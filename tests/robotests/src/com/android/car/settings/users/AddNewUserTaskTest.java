@@ -16,12 +16,22 @@
 
 package com.android.car.settings.users;
 
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.user.CarUserManager;
-import android.car.userlib.CarUserManagerHelper;
+import android.car.user.UserCreationResult;
+import android.content.Context;
 import android.content.pm.UserInfo;
+import android.content.res.Resources;
+import android.os.UserManager;
+
+import androidx.annotation.Nullable;
+import androidx.test.InstrumentationRegistry;
+
+import com.android.internal.infra.AndroidFuture;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -34,34 +44,43 @@ import org.robolectric.RobolectricTestRunner;
 @RunWith(RobolectricTestRunner.class)
 public class AddNewUserTaskTest {
     @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     @Mock
     private CarUserManager mCarUserManager;
     @Mock
     private AddNewUserTask.AddNewUserListener mAddNewUserListener;
+    @Mock
+    private Context mContext;
 
     private AddNewUserTask mTask;
+
+    private final Resources mResources = InstrumentationRegistry.getTargetContext().getResources();
 
     @Before
     public void createAsyncTask() {
         MockitoAnnotations.initMocks(this);
-        mTask = new AddNewUserTask(mCarUserManagerHelper, mCarUserManager, mAddNewUserListener);
+        mTask = new AddNewUserTask(mContext, mCarUserManager, mAddNewUserListener);
     }
 
     @Test
-    public void testTaskCallsCreateNewNonAdminUser() {
+    public void testTaskCallsCreateNewUser() {
         String newUserName = "Test name";
+        UserInfo newUser = new UserInfo(10, newUserName, /* flags= */ 0);
+
+        mockCreateUser(newUser, UserCreationResult.STATUS_SUCCESSFUL);
+
         mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
 
-        verify(mCarUserManagerHelper).createNewNonAdminUser(newUserName);
+        verify(mCarUserManager).createUser(newUserName, /* flags= */ 0);
     }
 
     @Test
     public void testSwitchToNewUserIfUserCreated() {
         String newUserName = "Test name";
         UserInfo newUser = new UserInfo(10, newUserName, /* flags= */ 0);
-        when(mCarUserManagerHelper.createNewNonAdminUser(newUserName)).thenReturn(newUser);
+
+        mockCreateUser(newUser, UserCreationResult.STATUS_SUCCESSFUL);
 
         mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
@@ -73,7 +92,8 @@ public class AddNewUserTaskTest {
     public void testOnUserAddedSuccessCalledIfUserCreated() {
         String newUserName = "Test name";
         UserInfo newUser = new UserInfo(10, newUserName, /* flags= */ 0);
-        when(mCarUserManagerHelper.createNewNonAdminUser(newUserName)).thenReturn(newUser);
+
+        mockCreateUser(newUser, UserCreationResult.STATUS_SUCCESSFUL);
 
         mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
@@ -84,11 +104,22 @@ public class AddNewUserTaskTest {
     @Test
     public void testOnUserAddedFailureCalledIfNullReturned() {
         String newUserName = "Test name";
-        when(mCarUserManagerHelper.createNewNonAdminUser(newUserName)).thenReturn(null);
+
+        mockCreateUser(/* user= */ null, UserCreationResult.STATUS_ANDROID_FAILURE);
 
         mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
 
         verify(mAddNewUserListener).onUserAddedFailure();
+    }
+
+    private void mockCreateUser(@Nullable UserInfo user, int status) {
+        when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mUserManager);
+        when(mContext.getResources()).thenReturn(mResources);
+
+        AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
+        future.complete(new UserCreationResult(status,
+                user, /* errorMessage= */ null));
+        when(mCarUserManager.createUser(anyString(), anyInt())).thenReturn(future);
     }
 }
