@@ -252,6 +252,14 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         mProgressBar.setVisible(false);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPasswordField.setText(null);
+
+        PasswordHelper.zeroizeCredentials(mCurrentEntry, mExistingCredential, mFirstEntry);
+    }
+
     /**
      * Append the argument to the end of the password entry field
      */
