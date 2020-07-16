@@ -19,7 +19,6 @@ package com.android.car.settings.users;
 import android.car.Car;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.user.CarUserManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -62,7 +61,6 @@ public class UsersListFragment extends SettingsFragment implements
 
     private Car mCar;
     private CarUserManager mCarUserManager;
-    private CarUserManagerHelper mCarUserManagerHelper;
     private UserManager mUserManager;
 
     private ProgressBarController mProgressBar;
@@ -74,7 +72,7 @@ public class UsersListFragment extends SettingsFragment implements
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mConfirmCreateNewUserListener = arguments -> {
-        mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper,
+        mAddNewUserTask = new AddNewUserTask(getContext(),
                 mCarUserManager, /* addNewUserListener= */ this).execute(
                 getContext().getString(R.string.user_new_user_name));
         mIsBusy = true;
@@ -112,7 +110,6 @@ public class UsersListFragment extends SettingsFragment implements
     public void onAttach(Context context) {
         super.onAttach(context);
         mCar = Car.createCar(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         mCarUserManager = (CarUserManager) mCar.getCarManager(Car.CAR_USER_SERVICE);
         mUserManager = UserManager.get(getContext());
     }
@@ -184,6 +181,11 @@ public class UsersListFragment extends SettingsFragment implements
         updateUi();
         // Display failure dialog.
         ErrorDialog.show(this, R.string.add_user_error_title);
+    }
+
+    @VisibleForTesting
+    void setCarUserManager(CarUserManager carUserManager) {
+        mCarUserManager = carUserManager;
     }
 
     private void updateUi() {

@@ -17,30 +17,58 @@
 package com.android.car.settings.users;
 
 import android.car.user.CarUserManager;
-import android.car.userlib.CarUserManagerHelper;
+import android.car.user.UserCreationResult;
+import android.car.userlib.UserHelper;
+import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.AsyncTask;
+
+import com.android.car.settings.common.Logger;
+import com.android.internal.infra.AndroidFuture;
+
+import java.util.concurrent.ExecutionException;
 
 /**
  * Task to add a new user to the device
  */
 public class AddNewUserTask extends AsyncTask<String, Void, UserInfo> {
+    private static final Logger LOG = new Logger(AddNewUserTask.class);
+
+    private final Context mContext;
     private final CarUserManager mCarUserManager;
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final AddNewUserListener mAddNewUserListener;
 
-    // TODO: Completely deprecate the usage of CarUserManagerHelper once all of its functionalities
-    // can be handled by CarUserManager's interfaces.
-    public AddNewUserTask(CarUserManagerHelper carUserManagerHelper, CarUserManager carUserManager,
+    public AddNewUserTask(Context context, CarUserManager carUserManager,
             AddNewUserListener addNewUserListener) {
+        mContext = context;
         mCarUserManager = carUserManager;
-        mCarUserManagerHelper = carUserManagerHelper;
         mAddNewUserListener = addNewUserListener;
     }
 
     @Override
     protected UserInfo doInBackground(String... userNames) {
-        return mCarUserManagerHelper.createNewNonAdminUser(userNames[0]);
+        AndroidFuture<UserCreationResult> future = mCarUserManager.createUser(userNames[0],
+                /* flags= */ 0);
+        try {
+            UserCreationResult result = future.get();
+            if (result.isSuccess()) {
+                UserInfo user = result.getUser();
+                if (user != null) {
+                    UserHelper.setDefaultNonAdminRestrictions(mContext, user, /* enable= */ true);
+                    UserHelper.assignDefaultIcon(mContext, user);
+                } else {
+                    LOG.wtf("Inconsistent state: successful future with null user - "
+                            + result.toString());
+                }
+                return user;
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            if (e instanceof InterruptedException) {
+                Thread.currentThread().interrupt();
+            }
+            LOG.e("Error creating new user: ", e);
+        }
+        return null;
     }
 
     @Override
