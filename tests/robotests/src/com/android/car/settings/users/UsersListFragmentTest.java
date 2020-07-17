@@ -20,12 +20,14 @@ import static com.android.car.ui.core.CarUi.requireToolbar;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
+import android.car.user.CarUserManager;
+import android.car.user.UserCreationResult;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
@@ -33,7 +35,6 @@ import android.os.UserManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.settings.testutils.ShadowUserManager;
@@ -41,6 +42,7 @@ import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.ToolbarController;
 import com.android.car.ui.utils.CarUxRestrictionsUtil;
+import com.android.internal.infra.AndroidFuture;
 
 import org.junit.After;
 import org.junit.Before;
@@ -48,7 +50,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
@@ -60,8 +61,7 @@ import java.util.ArrayList;
  * Tests for UserDetailsFragment.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class,
-        ShadowUserHelper.class, ShadowUserManager.class})
+@Config(shadows = {ShadowUserIconProvider.class, ShadowUserHelper.class, ShadowUserManager.class})
 public class UsersListFragmentTest {
 
     private Context mContext;
@@ -70,7 +70,7 @@ public class UsersListFragmentTest {
     private FragmentController<UsersListFragment> mFragmentController;
 
     @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private CarUserManager mCarUserManager;
 
     @Mock
     private UserHelper mUserHelper;
@@ -78,7 +78,6 @@ public class UsersListFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         ShadowUserHelper.setInstance(mUserHelper);
         mContext = RuntimeEnvironment.application;
 
@@ -92,7 +91,6 @@ public class UsersListFragmentTest {
     @After
     public void tearDown() {
         ShadowUserHelper.reset();
-        ShadowCarUserManagerHelper.reset();
         ShadowUserManager.reset();
     }
 
@@ -123,12 +121,18 @@ public class UsersListFragmentTest {
 
     /* Test that onCreateNewUserConfirmed invokes a creation of a new non-admin. */
     @Test
-    public void testOnCreateNewUserConfirmedInvokesCreateNewNonAdminUser() {
+    public void testOnCreateNewUserConfirmedInvokesCreateNewUser() {
         createUsersListFragment(/* flags= */ 0, /* disallowAddUser= */ false);
+        mFragment.setCarUserManager(mCarUserManager);
+
+        AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
+        future.complete(new UserCreationResult(UserCreationResult.STATUS_SUCCESSFUL,
+                /* user= */ null, /* errorMessage= */ null));
+        when(mCarUserManager.createUser(anyString(), anyInt())).thenReturn(future);
+
         mFragment.mConfirmCreateNewUserListener.onConfirm(/* arguments= */ null);
-        Robolectric.flushBackgroundThreadScheduler();
-        verify(mCarUserManagerHelper)
-                .createNewNonAdminUser(mContext.getString(R.string.user_new_user_name));
+        verify(mCarUserManager).createUser(mContext.getString(R.string.user_new_user_name),
+                /* flags= */ 0);
     }
 
     /* Test that if we're in demo user, click on the button starts exit out of the retail mode. */
@@ -164,7 +168,6 @@ public class UsersListFragmentTest {
                 testUser.getUserHandle(), UserManager.DISALLOW_ADD_USER, disallowAddUser);
         when(mUserHelper.getCurrentProcessUserInfo()).thenReturn(testUser);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(new ArrayList<>());
-        when(mCarUserManagerHelper.createNewNonAdminUser(any())).thenReturn(null);
         mFragmentController.setup();
 
         ToolbarController toolbar = (ToolbarController) requireToolbar(mFragment.requireActivity());
