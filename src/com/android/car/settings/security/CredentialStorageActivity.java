@@ -195,53 +195,20 @@ public class CredentialStorageActivity extends FragmentActivity {
             return true;
         }
 
-        boolean shouldFinish = true;
-        if (installBundle.containsKey(Credentials.EXTRA_USER_PRIVATE_KEY_NAME)) {
-            String key = installBundle.getString(Credentials.EXTRA_USER_PRIVATE_KEY_NAME);
-            byte[] value = installBundle.getByteArray(Credentials.EXTRA_USER_PRIVATE_KEY_DATA);
-
-            if (!mKeyStore.importKey(key, value, uid, KeyStore.FLAG_NONE)) {
-                LOG.e("Failed to install " + key + " as uid " + uid);
-                return true;
-            }
-            // The key was prepended USER_PRIVATE_KEY by the CredentialHelper. However,
-            // KeyChain internally uses the raw alias name and only prepends USER_PRIVATE_KEY
-            // to the key name when interfacing with KeyStore.
-            // This is generally a symptom of CredentialStorage and CredentialHelper relying
-            // on internal implementation details of KeyChain and imitating its functionality
-            // rather than delegating to KeyChain for the certificate installation.
-            if (uid == Process.SYSTEM_UID || uid == KeyStore.UID_SELF) {
-                new MarkKeyAsUserSelectable(this,
-                        key.replaceFirst("^" + Credentials.USER_PRIVATE_KEY, "")).execute();
-                shouldFinish = false;
-            }
+        String alias = installBundle.getString(Credentials.EXTRA_USER_KEY_ALIAS, null);
+        if (TextUtils.isEmpty(alias)) {
+            LOG.e("Cannot install key without an alias");
+            return true;
         }
 
-        int flags = KeyStore.FLAG_NONE;
+        final byte[] privateKeyData = installBundle.getByteArray(
+                Credentials.EXTRA_USER_PRIVATE_KEY_DATA);
+        final byte[] certData = installBundle.getByteArray(Credentials.EXTRA_USER_CERTIFICATE_DATA);
+        final byte[] caListData = installBundle.getByteArray(
+                Credentials.EXTRA_CA_CERTIFICATES_DATA);
+        new InstallKeyInKeyChain(alias, privateKeyData, certData, caListData, uid).execute();
 
-        if (installBundle.containsKey(Credentials.EXTRA_USER_CERTIFICATE_NAME)) {
-            String certName = installBundle.getString(Credentials.EXTRA_USER_CERTIFICATE_NAME);
-            byte[] certData = installBundle.getByteArray(Credentials.EXTRA_USER_CERTIFICATE_DATA);
-
-            if (!mKeyStore.put(certName, certData, uid, flags)) {
-                LOG.e("Failed to install " + certName + " as uid " + uid);
-                return shouldFinish;
-            }
-        }
-
-        if (installBundle.containsKey(Credentials.EXTRA_CA_CERTIFICATES_NAME)) {
-            String caListName = installBundle.getString(Credentials.EXTRA_CA_CERTIFICATES_NAME);
-            byte[] caListData = installBundle.getByteArray(Credentials.EXTRA_CA_CERTIFICATES_DATA);
-
-            if (!mKeyStore.put(caListName, caListData, uid, flags)) {
-                LOG.e("Failed to install " + caListName + " as uid " + uid);
-                return shouldFinish;
-            }
-        }
-
-        sendBroadcast(new Intent(KeyChain.ACTION_KEYCHAIN_CHANGED));
-        setResult(RESULT_OK);
-        return shouldFinish;
+        return false;
     }
 
     /**
@@ -298,6 +265,68 @@ public class CredentialStorageActivity extends FragmentActivity {
                         Toast.LENGTH_SHORT).show();
             }
             credentialStorage.finish();
+        }
+    }
+
+    /**
+     * Background task to install a certificate into KeyChain.
+     */
+    private class InstallKeyInKeyChain extends AsyncTask<Void, Void, Boolean> {
+        final String mAlias;
+        private final byte[] mKeyData;
+        private final byte[] mCertData;
+        private final byte[] mCaListData;
+        private final int mUid;
+
+        InstallKeyInKeyChain(String alias, byte[] keyData, byte[] certData, byte[] caListData,
+                int uid) {
+            mAlias = alias;
+            mKeyData = keyData;
+            mCertData = certData;
+            mCaListData = caListData;
+            mUid = uid;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... unused) {
+            try (KeyChain.KeyChainConnection keyChainConnection = KeyChain.bind(
+                    CredentialStorageActivity.this)) {
+                return keyChainConnection.getService()
+                        .installKeyPair(mKeyData, mCertData, mCaListData, mAlias, mUid);
+            } catch (RemoteException e) {
+                LOG.w(String.format("Failed to install key %s to uid %d", mAlias, mUid), e);
+                return false;
+            } catch (InterruptedException e) {
+                LOG.w(String.format("Interrupted while installing key %s", mAlias), e);
+                Thread.currentThread().interrupt();
+                return false;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            LOG.i(String.format("Marked alias %s as selectable, success? %s",
+                    mAlias, result));
+            CredentialStorageActivity.this.onKeyInstalled(mAlias, mUid, result);
+        }
+    }
+
+    private void onKeyInstalled(String alias, int uid, boolean result) {
+        if (!result) {
+            LOG.w(String.format("Error installing alias %s for uid %d", alias, uid));
+            finish();
+            return;
+        }
+
+        // Send the broadcast.
+        final Intent broadcast = new Intent(KeyChain.ACTION_KEYCHAIN_CHANGED);
+        sendBroadcast(broadcast);
+        setResult(RESULT_OK);
+
+        if (uid == Process.SYSTEM_UID || uid == KeyStore.UID_SELF) {
+            new MarkKeyAsUserSelectable(this, alias).execute();
+        } else {
+            finish();
         }
     }
 
