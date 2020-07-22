@@ -23,6 +23,7 @@ android_robolectric_test {
         "Robolectric_all-target",
         "robolectric_android-all-stub",
         "mockito-robolectric-prebuilt",
+        "telephony-common",
         "truth-prebuilt",
         "testng",
         "android.car",
