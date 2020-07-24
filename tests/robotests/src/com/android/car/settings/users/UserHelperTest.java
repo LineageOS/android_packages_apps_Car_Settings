@@ -482,12 +482,15 @@ public class UserHelperTest {
     }
 
     private void mockRemoveUser(int userId, int status) {
-        when(mMockCarUserManager.removeUser(userId)).thenReturn(new UserRemovalResult(status));
+        AndroidFuture<UserRemovalResult> future = new AndroidFuture<>();
+        future.complete(new UserRemovalResult(status));
+        when(mMockCarUserManager.removeUser(userId)).thenReturn(future);
     }
 
     private void mockRemoveUserSuccess() {
-        when(mMockCarUserManager.removeUser(anyInt()))
-                .thenReturn(new UserRemovalResult(UserRemovalResult.STATUS_SUCCESSFUL));
+        AndroidFuture<UserRemovalResult> future = new AndroidFuture<>();
+        future.complete(new UserRemovalResult(UserRemovalResult.STATUS_SUCCESSFUL));
+        when(mMockCarUserManager.removeUser(anyInt())).thenReturn(future);
     }
 
     private void mockCreateUserFail() {
