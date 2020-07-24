@@ -31,6 +31,7 @@ import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
 import android.car.user.UserRemovalResult;
 import android.car.user.UserSwitchResult;
+import android.car.util.concurrent.AndroidAsyncFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -484,38 +485,40 @@ public class UserHelperTest {
     private void mockRemoveUser(int userId, int status) {
         AndroidFuture<UserRemovalResult> future = new AndroidFuture<>();
         future.complete(new UserRemovalResult(status));
-        when(mMockCarUserManager.removeUser(userId)).thenReturn(future);
+        when(mMockCarUserManager.removeUser(userId)).thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockRemoveUserSuccess() {
         AndroidFuture<UserRemovalResult> future = new AndroidFuture<>();
         future.complete(new UserRemovalResult(UserRemovalResult.STATUS_SUCCESSFUL));
-        when(mMockCarUserManager.removeUser(anyInt())).thenReturn(future);
+        when(mMockCarUserManager.removeUser(anyInt())).thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockCreateUserFail() {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         future.complete(new UserCreationResult(UserCreationResult.STATUS_ANDROID_FAILURE,
                 null, null));
-        when(mMockCarUserManager.createUser(any(), anyInt())).thenReturn(future);
-        when(mMockCarUserManager.createGuest(any())).thenReturn(future);
+        AndroidAsyncFuture<UserCreationResult> asyncFuture = new AndroidAsyncFuture<>(future);
+        when(mMockCarUserManager.createUser(any(), anyInt())).thenReturn(asyncFuture);
+        when(mMockCarUserManager.createGuest(any())).thenReturn(asyncFuture);
     }
 
     private void mockCreateUser(String name, int flag, int status, UserInfo userInfo) {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         future.complete(new UserCreationResult(status, userInfo, null));
-        when(mMockCarUserManager.createUser(name, flag)).thenReturn(future);
+        when(mMockCarUserManager.createUser(name, flag))
+                .thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockCreateGuest(String name, int status, UserInfo userInfo) {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         future.complete(new UserCreationResult(status, userInfo, null));
-        when(mMockCarUserManager.createGuest(name)).thenReturn(future);
+        when(mMockCarUserManager.createGuest(name)).thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockSwitchUserSuccess() {
         AndroidFuture<UserSwitchResult> future = new AndroidFuture<>();
         future.complete(new UserSwitchResult(UserSwitchResult.STATUS_SUCCESSFUL, null));
-        when(mMockCarUserManager.switchUser(anyInt())).thenReturn(future);
+        when(mMockCarUserManager.switchUser(anyInt())).thenReturn(new AndroidAsyncFuture<>(future));
     }
 }

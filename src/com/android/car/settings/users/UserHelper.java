@@ -24,6 +24,7 @@ import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
 import android.car.user.UserRemovalResult;
 import android.car.user.UserSwitchResult;
+import android.car.util.concurrent.AsyncFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -34,7 +35,6 @@ import android.util.Log;
 
 import com.android.car.settings.R;
 import com.android.internal.annotations.VisibleForTesting;
-import com.android.internal.infra.AndroidFuture;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -137,7 +137,7 @@ public class UserHelper {
     }
 
     private boolean removeUser(@UserIdInt int userId) {
-        AndroidFuture<UserRemovalResult> userRemovalResultFuture =
+        AsyncFuture<UserRemovalResult> userRemovalResultFuture =
                 mCarUserManager.removeUser(userId);
         try {
             UserRemovalResult userRemovalResult =
@@ -154,7 +154,7 @@ public class UserHelper {
     }
 
     private boolean switchUser(@UserIdInt int userId) {
-        AndroidFuture<UserSwitchResult> userSwitchResultFuture =
+        AsyncFuture<UserSwitchResult> userSwitchResultFuture =
                 mCarUserManager.switchUser(userId);
         try {
             UserSwitchResult userSwitchResult =
@@ -171,7 +171,7 @@ public class UserHelper {
     }
 
     @Nullable
-    private UserInfo getUserInfo(AndroidFuture<UserCreationResult> future) {
+    private UserInfo getUserInfo(AsyncFuture<UserCreationResult> future) {
         UserCreationResult userCreationResult = null;
         try {
             userCreationResult = future.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
@@ -222,7 +222,7 @@ public class UserHelper {
             Log.e(TAG, "Only admin users and system user can create other admins.");
             return null;
         }
-        AndroidFuture<UserCreationResult> future =
+        AsyncFuture<UserCreationResult> future =
                 mCarUserManager.createUser(userName, UserInfo.FLAG_ADMIN);
         UserInfo user = getUserInfo(future);
 
@@ -242,7 +242,7 @@ public class UserHelper {
     @Nullable
     public UserInfo createNewOrFindExistingGuest(Context context) {
         // CreateGuest will return null if a guest already exists.
-        AndroidFuture<UserCreationResult> future = mCarUserManager.createGuest(mDefaultGuestName);
+        AsyncFuture<UserCreationResult> future = mCarUserManager.createGuest(mDefaultGuestName);
         UserInfo newGuest = getUserInfo(future);
 
         if (newGuest != null) {
