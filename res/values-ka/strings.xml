@@ -71,7 +71,7 @@
     <string name="app_data_usage" msgid="3878609885080232877">"აპის მონაცემთა გამოყენება"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"შეზღუდულია"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"გამოყენების ციკლის გადაყენების თარიღი"</string>
-    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"თითოეული თვის თარიღი:"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"თვის შემდეგ რიცხვში:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"დაყენება"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"მოხმარების შესახებ გაფრთხილება და ლიმიტი"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"აპების მიერ ტრაფიკის მოხმარების ციკლი"</string>
@@ -147,7 +147,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"ავტომატური"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 გჰც დიაპაზონი"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5 გჰც დიაპაზონი"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"სასურველია 5-გიგაჰერციანი დიაპაზონი"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"სასურველია 5 გჰც დიაპაზონი"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 გჰც"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 გჰც"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"აირჩიეთ 1 დიაპ. Wi‑Fi ქსელისთვის:"</string>
@@ -219,7 +219,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"მაღვიძარა"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"ტელეფონის ზარი"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"შეტყობინების ნაგულისხმევი ხმა"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"მაღვიძარას ნაგულისხმევი ხმა"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"მაღვიძარას ნაგულ. ხმა"</string>
     <string name="units_settings" msgid="402325305096925886">"ერთეულები"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"სიჩქარე"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"მანძილი"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ციფრების ზრდადი, კლებადი ან გამეორებადი მიმდევრობის გამოყენება ნებადართული არ არის."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ეკრანის დაბლოკვის ვარიანტები"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> დღის წინ"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"სანდო მოწყობილობის დამატება"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"სანდო მოწყობილ. დასამატებლად Bluetooth ჩაირთვება"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"სანდო მოწყობილობები"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> მოწყობილობა</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> მოწყობილობა</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"თქვენი <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> განბლოკავს ამ მანქანას, როცა ის დაკავშირებული იქნება. თუ თქვენი <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> სხვის ხელში აღმოჩნდება, ის შეძლებს ამ მოწყობილობაზე წვდომას."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"დადასტურება"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"სანდო მოწყობილობის ამოშლა"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"მზადაა"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"სანდო მოწყობილობის დასაყენებლად გამოიყენეთ კომპანიონი აპი. დაყენების შემდეგ თქვენი მომხმარებლის პროფილი ავტომატურად განიბლოკება, როცა თქვენ ტელეფონი ავტომობილთან ახლოს დაფიქსირდება."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ჩამოტვირთეთ კომპანიონი აპი თქვენს ტელეფონზე"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. თქვენს ტელეფონზე აირჩიეთ <xliff:g id="CAR_NAME">%1$s</xliff:g> მოწყობილობების დასაწყვილებლად"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"თქვენს ავტომობილთან ახლოს მდებარე სანდო მოწყობილობა განბლოკავს მომხმარებლის პროფილს აალებისას, მაშინაც კი, თუ მოწყობილობა სხვას უკავია."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"გთხოვთ, დაადასტუროთ, რომ დაკავშირების კოდები ემთხვევა"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ტელეფონი წარმატებით დარეგისტრირდა"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ის რეგისტრაცია ვერ მოხერხდა"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"სანდო მოწყობილობის დასამატებლად მომდევნო ეტაპზე საჭირო იქნება ავტორიზაციის მეთოდის დაყენება. ავტორიზაცია საჭირო იქნება თქვენს პროფილზე წვდომისთვის, როცა სანდო მოწყობილობა თან არ გექნებათ."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"მოწყობილობის კავშირი გათიშულია."</string>
     <string name="credentials_reset" msgid="873900550885788639">"ავტორიზაციის მონაცემების გასუფთავება"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ყველა სერტიფიკატის ამოშლა"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"გსურთ სრული კონტენტის წაშლა?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"დახურვა"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ფუნქცია მიუწვდომელია მანქანის მართვისას"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"მანქანის მართვისას მომხმარებლის დამატება ვერ მოხერხდება"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"ძიება"</string>
 </resources>

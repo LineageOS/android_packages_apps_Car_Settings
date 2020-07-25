@@ -486,11 +486,11 @@
     <string name="users_list_title" msgid="770764290290240909">"Пайдаланушылар"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s: рұқсаттар"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Жад"</string>
-    <string name="storage_music_audio" msgid="7827147379976134040">"Музыка және аудиомазмұн"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"Музыка және аудио"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"Басқа қолданбалар"</string>
-    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Файлдар"</string>
     <string name="storage_system" msgid="1271345630248014010">"Жүйе"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Жүйе Android <xliff:g id="VERSION">%s</xliff:g> нұсқасын іске қосуға пайдаланылатын файлдарды қамтиды"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"\"Жүйе\" қалтасында Android <xliff:g id="VERSION">%s</xliff:g> жұмысына қажетті файлдар орналасқан."</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудио файлдар"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Есептелуде…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Қолданба көлемі"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Сандардың артатын, кемитін немесе қайталанатын ретіне рұқсат берілмейді"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды құлыптау опциялары"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн бұрын"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Сенімді құрылғыны қосу"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Сенімді құрылғы енгізу үшін Bluetooth қосылады"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Сенімді құрылғылар"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> құрылғы</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> құрылғы</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> жалғанған кезде, ол көлігіңіздің құлпын ашады. Әлдекім <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> құрылғыңызды алса, оған осы құрылғыға кіре алады."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Растау"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Сенімді құрылғыны өшіру"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Дайын"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Сенімді құрылғыны реттеу үшін қосымша қолданбаны пайдаланыңыз. Реттелгеннен кейін, телефонды көлік анықтаған кезде, пайдаланушы профилі автоматты түрде ашылады."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Телефоныңызға қосымша қолданбаны жүктеп алыңыз."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Құрылғыларды жұптау үшін телефоныңыздан <xliff:g id="CAR_NAME">%1$s</xliff:g> көлігін таңдаңыз."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Көліктің маңайындағы сенімді құрылғы басқа біреуде болса да, пайдаланушы профилінің құлпын ашады."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Жұптау кодтарының сәйкес екенін растаңыз"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефон сәтті тіркелді"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> тіркелмеді."</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Сенімді құрылғыны енгізу үшін аутентификация әдісін орнату қажет. Сенімді құрылғыңыз болмаса, профильге кіру үшін аутентификация керек."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Құрылғы ажыратылды."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Тіркелу деректерін өшіру"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Барлық сертификаттарды өшіру"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Мазмұн толығымен өшірілсін бе?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЖАБУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Көлік жүргізу кезінде бұл функция жұмыс істемейді."</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Көлік жүргізу кезінде пайдаланушыны енгізу мүмкін емес."</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Іздеу"</string>
 </resources>

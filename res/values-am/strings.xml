@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"እየጨመሩ የሚሄዱ፣ እየቀነሱ የሚሄዱ ወይም ተደጋጋሚ የአኃዞች ተከታታይ አይፈቀድም።"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"የማያ ገጽ መቆለፊያ አማራጮች"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ቀኖች በፊት"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"የሚታመን መሣሪያ አክል"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"ብሉቱዝ የታመነ መሣሪያን ለማከል ይበራል"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"የሚታመኑ መሣሪያዎች"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> መሣሪያዎች</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> መሣሪያዎች</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"የእርስዎ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> በሚገናኝበት ጊዜ የእርስዎን መኪና ይከፍተዋል። የእርስዎን <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> የሆነ ሰው ከወሰደው፣ ይህን መሣሪያ ሊደርስበት ይችላል"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ያረጋግጡ"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"የሚታመን መሣሪያን አስወግድ"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ተከናውኗል"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"የታመነ መሣሪያ ለማቀናበር አጃቢ መተግበሪያን ይጠቀሙ። አንድ ጊዜ ካቀናበሩ በኋላ፣ የእርስዎ የተጠቃሚ መገለጫ የእርስዎ ስልክ ከተሽከርካሪው አቅራቢያ እንዳለ ሲደረስበት በራስ ሰር ይከፈታል።"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. በእርስዎ ስልክ ላይ አጃቢውን መተግበሪያ ያውርዱ"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. መሣሪያዎቹን ለማጣመር በእርስዎ ስልክ ላይ <xliff:g id="CAR_NAME">%1$s</xliff:g> ን ይምረጡ"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"መኪናው ሲነሣ ከእርስዎ መኪና አቅራቢያ ያለ የታመነ መሣሪያ መኪናውን ይከፍታል፣ ምንም እንኳ መሣሪያውን የያዘው ሌላ ሰው ቢሆንም።"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"እባክዎ የማጣመሪያ ኮዶች የሚዛመዱ መሆናቸውን ያረጋግጡ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ስልክ በተሳካ ሁኔታ ተመዝግቧል"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> መመዝገብ አልተሳካም"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"የታመነ መሣሪያን ማከል ቀጥለው የማረጋገጫ ዘዴን እንዲያክሉ ይፈልግብዎታል። የታመነ መሣሪያዎ ከእርስዎ ጋር ከሌለ መገለጫዎን ለመድረስ ማረጋገጫ ያስፈልጋል።"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"የመሣሪያ ግንኙነት ተቋርጧል።"</string>
     <string name="credentials_reset" msgid="873900550885788639">"መረጃዎችን አጽዳ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ሁሉንም ምስክሮች አስወግድ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ሁሉም ይዘቶች ይወገድ?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"አሰናብት"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"እየነዱ ሳለ ባህሪው አይገኝም"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"እየነዱ ሳለ ተጠቃሚን ማከል አይቻልም"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"ይፈልጉ"</string>
 </resources>
