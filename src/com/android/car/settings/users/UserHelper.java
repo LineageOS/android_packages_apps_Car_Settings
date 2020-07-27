@@ -137,9 +137,17 @@ public class UserHelper {
     }
 
     private boolean removeUser(@UserIdInt int userId) {
-        UserRemovalResult userRemovalResult = mCarUserManager.removeUser(userId);
-        if (userRemovalResult == null || !userRemovalResult.isSuccess()) {
-            Log.w(TAG, "Could not remove user. " + userRemovalResult);
+        AndroidFuture<UserRemovalResult> userRemovalResultFuture =
+                mCarUserManager.removeUser(userId);
+        try {
+            UserRemovalResult userRemovalResult =
+                    userRemovalResultFuture.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
+            if (userRemovalResult == null || !userRemovalResult.isSuccess()) {
+                Log.w(TAG, "Could not remove user. " + userRemovalResult);
+                return false;
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Could not remove user.", e);
             return false;
         }
         return true;
