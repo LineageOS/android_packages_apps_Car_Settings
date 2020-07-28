@@ -194,7 +194,9 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                     mUiStage = Stage.Introduction;
                 }
                 // Schedule the UI update.
-                mTextChangedHandler.notifyAfterTextChanged();
+                if (isResumed()) {
+                    mTextChangedHandler.notifyAfterTextChanged();
+                }
             }
         });
 
