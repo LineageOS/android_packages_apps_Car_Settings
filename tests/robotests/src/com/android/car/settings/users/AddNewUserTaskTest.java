@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 
 import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
+import android.car.util.concurrent.AndroidAsyncFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -120,6 +121,7 @@ public class AddNewUserTaskTest {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         future.complete(new UserCreationResult(status,
                 user, /* errorMessage= */ null));
-        when(mCarUserManager.createUser(anyString(), anyInt())).thenReturn(future);
+        when(mCarUserManager.createUser(anyString(), anyInt()))
+                .thenReturn(new AndroidAsyncFuture<>(future));
     }
 }
