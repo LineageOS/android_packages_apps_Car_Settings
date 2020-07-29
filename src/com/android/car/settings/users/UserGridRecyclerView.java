@@ -380,20 +380,20 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         private void handleUserSwitch(UserInfo userInfo) {
-            mCarUserManager.switchUser(userInfo.id).thenRun(() -> {
+            mCarUserManager.switchUser(userInfo.id).whenCompleteAsync((r, e) -> {
                 // Successful switch, close Settings app.
                 closeSettingsTask();
-            });
+            }, Runnable::run);
         }
 
         private void handleGuestSessionClicked() {
             UserInfo guest =
                     UserHelper.getInstance(mContext).createNewOrFindExistingGuest(mContext);
             if (guest != null) {
-                mCarUserManager.switchUser(guest.id).thenRun(() -> {
+                mCarUserManager.switchUser(guest.id).whenCompleteAsync((r, e) -> {
                     // Successful start, will switch to guest now. Close Settings app.
                     closeSettingsTask();
-                });
+                }, Runnable::run);
             }
         }
 
