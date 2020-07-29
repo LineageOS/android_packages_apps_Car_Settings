@@ -28,6 +28,7 @@ import static org.mockito.Mockito.when;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
+import android.car.util.concurrent.AndroidAsyncFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
@@ -128,7 +129,8 @@ public class UsersListFragmentTest {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         future.complete(new UserCreationResult(UserCreationResult.STATUS_SUCCESSFUL,
                 /* user= */ null, /* errorMessage= */ null));
-        when(mCarUserManager.createUser(anyString(), anyInt())).thenReturn(future);
+        when(mCarUserManager.createUser(anyString(), anyInt()))
+                .thenReturn(new AndroidAsyncFuture<>(future));
 
         mFragment.mConfirmCreateNewUserListener.onConfirm(/* arguments= */ null);
         verify(mCarUserManager).createUser(mContext.getString(R.string.user_new_user_name),

@@ -19,12 +19,12 @@ package com.android.car.settings.users;
 import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
 import android.car.userlib.UserHelper;
+import android.car.util.concurrent.AsyncFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.AsyncTask;
 
 import com.android.car.settings.common.Logger;
-import com.android.internal.infra.AndroidFuture;
 
 import java.util.concurrent.ExecutionException;
 
@@ -47,7 +47,7 @@ public class AddNewUserTask extends AsyncTask<String, Void, UserInfo> {
 
     @Override
     protected UserInfo doInBackground(String... userNames) {
-        AndroidFuture<UserCreationResult> future = mCarUserManager.createUser(userNames[0],
+        AsyncFuture<UserCreationResult> future = mCarUserManager.createUser(userNames[0],
                 /* flags= */ 0);
         try {
             UserCreationResult result = future.get();
