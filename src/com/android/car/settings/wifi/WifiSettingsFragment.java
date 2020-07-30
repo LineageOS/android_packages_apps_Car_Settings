@@ -135,7 +135,8 @@ public class WifiSettingsFragment extends SettingsFragment
 
     @Override
     public void onWifiStateChanged(int state) {
-        mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
+        mWifiSwitch.setChecked(state == WifiManager.WIFI_STATE_ENABLED
+                || state == WifiManager.WIFI_STATE_ENABLING);
         switch (state) {
             case WifiManager.WIFI_STATE_ENABLING:
                 mProgressBar.setVisible(true);
