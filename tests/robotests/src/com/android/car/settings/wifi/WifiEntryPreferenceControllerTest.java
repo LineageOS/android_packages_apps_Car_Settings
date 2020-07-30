@@ -28,6 +28,7 @@ import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
 
 import androidx.lifecycle.Lifecycle;
+import androidx.test.core.app.ApplicationProvider;
 
 import com.android.car.settings.common.MasterSwitchPreference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -40,7 +41,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 
@@ -60,7 +60,7 @@ public class WifiEntryPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarWifiManager.setInstance(mCarWifiManager);
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
         mMasterSwitchPreference = new MasterSwitchPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 WifiEntryPreferenceController.class, mMasterSwitchPreference);
@@ -128,6 +128,18 @@ public class WifiEntryPreferenceControllerTest {
 
         when(mCarWifiManager.isWifiEnabled()).thenReturn(true);
         mController.onWifiStateChanged(WifiManager.WIFI_STATE_ENABLED);
+
+        assertThat(mMasterSwitchPreference.isSwitchChecked()).isTrue();
+    }
+
+    @Test
+    public void onWifiStateChanged_enabling_setsSwitchChecked() {
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
+                PackageManager.FEATURE_WIFI, /* supported= */ true);
+        when(mCarWifiManager.isWifiEnabled()).thenReturn(false);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+
+        mController.onWifiStateChanged(WifiManager.WIFI_STATE_ENABLING);
 
         assertThat(mMasterSwitchPreference.isSwitchChecked()).isTrue();
     }
