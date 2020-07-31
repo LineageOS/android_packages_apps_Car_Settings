@@ -19,7 +19,6 @@ package com.android.car.settings.location;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
 import androidx.annotation.VisibleForTesting;
@@ -98,13 +97,15 @@ public class RecentLocationRequestsPreferenceController extends
         pref.setTitle(request.label);
         Intent intent = new Intent();
         intent.setPackage(request.packageName);
-        ResolveInfo resolveInfo = getContext().getPackageManager().resolveActivity(intent,
-                PackageManager.MATCH_DEFAULT_ONLY);
-        pref.setOnPreferenceClickListener(p -> {
-            getFragmentController().launchFragment(
-                    ApplicationDetailsFragment.getInstance(resolveInfo.activityInfo.packageName));
-            return true;
-        });
+        ResolveInfo resolveInfo = getContext().getPackageManager().resolveActivity(intent, 0);
+        if (resolveInfo != null) {
+            pref.setOnPreferenceClickListener(p -> {
+                getFragmentController().launchFragment(
+                        ApplicationDetailsFragment.getInstance(
+                                resolveInfo.activityInfo.packageName));
+                return true;
+            });
+        }
         return pref;
     }
 
