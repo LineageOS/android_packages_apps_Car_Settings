@@ -21,6 +21,7 @@ import android.annotation.UserIdInt;
 import android.app.ActivityManager;
 import android.car.Car;
 import android.car.user.CarUserManager;
+import android.car.user.OperationResult;
 import android.car.user.UserCreationResult;
 import android.car.user.UserRemovalResult;
 import android.car.user.UserSwitchResult;
@@ -37,7 +38,9 @@ import com.android.car.settings.R;
 import com.android.internal.annotations.VisibleForTesting;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -137,56 +140,46 @@ public class UserHelper {
     }
 
     private boolean removeUser(@UserIdInt int userId) {
-        AsyncFuture<UserRemovalResult> userRemovalResultFuture =
-                mCarUserManager.removeUser(userId);
-        try {
-            UserRemovalResult userRemovalResult =
-                    userRemovalResultFuture.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
-            if (userRemovalResult == null || !userRemovalResult.isSuccess()) {
-                Log.w(TAG, "Could not remove user. " + userRemovalResult);
-                return false;
-            }
-        } catch (Exception e) {
-            Log.w(TAG, "Could not remove user.", e);
-            return false;
-        }
-        return true;
+        UserRemovalResult result = getResult("remove", mCarUserManager.removeUser(userId));
+        return result != null;
     }
 
     private boolean switchUser(@UserIdInt int userId) {
-        AsyncFuture<UserSwitchResult> userSwitchResultFuture =
-                mCarUserManager.switchUser(userId);
-        try {
-            UserSwitchResult userSwitchResult =
-                    userSwitchResultFuture.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
-            if (userSwitchResult == null || !userSwitchResult.isSuccess()) {
-                Log.w(TAG, "Could not switch user. " + userSwitchResult);
-                return false;
-            }
-        } catch (Exception e) {
-            Log.w(TAG, "Could not switch user.", e);
-            return false;
-        }
-        return true;
+        UserSwitchResult result = getResult("switch", mCarUserManager.switchUser(userId));
+        return result != null;
     }
 
+    /**
+     * Gets the result of an async operation.
+     *
+     * @param operation name of the operation, to be logged in case of error
+     * @param future future holding the operation result.
+     *
+     * @return result of the operation or {@code null} if it failed or timed out.
+     */
     @Nullable
-    private UserInfo getUserInfo(AsyncFuture<UserCreationResult> future) {
-        UserCreationResult userCreationResult = null;
+    private static <T extends OperationResult> T getResult(String operation,
+            AsyncFuture<T> future) {
+        T result = null;
         try {
-            userCreationResult = future.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
-        } catch (Exception e) {
-            Log.w(TAG, "Could not create user.", e);
+            result = future.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            Log.w(TAG, "Interrupted waiting to " + operation + " user", e);
+            return null;
+        } catch (ExecutionException | TimeoutException e) {
+            Log.w(TAG, "Exception waiting to " + operation + " user", e);
             return null;
         }
-
-        if (userCreationResult == null || !userCreationResult.isSuccess()
-                || userCreationResult.getUser() == null) {
-            Log.w(TAG, "Could not create user. " + userCreationResult);
+        if (result == null) {
+            Log.w(TAG, "Time out (" + TIMEOUT_MS + " ms) trying to " + operation + " user");
             return null;
         }
-
-        return userCreationResult.getUser();
+        if (!result.isSuccess()) {
+            Log.w(TAG, "Failed to " + operation + " user: " + result);
+            return null;
+        }
+        return result;
     }
 
     private boolean removeLastAdmin(UserInfo userInfo) {
@@ -222,11 +215,10 @@ public class UserHelper {
             Log.e(TAG, "Only admin users and system user can create other admins.");
             return null;
         }
-        AsyncFuture<UserCreationResult> future =
-                mCarUserManager.createUser(userName, UserInfo.FLAG_ADMIN);
-        UserInfo user = getUserInfo(future);
-
-        if (user == null) return null;
+        UserCreationResult result = getResult("create admin",
+                mCarUserManager.createUser(userName, UserInfo.FLAG_ADMIN));
+        if (result == null) return null;
+        UserInfo user = result.getUser();
 
         new UserIconProvider().assignDefaultIcon(mUserManager, mResources, user);
         return user;
@@ -241,9 +233,10 @@ public class UserHelper {
      */
     @Nullable
     public UserInfo createNewOrFindExistingGuest(Context context) {
-        // CreateGuest will return null if a guest already exists.
-        AsyncFuture<UserCreationResult> future = mCarUserManager.createGuest(mDefaultGuestName);
-        UserInfo newGuest = getUserInfo(future);
+        // createGuest() will return null if a guest already exists.
+        UserCreationResult result = getResult("create guest",
+                mCarUserManager.createGuest(mDefaultGuestName));
+        UserInfo newGuest = result == null ? null : result.getUser();
 
         if (newGuest != null) {
             new UserIconProvider().assignDefaultIcon(mUserManager, mResources, newGuest);
