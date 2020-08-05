@@ -1205,6 +1205,8 @@
     <string name="lockpattern_settings_help_how_to_record">How to draw an unlock pattern</string>
     <!-- Message shown when error is encountered when saving pattern [CHAR LIMIT=40] -->
     <string name="error_saving_lockpattern">Error saving pattern</string>
+    <!-- Message shown when in pattern unlock screen after too many incorrect attempts [CHAR LIMIT=120]-->
+    <string name="lockpattern_too_many_failed_confirmation_attempts">Too many incorrect attempts. Try again in <xliff:g id="number">%d</xliff:g> seconds.</string>
     <!-- Label for button to confirm picker selection [CHAR_LIMIT=20] -->
     <string name="okay">OK</string>
     <!-- Title of dialog asking the user if they really want to remove the screen lock [CHAR LIMIT=30]-->

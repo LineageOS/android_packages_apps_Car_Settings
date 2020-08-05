@@ -35,6 +35,7 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.TextViewInputDisabler;
 
 import java.util.Arrays;
 
@@ -57,6 +58,11 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     private int mUserId;
     private boolean mIsPin;
     private byte[] mEnteredPassword;
+
+    private ConfirmLockLockoutHelper mConfirmLockLockoutHelper;
+
+    private TextViewInputDisabler mPasswordEntryInputDisabler;
+    private InputMethodManager mImm;
 
     /**
      * Factory method for creating fragment in PIN mode.
@@ -100,12 +106,15 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         } else {
             throw new RuntimeException("The activity must implement CheckLockListener");
         }
+
+        mUserId = UserHandle.myUserId();
+        mConfirmLockLockoutHelper = ConfirmLockLockoutHelper.getInstance(requireContext(), mUserId);
+        mImm = requireContext().getSystemService(InputMethodManager.class);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mUserId = UserHandle.myUserId();
         Bundle args = getArguments();
         if (args != null) {
             mIsPin = args.getBoolean(EXTRA_IS_PIN);
@@ -117,7 +126,24 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
         mPasswordField = view.findViewById(R.id.password_entry);
+        mPasswordEntryInputDisabler = new TextViewInputDisabler(mPasswordField);
         mMsgView = view.findViewById(R.id.message);
+        mConfirmLockLockoutHelper.setConfirmLockUIController(
+                new ConfirmLockLockoutHelper.ConfirmLockUIController() {
+                    @Override
+                    public void setErrorText(String text) {
+                        mMsgView.setText(text);
+                    }
+
+                    @Override
+                    public void refreshUI(boolean isLockedOut) {
+                        if (mIsPin) {
+                            updatePinEntry(isLockedOut);
+                        } else {
+                            updatePasswordEntry(isLockedOut);
+                        }
+                    }
+                });
 
         if (mIsPin) {
             initPinView(view);
@@ -137,6 +163,20 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         if (mCheckLockWorker != null) {
             mCheckLockWorker.setListener(this::onCheckCompleted);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        mConfirmLockLockoutHelper.onResumeUI();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        mConfirmLockLockoutHelper.onPauseUI();
     }
 
     @Override
@@ -259,13 +299,17 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     }
 
     @VisibleForTesting
-    void onCheckCompleted(boolean lockMatched) {
+    void onCheckCompleted(boolean lockMatched, int timeoutMs) {
         if (lockMatched) {
             mCheckLockListener.onLockVerified(mEnteredPassword);
         } else {
-            setErrorMessage();
-            if (mIsPin) {
-                mPinPad.setEnabled(true);
+            if (timeoutMs > 0) {
+                mConfirmLockLockoutHelper.onCheckCompletedWithTimeout(timeoutMs);
+            } else {
+                setErrorMessage();
+                if (mIsPin) {
+                    mPinPad.setEnabled(true);
+                }
             }
         }
 
@@ -277,5 +321,28 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     private void setErrorMessage() {
         mMsgView.setText(
                 mIsPin ? R.string.lockscreen_wrong_pin : R.string.lockscreen_wrong_password);
+    }
+
+    private void updatePasswordEntry(boolean isLockedOut) {
+        mPasswordField.setEnabled(!isLockedOut);
+        mPasswordEntryInputDisabler.setInputEnabled(!isLockedOut);
+        if (isLockedOut) {
+            if (mImm != null) {
+                mImm.hideSoftInputFromWindow(mPasswordField.getWindowToken(), /* flags= */ 0);
+            }
+        } else {
+            mPasswordField.requestFocus();
+        }
+    }
+
+    private void updatePinEntry(boolean isLockedOut) {
+        mPinPad.setEnabled(!isLockedOut);
+        if (isLockedOut) {
+            if (mImm != null) {
+                mImm.hideSoftInputFromWindow(mPinPad.getWindowToken(), /* flags= */ 0);
+            }
+        } else {
+            mPinPad.requestFocus();
+        }
     }
 }
