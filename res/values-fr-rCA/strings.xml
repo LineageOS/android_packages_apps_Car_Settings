@@ -342,7 +342,7 @@
     <string name="usage_access_title" msgid="7153427122072303254">"Accès aux données utilisation"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"L\'accès aux données d\'utilisation permet à une application d\'effectuer le suivi des applications que vous utilisez, de la fréquence d\'utilisation, du fournisseur de services, des paramètres de langue et d\'autres détails."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Gestion du Wi-Fi"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou supprimer des réseaux, ou à lancer un point d\'accès local uniquement."</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou retirer des réseaux, ou à lancer un point d\'accès local uniquement."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Plus"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
@@ -521,7 +521,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Supprimer le compte"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Supprimer le compte?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"La suppression de ce compte entraînera la suppression de tous les messages, les contacts et les autres données de l\'appareil."</string>
-    <string name="remove_account_error_title" msgid="8368044943174826635">"Impossible de supprimer le compte."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Impossible de retirer le compte."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Synchronisation du compte"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"La synchronisation est activée pour <xliff:g id="ID_1">%1$d</xliff:g> éléments sur <xliff:g id="ID_2">%2$d</xliff:g>"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"La synchronisation est activée pour tous les éléments"</string>
@@ -627,8 +627,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Effacer les authentifiants"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"Supprimer tous les certificats"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Voulez-vous supprimer l\'intégralité du contenu?"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Retirer tous les certificats"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Voulez-vous retirer l\'intégralité du contenu?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Le stockage des authentifiants est effacé."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Impossible d\'effacer le stockage des authentifiants."</string>
     <string name="forget" msgid="3971143908183848527">"Oublier"</string>

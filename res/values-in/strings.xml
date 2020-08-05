@@ -70,7 +70,7 @@
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Lihat paket"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Penggunaan kuota aplikasi"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"terbatas"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tanggal penyetelan ulang siklus penggunaan"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tanggal peresetan siklus penggunaan"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Tanggal setiap bulannya:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Setel"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Peringatan &amp; batas data"</string>
@@ -208,7 +208,7 @@
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Mesin saat ini"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Laju Bicara"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Tinggi nada"</string>
-    <string name="tts_reset" msgid="6289481549801844709">"Setel ulang"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"Reset"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Suara"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume dering"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volume navigasi"</string>
@@ -393,8 +393,8 @@
     <string name="show_dev_already" msgid="1678087328973865736">"Tidak perlu, Anda sudah menjadi developer."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsi developer"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opsi reset"</string>
-    <string name="reset_options_summary" msgid="5508201367420359293">"Menyetel ulang jaringan, aplikasi, atau perangkat"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Setel ulang jaringan"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"Mereset jaringan, aplikasi, atau perangkat"</string>
+    <string name="reset_network_title" msgid="1284233059990797263">"Reset jaringan"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Tindakan ini akan menyetel ulang semua setelan jaringan, termasuk:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Kuota"</li></string>
@@ -403,21 +403,21 @@
     <string name="reset_esim_desc" msgid="1437276625485586740">"Tindakan ini tidak akan membatalkan paket layanan Anda."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Tidak dapat menyetel ulang eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Pilih jaringan"</string>
-    <string name="reset_network_button_text" msgid="8374174455632765033">"Setel ulang setelan"</string>
-    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Setel ulang?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Setel ulang semua setelan jaringan? Tindakan ini tidak dapat diurungkan!"</string>
-    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Setel ulang setelan"</string>
-    <string name="reset_network_complete_toast" msgid="3804108209431416865">"Setelan jaringan telah disetel ulang"</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"Setel ulang preferensi aplikasi"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Reset setelan"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Reset?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Reset semua setelan jaringan? Tindakan ini tidak dapat diurungkan!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Reset setelan"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"Setelan jaringan telah direset"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Reset preferensi aplikasi"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Tindakan ini akan menyetel ulang semua preferensi untuk:\n\n"<li>"Aplikasi yang dinonaktifkan"</li>\n<li>"Notifikasi aplikasi yang dinonaktifkan"</li>\n<li>"Aplikasi default untuk tindakan"</li>\n<li>"Batasan data latar belakang untuk aplikasi"</li>\n<li>"Batasan izin apa pun"</li>\n\n"Data aplikasi Anda tidak akan hilang."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Setel ulang aplikasi"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferensi aplikasi telah disetel ulang"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reset aplikasi"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferensi aplikasi telah direset"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Hapus semua (reset ke setelan pabrik)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Tindakan ini akan menghapus semua data dari head unit kendaraan, termasuk:\n\n"<li>"Akun Google Anda"</li>\n<li>"Data sistem dan aplikasi serta setelan"</li>\n<li>"Aplikasi yang diunduh"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Saat ini Anda telah login ke akun berikut:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Ada pengguna lain yang aktif di kendaraan ini."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Setel ulang kendaraan"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Setel ulang?"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Reset kendaraan"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Reset?"</string>
     <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Hapus semua informasi pribadi dan aplikasi yang didownload? Tindakan ini tidak dapat diurungkan!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Hapus semua"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Menghapus"</string>
