@@ -26,7 +26,7 @@ import com.android.car.settings.R;
 import com.android.car.ui.preference.CarUiTwoActionPreference;
 
 /** A preference that can be clicked on one side and toggled on another. */
-public class MasterSwitchPreference extends CarUiTwoActionPreference {
+public class SeparateSwitchPreference extends CarUiTwoActionPreference {
 
     /**
      * Interface definition for a callback to be invoked when the switch is toggled.
@@ -38,7 +38,7 @@ public class MasterSwitchPreference extends CarUiTwoActionPreference {
          * @param preference the preference whose switch was toggled.
          * @param isChecked  the new state of the switch.
          */
-        void onToggle(MasterSwitchPreference preference, boolean isChecked);
+        void onToggle(SeparateSwitchPreference preference, boolean isChecked);
     }
 
     private Switch mSwitch;
@@ -52,29 +52,29 @@ public class MasterSwitchPreference extends CarUiTwoActionPreference {
                 }
             };
 
-    public MasterSwitchPreference(Context context, AttributeSet attrs,
+    public SeparateSwitchPreference(Context context, AttributeSet attrs,
             int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
 
-    public MasterSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SeparateSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
-    public MasterSwitchPreference(Context context, AttributeSet attrs) {
+    public SeparateSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public MasterSwitchPreference(Context context) {
+    public SeparateSwitchPreference(Context context) {
         super(context);
         init();
     }
 
     private void init() {
-        setWidgetLayoutResource(R.layout.master_switch_widget);
+        setWidgetLayoutResource(R.layout.switch_widget);
     }
 
     /** Sets the listener that handles the change in switch state. */
@@ -89,7 +89,7 @@ public class MasterSwitchPreference extends CarUiTwoActionPreference {
 
     @Override
     protected void onBindWidgetFrame(View widgetFrame) {
-        mSwitch = widgetFrame.findViewById(R.id.master_switch);
+        mSwitch = widgetFrame.findViewById(R.id.switch_widget);
         mSwitch.setChecked(mIsChecked);
         mSwitch.setOnCheckedChangeListener(mCheckedChangeListener);
         widgetFrame.setOnClickListener(v -> setSwitchChecked(!mIsChecked));

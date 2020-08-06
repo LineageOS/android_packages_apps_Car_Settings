@@ -31,8 +31,8 @@
         android:title="@string/reset_app_pref_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.system.MasterClearFragment"
-        android:key="@string/pk_master_clear"
-        android:title="@string/master_clear_title"
-        settings:controller="com.android.car.settings.system.MasterClearEntryPreferenceController"/>
+        android:fragment="com.android.car.settings.system.FactoryResetFragment"
+        android:key="@string/pk_factory_reset"
+        android:title="@string/factory_reset_title"
+        settings:controller="com.android.car.settings.system.FactoryResetEntryPreferenceController"/>
 </PreferenceScreen>

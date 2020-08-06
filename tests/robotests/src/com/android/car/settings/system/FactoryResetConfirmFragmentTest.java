@@ -49,9 +49,9 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowApplication;
 
-/** Unit test for {@link MasterClearConfirmFragment}. */
+/** Unit test for {@link FactoryResetConfirmFragment}. */
 @RunWith(RobolectricTestRunner.class)
-public class MasterClearConfirmFragmentTest {
+public class FactoryResetConfirmFragmentTest {
 
     @Mock
     private PersistentDataBlockManager mPersistentDataBlockManager;
@@ -59,7 +59,7 @@ public class MasterClearConfirmFragmentTest {
     private OemLockManager mOemLockManager;
 
     private Context mContext;
-    private MasterClearConfirmFragment mFragment;
+    private FactoryResetConfirmFragment mFragment;
 
     @Before
     public void setUp() {
@@ -77,7 +77,7 @@ public class MasterClearConfirmFragmentTest {
         // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
         CarUiInstallerRobolectric.install();
 
-        mFragment = FragmentController.of(new MasterClearConfirmFragment()).setup();
+        mFragment = FragmentController.of(new FactoryResetConfirmFragment()).setup();
 
         // Default to not provisioned.
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
@@ -92,7 +92,7 @@ public class MasterClearConfirmFragmentTest {
 
     @Test
     public void confirmClicked_sendsResetIntent() {
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -106,9 +106,9 @@ public class MasterClearConfirmFragmentTest {
     @Test
     public void confirmClicked_resetEsimFalse_resetIntentReflectsChoice() {
         PreferenceManager.getDefaultSharedPreferences(mContext).edit().putBoolean(
-                mContext.getString(R.string.pk_master_clear_reset_esim), false).commit();
+                mContext.getString(R.string.pk_factory_reset_reset_esim), false).commit();
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getExtras().getBoolean(Intent.EXTRA_WIPE_ESIMS)).isEqualTo(false);
@@ -118,7 +118,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_pdbManagerNull_sendsResetIntent() {
         ShadowApplication.getInstance().removeSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -128,7 +128,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_oemUnlockAllowed_doesNotWipePdb() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(true);
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         verify(mPersistentDataBlockManager, never()).wipe();
     }
@@ -137,7 +137,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_oemUnlockAllowed_sendsResetIntent() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(true);
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -147,7 +147,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_noOemUnlockAllowed_notProvisioned_doesNotWipePdb() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(false);
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         verify(mPersistentDataBlockManager, never()).wipe();
     }
@@ -156,7 +156,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_noOemUnlockAllowed_notProvisioned_sendsResetIntent() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(false);
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -168,7 +168,7 @@ public class MasterClearConfirmFragmentTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 1);
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         verify(mPersistentDataBlockManager).wipe();
     }
@@ -179,13 +179,13 @@ public class MasterClearConfirmFragmentTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 1);
 
-        triggerMasterClearConfirmButton(mFragment.requireActivity());
+        triggerFactoryResetConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
     }
 
-    private void triggerMasterClearConfirmButton(Activity activity) {
+    private void triggerFactoryResetConfirmButton(Activity activity) {
         ToolbarController toolbar = requireToolbar(activity);
         toolbar.getMenuItems().get(0).performClick();
         Robolectric.flushForegroundThreadScheduler();

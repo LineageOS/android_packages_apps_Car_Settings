@@ -21,14 +21,14 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.MasterSwitchPreference;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.common.SeparateSwitchPreference;
 
 /**
  * Controller which determines if the top level entry into Wi-Fi settings should be displayed
  * based on device capabilities.
  */
-public class WifiEntryPreferenceController extends PreferenceController<MasterSwitchPreference>
+public class WifiEntryPreferenceController extends PreferenceController<SeparateSwitchPreference>
         implements CarWifiManager.Listener {
 
     private CarWifiManager mCarWifiManager;
@@ -39,8 +39,8 @@ public class WifiEntryPreferenceController extends PreferenceController<MasterSw
     }
 
     @Override
-    protected Class<MasterSwitchPreference> getPreferenceType() {
-        return MasterSwitchPreference.class;
+    protected Class<SeparateSwitchPreference> getPreferenceType() {
+        return SeparateSwitchPreference.class;
     }
 
     @Override

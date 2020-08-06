@@ -44,18 +44,18 @@ import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowUserManager;
 
-/** Unit test for {@link MasterClearAccountsPreferenceController}. */
+/** Unit test for {@link FactoryResetAccountsPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowAccountManager.class})
-public class MasterClearAccountsPreferenceControllerTest {
+public class FactoryResetAccountsPreferenceControllerTest {
 
     private final int mUserId = UserHandle.myUserId();
 
     private Context mContext;
     private PreferenceGroup mPreferenceGroup;
-    private PreferenceControllerTestHelper<MasterClearAccountsPreferenceController>
+    private PreferenceControllerTestHelper<FactoryResetAccountsPreferenceController>
             mControllerHelper;
-    private MasterClearAccountsPreferenceController mController;
+    private FactoryResetAccountsPreferenceController mController;
 
     @Before
     public void setUp() {
@@ -66,7 +66,7 @@ public class MasterClearAccountsPreferenceControllerTest {
 
         mPreferenceGroup = new PreferenceCategory(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                MasterClearAccountsPreferenceController.class, mPreferenceGroup);
+                FactoryResetAccountsPreferenceController.class, mPreferenceGroup);
         mController = mControllerHelper.getController();
     }
 
@@ -76,7 +76,7 @@ public class MasterClearAccountsPreferenceControllerTest {
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
         assertThat(mPreferenceGroup.getPreference(0).getTitle()).isEqualTo(
-                mContext.getString(R.string.master_clear_accounts));
+                mContext.getString(R.string.factory_reset_accounts));
     }
 
     @Test
