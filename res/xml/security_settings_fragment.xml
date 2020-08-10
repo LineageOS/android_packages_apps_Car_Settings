@@ -43,4 +43,12 @@
             android:action="com.android.credentials.RESET"
             android:targetPackage="com.android.car.settings"/>
     </Preference>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_system_extra_settings"
+        settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
+        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+            <extra android:name="com.android.settings.category"
+                   android:value="com.android.settings.category.ia.security"/>
+        </intent>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>
