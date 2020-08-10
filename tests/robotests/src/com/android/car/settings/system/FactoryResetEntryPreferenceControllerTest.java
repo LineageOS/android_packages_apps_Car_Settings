@@ -43,13 +43,13 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadows.ShadowUserManager;
 
-/** Unit test for {@link MasterClearEntryPreferenceController}. */
+/** Unit test for {@link FactoryResetEntryPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-public class MasterClearEntryPreferenceControllerTest {
+public class FactoryResetEntryPreferenceControllerTest {
     private static final int SECONDARY_USER_ID = 10;
 
     private Context mContext;
-    private MasterClearEntryPreferenceController mController;
+    private FactoryResetEntryPreferenceController mController;
 
     @Before
     public void setUp() {
@@ -57,7 +57,7 @@ public class MasterClearEntryPreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
 
         mController = new PreferenceControllerTestHelper<>(mContext,
-                MasterClearEntryPreferenceController.class,
+                FactoryResetEntryPreferenceController.class,
                 new Preference(mContext)).getController();
     }
 

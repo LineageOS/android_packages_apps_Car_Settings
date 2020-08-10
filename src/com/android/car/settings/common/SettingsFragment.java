@@ -328,7 +328,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
     // Allocates the next available startActivityForResult request index.
     private int allocateRequestIndex(ActivityResultCallback callback) {
-        // Sanity check that we haven't exhausted the request index space.
+        // Check that we haven't exhausted the request index space.
         if (mActivityResultCallbackMap.size() >= MAX_NUM_PENDING_ACTIVITY_RESULT_CALLBACKS) {
             throw new IllegalStateException(
                     "Too many pending activity result callbacks.");

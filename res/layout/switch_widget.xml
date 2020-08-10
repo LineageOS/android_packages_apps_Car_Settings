@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2019 The Android Open Source Project
+    Copyright 2018 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,16 +15,11 @@
     limitations under the License.
 -->
 
-<PreferenceScreen
+<Switch
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/master_clear_confirm_title"
-    android:key="@string/psk_master_clear_confirm">
-    <com.android.car.ui.preference.CarUiPreference
-        android:key="@string/pk_master_clear_confirm_desc"
-        android:selectable="false"
-        android:title="@string/master_clear_confirm_desc"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
-        settings:singleLineTitle="false"
-        settings:showChevron="false"/>
-</PreferenceScreen>
+    android:id="@+id/switch_widget"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:clickable="false"
+    android:focusable="false"/>

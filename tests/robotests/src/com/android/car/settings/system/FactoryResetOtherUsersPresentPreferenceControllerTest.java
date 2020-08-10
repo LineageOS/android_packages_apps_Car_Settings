@@ -42,15 +42,15 @@ import org.robolectric.annotation.Config;
 
 import java.util.Collections;
 
-/** Unit test for {@link MasterClearOtherUsersPresentPreferenceController}. */
+/** Unit test for {@link FactoryResetOtherUsersPresentPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowUserHelper.class})
-public class MasterClearOtherUsersPresentPreferenceControllerTest {
+public class FactoryResetOtherUsersPresentPreferenceControllerTest {
 
     @Mock
     private UserHelper mUserHelper;
     private Preference mPreference;
-    private MasterClearOtherUsersPresentPreferenceController mController;
+    private FactoryResetOtherUsersPresentPreferenceController mController;
 
     @Before
     public void setUp() {
@@ -59,9 +59,9 @@ public class MasterClearOtherUsersPresentPreferenceControllerTest {
 
         Context context = RuntimeEnvironment.application;
         mPreference = new Preference(context);
-        PreferenceControllerTestHelper<MasterClearOtherUsersPresentPreferenceController>
+        PreferenceControllerTestHelper<FactoryResetOtherUsersPresentPreferenceController>
                 controllerHelper = new PreferenceControllerTestHelper<>(context,
-                MasterClearOtherUsersPresentPreferenceController.class, mPreference);
+                FactoryResetOtherUsersPresentPreferenceController.class, mPreference);
         controllerHelper.markState(Lifecycle.State.STARTED);
         mController = controllerHelper.getController();
     }

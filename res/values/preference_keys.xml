@@ -375,7 +375,7 @@
     <!-- Reset Options -->
     <string name="pk_reset_network" translatable="false">reset_network</string>
     <string name="pk_reset_app_pref" translatable="false">reset_app_pref</string>
-    <string name="pk_master_clear" translatable="false">master_clear</string>
+    <string name="pk_factory_reset" translatable="false">factory_reset</string>
 
     <!-- Reset Network -->
     <string name="pk_reset_network_items" translatable="false">reset_network_items</string>
@@ -383,15 +383,15 @@
     <string name="pk_reset_network_subscription" translatable="false">reset_network_subscription
     </string>
 
-    <!-- Master Clear -->
-    <string name="pk_master_clear_desc" translatable="false">master_clear_desc</string>
-    <string name="pk_master_clear_account_list" translatable="false">master_clear_account_list
+    <!-- Factory Clear -->
+    <string name="pk_factory_reset_desc" translatable="false">factory_reset_desc</string>
+    <string name="pk_factory_reset_account_list" translatable="false">factory_reset_account_list
     </string>
-    <string name="pk_master_clear_other_users_present" translatable="false">
-        master_clear_other_users_present
+    <string name="pk_factory_reset_other_users_present" translatable="false">
+        factory_reset_other_users_present
     </string>
-    <string name="pk_master_clear_reset_esim" translatable="false">master_clear_reset_esim</string>
-    <string name="pk_master_clear_confirm_desc" translatable="false">master_clear_confirm_desc
+    <string name="pk_factory_reset_reset_esim" translatable="false">factory_reset_reset_esim</string>
+    <string name="pk_factory_reset_confirm_desc" translatable="false">factory_reset_confirm_desc
     </string>
 
     <!-- Developer Options -->

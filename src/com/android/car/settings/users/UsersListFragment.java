@@ -81,7 +81,7 @@ public class UsersListFragment extends SettingsFragment implements
 
     /**
      * Will perform a factory reset. Copied from
-     * {@link com.android.settings.MasterClearConfirm#doMasterClear()}
+     * {@link com.android.settings.MainClearConfirm#doMainClear()}
      */
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mConfirmExitRetailModeListener = arguments -> {

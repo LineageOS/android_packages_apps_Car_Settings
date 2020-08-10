@@ -39,13 +39,13 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowEuiccManager;
 
-/** Unit test for {@link MasterClearResetEsimPreferenceController}. */
+/** Unit test for {@link FactoryResetEsimPreferenceController}. */
 @Ignore
 @RunWith(RobolectricTestRunner.class)
-public class MasterClearResetEsimPreferenceControllerTest {
+public class FactoryResetEsimPreferenceControllerTest {
 
     private Context mContext;
-    private MasterClearResetEsimPreferenceController mController;
+    private FactoryResetEsimPreferenceController mController;
 
     @Before
     public void setUp() {
@@ -55,7 +55,7 @@ public class MasterClearResetEsimPreferenceControllerTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.EUICC_PROVISIONED, 1);
 
         mController = new PreferenceControllerTestHelper<>(mContext,
-                MasterClearResetEsimPreferenceController.class,
+                FactoryResetEsimPreferenceController.class,
                 new SwitchPreference(mContext)).getController();
     }
 
@@ -66,7 +66,7 @@ public class MasterClearResetEsimPreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_showEsimPropertyTrue_available() {
-        SystemProperties.set(MasterClearResetEsimPreferenceController.KEY_SHOW_ESIM_RESET_CHECKBOX,
+        SystemProperties.set(FactoryResetEsimPreferenceController.KEY_SHOW_ESIM_RESET_CHECKBOX,
                 Boolean.TRUE.toString());
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
@@ -74,7 +74,7 @@ public class MasterClearResetEsimPreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_showEsimPropertyFalse_unsupportedOnDevice() {
-        SystemProperties.set(MasterClearResetEsimPreferenceController.KEY_SHOW_ESIM_RESET_CHECKBOX,
+        SystemProperties.set(FactoryResetEsimPreferenceController.KEY_SHOW_ESIM_RESET_CHECKBOX,
                 Boolean.FALSE.toString());
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
