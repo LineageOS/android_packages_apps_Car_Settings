@@ -15,6 +15,10 @@ android_test {
         "androidx.test.rules",
         "androidx.test.ext.junit",
         "androidx.test.ext.truth",
+        "mockito-target-minus-junit4",
+        "platform-test-annotations",
+        "truth-prebuilt",
+        "testng",
     ],
 
     instrumentation_for: "CarSettingsForTesting",
