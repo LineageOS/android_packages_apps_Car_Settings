@@ -38,6 +38,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
 
     private boolean mHasPendingResult;
     private boolean mLockMatched;
+    private int mThrottleTimeoutMs;
     private boolean mCheckInProgress;
     private Listener mListener;
     private LockPatternUtils mLockPatternUtils;
@@ -56,8 +57,9 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
         if (mListener == null) {
             mHasPendingResult = true;
             mLockMatched = matched;
+            mThrottleTimeoutMs = throttleTimeoutMs;
         } else {
-            mListener.onCheckCompleted(matched);
+            mListener.onCheckCompleted(matched, throttleTimeoutMs);
         }
     }
 
@@ -68,7 +70,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
         mListener = listener;
         if (mListener != null && mHasPendingResult) {
             mHasPendingResult = false;
-            mListener.onCheckCompleted(mLockMatched);
+            mListener.onCheckCompleted(mLockMatched, mThrottleTimeoutMs);
         }
     }
 
@@ -111,8 +113,10 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
     interface Listener {
         /**
          * @param matched Whether the entered password matches the stored record.
+         * @param timeoutMs The remaining amount of time that the user is locked out from
+         *                  retrying the password challenge.
          */
-        void onCheckCompleted(boolean matched);
+        void onCheckCompleted(boolean matched, int timeoutMs);
     }
 }
 
