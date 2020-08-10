@@ -30,8 +30,8 @@ import android.net.wifi.WifiManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.test.core.app.ApplicationProvider;
 
-import com.android.car.settings.common.MasterSwitchPreference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.SeparateSwitchPreference;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
 
 import org.junit.After;
@@ -50,7 +50,7 @@ import org.robolectric.annotation.Config;
 public class WifiEntryPreferenceControllerTest {
 
     private Context mContext;
-    private MasterSwitchPreference mMasterSwitchPreference;
+    private SeparateSwitchPreference mSeparateSwitchPreference;
     private PreferenceControllerTestHelper<WifiEntryPreferenceController> mControllerHelper;
     private WifiEntryPreferenceController mController;
     @Mock
@@ -61,9 +61,9 @@ public class WifiEntryPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarWifiManager.setInstance(mCarWifiManager);
         mContext = ApplicationProvider.getApplicationContext();
-        mMasterSwitchPreference = new MasterSwitchPreference(mContext);
+        mSeparateSwitchPreference = new SeparateSwitchPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                WifiEntryPreferenceController.class, mMasterSwitchPreference);
+                WifiEntryPreferenceController.class, mSeparateSwitchPreference);
         mController = mControllerHelper.getController();
     }
 
@@ -76,10 +76,10 @@ public class WifiEntryPreferenceControllerTest {
     public void onCreate_setsListener() {
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
                 PackageManager.FEATURE_WIFI, /* supported= */ true);
-        assertThat(mMasterSwitchPreference.getSwitchToggleListener()).isNull();
+        assertThat(mSeparateSwitchPreference.getSwitchToggleListener()).isNull();
 
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        assertThat(mMasterSwitchPreference.getSwitchToggleListener()).isNotNull();
+        assertThat(mSeparateSwitchPreference.getSwitchToggleListener()).isNotNull();
     }
 
     @Test
@@ -87,11 +87,11 @@ public class WifiEntryPreferenceControllerTest {
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
                 PackageManager.FEATURE_WIFI, /* supported= */ true);
         when(mCarWifiManager.isWifiEnabled()).thenReturn(false);
-        mMasterSwitchPreference.setSwitchChecked(true);
+        mSeparateSwitchPreference.setSwitchChecked(true);
 
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
-        assertThat(mMasterSwitchPreference.isSwitchChecked()).isFalse();
+        assertThat(mSeparateSwitchPreference.isSwitchChecked()).isFalse();
     }
 
     @Test
@@ -99,11 +99,11 @@ public class WifiEntryPreferenceControllerTest {
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
                 PackageManager.FEATURE_WIFI, /* supported= */ true);
         when(mCarWifiManager.isWifiEnabled()).thenReturn(true);
-        mMasterSwitchPreference.setSwitchChecked(false);
+        mSeparateSwitchPreference.setSwitchChecked(false);
 
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
-        assertThat(mMasterSwitchPreference.isSwitchChecked()).isTrue();
+        assertThat(mSeparateSwitchPreference.isSwitchChecked()).isTrue();
     }
 
     @Test
@@ -116,7 +116,7 @@ public class WifiEntryPreferenceControllerTest {
         when(mCarWifiManager.isWifiEnabled()).thenReturn(false);
         mController.onWifiStateChanged(WifiManager.WIFI_STATE_DISABLED);
 
-        assertThat(mMasterSwitchPreference.isSwitchChecked()).isFalse();
+        assertThat(mSeparateSwitchPreference.isSwitchChecked()).isFalse();
     }
 
     @Test
@@ -129,7 +129,7 @@ public class WifiEntryPreferenceControllerTest {
         when(mCarWifiManager.isWifiEnabled()).thenReturn(true);
         mController.onWifiStateChanged(WifiManager.WIFI_STATE_ENABLED);
 
-        assertThat(mMasterSwitchPreference.isSwitchChecked()).isTrue();
+        assertThat(mSeparateSwitchPreference.isSwitchChecked()).isTrue();
     }
 
     @Test
@@ -141,7 +141,7 @@ public class WifiEntryPreferenceControllerTest {
 
         mController.onWifiStateChanged(WifiManager.WIFI_STATE_ENABLING);
 
-        assertThat(mMasterSwitchPreference.isSwitchChecked()).isTrue();
+        assertThat(mSeparateSwitchPreference.isSwitchChecked()).isTrue();
     }
 
     @Test

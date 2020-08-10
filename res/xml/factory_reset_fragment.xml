@@ -18,30 +18,30 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/master_clear_title"
-    android:key="@string/psk_master_clear">
+    android:title="@string/factory_reset_title"
+    android:key="@string/psk_factory_reset">
     <com.android.car.ui.preference.CarUiPreference
-        android:key="@string/pk_master_clear_desc"
+        android:key="@string/pk_factory_reset_desc"
         android:selectable="false"
-        android:title="@string/master_clear_desc"
+        android:title="@string/factory_reset_desc"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
         settings:singleLineTitle="false"
         settings:showChevron="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_master_clear_account_list"
+        android:key="@string/pk_factory_reset_account_list"
         android:selectable="false"
-        android:title="@string/master_clear_accounts"
-        settings:controller="com.android.car.settings.system.MasterClearAccountsPreferenceController"/>
+        android:title="@string/factory_reset_accounts"
+        settings:controller="com.android.car.settings.system.FactoryResetAccountsPreferenceController"/>
     <Preference
-        android:key="@string/pk_master_clear_other_users_present"
+        android:key="@string/pk_factory_reset_other_users_present"
         android:selectable="false"
-        android:title="@string/master_clear_other_users_present"
-        settings:controller="com.android.car.settings.system.MasterClearOtherUsersPresentPreferenceController"
+        android:title="@string/factory_reset_other_users_present"
+        settings:controller="com.android.car.settings.system.FactoryResetOtherUsersPresentPreferenceController"
         settings:singleLineTitle="false"/>
     <CheckBoxPreference
         android:defaultValue="true"
-        android:key="@string/pk_master_clear_reset_esim"
+        android:key="@string/pk_factory_reset_reset_esim"
         android:summary="@string/reset_esim_desc"
         android:title="@string/reset_esim_title"
-        settings:controller="com.android.car.settings.system.MasterClearResetEsimPreferenceController"/>
+        settings:controller="com.android.car.settings.system.FactoryResetEsimPreferenceController"/>
 </PreferenceScreen>

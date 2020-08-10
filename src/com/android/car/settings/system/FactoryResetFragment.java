@@ -40,39 +40,39 @@ import java.util.List;
 /**
  * Presents the user with the option to reset the head unit to its default "factory" state. If a
  * user confirms, the user is first required to authenticate and then presented with a secondary
- * confirmation: {@link MasterClearConfirmFragment}. The user must scroll to the bottom of the page
+ * confirmation: {@link FactoryResetConfirmFragment}. The user must scroll to the bottom of the page
  * before proceeding.
  */
-public class MasterClearFragment extends SettingsFragment implements ActivityResultCallback {
+public class FactoryResetFragment extends SettingsFragment implements ActivityResultCallback {
 
     // Arbitrary request code for starting CheckLockActivity when the reset button is clicked.
     @VisibleForTesting
     static final int CHECK_LOCK_REQUEST_CODE = 88;
 
-    private MenuItem mMasterClearButton;
+    private MenuItem mFactoryResetButton;
 
     @Override
     public List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mMasterClearButton);
+        return Collections.singletonList(mFactoryResetButton);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mMasterClearButton = new MenuItem.Builder(getContext())
-                .setTitle(R.string.master_clear_button_text)
+        mFactoryResetButton = new MenuItem.Builder(getContext())
+                .setTitle(R.string.factory_reset_button_text)
                 .setEnabled(false)
                 .setOnClickListener(i ->
                         startActivityForResult(new Intent(getContext(), CheckLockActivity.class),
-                                CHECK_LOCK_REQUEST_CODE, /* callback= */ MasterClearFragment.this))
+                                CHECK_LOCK_REQUEST_CODE, /* callback= */ FactoryResetFragment.this))
                 .build();
     }
 
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.master_clear_fragment;
+        return R.xml.factory_reset_fragment;
     }
 
     @Override
@@ -84,13 +84,13 @@ public class MasterClearFragment extends SettingsFragment implements ActivityRes
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        mMasterClearButton.setEnabled(isAtEnd());
+                        mFactoryResetButton.setEnabled(isAtEnd());
                         recyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                     }
                 });
         recyclerView.setOnScrollChangeListener((v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
             if (isAtEnd()) {
-                mMasterClearButton.setEnabled(true);
+                mFactoryResetButton.setEnabled(true);
             }
         });
     }
@@ -98,7 +98,7 @@ public class MasterClearFragment extends SettingsFragment implements ActivityRes
     @Override
     public void processActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == CHECK_LOCK_REQUEST_CODE && resultCode == RESULT_OK) {
-            launchFragment(new MasterClearConfirmFragment());
+            launchFragment(new FactoryResetConfirmFragment());
         }
     }
 
