@@ -48,13 +48,14 @@ import java.util.Set;
  * Displays the currently signed in accounts on the vehicle to inform the user that they will be
  * removed during a factory reset.
  */
-public class MasterClearAccountsPreferenceController extends PreferenceController<PreferenceGroup> {
+public class FactoryResetAccountsPreferenceController
+        extends PreferenceController<PreferenceGroup> {
 
-    private static final Logger LOG = new Logger(MasterClearAccountsPreferenceController.class);
+    private static final Logger LOG = new Logger(FactoryResetAccountsPreferenceController.class);
 
     private final Map<Account, Preference> mAccountPreferenceMap = new ArrayMap<>();
 
-    public MasterClearAccountsPreferenceController(Context context, String preferenceKey,
+    public FactoryResetAccountsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
@@ -67,8 +68,8 @@ public class MasterClearAccountsPreferenceController extends PreferenceControlle
     @Override
     protected void onCreateInternal() {
         getPreference().addPreference(
-                createPreference(getContext().getString(R.string.master_clear_accounts), /* icon= */
-                        null));
+                createPreference(getContext().getString(R.string.factory_reset_accounts),
+                        /* icon= */ null));
     }
 
     @Override

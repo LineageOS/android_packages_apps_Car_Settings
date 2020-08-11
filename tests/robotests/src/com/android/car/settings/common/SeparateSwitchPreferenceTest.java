@@ -40,12 +40,12 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 @RunWith(RobolectricTestRunner.class)
-public class MasterSwitchPreferenceTest {
+public class SeparateSwitchPreferenceTest {
 
     private PreferenceViewHolder mViewHolder;
-    private MasterSwitchPreference mMasterSwitchPreference;
+    private SeparateSwitchPreference mSeparateSwitchPreference;
     @Mock
-    private MasterSwitchPreference.OnSwitchToggleListener mListener;
+    private SeparateSwitchPreference.OnSwitchToggleListener mListener;
 
     @Before
     public void setUp() {
@@ -53,54 +53,54 @@ public class MasterSwitchPreferenceTest {
         Context context = RuntimeEnvironment.application;
         Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
 
-        mMasterSwitchPreference = new MasterSwitchPreference(context);
-        View rootView = View.inflate(themedContext, mMasterSwitchPreference.getLayoutResource(),
+        mSeparateSwitchPreference = new SeparateSwitchPreference(context);
+        View rootView = View.inflate(themedContext, mSeparateSwitchPreference.getLayoutResource(),
                 null);
-        View.inflate(themedContext, R.layout.master_switch_widget,
+        View.inflate(themedContext, R.layout.switch_widget,
                 rootView.findViewById(android.R.id.widget_frame));
         mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);
-        mMasterSwitchPreference.onBindViewHolder(mViewHolder);
-        mMasterSwitchPreference.setSwitchChecked(false);
-        mMasterSwitchPreference.setSwitchToggleListener(mListener);
+        mSeparateSwitchPreference.onBindViewHolder(mViewHolder);
+        mSeparateSwitchPreference.setSwitchChecked(false);
+        mSeparateSwitchPreference.setSwitchToggleListener(mListener);
     }
 
     @Test
     public void widgetClicked_callsListener() {
         mViewHolder.findViewById(android.R.id.widget_frame).performClick();
 
-        verify(mListener).onToggle(mMasterSwitchPreference, true);
+        verify(mListener).onToggle(mSeparateSwitchPreference, true);
     }
 
     @Test
     public void widgetClicked_togglesSwitchState() {
         mViewHolder.findViewById(android.R.id.widget_frame).performClick();
 
-        assertThat(mMasterSwitchPreference.isSwitchChecked()).isTrue();
+        assertThat(mSeparateSwitchPreference.isSwitchChecked()).isTrue();
     }
 
     @Test
     public void setSwitchState_listenerSetAndButtonVisible_oppositeBool_callsListener() {
-        mMasterSwitchPreference.setSwitchChecked(true);
-        verify(mListener).onToggle(mMasterSwitchPreference, true);
+        mSeparateSwitchPreference.setSwitchChecked(true);
+        verify(mListener).onToggle(mSeparateSwitchPreference, true);
     }
 
     @Test
     public void setSwitchState_listenerSetAndButtonVisible_oppositeBool_togglesSwitchState() {
-        mMasterSwitchPreference.setSwitchChecked(true);
-        assertThat(mMasterSwitchPreference.isSwitchChecked()).isTrue();
+        mSeparateSwitchPreference.setSwitchChecked(true);
+        assertThat(mSeparateSwitchPreference.isSwitchChecked()).isTrue();
     }
 
     @Test
     public void setSwitchState_listenerSetAndButtonVisible_sameBool_listenerNotCalled() {
-        mMasterSwitchPreference.setSwitchChecked(false);
-        verify(mListener, never()).onToggle(eq(mMasterSwitchPreference), anyBoolean());
+        mSeparateSwitchPreference.setSwitchChecked(false);
+        verify(mListener, never()).onToggle(eq(mSeparateSwitchPreference), anyBoolean());
     }
 
     @Test
     public void setSwitchState_listenerSetAndButtonInvisible_oppositeBool_listenerNotCalled() {
-        mMasterSwitchPreference.showAction(false);
+        mSeparateSwitchPreference.showAction(false);
 
-        mMasterSwitchPreference.setSwitchChecked(true);
-        verify(mListener, never()).onToggle(eq(mMasterSwitchPreference), anyBoolean());
+        mSeparateSwitchPreference.setSwitchChecked(true);
+        verify(mListener, never()).onToggle(eq(mSeparateSwitchPreference), anyBoolean());
     }
 }

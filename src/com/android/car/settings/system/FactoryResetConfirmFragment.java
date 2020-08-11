@@ -40,7 +40,7 @@ import java.util.List;
  * Presents the user with a final warning before issuing the request to reset the head unit to its
  * default "factory" state.
  */
-public class MasterClearConfirmFragment extends SettingsFragment {
+public class FactoryResetConfirmFragment extends SettingsFragment {
 
     private MenuItem mClearConfirmButton;
 
@@ -89,7 +89,7 @@ public class MasterClearConfirmFragment extends SettingsFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.master_clear_confirm_fragment;
+        return R.xml.factory_reset_confirm_fragment;
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MasterClearConfirmFragment extends SettingsFragment {
         super.onCreate(savedInstanceState);
 
         mClearConfirmButton = new MenuItem.Builder(getContext())
-                .setTitle(R.string.master_clear_confirm_button_text)
+                .setTitle(R.string.factory_reset_confirm_button_text)
                 .setOnClickListener(mFinalClickListener)
                 .build();
     }
@@ -116,8 +116,8 @@ public class MasterClearConfirmFragment extends SettingsFragment {
         ProgressDialog progressDialog = new ProgressDialog(requireContext());
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
-        progressDialog.setTitle(requireContext().getString(R.string.master_clear_progress_title));
-        progressDialog.setMessage(requireContext().getString(R.string.master_clear_progress_text));
+        progressDialog.setTitle(requireContext().getString(R.string.factory_reset_progress_title));
+        progressDialog.setMessage(requireContext().getString(R.string.factory_reset_progress_text));
         return progressDialog;
     }
 
@@ -134,6 +134,6 @@ public class MasterClearConfirmFragment extends SettingsFragment {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(
                 requireContext());
         return sharedPreferences.getBoolean(
-                requireContext().getString(R.string.pk_master_clear_reset_esim), false);
+                requireContext().getString(R.string.pk_factory_reset_reset_esim), false);
     }
 }

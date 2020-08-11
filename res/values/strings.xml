@@ -886,26 +886,26 @@
     <!-- Reset app preferences complete toast text. [CHAR LIMIT=75] -->
     <string name="reset_app_pref_complete_toast">App preferences have been reset</string>
 
-    <!-- Master Clear --><skip/>
+    <!-- Factory Clear --><skip/>
     <!-- Button title to factory data reset the entire device. The "(factory reset)" part is optional for translation. [CHAR LIMIT=40]-->
-    <string name="master_clear_title">Erase all data (factory reset)</string>
+    <string name="factory_reset_title">Erase all data (factory reset)</string>
     <!-- Message on screen after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="master_clear_desc">This will erase all data from your vehicle\u2019s head unit, including:\n\n<li>Your Google account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
+    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s head unit, including:\n\n<li>Your Google account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
     <!-- The list of current accounts follows this text. [CHAR LIMIT=NONE] -->
-    <string name="master_clear_accounts">You are currently signed into the following accounts:</string>
+    <string name="factory_reset_accounts">You are currently signed into the following accounts:</string>
     <!-- Message on screen if other users are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="master_clear_other_users_present">There are other users present on this vehicle.</string>
+    <string name="factory_reset_other_users_present">There are other users present on this vehicle.</string>
     <!-- Button on screen after user selects factory reset. [CHAR LIMIT=30] -->
-    <string name="master_clear_button_text">Reset vehicle</string>
-    <!-- Master clear confirmation screen title. [CHAR LIMIT=30] -->
-    <string name="master_clear_confirm_title">Reset?</string>
+    <string name="factory_reset_button_text">Reset vehicle</string>
+    <!-- Factory clear confirmation screen title. [CHAR LIMIT=30] -->
+    <string name="factory_reset_confirm_title">Reset?</string>
     <!-- Message on screen after user selects Reset device button. [CHAR LIMIT=NONE] -->
-    <string name="master_clear_confirm_desc">Erase all your personal information and downloaded apps?  You can\u2019t undo this action!</string>
-    <string name="master_clear_confirm_button_text">Erase everything</string>
-    <!-- Master clear progress screen title. [CHAR LIMIT=30] -->
-    <string name="master_clear_progress_title" >Erasing</string>
-    <!-- Master clear progress screen text. [CHAR LIMIT=75] -->
-    <string name="master_clear_progress_text">Please wait...</string>
+    <string name="factory_reset_confirm_desc">Erase all your personal information and downloaded apps?  You can\u2019t undo this action!</string>
+    <string name="factory_reset_confirm_button_text">Erase everything</string>
+    <!-- Factory clear progress screen title. [CHAR LIMIT=30] -->
+    <string name="factory_reset_progress_title" >Erasing</string>
+    <!-- Factory clear progress screen text. [CHAR LIMIT=75] -->
+    <string name="factory_reset_progress_text">Please wait...</string>
 
     <!-- Date and time settings --><skip/>
     <!-- Main Settings screen setting option name to go into the date and time settings-->
@@ -1221,6 +1221,8 @@
     <string name="lockpattern_settings_help_how_to_record">How to draw an unlock pattern</string>
     <!-- Message shown when error is encountered when saving pattern [CHAR LIMIT=40] -->
     <string name="error_saving_lockpattern">Error saving pattern</string>
+    <!-- Message shown when in pattern unlock screen after too many incorrect attempts [CHAR LIMIT=120]-->
+    <string name="lockpattern_too_many_failed_confirmation_attempts">Too many incorrect attempts. Try again in <xliff:g id="number">%d</xliff:g> seconds.</string>
     <!-- Label for button to confirm picker selection [CHAR_LIMIT=20] -->
     <string name="okay">OK</string>
     <!-- Title of dialog asking the user if they really want to remove the screen lock [CHAR LIMIT=30]-->

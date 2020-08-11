@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2018 The Android Open Source Project
+    Copyright 2019 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,11 +15,16 @@
     limitations under the License.
 -->
 
-<Switch
+<PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/master_switch"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical"
-    android:clickable="false"
-    android:focusable="false"/>
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/factory_reset_confirm_title"
+    android:key="@string/psk_factory_reset_confirm">
+    <com.android.car.ui.preference.CarUiPreference
+        android:key="@string/pk_factory_reset_confirm_desc"
+        android:selectable="false"
+        android:title="@string/factory_reset_confirm_desc"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
+        settings:singleLineTitle="false"
+        settings:showChevron="false"/>
+</PreferenceScreen>

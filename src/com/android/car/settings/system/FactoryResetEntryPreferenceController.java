@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,25 +16,29 @@
 
 package com.android.car.settings.system;
 
+import static android.os.UserManager.DISALLOW_FACTORY_RESET;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.os.UserManager;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.users.UserHelper;
 
 /**
- * Displays a warning message on the factory reset screen when multiple switchable users are present
- * on the vehicle.
+ * Controller which determines if factory clear (aka "factory reset") should be displayed based on
+ * user status.
  */
-public class MasterClearOtherUsersPresentPreferenceController extends
-        PreferenceController<Preference> {
+public class FactoryResetEntryPreferenceController extends PreferenceController<Preference> {
 
-    public MasterClearOtherUsersPresentPreferenceController(Context context, String preferenceKey,
+    private final UserManager mUserManager;
+
+    public FactoryResetEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+        mUserManager = UserManager.get(context);
     }
 
     @Override
@@ -43,8 +47,17 @@ public class MasterClearOtherUsersPresentPreferenceController extends
     }
 
     @Override
-    protected void updateState(Preference preference) {
-        UserHelper userHelper = UserHelper.getInstance(getContext());
-        preference.setVisible(!userHelper.getAllSwitchableUsers().isEmpty());
+    public int getAvailabilityStatus() {
+        return isUserRestricted() ? DISABLED_FOR_USER : AVAILABLE;
+    }
+
+    private boolean isUserRestricted() {
+        return !(mUserManager.isAdminUser() || isDemoUser())
+                || mUserManager.hasUserRestriction(DISALLOW_FACTORY_RESET);
+    }
+
+    private boolean isDemoUser() {
+        return UserManager.isDeviceInDemoMode(getContext())
+                && mUserManager.isDemoUser();
     }
 }

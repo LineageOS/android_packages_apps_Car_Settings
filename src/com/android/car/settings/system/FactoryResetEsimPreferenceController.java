@@ -28,13 +28,13 @@ import com.android.car.settings.common.FragmentController;
  * Factory reset specific version of {@link ResetEsimPreferenceController} that is only available if
  * the system property {@code masterclear.allow_retain_esim_profiles_after_fdr} is also true.
  */
-public class MasterClearResetEsimPreferenceController extends ResetEsimPreferenceController {
+public class FactoryResetEsimPreferenceController extends ResetEsimPreferenceController {
 
     @VisibleForTesting
     static final String KEY_SHOW_ESIM_RESET_CHECKBOX =
             "masterclear.allow_retain_esim_profiles_after_fdr";
 
-    public MasterClearResetEsimPreferenceController(Context context, String preferenceKey,
+    public FactoryResetEsimPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }

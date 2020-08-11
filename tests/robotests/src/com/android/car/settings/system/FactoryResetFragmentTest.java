@@ -19,7 +19,7 @@ package com.android.car.settings.system;
 import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
 
-import static com.android.car.settings.system.MasterClearFragment.CHECK_LOCK_REQUEST_CODE;
+import static com.android.car.settings.system.FactoryResetFragment.CHECK_LOCK_REQUEST_CODE;
 import static com.android.car.ui.core.CarUi.requireToolbar;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -53,13 +53,13 @@ import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowApplication;
 
-/** Unit test for {@link MasterClearFragment}. */
+/** Unit test for {@link FactoryResetFragment}. */
 @Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowAccountManager.class, ShadowUserManager.class})
-public class MasterClearFragmentTest {
+public class FactoryResetFragmentTest {
 
-    private MasterClearFragment mFragment;
+    private FactoryResetFragment mFragment;
 
     @Before
     public void setUp() {
@@ -73,7 +73,7 @@ public class MasterClearFragmentTest {
         Shadows.shadowOf(context.getPackageManager())
                 .setSystemFeature(PackageManager.FEATURE_AUTOMOTIVE, true);
 
-        mFragment = FragmentController.of(new MasterClearFragment()).setup();
+        mFragment = FragmentController.of(new FactoryResetFragment()).setup();
     }
 
     @After
@@ -82,10 +82,10 @@ public class MasterClearFragmentTest {
     }
 
     @Test
-    public void masterClearButtonClicked_launchesCheckLockActivity() {
-        MenuItem masterClearButton = findMasterClearButton(mFragment.requireActivity());
-        masterClearButton.setEnabled(true);
-        masterClearButton.performClick();
+    public void factoryResetButtonClicked_launchesCheckLockActivity() {
+        MenuItem factoryResetButton = findFactoryResetButton(mFragment.requireActivity());
+        factoryResetButton.setEnabled(true);
+        factoryResetButton.performClick();
 
         Intent startedIntent = ShadowApplication.getInstance().getNextStartedActivity();
         assertThat(startedIntent.getComponent().getClassName()).isEqualTo(
@@ -93,13 +93,13 @@ public class MasterClearFragmentTest {
     }
 
     @Test
-    public void processActivityResult_resultOk_launchesMasterClearConfirmFragment() {
+    public void processActivityResult_resultOk_launchesFactoryResetConfirmFragment() {
         mFragment.processActivityResult(CHECK_LOCK_REQUEST_CODE, RESULT_OK, /* data= */ null);
 
         Fragment launchedFragment = mFragment.getFragmentManager().findFragmentById(
                 R.id.fragment_container);
 
-        assertThat(launchedFragment).isInstanceOf(MasterClearConfirmFragment.class);
+        assertThat(launchedFragment).isInstanceOf(FactoryResetConfirmFragment.class);
     }
 
     @Test
@@ -109,10 +109,10 @@ public class MasterClearFragmentTest {
         Fragment launchedFragment = mFragment.getFragmentManager().findFragmentById(
                 R.id.fragment_container);
 
-        assertThat(launchedFragment).isInstanceOf(MasterClearFragment.class);
+        assertThat(launchedFragment).isInstanceOf(FactoryResetFragment.class);
     }
 
-    private MenuItem findMasterClearButton(Activity activity) {
+    private MenuItem findFactoryResetButton(Activity activity) {
         ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
     }
