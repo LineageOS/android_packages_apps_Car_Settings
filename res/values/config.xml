@@ -27,7 +27,7 @@
     <!-- Whether Wi-Fi Mac address should be shown or not. -->
     <bool name="config_show_wifi_mac_address">true</bool>
     <!-- Whether to show regulatory info or not. -->
-    <bool name="config_show_regulatory_info">true</bool>
+    <bool name="config_show_regulatory_info">false</bool>
     <!-- Whether premium SMS should be shown or not. -->
     <bool name="config_show_premium_sms">true</bool>
     <!-- Whether exit button in settings' root action bar should be shown or not -->
