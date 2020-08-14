@@ -412,16 +412,26 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएका अनुप्रयोगका सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"अनुप्रयोगका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं एपको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"एपहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"यस कार्यले तपाईंको सवारी साधनाको मुख्य भागबाट सम्पूर्ण डेटा मेटाउने छ, जसमा निम्न कुराहरू पर्दछन्:\n\n"<li>"तपाईंको Google खाता"</li>\n<li>"प्रणाली र अनुप्रयोगका डेटा तथा सेटिङहरू"</li>\n<li>"डाउनलोड गरिएका एपहरू"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"तपाईं अहिले निम्न खाताहरूमा साइन इन हुनुहुन्छ:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"यस सवारी साधनमा अन्य प्रयोगकर्ताहरू छन्।"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"सवारी साधन रिसेट गर्नुहोस्"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"रिसेट गर्ने हो?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"तपाईंका सबै व्यक्तिगत जानकारी र डाउनलोड गरिएका एपहरू मेट्ने हो? तपाईं यो कार्य अन्डू गर्न सक्नुहुन्न!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"सबै कुरा मेटाउनुहोस्"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"मेटाउँदै"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"कृपया प्रतीक्षा गर्नुहोला..."</string>
+    <!-- no translation found for factory_reset_title (4019066569214122052) -->
+    <skip />
+    <!-- no translation found for factory_reset_desc (7133390564019035242) -->
+    <skip />
+    <!-- no translation found for factory_reset_accounts (5523956654938834209) -->
+    <skip />
+    <!-- no translation found for factory_reset_other_users_present (3708751471946901936) -->
+    <skip />
+    <!-- no translation found for factory_reset_button_text (5364900277201550546) -->
+    <skip />
+    <!-- no translation found for factory_reset_confirm_title (569087764460471326) -->
+    <skip />
+    <!-- no translation found for factory_reset_confirm_desc (5075292788128840731) -->
+    <skip />
+    <!-- no translation found for factory_reset_confirm_button_text (1797490544756481809) -->
+    <skip />
+    <!-- no translation found for factory_reset_progress_title (4580937077054738173) -->
+    <skip />
+    <!-- no translation found for factory_reset_progress_text (7704636573522634757) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"मिति र समय"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"मिति, समय, समय क्षेत्र र प्रारूपहरू सेट गर्नुहोस्"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"स्वचालित मिति र समय"</string>
@@ -567,6 +577,8 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"प्याटर्न मिलेन"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलक शैली कोर्ने तरिका"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ढाँचा सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
+    <!-- no translation found for lockpattern_too_many_failed_confirmation_attempts (4636307830951251013) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"ठिक छ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रिन लक हटाउने हो?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"यस कार्यले जुनसुकै व्यक्तिलाई तपाईंको खातामाथि पहुँच राख्न दिने छ"</string>

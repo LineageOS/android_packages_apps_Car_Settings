@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"此操作將會重設下列所有偏好設定：\n\n"<li>"已停用的應用程式"</li>\n<li>"已停用的應用程式通知"</li>\n<li>"執行操作的預設應用程式"</li>\n<li>"應用程式的背景數據限制"</li>\n<li>"任何權限限制"</li>\n\n"您將不會失去任何應用程式資料。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重設應用程式"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重設應用程式偏好設定"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"清除所有資料 (回復原廠設定)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"此操作將清除汽車音響主機的所有資料，包括：\n\n"<li>"您的 Google 帳戶"</li>\n<li>"系統和應用程式資料及設定"</li>\n<li>"已下載的應用程式"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"您目前已登入以下帳戶："</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"此汽車上還有其他使用者。"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"重設汽車"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"要重設嗎？"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"您要清除所有個人資訊和已下載的應用程式嗎？您無法復原這項操作！"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"全部清除"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"正在清除"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"請稍候…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"清除所有資料 (回復原廠設定)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"此操作將清除汽車音響主機的所有資料，包括：\n\n"<li>"您的 Google 帳戶"</li>\n<li>"系統和應用程式資料及設定"</li>\n<li>"已下載的應用程式"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"您目前已登入以下帳戶："</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"此汽車上還有其他使用者。"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"重設汽車"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"要重設嗎？"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"您要清除所有個人資料和已下載的應用程式嗎？您無法復原這項操作！"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"全部清除"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"正在清除"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"請稍候…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和時間"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"設定日期、時間、時區和格式"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"自動設定日期和時間"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"圖案錯誤"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"如何畫出解鎖圖案"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"儲存鎖定圖案時發生錯誤"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"錯誤次數太多，請於 <xliff:g id="NUMBER">%d</xliff:g> 秒後再試。"</string>
     <string name="okay" msgid="4589873324439764349">"確定"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"要移除螢幕鎖定嗎？"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"這樣，任何人都能存取您的帳戶"</string>

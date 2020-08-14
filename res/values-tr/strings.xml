@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Bu işlem, şunlarla ilgili tüm tercihleri sıfırlayacaktır:\n\n"<li>"Devre dışı bırakılan uygulamalar"</li>\n<li>"Devre dışı bırakılan uygulama bildirimleri"</li>\n<li>"İşlemler için varsayılan uygulamalar"</li>\n<li>"Uygulamalar için arka plan verileri kısıtlamaları"</li>\n<li>"Tüm izin kısıtlamaları"</li>\n\n"Uygulama verileriniz kaybolmayacak."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Uygulamaları sıfırla"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Uygulama tercihleri sıfırlandı"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Tüm verileri sil (fabrika ayarları)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Bu işlem, aracınızın ana biriminden şunlar dahil tüm verileri siler:\n\n"<li>"Google hesabınız"</li>\n<li>"Sistem ve uygulama verileri ile ayarları"</li>\n<li>"İndirilen uygulamalar"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Şu anda oturum açmış olduğunuz hesaplar:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Bu araçta başka kullanıcılar da var."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Aracı sıfırla"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Sıfırlansın mı?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Tüm kişisel bilgileriniz ve indirdiğiniz uygulamalar silinsin mi? Bu işlem geri alınamaz!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Her şeyi sil"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Siliniyor"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Lütfen bekleyin..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Tüm verileri sil (sıfırla)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Bu işlem, aracınızın ana biriminden şunlar dahil tüm verileri siler:\n\n"<li>"Google hesabınız"</li>\n<li>"Sistem ve uygulama verileri ile ayarları"</li>\n<li>"İndirilen uygulamalar"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Şu anda oturum açmış olduğunuz hesaplar:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Bu araçta başka kullanıcılar da var."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Aracı sıfırla"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Sıfırlansın mı?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Tüm kişisel bilgileriniz ve indirdiğiniz uygulamalar silinsin mi? Bu işlem geri alınamaz."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Her şeyi sil"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Siliniyor"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Lütfen bekleyin..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Tarih ve saat"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Tarihi, saati, saat dilimini ve biçimleri ayarlayın"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Otomatik tarih ve saat"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Yanlış desen"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kilit açma deseni çizme"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Desen kaydedilirken hata oluştu"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Çok fazla yanlış giriş yapıldı. <xliff:g id="NUMBER">%d</xliff:g> saniye içinde tekrar deneyin."</string>
     <string name="okay" msgid="4589873324439764349">"Tamam"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ekran kilidi kaldırılsın mı?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu, başkalarının hesabınıza erişmesine izin verir"</string>

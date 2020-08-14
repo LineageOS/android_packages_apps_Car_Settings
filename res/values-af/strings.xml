@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Dit sal al die voorkeure terugstel vir:\n\n"<li>"Gedeaktiveerde programme"</li>\n<li>"Gedeaktiveerdeprogram-kennisgewings"</li>\n<li>"Verstekprogramme vir handelinge"</li>\n<li>"Agtergronddatabeperkings vir programme"</li>\n<li>"Enige toestemmingbeperkings"</li>\n\n"Jy sal geen programdata verloor nie."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Stel programme terug"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Programvoorkeure is teruggestel"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Vee alle data uit (fabriekterugstelling)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Dit sal alle data van jou voertuig se beheerpaneel uitvee, insluitend:\n\n"<li>"Jou Google-rekening"</li>\n<li>"Stelsel- en programdata en -instellings"</li>\n<li>"Afgelaaide programme"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Jy is tans aangemeld by die volgende rekeninge:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Daar is ander gebruikers op hierdie voertuig teenwoordig."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Stel voertuig terug"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Stel terug?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vee al jou persoonlike inligting en afgelaaide programme uit? Jy kan nie hierdie handeling ontdoen nie!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Vee alles uit"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Vee tans uit"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Wag asseblief …"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Vee alle data uit (fabriekterugstelling)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Dit sal alle data van jou voertuig se beheerpaneel uitvee, insluitend:\n\n"<li>"Jou Google-rekening"</li>\n<li>"Stelsel- en programdata en -instellings"</li>\n<li>"Afgelaaide programme"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Jy is tans aangemeld by die volgende rekeninge:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Daar is ander gebruikers op hierdie voertuig teenwoordig."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Stel voertuig terug"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Stel terug?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Vee al jou persoonlike inligting en afgelaaide programme uit? Jy kan nie hierdie handeling ontdoen nie!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Vee alles uit"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Vee tans uit"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Wag asseblief …"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum en tyd"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Stel datum, tyd, tydsones en formate"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Outomatiese datum en tyd"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Verkeerde patroon"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Hoe om \'n ontsluitpatroon te teken"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Kon nie patroon stoor nie"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Te veel verkeerde pogings. Probeer oor <xliff:g id="NUMBER">%d</xliff:g> sekondes weer."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Verwyder skermslot?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Dit sal enigiemand toegang tot jou rekening gee"</string>

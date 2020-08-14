@@ -428,16 +428,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"يؤدي ذلك إلى إعادة ضبط جميع الإعدادات المفضَّلة لما يلي:\n\n"<li>"التطبيقات الموقوفة"</li>\n<li>"إشعارات التطبيقات الموقوفة"</li>\n<li>"التطبيقات التلقائية للإجراءات"</li>\n<li>"القيود على البيانات الخلفية للتطبيقات"</li>\n<li>"أيّ قيود على الأذونات"</li>\n\n"ولن تفقد أيّ بيانات للتطبيقات."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"إعادة ضبط التطبيقات"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تم إعادة ضبط خيارات التطبيقات المفضّلة"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"محو جميع البيانات (factory reset)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"سيؤدي هذا الإجراء إلى محو جميع البيانات من الوحدة الأساسية لمركبتك، بما في ذلك:\n\n"<li>"حسابك على Google"</li>\n<li>"بيانات وإعدادات النظام والتطبيقات"</li>\n<li>"التطبيقات التي تم تنزيلها"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"الحسابات التي سجَّلت الدخول إليها حاليًا:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"هناك مستخدمون آخرون موجودون على هذه المركبة."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"إعادة ضبط المركبة"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"هل تريد إعادة الضبط؟"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"هل تريد محو جميع المعلومات الشخصية والتطبيقات التي تم تنزيلها؟ لا يمكنك التراجع عن هذا الإجراء."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"محو جميع المعلومات والتطبيقات"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"جارٍ محو البيانات"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"يُرجى الانتظار..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"محو جميع البيانات (إعادة الضبط على الإعدادات الأصلية)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"سيؤدي هذا الإجراء إلى محو جميع البيانات من الوحدة الأساسية لمركبتك، بما في ذلك:\n\n"<li>"حسابك على Google"</li>\n<li>"بيانات وإعدادات النظام والتطبيقات"</li>\n<li>"التطبيقات التي تم تنزيلها"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"الحسابات المسجَّل الدخول إليها حاليًا:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"هناك مستخدمون آخرون على هذه المركبة."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"إعادة ضبط المركبة"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"هل تريد إعادة الضبط؟"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"هل تريد محو جميع المعلومات الشخصية والتطبيقات التي تم تنزيلها؟ لا يمكنك التراجع عن هذا الإجراء."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"محو جميع البيانات"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"جارٍ محو البيانات"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"يُرجى الانتظار..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"التاريخ والوقت"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"تعيين التاريخ والوقت والمنطقة الزمنية والتنسيقات"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"التاريخ والوقت التلقائي"</string>
@@ -587,6 +587,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"نقش غير صحيح"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"كيفية رسم نقش فتح القفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"حدث خطأ أثناء حفظ النقش."</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تم إجراء عدد كبير جدًا من المحاولات غير الصحيحة. أعِد المحاولة خلال <xliff:g id="NUMBER">%d</xliff:g> ثانية."</string>
     <string name="okay" msgid="4589873324439764349">"حسنًا"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"هل تريد إزالة قفل الشاشة؟"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"سيؤدي هذا الإجراء إلى السماح لأي شخص بالدخول إلى حسابك."</string>

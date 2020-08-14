@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ការធ្វើបែបនេះ​នឹងកំណត់​ចំណូលចិត្ត​ទាំងអស់​ឡើងវិញសម្រាប់៖\n\n"<li>"កម្មវិធី​ដែលបានបិទ"</li>\n<li>"ការជូនដំណឹង​កម្មវិធីដែលបានបិទ"</li>\n<li>"កម្មវិធីលំនាំដើម​សម្រាប់​សកម្មភាពផ្សេងៗ"</li>\n<li>"ការដាក់កំហិតទិន្នន័យផ្ទៃខាងក្រោយ​លើកម្មវិធីផ្សេងៗ"</li>\n<li>"ការដាក់កំហិត​លើការអនុញ្ញាត​ទាំងឡាយ"</li>\n\n"អ្នកនឹងមិន​បាត់បង់ទិន្នន័យ​កម្មវិធីណាមួយឡើយ។"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"កំណត់​កម្មវិធី​ឡើងវិញ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"បាន​កំណត់​ចំណូល​ចិត្ត​កម្មវិធីឡើង​វិញ​ហើយ"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"លុប​ទិន្នន័យ​ទាំងអស់ (កំណត់ដូច​ដើម​ឡើងវិញ)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"ការធ្វើបែបនេះ​នឹងលុប​ទិន្នន័យ​ទាំងអស់​ពីឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​អ្នក រួមទាំង៖\n\n"<li>"កម្មវិធី​ដែលបាន​ទាញយក"</li>\n<li>"ទិន្នន័យ​កម្មវិធី និង​ប្រព័ន្ធ ព្រមទាំង​ការកំណត់"</li>\n<li>"គណនី Google របស់អ្នក"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"បច្ចុប្បន្ន​ អ្នក​បាន​ចូល​គណនី​ដូច​ខាង​ក្រោម៖"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"មាន​វត្តមានរបស់​អ្នកប្រើប្រាស់​ផ្សេងទៀត​នៅលើ​យានជំនិះនេះ។"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"កំណត់​យានជំនិះ​ឡើងវិញ"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"កំណត់ឡើងវិញ?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"លុប​ព័ត៌មាន​ផ្ទាល់ខ្លួន និង​កម្មវិធី​ដែលបាន​ទាញយក​ទាំងអស់​របស់អ្នក? អ្នក​មិនអាច​ត្រឡប់​សកម្មភាពនេះ​វិញបានទេ!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"លុប​អ្វីគ្រប់យ៉ាង"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"កំពុងលុប"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"សូម​រង់ចាំ..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"លុបទិន្នន័យទាំងអស់ (កំណត់ដូចចេញពីរោងចក្រ)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"ការធ្វើបែបនេះ​នឹងលុប​ទិន្នន័យ​ទាំងអស់​ពីឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​អ្នក រួមទាំង៖\n\n"<li>"កម្មវិធី​ដែលបាន​ទាញយក"</li>\n<li>"ទិន្នន័យ​កម្មវិធី និង​ប្រព័ន្ធ ព្រមទាំង​ការកំណត់"</li>\n<li>"គណនី Google របស់អ្នក"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"បច្ចុប្បន្ន​ អ្នក​បាន​ចូល​គណនី​ដូច​ខាង​ក្រោម៖"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"មាន​វត្តមានរបស់​អ្នកប្រើប្រាស់​ផ្សេងទៀត​នៅលើ​យានជំនិះនេះ។"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"កំណត់​យានជំនិះ​ឡើងវិញ"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"កំណត់ឡើងវិញឬ?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"លុប​ព័ត៌មាន​ផ្ទាល់ខ្លួន និង​កម្មវិធី​ដែលបាន​ទាញយក​ទាំងអស់​របស់អ្នក​ឬ? អ្នក​មិនអាច​ត្រឡប់​សកម្មភាពនេះ​វិញបានទេ!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"លុប​អ្វីគ្រប់យ៉ាង"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"កំពុងលុប"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"សូម​រង់ចាំ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"កាលបរិច្ឆេទ និង​ម៉ោង"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"កំណត់​កាលបរិច្ឆេទ ម៉ោង ល្វែងម៉ោង និង​ទម្រង់"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"កាលបរិច្ឆេទ និង​ម៉ោង​ស្វ័យ​ប្រវត្តិ"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"លំនាំ​មិន​ត្រឹមត្រូវ​ទេ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"របៀបគូរ​លំនាំ​ដោះ​សោ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"មាន​បញ្ហា​ក្នុងការរក្សាទុក​លំនាំ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ការព្យាយាម​ចូលខុស​ច្រើនដងពេក។ សូមព្យាយាម​ម្ដងទៀត​ក្នុងរយៈពេល <xliff:g id="NUMBER">%d</xliff:g> វិនាទី​។"</string>
     <string name="okay" msgid="4589873324439764349">"យល់ព្រម"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"លុប​ការ​ចាក់សោ​អេក្រង់?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"វា​នឹង​អនុញ្ញាត​ឱ្យ​នរណា​ម្នាក់​ចូល​ប្រើ​គណនី​របស់អ្នក"</string>

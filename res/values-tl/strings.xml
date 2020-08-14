@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Ire-reset nito ang lahat ng kagustuhan para sa:\n\n"<li>"Mga naka-disable na app"</li>\n<li>"Mga naka-disable na notification ng app"</li>\n<li>"Mga default na application para sa mga pagkilos"</li>\n<li>"Mga paghihigpit sa data ng background para sa mga app"</li>\n<li>"Anumang paghihigpit sa pahintulot"</li>\n\n"Hindi ka mawawalan ng anumang data ng app."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"I-reset ang mga app"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Na-reset na ang mga kagustuhan sa app"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Burahin lahat ng data (factory reset)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Buburahin nito ang lahat ng data mula sa head unit ng iyong sasakyan, kasama ang:\n\n"<li>"Iyong Google account"</li>\n<li>"Data ng system at app at mga setting"</li>\n<li>"Mga na-download na app"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Kasalukuyan kang naka-sign in sa mga sumusunod na account:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"May iba pang user sa sasakyang ito."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"I-reset ang sasakyan"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"I-reset?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Burahin ang lahat ng iyong personal na impormasyon at na-download na app? Hindi mo maaaring i-undo ang pagkilos na ito!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Burahin lahat"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Binubura"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Mangyaring maghintay..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Burahin lahat ng data (i-factory reset)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Buburahin nito ang lahat ng data mula sa head unit ng iyong sasakyan, kasama ang:\n\n"<li>"Google account mo"</li>\n<li>"Data at mga setting ng system at app"</li>\n<li>"Mga na-download na app"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Kasalukuyan kang naka-sign in sa mga sumusunod na account:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"May iba pang user sa sasakyang ito."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"I-reset ang sasakyan"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"I-reset?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Burahin ang lahat ng iyong personal na impormasyon at na-download na app? Hindi mo puwedeng i-undo ang pagkilos na ito!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Burahin lahat"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Binubura"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Maghintay..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Petsa at oras"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Itakda ang petsa, oras, time zone, at mga format"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Awtomatikong petsa at oras"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Maling pattern"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Paano gumuhit ng pattern sa pag-unlock"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Nagka-error sa pag-save ng pattern"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Masyadong maraming maling pagsubok. Subukan ulit sa loob ng <xliff:g id="NUMBER">%d</xliff:g> (na) segundo."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Alisin ang lock ng screen?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Papayagan nito ang sinuman na i-access ang iyong content"</string>

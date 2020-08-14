@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"คำสั่งนี้จะรีเซ็ตค่ากำหนดทั้งหมดของ:\n\n"<li>"แอปที่ปิดใช้"</li>\n<li>"การแจ้งเตือนของแอปที่ปิดใช้"</li>\n<li>"แอปพลิเคชันเริ่มต้นสำหรับการทำงานต่างๆ"</li>\n<li>"ข้อจำกัดข้อมูลในพื้นหลังสำหรับแอป"</li>\n<li>"ข้อจำกัดสิทธิ์ใดๆ"</li>\n\n"ข้อมูลของแอปจะไม่หายไป"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"รีเซ็ตแอป"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"รีเซ็ตค่ากำหนดของแอปแล้ว"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"ลบข้อมูล (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"การดำเนินการนี้จะลบข้อมูลทั้งหมดออกจากระบบเครื่องเสียงในยานพาหนะ โดยรวมถึงสิ่งต่อไปนี้\n\n"<li>"บัญชี Google ของคุณ"</li>\n<li>"ข้อมูลและการตั้งค่าของระบบและแอป"</li>\n<li>"แอปที่ดาวน์โหลด"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"คุณลงชื่อเข้าใช้บัญชีต่อไปนี้อยู่ในขณะนี้"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"มีผู้ใช้รายอื่นอยู่บนยานพาหนะคันนี้"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"รีเซ็ตยานพาหนะ"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"รีเซ็ตไหม"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ลบข้อมูลส่วนบุคคลและแอปที่ดาวน์โหลดทั้งหมดไหม คุณจะเลิกทำการดำเนินการนี้ไม่ได้"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ลบทุกอย่าง"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"กำลังลบ"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"โปรดรอสักครู่..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"ลบข้อมูล (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"การดำเนินการนี้จะลบข้อมูลทั้งหมดออกจากระบบเครื่องเสียงในยานพาหนะ โดยรวมถึงสิ่งต่อไปนี้\n\n"<li>"บัญชี Google ของคุณ"</li>\n<li>"ข้อมูลและการตั้งค่าของระบบและแอป"</li>\n<li>"แอปที่ดาวน์โหลด"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"คุณลงชื่อเข้าใช้บัญชีต่อไปนี้อยู่ในขณะนี้:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"มีผู้ใช้รายอื่นอยู่บนยานพาหนะคันนี้"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"รีเซ็ตยานพาหนะ"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"รีเซ็ตไหม"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"ลบข้อมูลส่วนบุคคลและแอปที่ดาวน์โหลดทั้งหมดไหม คุณจะเลิกทำการดำเนินการนี้ไม่ได้"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"ลบทุกอย่าง"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"กำลังลบ"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"โปรดรอสักครู่..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"วันที่และเวลา"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ตั้งวันที่ เวลา เขตเวลาและรูปแบบ"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"วันที่และเวลาอัตโนมัติ"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"รูปแบบไม่ถูกต้อง"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"วิธีวาดรูปแบบการปลดล็อก"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"เกิดข้อผิดพลาดในการบันทึกรูปแบบ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ดำเนินการไม่ถูกต้องหลายครั้งเกินไป ลองอีกครั้งใน <xliff:g id="NUMBER">%d</xliff:g> วินาที"</string>
     <string name="okay" msgid="4589873324439764349">"ตกลง"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"นำการล็อกหน้าจอออกไหม"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"การดำเนินการนี้จะทำให้ทุกคนเข้าถึงบัญชีของคุณได้"</string>

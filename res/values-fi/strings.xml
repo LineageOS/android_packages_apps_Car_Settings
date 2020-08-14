@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Kaikki seuraavien asetukset nollataan:\n\n"<li>"Käytöstä poistetut sovellukset"</li>\n<li>"Käytöstä poistetut sovellusilmoitukset"</li>\n<li>"Toimintojen oletussovellukset"</li>\n<li>"Sovellusten taustadatan käyttörajoitukset"</li>\n<li>"Käyttöoikeusrajoitukset"</li>\n\n"Et menetä mitään sovellusten dataa."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Nollaa sovellukset"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Sovellusasetukset on nollattu"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Poista data (tehdasasetusten palautus)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Tämä poistaa ajoneuvon pääyksiköstä kaiken datan, esimerkiksi\n\n"<li>"Google-tilisi"</li>\n<li>"järjestelmän ja sovellusten datan ja asetukset"</li>\n<li>"ladatut sovellukset"</li>"."</string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Olet kirjautuneena sisään seuraaville tileille:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Tällä ajoneuvolla on muita paikalla olevia käyttäjiä."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Nollaa ajoneuvo"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Nollataanko?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Haluatko poistaa kaikki henkilötiedot ja ladatut sovellukset? Tätä ei voi peruuttaa."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Poista kaikki"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Poistetaan"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Odota…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Poista kaikki data (tehdasasetuksiin)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Tämä poistaa ajoneuvon pääyksiköstä kaiken datan, esimerkiksi\n\n"<li>"Google-tilisi"</li>\n<li>"järjestelmän ja sovellusten datan ja asetukset"</li>\n<li>"ladatut sovellukset"</li>"."</string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Olet kirjautunut sisään seuraaville tileille:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Tällä ajoneuvolla on muita paikalla olevia käyttäjiä."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Nollaa ajoneuvo"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Nollataanko?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Haluatko poistaa kaikki henkilötiedot ja ladatut sovellukset? Tätä ei voi peruuttaa."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Poista kaikki"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Poistetaan"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Odota…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Päivämäärä ja aika"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Aseta päivämäärä, aika, aikavyöhyke ja formaatit"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automaattinen pvm. ja aika"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Väärä kuvio"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Lukituksenpoistokuvion piirtäminen"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Virhe tallennettaessa kuviota"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Liian monta virheellistä yritystä. Yritä uudelleen <xliff:g id="NUMBER">%d</xliff:g> sekunnin kuluttua."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Poistetaanko näytön lukitus?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Tämän avulla kuka tahansa voi päästä tilillesi"</string>

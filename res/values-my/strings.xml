@@ -413,16 +413,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"၎င်းက အောက်ပါတို့အားလုံးကို ပြင်ဆင်သတ်မှတ်ပါမည်-\n\n"<li>" အက်ပ်များ ပိတ်ခြင်း"</li>\n<li>" အက်ပ်အကြောင်းကြားချက်များ ပိတ်ခြင်း"</li>\n<li>" လုပ်ဆောင်ချက်အတွက် မူရင်းအက်ပ် သတ်မှတ်ခြင်း"</li>\n<li>" အက်ပ်များအတွက် နောက်ခံဒေတာအသုံးပြုမှု ကန့်သတ်ခြင်း"</li>\n<li>" ခွင့်ပြုမှု ကန့်သတ်ချက်အားလုံး"</li>\n\n"သင်၏အက်ပ်ဒေတာများကို ဆုံးရှုံးမည်မဟုတ်ပါ။"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"အက်ပ်များ ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"အက်ပ်သတ်မှတ်ချက်များ ပြင်ဆင်သတ်မှတ်ပြီးပါပြီ"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"ဒေတာအားလုံး ဖျက်ပါ (စက်ရုံထုတ်သတ်မှတ်ပါ)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"ဤသို့ပြုလုပ်ခြင်းကြောင့် သင့်စက်ပစ္စည်း၏ ဦးခန်းပိုင်းယူနစ်အတွင်းရှိ- \n\n"<li>"သင့် Google အကောင့်"</li>\n<li>"\'စနစ်\' နှင့် အက်ပ်ဒေတာများနှင့် ဆက်တင်များ"</li>\n<li>"ဒေါင်းလုဒ်လုပ်ထားသော အက်ပ်များ"</li>" အပါအဝင် ဒေတာအားလုံးကို ဖျက်ပါမည်။"</string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"သင်သည် လက်ရှိတွင် အောက်ပါအကောင့်များကို ဝင်ရောက်ထားပါသည်-"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ဤစက်ပစ္စည်းပေါ်တွင် အခြားအသုံးပြုသူများလည်း ရှိသည်။"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"စက်ပစ္စည်း ပြင်ဆင်သတ်မှတ်ရန်"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ပြင်ဆင်သတ်မှတ်လိုပါသလား။"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"သင့်ကိုယ်ရေးကိုယ်တာအချက်လက်များနှင့် ဒေါင်းလုဒ်ချထားသောအက်ပ်များ အားလုံးကို ဖျက်မည်လား။ ဤလုပ်ဆောင်ချက်ကို တစ်ဆင့် နောက်ပြန်၍ မရပါ။"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"အားလုံးကိုဖျက်ရန်"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"ဖျက်နေသည်"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"ခဏစောင့်ပါ..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"ဒေတာအားလုံးဖျက်ခြင်း (စက်ရုံထုတ်ဆက်တင် သတ်မှတ်ရန်)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"၎င်းသည် သင့်စက်ပစ္စည်း၏ စက်အထိုင်မှ - \n\n"<li>"သင့် Google အကောင့်"</li>\n<li>"\'စနစ်\' နှင့် အက်ပ်ဒေတာများနှင့် ဆက်တင်များ"</li>\n<li>"ဒေါင်းလုဒ်လုပ်ထားသော အက်ပ်များ"</li>" အပါအဝင် ဒေတာအားလုံးကို ဖျက်ပါမည်"</string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"သင်သည် လက်ရှိတွင် အောက်ပါအကောင့်များသို့ လက်မှတ်ထိုးဝင်ထားသည် -"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"ဤယာဉ်ပေါ်တွင် အခြားအသုံးပြုသူများလည်း ရှိသည်။"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"ယာဉ် ပြင်ဆင်သတ်မှတ်ရန်"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"ပြင်ဆင်သတ်မှတ်မလား။"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"သင့်ကိုယ်ရေးကိုယ်တာအချက်လက်များနှင့် ဒေါင်းလုဒ်ချထားသောအက်ပ်များ အားလုံးကို ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို တစ်ဆင့် နောက်ပြန်၍ မရပါ။"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"အားလုံးကိုဖျက်ရန်"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"ဖျက်နေသည်"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"ခဏစောင့်ပါ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ရက်စွဲနှင့် အချိန်"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ရက်စွဲ၊ အချိန်၊ စံတော်ချိန်နှင့် စနစ်များကို သတ်မှတ်ပါ"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"ရက်စွဲနှင့် အချိန် အလိုအလျောက်"</string>
@@ -568,6 +568,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ပုံစံ မှားနေသည်"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"လော့ခ်ဖွင့်ရန်ပုံစံ ဆွဲနည်း"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ပုံစံကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"အလွန်များသည့် မမှန်ကန်သော ကြိုးစားမှုများရှိသည်။ <xliff:g id="NUMBER">%d</xliff:g> စက္ကန့်ကြာမှ ထပ်မံကြိုးစားပါ။"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"မျက်နှာပြင်လော့ခ် ဖယ်လိုသလား။"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"၎င်းက မည်သူ့ကိုမဆို သင့်အကောင့်ထဲ ဝင်ခွင့်ပေးမည်"</string>

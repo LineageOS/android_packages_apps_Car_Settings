@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөрдүн жөндөөлөрү баштапкы абалга келтирилет:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык дайындары сакталып калат."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Баштапкы абалга келтирүү"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Бардык дайын-даректерди өчүрүү"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Унааңыздын негизги тутумундагы бардык маалымат өчүрүлөт, тактап айтканда:\n\n"<li>"Google аккаунтуңуз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайындары"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Бул унаада башка колдонуучулар бар."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Унааны баштапкы абалга келтирүү"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Кайра коесузбу?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Бардык жеке маалыматтарыңыз жана жүктөп алынган колдонмолоруңуз тазалансынбы? Бул аракетти кайра кайтара албайсыз!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Баарын тазалоо"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Тазаланууда"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Күтө туруңуз…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Бардык дайындарды өчүрүү (демейки жөндөөлөргө кайтаруу)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Унааңыздын негизги тутумундагы бардык маалымат өчүрүлөт, тактап айтканда:\n\n"<li>"Google аккаунтуңуз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайындары"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Бул унаада башка колдонуучулар бар."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Унааны баштапкы абалга келтирүү"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Баштапкы абалга келтирилсинби?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Бардык жеке маалыматтарыңыз жана жүктөп алынган колдонмолоруңуз тазалансынбы? Бул аракетти кайра кайтара албайсыз!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Баарын тазалоо"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Өчүрүлүүдө"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Күтө туруңуз…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Күн жана убакыт"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Күндү, убакытты, убакыт алкагын, жана форматтарды жөндөө"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Тармактын күнү жана убакыты"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Графикалык ачкыч туура эмес"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Графикалык ачкычты кантип тартуу керек"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Графикалык ачкычты сактоо катасы"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Туура эмес аракеттер өтө көп болду. <xliff:g id="NUMBER">%d</xliff:g> секунддан кийин кайталап көрүңүз."</string>
     <string name="okay" msgid="4589873324439764349">"Жарайт"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экран кулпусу өчүрүлсүнбү?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ушуну менен аккаунтуңузга каалаган киши кире берет"</string>

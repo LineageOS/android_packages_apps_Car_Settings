@@ -420,16 +420,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Zresetuje to wszystkie ustawienia:\n\n"<li>"wyłączonych aplikacji,"</li>\n<li>"wyłączonych powiadomień z aplikacji,"</li>\n<li>"domyślnych aplikacji dla wybranych czynności,"</li>\n<li>"ograniczeń korzystania przez aplikacje z danych w tle,"</li>\n<li>"wszystkich ograniczeń dotyczących uprawnień."</li>\n\n"Nie stracisz żadnych danych aplikacji."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Resetuj aplikacje"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Ustawienia aplikacji zostały zresetowane"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Wykasuj wszystkie dane"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Zostaną usunięte wszystkie dane z radioodtwarzacza pojazdu, między innymi:\n\n"<li>"Twoje konto Google,"</li>\n<li>"dane i ustawienia aplikacji i systemu,"</li>\n<li>"pobrane aplikacje."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"W tej chwili używasz kont:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"W tym pojeździe są też zapisani inni użytkownicy."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Zresetuj pojazd"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Zresetować?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Wymazać wszystkie Twoje dane osobowe i pobrane aplikacje? Tego działania nie można cofnąć."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Wymaż wszystko"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Wymazuję"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Zaczekaj…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Wykasuj wszystkie dane"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Zostaną usunięte wszystkie dane z radioodtwarzacza pojazdu, między innymi:\n\n"<li>"Twoje konto Google,"</li>\n<li>"dane i ustawienia aplikacji i systemu,"</li>\n<li>"pobrane aplikacje."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"W tej chwili używasz kont:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Z tego pojazdu korzystają też inni użytkownicy."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Zresetuj pojazd"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Zresetować?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Wymazać wszystkie Twoje dane osobowe i pobrane aplikacje? Tego działania nie można cofnąć."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Wymaż wszystko"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Kasuję"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Czekaj…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data i godzina"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ustaw datę, godzinę, strefę czasową i formaty."</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i godzina"</string>
@@ -577,6 +577,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nieprawidłowy wzór"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Jak narysować wzór odblokowania"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Błąd podczas zapisywania wzoru"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Zbyt wiele nieudanych prób. Spróbuj ponownie za <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Usunąć blokadę ekranu?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Każdy będzie mógł mieć dostęp do Twojego konta"</string>

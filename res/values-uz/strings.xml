@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Quyidagi sozlamalar asliga qaytariladi:\n\n "<li>"Faolsizlantirilgan ilovalar"</li>\n" "<li>"Faolsizlantirilgan ilovalarning bildirishnomalari"</li>\n" "<li>"Muayyan amallar uchun birlamchi ilovalar"</li>\n" "<li>"Fonda internetdan foydalanishga nisbatan cheklovlar"</li>\n" "<li>"Ruxsatlar uchun barcha cheklovlar"</li>\n\n"Ilovalarga tegishli ma’lumotlar saqlanib qoladi."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"OK"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Ilova parametrlari tiklandi"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Barcha ma’lumotlarni tozalash (zavod sozlamalarini tiklash)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Bunda avtomobilning bosh qurilmasidagi barcha axborot, jumladan, quyidagilar tozalab tashlanadi:\n\n"<li>"Google hisobingiz"</li>\n<li>"Tizim va ilovaga oid axborot hamda sozlamalar"</li>\n<li>"Yuklab olingan ilovalar"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Siz hozir tizimga quyidagi hisoblardan kirgansiz:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Bu avtomobilda boshqa foydalanuvchilar ham bor."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Avtomobilni asliga qaytarish"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Asliga qaytarilsinmi?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Barcha shaxsiy maʼlumotlaringiz va yuklab olingan ilovalar oʻchirib tashlansinmi? Bu amalni ortga qaytarish imkonsiz!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Hammasini tozalash"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Tozalanmoqda"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Kutib turing..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Barcha axborotni tozalash (zavod sozlamalarini tiklash)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Bunda avtomobilning bosh qurilmasidagi barcha axborot, jumladan, quyidagilar tozalab tashlanadi:\n\n"<li>"Google hisobingiz"</li>\n<li>"Tizim va ilovaga oid axborot hamda sozlamalar"</li>\n<li>"Yuklab olingan ilovalar"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Siz hozir tizimga quyidagi hisoblardan kirgansiz:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Bu avtomobilda boshqa foydalanuvchilar ham bor."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Avtomobilni asliga qaytarish"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Asliga qaytarilsinmi?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Barcha shaxsiy maʼlumotlaringiz va yuklab olingan ilovalar oʻchirib tashlansinmi? Bu amalni ortga qaytarish imkonsiz!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Hammasini tozalash"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Tozalanmoqda"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Kutib turing…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Sana va vaqt"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Sana, vaqt, vaqt zonasi, &amp; formatlarini o‘rnatish"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Avtomatik sana &amp; va"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Grafik kalit xato"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Grafik kalit qanday chiziladi"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Grafik kalit saqlanmadi"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Juda koʻp notoʻgʻri urinildi! <xliff:g id="NUMBER">%d</xliff:g> soniyadan keyin qayta urining."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ekran qulfi olib tashlansinmi?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu hammaga hisobingizga kirish imkonini beradi"</string>

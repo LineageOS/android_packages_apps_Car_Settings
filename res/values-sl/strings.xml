@@ -420,16 +420,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"S tem bodo ponastavljene vse nastavitve za:\n\n"<li>" onemogočene aplikacije,"</li>\n<li>" obvestila za onemogočene aplikacije,"</li>\n<li>" privzete aplikacije za dejanja,"</li>\n<li>" omejitev prenosa podatkov v ozadju za aplikacije,"</li>\n<li>" omejitve dovoljenj."</li>\n\n" Podatkov aplikacij ne boste izgubili."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ponastavi aplikacije"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Nastavitve aplikacij so ponastavljene"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Izbriši vse podatke (pon. na tov. nast.)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"S tem boste iz glavne enote vozila izbrisali vse podatke, med drugim:\n\n"<li>"Račun za Google"</li>\n<li>"Podatke in nastavitve sistema in aplikacij"</li>\n<li>"Prenesene aplikacije"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Trenutno ste prijavljeni v te račune:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"V tem vozilu so drugi uporabniki."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Ponastavi vozilo"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Želite ponastaviti?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Želite izbrisati vse osebne podatke in prenesene aplikacije? Tega dejanja ni mogoče razveljaviti."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Izbriši vse"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Brisanje"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Počakajte ..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Izbriši vse podatke (tovarniška ponast.)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"S tem boste iz glavne enote vozila izbrisali vse podatke, med drugim:\n\n"<li>"Račun Google"</li>\n<li>"Podatke in nastavitve sistema in aplikacij"</li>\n<li>"Prenesene aplikacije"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni v te račune:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"V tem vozilu so drugi uporabniki."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Ponastavi vozilo"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Želite ponastaviti?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Želite izbrisati vse osebne podatke in prenesene aplikacije? Tega dejanja ni mogoče razveljaviti."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Izbriši vse"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Brisanje"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Počakajte …"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum in ura"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Nastavi datum, uro, časovni pas in oblike"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Samodejna datum in ura"</string>
@@ -577,6 +577,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Napačen vzorec"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kako narisati vzorec za odklepanje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Napaka pri shranjevanju vzorca"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Preveč napačnih poskusov. Poskusite znova čez <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"V redu"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Želite odstr. zaklep. zaslona?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"S tem bo lahko vsak dostopal do računa"</string>

@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Με αυτήν την ενέργεια, θα γίνει επαναφορά όλων των προτιμήσεων για:\n\n"<li>"Απενεργοποιημένες εφαρμογές"</li>\n<li>"Απενεργοποιημένες ειδοποιήσεις εφαρμογών"</li>\n<li>"Προεπιλεγμένες εφαρμογές για ενέργειες"</li>\n<li>"Περιορισμούς δεδομένων παρασκηνίου για εφαρμογές"</li>\n<li>"Τυχόν περιορισμούς αδειών"</li>\n\n"Δεν θα χάσετε τυχόν δεδομένα εφαρμογών."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Επαναφορά εφαρμογών"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Έγινε επαναφορά των προτιμήσεων των εφαρμογών"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Διαγραφή δεδομένων (Επαν. εργοστ. ρυθμ.)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από την κεντρική μονάδα του οχήματος, συμπεριλαμβανομένων:\n\n"<li>"Του Λογαριασμού σας Google"</li>\n<li>"Των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"Των εφαρμογών που έχετε κατεβάσει"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Αυτήν τη στιγμή είστε συνδεδεμένοι στους παρακάτω λογαριασμούς:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Υπάρχουν άλλοι χρήστες σε αυτό το όχημα."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Επαναφορά οχήματος"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Να γίνει επαναφορά;"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Να διαγραφούν όλα τα προσωπικά σας στοιχεία και οι εφαρμογές που έχετε κατεβάσει; Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Διαγραφή όλων"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Διαγραφή"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Περιμένετε…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Διαγραφή δεδομένων (επαναφ. εργ. ρυθ.)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από την κεντρική μονάδα του οχήματος, συμπεριλαμβανομένων:\n\n"<li>"Του Λογαριασμού σας Google"</li>\n<li>"Των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"Των εφαρμογών που έχετε κατεβάσει"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Αυτήν τη στιγμή είστε συνδεδεμένοι στους παρακάτω λογαριασμούς:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Υπάρχουν άλλοι χρήστες σε αυτό το όχημα."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Επαναφορά οχήματος"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Να γίνει επαναφορά;"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Να διαγραφούν όλα τα προσωπικά σας στοιχεία και οι εφαρμογές που έχετε κατεβάσει; Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Διαγραφή όλων"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Διαγραφή"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Περιμένετε…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Ημερομηνία και ώρα"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ορισμός ημερομηνίας, ώρας, ζώνης ώρας και μορφές"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Αυτόματη ημερομηνία και ώρα"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Λανθασμένο μοτίβο"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Τρόπος σχεδίασης μοτίβου ξεκλειδώματος"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Σφάλμα κατά την αποθήκευση του μοτίβου"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Πάρα πολλές αποτυχημένες προσπάθειες. Δοκιμάστε ξανά σε <xliff:g id="NUMBER">%d</xliff:g> δευτερόλεπτα."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Κατάργηση κλειδώματος οθόνης;"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Έτσι όλοι οι χρήστες θα έχουν πρόσβαση στον λογαριασμό σας"</string>

@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Dette tilbakestiller alle innstillinger for\n\n"<li>"deaktiverte apper"</li>\n<li>"deaktiverte appvarsler"</li>\n<li>"standardapper for handlinger"</li>\n<li>"begrensninger for bakgrunnsdata for apper"</li>\n<li>"eventuelle tillatelsesbegrensninger"</li>\n\n"Du kommer ikke til å miste appdata."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Tilbakestill apper"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Appinnstillingene er tilbakestilt"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Slett alle data (tilbakestill)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Dette sletter alle dataene fra kjøretøyets hovedenhet, inkludert\n\n"<li>"Google-kontoen din"</li>\n<li>"system- og appdata samt innstillinger"</li>\n<li>"nedlastede apper"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Du er for øyeblikket pålogget følgende kontoer:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Andre brukere er til stede i dette kjøretøyet."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Tilbakestill kjøretøyet"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vil du tilbakestille?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vil du slette den personlige informasjonen din og nedlastede apper? Du kan ikke angre denne handlingen."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Slett alt"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Tømmer"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Vent litt."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Tøm alle data (tilbakestill)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Dette sletter alle dataene fra kjøretøyets hovedenhet, inkludert\n\n"<li>"Google-kontoen din"</li>\n<li>"system- og appdata samt innstillinger"</li>\n<li>"nedlastede apper"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Du er for øyeblikket pålogget følgende kontoer:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Andre brukere er til stede i dette kjøretøyet."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Tilbakestill kjøretøyet"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Vil du tilbakestille?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Vil du slette den personlige informasjonen din og nedlastede apper? Du kan ikke angre denne handlingen."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Tøm alt"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Tømmer"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Vent litt"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dato og klokkeslett"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Angi dato, klokkeslett, tidssone og formater"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og klokkeslett"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Feil mønster"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Slik tegner du et opplåsingsmønster"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Feil ved lagring av mønster"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"For mange ugyldige forsøk. Prøv på nytt om <xliff:g id="NUMBER">%d</xliff:g> sekunder."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Vil du fjerne skjermlåsen?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Dette gir hvem som helst tilgang til kontoen din"</string>

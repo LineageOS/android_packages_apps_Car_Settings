@@ -420,16 +420,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Táto akcia resetuje predvoľby pre:\n\n"<li>"Zakázané aplikácie"</li>\n<li>"Upozornenia zakázaných aplikácií"</li>\n<li>"Predvolené aplikácie pre akcie"</li>\n<li>"Obmedzenia dát v pozadí pre aplikácie"</li>\n<li>"Akékoľvek obmedzenia povolení"</li>\n\n"Nestratíte žiadne dáta aplikácií."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Obnoviť aplikácie"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Predvoľby aplikácií boli obnovené"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Vymazať dáta (obnova výr. nastavení)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Týmto vymažete všetky údaje z autorádia vozidla, napríklad:\n\n"<li>"svoj účet Google,"</li>\n<li>"údaje aj nastavenia systému a aplikácií,"</li>\n<li>"stiahnuté aplikácie."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Aktuálne ste prihlásený/-á do nasledujúcich účtov:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"V tomto vozidle sú ďalší používatelia."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Resetovať vozidlo"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Chcete resetovať?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Chcete vymazať všetky osobné údaje a stiahnuté aplikácie? Túto akciu nebude možné vrátiť späť."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Vymazať všetko"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Prebieha vymazávanie"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Čakajte…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Vymazať údaje (obnovenie výrobných nas.)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Týmto vymažete všetky údaje z autorádia vozidla, napríklad:\n\n"<li>"svoj účet Google,"</li>\n<li>"údaje aj nastavenia systému a aplikácií,"</li>\n<li>"stiahnuté aplikácie."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Aktuálne ste prihlásený/-á do nasledujúcich účtov:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"V tomto vozidle sú ďalší používatelia."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Resetovať vozidlo"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Resetovať?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Chcete vymazať všetky osobné údaje a stiahnuté aplikácie? Túto akciu nebude možné vrátiť späť."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Vymazať všetko"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Maže sa"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Čakajte…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dátum a čas"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Nastaviť dátum, čas, časové pásmo a formáty"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatický dátum a čas"</string>
@@ -577,6 +577,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nesprávny vzor"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ako kresliť bezpečnostný vzor obrazovky"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Pri ukladaní vzoru sa vyskytla chyba"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Príliš veľa chybných pokusov. Skúste to znova o <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Odstrániť zámku obrazovky?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ktokoľvek bude mať prístup do vášho účtu"</string>

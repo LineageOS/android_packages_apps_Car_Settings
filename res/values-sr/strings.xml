@@ -416,16 +416,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Овим ћете ресетовати сва подешавања за:\n\n"<li>"Онемогућене апликације"</li>\n<li>"Обавештења о онемогућеним апликацијама"</li>\n<li>"Подразумеване апликације за радње"</li>\n<li>"Ограничења за позадинске податке за апликације"</li>\n<li>"Сва ограничења за дозволе"</li>\n\n"Нећете изгубити никакве податке апликације."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетуј апликације"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Подешавања апликација су ресетована"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Овим бришете све податке из интерне меморије возила, укључујући:\n\n"<li>"Google налог"</li>\n<li>"податке и подешавања система и апликација"</li>\n<li>"преузете апликације"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Тренутно сте пријављени на следеће налоге:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"У овом возилу су присутни и други корисници."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Ресетуј возило"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Желите ли да ресетујете?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Желите ли да обришете све личне податке и преузете апликације? Не можете да опозовете ову радњу!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Избриши све"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Брише се"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Сачекајте..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Обриши све податке"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Овим бришете све податке из интерне меморије возила, укључујући:\n\n"<li>"Google налог"</li>\n<li>"податке и подешавања система и апликација"</li>\n<li>"преузете апликације"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Тренутно сте пријављени на следеће налоге:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"У овом возилу су присутни и други корисници."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Ресетуј возило"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Желите да ресетујете?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Желите да обришете све личне податке и преузете апликације? Не можете да опозовете ову радњу!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Обриши све"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Брише се"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Сачекајте…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Датум и време"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Подесите датум, време, временску зону и формате"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Аутоматски датум и време"</string>
@@ -572,6 +572,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Погрешан шаблон"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Како нацртати шаблон за откључавање"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Грешка при чувању шаблона"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Превише нетачних покушаја. Пробајте поново за <xliff:g id="NUMBER">%d</xliff:g> сек."</string>
     <string name="okay" msgid="4589873324439764349">"Потврди"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Желите ли да укл. зак. екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Овим ћете дозволити свима приступ вашем налогу"</string>

@@ -420,16 +420,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Будут сброшены следующие настройки:\n\n"<li>"Отключенные приложения."</li>\n<li>"Отключенные уведомления приложений."</li>\n<li>"Приложения по умолчанию."</li>\n<li>"Ограничения на передачу данных в фоновом режиме."</li>\n<li>"Все ограничения разрешений."</li>\n\n"Данные приложений удалены не будут."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Сбросить настройки"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Настройки приложений сброшены."</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Удалить все данные (сбросить настройки)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Будут удалены все данные из головного устройства автомобиля, в том числе:\n\n"<li>"ваш аккаунт Google;"</li>\n<li>"настройки/данные системы и приложений;"</li>\n<li>"установленные приложения."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Вы вошли в следующие аккаунты:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"В этом автомобиле есть другие пользователи."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Сбросить настройки автомобиля"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Сбросить настройки?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Удалить всю личную информацию и скачанные приложения? Это действие нельзя отменить."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Стереть все"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Удаление…"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Подождите..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Стереть данные (к заводским настройкам)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Будут удалены все данные из головного устройства автомобиля, в том числе:\n\n"<li>"ваш аккаунт Google;"</li>\n<li>"данные и настройки системы и приложений;"</li>\n<li>"скачанные приложения."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Вы вошли в следующие аккаунты:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"В этом автомобиле есть другие аккаунты пользователей."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Сбросить настройки автомобиля"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Сбросить настройки?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Удалить всю личную информацию и скачанные приложения? Это действие нельзя отменить."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Стереть все"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Удаление…"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Подождите…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Дата и время"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Установка даты, времени, часового пояса и формата"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Дата и время сети"</string>
@@ -577,6 +577,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Неверный ключ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Как начертить графический ключ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Не удалось сохранить графический ключ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Слишком много неудачных попыток разблокировки. Повторите через <xliff:g id="NUMBER">%d</xliff:g> сек."</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Отключить блокировку экрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Доступ к вашему аккаунту сможет получить кто угодно."</string>

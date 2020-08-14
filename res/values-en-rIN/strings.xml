@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"This will reset all preferences for:\n\n"<li>"Disabled apps"</li>\n<li>"Disabled app notifications"</li>\n<li>"Default applications for actions"</li>\n<li>"Background data restrictions for apps"</li>\n<li>"Any permission restrictions"</li>\n\n"You will not lose any app data."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reset apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App preferences have been reset"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Delete all data (factory reset)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"This will erase all data from your vehicle’s head unit, including:\n\n"<li>"Your Google Account"</li>\n<li>"System and app data and settings"</li>\n<li>"Downloaded apps"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"You are currently signed in to the following accounts:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"There are other users present on this vehicle."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Reset vehicle"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Want to reset?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Erase all your personal information and downloaded apps? You can\'t undo this action!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Erase everything"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Erasing"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Please wait..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Erase all data (factory reset)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"This will erase all data from your vehicle’s head unit, including:\n\n"<li>"Your Google Account"</li>\n<li>"System and app data and settings"</li>\n<li>"Downloaded apps"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"You are currently signed in to the following accounts:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"There are other users present on this vehicle."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Reset vehicle"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Reset?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Erase all your personal information and downloaded apps? You can\'t undo this action!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Erase everything"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Erasing"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Please wait…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Date and time"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Set date, time, time zone, &amp; formats"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatic date and time"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Wrong pattern"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"How to draw an unlock pattern"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Error saving pattern"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Too many incorrect attempts. Try again in <xliff:g id="NUMBER">%d</xliff:g> seconds."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Remove screen lock?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"This will allow anyone to access your account"</string>

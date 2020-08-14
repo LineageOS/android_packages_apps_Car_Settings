@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"See lähtestab kõik järgmised eelistused.\n\n"<li>"Keelatud rakendused"</li>\n<li>"Keelatud rakenduste märguanded"</li>\n<li>"Toimingute vaikerakendused"</li>\n<li>"Rakenduste taustaandmete piirangud"</li>\n<li>"Mis tahes lubade piirangud"</li>\n\n"Rakenduste andmed säilivad."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Lähtesta rakendused"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Rakenduse eelistused on lähtestatud"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Kustuta kõik andmed (tehases. lähtest.)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"See kustutab teie sõiduki keskseadmest kõik andmed, sh:\n\n"<li>"teie Google\'i konto;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Olete praegu sisse logitud järgmistele kontodele:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Selles sõidukis on teisi kasutajaid."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Lähtesta seade"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Kas soovite lähtestada?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Kas kustutada kõik teie isiklikud andmed ja allalaaditud rakendused? Seda toimingut ei saa tagasi võtta."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Kustuta kõik"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Kustutamine"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Oodake …"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Kustuta andmed (tehaseseadetele läht.)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"See kustutab teie sõiduki keskseadmest kõik andmed, sh:\n\n"<li>"teie Google\'i konto;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Olete praegu sisse logitud järgmistele kontodele:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Selles sõidukis on teisi kasutajaid."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Lähtesta sõiduk"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Kas soovite lähtestada?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Kas kustutada kõik teie isiklikud andmed ja allalaaditud rakendused? Seda toimingut ei saa tagasi võtta."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Kustuta kõik"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Kustutamine"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Oodake …"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Kuupäev ja kellaaeg"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Määra kuupäev, kellaaeg, ajavöönd ja vormingud"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automaatne kuupäev ja kellaaeg"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Vale muster"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kuidas joonistada avamismustrit?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Viga mustri salvestamisel"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Liiga palju valesid katseid. Proovige uuesti <xliff:g id="NUMBER">%d</xliff:g> sekundi pärast."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Kas eemaldada ekraanilukk?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"See lubab igaühel teie kontole juurde pääseda"</string>

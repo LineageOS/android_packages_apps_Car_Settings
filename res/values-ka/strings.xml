@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ეს ქმედება გადააყენებს ყველა პარამეტრს, რომელიც ეხება:\n\n"<li>"გათიშულ აპებს"</li>\n<li>"აპების გათიშულ შეტყობინებებს"</li>\n<li>"ქმედებებზე მიმაგრებულ ნაგულისხმევ აპლიკაციებს"</li>\n<li>"ფონურ რეჟიმში მონაცემთა გამოყენების შეზღუდვებს აპებისთვის"</li>\n<li>"ნებისმიერი ნებართვის შეზღუდვას"</li>\n\n"აპების მონაცემები არ დაიკარგება."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"აპების გადაყენება"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"აპების პარამეტრები გადაყენებულია"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"ყველა მონაცემის ამოშლა (ქარხნული პარამეტრების დაბრუნება)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"ეს ქმედება ამოშლის ყველა მონაცემს თქვენი ავტომობილის საინფორმაციო-გასართობი სისტემიდან. მათ შორის, ამოიშლება შემდეგი:\n\n"<li>"თქვენი Google ანგარიში"</li>\n<li>"სისტემის/აპების მონაცემები და პარამეტრები"</li>\n<li>"ჩამოტვირთული აპები"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"ამჟამად შესული ხართ შემდეგ ანგარიშებში:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ამ ავტომობილს იყენებენ სხვა მომხმარებლებიც."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"ავტომობილის გადაყენება"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"გსურთ გადაყენება?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"გსურთ მთელი თქვენი პერსონალური ინფორმაციისა და ჩამოტვირთული აპების წაშლა? ამ მოქმედების გაუქმებას ვეღარ მოახერხებთ!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ყველაფრის ამოშლა"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"მიმდინარეობს ამოშლა"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"გთხოვთ, მოითმინოთ..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"ყველა მონაცემის ამოშლა (ქარხ. პარამეტ. დაბრ.)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"ეს ქმედება ამოშლის ყველა მონაცემს თქვენი ავტომობილის საინფორმაციო-გასართობი სისტემიდან. მათ შორის, ამოიშლება შემდეგი:\n\n"<li>"თქვენი Google ანგარიში"</li>\n<li>"სისტემის/აპების მონაცემები და პარამეტრები"</li>\n<li>"ჩამოტვირთული აპები"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"ამჟამად შესული ხართ შემდეგ ანგარიშებში:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"ამ ავტომობილს იყენებენ სხვა მომხმარებლებიც."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"ავტომობილის გადაყენება"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"გსურთ გადაყენება?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"გსურთ მთელი თქვენი პერსონალური ინფორმაციისა და ჩამოტვირთული აპების წაშლა? ამ მოქმედებას ვერ გააუქმებთ!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"ყველაფრის ამოშლა"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"მიმდინარეობს ამოშლა"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"გთხოვთ, მოითმინოთ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"თარიღი და დრო"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"თარიღის, დროის, დროის ზონის და ფორმატების დაყენება"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"ავტომატური თარიღი და დრო"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ნიმუში არასწორია"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"როგორ დახაზოთ განბლოკვის გრაფიკული გასაღები"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ნიმუშის შენახვისას მოხდა შეცდომა"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"დაფიქსირდა მეტისმეტად ბევრი არასწორი მცდელობა. ცადეთ ხელახლა <xliff:g id="NUMBER">%d</xliff:g> წამში."</string>
     <string name="okay" msgid="4589873324439764349">"კარგი"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"გაუქმდეს ეკრანის დაბლოკვა?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ეს ქმედება ხელმისაწვდომს გახდის თქვენს ანგარიშს ყველასთვის"</string>

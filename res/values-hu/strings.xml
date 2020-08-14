@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Ez visszaállítja a következőkre vonatkozó összes beállítást:\n\n"<li>"Letiltott alkalmazások"</li>\n<li>"Letiltott alkalmazásértesítések"</li>\n<li>"Alapértelmezett alkalmazások adott műveletekhez"</li>\n<li>"Az alkalmazások háttéradataira vonatkozó korlátozások"</li>\n<li>"Minden engedélykorlátozás"</li>\n\n"Az alkalmazásadatok nem vesznek el."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Alkalmazások visszaállítása"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Az alkalmazásbeállítások vissza lettek állítva"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Minden adat törlése (visszaállítás)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Ez minden adatot töröl a jármű fejegységéből, beleértve a következőket:\n\n"<li>"Az Ön Google-fiókja"</li>\n<li>"A rendszer- és alkalmazásadatok, illetve beállítások"</li>\n<li>"A letöltött alkalmazások"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Jelenleg a következő fiókokba van bejelentkezve:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Más felhasználók is vannak a járművön."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Jármű visszaállítása"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Visszaállítja?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Törli az összes személyes adatot és letöltött alkalmazást? A műveletet nem lehet visszavonni."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Minden törlése"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Törlés"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Kérjük, várjon…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Összes adat törlése"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Ez minden adatot töröl a jármű fejegységéből, beleértve a következőket:\n\n"<li>"Az Ön Google-fiókja"</li>\n<li>"A rendszer- és alkalmazásadatok, illetve beállítások"</li>\n<li>"A letöltött alkalmazások"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Jelenleg a következő fiókokba van bejelentkezve:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Más felhasználók is vannak a járművön."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Jármű visszaállítása"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Visszaállítja?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Törli az összes személyes adatot és letöltött alkalmazást? A műveletet nem lehet visszavonni."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Minden törlése"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Törlés"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Kérjük, várjon…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dátum és idő"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Dátum, idő, időzóna és formátumok beállítása"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatikus dátum és idő"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Helytelen minta"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Hogyan kell feloldási mintát rajzolni?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hiba történt a minta mentése során"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Túl sok helytelen próbálkozás. Próbálja újra <xliff:g id="NUMBER">%d</xliff:g> másodperc múlva."</string>
     <string name="okay" msgid="4589873324439764349">"Rendben"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Eltávolítja a képernyőzárat?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ezzel bárki hozzáférhet majd az Ön fiókjához"</string>

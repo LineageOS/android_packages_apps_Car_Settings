@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Со ова ќе се ресетираат сите поставки за:\n\n"<li>"оневозможените апликации;"</li>\n<li>"оневозможените известувања за апликации;"</li>\n<li>"стандардните апликации за дејства;"</li>\n<li>"ограничувањата за податоци од заднина за апликациите;"</li>\n<li>"сите ограничувања за дозволите."</li>\n\n"Нема да изгубите никакви податоци на апликациите."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетирај апликации"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Параметрите за апликацијата се ресетирани"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Избриши ги сите податоци"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Ова ќе ги избрише сите податоци од уредот за на глава на возилото, заедно со:\n\n"<li>"вашата сметка на Google;"</li>\n<li>"податоците и поставките на системот и апликациите;"</li>\n<li>"преземените апликации."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Моментално сте најавени на следниве сметки:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Присутни се и други корисници на возилово."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Ресетирај го возилото"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Ресетирај?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Дали да се избришат сите ваши лични податоци и преземени апликации? Не може да го вратите ова дејство!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Избриши сѐ"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Се брише"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Почекајте…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Избриши ги сите податоци"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Ова ќе ги избрише сите податоци од главната единица на возилото, заедно со:\n\n"<li>"вашата сметка на Google"</li>\n<li>"податоците и поставките на системот и апликациите"</li>\n<li>"преземените апликации"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Моментално сте најавени на следниве сметки:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"На возилово се присутни и други корисници."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Ресетирај го возилото"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Ресетирај?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Дали да се избришат сите ваши лични податоци и преземени апликации? Не може да го вратите ова дејство!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Избриши сѐ"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Се брише"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Почекајте…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Датум и време"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Постави датум, време, временска зона и формати"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Автоматски датум и време"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Погрешна шема"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Како се употребува шемата на отклучување"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Грешка при зачувување на шемата"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Премногу погрешни обиди. Обидете се повторно за <xliff:g id="NUMBER">%d</xliff:g> секунди."</string>
     <string name="okay" msgid="4589873324439764349">"Во ред"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Отстрани заклучување екран?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ова ќе овозможи секој да пристапува до вашата сметка"</string>

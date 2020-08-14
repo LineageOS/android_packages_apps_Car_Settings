@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Келесілердің параметрлері бастапқы күйіне қайтарылады:\n\n"<li>"өшірілген қолданбалар;"</li>\n<li>"қолданбалардың өшірілген хабарландырулары;"</li>\n<li>"әрекеттерге арналған әдепкі қолданбалар;"</li>\n<li>"фондық режимдегі дерек тасымалын шектеу;"</li>\n<li>"барлық рұқсат шектеулері."</li>\n\n"Қолданба деректері жоғалмайды."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Бастапқы күйге қайтару"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Қолданба параметрлері бастапқы күйіне қайтарылды"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Барлық деректі өшіру (зауыттық мәнге қайтару)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Көліктің басты құрылғысынан барлық деректер өшеді, оның ішінде:\n\n"<li>"Google есептік жазбаңыз;"</li>\n<li>"жүйе мен қолданба деректері және параметрлері;"</li>\n<li>"жүктеп алынған қолданбалар."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Сіз келесі есептік жазбаларға кірдіңіз:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Бұл көлікте басқа пайдаланушылар бар."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Көлікті бастапқы күйге қайтару"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Бастапқы күйге қайтарылсын ба?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Барлық жеке ақпаратыңыз бен жүктеп алынған қолданбаларыңыз өшірілсін бе? Бұл әрекетті кері қайтару мүмкін болмайды!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Барлығын өшіру"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Өшірілуде"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Күте тұрыңыз…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Барлық деректерді өшіру (зауыттық параметрлерге қайтару)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Көліктің басты құрылғысынан барлық деректер өшеді, оның ішінде:\n\n"<li>"Google есептік жазбаңыз;"</li>\n<li>"жүйе мен қолданба деректері және параметрлері;"</li>\n<li>"жүктеп алынған қолданбалар."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Сіз келесі есептік жазбаларға кірдіңіз:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Бұл көлікте басқа пайдаланушылар бар."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Көлікті бастапқы күйге қайтару"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Бастапқы күйге қайтарылсын ба?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Барлық жеке ақпаратыңыз бен жүктеп алған қолданбаларыңыз өшірілсін бе? Бұл әрекетті кері қайтару мүмкін болмайды!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Барлығын өшіру"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Өшірілуде"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Күте тұрыңыз…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Күн және уақыт"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Күнін, уақытын, уақыт белдеуін, форматтарды реттеу"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Автоматты күн мен уақыт"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Қате өрнек"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Құлыпты ашу өрнегін сызу"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Өрнекті сақтау кезінде қате кетті"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Тым көп қате әрекет жасалды. <xliff:g id="NUMBER">%d</xliff:g> секундтан кейін қайталап көріңіз."</string>
     <string name="okay" msgid="4589873324439764349">"Жарайды"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экран құлпы өшірілсін бе?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Кез келген адам есептік жазбаңызға кіре алатын болады"</string>

@@ -416,16 +416,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Time će se poništiti sve postavke za sljedeće:\n\n"<li>"onemogućene aplikacije"</li>\n<li>"onemogućene obavijesti aplikacija"</li>\n<li>"zadane aplikacije za radnje"</li>\n<li>"ograničenja pozadinskih podataka za aplikacije"</li>\n<li>"sva ograničenja dozvola."</li>\n\n"Nećete izgubiti podatke nijedne aplikacije."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Vrati aplikacije na zadano"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Postavke aplikacija vraćene su na zadano"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Izbriši sve podatke (vrati na tvorničke)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Time će se izbrisati svi podaci s glavne jedinice vozila, uključujući:\n\n"<li>"vaš Google račun"</li>\n<li>"podatke i postavke sustava i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Trenutačno ste prijavljeni na sljedeće račune:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Na ovom vozilu postoje i drugi korisnici."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Vrati vozilo na zadano"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vratiti na zadano?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Želite li izbrisati sve osobne podatke i preuzete aplikacije? Radnju nije moguće poništiti!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Izbriši sve"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Brisanje"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Pričekajte..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Izbriši sve podatke (vrati na tvorničke)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Time će se izbrisati svi podaci s glavne jedinice vozila, uključujući:\n\n"<li>"vaš Google račun"</li>\n<li>"podatke i postavke sustava i aplikacija"</li>\n<li>"preuzete aplikacije."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutačno ste prijavljeni na sljedeće račune:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Na ovom vozilu postoje i drugi korisnici."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Vrati vozilo na zadano"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Vratiti na zadano?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Želite li izbrisati sve osobne podatke i preuzete aplikacije? Radnju nije moguće poništiti!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Izbriši sve"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Brisanje"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Pričekajte..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum i vrijeme"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Postavljanje datuma, vremena, vremenske zone i formata"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatski datum i vrijeme"</string>
@@ -572,6 +572,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pogrešan uzorak"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kako iscrtati uzorak za otključavanje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Pogreška pri spremanju uzorka"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Previše netočnih pokušaja. Pokušajte ponovo za <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"U redu"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ukloniti zaključavanje zaslona?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Druge osobe moći će pristupiti vašem računu"</string>
