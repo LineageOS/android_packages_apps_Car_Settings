@@ -147,7 +147,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"ავტომატური"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 გჰც დიაპაზონი"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5 გჰც დიაპაზონი"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"სასურველია 5-გიგაჰერციანი დიაპაზონი"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"სასურველია 5 გჰც დიაპაზონი"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 გჰც"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 გჰც"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"აირჩიეთ 1 დიაპ. Wi‑Fi ქსელისთვის:"</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ნიმუში არასწორია"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"როგორ დახაზოთ განბლოკვის გრაფიკული გასაღები"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ნიმუშის შენახვისას მოხდა შეცდომა"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"დაფიქსირდა მეტისმეტად ბევრი არასწორი მცდელობა. ცადეთ ხელახლა <xliff:g id="NUMBER">%d</xliff:g> წამში."</string>
     <string name="okay" msgid="4589873324439764349">"კარგი"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"გაუქმდეს ეკრანის დაბლოკვა?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ეს ქმედება ხელმისაწვდომს გახდის თქვენს ანგარიშს ყველასთვის"</string>

@@ -48,7 +48,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"モバイルデータに <xliff:g id="CARRIER2_0">%2$s</xliff:g> を使用しています。<xliff:g id="CARRIER1">%1$s</xliff:g> に切り替えると、モバイルデータに <xliff:g id="CARRIER2_1">%2$s</xliff:g> は使用されなくなります。"</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> を使用"</string>
     <string name="roaming_title" msgid="6218635014519017734">"ローミング"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続する"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"データ ローミングを許可しますか？"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"高額な通信料が発生することがあります。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"データ使用量"</string>
@@ -301,7 +301,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"画面のテキストを使用"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"画面コンテンツのテキストにアクセスすることをアシストアプリに許可します"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"スクリーンショットを使用"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"画面の画像にアクセスすることをアシストアプリに許可します"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"表示中の画像にアクセスすることをアシストアプリに許可します"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"音声入力"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"自動入力サービス"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"なし"</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"パターンが間違っています"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ロック解除パターンの描き方"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"パターンの保存中にエラーが発生しました"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"間違えた回数が上限を超えました。<xliff:g id="NUMBER">%d</xliff:g> 秒後にもう一度お試しください。"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"画面ロックを解除しますか？"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"解除すると、誰でもアカウントにアクセスできるようになります"</string>

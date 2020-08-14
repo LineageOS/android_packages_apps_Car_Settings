@@ -324,7 +324,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Fråga varje gång"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Öppna inte i den här appen"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Länkar som stöds"</string>
-    <string name="special_access" msgid="5730278220917123811">"Särskild åtkomst för app"</string>
+    <string name="special_access" msgid="5730278220917123811">"Särskild appåtkomst"</string>
     <string name="show_system" msgid="4401355756969485287">"Visa systemet"</string>
     <string name="hide_system" msgid="8845453295584638040">"Dölj systemet"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Ändra systeminställningar"</string>
@@ -380,8 +380,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ett problem inträffade när licenserna lästes in."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Läser in …"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Nu är du <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
-      <item quantity="one">Nu är du <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="other">Du är nu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="one">Du är nu <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Nu är du en utvecklare!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Det behövs inte. Du är redan utvecklare."</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Fel grafiskt lösenord"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Så här ritar du ett grafiskt lösenord"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Grafiskt lösenord kunde inte sparas"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"För många felaktiga försök. Försök igen om <xliff:g id="NUMBER">%d</xliff:g> sekunder."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Vill du ta bort skärmlåset?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Om du tar bort skärmlåset kan alla få åtkomst till kontot"</string>

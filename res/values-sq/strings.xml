@@ -198,7 +198,7 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Trokit për ta çiftuar me <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Zgjidh pajisjen me Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Gjuhët"</string>
-    <string name="languages_and_input_settings" msgid="3672322610529408248">"Gjuhët dhe të dhënat"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Gjuhët dhe metodat e hyrjes"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastiera"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Menaxho tastierat"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Dalja \"tekst-në-ligjërim\""</string>
@@ -349,7 +349,7 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Shërbimet e vendndodhjes"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistemi"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Përditësimet e sistemit"</string>
-    <string name="firmware_version" msgid="8491753744549309333">"Versioni i Android-it"</string>
+    <string name="firmware_version" msgid="8491753744549309333">"Versioni i Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Niveli i korrigjimit të sigurisë së Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Modeli"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Versioni i brezit të bazës"</string>
@@ -380,8 +380,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ka një problem me ngarkimin e licencave."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Po ngarkohet…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa që të bëhesh një zhvillues</item>
-      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap që të bëhesh një zhvillues</item>
+      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa për t\'u bërë zhvillues.</item>
+      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap për t\'u bërë zhvillues.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Tani je një zhvillues!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Nuk ka nevojë, ti je tashmë një zhvillues."</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Motiv i gabuar"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Si të vizatosh një motiv shkyçjeje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Gabim gjatë ruajtjes së motivit"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Shumë tentativa të pasakta. Provo sërish brenda <xliff:g id="NUMBER">%d</xliff:g> sekondash."</string>
     <string name="okay" msgid="4589873324439764349">"Në rregull"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Të hiqet kyçja e ekranit?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Kjo do të lejojë këdo që të ketë qasje në llogarinë tënde"</string>

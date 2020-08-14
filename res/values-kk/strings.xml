@@ -480,9 +480,9 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"Жад"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"Музыка және аудио"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"Басқа қолданбалар"</string>
-    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Файлдар"</string>
     <string name="storage_system" msgid="1271345630248014010">"Жүйе"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Жүйе Android <xliff:g id="VERSION">%s</xliff:g> нұсқасын іске қосуға пайдаланылатын файлдарды қамтиды"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"\"Жүйе\" қалтасында Android <xliff:g id="VERSION">%s</xliff:g> жұмысына қажетті файлдар орналасқан."</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудио файлдар"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Есептелуде…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Қолданба көлемі"</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Қате өрнек"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Құлыпты ашу өрнегін сызу"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Өрнекті сақтау кезінде қате кетті"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Тым көп қате әрекет жасалды. <xliff:g id="NUMBER">%d</xliff:g> секундтан кейін қайталап көріңіз."</string>
     <string name="okay" msgid="4589873324439764349">"Жарайды"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экран құлпы өшірілсін бе?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Кез келген адам есептік жазбаңызға кіре алатын болады"</string>

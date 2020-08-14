@@ -298,7 +298,7 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Lưu ý: Sau khi khởi động lại, ứng dụng này sẽ không hoạt động cho đến khi bạn mở khóa xe."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Trợ lý và nhập bằng giọng nói"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Ứng dụng trợ lý"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"Sử dụng văn bản từ màn hình"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"Sử dụng văn bản trên màn hình"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Cho phép ứng dụng trợ lý truy cập vào nội dung trên màn hình dưới dạng văn bản"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Sử dụng ảnh chụp màn hình"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Cho phép ứng dụng trợ lý truy cập vào hình ảnh màn hình"</string>
@@ -309,7 +309,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Trợ lý sẽ có thể đọc thông tin về ứng dụng mà bạn đang dùng trên hệ thống, bao gồm cả thông tin hiển thị trên màn hình hoặc thông tin có thể truy cập trong ứng dụng."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Hãy đảm bảo bạn tin tưởng ứng dụng này&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; sử dụng nội dung trên màn hình của bạn để xác định nội dung nào có thể được tự động điền."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Thêm dịch vụ"</string>
-    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Mở đường dẫn liên kết"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Mở đường liên kết"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Ứng dụng đã cài đặt"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"Không mở các liên kết được hỗ trợ"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Mở <xliff:g id="DOMAIN">%s</xliff:g>"</string>
@@ -419,7 +419,7 @@
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Ngày và giờ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Đặt ngày, giờ, múi giờ và định dạng"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Ngày và giờ tự động"</string>
-    <string name="date_time_auto_summary" msgid="3311706425095342759">"Sử dụng thời gian do mạng cung cấp"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Sử dụng ngày và giờ do mạng cung cấp"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Múi giờ tự động"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Sử dụng múi giờ do mạng cung cấp"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Định dạng 24 giờ"</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Hình mở khóa không chính xác"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cách vẽ hình mở khóa"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Lỗi khi lưu mẫu"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Bạn đã nhập sai quá nhiều lần. Hãy thử lại sau <xliff:g id="NUMBER">%d</xliff:g> giây."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Xóa phương thức khóa màn hình?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Thao tác này sẽ cho phép bất cứ ai truy cập vào tài khoản của bạn"</string>

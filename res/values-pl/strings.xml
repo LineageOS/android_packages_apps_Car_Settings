@@ -509,7 +509,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"Konta"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nie dodano kont"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika: <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatycznie synchronizuj dane"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Pozwól aplikacjom automatycznie odświeżać dane"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Włączyć autosynchronizację?"</string>
@@ -569,6 +569,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nieprawidłowy wzór"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Jak narysować wzór odblokowania"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Błąd podczas zapisywania wzoru"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Zbyt wiele nieudanych prób. Spróbuj ponownie za <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Usunąć blokadę ekranu?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Każdy będzie mógł mieć dostęp do Twojego konta"</string>

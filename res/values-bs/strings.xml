@@ -564,11 +564,12 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pogrešan uzorak"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kako nacrtati uzorak za otključavanje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Greška prilikom pohrane uzorka"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Previše pogrešnih pokušaja. Pokušajte ponovo za <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"UREDU"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ukloniti zaključavanje ekrana?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Svi će imati pristup vašem računu"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Unesite svoj PIN"</string>
-    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Unesite svoju lozinku"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Unesite lozinku"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Postavite PIN radi sigurnosti"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Ponovo unesite PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN mora sadržavati najmanje 4 cifre"</string>

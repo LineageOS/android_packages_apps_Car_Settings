@@ -407,7 +407,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Resetuj podešavanja"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Podešavanja mreže su resetovana"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Resetuj podešavanja aplikacija"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ovim će se resetovati sva podešavanja za:\n\n"<li>"Onemogućene aplikacije"</li>\n<li>"Obaveštenja o onemogućenim aplikacijama"</li>\n<li>"Podrazumevane aplikacije za radnje"</li>\n<li>"Ograničenja za pozadinske podatke za aplikacije"</li>\n<li>"Sva ograničenja za dozvole"</li>\n\n"Nećete izgubiti nikakve podatke aplikacije."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ovim ćete resetovati sva podešavanja za:\n\n"<li>"Onemogućene aplikacije"</li>\n<li>"Obaveštenja o onemogućenim aplikacijama"</li>\n<li>"Podrazumevane aplikacije za radnje"</li>\n<li>"Ograničenja za pozadinske podatke za aplikacije"</li>\n<li>"Sva ograničenja za dozvole"</li>\n\n"Nećete izgubiti nikakve podatke aplikacije."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Resetuj aplikacije"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Podešavanja aplikacija su resetovana"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Obriši sve podatke"</string>
@@ -564,6 +564,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pogrešan šablon"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kako nacrtati šablon za otključavanje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Greška pri čuvanju šablona"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Previše netačnih pokušaja. Probajte ponovo za <xliff:g id="NUMBER">%d</xliff:g> sek."</string>
     <string name="okay" msgid="4589873324439764349">"Potvrdi"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Želite li da ukl. zak. ekrana?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ovim ćete dozvoliti svima pristup vašem nalogu"</string>

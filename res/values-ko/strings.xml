@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"잘못된 패턴"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"잠금해제 패턴을 그리는 방법"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"패턴 저장 중 오류 발생"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"잘못 시도한 횟수가 너무 많습니다. <xliff:g id="NUMBER">%d</xliff:g>초 후에 다시 시도해 주세요."</string>
     <string name="okay" msgid="4589873324439764349">"확인"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"화면 잠금을 삭제하시겠습니까?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"화면 잠금을 삭제하면 누구나 계정에 액세스할 수 있습니다."</string>

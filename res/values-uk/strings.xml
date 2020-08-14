@@ -23,7 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Рівень яскравості"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптивна яскравість"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Оптимізація рівня яскравості з урахуванням умов освітлення"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Нічний режим увімкнено"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Нічний екран увімкнено"</string>
     <string name="keywords_display" msgid="3978416985146943922">"екран, сенсорний екран"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"затемнений екран, сенсорний екран, акумулятор"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"затемнений екран, сенсорний екран, акумулятор"</string>
@@ -151,7 +151,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Автоматично"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Діапазон частот 2,4 ГГц"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Діапазон частот 5,0 ГГц"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Бажано використовувати діапазон частот 5,0 ГГц"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Діапазон 5,0 ГГц (рекомендовано)"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Виберіть принаймні один діапазон частот для точки доступу Wi-Fi:"</string>
@@ -569,6 +569,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Неправильний ключ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Як намалювати ключ розблокування"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Не вдалося зберегти ключ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Забагато невдалих спроб. Повторіть через <xliff:g id="NUMBER">%d</xliff:g> с."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Вимкнути блокування екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Будь-хто зможе ввійти у ваш обліковий запис"</string>

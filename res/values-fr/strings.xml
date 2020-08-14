@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Plus"</string>
     <string name="display_settings" msgid="5325515247739279185">"Écran"</string>
     <string name="brightness" msgid="2919605130898772866">"Niveau de luminosité"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptation de la luminosité"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosité adaptative"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimiser le niveau de luminosité en fonction de l\'éclairage ambiant"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Éclairage nocturne activé"</string>
     <string name="keywords_display" msgid="3978416985146943922">"écran, écran tactile"</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Pour dessiner un schéma de déverrouillage"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erreur d\'enregistrement du schéma"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Trop de tentatives incorrectes. Réessayez dans <xliff:g id="NUMBER">%d</xliff:g> secondes."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Annuler le verrouillage écran ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Si vous continuez, n\'importe qui pourra accéder à votre compte"</string>

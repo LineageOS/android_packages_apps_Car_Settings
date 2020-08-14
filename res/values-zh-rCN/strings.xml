@@ -23,7 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自动调节亮度"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"根据环境光线情况优化亮度"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"“夜间模式”已开启"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"“护眼模式”已开启"</string>
     <string name="keywords_display" msgid="3978416985146943922">"屏幕, 触摸屏"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"屏幕变暗, 调暗屏幕, 触摸屏, 电池"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"屏幕变暗, 调暗屏幕, 触摸屏, 电池"</string>
@@ -316,7 +316,7 @@
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"打开 <xliff:g id="DOMAIN">%s</xliff:g> 和其他网址"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"默认打开"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"其他默认设置"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"未设置默认操作。"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"无默认设置。"</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"您已选择默认使用此应用处理某些操作。"</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"清除默认设置"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"打开支持的链接"</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"图案错误"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"如何绘制解锁图案"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"保存图案时出错"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"错误次数过多。请在 <xliff:g id="NUMBER">%d</xliff:g> 秒后重试。"</string>
     <string name="okay" msgid="4589873324439764349">"确定"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"清除屏幕锁定设置"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"这样一来，任何人都能访问您的帐号"</string>
