@@ -55,7 +55,7 @@ android_app {
         enabled: false,
     },
 
-    required: ["privapp_whitelist_com.android.car.settings"],
+    required: ["allowed_privapp_com.android.car.settings"],
 
     dxflags: ["--multi-dex"],
 
