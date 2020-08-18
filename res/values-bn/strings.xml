@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ভুল প্যাটার্ন"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"কীভাবে একটি আনলক প্যাটার্ন আঁকবেন"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"প্যাটার্ন সেভ করার সময় সমস্যা"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"অনেকবার ভুল প্রচেষ্টা করা হয়েছে। <xliff:g id="NUMBER">%d</xliff:g> সেকেন্ডের মধ্যে আবার চেষ্টা করুন।"</string>
     <string name="okay" msgid="4589873324439764349">"ঠিক আছে"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"স্ক্রিন লক সরিয়ে দেবেন?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"এর ফলে যেকেউ আপনার অ্যাকাউন্ট অ্যাক্সেস করতে পারবেন"</string>
@@ -648,5 +649,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"খারিজ করুন"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ড্রাইভ করার সময় এই ফিচার কাজ করবে না"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ড্রাইভ করার সময় ব্যবহারকারীকে যোগ করতে পারবেন না"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"সার্চ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

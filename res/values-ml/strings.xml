@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"പാറ്റേൺ തെറ്റാണ്"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ഒരു അൺലോക്ക് പാറ്റേൺ വരയ്‌ക്കേണ്ടതെങ്ങനെ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"പാറ്റേൺ സംരക്ഷിക്കുന്നതിൽ പിശക്"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"നിരവധി തെറ്റായ ശ്രമങ്ങൾ. <xliff:g id="NUMBER">%d</xliff:g> സെക്കൻഡിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുക."</string>
     <string name="okay" msgid="4589873324439764349">"ശരി"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"സ്‌ക്രീൻ ലോക്ക് നീക്കം ചെയ്യണോ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ഇത് നിങ്ങളുടെ അക്കൗണ്ട് ആർക്കും ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കും"</string>
@@ -648,5 +649,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ഡിസ്‌മിസ് ചെയ്യുക"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഫീച്ചർ ലഭ്യമല്ല"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഉപയോക്താവിനെ ചേർക്കാനാവില്ല"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"തിരയുക"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>
