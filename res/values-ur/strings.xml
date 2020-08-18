@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"اس سے مندرجہ ذیل کیلئے تمام ترجیحات ری سیٹ ہو جائیں گی:\n\n"<li>"غیر فعال کردہ ایپس"</li>\n<li>"غیر فعال کردہ ایپس کی اطلاعات"</li>\n<li>"کارروائیوں کے لیے ڈیفالٹ ایپلیکیشنز"</li>\n<li>"ایپس کے لیے پس منظر کے ڈیٹا کی پابندیاں"</li>\n<li>"کوئی اجازتی پابندیاں"</li>\n\n"آپ کسی ایپ کے ڈیٹا سے محروم نہیں ہوں گے۔"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ایپس کو ری سیٹ کریں"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ایپ کی ترجیحات کو ری سیٹ کر دیا ہے"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"سبھی ڈیٹا کو حذف کریں (فیکٹری ری سیٹ)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"یہ آپ کی گاڑی کے ہیڈ یونٹ سے سبھی ڈیٹا کو صاف کر دے گا، بشمول:\n\n"<li>"آپ کا Google اکاؤنٹ"</li>\n<li>"سسٹم اور ایپ ڈیٹا اور ترتیبات"</li>\n<li>"ڈاؤن لوڈ کردہ ایپس"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"آپ فی الحال مندرجہ ذیل اکاؤنٹس میں سائن ان ہیں:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"اس آلہ پر دیگر صارفین موجود ہیں۔"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"گاڑی کو دوبارہ ترتیب دیں"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"دوبارہ ترتیب دیں؟"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"آپ کی سبھی ذاتی معلومات اور ڈاؤن لوڈ کردہ ایپس کو صاف کریں؟ آپ اس کارروائی کو کالعدم نہیں کر سکتے ہیں!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ہر چیز صاف کریں"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"صاف ہو رہا ہے"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"براہ کرم انتظار کریں..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"سبھی ڈیٹا کو حذف کریں (فیکٹری ری سیٹ)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"یہ آپ کی گاڑی کے ہیڈ یونٹ سے سبھی ڈیٹا کو صاف کر دے گا، بشمول:\n\n"<li>"آپ کا Google اکاؤنٹ"</li>\n<li>"سسٹم اور ایپ ڈیٹا اور ترتیبات"</li>\n<li>"ڈاؤن لوڈ کردہ ایپس"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"آپ فی الحال مندرجہ ذیل اکاؤنٹس میں سائن ان ہیں:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"اس آلہ پر دیگر صارفین موجود ہیں۔"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"گاڑی کو دوبارہ ترتیب دیں"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"دوبارہ ترتیب دیں؟"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"آپ کی سبھی ذاتی معلومات اور ڈاؤن لوڈ کردہ ایپس کو صاف کریں؟ آپ اس کاروائی کو کالعدم نہیں کر سکتے ہیں!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"ہر چیز صاف کریں"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"صاف ہو رہا ہے"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"براہ کرم انتظار کریں…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"تاریخ اور وقت"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"تاریخ، وقت، ٹائم زون اور فارمیٹس کو سیٹ کریں"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"خود کار تاریخ اور وقت"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"غلط پیٹرن"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"غیر مقفل کرنے کا پیٹرن ڈرا کرنے کا طریقہ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"پیٹرن کو محفوظ کرنے میں خرابی"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"کافی زیادہ غلط کوششیں کی گئیں۔ <xliff:g id="NUMBER">%d</xliff:g> سیکنڈ بعد دوبارہ کوشش کریں۔"</string>
     <string name="okay" msgid="4589873324439764349">"ٹھیک ہے"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"اسکرین لاک کو ہٹائیں؟"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"اس سے کسی کو بھی آپ کے اکاؤنٹ تک رسائی کی اجازت ہوگی"</string>

@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"આમ કરવાથી આ બધી પસંદગીઓ રીસેટ થઈ જશે:\n\n"<li>"બંધ કરેલી ઍપ"</li>\n<li>"ઍપના બંધ કરેલા નોટિફિકેશન"</li>\n<li>"ક્રિયાઓ માટેની ડિફૉલ્ટ ઍપ્લિકેશનો"</li>\n<li>"ઍપ માટે બૅકગ્રાઉન્ડ ડેટાના પ્રતિબંધો"</li>\n<li>"કોઈપણ પરવાનગીના પ્રતિબંધો"</li>\n\n"તમે કોઈપણ ઍપનો ડેટા ગુમાવશો નહીં."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ઍપને રીસેટ કરો"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ઍપ પસંદગીઓ રીસેટ કરવામાં આવી છે"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"બધો ડેટા કાઢી નાખો (ફેક્ટરી રીસેટ)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"આ ક્રિયા તમારા વાહનના હેડ યુનિટમાંથી બધો ડેટા કાઢી નાખશે, જેમાં આનો સમાવેશ થાય છે:\n\n"<li>"તમારું Google એકાઉન્ટ"</li>\n<li>"સિસ્ટમ અને ઍપ ડેટા અને સેટિંગ"</li>\n<li>"ડાઉનલોડ કરેલ ઍપ"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"હાલમાં તમે નીચે જણાવેલા બધા એકાઉન્ટમાં સાઇન ઇન થયા છો:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"આ વાહન પર અન્ય વપરાશકર્તા હાજર છે."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"વાહન રીસેટ કરો"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"રીસેટ કરીએ?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી એપ્લિકેશન્સને કાઢી નાખીએ? તમે આ ક્રિયાને પૂર્વવત્ કરી શકતા નથી!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"દરેક વસ્તુ કાઢી નાંખો"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"કાઢી નાંખી રહ્યું છે"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"કૃપા કરીને રાહ જુઓ..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"બધો ડેટા કાઢી નાખો (ફેક્ટરી રીસેટ)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"આમ કરવાથી, તમારા વાહનના હેડ યુનિટમાંથી નીચે જણાવેલા સહિત બધો ડેટા કાઢી નાખવામાં આવશે:\n\n"<li>"તમારું Google એકાઉન્ટ"</li>\n<li>"સિસ્ટમ અને ઍપનો ડેટા તેમજ બધા સેટિંગ"</li>\n<li>"ડાઉનલોડ કરેલી બધી ઍપ"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"હાલમાં તમે નીચે જણાવેલા બધા એકાઉન્ટમાં સાઇન ઇન થયા છો:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"આ વાહનમાં અન્ય વપરાશકર્તાઓની હાજરી છે."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"વાહનને ફેક્ટરી રીસેટ કરો"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"શું રીસેટ કરીએ?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"શું તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી ઍપ કાઢી નાખીએ? તમે આ ક્રિયામાં કરેલો ફેરફાર રદ કરી શકશો નહીં!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"તમામ બાબત કાઢી નાખો"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"કાઢી નાખી રહ્યાં છીએ"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"કૃપા કરીને રાહ જુઓ…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"તારીખ અને સમય"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"તારીખ, સમય, સમય ઝોન અને ફૉર્મેટ સેટ કરો"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"આપમેળે તારીખ અને સમય"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ખોટી પૅટર્ન"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"એક અનલૉક પૅટર્ન કેવી રીતે દોરવી"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"પૅટર્ન સાચવવામાં ભૂલ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"વધુ પડતા અયોગ્ય પ્રયાસો. <xliff:g id="NUMBER">%d</xliff:g> સેકન્ડમાં ફરી પ્રયાસ કરો."</string>
     <string name="okay" msgid="4589873324439764349">"ઓકે"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"સ્ક્રીન લૉક કાઢી નાખીએ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"આ ક્રિયા તમારા એકાઉન્ટને ઍક્સેસ કરવાની મંજૂરી કોઈને પણ આપશે"</string>
@@ -648,5 +649,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"છોડી દો"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ડ્રાઇવિંગ કરતી વખતે આ સુવિધા ઉપલબ્ધ નથી"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ડ્રાઇવ કરતી વખતે વપરાશકર્તાને ઉમેરી શકાતા નથી"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"શોધ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

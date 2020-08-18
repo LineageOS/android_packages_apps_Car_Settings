@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ইয়ে:\n\n"<li>"অক্ষম কৰি থোৱা এপ্"</li>\n<li>"অক্ষম কৰি থোৱা এপ্ জাননী"</li>\n<li>"কাৰ্যৰ ডিফ’ল্ট এপ্লিকেশ্বন"</li>\n<li>"এপৰ নেপথ্য ডেটা সীমাবদ্ধকৰণ"</li>\n<li>"যিকোনো অনুমতিৰ সীমাবদ্ধকৰণ"</li>"ৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰিব\n\nআপুনি কোনো এপৰ ডেটা নেহেৰুৱায়।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"এপসমূহ ৰিছেট কৰক"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"এপৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰা হৈছে"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"সকলো ডেটা মচক (ফেক্টৰী ৰিছেট কৰক)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"ইয়ে আপোনাৰ বাহনখনৰ হে’ড ইউনিটটোত থকা:\n\n"<li>"আপোনাৰ Google একাউণ্ট"</li>\n<li>"ছিষ্টেম আৰু এপ্‌ ডেটা আৰু ছেটিং "</li>\n<li>"ডাউনল’ড কৰা এপ্‌"</li>" আদিকে ধৰি সকলো ডেটা মচিব"</string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"আপুনি বৰ্তমান এই একাউণ্টসমূহত ছাইন ইন হৈ আছে:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"এই বাহনখনত আৰু ব্যৱহাৰকাৰী আছে।"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"বাহনখন ৰিছেট কৰক"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ৰিছেট কৰিবনে?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"আপোনাৰ ব্যক্তিগত সকলো তথ্য আৰু ডাউনল’ড কৰা সমস্ত এপ্‌ মচিবনে? আপুনি এই কাৰ্য পিছত আনডু কৰিব নোৱাৰিব!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"সকলো মচক"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"মচি থকা হৈছে"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"অনুগ্রহ কৰি অপেক্ষা কৰক…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"সকলো ডেটা মচক (ফেক্টৰী ৰিছেট)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"ই আপোনাৰ বাহনখনৰ হেড ইউনিটটোত থকা সকলো ডেটা মচিব, য’ত এয়াও অন্তৰ্ভুক্ত:\n\n"<li>"আপোনাৰ Google একাউণ্ট"</li>\n<li>"ছিষ্টেম আৰু এপ্‌ ডেটা আৰু ছেটিংসমূহ "</li>\n<li>"ডাউনল’ড কৰা এপ্‌সমূহ"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"আপুনি বৰ্তমানে এই একাউণ্টসমূহত ছাইন ইন হৈ আছে:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"এই বাহনখনত অন্য ব্যৱহাৰকাৰী আছে।"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"বাহনখন ৰিছেট কৰক"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"ৰিছেট কৰিবনে?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"আপোনাৰ ব্যক্তিগত সকলো তথ্য আৰু ডাউনল’ড কৰা সকলো এপ্‌ মচিবনে? আপুনি এই কাৰ্যটো আনডু কৰিব নোৱাৰে!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"সকলো মচক"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"মচি থকা হৈছে"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"অনুগ্রহ কৰি অপেক্ষা কৰক…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"তাৰিখ আৰু সময়"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"তাৰিখ, সময়, সময় মণ্ডল আৰু ফৰমেটসমূহ ছেট কৰক"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"স্বয়ং ছেট কৰা তাৰিখ আৰু সময়"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ভুল আৰ্হি"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"লক খোলাৰ আৰ্হি অঁকা উপায়"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"আৰ্হি ছেভ কৰোঁতে আঁসোৱাহ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"বহুসংখ্যক ভুল প্ৰয়াস। <xliff:g id="NUMBER">%d</xliff:g> ছেকেণ্ডত পুনৰ চেষ্টা কৰক।"</string>
     <string name="okay" msgid="4589873324439764349">"ঠিক আছে"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"স্ক্ৰীণ লক আঁতৰাবনে?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"এই কাৰ্যই সকলোকে আপোনাৰ একাউণ্টৰ এক্সেছ দিব"</string>
@@ -648,5 +649,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"অগ্ৰাহ্য কৰক"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"গাড়ী চলাই থকা সময়ত এই সুবিধাটো উপলব্ধ নহয়"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"গাড়ী চলাই থকা সময়ত ব্য়ৱহাৰকাৰীক যোগ কৰিব নোৱাৰি"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"সন্ধান কৰক"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>
