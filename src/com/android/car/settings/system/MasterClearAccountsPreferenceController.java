@@ -138,6 +138,7 @@ public class MasterClearAccountsPreferenceController extends PreferenceControlle
         preference.setTitle(title);
         preference.setIcon(icon);
         preference.setSelectable(false);
+        preference.setSingleLineTitle(false);
         return preference;
     }
 }
