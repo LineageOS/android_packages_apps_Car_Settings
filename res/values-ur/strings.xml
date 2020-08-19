@@ -102,7 +102,7 @@
     <string name="wifi_signal_strength" msgid="8507318230553042817">"سگنل کی قوت"</string>
     <string name="wifi_status" msgid="5688013206066543952">"صورتحال"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"لنک کی رفتار"</string>
-    <string name="wifi_frequency" msgid="8951455949682864922">"تعدد"</string>
+    <string name="wifi_frequency" msgid="8951455949682864922">"فریکوئنسی"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP پتہ"</string>
     <string name="show_password" msgid="2074628020371139240">"پاس ورڈ دکھائیں"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"نیٹ ورک کا نام درج کریں"</string>
@@ -368,7 +368,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"معاونین"</string>
     <string name="manual" msgid="4819839169843240804">"دستی"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"ریگولیٹری لیبلز"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"حفاظتی اور انضباطی مینوئل"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"حفاظتی اور ریگولیٹری مینوئل"</string>
     <string name="copyright_title" msgid="4220237202917417876">"کاپی رائٹ"</string>
     <string name="license_title" msgid="936705938435249965">"لائسنس"</string>
     <string name="terms_title" msgid="5201471373602628765">"شرائط و ضوابط"</string>
@@ -559,6 +559,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"غلط پیٹرن"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"غیر مقفل کرنے کا پیٹرن ڈرا کرنے کا طریقہ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"پیٹرن کو محفوظ کرنے میں خرابی"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"کافی زیادہ غلط کوششیں کی گئیں۔ <xliff:g id="NUMBER">%d</xliff:g> سیکنڈ بعد دوبارہ کوشش کریں۔"</string>
     <string name="okay" msgid="4589873324439764349">"ٹھیک ہے"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"اسکرین لاک کو ہٹائیں؟"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"اس سے کسی کو بھی آپ کے اکاؤنٹ تک رسائی کی اجازت ہوگی"</string>
@@ -655,7 +656,7 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter کلید"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"ڈیمو سے باہر نکلیں"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ڈیمو موڈ سے باہر نکلیں"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"اس سے ڈیمو اکاؤنٹ اور فیکٹری ڈیٹا کی دوبارہ ترتیب کا سسٹم حذف ہو جائے گا۔ تمام صارف ڈیٹا غائب ہو جائیں گے۔"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"اس سے ڈیمو اکاؤنٹ اور فیکٹری ڈیٹا ری سیٹ کا سسٹم حذف ہو جائے گا۔ تمام صارف ڈیٹا غائب ہو جائیں گے۔"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ڈیمو سے باہر نکلیں"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"برخاست کریں"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ڈرائیونگ کے دوران یہ خصوصیت دستیاب نہیں ہے"</string>

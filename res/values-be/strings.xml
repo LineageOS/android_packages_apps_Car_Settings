@@ -23,7 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Узровень яркасці"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптыўная яркасць"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Аптымізаваць узровень яркасці ў залежнасці ад асвятлення"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Начны рэжым уключаны"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Начная падсветка ўключана"</string>
     <string name="keywords_display" msgid="3978416985146943922">"экран, сэнсарны экран"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"зацемнены экран, сэнсарны экран, акумулятар"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"зацемнены экран, сэнсарны экран, акумулятар"</string>
@@ -309,7 +309,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Выкарыстоўваць здымак экрана"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Дазволіць праграме-памочніку мець доступ да відарыса на экране"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Галасавы ўвод"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Сэрвіс аўтазапаўнення"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Служба аўтазапаўнення"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Няма"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Выбрана"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Памочнік атрымае доступ да інфармацыі пра праграмы, якія выкарыстоўваюцца ў вашай сістэме, у тым ліку да інфармацыі, бачнай на вашым экране ці даступнай у праграмах."</string>
@@ -320,7 +320,7 @@
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"Не адкрываць спасылкі, якія падтрымліваюцца"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Адкрыць <xliff:g id="DOMAIN">%s</xliff:g>"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"Адкрыць <xliff:g id="DOMAIN">%s</xliff:g> і іншыя URL-адрасы"</string>
-    <string name="app_launch_title" msgid="3442601467010363057">"Стандартна адкрываць"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Адкрываць стандартна"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Іншыя стандартныя налады"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Стандартныя налады не зададзены."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Для выканання некаторых дзеянняў вы выбралі стандартны запуск гэтай праграмы."</string>
@@ -374,7 +374,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Удзельнікі"</string>
     <string name="manual" msgid="4819839169843240804">"Уручную"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Ярлыкі сертыфікацыі"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Кіраўніцтва па эксплуатацыі і бяспецы"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Інфармацыя па эксплуатацыі і бяспецы"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Аўтарскія правы"</string>
     <string name="license_title" msgid="936705938435249965">"Ліцэнзія"</string>
     <string name="terms_title" msgid="5201471373602628765">"Умовы выкарыстання"</string>
@@ -569,6 +569,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Няправільны ўзор"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Як нарысаваць узор разблакіроўкі"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Памылка захавання ўзору разблакіроўкі"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Занадта шмат няўдалых спроб. Паспрабуйце яшчэ раз праз <xliff:g id="NUMBER">%d</xliff:g> с."</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Зняць блакіроўку экрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Доступ да вашага ўліковага запісу атрымае любы карыстальнік"</string>
