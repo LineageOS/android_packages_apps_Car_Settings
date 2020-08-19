@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ఇది వీటి కోసం అన్ని ప్రాధాన్యతలను రీసెట్ చేస్తుంది:\n\n"<li>"నిలిపివేయబడిన యాప్‌లు"</li>\n<li>"నిలిపివేయబడిన యాప్ నోటిఫికేషన్‌లు"</li>\n<li>"చర్యల కోసం డిఫాల్ట్ యాప్‌లు"</li>\n<li>"యాప్‌ల కోసం నేపథ్య డేటా పరిమితులు"</li>\n<li>"ఏవైనా అనుమతి పరిమితులు"</li>\n\n" మీరు ఏ యాప్‌ డేటాను కోల్పోరు."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"యాప్‌లను రీసెట్ చేయి"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"యాప్ ప్రాధాన్యతలు రీసెట్ చేయబడ్డాయి"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"మొత్తం డేటాను తొలగించు (ఫ్యాక్టరీ రీసెట్)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"ఇది మీ వాహన ప్రధాన విభాగం నుండి మొత్తం డేటాను తొలగిస్తుంది, వీటితో సహా:\n\n"<li>"మీ Google ఖాతా"</li>\n<li>"సిస్టమ్ మరియు యాప్ డేటా మరియు సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేసిన యాప్‌‍లు"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"మీరు ప్రస్తుతం క్రింది ఖాతాలకు సైన్ ఇన్ చేసారు:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ఈ వాహనంలో ఇతర వినియోగదారులు ఉన్నారు."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"వాహనాన్ని రీసెట్ చేయి"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"రీసెట్ చేయాలా?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"మీ వ్యక్తిగత సమాచారం మరియు డౌన్‌లోడ్ చేసిన యాప్‌లు అన్నింటినీ తొలగించాలా? మీరు ఈ చర్యను తిరిగి రద్దు చేయలేరు!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ప్రతి దాన్ని తొలగించండి"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"తొలగిస్తోంది"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"దయచేసి వేచి ఉండండి..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"డేటా అంతటినీ తొలగించు (ఫ్యాక్టరీ రీసెట్)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"కింద పేర్కొన్న వాటితో సహా ఇది మీ వాహన ప్రధాన విభాగం నుండి మొత్తం డేటాను తొలగిస్తుంది:\n\n"<li>"మీ Google ఖాతా"</li>\n<li>"సిస్టమ్, యాప్ డేటా, సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేసిన యాప్‌‍లు"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"మీరు ప్రస్తుతం కింది ఖాతాలకు సైన్ ఇన్ చేశారు:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"ఈ వాహనంలో ఇతర యూజర్‌లు ఉన్నారు."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"వాహనాన్ని రీసెట్ చేయి"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"రీసెట్ చేయాలా?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"మీ వ్యక్తిగత సమాచారం, డౌన్‌లోడ్ చేసిన యాప్‌లు అన్నింటినీ తొలగించాలా? మీరు ఈ చర్యను తిరిగి రద్దు చేయలేరు!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"అన్నింటినీ తొలగించండి"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"తొలగిస్తోంది"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"దయచేసి వేచి ఉండండి..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"తేదీ &amp; సమయం"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"తేదీ, సమయం, సమయ మండలి &amp; ఫార్మాట్‌లను సెట్ చేయండి"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"ఆటోమేటిక్‌గా తేదీ &amp; సమయం"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ఆకృతి తప్పు"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"అన్‌లాక్ నమూనాను ఎలా గీయాలి"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ఆకృతిని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"చాలా ఎక్కువ తప్పు ప్రయత్నాలు చేశారు. <xliff:g id="NUMBER">%d</xliff:g> సెకన్లలో మళ్లీ ట్రై చేయండి."</string>
     <string name="okay" msgid="4589873324439764349">"సరే"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"స్క్రీన్ లాక్‌ను తీసివేయాలా?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ఎవరైనా మీ ఖాతాను యాక్సెస్ చేయడానికి ఇది అనుమతిస్తుంది"</string>
@@ -648,5 +649,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"విస్మరించు"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"డ్రైవింగ్ చేస్తున్నప్పుడు ఈ ఫీచర్ అందుబాటులో ఉండదు"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"డ్రైవింగ్ చేస్తున్నప్పుడు, యూజర్‌ను జోడించడం సాధ్యం కాదు"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"శోధన"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

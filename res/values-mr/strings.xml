@@ -412,26 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"हे यासाठी सर्व प्राधान्ये रीसेट करेल:\n\n"<li>"बंद केलेली अ‍ॅप्स"</li>\n<li>"बंद केलेल्या अ‍ॅप्स सूचना"</li>\n<li>"क्रियांसाठी डीफॉल्ट अ‍ॅप्लिकेशन्स"</li>\n<li>"अ‍ॅप्ससाठी बॅकग्राउंड डेटा प्रतिबंध"</li>\n<li>"कोणतेही परवानगी प्रतिबंध"</li>\n\n"तुम्ही कोणताही अ‍ॅप डेटा गमावणार नाही."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"अ‍ॅप्स रीसेट करा"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ॲप प्राधान्ये रीसेट केली गेली आहेत"</string>
-    <!-- no translation found for factory_reset_title (4019066569214122052) -->
-    <skip />
-    <!-- no translation found for factory_reset_desc (7133390564019035242) -->
-    <skip />
-    <!-- no translation found for factory_reset_accounts (5523956654938834209) -->
-    <skip />
-    <!-- no translation found for factory_reset_other_users_present (3708751471946901936) -->
-    <skip />
-    <!-- no translation found for factory_reset_button_text (5364900277201550546) -->
-    <skip />
-    <!-- no translation found for factory_reset_confirm_title (569087764460471326) -->
-    <skip />
-    <!-- no translation found for factory_reset_confirm_desc (5075292788128840731) -->
-    <skip />
-    <!-- no translation found for factory_reset_confirm_button_text (1797490544756481809) -->
-    <skip />
-    <!-- no translation found for factory_reset_progress_title (4580937077054738173) -->
-    <skip />
-    <!-- no translation found for factory_reset_progress_text (7704636573522634757) -->
-    <skip />
+    <string name="factory_reset_title" msgid="4019066569214122052">"सर्व डेटा मिटवा (फॅक्टरी रीसेट)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"हे तुमच्या वाहनाच्या मुख्य युनिटमधून पुढील गोष्टींच्‍या समावेशासह सर्व डेटा मिटवेल:\n\n"<li>"तुमचे Google खाते"</li>\n<li>"सिस्टम आणि अ‍ॅप डेटा व सेटिंग्ज"</li>\n<li>"डाउनलोड केलेली अ‍ॅप्स"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"तुम्ही सध्या खालील खात्यांमध्ये साइन इन केले आहे:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"या वाहनावर इतर वापरकर्ते उपस्‍थित आहेत."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"वाहन रीसेट करा"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"रीसेट करायचे आहे का?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"तुमची सर्व वैयक्तिक माहिती आणि डाउनलोड केलेली अ‍ॅप्स मिटवायची आहेत का? तुम्ही ही कृती पहिल्यासारखी करू शकणार नाही!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"सर्वकाही मिटवा"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"मिटवत आहे"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"कृपया प्रतीक्षा करा…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"तारीख आणि वेळ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"तारीख, वेळ, टाइम झोन आणि फॉरमॅट सेट करा"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"आपोआप तारीख आणि वेळ"</string>
@@ -577,8 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"चुकीचा पॅटर्न"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलॉक पॅटर्न कसा काढावा"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"पॅटर्न सेव्ह करताना एरर आली"</string>
-    <!-- no translation found for lockpattern_too_many_failed_confirmation_attempts (4636307830951251013) -->
-    <skip />
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"बरेच चुकीचे प्रयत्‍न. <xliff:g id="NUMBER">%d</xliff:g> सेकंदांमध्‍ये पुन्हा प्रयत्न करा."</string>
     <string name="okay" msgid="4589873324439764349">"ठीक आहे"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रीन लॉक काढायचा?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"तुमचे खाते ॲक्‍सेस करण्‍यासाठी हे कुणालाही अनुमती देते"</string>

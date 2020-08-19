@@ -412,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"এটি এইগুলির জন্য সব পছন্দ রিসেট করবে:\n\n"<li>" বন্ধ করা অ্যাপ"</li>\n<li>" বন্ধ করা অ্যাপের বিজ্ঞপ্তি"</li>\n<li>" অ্যাকশনের জন্য ডিফল্ট অ্যাপ্লিকেশন"</li>\n<li>" অ্যাপের জন্য ব্যাকগ্রাউন্ড ডেটার সীমাবদ্ধতা"</li>\n<li>" যেকোনও অনুমতির সীমাবদ্ধতা"</li>\n\n" আপনি কোনও অ্যাপের ডেটা হারাবেন না।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"অ্যাপ আবার সেট করুন"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"অ্যাপের পছন্দ রিসেট করা হয়েছে"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"সমস্ত ডেটা মুছে ফেলুন (ফ্যাক্টরি রিসেট)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"এটি গাড়ির প্রধান ডিসপ্লে ইউনিট থেকে সমস্ত ডেটা মুছে ফেলবে, নিম্নলিখিত বিষয়গুলি অন্তর্ভুক্ত:\n\n"<li>"আপনার Google অ্যাকাউন্ট"</li>\n<li>"সিস্টেম এবং অ্যাপের ডেটা এবং সেটিংস"</li>\n<li>"ডাউনলোড করা অ্যাপ"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"আপনি বর্তমানে নিম্নলিখিত অ্যাকাউন্টে সাইন-ইন করে আছেন:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"এই গাড়িতে অন্য ব্যবহারকারী আছেন।"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"গাড়ি রিসেট করুন"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"রিসেট করবেন?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"আপনার সমস্ত ব্যক্তিগত তথ্য এবং ডাউনলোড করা অ্যাপ মুছে দিতে চান? আপনি এই প্রক্রিয়াটি আগের অবস্থায় ফেরাতে পারবেন না!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"সবকিছু মুছে দিন"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"মোছা হচ্ছে"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"অপেক্ষা করুন..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"সমস্ত ডেটা মুছুন (ফ্যাক্টরি রিসেট)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"নিচে উল্লেখ করা ডেটা ছাড়াও, এটি গাড়ির প্রধান হেড ইউনিট থেকে সমস্ত ডেটা মুছে ফেলবে:\n\n"<li>"আপনার Google অ্যাকাউন্ট"</li>\n<li>"সিস্টেম এবং অ্যাপ ডেটা এবং সেটিংস"</li>\n<li>"ডাউনলোড করা অ্যাপ"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"আপনি বর্তমানে নিম্নলিখিত অ্যাকাউন্টে সাইন-ইন করে আছেন:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"এই গাড়িতে অন্য ব্যবহারকারী আছেন।"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"গাড়ি রিসেট করুন"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"রিসেট করতে চান?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"আপনার সমস্ত ব্যক্তিগত তথ্য এবং ডাউনলোড করা অ্যাপ মুছে দিতে চান? আপনি এই প্রক্রিয়াটি সম্পূর্ণ করলে আগের অবস্থায় ফিরে যেতে পারবেন না!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"সবকিছু মুছে দিন"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"মুছে ফেলা হচ্ছে"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"অপেক্ষা করুন..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"দিন ও তারিখ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"তারিখ, সময়, টাইম জোন ও ফর্ম্যাট সেট করুন"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"অটোমেটিক তারিখ ও সময়"</string>
@@ -567,6 +567,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ভুল প্যাটার্ন"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"কীভাবে একটি আনলক প্যাটার্ন আঁকবেন"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"প্যাটার্ন সেভ করার সময় সমস্যা"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"অনেকবার ভুল প্রচেষ্টা করা হয়েছে। <xliff:g id="NUMBER">%d</xliff:g> সেকেন্ডের মধ্যে আবার চেষ্টা করুন।"</string>
     <string name="okay" msgid="4589873324439764349">"ঠিক আছে"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"স্ক্রিন লক সরিয়ে দেবেন?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"এর ফলে যেকেউ আপনার অ্যাকাউন্ট অ্যাক্সেস করতে পারবেন"</string>
@@ -648,5 +649,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"খারিজ করুন"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ড্রাইভ করার সময় এই ফিচার কাজ করবে না"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ড্রাইভ করার সময় ব্যবহারকারীকে যোগ করতে পারবেন না"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"সার্চ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>
