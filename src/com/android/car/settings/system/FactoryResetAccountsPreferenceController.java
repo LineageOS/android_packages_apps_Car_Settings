@@ -139,6 +139,7 @@ public class FactoryResetAccountsPreferenceController
         preference.setTitle(title);
         preference.setIcon(icon);
         preference.setSelectable(false);
+        preference.setSingleLineTitle(false);
         return preference;
     }
 }
