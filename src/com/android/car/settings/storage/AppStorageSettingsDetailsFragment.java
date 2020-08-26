@@ -257,22 +257,13 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
         if (mAppsControlDisallowedAdmin != null && !mAppsControlDisallowedBySystem) {
             RestrictedLockUtils.sendShowAdminSupportDetailsIntent(
                     getActivity(), mAppsControlDisallowedAdmin);
-        } else {
+        } else if (mAppEntry.info.manageSpaceActivityName != null) {
             Intent intent = new Intent(Intent.ACTION_DEFAULT);
-            boolean isManageSpaceActivityAvailable = false;
-            if (mAppEntry.info.manageSpaceActivityName != null) {
-                intent.setClassName(mAppEntry.info.packageName,
-                        mAppEntry.info.manageSpaceActivityName);
-                isManageSpaceActivityAvailable = getContext().getPackageManager().resolveActivity(
-                        intent, /* flags= */ 0) != null;
-            }
-
-            if (isManageSpaceActivityAvailable) {
-                startActivityForResult(intent, REQUEST_MANAGE_SPACE);
-            } else {
-                showClearDataDialog();
-            }
-
+            intent.setClassName(mAppEntry.info.packageName,
+                    mAppEntry.info.manageSpaceActivityName);
+            startActivityForResult(intent, REQUEST_MANAGE_SPACE);
+        } else {
+            showClearDataDialog();
         }
     }
 
