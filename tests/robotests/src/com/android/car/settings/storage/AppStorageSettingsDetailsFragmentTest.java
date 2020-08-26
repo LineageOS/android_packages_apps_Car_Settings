@@ -16,6 +16,7 @@
 
 package com.android.car.settings.storage;
 
+import static com.android.car.settings.storage.AppStorageSettingsDetailsFragment.CONFIRM_CLEAR_STORAGE_DIALOG_TAG;
 import static com.android.car.settings.storage.AppStorageSettingsDetailsFragment.EXTRA_PACKAGE_NAME;
 import static com.android.car.ui.core.CarUi.requireToolbar;
 
@@ -33,8 +34,10 @@ import static org.mockito.Mockito.when;
 import android.app.Activity;
 import android.app.usage.StorageStats;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 
 import com.android.car.settings.R;
@@ -59,6 +62,7 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
 
 /** Unit test for {@link AppStorageSettingsDetailsFragment}. */
 @RunWith(RobolectricTestRunner.class)
@@ -67,6 +71,7 @@ import org.robolectric.annotation.Config;
 public class AppStorageSettingsDetailsFragmentTest {
 
     private static final String PACKAGE_NAME = "com.google.packageName";
+    private static final String TEST_MANAGE_STORAGE_ACTIVITY = "TestActivity";
     private static final String SOURCE = "source";
     private static final int UID = 12;
     private static final String LABEL = "label";
@@ -102,6 +107,8 @@ public class AppStorageSettingsDetailsFragmentTest {
         ApplicationInfo appInfo = new ApplicationInfo();
         appInfo.uid = UID;
         appInfo.sourceDir = SOURCE;
+        appInfo.packageName = PACKAGE_NAME;
+        appInfo.manageSpaceActivityName = TEST_MANAGE_STORAGE_ACTIVITY;
 
         ApplicationsState.AppEntry appEntry = new ApplicationsState.AppEntry(mContext, appInfo,
                 1234L);
@@ -225,7 +232,61 @@ public class AppStorageSettingsDetailsFragmentTest {
         mFragment.onDataLoaded(storageStats, false, false);
         findClearStorageButton(mFragment.requireActivity()).performClick();
 
-        assertThat(mFragment.getFragmentManager()).isNotNull();
+        assertThat(mFragment.requireActivity().getSupportFragmentManager().findFragmentByTag(
+                CONFIRM_CLEAR_STORAGE_DIALOG_TAG)).isNotNull();
+    }
+
+    @Test
+    public void handleClearDataClick_hasValidManageSpaceActivity_shouldNotShowDialogToClear() {
+        ShadowRestrictedLockUtilsInternal.setEnforcedAdmin(mEnforcedAdmin);
+        ShadowRestrictedLockUtilsInternal.setHasBaseUserRestriction(true);
+        ShadowApplicationPackageManager.setPackageManager(mPackageManager);
+
+        // manage space activity resolves correctly.
+        Intent intent = new Intent(Intent.ACTION_DEFAULT);
+        intent.setClassName(PACKAGE_NAME, TEST_MANAGE_STORAGE_ACTIVITY);
+        getShadowPackageManager().addResolveInfoForIntent(intent, new ResolveInfo());
+
+        mFragmentController.resume();
+        StorageStats stats = new StorageStats();
+        stats.codeBytes = 100;
+        stats.dataBytes = 50;
+        stats.cacheBytes = 10;
+        StorageStatsSource.AppStorageStats storageStats =
+                new StorageStatsSource.AppStorageStatsImpl(stats);
+
+        mFragment.onActivityCreated(null);
+        mFragment.onDataLoaded(storageStats, false, false);
+        findClearStorageButton(mFragment.requireActivity()).performClick();
+
+        assertThat(mFragment.requireActivity().getSupportFragmentManager().findFragmentByTag(
+                CONFIRM_CLEAR_STORAGE_DIALOG_TAG)).isNull();
+    }
+
+    @Test
+    public void handleClearDataClick_hasInvalidManageSpaceActivity_shouldShowDialogToClear() {
+        ShadowRestrictedLockUtilsInternal.setEnforcedAdmin(mEnforcedAdmin);
+        ShadowRestrictedLockUtilsInternal.setHasBaseUserRestriction(true);
+        ShadowApplicationPackageManager.setPackageManager(mPackageManager);
+
+        Intent intent = new Intent(Intent.ACTION_DEFAULT);
+        intent.setClassName(PACKAGE_NAME, TEST_MANAGE_STORAGE_ACTIVITY);
+        getShadowPackageManager().removeResolveInfosForIntent(intent, PACKAGE_NAME);
+
+        mFragmentController.resume();
+        StorageStats stats = new StorageStats();
+        stats.codeBytes = 100;
+        stats.dataBytes = 50;
+        stats.cacheBytes = 10;
+        StorageStatsSource.AppStorageStats storageStats =
+                new StorageStatsSource.AppStorageStatsImpl(stats);
+
+        mFragment.onActivityCreated(null);
+        mFragment.onDataLoaded(storageStats, false, false);
+        findClearStorageButton(mFragment.requireActivity()).performClick();
+
+        assertThat(mFragment.requireActivity().getSupportFragmentManager().findFragmentByTag(
+                CONFIRM_CLEAR_STORAGE_DIALOG_TAG)).isNotNull();
     }
 
     @Test
@@ -308,5 +369,9 @@ public class AppStorageSettingsDetailsFragmentTest {
     private MenuItem findClearStorageButton(Activity activity) {
         ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
+    }
+
+    private ShadowApplicationPackageManager getShadowPackageManager() {
+        return Shadow.extract(mContext.getPackageManager());
     }
 }
