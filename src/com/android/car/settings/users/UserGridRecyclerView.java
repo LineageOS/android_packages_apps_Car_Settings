@@ -222,7 +222,7 @@ public class UserGridRecyclerView extends RecyclerView {
     }
 
     private List<UserInfo> getUsersForUserGrid() {
-        List<UserInfo> users = UserManager.get(mContext).getUsers(/* excludeDying= */ true);
+        List<UserInfo> users = UserManager.get(mContext).getAliveUsers();
         return users.stream()
                 .filter(UserInfo::supportsSwitchToByUser)
                 .collect(Collectors.toList());
