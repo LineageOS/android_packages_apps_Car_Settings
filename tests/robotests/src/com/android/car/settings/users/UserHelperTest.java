@@ -455,6 +455,8 @@ public class UserHelperTest {
         assertThat(guest).isEqualTo(guestInfo);
     }
 
+    // TODO(b/157921703): use AndroidMockitoHelper for most of the methods below
+
     private UserInfo createAdminUser(int id) {
         return new UserInfo(id, null, UserInfo.FLAG_ADMIN);
     }
@@ -478,8 +480,7 @@ public class UserHelperTest {
     private void mockGetUsers(UserInfo... users) {
         List<UserInfo> testUsers = new ArrayList<>(Arrays.asList(users));
         when(mMockUserManager.getUsers()).thenReturn(testUsers);
-        when(mMockUserManager.getUsers(true)).thenReturn(testUsers);
-        when(mMockUserManager.getUsers(false)).thenReturn(testUsers);
+        when(mMockUserManager.getAliveUsers()).thenReturn(testUsers);
     }
 
     private void mockRemoveUser(int userId, int status) {
