@@ -301,7 +301,8 @@ public class UserHelper {
      * @return An optionally filtered list containing all living users
      */
     public List<UserInfo> getAllLivingUsers(@Nullable Predicate<? super UserInfo> filter) {
-        Stream<UserInfo> filteredListStream = mUserManager.getAliveUsers().stream();
+        Stream<UserInfo> filteredListStream =
+                mUserManager.getUsers(/* excludeDying= */ true).stream();
 
         if (filter != null) {
             filteredListStream = filteredListStream.filter(filter);
