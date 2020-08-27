@@ -334,6 +334,7 @@ public class UserHelperTest {
         UserInfo nonAdminInfo = createNonAdminUser(baseId + 1);
         mockGetUsers(adminUser, nonAdminInfo);
         UserInfo newAdminInfo = createAdminUser(baseId + 2);
+        mockRemoveUserSuccess();
         mockCreateUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN,
                 UserCreationResult.STATUS_SUCCESSFUL, newAdminInfo);
         mockSwitchUserSuccess();
@@ -376,6 +377,7 @@ public class UserHelperTest {
         mockGetUsers(currentUser);
 
         UserInfo guestUser = createGuestUser(baseId + 1);
+        mockRemoveUserSuccess();
         mockCreateGuest(DEFAULT_GUEST_NAME, UserCreationResult.STATUS_SUCCESSFUL, guestUser);
         mockSwitchUserSuccess();
 
