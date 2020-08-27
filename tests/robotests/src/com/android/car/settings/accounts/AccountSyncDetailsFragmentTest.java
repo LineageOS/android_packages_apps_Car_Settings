@@ -16,6 +16,8 @@
 
 package com.android.car.settings.accounts;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -32,13 +34,13 @@ import android.content.SyncInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,6 +49,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
@@ -55,7 +58,7 @@ import java.util.List;
 /**
  * Tests for the {@link AccountSyncDetailsFragment}.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowContentResolver.class, ShadowAccountManager.class})
 public class AccountSyncDetailsFragmentTest {
     private static final int USER_ID = 3;
@@ -75,6 +78,9 @@ public class AccountSyncDetailsFragmentTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowContentResolver.setSyncListener(mMockSyncListener);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
@@ -188,7 +194,7 @@ public class AccountSyncDetailsFragmentTest {
     }
 
     private MenuItem getSyncButton() {
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         return toolbar.getMenuItems().get(0);
     }
 
@@ -204,7 +210,7 @@ public class AccountSyncDetailsFragmentTest {
             String authority = authorities[i];
             // Adds a sync adapter type that has the right account type and is visible.
             SyncAdapterType syncAdapterType = new SyncAdapterType(authority,
-                    ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                    ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
             syncAdapters[i] = syncAdapterType;
 
             // Sets that the sync adapter is syncable.

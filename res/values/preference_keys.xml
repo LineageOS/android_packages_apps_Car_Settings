@@ -284,8 +284,8 @@
     <string name="pk_location_recent_requests_entry" translatable="false">
         location_recent_requests_entry
     </string>
-    <string name="pk_location_recent_requests_screen" translatable="false">
-        location_recent_requests_screen
+    <string name="pk_location_recent_requests" translatable="false">
+        location_recent_requests
     </string>
     <string name="pk_location_app_permissions" translatable="false">location_app_permissions
     </string>
@@ -305,14 +305,6 @@
     <string name="pk_password_lock" translatable="false">password_lock</string>
     <string name="pk_pin_lock" translatable="false">pin_lock</string>
     <string name="pk_choose_lock_type" translatable="false">choose_lock_type</string>
-    <string name="pk_trusted_device" translatable="false">trusted_device</string>
-    <string name="pk_car_ble_name" translatable="false">car_ble_name</string>
-    <string name="pk_add_trusted_device" translatable="false">add_trusted_device</string>
-    <string name="pk_trusted_device_list" translatable="false">trusted_device_list</string>
-    <string name="pk_add_device_instruction" translatable="false">add_device_instruction</string>
-    <string name="pk_companion_app_download" translatable="false">companion_app_download</string>
-    <string name="pk_trusted_device_safety_alert" translatable="false">trusted_device_safety_alert
-    </string>
     <string name="pk_credentials_reset" translatable="false">credentials_reset</string>
 
     <!-- System Settings -->
@@ -362,13 +354,22 @@
     </string>
 
     <!-- About Settings -->
-    <string name="pk_model_info" translatable="false">model_info</string>
+    <string name="pk_hardware_info" translatable="false">hardware_info</string>
     <string name="pk_firmware_version" translatable="false">firmware_version</string>
     <string name="pk_security_patch" translatable="false">security_patch</string>
     <string name="pk_kernel_version" translatable="false">kernel_version</string>
     <string name="pk_build_number" translatable="false">build_number</string>
     <string name="pk_regulatory_labels" translatable="false">regulatory_labels</string>
     <string name="pk_about_bluetooth_mac_address" translatable="false">about_bluetooth_mac_address
+    </string>
+
+    <!-- Hardware Info -->
+    <string name="pk_hardware_info_device_model" translatable="false">hardware_info_device_model
+    </string>
+    <string name="pk_hardware_info_device_serial" translatable="false">hardware_info_device_serial
+    </string>
+    <string name="pk_hardware_info_device_revision" translatable="false">
+        hardware_info_device_revision
     </string>
 
     <!-- Reset Options -->

@@ -21,29 +21,32 @@ import static com.google.common.truth.Truth.assertThat;
 import android.app.Activity;
 import android.widget.TimePicker;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.shadows.ShadowSettings;
 
 /** Unit test for {@link TimePickerFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class TimePickerFragmentTest {
 
     private TimePickerFragment mFragment;
     private FragmentController<TimePickerFragment> mFragmentController;
-
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mFragment = new TimePickerFragment();
         mFragmentController = FragmentController.of(mFragment);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @Test

@@ -16,6 +16,9 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.ui.core.CarUi.requireInsets;
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
@@ -26,7 +29,6 @@ import android.util.ArrayMap;
 import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -34,15 +36,17 @@ import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.DisabledPreferenceCallback;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
+import com.android.settingslib.search.Indexable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +66,7 @@ import java.util.Map;
  * controllers.
  */
 public abstract class SettingsFragment extends PreferenceFragment implements
-        CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController {
+        CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController, Indexable {
 
     @VisibleForTesting
     static final String DIALOG_FRAGMENT_TAG =
@@ -78,6 +82,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
     private CarUxRestrictions mUxRestrictions;
     private int mCurrentRequestIndex = 0;
+    private String mRestrictedWhileDrivingMessage;
 
     /**
      * Returns the resource id for the preference XML of this fragment.
@@ -85,8 +90,8 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     @XmlRes
     protected abstract int getPreferenceScreenResId();
 
-    protected Toolbar getToolbar() {
-        return requireActivity().findViewById(R.id.toolbar);
+    protected ToolbarController getToolbar() {
+        return requireToolbar(requireActivity());
     }
     /**
      * Returns the MenuItems to display in the toolbar. Subclasses should override this to
@@ -133,8 +138,8 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         if (!(getActivity() instanceof UxRestrictionsProvider)) {
             throw new IllegalStateException("Must attach to a UxRestrictionsProvider");
         }
-        if (!(getActivity() instanceof FragmentController)) {
-            throw new IllegalStateException("Must attach to a FragmentController");
+        if (!(getActivity() instanceof FragmentHost)) {
+            throw new IllegalStateException("Must attach to a FragmentHost");
         }
 
         TypedValue tv = new TypedValue();
@@ -160,6 +165,14 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             mPreferenceControllersLookup.computeIfAbsent(controller.getClass(),
                     k -> new ArrayList<>(/* initialCapacity= */ 1)).add(controller);
         });
+
+        mRestrictedWhileDrivingMessage = context.getString(R.string.restricted_while_driving);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        onCarUiInsetsChanged(requireInsets(requireActivity()));
     }
 
     /**
@@ -176,14 +189,22 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         addPreferencesFromResource(resId);
         PreferenceScreen screen = getPreferenceScreen();
         for (PreferenceController controller : mPreferenceControllers) {
-            controller.setPreference(screen.findPreference(controller.getPreferenceKey()));
+            Preference pref = screen.findPreference(controller.getPreferenceKey());
+
+            controller.setPreference(pref);
+
+            if (pref instanceof DisabledPreferenceCallback && controller.getAvailabilityStatus()
+                    != PreferenceController.AVAILABLE_FOR_VIEWING) {
+                ((DisabledPreferenceCallback) pref).setMessageToShowWhenDisabledPreferenceClicked(
+                        mRestrictedWhileDrivingMessage);
+            }
         }
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Toolbar toolbar = requireActivity().findViewById(R.id.toolbar);
+        ToolbarController toolbar = getToolbar();
         if (toolbar != null) {
             List<MenuItem> items = getToolbarMenuItems();
             if (items != null) {
@@ -197,21 +218,6 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             toolbar.setTitle(getPreferenceScreen().getTitle());
             toolbar.setMenuItems(items);
             toolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
-
-            // If the fragment is root, change the back button to settings icon.
-            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-            if (fragmentManager.getBackStackEntryCount() == 1
-                    && fragmentManager.findFragmentByTag("0") != null
-                    && fragmentManager.findFragmentByTag("0").getClass().getName().equals(
-                    getString(R.string.config_settings_hierarchy_root_fragment))) {
-                toolbar.setState(Toolbar.State.HOME);
-                toolbar.setLogo(getContext().getResources()
-                        .getBoolean(R.bool.config_show_settings_root_exit_icon)
-                        ? R.drawable.ic_launcher_settings
-                        : 0);
-            } else {
-                toolbar.setState(Toolbar.State.SUBPAGE);
-            }
         }
     }
 
@@ -264,17 +270,12 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
     @Override
     public void launchFragment(Fragment fragment) {
-        ((FragmentController) requireActivity()).launchFragment(fragment);
+        getFragmentHost().launchFragment(fragment);
     }
 
     @Override
     public void goBack() {
-        requireActivity().onBackPressed();
-    }
-
-    @Override
-    public void showBlockingMessage() {
-        Toast.makeText(getContext(), R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
+        getFragmentHost().goBack();
     }
 
     @Override
@@ -351,5 +352,9 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         if ((requestCode & 0xff00) != 0) {
             throw new IllegalArgumentException("Can only use lower 8 bits for requestCode");
         }
+    }
+
+    private FragmentHost getFragmentHost() {
+        return (FragmentHost) requireActivity();
     }
 }

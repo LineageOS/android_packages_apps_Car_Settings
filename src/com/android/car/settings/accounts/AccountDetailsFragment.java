@@ -22,7 +22,6 @@ import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
 import android.app.Dialog;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -38,6 +37,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.users.UserHelper;
 import com.android.car.ui.AlertDialogBuilder;
 import com.android.car.ui.preference.CarUiDialogFragment;
 import com.android.car.ui.toolbar.MenuItem;
@@ -114,7 +114,7 @@ public class AccountDetailsFragment extends SettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        boolean canModifyAccount = new CarUserManagerHelper(getContext())
+        boolean canModifyAccount = UserHelper.getInstance(getContext())
                 .canCurrentProcessModifyAccounts();
 
         mRemoveButton = new MenuItem.Builder(getContext())

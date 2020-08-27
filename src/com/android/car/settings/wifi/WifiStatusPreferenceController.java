@@ -42,24 +42,21 @@ public class WifiStatusPreferenceController extends WifiBasePreferenceController
 
     @Override
     protected void updateState(Preference preference) {
-        CarWifiManager manager = getCarWifiManager();
-        if (manager != null) {
-            switch (manager.getWifiState()) {
-                case WifiManager.WIFI_STATE_DISABLED:
-                    getPreference().setVisible(true);
-                    getPreference().setTitle(R.string.wifi_disabled);
-                    getPreference().setSelectable(false);
-                    getPreference().setIcon(R.drawable.ic_settings_about);
-                    break;
-                case WifiManager.WIFI_STATE_ENABLING:
-                    getPreference().setVisible(true);
-                    getPreference().setTitle(R.string.loading_wifi_list);
-                    getPreference().setSelectable(true);
-                    getPreference().setIcon(null);
-                    break;
-                default:
-                    getPreference().setVisible(false);
-            }
+        switch (getCarWifiManager().getWifiState()) {
+            case WifiManager.WIFI_STATE_DISABLED:
+                getPreference().setVisible(true);
+                getPreference().setTitle(R.string.wifi_disabled);
+                getPreference().setSelectable(false);
+                getPreference().setIcon(R.drawable.ic_settings_about);
+                break;
+            case WifiManager.WIFI_STATE_ENABLING:
+                getPreference().setVisible(true);
+                getPreference().setTitle(R.string.loading_wifi_list);
+                getPreference().setSelectable(true);
+                getPreference().setIcon(null);
+                break;
+           default:
+                getPreference().setVisible(false);
         }
     }
 
@@ -67,5 +64,4 @@ public class WifiStatusPreferenceController extends WifiBasePreferenceController
     public void onWifiStateChanged(int state) {
         refreshUi();
     }
-
 }

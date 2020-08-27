@@ -74,8 +74,7 @@ public class BluetoothUnbondedDevicesPreferenceController extends
     protected int getAvailabilityStatus() {
         int availabilityStatus = super.getAvailabilityStatus();
         if (availabilityStatus == AVAILABLE
-                && getCarUserManagerHelper().isCurrentProcessUserHasRestriction(
-                DISALLOW_CONFIG_BLUETOOTH)) {
+                && getUserManager().hasUserRestriction(DISALLOW_CONFIG_BLUETOOTH)) {
             return DISABLED_FOR_USER;
         }
         return availabilityStatus;
@@ -91,8 +90,8 @@ public class BluetoothUnbondedDevicesPreferenceController extends
             if (matches && unbondedMajorClassFilter.length > 0) {
                 matches = device.getBluetoothClass() != null
                         && ArrayUtils.contains(
-                                unbondedMajorClassFilter,
-                                device.getBluetoothClass().getMajorDeviceClass());
+                        unbondedMajorClassFilter,
+                        device.getBluetoothClass().getMajorDeviceClass());
             }
             return matches;
         }

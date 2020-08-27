@@ -61,7 +61,7 @@ public class ErrorDialog extends CarUiDialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new AlertDialogBuilder(getContext())
                 .setTitle(getArguments().getInt(ERROR_DIALOG_TITLE_KEY))
-                .setPositiveButton(android.R.string.ok, /* listener =*/ null)
+                .setPositiveButton(android.R.string.ok, /* listener= */ null)
                 .create();
     }
 

@@ -129,7 +129,7 @@ public class WifiDetailsFragment extends SettingsFragment
         mWifiManager = context.getSystemService(WifiManager.class);
         LOG.d("Creating WifiInfoProvider for " + mAccessPoint);
         if (mWifiInfoProvider == null) {
-            mWifiInfoProvider = new WifiInfoProviderImpl(getContext(), mAccessPoint);
+            mWifiInfoProvider = new WifiInfoProvider(getContext(), mAccessPoint);
         }
         getLifecycle().addObserver(mWifiInfoProvider);
 

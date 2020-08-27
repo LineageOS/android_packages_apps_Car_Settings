@@ -16,20 +16,22 @@
 
 package com.android.car.settings.wifi;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 import android.content.Intent;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.test.core.app.ApplicationProvider;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.After;
@@ -37,12 +39,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RuntimeEnvironment;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 import java.util.List;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowLocalBroadcastManager.class, ShadowWifiManager.class})
 public class AddWifiFragmentTest {
 
@@ -53,10 +55,13 @@ public class AddWifiFragmentTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
         mLocalBroadcastManager = LocalBroadcastManager.getInstance(mContext);
         mFragment = new AddWifiFragment();
         mFragmentController = FragmentController.of(mFragment);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
@@ -66,34 +71,34 @@ public class AddWifiFragmentTest {
     }
 
     @Test
-    public void onStart_registersNameChangeListener() {
-        mFragmentController.create().start();
+    public void onCreate_registersNameChangeListener() {
+        mFragmentController.create();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkNamePreferenceController.ACTION_NAME_CHANGE)).isTrue();
     }
 
     @Test
-    public void onStart_registersSecurityChangeListener() {
-        mFragmentController.create().start();
+    public void onCreate_registersSecurityChangeListener() {
+        mFragmentController.create();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE)).isTrue();
     }
 
     @Test
-    public void onStop_unregistersNameChangeListener() {
-        mFragmentController.create().start();
-        mFragmentController.stop();
+    public void onDestroy_unregistersNameChangeListener() {
+        mFragmentController.create();
+        mFragmentController.destroy();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkNamePreferenceController.ACTION_NAME_CHANGE)).isFalse();
     }
 
     @Test
-    public void onStop_unregistersSecurityChangeListener() {
-        mFragmentController.create().start();
-        mFragmentController.stop();
+    public void onDestroy_unregistersSecurityChangeListener() {
+        mFragmentController.create();
+        mFragmentController.destroy();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE)).isFalse();
@@ -108,9 +113,8 @@ public class AddWifiFragmentTest {
     @Test
     public void receiveNameChangeIntent_emptyName_buttonDisabled() {
         mFragmentController.setup();
-        Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
-        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, "");
-        mLocalBroadcastManager.sendBroadcastSync(intent);
+
+        sendNameChangeBroadcastIntent("");
 
         assertThat(getAddWifiButton().isEnabled()).isFalse();
     }
@@ -118,12 +122,8 @@ public class AddWifiFragmentTest {
     @Test
     public void receiveNameChangeIntent_name_buttonEnabled() {
         mFragmentController.setup();
-        String networkName = "test_network_name";
-        Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
-        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, networkName);
-        mLocalBroadcastManager.sendBroadcastSync(intent);
 
-        Robolectric.flushForegroundThreadScheduler();
+        sendNameChangeBroadcastIntent("test_network_name");
 
         assertThat(getAddWifiButton().isEnabled()).isTrue();
     }
@@ -131,21 +131,29 @@ public class AddWifiFragmentTest {
     @Test
     public void receiveSecurityChangeIntent_nameSet_buttonDisabled() {
         mFragmentController.setup();
-        String networkName = "test_network_name";
-        Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
-        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, networkName);
-        mLocalBroadcastManager.sendBroadcastSync(intent);
+        sendNameChangeBroadcastIntent("test_network_name");
 
-        intent = new Intent(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE);
-        intent.putExtra(NetworkSecurityPreferenceController.KEY_SECURITY_TYPE,
-                AccessPoint.SECURITY_PSK);
-        mLocalBroadcastManager.sendBroadcastSync(intent);
+        sendSecurityChangeBroadcastIntent(AccessPoint.SECURITY_PSK);
 
         assertThat(getAddWifiButton().isEnabled()).isFalse();
     }
 
+    private void sendNameChangeBroadcastIntent(String networkName) {
+        Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
+        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, networkName);
+        mLocalBroadcastManager.sendBroadcastSync(intent);
+        Robolectric.flushForegroundThreadScheduler();
+    }
+
+    private void sendSecurityChangeBroadcastIntent(int securityType) {
+        Intent intent = new Intent(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE);
+        intent.putExtra(NetworkSecurityPreferenceController.KEY_SECURITY_TYPE, securityType);
+        mLocalBroadcastManager.sendBroadcastSync(intent);
+        Robolectric.flushForegroundThreadScheduler();
+    }
+
     private MenuItem getAddWifiButton() {
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         return toolbar.getMenuItems().get(0);
     }
 

@@ -16,9 +16,9 @@
 
 package com.android.car.settings.system;
 
+import android.app.ActivityManager;
 import android.app.AppOpsManager;
 import android.app.INotificationManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
@@ -133,7 +133,7 @@ public class ResetAppPrefFragment extends SettingsFragment {
                 }
                 IPackageManager.Stub.asInterface(
                         packageManagerServiceBinder).resetApplicationPreferences(
-                        new CarUserManagerHelper(context).getCurrentForegroundUserId());
+                        ActivityManager.getCurrentUser());
             } catch (RemoteException e) {
                 LOG.w("Unable to reset app preferences", e);
             }

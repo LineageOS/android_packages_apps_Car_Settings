@@ -31,10 +31,48 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Nattilstand"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netværk og internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilnetværk"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-kort</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-kort</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktiv/knyttet til SIM-kort"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktiv/knyttet til SIM-kort"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktiv/knyttet til downloadet SIM-kort"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inaktiv/knyttet til downloadet SIM-kort"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Tilføj flere"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobildata"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Brug data via mobilnetværk"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vil du deaktivere mobildata?"</string>
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"Du har ikke valgt endnu"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Vil du bruge <xliff:g id="CARRIER">%1$s</xliff:g> til mobildata?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Du bruger <xliff:g id="CARRIER2_0">%2$s</xliff:g> til mobildata. Hvis du skifter til <xliff:g id="CARRIER1">%1$s</xliff:g>, anvendes <xliff:g id="CARRIER2_1">%2$s</xliff:g> ikke længere til mobildata."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Brug <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Opret forbindelse til datatjenester under roaming"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Vil du tillade dataroaming?"</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Du skal muligvis betale roaminggebyrer."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Dataforbrug"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"Primære data"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"Der er brugt <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Dataadvarsel ved <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Datagrænse på <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Dataadvarsel ved <xliff:g id="ID_1">^1</xliff:g>/datagrænse på <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="one">%d dag tilbage</item>
+      <item quantity="other">%d dage tilbage</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"Der er ingen resterende tid"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Der er mindre end 1 dag tilbage"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"Opdateret af <xliff:g id="ID_1">^1</xliff:g> for <xliff:g id="ID_2">^2</xliff:g> siden"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"Opdateret for <xliff:g id="ID_1">^2</xliff:g> siden"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Netop opdateret af <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Netop opdateret"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"Se abonnement"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Dataforbrug i apps"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"begrænset"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Dato for nulstilling af forbrugsperiode"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Dato i hver måned:"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Angiv"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Advarsel om dataforbrug og datagrænse"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cyklus for appdataforbrug"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Angiv advarsel om dataforbrug"</string>
@@ -43,6 +81,9 @@
     <string name="data_limit" msgid="227338836292511425">"Datagrænse"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Grænse for dataforbrug"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Dit køretøjs hovedenhed deaktiverer mobildata, når den angivne grænse er nået.\n\nEftersom dataforbruget måles af hovedenheden, og dit mobilselskab muligvis beregner forbrug på en anden måde, kan du overveje at angive en lav grænse."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Angiv en advarsel om dataforbrug"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Angiv en grænse for dataforbrug"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Angiv"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Aktiverer Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Deaktiverer Wi-Fi…"</string>
@@ -54,6 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Forbind"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Adgangskode"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Vis adgangskode"</string>
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Giv netværket et navn"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Netværksnavn"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Angiv SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Sikkerhed"</string>
@@ -93,6 +135,28 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Skift automatisk til mobildata"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Brug mobildata, når du ikke har internetadgang via Wi-Fi. Du skal muligvis betale for dataforbrug."</string>
     <string name="learn_more" msgid="8214605928933358604">"Få flere oplysninger"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Navn på hotspot"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Aktiverer <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andre enheder kan oprette forbindelse til <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Adgangskode til hotspot"</string>
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sikkerhed"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Ingen"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP-bånd"</string>
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Vælg AP-bånd"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Automatisk"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 GHz-bånd"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5,0 GHz-bånd"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GHz-bånd foretrækkes"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Vælg mindst ét bånd til Wi‑Fi-hotspottet:"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot og netdeling"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Deaktiver hotspot automatisk"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi-hotspot deaktiveres, hvis der ikke er nogen forbundne enheder"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker at aktivere Wi-Fi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker at deaktivere Wi-Fi"</string>
+    <string name="wifi_error" msgid="3105105447117289410">"Fejl"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Enhed uden navn"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Parrede enheder"</string>
@@ -109,6 +173,16 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Tilgængelige enheder"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profiler"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Aktiverer Bluetooth…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Deaktiverer Bluetooth…"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> ønsker at aktivere Bluetooth"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> ønsker at deaktivere Bluetooth"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"En app ønsker at aktivere Bluetooth"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"En app ønsker at deaktivere Bluetooth"</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> ønsker at gøre din hovedenhed synlig for andre Bluetooth-enheder i <xliff:g id="TIMEOUT">%2$d</xliff:g> sekunder."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"En app ønsker at gøre din hovedenhed synlig for andre Bluetooth-enheder i <xliff:g id="TIMEOUT">%1$d</xliff:g> sekunder."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ønsker at aktivere Bluetooth og gøre din hovedenhed synlig for andre enheder i <xliff:g id="TIMEOUT">%2$d</xliff:g> sekunder."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"En app ønsker at aktivere Bluetooth og gøre din hovedenhed synlig for andre enheder i <xliff:g id="TIMEOUT">%1$d</xliff:g> sekunder."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Anmodning om Bluetooth-parring"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Tilknyt og forbind"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-parringskode"</string>
@@ -122,8 +196,11 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalt 0000 eller 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Anmodning om parring"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tryk for at parre med <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"Vælg Bluetooth-enhed"</string>
     <string name="language_settings" msgid="2079258598337245546">"Sprog"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Sprog og indtastning"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Foreslået"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Alle sprog"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastatur"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Administrer tastaturer"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Oplæsning"</string>
@@ -143,9 +220,59 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Ringetone ved opkald"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Standardlyd for notifikationer"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Standardlyd for alarmer"</string>
+    <string name="units_settings" msgid="402325305096925886">"Måleenhed"</string>
+    <string name="units_speed_title" msgid="7115143916747108160">"Hastighed"</string>
+    <string name="units_distance_title" msgid="6257691565990474635">"Afstand"</string>
+    <string name="units_fuel_consumption_title" msgid="6415108114453652570">"Brændstofforbrug"</string>
+    <string name="units_energy_consumption_title" msgid="2775408854562057609">"Energiforbrug"</string>
+    <string name="units_temperature_title" msgid="22994498606206991">"Temperatur"</string>
+    <string name="units_volume_title" msgid="1912873077839446914">"Volumen"</string>
+    <string name="units_pressure_title" msgid="7477179239294531518">"Tryk"</string>
+    <string name="units_list_entry" msgid="7277796571051055840">"<xliff:g id="UNIT_ABBREVIATION">%1$s</xliff:g> – <xliff:g id="UNIT_PRONUNCIATION">%2$s</xliff:g>"</string>
+    <string name="units_ratio" msgid="1085608614216280006">"<xliff:g id="UNIT_NUMERATOR">%1$s</xliff:g>/<xliff:g id="UNIT_DENOMINATOR">%2$s</xliff:g>"</string>
+    <string name="units_ratio_numerator" msgid="3462102280813794384">"<xliff:g id="UNIT_NUMERATOR_QUANTITY">%1$d</xliff:g> <xliff:g id="UNIT_NUMERATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_ratio_denominator" msgid="6737154450651499228">"<xliff:g id="UNIT_DENOMINATOR_QUANTITY">%1$d</xliff:g> <xliff:g id="UNIT_DENOMINATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_unit_name_meter_per_sec" msgid="9151123661434898991">"Meter per sekund"</string>
+    <string name="units_unit_name_rpm" msgid="4084216808160262380">"Omdrejningstal"</string>
+    <string name="units_unit_name_hertz" msgid="5373975672472735625">"Hertz"</string>
+    <string name="units_unit_name_percentile" msgid="1630667431830186060">"Percentil"</string>
+    <string name="units_unit_name_millimeter" msgid="318832924604375755">"Millimeter"</string>
+    <string name="units_unit_name_meter" msgid="4778344873095502130">"Meter"</string>
+    <string name="units_unit_name_kilometer" msgid="4351417123421381297">"Kilometer"</string>
+    <string name="units_unit_name_mile" msgid="8337486880403419613">"Mile"</string>
+    <string name="units_unit_name_celsius" msgid="1642787068882598698">"Celsius"</string>
+    <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"Fahrenheit"</string>
+    <string name="units_unit_name_kelvin" msgid="4043908998904418360">"Kelvin"</string>
+    <string name="units_unit_name_milliliter" msgid="2735564290593738653">"Milliliter"</string>
+    <string name="units_unit_name_liter" msgid="2682609997247920434">"Liter"</string>
+    <string name="units_unit_name_us_gallon" msgid="2991675590060288099">"Gallon"</string>
+    <string name="units_unit_name_imperial_gallon" msgid="7827144733136304182">"Engelsk gallon"</string>
+    <string name="units_unit_name_nano_secs" msgid="7258767560309570567">"Nanosekund"</string>
+    <string name="units_unit_name_secs" msgid="2282853373442592245">"Sekund"</string>
+    <string name="units_unit_name_year" msgid="8237348390239986270">"År"</string>
+    <string name="units_unit_name_kilopascal" msgid="371397110720444118">"Kilopascal"</string>
+    <string name="units_unit_name_watt_hour" msgid="1581554497071668301">"Watt-time"</string>
+    <string name="units_unit_name_milliampere" msgid="4477388320207031153">"Milliampere"</string>
+    <string name="units_unit_name_millivolt" msgid="4730384331465782188">"Millivolt"</string>
+    <string name="units_unit_name_milliwatts" msgid="6689028603486588098">"Milliwatt"</string>
+    <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"Amperetime"</string>
+    <string name="units_unit_name_kilowatt_hour" msgid="4282251431283475831">"Kilowatt-time"</string>
+    <string name="units_unit_name_psi" msgid="9199487304284041266">"PSI"</string>
+    <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"Miles i timen"</string>
+    <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"Kilometer i timen"</string>
+    <string name="units_unit_name_bar" msgid="4051903414466411804">"Bar"</string>
+    <string name="units_unit_name_degrees" msgid="47944625323398947">"Grad"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"Kilowatt per hundrede miles"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"Kilowatt per hundrede kilometer"</string>
+    <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"Miles per gallon (USA)"</string>
+    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Miles per gallon (Storbritannien)"</string>
+    <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilometer per liter"</string>
+    <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Liter per hundrede kilometer"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps og notifikationer"</string>
     <string name="all_applications" msgid="7798210477486822168">"Vis alle apps"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standardapps"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Apptilladelser"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Apps, der bruger <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Appinfo"</string>
     <string name="force_stop" msgid="2153183697014720520">"Tving til at standse"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vil du tvinge appen til at standse?"</string>
@@ -155,46 +282,79 @@
     <string name="uninstall_text" msgid="277907956072833012">"Afinstaller"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Hvis du deaktiverer denne app, kan det medføre, at Android-apps og andre apps ikke fungerer korrekt."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Deaktiver appen"</string>
+    <string name="not_installed" msgid="4218816013370552746">"Ikke installeret for denne bruger"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Tilladelser"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"Notifikationer"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Lagerplads og cache"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Version %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Der er ikke givet nogen tilladelser"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Der er ikke anmodet om nogen tilladelser"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s i intern lagerplads"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Dataforbrug"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Dataforbrug fra apps"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Dataforbrug i apps"</string>
     <string name="computing_size" msgid="5791407621793083965">"Beregner…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ekstra tilladelse</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ekstra tilladelser</item>
     </plurals>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Bemærk! Efter en genstart kan denne app ikke starte, før du låser dit køretøj op."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistance og indtaling"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistanceapp"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Brug tekst fra skærmen"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Giv assistanceappen adgang til skærmens indhold som tekst"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Brug screenshot"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Giv assistanceappen adgang til et billede af skærmen"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
-    <string name="autofill_settings_title" msgid="1188754272680049972">"AutoFyld-tjenesten"</string>
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Indtaling"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"AutoFyld-tjeneste"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ingen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Valgt"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistenten kan læse oplysninger om, hvilke apps der bruges i dit system, herunder oplysninger, der er synlige på din skærm eller tilgængelige i dine apps."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sørg for, at du har tillid til denne app&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; anvender indholdet af din skærm til at fastslå, hvad der kan udfyldes automatisk."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Tilføj tjeneste"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Åbning af links"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Installerede apps"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Åbn ikke understøttede links"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"Åbn <xliff:g id="DOMAIN">%s</xliff:g>"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Åbn <xliff:g id="DOMAIN">%s</xliff:g> og andre webadresser"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Åbn som standard"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Andre standarder"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Der er ikke angivet nogen standarder."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Du har valgt at benytte denne app som standard for nogle handlinger."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"Ryd standarder"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Åbn understøttede links"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Åbn i denne app"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Spørg hver gang"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Åbn ikke i denne app"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Understøttede links"</string>
+    <string name="special_access" msgid="5730278220917123811">"Særlig appadgang"</string>
+    <string name="show_system" msgid="4401355756969485287">"Vis system"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Skjul system"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Rediger systemindstillingerne"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Denne tilladelse giver en app lov til at ændre systemindstillingerne."</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"Adgang til notifikationer"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vil du give <xliff:g id="SERVICE">%1$s</xliff:g> adgang til notifikationer?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan læse alle notifikationer, herunder personlige oplysninger som f.eks. navne på kontakter og tekst i beskeder, som du modtager. Den kan også afvise notifikationer eller aktivere handlingsknapper i notifikationerne.\n\nDette gør det også muligt for appen at aktivere eller deaktivere Forstyr ikke og ændre relaterede indstillinger."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Hvis du deaktiverer notifikationer for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, deaktiveres adgangen til Forstyr ikke muligvis også."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Deaktiver"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuller"</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Adgang til overtakseret sms"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Overtakseret sms kan koste dig penge, som opkræves via din mobilregning. Hvis du aktiverer tilladelsen for en app, kan du sende overtakserede sms-beskeder ved hjælp af denne app."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Adgang til telefonbrug"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Med adgang til telefonbrug kan en app aflæse, hvilke andre apps du anvender og hvor ofte, samt dit mobilselskab, dine sprogindstillinger og andre oplysninger."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Styring af Wi-Fi"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-styring giver en app tilladelse til at aktivere og deaktivere Wi-Fi, søge efter og oprette forbindelse til Wi-Fi-netværk, tilføje og fjerne netværk eller starte et lokalt hotspot."</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"Mere"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Placering"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Seneste placeringsanmodninger"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Der er ingen seneste placeringsanmodninger"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tilladelser på appniveau"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Scanning"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Placeringstjenester"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi-scanning"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Tillad, at apps og tjenester til enhver tid kan søge efter Wi-Fi-netværk, også selvom Wi-Fi er deaktiveret. Dette kan f.eks. bruges til at forbedre stedbaserede funktioner og tjenester."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth-scanning"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Tillad, at apps og tjenester til enhver tid kan søge efter enheder i nærheden, også selvom Bluetooth er deaktiveret. Dette kan f.eks. bruges til at forbedre stedbaserede funktioner og tjenester."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemopdateringer"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Seneste sikkerhedsopdatering i Android"</string>
-    <string name="model_info" msgid="4966408071657934452">"Model"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Model og hardware"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"Model: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Basebandversion"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernesystem"</string>
     <string name="build_number" msgid="3997326631001009102">"Buildnummer"</string>
@@ -218,6 +378,10 @@
     <string name="webview_license_title" msgid="6442372337052056463">"System WebView-licenser"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Baggrunde"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Leverandører af satellitbilleder:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"Model"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"Serienummer"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Hardwareversion"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Tredjepartslicenser"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Der er problemer med at indlæse licenserne."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Indlæser…"</string>
@@ -259,9 +423,8 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Sletter"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Vent et øjeblik..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dato og klokkeslæt"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Angiv dato og klokkeslæt"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Angiv dato, klokkeslæt, tidszone og formater"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og klokkeslæt"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og tid"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Brug netværkets tid"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automatisk tidszone"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Brug netværkets tidszone"</string>
@@ -318,8 +481,29 @@
     <string name="user_name_label" msgid="3210832645046206845">"Navn"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Ikke konfigureret"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Rediger brugernavn"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"Feltet skal udfyldes."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"Det brugernavn, du har angivet, er ugyldigt."</string>
     <string name="users_list_title" msgid="770764290290240909">"Brugere"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Tilladelser er givet til %1$s"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"Lagerplads"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"Musik og lyd"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"Andre apps"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Filer"</string>
+    <string name="storage_system" msgid="1271345630248014010">"System"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Systemet omfatter filer, der anvendes til at køre Android-versionen <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Lydfiler"</string>
+    <string name="memory_calculating_size" msgid="1672238502950390033">"Beregner…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Appstørrelse"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"Brugerdata"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"I alt"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Ryd lagerplads"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Ryd cache"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vil du slette appdata?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Alle data i denne app slettes permanent. Det omfatter alle filer, indstillinger, konti, databaser osv."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Appens lager kunne ikke ryddes."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> blev skubbet sikkert ud"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> kunne ikke skubbes sikkert ud"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Konti"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Tilføj konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Der er ikke tilføjet nogen konti"</string>
@@ -350,7 +534,8 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Synkroniser nu"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Annuller synkronisering"</string>
-    <string name="sync_is_failing" msgid="5766255460901806206">"Der er problemer med synkroniseringen i øjeblikket. Den er snart tilbage."</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"Der er i øjeblikket problemer med synkroniseringen. Den fortsætter om et øjeblik."</string>
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Privatliv"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sikkerhed"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skærmlås"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ingen"</string>
@@ -440,31 +625,20 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Brug af almindelige adgangskoder er blokeret af din it-administrator. Prøv en anden adgangskode."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Stigende eller faldende talsekvens og gentagne tal er ikke tilladt."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Valgmuligheder for skærmlås"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : For <xliff:g id="NUM_DAYS">%3$s</xliff:g> dage siden"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Tilføj godkendt enhed"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Godkendte enheder"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> enhed</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> enheder</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Din <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> låser bilen op, når der er forbindelse til enheden. Hvis en anden person tager din <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, kan vedkommende muligvis få adgang til denne enhed"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bekræft"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Fjern godkendt enhed"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Luk"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Brug den medfølgende app til at konfigurere en godkendt enhed. Når du har konfigureret enheden, kan du låse din brugerprofil op, når køretøjet registrerer din telefon."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download den medfølgende app på din telefon"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Vælg <xliff:g id="CAR_NAME">%1$s</xliff:g> på telefonen for at parre enhederne"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock kan ikke registrere sikkerhedsfunktionerne på enheden. Af hensyn til beskyttelsen af din bil kan en godkendt enhed kun holde din bil ulåst, hvis du allerede har låst den op. Din godkendte enhed kan holde din bil ulåst, når den er i nærheden, også selvom den holdes af en anden."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Tilføj <xliff:g id="DEVICE_NAME">%1$s</xliff:g> som godkendt enhed"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> er nu tilføjet som en godkendt enhed"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Tilmeldingen af <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mislykkedes"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Hvis du vil tilføje en godkendt enhed, skal du først angive en godkendelsesmetode. Hvis du ikke har din godkendte enhed med dig, kræves der godkendelse, før du kan få adgang til din profil."</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> dage siden"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Ryd loginoplysninger"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Fjern alle certifikater"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Vil du fjerne alt indhold?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Lager for loginoplysninger er slettet."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Lager for loginoplysninger kunne ikke slettes."</string>
     <string name="forget" msgid="3971143908183848527">"Glem"</string>
     <string name="connect" msgid="5861699594602380150">"Opret forbindelse"</string>
     <string name="disconnect" msgid="6140789953324820336">"Afbryd forbindelse"</string>
     <string name="delete_button" msgid="5840500432614610850">"Slet"</string>
     <string name="remove_button" msgid="6664656962868194178">"Fjern"</string>
     <string name="cancel" msgid="750286395700355455">"Annuller"</string>
+    <string name="allow" msgid="7519431342750394402">"Tillad"</string>
+    <string name="deny" msgid="340512788979930804">"Afvis"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace-tast"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter-tast"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Luk demotilstand"</string>
@@ -472,6 +646,7 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Denne handling sletter demokontoen og gendanner systemets fabriksdata. Du mister alle brugerdata."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Luk demotilstand"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"AFVIS"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funktionen er ikke tilgængelig under kørsel."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Du kan ikke tilføje brugere under kørsel."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Funktionen er ikke tilgængelig, mens du kører"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Du kan ikke tilføje brugere, mens du kører"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Søg"</string>
 </resources>

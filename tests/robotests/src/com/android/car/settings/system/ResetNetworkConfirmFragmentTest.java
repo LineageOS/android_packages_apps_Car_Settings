@@ -16,9 +16,10 @@
 
 package com.android.car.settings.system;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.robolectric.Shadows.shadowOf;
 import static org.testng.Assert.assertThrows;
 
 import android.content.ContentResolver;
@@ -31,7 +32,6 @@ import android.telephony.SubscriptionManager;
 
 import androidx.preference.PreferenceManager;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
@@ -40,8 +40,9 @@ import com.android.car.settings.testutils.ShadowNetworkPolicyManager;
 import com.android.car.settings.testutils.ShadowRecoverySystem;
 import com.android.car.settings.testutils.ShadowTelephonyManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -49,7 +50,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowContentResolver;
@@ -57,7 +60,7 @@ import org.robolectric.shadows.ShadowContextImpl;
 
 import java.util.List;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {
         ShadowConnectivityManager.class,
         ShadowWifiManager.class,
@@ -91,12 +94,15 @@ public class ResetNetworkConfirmFragmentTest {
 
         Robolectric.getForegroundThreadScheduler().pause();
 
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         ResetNetworkConfirmFragment fragment = new ResetNetworkConfirmFragment();
 
         mFragmentController = FragmentController.of(fragment);
         mFragmentController.setup();
 
-        Toolbar toolbar = fragment.getActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(fragment.getActivity());
         mResetButton = toolbar.getMenuItems().get(0);
     }
 
@@ -114,25 +120,25 @@ public class ResetNetworkConfirmFragmentTest {
     @Test
     public void testResetButtonClick_connectivityManagerReset() {
         mResetButton.performClick();
-        assertThat(ShadowConnectivityManager.verifyFactoryResetCalled(/* numTimes */ 1)).isTrue();
+        assertThat(ShadowConnectivityManager.verifyFactoryResetCalled(/* numTimes= */ 1)).isTrue();
     }
 
     @Test
     public void testResetButtonClick_wifiManagerReset() {
         mResetButton.performClick();
-        assertThat(ShadowWifiManager.verifyFactoryResetCalled(/* numTimes */ 1)).isTrue();
+        assertThat(ShadowWifiManager.verifyFactoryResetCalled(/* numTimes= */ 1)).isTrue();
     }
 
     @Test
     public void testResetButtonClick_bluetoothAdapterReset() {
         mResetButton.performClick();
-        assertThat(ShadowBluetoothAdapter.verifyFactoryResetCalled(/* numTimes */ 1)).isTrue();
+        assertThat(ShadowBluetoothAdapter.verifyFactoryResetCalled(/* numTimes= */ 1)).isTrue();
     }
 
     @Test
     public void testResetButtonClick_cleanSmsRawTable() {
         mResetButton.performClick();
-        assertThat(getUriWithGivenPrefix(shadowOf(mContentResolver).getDeletedUris(),
+        assertThat(getUriWithGivenPrefix(Shadows.shadowOf(mContentResolver).getDeletedUris(),
                 Telephony.Sms.CONTENT_URI)).isNotNull();
     }
 
@@ -140,14 +146,14 @@ public class ResetNetworkConfirmFragmentTest {
     public void testResetButtonClick_euiccResetEnabled_euiccReset() {
         setEuiccResetCheckbox(true);
         mResetButton.performClick();
-        assertThat(ShadowRecoverySystem.verifyWipeEuiccDataCalled(/* numTimes */ 1)).isTrue();
+        assertThat(ShadowRecoverySystem.verifyWipeEuiccDataCalled(/* numTimes= */ 1)).isTrue();
     }
 
     @Test
     public void testResetButtonClick_euiccResetDisabled_euiccNotReset() {
         setEuiccResetCheckbox(false);
         mResetButton.performClick();
-        assertThat(ShadowRecoverySystem.verifyWipeEuiccDataCalled(/* numTimes */ 1)).isFalse();
+        assertThat(ShadowRecoverySystem.verifyWipeEuiccDataCalled(/* numTimes= */ 1)).isFalse();
     }
 
     @Test
@@ -161,22 +167,23 @@ public class ResetNetworkConfirmFragmentTest {
         setNetworkSubscriptionId("");
         mResetButton.performClick();
         assertThat(ShadowTelephonyManager.verifyFactoryResetCalled(
-                SubscriptionManager.INVALID_SUBSCRIPTION_ID, /* numTimes */ 1)).isTrue();
+                SubscriptionManager.INVALID_SUBSCRIPTION_ID, /* numTimes= */ 1)).isTrue();
     }
 
     @Test
     public void testResetButtonClick_validNetworkSubscriptionId_telephonyReset() {
         setNetworkSubscriptionId("123");
         mResetButton.performClick();
-        assertThat(ShadowTelephonyManager.verifyFactoryResetCalled(123, /* numTimes */ 1)).isTrue();
+        assertThat(
+                ShadowTelephonyManager.verifyFactoryResetCalled(123, /* numTimes= */ 1)).isTrue();
     }
 
     @Test
     public void testResetButtonClick_emptyNetworkSubscriptionId_networkManagerNotReset() {
         setNetworkSubscriptionId("");
         mResetButton.performClick();
-        assertThat(ShadowNetworkPolicyManager.verifyFactoryResetCalled(null, /* numTimes */
-                1)).isTrue();
+        assertThat(ShadowNetworkPolicyManager.verifyFactoryResetCalled(null,
+                /* numTimes= */ 1)).isTrue();
     }
 
     @Test
@@ -184,14 +191,14 @@ public class ResetNetworkConfirmFragmentTest {
         setNetworkSubscriptionId("123");
         mResetButton.performClick();
         assertThat(ShadowNetworkPolicyManager.verifyFactoryResetCalled(
-                ShadowTelephonyManager.SUBSCRIBER_ID, /* numTimes */ 1)).isTrue();
+                ShadowTelephonyManager.SUBSCRIBER_ID, /* numTimes= */ 1)).isTrue();
     }
 
     @Test
     public void testResetButtonClick_emptyNetworkSubscriptionId_noRestoreDefaultApn() {
         setNetworkSubscriptionId("");
         mResetButton.performClick();
-        Uri uri = getUriWithGivenPrefix(shadowOf(mContentResolver).getDeletedUris(),
+        Uri uri = getUriWithGivenPrefix(Shadows.shadowOf(mContentResolver).getDeletedUris(),
                 ResetNetworkConfirmFragment.RESTORE_CARRIERS_URI);
         assertThat(uri).isNotNull();
         assertThat(uri.toString().contains("subId/")).isFalse();
@@ -201,7 +208,7 @@ public class ResetNetworkConfirmFragmentTest {
     public void testResetButtonClick_validNetworkSubscriptionId_restoreDefaultApn() {
         setNetworkSubscriptionId("123");
         mResetButton.performClick();
-        Uri uri = getUriWithGivenPrefix(shadowOf(mContentResolver).getDeletedUris(),
+        Uri uri = getUriWithGivenPrefix(Shadows.shadowOf(mContentResolver).getDeletedUris(),
                 ResetNetworkConfirmFragment.RESTORE_CARRIERS_URI);
         assertThat(uri).isNotNull();
         assertThat(uri.toString().contains("subId/123")).isTrue();

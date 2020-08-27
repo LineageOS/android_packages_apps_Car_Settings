@@ -16,7 +16,6 @@
 
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
@@ -47,15 +46,12 @@ public class UsersPreferenceProvider {
     }
 
     private final Context mContext;
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final UserClickListener mUserPreferenceClickListener;
     private boolean mIncludeCurrentUser;
     private boolean mIncludeGuest;
 
-    public UsersPreferenceProvider(Context context, CarUserManagerHelper carUserManagerHelper,
-            UserClickListener listener) {
+    public UsersPreferenceProvider(Context context, UserClickListener listener) {
         mContext = context;
-        mCarUserManagerHelper = carUserManagerHelper;
         mUserPreferenceClickListener = listener;
         mIncludeCurrentUser = true;
         mIncludeGuest = true;
@@ -84,19 +80,18 @@ public class UsersPreferenceProvider {
      */
     public List<Preference> createUserList() {
         List<Preference> users = new ArrayList<>();
-        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
+        UserInfo currUserInfo = UserHelper.getInstance(mContext).getCurrentProcessUserInfo();
 
-        // Show current user
+        // Show current user at the top of the list.
         if (mIncludeCurrentUser) {
             users.add(createUserPreference(currUserInfo));
         }
 
-        // Display other users on the system
-        List<UserInfo> infos = mCarUserManagerHelper.getAllSwitchableUsers();
+        // Display all users on the system, except: Guests and current user who's displayed already.
+        List<UserInfo> infos = UserHelper.getInstance(mContext).getAllLivingUsers(
+                userInfo -> !userInfo.isGuest() && userInfo.id != currUserInfo.id);
         for (UserInfo userInfo : infos) {
-            if (!userInfo.isGuest()) { // Do not show guest users.
-                users.add(createUserPreference(userInfo));
-            }
+            users.add(createUserPreference(userInfo));
         }
 
         // Display guest session option.
@@ -110,9 +105,8 @@ public class UsersPreferenceProvider {
     private Preference createUserPreference(UserInfo userInfo) {
         CarUiPreference preference = new CarUiPreference(mContext);
         preference.setIcon(
-                new UserIconProvider(mCarUserManagerHelper).getUserIcon(userInfo, mContext));
-        preference.setTitle(
-                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, userInfo));
+                new UserIconProvider().getRoundedUserIcon(userInfo, mContext));
+        preference.setTitle(UserUtils.getUserDisplayName(mContext, userInfo));
 
         if (!userInfo.isInitialized()) {
             preference.setSummary(R.string.user_summary_not_set_up);
@@ -136,12 +130,12 @@ public class UsersPreferenceProvider {
     private Preference createGuestUserPreference() {
         CarUiPreference preference = new CarUiPreference(mContext);
         preference.setIcon(
-                new UserIconProvider(mCarUserManagerHelper).getDefaultGuestIcon(mContext));
+                new UserIconProvider().getRoundedGuestDefaultIcon(mContext.getResources()));
         preference.setTitle(R.string.user_guest);
         return preference;
     }
 
     private boolean isCurrentUser(UserInfo userInfo) {
-        return mCarUserManagerHelper.isCurrentProcessUser(userInfo);
+        return UserHelper.getInstance(mContext).isCurrentProcessUser(userInfo);
     }
 }

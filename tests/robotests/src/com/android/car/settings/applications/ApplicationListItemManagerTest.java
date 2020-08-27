@@ -27,7 +27,6 @@ import android.os.storage.VolumeInfo;
 
 import androidx.lifecycle.Lifecycle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -36,13 +35,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowLooper;
 
 import java.util.ArrayList;
 
 /** Unit test for {@link ApplicationListItemManager}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ApplicationListItemManagerTest {
     private static final String LABEL = "label";
     private static final String SIZE_STR = "12.34 MB";

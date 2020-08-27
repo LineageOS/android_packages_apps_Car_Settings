@@ -36,8 +36,4 @@ android_robolectric_test {
     test_options: {
         timeout: 36000,
     },
-
-    coverage_libs: [
-        "CarSettingsForTesting",
-    ],
 }

@@ -16,39 +16,37 @@
 
 package com.android.car.settings.users;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.FragmentController;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.settings.testutils.ShadowUserManager;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 /**
  * Tests for ChooseNewAdminFragment.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
+@RunWith(RobolectricTestRunner.class)
+@Config(shadows = {ShadowUserIconProvider.class, ShadowUserManager.class})
 public class ChooseNewAdminFragmentTest {
 
     private static final UserInfo TEST_ADMIN_USER = new UserInfo(/* id= */ 10,
             "TEST_USER_NAME", /* flags= */ 0);
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     private FragmentController<ChooseNewAdminFragment> mFragmentController;
     private ChooseNewAdminFragment mFragment;
@@ -56,7 +54,9 @@ public class ChooseNewAdminFragmentTest {
     @Before
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
 
         mFragment = ChooseNewAdminFragment.newInstance(TEST_ADMIN_USER);
         mFragmentController = FragmentController.of(mFragment);
@@ -65,12 +65,12 @@ public class ChooseNewAdminFragmentTest {
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
+        ShadowUserManager.reset();
     }
 
     @Test
     public void testBackButtonPressed_whenRemoveCancelled() {
-        MenuItem actionButton = ((Toolbar) mFragment.requireActivity().findViewById(R.id.toolbar))
+        MenuItem actionButton = ((ToolbarController) requireToolbar(mFragment.requireActivity()))
                 .getMenuItems().get(0);
 
         actionButton.performClick();

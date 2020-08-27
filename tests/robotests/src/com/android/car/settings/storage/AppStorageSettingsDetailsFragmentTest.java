@@ -17,6 +17,7 @@
 package com.android.car.settings.storage;
 
 import static com.android.car.settings.storage.AppStorageSettingsDetailsFragment.EXTRA_PACKAGE_NAME;
+import static com.android.car.ui.core.CarUi.requireToolbar;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -31,22 +32,20 @@ import static org.mockito.Mockito.when;
 
 import android.app.Activity;
 import android.app.usage.StorageStats;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowActivityManager;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowApplicationsState;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowRestrictedLockUtilsInternal;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.StorageStatsSource;
@@ -57,14 +56,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 /** Unit test for {@link AppStorageSettingsDetailsFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowApplicationsState.class, ShadowCarUserManagerHelper.class,
-        ShadowRestrictedLockUtilsInternal.class, ShadowApplicationPackageManager.class,
-        ShadowActivityManager.class})
+@RunWith(RobolectricTestRunner.class)
+@Config(shadows = {ShadowApplicationsState.class, ShadowRestrictedLockUtilsInternal.class,
+        ShadowApplicationPackageManager.class, ShadowActivityManager.class})
 public class AppStorageSettingsDetailsFragmentTest {
 
     private static final String PACKAGE_NAME = "com.google.packageName";
@@ -72,7 +71,6 @@ public class AppStorageSettingsDetailsFragmentTest {
     private static final int UID = 12;
     private static final String LABEL = "label";
     private static final String SIZE_STR = "12.34 MB";
-    private static final int TEST_USER_ID = 10;
 
     private Context mContext;
     private AppStorageSettingsDetailsFragment mFragment;
@@ -80,9 +78,6 @@ public class AppStorageSettingsDetailsFragmentTest {
 
     @Mock
     private ApplicationsState mApplicationsState;
-
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Mock
     private RestrictedLockUtils.EnforcedAdmin mEnforcedAdmin;
@@ -94,6 +89,10 @@ public class AppStorageSettingsDetailsFragmentTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         mFragment = new AppStorageSettingsDetailsFragment();
         Bundle bundle = new Bundle();
         bundle.putString(EXTRA_PACKAGE_NAME, PACKAGE_NAME);
@@ -111,9 +110,6 @@ public class AppStorageSettingsDetailsFragmentTest {
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
         appEntry.info.packageName = PACKAGE_NAME;
         when(mApplicationsState.getEntry(eq(PACKAGE_NAME), anyInt())).thenReturn(appEntry);
-        // Set user.
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER_ID);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         ShadowApplicationsState.setInstance(mApplicationsState);
         mFragmentController.setup();
     }
@@ -121,7 +117,6 @@ public class AppStorageSettingsDetailsFragmentTest {
     @After
     public void tearDown() {
         ShadowApplicationsState.reset();
-        ShadowCarUserManagerHelper.reset();
         ShadowRestrictedLockUtilsInternal.reset();
         ShadowApplicationPackageManager.reset();
         ShadowActivityManager.reset();
@@ -306,12 +301,12 @@ public class AppStorageSettingsDetailsFragmentTest {
     }
 
     private MenuItem findClearCacheButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(1);
     }
 
     private MenuItem findClearStorageButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
     }
 }

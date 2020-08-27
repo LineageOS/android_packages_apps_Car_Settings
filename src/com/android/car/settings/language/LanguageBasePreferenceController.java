@@ -98,8 +98,8 @@ public abstract class LanguageBasePreferenceController extends
             Set<LocaleStore.LocaleInfo> subLocales = LocaleStore.getLevelLocales(
                     getContext(),
                     getExclusionSet(),
-                    /* parent */ localeInfo,
-                    /* translatedOnly */ true);
+                    /* parent= */ localeInfo,
+                    /* translatedOnly= */ true);
 
             if (subLocales.size() > 1) {
                 handleLocaleWithChildren(localeInfo);

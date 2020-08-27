@@ -20,7 +20,6 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
@@ -53,13 +52,11 @@ public class MasterClearAccountsPreferenceController extends PreferenceControlle
 
     private static final Logger LOG = new Logger(MasterClearAccountsPreferenceController.class);
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final Map<Account, Preference> mAccountPreferenceMap = new ArrayMap<>();
 
     public MasterClearAccountsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
@@ -78,8 +75,7 @@ public class MasterClearAccountsPreferenceController extends PreferenceControlle
     protected void updateState(PreferenceGroup preferenceGroup) {
         // Refresh the accounts in the off chance an account was added or removed while stopped.
         Set<Account> accountsToRemove = new HashSet<>(mAccountPreferenceMap.keySet());
-        List<UserInfo> profiles = UserManager.get(getContext()).getProfiles(
-                mCarUserManagerHelper.getCurrentProcessUserId());
+        List<UserInfo> profiles = UserManager.get(getContext()).getProfiles(UserHandle.myUserId());
         for (UserInfo profile : profiles) {
             UserHandle userHandle = new UserHandle(profile.id);
             AuthenticatorDescription[] descriptions = AccountManager.get(
