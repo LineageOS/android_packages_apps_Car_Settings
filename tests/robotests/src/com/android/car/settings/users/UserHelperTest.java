@@ -334,6 +334,7 @@ public class UserHelperTest {
         UserInfo nonAdminInfo = createNonAdminUser(baseId + 1);
         mockGetUsers(adminUser, nonAdminInfo);
         UserInfo newAdminInfo = createAdminUser(baseId + 2);
+        mockRemoveUserSuccess();
         mockCreateUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN,
                 UserCreationResult.STATUS_SUCCESSFUL, newAdminInfo);
         mockSwitchUserSuccess();
@@ -376,6 +377,7 @@ public class UserHelperTest {
         mockGetUsers(currentUser);
 
         UserInfo guestUser = createGuestUser(baseId + 1);
+        mockRemoveUserSuccess();
         mockCreateGuest(DEFAULT_GUEST_NAME, UserCreationResult.STATUS_SUCCESSFUL, guestUser);
         mockSwitchUserSuccess();
 
@@ -455,6 +457,8 @@ public class UserHelperTest {
         assertThat(guest).isEqualTo(guestInfo);
     }
 
+    // TODO(b/157921703): use AndroidMockitoHelper for most of the methods below
+
     private UserInfo createAdminUser(int id) {
         return new UserInfo(id, null, UserInfo.FLAG_ADMIN);
     }
@@ -478,8 +482,7 @@ public class UserHelperTest {
     private void mockGetUsers(UserInfo... users) {
         List<UserInfo> testUsers = new ArrayList<>(Arrays.asList(users));
         when(mMockUserManager.getUsers()).thenReturn(testUsers);
-        when(mMockUserManager.getUsers(true)).thenReturn(testUsers);
-        when(mMockUserManager.getUsers(false)).thenReturn(testUsers);
+        when(mMockUserManager.getAliveUsers()).thenReturn(testUsers);
     }
 
     private void mockRemoveUser(int userId, int status) {
