@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import static android.car.test.mocks.AndroidMockitoHelper.mockUmGetAliveUsers;
 import static android.os.UserManager.USER_TYPE_SYSTEM_HEADLESS;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -53,10 +54,6 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowProcess;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowActivityManager.class, ShadowUserManager.class,
@@ -457,8 +454,6 @@ public class UserHelperTest {
         assertThat(guest).isEqualTo(guestInfo);
     }
 
-    // TODO(b/157921703): use AndroidMockitoHelper for most of the methods below
-
     private UserInfo createAdminUser(int id) {
         return new UserInfo(id, null, UserInfo.FLAG_ADMIN);
     }
@@ -480,9 +475,7 @@ public class UserHelperTest {
     }
 
     private void mockGetUsers(UserInfo... users) {
-        List<UserInfo> testUsers = new ArrayList<>(Arrays.asList(users));
-        when(mMockUserManager.getUsers()).thenReturn(testUsers);
-        when(mMockUserManager.getAliveUsers()).thenReturn(testUsers);
+        mockUmGetAliveUsers(mMockUserManager, users);
     }
 
     private void mockRemoveUser(int userId, int status) {
