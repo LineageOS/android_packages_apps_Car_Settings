@@ -26,6 +26,7 @@ android_robolectric_test {
         "truth-prebuilt",
         "testng",
         "android.car",
+        "android.car.test.utils",
     ],
 
     java_resource_dirs: ["config"],
