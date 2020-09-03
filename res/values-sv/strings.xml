@@ -301,7 +301,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistent och röstinmatning"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistentapp"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Använda text från skärmen"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Tillåt att assistentappen får åtkomst till innehåll på skärmen, till exempel text"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Tillåt att assistentappen får åtkomst till innehåll på skärmen som text"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Använda skärmdump"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Tillåt att assistentappen får åtkomst till en bild på skärmen"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Röstinmatning"</string>
@@ -326,7 +326,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Fråga varje gång"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Öppna inte i den här appen"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Länkar som stöds"</string>
-    <string name="special_access" msgid="5730278220917123811">"Särskild åtkomst för app"</string>
+    <string name="special_access" msgid="5730278220917123811">"Särskild appåtkomst"</string>
     <string name="show_system" msgid="4401355756969485287">"Visa systemet"</string>
     <string name="hide_system" msgid="8845453295584638040">"Dölj systemet"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Ändra systeminställningar"</string>
@@ -386,8 +386,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ett problem inträffade när licenserna lästes in."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Läser in …"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Nu är du <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
-      <item quantity="one">Nu är du <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="other">Du är nu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="one">Du är nu <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Nu är du en utvecklare!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Det behövs inte. Du är redan utvecklare."</string>

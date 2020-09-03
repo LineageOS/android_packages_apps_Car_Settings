@@ -151,7 +151,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"請至少為 Wi-Fi 無線基地台選擇一個頻帶："</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"無線基地台與數據連線"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"無線基地台與網路共用"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉無線基地台"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi 無線基地台會在沒有任何裝置連線時關閉"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
@@ -389,7 +389,7 @@
       <item quantity="other">只要再 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟即可啟用開發人員設定。</item>
       <item quantity="one">只要再 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟即可啟用開發人員設定。</item>
     </plurals>
-    <string name="show_dev_on" msgid="5339077400040834808">"你已啟用開發人員設定！"</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"開發人員設定已啟用！"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"你已啟用開發人員設定。"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"開發人員選項"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"重設選項"</string>

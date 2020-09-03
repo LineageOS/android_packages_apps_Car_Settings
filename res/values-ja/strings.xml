@@ -48,13 +48,13 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"モバイルデータに <xliff:g id="CARRIER2_0">%2$s</xliff:g> を使用しています。<xliff:g id="CARRIER1">%1$s</xliff:g> に切り替えると、モバイルデータに <xliff:g id="CARRIER2_1">%2$s</xliff:g> は使用されなくなります。"</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> を使用"</string>
     <string name="roaming_title" msgid="6218635014519017734">"ローミング"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続する"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"データ ローミングを許可しますか？"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"ローミング料金が発生する場合があります。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"データ使用量"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"メインデータ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> 使用"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"データ警告: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"警告するデータ使用量: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"データ上限: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"データ警告: <xliff:g id="ID_1">^1</xliff:g> / データ上限: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
@@ -73,11 +73,11 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"使用サイクルのリセット日"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"毎月のリセット日:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"設定"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"データの警告と上限"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"データ使用量の警告と上限"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"アプリのデータ使用量のサイクル"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"データ使用の警告を設定"</string>
-    <string name="data_warning" msgid="116776633806885370">"データ使用の警告"</string>
-    <string name="set_data_limit" msgid="7136539812414500084">"データの上限を設定"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"データ使用量を警告"</string>
+    <string name="data_warning" msgid="116776633806885370">"警告するデータ使用量"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"データ使用量を制限"</string>
     <string name="data_limit" msgid="227338836292511425">"データの上限"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"データ使用の上限の設定"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"車載ヘッドユニットで設定した上限に達するとモバイルデータが OFF になります。\n\nデータ使用量はヘッドユニットで測定された値ですが、携帯通信会社での使用量の計算はこれと異なることがあるため、余裕をもって上限を設定することをおすすめします。"</string>
@@ -303,7 +303,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"画面のテキストを使用"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"画面コンテンツのテキストにアクセスすることをアシストアプリに許可します"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"スクリーンショットを使用"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"画面の画像にアクセスすることをアシストアプリに許可します"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"表示中の画像にアクセスすることをアシストアプリに許可します"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"音声入力"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"自動入力サービス"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"なし"</string>
