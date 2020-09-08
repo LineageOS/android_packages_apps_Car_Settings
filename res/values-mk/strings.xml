@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Роаминг"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Поврзувај се со интернет-услуги во роаминг"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Да се дозволи ли интернет-роаминг?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"Може да направите големи трошоци."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Може да ви се наплати за роаминг."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Потрошен сообраќај"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Примарен сообраќај"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Потрошен сообраќај: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Изберете уред со Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Јазици"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Јазици и внесување"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Предложен"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Сите јазици"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Тастатура"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Управување со тастатури"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Претворање текст во говор"</string>
@@ -351,7 +353,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања на системот"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Верзија на Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Ниво на безбедносна лепенка на Android"</string>
-    <string name="model_info" msgid="4966408071657934452">"Модел"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Модел и хардвер"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"Модел: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Верзија на немодулиран опсег"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Верзија на кернел"</string>
     <string name="build_number" msgid="3997326631001009102">"Број на верзија"</string>
@@ -375,6 +378,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Системски лиценци за WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Тапети"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Извор на сателитски снимки:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"Модел"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"Сериски број"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Верзија на хардвер"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Лиценци на трети лица"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Постои проблем при вчитување на лиценците."</string>
@@ -470,11 +476,13 @@
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Изберете администратор"</string>
     <string name="user_guest" msgid="3465399481257448601">"Гостин"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Гостин"</string>
-    <string name="user_switch" msgid="6544839750534690781">"Промени"</string>
+    <string name="user_switch" msgid="6544839750534690781">"Префрли"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Вие (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Име"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Не е поставен"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Изменување на корисничкото име"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"Полето не може да биде празно."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"Внесеното корисничко име е неважечко."</string>
     <string name="users_list_title" msgid="770764290290240909">"Корисници"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Дадени се дозволи на %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Капацитет"</string>
@@ -618,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Не е дозволена низа на цифри со растечки, опаѓачки или повторлив редослед."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заклучување на екранот"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пред <xliff:g id="NUM_DAYS">%3$s</xliff:g> дена"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Додај доверлив уред"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth ќе се вклучи за да додаде доверлив уред"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Доверливи уреди"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> уред</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> уреди</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Вашиот <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ќе го отклучува автомобилов кога е поврзан. Ако некој ви го земе <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, ќе може да пристапува до уредов"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Отстрани доверлив уред"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Употребете ја придружната апликација за да поставите доверлив уред. Откако ќе го поставите, вашиот кориснички профил ќе се отклучи автоматски кога вашиот телефон ќе се открие во близина на возилото."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преземете ја придружната апликација на телефонот"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изберете <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефонот за да ги спарите уредите"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Доверлив уред во близина на вашиот автомобил може да го отклучи корисничкиот профил по стартувањето на автомобилот, дури и кога некој друг го држи уредот."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Потврдете дека кодовите за спарување се совпаѓаат"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефонот е регистриран успешно"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрацијата на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> не успеа"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ако додадете доверлив уред, ќе треба да поставите метод на проверка во следниот чекор. Ако доверливиот уред не ви е при рака, ќе ви биде потребна проверка за да пристапите до профилот."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Врската со уредот се прекина."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Избриши акредитиви"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Отстрани ги сите акредитиви"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Дали да се отстранат сите содржини?"</string>
@@ -660,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОТФРЛИ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функцијата не е достапна при возење"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Не може да се додаде корисник додека возите"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Пребарување"</string>
 </resources>

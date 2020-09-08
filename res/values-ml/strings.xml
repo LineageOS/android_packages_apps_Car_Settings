@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"റോമിംഗ്"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"റോമിംഗിൽ ഡാറ്റാ സേവനങ്ങളിലേക്ക് കണ‌ക്റ്റ് ചെയ്യുക"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"ഡാറ്റാ റോമിംഗ് അനുവദിക്കണോ?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"നിങ്ങളിൽ നിന്ന് നിശ്ചിത നിരക്കുകൾ ഈടാക്കിയേക്കാം."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"റോമിംഗ് നിരക്കുകൾ ബാധകമായേക്കാം."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ഡാറ്റ ഉപയോഗം"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"പ്രാഥമിക ഡാറ്റ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ഉപയോഗിച്ചു"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth ഉപകരണം തിരഞ്ഞെടുക്കുക"</string>
     <string name="language_settings" msgid="2079258598337245546">"ഭാഷകൾ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ഭാഷകളും ഇൻപുട്ടും"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"നിർദ്ദേശിച്ചത്"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"എല്ലാ ഭാഷകളും"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"കീബോർഡ്"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"കീബോർഡുകൾ മാനേജ് ചെയ്യുക"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"ടെക്‌സ്‌റ്റ് ടു സ്‌പീച്ച് ഔട്ട്‌പുട്ട്"</string>
@@ -351,7 +353,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"സി‌സ്‌റ്റം അപ്‌ഡേറ്റുകൾ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android പതിപ്പ്"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android സുരക്ഷാ പാച്ച് നില"</string>
-    <string name="model_info" msgid="4966408071657934452">"മോഡല്‍"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"മോഡലും ഹാർഡ്‌വെയറും"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"മോഡൽ: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"ബെയ്‌സ്‌ബാൻഡ് പതിപ്പ്"</string>
     <string name="kernel_version" msgid="7327212934187011508">"പ്രധാന പതിപ്പ്"</string>
     <string name="build_number" msgid="3997326631001009102">"ബിൽഡ് നമ്പർ"</string>
@@ -375,6 +378,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"സിസ്‌റ്റം WebView ലൈസൻസുകൾ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"വാൾപേപ്പറുകൾ"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ഉപഗ്രഹ ഇമേജറി ദാതാക്കൾ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"മോഡല്‍"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"സീരിയൽ നമ്പർ"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"ഹാർഡ്‌വെയർ പതിപ്പ്"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"മൂന്നാം കക്ഷി ലൈസൻസുകൾ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ലൈസൻസുകൾ ലോഡ് ചെയ്യുന്നതിൽ ഒരു പ്രശ്നമുണ്ട്."</string>
@@ -475,6 +481,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"പേര്"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"സജ്ജീകരിച്ചിട്ടില്ല"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ഉപയോക്തൃ നാമം എഡിറ്റ് ചെയ്യുക"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"ഫീൽഡ് ശൂന്യമായിടരുത്."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"നൽകിയ ഉപയോക്തൃനാമം അസാധുവാണ്."</string>
     <string name="users_list_title" msgid="770764290290240909">"ഉപയോക്താക്കള്‍"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s-ന് അനുമതികൾ നൽകി"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"സ്‌റ്റോറേജ്"</string>
@@ -618,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"അക്കങ്ങൾ ആരോഹണ ക്രമത്തിലോ അവരോഹണ ക്രമത്തിലോ അനുക്രമമായോ നൽകുന്നത് അനുവദനീയമല്ല."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"സ്‌ക്രീൻ ലോക്ക് ഓപ്ഷനുകള്‍"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ദിവസം മുമ്പ്"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"വിശ്വസ്‌ത ഉപകരണം ചേർക്കുക"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"വിശ്വസ്‌ത ഉപകരണങ്ങൾ ചേർക്കാൻ Bluetooth ഓണാകും"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"വിശ്വസ്‌ത ഉപകരണങ്ങൾ"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ഉപകരണങ്ങൾ</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ഉപകരണം</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"നിങ്ങളുടെ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> കണക്റ്റ് ചെയ്‌തിരിക്കുമ്പോൾ അത് ഈ കാർ അൺലോക്ക് ചെയ്യും. ആരെങ്കിലും നിങ്ങളുടെ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> എടുക്കുകയാണെങ്കിൽ അവർക്ക് ഈ ഉപകരണം ആക്‌സസ് ചെയ്യാനായേക്കും"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"സ്ഥിരീകരിക്കുക"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"വിശ്വസ്‌ത ഉപകരണം നീക്കം ചെയ്യുക"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ചെയ്‌തു"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"വിശ്വസ്‌ത ഉപകരണം സജ്ജീകരിക്കാൻ സഹകാരി ആപ്പ് ഉപയോഗിക്കുക. ഒരിക്കൽ സജ്ജീകരിച്ചാൽ, വാഹനത്തിനടുത്ത് നിങ്ങളുടെ ഫോൺ കണ്ടെത്തുമ്പോൾ നിങ്ങളുടെ ഉപയോക്തൃ പ്രൊഫൈൽ സ്വയമേവ അൺലോക്ക് ചെയ്യും."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. നിങ്ങളുടെ ഫോണിൽ സഹകാരി ആപ്പ് ഡൗൺലോഡ് ചെയ്യുക"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ഉപകരണങ്ങൾ ജോഡിയാക്കാൻ നിങ്ങളുടെ ഫോണിൽ <xliff:g id="CAR_NAME">%1$s</xliff:g> തിരഞ്ഞെടുക്കുക"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"മറ്റൊരാളുടെ കൈവശം ഉപകരണമുണ്ടെങ്കിൽപ്പോലും നിങ്ങളുടെ കാറിന് സമീപമുള്ള വിശ്വസ്‌ത ഉപകരണം കാർ ഇഗ്‌നിഷനിലാകുമ്പോൾ ഉപയോക്തൃ പ്രൊഫൈൽ അൺലോക്ക് ചെയ്യും."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ജോടിയാക്കൽ കോഡുകൾ തമ്മിൽ പൊരുത്തമുണ്ടെന്ന് ഉറപ്പാക്കുക"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ഫോൺ എൻറോൾ ചെയ്‌തു"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ഒരു വിശ്വസ്‌ത ഉപകരണം ചേർക്കുന്നതിന്, അടുത്തതായി ഒരു പരിശോധിച്ചുറപ്പിക്കൽ രീതി നിങ്ങൾ സജ്ജീകരിക്കേണ്ടതുണ്ട്. വിശ്വസ്‌ത ഉപകരണം നിങ്ങളുടെ കൈവശമില്ലെങ്കിൽ, നിങ്ങളുടെ പ്രൊഫൈൽ ആക്‌സസ് ചെയ്യാൻ പരിശോധിച്ചുറപ്പിക്കൽ ആവശ്യമാണ്."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ഉപകരണം വിച്ഛേദിച്ചു."</string>
     <string name="credentials_reset" msgid="873900550885788639">"ക്രെഡൻഷ്യലുകൾ മായ്ക്കുക"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"എല്ലാ സർട്ടിഫിക്കറ്റുകളും നീക്കം ചെയ്യുക"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"എല്ലാ ഉള്ളടക്കങ്ങളും നീക്കം ചെയ്യണോ?"</string>
@@ -660,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ഡിസ്‌മിസ് ചെയ്യുക"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഫീച്ചർ ലഭ്യമല്ല"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഉപയോക്താവിനെ ചേർക്കാനാവില്ല"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

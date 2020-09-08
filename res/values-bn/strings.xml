@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"রোমিং"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"রোমিংয়ে থাকাকালীন ডেটা পরিষেবাতে কানেক্ট করুন"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"ডেটা রোমিংয়ের অনুমতি দেবেন?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"আপনার ব্যালেন্স খরচ হতে পারে।"</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"রোমিং চার্জ প্রযোজ্য হতে পারে।"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ডেটার ব্যবহার"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"প্রাথমিক ডেটা"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ব্যবহার করা হয়েছে"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ব্লুটুথ ডিভাইস বেছে নিন"</string>
     <string name="language_settings" msgid="2079258598337245546">"ভাষা"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ভাষাগুলি ও ইনপুট"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"সাজেস্ট করা হয়েছে"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"সব ভাষা"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"কীবোর্ড"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"কীবোর্ডগুলি ম্যানেজ করুন"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"টেক্সট টু স্পিচ আউটপুট"</string>
@@ -351,7 +353,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"সিস্টেম আপডেট"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ভার্সন"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android সুরক্ষার প্যাচ লেবেল"</string>
-    <string name="model_info" msgid="4966408071657934452">"মডেল"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"মডেল ও হার্ডওয়্যার"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"মডেল: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"বেসব্যান্ড ভার্সন"</string>
     <string name="kernel_version" msgid="7327212934187011508">"কার্নেল ভার্সন"</string>
     <string name="build_number" msgid="3997326631001009102">"বিল্ড নম্বর"</string>
@@ -375,6 +378,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"সিস্টেম ওয়েবভিউ লাইসেন্স"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ওয়ালপেপার"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"উপগ্রহ ছবি প্রদানকারী:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"মডেল"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"ক্রমিক সংখ্যা"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"হার্ডওয়্যার ভার্সন"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"তৃতীয় পক্ষের লাইসেন্স"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"লাইসেন্সগুলি লোড হতে সমস্যা হয়েছে।"</string>
@@ -475,6 +481,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"নাম"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"সেট-আপ করা নেই"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ব্যবহারকারীর নাম এডিট করুন"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"ক্ষেত্র খালি রাখা যাবে না।"</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"ব্যবহারকারীর যে নাম লেখা হয়েছে তা সঠিক নয়।"</string>
     <string name="users_list_title" msgid="770764290290240909">"ব্যবহারকারী"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s কে অনুমতি দেওয়া হয়েছে"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"স্টোরেজ"</string>
@@ -618,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ছোট থেকে বড়, বড় থেকে ছোট সংখ্যা অথবা নির্দিষ্ট কয়েকটি সংখ্যা বার বার লেখা যাবে না।"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্রিন লকের বিকল্প"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> দিন আগে"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"বিশ্বস্ত ডিভাইস যোগ করুন"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"বিশ্বস্ত ডিভাইস যোগ করার জন্য ব্লুটুথ চালু হবে"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"বিশ্বস্ত ডিভাইসগুলি"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টি ডিভাইস</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টি ডিভাইস</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"এই গাড়ি কানেক্ট করা থাকলে <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> এটিকে আনলক করবে কেউ আপনার <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> নিলে, তারা আপনার ডিভাইস অ্যাক্সেস করতে পারবেন।"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"কনফার্ম করুন"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"বিশ্বস্ত ডিভাইস সরান"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"হয়ে গেছে"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"কোনও বিশ্বস্ত ডিভাইস সেট-আপ করতে কম্প্যানিয়ন অ্যাপ ব্যবহার করুন। সেট-আপ হয়ে যাওয়ার পরে গাড়ির আশেপাশে আপনার ফোন শনাক্ত হলে ব্যবহারকারী হিসেবে আপনার প্রোফাইল অটোমেটিক আনলক হয়ে যাবে।"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"১. আপনার ফোনে কম্প্যানিয়ন অ্যাপ ডাউনলোড করুন"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইসের সাথে যোগ করতে <xliff:g id="CAR_NAME">%1$s</xliff:g> বেছে নিন"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"কোনও বিশ্বস্ত ডিভাইস আপনার গাড়ির আশেপাশে থাকলে বা ডিভাইসটি অন্য কারও কাছে থাকলে গাড়ি চালু করার সাথে সাথে এটি গাড়ি আনলক করবে।"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"পেয়ারিং কোড মিলছে কিনা কনফার্ম করুন"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ফোনটি নথিভুক্ত করা হয়েছে"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> নথিভুক্ত করা যায়নি"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"একটি বিশ্বস্ত ডিভাইস যোগ করার পর যাচাইকরণ পদ্ধতি সেট করতে হবে। যদি আপনার বিশ্বস্ত ডিভাইস হাতের কাছে না থাকে তাহলে আপনার প্রোফাইল অ্যাক্সেস করার জন্য যাচাইকরণ করা প্রয়োজন।"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ডিভাইস ডিসকানেক্ট করা হয়েছে।"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ক্রেডেনশিয়াল মুছে ফেলুন"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"সব সার্টিফিকেট সরান"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"সমস্ত কন্টেন্ট সরাতে চান?"</string>
@@ -660,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"খারিজ করুন"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ড্রাইভ করার সময় এই ফিচার কাজ করবে না"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ড্রাইভ করার সময় ব্যবহারকারীকে যোগ করতে পারবেন না"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

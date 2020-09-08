@@ -18,13 +18,16 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/privacy_settings_title">
+    android:title="@string/privacy_settings_title"
+    android:key="@string/psk_privacy_settings">
 
     <Preference
-        android:fragment="com.android.car.settings.location.LocationSettingsFragment"
         android:key="@string/pk_location_settings_entry"
         android:title="@string/location_settings_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
+        <intent android:targetPackage="com.android.car.settings"
+                android:targetClass="com.android.car.settings.common.CarSettingActivities$LocationSettingsActivity"/>
+    </Preference>
 
     <Preference
         android:key="@string/pk_privacy_manage_perms"

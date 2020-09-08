@@ -35,13 +35,12 @@ import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
 import android.view.inputmethod.InputMethodSubtype.InputMethodSubtypeBuilder;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.ArrayList;
@@ -52,7 +51,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class InputMethodUtilTest {
     private static final String DUMMY_PACKAGE_NAME = "dummy package name";
     private static final String DUMMY_LABEL = "dummy label";
@@ -94,26 +93,32 @@ public class InputMethodUtilTest {
                 Settings.Secure.DEFAULT_INPUT_METHOD, DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
 
         mDummyEnabledInputMethodsListOneDefaultable = Arrays
-                .stream(DUMMY_ENABLED_INPUT_METHODS.split(String.valueOf(InputMethodUtil
-                        .INPUT_METHOD_DELIMITER))).collect(Collectors.toList()).stream().map(
-                            result -> {
-                                InputMethodInfo info = createMockInputMethodInfo(
-                                        mPackageManager, DUMMY_PACKAGE_NAME);
-                                when(info.getId()).thenReturn(result);
-                                when(info.isDefault(mContext)).thenReturn(result.equals(
-                                        DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT));
-                                return info;
-                            }).collect(Collectors.toList());
+                .stream(DUMMY_ENABLED_INPUT_METHODS.split(
+                        String.valueOf(InputMethodUtil.INPUT_METHOD_DELIMITER)))
+                .collect(Collectors.toList())
+                .stream().map(
+                        result -> {
+                            InputMethodInfo info = createMockInputMethodInfo(
+                                    mPackageManager, DUMMY_PACKAGE_NAME);
+                            when(info.getId()).thenReturn(result);
+                            when(info.isDefault(mContext)).thenReturn(result.equals(
+                                    DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT));
+                            return info;
+                        })
+                .collect(Collectors.toList());
         mDummyEnabledInputMethodsListAllDefaultable = Arrays
                 .stream(DUMMY_ENABLED_INPUT_METHODS.split(String.valueOf(InputMethodUtil
-                        .INPUT_METHOD_DELIMITER))).collect(Collectors.toList()).stream().map(
-                                result -> {
-                                    InputMethodInfo info = createMockInputMethodInfo(
-                                            mPackageManager, DUMMY_PACKAGE_NAME);
-                                    when(info.getId()).thenReturn(result);
-                                    when(info.isDefault(mContext)).thenReturn(true);
-                                    return info;
-                                }).collect(Collectors.toList());
+                        .INPUT_METHOD_DELIMITER)))
+                .collect(Collectors.toList())
+                .stream().map(
+                        result -> {
+                            InputMethodInfo info = createMockInputMethodInfo(
+                                    mPackageManager, DUMMY_PACKAGE_NAME);
+                            when(info.getId()).thenReturn(result);
+                            when(info.isDefault(mContext)).thenReturn(true);
+                            return info;
+                        })
+                .collect(Collectors.toList());
     }
 
     @Test

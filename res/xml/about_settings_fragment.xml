@@ -18,12 +18,13 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/about_settings">
+    android:title="@string/about_settings"
+    android:key="@string/psk_about_settings">
     <com.android.car.ui.preference.CarUiPreference
-        android:key="@string/pk_model_info"
-        android:title="@string/model_info"
-        settings:controller="com.android.car.settings.system.ModelInfoPreferenceController"
-        settings:showChevron="false"/>
+        android:fragment="com.android.car.settings.system.HardwareInfoFragment"
+        android:key="@string/pk_hardware_info"
+        android:title="@string/hardware_info"
+        settings:controller="com.android.car.settings.system.HardwareInfoPreferenceController"/>
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_firmware_version"
         android:title="@string/firmware_version"

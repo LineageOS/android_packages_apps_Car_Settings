@@ -47,10 +47,16 @@ public class StorageFileCategoryPreferenceController extends StorageUsageBasePre
     }
 
     @Override
+    protected void onCreateInternal() {
+        super.onCreateInternal();
+        getPreference().setSelectable(
+                getFilesIntent().resolveActivity(getContext().getPackageManager()) != null);
+    }
+
+    @Override
     protected long calculateCategoryUsage(SparseArray<StorageAsyncLoader.AppsStorageResult> result,
             long usedSizeBytes) {
-        StorageAsyncLoader.AppsStorageResult data = result.get(
-                getCarUserManagerHelper().getCurrentProcessUserId());
+        StorageAsyncLoader.AppsStorageResult data = result.get(UserHandle.myUserId());
         return data.getExternalStats().totalBytes - data.getExternalStats().audioBytes
                 - data.getExternalStats().videoBytes - data.getExternalStats().imageBytes
                 - data.getExternalStats().appBytes;
@@ -58,11 +64,11 @@ public class StorageFileCategoryPreferenceController extends StorageUsageBasePre
 
     @Override
     protected boolean handlePreferenceClicked(ProgressBarPreference preference) {
+        int myUserId = UserHandle.myUserId();
         Intent intent = getFilesIntent();
-        intent.putExtra(Intent.EXTRA_USER_ID, getCarUserManagerHelper().getCurrentProcessUserId());
+        intent.putExtra(Intent.EXTRA_USER_ID, myUserId);
         if (intent.resolveActivity(getContext().getPackageManager()) != null) {
-            getContext().startActivityAsUser(intent,
-                new UserHandle(getCarUserManagerHelper().getCurrentProcessUserId()));
+            getContext().startActivityAsUser(intent, UserHandle.of(myUserId));
         } else {
             LOG.i("No activity found to handle intent: " + intent);
         }

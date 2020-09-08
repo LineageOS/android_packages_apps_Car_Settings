@@ -17,7 +17,6 @@
 package com.android.car.settings.security;
 
 import android.app.Activity;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -60,15 +59,13 @@ public class CredentialStorageActivity extends FragmentActivity {
 
     private static final int CONFIRM_CLEAR_SYSTEM_CREDENTIAL_REQUEST = 1;
 
-    private final KeyStore mKeyStore = KeyStore.getInstance();
-
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private LockPatternUtils mUtils;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mCarUserManagerHelper = new CarUserManagerHelper(this);
+        mUserManager = UserManager.get(getApplicationContext());
         mUtils = new LockPatternUtils(this);
     }
 
@@ -80,8 +77,7 @@ public class CredentialStorageActivity extends FragmentActivity {
             return;
         }
 
-        if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
+        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
             finish();
             return;
         }
@@ -110,7 +106,7 @@ public class CredentialStorageActivity extends FragmentActivity {
     }
 
     private void onResetConfirmed() {
-        if (!mUtils.isSecure(mCarUserManagerHelper.getCurrentProcessUserId())) {
+        if (!mUtils.isSecure(UserHandle.myUserId())) {
             new ResetKeyStoreAndKeyChain(this).execute();
         } else {
             startActivityForResult(new Intent(this, CheckLockActivity.class),
@@ -161,8 +157,7 @@ public class CredentialStorageActivity extends FragmentActivity {
         UserManager userManager = (UserManager) getSystemService(Context.USER_SERVICE);
         UserInfo parentInfo = userManager.getProfileParent(launchedFromUserId);
         // Caller is running in a profile of this user
-        return ((parentInfo != null) && (parentInfo.id
-                == mCarUserManagerHelper.getCurrentProcessUserId()));
+        return ((parentInfo != null) && (parentInfo.id == UserHandle.myUserId()));
     }
 
     /**
@@ -230,8 +225,7 @@ public class CredentialStorageActivity extends FragmentActivity {
                 return false;
             }
 
-            credentialStorage.mUtils.resetKeyStore(
-                    credentialStorage.mCarUserManagerHelper.getCurrentProcessUserId());
+            credentialStorage.mUtils.resetKeyStore(UserHandle.myUserId());
 
             try {
                 KeyChain.KeyChainConnection keyChainConnection = KeyChain.bind(credentialStorage);

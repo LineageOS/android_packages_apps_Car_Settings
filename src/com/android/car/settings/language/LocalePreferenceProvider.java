@@ -24,14 +24,15 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceUtil;
-import com.android.car.settingslib.R;
-import com.android.car.settingslib.language.LanguagePickerUtils;
 import com.android.car.ui.preference.CarUiPreference;
+import com.android.internal.app.LocaleHelper;
 import com.android.internal.app.LocaleStore;
 import com.android.internal.app.SuggestedLocaleAdapter;
 
+import java.util.Locale;
 import java.util.Set;
 
 /**
@@ -46,8 +47,8 @@ public class LocalePreferenceProvider {
     public static LocalePreferenceProvider newInstance(Context context,
             Set<LocaleStore.LocaleInfo> localeInfoSet,
             @Nullable LocaleStore.LocaleInfo parentLocale) {
-        SuggestedLocaleAdapter adapter = LanguagePickerUtils.createSuggestedLocaleAdapter(context,
-                localeInfoSet, parentLocale);
+        SuggestedLocaleAdapter adapter = createSuggestedLocaleAdapter(context, localeInfoSet,
+                parentLocale);
         return new LocalePreferenceProvider(context, adapter);
     }
 
@@ -142,5 +143,22 @@ public class LocalePreferenceProvider {
                 LOG.d("Attempting to get unknown type: " + type);
                 throw new IllegalStateException("Unknown locale list item type");
         }
+    }
+
+    /**
+     * Creates an instance of {@link SuggestedLocaleAdapter} with a locale
+     * {@link LocaleStore.LocaleInfo} that is scoped to a parent locale if a parent locale is
+     * provided.
+     */
+    private static SuggestedLocaleAdapter createSuggestedLocaleAdapter(Context context,
+            Set<LocaleStore.LocaleInfo> localeInfoSet, @Nullable LocaleStore.LocaleInfo parent) {
+        boolean countryMode = (parent != null);
+        Locale displayLocale = countryMode ? parent.getLocale() : Locale.getDefault();
+        SuggestedLocaleAdapter adapter = new SuggestedLocaleAdapter(localeInfoSet, countryMode);
+        LocaleHelper.LocaleInfoComparator comp =
+                new LocaleHelper.LocaleInfoComparator(displayLocale, countryMode);
+        adapter.sort(comp);
+        adapter.setDisplayLocale(context, displayLocale);
+        return adapter;
     }
 }

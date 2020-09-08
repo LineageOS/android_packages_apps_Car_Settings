@@ -17,9 +17,10 @@
 package com.android.car.settings.quicksettings;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -29,24 +30,22 @@ import android.os.UserManager;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.home.HomepageFragment;
+import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.users.UserIconProvider;
-import com.android.car.settings.users.UserSwitcherFragment;
+import com.android.car.settings.users.UserSwitcherActivity;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -55,27 +54,22 @@ import java.util.concurrent.TimeUnit;
 public class QuickSettingFragment extends BaseFragment {
     // Time to delay refreshing the build info, if the clock is not correct.
     private static final long BUILD_INFO_REFRESH_TIME_MS = TimeUnit.SECONDS.toMillis(5);
-    /**
-     * Indicates whether all Preferences are configured to ignore UX Restrictions Event.
-     */
-    private boolean mAllIgnoresUxRestrictions;
 
-    /**
-     * Set of the keys of Preferences that ignore UX Restrictions. When mAlwaysIgnoreUxRestrictions
-     * is configured to be false, then only the Preferences whose keys are contained in this Set
-     * ignore UX Restrictions.
-     */
-    private Set<String> mPreferencesIgnoringUxRestrictions;
-
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private UserIconProvider mUserIconProvider;
     private QuickSettingGridAdapter mGridAdapter;
     private RecyclerView mListView;
     private MenuItem mFullSettingsBtn;
     private MenuItem mUserSwitcherBtn;
-    private float mOpacityDisabled;
-    private float mOpacityEnabled;
     private TextView mBuildInfo;
+
+    private ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.FINISH_TASK_WITH_ACTIVITY) {
+                    getActivity().finish();
+                }
+            });
 
     @Override
     @LayoutRes
@@ -86,12 +80,10 @@ public class QuickSettingFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mUserManager = UserManager.get(getContext());
         Activity activity = requireActivity();
 
-        mOpacityDisabled = activity.getResources().getFloat(R.dimen.opacity_disabled);
-        mOpacityEnabled = activity.getResources().getFloat(R.dimen.opacity_enabled);
-        mCarUserManagerHelper = new CarUserManagerHelper(activity);
-        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
+        mUserIconProvider = new UserIconProvider();
         mListView = activity.findViewById(R.id.list);
         mGridAdapter = new QuickSettingGridAdapter(activity);
         mListView.setLayoutManager(mGridAdapter.getGridLayoutManager());
@@ -99,17 +91,12 @@ public class QuickSettingFragment extends BaseFragment {
         setupUserButton(activity);
 
         mGridAdapter
-                .addTile(new WifiTile(activity, mGridAdapter, getFragmentController()))
-                .addTile(new BluetoothTile(activity, mGridAdapter, getFragmentController()))
-                .addTile(new DayNightTile(activity, mGridAdapter, getFragmentController()))
-                .addTile(new CelluarTile(activity, mGridAdapter))
+                .addTile(new WifiTile(activity, mGridAdapter, getFragmentHost()))
+                .addTile(new BluetoothTile(activity, mGridAdapter, getFragmentHost()))
+                .addTile(new DayNightTile(activity, mGridAdapter, getFragmentHost()))
+                .addTile(new CelluarTile(activity, mGridAdapter, getFragmentHost()))
                 .addSeekbarTile(new BrightnessTile(activity));
         mListView.setAdapter(mGridAdapter);
-
-        mPreferencesIgnoringUxRestrictions = new HashSet<String>(Arrays.asList(
-                getContext().getResources().getStringArray(R.array.config_ignore_ux_restrictions)));
-        mAllIgnoresUxRestrictions =
-                getContext().getResources().getBoolean(R.bool.config_always_ignore_ux_restrictions);
     }
 
 
@@ -120,12 +107,7 @@ public class QuickSettingFragment extends BaseFragment {
 
     @Override
     protected Toolbar.State getToolbarState() {
-        Activity activity = requireActivity();
-        FragmentManager fragmentManager = ((FragmentActivity) activity).getSupportFragmentManager();
-        if (fragmentManager.getBackStackEntryCount() == 1
-                && fragmentManager.findFragmentByTag("0") != null
-                && fragmentManager.findFragmentByTag("0").getClass().getName().equals(
-                getString(R.string.config_settings_hierarchy_root_fragment))
+        if (getContext().getResources().getBoolean(R.bool.config_is_quick_settings_root)
                 && !getContext().getResources()
                 .getBoolean(R.bool.config_show_settings_root_exit_icon)) {
             return Toolbar.State.HOME;
@@ -146,7 +128,8 @@ public class QuickSettingFragment extends BaseFragment {
         mUserSwitcherBtn = new MenuItem.Builder(getContext())
                 .setTitle(getString(R.string.user_switch))
                 .setOnClickListener(i ->
-                        getFragmentController().launchFragment(new UserSwitcherFragment()))
+                        mStartForResult.launch(
+                                new Intent(getContext(), UserSwitcherActivity.class)))
                 .setIcon(R.drawable.ic_user)
                 .setShowIconAndTitle(true)
                 .setVisible(showUserSwitcher())
@@ -154,8 +137,7 @@ public class QuickSettingFragment extends BaseFragment {
                 .build();
         mFullSettingsBtn = new MenuItem.Builder(getContext())
                 .setTitle(getString(R.string.more_settings_label))
-                .setOnClickListener(i ->
-                        getFragmentController().launchFragment(new HomepageFragment()))
+                .setOnClickListener(i -> launchFullSettings())
                 .setIcon(R.drawable.ic_settings_gear)
                 .setShowIconAndTitle(true)
                 .setUxRestrictions(CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP)
@@ -177,6 +159,13 @@ public class QuickSettingFragment extends BaseFragment {
         // In non-user builds (that is, user-debug, eng, etc), display some version information.
         if (!Build.IS_USER) {
             refreshBuildInfo();
+        }
+    }
+
+    private void launchFullSettings() {
+        startActivity(new Intent(getContext(), CarSettingActivities.HomepageActivity.class));
+        if (!getContext().getResources().getBoolean(R.bool.config_is_quick_settings_root)) {
+            getActivity().finish();
         }
     }
 
@@ -211,8 +200,8 @@ public class QuickSettingFragment extends BaseFragment {
     }
 
     private void setupUserButton(Context context) {
-        UserInfo currentUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
-        Drawable userIcon = mUserIconProvider.getUserIcon(currentUserInfo, context);
+        UserInfo currentUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
+        Drawable userIcon = mUserIconProvider.getRoundedUserIcon(currentUserInfo, context);
         mUserSwitcherBtn.setIcon(userIcon);
         mUserSwitcherBtn.setTitle(currentUserInfo.name);
     }
@@ -222,5 +211,13 @@ public class QuickSettingFragment extends BaseFragment {
                 && UserManager.supportsMultipleUsers()
                 && !UserManager.get(getContext()).hasUserRestriction(
                 UserManager.DISALLOW_USER_SWITCH);
+    }
+
+    /**
+     * Quick Settings should be viewable while driving
+     */
+    @Override
+    protected boolean canBeShown(@NonNull CarUxRestrictions carUxRestrictions) {
+        return true;
     }
 }

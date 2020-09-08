@@ -16,17 +16,17 @@
 
 package com.android.car.settings.bluetooth;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
-import android.view.View;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 import org.junit.After;
@@ -34,11 +34,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 /** Unit test for {@link BluetoothDevicePickerFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
 public class BluetoothDevicePickerFragmentTest {
 
@@ -55,6 +56,9 @@ public class BluetoothDevicePickerFragmentTest {
 
         mFragment = new BluetoothDevicePickerFragment();
         mFragmentController = FragmentController.of(mFragment);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
@@ -73,9 +77,9 @@ public class BluetoothDevicePickerFragmentTest {
     @Test
     public void onStart_showsProgressBar() {
         mFragmentController.setup();
-        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
 
-        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(toolbar.getProgressBar().isVisible()).isTrue();
     }
 
     @Test
@@ -88,11 +92,11 @@ public class BluetoothDevicePickerFragmentTest {
     @Test
     public void onStop_hidesProgressBar() {
         mFragmentController.setup().onPause();
-        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
-        toolbar.showProgressBar();
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
+        toolbar.getProgressBar().setVisible(true);
 
         mFragmentController.stop();
 
-        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.GONE);
+        assertThat(toolbar.getProgressBar().isVisible()).isFalse();
     }
 }

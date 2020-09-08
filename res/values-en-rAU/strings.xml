@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Connect to data services when roaming"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Allow data roaming?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"You may incur significant charges."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Roaming charges may apply."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Data usage"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Primary data"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> used"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Choose Bluetooth device"</string>
     <string name="language_settings" msgid="2079258598337245546">"Languages"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Languages and input"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Suggested"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"All languages"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Keyboard"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Manage keyboards"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Text to speech output"</string>
@@ -351,7 +353,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"System updates"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android security patch level"</string>
-    <string name="model_info" msgid="4966408071657934452">"Model"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Model &amp; hardware"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"Model: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Baseband version"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel version"</string>
     <string name="build_number" msgid="3997326631001009102">"Build number"</string>
@@ -375,6 +378,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"System WebView licences"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Wallpaper"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Satellite imagery providers:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"Model"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"Serial number"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Hardware version"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Third-party licences"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"There is a problem loading the licences."</string>
@@ -475,6 +481,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"Name"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Not set up"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Edit user name"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"Field can\'t be blank."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"Username entered is invalid."</string>
     <string name="users_list_title" msgid="770764290290240909">"Users"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Permissions granted to %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Storage"</string>
@@ -618,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Ascending, descending or repeated sequence of digits isn\'t allowed."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Screen lock options"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> days ago"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Add trusted device"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth will turn on to add trusted device"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Trusted devices"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> devices</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> device</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Your <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> will unlock this car when it\'s connected. If someone takes your <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, they may be able to access this device"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirm"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Remove trusted device"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Done"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Use the companion app to set up a trusted device. Once set up, your user profile will unlock automatically when your phone is detected near the vehicle."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download the companion app on your phone"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Select <xliff:g id="CAR_NAME">%1$s</xliff:g> on your phone to pair the devices"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"A trusted device near your car will unlock the user profile upon ignition, even if someone else is holding the device."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Please confirm that the pairing codes match"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Phone has been enrolled successfully"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> enrolment failed"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Adding a trusted device requires you to set an authentication method next. If you do not have your trusted device with you, authentication will be required to access your profile."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Device disconnected."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Clear credentials"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Remove all certificates"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Remove all the contents?"</string>
@@ -660,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"DISMISS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Feature not available while driving"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Can\'t add user while driving"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

@@ -20,74 +20,89 @@ import static android.os.storage.VolumeInfo.MOUNT_FLAG_PRIMARY;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.nullable;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.ResolveInfo;
-import android.os.UserHandle;
 import android.os.storage.VolumeInfo;
 
 import androidx.lifecycle.Lifecycle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.ProgressBarPreference;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowStorageManagerVolumeProvider;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowApplication;
 import org.robolectric.shadows.ShadowApplicationPackageManager;
 
 /** Unit test for {@link StorageFileCategoryPreferenceController}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowStorageManagerVolumeProvider.class, ShadowCarUserManagerHelper.class})
+@RunWith(RobolectricTestRunner.class)
+@Config(shadows = {ShadowStorageManagerVolumeProvider.class})
 public class StorageFileCategoryPreferenceControllerTest {
 
-    private static final int TEST_USER = 10;
 
     private Context mContext;
     private ProgressBarPreference mProgressBarPreference;
-    private StorageFileCategoryPreferenceController mController;
     private PreferenceControllerTestHelper<StorageFileCategoryPreferenceController>
             mPreferenceControllerHelper;
-
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = spy(RuntimeEnvironment.application);
+        mContext = RuntimeEnvironment.application;
         mProgressBarPreference = new ProgressBarPreference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 StorageFileCategoryPreferenceController.class, mProgressBarPreference);
-        mController = mPreferenceControllerHelper.getController();
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @After
     public void tearDown() {
         ShadowStorageManagerVolumeProvider.reset();
+        ShadowApplicationPackageManager.reset();
+    }
+
+    @Test
+    public void onCreate_nonResolvableIntent_notSelectable() {
+        VolumeInfo volumeInfo = new VolumeInfo("id", VolumeInfo.TYPE_EMULATED, null, "id");
+        volumeInfo.mountFlags = MOUNT_FLAG_PRIMARY;
+        ShadowStorageManagerVolumeProvider.setVolumeInfo(volumeInfo);
+
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+
+        assertThat(mProgressBarPreference.isSelectable()).isFalse();
+    }
+
+    @Test
+    public void onCreate_resolvableIntent_selectable() {
+        VolumeInfo volumeInfo = new VolumeInfo("id", VolumeInfo.TYPE_EMULATED, null, "id");
+        volumeInfo.mountFlags = MOUNT_FLAG_PRIMARY;
+        Intent browseIntent = volumeInfo.buildBrowseIntent();
+        ShadowStorageManagerVolumeProvider.setVolumeInfo(volumeInfo);
+
+        ActivityInfo activityInfo = new ActivityInfo();
+        activityInfo.packageName = "com.test.package.name";
+        activityInfo.name = "ClassName";
+        activityInfo.applicationInfo = new ApplicationInfo();
+        activityInfo.applicationInfo.packageName = "com.test.package.name";
+
+        ResolveInfo resolveInfo = new ResolveInfo();
+        resolveInfo.system = true;
+        resolveInfo.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(browseIntent, resolveInfo);
+
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+
+        assertThat(mProgressBarPreference.isSelectable()).isTrue();
     }
 
     @Test
@@ -98,8 +113,7 @@ public class StorageFileCategoryPreferenceControllerTest {
 
         mProgressBarPreference.performClick();
 
-        verify(mContext, never()).startActivityAsUser(
-                 any(Intent.class), nullable(UserHandle.class));
+        assertThat(ShadowApplication.getInstance().getNextStartedActivity()).isNull();
     }
 
     @Test
@@ -108,21 +122,22 @@ public class StorageFileCategoryPreferenceControllerTest {
         volumeInfo.mountFlags = MOUNT_FLAG_PRIMARY;
         Intent browseIntent = volumeInfo.buildBrowseIntent();
         ShadowStorageManagerVolumeProvider.setVolumeInfo(volumeInfo);
+
         ActivityInfo activityInfo = new ActivityInfo();
         activityInfo.packageName = "com.test.package.name";
         activityInfo.name = "ClassName";
         activityInfo.applicationInfo = new ApplicationInfo();
         activityInfo.applicationInfo.packageName = "com.test.package.name";
+
         ResolveInfo resolveInfo = new ResolveInfo();
         resolveInfo.system = true;
         resolveInfo.activityInfo = activityInfo;
         getShadowPackageManager().addResolveInfoForIntent(browseIntent, resolveInfo);
 
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mProgressBarPreference.performClick();
 
-        ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify(mContext).startActivityAsUser(argumentCaptor.capture(), nullable(UserHandle.class));
-        Intent intent = argumentCaptor.getValue();
+        Intent intent = ShadowApplication.getInstance().getNextStartedActivity();
         assertThat(intent.getAction()).isEqualTo(browseIntent.getAction());
         assertThat(intent.getData()).isEqualTo(browseIntent.getData());
     }

@@ -16,27 +16,28 @@
 
 package com.android.car.settings.accounts;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.when;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.settings.testutils.ShadowUserHelper;
+import com.android.car.settings.users.UserHelper;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -44,15 +45,15 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
 /**
  * Tests for the {@link AccountDetailsFragment}.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class,
-        ShadowContentResolver.class})
+@RunWith(RobolectricTestRunner.class)
+@Config(shadows = {ShadowAccountManager.class, ShadowContentResolver.class, ShadowUserHelper.class})
 public class AccountDetailsFragmentTest {
     private static final String DIALOG_TAG = "confirmRemoveAccount";
     private final Account mAccount = new Account("Name", "com.acct");
@@ -63,58 +64,65 @@ public class AccountDetailsFragmentTest {
     private Context mContext;
     private FragmentController<AccountDetailsFragment> mFragmentController;
     private AccountDetailsFragment mFragment;
+
     @Mock
-    private CarUserManagerHelper mMockCarUserManagerHelper;
+    private UserHelper mMockUserHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
+        ShadowUserHelper.setInstance(mMockUserHelper);
 
         mContext = application;
         // Add the account to the official list of accounts
         getShadowAccountManager().addAccount(mAccount);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
         ShadowContentResolver.reset();
+        ShadowUserHelper.reset();
     }
 
     @Test
     public void onActivityCreated_titleShouldBeSet() {
         initFragment();
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getTitle()).isEqualTo(mAccountLabel);
     }
 
     @Test
     public void cannotModifyUsers_removeAccountButtonShouldNotBeVisible() {
-        doReturn(false).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts())
+                .thenReturn(false);
         initFragment();
 
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getMenuItems()).hasSize(1);
         assertThat(toolbar.getMenuItems().get(0).isVisible()).isFalse();
     }
 
     @Test
     public void canModifyUsers_removeAccountButtonShouldBeVisible() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts())
+                .thenReturn(true);
         initFragment();
 
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getMenuItems()).hasSize(1);
         assertThat(toolbar.getMenuItems().get(0).isVisible()).isTrue();
     }
 
     @Test
     public void onRemoveAccountButtonClicked_canModifyUsers_shouldShowConfirmRemoveAccountDialog() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts())
+                .thenReturn(true);
         initFragment();
 
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         toolbar.getMenuItems().get(0).performClick();
 
         Fragment dialogFragment = mFragment.findDialogByTag(DIALOG_TAG);

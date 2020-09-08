@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Csatlakozás adatszolgáltatásokhoz roaming során"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Engedélyezi az adatroamingot?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"Lehet, hogy jelentős összeget számítanak fel érte."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"A szolgáltató roamingdíjat számíthat fel."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Adathasználat"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Elsődleges adatcsomag"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> felhasználva"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth-eszköz kiválasztása"</string>
     <string name="language_settings" msgid="2079258598337245546">"Nyelvek"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Nyelvek és bevitel"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Javasolt"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Minden nyelv"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Billentyűzet"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Billentyűzetek kezelése"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Szövegfelolvasás"</string>
@@ -351,7 +353,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-verzió"</string>
     <string name="security_patch" msgid="4794276590178386903">"Androidos biztonsági hibajavító csomag"</string>
-    <string name="model_info" msgid="4966408071657934452">"Modell"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Modell és hardver"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"Modell: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Alapsáv verziója"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel verziója"</string>
     <string name="build_number" msgid="3997326631001009102">"Buildszám"</string>
@@ -375,6 +378,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"A rendszer WebView-licencei"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Háttérképek"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"A műholdképek szolgáltatói:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"Modell"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"Sorozatszám"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Hardververzió"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Harmadik felek licencei"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Probléma adódott a licencek betöltésekor."</string>
@@ -475,6 +481,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"Név"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Nincs beállítva"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Felhasználónév szerkesztése"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"A mező nem lehet üres."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"A megadott felhasználónév érvénytelen."</string>
     <string name="users_list_title" msgid="770764290290240909">"Felhasználók"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s megkapta az engedélyeket"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Tárhely"</string>
@@ -618,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Növekvő, csökkenő vagy ismétlődő számsor megadása nem engedélyezett."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"A képernyőzár beállításai"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> nappal ezelőtt"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Megbízható eszköz hozzáadása"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bekapcsol a Bluetooth az eszköz hozzáadásához"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Megbízható eszközök"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> eszköz</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> eszköz</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"A(z) <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> kapcsolódáskor feloldja az autózárat. Ha valaki elveszi a(z) <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> eszközét, akkor az illető hozzáférhet az eszközhöz"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Megerősítés"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Megbízható eszköz eltávolítása"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Kész"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Állítson be megbízható eszközt a társalkalmazással. A beállítást követően felhasználó profilja automatikusan feloldódik, amint azt észleljük, hogy a telefon a jármű közelében van."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Töltse le telefonjára a társalkalmazást."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Az eszközök párosításához válassza a(z) <xliff:g id="CAR_NAME">%1$s</xliff:g> elemet a telefonon."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Az autó közelében lévő megbízható eszközök indításkor feloldják a felhasználói profil zárolását, akkor is, ha éppen másnál van az eszköz."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Ellenőrizze, hogy egyeznek-e a párosítókódok"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"A telefon regisztrációja sikeresen megtörtént"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nem sikerült a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> regisztrációja"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ha megbízható eszközt szeretne hozzáadni, akkor a következő lépésben hitelesítési módot kell megadnia. Ha nincs Önnél megbízható eszköze, hitelesítésre lesz szükség a profiljához való hozzáféréshez."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Eszköz leválasztva."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hitelesítési adatok törlése"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Összes tanúsítvány eltávolítása"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Eltávolítja az összes tartalmat?"</string>
@@ -660,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ELVETÉS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Vezetés közben nem áll rendelkezésre a funkció"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Vezetés közben nem lehet hozzáadni felhasználót"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Keresés"</string>
 </resources>

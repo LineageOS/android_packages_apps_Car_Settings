@@ -17,7 +17,7 @@
 package com.android.car.settings.testutils;
 
 import android.content.Context;
-import android.net.wifi.WifiConfiguration;
+import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiManager;
 
 import com.android.car.settings.wifi.CarWifiManager;
@@ -40,9 +40,9 @@ public class ShadowCarWifiManager {
 
     private static CarWifiManager sInstance;
     private static int sCurrentState = STATE_UNKNOWN;
-    private static WifiConfiguration sWifiConfiguration = new WifiConfiguration();
-    private static boolean sIsDualModeSupported = true;
-    private static boolean sIsDualBandSupported = true;
+    private static SoftApConfiguration sSoftApConfiguration =
+            new SoftApConfiguration.Builder().build();
+    private static boolean sIs5GhzBandSupported = true;
     private static int sWifiState = WifiManager.WIFI_STATE_UNKNOWN;
 
     public static void setInstance(CarWifiManager wifiManager) {
@@ -52,10 +52,9 @@ public class ShadowCarWifiManager {
     @Resetter
     public static void reset() {
         sInstance = null;
-        sWifiConfiguration = new WifiConfiguration();
+        sSoftApConfiguration = new SoftApConfiguration.Builder().build();
         sCurrentState = STATE_UNKNOWN;
-        sIsDualModeSupported = true;
-        sIsDualBandSupported = true;
+        sIs5GhzBandSupported = true;
         sWifiState = WifiManager.WIFI_STATE_UNKNOWN;
     }
 
@@ -79,18 +78,13 @@ public class ShadowCarWifiManager {
     }
 
     @Implementation
-    public void setWifiApConfig(WifiConfiguration config) {
-        sWifiConfiguration = config;
+    public void setSoftApConfig(SoftApConfiguration config) {
+        sSoftApConfiguration = config;
     }
 
     @Implementation
-    public WifiConfiguration getWifiApConfig() {
-        return sWifiConfiguration;
-    }
-
-    @Implementation
-    public boolean setWifiEnabled(boolean enabled) {
-        return sInstance.setWifiEnabled(enabled);
+    public SoftApConfiguration getSoftApConfig() {
+        return sSoftApConfiguration;
     }
 
     @Implementation
@@ -134,26 +128,22 @@ public class ShadowCarWifiManager {
     }
 
     @Implementation
-    protected boolean isDualModeSupported() {
-        return sIsDualModeSupported;
-    }
-
-    @Implementation
     protected String getCountryCode() {
         return "1";
     }
 
     @Implementation
-    protected boolean isDualBandSupported() {
-        return sIsDualBandSupported;
+    protected boolean is5GhzBandSupported() {
+        return sIs5GhzBandSupported;
     }
 
-    public static void setIsDualModeSupported(boolean supported) {
-        sIsDualModeSupported = supported;
+    @Implementation
+    protected boolean addListener(CarWifiManager.Listener listener) {
+        return sInstance.addListener(listener);
     }
 
-    public static void setIsDualBandSupported(boolean supported) {
-        sIsDualBandSupported = supported;
+    public static void setIs5GhzBandSupported(boolean supported) {
+        sIs5GhzBandSupported = supported;
     }
 
     public static int getCurrentState() {

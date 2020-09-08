@@ -16,6 +16,8 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -34,19 +36,22 @@ import android.content.IntentSender;
 import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.FragmentController;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.shadows.ShadowToast;
 
 /** Unit test for {@link SettingsFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class SettingsFragmentTest {
 
     private static final String TEST_TAG = "test_tag";
@@ -60,6 +65,9 @@ public class SettingsFragmentTest {
         mContext = RuntimeEnvironment.application;
         mFragmentController = FragmentController.of(new TestSettingsFragment());
         mFragment = mFragmentController.get();
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @Test
@@ -88,6 +96,19 @@ public class SettingsFragmentTest {
                 CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD, /* timestamp= */ 0).build();
         mFragment.onUxRestrictionsChanged(uxRestrictions);
         assertThat(controller.getUxRestrictions()).isEqualTo(uxRestrictions);
+    }
+
+    @Test
+    public void onUxRestrictedPreferenceTapped_showToast() {
+        mFragmentController.setup();
+        FakePreferenceController controller = mFragment.use(FakePreferenceController.class,
+                R.string.tpk_fake_controller);
+        CarUxRestrictions uxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
+        mFragment.onUxRestrictionsChanged(uxRestrictions);
+        controller.getPreference().performClick();
+        assertThat(ShadowToast.showedToast(
+                mContext.getString(R.string.restricted_while_driving))).isTrue();
     }
 
     @Test
@@ -120,7 +141,7 @@ public class SettingsFragmentTest {
     public void showDialog_noTag_launchesDialogFragment() {
         mFragmentController.setup();
         DialogFragment dialogFragment = mock(DialogFragment.class);
-        mFragment.showDialog(dialogFragment, /* tag */ null);
+        mFragment.showDialog(dialogFragment, /* tag= */ null);
         verify(dialogFragment).show(mFragment.getFragmentManager(), null);
     }
 
@@ -178,8 +199,8 @@ public class SettingsFragmentTest {
         assertThrows(
                 () -> mFragment.startIntentSenderForResult(
                         mock(IntentSender.class), /* requestCode= */ 0xffff,
-                        /* fillInIntent= */null, /* flagsMask= */ 0,
-                        /* flagsValues= */0, /* options= */ null,
+                        /* fillInIntent= */ null, /* flagsMask= */ 0,
+                        /* flagsValues= */ 0, /* options= */ null,
                         mock(ActivityResultCallback.class)));
     }
 
@@ -190,8 +211,8 @@ public class SettingsFragmentTest {
             for (int i = 0; i < 0xff; i++) {
                 mFragment.startIntentSenderForResult(
                         mock(IntentSender.class), /* requestCode= */ 0xffff,
-                        /* fillInIntent= */null, /* flagsMask= */ 0,
-                        /* flagsValues= */0, /* options= */ null,
+                        /* fillInIntent= */ null, /* flagsMask= */ 0,
+                        /* flagsValues= */ 0, /* options= */ null,
                         mock(ActivityResultCallback.class));
             }
         });
@@ -231,7 +252,7 @@ public class SettingsFragmentTest {
         DummyFragment otherFragment = new DummyFragment();
         mFragment.launchFragment(otherFragment);
 
-        Toolbar toolbar = otherFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(otherFragment.requireActivity());
 
         assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.HOME);
     }
@@ -240,13 +261,10 @@ public class SettingsFragmentTest {
     public void onActivityCreated_hasBackArrowIconIfNotRoot() {
         mFragmentController.setup();
 
-        TestSettingsFragment otherFragment1 = new TestSettingsFragment();
-        mFragment.launchFragment(otherFragment1);
+        TestSettingsFragment otherFragment = new TestSettingsFragment();
+        mFragment.launchFragment(otherFragment);
 
-        TestSettingsFragment otherFragment2 = new TestSettingsFragment();
-        mFragment.launchFragment(otherFragment2);
-
-        Toolbar toolbar = otherFragment2.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(otherFragment.requireActivity());
 
         assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.SUBPAGE);
         assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(

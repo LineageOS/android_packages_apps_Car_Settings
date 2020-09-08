@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Conectar aos serviços de dados quando estiver em roaming"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Permitir roaming de dados?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"Pode haver cobranças significativas."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Sujeito a cobrança por uso de roaming."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Uso de dados"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dados primários"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Usados: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Escolher dispositivo Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e entrada"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugestões"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Todos os idiomas"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Teclado"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Gerenciar teclados"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Converter texto em voz"</string>
@@ -351,7 +353,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Atualizações do sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versão do Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nível do patch de segurança do Android"</string>
-    <string name="model_info" msgid="4966408071657934452">"Modelo"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Modelo e hardware"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"Modelo: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Versão da banda de base"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Versão do kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Número da versão"</string>
@@ -375,6 +378,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Licenças do sistema WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Planos de fundo"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Provedores de imagens via satélite:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"Modelo"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"Número de série"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Versão do hardware"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licenças de terceiros"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ocorreu um problema ao carregar as licenças."</string>
@@ -475,6 +481,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"Nome"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Não configurado"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Editar nome de usuário"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"O campo não pode ficar em branco."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"O nome de usuário informado é inválido."</string>
     <string name="users_list_title" msgid="770764290290240909">"Usuários"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Permissões concedidas a %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Armazenamento"</string>
@@ -618,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Não é permitido usar uma sequência de dígitos em ordem crescente, decrescente ou repetidos."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opções de bloqueio de tela"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> dias atrás"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Adicionar disp. confiável"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth será ativ. p/ adicionar disp. confiáveis"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Dispositivos confiáveis"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> dispositivo</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dispositivos</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Seu <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> desbloqueará este carro quando estiver conectado. Se alguém pegar o <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, essa pessoa pode conseguir acessar este dispositivo."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Remover dispositivo confiável"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Concluído"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Use o app complementar para configurar um dispositivo confiável. Após a configuração, seu perfil de usuário será desbloqueado automaticamente quando o smartphone for detectado pelo veículo."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Faça o download do app complementar no smartphone."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecione <xliff:g id="CAR_NAME">%1$s</xliff:g> no smartphone para parear os dispositivos."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"O perfil de usuário será desbloqueado com um dispositivo confiável próximo após a ignição, mesmo que outra pessoa esteja segurando o dispositivo."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirme a correspondências dos códigos de pareamento"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"A inscrição do smartphone foi concluída"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Falha na inscrição do <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Depois de adicionar um dispositivo confiável, é necessário configurar um método de autenticação. Se o dispositivo confiável não estiver com você, a autenticação será necessária para acessar seu perfil."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Dispositivo desconectado."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Limpar credenciais"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Remover todos os certificados"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Remover todo o conteúdo?"</string>
@@ -660,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"DISPENSAR"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Recurso não disponível enquanto você dirige"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Não é possível adicionar usuários enquanto você dirige"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Pesquisa"</string>
 </resources>

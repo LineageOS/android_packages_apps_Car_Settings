@@ -16,14 +16,12 @@
 
 package com.android.car.settings.applications;
 
-import static com.google.common.truth.Truth.assertThat;
+import static com.android.car.ui.core.CarUi.requireToolbar;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static com.google.common.truth.Truth.assertThat;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -34,27 +32,27 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.Signature;
-import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.os.UserManager;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import androidx.test.core.app.ApplicationProvider;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowActivityManager;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowDevicePolicyManager;
 import com.android.car.settings.testutils.ShadowIconDrawableFactory;
 import com.android.car.settings.testutils.ShadowPermissionControllerManager;
 import com.android.car.settings.testutils.ShadowSmsApplication;
 import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.car.settings.testutils.ShadowUtils;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -62,9 +60,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Config;
@@ -77,11 +75,10 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /** Unit test for {@link ApplicationDetailsFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {
         ShadowActivityManager.class,
         ShadowApplicationPackageManager.class,
-        ShadowCarUserManagerHelper.class,
         ShadowDevicePolicyManager.class,
         ShadowIconDrawableFactory.class,
         ShadowPermissionControllerManager.class,
@@ -92,9 +89,6 @@ public class ApplicationDetailsFragmentTest {
 
     private static final String PACKAGE_NAME = "com.android.car.settings.test";
 
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
-
     private Context mContext;
     private TestActivity mActivity;
     private ActivityController<TestActivity> mController;
@@ -103,18 +97,14 @@ public class ApplicationDetailsFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         int userId = UserHandle.myUserId();
-        UserInfo userInfo = new UserInfo();
-        userInfo.id = userId;
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
-        when(mCarUserManagerHelper.getAllUsers()).thenReturn(Collections.singletonList(userInfo));
-        UserManager mockUserManager = mock(UserManager.class);
-        when(mockUserManager.getUserInfo(userId)).thenReturn(userInfo);
-        ShadowUserManager.setInstance(mockUserManager);
 
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
+        getShadowUserManager().addUser(userId, "userName", /* flags= */ 0);
         getShadowUserManager().addProfile(userId, userId, "profileName", /* profileFlags= */ 0);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
 
         mActivity = new TestActivity();
         mController = ActivityController.of(mActivity);
@@ -129,7 +119,6 @@ public class ApplicationDetailsFragmentTest {
         ReflectionHelpers.setStaticField(ApplicationsState.class, "sInstance", null);
         ReflectionHelpers.setStaticField(Utils.class, "sSystemSignature", null);
         ShadowApplicationPackageManager.reset();
-        ShadowCarUserManagerHelper.reset();
         ShadowDevicePolicyManager.reset();
         ShadowSmsApplication.reset();
         ShadowUserManager.reset();
@@ -163,8 +152,8 @@ public class ApplicationDetailsFragmentTest {
         getShadowPackageManager().addPackage(createPackageInfoWithApplicationInfo(PACKAGE_NAME));
         mActivity.launchFragment(mFragment);
 
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_APPS_CONTROL)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), UserManager.DISALLOW_APPS_CONTROL, true);
         mController.start();
 
         assertThat(findForceStopButton(mActivity).isEnabled()).isFalse();
@@ -442,8 +431,8 @@ public class ApplicationDetailsFragmentTest {
         getShadowPackageManager().addPackage(createPackageInfoWithApplicationInfo(PACKAGE_NAME));
         mActivity.launchFragment(mFragment);
 
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_APPS_CONTROL)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), UserManager.DISALLOW_APPS_CONTROL, true);
         mController.start();
 
         assertThat(findUninstallButton(mActivity).isEnabled()).isFalse();
@@ -454,8 +443,8 @@ public class ApplicationDetailsFragmentTest {
         getShadowPackageManager().addPackage(createPackageInfoWithApplicationInfo(PACKAGE_NAME));
         mActivity.launchFragment(mFragment);
 
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_UNINSTALL_APPS)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), UserManager.DISALLOW_UNINSTALL_APPS, true);
         mController.start();
 
         assertThat(findUninstallButton(mActivity).isEnabled()).isFalse();
@@ -534,6 +523,7 @@ public class ApplicationDetailsFragmentTest {
         mController.start();
 
         findDisableButton(mActivity).performClick();
+        Robolectric.flushForegroundThreadScheduler();
 
         assertThat(
                 mContext.getPackageManager().getApplicationEnabledSetting(PACKAGE_NAME)).isEqualTo(
@@ -550,7 +540,6 @@ public class ApplicationDetailsFragmentTest {
 
         Intent intent = ShadowApplication.getInstance().getNextStartedActivity();
         assertThat(intent.getAction()).isEqualTo(Intent.ACTION_UNINSTALL_PACKAGE);
-        assertThat(intent.getBooleanExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, false)).isTrue();
         assertThat(intent.getBooleanExtra(Intent.EXTRA_RETURN_RESULT, false)).isTrue();
         assertThat(intent.getData().toString()).isEqualTo("package:" + PACKAGE_NAME);
     }
@@ -569,7 +558,7 @@ public class ApplicationDetailsFragmentTest {
     }
 
     private MenuItem findForceStopButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(1);
     }
 
@@ -579,7 +568,7 @@ public class ApplicationDetailsFragmentTest {
     }
 
     private MenuItem findUninstallButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
     }
 

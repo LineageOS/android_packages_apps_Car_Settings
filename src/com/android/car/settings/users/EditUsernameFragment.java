@@ -15,10 +15,10 @@
  */
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -31,8 +31,8 @@ import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settingslib.util.SettingsConstants;
 import com.android.car.ui.toolbar.MenuItem;
+import com.android.internal.annotations.VisibleForTesting;
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,12 +41,15 @@ import java.util.List;
  * Enables user to edit their username.
  */
 public class EditUsernameFragment extends BaseFragment {
+
+    private static final String USER_NAME_SET = "user_name_set";
+
     private UserInfo mUserInfo;
 
     private EditText mUserNameEditText;
+    @VisibleForTesting UserManager mUserManager;
     private MenuItem mOkButton;
     private MenuItem mCancelButton;
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     /**
      * Creates instance of EditUsernameFragment.
@@ -90,10 +93,10 @@ public class EditUsernameFragment extends BaseFragment {
                 .setTitle(android.R.string.ok)
                 .setOnClickListener(i -> {
                     // Save new user's name.
-                    mCarUserManagerHelper.setUserName(mUserInfo,
+                    mUserManager.setUserName(mUserInfo.id,
                             mUserNameEditText.getText().toString());
                     Settings.Secure.putInt(getActivity().getContentResolver(),
-                            SettingsConstants.USER_NAME_SET, 1);
+                            USER_NAME_SET, 1);
                     getActivity().onBackPressed();
                 })
                 .build();
@@ -101,13 +104,17 @@ public class EditUsernameFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mUserNameEditText = view.findViewById(R.id.user_name_text_edit);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+
+        if (mUserManager == null) {
+            mUserManager = UserManager.get(getContext());
+        }
 
         configureUsernameEditing();
     }

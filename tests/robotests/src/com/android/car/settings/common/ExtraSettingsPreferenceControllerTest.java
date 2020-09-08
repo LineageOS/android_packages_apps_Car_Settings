@@ -29,7 +29,6 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 
 import org.junit.After;
@@ -38,6 +37,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
@@ -45,7 +45,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /** Unit test for {@link ExtraSettingsPreferenceController}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowApplicationPackageManager.class})
 public class ExtraSettingsPreferenceControllerTest {
 

@@ -16,21 +16,18 @@
 
 package com.android.car.settings.accounts;
 
-import android.accounts.AccountManager;
-import android.accounts.AuthenticatorDescription;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
-import android.os.UserHandle;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.ArrayMap;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiPreference;
@@ -49,15 +46,11 @@ import java.util.Set;
  * <p>Largely derived from {@link com.android.settings.accounts.ChooseAccountActivity}
  */
 public class ChooseAccountPreferenceController extends
-        PreferenceController<PreferenceGroup> implements
-        AuthenticatorHelper.OnAccountsUpdateListener {
-    private static final int ADD_ACCOUNT_REQUEST_CODE = 1;
+        PreferenceController<PreferenceGroup> implements ActivityResultCallback {
+    @VisibleForTesting
+    static final int ADD_ACCOUNT_REQUEST_CODE = 100;
 
-    private final UserHandle mUserHandle;
-    private AuthenticatorHelper mAuthenticatorHelper;
-    private List<String> mAuthorities;
-    private Set<String> mAccountTypesFilter;
-    private Set<String> mAccountTypesExclusionFilter;
+    private AccountTypesHelper mAccountTypesHelper;
     private ArrayMap<String, AuthenticatorDescriptionPreference> mPreferences = new ArrayMap<>();
     private boolean mIsStarted = false;
     private boolean mHasPendingBack = false;
@@ -65,28 +58,23 @@ public class ChooseAccountPreferenceController extends
     public ChooseAccountPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mUserHandle = new CarUserManagerHelper(context).getCurrentProcessUserInfo().getUserHandle();
-
-        HashSet<String> accountTypeExclusionFilter = new HashSet<>();
-
-        // Hardcoding bluetooth account type
-        accountTypeExclusionFilter.add("com.android.bluetooth.pbapsink");
-        setAccountTypesExclusionFilter(accountTypeExclusionFilter);
+        mAccountTypesHelper = new AccountTypesHelper(context);
+        mAccountTypesHelper.setOnChangeListener(this::forceUpdateAccountsCategory);
     }
 
     /** Sets the authorities that the user has. */
     public void setAuthorities(List<String> authorities) {
-        mAuthorities = authorities;
+        mAccountTypesHelper.setAuthorities(authorities);
     }
 
     /** Sets the filter for accounts that should be shown. */
     public void setAccountTypesFilter(Set<String> accountTypesFilter) {
-        mAccountTypesFilter = accountTypesFilter;
+        mAccountTypesHelper.setAccountTypesFilter(accountTypesFilter);
     }
 
     /** Sets the filter for accounts that should NOT be shown. */
     protected void setAccountTypesExclusionFilter(Set<String> accountTypesExclusionFilterFilter) {
-        mAccountTypesExclusionFilter = accountTypesExclusionFilterFilter;
+        mAccountTypesHelper.setAccountTypesExclusionFilter(accountTypesExclusionFilterFilter);
     }
 
     @Override
@@ -96,13 +84,7 @@ public class ChooseAccountPreferenceController extends
 
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
-        forceUpdateAccountsCategory();
-    }
-
-    /** Initializes the authenticator helper. */
-    @Override
-    protected void onCreateInternal() {
-        mAuthenticatorHelper = new AuthenticatorHelper(getContext(), mUserHandle, this);
+        mAccountTypesHelper.forceUpdate();
     }
 
     /**
@@ -110,8 +92,8 @@ public class ChooseAccountPreferenceController extends
      */
     @Override
     protected void onStartInternal() {
-        mAuthenticatorHelper.listenToAccountUpdates();
         mIsStarted = true;
+        mAccountTypesHelper.listenToAccountUpdates();
 
         if (mHasPendingBack) {
             mHasPendingBack = false;
@@ -127,16 +109,8 @@ public class ChooseAccountPreferenceController extends
      */
     @Override
     protected void onStopInternal() {
-        mAuthenticatorHelper.stopListeningToAccountUpdates();
+        mAccountTypesHelper.stopListeningToAccountUpdates();
         mIsStarted = false;
-    }
-
-    @Override
-    public void onAccountsUpdate(UserHandle userHandle) {
-        // Only force a refresh if accounts have changed for the current user.
-        if (userHandle.equals(mUserHandle)) {
-            forceUpdateAccountsCategory();
-        }
     }
 
     /** Forces a refresh of the authenticator description preferences. */
@@ -171,47 +145,27 @@ public class ChooseAccountPreferenceController extends
      */
     private List<AuthenticatorDescriptionPreference> getAuthenticatorDescriptionPreferences(
             Set<String> preferencesToRemove) {
-        AuthenticatorDescription[] authenticatorDescriptions = AccountManager.get(
-                getContext()).getAuthenticatorTypesAsUser(
-                mUserHandle.getIdentifier());
-
         ArrayList<AuthenticatorDescriptionPreference> authenticatorDescriptionPreferences =
                 new ArrayList<>();
+        Set<String> authorizedAccountTypes = mAccountTypesHelper.getAuthorizedAccountTypes();
         // Create list of account providers to show on page.
-        for (AuthenticatorDescription authenticatorDescription : authenticatorDescriptions) {
-            String accountType = authenticatorDescription.type;
-            CharSequence label = mAuthenticatorHelper.getLabelForType(getContext(), accountType);
-            Drawable icon = mAuthenticatorHelper.getDrawableForType(getContext(), accountType);
+        for (String accountType : authorizedAccountTypes) {
+            CharSequence label = mAccountTypesHelper.getLabelForType(accountType);
+            Drawable icon = mAccountTypesHelper.getDrawableForType(accountType);
 
-            List<String> accountAuthorities =
-                    mAuthenticatorHelper.getAuthoritiesForAccountType(accountType);
-
-            // If there are specific authorities required, we need to check whether they are
-            // included in the account type.
-            boolean authorized =
-                    (mAuthorities == null || mAuthorities.isEmpty() || accountAuthorities == null
-                            || !Collections.disjoint(accountAuthorities, mAuthorities));
-
-            // If there is an account type filter, make sure this account type is included.
-            authorized = authorized && (mAccountTypesFilter == null
-                    || mAccountTypesFilter.contains(accountType));
-
-            // Check if the account type is in the exclusion list.
-            authorized = authorized && (mAccountTypesExclusionFilter == null
-                    || !mAccountTypesExclusionFilter.contains(accountType));
-
-            // If authorized, add a preference for the provider to the list and remove it from
-            // preferencesToRemove.
-            if (authorized) {
-                AuthenticatorDescriptionPreference preference = mPreferences.getOrDefault(
-                        accountType,
-                        new AuthenticatorDescriptionPreference(getContext(), accountType, label,
-                                icon));
-                preference.setOnPreferenceClickListener(
-                        pref -> onAddAccount(preference.getAccountType()));
-                authenticatorDescriptionPreferences.add(preference);
-                preferencesToRemove.remove(accountType);
-            }
+            // Add a preference for the provider to the list and remove it from preferencesToRemove.
+            AuthenticatorDescriptionPreference preference = mPreferences.getOrDefault(accountType,
+                    new AuthenticatorDescriptionPreference(getContext(), accountType, label, icon));
+            preference.setOnPreferenceClickListener(
+                    pref -> {
+                        Intent intent = AddAccountActivity.createAddAccountActivityIntent(
+                                getContext(), preference.getAccountType());
+                        getFragmentController().startActivityForResult(intent,
+                                ADD_ACCOUNT_REQUEST_CODE, /* callback= */ this);
+                        return true;
+                    });
+            authenticatorDescriptionPreferences.add(preference);
+            preferencesToRemove.remove(accountType);
         }
 
         Collections.sort(authenticatorDescriptionPreferences, Comparator.comparing(
@@ -220,16 +174,14 @@ public class ChooseAccountPreferenceController extends
         return authenticatorDescriptionPreferences;
     }
 
-    /** Starts the {@link AddAccountActivity} to add an account for the given account type. */
-    private boolean onAddAccount(String accountType) {
-        Intent intent = new Intent(getContext(), AddAccountActivity.class);
-        intent.putExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT, accountType);
-        getFragmentController().startActivityForResult(intent, ADD_ACCOUNT_REQUEST_CODE,
-                this::onAccountAdded);
-        return true;
+    /** Used for testing to trigger an account update. */
+    @VisibleForTesting
+    AuthenticatorHelper getAuthenticatorHelper() {
+        return mAccountTypesHelper.getAuthenticatorHelper();
     }
 
-    private void onAccountAdded(int requestCode, int resultCode, @Nullable Intent data) {
+    @Override
+    public void processActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == ADD_ACCOUNT_REQUEST_CODE) {
             if (mIsStarted) {
                 getFragmentController().goBack();
@@ -237,12 +189,6 @@ public class ChooseAccountPreferenceController extends
                 mHasPendingBack = true;
             }
         }
-    }
-
-    /** Used for testing to trigger an account update. */
-    @VisibleForTesting
-    AuthenticatorHelper getAuthenticatorHelper() {
-        return mAuthenticatorHelper;
     }
 
     /** Handles adding accounts. */

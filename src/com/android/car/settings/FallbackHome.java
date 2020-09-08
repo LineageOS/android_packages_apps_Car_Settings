@@ -55,7 +55,7 @@ public class FallbackHome extends Activity {
 
     private final Runnable mProgressTimeoutRunnable = () -> {
         View v = getLayoutInflater().inflate(
-                R.layout.fallback_home_finishing_boot, null /* root */);
+                R.layout.fallback_home_finishing_boot, /* root= */ null);
         setContentView(v);
         v.setAlpha(0f);
         v.animate()

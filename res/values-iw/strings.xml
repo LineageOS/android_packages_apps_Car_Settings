@@ -52,7 +52,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"נדידה"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"חיבור לשירותי נתונים בנדידה"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"האם לאפשר נדידה?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"ייתכנו שיעורי חיוב גבוהים."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"ייתכנו חיובי נדידה."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"שימוש בחבילת הגלישה"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"נתונים עיקריים"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"נעשה שימוש ב-<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -203,6 +203,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"בחירת מכשיר Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"שפות"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"שפות וקלט"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"הצעות"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"כל השפות"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"מקלדת"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"ניהול מקלדות"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"פלט של המרת טקסט לדיבור"</string>
@@ -357,7 +359,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"עדכוני מערכת"</string>
     <string name="firmware_version" msgid="8491753744549309333">"גרסת Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"רמת תיקון האבטחה ב-Android"</string>
-    <string name="model_info" msgid="4966408071657934452">"דגם"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"דגם וחומרה"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"דגם: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"גרסת פס בסיס"</string>
     <string name="kernel_version" msgid="7327212934187011508">"גרסת ליבה"</string>
     <string name="build_number" msgid="3997326631001009102">"מספר Build"</string>
@@ -381,6 +384,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"רישיונות WebView של המערכת"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"טפטים"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ספקים של צילומי לוויין:\n‎©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"דגם"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"מספר סידורי"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"גרסת חומרה"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"רישיונות צד שלישי"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"יש בעיה בטעינת הרישיון."</string>
@@ -485,6 +491,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"שם"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"לא מוגדר"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"עריכת שם המשתמש"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"חובה למלא את השדה."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"שם המשתמש שהוזן לא חוקי."</string>
     <string name="users_list_title" msgid="770764290290240909">"משתמשים"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"הרשאות הוענקו למשתמש %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"אחסון"</string>
@@ -640,28 +648,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"אין להגדיר רצף ספרות עולה, יורד או חוזר."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"הוספת מכשיר מהימן"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth יופעל לצורך הוספת מכשיר מהימן"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"מכשירים מהימנים"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> מכשירים</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> מכשירים</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> מכשירים</item>
-      <item quantity="one">מכשיר אחד (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"ה-<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> שלך יבטל את נעילה המכונית הזו כשהוא מחובר. אם מישהו ייקח את ה-<xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, הוא יוכל לגשת אל המכשיר הזה"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"אישור"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"הסרת מכשיר מהימן"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"סיום"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"יש להשתמש באפליקציה הנלווית כדי להגדיר מכשיר מהימן. לאחר ההגדרה, הנעילה של פרופיל המשתמש תבוטל באופן אוטומטי כשהטלפון שלך יזוהה ליד הרכב."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. יש להוריד את האפליקציה הנלווית לטלפון שלך"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. יש לבחור את <xliff:g id="CAR_NAME">%1$s</xliff:g> בטלפון כדי להתאים את המכשירים"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"מכשיר מהימן בקרבת המכונית שלך יבטל את פרופיל המשתמש עם ההתנעה, גם אם המכשיר נמצא בידי מישהו אחר."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"יש לאשר שקודי ההתאמה תואמים"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"רישום הטלפון הסתיים בהצלחה"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ההרשמה של <xliff:g id="DEVICE_NAME">%1$s</xliff:g> נכשלה"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"כדי להוסיף מכשיר מהימן, צריך להגדיר שיטת אימות בשלב הבא. אם המכשיר המהימן לא נמצא ברשותך, יידרש אימות כדי לקבל גישה לפרופיל שלך."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"המכשיר נותק."</string>
     <string name="credentials_reset" msgid="873900550885788639">"ניקוי פרטי כניסה"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"הסרת כל האישורים"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"להסיר את כל התכנים?"</string>
@@ -684,4 +670,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"סגירה"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"התכונה לא זמינה בזמן הנהיגה"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"לא ניתן להוסיף משתמש בזמן הנהיגה"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"חיפוש"</string>
 </resources>

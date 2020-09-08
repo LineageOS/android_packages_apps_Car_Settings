@@ -16,28 +16,31 @@ android_app {
     name: "CarSettings",
     overrides: ["Settings"],
     platform_apis: true,
+    defaults: [
+        "SettingsLibDefaults",
+        "SettingsLib-search-defaults",
+    ],
 
     srcs: ["src/**/*.java"],
 
     libs: [
         "android.car",
-        "telephony-common",
     ],
 
     static_libs: [
-        "androidx.car_car",
         "androidx.lifecycle_lifecycle-common-java8",
         "androidx.lifecycle_lifecycle-extensions",
         "androidx.preference_preference",
         "androidx-constraintlayout_constraintlayout",
+        "androidx.test.core",
         "car-apps-common",
-        "car-settings-lib",
         "car-setup-wizard-lib-utils",
         "SettingsLib",
-        "car-ui-lib",
+        "SettingsLib-search",
         "android.car.userlib",
         "androidx-constraintlayout_constraintlayout-solver",
         "jsr305",
+        "car-ui-lib",
     ],
 
     certificate: "platform",
@@ -66,30 +69,32 @@ android_app {
 // Duplicate of CarSettings which includes testing only resources for Robolectric
 android_app {
     name: "CarSettingsForTesting",
-    overrides: ["Settings"],
     platform_apis: true,
+    defaults: [
+        "SettingsLibDefaults",
+        "SettingsLib-search-defaults",
+    ],
 
     srcs: ["src/**/*.java"],
 
     libs: [
         "android.car",
-        "telephony-common",
     ],
 
     static_libs: [
-        "androidx.car_car",
         "androidx.lifecycle_lifecycle-common-java8",
         "androidx.lifecycle_lifecycle-extensions",
         "androidx.preference_preference",
         "androidx-constraintlayout_constraintlayout",
+        "androidx.test.core",
         "car-apps-common",
-        "car-settings-lib",
         "car-setup-wizard-lib-utils",
         "SettingsLib",
-        "car-ui-lib",
+        "SettingsLib-search",
         "android.car.userlib",
         "androidx-constraintlayout_constraintlayout-solver",
         "jsr305",
+        "car-ui-lib-testing-support",
     ],
 
     // Testing only resources must be applied last so they take precedence.
@@ -118,5 +123,3 @@ android_app {
         },
     },
 }
-
-

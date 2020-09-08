@@ -16,8 +16,12 @@
 -->
 
 <resources>
-    <!-- The fully qualified class name of the fragment to launch when the settings application starts. -->
-    <string name="config_settings_hierarchy_root_fragment" translatable="false">com.android.car.settings.quicksettings.QuickSettingFragment</string>
+    <!-- Whether quick settings should be the root settings activity or not. -->
+    <bool name="config_is_quick_settings_root">false</bool>
+    <!-- Whether to show the launcher icon for settings home or not. -->
+    <bool name="config_enable_home_settings_icon">true</bool>
+    <!-- Whether to show the launcher icon for quick settings or not. -->
+    <bool name="config_enable_quick_settings_icon">false</bool>
     <!-- Whether system_update_settings should be shown or not. -->
     <bool name="config_show_system_update_settings">true</bool>
     <!-- Whether Wi-Fi Mac address should be shown or not. -->
@@ -87,13 +91,20 @@
     <!-- Array of Preference Keys that ignore UX Restrictions -->
     <string-array name="config_ignore_ux_restrictions">
         <item>@string/pk_display_settings_entry</item>
+        <item>@string/pk_brightness_level</item>
         <item>@string/pk_sound_settings_entry</item>
-        <item>@string/pk_storage_settings_entry</item>
+        <item>@string/pk_volume_settings</item>
         <item>@string/pk_network_and_internet_entry</item>
         <item>@string/pk_wifi_settings_entry</item>
         <item>@string/pk_bluetooth_settings_entry</item>
+        <item>@string/pk_bluetooth_paired_devices</item>
     </string-array>
 
     <!-- The component which listens for the enabling of developer options. -->
     <string name="config_dev_options_module" translatable="false">com.android.car.developeroptions/.Settings$DevelopmentSettingsDashboardActivity</string>
+
+    <!-- Settings intelligence package name -->
+    <string name="config_settingsintelligence_package_name" translatable="false">
+        com.android.settings.intelligence
+    </string>
 </resources>

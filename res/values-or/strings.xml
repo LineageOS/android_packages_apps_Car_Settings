@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"ରୋମିଂ"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"ରୋମିଂ ବେଳେ ଡାଟା ସେବାଗୁଡ଼ିକୁ ସଂଯୋଗ କରନ୍ତୁ"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"ଡାଟା ରୋମିଂର ଅନୁମତି ଦେବେ?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"ଆପଣଙ୍କୁ ଅଧିକ ଦେୟ ଲାଗୁ ହୋଇପାରେ।"</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"ରୋମିଂ ଚାର୍ଜ୍ ଲାଗୁ ହୋଇପାରେ।"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ଡାଟାର ବ୍ୟବହାର"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ପ୍ରାଥମିକ ଡାଟା"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ବ୍ୟବହୃତ ହୋଇଛି"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ବ୍ଲୁଟୂଥ୍ ଡିଭାଇସ୍ ଚୟନ କରନ୍ତୁ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ଭାଷା"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ଭାଷା ଓ ଇନ୍‌‌ପୁଟ୍‌"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"ପରାମର୍ଶିତ"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"ସମସ୍ତ ଭାଷା"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"କୀବୋର୍ଡ"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"କୀବୋର୍ଡଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ୍‍-ରୁ-ସ୍ପିଚ୍‍ ଆଉଟ୍‍ପୁଟ୍"</string>
@@ -351,7 +353,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"ସିଷ୍ଟମ୍‌ ଅପ୍‌ଡେଟ୍"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ଭର୍ସନ୍‌"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ସୁରକ୍ଷା ପାଚ୍‌ ସ୍ତର"</string>
-    <string name="model_info" msgid="4966408071657934452">"ମଡେଲ୍‌"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"ମଡେଲ୍ ଓ ହାର୍ଡୱେୟାର୍"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"ମଡେଲ୍: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"ବେସ୍‌ବ୍ୟାଣ୍ଡ ଭର୍ସନ୍‌"</string>
     <string name="kernel_version" msgid="7327212934187011508">"କର୍ନେଲ୍‌ ଭର୍ସନ୍‌"</string>
     <string name="build_number" msgid="3997326631001009102">"ନମ୍ୱ‍ର୍‌ ଗଠନ କରନ୍ତୁ"</string>
@@ -375,6 +378,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"ସିଷ୍ଟମ୍‍ WebView ଲାଇସେନ୍ସ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ୱାଲପେପର୍‌"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ସ୍ୟାଟେଲାଇଟ୍‌ ଇମେଜେରୀ ପ୍ରଦାତା:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"ମଡେଲ୍‌"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"କ୍ରମିକ ନମ୍ବର"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"ହାର୍ଡୱେର୍ ସଂସ୍କରଣ"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ତୃତୀୟ-ପକ୍ଷ ଲାଇସେନ୍ସ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ଲାଇସେନ୍ସ ଲୋଡ୍‌ କରିବାରେ ସମସ୍ୟା ହୋଇଛି।"</string>
@@ -475,6 +481,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"ନାମ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ସେଟ୍ ହୋଇନାହିଁ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ୟୁଜର୍‍ ନାମକୁ ଏଡିଟ୍ କରନ୍ତୁ"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"ନାମ ଲେଖିବା ସ୍ଥାନକୁ ଖାଲି ଛାଡ଼ି ହେବନାହିଁ।"</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"ଲେଖାଯାଇଥିବା ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ନାମ ଅବୈଧ ଅଟେ।"</string>
     <string name="users_list_title" msgid="770764290290240909">"ୟୁଜର୍"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s ପାଇଁ ଅନୁମତି ଅନୁମୋଦିତ ହୋଇଛି"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"ଷ୍ଟୋରେଜ୍"</string>
@@ -618,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା କ୍ରମ ଦୋହରାଇବାର ଅନୁମତି ନାହିଁ।"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ସ୍କ୍ରିନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ଦିନ ପୂର୍ବେ"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍‍‍‍ ଯୋଗ କରନ୍ତୁ"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍‌କୁ ଯୋଗ କରିବାକୁ ବ୍ଲୁଟୁଥ୍ ଚାଲୁ ହେବ"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ଡିଭାଇସ୍</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟିି ଡିିିଭାଇସ୍</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"ଏହା ସଂଯୋଗ ହେଲେ ଆପଣଙ୍କର <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ଏହି କାର୍‍ ଅନ୍‍ଲକ‍ କରିବ। ଯଦି କେହିଜଣେ ଆପଣଙ୍କର <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ନିଏ, ସେମାନେ ହୁଏତ ଏହି ଡିଭାଇସ୍‍ ଆକ୍ସେସ୍‍ କରିବାକୁ ସକ୍ଷମ ହୋଇପାରନ୍ତି"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ନିଶ୍ଚିତ କରନ୍ତୁ"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍ କାଢ଼ିଦିଅନ୍ତୁ"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ହୋଇଗଲା"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ଏକ ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍ ସେଟ୍ ଅପ୍ କରିବା ପାଇଁ ସହଯୋଗୀ ଆପ୍ ବ୍ୟବହାର କରନ୍ତୁ। ଥରେ ସେଟ୍ ଅପ୍ ହେଲେ, ଆପଣଙ୍କର ଫୋନ୍ ଗାଡି ପାଖରେ ଚିହ୍ନଟ ହେଉଥିବା ସମୟରେ ଆପଣଙ୍କର ଉପଯୋଗକର୍ତ୍ତା ପ୍ରୋଫାଇଲ୍ ସ୍ୱଚାଳିତ ଭାବେ ଅନ୍‌ଲକ୍ ହେବ।"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ଆପଣଙ୍କର ଫୋନ୍‍‍ରେ ସହଯୋଗୀ ଆପ୍ ଡାଉନ୍‍ଲୋଡ୍ କରନ୍ତୁ"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ଡିଭାଇସ୍ ପେୟାର୍ କରିବାକୁ ଆପଣଙ୍କ ଫୋନ୍‍‍ରୁ <xliff:g id="CAR_NAME">%1$s</xliff:g> ବାଛନ୍ତୁ"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"ଅନ୍ୟ କେହି ଡିଭାଇସ୍‌କୁ ଧରି ଥିଲେ ମଧ୍ୟ, ଇଞ୍ଜିନ୍ ଚାଲୁ ହେଲେ ଆପଣଙ୍କର କାର୍ ନିକଟର ଏକ ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍ ଉପଭୋକ୍ତା ପ୍ରୋଫାଇଲ୍‍କୁ ଅନ୍‌ଲକ୍ କରିବ।"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ଦୟାକରି ସୁନିଶ୍ଚିତ କରନ୍ତୁ ଯେ ପେୟାରିଂ କୋଡ୍‍ଗୁଡ଼ିକ ମେଳ ଖାଉଛି"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ଫୋନ୍ ସଫଳତାର ସହ ପଞ୍ଜୀକୃତ ହୋଇଛି"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ନାମାଙ୍କନ ହୋଇପାରିଲା ନାହିଁ"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ଏହାପରେ ଏକ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ଯୋଗ କରିବାରେ ଆପଣଙ୍କୁ ପ୍ରମାଣିକରଣର ଉପାୟ ସେଟ୍‍ କରିବାକୁ ହେବ। ଯଦି ଆପଣଙ୍କ ପାଖରେ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ନାହିଁ, ତେବେ ଆପଣଙ୍କ ପ୍ରୋଫାଇଲ୍‌ ଆକ୍ସେସ୍‌ କରିବାକୁ ପ୍ରମାଣିକରଣ ଆବଶ୍ୟକ ହେବ।"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ଡିଭାଇସ୍ ବିଚ୍ଛିନ୍ନ ହୋଇଛି।"</string>
     <string name="credentials_reset" msgid="873900550885788639">"କ୍ରେଡେନସିଆଲ୍ ଖାଲି କରନ୍ତୁ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ସବୁ ସର୍ଟିଫିକେଟ୍‌କୁ କାଢ଼ି ଦିଅନ୍ତୁ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ସବୁ କିଛି କାଢ଼ି ଦେବେ?"</string>
@@ -660,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ଖାରଜ କରନ୍ତୁ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ଗାଡ଼ି ଚଲାଇବା ସମୟରେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବ ନାହିଁ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ଉପଯୋଗକର୍ତ୍ତା ଯୋଗ କରିପାରିବେ ନାହିଁ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

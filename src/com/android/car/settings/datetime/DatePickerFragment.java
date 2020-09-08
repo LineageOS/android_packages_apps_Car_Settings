@@ -66,7 +66,7 @@ public class DatePickerFragment extends BaseFragment {
                         timeDetector.suggestManualTime(manualTimeSuggestion);
                         getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
                     }
-                    getFragmentController().goBack();
+                    getFragmentHost().goBack();
                 })
                 .build();
     }
