@@ -131,4 +131,9 @@
     <dimen name="alert_dialog_password_checkbox_margin_end">@*android:dimen/car_padding_3</dimen>
     <dimen name="alert_dialog_password_checkbox_margin_start">@*android:dimen/car_padding_3</dimen>
     <dimen name="alert_dialog_password_checkbox_margin_top">@*android:dimen/car_padding_1</dimen>
+
+    <!-- Preference access point -->
+    <dimen name="ap_preference_item_padding_start">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="ap_preference_item_padding_end">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="ap_preference_item_icon_margin_end">@*android:dimen/car_padding_2</dimen>
 </resources>

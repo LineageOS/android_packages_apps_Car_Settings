@@ -403,6 +403,20 @@
             </intent-filter>
         </activity>
 
+        <!-- This is used internally for CTS tests and should not be used in generally. -->
+        <activity android:name=".wifi.networkrequest.NetworkRequestDialogActivity"
+                  android:excludeFromRecents="true"
+                  android:exported="true"
+                  android:launchMode="singleTop"
+                  android:permission="android.permission.NETWORK_SETTINGS"
+                  android:taskAffinity=".wifi.networkrequest.NetworkRequestDialogActivity"
+                  android:theme="@style/ActionDialogTheme">
+            <intent-filter>
+                <action android:name="com.android.settings.wifi.action.NETWORK_REQUEST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
         <!-- This logic is copied from phone.-->
         <!-- Ensures there's lightweight fallback activity when no other MAIN/HOME activity is present.-->
         <activity android:name=".FallbackHome"

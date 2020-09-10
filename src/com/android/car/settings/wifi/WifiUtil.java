@@ -30,6 +30,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
@@ -178,6 +179,31 @@ public class WifiUtil {
         WifiConfiguration wifiConfig = new WifiConfiguration();
         wifiConfig.SSID = String.format("\"%s\"", ssid);
         wifiConfig.hiddenSSID = hidden;
+
+        return finishWifiConfig(wifiConfig, security, password);
+    }
+
+    /** Similar to above, but uses AccessPoint to get additional relevant information. */
+    public static WifiConfiguration getWifiConfig(@NonNull AccessPoint accessPoint,
+            String password) {
+        if (accessPoint == null) {
+            throw new IllegalArgumentException("AccessPoint input is required.");
+        }
+
+        WifiConfiguration wifiConfig = new WifiConfiguration();
+        if (!accessPoint.isSaved()) {
+            wifiConfig.SSID = AccessPoint.convertToQuotedString(
+                    accessPoint.getSsidStr());
+        } else {
+            wifiConfig.networkId = accessPoint.getConfig().networkId;
+            wifiConfig.hiddenSSID = accessPoint.getConfig().hiddenSSID;
+        }
+
+        return finishWifiConfig(wifiConfig, accessPoint.getSecurity(), password);
+    }
+
+    private static WifiConfiguration finishWifiConfig(WifiConfiguration wifiConfig, int security,
+            String password) {
         switch (security) {
             case AccessPoint.SECURITY_NONE:
                 wifiConfig.setSecurityParams(WifiConfiguration.SECURITY_TYPE_OPEN);
@@ -231,7 +257,6 @@ public class WifiUtil {
         }
         return wifiConfig;
     }
-
 
     /** Forget the network specified by {@code accessPoint}. */
     public static void forget(Context context, AccessPoint accessPoint) {
