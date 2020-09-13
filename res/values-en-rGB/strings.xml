@@ -412,7 +412,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"This will reset all preferences for:\n\n"<li>"Disabled apps"</li>\n<li>"Disabled app notifications"</li>\n<li>"Default applications for actions"</li>\n<li>"Background data restrictions for apps"</li>\n<li>"Any permission restrictions"</li>\n\n"You will not lose any app data."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reset apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App preferences have been reset"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Delete all data (factory reset)"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Erase all data (factory reset)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"This will erase all data from your vehicle’s head unit, including:\n\n"<li>"Your Google Account"</li>\n<li>"System and app data and settings"</li>\n<li>"Downloaded apps"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"You are currently signed in to the following accounts:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"There are other users present on this vehicle."</string>
@@ -574,8 +574,8 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Enter your password"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"For security, set a PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Re-enter your PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least four digits"</string>
-    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least four digits."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least 4 digits"</string>
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least 4 digits."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINs don\'t match"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Error saving PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Wrong PIN"</string>

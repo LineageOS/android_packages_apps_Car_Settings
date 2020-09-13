@@ -85,7 +85,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"डेटा वापर मर्यादा सेट करा"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"सेट करा"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाय-फाय"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"वाय-फाय सुरू करत आहे…"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"वाय-फाय चालू करत आहे…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"वाय-फाय बंद करत आहे…"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"वाय-फाय सूची लोड करत आहे"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"वाय-फाय बंद केले"</string>
@@ -127,7 +127,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"वाय-फाय प्राधान्ये"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"वाय-फाय आपोआप सुरू करा"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तुमच्या होम नेटवर्कसारख्या उच्च दर्जाच्या सेव्ह केलेल्या नेटवर्कजवळ वाय-फाय आपोआप परत सुरू होईल"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तुमच्या होम नेटवर्कसारख्या उच्च दर्जाच्या सेव्ह केलेल्या नेटवर्कजवळ वाय-फाय आपोआप परत चालू होईल"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान बंद केल्यामुळे उपलब्ध नाही. "<annotation id="link">"स्थान"</annotation>" सुरू करा."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"वाय-फाय स्कॅनिंग सुरू करायचे का?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"सुरू करा"</string>
@@ -183,18 +183,18 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"एका अ‍ॅपला तुमचे हेडयुनिट इतर ब्लूटूथ डिव्हाइससाठी <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंदांकरिता दृश्यमान करायचे आहे."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला ब्लूटूथ सुरू करायचे आहे आणि तुमचे हेडयुनिट इतर डिव्हाइससाठी <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकंदांकरिता दृश्‍यमान करायचे आहे."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एका अ‍ॅपला ब्लूटूथ सुरू करायचे आहे आणि तुमचे हेडयुनिट इतर डिव्हाइससाठी <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंदांकरिता दृश्यमान बनवायचे आहे."</string>
-    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ पेअरिंग विनंती"</string>
+    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ पेअरींग विनंती"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"पेअर करा आणि कनेक्ट करा"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लूटूथ पेअरिंग कोड"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लूटूथ पेअरींग कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"पिन मध्ये अक्षरे किंवा चिन्हे आहेत"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"पेअरिंग कोड टाइप करा नंतर परत या किंवा Enter दाबा"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"पेअरींग कोड टाइप करा नंतर परत या किंवा Enter दाबा"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सह पेअर करायचे?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ला तुमचे संपर्क आणि कॉल इतिहास अ‍ॅक्सेस करण्‍याची अनुमती द्या"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"तुम्हाला इतर डिव्हाइसवर देखील हा पिन टाइप करण्याची आवश्यकता असू शकते."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"तुम्हाला इतर डिव्हाइसवर देखील ही पासकी टाइप करण्याची आवश्यकता असू शकते."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"१६ अंक असणे आवश्यक आहे"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"सामान्यतः ०००० किंवा १२३४"</string>
-    <string name="bluetooth_notif_title" msgid="8374602799367803335">"पेअरिंग विनंती"</string>
+    <string name="bluetooth_notif_title" msgid="8374602799367803335">"पेअरींग विनंती"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सह जोडण्यासाठी टॅप करा."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ब्लूटूथ डिव्हाइस निवडा"</string>
     <string name="language_settings" msgid="2079258598337245546">"भाषा"</string>
@@ -278,7 +278,7 @@
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"सक्तीने थांबवायचे आहे का?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"तुम्ही सक्तीने अ‍ॅप थांबवल्यास, ते गैरवर्तन करू शकते."</string>
     <string name="disable_text" msgid="4358165448648990820">"बंद करा"</string>
-    <string name="enable_text" msgid="1794971777861881238">"सुरू करा"</string>
+    <string name="enable_text" msgid="1794971777861881238">"चालू करा"</string>
     <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करा"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"तुम्ही हे अ‍ॅप बंद केल्यास, Android आणि इतर अ‍ॅप्स कदाचित यापुढे अपेक्षेप्रमाणे कार्य करू शकणार नाहीत."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"अ‍ॅप बंद करा"</string>
@@ -500,7 +500,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"स्‍टोरेज साफ करा"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"कॅशे  साफ करा"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"अ‍ॅप डेटा हटवायचा का?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"या ॲपचा सर्व डेटा कायमचा हटवला जाईल. यात सर्व फाइल, सेटिंग्ज, खाती, डेटाबेस इ.चा समावेश असतो."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"या ॲपचा सर्व डेटा कायमचा हटवला जाईल. यात सर्व फायली, सेटिंग्ज, खाती, डेटाबेस इ.चा समावेश असतो."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ॲपसाठी स्‍टोरेज साफ करता आले नाही."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षितपणे बाहेर काढले"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षितपणे बाहेर काढता आले नाही"</string>
@@ -524,7 +524,7 @@
     <string name="remove_account_error_title" msgid="8368044943174826635">"खाते काढता आले नाही"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"खाते सिंक करा"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> पैकी <xliff:g id="ID_1">%1$d</xliff:g> आयटम सिंक करणे सुरू आहे"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सर्व आयटम सिंक करणे सुरू करा"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सर्व आयटम सिंक करणे चालू करा"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"सर्व आयटम सिंक करणे बंद करा"</string>
     <string name="sync_disabled" msgid="393531064334628258">"सिंक बंद आहे"</string>
     <string name="sync_error" msgid="6698021343089247914">"सिंक एरर"</string>

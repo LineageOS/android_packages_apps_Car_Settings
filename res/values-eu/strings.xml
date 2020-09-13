@@ -175,14 +175,14 @@
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetooth-a aktibatzen…"</string>
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetooth-a desaktibatzen…"</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a aktibatu nahi du"</string>
-    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a desaktibatu nahi du"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikazio batek Bluetooth-a aktibatu nahi du"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikazio batek Bluetooth-a desaktibatu nahi du"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth konexioa aktibatu nahi du"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth konexioa desaktibatu nahi du"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikazio batek Bluetooth konexioa aktibatu nahi du"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikazio batek Bluetooth konexioa desaktibatu nahi du"</string>
     <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du Bluetooth bidezko beste gailu batzuen aurrean."</string>
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Aplikazio batek gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du Bluetooth bidezko beste gailu batzuen aurrean."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikazio batek Bluetooth-a aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth konexioa aktibatu eta gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikazio batek Bluetooth konexioa aktibatu eta gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth bidez parekatzeko eskaera"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Parekatu eta konektatu"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth parekatze-kodea"</string>
@@ -288,7 +288,7 @@
     <string name="storage_application_label" msgid="5911779903670978586">"Memoria eta cachea"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Bertsioa: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ez du baimenik"</string>
-    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ez da baimenik eskatu"</string>
+    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ez du eskatu baimenik"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s barneko memorian"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datuen erabilera"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Aplik. datuen erabilera"</string>
@@ -593,7 +593,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> digitu izan behar ditu"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0 eta 9 arteko zenbakiak soilik izan ditzake."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Gailuaren administratzaileak ez du eman beste PIN kode bat erabiltzeko baimenik"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"IKT saileko administratzaileak blokeatu egiten ditu asmatzen errazak diren PIN kodeak. Erabili beste PIN bat."</string>
+    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"IKT administratzaileak blokeatu egiten ditu asmatzen errazak diren PIN kodeak. Erabili beste PIN bat."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Ezin da erabili onartzen ez den karaktererik."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Pasahitzak ez du balio; gutxienez lau karaktere izan behar ditu."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -622,7 +622,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Gailuaren administratzaileak ez du eman beste pasahitz bat erabiltzeko baimenik"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Errore bat gertatu da pasahitza gordetzean"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"IKT saileko administratzaileak blokeatu egiten ditu asmatzen errazak diren pasahitzak. Erabili beste pasahitz bat."</string>
+    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"IKT administratzaileak blokeatu egiten ditu asmatzen errazak diren pasahitzak. Erabili beste pasahitz bat."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Ezin da erabili goranzko, beheranzko edo errepikatutako digitu-sekuentziarik."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Pantaila blokeatzeko aukerak"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: duela <xliff:g id="NUM_DAYS">%3$s</xliff:g> egun"</string>
