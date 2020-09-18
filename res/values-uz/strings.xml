@@ -186,7 +186,7 @@
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth orqali ulanish so‘rovi"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Juftlash va ulash"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth orqali ulanish kodi"</string>
-    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"Harflar yoki maxsus belgilardan iborat PIN kod"</string>
+    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN kod harflar va belgilardan iborat bo‘ladi"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Ulanish kodini kiriting va keyin “Return” yoki “Enter” tugmasini bosing"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qurilmasiga ulansinmi?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qurilmasiga kontaktlarim va qo‘ng‘iroqlar tarixiga kirish uchun ruxsat berilsin"</string>
@@ -271,7 +271,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Ilovalar va bildirishnomalar"</string>
     <string name="all_applications" msgid="7798210477486822168">"Barcha ilovalar"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standart ilovalar"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Ilova uchun ruxsatlar"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Ilovalar uchun ruxsatlar"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Ilovalar <xliff:g id="APPS">%1$s</xliff:g> ishlatmoqda"</string>
     <string name="applications_settings" msgid="794261395191035632">"Ilova haqida"</string>
     <string name="force_stop" msgid="2153183697014720520">"Majburan to‘xtatish"</string>
@@ -318,7 +318,7 @@
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> va boshqa URL havolalarni ochish"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"Birlamchi sifatida ochish"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Boshqa birlamchi sozlamalar"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Birlamchi sozlamalar belgilanmagan."</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Birlamchi sozlamalar oʻrnatilmagan."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Ushbu ilovaning baʼzi andoza harakatlarini tanladingiz."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Birlamchilarni tozalash"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Mos havolalarni ochish"</string>
@@ -371,7 +371,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Hissa qo‘shganlar"</string>
     <string name="manual" msgid="4819839169843240804">"Qo‘llanma"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Sertifikat yorliqlari"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Xavfsizlik va standartlarga muvofiqlik"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Xavfsizlik va sertifikat qo‘llanmasi"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Mualliflik huquqi belgisi"</string>
     <string name="license_title" msgid="936705938435249965">"Litsenziya"</string>
     <string name="terms_title" msgid="5201471373602628765">"Foydalanish shartlari"</string>

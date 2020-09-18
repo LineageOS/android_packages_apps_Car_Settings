@@ -29,7 +29,7 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"dim screen, touchscreen, battery"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"dim screen, night, tint"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Night mode"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"Network and Internet"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Network and internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobile network"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIMs</item>
@@ -73,7 +73,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Usage cycle reset date"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Date of each month:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Set"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Data warning and limit"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Data warning limit"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"App data usage cycle"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Set data warning"</string>
     <string name="data_warning" msgid="116776633806885370">"Data warning"</string>
@@ -560,7 +560,7 @@
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancel"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Your new unlock pattern"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Draw an unlock pattern"</string>
-    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Release finger when done"</string>
+    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Release finger when you\'ve finished"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Pattern recorded"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Draw pattern again to confirm"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connect at least four dots. Try again."</string>
@@ -574,8 +574,8 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Enter your password"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"For security, set a PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Re-enter your PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least four digits"</string>
-    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least four digits."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least 4 digits"</string>
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least 4 digits."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINs don\'t match"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Error saving PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Wrong PIN"</string>
