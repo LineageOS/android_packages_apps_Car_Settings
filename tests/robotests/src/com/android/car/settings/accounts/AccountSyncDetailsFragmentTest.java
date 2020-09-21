@@ -44,6 +44,7 @@ import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -58,6 +59,7 @@ import java.util.List;
 /**
  * Tests for the {@link AccountSyncDetailsFragment}.
  */
+@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowContentResolver.class, ShadowAccountManager.class})
 public class AccountSyncDetailsFragmentTest {
