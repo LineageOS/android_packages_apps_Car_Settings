@@ -117,7 +117,7 @@ public class ButtonPasswordEditTextPreferenceTest {
         assertThat(containerWithoutWidget.isClickable()).isFalse();
         assertThat(containerWithoutWidget.isFocusable()).isFalse();
         assertThat(actionContainer.getVisibility()).isEqualTo(View.GONE);
-        assertThat(widgetFrame.isClickable()).isFalse();
+        assertThat(widgetFrame.hasOnClickListeners()).isFalse();
         assertThat(widgetFrame.isFocusable()).isFalse();
     }
 }
