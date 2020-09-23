@@ -44,6 +44,7 @@ import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -58,6 +59,7 @@ import org.robolectric.shadows.ShadowUserManager;
 /**
  * Tests for AccountSettingsFragment class.
  */
+@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowAccountManager.class, ShadowContentResolver.class, ShadowUserHelper.class})
 public class AccountSettingsFragmentTest {
