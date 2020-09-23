@@ -46,7 +46,7 @@
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Debes seleccionar una opción"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"¿Usar <xliff:g id="CARRIER">%1$s</xliff:g> para los datos móviles?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Estás utilizando <xliff:g id="CARRIER2_0">%2$s</xliff:g> para los datos móviles. Si cambias a <xliff:g id="CARRIER1">%1$s</xliff:g>, no se utilizará más a <xliff:g id="CARRIER2_1">%2$s</xliff:g> para los datos móviles."</string>
-    <string name="sim_change_data_ok" msgid="2348804996223271081">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Usar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Itinerancia"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Conectarse a servicios de datos en itinerancia"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"¿Quieres permitir la itinerancia de datos?"</string>
@@ -157,6 +157,20 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quiere activar la conexión Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quiere desactivar la conexión Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
+    <!-- no translation found for network_connection_request_dialog_title (8449606155059098762) -->
+    <skip />
+    <!-- no translation found for network_connection_timeout_dialog_message (2536299451668687586) -->
+    <skip />
+    <!-- no translation found for network_connection_timeout_dialog_ok (2228662561126434792) -->
+    <skip />
+    <!-- no translation found for network_connection_errorstate_dialog_message (4268321315241218483) -->
+    <skip />
+    <!-- no translation found for network_connection_connect_successful (7893957133113302365) -->
+    <skip />
+    <!-- no translation found for network_connection_request_dialog_showall (776613149566461487) -->
+    <skip />
+    <!-- no translation found for progress_scanning (7191583064717479795) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos vinculados"</string>
