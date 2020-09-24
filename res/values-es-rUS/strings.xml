@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quiere activar la conexión Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quiere desactivar la conexión Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispositivo para usar con <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"No se encontraron dispositivos. Asegúrate de que los dispositivos estén encendidos y puedan conectarse."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Volver a intentarlo"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Se produjo un error. La aplicación canceló la solicitud para elegir un dispositivo."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Conexión exitosa"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostrar todo"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Buscando"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos sincronizados"</string>
