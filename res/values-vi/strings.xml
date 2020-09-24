@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> muốn bật Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> muốn tắt Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Lỗi"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Thiết bị sẽ sử dụng với <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Không tìm thấy thiết bị nào. Đảm bảo rằng các thiết bị đang bật và sẵn sàng kết nối."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Thử lại"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Đã xảy ra lỗi. Ứng dụng đã hủy yêu cầu chọn thiết bị."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Kết nối thành công"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Hiển thị tất cả"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Đang tìm kiếm"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Thiết bị chưa có tên"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Thiết bị được ghép nối"</string>

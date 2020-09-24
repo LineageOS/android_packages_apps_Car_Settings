@@ -157,20 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fiని ఆన్ చేయాలనుకుంటుంది"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fiని ఆఫ్ చేయాలనుకుంటుంది"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ఎర్రర్"</string>
-    <!-- no translation found for network_connection_request_dialog_title (8449606155059098762) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_message (2536299451668687586) -->
-    <skip />
-    <!-- no translation found for network_connection_timeout_dialog_ok (2228662561126434792) -->
-    <skip />
-    <!-- no translation found for network_connection_errorstate_dialog_message (4268321315241218483) -->
-    <skip />
-    <!-- no translation found for network_connection_connect_successful (7893957133113302365) -->
-    <skip />
-    <!-- no translation found for network_connection_request_dialog_showall (776613149566461487) -->
-    <skip />
-    <!-- no translation found for progress_scanning (7191583064717479795) -->
-    <skip />
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g>తో ఉపయోగించుకునే పరికరం"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"పరికరాలు ఏవీ కనుగొనబడలేదు. పరికరాలు ఆన్‌లో ఉన్నాయని మరియు కనెక్ట్ చేయడానికి అందుబాటులో ఉన్నాయని నిర్ధారించుకోండి."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే అభ్యర్థనని రద్దు చేసింది."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"అన్నింటినీ చూపు"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"శోధించడం"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"బ్లూటూత్"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"పేరులేని పరికరం"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"జత చేయబడిన పరికరాలు"</string>
