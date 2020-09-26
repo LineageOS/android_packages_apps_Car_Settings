@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求關閉 Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"錯誤"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"可配合<xliff:g id="APPNAME">%1$s</xliff:g>使用的裝置"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"找不到任何裝置。請確保裝置已開啟，並可連接網絡。"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"請再試一次"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"發生錯誤。應用程式已取消選擇裝置的要求。"</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"連線成功"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"顯示全部"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"正在搜尋..."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"藍牙"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"未命名的裝置"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"已配對的裝置"</string>
