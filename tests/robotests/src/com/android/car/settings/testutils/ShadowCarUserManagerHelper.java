@@ -47,11 +47,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected UserInfo createNewNonAdminUser(String userName) {
-        return sMockInstance.createNewNonAdminUser(userName);
-    }
-
-    @Implementation
     protected void grantAdminPermissions(UserInfo user) {
         sMockInstance.grantAdminPermissions(user);
     }
