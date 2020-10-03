@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να ενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να απενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Σφάλμα"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Συσκευή για χρήση με την εφαρμογή <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Δεν βρέθηκαν συσκευές. Βεβαιωθείτε ότι οι συσκευές είναι ενεργοποιημένες και διαθέσιμες για σύνδεση."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Δοκιμάστε ξανά"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Παρουσιάστηκε κάποιο πρόβλημα. Η εφαρμογή ακύρωσε το αίτημα για επιλογή συσκευής."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Η σύνδεση είναι επιτυχής"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Εμφάνιση όλων"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Αναζήτηση"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Ανώνυμη συσκευή"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Συσκευές σε σύζευξη"</string>

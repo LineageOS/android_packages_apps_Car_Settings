@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi inschakelen"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitschakelen"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Apparaat om te gebruiken met <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Geen apparaten gevonden. Zorg dat apparaten zijn ingeschakeld en beschikbaar zijn voor verbinding."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Opnieuw proberen"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Er is een probleem opgetreden. De app heeft het verzoek om een apparaat te kiezen geannuleerd."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Verbinding gemaakt"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Alles tonen"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Zoeken"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Naamloos apparaat"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Gekoppelde apparaten"</string>
@@ -303,7 +310,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Screenshot gebruiken"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Toestaan dat de app voor assistentie toegang krijgt tot een afbeelding van het scherm"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Spraakinvoer"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Service voor automatisch aanvullen"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Service voor automatisch invullen"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Geen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Geselecteerd"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"De Assistent kan informatie over de gebruikte apps in je systeem lezen, waaronder informatie die zichtbaar is op je scherm of toegankelijk is in de apps."</string>
