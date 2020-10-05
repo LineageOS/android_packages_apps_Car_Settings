@@ -151,7 +151,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"۲٫۴ گیگاهرتز"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"۵٫۰ گیگاهرتز"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"حداقل یک باند برای نقطه اتصال Wi‑Fi انتخاب کنید:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطه اتصال و اتصال به اینترنت با تلفن همراه"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطه اتصال و اشتراک‌گذاری اینترنت"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"خاموش شدن خودکار نقطه اتصال"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"اگر دستگاهی متصل نباشد، نقطه اتصال Wi‑Fi خاموش خواهد شد"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> می‌خواهد Wi-Fi را روشن کند"</string>
@@ -271,7 +271,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"برنامه‌ها و اعلان‌ها"</string>
     <string name="all_applications" msgid="7798210477486822168">"نمایش همه برنامه‌ها"</string>
     <string name="default_applications" msgid="1558183275638697087">"برنامه‌های پیش‌فرض"</string>
-    <string name="app_permissions" msgid="32799922508313948">"مجوزهای برنامه"</string>
+    <string name="app_permissions" msgid="32799922508313948">"اجازه‌های برنامه"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"برنامه‌هایی که از <xliff:g id="APPS">%1$s</xliff:g> استفاده می‌کنند"</string>
     <string name="applications_settings" msgid="794261395191035632">"اطلاعات برنامه"</string>
     <string name="force_stop" msgid="2153183697014720520">"توقف اجباری"</string>
@@ -318,7 +318,7 @@
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"باز کردن <xliff:g id="DOMAIN">%s</xliff:g> و نشانی‌های وب دیگر"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"باز کردن به‌طور پیش‌فرض"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"سایر پیش‌فرض‌ها"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"پیش فرضی تنظیم نشده است."</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"پیش‌فرضی تنظیم نشده است."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"شما انتخاب کرده‌اید که این برنامه را به‌طور پیش‌فرض برای برخی از عملکردها راه‌اندازی کنید."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"پاک کردن پیش‌فرض ها"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"باز کردن پیوندهای پشتیبانی‌شده"</string>
