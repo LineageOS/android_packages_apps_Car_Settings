@@ -17,6 +17,7 @@
 package com.android.car.settings.security;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
@@ -63,12 +64,14 @@ public class CredentialStorageActivity extends FragmentActivity {
     private final KeyStore mKeyStore = KeyStore.getInstance();
 
     private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private LockPatternUtils mUtils;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCarUserManagerHelper = new CarUserManagerHelper(this);
+        mUserManager = UserManager.get(this);
         mUtils = new LockPatternUtils(this);
     }
 
@@ -263,11 +266,12 @@ public class CredentialStorageActivity extends FragmentActivity {
                 return false;
             }
 
-            credentialStorage.mUtils.resetKeyStore(
-                    credentialStorage.mCarUserManagerHelper.getCurrentProcessUserId());
+            UserHandle user = getUserHandleToUse(credentialStorage.mUserManager);
+            credentialStorage.mUtils.resetKeyStore(user.getIdentifier());
 
             try {
-                KeyChain.KeyChainConnection keyChainConnection = KeyChain.bind(credentialStorage);
+                KeyChain.KeyChainConnection keyChainConnection = KeyChain.bindAsUser(
+                        credentialStorage, user);
                 try {
                     return keyChainConnection.getService().reset();
                 } catch (RemoteException e) {
@@ -322,8 +326,8 @@ public class CredentialStorageActivity extends FragmentActivity {
                     || credentialStorage.isDestroyed()) {
                 return false;
             }
-            try (KeyChain.KeyChainConnection keyChainConnection = KeyChain.bind(
-                    credentialStorage)) {
+            try (KeyChain.KeyChainConnection keyChainConnection = KeyChain.bindAsUser(
+                    credentialStorage, getUserHandleToUse(credentialStorage.mUserManager))) {
                 keyChainConnection.getService().setUserSelectable(mAlias, true);
                 return true;
             } catch (RemoteException e) {
@@ -346,5 +350,10 @@ public class CredentialStorageActivity extends FragmentActivity {
             }
             credentialStorage.finish();
         }
+    }
+
+    private static UserHandle getUserHandleToUse(UserManager userManager) {
+        return userManager.isHeadlessSystemUserMode()
+                ? UserHandle.SYSTEM : UserHandle.of(ActivityManager.getCurrentUser());
     }
 }

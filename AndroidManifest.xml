@@ -344,6 +344,7 @@
         <activity android:name=".security.CredentialStorageActivity"
                   android:theme="@style/ActionDialogTheme"
                   android:launchMode="singleTop"
+                  android:showForAllUsers="true"
                   android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter android:priority="1">
                 <action android:name="com.android.credentials.INSTALL" />
