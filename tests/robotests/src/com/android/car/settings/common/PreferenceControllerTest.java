@@ -25,9 +25,11 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.Mockito.inOrder;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -38,6 +40,9 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.R;
+import com.android.car.ui.preference.CarUiPreference;
+import com.android.car.ui.preference.DisabledPreferenceCallback;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,6 +50,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InOrder;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 
@@ -231,6 +237,54 @@ public class PreferenceControllerTest {
         mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
         assertThat(mPreference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_restricted_RestrictedMessageSet() {
+        // mPreference needs to be a mock of CarUiPreference to register DisabledPreferenceCallback
+        mPreference = mock(CarUiPreference.class);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                FakePreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+
+        Mockito.reset(mPreference);
+        mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        verify((DisabledPreferenceCallback) mPreference)
+                .setMessageToShowWhenDisabledPreferenceClicked(
+                        mContext.getResources().getString(R.string.restricted_while_driving));
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_restricted_viewOnly_restrictedMessageUnset() {
+        // mPreference needs to be a mock of CarUiPreference to register DisabledPreferenceCallback
+        mPreference = mock(CarUiPreference.class);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                FakePreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
+        mController.setAvailabilityStatus(AVAILABLE_FOR_VIEWING);
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+
+        Mockito.reset(mPreference);
+        mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        verify((DisabledPreferenceCallback) mPreference)
+                .setMessageToShowWhenDisabledPreferenceClicked("");
+    }
+
+    @Test
+    public void onCreate_unrestricted_disabled_restrictedMessageUnset() {
+        // mPreference needs to be a mock of CarUiPreference to register DisabledPreferenceCallback
+        mPreference = mock(CarUiPreference.class);
+        when(mPreference.isEnabled()).thenReturn(false);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                FakePreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+
+        verify((DisabledPreferenceCallback) mPreference)
+                .setMessageToShowWhenDisabledPreferenceClicked("");
     }
 
     @Test
