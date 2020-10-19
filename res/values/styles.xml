@@ -64,4 +64,9 @@
         <!-- Use '?android:attr/textColorPrimary' (or another chosen color) to show the dividers -->
         <item name="android:colorControlNormal">@android:color/transparent</item>
     </style>
+
+    <style name="ColoredSwitchPreferenceStyle">
+        <item name="disabledTitleColor">@color/car_grey_400</item>
+        <item name="enabledTitleColor">?android:attr/colorAccent</item>
+    </style>
 </resources>
