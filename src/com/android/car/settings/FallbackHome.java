@@ -19,6 +19,7 @@ package com.android.car.settings;
 import static android.car.settings.CarSettings.Global.ENABLE_USER_SWITCH_DEVELOPER_MESSAGE;
 
 import android.app.Activity;
+import android.car.userlib.UserHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -52,6 +53,8 @@ public class FallbackHome extends Activity {
     private static final int PROGRESS_TIMEOUT = 2000;
 
     private boolean mProvisioned;
+
+    private boolean mFinished;
 
     private final Runnable mProgressTimeoutRunnable = () -> {
         View v = getLayoutInflater().inflate(
@@ -135,6 +138,10 @@ public class FallbackHome extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(mReceiver);
+        if (!mFinished) {
+            LOG.d("User " + getUserId() + " FallbackHome is finished");
+            finishFallbackHome();
+        }
     }
 
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -160,13 +167,23 @@ public class FallbackHome extends Activity {
                         + "one soon?");
                 mHandler.sendEmptyMessageDelayed(0, 500);
             } else {
-                LOG.d("User " + getUserId() + " unlocked and real home ("
-                        + homeInfo.activityInfo.packageName + ") found; let's go!");
-                getSystemService(PowerManager.class).userActivity(
-                        SystemClock.uptimeMillis(), false);
-                finishAndRemoveTask();
+                String homePackageName = homeInfo.activityInfo.packageName;
+                if (UserHelper.isHeadlessSystemUser(getUserId())) {
+                    // This is the transient state in HeadlessSystemMode to boot for user 10+.
+                    LOG.d("User 0 unlocked, but will not launch real home: " + homePackageName);
+                    return;
+                }
+                LOG.d("User " + getUserId() + " unlocked and real home (" + homePackageName
+                        + ") found; let's go!");
+                finishFallbackHome();
             }
         }
+    }
+
+    private void finishFallbackHome() {
+        getSystemService(PowerManager.class).userActivity(SystemClock.uptimeMillis(), false);
+        finishAndRemoveTask();
+        mFinished = true;
     }
 
     private Handler mHandler = new Handler() {
