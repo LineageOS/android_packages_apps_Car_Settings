@@ -27,6 +27,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.DisabledPreferenceCallback;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -140,6 +141,7 @@ public abstract class PreferenceController<V extends Preference> implements
     private final Context mContext;
     private final String mPreferenceKey;
     private final FragmentController mFragmentController;
+    private final String mRestrictedWhileDrivingMessage;
 
     private CarUxRestrictions mUxRestrictions;
     private V mPreference;
@@ -159,6 +161,8 @@ public abstract class PreferenceController<V extends Preference> implements
                 mContext.getResources().getStringArray(R.array.config_ignore_ux_restrictions)));
         mAlwaysIgnoreUxRestrictions =
                 mContext.getResources().getBoolean(R.bool.config_always_ignore_ux_restrictions);
+        mRestrictedWhileDrivingMessage =
+                mContext.getResources().getString(R.string.restricted_while_driving);
     }
 
     /**
@@ -446,10 +450,18 @@ public abstract class PreferenceController<V extends Preference> implements
      * additional driving restrictions.
      */
     protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
+        String message = "";
         if (!isUxRestrictionsIgnored(mAlwaysIgnoreUxRestrictions,
                 mPreferencesIgnoringUxRestrictions)
                 && CarUxRestrictionsHelper.isNoSetup(uxRestrictions)) {
             mPreference.setEnabled(false);
+            if (getAvailabilityStatus() != AVAILABLE_FOR_VIEWING) {
+                message = mRestrictedWhileDrivingMessage;
+            }
+        }
+        if (mPreference instanceof DisabledPreferenceCallback) {
+            ((DisabledPreferenceCallback) mPreference)
+                    .setMessageToShowWhenDisabledPreferenceClicked(message);
         }
     }
 
