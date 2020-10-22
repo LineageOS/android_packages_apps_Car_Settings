@@ -26,11 +26,8 @@ import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.ui.toolbar.MenuItem;
 
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Sets the system date.
@@ -39,36 +36,23 @@ public class DatePickerFragment extends BaseFragment {
     private static final int MILLIS_IN_SECOND = 1000;
 
     private DatePicker mDatePicker;
-    private MenuItem mOkButton;
 
     @Override
-    public List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mOkButton);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mOkButton = new MenuItem.Builder(getContext())
-                .setTitle(android.R.string.ok)
-                .setOnClickListener(i -> {
-                    Calendar c = Calendar.getInstance();
-                    c.set(Calendar.YEAR, mDatePicker.getYear());
-                    c.set(Calendar.MONTH, mDatePicker.getMonth());
-                    c.set(Calendar.DAY_OF_MONTH, mDatePicker.getDayOfMonth());
-                    long when = Math.max(c.getTimeInMillis(), DatetimeSettingsFragment.MIN_DATE);
-                    if (when / MILLIS_IN_SECOND < Integer.MAX_VALUE) {
-                        TimeDetector timeDetector =
-                                getContext().getSystemService(TimeDetector.class);
-                        ManualTimeSuggestion manualTimeSuggestion =
-                                TimeDetector.createManualTimeSuggestion(when, "Settings: Set date");
-                        timeDetector.suggestManualTime(manualTimeSuggestion);
-                        getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
-                    }
-                    getFragmentHost().goBack();
-                })
-                .build();
+    public void onStop() {
+        super.onStop();
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, mDatePicker.getYear());
+        c.set(Calendar.MONTH, mDatePicker.getMonth());
+        c.set(Calendar.DAY_OF_MONTH, mDatePicker.getDayOfMonth());
+        long when = Math.max(c.getTimeInMillis(), DatetimeSettingsFragment.MIN_DATE);
+        if (when / MILLIS_IN_SECOND < Integer.MAX_VALUE) {
+            TimeDetector timeDetector =
+                    getContext().getSystemService(TimeDetector.class);
+            ManualTimeSuggestion manualTimeSuggestion =
+                    TimeDetector.createManualTimeSuggestion(when, "Settings: Set date");
+            timeDetector.suggestManualTime(manualTimeSuggestion);
+            getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
+        }
     }
 
     @Override
