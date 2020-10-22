@@ -87,8 +87,8 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Podesite ograničenje potrošnje podataka"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Podesi"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi se uključuje..."</string>
-    <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi se isključuje..."</string>
+    <string name="wifi_starting" msgid="473253087503153167">"WiFi se uključuje..."</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"WiFi se isključuje..."</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Učitava se Wi‑Fi lista"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi je onemogućen"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Brisanje mreže nije uspelo"</string>
@@ -131,7 +131,7 @@
     <string name="wifi_wakeup" msgid="7451825226044542000">"Automatski uključi Wi‑Fi"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi će se ponovo uključiti u blizini sačuvanih mreža visokog kvaliteta, kao što je kućna mreža"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Nije dostupno jer je lokacija isključena. Uključite "<annotation id="link">"lokaciju"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Želite li da uključite Wi-Fi skeniranje?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Želite li da uključite WiFi skeniranje?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Uključi"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi skeniranje je uključeno"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatski pređi na mobilne podatke"</string>
@@ -156,8 +156,8 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot i privezivanje"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatski isključi hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi hotspot će se isključiti ako nijedan uređaj nije povezan"</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> želi da uključi Wi-Fi"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> želi da isključi Wi-Fi"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> želi da uključi WiFi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> želi da isključi WiFi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Greška"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Uređaj koji će se koristiti za <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nije pronađen nijedan uređaj Proverite da li je uređaj uključen i dostupan za povezivanje."</string>
@@ -351,8 +351,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premijum SMS-ovi mogu da koštaju i povećaće račune kod mobilnog operatera. Ako omogućite dozvolu za neku aplikaciju, moći ćete da šaljete premijum SMS-ove pomoću te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup korišćenju"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Pristup korišćenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi mobilnog operatera, jezička podešavanja i druge podatke."</string>
-    <string name="wifi_control_title" msgid="5660436566907731929">"Kontrola Wi-Fi mreže"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Kontrola Wi-Fi mreže omogućava aplikaciji da uključi ili isključi Wi-Fi, traži i povezuje se na Wi-Fi mreže, dodaje ili uklanja mreže ili pokreće samo lokalni hotspot."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Kontrola WiFi mreže"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Kontrola WiFi mreže omogućava aplikaciji da uključi ili isključi WiFi, traži i povezuje se na WiFi mreže, dodaje ili uklanja mreže ili pokreće samo lokalni hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Još"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtevi za lokaciju"</string>
@@ -407,7 +407,7 @@
     <string name="reset_options_summary" msgid="5508201367420359293">"Resetovanje mreže, aplikacija ili uređaja"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Resetuj mrežu"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Ovim resetujete sva podešavanja mreže, uključujući:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi-Fi"</li></string>
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"WiFi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobilni podaci"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Izbriši sve eSIM-ove vozila"</string>
