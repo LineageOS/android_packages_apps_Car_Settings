@@ -149,4 +149,9 @@
     <dimen name="ap_preference_item_padding_start">@*android:dimen/car_keyline_1</dimen>
     <dimen name="ap_preference_item_padding_end">@*android:dimen/car_keyline_1</dimen>
     <dimen name="ap_preference_item_icon_margin_end">@*android:dimen/car_padding_2</dimen>
+
+    <!-- Divider Preference -->
+    <dimen name="divider_preference_height">1dp</dimen>
+    <dimen name="divider_preference_margin_top">@*android:dimen/car_padding_2</dimen>
+    <dimen name="divider_preference_margin_bottom">@*android:dimen/car_padding_2</dimen>
 </resources>
