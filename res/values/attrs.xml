@@ -73,6 +73,11 @@
         <attr name="maxLabel" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="ColoredSwitchPreference">
+        <attr name="disabledTitleColor" format="color"/>
+        <attr name="enabledTitleColor" format="color"/>
+    </declare-styleable>
+
     <attr name="wifiSignalColor" format="color"/>
     <attr name="iconColor" format="color"/>
     <attr name="dividerColor" format="color"/>
