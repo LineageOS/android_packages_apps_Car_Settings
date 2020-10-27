@@ -26,13 +26,9 @@ import androidx.annotation.XmlRes;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
-import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.ProgressBarController;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.wifi.AccessPoint;
-
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Main page to host Wifi related preferences.
@@ -46,14 +42,8 @@ public class WifiSettingsFragment extends SettingsFragment
 
     private CarWifiManager mCarWifiManager;
     private ProgressBarController mProgressBar;
-    private MenuItem mWifiSwitch;
     @Nullable
     private String mConnectedAccessPointKey;
-
-    @Override
-    public List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mWifiSwitch);
-    }
 
     @Override
     @XmlRes
@@ -65,16 +55,6 @@ public class WifiSettingsFragment extends SettingsFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCarWifiManager = new CarWifiManager(getContext());
-
-        mWifiSwitch = new MenuItem.Builder(getContext())
-                .setCheckable()
-                .setChecked(mCarWifiManager.isWifiEnabled())
-                .setOnClickListener(i -> {
-                    if (mWifiSwitch.isChecked() != mCarWifiManager.isWifiEnabled()) {
-                        mCarWifiManager.setWifiEnabled(mWifiSwitch.isChecked());
-                    }
-                })
-                .build();
 
         if (savedInstanceState != null) {
             mConnectedAccessPointKey = savedInstanceState.getString(
@@ -135,15 +115,7 @@ public class WifiSettingsFragment extends SettingsFragment
 
     @Override
     public void onWifiStateChanged(int state) {
-        mWifiSwitch.setChecked(state == WifiManager.WIFI_STATE_ENABLED
-                || state == WifiManager.WIFI_STATE_ENABLING);
-        switch (state) {
-            case WifiManager.WIFI_STATE_ENABLING:
-                mProgressBar.setVisible(true);
-                break;
-            default:
-                mProgressBar.setVisible(false);
-        }
+        mProgressBar.setVisible(state == WifiManager.WIFI_STATE_ENABLING);
     }
 
     /**
