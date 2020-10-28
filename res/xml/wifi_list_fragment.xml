@@ -18,6 +18,12 @@
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/wifi_settings"
                   android:key="@string/psk_wifi_list">
+    <com.android.car.settings.common.ColoredSwitchPreference
+        android:key="@string/pk_wifi_state_switch"
+        style="@style/ColoredSwitchPreferenceStyle"
+        settings:controller="com.android.car.settings.wifi.WifiStateSwitchPreferenceController"
+        settings:searchable="false"/>
+    <com.android.car.settings.common.DividerPreference/>
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_wifi_status"
         settings:controller="com.android.car.settings.wifi.WifiStatusPreferenceController"
