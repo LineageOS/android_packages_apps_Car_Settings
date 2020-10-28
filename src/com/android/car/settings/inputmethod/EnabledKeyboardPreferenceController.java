@@ -128,7 +128,13 @@ public class EnabledKeyboardPreferenceController extends
             try {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 String settingsActivity = inputMethodInfo.getSettingsActivity();
+                if (settingsActivity == null) {
+                    LOG.d("IME's Settings Activity not defined.");
+                    return true;
+                }
+
                 intent.setClassName(inputMethodInfo.getPackageName(), settingsActivity);
+
                 // Invoke a settings activity of an input method.
                 getContext().startActivity(intent);
             } catch (final ActivityNotFoundException e) {
