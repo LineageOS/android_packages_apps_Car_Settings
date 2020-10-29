@@ -140,7 +140,7 @@ public class UserHelper {
     }
 
     private boolean removeUser(@UserIdInt int userId) {
-        UserRemovalResult result = mCarUserManager.removeUser(UserHandle.of(userId));
+        UserRemovalResult result = mCarUserManager.removeUser(userId);
         boolean ok = result.isSuccess();
         if (!ok) {
             Log.w(TAG, "Failed to remove user " + userId + ": " + result);
