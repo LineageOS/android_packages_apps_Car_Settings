@@ -298,7 +298,7 @@ public class UserHelperTest {
         when(mMockUserManager.isAdminUser()).thenReturn(true);
 
         assertThat(mUserHelper.removeUser(mContext, nonAdminUser)).isTrue();
-        verify(mMockCarUserManager).removeUser(UserHandle.of(nonAdminUserId));
+        verify(mMockCarUserManager).removeUser(nonAdminUserId);
     }
 
     @Test
@@ -316,7 +316,7 @@ public class UserHelperTest {
 
         // If Non-Admin is trying to remove someone other than themselves, they should fail.
         assertThat(mUserHelper.removeUser(mContext, user2)).isFalse();
-        verify(mMockCarUserManager, never()).removeUser(UserHandle.of(user2.id));
+        verify(mMockCarUserManager, never()).removeUser(user2.id);
     }
 
 
@@ -340,7 +340,7 @@ public class UserHelperTest {
 
         verify(mMockCarUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManager).switchUser(newAdminInfo.id);
-        verify(mMockCarUserManager).removeUser(UserHandle.of(adminUser.id));
+        verify(mMockCarUserManager).removeUser(adminUser.id);
     }
 
     @Test
@@ -361,7 +361,7 @@ public class UserHelperTest {
         mUserHelper.removeUser(mContext, adminUser);
         verify(mMockCarUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManager, never()).switchUser(anyInt());
-        verify(mMockCarUserManager, never()).removeUser(UserHandle.of(adminUser.id));
+        verify(mMockCarUserManager, never()).removeUser(adminUser.id);
     }
 
     @Test
@@ -381,7 +381,7 @@ public class UserHelperTest {
         mUserHelper.removeUser(mContext, currentUser);
         verify(mMockCarUserManager).createGuest(DEFAULT_GUEST_NAME);
         verify(mMockCarUserManager).switchUser(guestUser.id);
-        verify(mMockCarUserManager).removeUser(UserHandle.of(currentUser.id));
+        verify(mMockCarUserManager).removeUser(currentUser.id);
     }
 
     @Test
@@ -479,12 +479,11 @@ public class UserHelperTest {
     }
 
     private void mockRemoveUser(int userId, int status) {
-        when(mMockCarUserManager.removeUser(UserHandle.of(userId)))
-                .thenReturn(new UserRemovalResult(status));
+        when(mMockCarUserManager.removeUser(userId)).thenReturn(new UserRemovalResult(status));
     }
 
     private void mockRemoveUserSuccess() {
-        when(mMockCarUserManager.removeUser(any()))
+        when(mMockCarUserManager.removeUser(anyInt()))
                 .thenReturn(new UserRemovalResult(UserRemovalResult.STATUS_SUCCESSFUL));
     }
 
