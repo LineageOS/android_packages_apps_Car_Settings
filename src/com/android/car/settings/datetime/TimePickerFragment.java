@@ -21,6 +21,7 @@ import android.app.timedetector.TimeDetector;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.widget.NumberPicker;
 import android.widget.TimePicker;
 
 import androidx.annotation.LayoutRes;
@@ -28,8 +29,15 @@ import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.rotary.DirectManipulationHandler;
+import com.android.car.settings.common.rotary.DirectManipulationState;
+import com.android.car.settings.common.rotary.NumberPickerNudgeHandler;
+import com.android.car.settings.common.rotary.NumberPickerParentNudgeHandler;
+import com.android.car.settings.common.rotary.NumberPickerRotationHandler;
+import com.android.car.settings.common.rotary.NumberPickerUtils;
 import com.android.car.ui.toolbar.MenuItem;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
@@ -40,7 +48,9 @@ import java.util.List;
 public class TimePickerFragment extends BaseFragment {
     private static final int MILLIS_IN_SECOND = 1000;
 
+    private DirectManipulationState mDirectManipulationMode;
     private TimePicker mTimePicker;
+    private List<NumberPicker> mNumberPickers;
     private MenuItem mOkButton;
 
     @Override
@@ -90,8 +100,41 @@ public class TimePickerFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        mDirectManipulationMode = new DirectManipulationState(requireContext().getResources());
         mTimePicker = (TimePicker) getView().findViewById(R.id.time_picker);
         mTimePicker.setIs24HourView(is24Hour());
+        DirectManipulationHandler.setDirectManipulationHandler(mTimePicker,
+                new DirectManipulationHandler.Builder(mDirectManipulationMode)
+                        .setNudgeHandler(new NumberPickerParentNudgeHandler())
+                        .build());
+
+        DirectManipulationHandler numberPickerListener =
+                new DirectManipulationHandler.Builder(mDirectManipulationMode)
+                        .setNudgeHandler(new NumberPickerNudgeHandler())
+                        .setBackHandler((v, keyCode, event) -> {
+                            mTimePicker.requestFocus();
+                            return true;
+                        })
+                        .setRotationHandler(new NumberPickerRotationHandler())
+                        .build();
+
+        mNumberPickers = new ArrayList<>();
+        NumberPickerUtils.getNumberPickerDescendants(mNumberPickers, mTimePicker);
+        for (int i = 0; i < mNumberPickers.size(); i++) {
+            DirectManipulationHandler.setDirectManipulationHandler(mNumberPickers.get(i),
+                    numberPickerListener);
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        DirectManipulationHandler.setDirectManipulationHandler(mTimePicker, /* handler= */ null);
+        for (int i = 0; i < mNumberPickers.size(); i++) {
+            DirectManipulationHandler.setDirectManipulationHandler(mNumberPickers.get(i),
+                    /* handler= */ null);
+        }
+
+        super.onDestroy();
     }
 
     private boolean is24Hour() {
