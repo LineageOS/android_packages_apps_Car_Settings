@@ -450,18 +450,28 @@ public abstract class PreferenceController<V extends Preference> implements
      * additional driving restrictions.
      */
     protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
-        String message = "";
+        boolean showMessage = false;
         if (!isUxRestrictionsIgnored(mAlwaysIgnoreUxRestrictions,
                 mPreferencesIgnoringUxRestrictions)
                 && CarUxRestrictionsHelper.isNoSetup(uxRestrictions)) {
             mPreference.setEnabled(false);
             if (getAvailabilityStatus() != AVAILABLE_FOR_VIEWING) {
-                message = mRestrictedWhileDrivingMessage;
+                showMessage = true;
             }
         }
-        if (mPreference instanceof DisabledPreferenceCallback) {
-            ((DisabledPreferenceCallback) mPreference)
-                    .setMessageToShowWhenDisabledPreferenceClicked(message);
+        setRestrictedWhileDrivingMessage(mPreference, showMessage);
+    }
+
+    /**
+     * Updates the preference restricted while driving message.
+
+     * @param preference  the preference to update.
+     * @param showMessage whether or not the message should be shown.
+     */
+    protected void setRestrictedWhileDrivingMessage(Preference preference, boolean showMessage) {
+        if (preference instanceof DisabledPreferenceCallback) {
+            ((DisabledPreferenceCallback) preference).setMessageToShowWhenDisabledPreferenceClicked(
+                    showMessage ? mRestrictedWhileDrivingMessage : "");
         }
     }
 
