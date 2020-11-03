@@ -257,6 +257,8 @@
     <string name="wifi_cellular_fallback_title">Switch to mobile data automatically</string>
     <!-- Preference summary to automatically switch away from bad wifi networks [CHAR LIMIT=None]-->
     <string name="wifi_cellular_fallback_summary">Use mobile data when Wi\u2011Fi has no internet access. Data usage charges may apply.</string>
+    <!-- Content description for the wifi state switch. [CHAR LIMIT=NONE] -->
+    <string name="wifi_state_switch_content_description" translatable="false">Wi\u2011Fi toggle switch</string>
     <!-- url for the wifi scanning required dialog help page -->
     <string name="help_uri_wifi_scanning_required" translatable="false"></string>
     <!-- Button label to allow the user to view additional information [CHAR LIMIT=NONE] -->
@@ -752,6 +754,8 @@
     <string name="location_settings_app_permissions_title">App-level permissions</string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
     <string name="location_settings_services_title">Location Services</string>
+    <!-- Content description for the location state switch. [CHAR LIMIT=NONE] -->
+    <string name="location_state_switch_content_description" translatable="false">Location toggle switch</string>
 
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->
