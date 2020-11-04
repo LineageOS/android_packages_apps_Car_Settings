@@ -20,9 +20,8 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
-import androidx.preference.TwoStatePreference;
-
 import com.android.car.settings.R;
+import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
@@ -30,7 +29,7 @@ import com.android.car.settings.common.PreferenceController;
  * Enables/disables Wifi state via SwitchPreference.
  */
 public class WifiStateSwitchPreferenceController extends
-        PreferenceController<TwoStatePreference>
+        PreferenceController<ColoredSwitchPreference>
         implements CarWifiManager.Listener {
 
     private final CarWifiManager mCarWifiManager;
@@ -43,20 +42,26 @@ public class WifiStateSwitchPreferenceController extends
     }
 
     @Override
-    protected Class<TwoStatePreference> getPreferenceType() {
-        return TwoStatePreference.class;
+    protected Class<ColoredSwitchPreference> getPreferenceType() {
+        return ColoredSwitchPreference.class;
     }
 
     @Override
-    protected void updateState(TwoStatePreference preference) {
+    protected void updateState(ColoredSwitchPreference preference) {
         updateSwitchPreference(preference, mCarWifiManager.isWifiEnabled());
     }
 
     @Override
-    protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
+    protected boolean handlePreferenceChanged(ColoredSwitchPreference preference, Object newValue) {
         boolean wifiEnabled = (Boolean) newValue;
         mCarWifiManager.setWifiEnabled(wifiEnabled);
         return true;
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        getPreference().setContentDescription(
+                getContext().getString(R.string.wifi_state_switch_content_description));
     }
 
     @Override
@@ -88,7 +93,7 @@ public class WifiStateSwitchPreferenceController extends
                 || state == WifiManager.WIFI_STATE_ENABLING);
     }
 
-    private void updateSwitchPreference(TwoStatePreference preference, boolean enabled) {
+    private void updateSwitchPreference(ColoredSwitchPreference preference, boolean enabled) {
         preference.setTitle(enabled ? R.string.car_ui_preference_switch_on
                 : R.string.car_ui_preference_switch_off);
         preference.setChecked(enabled);

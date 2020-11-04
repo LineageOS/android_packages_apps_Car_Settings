@@ -25,9 +25,8 @@ import android.location.LocationManager;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.preference.TwoStatePreference;
-
 import com.android.car.settings.R;
+import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.Utils;
@@ -36,7 +35,7 @@ import com.android.settingslib.Utils;
  * Enables/disables location state via SwitchPreference.
  */
 public class LocationStateSwitchPreferenceController extends
-        PreferenceController<TwoStatePreference> {
+        PreferenceController<ColoredSwitchPreference> {
 
     private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
             new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
@@ -60,17 +59,17 @@ public class LocationStateSwitchPreferenceController extends
     }
 
     @Override
-    protected Class<TwoStatePreference> getPreferenceType() {
-        return TwoStatePreference.class;
+    protected Class<ColoredSwitchPreference> getPreferenceType() {
+        return ColoredSwitchPreference.class;
     }
 
     @Override
-    protected void updateState(TwoStatePreference preference) {
+    protected void updateState(ColoredSwitchPreference preference) {
         updateSwitchPreference(preference, mLocationManager.isLocationEnabled());
     }
 
     @Override
-    protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
+    protected boolean handlePreferenceChanged(ColoredSwitchPreference preference, Object newValue) {
         boolean locationEnabled = (Boolean) newValue;
         Utils.updateLocationEnabled(
                 mContext,
@@ -78,6 +77,12 @@ public class LocationStateSwitchPreferenceController extends
                 UserHandle.myUserId(),
                 Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS);
         return true;
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        getPreference().setContentDescription(
+                getContext().getString(R.string.location_state_switch_content_description));
     }
 
     @Override
@@ -90,7 +95,7 @@ public class LocationStateSwitchPreferenceController extends
         mContext.unregisterReceiver(mReceiver);
     }
 
-    private void updateSwitchPreference(TwoStatePreference preference, boolean enabled) {
+    private void updateSwitchPreference(ColoredSwitchPreference preference, boolean enabled) {
         preference.setTitle(enabled ? R.string.car_ui_preference_switch_on
                 : R.string.car_ui_preference_switch_off);
         preference.setChecked(enabled);
