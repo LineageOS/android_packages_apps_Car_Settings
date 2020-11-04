@@ -16,13 +16,21 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.ExtraSettingsPreferenceController.META_DATA_DISTRACTION_OPTIMIZED;
+
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -39,9 +47,12 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-@RunWith(AndroidJUnit4.class)
-public class PreferenceControllerTest {
+import java.util.HashMap;
+import java.util.Map;
 
+@RunWith(AndroidJUnit4.class)
+public class ExtraSettingsPreferenceControllerTest {
+    private static final Intent FAKE_INTENT = new Intent();
     private static final CarUxRestrictions NO_SETUP_UX_RESTRICTIONS =
             new CarUxRestrictions.Builder(/* reqOpt= */ true,
                     CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
@@ -50,16 +61,24 @@ public class PreferenceControllerTest {
             new CarUxRestrictions.Builder(/* reqOpt= */ true,
                     CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
+    private static final CarUxRestrictions NO_UX_RESTRICTIONS =
+            new CarUxRestrictions.Builder(/* reqOpt= */ false,
+                    CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
     private LifecycleOwner mLifecycleOwner;
     private Lifecycle mLifecycle;
 
     private Context mContext = ApplicationProvider.getApplicationContext();
-    private FakePreferenceController mPreferenceController;
+    private PreferenceManager mPreferenceManager;
+    private PreferenceScreen mScreen;
+    private FakeExtraSettingsPreferenceController mPreferenceController;
+    private CarUiPreference mPreference;
+    private Map<Preference, Bundle> mPreferenceBundleMap = new HashMap<>();
 
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private CarUiPreference mPreference;
+    private ExtraSettingsLoader mExtraSettingsLoaderMock;
 
     @Before
     @UiThreadTest
@@ -69,13 +88,27 @@ public class PreferenceControllerTest {
 
         MockitoAnnotations.initMocks(this);
 
-        mPreferenceController = new FakePreferenceController(mContext, /* preferenceKey= */ "key",
-                mFragmentController, BASELINE_UX_RESTRICTIONS);
+        mPreferenceController = new FakeExtraSettingsPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController,
+                BASELINE_UX_RESTRICTIONS);
+
+        mPreferenceManager = new PreferenceManager(mContext);
+        mScreen = mPreferenceManager.createPreferenceScreen(mContext);
+        mScreen.setIntent(FAKE_INTENT);
+        mPreferenceController.setPreference(mScreen);
+        mPreference = spy(new CarUiPreference(mContext));
+
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(META_DATA_DISTRACTION_OPTIMIZED, false);
+        mPreferenceBundleMap = new HashMap<>();
+        mPreferenceBundleMap.put(mPreference, bundle);
+        when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
+                mPreferenceBundleMap);
+        mPreferenceController.setExtraSettingsLoader(mExtraSettingsLoaderMock);
     }
 
     @Test
-    public void onUxRestrictionsChanged_restricted_RestrictedMessageSet() {
-        mPreferenceController.setPreference(mPreference);
+    public void onUxRestrictionsChanged_restricted_restrictedMessageSet() {
         mPreferenceController.onCreate(mLifecycleOwner);
 
         Mockito.reset(mPreference);
@@ -87,8 +120,18 @@ public class PreferenceControllerTest {
     }
 
     @Test
+    public void onUxRestrictionsChanged_unrestricted_restrictedMessageUnset() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        Mockito.reset(mPreference);
+        mPreferenceController.onUxRestrictionsChanged(NO_UX_RESTRICTIONS);
+
+        verify((DisabledPreferenceCallback) mPreference)
+                .setMessageToShowWhenDisabledPreferenceClicked("");
+    }
+
+    @Test
     public void onUxRestrictionsChanged_restricted_viewOnly_restrictedMessageUnset() {
-        mPreferenceController.setPreference(mPreference);
         mPreferenceController.setAvailabilityStatus(PreferenceController.AVAILABLE_FOR_VIEWING);
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -99,30 +142,15 @@ public class PreferenceControllerTest {
                 .setMessageToShowWhenDisabledPreferenceClicked("");
     }
 
-    @Test
-    public void onCreate_unrestricted_disabled_restrictedMessageUnset() {
-        mPreference.setEnabled(false);
-        mPreferenceController.setPreference(mPreference);
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked("");
-    }
-
-    private static class FakePreferenceController extends
-            PreferenceController<Preference> {
+    private static class FakeExtraSettingsPreferenceController extends
+            ExtraSettingsPreferenceController {
 
         private int mAvailabilityStatus;
 
-        FakePreferenceController(Context context, String preferenceKey,
+        FakeExtraSettingsPreferenceController(Context context, String preferenceKey,
                 FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
             super(context, preferenceKey, fragmentController, uxRestrictions);
             mAvailabilityStatus = AVAILABLE;
-        }
-
-        @Override
-        protected Class<Preference> getPreferenceType() {
-            return Preference.class;
         }
 
         @Override
