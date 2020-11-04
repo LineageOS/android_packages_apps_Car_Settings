@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -33,6 +34,7 @@ import com.android.settingslib.Utils;
 public class ColoredSwitchPreference extends CarUiSwitchPreference {
     private int mEnabledColor;
     private int mDisabledColor;
+    private String mContentDescription;
 
     public ColoredSwitchPreference(Context context, AttributeSet attrs,
             int defStyleAttr, int defStyleRes) {
@@ -67,6 +69,9 @@ public class ColoredSwitchPreference extends CarUiSwitchPreference {
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
+        if (!TextUtils.isEmpty(mContentDescription)) {
+            holder.itemView.setContentDescription(mContentDescription);
+        }
         TextView title = holder.itemView.findViewById(android.R.id.title);
         if (title != null) {
             if (isChecked()) {
@@ -75,5 +80,14 @@ public class ColoredSwitchPreference extends CarUiSwitchPreference {
                 title.setTextColor(mDisabledColor);
             }
         }
+    }
+
+    /**
+     * Set a content description for the preference. This is mainly for accessibility or
+     * UI Automation purposes.
+     */
+    public void setContentDescription(String contentDescription) {
+        mContentDescription = contentDescription;
+        notifyChanged();
     }
 }
