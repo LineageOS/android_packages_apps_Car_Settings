@@ -17,7 +17,6 @@
 package com.android.car.settings.users;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -39,7 +38,6 @@ import java.util.Objects;
 public abstract class UsersBasePreferenceController extends PreferenceController<PreferenceGroup> {
 
     private UsersPreferenceProvider mPreferenceProvider;
-    private CarUserManagerHelper mCarUserManagerHelper;
     private List<Preference> mUsersToDisplay = new ArrayList<>();
 
     private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
@@ -53,7 +51,6 @@ public abstract class UsersBasePreferenceController extends PreferenceController
     public UsersBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
         UsersPreferenceProvider.UserClickListener userClickListener = this::userClicked;
         mPreferenceProvider = new UsersPreferenceProvider(context, userClickListener);
     }
@@ -91,11 +88,6 @@ public abstract class UsersBasePreferenceController extends PreferenceController
                 preferenceGroup.addPreference(preference);
             }
         }
-    }
-
-    /** Gets the car user manager helper. */
-    protected CarUserManagerHelper getCarUserManagerHelper() {
-        return mCarUserManagerHelper;
     }
 
     /** Handles the user click on a preference for a certain user. */
