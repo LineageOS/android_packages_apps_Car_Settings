@@ -48,7 +48,7 @@
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Vyžaduje sa výber"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Používať <xliff:g id="CARRIER">%1$s</xliff:g> na mobilné dáta?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Na mobilné dáta používate <xliff:g id="CARRIER2_0">%2$s</xliff:g>. Ak prepnete na <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> sa už nebude používať na mobilné dáta."</string>
-    <string name="sim_change_data_ok" msgid="2348804996223271081">"Používať <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Použiť <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Pripájať sa k dátovým službám pri roamingu"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Chcete povoliť dátový roaming?"</string>
@@ -156,18 +156,11 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Vyberte aspoň jedno pásmo hotspotu Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot a tethering"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automaticky vypínať"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatické vypínanie hotspotu"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Ak nebudú pripojené žiadne zariadenia, hotspot Wi‑Fi sa vypne"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chce zapnúť Wi‑Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> chce vypnúť Wi‑Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Chyba"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Zariadenie, ktoré sa má používať s aplikáciou <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nenašli sa žiadne zariadenia. Skontrolujte, či sú zariadenia zapnuté a dostupné na pripojenie."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Skúsiť znova"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Vyskytol sa problém. Aplikácia zrušila žiadosť o výber zariadenia."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Pripojenie je úspešné"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Zobraziť všetko"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Vyhľadávanie"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Zariadenie bez názvu"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Spárované zariadenia"</string>
@@ -197,7 +190,7 @@
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Žiadosť o párovanie zariadenia Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Párovať a pripojiť"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Párovací kód Bluetooth"</string>
-    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN obsahuje písmená či symboly"</string>
+    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"Kód PIN obsahuje písmená alebo symboly"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Zadajte párovací kód a potom stlačte tlačidlo Return alebo Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Spárovať so zariadením <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Povoliť zariadeniu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> prístup k vašim kontaktom a histórii hovorov"</string>
@@ -296,7 +289,7 @@
     <string name="not_installed" msgid="4218816013370552746">"Pre tohto používateľa nebola nainštalovaná"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Povolenia"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Upozornenia"</string>
-    <string name="storage_application_label" msgid="5911779903670978586">"Ukladací priestor a vyrovnávacia pamäť"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Úložisko a vyrovnávacia pamäť"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Verzia: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Neboli udelené žiadne povolenia"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Neboli požadované žiadne povolenia"</string>
@@ -427,16 +420,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Táto akcia resetuje predvoľby pre:\n\n"<li>"Zakázané aplikácie"</li>\n<li>"Upozornenia zakázaných aplikácií"</li>\n<li>"Predvolené aplikácie pre akcie"</li>\n<li>"Obmedzenia dát v pozadí pre aplikácie"</li>\n<li>"Akékoľvek obmedzenia povolení"</li>\n\n"Nestratíte žiadne dáta aplikácií."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Obnoviť aplikácie"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Predvoľby aplikácií boli obnovené"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Vymazať údaje (obnovenie výrobných nas.)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Týmto vymažete všetky údaje z autorádia vozidla, napríklad:\n\n"<li>"svoj účet Google,"</li>\n<li>"údaje aj nastavenia systému a aplikácií,"</li>\n<li>"stiahnuté aplikácie."</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Aktuálne ste prihlásený/-á do nasledujúcich účtov:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"V tomto vozidle sú ďalší používatelia."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Resetovať vozidlo"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Resetovať?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Chcete vymazať všetky osobné údaje a stiahnuté aplikácie? Túto akciu nebude možné vrátiť späť."</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Vymazať všetko"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Maže sa"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Čakajte…"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Vymazať dáta (obnova výr. nastavení)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Týmto vymažete všetky údaje z autorádia vozidla, napríklad:\n\n"<li>"svoj účet Google,"</li>\n<li>"údaje aj nastavenia systému a aplikácií,"</li>\n<li>"stiahnuté aplikácie."</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Aktuálne ste prihlásený/-á do nasledujúcich účtov:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"V tomto vozidle sú ďalší používatelia."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Resetovať vozidlo"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Chcete resetovať?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Chcete vymazať všetky osobné údaje a stiahnuté aplikácie? Túto akciu nebude možné vrátiť späť."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Vymazať všetko"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Prebieha vymazávanie"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Čakajte…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dátum a čas"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Nastaviť dátum, čas, časové pásmo a formáty"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatický dátum a čas"</string>
@@ -514,7 +507,7 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"Údaje používateľa"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Vyrovnávacia pamäť"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Celkove"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vymazať obsah úložiska"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vymazať ukladací priestor"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Vymazať vyrovnávaciu pamäť"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Chcete odstrániť dáta aplikácie?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Všetky údaje tejto aplikácie vrátane súborov, nastavení, účtov, databáz atď. budú navždy odstránené."</string>
@@ -584,7 +577,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nesprávny vzor"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ako kresliť bezpečnostný vzor obrazovky"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Pri ukladaní vzoru sa vyskytla chyba"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Príliš veľa chybných pokusov. Skúste to znova o <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Odstrániť zámku obrazovky?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ktokoľvek bude mať prístup do vášho účtu"</string>

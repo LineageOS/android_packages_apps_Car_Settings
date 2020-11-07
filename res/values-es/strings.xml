@@ -41,12 +41,12 @@
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactivo/SIM descargada"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Añadir más"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datos móviles"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a datos con la red móvil"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a los datos con la red móvil"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"¿Desactivar los datos móviles?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Debes seleccionar una opción"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"¿Usar <xliff:g id="CARRIER">%1$s</xliff:g> para los datos móviles?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Estás utilizando <xliff:g id="CARRIER2_0">%2$s</xliff:g> para los datos móviles. Si cambias a <xliff:g id="CARRIER1">%1$s</xliff:g>, no se utilizará más a <xliff:g id="CARRIER2_1">%2$s</xliff:g> para los datos móviles."</string>
-    <string name="sim_change_data_ok" msgid="2348804996223271081">"Usar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Itinerancia"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Conectarse a servicios de datos en itinerancia"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"¿Quieres permitir la itinerancia de datos?"</string>
@@ -81,7 +81,7 @@
     <string name="data_limit" msgid="227338836292511425">"Límite de datos"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitando uso de datos"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"La unidad principal de tu vehículo desactivará los datos móviles cuando se alcance el límite establecido.\n\nSe tiene en cuenta el uso de datos medido por la unidad principal, aunque tu operador podría registrarlo de forma diferente. Por tanto, debes ser prudente al establecer un límite."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Establece la advertencia de uso de datos"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Establecer advertencia de uso de datos"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limitar uso de datos"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Definir"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quiere activar la conexión Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quiere desactivar la conexión Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispositivo para usar con <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"No se ha encontrado ningún dispositivo. Comprueba que estén encendidos y listos para conectarse."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Reintentar"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Se ha producido un error. La aplicación ha cancelado la solicitud para elegir un dispositivo."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Se ha conectado correctamente"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostrar todo"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Buscando"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos vinculados"</string>
@@ -312,7 +305,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Usar captura de pantalla"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permitir que la aplicación de asistencia acceda a una imagen de la pantalla"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Entrada de voz"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Autocompletar"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Servicio Autocompletar"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ninguna"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Seleccionada"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"El asistente podrá consultar información sobre las aplicaciones en uso del sistema, como la que aparezca en pantalla o a la que se pueda acceder a través de las aplicaciones."</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Se restablecerán todas las preferencias de:\n\n"<li>"Aplicaciones desactivadas"</li>\n<li>"Notificaciones de aplicaciones desactivadas"</li>\n<li>"Aplicaciones para acciones predeterminadas"</li>\n<li>"Restricciones de datos en segundo plano de aplicaciones"</li>\n<li>"Restricciones de permisos"</li>\n\n"No se perderán los datos de las aplicaciones."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer aplicaciones"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se han restablecido las preferencias de las aplicaciones"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Borrar todos los datos"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Se borrarán todos los datos de la unidad principal de tu vehículo, como:\n\n"<li>"Tu cuenta de Google"</li>\n<li>"Los ajustes y datos de aplicaciones y del sistema"</li>\n<li>"Las aplicaciones descargadas"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Has iniciado sesión en estas cuentas:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Hay otros usuarios en este vehículo."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Restablecer vehículo"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"¿Restablecer?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"¿Quieres borrar toda tu información personal y todas las aplicaciones descargadas? Esta acción no se puede deshacer."</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Borrar todo"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Borrando"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Espera..."</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Borrar todos los datos (restablecer)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Se borrarán todos los datos de la unidad principal de tu vehículo, como:\n\n"<li>"Tu cuenta de Google"</li>\n<li>"Los ajustes y datos de aplicaciones y del sistema"</li>\n<li>"Las aplicaciones descargadas"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Has iniciado sesión en estas cuentas:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Hay otros usuarios presentes en este vehículo."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Restablecer vehículo"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"¿Restablecer?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"¿Quieres borrar toda tu información personal y todas las aplicaciones descargadas? Esta acción no se puede deshacer."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Borrar todo"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Borrando"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Espera..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Fecha y hora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Establecer fecha, hora, zona horaria y formatos"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Fecha y hora automáticas"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Patrón incorrecto"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cómo crear un patrón de desbloqueo"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"No se ha podido guardar el patrón"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Demasiados intentos fallidos. Vuelve a intentarlo dentro de <xliff:g id="NUMBER">%d</xliff:g> segundos."</string>
     <string name="okay" msgid="4589873324439764349">"Aceptar"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"¿Quitar bloqueo de pantalla?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Cualquier usuario podrá acceder a tu cuenta"</string>
@@ -634,8 +626,8 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No se permite utilizar una secuencia ascendente, descendente ni repetida de dígitos."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opciones de bloqueo de pantalla"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : hace <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>
-    <string name="credentials_reset" msgid="873900550885788639">"Borrar credenciales"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"Quita todos los certificados"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Eliminar certificados"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Quitar todos los certificados"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"¿Seguro que quieres quitar todos los contenidos?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Almacenamiento de credenciales borrado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"No se ha podido borrar el almacenamiento de credenciales."</string>

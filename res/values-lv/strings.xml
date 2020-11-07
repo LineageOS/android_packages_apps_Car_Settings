@@ -159,13 +159,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Lietotnē <xliff:g id="REQUESTER">%s</xliff:g> tiek mēģināts ieslēgt Wi-Fi savienojumu"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Lietotnē <xliff:g id="REQUESTER">%s</xliff:g> tiek mēģināts izslēgt Wi-Fi savienojumu"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Kļūda"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Ierīce izmantošanai ar lietotni <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nav atrasta neviena ierīce. Ierīcēm ir jābūt ieslēgtām un pieejamām savienojuma izveidei."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Mēģināt vēlreiz"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Radās kļūda. Lietojumprogramma atsauca ierīces atlases pieprasījumu."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Savienojums izveidots"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Rādīt visu"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Notiek meklēšana"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Nenosaukta ierīce"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Pārī savienotās ierīces"</string>
@@ -423,16 +416,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Šādi tiks atiestatītas visas preferences, kas saistītas ar:\n\n"<li>"atspējotām lietotnēm;"</li>\n<li>"atspējotu lietotņu paziņojumiem;"</li>\n<li>"darbībām paredzētām noklusējuma lietojumprogrammām;"</li>\n<li>"lietotņu fona datu ierobežojumiem;"</li>\n<li>"visiem atļauju ierobežojumiem."</li>\n\n"Jūs nezaudēsiet lietotņu datus."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Atiestatīt lietotnes"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Lietotņu preferences ir atiestatītas"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Dzēst visu (atiestatīt rūpnīcas datus)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Tādējādi tiks izdzēsti visi transportlīdzekļa sistēmas panelī esošie dati, tostarp:\n\n"<li>"jūsu Google konts;"</li>\n<li>"sistēmas un lietotņu dati un iestatījumi;"</li>\n<li>"lejupielādētās lietotnes."</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Jūs pašlaik esat pierakstījies tālāk norādītajos kontos."</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Šo transportlīdzekli izmanto vēl citi lietotāji."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Atiestatīt transportlīdzekli"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Vai atiestatīt?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Vai dzēst visu jūsu personas informāciju un lejupielādētās lietotnes? Šo darbību nevarēs atsaukt."</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Dzēst visu"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Notiek dzēšana"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Lūdzu, uzgaidiet…"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Notīrīt visus datus (atiestatīt ierīci)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Tādējādi tiks izdzēsti visi transportlīdzekļa sistēmas panelī esošie dati, tostarp:\n\n"<li>"jūsu Google konts;"</li>\n<li>"sistēmas un lietotņu dati un iestatījumi;"</li>\n<li>"lejupielādētās lietotnes."</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Jūs pašlaik esat pierakstījies šādos kontos:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Šo transportlīdzekli izmanto vēl citi lietotāji."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Atiestatīt transportlīdzekli"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vai atiestatīt?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vai dzēst visu jūsu personisko informāciju un lejupielādētās lietotnes? Šo darbību nevarēs atsaukt."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Dzēst visu"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Notiek dzēšana"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Lūdzu, uzgaidiet…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datums un laiks"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Iestatīt datumu, laiku, laika joslu un formātus"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automātisks datums un laiks"</string>
@@ -579,7 +572,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nepareiza kombinācija"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kā zīmēt atbloķēšanas kombināciju"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Saglabājot kombināciju, radās kļūda."</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Pārāk daudz neveiksmīgu mēģinājumu. Mēģiniet vēlreiz pēc <xliff:g id="NUMBER">%d</xliff:g> sekundēm."</string>
     <string name="okay" msgid="4589873324439764349">"Labi"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Vai noņemt ekrāna bloķēšanu?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Tādējādi ikviens varēs piekļūt jūsu kontam."</string>

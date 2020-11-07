@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"வைஃபையை ஆன் செய்ய <xliff:g id="REQUESTER">%s</xliff:g> ஆப்ஸ் விரும்புகிறது"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"வைஃபையை ஆஃப் செய்ய <xliff:g id="REQUESTER">%s</xliff:g> ஆப்ஸ் விரும்புகிறது"</string>
     <string name="wifi_error" msgid="3105105447117289410">"பிழை"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> உடன் பயன்படுத்தக்கூடிய சாதனம்"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"சாதனங்கள் எதுவும் இல்லை. சாதனங்கள் ஆன் செய்யப்பட்டு இணைப்பதற்குத் தயாராக உள்ளனவா என்பதை உறுதிப்படுத்தவும்."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"மீண்டும் முயல்க"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ஏதோ அறிவிப்பு வந்துள்ளது. ஒரு சாதனத்தைத் தேர்வுசெய்வதற்கான கோரிக்கையை இந்த ஆப்ஸ் ரத்துசெய்துள்ளது."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"இணைப்பு வெற்றியடைந்தது"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"அனைத்தையும் காட்டு"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"தேடுகிறது"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"புளூடூத்"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"பெயரிடப்படாத சாதனம்"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"இணைக்கப்பட்ட சாதனங்கள்"</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"பின்வரும் விருப்பத்தேர்வுகளை இது மீட்டமைக்கும்:\n\n"<li>"முடக்கப்பட்டுள்ள ஆப்ஸ்"</li>\n<li>"முடக்கப்பட்டுள்ள ஆப்ஸ் அறிவிப்புகள்"</li>\n<li>"செயல்பாடுகளுக்கான இயல்புநிலை ஆப்ஸ்"</li>\n<li>"ஆப்ஸிற்கான பின்புலத் தரவுக் கட்டுப்பாடுகள்"</li>\n<li>"ஏதேனும் அனுமதிக் கட்டுப்பாடுகள்"</li>\n\n"இதன் காரணமாக எந்த ஆப்ஸ் தரவையும் இழக்கமாட்டீர்கள்."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ஆப்ஸை மீட்டமை"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ஆப்ஸ் விருப்பத்தேர்வுகள் மீட்டமைக்கப்பட்டன"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"அனைத்தையும் அழி (ஆரம்பநிலைக்கு மீட்டமை)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"இது உங்கள் வாகனத்தின் முதன்மை யூனிட்டிலிருந்து அனைத்துத் தரவையும் அழித்துவிடும், இவற்றில்:\n\n"<li>"உங்களின் Google கணக்கு"</li>\n<li>"சிஸ்டம் &amp; ஆப்ஸ் தரவு மற்றும் அமைப்புகள்"</li>\n<li>"பதிவிறக்கப்பட்ட ஆப்ஸ்"</li>" ஆகியவை உள்ளடங்கும்"</string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"பின்வரும் கணக்குகளில் உள்நுழைந்துள்ளீர்கள்:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"இந்த வாகனத்தில் பிற பயனர்கள் உள்ளனர்."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"வாகனத்தின் சாதனத்தை மீட்டமை"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"மீட்டமைக்கவா?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"உங்களின் தனிப்பட்ட தகவல்களையும் பதிவிறக்கிய ஆப்ஸ் அனைத்தையும் அழிக்கவா? இதைச் செயல்தவிர்க்க இயலாது!"</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"அனைத்தையும் அழி"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"அழிக்கிறது"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"காத்திருக்கவும்..."</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"எல்லாத் தரவையும் அழி (ஆரம்பநிலை ரீசெட்)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"இது உங்கள் கார் சாதனத்தின் முதன்மை யூனிட்டிலிருந்து அனைத்துத் தரவையும் அழித்துவிடும். இவற்றில்\n\n"<li>"உங்களின் Google கணக்கு"</li>\n<li>"சிஸ்டம் &amp; ஆப்ஸ் தரவுகள் மற்றும் அமைப்புகள்"</li>\n<li>"பதிவிறக்கப்பட்ட ஆப்ஸ்"</li>" ஆகியவை உள்ளடங்கும்"</string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"தற்போது பின்வரும் கணக்குகளில் உள்நுழைந்துள்ளீர்கள்:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"இந்தக் காரின் சாதனத்தைப் பிற பயனர்கள் பயன்படுத்துகின்றனர்."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"காரின் சாதனத்தை மீட்டமை"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"மீட்டமைக்கவா?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"அனைத்துத் தனிப்பட்ட தகவலையும், பதிவிறக்கிய ஆப்ஸையும் அழிக்கவா? இதைச் செயல்தவிர்க்க இயலாது!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"அனைத்தையும் அழி"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"அழிக்கிறது"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"காத்திருக்கவும்..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"தேதி &amp; நேரம்"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"தேதி, நேரம், நேரமண்டலம் &amp; வடிவங்களை அமை"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"தானியங்கு தேதி &amp; நேரம்"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"தவறான பேட்டர்ன்"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"திறப்பதற்கான பேட்டர்னை வரைவது எப்படி?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"பேட்டர்னைச் சேமிப்பதில் பிழை"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"பலமுறை தவறாக முயன்றுவிட்டீர்கள். <xliff:g id="NUMBER">%d</xliff:g> வினாடிகளில் மீண்டும் முயலவும்."</string>
     <string name="okay" msgid="4589873324439764349">"சரி"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"திரைப் பூட்டை அகற்றவா?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"திரைப் பூட்டை அகற்றினால், அனைவருக்கும் அணுகல் கிடைக்கும்"</string>
@@ -656,5 +648,6 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"நிராகரி"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"வாகனம் ஓட்டும்போது இந்த அம்சத்தைப் பயன்படுத்த இயலாது"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"வாகனம் ஓட்டும்போது பயனரைச் சேர்க்க முடியாது"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
+    <!-- no translation found for default_search_query (3137420627428857068) -->
+    <skip />
 </resources>

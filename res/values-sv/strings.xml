@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> vill aktivera Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> vill inaktivera Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fel"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Använd enheten med <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Inga enheter hittades. Kontrollera att enheterna är på och går att ansluta till."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Försök igen"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Något inträffade. Appen har avbrutit förfrågan om att välja enhet."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Anslutningen har upprättats"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Visa alla"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Söker"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Namnlös enhet"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Kopplade enheter"</string>
@@ -308,7 +301,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistent och röstinmatning"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistentapp"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Använda text från skärmen"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Tillåt att assistentappen får åtkomst till innehåll på skärmen som text"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Tillåt att assistentappen får åtkomst till innehåll på skärmen, till exempel text"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Använda skärmdump"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Tillåt att assistentappen får åtkomst till en bild på skärmen"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Röstinmatning"</string>
@@ -333,7 +326,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Fråga varje gång"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Öppna inte i den här appen"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Länkar som stöds"</string>
-    <string name="special_access" msgid="5730278220917123811">"Särskild appåtkomst"</string>
+    <string name="special_access" msgid="5730278220917123811">"Särskild åtkomst för app"</string>
     <string name="show_system" msgid="4401355756969485287">"Visa systemet"</string>
     <string name="hide_system" msgid="8845453295584638040">"Dölj systemet"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Ändra systeminställningar"</string>
@@ -393,8 +386,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ett problem inträffade när licenserna lästes in."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Läser in …"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Du är nu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
-      <item quantity="one">Du är nu <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="other">Nu är du <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="one">Nu är du <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Nu är du en utvecklare!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Det behövs inte. Du är redan utvecklare."</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Detta återställer alla inställningar för:\n\n"<li>"Inaktiverade appar"</li>\n<li>"Inaktiverade appmeddelanden"</li>\n<li>"Standardappar för åtgärder"</li>\n<li>"Begränsningar av bakgrundsdata för appar"</li>\n<li>"Alla begränsningar av behörigheter"</li>\n\n"Ingen appdata försvinner."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Återställ appar"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Appinställningarna har återställts"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Rensa all data (återställ standardinst.)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Detta rensar all data från fordonets huvudenhet, bland annat:\n\n"<li>"Ditt Google-konto"</li>\n<li>"System- och appdata och inställningar"</li>\n<li>"Nedladdade appar"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Du är inloggad på följande konton:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Det finns andra användare av fordonet."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Återställ fordonet"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Vill du återställa?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Vill du rensa alla personliga uppgifter och nedladdade appar? Det går inte att ångra den här åtgärden."</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Rensa allt"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Rensar"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Vänta …"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Rensa all data (återställ standardinst.)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Detta rensar all data från fordonets huvudenhet, bland annat:\n\n"<li>"Ditt Google-konto"</li>\n<li>"System- och appdata och inställningar"</li>\n<li>"Nedladdade appar"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Du är inloggad på följande konton:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Det finns andra användare av fordonet."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Återställ fordonet"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vill du återställa?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vill du rensa alla personliga uppgifter och nedladdade appar? Det går inte att ångra den här åtgärden."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Rensa allt"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Rensar"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Vänta ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum och tid"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ange datum, tidszon och format"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatiskt datum och tid"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Fel grafiskt lösenord"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Så här ritar du ett grafiskt lösenord"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Grafiskt lösenord kunde inte sparas"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"För många felaktiga försök. Försök igen om <xliff:g id="NUMBER">%d</xliff:g> sekunder."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Vill du ta bort skärmlåset?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Om du tar bort skärmlåset kan alla få åtkomst till kontot"</string>

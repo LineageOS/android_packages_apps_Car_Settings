@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Թույլտատրե՞լ <xliff:g id="REQUESTER">%s</xliff:g> հավելվածին միացնել Wi-Fi-ը"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Թույլտատրե՞լ <xliff:g id="REQUESTER">%s</xliff:g> հավելվածին անջատել Wi-Fi-ը"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Սխալ"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Սարք <xliff:g id="APPNAME">%1$s</xliff:g> հավելվածի հետ օգտագործելու համար"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Սարքեր չեն գտնվել։ Համոզվեք, որ սարքերը միացված են և հասանելի են կապակցման համար։"</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Նորից փորձել"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Սխալ առաջացավ: Հավելվածը չեղարկել է սարք ընտրելու հայտը:"</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Կապը հաստատվեց"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Ցույց տալ բոլորը"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Որոնում"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Անանուն սարք"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Զուգակցված սարքեր"</string>
@@ -330,7 +323,7 @@
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Մաքրել կանխադրված կարգավորումները"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Բացել աջակցվող հղումները"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Բացել այս հավելվածով"</string>
-    <string name="app_link_open_ask" msgid="7242075065136237456">"Ամեն անգամ հարցնել"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Հարցնել ամեն անգամ"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Չբացել այս հավելվածով"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Աջակցվող հղումներ"</string>
     <string name="special_access" msgid="5730278220917123811">"Հատուկ հասանելիություն հավելվածների համար"</string>
@@ -360,7 +353,7 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Համակարգի թարմացումներ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-ի տարբերակը"</string>
     <string name="security_patch" msgid="4794276590178386903">"Անվտանգության համակարգի վերջին թարմացումը"</string>
-    <string name="hardware_info" msgid="3973165746261507658">"Մոդել և սարքակազմ"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Մոդելը և սարքակազմը"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Մոդելը՝ <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Baseband-ի տարբերակը"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Միջուկի տարբերակը"</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Հետևյալ կարգավորումները կզրոյանան՝\n\n"<li>"անջատված հավելվածները,"</li>\n<li>"հավելվածների անջատված ծանուցումները,"</li>\n<li>"կանխադրված հավելվածները,"</li>\n<li>"ֆոնային ռեժիմում տվյալների փոխանցման սահմանափակումները,"</li>\n<li>"թույլտվությունների բոլոր սահմանափակումները։"</li>\n\n"Հավելվածների տվյալները կպահպանվեն։"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Վերակայել կարգավորումները"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Հավելվածների կարգավորումները վերակայվեցին"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Ջնջել բոլոր տվյալները (գործ. վերակայում)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Մեքենայի գլխավոր վահանակից կջնջվեն բոլոր տվյալները, այդ թվում՝\n\n"<li>"Ձեր Google հաշիվը"</li>\n<li>"Համակարգի և հավելվածների տվյալներն ու կարգավորումները"</li>\n<li>"Ներբեռնված հավելվածները"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Դուք մտել եք հետևյալ հաշիվներ՝"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Այս մեքենայում այլ օգտատերեր կան։"</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Զրոյացնել կարգավորումները"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Զրոյացնե՞լ կարգավորումները"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Ջնջե՞լ բոլոր անձնական տեղեկությունները և ներբեռնված հավելվածները։ Դուք չեք կարողանա հետարկել այս գործողությունը։"</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Ջնջել ամեն ինչ"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Ջնջում"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Սպասեք…"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Ջնջել բոլոր տվյալները (գործ. վերակայում)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Մեքենայի գլխավոր վահանակից կջնջվեն բոլոր տվյալները, այդ թվում՝\n\n"<li>"Ձեր Google հաշիվը"</li>\n<li>"Համակարգի և հավելվածների տվյալներն ու կարգավորումները"</li>\n<li>"Ներբեռնված հավելվածները"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Դուք մտել եք հետևյալ հաշիվներ՝"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Այս մեքենայում այլ օգտատերեր կան:"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Զրոյացնել կարգավորումները"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Զրոյացնե՞լ"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Ջնջե՞լ բոլոր անձնական տեղեկությունները և ներբեռնված հավելվածները: Դուք այլևս չեք կարողանա հետարկել այս գործողությունը:"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Ջնջել ամեն ինչ"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Ջնջում"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Խնդրում ենք սպասել..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Ամսաթիվ և ժամ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Սահմանել ամսաթիվը, ժամը, ժամային գոտին և ձևաչափերը"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Ցանցի ամսաթիվն ու ժամը"</string>
@@ -443,8 +436,8 @@
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Ընտրել ժամային գոտի"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Ամսաթիվ"</string>
     <string name="date_time_set_date" msgid="2537494485643283230">"Սահմանել ամսաթիվը"</string>
-    <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"Դասավորել ըստ այբուբենի"</string>
-    <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Դասավորել ըստ ժամային գոտու"</string>
+    <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"Տեսակավորել ըստ այբուբենի"</string>
+    <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Տեսակավորել ըստ ժամային գոտու"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Ամսաթիվ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Ժամանակ"</string>
     <string name="user_admin" msgid="1535484812908584809">"Ադմինիստրատոր"</string>
@@ -568,13 +561,12 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Ձեր նոր ապակողպող նախշը"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Ապակողպող նախշ գծեք"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Ավարտելուց հետո մատը բաց թողեք"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշը պահվեց"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշն ընդունված է"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Հաստատելու համար նորից նկարեք նախշը"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Միացրեք առնվազն 4 կետ:"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Նախշը սխալ է"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ինչպես ապակողպող նախշ գծել"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Չհաջողվեց պահել նախշը"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Չափից շատ սխալ փորձ է կատարվել։ Նորից փորձեք <xliff:g id="NUMBER">%d</xliff:g> վայրկյանից։"</string>
     <string name="okay" msgid="4589873324439764349">"Հաստատել"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Անջատե՞լ էկրանի կողպումը"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ցանկացած մարդ կկարողանա մտնել ձեր հաշիվ"</string>

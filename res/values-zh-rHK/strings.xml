@@ -131,7 +131,7 @@
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"由於位置資訊功能已關閉，因此無法使用。請開啟"<annotation id="link">"位置資訊"</annotation>"。"</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"要開啟 Wi-Fi 掃瞄功能嗎？"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"開啟"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi 掃瞄功能已開啟"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"已開啟 Wi‑Fi 掃瞄功能"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"自動切換至流動數據網絡"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"當 Wi‑Fi 無法連線至互聯網時，切換至流動數據網絡 (可能需要支付數據用量費用)。"</string>
     <string name="learn_more" msgid="8214605928933358604">"瞭解詳情"</string>
@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求關閉 Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"錯誤"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"可配合<xliff:g id="APPNAME">%1$s</xliff:g>使用的裝置"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"找不到任何裝置。請確保裝置已開啟，並可連接網絡。"</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"請再試一次"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"發生錯誤。應用程式已取消選擇裝置的要求。"</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"連線成功"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"顯示全部"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"正在搜尋..."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"藍牙"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"未命名的裝置"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"已配對的裝置"</string>
@@ -393,8 +386,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"載入授權時發生問題。"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"正在載入…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">尚餘 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟，您就可以成為開發人員。</item>
-      <item quantity="one">尚餘 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟，您就可以成為開發人員。</item>
+      <item quantity="other">您只需完成剩餘的 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟，即可成為開發人員。</item>
+      <item quantity="one">您只需完成剩餘的 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟，即可成為開發人員。</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"您現已成為開發人員！"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"不需要了，您已經是開發人員。"</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"此操作將會重設下列所有偏好設定：\n\n"<li>"已停用的應用程式"</li>\n<li>"已停用的應用程式通知"</li>\n<li>"執行操作的預設應用程式"</li>\n<li>"應用程式的背景數據限制"</li>\n<li>"任何權限限制"</li>\n\n"您將不會失去任何應用程式資料。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重設應用程式"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重設應用程式偏好設定"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"清除所有資料 (回復原廠設定)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"此操作將清除汽車音響主機的所有資料，包括：\n\n"<li>"您的 Google 帳戶"</li>\n<li>"系統和應用程式資料及設定"</li>\n<li>"已下載的應用程式"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"您目前已登入以下帳戶："</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"此汽車上還有其他使用者。"</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"重設汽車"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"要重設嗎？"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"要清除所有個人資料和已下載的應用程式嗎？這項操作無法復原！"</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"全部清除"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"正在清除"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"請稍候…"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"清除所有資料 (回復原廠設定)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"此操作將清除汽車音響主機的所有資料，包括：\n\n"<li>"您的 Google 帳戶"</li>\n<li>"系統和應用程式資料及設定"</li>\n<li>"已下載的應用程式"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"您目前已登入以下帳戶："</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"此汽車上還有其他使用者。"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"重設汽車"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"要重設嗎？"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"您要清除所有個人資訊和已下載的應用程式嗎？您無法復原這項操作！"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"全部清除"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"正在清除"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"請稍候…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和時間"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"設定日期、時間、時區和格式"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"自動設定日期和時間"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"圖案錯誤"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"如何畫出解鎖圖案"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"儲存鎖定圖案時發生錯誤"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"錯誤次數太多，請於 <xliff:g id="NUMBER">%d</xliff:g> 秒後再試。"</string>
     <string name="okay" msgid="4589873324439764349">"確定"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"要移除螢幕鎖定嗎？"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"這樣，任何人都能存取您的帳戶"</string>

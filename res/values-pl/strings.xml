@@ -130,7 +130,7 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Adresy IPv6"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Brama"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Ustawienia Wi‑Fi"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Włączaj Wi-Fi automatycznie"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Włącz Wi-Fi automatycznie"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi włączy się w pobliżu zapisanych sieci wysokiej jakości, np. Twojej sieci domowej"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Niedostępne, bo lokalizacja jest wyłączona. Włącz "<annotation id="link">"ją"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Włączyć skanowanie Wi‑Fi?"</string>
@@ -161,13 +161,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chce włączyć Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> chce wyłączyć Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Błąd"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Urządzenie, na którym chcesz korzystać z aplikacji <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nie znaleziono urządzeń. Upewnij się, że urządzenia są włączone i mogą się połączyć."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Spróbuj ponownie"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Coś się stało. Aplikacja anulowała prośbę o wybór urządzenia."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Mamy połączenie"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Pokaż wszystko"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Wyszukiwanie"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Urządzenie bez nazwy"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Sparowane urządzenia"</string>
@@ -427,16 +420,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Zresetuje to wszystkie ustawienia:\n\n"<li>"wyłączonych aplikacji,"</li>\n<li>"wyłączonych powiadomień z aplikacji,"</li>\n<li>"domyślnych aplikacji dla wybranych czynności,"</li>\n<li>"ograniczeń korzystania przez aplikacje z danych w tle,"</li>\n<li>"wszystkich ograniczeń dotyczących uprawnień."</li>\n\n"Nie stracisz żadnych danych aplikacji."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Resetuj aplikacje"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Ustawienia aplikacji zostały zresetowane"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Wykasuj wszystkie dane"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Zostaną usunięte wszystkie dane z radioodtwarzacza pojazdu, między innymi:\n\n"<li>"Twoje konto Google,"</li>\n<li>"dane i ustawienia aplikacji i systemu,"</li>\n<li>"pobrane aplikacje."</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"W tej chwili używasz kont:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Z tego pojazdu korzystają też inni użytkownicy."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Zresetuj pojazd"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Zresetować?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Wymazać wszystkie Twoje dane osobowe i pobrane aplikacje? Tego działania nie można cofnąć."</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Wymaż wszystko"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Kasuję"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Czekaj…"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Wykasuj wszystkie dane"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Zostaną usunięte wszystkie dane z radioodtwarzacza pojazdu, między innymi:\n\n"<li>"Twoje konto Google,"</li>\n<li>"dane i ustawienia aplikacji i systemu,"</li>\n<li>"pobrane aplikacje."</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"W tej chwili używasz kont:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"W tym pojeździe są też zapisani inni użytkownicy."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Zresetuj pojazd"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Zresetować?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Wymazać wszystkie Twoje dane osobowe i pobrane aplikacje? Tego działania nie można cofnąć."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Wymaż wszystko"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Wymazuję"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Zaczekaj…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data i godzina"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ustaw datę, godzinę, strefę czasową i formaty."</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i godzina"</string>
@@ -524,7 +517,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"Konta"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nie dodano kont"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika: <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatycznie synchronizuj dane"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Pozwól aplikacjom automatycznie odświeżać dane"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Włączyć autosynchronizację?"</string>
@@ -584,7 +577,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nieprawidłowy wzór"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Jak narysować wzór odblokowania"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Błąd podczas zapisywania wzoru"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Zbyt wiele nieudanych prób. Spróbuj ponownie za <xliff:g id="NUMBER">%d</xliff:g> s."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Usunąć blokadę ekranu?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Każdy będzie mógł mieć dostęp do Twojego konta"</string>
@@ -594,7 +586,7 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Podaj ponownie kod PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Kod PIN musi mieć co najmniej 4 cyfry"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Kod PIN musi mieć co najmniej 4 cyfry."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kody PIN nie są takie same"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kody PIN nie są identyczne"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Błąd podczas zapisywania kodu PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Nieprawidłowy kod PIN"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Nieprawidłowe hasło"</string>

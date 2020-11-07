@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"I-<xliff:g id="REQUESTER">%s</xliff:g> ifuna ukuvula i-Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"I-<xliff:g id="REQUESTER">%s</xliff:g> ifuna ukuvala i-Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Iphutha"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Idivayisi ezosetshenziswa ne-<xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Awekho amadivayisi atholiwe. Yenza isiqinisekiso sokuthi amadivayisi avuliwe futhi ayatholakala ukuze axhumeke."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Zama futhi"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Okuthile kuvelile. Uhlelo lokusebenza likhansele isicelo sokukhetha idivayisi."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Ukuxhumeka kuphumelele"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Bonisa konke"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Iyasesha..."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"I-Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Idivayisi engenalo igama"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Amadivaysi abhanqene"</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Lokhu kuzosetha kabusha konke okuncamelayo kwe-:\n\n"<li>"Izinhlelo zokusebenza ezikhutshaziwe"</li>\n<li>"Izaziso zezinhlelo zokusebenza ezikhutshaziwe"</li>\n<li>"Izinhlelo zokusebenza ezizenzakalelayo zezenzo"</li>\n<li>"Imikhawulo yedatha yangemuva yezinhlelo zokusebenza"</li>\n<li>"Noma yimiphi imikhawulo yemvume"</li>\n\n"Ngeke uze ulahlekelwe noma iyiphi idatha yohlelo lokusebenza."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Setha kabusha izinhlelo zokusebenza"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Izintandokazi zohlelo lokusebenza zisethwe kabusha"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Sula yonke idatha (ukusethwa kabusha njengasekuqaleni)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Lokhu kuzosusa yonke idatha kusukela kuyunithi eyinhloko yemoto yakho, efaka:\n\n"<li>"I-akhawunti yakho ye-Google"</li>\n<li>"Isistimu nedatha yohlelo lokusebenza nezilungiselelo"</li>\n<li>"Izinhlelo zokusebenza ezilandiwe"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Manje ungene ngemvume kuma-akhawunti alandelayo:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Kukhona abanye abasebenzisi abakhona kule moto."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Setha kabusha imoto"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Setha kabusha?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Sula lonke ulwazi lakho lomuntu siqu kanye nezinhlelo zokusebenza ezilandiwe? Awukwazi ukuhlehlisa lesi senzo!"</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Sula yonke into"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Iyasula"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Sicela ulinde..."</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Sula yonke idatha (ukusethwa kabusha kwasekuqaleni)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Lokhu kuzosusa yonke idatha kusukela kuyunithi eyinhloko yemoto yakho, efaka:\n\n"<li>"I-akhawunti yakho ye-Google"</li>\n<li>"Isistimu nedatha yohlelo lokusebenza nezilungiselelo"</li>\n<li>"Izinhlelo zokusebenza ezilandiwe"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Manje ungene ngemvume kuma-akhawunti alandelayo:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Kukhona abanye abasebenzisi abakhona kule moto."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Setha kabusha imoto"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Setha kabusha?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Sula lonke ulwazi lakho lomuntu siqu kanye nezinhlelo zokusebenza ezilandiwe? Awukwazi ukuhlehlisa lesi senzo!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Sula yonke into"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Iyasula"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Sicela ulinde..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Idethi nesikhathi"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Setha idethi, isikhathi, umkhwawulo wesikhathi namafomethi"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Idethi nesikhathi ezizenzakalelayo"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Iphethini engalungile"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Udweba kanjani phathini yokuvula"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Iphutha ukulondoloza iphethini"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Imizamo eminingi engalungile. Zama futhi kumasekhondi angu-<xliff:g id="NUMBER">%d</xliff:g>."</string>
     <string name="okay" msgid="4589873324439764349">"KULUNGILE"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Susa isikrini sokukhiya?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Lokhu kuzovumela wonke umuntu ukufinyelela i-akhawunti yakho"</string>

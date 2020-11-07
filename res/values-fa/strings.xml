@@ -151,19 +151,12 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"۲٫۴ گیگاهرتز"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"۵٫۰ گیگاهرتز"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"حداقل یک باند برای نقطه اتصال Wi‑Fi انتخاب کنید:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطه اتصال و اشتراک‌گذاری اینترنت"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطه اتصال و اتصال به اینترنت با تلفن همراه"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"خاموش شدن خودکار نقطه اتصال"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"اگر دستگاهی متصل نباشد، نقطه اتصال Wi‑Fi خاموش خواهد شد"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> می‌خواهد Wi-Fi را روشن کند"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> می‌خواهد Wi-Fi را خاموش کند"</string>
     <string name="wifi_error" msgid="3105105447117289410">"خطا"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"دستگاه مورداستفاده با <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"دستگاهی پیدا نشد. مطمئن شوید دستگاه‌ها روشن و برای اتصال دردسترس هستند."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"امتحان مجدد"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"مشکلی رخ داد. برنامه درخواست انتخاب دستگاه را لغو کرد."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"اتصال برقرار شد"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"نمایش همه"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"در حال جستجو"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"دستگاه بی‌نام"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"دستگاه‌های مرتبط‌شده"</string>
@@ -278,7 +271,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"برنامه‌ها و اعلان‌ها"</string>
     <string name="all_applications" msgid="7798210477486822168">"نمایش همه برنامه‌ها"</string>
     <string name="default_applications" msgid="1558183275638697087">"برنامه‌های پیش‌فرض"</string>
-    <string name="app_permissions" msgid="32799922508313948">"اجازه‌های برنامه"</string>
+    <string name="app_permissions" msgid="32799922508313948">"مجوزهای برنامه"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"برنامه‌هایی که از <xliff:g id="APPS">%1$s</xliff:g> استفاده می‌کنند"</string>
     <string name="applications_settings" msgid="794261395191035632">"اطلاعات برنامه"</string>
     <string name="force_stop" msgid="2153183697014720520">"توقف اجباری"</string>
@@ -301,15 +294,15 @@
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"مصرف داده برنامه"</string>
     <string name="computing_size" msgid="5791407621793083965">"درحال محاسبه..."</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> اجازه تکمیلی</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> اجازه‌های تکمیلی</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> مجوز دیگر</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> مجوز دیگر</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"توجه: پس از راه‌اندازی مجدد، تا قفل وسیله‌تان را باز نکنید، این برنامه نمی‌تواند شروع به کار کند."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"همیار و ورودی گفتاری"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"برنامه همیار"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"استفاده از نوشتار صفحه"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"اجازه به برنامه همیار برای دسترسی به محتوای صفحه به‌عنوان نوشتار"</string>
-    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"استفاده از نماگرفت"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"استفاده از عکس صفحه‌نمایش"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"اجازه به برنامه همیار برای دسترسی به تصویری از صفحه"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"ورودی صدا"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"سرویس تکمیل خودکار"</string>
@@ -325,7 +318,7 @@
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"باز کردن <xliff:g id="DOMAIN">%s</xliff:g> و نشانی‌های وب دیگر"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"باز کردن به‌طور پیش‌فرض"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"سایر پیش‌فرض‌ها"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"پیش‌فرضی تنظیم نشده است."</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"پیش فرضی تنظیم نشده است."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"شما انتخاب کرده‌اید که این برنامه را به‌طور پیش‌فرض برای برخی از عملکردها راه‌اندازی کنید."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"پاک کردن پیش‌فرض ها"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"باز کردن پیوندهای پشتیبانی‌شده"</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"با این کار همه اولویت‌های مربوط به موارد زیر بازنشانی می‌شود:\n\n"<li>"برنامه‌های غیرفعال‌شده"</li>\n<li>"اعلان‌های برنامه غیرفعال‌شده"</li>\n<li>"برنامه‌های پیش‌فرض برای عملکردها"</li>\n<li>"محدودیت‌های داده پس‌زمینه برای برنامه‌ها"</li>\n<li>"هرگونه محدودیت مجوز"</li>\n\n"هیچ داده برنامه‌ای را از دست نخواهید داد."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"بازنشانی برنامه‌ها"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تنظیمات برگزیده برنامه بازنشانی شده است"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"پاک‌سازی داده‌ها (بازنشانی کارخانه‌ای)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"با این کار، همه داده‌های سیستم صوتی خودرو پاک می‌شود، ازجمله:\n\n"<li>"حساب Google شما"</li>\n<li>"تنظیمات و داده‌های برنامه و سیستم"</li>\n<li>"برنامه‌های بارگیری‌شده"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"درحال‌حاضر به سیستم حساب های زیر وارد شده‌اید:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"کاربران دیگری هم در این خودرو وجود دارند."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"بازنشانی خودرو"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"بازنشانی شود؟"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"همه اطلاعات شخصی و برنامه‌های بارگیری‌شده پاک شود؟ این کار واگردشدنی نیست!"</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"پاک کردن همه چیز"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"درحال پاک‌سازی"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"لطفاً صبر کنید…"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"پاک کردن همه داده‌ها (بازنشانی کارخانه‌ای)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"با این کار، همه داده‌های سیستم صوتی خودرو، ازجمله موارد زیر پاک می‌شود:\n\n"<li>"حساب Google شما"</li>\n<li>"تنظیمات و داده‌های برنامه و سیستم"</li>\n<li>"برنامه‌های بارگیری‌شده"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"شما درحال‌حاضر به حساب های زیر وارد شده‌اید:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"کاربرانی دیگری هم در این خودرو حضور دارند."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"بازنشانی خودرو"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"بازنشانی شود؟"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"همه اطلاعات شخصی و برنامه‌های بارگیری‌شده پاک شود؟ این کار قابل‌واگرد نیست!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"پاک کردن همه موارد"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"درحال پاک‌سازی"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"لطفاً صبر کنید..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"تاریخ و زمان"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"تنظیم تاریخ، ساعت، منطقه زمانی و قالب‌ها"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"زمان و تاریخ خودکار"</string>
@@ -504,7 +497,7 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"داده‌های کاربر"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"حافظهٔ پنهان"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"جمع"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"پاک کردن فضای ذخیره‌سازی"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"پاک کردن محل ذخیره‌سازی"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"پاک کردن حافظهٔ پنهان"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"داده‌های برنامه حذف شود؟"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"همه داده‌های این برنامه به‌صورت دائمی حذف می‌شود. این شامل تمام فایل‌ها، تنظیمات، حساب‌ها، پایگاه‌های داده و دیگر موارد می‌شود."</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"الگو اشتباه است"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"نحوه ترسیم الگوی بازگشایی قفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"خطای ذخیره الگو"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تلاش‌های نادرست زیادی انجام شده است. <xliff:g id="NUMBER">%d</xliff:g> ثانیه دیگر دوباره امتحان کنید."</string>
     <string name="okay" msgid="4589873324439764349">"تأیید"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"قفل صفحه برداشته شود؟"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"این کار به همه افراد اجازه می‌دهد به حسابتان دسترسی پیدا کنند"</string>

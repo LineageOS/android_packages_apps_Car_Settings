@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Plus"</string>
     <string name="display_settings" msgid="5325515247739279185">"Écran"</string>
     <string name="brightness" msgid="2919605130898772866">"Niveau de luminosité"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosité adaptative"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptation de la luminosité"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimiser le niveau de luminosité en fonction de l\'éclairage ambiant"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Éclairage nocturne activé"</string>
     <string name="keywords_display" msgid="3978416985146943922">"écran, écran tactile"</string>
@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> requiert l\'activation du Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> requiert la désactivation du Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erreur"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Appareil à utiliser avec l\'application <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Aucun appareil trouvé. Assurez-vous que des appareils soient activés et prêts à être connectés."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Réessayer"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Un problème est survenu. L\'application a annulé la demande de sélection d\'un appareil."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Connexion réussie"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Tout afficher"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Recherche en cours"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Appareil sans nom"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Appareils associés"</string>
@@ -419,16 +412,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Toutes les préférences relatives aux éléments suivants seront réinitialisées :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences relatives aux applications ont été réinitialisées"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Effacer données (rétablir config. d\'usine)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Cette action effacera toutes les données de l\'unité principale du véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et paramètres du système et des applications"</li>\n<li>"Les applications téléchargées"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Vous êtes actuellement connecté aux comptes suivants :"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"D\'autres personnes utilisent ce véhicule."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Réinitialiser le véhicule"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Réinitialiser ?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Effacer toutes vos informations personnelles et les applications téléchargées ? Cette action est irréversible."</string>
-    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Tout effacer"</string>
-    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Suppression en cours"</string>
-    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Veuillez patienter…"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Effacer données (rétablir config. d\'usine)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Cette action effacera toutes les données de l\'unité principale du véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et paramètres du système et des applications"</li>\n<li>"Les applications téléchargées"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Vous êtes actuellement connecté aux comptes suivants :"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"D\'autres personnes utilisent ce véhicule."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Réinitialiser le véhicule"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Réinitialiser ?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Effacer toutes vos informations personnelles et les applications téléchargées ? Cette action est irréversible."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Tout effacer"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Suppression en cours"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Veuillez patienter..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Date et heure"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Configurer la date, l\'heure, le fuseau horaire et les formats"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Date et heure automatiques"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Pour dessiner un schéma de déverrouillage"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erreur d\'enregistrement du schéma"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Trop de tentatives incorrectes. Réessayez dans <xliff:g id="NUMBER">%d</xliff:g> secondes."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Annuler le verrouillage écran ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Si vous continuez, n\'importe qui pourra accéder à votre compte"</string>
