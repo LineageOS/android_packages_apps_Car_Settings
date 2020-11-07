@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/bluetooth_settings_title"
     android:key="@string/psk_bluetooth_settings">
+    <com.android.car.settings.common.ColoredSwitchPreference
+        android:key="@string/pk_bluetooth_state_switch"
+        style="@style/ColoredSwitchPreferenceStyle"
+        settings:controller="com.android.car.settings.bluetooth.BluetoothStateSwitchPreferenceController"
+        settings:searchable="false"/>
+    <com.android.car.settings.common.DividerPreference/>
     <PreferenceCategory
         android:key="@string/pk_bluetooth_paired_devices"
         android:title="@string/bluetooth_paired_devices"
