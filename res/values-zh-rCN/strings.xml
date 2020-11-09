@@ -23,7 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自动调节亮度"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"根据环境光线情况优化亮度"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"“夜间模式”已开启"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"“护眼模式”已开启"</string>
     <string name="keywords_display" msgid="3978416985146943922">"屏幕, 触摸屏"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"屏幕变暗, 调暗屏幕, 触摸屏, 电池"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"屏幕变暗, 调暗屏幕, 触摸屏, 电池"</string>
@@ -49,7 +49,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"使用<xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"漫游"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"漫游时连接到移动数据网络服务"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"要允许数据网络漫游吗？"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"允许数据漫游？"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"可能需要支付漫游费用。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"流量消耗"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"主要数据"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>请求开启 WLAN"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>请求关闭 WLAN"</string>
     <string name="wifi_error" msgid="3105105447117289410">"错误"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"要与<xliff:g id="APPNAME">%1$s</xliff:g>搭配使用的设备"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"找不到设备。请确保设备已开启并可连接到网络。"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"重试"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"出了点问题。该应用已取消选择设备的请求。"</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"连接成功"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"全部显示"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"正在搜索"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"蓝牙"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"未命名的设备"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"已配对的设备"</string>
@@ -318,7 +325,7 @@
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"打开 <xliff:g id="DOMAIN">%s</xliff:g> 和其他网址"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"默认打开"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"其他默认设置"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"未设置默认操作。"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"无默认设置。"</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"您已选择默认使用此应用处理某些操作。"</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"清除默认设置"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"打开支持的链接"</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"此操作将会重置以下所有偏好设置：\n\n"<li>"已停用的应用"</li>\n<li>"已停用的应用通知"</li>\n<li>"执行操作的默认应用"</li>\n<li>"应用的后台流量限制"</li>\n<li>"任何权限限制"</li>\n\n"您将不会丢失任何应用数据。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重置应用"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"清空所有数据（恢复出厂设置）"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"这样做将会清空您车机中的所有数据，其中包括：\n\n"<li>"您的 Google 帐号"</li>\n<li>"系统与应用的数据和设置"</li>\n<li>"已下载的应用"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"您目前已登录以下帐号："</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"此车辆目前还有其他用户。"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"重置车辆"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"要重置吗？"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"要清空您的所有个人信息和下载的应用吗？此操作无法撤消！"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"清空所有内容"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"正在清空"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"请稍候…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"清除所有数据（恢复出厂设置）"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"这样做将会清除车载信息娱乐系统中的所有数据，其中包括：\n\n"<li>"您的 Google 帐号"</li>\n<li>"系统与应用的数据和设置"</li>\n<li>"已下载的应用"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"您目前已登录以下帐号："</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"这辆车目前还有其他用户。"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"重置车辆"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"要重置吗？"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"要清除您的所有个人信息和已下载的应用吗？此操作无法撤消！"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"清除所有内容"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"正在清除"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"请稍候…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和时间"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"设置日期、时间、时区和格式"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"自动确定日期和时间"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"图案错误"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"如何绘制解锁图案"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"保存图案时出错"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"错误次数过多。请在 <xliff:g id="NUMBER">%d</xliff:g> 秒后重试。"</string>
     <string name="okay" msgid="4589873324439764349">"确定"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"清除屏幕锁定设置"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"这样一来，任何人都能访问您的帐号"</string>

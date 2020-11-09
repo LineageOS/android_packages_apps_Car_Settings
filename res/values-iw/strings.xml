@@ -84,7 +84,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"הגדרת מגבלת נתונים"</string>
     <string name="data_limit" msgid="227338836292511425">"מגבלת נתונים"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"הגבלת שימוש בחבילת הגלישה"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"כשיחידת הראש ברכב תגיע למגבלה שהגדרת, היא תשבית את חבילת הגלישה.\n\nמכיוון שעשויים להיות הבדלים בין השימוש בחבילת הגלישה שנמדד על ידי יחידת הראש לבין השימוש שנמדד על ידי הספק, מומלץ להגדיר מגבלה סבירה."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"כשהיחידה הראשית ברכב תגיע למגבלה שהגדרת, היא תשבית את חבילת הגלישה.\n\nמכיוון שעשויים להיות הבדלים בין השימוש בחבילת הגלישה שנמדד על ידי היחידה הראשית לבין השימוש שנמדד על ידי הספק, מומלץ להגדיר מגבלה סבירה."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"הגדרת אזהרה לגבי שימוש בחבילת הגלישה"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"מגבלה לשימוש בחבילת הגלישה"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"הגדרה"</string>
@@ -161,6 +161,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> רוצה להפעיל את ה-Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> רוצה לכבות את ה-Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"שגיאה"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"מכשיר לשימוש עם <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"לא נמצאו מכשירים. יש לוודא שהמכשירים פועלים וזמינים לחיבור."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"לניסיון חוזר"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"משהו קרה. האפליקציה ביטלה את הבקשה לבחירת מכשיר."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"החיבור הצליח"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"הצגת הכול"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"מחפש"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"מכשיר ללא שם"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"מכשירים מותאמים"</string>
@@ -314,7 +321,7 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"שירות מילוי אוטומטי"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ללא"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"נבחרה"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"ה-Assistant יוכל לקרוא מידע על אפליקציות שבהן נעשה שימוש במערכת שלך, כולל מידע המופיע במסך או שניתן לגשת אליו באפליקציות."</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant תוכל לקרוא מידע על אפליקציות שבהן נעשה שימוש במערכת שלך, כולל מידע המופיע במסך או שניתן לגשת אליו באפליקציות."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;יש לוודא שהאפליקציה מהימנה&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=המילוי האוטומטי של Google&gt;%1$s&lt;/xliff:g&gt; משתמש בתוכן המסך כדי לקבוע אילו שדות אפשר למלא באופן אוטומטי."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"הוספת שירות"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"פתיחת קישורים"</string>
@@ -420,16 +427,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"הפעולה תאפס את כל ההעדפות עבור:\n\n"<li>"אפליקציות מושבתות"</li>\n<li>"השבתת התראות של אפליקציות"</li>\n<li>"אפליקציות שהן ברירת המחדל לביצוע פעולות"</li>\n<li>"הגבלות של נתוני רקע לאפליקציות"</li>\n<li>"הגבלת הרשאות"</li>\n\n"נתוני האפליקציות לא יאבדו."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"איפוס אפליקציות"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"העדפות האפליקציה אופסו"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"מחיקת כל הנתונים (איפוס להגדרות היצרן)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"פעולה זו תמחק את כל הנתונים מיחידת הראש של הרכב שלך, כולל:\n\n"<li>"חשבון Google שלך"</li>\n<li>"נתוני מערכת ואפליקציות והגדרות"</li>\n<li>"אפליקציות שהורדו"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"יש לך חיבור פעיל כרגע אל החשבונות הבאים:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"קיימים משתמשים נוספים ברכב זה."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"איפוס הרכב"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"לאפס?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"האם למחוק את כל המידע האישי שלך והאפליקציות שהורדת? לא ניתן לבטל את הפעולה!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"מחיקת הכול"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"המחיקה מתבצעת"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"יש להמתין…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"מחיקת כל הנתונים (איפוס להגדרות מקוריות)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"פעולה זו תמחק את כל הנתונים מהיחידה הראשית של הרכב שלך, כולל:\n\n"<li>"חשבון Google שלך"</li>\n<li>"נתוני מערכת ואפליקציות והגדרות"</li>\n<li>"אפליקציות שהורדו"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"יש לך חיבור פעיל כרגע אל החשבונות הבאים:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"קיימים משתמשים נוספים ברכב זה."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"איפוס הרכב"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"האם לאפס?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"האם למחוק את כל המידע האישי שלך והאפליקציות שהורדת? לא ניתן לבטל את הפעולה!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"מחיקת הכול"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"מתבצעת מחיקה"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"יש להמתין…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"תאריך ושעה"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"הגדרת תאריך, שעה, אזור זמן ופורמטים"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"תאריך ושעה אוטומטיים"</string>
@@ -577,6 +584,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"קו ביטול נעילה שגוי"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"כיצד לשרטט קו ביטול נעילה"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"שגיאה בשמירה של קו ביטול הנעילה"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"יותר מדי ניסיונות שגויים. ניתן לנסות שוב בעוד <xliff:g id="NUMBER">%d</xliff:g> שניות."</string>
     <string name="okay" msgid="4589873324439764349">"אישור"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"להסיר את נעילת המסך?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"פעולה זו תאפשר לכל אחד לגשת לחשבון שלך"</string>

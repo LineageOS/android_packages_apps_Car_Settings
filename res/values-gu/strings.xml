@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>, વાઇ-ફાઇ ચાલુ કરવા માગે છે"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>, વાઇ-ફાઇ બંધ કરવા માગે છે"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ભૂલ"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> સાથે ઉપયોગમાં લેવાનું ડિવાઇસ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"કોઈ ડિવાઇસ મળ્યું નથી. ખાતરી કરો કે ડિવાઇસ ચાલુ છે અને કનેક્ટ કરવા માટે ઉપલબ્ધ છે."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"ફરી પ્રયાસ કરો"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"કંઈક નડ્યું. ઍપ્લિકેશને ડિવાઇસ પસંદ કરવાની વિનંતી રદ કરી છે."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"કનેક્શન સફળ થયું"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"બધા બતાવો"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"શોધી રહ્યું છે"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"બ્લૂટૂથ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"અનામાંકિત ડિવાઇસ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"જોડાણ કરેલા ડિવાઇસ"</string>
@@ -220,7 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ફોન રિંગટોન"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ડિફૉલ્ટ નોટિફિકેશન સાઉન્ડ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ડિફૉલ્ટ અલાર્મ સાઉન્ડ"</string>
-    <string name="units_settings" msgid="402325305096925886">"એકમ"</string>
+    <string name="units_settings" msgid="402325305096925886">"યુનિટ"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"ઝડપ"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"અંતર"</string>
     <string name="units_fuel_consumption_title" msgid="6415108114453652570">"ઇંધણના વપરાશની વિગતો"</string>
@@ -305,11 +312,11 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"સ્ક્રીનશૉટનો ઉપયોગ કરો"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"સહાયક ઍપને સ્ક્રીનની છબીને ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"વૉઇસ ઇનપુટ"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"આપમેળે ભરાવાની સેવા"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"ઑટોમૅટિક રીતે ભરવાની સુવિધા"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"એકપણ નહીં"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"પસંદ કરેલી"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"તમારી સ્ક્રીન પર જોઈ શકાતી અથવા ઍપમાંથી ઍક્સેસ કરી શકાય તેવી માહિતી સહિતની તમારી સિસ્ટમમાં ઉપયોગમાં લેવાતી ઍપ વિશેની માહિતી આસિસ્ટંટ વાંચી શકશે."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ખાતરી કરો કે તમે આ ઍપનો વિશ્વાસ કરો છો&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google આપમેળે ભરાવાની સુવિધા&gt;%1$s&lt;/xliff:g&gt; તમારી સ્ક્રીન પર શું છે તેનો ઉપયોગ એ નક્કી કરવા કરે છે કે આપમેળે શું ભરાઈ શકે."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ખાતરી કરો કે તમે આ ઍપનો વિશ્વાસ કરો છો&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ઑટોમૅટિક રીતે ભરવાની સુવિધા&gt;%1$s&lt;/xliff:g&gt; તમારી સ્ક્રીન પર શું છે તેનો ઉપયોગ એ નક્કી કરવા કરે છે કે ઑટોમૅટિક રીતે શું દાખલ થશે."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"સેવા ઉમેરો"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"લિંક ખોલવી"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"ઇન્સ્ટૉલ કરેલી ઍપ"</string>
@@ -393,7 +400,7 @@
     <string name="show_dev_already" msgid="1678087328973865736">"કોઈ જરૂર નથી, તમે પહેલાંથી જ ડેવલપર છો."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ડેવલપરના વિકલ્પો"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"રીસેટ કરવાના વિકલ્પો"</string>
-    <string name="reset_options_summary" msgid="5508201367420359293">"નેટવર્ક, ઍપ અથવા ઉપકરણ રીસેટ કરો"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"નેટવર્ક, ઍપ અથવા ડિવાઇસ રીસેટ કરો"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"નેટવર્ક રીસેટ કરો"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"આ બધા નેટવર્ક સેટિંગ રીસેટ કરશે, જેમાં આનો સમાવેશ છે:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"વાઇ-ફાઇ"</li></string>
@@ -412,21 +419,21 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"આમ કરવાથી આ બધી પસંદગીઓ રીસેટ થઈ જશે:\n\n"<li>"બંધ કરેલી ઍપ"</li>\n<li>"ઍપના બંધ કરેલા નોટિફિકેશન"</li>\n<li>"ક્રિયાઓ માટેની ડિફૉલ્ટ ઍપ્લિકેશનો"</li>\n<li>"ઍપ માટે બૅકગ્રાઉન્ડ ડેટાના પ્રતિબંધો"</li>\n<li>"કોઈપણ પરવાનગીના પ્રતિબંધો"</li>\n\n"તમે કોઈપણ ઍપનો ડેટા ગુમાવશો નહીં."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ઍપને રીસેટ કરો"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ઍપ પસંદગીઓ રીસેટ કરવામાં આવી છે"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"બધો ડેટા કાઢી નાખો (ફેક્ટરી રીસેટ)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"આ ક્રિયા તમારા વાહનના હેડ યુનિટમાંથી બધો ડેટા કાઢી નાખશે, જેમાં આનો સમાવેશ થાય છે:\n\n"<li>"તમારું Google એકાઉન્ટ"</li>\n<li>"સિસ્ટમ અને ઍપ ડેટા અને સેટિંગ"</li>\n<li>"ડાઉનલોડ કરેલ ઍપ"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"હાલમાં તમે નીચે જણાવેલા બધા એકાઉન્ટમાં સાઇન ઇન થયા છો:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"આ વાહન પર અન્ય વપરાશકર્તા હાજર છે."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"વાહન રીસેટ કરો"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"રીસેટ કરીએ?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી એપ્લિકેશન્સને કાઢી નાખીએ? તમે આ ક્રિયાને પૂર્વવત્ કરી શકતા નથી!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"દરેક વસ્તુ કાઢી નાંખો"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"કાઢી નાંખી રહ્યું છે"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"કૃપા કરીને રાહ જુઓ..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"બધો ડેટા કાઢી નાખો (ફેક્ટરી રીસેટ)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"આમ કરવાથી, તમારા વાહનના હેડ યુનિટમાંથી નીચે જણાવેલા સહિત બધો ડેટા કાઢી નાખવામાં આવશે:\n\n"<li>"તમારું Google એકાઉન્ટ"</li>\n<li>"સિસ્ટમ અને ઍપનો ડેટા તેમજ બધા સેટિંગ"</li>\n<li>"ડાઉનલોડ કરેલી બધી ઍપ"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"હાલમાં તમે નીચે જણાવેલા બધા એકાઉન્ટમાં સાઇન ઇન થયા છો:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"આ વાહનમાં અન્ય વપરાશકર્તાઓની હાજરી છે."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"વાહનને ફેક્ટરી રીસેટ કરો"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"શું રીસેટ કરીએ?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"શું તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી ઍપ કાઢી નાખીએ? તમે આ ક્રિયામાં કરેલો ફેરફાર રદ કરી શકશો નહીં!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"તમામ બાબત કાઢી નાખો"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"કાઢી નાખી રહ્યાં છીએ"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"કૃપા કરીને રાહ જુઓ…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"તારીખ અને સમય"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"તારીખ, સમય, સમય ઝોન અને ફૉર્મેટ સેટ કરો"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"આપમેળે તારીખ અને સમય"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"ઑટોમૅટિક રીતે તારીખ અને સમય"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"નેટવર્ક દ્વારા પ્રદાન કરવામાં આવેલ સમયનો ઉપયોગ કરો"</string>
-    <string name="zone_auto" msgid="3701878581920206160">"આપમેળે સમય ઝોન"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"ઑટોમૅટિક સમય ઝોન"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"નેટવર્ક દ્વારા પ્રદાન કરાયેલ સમય ઝોનનો ઉપયોગ કરો"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑કલાકનું ફૉર્મેટ"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-કલાકના ફૉર્મેટનો ઉપયોગ કરો"</string>
@@ -463,7 +470,7 @@
       <item quantity="other">તમે <xliff:g id="COUNT">%d</xliff:g> વપરાશકર્તા સુધી મંજૂરી આપી શકશો.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"નવો વપરાશકર્તા બનાવવામાં નિષ્ફળ"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"આ યુઝરને ડિલીટ કરીએ?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"આ વપરાશકર્તાને ડિલીટ કરીએ?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"બધી ઍપ અને ડેટા ડિલીટ કરવામાં આવશે."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"વપરાશકર્તાને ડિલીટ કરવામાં નિષ્ફળ થયાં."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"છોડી દો"</string>
@@ -488,7 +495,7 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"સ્ટોરેજ"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"મ્યુઝિક અને ઑડિયો"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"અન્ય ઍપ"</string>
-    <string name="storage_files" msgid="6382081694781340364">"ફાઇલો"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"સિસ્ટમ"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"સિસ્ટમમાં Androidનું <xliff:g id="VERSION">%s</xliff:g> વર્ઝન ચલાવવા માટે ઉપયોગી ફાઇલોનો સમાવેશ છે"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ઑડિયોની ફાઇલો"</string>
@@ -520,7 +527,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"પ્રતિબંધિત પ્રોફાઇલ એકાઉન્ટ ઉમેરી શકતી નથી"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"એકાઉન્ટ કાઢી નાખો"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"એકાઉન્ટ કાઢી નાખીએ?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"આ એકાઉન્ટને કાઢી નાખવાથી તેમાંના બધા સંદેશા, સંપર્કો તેમજ ઉપકરણમાંનો અન્ય ડેટા ડિલીટ થઈ જશે!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"આ એકાઉન્ટને કાઢી નાખવાથી તેમાંના બધા સંદેશા, સંપર્કો તેમજ ડિવાઇસનો અન્ય ડેટા ડિલીટ થઈ જશે!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"એકાઉન્ટ કાઢી નાખવામાં નિષ્ફળ થયાં."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"એકાઉન્ટ સિંક કરો"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> માંથી <xliff:g id="ID_1">%1$d</xliff:g> આઇટમ માટે સિંક ચાલુ છે"</string>
@@ -563,10 +570,11 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"પૂર્ણ થવા પર આંગળી છોડી દો"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"પૅટર્ન રેકોર્ડ કરી"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"કન્ફર્મ કરવા માટે ફરીથી પૅટર્ન દોરો"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ઓછામાં ઓછા 4 ટપકાં કનેક્ટ કરો. ફરી પ્રયાસ કરો."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ઓછામાં ઓછા 4 ડૉટ કનેક્ટ કરો. ફરી પ્રયાસ કરો."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ખોટી પૅટર્ન"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"એક અનલૉક પૅટર્ન કેવી રીતે દોરવી"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"પૅટર્ન સાચવવામાં ભૂલ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"વધુ પડતા અયોગ્ય પ્રયાસો. <xliff:g id="NUMBER">%d</xliff:g> સેકન્ડમાં ફરી પ્રયાસ કરો."</string>
     <string name="okay" msgid="4589873324439764349">"ઓકે"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"સ્ક્રીન લૉક કાઢી નાખીએ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"આ ક્રિયા તમારા એકાઉન્ટને ઍક્સેસ કરવાની મંજૂરી કોઈને પણ આપશે"</string>
@@ -648,5 +656,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"છોડી દો"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ડ્રાઇવિંગ કરતી વખતે આ સુવિધા ઉપલબ્ધ નથી"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ડ્રાઇવ કરતી વખતે વપરાશકર્તાને ઉમેરી શકાતા નથી"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"શોધ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

@@ -102,7 +102,7 @@
     <string name="wifi_signal_strength" msgid="8507318230553042817">"ਸਿਗਨਲ ਦੀ ਤੀਬਰਤਾ"</string>
     <string name="wifi_status" msgid="5688013206066543952">"ਸਥਿਤੀ"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"ਲਿੰਕ ਸਪੀਡ"</string>
-    <string name="wifi_frequency" msgid="8951455949682864922">"ਬਾਰੰਬਾਰਤਾ"</string>
+    <string name="wifi_frequency" msgid="8951455949682864922">"ਵਾਰਵਾਰਤਾ"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ਪਤਾ"</string>
     <string name="show_password" msgid="2074628020371139240">"ਪਾਸਵਰਡ ਦਿਖਾਓ"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"ਨੈੱਟਵਰਕ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ਦੀ ਵਾਈ-ਫਾਈ ਨੂੰ ਚਾਲੂ ਕਰਨ ਦੀ ਇੱਛਾ ਹੈ"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ਦੀ ਵਾਈ-ਫਾਈ ਨੂੰ ਬੰਦ ਕਰਨ ਦੀ ਇੱਛਾ ਹੈ"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ਗੜਬੜ"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> ਨਾਲ ਵਰਤਣ ਵਾਲਾ ਡੀਵਾਈਸ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"ਕੋਈ ਡੀਵਾਈਸ ਨਹੀਂ ਮਿਲੇ। ਪੱਕਾ ਕਰੋ ਕਿ ਡੀਵਾਈਸ ਚਾਲੂ ਹਨ ਅਤੇ ਕਨੈਕਟ ਹੋਣ ਲਈ ਉਪਲਬਧ ਹਨ।"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ਕੋਈ ਗੜਬੜ ਹੋ ਗਈ। ਐਪਲੀਕੇਸ਼ਨ ਨੇ ਕਿਸੇ ਡੀਵਾਈਸ ਨੂੰ ਚੁਣਨ ਦੀ ਬੇਨਤੀ ਰੱਦ ਕਰ ਦਿੱਤੀ ਹੈ।"</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"ਕਨੈਕਸ਼ਨ ਸਫਲ ਰਿਹਾ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ਸਭ ਦਿਖਾਓ"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"ਖੋਜ ਰਿਹਾ ਹੈ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ਬਲੂਟੁੱਥ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ਬੇਨਾਮ ਡੀਵਾਈਸ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ਜੋੜਾਬੱਧ ਕੀਤੇ ਡੀਵਾਈਸ"</string>
@@ -211,7 +218,7 @@
     <string name="tts_reset" msgid="6289481549801844709">"ਰੀਸੈੱਟ ਕਰੋ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ਧੁਨੀ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ਰਿੰਗ ਵੌਲਿਊਮ"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"ਨੈਵੀਗੇਸ਼ਨ ਵੌਲਿਊਮ"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"ਨੈਵੀਗੇਸ਼ਨ ਦੀ ਅਵਾਜ਼"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"ਰਿੰਗਟੋਨ"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"ਸੂਚਨਾ"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"ਮੀਡੀਆ"</string>
@@ -377,7 +384,7 @@
     <string name="terms_title" msgid="5201471373602628765">"ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"ਸਿਸਟਮ WebView ਲਾਇਸੰਸ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ਵਾਲਪੇਪਰ"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ਸੈਟੇਲਾਈਟ ਇਮੇਜਰੀ ਪ੍ਰਦਾਨਕ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ਉਪਗ੍ਰਹਿ ਇਮੇਜਰੀ ਪ੍ਰਦਾਨਕ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"ਮਾਡਲ"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"ਸੀਰੀਅਲ ਨੰਬਰ"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"ਹਾਰਡਵੇਅਰ ਵਰਜਨ"</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ਇੰਝ ਕਰਨ ਨਾਲ ਇਹ ਇਹਨਾਂ ਲਈ ਸਾਰੀਆਂ ਤਰਜੀਹਾਂ ਰੀਸੈੱਟ ਕਰ ਦੇਵੇਗਾ:\n\n"<li>" ਬੰਦ ਕੀਤੀਆਂ ਐਪਾਂ"</li>\n<li>"ਬੰਦ ਕੀਤੀਆਂ ਐਪ ਸੂਚਨਾਵਾਂ"</li>\n<li>"ਕਾਰਵਾਈਆਂ ਲਈ ਪੂਰਵ-ਨਿਰਧਾਰਤ ਐਪਲੀਕੇਸ਼ਨਾਂ"</li>\n<li>" ਐਪਾਂ ਲਈ ਬੈਕਗ੍ਰਾਊਂਡ ਡਾਟੇ ਸੰਬੰਧੀ ਪਾਬੰਦੀਆਂ"</li>\n<li>"ਕੋਈ ਵੀ ਇਜਾਜ਼ਤ ਸੰਬੰਧੀ ਪਾਬੰਦੀਆਂ"</li>\n\n"ਤੁਸੀਂ ਕੋਈ ਵੀ ਐਪ ਡਾਟਾ ਨਹੀਂ ਗੁਆਓਗੇ।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ਐਪਾਂ ਰੀਸੈੱਟ ਕਰੋ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ਐਪ ਤਰਜੀਹਾਂ ਰੀਸੈੱਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"ਸਭ ਡਾਟਾ ਮਿਟਾਓ (ਫੈਕਟਰੀ ਰੀਸੈੱਟ)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"ਇਹ ਤੁਹਾਡੇ ਵਾਹਨ ਦੀ ਸਕ੍ਰੀਨ ਤੋਂ ਸਾਰਾ ਡਾਟਾ ਮਿਟਾ ਦੇਵੇਗਾ, ਇਹਨਾਂ ਸਮੇਤ:\n\n"<li>"ਤੁਹਾਡਾ Google ਖਾਤਾ"</li>\n<li>"ਸਿਸਟਮ ਅਤੇ ਐਪ ਡਾਟਾ ਅਤੇ ਸੈਟਿੰਗਾਂ"</li>\n<li>"ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਐਪਾਂ"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"ਤੁਸੀਂ ਇਸ ਵੇਲੇ ਇਹਨਾਂ ਖਾਤਿਆਂ \'ਤੇ ਸਾਈਨ-ਇਨ ਹੋ:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ਇਸ ਵਾਹਨ \'ਤੇ ਹੋਰ ਵਰਤੋਂਕਾਰ ਮੌਜੂਦ ਨਹੀਂ ਹਨ।"</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"ਵਾਹਨ ਰੀਸੈੱਟ ਕਰੋ"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ਕੀ ਰੀਸੈੱਟ ਕਰਨਾ ਹੈ?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ਕੀ ਆਪਣੀ ਸਾਰੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਅਤੇ ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਐਪਾਂ ਮਿਟਾਉਣੀਆਂ ਹਨ? ਤੁਸੀਂ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਅਣਕੀਤਾ ਨਹੀਂ ਕਰ ਸਕਦੇ!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ਸਭ ਕੁਝ ਮਿਟਾਓ"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"ਮਿਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"ਸਭ ਡਾਟਾ ਮਿਟਾਓ (ਫੈਕਟਰੀ ਰੀਸੈੱਟ)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"ਇਹ ਤੁਹਾਡੇ ਵਾਹਨ ਦੀ ਸਕ੍ਰੀਨ ਤੋਂ ਸਾਰਾ ਡਾਟਾ ਮਿਟਾ ਦੇਵੇਗਾ, ਇਹਨਾਂ ਸਮੇਤ:\n\n"<li>"ਤੁਹਾਡਾ Google ਖਾਤਾ"</li>\n<li>"ਸਿਸਟਮ ਅਤੇ ਐਪ ਡਾਟਾ ਅਤੇ ਸੈਟਿੰਗਾਂ"</li>\n<li>"ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਐਪਾਂ"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"ਤੁਸੀਂ ਇਸ ਵੇਲੇ ਇਹਨਾਂ ਖਾਤਿਆਂ \'ਤੇ ਸਾਈਨ-ਇਨ ਹੋ:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"ਇਸ ਵਾਹਨ \'ਤੇ ਹੋਰ ਵਰਤੋਂਕਾਰ ਮੌਜੂਦ ਨਹੀਂ ਹਨ।"</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"ਵਾਹਨ ਰੀਸੈੱਟ ਕਰੋ"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"ਕੀ ਰੀਸੈੱਟ ਕਰਨਾ ਹੈ?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"ਕੀ ਆਪਣੀ ਸਾਰੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਅਤੇ ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਐਪਾਂ ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ? ਤੁਸੀਂ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਅਣਕੀਤਾ ਨਹੀਂ ਕਰ ਸਕਦੇ!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"ਸਭ ਕੁਝ ਮਿਟਾਓ"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"ਮਿਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ਤਾਰੀਖ, ਸਮਾਂ, ਸਮਾਂ ਖੇਤਰ ਅਤੇ ਵੰਨਗੀ ਸੈੱਟ ਕਰੋ"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"ਸਵੈਚਲਿਤ ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"</string>
@@ -488,7 +495,7 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"ਸਟੋਰੇਜ"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"ਸੰਗੀਤ ਅਤੇ ਆਡੀਓ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"ਹੋਰ ਐਪਾਂ"</string>
-    <string name="storage_files" msgid="6382081694781340364">"ਫ਼ਾਈਲਾਂ"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"ਸਿਸਟਮ"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"ਸਿਸਟਮ ਵਿੱਚ ਅਜਿਹੀਆਂ ਫ਼ਾਈਲਾਂ ਸ਼ਾਮਲ ਹਨ ਜੋ Android ਵਰਜਨ <xliff:g id="VERSION">%s</xliff:g> ਨੂੰ ਚਲਾਉਣ ਲਈ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ਆਡੀਓ ਫ਼ਾਈਲਾਂ"</string>
@@ -498,7 +505,7 @@
     <string name="storage_cache_size_label" msgid="6361308766707419555">"ਕੈਸ਼ੇ"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"ਕੁੱਲ"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"ਸਟੋਰੇਜ ਕਲੀਅਰ ਕਰੋ"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"ਕੈਸ਼ੇ ਹਟਾਓ"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"ਕੈਸ਼ੇ ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ਕੀ ਐਪ ਡਾਟਾ ਮਿਟਾਉਣਾ ਹੈ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ਇਸ ਐਪ ਦਾ ਸਾਰਾ ਡਾਟਾ ਸਥਾਈ ਤੌਰ ਤੇ ਮਿਟਾਇਆ ਜਾਏਗਾ। ਇਸ ਵਿੱਚ ਸਾਰੀਆਂ ਫ਼ਾਈਲਾਂ, ਸੈਟਿੰਗਾਂ, ਖਾਤੇ, ਡਾਟਾਬੇਸ ਆਦਿ ਸ਼ਾਮਲ ਹਨ।"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ਐਪ ਦੀ ਸਟੋਰੇਜ ਕਲੀਅਰ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ਗਲਤ ਪੈਟਰਨ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ਇੱਕ ਅਣਲਾਕ ਪੈਟਰਨ ਕਿਵੇਂ ਉਲੀਕੀਏ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ਪੈਟਰਨ ਰੱਖਿਅਤ ਕਰਨ ਵੇਲੇ ਗੜਬੜ ਹੋਈ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ਬਹੁਤ ਸਾਰੀਆਂ ਗ਼ਲਤ ਕੋਸ਼ਿਸ਼ਾਂ। <xliff:g id="NUMBER">%d</xliff:g> ਸਕਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="okay" msgid="4589873324439764349">"ਠੀਕ ਹੈ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"ਕੀ ਸਕ੍ਰੀਨ ਲਾਕ ਹਟਾਉਣਾ ਹੈ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ਇਹ ਕਿਸੇ ਨੂੰ ਤੁਹਾਡੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੇਵੇਗਾ"</string>

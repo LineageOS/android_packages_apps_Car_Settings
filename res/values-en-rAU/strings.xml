@@ -73,7 +73,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Usage cycle reset date"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Date of each month:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Set"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Data warning limit"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Data warning and limit"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"App data usage cycle"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Set data warning"</string>
     <string name="data_warning" msgid="116776633806885370">"Data warning"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wants to turn on Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wants to turn off Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Device to use with <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"No devices found. Make sure that devices are turned on and available to connect."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Try again"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Something came up. The application has cancelled the request to choose a device."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Connection successful"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Show all"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Searching"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Unnamed device"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Paired devices"</string>
@@ -345,7 +352,7 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi control allows an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks add or remove networks, or start a local-only hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"More"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Location"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent Location Requests"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent location requests"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No recent location requests"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"App-level permissions"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Location Services"</string>
@@ -353,7 +360,7 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"System updates"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android security patch level"</string>
-    <string name="hardware_info" msgid="3973165746261507658">"Model &amp; hardware"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Model and hardware"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Model: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Baseband version"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel version"</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"This will reset all preferences for:\n\n"<li>"Disabled apps"</li>\n<li>"Disabled app notifications"</li>\n<li>"Default applications for actions"</li>\n<li>"Background data restrictions for apps"</li>\n<li>"Any permission restrictions"</li>\n\n"You will not lose any app data."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reset apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App preferences have been reset"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Erase all data (factory reset)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"This will erase all data from your vehicle’s head unit, including:\n\n"<li>"Your Google Account"</li>\n<li>"System and app data and settings"</li>\n<li>"Downloaded apps"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"You are currently signed in to the following accounts:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"There are other users present on this vehicle."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Reset vehicle"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Reset?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Erase all your personal information and downloaded apps? You can\'t undo this action!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Erase everything"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Erasing"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Please wait..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Erase all data (factory reset)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"This will erase all data from your vehicle’s head unit, including:\n\n"<li>"Your Google Account"</li>\n<li>"System and app data and settings"</li>\n<li>"Downloaded apps"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"You are currently signed in to the following accounts:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"There are other users present on this vehicle."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Reset vehicle"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Reset?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Delete all your personal information and downloaded apps? You won\'t be able to undo this action."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Erase everything"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Erasing"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Please wait…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Date and time"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Set date, time, time zone, &amp; formats"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatic date and time"</string>
@@ -560,13 +567,14 @@
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancel"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Your new unlock pattern"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Draw an unlock pattern"</string>
-    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Release finger when you\'ve finished"</string>
+    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Release finger when finished"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Pattern recorded"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Draw pattern again to confirm"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connect at least four dots. Try again."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Wrong pattern"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"How to draw an unlock pattern"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Error saving pattern"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Too many incorrect attempts. Try again in <xliff:g id="NUMBER">%d</xliff:g> seconds."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Remove screen lock?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"This will allow anyone to access your account"</string>
@@ -574,8 +582,8 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Enter your password"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"For security, set a PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Re-enter your PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least 4 digits"</string>
-    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least 4 digits."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least four digits"</string>
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin invalid, must be at least four digits."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINs don\'t match"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Error saving PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Wrong PIN"</string>

@@ -135,7 +135,7 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Автоматично превключване към мобилни данни"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Използване на мобилни данни, когато Wi‑Fi мрежата няма достъп до интернет. Може да бъдете таксувани за пренос на данни."</string>
     <string name="learn_more" msgid="8214605928933358604">"Научете повече"</string>
-    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Точка за достъп: Име"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Име на точката за достъп"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"„<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“ се включва..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Други устройства могат да се свързват към „<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Парола за точката за достъп"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> иска да включи Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> иска да изключи Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Грешка"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Устройство, което да се използва с(ъс) „<xliff:g id="APPNAME">%1$s</xliff:g>“"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Няма намерени устройства. Уверете се, че устройствата са включени и налице за свързване."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Нов опит"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Нещо стана. Приложението анулира заявката за избиране на устройство."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Връзката е успешна"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Показване на всички"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Търси се"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Устройство без име"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Сдвоени устройства"</string>
@@ -188,7 +195,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код за сдвояване с Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ПИН кодът съдържа букви или символи"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Въведете кода за сдвояване, след което натиснете „Return“ или „Enter“"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Искате ли да сдвоите с/ъс <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Искате ли да сдвоите с(ъс) <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Разрешаване на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> да осъществява достъп до вашите контакти и история на обажданията"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Възможно е също така да се наложи да въведете този ПИН на другото устройство."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Възможно е също така да се наложи да въведете този код за достъп на другото устройство."</string>
@@ -281,7 +288,7 @@
     <string name="enable_text" msgid="1794971777861881238">"Активиране"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Деинсталиране"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако деактивирате това приложение, Android и други приложения може да спрат да работят както трябва."</string>
-    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Деактивиране на приложението"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Деактивиране"</string>
     <string name="not_installed" msgid="4218816013370552746">"Не е инсталирано за този потребител"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Известия"</string>
@@ -327,7 +334,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Без отваряне в това приложение"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддържани връзки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специален достъп за приложението"</string>
-    <string name="show_system" msgid="4401355756969485287">"Показване на сист. процеси"</string>
+    <string name="show_system" msgid="4401355756969485287">"Системни процеси"</string>
     <string name="hide_system" msgid="8845453295584638040">"Скриване на системните процеси"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Промяна на сист. настройки"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Това разрешение позволява на дадено приложение да променя системни настройки."</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Това действие ще нулира всички предпочитания за:\n\n"<li>"деактивираните приложения;"</li>\n<li>"известията за деактивирани приложения;"</li>\n<li>"стандартните приложения за действия;"</li>\n<li>"ограниченията за данни на заден план за приложенията;"</li>\n<li>" ограниченията за всички разрешения."</li>\n\n"Няма да загубите данни от приложенията."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Нулиране на приложенията"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Предпочитанията за приложенията са нулирани"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Изтрив. на данните (възст. на фабр. настр.)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Това ще изтрие всички данни от основното устройство на автомобила ви, включително:\n\n"<li>"профила ви в Google;"</li>\n<li>"данни и настройки от системата и приложенията;"</li>\n<li>"изтеглените приложения."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Понастоящем сте влезли в следните профили:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"В този автомобил има други потребители."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Нулиране на автомобила"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Да се извърши ли нулиране?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Да се изтрият ли цялата ви лична информация и всички изтеглени приложения? Не можете да отмените това действие!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Изтриване на всичко"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Изтрива се"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Моля, изчакайте..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Изтр. на вс. данни (възст. на фабр. настр.)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Това ще изтрие всички данни от основното устройство на автомобила ви, включително:\n\n"<li>"профила ви в Google;"</li>\n<li>"данни и настройки от системата и приложенията;"</li>\n<li>"изтеглените приложения."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Понастоящем сте влезли в следните профили:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"В този автомобил има други потребители."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Нулиране на автомобила"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Да се извърши ли нулиране?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Да се изтрият ли цялата ви лична информация и всички изтеглени приложения? Не можете да отмените това действие!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Изтриване на всички данни"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Данните се изтриват"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Моля, изчакайте..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Дата и час"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Задаване на дата, час, часова зона и формати"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Автоматична дата и час"</string>
@@ -454,7 +461,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Деинсталиране на приложения"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Добавяне на потребител"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Нов потребител"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Добавяне на нов потреб.?"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Добавяне на нов потребител?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Когато добавите нов потребител, той трябва да настрои работното си пространство."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Всеки потребител може да актуализира приложенията за всички останали потребители."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Достигнахте огранич. за потребители"</string>
@@ -542,7 +549,7 @@
     <string name="security_lock_pattern" msgid="1174352995619563104">"Фигура"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"ПИН код"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Парола"</string>
-    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Избор на типа на закл."</string>
+    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Избор на типа на заключване"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Опции за заключване"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Въведете фигурата си"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Потвърждаване"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Грешна фигура"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Как се чертае фигура за отключване"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Грешка при запазването на фигурата"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Твърде много неправилни опити. Пробвайте отново след <xliff:g id="NUMBER">%d</xliff:g> секунди."</string>
     <string name="okay" msgid="4589873324439764349">"ОK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Премахване на закл. на екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Така ще разрешите на всеки да има достъп до профила ви"</string>
