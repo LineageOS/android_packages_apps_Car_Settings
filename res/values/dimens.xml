@@ -17,6 +17,7 @@
 
 <resources>
     <dimen name="icon_size">@*android:dimen/car_primary_icon_size</dimen>
+    <dimen name="secondary_icon_size">@*android:dimen/car_secondary_icon_size</dimen>
     <dimen name="touch_target_size">@*android:dimen/car_touch_target_size</dimen>
 
     <dimen name="button_min_width">@*android:dimen/car_button_min_width</dimen>

@@ -153,6 +153,14 @@ public class ActionButtonInfo {
     }
 
     /**
+     * Get the current button enabled state.
+     */
+    @VisibleForTesting
+    public boolean isEnabled() {
+        return mIsEnabled;
+    }
+
+    /**
      * Get the current button visibility.
      */
     @VisibleForTesting
