@@ -80,7 +80,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Weka kikomo cha data"</string>
     <string name="data_limit" msgid="227338836292511425">"Kikomo cha data"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kupunguza matumizi ya data"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo kisicho kamili sana."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo cha wastani."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Weka onyo kwa matumizi ya data"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Weka kikomo cha matumizi ya data"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Weka"</string>
@@ -147,7 +147,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Otomatiki"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Bendi ya GHz 2.4"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Bendi ya GHz 5.0"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Imechagua Bendi ya GHz 5.0"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Bendi ya GHz 5.0 (inapendelewa)"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"GHz 2.4"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"GHz 5.0"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chagua angalau bendi moja ya mtandaopepe wa Wi‑Fi:"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> inataka kuwasha Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> inataka kuzima Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Hitilafu"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Kifaa kitatumia <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Hakuna vifaa vilivyopatikana. Hakikisha kuwa umewasha vifaa na vinaweza kuunganishwa."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Jaribu tena"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Hitilafu fulani imetokea. Programu imeghairi ombi la kuchagua kifaa."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Imeunganisha"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Onyesha yote"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Inatafuta"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Kifaa kisichokuwa na jina"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Vifaa vilivyooanishwa"</string>
@@ -298,7 +305,7 @@
       <item quantity="one">Ruhusa <xliff:g id="COUNT_0">%d</xliff:g> ya ziada</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Kumbuka: Baada ya kuwasha tena programu hii, hutaweza kuitumia hadi utakapofungua gari lako."</string>
-    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Mratibu na kuweka data kwa kutamka"</string>
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Maagizo na kuweka data kwa kutamka"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Programu ya usaidizi"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Tumia maandishi kutoka kwenye skrini"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Ruhusu programu ya usaidizi kufikia maudhui ya skrini katika muundo wa maandishi"</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Hatua hii itaweka upya mapendeleo yote ya:\n\n"<li>"Programu zilizozimwa"</li>\n<li>"Arifa za programu zilizomwa"</li>\n<li>"Programu chaguomsingi za vitendo"</li>\n<li>"Masharti ya matumizi ya data chinichini katika programu"</li>\n<li>"Masharti yoyote ya ruhusa"</li>\n\n"Hutapoteza data yoyote ya programu."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Weka programu upya"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Mapendeleo ya programu yamewekwa upya"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Futa data yote (rejesha mipangilio ya kiwandani)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Hatua hii itafuta data yote kwenye sehemu ya mbele ya gari lako ikiwa ni pamoja na:\n\n"<li>" Akaunti yako ya Google"</li>\n<li>"Data na mipangilio ya mfumo na programu"</li>\n<li>"Programu ulizopakua"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Kwa sasa umeingia katika akaunti zifuatazo:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Watu wengine katika gari hili.wanatumia kifaa."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Badilisha mipangilio ya gari"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Ungependa kubadilisha?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Ungependa kufuta taarifa yako yote ya binafsi na programu ulizopakua? Huwezi kutendua hatua hii!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Futa kila kitu"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Inafuta"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Tafadhali subiri..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Futa data yote (rejesha mipangilio ya kiwandani)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Hatua hii itafuta data yote kwenye sehemu ya mbele ya gari lako ikiwa ni pamoja na:\n\n"<li>" Akaunti yako ya Google"</li>\n<li>"Data na mipangilio ya mfumo na programu"</li>\n<li>"Programu ulizopakua"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Kwa sasa umeingia katika akaunti zifuatazo:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Watu wengine katika gari hili wanatumia kifaa."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Badilisha mipangilio ya gari"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Ungependa kubadilisha?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Ungependa kufuta taarifa yako yote ya binafsi na programu ulizopakua? Huwezi kutendua hatua hii!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Futa kila kitu"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Inafuta"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Tafadhali subiri..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Tarehe na saa"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Weka tarehe, saa, saa za eneo na mfumo"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Tarehe na saa otomatiki"</string>
@@ -463,7 +470,7 @@
       <item quantity="one">Unaruhusiwa kuongeza mtumiaji mmoja pekee.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Imeshindwa kuongeza mtumiaji mpya"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Ungependa kumtafuta mtumiaji huyu?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Ungependa kumfuta mtumiaji huyu?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Data na programu zote zitafutwa."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Imeshindwa kumfuta mtumiaji."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ondoa"</string>
@@ -497,7 +504,7 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"Data ya mtumiaji"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Akiba"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Jumla"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Futa hifadhi"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Futa data ya hifadhi"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Futa akiba"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ungependa kufuta data ya programu?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Data yote ya programu hii itafutwa kabisa. Hii inajumuisha faili, mipangilio, akaunti, hifadhidata zote na mengineyo."</string>
@@ -519,8 +526,8 @@
     <string name="add_an_account" msgid="1072285034300995091">"Ongeza akaunti"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Wasifu zilizodhibitiwa haziwezi kuongeza akaunti"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Ondoa akaunti"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"Unataka kuondoa akaunti?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Kuondoa akaunti hii kutasabibisha kufutwa kwa ujumbe, anwani na data nyingine kwenye kifaa!"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"Ungependa kuondoa akaunti?"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Kuondoa akaunti hii kutasababisha kufutwa kwa ujumbe, anwani na data nyingine kwenye kifaa!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Imeshindwa kuondoa akaunti."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Usawazishaji wa akaunti"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Umewasha usawazishaji katika vipengee <xliff:g id="ID_1">%1$d</xliff:g> kati ya <xliff:g id="ID_2">%2$d</xliff:g>"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Mchoro si sahihi"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Jinsi ya kuchora mchoro wa kufungua"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hitilafu ya kuhifadhi mchoro"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Majaribio mengi mno yasiyo sahihi. Jaribu tena baada ya sekunde <xliff:g id="NUMBER">%d</xliff:g>."</string>
     <string name="okay" msgid="4589873324439764349">"Sawa"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Utaondoa mbinu ya kufunga skrini?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Hatua hii itamruhusu mtu yeyote afikie akaunti yako"</string>

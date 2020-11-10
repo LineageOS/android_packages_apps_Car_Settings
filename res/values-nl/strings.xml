@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Instellingen"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Meer"</string>
-    <string name="display_settings" msgid="5325515247739279185">"Display"</string>
+    <string name="display_settings" msgid="5325515247739279185">"Scherm"</string>
     <string name="brightness" msgid="2919605130898772866">"Helderheidsniveau"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Helderheidsniveau optimaliseren voor het beschikbare licht"</string>
@@ -71,7 +71,7 @@
     <string name="app_data_usage" msgid="3878609885080232877">"Datagebruik van app"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"beperkt"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Datum voor resetten gebruikscyclus"</string>
-    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Datum van elke maand:"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Dag van elke maand:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Instellen"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datawaarschuwing- en limiet"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Gebruikscyclus app-data"</string>
@@ -142,7 +142,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Beveiliging"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Geen"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Band toegangsp."</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Toegangspunt"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Frequentieband TP kiezen"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Auto"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4GHz-frequentieband"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi inschakelen"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitschakelen"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Apparaat om te gebruiken met <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Geen apparaten gevonden. Zorg dat apparaten zijn ingeschakeld en beschikbaar zijn voor verbinding."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Opnieuw proberen"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Er is een probleem opgetreden. De app heeft het verzoek om een apparaat te kiezen geannuleerd."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Verbinding gemaakt"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Alles tonen"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Zoeken"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Naamloos apparaat"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Gekoppelde apparaten"</string>
@@ -305,7 +312,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Screenshot gebruiken"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Toestaan dat de app voor assistentie toegang krijgt tot een afbeelding van het scherm"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Spraakinvoer"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Service voor automatisch aanvullen"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Service voor automatisch invullen"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Geen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Geselecteerd"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"De Assistent kan informatie over de gebruikte apps in je systeem lezen, waaronder informatie die zichtbaar is op je scherm of toegankelijk is in de apps."</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Hiermee worden alle voorkeuren gereset voor:\n\n"<li>"Uitgeschakelde apps"</li>\n<li>"Uitgeschakelde app-meldingen"</li>\n<li>"Standaardapps voor acties"</li>\n<li>"Beperkingen voor achtergrondgegevens voor apps"</li>\n<li>"Rechtenbeperkingen"</li>\n\n"Je verliest geen app-gegevens."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Apps resetten"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-voorkeuren zijn gereset"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Alle gegevens wissen (fabrieksreset)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Hiermee worden alle gegevens van de hoofdunit van je voertuig gewist, waaronder:\n\n"<li>"Je Google-account"</li>\n<li>"Gegevens en instellingen van het systeem en de apps"</li>\n<li>"Gedownloade apps"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Je bent momenteel ingelogd op de volgende accounts:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Er zijn andere gebruikers aanwezig in dit voertuig."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Voertuig resetten"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Resetten?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Al je persoonlijke informatie en gedownloade apps verwijderen? Je kunt deze actie niet ongedaan maken."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Alles wissen"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Wissen"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Even geduld..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Alle gegevens wissen (fabrieksreset)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Hiermee worden alle gegevens van de hoofdunit van je voertuig gewist, waaronder:\n\n"<li>"Je Google-account"</li>\n<li>"Gegevens en instellingen van het systeem en de apps"</li>\n<li>"Gedownloade apps"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Je bent momenteel ingelogd op de volgende accounts:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Er zijn andere gebruikers aanwezig in dit voertuig."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Voertuig resetten"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Resetten?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Al je persoonlijke informatie en gedownloade apps verwijderen? Je kunt deze actie niet ongedaan maken."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Alles wissen"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Wissen"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Even geduld..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum en tijd"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Datum, tijd, tijdzone en notaties instellen"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatische datum en tijd"</string>
@@ -455,7 +462,7 @@
     <string name="user_add_user_menu" msgid="5319151436895941496">"Gebruiker toevoegen"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Nieuwe gebruiker"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Nieuwe gebruiker?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Wanneer je een nieuwe gebruiker toevoegt, moet die persoon een eigen profiel instellen."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Als je een nieuwe gebruiker toevoegt, moet die persoon een eigen profiel instellen."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Elke gebruiker kan apps updaten voor alle andere gebruikers"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Gebruikerslimiet bereikt"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Onjuist patroon"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ontgrendelingspatroon tekenen"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Fout bij patroon opslaan"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Te veel onjuiste pogingen. Probeer het over <xliff:g id="NUMBER">%d</xliff:g> seconden opnieuw."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Schermvergrendeling verwijderen?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Zo kan iedereen toegang tot je account krijgen"</string>

@@ -105,7 +105,7 @@
     <string name="wifi_frequency" msgid="8951455949682864922">"Frequência"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"Endereço IP"</string>
     <string name="show_password" msgid="2074628020371139240">"Exibir senha"</string>
-    <string name="default_network_name_summary" msgid="8148402439232464276">"Digite nome da rede"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"Digite o nome da rede"</string>
     <string name="default_password_summary" msgid="8789594645836902982">"Digite a senha"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
@@ -129,7 +129,7 @@
     <string name="wifi_wakeup" msgid="7451825226044542000">"Ativar o Wi‑Fi automaticamente"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"O Wi‑Fi será ativado perto de redes salvas de alta qualidade, como sua rede doméstica"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisponível porque o local está desativado. Ative o"<annotation id="link">"local"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Ativar a busca por Wi‑Fi?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Ativar a \"busca por Wi‑Fi\"?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Ativar"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Busca por Wi‑Fi ativada"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Alternar para dados móveis automaticamente"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quer ativar o Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quer desativar o Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erro"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispositivo para usar com <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nenhum dispositivo foi encontrado. Os dispositivos precisam estar ligados e disponíveis para conexão."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Tentar novamente"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Algo deu errado. O aplicativo cancelou a solicitação para selecionar um dispositivo."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Conexão realizada"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostrar tudo"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Pesquisar"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sem nome"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos pareados"</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Isso redefinirá todas as preferências para:\n\n"<li>" apps desativados;"</li>" \n "<li>"notificações de apps desativados; "</li>\n<li>"apps padrão para ações;"</li>\n<li>"restrições de dados em segundo plano para apps; "</li>\n<li>"qualquer restrição de permissão."</li>\n\n"Você não perderá os dados dos apps."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Redefinir apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"As preferências do app foram redefinidas"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Limpar todos os dados"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Essa ação limpará todos os dados da unidade principal do seu veículo, incluindo:\n\n"<li>"sua Conta do Google;"</li>\n<li>"dados e configurações do sistema e do app;"</li>\n<li>"apps transferidos."</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"No momento, as seguintes contas estão conectadas:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Há outros usuários neste veículo."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Redefinir veículo"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Redefinir?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Limpar todas as suas informações pessoais e apps transferidos por download? Não é possível desfazer essa ação."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Apagar tudo"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Apagando"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Aguarde…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Limpar todos os dados"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Essa ação limpará todos os dados da unidade principal do seu veículo, incluindo:\n\n"<li>"sua Conta do Google;"</li>\n<li>"dados e configurações do sistema e do app;"</li>\n<li>"apps transferidos."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"No momento, as seguintes contas estão conectadas:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Há outros usuários neste veículo."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Redefinir veículo"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Redefinir?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Limpar todas as suas informações pessoais e apps transferidos por download? Não é possível desfazer essa ação."</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Apagar tudo"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Apagando"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Aguarde…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data e hora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Definir data, hora, fuso horário e formatos"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Data e hora automáticas"</string>
@@ -509,7 +516,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar dados automaticamente"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que os apps atualizem dados automaticamente"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permite que os apps atualizem dados automaticamente"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Ativar sincronização automática?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"As alterações feitas nas suas contas na Web serão automaticamente copiadas para o dispositivo.\n\nEm algumas contas, as alterações feitas no smartphone também poderão ser copiadas automaticamente para a Web. É o caso de uma Conta do Google."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Desativar sincroniz. automática?"</string>
@@ -559,14 +566,15 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Limpar"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancelar"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Seu novo padrão de desbloqueio"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Desenhar um padrão de desbloqueio"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Desenhe um padrão de desbloqueio"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Solte o dedo quando terminar."</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Padrão registrado"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Desenhe o padrão novamente p/ confirmar"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Desenhe o padrão de novo para confirmar"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Conecte 4 pontos (mín). Tente novamente."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Padrão incorreto"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como desenhar um padrão de desbloqueio"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erro ao salvar o padrão"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Excesso de tentativas incorretas. Tente novamente em <xliff:g id="NUMBER">%d</xliff:g> segundos."</string>
     <string name="okay" msgid="4589873324439764349">"Ok"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Remover bloqueio de tela?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Qualquer pessoa poderá acessar sua conta"</string>

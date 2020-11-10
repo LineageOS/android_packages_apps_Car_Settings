@@ -140,7 +140,7 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"D\'autres appareils peuvent se connecter à <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Mot de passe du point d\'accès"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sécurité"</string>
-    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 personnel"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personnel"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Aucun"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Bande PA"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Sélectionner la bande PA"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> souhaite activer le Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> souhaite désactiver le Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erreur"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Appareil à utiliser avec <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Aucun appareil trouvé. Assurez-vous que l\'appareil est allumé et prêt à se connecter."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Réessayer"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Une erreur s\'est produite. L\'application a annulé la demande de sélection d\'un appareil."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Connexion réussie"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Tout afficher"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Recherche en cours…"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Appareil sans nom"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Appareils associés"</string>
@@ -328,13 +335,13 @@
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Liens compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Accès spécial pour applications"</string>
     <string name="show_system" msgid="4401355756969485287">"Afficher le système"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Masquer le système"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Masquer les processus système"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modifier paramètres système"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cette autorisation permet à une application de modifier les paramètres du système."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accès aux notifications"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Autoriser <xliff:g id="SERVICE">%1$s</xliff:g> à accéder aux notifications?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> pourra lire toutes les notifications, y compris des données personnelles, telles que le nom de contacts et le texte des messages que vous recevez. Ce service d\'écoute pourra également ignorer des notifications ou déclencher des boutons d\'action que celles-ci contiennent.\n\nCe déclenchement permettra également à l\'application d\'activer et de désactiver la fonction Ne pas déranger ainsi que de modifier les paramètres connexes."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si vous désactivez l\'accès aux notifications pour <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, l\'accès à la fonction Ne pas déranger peut également être désactivé."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> pourra lire toutes les notifications, y compris des données personnelles, telles que le nom de contacts et le texte des messages que vous recevez. Ce service d\'écoute pourra également ignorer des notifications ou déclencher des boutons d\'action que celles-ci contiennent.\n\nCe déclenchement permettra également à l\'application d\'activer et de désactiver le mode Ne pas déranger ainsi que de modifier les paramètres connexes."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si vous désactivez l\'accès aux notifications pour <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, l\'accès au mode Ne pas déranger peut également être désactivé."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Désactiver"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accès aux messages texte payants"</string>
@@ -342,7 +349,7 @@
     <string name="usage_access_title" msgid="7153427122072303254">"Accès aux données utilisation"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"L\'accès aux données d\'utilisation permet à une application d\'effectuer le suivi des applications que vous utilisez, de la fréquence d\'utilisation, du fournisseur de services, des paramètres de langue et d\'autres détails."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Gestion du Wi-Fi"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou supprimer des réseaux, ou à lancer un point d\'accès local uniquement."</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou retirer des réseaux, ou à lancer un point d\'accès local uniquement."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Plus"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
@@ -412,16 +419,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Cette opération réinitialise toutes les préférences relatives aux éléments suivants :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences des applications ont été réinitialisées"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Effacer toutes les données (réinitial.)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Cette action effacera toutes les données de l\'unité principale de votre véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et les paramètres du système et de l\'application"</li>\n<li>"Les applications téléchargées"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Vous êtes actuellement connecté aux comptes suivants :"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"D\'autres personnes utilisent ce véhicule."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Réinitialiser le véhicule"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Réinitialiser?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Voulez-vous effacer toutes vos données personnelles et les applications que vous avez téléchargées? Cette action est irréversible!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Tout effacer"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Suppression en cours…"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Veuillez patienter…"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Effacer toutes les données"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Cette action effacera toutes les données de l\'unité principale de votre véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et les paramètres du système et de l\'application"</li>\n<li>"Les applications téléchargées"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Vous êtes actuellement connecté aux comptes suivants :"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"D\'autres personnes utilisent ce véhicule."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Réinitialiser le véhicule"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Réinitialiser?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Voulez-vous effacer toutes vos données personnelles et les applications que vous avez téléchargées? Cette action est irréversible!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Tout effacer"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Effacement en cours…"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Veuillez patienter…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Date et heure"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Configurer la date, l\'heure, le fuseau horaire et les formats"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Date et heure automatiques"</string>
@@ -521,7 +528,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Supprimer le compte"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Supprimer le compte?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"La suppression de ce compte entraînera la suppression de tous les messages, les contacts et les autres données de l\'appareil."</string>
-    <string name="remove_account_error_title" msgid="8368044943174826635">"Impossible de supprimer le compte."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Impossible de retirer le compte."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Synchronisation du compte"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"La synchronisation est activée pour <xliff:g id="ID_1">%1$d</xliff:g> éléments sur <xliff:g id="ID_2">%2$d</xliff:g>"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"La synchronisation est activée pour tous les éléments"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Comment dessiner un schéma de déverr."</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erreur lors de l\'enregistrement du schéma"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Trop de tentatives incorrectes. Réessayez dans <xliff:g id="NUMBER">%d</xliff:g> secondes."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Suppr. le verrouill. de l\'écran?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Cela permettra à quiconque d\'accéder à votre compte"</string>
@@ -627,8 +635,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Effacer les authentifiants"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"Supprimer tous les certificats"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Voulez-vous supprimer l\'intégralité du contenu?"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Retirer tous les certificats"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Voulez-vous retirer l\'intégralité du contenu?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Le stockage des authentifiants est effacé."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Impossible d\'effacer le stockage des authentifiants."</string>
     <string name="forget" msgid="3971143908183848527">"Oublier"</string>

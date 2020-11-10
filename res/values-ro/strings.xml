@@ -159,6 +159,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> încearcă să activeze Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> încearcă să dezactiveze Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Eroare"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispozitivul care va fi folosit cu <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nu s-au găsit dispozitive. Asigurați-vă că dispozitivele sunt pornite și gata de conectare."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Reîncercați"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"A intervenit ceva. Această aplicație a anulat solicitarea de a alege un dispozitiv."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Conectare reușită"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Afișați-le pe toate"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Se caută dispozitive"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispozitiv nedenumit"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispozitive asociate"</string>
@@ -416,16 +423,16 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Astfel vor fi resetate toate preferințele pentru:\n\n"<li>"aplicații dezactivate,"</li>\n<li>"notificări de aplicații dezactivate,"</li>\n<li>"aplicații prestabilite pentru acțiuni,"</li>\n<li>"restricții privind datele de fundal pentru aplicații,"</li>\n<li>"orice restricții de permisiuni."</li>\n\n"Nu veți pierde datele aplicațiilor."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Resetați aplicațiile"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferințele pentru aplicații au fost resetate"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Ștergeți datele (reveniți la setările din fabrică)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Astfel, vor fi șterse toate datele de pe unitatea principală a vehiculului, între care:\n\n"<li>"contul dvs. Google;"</li>\n<li>"datele și setările de sistem și de aplicație;"</li>\n<li>"aplicațiile descărcate"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Sunteți conectat(ă) la următoarele conturi:"</string>
-    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Există și alți utilizatori în acest vehicul."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Resetați vehiculul"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Resetați?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Ștergeți toate informațiile cu caracter personal și aplicațiile descărcate? Nu puteți anula această acțiune!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Ștergeți tot"</string>
-    <string name="master_clear_progress_title" msgid="7087480656932674774">"Se șterge"</string>
-    <string name="master_clear_progress_text" msgid="3440789441935303176">"Așteptați..."</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Ștergeți datele (setări din fabrică)"</string>
+    <string name="factory_reset_desc" msgid="7133390564019035242">"Astfel, vor fi șterse toate datele de pe unitatea principală a vehiculului, între care:\n\n"<li>"contul dvs. Google;"</li>\n<li>"datele și setările de sistem și de aplicație;"</li>\n<li>"aplicațiile descărcate."</li>"."</string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"V-ați conectat la următoarele conturi:"</string>
+    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Există și alți utilizatori în acest vehicul."</string>
+    <string name="factory_reset_button_text" msgid="5364900277201550546">"Resetați vehiculul"</string>
+    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Resetați?"</string>
+    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Ștergeți toate informațiile cu caracter personal și aplicațiile descărcate? Nu puteți anula această acțiune!"</string>
+    <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Ștergeți tot"</string>
+    <string name="factory_reset_progress_title" msgid="4580937077054738173">"Se șterge"</string>
+    <string name="factory_reset_progress_text" msgid="7704636573522634757">"Așteptați…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data și ora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Setați data, ora, fusul orar și formatele"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Dată și oră automate"</string>
@@ -572,6 +579,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Model greșit"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Desenarea unui model pentru deblocare"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Eroare la salvarea modelului"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Prea multe încercări incorecte. Încercați din nou peste <xliff:g id="NUMBER">%d</xliff:g> secunde."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Eliminați blocarea ecranului?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Acțiunea va permite oricui să vă acceseze contul"</string>
