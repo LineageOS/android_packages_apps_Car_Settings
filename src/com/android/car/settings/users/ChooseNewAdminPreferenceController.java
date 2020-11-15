@@ -85,7 +85,7 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
 
     @VisibleForTesting
     void assignNewAdminAndRemoveOldAdmin(UserInfo userToMakeAdmin) {
-        getCarUserManagerHelper().grantAdminPermissions(userToMakeAdmin);
+        android.car.userlib.UserHelper.grantAdminPermissions(getContext(), userToMakeAdmin);
         removeOldAdmin();
     }
 

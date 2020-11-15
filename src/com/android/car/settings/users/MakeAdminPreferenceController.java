@@ -32,13 +32,12 @@ public class MakeAdminPreferenceController extends
         UserDetailsBasePreferenceController<ButtonPreference> {
 
     @VisibleForTesting
-    final ConfirmationDialogFragment.ConfirmListener mConfirmListener =
-            arguments -> {
-                UserInfo userToMakeAdmin = (UserInfo) arguments.get(
-                        UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN);
-                getCarUserManagerHelper().grantAdminPermissions(userToMakeAdmin);
-                getFragmentController().goBack();
-            };
+    final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
+        UserInfo userToMakeAdmin =
+                (UserInfo) arguments.get(UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN);
+        android.car.userlib.UserHelper.grantAdminPermissions(getContext(), userToMakeAdmin);
+        getFragmentController().goBack();
+    };
 
     public MakeAdminPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {

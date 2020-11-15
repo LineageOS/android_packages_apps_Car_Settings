@@ -17,7 +17,6 @@
 package com.android.car.settings.users;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -38,7 +37,6 @@ import com.android.car.settings.common.PreferenceController;
 public abstract class UserDetailsBasePreferenceController<V extends Preference> extends
         PreferenceController<V> {
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private UserInfo mUserInfo;
 
     private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
@@ -52,7 +50,6 @@ public abstract class UserDetailsBasePreferenceController<V extends Preference> 
     public UserDetailsBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
     }
 
     /** Sets the user info for which this preference controller operates. */
@@ -96,10 +93,5 @@ public abstract class UserDetailsBasePreferenceController<V extends Preference> 
 
     private void unregisterForUserEvents() {
         getContext().unregisterReceiver(mUserUpdateReceiver);
-    }
-
-    /** Gets the car user manager helper. */
-    protected CarUserManagerHelper getCarUserManagerHelper() {
-        return mCarUserManagerHelper;
     }
 }
