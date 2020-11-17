@@ -334,7 +334,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Ne pas ouvrir dans cette application"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Liens compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Droits d\'accès spécifiques accordés aux applications"</string>
-    <string name="show_system" msgid="4401355756969485287">"Afficher les processus système"</string>
+    <string name="show_system" msgid="4401355756969485287">"Afficher process. système"</string>
     <string name="hide_system" msgid="8845453295584638040">"Masquer les processus système"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Changer les paramètres système"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cette autorisation permet à une application de modifier les paramètres système."</string>
@@ -416,8 +416,8 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Réinitialiser paramètres"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Les paramètres réseau ont bien été réinitialisés"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Réinitialiser les préférences des applis"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Toutes les préférences relatives aux éléments suivants seront réinitialisées :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Toutes les préférences liées à ces éléments seront réinitialisées :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applis par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applis"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applis"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences relatives aux applications ont été réinitialisées"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Effacer données (rétablir config. d\'usine)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Cette action effacera toutes les données de l\'unité principale du véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et paramètres du système et des applications"</li>\n<li>"Les applications téléchargées"</li></string>
@@ -559,7 +559,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Passer"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Configurer le verrouillage de l\'écran"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Sélectionner un code"</string>
-    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Choisir votre schéma"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Sélectionner un schéma"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Sélectionner un mot de passe"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Verrouillage actuel de l\'écran"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pour la sécurité, définissez un schéma"</string>
@@ -569,7 +569,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dessinez un schéma de déverrouillage"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Relevez le doigt quand vous avez terminé"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Schéma enregistré"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessiner le schéma pour le confirmer"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessinez le schéma pour le confirmer"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Reliez au moins 4 points. Réessayez."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Pour dessiner un schéma de déverrouillage"</string>

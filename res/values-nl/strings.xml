@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Instellingen"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Meer"</string>
-    <string name="display_settings" msgid="5325515247739279185">"Display"</string>
+    <string name="display_settings" msgid="5325515247739279185">"Scherm"</string>
     <string name="brightness" msgid="2919605130898772866">"Helderheidsniveau"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Helderheidsniveau optimaliseren voor het beschikbare licht"</string>
@@ -142,7 +142,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Beveiliging"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Geen"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Band toegangsp."</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Toegangspunt"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Frequentieband TP kiezen"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Auto"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4GHz-frequentieband"</string>
@@ -462,7 +462,7 @@
     <string name="user_add_user_menu" msgid="5319151436895941496">"Gebruiker toevoegen"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Nieuwe gebruiker"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Nieuwe gebruiker?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Wanneer je een nieuwe gebruiker toevoegt, moet die persoon een eigen profiel instellen."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Als je een nieuwe gebruiker toevoegt, moet die persoon een eigen profiel instellen."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Elke gebruiker kan apps updaten voor alle andere gebruikers"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Gebruikerslimiet bereikt"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">

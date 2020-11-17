@@ -396,7 +396,7 @@
       <item quantity="other">तपाईं अब एउटा विकासकर्ता हुनबाट <xliff:g id="STEP_COUNT_1">%1$d</xliff:g>चरण टाढा हुनुहुन्छ।</item>
       <item quantity="one">तपाईं अब एउटा विकासकर्ता हुनबाट <xliff:g id="STEP_COUNT_0">%1$d</xliff:g>चरण टाढा हुनुहुन्छ।</item>
     </plurals>
-    <string name="show_dev_on" msgid="5339077400040834808">"तपाईं अब एउटा विकासकर्ता हुनुहुन्छ!"</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"तपाईं अब एउटा विकासकर्ता हुनुभएको छ!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"आवश्यक छैन, तपाईं आफैँ नै एउटा विकासकर्ता हुनुहुन्छ।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"विकासकर्ताका विकल्पहरू"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"रिसेटका विकल्पहरू"</string>
@@ -546,12 +546,12 @@
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रिन लक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कुनै पनि होइन"</string>
-    <string name="security_lock_pattern" msgid="1174352995619563104">"ढाँचा"</string>
+    <string name="security_lock_pattern" msgid="1174352995619563104">"प्याटर्न"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"लकको प्रकार चयन गर्ने"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"लक गर्ने विकल्पहरू"</string>
-    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"आफ्नो ढाँचा प्रविष्टि गर्नुहोस्"</string>
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"आफ्नो प्याटर्न प्रविष्टि गर्नुहोस्"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि गर्नुहोस्"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"पुनः चित्रण गर्नुहोस्"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"जारी राख्नुहोस्"</string>
@@ -559,25 +559,25 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"छाड्नुहोस्"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रिन लक सेट गर्नुहोस्"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"आफ्नो PIN छनौट गर्नुहोस्"</string>
-    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"आफ्नो ढाँचा छनौट गर्नुहोस्"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"आफ्नो प्याटर्न छनौट गर्नुहोस्"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"आफ्नो पासवर्ड छनौट गर्नुहोस्"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"हालको स्क्रिन लक"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षाका लागि प्याटर्न सेट गर्नुहोस्"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"खाली गर्नुहोस्"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"रद्द गर्नुहोस्"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"तपाईंको नयाँ अनलक शैली:"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"तपाईंको नयाँ अनलक प्याटर्न"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"अनलक प्याटर्न बनाउनुहोस्"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"सकिएपछि औँला उचाल्नुहोस्"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ढाँचा रेकर्ड गरियो"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"प्याटर्न रेकर्ड गरियो"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"पुष्टि गर्न प्याटर्न फेरि बनाउनुहोस्"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"कम्तीमा ४ वटा थोप्लाहरू जोड्नुहोस्। फेरि प्रयास गर्नुहोस्।"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"प्याटर्न मिलेन"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलक शैली कोर्ने तरिका"</string>
-    <string name="error_saving_lockpattern" msgid="2933512812768570130">"ढाँचा सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
+    <string name="error_saving_lockpattern" msgid="2933512812768570130">"प्याटर्न सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"अत्यन्तै धेरै गलत प्रयास गरिए। <xliff:g id="NUMBER">%d</xliff:g> सेकेन्डपछि फेरि प्रयास गर्नुहोस्।"</string>
     <string name="okay" msgid="4589873324439764349">"ठिक छ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रिन लक हटाउने हो?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"यस कार्यले जुनसुकै व्यक्तिलाई तपाईंको खातामाथि पहुँच राख्न दिने छ"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"यस कार्यले जुनसुकै व्यक्तिलाई तपाईंको खाता प्रयोग गर्न दिने छ"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"आफ्नो PIN प्रविष्टि गर्नुहोस्"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"आफ्नो पासवर्ड प्रविष्टि गर्नुहोस्"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षाका ला‍गि एउटा PIN सेट गर्नुहोस्"</string>
