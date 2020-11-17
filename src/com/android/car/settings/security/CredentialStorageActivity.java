@@ -73,15 +73,6 @@ public class CredentialStorageActivity extends FragmentActivity {
         mCarUserManagerHelper = new CarUserManagerHelper(this);
         mUserManager = UserManager.get(this);
         mUtils = new LockPatternUtils(this);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if (isFinishing()) {
-            return;
-        }
 
         if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
