@@ -172,7 +172,11 @@ public class ActionButtonInfo {
         mButtonTextView.setText(mText);
         mButtonIconView.setImageDrawable(mIcon);
         mButtonView.setOnClickListener(mListener);
+
         mButtonView.setEnabled(mIsEnabled);
+        mButtonTextView.setEnabled(mIsEnabled);
+        mButtonIconView.setEnabled(mIsEnabled);
+        mButtonIconView.setVisibility(mIcon != null ? View.VISIBLE : View.GONE);
 
         if (shouldBeVisible()) {
             mButtonView.setVisibility(View.VISIBLE);
