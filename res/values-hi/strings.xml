@@ -195,7 +195,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्‍लूटूथ के ज़रिए जोड़ने वाला कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"पिन में अक्षर या चिह्न शामिल होते हैं"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"दूसरे डिवाइस से जोड़ने वाला कोड लिखें और फिर Return या Enter दबाएं"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> से जोड़ें?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"क्या आप <xliff:g id="DEVICE_NAME">%1$s</xliff:g> से जोड़ना चाहते हैं?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को अपने संपर्क या कॉल इतिहास का इस्तेमाल करने की मंज़ूरी दें"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"आपको यह पि‍न दूसरे डिवाइस पर भी डालना होगा."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"आपको यह पासवर्ड दूसरे डिवाइस पर भी डालना होगा."</string>
@@ -641,7 +641,7 @@
     <string name="credentials_not_erased" msgid="6118567459076742720">"क्रेडेंशियल स्टोरेज हमेशा के लिए नहीं मिटाई जा सकती."</string>
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>
     <string name="connect" msgid="5861699594602380150">"कनेक्शन जोड़ें"</string>
-    <string name="disconnect" msgid="6140789953324820336">"कनेक्शन हटाएं"</string>
+    <string name="disconnect" msgid="6140789953324820336">"डिसकनेक्ट करें"</string>
     <string name="delete_button" msgid="5840500432614610850">"मिटाएं"</string>
     <string name="remove_button" msgid="6664656962868194178">"हटाएं"</string>
     <string name="cancel" msgid="750286395700355455">"अभी नहीं"</string>
