@@ -288,7 +288,7 @@
     <string name="enable_text" msgid="1794971777861881238">"Овозможи"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Деинсталирај"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако ја оневозможите оваа апликација, Android и другите апликации можеби веќе нема да функционираат како што треба."</string>
-    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Оневозможете ја апликацијата"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Оневозможи ја апликацијата"</string>
     <string name="not_installed" msgid="4218816013370552746">"Не е инсталирано за корисников"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Дозволи"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Известувања"</string>
@@ -416,11 +416,11 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ресетирај поставки"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Мрежните поставки се ресетирани"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Ресетирај ги поставките за апликациите"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Со ова ќе се ресетираат сите поставки за:\n\n"<li>"оневозможените апликации;"</li>\n<li>"оневозможените известувања за апликации;"</li>\n<li>"стандардните апликации за дејства;"</li>\n<li>"ограничувањата за податоци од заднина за апликациите;"</li>\n<li>"сите ограничувања за дозволите."</li>\n\n"Нема да изгубите никакви податоци на апликациите."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Со ова ќе се ресетираат сите поставки за:\n\n"<li>"оневозможените апликации;"</li>\n<li>"оневозможените известувања за апликации;"</li>\n<li>"стандардните апликации за дејства;"</li>\n<li>"ограничувањата за интернет во заднина за апликациите;"</li>\n<li>"сите ограничувања за дозволите."</li>\n\n"Нема да изгубите никакви податоци од апликациите."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетирај апликации"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Параметрите за апликацијата се ресетирани"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Избриши ги сите податоци"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Ова ќе ги избрише сите податоци од уредот за на глава на возилото, заедно со:\n\n"<li>"вашата сметка на Google;"</li>\n<li>"податоците и поставките на системот и апликациите;"</li>\n<li>"преземените апликации."</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Ова ќе ги избрише сите податоци од главниот уред на возилото, заедно со:\n\n"<li>"вашата сметка на Google"</li>\n<li>"податоците и поставките на системот и апликациите"</li>\n<li>"преземените апликации"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Моментално сте најавени на следниве сметки:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Присутни се и други корисници на возилово."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Ресетирај го возилото"</string>
@@ -507,7 +507,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Избриши го капацитетот"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Избриши го кешот"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Да се избришат податоци на аплик.?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Сите податоци на оваа апликација ќе бидат трајно избришани. Ова ги опфаќа сите датотеки, поставки, сметки, бази на податоци, итн."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Сите податоци на оваа апликација ќе бидат трајно избришани. Ова ги опфаќа сите датотеки, поставки, сметки, бази на податоци итн."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Не може да се избрише капацитетот за апликацијата."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> безбедно се отстрани"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> не можеше безбедно да се отстрани"</string>

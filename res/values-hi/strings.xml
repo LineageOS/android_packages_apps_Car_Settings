@@ -20,7 +20,7 @@
     <string name="settings_label" msgid="5147911978211079839">"सेटिंग"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"ज़्यादा"</string>
     <string name="display_settings" msgid="5325515247739279185">"डिसप्ले"</string>
-    <string name="brightness" msgid="2919605130898772866">"स्क्रीन की चमक का लेवल"</string>
+    <string name="brightness" msgid="2919605130898772866">"स्क्रीन की रोशनी का लेवल"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"रोशनी के अनुसार सेट होने वाली चमक"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"आस-पास मौजूद रोशनी के हिसाब से स्क्रीन की चमक कम या ज़्यादा करें"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"नाइट लाइट चालू है"</string>
@@ -173,7 +173,7 @@
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"आपका वाहन <xliff:g id="DEVICE_NAME">%1$s</xliff:g> से डिसकनेक्ट हो जाएगा."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"वाहन का ब्लूटूथ पता: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"डिवाइस का ब्लूटूथ पता: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_name" msgid="2609869978821094114">"वाहन का नाम"</string>
+    <string name="bluetooth_name" msgid="2609869978821094114">"गाड़ी का नाम"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"इस वाहन का नाम बदलें"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"डिवाइस का नाम बदलें"</string>
     <string name="bluetooth_rename_button" msgid="2397892174725986383">"नाम बदलें"</string>
@@ -195,7 +195,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्‍लूटूथ के ज़रिए जोड़ने वाला कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"पिन में अक्षर या चिह्न शामिल होते हैं"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"दूसरे डिवाइस से जोड़ने वाला कोड लिखें और फिर Return या Enter दबाएं"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> से जोड़ें?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"क्या आप <xliff:g id="DEVICE_NAME">%1$s</xliff:g> से जोड़ना चाहते हैं?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को अपने संपर्क या कॉल इतिहास का इस्तेमाल करने की मंज़ूरी दें"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"आपको यह पि‍न दूसरे डिवाइस पर भी डालना होगा."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"आपको यह पासवर्ड दूसरे डिवाइस पर भी डालना होगा."</string>
@@ -218,7 +218,7 @@
     <string name="tts_reset" msgid="6289481549801844709">"रीसेट करें"</string>
     <string name="sound_settings" msgid="3072423952331872246">"आवाज़"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"घंटी बजने की आवाज़"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"नेविगेशन की आवाज़"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"नेविगेशन वॉल्यूम"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"रिंगटोन"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"सूचना"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"मीडिया"</string>
@@ -351,10 +351,10 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"वाई-फ़ाई नियंत्रण"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"वाई-फ़ाई का नियंत्रण किसी ऐप्लिकेशन को वाई-फ़ाई चालू या बंद करने, वाई-फ़ाई नेटवर्क ढूंढने और उससे जुड़ने की अनुमति देता है. साथ ही, नेटवर्क जोड़ने या हटाने या सिर्फ़ सीमित दायरे में इस्तेमाल होने वाला हॉटस्पॉट चालू करने की अनुमति देता है."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ज़्यादा सेटिंग"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"जगह"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"जगह की जानकारी"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>
-    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ऐप्लिकेशन-स्तर की अनुमतियां"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ऐप्लिकेशन-लेवल की अनुमतियां"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"जगह की जानकारी की सेवाएं"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
@@ -417,13 +417,13 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्क सेटिंग रीसेट कर दी गई हैं"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"ऐप्लिकेशन की सेटिंग रीसेट करें"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"इससे इन सबके लिए प्राथमिकताएं रीसेट हो जाएंगी:\n\n"<li>"बंद किए गए ऐप्लिकेशन"</li>\n<li>"बंद की गई ऐप्लिकेशन सूचनाएं"</li>\n<li>"कार्रवाइयों के लिए डिफ़ॉल्ट ऐप्लिकेशन"</li>\n<li>"ऐप्लिकेशन के लिए बैकग्राउंड डेटा पाबंदियां"</li>\n<li>"अनुमति से जुड़ी सभी पाबंदियां"</li>\n\n"आपका सारा ऐप्लिकेशन डेटा बना रहेगा."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ऐप्लिकेशन रीसेट करें"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ऐप्लिकेशन को रीसेट करें"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ऐप्लिकेशन की सेटिंग रीसेट कर दी गई हैं"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"पूरा डेटा हमेशा के लिए मिटाएं (फ़ैक्ट्री रीसेट)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"इससे आपके वाहन की हेड यूनिट से सारा डेटा हमेशा के लिए मिटा दिया जाएगा, जिसमें शामिल हैं:\n\n"<li>"आपका Google खाता"</li>\n<li>"सिस्टम, ऐप्लिकेशन का डेटा और सेटिंग"</li>\n<li>"डाउनलोड किए गए ऐप्लिकेशन"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"इससे आपकी गाड़ी की हेड यूनिट से सारा डेटा हमेशा के लिए मिटा दिया जाएगा, जिसमें शामिल हैं:\n\n"<li>"आपका Google खाता"</li>\n<li>"सिस्टम, ऐप्लिकेशन का डेटा और सेटिंग"</li>\n<li>"डाउनलोड किए गए ऐप्लिकेशन"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"आपने इस समय नीचे दिए गए खातों में साइन इन कर रखा है:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"इस वाहन पर दूसरे उपयोगकर्ता मौजूद हैं."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"वाहन रीसेट करें"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"गाड़ी को रीसेट करें"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"रीसेट करें?"</string>
     <string name="master_clear_confirm_desc" msgid="8920446291698038558">"अपनी सारी निजी जानकारी और डाउनलोड किए गए ऐप्लिकेशन हमेशा के लिए मिटाना चाहते हैं? आप इस कार्रवाई को पहले जैसा नहीं कर सकते!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"सब कुछ हमेशा के लिए मिटाएं"</string>
@@ -431,10 +431,10 @@
     <string name="master_clear_progress_text" msgid="3440789441935303176">"कृपया इंतज़ार करें..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"तारीख और समय"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"तारीख, समय, समय क्षेत्र और फ़ॉर्मैट सेट करें"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"अपने आप तारीख और समय सेट होना"</string>
-    <string name="date_time_auto_summary" msgid="3311706425095342759">"नेटवर्क की ओर से तय किए गए समय का इस्तेमाल करें"</string>
-    <string name="zone_auto" msgid="3701878581920206160">"समय क्षेत्र अपने आप तय होना"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"नेटवर्क की ओर से तय किए गए समय क्षेत्र का इस्तेमाल करें"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"तारीख और समय अपने-आप सेट होना"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"नेटवर्क का दिया हुआ समय इस्तेमाल करें"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"समय क्षेत्र अपने-आप सेट होना"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"नेटवर्क का दिया हुआ समय क्षेत्र इस्तेमाल करें"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑घंटे वाला फ़ॉर्मैट"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-घंटे वाला फ़ॉर्मैट इस्तेमाल करें"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"समय"</string>
@@ -462,8 +462,8 @@
     <string name="user_add_user_menu" msgid="5319151436895941496">"उपयोगकर्ता जोड़ें"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"नया उपयोगकर्ता"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"नया उपयोगकर्ता जोड़ें?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"जब आप कोई नया उपयोगकर्ता जोड़ते हैं तो, उस व्यक्ति को अपनी जगह सेट करनी होती है."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकते हैं."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"जब आप कोई नया उपयोगकर्ता जोड़ते हैं, तो उस व्यक्ति को अपनी जगह सेट करनी होती है."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकता है."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"अब और उपयोगकर्ता नहीं जोड़े जा सकते"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="one">आप <xliff:g id="COUNT">%d</xliff:g> उपयोगकर्ता जोड़ सकते हैं.</item>
@@ -487,7 +487,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"आप (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेट नहीं है"</string>
-    <string name="edit_user_name_title" msgid="6890782937520262478">"\'उपयोगकर्ता नाम\' में बदलाव करें"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"उपयोगकर्ता का नाम बदलें"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"नाम लिखने की जगह खाली नहीं रखी जा सकती."</string>
     <string name="name_input_invalid_error" msgid="3523545780580744273">"डाला गया उपयोगकर्ता नाम गलत है."</string>
     <string name="users_list_title" msgid="770764290290240909">"उपयोगकर्ता"</string>
@@ -515,7 +515,7 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"कोई खाता जोड़ा नहीं गया है"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> के खाते"</string>
-    <string name="account_auto_sync_title" msgid="3238816995364191432">"डेटा को अपने आप सिंक करें"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"डेटा को अपने-आप सिंक होने दें"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ऐप्लिकेशन को डेटा अपने-आप रीफ़्रेश करने दें"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"अपने आप डेटा सिंक होना चालू करें?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"आपने वेब पर अपने खातों में जो भी बदलाव किए हैं, उनकी कॉपी आपके डिवाइस में अपने आप बन जाएगी.\n\nआपने जो भी बदलाव फ़ोन पर किए हैं, उन्हें कुछ खाते वेब पर भी कॉपी कर सकते हैं. Google खाता इसी तरह काम करता है."</string>
@@ -576,7 +576,7 @@
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"पैटर्न सेव करने में गड़बड़ी हुई"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"आपकी कोशिशें बहुत बार गलत हुई हैं. <xliff:g id="NUMBER">%d</xliff:g> सेकंड में फिर से कोशिश करें."</string>
     <string name="okay" msgid="4589873324439764349">"ठीक है"</string>
-    <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रीन लॉक हटाएं?"</string>
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"क्या आप स्क्रीन लॉक हटाना चाहते हैं?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"स्क्रीन लॉक हटाने पर कोई भी आपका खाता इस्तेमाल कर सकता है"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"अनलॉक करने के लिए पिन डालें"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"अपना पासवर्ड डालें"</string>
@@ -635,13 +635,13 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक विकल्प"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> days ago"</string>
     <string name="credentials_reset" msgid="873900550885788639">"क्रेडेंशियल मिटाएं"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"सभी प्रमाणपत्र हटाएं"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"सभी सर्टिफ़िकेट हटाएं"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"सभी सामग्री हटाएं?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"क्रेडेंशियल स्टोरेज हमेशा के लिए मिटाई गई."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"क्रेडेंशियल स्टोरेज हमेशा के लिए नहीं मिटाई जा सकती."</string>
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>
     <string name="connect" msgid="5861699594602380150">"कनेक्शन जोड़ें"</string>
-    <string name="disconnect" msgid="6140789953324820336">"कनेक्शन हटाएं"</string>
+    <string name="disconnect" msgid="6140789953324820336">"डिसकनेक्ट करें"</string>
     <string name="delete_button" msgid="5840500432614610850">"मिटाएं"</string>
     <string name="remove_button" msgid="6664656962868194178">"हटाएं"</string>
     <string name="cancel" msgid="750286395700355455">"अभी नहीं"</string>

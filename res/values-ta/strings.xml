@@ -152,7 +152,7 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ஒன்றைத் தேர்வுசெய்யவும்:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ஹாட்ஸ்பாட்டும் இணைப்பு முறையும்"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்தல்"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"சாதனங்கள் எவையும் இணைக்கப்படவில்லை எனில் வைஃபை ஹாட்ஸ்பாட் ஆஃப் செய்யப்படும்"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"வைஃபையை ஆன் செய்ய <xliff:g id="REQUESTER">%s</xliff:g> ஆப்ஸ் விரும்புகிறது"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"வைஃபையை ஆஃப் செய்ய <xliff:g id="REQUESTER">%s</xliff:g> ஆப்ஸ் விரும்புகிறது"</string>
@@ -167,7 +167,7 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"புளூடூத்"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"பெயரிடப்படாத சாதனம்"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"இணைக்கப்பட்ட சாதனங்கள்"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"புதிய சாதனத்தை இணைத்தல்"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"புதிய சாதனத்தை இணை"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"இணைப்பதற்கு புளூடூத் ஆன் செய்யப்படும்"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"சாதன இணைப்பைத் துண்டிக்கவா?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> இலிருந்து உங்கள் வாகனத்தின் புளூடூத் இணைப்பு துண்டிக்கப்படும்."</string>
@@ -425,16 +425,16 @@
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"இந்தக் காரின் சாதனத்தைப் பிற பயனர்கள் பயன்படுத்துகின்றனர்."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"காரின் சாதனத்தை மீட்டமை"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"மீட்டமைக்கவா?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"அனைத்துத் தனிப்பட்ட தகவலையும், பதிவிறக்கிய ஆப்ஸையும் அழிக்கவா? இதைச் செயல்தவிர்க்க இயலாது!"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"உங்களின் தனிப்பட்ட தகவல்கள், பதிவிறக்கிய ஆப்ஸ் போன்ற அனைத்தையும் அழிக்கவா? இதைச் செயல்தவிர்க்க இயலாது!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"அனைத்தையும் அழி"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"அழிக்கிறது"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"காத்திருக்கவும்..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"தேதி &amp; நேரம்"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"தேதி, நேரம், நேரமண்டலம் &amp; வடிவங்களை அமை"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"தானியங்கு தேதி &amp; நேரம்"</string>
-    <string name="date_time_auto_summary" msgid="3311706425095342759">"நெட்வொர்க் வழங்கும் நேரத்தைப் பயன்படுத்து"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"மொபைல் நெட்வொர்க் வழங்கும் நேரத்தைப் பயன்படுத்தும்"</string>
     <string name="zone_auto" msgid="3701878581920206160">"தானியங்கு நேர மண்டலம்"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"நெட்வொர்க் வழங்கும் நேர மண்டலத்தைப் பயன்படுத்து"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"மொபைல் நெட்வொர்க் வழங்கும் நேர மண்டலத்தைப் பயன்படுத்தும்"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 மணிநேர வடிவம்"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24 மணிநேர வடிவத்தைப் பயன்படுத்து"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"நேரம்"</string>
@@ -515,8 +515,8 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"கணக்கைச் சேர்"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"கணக்குகள் எதுவும் சேர்க்கப்படவில்லை"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> இன் கணக்குகள்"</string>
-    <string name="account_auto_sync_title" msgid="3238816995364191432">"தானாகத் தரவை ஒத்திசைத்தல்"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"தானாகத் தரவை ரெஃப்ரெஷ் செய்ய ஆப்ஸை அனுமதிக்கவும்"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"தானாகத் தரவை ஒத்திசை"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"தானாகத் தரவை ரெஃப்ரெஷ் செய்ய ஆப்ஸை அனுமதிக்கும்"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"தானாக ஒத்திசைப்பதை ஆன் செய்யவா?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"இணையத்திலுள்ள கணக்குகளில் நீங்கள் செய்யும் மாற்றங்கள் தானாகவே உங்கள் சாதனத்தில் நகலெடுக்கப்படும்.\n\n மொபைலில் நீங்கள் செய்யும் மாற்றங்களையும் சில கணக்குகள் தானாகவே இணையத்தில் நகலெடுக்கக்கூடும். Google கணக்கு இவ்வாறுதான் செயல்படுகிறது."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"தானாக ஒத்திசைப்பதை ஆஃப் செய்யவா?"</string>
@@ -531,7 +531,7 @@
     <string name="remove_account_error_title" msgid="8368044943174826635">"கணக்கை அகற்ற இயலவில்லை."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"கணக்கு ஒத்திசைவு"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> இல் <xliff:g id="ID_1">%1$d</xliff:g>க்கு ஒத்திசைவு ஆன் செய்யப்பட்டுள்ளது"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"அனைத்துக்கும் ஒத்திசைவை ஆன் செய்"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"அனைத்துக்கும் ஒத்திசைவை இயக்கும்"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"அனைத்துக்கும் ஒத்திசைவை ஆஃப் செய்"</string>
     <string name="sync_disabled" msgid="393531064334628258">"ஒத்திசைவு: ஆஃப்"</string>
     <string name="sync_error" msgid="6698021343089247914">"ஒத்திசைவுப் பிழை"</string>
@@ -634,7 +634,7 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைத் தொடர்ந்து பயன்படுத்துவது அனுமதிக்கப்படாது."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
-    <string name="credentials_reset" msgid="873900550885788639">"அனுமதிச் சான்றுகளை அழித்தல்"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"அனுமதிச் சான்றுகளை அழி"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"அனைத்து சான்றிதழ்களையும் அகற்றும்"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"அனைத்து உள்ளடக்கத்தையும் அகற்ற வேண்டுமா?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"நற்சான்று சேமிப்பகம் அழிக்கப்பட்டது."</string>

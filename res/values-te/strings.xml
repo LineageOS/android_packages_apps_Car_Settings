@@ -210,10 +210,10 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"అన్ని భాషలు"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"కీబోర్డ్"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"కీబోర్డ్‌లను నిర్వహించండి"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"వచనం నుండి ప్రసంగం అవుట్‌పుట్"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"టెక్స్ట్ టు స్పీచ్ అవుట్‌పుట్"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ప్రాధాన్య ఇంజిన్"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ప్రస్తుత ఇంజిన్"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"ప్రసంగం రేట్"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"స్పీచ్ రేట్"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"పిచ్"</string>
     <string name="tts_reset" msgid="6289481549801844709">"రీసెట్ చేయి"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ధ్వని"</string>
@@ -282,8 +282,8 @@
     <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> ఉపయోగిస్తున్న యాప్‌లు"</string>
     <string name="applications_settings" msgid="794261395191035632">"యాప్ సమాచారం"</string>
     <string name="force_stop" msgid="2153183697014720520">"ఫోర్స్ స్టాప్"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"హటాత్తుగా ఆపివేయాలా?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"మీరు ఏదైనా యాప్‌ను హటాత్తుగా ఆపివేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"ఫోర్స్ స్టాప్ చేయాలా?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"మీరు ఏదైనా యాప్‌ను ఫోర్స్ స్టాప్ చేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
     <string name="disable_text" msgid="4358165448648990820">"నిలిపివేయి"</string>
     <string name="enable_text" msgid="1794971777861881238">"ప్రారంభించు"</string>
     <string name="uninstall_text" msgid="277907956072833012">"అన్ఇన్‌స్టాల్ చేయి"</string>
@@ -312,7 +312,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"స్క్రీన్‌షాట్‌ను ఉపయోగించండి"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"స్క్రీన్ చిత్రాన్ని యాక్సెస్ చేయడానికి సహాయక యాప్‌ను అనుమతిస్తుంది"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"వాయిస్ ఇన్‌పుట్"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"స్వీయ పూరింపు సేవ"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"ఆటోమేటిక్ ఫిల్ సర్వీస్"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ఏదీ కాదు"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ఎంచుకోబడింది"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"అసిస్టెంట్ మీ సిస్టమ్‌లో వినియోగంలో ఉన్న యాప్‌ల గురించిన సమాచారం, అలాగే మీ స్క్రీన్‌పై కనిపించే లేదా యాప్‌లలో యాక్సెస్ చేసే సమాచారాన్ని చదవగలుగుతుంది."</string>
@@ -559,13 +559,13 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"దాటవేయి"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"స్క్రీన్ లాక్‌ను సెట్ చేయండి"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"మీ పిన్ ఎంచుకోండి"</string>
-    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"మీ నమూనాను ఎంచుకోండి"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"మీ ఆకృతిని ఎంచుకోండి"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"మీ పాస్‌వర్డ్‌ను ఎంచుకోండి"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ప్రస్తుత స్క్రీన్ లాక్"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"భద్రత కోసం, ఆకృతిని సెట్ చేయండి"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయి"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"రద్దు చేయి"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"మీ కొత్త అన్‌లాక్ నమూనా"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"మీ కొత్త అన్‌లాక్ ఆకృతి"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"అన్‌లాక్ నమూనాని గీయండి"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"పూర్తయినప్పుడు వేలును తీసివేయండి"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ఆకృతి రికార్డ్ చేయబడింది"</string>
