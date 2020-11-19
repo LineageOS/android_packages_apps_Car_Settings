@@ -18,7 +18,10 @@ package com.android.car.settings.common;
 
 import static com.android.settingslib.drawer.CategoryKey.CATEGORY_DEVICE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_KEYHINT;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 
 import android.app.ActivityManager;
@@ -32,6 +35,7 @@ import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.apps.common.util.Themes;
@@ -49,12 +53,19 @@ import java.util.Map;
 public class ExtraSettingsLoader {
     private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
-    private Map<Preference, Bundle> mPreferenceBundleMap;
     private final Context mContext;
+    private Map<Preference, Bundle> mPreferenceBundleMap;
+    private PackageManager mPm;
 
     public ExtraSettingsLoader(Context context) {
         mContext = context;
+        mPm = context.getPackageManager();
         mPreferenceBundleMap = new HashMap<>();
+    }
+
+    @VisibleForTesting
+    void setPackageManager(PackageManager pm) {
+        mPm = pm;
     }
 
     /**
@@ -66,8 +77,7 @@ public class ExtraSettingsLoader {
      * @param intent intent specifying the extra settings category to load
      */
     public Map<Preference, Bundle> loadPreferences(Intent intent) {
-        PackageManager pm = mContext.getPackageManager();
-        List<ResolveInfo> results = pm.queryIntentActivitiesAsUser(intent,
+        List<ResolveInfo> results = mPm.queryIntentActivitiesAsUser(intent,
                 PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
 
         String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
@@ -76,40 +86,30 @@ public class ExtraSettingsLoader {
                 // Do not allow any app to be added to settings, only system ones.
                 continue;
             }
+            String key = null;
             String title = null;
             String summary = null;
             String category = null;
             ActivityInfo activityInfo = resolved.activityInfo;
             Bundle metaData = activityInfo.metaData;
             try {
-                Resources res = pm.getResourcesForApplication(activityInfo.packageName);
-                if (metaData.containsKey(META_DATA_PREFERENCE_TITLE)) {
-                    if (metaData.get(META_DATA_PREFERENCE_TITLE) instanceof Integer) {
-                        title = res.getString(metaData.getInt(META_DATA_PREFERENCE_TITLE));
-                    } else {
-                        title = metaData.getString(META_DATA_PREFERENCE_TITLE);
-                    }
+                Resources res = mPm.getResourcesForApplication(activityInfo.packageName);
+                if (metaData.containsKey(META_DATA_PREFERENCE_KEYHINT)) {
+                    key = extractMetaDataString(metaData, META_DATA_PREFERENCE_KEYHINT, res);
                 }
+                title = extractMetaDataString(metaData, META_DATA_PREFERENCE_TITLE, res);
                 if (TextUtils.isEmpty(title)) {
                     LOG.d("no title.");
-                    title = activityInfo.loadLabel(pm).toString();
+                    title = activityInfo.loadLabel(mPm).toString();
                 }
-                if (metaData.containsKey(META_DATA_PREFERENCE_SUMMARY)) {
-                    if (metaData.get(META_DATA_PREFERENCE_SUMMARY) instanceof Integer) {
-                        summary = res.getString(metaData.getInt(META_DATA_PREFERENCE_SUMMARY));
-                    } else {
-                        summary = metaData.getString(META_DATA_PREFERENCE_SUMMARY);
+                if (!metaData.containsKey(META_DATA_PREFERENCE_SUMMARY_URI)) {
+                    summary = extractMetaDataString(metaData, META_DATA_PREFERENCE_SUMMARY, res);
+                    if (TextUtils.isEmpty(summary)) {
+                        LOG.d("no description.");
                     }
-                } else {
-                    LOG.d("no description.");
                 }
-                if (metaData.containsKey(META_DATA_PREFERENCE_CATEGORY)) {
-                    if (metaData.get(META_DATA_PREFERENCE_CATEGORY) instanceof Integer) {
-                        category = res.getString(metaData.getInt(META_DATA_PREFERENCE_CATEGORY));
-                    } else {
-                        category = metaData.getString(META_DATA_PREFERENCE_CATEGORY);
-                    }
-                } else {
+                category = extractMetaDataString(metaData, META_DATA_PREFERENCE_CATEGORY, res);
+                if (TextUtils.isEmpty(category)) {
                     LOG.d("no category.");
                 }
             } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
@@ -119,7 +119,7 @@ public class ExtraSettingsLoader {
             if (metaData.containsKey(META_DATA_PREFERENCE_ICON)) {
                 int iconRes = metaData.getInt(META_DATA_PREFERENCE_ICON);
                 icon = Icon.createWithResource(activityInfo.packageName, iconRes);
-            } else {
+            } else if (!metaData.containsKey(META_DATA_PREFERENCE_ICON_URI)) {
                 icon = Icon.createWithResource(mContext, R.drawable.ic_settings_gear);
                 LOG.d("use default icon.");
             }
@@ -136,14 +136,33 @@ public class ExtraSettingsLoader {
             CarUiPreference preference = new CarUiPreference(mContext);
             preference.setTitle(title);
             preference.setSummary(summary);
+            if (key != null) {
+                preference.setKey(key);
+            }
             if (icon != null) {
                 preference.setIcon(icon.loadDrawable(mContext));
-                preference.getIcon().setTintList(
-                        Themes.getAttrColorStateList(mContext, R.attr.iconColor));
+                if (ExtraSettingsUtil.isIconTintable(metaData)) {
+                    preference.getIcon().setTintList(
+                            Themes.getAttrColorStateList(mContext, R.attr.iconColor));
+                }
             }
             preference.setIntent(extraSettingIntent);
             mPreferenceBundleMap.put(preference, metaData);
         }
         return mPreferenceBundleMap;
+    }
+
+    /**
+     * Extracts the value in the metadata specified by the key.
+     * If it is resource, resolve the string and return. Otherwise, return the string itself.
+     */
+    private String extractMetaDataString(Bundle metaData, String key, Resources res) {
+        if (metaData.containsKey(key)) {
+            if (metaData.get(key) instanceof Integer) {
+                return res.getString(metaData.getInt(key));
+            }
+            return metaData.getString(key);
+        }
+        return null;
     }
 }

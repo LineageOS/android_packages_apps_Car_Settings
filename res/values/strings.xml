@@ -34,6 +34,8 @@
     <string name="keywords_display_night_display">dim screen, night, tint</string>
     <!-- Label for night mode toggle tile in quick setting [CHAR LIMIT=20] -->
     <string name="night_mode_tile_label">Night mode</string>
+    <!-- Empty placeholder string to be used while waiting for a string to be loaded asynchronously. [CHAR LIMIT=NONE] -->
+    <string name="empty_placeholder" translatable="false">&#160;</string>
 
     <!-- Network and internet settings [CHAR LIMIT=40] -->
     <string name="network_and_internet">Network &amp; internet</string>
