@@ -68,15 +68,6 @@ public class CredentialStorageActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         mUserManager = UserManager.get(getApplicationContext());
         mUtils = new LockPatternUtils(this);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if (isFinishing()) {
-            return;
-        }
 
         if (mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
             finish();
