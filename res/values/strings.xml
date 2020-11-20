@@ -718,6 +718,8 @@
     <string name="show_system">Show system</string>
     <!-- Text for toggle button to control whether system processes are hidden in app lists. [CHAR_LIMIT=30] -->
     <string name="hide_system">Hide system</string>
+    <!-- Text for toggle switch to control whether system processes are hidden in app lists. [CHAR_LIMIT=40] -->
+    <string name="hide_system_apps">Hide system apps</string>
     <!-- Title for managing apps which can modify system settings. [CHAR_LIMIT=40] -->
     <string name="modify_system_settings_title">Modify system settings</string>
     <!-- Description of modifying system settings. [CHAR_LIMIT=NONE] -->
