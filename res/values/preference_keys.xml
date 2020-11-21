@@ -144,6 +144,9 @@
     <string name="pk_application_extra_settings" translatable="false">
         application_extra_settings
     </string>
+    <string name="pk_all_applications_settings_hide_system_switch" translatable="false">
+        all_applications_settings_hide_system_switch
+    </string>
 
     <!-- Application Details -->
     <string name="pk_application_details_app" translatable="false">application_details_app</string>
@@ -199,6 +202,9 @@
     <string name="pk_modify_system_settings_description" translatable="false">
         modify_system_settings_description
     </string>
+    <string name="pk_modify_system_settings_hide_system_switch" translatable="false">
+        modify_system_settings_hide_system_switch
+    </string>
     <string name="pk_notification_access_entry" translatable="false">notification_access_entry
     </string>
     <string name="pk_notification_access" translatable="false">notification_access</string>
@@ -212,9 +218,15 @@
     <string name="pk_usage_access" translatable="false">usage_access</string>
     <string name="pk_usage_access_description" translatable="false">usage_access_description
     </string>
+    <string name="pk_usage_access_hide_system_switch" translatable="false">
+        usage_access_hide_system_switch
+    </string>
     <string name="pk_wifi_control_entry" translatable="false">wifi_control_entry</string>
     <string name="pk_wifi_control" translatable="false">wifi_control</string>
     <string name="pk_wifi_control_description" translatable="false">wifi_control_description
+    </string>
+    <string name="pk_wifi_control_hide_system_switch" translatable="false">
+        wifi_control_hide_system_switch
     </string>
     <string name="pk_more_special_access" translatable="false">more_special_access</string>
 
@@ -252,8 +264,14 @@
     </string>
     <string name="pk_storage_music_audio_details" translatable="false">storage_music_audio_details
     </string>
+    <string name="pk_storage_music_audio_details_hide_system_switch" translatable="false">
+        storage_music_audio_details_hide_system_switch
+    </string>
     <string name="pk_storage_other_apps" translatable="false">storage_other_apps</string>
     <string name="pk_storage_other_apps_details" translatable="false">storage_other_apps_details
+    </string>
+    <string name="pk_storage_other_apps_details_hide_system_switch" translatable="false">
+        storage_other_apps_details_hide_system_switch
     </string>
     <string name="pk_storage_application_size" translatable="false">storage_application_size
     </string>
