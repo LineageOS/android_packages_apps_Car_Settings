@@ -20,38 +20,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.os.UserManager;
 
-import com.android.car.settings.R;
-import com.android.car.settings.common.ConfirmationDialogFragment;
-import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.SettingsFragment;
-import com.android.car.ui.toolbar.MenuItem;
-
-import java.util.Collections;
-import java.util.List;
 
 /** Common logic shared for controlling the action bar which contains a button to delete a user. */
 public abstract class UserDetailsBaseFragment extends SettingsFragment {
-    private UserManager mUserManager;
     private UserInfo mUserInfo;
-    private MenuItem mDeleteButton;
-
-    private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
-        String userType = arguments.getString(UsersDialogProvider.KEY_USER_TYPE);
-        if (userType.equals(UsersDialogProvider.LAST_ADMIN)) {
-            launchFragment(ChooseNewAdminFragment.newInstance(mUserInfo));
-        } else {
-            Context context = getContext();
-            if (UserHelper.getInstance(context).removeUser(context, mUserInfo)) {
-                getActivity().onBackPressed();
-            } else {
-                // If failed, need to show error dialog for users.
-                ErrorDialog.show(this, R.string.delete_user_error_title);
-            }
-        }
-    };
 
     /** Adds user id to fragment arguments. */
     protected static UserDetailsBaseFragment addUserIdToFragmentArguments(
@@ -63,40 +37,10 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     }
 
     @Override
-    public List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mDeleteButton);
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         int userId = getArguments().getInt(Intent.EXTRA_USER_ID);
-        mUserManager = UserManager.get(getContext());
         mUserInfo = UserUtils.getUserInfo(getContext(), userId);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        ConfirmationDialogFragment dialogFragment =
-                (ConfirmationDialogFragment) findDialogByTag(ConfirmationDialogFragment.TAG);
-        ConfirmationDialogFragment.resetListeners(
-                dialogFragment,
-                mConfirmListener,
-                /* rejectListener= */ null,
-                /* neutralListener= */ null);
-
-        // If the current user is not allowed to remove users, the user trying to be removed
-        // cannot be removed, or the current user is a demo user, do not show delete button.
-        boolean isVisible = !mUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER)
-                && mUserInfo.id != UserHandle.USER_SYSTEM
-                && !mUserManager.isDemoUser();
-        mDeleteButton = new MenuItem.Builder(getContext())
-                .setTitle(R.string.delete_button)
-                .setOnClickListener(i -> showConfirmRemoveUserDialog())
-                .setVisible(isVisible)
-                .build();
     }
 
     @Override
@@ -118,26 +62,4 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
 
     /** Defines the text that should be shown in the action bar. */
     protected abstract String getTitleText();
-
-    private void showConfirmRemoveUserDialog() {
-        UserHelper userHelper = UserHelper.getInstance(getContext());
-        boolean isLastUser = userHelper.getAllPersistentUsers().size() == 1;
-        boolean isLastAdmin = mUserInfo.isAdmin()
-                && userHelper.getAllAdminUsers().size() == 1;
-
-        ConfirmationDialogFragment dialogFragment;
-
-        if (isLastUser) {
-            dialogFragment = UsersDialogProvider.getConfirmRemoveLastUserDialogFragment(
-                    getContext(), mConfirmListener, /* rejectListener= */ null);
-        } else if (isLastAdmin) {
-            dialogFragment = UsersDialogProvider.getConfirmRemoveLastAdminDialogFragment(
-                    getContext(), mConfirmListener, /* rejectListener= */ null);
-        } else {
-            dialogFragment = UsersDialogProvider.getConfirmRemoveUserDialogFragment(getContext(),
-                    mConfirmListener, /* rejectListener= */ null);
-        }
-
-        dialogFragment.show(getFragmentManager(), ConfirmationDialogFragment.TAG);
-    }
 }

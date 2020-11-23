@@ -58,8 +58,10 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        use(EditUserNameEntryPreferenceController.class,
-                R.string.pk_edit_user_name_entry).setUserInfo(getUserInfo());
+        use(UserDetailsHeaderPreferenceController.class,
+                R.string.pk_user_details_header).setUserInfo(getUserInfo());
+        use(UserDetailsActionButtonsPreferenceController.class,
+                R.string.pk_user_details_action_buttons).setUserInfo(getUserInfo());
     }
 
     @Override
