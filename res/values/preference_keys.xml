@@ -331,8 +331,15 @@
     <!-- Users Settings -->
     <string name="pk_users_list" translatable="false">users_list</string>
     <string name="pk_choose_new_admin" translatable="false">choose_new_admin</string>
-    <string name="pk_edit_user_name_entry" translatable="false">edit_user_name_entry</string>
-    <string name="pk_make_user_admin" translatable="false">make_user_admin</string>
+    <string name="pk_user_details_header" translatable="false">user_details_header</string>
+    <string name="pk_user_details_action_buttons" translatable="false">user_details_action_buttons
+    </string>
+    <string name="pk_user_details_permissions_header" translatable="false">
+        user_details_permissions_header
+    </string>
+    <string name="pk_user_details_permissions_action_buttons" translatable="false">
+        user_details_permissions_action_buttons
+    </string>
     <string name="pk_user_permissions" translatable="false">user_permissions</string>
 
     <!-- Security Settings -->
