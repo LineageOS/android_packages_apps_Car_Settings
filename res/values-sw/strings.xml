@@ -80,7 +80,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Weka kikomo cha data"</string>
     <string name="data_limit" msgid="227338836292511425">"Kikomo cha data"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kupunguza matumizi ya data"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo cha wastani."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo kisicho kamili sana."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Weka onyo kwa matumizi ya data"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Weka kikomo cha matumizi ya data"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Weka"</string>
@@ -147,7 +147,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Otomatiki"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Bendi ya GHz 2.4"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Bendi ya GHz 5.0"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Bendi ya GHz 5.0 (inapendelewa)"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Imechagua Bendi ya GHz 5.0"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"GHz 2.4"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"GHz 5.0"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chagua angalau bendi moja ya mtandaopepe wa Wi‑Fi:"</string>
@@ -298,7 +298,7 @@
       <item quantity="one">Ruhusa <xliff:g id="COUNT_0">%d</xliff:g> ya ziada</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Kumbuka: Baada ya kuwasha tena programu hii, hutaweza kuitumia hadi utakapofungua gari lako."</string>
-    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Maagizo na kuweka data kwa kutamka"</string>
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Mratibu na kuweka data kwa kutamka"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Programu ya usaidizi"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Tumia maandishi kutoka kwenye skrini"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Ruhusu programu ya usaidizi kufikia maudhui ya skrini katika muundo wa maandishi"</string>
@@ -497,7 +497,7 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"Data ya mtumiaji"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Akiba"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Jumla"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Futa data ya hifadhi"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Futa hifadhi"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Futa akiba"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ungependa kufuta data ya programu?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Data yote ya programu hii itafutwa kabisa. Hii inajumuisha faili, mipangilio, akaunti, hifadhidata zote na mengineyo."</string>

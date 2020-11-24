@@ -43,6 +43,7 @@ import com.android.car.settings.users.UserHelper;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -52,6 +53,7 @@ import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
 /** Unit tests for {@link AccountListPreferenceController}. */
+@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowContentResolver.class, ShadowAccountManager.class, ShadowUserHelper.class})
 public class AccountListPreferenceControllerTest {

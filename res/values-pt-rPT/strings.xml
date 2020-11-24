@@ -49,7 +49,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Ligar a serviços de dados em roaming"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"Permitir roaming de dados?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Pretende permitir roaming de dados?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Podem aplicar-se custos de roaming."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilização de dados"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dados principais"</string>
@@ -74,7 +74,7 @@
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Data de cada mês:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Definir"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Limite e aviso de dados"</string>
-    <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclo de utilização de dados da app"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclo de utilização de dados da aplic."</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Definir aviso de dados"</string>
     <string name="data_warning" msgid="116776633806885370">"Aviso de dados"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Definir limite de dados"</string>
@@ -188,7 +188,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de sincronização Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"O PIN contém letras ou símbolos."</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Introduza o código de sincronização e, em seguida, prima Return ou Enter."</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Sincronizar com o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Pretende sincronizar com o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> aceda aos contactos e ao histórico de chamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Poderá também ter de introduzir este PIN no outro dispositivo."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Poderá também ter de introduzir a chave de acesso no outro dispositivo."</string>
@@ -270,9 +270,9 @@
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Litros por cem quilómetros"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps e notificações"</string>
     <string name="all_applications" msgid="7798210477486822168">"Mostrar todas as aplicações"</string>
-    <string name="default_applications" msgid="1558183275638697087">"Apps predefinidas"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Autorizações da app"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"Apps que utilizam <xliff:g id="APPS">%1$s</xliff:g>"</string>
+    <string name="default_applications" msgid="1558183275638697087">"Aplicações predefinidas"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Autorizações da aplicação"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Aplicações que utilizam <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informações da aplicação"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forçar paragem"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Pretende forçar a paragem?"</string>
@@ -299,11 +299,11 @@
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Nota: após reiniciar, só é possível iniciar esta aplicação quando o veículo for desbloqueado."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistente e entrada de texto por voz"</string>
-    <string name="assist_app_settings" msgid="9085261410166776497">"App de assistência"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"Aplicação de assistência"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Utilizar o texto do ecrã"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Permitir que a app de assistência aceda ao conteúdo do ecrã como texto"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Permitir que a aplicação de assistência aceda ao conteúdo do ecrã como texto"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Utilizar a captura de ecrã"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permitir que a app de assistência aceda a uma imagem do ecrã"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permitir que a aplicação de assistência aceda a uma imagem do ecrã"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Entrada de texto por voz"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Serviço de preenchimento automático"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nenhuma"</string>
@@ -312,7 +312,7 @@
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Certifique-se de que confia nesta aplicação&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=O Preenchimento automático do Google&gt;%1$s&lt;/xliff:g&gt; utiliza o que está no ecrã para determinar o que pode ser preenchido automaticamente."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Adicionar serviço"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Abertura de links"</string>
-    <string name="domain_url_section_title" msgid="9070403140947787214">"Apps instaladas"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Aplicações instaladas"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"Não abrir links compatíveis"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Abrir <xliff:g id="DOMAIN">%s</xliff:g>"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"Abrir <xliff:g id="DOMAIN">%s</xliff:g> e outros URLs"</string>
@@ -332,7 +332,7 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar definições sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Esta autorização permite que uma aplicação modifique as definições do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Pretende permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"O serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> consegue ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto das mensagens recebidas. Também consegue ignorar notificações ou acionar botões de ação que estas contenham.\n\nDeste modo, a aplicação também pode ativar ou desativar o modo Não incomodar e alterar as definições relacionadas."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desativar o acesso às notificações para o serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o acesso ao modo Não incomodar seja igualmente desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
@@ -506,7 +506,7 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Não foi possível ejetar com segurança <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Contas"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Adicionar conta"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada."</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar dados automaticamente"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que as aplicações atualizem dados automaticamente"</string>
@@ -519,7 +519,7 @@
     <string name="add_an_account" msgid="1072285034300995091">"Adicionar uma conta"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Os perfis restritos não podem adicionar contas."</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Remover conta"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"Remover a conta?"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"Pretende remover a conta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"A remoção desta conta elimina todas as mensagens, os contactos e outros dados do dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Falha ao remover a conta"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Sincronização da conta"</string>
@@ -581,7 +581,7 @@
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN incorreto"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Palavra-passe incorreta."</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Por segurança, defina uma palavra-passe."</string>
-    <string name="confirm_your_password_header" msgid="7052891840366724938">"Reintroduza a palavra-passe"</string>
+    <string name="confirm_your_password_header" msgid="7052891840366724938">"Reintroduzir a palavra-passe"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Palavras-passe não coincidem"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Limpar"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Cancelar"</string>
@@ -628,7 +628,7 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: há <xliff:g id="NUM_DAYS">%3$s</xliff:g> dias"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Limpar credenciais"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Permite remover todos os certificados"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Remover todo o conteúdo?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Pretende remover todo o conteúdo?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"O armazenamento de credenciais foi apagado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Não foi possível apagar o armazenamento de credenciais."</string>
     <string name="forget" msgid="3971143908183848527">"Esquecer"</string>

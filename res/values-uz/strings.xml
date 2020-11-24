@@ -142,7 +142,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Xavfsizlik"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Yoʻq"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Wi-Fi diapazoni"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP diapazoni"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Wi-Fi chastotalari diapazoni"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Avto"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 GGs"</string>
@@ -203,7 +203,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Barcha tillar"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Klaviatura"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Klaviaturalar boshqaruvi"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"Matnni nutqqa aylantirish vositasi"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Nutq sintezi"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Standart sintezator"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Joriy sintezator"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Nutq tezligi"</string>
@@ -316,7 +316,7 @@
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"Mos havolalar ochilmasin"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> manzilini ochish"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> va boshqa URL havolalarni ochish"</string>
-    <string name="app_launch_title" msgid="3442601467010363057">"Birlamchi sifatida ochish"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Odatiy tarzda ochish"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Boshqa birlamchi sozlamalar"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Birlamchi sozlamalar belgilanmagan."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Ushbu ilovaning baʼzi andoza harakatlarini tanladingiz."</string>
@@ -352,7 +352,7 @@
     <string name="system_setting_title" msgid="6864599341809463440">"Tizim"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Tizimni yangilash"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android versiyasi"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Android tizim xavfsizligi yangilanishi"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Tizim xavfsizligi uchun yangilanish"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model va apparat taʼminoti"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Modeli: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Aloqa moduli versiyasi"</string>
@@ -375,7 +375,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Mualliflik huquqi belgisi"</string>
     <string name="license_title" msgid="936705938435249965">"Litsenziya"</string>
     <string name="terms_title" msgid="5201471373602628765">"Foydalanish shartlari"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"System WebView litsenziyalari"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"WebView tizim litsenziyalari"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Orqa fon rasmlari"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Sputnik tasvirlari:\n© CNES 2014/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Modeli"</string>
@@ -505,7 +505,7 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olindi"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olinmadi"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hisoblar"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Hisob kiritish"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Hisob qo‘shish"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hech qanday hisobga kirilmagan"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> – hisoblar"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Avtomatik sinxronlash"</string>
@@ -515,7 +515,7 @@
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Avto-sinxronlash bas qilinsinmi?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Trafik tejaladi, lekin oxirgi axborotlarni yigʻish uchun har bir hisobni oʻzingiz sinxronlashingiz kerak. Shuningdek, oʻzgarishlar yuz berganda sizga bildirishnomalar keladi."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hisob haqida"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"Hisob kiritish"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"Hisob qo‘shish"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Yangi hisob kiritish"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Cheklangan profillar hisoblar qo‘sha olmaydilar"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Hisobni olib tashlash"</string>

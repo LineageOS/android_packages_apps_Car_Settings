@@ -194,7 +194,9 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                     mUiStage = Stage.Introduction;
                 }
                 // Schedule the UI update.
-                mTextChangedHandler.notifyAfterTextChanged();
+                if (isResumed()) {
+                    mTextChangedHandler.notifyAfterTextChanged();
+                }
             }
         });
 
@@ -250,6 +252,14 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             mSaveLockWorker.setListener(null);
         }
         mProgressBar.setVisible(false);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPasswordField.setText(null);
+
+        PasswordHelper.zeroizeCredentials(mCurrentEntry, mExistingCredential, mFirstEntry);
     }
 
     /**
