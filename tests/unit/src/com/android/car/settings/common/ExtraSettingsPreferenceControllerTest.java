@@ -76,7 +76,6 @@ public class ExtraSettingsPreferenceControllerTest {
             new CarUxRestrictions.Builder(/* reqOpt= */ false,
                     CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-    // Real test provider
     private static final String TEST_PROVIDER =
             "content://com.android.car.settings.testutils.TestContentProvider";
 
