@@ -23,4 +23,8 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_users_list"
         settings:controller="com.android.car.settings.users.UsersListPreferenceController"/>
+    <com.android.car.settings.common.ColoredPreference
+        android:key="@string/pk_add_user"
+        style="@style/ColoredAccentPreferenceStyle"
+        settings:controller="com.android.car.settings.users.AddUserPreferenceController"/>
 </PreferenceScreen>

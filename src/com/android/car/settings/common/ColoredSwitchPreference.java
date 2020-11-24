@@ -17,6 +17,7 @@
 package com.android.car.settings.common;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -32,8 +33,8 @@ import com.android.settingslib.Utils;
  * Extends {@link CarUiSwitchPreference} to customize colors for each state.
  */
 public class ColoredSwitchPreference extends CarUiSwitchPreference {
-    private int mEnabledColor;
-    private int mDisabledColor;
+    private ColorStateList mEnabledColor;
+    private ColorStateList mDisabledColor;
     private String mContentDescription;
 
     public ColoredSwitchPreference(Context context, AttributeSet attrs,
@@ -60,10 +61,15 @@ public class ColoredSwitchPreference extends CarUiSwitchPreference {
     private void init(Context context, AttributeSet attrs) {
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.ColoredSwitchPreference);
-        mDisabledColor = a.getColor(R.styleable.ColoredSwitchPreference_disabledTitleColor,
-                Utils.getColorAttr(context, android.R.attr.textColorPrimary).getDefaultColor());
-        mEnabledColor = a.getColor(R.styleable.ColoredSwitchPreference_enabledTitleColor,
-                Utils.getColorAttr(context, android.R.attr.textColorPrimary).getDefaultColor());
+        mDisabledColor = a.getColorStateList(
+                R.styleable.ColoredSwitchPreference_disabledTitleColor);
+        if (mDisabledColor == null) {
+            mDisabledColor = Utils.getColorAttr(context, android.R.attr.textColorPrimary);
+        }
+        mEnabledColor = a.getColorStateList(R.styleable.ColoredSwitchPreference_enabledTitleColor);
+        if (mEnabledColor == null) {
+            mEnabledColor = Utils.getColorAttr(context, android.R.attr.textColorPrimary);
+        }
     }
 
     @Override
