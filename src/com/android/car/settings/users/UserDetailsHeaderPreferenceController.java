@@ -20,41 +20,40 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
+import androidx.annotation.VisibleForTesting;
+import androidx.preference.Preference;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.FragmentController;
 
-/** Business logic for the preference which opens the EditUserNameFragment. */
-public class EditUserNameEntryPreferenceController extends
-        UserDetailsBasePreferenceController<ButtonPreference> {
+/** Header preference showing the user's icon, name, and summary on the user details page. */
+public class UserDetailsHeaderPreferenceController extends
+        UserDetailsBasePreferenceController<Preference> {
 
-    private final UserHelper mUserHelper;
+    private UserHelper mUserHelper;
 
-    public EditUserNameEntryPreferenceController(Context context, String preferenceKey,
+    public UserDetailsHeaderPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUserHelper = UserHelper.getInstance(getContext());
     }
 
     @Override
-    protected Class<ButtonPreference> getPreferenceType() {
-        return ButtonPreference.class;
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
-    protected void updateState(ButtonPreference preference) {
-        preference.setOnButtonClickListener(pref -> {
-            getFragmentController().launchFragment(EditUsernameFragment.newInstance(getUserInfo()));
-        });
-
+    protected void updateState(Preference preference) {
         Drawable icon = new UserIconProvider().getRoundedUserIcon(getUserInfo(), getContext());
         preference.setIcon(icon);
         preference.setTitle(UserUtils.getUserDisplayName(getContext(), getUserInfo()));
-
-        if (!mUserHelper.isCurrentProcessUser(getUserInfo())) {
-            preference.showAction(false);
-        }
         preference.setSummary(getSummary());
+    }
+
+    @VisibleForTesting
+    void setUserHelper(UserHelper userHelper) {
+        mUserHelper = userHelper;
     }
 
     private CharSequence getSummary() {

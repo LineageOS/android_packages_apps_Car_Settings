@@ -46,8 +46,10 @@ public class UserDetailsPermissionsFragment extends UserDetailsBaseFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        use(MakeAdminPreferenceController.class, R.string.pk_make_user_admin).setUserInfo(
-                getUserInfo());
+        use(UserDetailsHeaderPreferenceController.class,
+                R.string.pk_user_details_permissions_header).setUserInfo(getUserInfo());
+        use(UserDetailsActionButtonsPreferenceController.class,
+                R.string.pk_user_details_permissions_action_buttons).setUserInfo(getUserInfo());
         use(PermissionsPreferenceController.class, R.string.pk_user_permissions).setUserInfo(
                 getUserInfo());
     }
