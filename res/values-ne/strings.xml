@@ -173,7 +173,7 @@
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"तपाईंको यन्त्र <xliff:g id="DEVICE_NAME">%1$s</xliff:g> बाट विच्छेद हुने छ।"</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"सवारी साधनको ब्लुटुथ ठेगाना: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"यन्त्रको ब्लुटुथ ठेगाना: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_name" msgid="2609869978821094114">"यन्त्रको नाम"</string>
+    <string name="bluetooth_name" msgid="2609869978821094114">"गाडीको नाम"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"यो सवारी साधनको पुनः नामकरण गर्नुहोस्"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"यन्त्रको पुनः नामकरण गर्नुहोस्"</string>
     <string name="bluetooth_rename_button" msgid="2397892174725986383">"पुनः नामकरण गर्नुहोस्"</string>
@@ -278,9 +278,9 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"एप तथा सूचनाहरू"</string>
     <string name="all_applications" msgid="7798210477486822168">"सबै एपहरू देखाउनुहोस्"</string>
     <string name="default_applications" msgid="1558183275638697087">"पूर्वनिर्धारित एपहरू"</string>
-    <string name="app_permissions" msgid="32799922508313948">"अनुप्रयोगसम्बन्धी अनुमति"</string>
+    <string name="app_permissions" msgid="32799922508313948">"एपसम्बन्धी अनुमति"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> प्रयोग गरिरहेका एपहरू"</string>
-    <string name="applications_settings" msgid="794261395191035632">"अनुप्रयोगसम्बन्धी जानकारी"</string>
+    <string name="applications_settings" msgid="794261395191035632">"एपसम्बन्धी जानकारी"</string>
     <string name="force_stop" msgid="2153183697014720520">"जबर्जस्ती रोक्नुहोस्"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"जबरजस्ती रोक्ने हो?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"तपाईंले कुनै एपलाई जबरजस्ती रोक्नुभयो भने त्यसले सही तरिकाले काम नगर्न सक्छ।"</string>
@@ -345,7 +345,7 @@
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"निष्क्रिय पार्नुहोस्"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द गर्नुहोस्"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रिमियम SMS सुविधामाथिको पहुँच"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले अनुप्रयोगका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस एपको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले एपका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस एपको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"प्रयोगसम्बन्धी पहुँच"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"प्रयोगको पहुँचले एपलाई तपाईंले आफ्नो सेवा प्रदायक, भाषासम्बन्धी सेटिङ र अन्य विवरणहरूसहित अन्य कुन कुन एपहरू गरिरहनुभएको छ र कत्तिको प्रयोग गर्नुहुन्छ भन्ने कुरा ट्र्याक गर्न दिन्छ।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi को नियन्त्रण"</string>
@@ -364,7 +364,7 @@
     <string name="hardware_info_summary" msgid="8262576443254075921">"मोडेल: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"बेसब्यान्ड संस्करण"</string>
     <string name="kernel_version" msgid="7327212934187011508">"कर्नेल संस्करण"</string>
-    <string name="build_number" msgid="3997326631001009102">"बिल्डको नम्बर"</string>
+    <string name="build_number" msgid="3997326631001009102">"बिल्ड नम्बर"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ब्लुटुथ ठेगाना"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"उपलब्ध छैन"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"स्थिति"</string>
@@ -415,12 +415,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"नेटवर्कसम्बन्धी सबै सेटिङहरू रिसेट गर्ने हो? तपाईं यो कार्य अन्डू गर्न सक्नुहुन्न!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिङहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्कसम्बन्धी सेटिङहरू रिसेट गरिएको छ"</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"अनुप्रयोगका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएका अनुप्रयोगका सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"अनुप्रयोगका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं एपको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"एपका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएका एपका सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"एपका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं एपको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"एपहरू रिसेट गर्नुहोस्"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"एपका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"यस कार्यले तपाईंको सवारी साधनाको मुख्य भागबाट सम्पूर्ण डेटा मेटाउने छ, जसमा निम्न कुराहरू पर्दछन्:\n\n"<li>"तपाईंको Google खाता"</li>\n<li>"प्रणाली र अनुप्रयोगका डेटा तथा सेटिङहरू"</li>\n<li>"डाउनलोड गरिएका एपहरू"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"यस कार्यले तपाईंको सवारी साधनाको मुख्य भागबाट सम्पूर्ण डेटा मेटाउने छ, जसमा निम्न कुराहरू पर्दछन्:\n\n"<li>"तपाईंको Google खाता"</li>\n<li>"प्रणाली र एपका डेटा तथा सेटिङहरू"</li>\n<li>"डाउनलोड गरिएका एपहरू"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"तपाईं अहिले निम्न खाताहरूमा साइन इन हुनुहुन्छ:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"यस सवारी साधनमा अन्य प्रयोगकर्ताहरू छन्।"</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"सवारी साधन रिसेट गर्नुहोस्"</string>
@@ -508,7 +508,7 @@
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"क्यास हटाउनुहोस्"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"एपको डेटा मेटाउने हो?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"यस एपका सम्पूर्ण डेटा स्थायी रूपमा मेटाइने छ। यसमा सम्पूर्ण फाइल, सेटिङ, खाता, डेटाबेस आदि पर्दछन्।"</string>
-    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"अनुप्रयोगका लागि भण्डारण खाली गर्न सकिएन।"</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"एपका लागि भण्डारण खाली गर्न सकिएन।"</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकालिएको छ"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकाल्न सकिएन"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाताहरू"</string>
@@ -516,7 +516,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"कुनै पनि खाता थपिएन"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> को खाता"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"डेटा स्वतः सिंक गर्नुहोस्"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"अनुप्रयोगहरूलाई डेटा स्वतः पुनः ताजा गर्न दिनुहोस्"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"एपहरूलाई डेटा स्वतः पुनः ताजा गर्न दिनुहोस्"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"डेटा स्वतः सिंक गर्ने कार्य सक्रिय गर्ने हो?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"तपाईंले वेबमार्फत आफ्नो खातामा गर्ने सबै परिवर्तनहरू स्वतः तपाईंको यन्त्रमा प्रतिलिपि गरिने छन्।\n\nकेही खाताहरूले तपाईंले फोनमा गर्ने सबै परिवर्तनहरूलाई वेबमा स्वतः प्रतिलिपि गर्न पनि सक्छन्। Google खाताले यसरी काम गर्दछ।"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"डेटा स्वतः सिंक गर्ने कार्य निष्क्रिय पार्ने हो?"</string>
