@@ -132,7 +132,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Samodejno"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4-GHz pas"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5,0-GHz pas"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Prednostno 5,0-GHz pas"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0-GHz pas (prednostno)"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Izberite vsaj en pas za dostopno točko Wi‑Fi:"</string>
@@ -356,7 +356,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Sodelavci"</string>
     <string name="manual" msgid="4819839169843240804">"Ročno"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Zakonsko predpis. oznake"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Priročnik z varn. in zak. predpis. inf."</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Varnostne in zakonsko predpisane inform."</string>
     <string name="copyright_title" msgid="4220237202917417876">"Avtorske pravice"</string>
     <string name="license_title" msgid="936705938435249965">"Licenca"</string>
     <string name="terms_title" msgid="5201471373602628765">"Določila in pogoji"</string>
@@ -376,7 +376,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Zdaj ste razvijalec."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Ni treba, ker ste že razvijalec."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Možnosti za razvijalce"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Ponastavitev možnosti"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Možnosti ponastavitve"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Ponastavitev omrežja, aplikacij ali naprave"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Ponastavi omrežje"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"S tem boste ponastavili vse omrežne nastavitve, med drugim tudi:"</string>
@@ -552,7 +552,7 @@
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Napaka pri shranjevanju vzorca"</string>
     <string name="okay" msgid="4589873324439764349">"V redu"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Želite odstr. zaklep. zaslona?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"S tem bo lahko vsak dostopal do računa"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"S tem bo lahko vsak dostopal do računa."</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Vnesite kodo PIN"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Vnesite geslo"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Zaradi varnosti nastavite kodo PIN"</string>

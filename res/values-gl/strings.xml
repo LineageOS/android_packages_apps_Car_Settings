@@ -199,7 +199,7 @@
     <string name="media_volume_summary" msgid="2961762827637127239">"Define o volume da música e dos vídeos"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarma"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Ton de chamada do teléfono"</string>
-    <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notificación predeterm."</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notificación predeterminado"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Son de alarma predeterminado"</string>
     <string name="units_settings" msgid="402325305096925886">"Unidades"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Velocidade"</string>
@@ -306,7 +306,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Non abre nesta aplicación"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Ligazóns compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Acceso especial das aplicacións"</string>
-    <string name="show_system" msgid="4401355756969485287">"Mostrar procesos do sistema"</string>
+    <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar axustes do sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Con este permiso as aplicacións poden modificar a configuración do sistema."</string>
@@ -373,7 +373,7 @@
     <string name="reset_options_title" msgid="4388902952861833420">"Opcións de restablecemento"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Restablecemento do dispositivo, das aplicacións ou da rede"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Restablecer rede"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Con esta acción restablecerase toda a configuración da rede, incluso:"</string>
+    <string name="reset_network_desc" msgid="602381374544634925">"Con esta acción restablecerase toda a configuración da rede, como:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wifi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datos móbiles"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
@@ -526,7 +526,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Tentar de novo"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Omitir"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Definir un bloqueo de pantalla"</string>
-    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Escolle o teu PIN"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Escoller o teu PIN"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Seleccionar o teu padrón"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Escoller o teu contrasinal"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Bloqueo de pantalla actual"</string>

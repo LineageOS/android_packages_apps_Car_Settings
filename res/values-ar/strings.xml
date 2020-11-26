@@ -129,7 +129,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"الأمان"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"بلا"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"نطاق نقطة وصول"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"نطاق نقطة الوصول"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"اختيار نطاق نقطة الوصول"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"تلقائي"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"نطاق بتردد ٢٫٤ غيغاهرتز"</string>
@@ -144,7 +144,7 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"هناك رغبة من <xliff:g id="REQUESTER">%s</xliff:g> في تفعيل شبكة Wi-Fi."</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"هناك رغبة من <xliff:g id="REQUESTER">%s</xliff:g> في إيقاف شبكة Wi-Fi."</string>
     <string name="wifi_error" msgid="3105105447117289410">"خطأ"</string>
-    <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
+    <string name="bluetooth_settings_title" msgid="3794688574569688649">"البلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"جهاز بدون اسم"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"الأجهزة المقترنة"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"إقران جهاز جديد"</string>
@@ -161,7 +161,7 @@
     <string name="bluetooth_profiles" msgid="5580372290862835951">"الملفات الشخصية"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"جارٍ تفعيل البلوتوث..."</string>
-    <string name="bluetooth_turning_off" msgid="1753975097241024061">"جارٍ إيقاف تفعيل البلوتوث..."</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"جارٍ إيقاف البلوتوث..."</string>
     <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> تفعيل البلوتوث"</string>
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> إيقاف البلوتوث"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"يريد أحد التطبيقات تفعيل بلوتوث"</string>
@@ -194,7 +194,7 @@
     <string name="tts_speech_rate" msgid="4512944877291943133">"معدل سرعة الكلام"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"درجة الصوت"</string>
     <string name="tts_reset" msgid="6289481549801844709">"إعادة الضبط"</string>
-    <string name="sound_settings" msgid="3072423952331872246">"صوت"</string>
+    <string name="sound_settings" msgid="3072423952331872246">"الصوت"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"مستوى صوت الرنين"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"مستوى صوت التنقل"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"نغمة الرنين"</string>
@@ -205,7 +205,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"نغمة رنين الهاتف"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"الصوت التلقائي للإشعارات"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"الصوت التلقائي للمنبّه"</string>
-    <string name="units_settings" msgid="402325305096925886">"وحدة"</string>
+    <string name="units_settings" msgid="402325305096925886">"وحدات العرض"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"السرعة"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"المسافة"</string>
     <string name="units_fuel_consumption_title" msgid="6415108114453652570">"استهلاك الوقود"</string>
@@ -256,7 +256,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"التطبيقات والإشعارات"</string>
     <string name="all_applications" msgid="7798210477486822168">"إظهار جميع التطبيقات"</string>
     <string name="default_applications" msgid="1558183275638697087">"التطبيقات التلقائية"</string>
-    <string name="app_permissions" msgid="32799922508313948">"أذونات التطبيق"</string>
+    <string name="app_permissions" msgid="32799922508313948">"أذونات التطبيقات"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"التطبيقات التي تستخدم <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"معلومات التطبيق"</string>
     <string name="force_stop" msgid="2153183697014720520">"فرض الإيقاف"</string>
@@ -398,15 +398,15 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"هل تريد إعادة ضبط جميع إعدادات الشبكة؟ لا يمكنك التراجع عن هذا الإجراء."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"إعادة ضبط الإعدادات"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"تمت إعادة ضبط إعدادات الشبكة."</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"إعادة ضبط خيارات التطبيقات المفضّلة"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"إعادة ضبط الإعدادات المفضّلة للتطبيقات"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"يؤدي ذلك إلى إعادة ضبط جميع الإعدادات المفضَّلة لما يلي:\n\n"<li>"التطبيقات الموقوفة"</li>\n<li>"إشعارات التطبيقات الموقوفة"</li>\n<li>"التطبيقات التلقائية للإجراءات"</li>\n<li>"القيود على البيانات الخلفية للتطبيقات"</li>\n<li>"أيّ قيود على الأذونات"</li>\n\n"ولن تفقد أيّ بيانات للتطبيقات."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"إعادة ضبط التطبيقات"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تم إعادة ضبط خيارات التطبيقات المفضّلة"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تمت إعادة ضبط الإعدادات المفضّلة للتطبيقات"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"محو جميع البيانات (factory reset)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"سيؤدي هذا الإجراء إلى محو جميع البيانات من الوحدة الأساسية لمركبتك، بما في ذلك:\n\n"<li>"حسابك على Google"</li>\n<li>"بيانات وإعدادات النظام والتطبيقات"</li>\n<li>"التطبيقات التي تم تنزيلها"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"سيؤدي هذا الإجراء إلى محو جميع البيانات من الوحدة الأساسية لسيارتك، بما في ذلك:\n\n"<li>"حسابك على Google"</li>\n<li>"بيانات وإعدادات النظام والتطبيقات"</li>\n<li>"التطبيقات التي تم تنزيلها"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"الحسابات التي سجَّلت الدخول إليها حاليًا:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"هناك مستخدمون آخرون موجودون على هذه المركبة."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"إعادة ضبط المركبة"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"إعادة ضبط إعدادات السيارة"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"هل تريد إعادة الضبط؟"</string>
     <string name="master_clear_confirm_desc" msgid="8920446291698038558">"هل تريد محو جميع المعلومات الشخصية والتطبيقات التي تم تنزيلها؟ لا يمكنك التراجع عن هذا الإجراء."</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"محو جميع المعلومات والتطبيقات"</string>
@@ -421,11 +421,11 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"تنسيق ٢٤ ساعة"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"استخدام تنسيق ٢٤ ساعة"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"الوقت"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"تعيين الوقت"</string>
+    <string name="date_time_set_time" msgid="6449555153906058248">"ضبط الوقت"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"المنطقة الزمنية"</string>
-    <string name="date_time_set_timezone" msgid="4759353576185916944">"تحديد المنطقة الزمنية"</string>
+    <string name="date_time_set_timezone" msgid="4759353576185916944">"اختيار المنطقة الزمنية"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"التاريخ"</string>
-    <string name="date_time_set_date" msgid="2537494485643283230">"تعيين التاريخ"</string>
+    <string name="date_time_set_date" msgid="2537494485643283230">"ضبط التاريخ"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"ترتيب أبجدي"</string>
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ترتيب بحسب المنطقة الزمنية"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"التاريخ"</string>
@@ -446,7 +446,7 @@
     <string name="user_new_user_name" msgid="7115771396412339662">"مستخدم جديد"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"أتريد إضافة مستخدم جديد؟"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"عند إضافة مستخدم جديد، عليه إعداد مساحته."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"يمكن لأي مستخدم تحديث التطبيقات لجميع المستخدمين الآخرين."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"يمكن لأي مستخدم تعديل إعدادات التطبيقات لجميع المستخدمين الآخرين."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"تم الوصول إلى أقصى عدد للمستخدمين"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="zero">يمكنك إنشاء ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدم.</item>
@@ -489,11 +489,11 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"بيانات المستخدمين"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"ذاكرة التخزين المؤقت"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"الإجمالي"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"مسح مساحة التخزين"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"محو مساحة التخزين"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"محو ذاكرة التخزين المؤقت"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"هل تريد حذف بيانات التطبيق؟"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا. ويشمل ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات وما إلى ذلك."</string>
-    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"تعذّر مسح مساحة تخزين للتطبيق."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"تعذّر محو مساحة تخزين للتطبيق."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"تم إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"تعذّر إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"الحسابات"</string>
@@ -541,7 +541,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"متابعة"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"إعادة المحاولة"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"تخطّي"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"تعيين قفل شاشة"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"ضبط قفل شاشة"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"اختيار رقم التعريف الشخصي"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"اختيار النّقش"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"اختيار كلمة المرور"</string>
@@ -565,7 +565,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"أدخل كلمة المرور"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"للحفاظ على الأمان، يجب تعيين رقم PIN."</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"إعادة إدخال رقم التعريف الشخصي"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"يجب أن يكون رقم PIN‏ 4 أرقام على الأقل."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"يجب أن يتكوّن PIN من‏ 4 أرقام على الأقل."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"رقم التعريف الشخصي غير صالح لأنه يجب أن يحتوي على 4 أرقام على الأقل."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"أرقام PIN غير متطابقة"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"حدث خطأ أثناء حفظ رقم التعريف الشخصي."</string>

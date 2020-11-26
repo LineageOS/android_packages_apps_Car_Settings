@@ -88,7 +88,7 @@
     <string name="wifi_frequency" msgid="8951455949682864922">"Frequência"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"Endereço IP"</string>
     <string name="show_password" msgid="2074628020371139240">"Exibir senha"</string>
-    <string name="default_network_name_summary" msgid="8148402439232464276">"Digite nome da rede"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"Digite o nome da rede"</string>
     <string name="default_password_summary" msgid="8789594645836902982">"Digite a senha"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
@@ -112,7 +112,7 @@
     <string name="wifi_wakeup" msgid="7451825226044542000">"Ativar o Wi‑Fi automaticamente"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"O Wi‑Fi será ativado perto de redes salvas de alta qualidade, como sua rede doméstica"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisponível porque o local está desativado. Ative o"<annotation id="link">"local"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Ativar a busca por Wi‑Fi?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Ativar a \"busca por Wi‑Fi\"?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Ativar"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Busca por Wi‑Fi ativada"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Alternar para dados móveis automaticamente"</string>
@@ -485,7 +485,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar dados automaticamente"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que os apps atualizem dados automaticamente"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permite que os apps atualizem dados automaticamente"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Ativar sincronização automática?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"As alterações feitas nas suas contas na Web serão automaticamente copiadas para o dispositivo.\n\nEm algumas contas, as alterações feitas no smartphone também poderão ser copiadas automaticamente para a Web. É o caso de uma Conta do Google."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Desativar sincroniz. automática?"</string>
@@ -534,10 +534,10 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Limpar"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancelar"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Seu novo padrão de desbloqueio"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Desenhar um padrão de desbloqueio"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Desenhe um padrão de desbloqueio"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Solte o dedo quando terminar."</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Padrão registrado"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Desenhe o padrão novamente p/ confirmar"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Desenhe o padrão de novo para confirmar"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Conecte 4 pontos (mín). Tente novamente."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Padrão incorreto"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como desenhar um padrão de desbloqueio"</string>

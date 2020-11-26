@@ -20,10 +20,10 @@
     <string name="settings_label" msgid="5147911978211079839">"सेटिंग्ज"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"आणखी"</string>
     <string name="display_settings" msgid="5325515247739279185">"डिस्प्ले"</string>
-    <string name="brightness" msgid="2919605130898772866">"चकाकी स्तर"</string>
+    <string name="brightness" msgid="2919605130898772866">"ब्राइटनेस पातळी"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"अनुकूल चकाकी"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"उपलब्ध प्रकाशासाठी चकाकी पातळी ऑप्टिमाइझ करा"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"रात्रीचा प्रकाश चालू आहे"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"रात्रीचा प्रकाश सुरू आहे"</string>
     <string name="keywords_display" msgid="3978416985146943922">"स्क्रीन, टचस्क्रीन"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"मंद स्क्रीन, टचस्क्रीन, बॅटरी"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"मंद स्क्रीन, टचस्क्रीन, बॅटरी"</string>
@@ -68,7 +68,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"डेटा वापर मर्यादा सेट करा"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"सेट करा"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाय-फाय"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"वाय-फाय चालू करत आहे…"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"वाय-फाय सुरू करत आहे…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"वाय-फाय बंद करत आहे…"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"वाय-फाय सूची लोड करत आहे"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"वाय-फाय बंद केले"</string>
@@ -110,11 +110,11 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"वाय-फाय प्राधान्ये"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"वाय-फाय आपोआप सुरू करा"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तुमच्या होम नेटवर्कसारख्या उच्च दर्जाच्या सेव्ह केलेल्या नेटवर्कजवळ वाय-फाय आपोआप परत चालू होईल"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तुमच्या होम नेटवर्कसारख्या उच्च दर्जाच्या सेव्ह केलेल्या नेटवर्कजवळ वाय-फाय आपोआप परत सुरू होईल"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान बंद केल्यामुळे उपलब्ध नाही. "<annotation id="link">"स्थान"</annotation>" सुरू करा."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"वाय-फाय स्कॅनिंग सुरू करायचे का?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"सुरू करा"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"वाय फाय स्कॅनिंग सुरू केले आहे"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"वाय-फाय स्कॅनिंग सुरू केले आहे"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटावर आपोआप स्विच करा"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"वाय-फायवरून इंटरनेट ॲक्सेस नसताना मोबाइल डेटा वापरा. डेटा वापर शुल्क लागू शकते."</string>
     <string name="learn_more" msgid="8214605928933358604">"अधिक जाणून घ्या"</string>
@@ -146,7 +146,7 @@
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"नवीन डिव्हाइस पेअर करा"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"पेअर करण्यासाठी ब्लूटूथ सुरू होईल"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"डिव्हाइस डिस्‍कनेक्‍ट करायचे?"</string>
-    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"तुमचे डिव्हाइस <xliff:g id="DEVICE_NAME">%1$s</xliff:g>वरून डिस्कनेक्ट होईल."</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"तुमचे वाहन <xliff:g id="DEVICE_NAME">%1$s</xliff:g> वरून डिस्कनेक्ट होईल."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"वाहनाचा ब्लूटूथ अ‍ॅड्रेस: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"डिव्हाइसचा ब्लूटूथ अ‍ॅड्रेस: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"वाहनाचे नाव"</string>
@@ -166,18 +166,18 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"एका अ‍ॅपला तुमचे हेडयुनिट इतर ब्लूटूथ डिव्हाइससाठी <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंदांकरिता दृश्यमान करायचे आहे."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला ब्लूटूथ सुरू करायचे आहे आणि तुमचे हेडयुनिट इतर डिव्हाइससाठी <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकंदांकरिता दृश्‍यमान करायचे आहे."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एका अ‍ॅपला ब्लूटूथ सुरू करायचे आहे आणि तुमचे हेडयुनिट इतर डिव्हाइससाठी <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंदांकरिता दृश्यमान बनवायचे आहे."</string>
-    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ पेअरींग विनंती"</string>
+    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ पेअरिंग विनंती"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"पेअर करा आणि कनेक्ट करा"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लूटूथ पेअरींग कोड"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लूटूथ पेअरिंग कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"पिन मध्ये अक्षरे किंवा चिन्हे आहेत"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"पेअरींग कोड टाइप करा नंतर परत या किंवा Enter दाबा"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"पेअरिंग कोड टाइप करा नंतर परत या किंवा Enter दाबा"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सह पेअर करायचे?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ला तुमचे संपर्क आणि कॉल इतिहास अ‍ॅक्सेस करण्‍याची अनुमती द्या"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"तुम्हाला इतर डिव्हाइसवर देखील हा पिन टाइप करण्याची आवश्यकता असू शकते."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"तुम्हाला इतर डिव्हाइसवर देखील ही पासकी टाइप करण्याची आवश्यकता असू शकते."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"१६ अंक असणे आवश्यक आहे"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"सामान्यतः ०००० किंवा १२३४"</string>
-    <string name="bluetooth_notif_title" msgid="8374602799367803335">"पेअरींग विनंती"</string>
+    <string name="bluetooth_notif_title" msgid="8374602799367803335">"पेअरिंग विनंती"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सह जोडण्यासाठी टॅप करा."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ब्लूटूथ डिव्हाइस निवडा"</string>
     <string name="language_settings" msgid="2079258598337245546">"भाषा"</string>
@@ -192,14 +192,14 @@
     <string name="tts_reset" msgid="6289481549801844709">"रीसेट करा"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ध्वनी"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"रिंग आवाज"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"नेव्हिगेशन आवाज"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"नेव्हिगेशन व्हॉल्यूम"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"रिंगटोन"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"सूचना"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"मीडिया"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"संगीत आणि व्हिडिओंसाठी व्हॉल्यूम सेट करा"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"अलार्म"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"फोनची रिंगटोन"</string>
-    <string name="notification_ringtone_title" msgid="8661716239594010288">"सूचनेचा डीफॉल्ट आवाज"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"डीफॉल्ट सूचना आवाज"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"अलार्मचा डीफॉल्ट आवाज"</string>
     <string name="units_settings" msgid="402325305096925886">"युनिट"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"वेग"</string>
@@ -259,7 +259,7 @@
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"सक्तीने थांबवायचे आहे का?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"तुम्ही सक्तीने अ‍ॅप थांबवल्यास, ते गैरवर्तन करू शकते."</string>
     <string name="disable_text" msgid="4358165448648990820">"बंद करा"</string>
-    <string name="enable_text" msgid="1794971777861881238">"चालू करा"</string>
+    <string name="enable_text" msgid="1794971777861881238">"सुरू करा"</string>
     <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करा"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"तुम्ही हे अ‍ॅप बंद केल्यास, Android आणि इतर अ‍ॅप्स कदाचित यापुढे अपेक्षेप्रमाणे कार्य करू शकणार नाहीत."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"अ‍ॅप बंद करा"</string>
@@ -276,7 +276,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त परवानग्या</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अतिरिक्त परवानगी</item>
     </plurals>
-    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"टीप: रीबूट केल्यानंतर, तुम्ही तुमचे वाहन अनलॉक करेपर्यंत हे ॲप सुरू होऊ शकत नाही."</string>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"टीप: रीबूट केल्यानंतर, तुम्ही तुमचे वाहन अनलॉक करेपर्यंत हे अ‍ॅप सुरू होऊ शकत नाही."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"साहाय्य आणि व्हॉइस इनपुट"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"साहाय्य अ‍ॅप"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"स्क्रीनवरील मजकूर वापरा"</string>
@@ -383,7 +383,7 @@
     <string name="reset_network_select" msgid="2433825874868038739">"नेटवर्क निवडा"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"सेटिंग्ज रीसेट करा"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"रीसेट करायचे?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"सर्व नेटवर्क सेटिंग्ज रीसेट करायच्या? तुम्ही ही क्रिया पूर्ववत करू शकत नाही!"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"सर्व नेटवर्क सेटिंग्ज रीसेट करायची? तुम्ही ही क्रिया पूर्ववत करू शकत नाही!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिंग्ज रीसेट करा"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्क सेटिंग्ज रीसेट केल्या आहेत"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"ॲप प्राधान्ये रीसेट करा"</string>
@@ -467,16 +467,16 @@
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममध्ये अशा फायलींचा समावेश आहे ज्यांचा वापर Android आवृत्ती <xliff:g id="VERSION">%s</xliff:g> रन करण्यासाठी केला जातो"</string>
-    <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फायली"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फाइल"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"मोजत आहे…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"अ‍ॅप आकार"</string>
     <string name="storage_data_size_label" msgid="5022911581004239367">"वापरकर्ता डेटा"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"कॅशे"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"एकूण"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"स्‍टोरेज साफ करा"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"कॅशे साफ करा"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"कॅशे  साफ करा"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"अ‍ॅप डेटा हटवायचा का?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"या ॲपचा सर्व डेटा कायमचा हटवला जाईल. यात सर्व फायली, सेटिंग्ज, खाती, डेटाबेस इ.चा समावेश असतो."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"या ॲपचा सर्व डेटा कायमचा हटवला जाईल. यात सर्व फाइल, सेटिंग्ज, खाती, डेटाबेस इ.चा समावेश असतो."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ॲपसाठी स्‍टोरेज साफ करता आले नाही."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षितपणे बाहेर काढले"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षितपणे बाहेर काढता आले नाही"</string>
@@ -500,7 +500,7 @@
     <string name="remove_account_error_title" msgid="8368044943174826635">"खाते काढता आले नाही"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"खाते सिंक करा"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> पैकी <xliff:g id="ID_1">%1$d</xliff:g> आयटम सिंक करणे सुरू आहे"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सर्व आयटम सिंक करणे चालू करा"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सर्व आयटम सिंक करणे सुरू करा"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"सर्व आयटम सिंक करणे बंद करा"</string>
     <string name="sync_disabled" msgid="393531064334628258">"सिंक बंद आहे"</string>
     <string name="sync_error" msgid="6698021343089247914">"सिंक एरर"</string>
@@ -534,17 +534,17 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"साफ करा"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"रद्द करा"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"तुमचा नवीन अनलॉक पॅटर्न"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"अनलॉक पॅटर्न रेखाटा"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"अनलॉक पॅटर्न रेखांकित करा"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"पूर्ण झाल्यावर बोट काढा"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"पॅटर्न रेकॉर्ड झाला"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"निश्चित करण्यासाठी पुन्हा रेखांकित करा"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"खात्री करण्यासाठी पॅटर्न पुन्हा रेखांकित करा"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"किमान ४ बिंदू जोडा. पुन्हा प्रयत्न करा."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"चुकीचा पॅटर्न"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलॉक पॅटर्न कसा काढावा"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"पॅटर्न सेव्ह करताना एरर आली"</string>
     <string name="okay" msgid="4589873324439764349">"ठीक आहे"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रीन लॉक काढायचा?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"तुमचे खाते ॲक्‍सेस करण्‍यासाठी हे कुणालाही अनुमती देते"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"तुमचे खाते ॲक्‍सेस करण्‍यासाठी हे कोणालाही अनुमती देईल"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"तुमचा पिन एंटर करा"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"तुमचा पासवर्ड एंटर करा"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षिततेसाठी पिन सेट करा"</string>

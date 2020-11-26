@@ -111,7 +111,7 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Adresy IPv6"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Brama"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Ustawienia Wi‑Fi"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Włącz Wi-Fi automatycznie"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Włączaj Wi-Fi automatycznie"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi włączy się w pobliżu zapisanych sieci wysokiej jakości, np. Twojej sieci domowej"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Niedostępne, bo lokalizacja jest wyłączona. Włącz "<annotation id="link">"ją"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Włączyć skanowanie Wi‑Fi?"</string>
@@ -491,7 +491,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"Konta"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nie dodano kont"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika: <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatycznie synchronizuj dane"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Pozwól aplikacjom automatycznie odświeżać dane"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Włączyć autosynchronizację?"</string>
@@ -559,7 +559,7 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Podaj ponownie kod PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Kod PIN musi mieć co najmniej 4 cyfry"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Kod PIN musi mieć co najmniej 4 cyfry."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kody PIN nie są identyczne"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kody PIN nie są takie same"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Błąd podczas zapisywania kodu PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Nieprawidłowy kod PIN"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Nieprawidłowe hasło"</string>

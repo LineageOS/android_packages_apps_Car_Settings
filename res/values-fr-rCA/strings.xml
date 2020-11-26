@@ -42,6 +42,7 @@
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Avertissement d\'utilisation de données : <xliff:g id="ID_1">^1</xliff:g> / Limite d\'utilisation de données : <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="one">%d jour restant</item>
+      <item quantity="many">%d days left</item>
       <item quantity="other">%d jours restants</item>
     </plurals>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Aucun temps restant"</string>
@@ -123,7 +124,7 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"D\'autres appareils peuvent se connecter à <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Mot de passe du point d\'accès"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sécurité"</string>
-    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 personnel"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personnel"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Aucun"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Bande PA"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Sélectionner la bande PA"</string>
@@ -274,6 +275,7 @@
     <string name="computing_size" msgid="5791407621793083965">"Traitement en cours…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> autorisation supplémentaire</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> additional permissions</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> autorisations supplémentaires</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Remarque : Après un redémarrage, vous ne pouvez pas lancer cette application tant que vous n\'avez pas déverrouillé votre véhicule."</string>
@@ -307,13 +309,13 @@
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Liens compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Accès spécial pour applications"</string>
     <string name="show_system" msgid="4401355756969485287">"Afficher le système"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Masquer le système"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Masquer les processus système"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modifier paramètres système"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cette autorisation permet à une application de modifier les paramètres du système."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accès aux notifications"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Autoriser <xliff:g id="SERVICE">%1$s</xliff:g> à accéder aux notifications?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> pourra lire toutes les notifications, y compris des données personnelles, telles que le nom de contacts et le texte des messages que vous recevez. Ce service d\'écoute pourra également ignorer des notifications ou déclencher des boutons d\'action que celles-ci contiennent.\n\nCe déclenchement permettra également à l\'application d\'activer et de désactiver la fonction Ne pas déranger ainsi que de modifier les paramètres connexes."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si vous désactivez l\'accès aux notifications pour <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, l\'accès à la fonction Ne pas déranger peut également être désactivé."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> pourra lire toutes les notifications, y compris des données personnelles, telles que le nom de contacts et le texte des messages que vous recevez. Ce service d\'écoute pourra également ignorer des notifications ou déclencher des boutons d\'action que celles-ci contiennent.\n\nCe déclenchement permettra également à l\'application d\'activer et de désactiver le mode Ne pas déranger ainsi que de modifier les paramètres connexes."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si vous désactivez l\'accès aux notifications pour <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, l\'accès au mode Ne pas déranger peut également être désactivé."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Désactiver"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accès aux messages texte payants"</string>
@@ -323,14 +325,14 @@
     <string name="directory_access_title" msgid="7117264853202268740">"Accès à l\'annuaire"</string>
     <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Gestion du Wi-Fi"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou supprimer des réseaux, ou à lancer un point d\'accès local uniquement."</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou retirer des réseaux, ou à lancer un point d\'accès local uniquement."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applis"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Système"</string>
-    <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour système"</string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour du système"</string>
     <string name="status_unavailable" msgid="3737918179898732010">"Indisponible"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Version d\'Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Niveau du correctif de sécurité Android"</string>
@@ -365,6 +367,7 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Chargement en cours…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
       <item quantity="one">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étape pour devenir un concepteur.</item>
+      <item quantity="many">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer.</item>
       <item quantity="other">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étapes pour devenir un concepteur.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Vous êtes désormais un concepteur!"</string>
@@ -438,6 +441,7 @@
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Limite d\'utilisateurs atteinte"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="one">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> utilisateur.</item>
+      <item quantity="many">You can create up to <xliff:g id="COUNT">%d</xliff:g> users.</item>
       <item quantity="other">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> utilisateurs.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Impossible de créer un utilisateur"</string>
@@ -473,7 +477,7 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"Données de l\'utilisateur"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Total"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vider le stockage"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Effacer l\'espace de stockage"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Vider le cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Supprimer les données de l\'appli?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Toutes les données de cette application seront supprimées définitivement, y compris l\'intégralité des fichiers, des paramètres, des comptes, des bases de données, etc."</string>
@@ -497,7 +501,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Supprimer le compte"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Supprimer le compte?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"La suppression de ce compte entraînera la suppression de tous les messages, les contacts et les autres données de l\'appareil."</string>
-    <string name="remove_account_error_title" msgid="8368044943174826635">"Impossible de supprimer le compte."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Impossible de retirer le compte."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Synchronisation du compte"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"La synchronisation est activée pour <xliff:g id="ID_1">%1$d</xliff:g> éléments sur <xliff:g id="ID_2">%2$d</xliff:g>"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"La synchronisation est activée pour tous les éléments"</string>
@@ -573,26 +577,32 @@
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Le mot de passe doit comprendre au moins quatre caractères"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> letters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres</item>
     </plurals>
     <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre minuscule</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> lowercase letters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres minuscules</item>
     </plurals>
     <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre majuscule</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> uppercase letters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres majuscules</item>
     </plurals>
     <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> chiffre</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> numerical digits</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> chiffres</item>
     </plurals>
     <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractère spécial</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> special symbols</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractères spéciaux</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractère autre qu\'une lettre</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> non-letter characters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractères autres qu\'une lettre</item>
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'administrateur de l\'appareil ne permet pas l\'utilisation d\'un mot de passe récent"</string>
@@ -603,7 +613,7 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
     <string name="forget" msgid="3971143908183848527">"Oublier"</string>
     <string name="connect" msgid="5861699594602380150">"Connexion"</string>
-    <string name="disconnect" msgid="6140789953324820336">"Déconnexion"</string>
+    <string name="disconnect" msgid="6140789953324820336">"Déconnecter"</string>
     <string name="delete_button" msgid="5840500432614610850">"Supprimer"</string>
     <string name="remove_button" msgid="6664656962868194178">"Supprimer"</string>
     <string name="cancel" msgid="750286395700355455">"Annuler"</string>

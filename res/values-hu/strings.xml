@@ -123,7 +123,7 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Más eszközök is csatlakozhatnak a(z) <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> hotspothoz"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Hotspot jelszava"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Biztonság"</string>
-    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 személyes"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nincs"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP-sáv"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP-sáv kiválasztása"</string>
@@ -333,7 +333,7 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>
     <string name="status_unavailable" msgid="3737918179898732010">"Nem áll rendelkezésre"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-verzió"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Androidos biztonsági hibajavító csomag szintje"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Androidos biztonsági hibajavító csomag"</string>
     <string name="model_info" msgid="4966408071657934452">"Modell"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Alapsáv verziója"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel verziója"</string>
@@ -352,7 +352,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Közreműködők"</string>
     <string name="manual" msgid="4819839169843240804">"Kézi"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Szabályozási címkék"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Biztonsági és az előírásokkal kapcsolatos útmutató"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Biztonsági és szabályozási útmutató"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Szerzői jog"</string>
     <string name="license_title" msgid="936705938435249965">"Licenc"</string>
     <string name="terms_title" msgid="5201471373602628765">"Általános Szerződési Feltételek"</string>
@@ -466,7 +466,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Egyéb alkalmazások"</string>
     <string name="storage_files" msgid="6382081694781340364">"Fájlok"</string>
     <string name="storage_system" msgid="1271345630248014010">"Rendszer"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"A rendszer tartalmaz <xliff:g id="VERSION">%s</xliff:g> verziójú Android futtatásához használt fájlokat"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"A rendszer az Android <xliff:g id="VERSION">%s</xliff:g>. verziójának futtatásához használt fájlokat tartalmaz"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Hangfájlok"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Számítás…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Alkalmazás mérete"</string>

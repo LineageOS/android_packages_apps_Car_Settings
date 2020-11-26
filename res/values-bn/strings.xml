@@ -147,7 +147,7 @@
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"পেয়ার করার জন্য ব্লুটুথ চালু হবে"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ডিভাইস ডিসকানেক্ট করতে চান?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>.ডিভাইস থেকে আপনার গাড়িটি ডিসকানেক্ট হয়ে যাবে।"</string>
-    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"গাড়িতে ব্যবহার হওয়া ব্লুটুথ ঠিকানা: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"গাড়িতে ব্যবহার হওয়া ব্লুটুথ অ্যাড্রেস: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"ডিভাইসে ব্যবহার হওয়া ব্লুটুথ ঠিকানা: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"গাড়ির নাম"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"এই গাড়িটির আবার নামকরণ করুন"</string>
@@ -168,7 +168,7 @@
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"একটি অ্যাপ ব্লুটুথ চালু করতে চায় এবং আপনার হেডইউনিটটিকে অন্যান্য ডিভাইসের জন্য <xliff:g id="TIMEOUT">%1$d</xliff:g> সেকেন্ড দেখাতে চায়।"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ব্লুটুথ পেয়ার করার অনুরোধ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"পেয়ার এবং কানেক্ট করুন"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ব্লুটুথ এর সাথে পেয়ার করার কোড"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ব্লুটুথ-এর সাথে পেয়ার করার কোড"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"পিনে অক্ষর বা চিহ্ন রয়েছে"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"যুক্ত করার কোড লিখে রিটার্ন অথবা এন্টার টিপুন"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> এর সাথে পেয়ার করবেন?"</string>
@@ -192,7 +192,7 @@
     <string name="tts_reset" msgid="6289481549801844709">"রিসেট করুন"</string>
     <string name="sound_settings" msgid="3072423952331872246">"সাউন্ড"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"রিং ভলিউম"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"ন্যাভিগেশন ভলিউম"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"নেভিগেশন ভলিউম"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"রিংটোন"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"বিজ্ঞপ্তি"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"মিডিয়া"</string>
@@ -310,7 +310,7 @@
     <string name="hide_system" msgid="8845453295584638040">"সিস্টেম লুকান"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"সিস্টেম সেটিংস পরিবর্তন করুন"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"এই অনুমতিটি কোনও অ্যাপকে সিস্টেম সেটিংস পরিবর্তন করার অনুমতি দেয়।"</string>
-    <string name="notification_access_title" msgid="1467340098885813473">"বিজ্ঞপ্তির অ্যাক্সেস"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"বিজ্ঞপ্তি অ্যাক্সেস"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>-কে বিজ্ঞপ্তিতে অ্যাক্সেস দিতে চান?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> পরিচিতির নাম ও আপনার পাওয়া মেসেজের মত ব্যক্তিগত তথ্য সহ সমস্ত বিজ্ঞপ্তি পড়তে পারবেন। এটি আবার এর মধ্যে থাকা বিজ্ঞপ্তি বা নির্দিষ্ট কাজের বোতাম খারিজ করতে পারবে।\n\nএছাড়াও এটি এই অ্যাপকে \'বিরক্ত করবে না\' বিকল্পটিকে চালু বা বন্ধ করার এবং সেই সংক্রান্ত সেটিংস পরিবর্তন করার সুবিধা দেয়।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-এর জন্য বিজ্ঞপ্তির অ্যাক্সেস বন্ধ করেন, তাহলে \'বিরক্ত করবে না\' এর অ্যাক্সেসও বন্ধ হয়ে যেতে পারে।"</string>
@@ -370,7 +370,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"আপনি এখন একজন ডেভেলপার!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"কোনও প্রয়োজন নেই, আপনি ইতিমধ্যেই একজন ডেভেলপার।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ডেভেলপারের জন্য বিকল্প"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"রিসেটের বিকল্পগুলি"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"রিসেট করার বিকল্প"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"নেটওয়ার্ক, অ্যাপ অথবা ডিভাইস রিসেট"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"নেটওয়ার্ক রিসেট করুন"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"এর ফলে সমস্ত নেটওয়ার্ক সেটিংস রিসেট করা হবে, এগুলি সহ:"</string>
@@ -388,8 +388,8 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"নেটওয়ার্ক সেটিংস রিসেট করা হয়েছে"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"অ্যাপের অভিরুচি রিসেট করুন"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"এটি এইগুলির জন্য সব পছন্দ রিসেট করবে:\n\n"<li>" বন্ধ করা অ্যাপ"</li>\n<li>" বন্ধ করা অ্যাপের বিজ্ঞপ্তি"</li>\n<li>" অ্যাকশনের জন্য ডিফল্ট অ্যাপ্লিকেশন"</li>\n<li>" অ্যাপের জন্য ব্যাকগ্রাউন্ড ডেটার সীমাবদ্ধতা"</li>\n<li>" যেকোনও অনুমতির সীমাবদ্ধতা"</li>\n\n" আপনি কোনও অ্যাপের ডেটা হারাবেন না।"</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"অ্যাপ আবার সেট করুন"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"অ্যাপের পছন্দ রিসেট করা হয়েছে"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"অ্যাপ রিসেট করুন"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"অ্যাপের অভিরুচি রিসেট করা হয়েছে"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"সমস্ত ডেটা মুছে ফেলুন (ফ্যাক্টরি রিসেট)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"এটি গাড়ির প্রধান ডিসপ্লে ইউনিট থেকে সমস্ত ডেটা মুছে ফেলবে, নিম্নলিখিত বিষয়গুলি অন্তর্ভুক্ত:\n\n"<li>"আপনার Google অ্যাকাউন্ট"</li>\n<li>"সিস্টেম এবং অ্যাপের ডেটা এবং সেটিংস"</li>\n<li>"ডাউনলোড করা অ্যাপ"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"আপনি বর্তমানে নিম্নলিখিত অ্যাকাউন্টে সাইন-ইন করে আছেন:"</string>
@@ -483,7 +483,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"অ্যাকাউন্ট"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"অ্যাকাউন্ট যোগ করুন"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"কোনও অ্যাকাউন্ট যোগ করা হয়নি"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> এর অ্যাকাউন্ট"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>-এর অ্যাকাউন্ট"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ডেটা অটোমেটিক সিঙ্ক হবে"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"অ্যাপকে অটোমেটিক ডেটা রিফ্রেশ করতে দিন"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ডেটা অটোমেটিক সিঙ্ক চালু করবেন?"</string>
