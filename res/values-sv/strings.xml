@@ -167,7 +167,7 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Namnlös enhet"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Kopplade enheter"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Koppla en ny enhet"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Parkoppla en ny enhet"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth aktiveras för parkoppling"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Ska enheten kopplas från?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Fordonet kopplas bort från <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
@@ -225,7 +225,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Ringsignal"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Standardljud för aviseringar"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Standardljud för alarm"</string>
-    <string name="units_settings" msgid="402325305096925886">"Enhet"</string>
+    <string name="units_settings" msgid="402325305096925886">"Enheter"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Hastighet"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Avstånd"</string>
     <string name="units_fuel_consumption_title" msgid="6415108114453652570">"Bränsleförbrukning"</string>
@@ -280,7 +280,7 @@
     <string name="app_permissions_summary" msgid="1842858532315056367">"Appar som använder <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Appinformation"</string>
     <string name="force_stop" msgid="2153183697014720520">"Tvinga att avsluta"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vill du tvinga att avsluta?"</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vill du tvinga appen att avsluta?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Om du tvingar appen att avsluta kanske den inte fungerar som den ska."</string>
     <string name="disable_text" msgid="4358165448648990820">"Inaktivera"</string>
     <string name="enable_text" msgid="1794971777861881238">"Aktivera"</string>
@@ -464,12 +464,12 @@
       <item quantity="one">Det går bara att skapa en användare.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Det gick inte att skapa en ny användare"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Radera användaren?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Vill du radera användaren?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Alla appar och all data raderas."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Det gick inte att radera användaren."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Stäng"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Försök igen"</string>
-    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Radera sista användaren?"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Vill du radera den sista användaren?"</string>
     <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Om du raderar den sista användaren för bilen skapas en ny adminanvändare."</string>
     <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Alla inställningar, appar och all data som är kopplade till användaren raderas. Du måste konfigurera systemet igen."</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Välj en ny administratör"</string>

@@ -216,7 +216,7 @@
     <string name="tts_reset" msgid="6289481549801844709">"Sıfırla"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Ses"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Zil sesi düzeyi"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"Gezinme ses düzeyi"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"Navigasyon ses düzeyi"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Zil sesi"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Bildirim"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"Medya"</string>
@@ -332,7 +332,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Bu uygulamada açma"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Desteklenen bağlantılar"</string>
     <string name="special_access" msgid="5730278220917123811">"Özel uygulama erişimi"</string>
-    <string name="show_system" msgid="4401355756969485287">"Sisteme ait olanları göster"</string>
+    <string name="show_system" msgid="4401355756969485287">"Sisteme ait olanlar"</string>
     <string name="hide_system" msgid="8845453295584638040">"Sisteme ait olanları gizle"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Sistem ayarlarını değiştir"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Bu izin, bir uygulamaya sistem ayarlarını değiştirme olanağı tanır."</string>
@@ -506,7 +506,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"Hesaplar"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Hesap ekle"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hiçbir hesap eklenmedi"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> adlı kullanıcının hesapları"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> kullanıcı hesapları"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Verileri otomatik olarak senkronize et"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Uygulamaların verileri otomatik olarak yenilemesine izin ver"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Otomatik veri senk. açılsın mı?"</string>
@@ -569,7 +569,7 @@
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Çok fazla yanlış giriş yapıldı. <xliff:g id="NUMBER">%d</xliff:g> saniye içinde tekrar deneyin."</string>
     <string name="okay" msgid="4589873324439764349">"Tamam"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ekran kilidi kaldırılsın mı?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu, başkalarının hesabınıza erişmesine izin verir"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu durumda herkes hesabınıza erişebilecek"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN\'inizi girin"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Şifrenizi girin"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Güvenlik için PIN oluşturun"</string>

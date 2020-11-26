@@ -359,7 +359,7 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sustav"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sustava"</string>
-    <string name="firmware_version" msgid="8491753744549309333">"verziju Androida"</string>
+    <string name="firmware_version" msgid="8491753744549309333">"Verzija Androida"</string>
     <string name="security_patch" msgid="4794276590178386903">"Razina Androidove sigurnosne zakrpe"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Osnovna verzija"</string>
@@ -408,14 +408,14 @@
     <string name="reset_esim_desc" msgid="1437276625485586740">"Time se neće otkazati vaš paket usluge."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Poništavanje eSIM-ova nije uspjelo"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Odaberite mrežu"</string>
-    <string name="reset_network_button_text" msgid="8374174455632765033">"Vrati postavke na zadano"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Poništi postavke"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vratiti na zadano?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Želite li vratiti sve postavke mreže na zadano? Tu radnju nije moguće poništiti!"</string>
-    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Vrati postavke na zadano"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Poništi postavke"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Postavke mreže vraćene su na zadano"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Vrati postavke aplikacija na zadano"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Time će se poništiti sve postavke za sljedeće:\n\n"<li>"onemogućene aplikacije"</li>\n<li>"onemogućene obavijesti aplikacija"</li>\n<li>"zadane aplikacije za radnje"</li>\n<li>"ograničenja pozadinskih podataka za aplikacije"</li>\n<li>"sva ograničenja dozvola."</li>\n\n"Nećete izgubiti podatke nijedne aplikacije."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Vrati aplikacije na zadano"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Poništi aplikacije"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Postavke aplikacija vraćene su na zadano"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Izbriši sve podatke (vrati na tvorničke)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Time će se izbrisati svi podaci s glavne jedinice vozila, uključujući:\n\n"<li>"vaš Google račun"</li>\n<li>"podatke i postavke sustava i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
@@ -546,7 +546,7 @@
     <string name="security_lock_pattern" msgid="1174352995619563104">"Uzorak"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Zaporka"</string>
-    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Odaberite vrstu zaklj."</string>
+    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Odaberite vrstu zaključavanja"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Opcije zaključavanja"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Unesite uzorak"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Potvrdi"</string>

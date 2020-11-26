@@ -84,7 +84,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"הגדרת מגבלת נתונים"</string>
     <string name="data_limit" msgid="227338836292511425">"מגבלת נתונים"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"הגבלת שימוש בחבילת הגלישה"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"כשיחידת הראש ברכב תגיע למגבלה שהגדרת, היא תשבית את חבילת הגלישה.\n\nמכיוון שעשויים להיות הבדלים בין השימוש בחבילת הגלישה שנמדד על ידי יחידת הראש לבין השימוש שנמדד על ידי הספק, מומלץ להגדיר מגבלה סבירה."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"כשהיחידה הראשית ברכב תגיע למגבלה שהגדרת, היא תשבית את חבילת הגלישה.\n\nמכיוון שעשויים להיות הבדלים בין השימוש בחבילת הגלישה שנמדד על ידי היחידה הראשית לבין השימוש שנמדד על ידי הספק, מומלץ להגדיר מגבלה סבירה."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"הגדרת אזהרה לגבי שימוש בחבילת הגלישה"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"מגבלה לשימוש בחבילת הגלישה"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"הגדרה"</string>
@@ -174,7 +174,7 @@
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"התאמה של מכשיר חדש"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth יופעל לצורך התאמה"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"לנתק את המכשיר?"</string>
-    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"יתבצע ניתוק של הרכב מ-<xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"הרכב יתנתק מ-<xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"כתובת ה-Bluetooth של הרכב: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"כתובת המכשיר לחיבור דרך Bluetooth: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"שם הרכב"</string>
@@ -319,7 +319,7 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"שירות מילוי אוטומטי"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ללא"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"נבחרה"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"ה-Assistant יוכל לקרוא מידע על אפליקציות שבהן נעשה שימוש במערכת שלך, כולל מידע המופיע במסך או שניתן לגשת אליו באפליקציות."</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant תוכל לקרוא מידע על אפליקציות שבהן נעשה שימוש במערכת שלך, כולל מידע המופיע במסך או שניתן לגשת אליו באפליקציות."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;יש לוודא שהאפליקציה מהימנה&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=המילוי האוטומטי של Google&gt;%1$s&lt;/xliff:g&gt; משתמש בתוכן המסך כדי לקבוע אילו שדות אפשר למלא באופן אוטומטי."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"הוספת שירות"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"פתיחת קישורים"</string>
@@ -422,7 +422,7 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"איפוס אפליקציות"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"העדפות האפליקציה אופסו"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"מחיקת כל הנתונים (איפוס להגדרות היצרן)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"פעולה זו תמחק את כל הנתונים מיחידת הראש של הרכב שלך, כולל:\n\n"<li>"חשבון Google שלך"</li>\n<li>"נתוני מערכת ואפליקציות והגדרות"</li>\n<li>"אפליקציות שהורדו"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"פעולה זו תמחק את כל הנתונים מהיחידה הראשית של הרכב שלך, כולל:\n\n"<li>"חשבון Google שלך"</li>\n<li>"נתוני מערכת ואפליקציות והגדרות"</li>\n<li>"אפליקציות שהורדו"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"יש לך חיבור פעיל כרגע אל החשבונות הבאים:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"קיימים משתמשים נוספים ברכב זה."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"איפוס הרכב"</string>

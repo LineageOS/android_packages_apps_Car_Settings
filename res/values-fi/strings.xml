@@ -141,7 +141,7 @@
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Hotspotin salasana"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Suojaus"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
-    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"–"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Ei mitään"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP-taajuus"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Valitse AP-taajuus"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Autom."</string>
@@ -167,7 +167,7 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Nimetön laite"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Laiteparit"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Muodosta laitepari uuden laitteen kanssa"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Muodosta uusi laitepari"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth käynnistetään parinmuodostusta varten"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Katkaistaanko laitteen yhteys?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Ajoneuvo ja <xliff:g id="DEVICE_NAME">%1$s</xliff:g> erotetaan."</string>
@@ -280,8 +280,8 @@
     <string name="app_permissions_summary" msgid="1842858532315056367">"Sovellukset, joilla on lupa käyttää seuraavia: <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Sovellustiedot"</string>
     <string name="force_stop" msgid="2153183697014720520">"Pakota sulkeutumaan"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Pakotetaanko lopetus?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Jos pakotat sovelluksen pysähtymään, se ei välttämättä enää toimi oikein."</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Pakotetaanko sulkeutumaan?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Jos pakotat sovelluksen sulkeutumaan, se ei välttämättä enää toimi oikein."</string>
     <string name="disable_text" msgid="4358165448648990820">"Poista käytöstä"</string>
     <string name="enable_text" msgid="1794971777861881238">"Käytä"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Poista"</string>
@@ -425,7 +425,7 @@
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Odota…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Päivämäärä ja aika"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Aseta päivämäärä, aika, aikavyöhyke ja formaatit"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Automaattinen pvm. ja aika"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automaattinen päivä ja aika"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Käytä verkon määrittämää aikaa"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automaattinen aikavyöhyke"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Käytä verkon määrittämää aikavyöhykettä"</string>
@@ -457,7 +457,7 @@
     <string name="user_new_user_name" msgid="7115771396412339662">"Uusi käyttäjä"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Lisätäänkö uusi käyttäjä?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Kun lisäät uuden käyttäjän, hänen tulee määrittää oman tilansa asetukset."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"Kaikki käyttäjät voivat päivittää muiden käyttäjien sovelluksia."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"Kaikki käyttäjät voivat päivittää sovelluksia muille käyttäjille."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Käyttäjäraja saavutettu"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="other">Voit lisätä korkeintaan <xliff:g id="COUNT">%d</xliff:g> käyttäjää.</item>
@@ -505,7 +505,7 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Turvallinen poistaminen epäonnistui: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Tilit"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Lisää tili"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Tilejä ei lisätty"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Tilejä ei ole lisätty"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Tilit: <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Synkronoi data automaattisesti"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Salli sovellusten päivittää dataa automaattisesti"</string>
@@ -519,11 +519,11 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Rajoitetut profiilit eivät voi lisätä tilejä."</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Poista tili"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Poistetaanko tili?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Poistamalla tämän tilin poistat kaikki sen viestit, yhteystiedot ja muut tiedot laitteelta."</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Jos poistat tämän tilin, myös kaikki sen viestit, yhteystiedot ja muut tiedot poistetaan laitteelta."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Tilin poistaminen epäonnistui."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Tilin synkronointi"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Synkronointi käytössä <xliff:g id="ID_1">%1$d</xliff:g>/<xliff:g id="ID_2">%2$d</xliff:g> kohteella"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synkronointi käytössä kaikilla kohteilla"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synkronointi käytössä kaikille kohteille"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Synkronointi pois käytöstä kaikilla kohteilla"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Synkronointi EI KÄYTÖSSÄ"</string>
     <string name="sync_error" msgid="6698021343089247914">"Synkronointivirhe"</string>
@@ -537,7 +537,7 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Tietosuoja"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Tietoturva"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Näytön lukitus"</string>
-    <string name="security_lock_none" msgid="1054645093754839638">"–"</string>
+    <string name="security_lock_none" msgid="1054645093754839638">"Ei mitään"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"Kuvio"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN-koodi"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Salasana"</string>
@@ -569,7 +569,7 @@
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Liian monta virheellistä yritystä. Yritä uudelleen <xliff:g id="NUMBER">%d</xliff:g> sekunnin kuluttua."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Poistetaanko näytön lukitus?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Tämän avulla kuka tahansa voi päästä tilillesi"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Kuka tahansa voi päästä tilillesi"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Syötä PIN-koodi"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Syötä salasana"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Aseta PIN-koodi tietoturvasyistä"</string>

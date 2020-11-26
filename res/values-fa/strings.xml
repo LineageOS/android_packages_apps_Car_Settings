@@ -195,7 +195,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"کد مرتبط‌سازی بلوتوث"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"پین شامل حروف یا نماد است"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"کد مرتبط‌سازی را وارد کنید سپس بازگشت یا Enter را فشار دهید"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> مرتبط‌سازی شود؟"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"‏<xliff:g id="DEVICE_NAME">%1$s</xliff:g> مرتبط‌سازی شود؟"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"به <xliff:g id="DEVICE_NAME">%1$s</xliff:g> اجازه داده شود به مخاطبین و سابقه تماس شما دسترسی داشته باشد"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ممکن است لازم باشد که این پین را در دستگاه دیگر وارد کنید."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ممکن است لازم باشد این کلید عبور را نیز در دستگاه دیگر وارد کنید."</string>
@@ -352,7 +352,7 @@
     <string name="location_settings_title" msgid="901334356682423679">"مکان"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"درخواست‌های اخیر مکان"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"درخواست مکان جدیدی وجود ندارد"</string>
-    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"مجوزهای سطح برنامه"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"اجازه‌های سطح برنامه"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات مکان"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"سیستم"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"به‌روزرسانی‌های سیستم"</string>
@@ -561,7 +561,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"الگوی بازگشایی قفل را بکشید"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"وقتی الگو را کشیدید، انگشتتان را بردارید"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"الگو ضبط شد"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"برای تأیید دوباره الگو را بکشید"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"برای تأیید، دوباره الگو را بکشید"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"حداقل ۴ نقطه را وصل و دوباره امتحان کنید."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"الگو اشتباه است"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"نحوه ترسیم الگوی بازگشایی قفل"</string>
@@ -644,7 +644,7 @@
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"لطفاً تأیید کنید که کدهای مرتبط‌سازی مطابقت دارند"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"تلفن با موفقیت ثبت‌نام شد"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ثبت‌نام <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ناموفق بود"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"افزودن دستگاه مطمئن مستلزم تنظیم روش احراز هویت در مرحله بعد است. اگر دستگاه مطمئن‌تان را با خود حمل نمی‌کنید، برای دسترسی به نمایه‌تان باید احراز هویت کنید."</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"افزودن دستگاه مطمئن مستلزم تنظیم روش اصالت‌سنجی در مرحله بعد است. اگر دستگاه مطمئن‌تان را با خود حمل نمی‌کنید، برای دسترسی به نمایه‌تان باید اصالت‌سنجی کنید."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ارتباط دستگاه قطع شد."</string>
     <string name="credentials_reset" msgid="873900550885788639">"پاک کردن اطلاعات کاربری"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"حذف تمام گواهی‌ها"</string>

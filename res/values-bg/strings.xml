@@ -135,7 +135,7 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Автоматично превключване към мобилни данни"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Използване на мобилни данни, когато Wi‑Fi мрежата няма достъп до интернет. Може да бъдете таксувани за пренос на данни."</string>
     <string name="learn_more" msgid="8214605928933358604">"Научете повече"</string>
-    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Точка за достъп: Име"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Име на точката за достъп"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"„<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“ се включва..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Други устройства могат да се свързват към „<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Парола за точката за достъп"</string>
@@ -286,7 +286,7 @@
     <string name="enable_text" msgid="1794971777861881238">"Активиране"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Деинсталиране"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако деактивирате това приложение, Android и други приложения може да спрат да работят както трябва."</string>
-    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Деактивиране на приложението"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Деактивиране"</string>
     <string name="not_installed" msgid="4218816013370552746">"Не е инсталирано за този потребител"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Известия"</string>
@@ -332,7 +332,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Без отваряне в това приложение"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддържани връзки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специален достъп за приложението"</string>
-    <string name="show_system" msgid="4401355756969485287">"Показване на сист. процеси"</string>
+    <string name="show_system" msgid="4401355756969485287">"Системни процеси"</string>
     <string name="hide_system" msgid="8845453295584638040">"Скриване на системните процеси"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Промяна на сист. настройки"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Това разрешение позволява на дадено приложение да променя системни настройки."</string>
@@ -455,7 +455,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Деинсталиране на приложения"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Добавяне на потребител"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Нов потребител"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Добавяне на нов потреб.?"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Добавяне на нов потребител?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Когато добавите нов потребител, той трябва да настрои работното си пространство."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Всеки потребител може да актуализира приложенията за всички останали потребители."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Достигнахте огранич. за потребители"</string>
@@ -541,7 +541,7 @@
     <string name="security_lock_pattern" msgid="1174352995619563104">"Фигура"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"ПИН код"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Парола"</string>
-    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Избор на типа на закл."</string>
+    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Избор на типа на заключване"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Опции за заключване"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Въведете фигурата си"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Потвърждаване"</string>

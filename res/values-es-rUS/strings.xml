@@ -166,9 +166,9 @@
     <string name="progress_scanning" msgid="7191583064717479795">"Buscando"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
-    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos sincronizados"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Sincronizar dispositivo nuevo"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Se activará el Bluetooth para iniciar la sincronización"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos vinculados"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Vincular dispositivo nuevo"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Se activará el Bluetooth para iniciar la vinculación"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"¿Desconectar dispositivo?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"El vehículo se desconectará de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Dirección Bluetooth del vehículo: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -190,19 +190,19 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Una app quiere que tu unidad central sea visible para otros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> quiere activar la conexión Bluetooth y que tu unidad central sea visible para otros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Una app quiere activar la conexión Bluetooth y que tu unidad central sea visible para otros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
-    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitud de sincronización mediante Bluetooth"</string>
+    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitud de vinculación mediante Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Vincular y conectar"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de sincronización mediante Bluetooth"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de vinculación mediante Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"El PIN contiene letras o símbolos"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Ingresa el código de sincronización y, luego, presiona Intro"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"¿Sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Ingresa el código de vinculación y, luego, presiona Intro"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"¿Vincular con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> acceda a los contactos y al historial de llamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Es posible que también debas ingresar este PIN de acceso en el otro dispositivo."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Es posible que también debas ingresar esta clave de acceso en el otro dispositivo."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Debe tener 16 dígitos"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Por lo general, 0000 o 1234"</string>
-    <string name="bluetooth_notif_title" msgid="8374602799367803335">"Sincronizando solicitud"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Presiona para sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitud de vinculación"</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Presiona para vincular con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Elegir dispositivo Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas y entradas"</string>
@@ -223,7 +223,7 @@
     <string name="media_volume_summary" msgid="2961762827637127239">"Establecer volumen para la música y los videos"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarma"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Tono del teléfono"</string>
-    <string name="notification_ringtone_title" msgid="8661716239594010288">"Sonido de notificación predet."</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"Sonido predeterminado"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Sonido de alarma predeterm."</string>
     <string name="units_settings" msgid="402325305096925886">"Unidades"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Velocidad"</string>
@@ -410,7 +410,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Restablecer configuración"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Se restableció la configuración de red"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Restablecer preferencias de apps"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Se restablecerán todas las preferencias de lo sigueinte:\n\n"<li>"Apps inhabilitadas"</li>\n<li>"Notificaciones de apps inhabilitadas"</li>\n<li>"Apps predeterminadas para realizar acciones"</li>\n<li>"Restricciones de datos en segundo plano para apps"</li>\n<li>"Restricciones de permisos"</li>\n\n"No perderás los datos de las apps."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Se restablecerán todas las preferencias de lo siguiente:\n\n"<li>"Apps inhabilitadas"</li>\n<li>"Notificaciones de apps inhabilitadas"</li>\n<li>"Apps predeterminadas para realizar acciones"</li>\n<li>"Restricciones de datos en segundo plano para apps"</li>\n<li>"Restricciones de permisos"</li>\n\n"No perderás los datos de las apps."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se restablecieron las preferencias de las apps"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Borrar todos los datos (restablecer)"</string>
@@ -457,7 +457,7 @@
     <string name="user_new_user_name" msgid="7115771396412339662">"Usuario nuevo"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"¿Agregar un usuario?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Cuando agregues un nuevo usuario, esa persona deberá configurar su espacio."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"Cualquier usuario podrá actualizar las apps de otras personas."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"Cualquier usuario puede actualizar las aplicaciones del resto de los usuarios."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Alcanzaste el límite de usuarios"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="other">Puedes crear hasta <xliff:g id="COUNT">%d</xliff:g> usuarios.</item>
@@ -639,9 +639,9 @@
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Listo"</string>
     <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Usa la aplicación complementaria para configurar un dispositivo de confianza. Una vez que lo hagas, tu perfil de usuario se desbloqueará automáticamente cuando se detecte que tu teléfono está cerca del vehículo."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descarga la aplicación complementaria en el teléfono."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> en el teléfono para sincronizar los dispositivos."</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> en el teléfono para vincular los dispositivos."</string>
     <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Un dispositivo de confianza cercano desbloqueará el perfil de usuario cuando enciendas tu vehículo, incluso aunque lo sostenga otra persona."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirma que coinciden los códigos de sincronización"</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirma que coinciden los códigos de vinculación"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Se inscribió correctamente el teléfono"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Se ha producido un error al registrar <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Después de agregar un dispositivo de confianza, deberás establecer un método de autenticación. Ese método te permitirá acceder a tu perfil cuando no lleves contigo el dispositivo de confianza."</string>

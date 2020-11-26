@@ -225,7 +225,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ફોન રિંગટોન"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ડિફૉલ્ટ નોટિફિકેશન સાઉન્ડ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ડિફૉલ્ટ અલાર્મ સાઉન્ડ"</string>
-    <string name="units_settings" msgid="402325305096925886">"એકમ"</string>
+    <string name="units_settings" msgid="402325305096925886">"યુનિટ"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"ઝડપ"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"અંતર"</string>
     <string name="units_fuel_consumption_title" msgid="6415108114453652570">"ઇંધણના વપરાશની વિગતો"</string>
@@ -310,11 +310,11 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"સ્ક્રીનશૉટનો ઉપયોગ કરો"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"સહાયક ઍપને સ્ક્રીનની છબીને ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"વૉઇસ ઇનપુટ"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"આપમેળે ભરાવાની સેવા"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"ઑટોમૅટિક રીતે ભરવાની સુવિધા"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"એકપણ નહીં"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"પસંદ કરેલી"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"તમારી સ્ક્રીન પર જોઈ શકાતી અથવા ઍપમાંથી ઍક્સેસ કરી શકાય તેવી માહિતી સહિતની તમારી સિસ્ટમમાં ઉપયોગમાં લેવાતી ઍપ વિશેની માહિતી આસિસ્ટંટ વાંચી શકશે."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ખાતરી કરો કે તમે આ ઍપનો વિશ્વાસ કરો છો&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google આપમેળે ભરાવાની સુવિધા&gt;%1$s&lt;/xliff:g&gt; તમારી સ્ક્રીન પર શું છે તેનો ઉપયોગ એ નક્કી કરવા કરે છે કે આપમેળે શું ભરાઈ શકે."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ખાતરી કરો કે તમે આ ઍપનો વિશ્વાસ કરો છો&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ઑટોમૅટિક રીતે ભરવાની સુવિધા&gt;%1$s&lt;/xliff:g&gt; તમારી સ્ક્રીન પર શું છે તેનો ઉપયોગ એ નક્કી કરવા કરે છે કે ઑટોમૅટિક રીતે શું દાખલ થશે."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"સેવા ઉમેરો"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"લિંક ખોલવી"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"ઇન્સ્ટૉલ કરેલી ઍપ"</string>
@@ -394,7 +394,7 @@
     <string name="show_dev_already" msgid="1678087328973865736">"કોઈ જરૂર નથી, તમે પહેલાંથી જ ડેવલપર છો."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ડેવલપરના વિકલ્પો"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"રીસેટ કરવાના વિકલ્પો"</string>
-    <string name="reset_options_summary" msgid="5508201367420359293">"નેટવર્ક, ઍપ અથવા ઉપકરણ રીસેટ કરો"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"નેટવર્ક, ઍપ અથવા ડિવાઇસ રીસેટ કરો"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"નેટવર્ક રીસેટ કરો"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"આ બધા નેટવર્ક સેટિંગ રીસેટ કરશે, જેમાં આનો સમાવેશ છે:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"વાઇ-ફાઇ"</li></string>
@@ -419,15 +419,15 @@
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"આ વાહન પર અન્ય વપરાશકર્તા હાજર છે."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"વાહન રીસેટ કરો"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"રીસેટ કરીએ?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી એપ્લિકેશન્સને કાઢી નાખીએ? તમે આ ક્રિયાને પૂર્વવત્ કરી શકતા નથી!"</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"દરેક વસ્તુ કાઢી નાંખો"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"તમારી બધી વ્યક્તિગત માહિતી અને ડાઉનલોડ કરેલી ઍપ કાઢી નાખીએ? તમે આ ક્રિયા માટે કરેલો છેલ્લો ફેરફાર રદ કરી શકશો નહીં!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"દરેક વસ્તુ કાઢી નાખો"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"કાઢી નાંખી રહ્યું છે"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"કૃપા કરીને રાહ જુઓ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"તારીખ અને સમય"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"તારીખ, સમય, સમય ઝોન અને ફૉર્મેટ સેટ કરો"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"આપમેળે તારીખ અને સમય"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"ઑટોમૅટિક રીતે તારીખ અને સમય"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"નેટવર્ક દ્વારા પ્રદાન કરવામાં આવેલ સમયનો ઉપયોગ કરો"</string>
-    <string name="zone_auto" msgid="3701878581920206160">"આપમેળે સમય ઝોન"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"ઑટોમૅટિક સમય ઝોન"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"નેટવર્ક દ્વારા પ્રદાન કરાયેલ સમય ઝોનનો ઉપયોગ કરો"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑કલાકનું ફૉર્મેટ"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-કલાકના ફૉર્મેટનો ઉપયોગ કરો"</string>
@@ -464,7 +464,7 @@
       <item quantity="other">તમે <xliff:g id="COUNT">%d</xliff:g> વપરાશકર્તા સુધી મંજૂરી આપી શકશો.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"નવો વપરાશકર્તા બનાવવામાં નિષ્ફળ"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"આ યુઝરને ડિલીટ કરીએ?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"આ વપરાશકર્તાને ડિલીટ કરીએ?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"બધી ઍપ અને ડેટા ડિલીટ કરવામાં આવશે."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"વપરાશકર્તાને ડિલીટ કરવામાં નિષ્ફળ થયાં."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"છોડી દો"</string>
@@ -519,7 +519,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"પ્રતિબંધિત પ્રોફાઇલ એકાઉન્ટ ઉમેરી શકતી નથી"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"એકાઉન્ટ કાઢી નાખો"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"એકાઉન્ટ કાઢી નાખીએ?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"આ એકાઉન્ટને કાઢી નાખવાથી તેમાંના બધા સંદેશા, સંપર્કો તેમજ ઉપકરણમાંનો અન્ય ડેટા ડિલીટ થઈ જશે!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"આ એકાઉન્ટને કાઢી નાખવાથી તેમાંના બધા સંદેશા, સંપર્કો તેમજ ડિવાઇસનો અન્ય ડેટા ડિલીટ થઈ જશે!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"એકાઉન્ટ કાઢી નાખવામાં નિષ્ફળ થયાં."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"એકાઉન્ટ સિંક કરો"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> માંથી <xliff:g id="ID_1">%1$d</xliff:g> આઇટમ માટે સિંક ચાલુ છે"</string>

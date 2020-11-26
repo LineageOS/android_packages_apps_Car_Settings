@@ -216,7 +216,7 @@
     <string name="tts_reset" msgid="6289481549801844709">"Đặt lại"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Âm báo"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Âm lượng chuông"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"Âm lượng điều hướng"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"Âm lượng khi đi theo chỉ dẫn"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Nhạc chuông"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Thông báo"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"Phương tiện"</string>
@@ -281,7 +281,7 @@
     <string name="applications_settings" msgid="794261395191035632">"Thông tin ứng dụng"</string>
     <string name="force_stop" msgid="2153183697014720520">"Buộc dừng"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Buộc dừng?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Nếu bạn buộc dừng một ứng dụng, thì ứng dụng đó có thể hoạt động sai."</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Nếu bạn buộc dừng một ứng dụng, thì ứng dụng đó có thể hoạt động không đúng cách."</string>
     <string name="disable_text" msgid="4358165448648990820">"Tắt"</string>
     <string name="enable_text" msgid="1794971777861881238">"Bật"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Gỡ cài đặt"</string>
@@ -413,8 +413,8 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Thao tác này sẽ đặt lại tất cả tùy chọn cho:\n\n"<li>"Ứng dụng bị tắt"</li>\n<li>"Thông báo ứng dụng bị tắt"</li>\n<li>"Ứng dụng mặc định cho các thao tác"</li>\n<li>"Giới hạn dữ liệu nền cho ứng dụng"</li>\n<li>"Bất kỳ giới hạn về quyền nào"</li>\n\n"Bạn sẽ không mất bất kỳ dữ liệu ứng dụng nào."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Đặt lại ứng dụng"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Đã đặt lại tùy chọn ứng dụng"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Xóa mọi dữ liệu (khôi phục cài đặt gốc)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Tác vụ này sẽ xóa tất cả dữ liệu trong thiết bị đầu trên phương tiện của bạn, bao gồm:\n\n"<li>"Tài khoản Google của bạn"</li>\n<li>"Dữ liệu cùng với tùy chọn cài đặt của ứng dụng và hệ thống"</li>\n<li>"Ứng dụng đã tải xuống"</li></string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Xóa mọi dữ liệu (đặt lại về trạng thái ban đầu)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Thao tác này sẽ xóa tất cả dữ liệu trong hệ thống giải trí trên xe của bạn, bao gồm:\n\n"<li>"Tài khoản Google của bạn"</li>\n<li>"Dữ liệu cùng với các tùy chọn cài đặt của ứng dụng và hệ thống"</li>\n<li>"Ứng dụng đã tải xuống"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Bạn hiện đã đăng nhập vào các tài khoản sau:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Có người dùng khác trên phương tiện này."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Đặt lại phương tiện"</string>
@@ -519,7 +519,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Các hồ sơ bị hạn chế không thể thêm tài khoản"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Xóa tài khoản"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Bạn muốn xóa tài khoản?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Xóa tài khoản này sẽ xóa tất cả thư, danh bạ và dữ liệu khác khỏi thiết bị!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Nếu bạn xóa tài khoản này, tất cả thư, danh bạ và dữ liệu khác có liên quan sẽ bị xóa khỏi thiết bị!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Không xóa được tài khoản."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Đồng bộ hóa tài khoản"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Đã bật đồng bộ hóa cho <xliff:g id="ID_1">%1$d</xliff:g>/<xliff:g id="ID_2">%2$d</xliff:g> mục"</string>
@@ -569,12 +569,12 @@
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Bạn đã nhập sai quá nhiều lần. Hãy thử lại sau <xliff:g id="NUMBER">%d</xliff:g> giây."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Xóa phương thức khóa màn hình?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Thao tác này sẽ cho phép bất cứ ai truy cập vào tài khoản của bạn"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Thao tác này sẽ cho phép bất cứ ai cũng có thể truy cập vào tài khoản của bạn"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Nhập mã PIN của bạn"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Nhập mật khẩu của bạn"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Để bảo mật, hãy đặt mã PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Nhập lại mã PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN phải có ít nhất 4 chữ số"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Mã PIN phải có ít nhất 4 chữ số"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Mã PIN không hợp lệ. Mã này phải có ít nhất 4 chữ số."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Các mã PIN không khớp"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Lỗi khi lưu mã PIN"</string>

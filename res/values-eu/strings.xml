@@ -121,7 +121,7 @@
     <string name="wifi_network_detail" msgid="9070182553555487360">"Sarearen xehetasunak"</string>
     <string name="wifi_mac_address" msgid="1466178247802349180">"MAC helbidea"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP helbidea"</string>
-    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Azpisarearen maskara"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Azpisare-maskara"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 helbideak"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Atebidea"</string>
@@ -192,7 +192,7 @@
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikazio batek Bluetooth-a aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth bidez parekatzeko eskaera"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Parekatu eta konektatu"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth parekatze-kodea"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth bidez parekatzeko kodea"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN kodeak hizkiak edo ikurrak ditu"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Idatzi parekatze-kodea eta sakatu Itzuli edo Sartu"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuarekin parekatu nahi duzu?"</string>
@@ -357,7 +357,7 @@
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistemaren eguneratzeak"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-en bertsioa"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Android segurtasun-adabakiaren maila"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Android-en segurtasun-adabakiaren maila"</string>
     <string name="model_info" msgid="4966408071657934452">"Modeloa"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Oinarri-bandaren bertsioa"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel bertsioa"</string>
@@ -414,7 +414,7 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Berrezarri aplikazioak"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Berrezarri dira aplikazioen hobespenak"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Ezabatu datu guztiak (berrezarri jatorrizkoak)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Ibilgailuaren gailu nagusiko datu guztiak ezabatuko dira, honako hauek barne:\n\n"<li>"Google kontua,"</li>\n<li>"sistemako eta aplikazioetako datuak eta ezarpenak,"</li>\n<li>"deskargatutako aplikazioak."</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Ibilgailuaren gailu nagusiko datu guztiak ezabatuko dira, honako hauek barne:\n\n"<li>"Google-ko kontua,"</li>\n<li>"sistemako eta aplikazioetako datuak eta ezarpenak,"</li>\n<li>"deskargatutako aplikazioak."</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Kontu hauetan hasi duzu saioa:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Beste erabiltzaile batzuk daude ibilgailu honetan."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Berrezarri ibilgailua"</string>
@@ -553,7 +553,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Aukeratu PIN kodea"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Aukeratu eredu bat"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Aukeratu pasahitza"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"Uneko pantailaren blokeoa"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"Ezarrita dagoen pantailaren blokeoa"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Babestuta egoteko, ezarri eredu bat"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Garbitu"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Utzi"</string>
@@ -586,7 +586,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Garbitu"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Utzi"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Berretsi"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Gutxienez lau karaktere izan behar ditu"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Lau karaktere izan behar ditu gutxienez"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Gutxienez <xliff:g id="COUNT">%d</xliff:g> karaktere izan behar ditu"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kodeak <xliff:g id="COUNT">%d</xliff:g> digitu izan behar ditu gutxienez"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> karaktere izan behar ditu"</string>
@@ -595,7 +595,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Gailuaren administratzaileak ez du eman beste PIN kode bat erabiltzeko baimenik"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"IKT saileko administratzaileak blokeatu egiten ditu asmatzen errazak diren PIN kodeak. Erabili beste PIN bat."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Ezin da erabili onartzen ez den karaktererik."</string>
-    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Pasahitzak ez du balio; gutxienez lau karaktere izan behar ditu."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Pasahitzak ez du balio; lau karaktere izan behar ditu gutxienez."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Gutxienez <xliff:g id="COUNT">%d</xliff:g> hizki izan behar ditu</item>
       <item quantity="one">Gutxienez 1 hizki izan behar du</item>

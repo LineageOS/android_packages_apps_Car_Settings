@@ -371,7 +371,7 @@
     <string name="about_settings" msgid="4329457966672592345">"정보"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"법률 정보, 상태, 소프트웨어 버전 보기"</string>
-    <string name="legal_information" msgid="1838443759229784762">"법률정보"</string>
+    <string name="legal_information" msgid="1838443759229784762">"법률 정보"</string>
     <string name="contributors_title" msgid="7698463793409916113">"도움을 주신 분들"</string>
     <string name="manual" msgid="4819839169843240804">"수동"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"규정 라벨"</string>
@@ -395,7 +395,7 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"개발자 옵션"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"옵션 재설정"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"네트워크, 앱, 기기 재설정"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"네트워크 재설정"</string>
+    <string name="reset_network_title" msgid="1284233059990797263">"네트워크 초기화"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"다음을 포함한 모든 네트워크 설정을 초기화합니다."</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"모바일 데이터"</li></string>
@@ -410,7 +410,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"설정 초기화"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"네트워크 설정이 초기화되었습니다."</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"앱 환경설정 초기화"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"이 작업을 하면 다음 환경설정이 재설정됩니다.\n\n"<li>"사용 중지된 앱"</li>\n<li>"사용 중지된 알림"</li>\n<li>"작업에 사용하는 기본 애플리케이션"</li>\n<li>"앱의 백그라운드 데이터 제한"</li>\n<li>"그 밖의 권한 제한"</li>\n\n"앱 데이터는 손실되지 않습니다."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"다음 환경설정이 초기화됩니다.\n\n"<li>"사용 중지된 앱"</li>\n<li>"사용 중지된 앱 알림"</li>\n<li>"작업에 사용하는 기본 애플리케이션"</li>\n<li>"앱의 백그라운드 데이터 제한"</li>\n<li>"그 밖의 권한 제한"</li>\n\n"앱 데이터는 손실되지 않습니다."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"앱 초기화"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"앱 환경설정이 초기화되었습니다."</string>
     <string name="master_clear_title" msgid="8515335233363214414">"모든 데이터 삭제(초기화)"</string>
@@ -419,7 +419,7 @@
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"이 차량에 다른 사용자가 있습니다."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"차량 초기화"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"초기화하시겠습니까?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"모든 개인정보와 다운로드한 앱을 삭제하시겠습니까? 삭제한 후에는 작업을 취소할 수 없습니다."</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"모든 개인 정보와 다운로드한 앱을 삭제하시겠습니까? 삭제한 후에는 작업을 취소할 수 없습니다."</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"모두 삭제"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"삭제 중"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"잠시 기다려 주세요..."</string>
@@ -455,7 +455,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"앱 제거"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"사용자 추가"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"새 사용자"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"새 사용자를 추가할까요?"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"새 사용자를 추가하시겠습니까?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"추가된 새로운 사용자는 자신의 공간을 설정해야 합니다."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"모든 사용자는 다른 사용자들을 위하여 앱을 업데이트할 수 있습니다."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"사용자 제한 도달"</string>
@@ -518,7 +518,7 @@
     <string name="add_an_account" msgid="1072285034300995091">"계정 추가"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"제한된 프로필은 계정을 추가할 수 없습니다."</string>
     <string name="remove_account_title" msgid="8840386525787836381">"계정 삭제"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"계정을 삭제할까요?"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"계정을 삭제하시겠습니까?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"계정을 삭제하면 기기의 메시지, 연락처 및 다른 데이터가 모두 지워집니다."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"계정을 삭제하지 못했습니다"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"계정 동기화"</string>
