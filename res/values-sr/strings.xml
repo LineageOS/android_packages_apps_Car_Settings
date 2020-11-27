@@ -87,8 +87,8 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Подесите ограничење потрошње података"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Подеси"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi се укључује..."</string>
-    <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi се искључује..."</string>
+    <string name="wifi_starting" msgid="473253087503153167">"WiFi се укључује..."</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"WiFi се искључује..."</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Учитава се Wi‑Fi листа"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi је онемогућен"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Брисање мреже није успело"</string>
@@ -131,7 +131,7 @@
     <string name="wifi_wakeup" msgid="7451825226044542000">"Аутоматски укључи Wi‑Fi"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi ће се поново укључити у близини сачуваних мрежа високог квалитета, као што је кућна мрежа"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Није доступно јер је локација искључена. Укључите "<annotation id="link">"локацију"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Желите ли да укључите Wi-Fi скенирање?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Желите ли да укључите WiFi скенирање?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Укључи"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi скенирање је укључено"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Аутоматски пређи на мобилне податке"</string>
@@ -156,8 +156,8 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот и привезивање"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Аутоматски искључи хотспот"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi хотспот ће се искључити ако ниједан уређај није повезан"</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> жели да укључи Wi-Fi"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> жели да искључи Wi-Fi"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> жели да укључи WiFi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> жели да искључи WiFi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Грешка"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Неименовани уређај"</string>
@@ -344,8 +344,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Премијум SMS-ови могу да коштају и повећаће рачуне код мобилног оператера. Ако омогућите дозволу за неку апликацију, моћи ћете да шаљете премијум SMS-ове помоћу те апликације."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Приступ коришћењу"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Приступ коришћењу омогућава апликацији да прати које друге апликације користите и колико често, као и да види мобилног оператера, језичка подешавања и друге податке."</string>
-    <string name="wifi_control_title" msgid="5660436566907731929">"Контрола Wi-Fi мреже"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Контрола Wi-Fi мреже омогућава апликацији да укључи или искључи Wi-Fi, тражи и повезује се на Wi-Fi мреже, додаје или уклања мреже или покреће само локални хотспот."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Контрола WiFi мреже"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Контрола WiFi мреже омогућава апликацији да укључи или искључи WiFi, тражи и повезује се на WiFi мреже, додаје или уклања мреже или покреће само локални хотспот."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Још"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
@@ -400,7 +400,7 @@
     <string name="reset_options_summary" msgid="5508201367420359293">"Ресетовање мреже, апликација или уређаја"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Ресетуј мрежу"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Овим ресетујете сва подешавања мреже, укључујући:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi-Fi"</li></string>
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"WiFi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобилни подаци"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Избриши све eSIM-ове возила"</string>
@@ -416,7 +416,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Овим ћете ресетовати сва подешавања за:\n\n"<li>"Онемогућене апликације"</li>\n<li>"Обавештења о онемогућеним апликацијама"</li>\n<li>"Подразумеване апликације за радње"</li>\n<li>"Ограничења за позадинске податке за апликације"</li>\n<li>"Сва ограничења за дозволе"</li>\n\n"Нећете изгубити никакве податке апликације."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетуј апликације"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Подешавања апликација су ресетована"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке (фабричка подешавања)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Овим бришете све податке из интерне меморије возила, укључујући:\n\n"<li>"Google налог"</li>\n<li>"податке и подешавања система и апликација"</li>\n<li>"преузете апликације"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Тренутно сте пријављени на следеће налоге:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"У овом возилу су присутни и други корисници."</string>
@@ -525,7 +525,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Ограничени профили не могу да додају налоге"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Уклони налог"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Желите да уклоните налог?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Ако уклоните овај налог, избрисаћете све поруке, контакте и друге податке са уређаја!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Ако уклоните овај налог, избрисаћете све поруке, контакте и друге податке са уређаја."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Уклањање налога није успело."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Синхронизација налога"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Синхронизација је укључена за одређене ставке (<xliff:g id="ID_1">%1$d</xliff:g> од <xliff:g id="ID_2">%2$d</xliff:g>)"</string>
@@ -567,14 +567,14 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Нацртајте шаблон за откључавање"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Подигните прст када завршите"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Шаблон је снимљен"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Поново нацртајте шаблон ради потврде"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Поново нацртајте шаблон да бисте потврдили"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Повежите бар 4 тачке. Пробајте поново."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Погрешан шаблон"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Како нацртати шаблон за откључавање"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Грешка при чувању шаблона"</string>
     <string name="okay" msgid="4589873324439764349">"Потврди"</string>
-    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Желите ли да укл. зак. екрана?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Овим ћете дозволити свима приступ вашем налогу"</string>
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Уклонићете закључавање екрана?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Тада ће свако моћи да приступи вашем налогу"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Унесите PIN"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Унесите лозинку"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Подесите PIN из безбедносних разлога"</string>

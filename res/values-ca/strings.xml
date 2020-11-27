@@ -272,7 +272,7 @@
     <string name="all_applications" msgid="7798210477486822168">"Mostra totes les aplicacions"</string>
     <string name="default_applications" msgid="1558183275638697087">"Aplicacions predeterminades"</string>
     <string name="app_permissions" msgid="32799922508313948">"Permisos d\'aplicacions"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"Aplicacions que fan servir: <xliff:g id="APPS">%1$s</xliff:g>"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Aplicacions que utilitzen <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informació de les aplicacions"</string>
     <string name="force_stop" msgid="2153183697014720520">"Força l\'aturada"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vols forçar l\'aturada?"</string>
@@ -404,7 +404,7 @@
     <string name="reset_esim_error_title" msgid="7245109418130525492">"No es poden restablir les eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Selecciona una xarxa"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Restableix la configuració"</string>
-    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vols restablir-la?"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Restablir?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Vols restablir tota la configuració de la xarxa? Aquesta acció no es pot desfer."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Restableix la configuració"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"S\'ha restablert la configuració de la xarxa"</string>
@@ -412,12 +412,12 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Es restabliran totes les preferències de:\n\n"<li>"aplicacions desactivades"</li>\n<li>"notificacions d\'aplicacions desactivades"</li>\n<li>"aplicacions predeterminades per a les accions"</li>\n<li>"restriccions de dades en segon pla per a les aplicacions"</li>\n<li>"restriccions de permisos"</li>\n\n"No perdràs les dades de les aplicacions."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restableix les aplicacions"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"S\'han restablert les preferències d\'aplicacions"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Esborra totes les dades"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Esborra totes les dades (restabliment de les dades de fàbrica)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Aquesta opció esborrarà totes dades de la unitat principal del vehicle, com ara:\n\n"<li>"el teu Compte de Google"</li>\n<li>"la configuració i les dades d\'aplicacions i del sistema"</li>\n<li>"les aplicacions baixades"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Actualment tens la sessió iniciada als comptes següents:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Hi ha altres usuaris al vehicle."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Restableix el vehicle"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vols restablir-lo?"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Restablir?"</string>
     <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vols esborrar tota la informació personal i les aplicacions baixades? Aquesta acció no es pot desfer."</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Esborra-ho tot"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"S\'està esborrant"</string>
@@ -455,7 +455,7 @@
     <string name="user_add_user_menu" msgid="5319151436895941496">"Afegeix un usuari"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Usuari nou"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Vols afegir un usuari?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Quan s\'afegeix un usuari nou, aquest usuari ha de configurar el seu espai."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Quan s\'afegeix un usuari nou, aquesta persona ha de configurar el seu espai."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualsevol usuari pot actualitzar les aplicacions de la resta d\'usuaris."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"S\'ha assolit el límit d\'usuaris"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
@@ -507,7 +507,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"Comptes"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Afegeix un compte"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"No s\'ha afegit cap compte"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"Comptes de l\'usuari <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"Comptes de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronitza les dades automàticament"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permet que les aplicacions actualitzin dades automàticament"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Activar sincronització autom.?"</string>
@@ -562,14 +562,14 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dibuixa un patró de desbloqueig"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Deixa anar el dit quan acabis"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patró enregistrat"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Repeteix el patró per confirmar-lo"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuixa el patró de nou per confirmar"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connecta 4 punts com a mínim. Torna-ho a provar."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"El patró no és correcte"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Com es dibuixa un patró de desbloqueig"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"S\'ha produït un error en desar el patró"</string>
     <string name="okay" msgid="4589873324439764349">"D\'acord"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Suprimir bloqueig de pantalla?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Permetràs que qualsevol persona accedeixi al teu compte"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Qualsevol persona podrà accedir al teu compte"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Introdueix el PIN"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Introdueix la contrasenya"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Per seguretat, defineix un PIN"</string>

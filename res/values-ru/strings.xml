@@ -165,10 +165,10 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"Устройство без названия"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Подключенные устройства"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Подключить новое устройство"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Будет включена функция Bluetooth."</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Будет включена функция Bluetooth"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Отключить устройство?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Автомобиль будет отключен от устройства \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\"."</string>
-    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Адрес Bluetooth для автомобиля: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Адрес Bluetooth автомобиля: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Адрес Bluetooth: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"Название автомобиля"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Переименование автомобиля"</string>
@@ -275,7 +275,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Приложения и уведомления"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показать все приложения"</string>
     <string name="default_applications" msgid="1558183275638697087">"Приложения по умолчанию"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Разрешения для приложения"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Разрешения для приложений"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Приложения, которым разрешен доступ (<xliff:g id="APPS">%1$s</xliff:g>)"</string>
     <string name="applications_settings" msgid="794261395191035632">"Сведения о приложениях"</string>
     <string name="force_stop" msgid="2153183697014720520">"Остановить"</string>
@@ -333,7 +333,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Не открывать в этом приложении"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддерживаемые ссылки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специальный доступ для приложений"</string>
-    <string name="show_system" msgid="4401355756969485287">"Показать сист. процессы"</string>
+    <string name="show_system" msgid="4401355756969485287">"Показать системные"</string>
     <string name="hide_system" msgid="8845453295584638040">"Скрыть системные процессы"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Изменение системных настроек"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Приложение сможет изменять системные настройки."</string>
@@ -350,7 +350,7 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Управление сетями Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Эта настройка разрешает приложению сканировать, добавлять и удалять сети Wi-Fi, подключаться к ним, включать и отключать модуль Wi-Fi, а также создавать локальные точки доступа."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Ещё"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"Передача геоданных"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Геолокация"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последние запросы местоположения"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нет недавних запросов местоположения."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения для приложений"</string>
@@ -370,7 +370,7 @@
     <string name="device_status" msgid="267298179806290920">"Статус"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"Статус батареи, сети и другая информация"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"Номер телефона, уровень сигнала…"</string>
-    <string name="about_settings" msgid="4329457966672592345">"О телефоне"</string>
+    <string name="about_settings" msgid="4329457966672592345">"О системе"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"Просмотр юридической информации, статуса телефона, версии ПО"</string>
     <string name="legal_information" msgid="1838443759229784762">"Юридическая информация"</string>
@@ -420,7 +420,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Будут сброшены следующие настройки:\n\n"<li>"Отключенные приложения."</li>\n<li>"Отключенные уведомления приложений."</li>\n<li>"Приложения по умолчанию."</li>\n<li>"Ограничения на передачу данных в фоновом режиме."</li>\n<li>"Все ограничения разрешений."</li>\n\n"Данные приложений удалены не будут."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Сбросить настройки"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Настройки приложений сброшены."</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Удалить все данные (сбросить настройки)"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Стереть все данные (заводские настройки)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Будут удалены все данные из головного устройства автомобиля, в том числе:\n\n"<li>"ваш аккаунт Google;"</li>\n<li>"настройки/данные системы и приложений;"</li>\n<li>"установленные приложения."</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Вы вошли в следующие аккаунты:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"В этом автомобиле есть другие пользователи."</string>
@@ -516,10 +516,10 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Не удалось безопасно извлечь устройство \"<xliff:g id="NAME">%1$s</xliff:g>\"."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Аккаунты"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Добавить аккаунт"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Аккаунтов нет."</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Аккаунтов нет"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Аккаунты пользователя <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Автосинхронизация данных"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Данные приложений будут обновляться автоматически."</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Данные приложений будут обновляться автоматически"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Включить автосинхронизацию?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Все изменения в аккаунтах на компьютере будут автоматически копироваться на устройство.\n\nВ некоторых случаях также может выполняться обратная синхронизация (например, для аккаунта Google)."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Отключить автосинхронизацию?"</string>
@@ -584,7 +584,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Введите пароль"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Для защиты системы создайте PIN-код."</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Введите PIN-код ещё раз"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-код должен быть не короче 4 цифр."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-код должен состоять как минимум из 4 цифр."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Ошибка. PIN-код должен содержать не менее 4 цифр."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-коды не совпадают"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Не удалось сохранить PIN-код"</string>

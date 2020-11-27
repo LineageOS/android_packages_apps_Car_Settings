@@ -91,7 +91,7 @@
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi өшірулі"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Желі өшірілмеді"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Желіге қосылмады"</string>
-    <string name="wifi_setup_add_network" msgid="3660498520389954620">"Желіні енгізу"</string>
+    <string name="wifi_setup_add_network" msgid="3660498520389954620">"Желі қосу"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Қосылу"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Құпия сөз"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Құпия сөзді көрсету"</string>
@@ -105,7 +105,7 @@
     <string name="wifi_frequency" msgid="8951455949682864922">"Жиілік"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP мекенжайы"</string>
     <string name="show_password" msgid="2074628020371139240">"Құпия сөзді көрсету"</string>
-    <string name="default_network_name_summary" msgid="8148402439232464276">"Желі атауын енгізу"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"Желі атауын енгізіңіз."</string>
     <string name="default_password_summary" msgid="8789594645836902982">"Құпия сөзді енгізу"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
@@ -160,8 +160,8 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Атаусыз құрылғы"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Жұпталған құрылғылар"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Жаңа құрылғыны жұптау"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Жұптау үшін Bluetooth функциясы қосылады"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Жаңа құрылғымен жұптау"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Жұптау үшін Bluetooth функциясы қосылады."</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Құрылғы ажыратылсын ба?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Көлігіңіз <xliff:g id="DEVICE_NAME">%1$s</xliff:g> құрылғысынан ажыратылады."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Көліктің Bluetooth мекенжайы: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -198,7 +198,7 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> құрылғысымен жұптау үшін түртіңіз."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth құрылғысын таңдау"</string>
     <string name="language_settings" msgid="2079258598337245546">"Тілдер"</string>
-    <string name="languages_and_input_settings" msgid="3672322610529408248">"Тілдер және кіріс"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Тілдер және енгізу"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Ұсынылған"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Барлық тілдер"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Пернетақта"</string>
@@ -211,7 +211,7 @@
     <string name="tts_reset" msgid="6289481549801844709">"Қалпына келтіру"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Дыбыс"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Қоңыраудың дыбыс деңгейі"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"Навигациялау дыбысының қаттылығы"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"Навигация кезіндегі дыбыс деңгейі"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Қоңырау әуені"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Хабарландыру"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"Meдиа"</string>
@@ -219,7 +219,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"Дабыл"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Телефон рингтоны"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Әдепкі хабарландыру дыбысы"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Әдепкі дабыл сигналы"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Әдепкі оятқыш сигналы"</string>
     <string name="units_settings" msgid="402325305096925886">"Өлшем бірліктер"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Жылдамдық"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Арақашықтық"</string>
@@ -272,11 +272,11 @@
     <string name="all_applications" msgid="7798210477486822168">"Барлық қолданбаларды көрсету"</string>
     <string name="default_applications" msgid="1558183275638697087">"Әдепкі қолданбалар"</string>
     <string name="app_permissions" msgid="32799922508313948">"Қолданба рұқсаттары"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> қолданбасын пайдаланып жатқан қолданбалар"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Рұқсаты бар қолданбалар: <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Қолданба ақпараты"</string>
     <string name="force_stop" msgid="2153183697014720520">"Қолмен тоқтату"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Қолмен тоқтатылсын ба?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Егер қолданбаны күштеп тоқтату оның жұмысына кері әсерін тигізуі мүмкін."</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Қолданбаны қолмен тоқтату оның жұмысына кері әсерін тигізуі мүмкін."</string>
     <string name="disable_text" msgid="4358165448648990820">"Өшіру"</string>
     <string name="enable_text" msgid="1794971777861881238">"Қосу"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Жою"</string>
@@ -344,8 +344,8 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi желісін басқару"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi желісін басқару функциясы қолданбаға Wi-Fi желісін қосуға немесе өшіруге, Wi-Fi желілерін іздеуге және оларға жалғануға, желілерді енгізуге не өшіруге немесе тек жергілікті хотспотты іске қосуға рұқсат етеді."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Тағы"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"Орналасқан жер"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Жақында жасалған орналасқан жерді анықтау сұраулары"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Орналасу"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Соңғы орынды анықтау сұраулары"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Орналасқан жерді анықтау сұраулары жақында жасалмаған"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Қолданба деңгейіндегі рұқсаттар"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Орынды анықтау қызметтері"</string>
@@ -364,7 +364,7 @@
     <string name="device_status" msgid="267298179806290920">"Күйі"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"Батарея күйі, желі және басқа ақпарат"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"Телефон нөмірі, сигнал, т.б."</string>
-    <string name="about_settings" msgid="4329457966672592345">"Мәліметтер"</string>
+    <string name="about_settings" msgid="4329457966672592345">"Телефон туралы"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"Құқықтық ақпаратын, күйін, бағдарламалық жасақтама нұсқасын көру"</string>
     <string name="legal_information" msgid="1838443759229784762">"Құқықтық ақпарат"</string>
@@ -392,7 +392,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Енді сіз әзірлеушісіз!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Қажет емес, сіз енді әзірлеушісіз."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Әзірлеуші опциялары"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Опцияларды қайтару"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Бастапқы күйге қайтару"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Желі, қолданбалар және құрылғы параметрлерін қайтару"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Желіні бастапқы күйге қайтару"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Келесілерді қоса, барлық желі параметрлері бастапқы күйіне қайтарылады:"</string>
@@ -411,7 +411,7 @@
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Параметрлерді бастапқы күйіне қайтару"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Келесілердің параметрлері бастапқы күйіне қайтарылады:\n\n"<li>"өшірілген қолданбалар;"</li>\n<li>"қолданбалардың өшірілген хабарландырулары;"</li>\n<li>"әрекеттерге арналған әдепкі қолданбалар;"</li>\n<li>"фондық режимдегі дерек тасымалын шектеу;"</li>\n<li>"барлық рұқсат шектеулері."</li>\n\n"Қолданба деректері жоғалмайды."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Бастапқы күйге қайтару"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Қолданба параметрлері бастапқы күйіне қайтарылды"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Қолданба параметрлері бастапқы күйіне қайтарылды."</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Барлық деректі өшіру (зауыттық мәнге қайтару)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Көліктің басты құрылғысынан барлық деректер өшеді, оның ішінде:\n\n"<li>"Google есептік жазбаңыз;"</li>\n<li>"жүйе мен қолданба деректері және параметрлері;"</li>\n<li>"жүктеп алынған қолданбалар."</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Сіз келесі есептік жазбаларға кірдіңіз:"</string>
@@ -435,7 +435,7 @@
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Уақыт белдеуі"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Уақыт белдеуін таңдау"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Күні"</string>
-    <string name="date_time_set_date" msgid="2537494485643283230">"Күнін реттеу"</string>
+    <string name="date_time_set_date" msgid="2537494485643283230">"Күнді реттеу"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"Алфавит бойынша сұрыптау"</string>
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Уақыт белдеуі бойынша сұрыптау"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Күні"</string>
@@ -452,10 +452,10 @@
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Автокөліктің мобильдік деректері арқылы хабар алмасу"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Жаңа қолданбаларды орнату"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Қолданбаларды жою"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"Пайдаланушы енгізу"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"Пайдаланушы қосу"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Жаңа пайдаланушы"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Жаңа пайдаланушы енгізілсін бе?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Енгізілген жаңа пайдаланушы өз профилін реттеуі керек."</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Жаңа пайдаланушы қосылсын ба?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Қосылған жаңа пайдаланушы өз профилін реттеуі керек."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Кез келген пайдаланушы қолданбаларды басқа пайдаланушылар үшін жаңарта алады."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Пайдаланушылар саны шегіне жетті"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
@@ -506,7 +506,7 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> қауіпсіз шығару мүмкін емес."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Есептік жазбалар"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Есептік жазба енгізу"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Ешқандай есептік жазба енгізілмеген"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Ешқандай есептік жазба қосылмаған"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> атты пайдаланушының есептік жазбалары"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Деректерді автоматты түрде синхрондау"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Қолданбалардың деректерді автоматты жаңартуына рұқсат беру"</string>

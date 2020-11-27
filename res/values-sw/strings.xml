@@ -163,7 +163,7 @@
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Oanisha kifaa kipya"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth itawaka ili ioanishe"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Ungependa kuondoa kifaa?"</string>
-    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Muunganisho wa gari lako utaondolewa kwenye <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Gari lako litatenganishwa na <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Anwani ya Bluetooth ya gari: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Anwani ya Bluetooth ya Kifaa chako: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"Jina la gari"</string>
@@ -463,7 +463,7 @@
       <item quantity="one">Unaruhusiwa kuongeza mtumiaji mmoja pekee.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Imeshindwa kuongeza mtumiaji mpya"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Ungependa kumtafuta mtumiaji huyu?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Ungependa kumfuta mtumiaji huyu?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Data na programu zote zitafutwa."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Imeshindwa kumfuta mtumiaji."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ondoa"</string>
@@ -519,8 +519,8 @@
     <string name="add_an_account" msgid="1072285034300995091">"Ongeza akaunti"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Wasifu zilizodhibitiwa haziwezi kuongeza akaunti"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Ondoa akaunti"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"Unataka kuondoa akaunti?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Kuondoa akaunti hii kutasabibisha kufutwa kwa ujumbe, anwani na data nyingine kwenye kifaa!"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"Ungependa kuondoa akaunti?"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Kuondoa akaunti hii kutasababisha kufutwa kwa ujumbe, anwani na data nyingine kwenye kifaa!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Imeshindwa kuondoa akaunti."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Usawazishaji wa akaunti"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Umewasha usawazishaji katika vipengee <xliff:g id="ID_1">%1$d</xliff:g> kati ya <xliff:g id="ID_2">%2$d</xliff:g>"</string>
