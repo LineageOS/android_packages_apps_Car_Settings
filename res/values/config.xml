@@ -101,7 +101,9 @@
     </string-array>
 
     <!-- The component which listens for the enabling of developer options. -->
-    <string name="config_dev_options_module" translatable="false">com.android.settings/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity</string>
+    <string name="config_dev_options_module" translatable="false">
+        com.android.car.developeroptions/.CarDevelopmentSettingsDashboardActivity
+    </string>
 
     <!-- Settings intelligence package name -->
     <string name="config_settingsintelligence_package_name" translatable="false">
