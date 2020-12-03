@@ -50,8 +50,8 @@ public class BluetoothBondedDevicesPreferenceController extends
     @Override
     protected BluetoothDevicePreference createDevicePreference(CachedBluetoothDevice cachedDevice) {
         BluetoothDevicePreference pref = super.createDevicePreference(cachedDevice);
-        pref.setWidgetLayoutResource(R.layout.details_preference_widget);
-        pref.setOnButtonClickListener(preference -> getFragmentController().launchFragment(
+        pref.setSecondaryActionIcon(R.drawable.ic_settings_gear);
+        pref.setOnSecondaryActionClickListener(() -> getFragmentController().launchFragment(
                 BluetoothDeviceDetailsFragment.newInstance(cachedDevice)));
         return pref;
     }
@@ -91,7 +91,8 @@ public class BluetoothBondedDevicesPreferenceController extends
 
     private void updateActionVisibility(PreferenceGroup group, boolean isActionVisible) {
         for (int i = 0; i < group.getPreferenceCount(); i++) {
-            ((BluetoothDevicePreference) group.getPreference(i)).showAction(isActionVisible);
+            ((BluetoothDevicePreference) group.getPreference(i)).setSecondaryActionVisible(
+                    isActionVisible);
         }
     }
 }

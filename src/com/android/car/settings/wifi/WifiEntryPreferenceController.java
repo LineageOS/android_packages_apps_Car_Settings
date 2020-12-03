@@ -22,13 +22,14 @@ import android.net.wifi.WifiManager;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.common.SeparateSwitchPreference;
+import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 
 /**
  * Controller which determines if the top level entry into Wi-Fi settings should be displayed
  * based on device capabilities.
  */
-public class WifiEntryPreferenceController extends PreferenceController<SeparateSwitchPreference>
+public class WifiEntryPreferenceController extends
+        PreferenceController<CarUiTwoActionSwitchPreference>
         implements CarWifiManager.Listener {
 
     private CarWifiManager mCarWifiManager;
@@ -39,14 +40,14 @@ public class WifiEntryPreferenceController extends PreferenceController<Separate
     }
 
     @Override
-    protected Class<SeparateSwitchPreference> getPreferenceType() {
-        return SeparateSwitchPreference.class;
+    protected Class<CarUiTwoActionSwitchPreference> getPreferenceType() {
+        return CarUiTwoActionSwitchPreference.class;
     }
 
     @Override
     protected void onCreateInternal() {
         mCarWifiManager = new CarWifiManager(getContext());
-        getPreference().setSwitchToggleListener((preference, isChecked) -> {
+        getPreference().setOnSecondaryActionClickListener(isChecked -> {
             if (isChecked != mCarWifiManager.isWifiEnabled()) {
                 mCarWifiManager.setWifiEnabled(isChecked);
             }
@@ -57,7 +58,7 @@ public class WifiEntryPreferenceController extends PreferenceController<Separate
     protected void onStartInternal() {
         mCarWifiManager.addListener(this);
         mCarWifiManager.start();
-        getPreference().setSwitchChecked(mCarWifiManager.isWifiEnabled());
+        getPreference().setSecondaryActionChecked(mCarWifiManager.isWifiEnabled());
     }
 
     @Override
@@ -78,7 +79,7 @@ public class WifiEntryPreferenceController extends PreferenceController<Separate
 
     @Override
     public void onWifiStateChanged(int state) {
-        getPreference().setSwitchChecked(state == WifiManager.WIFI_STATE_ENABLED
+        getPreference().setSecondaryActionChecked(state == WifiManager.WIFI_STATE_ENABLED
                 || state == WifiManager.WIFI_STATE_ENABLING);
     }
 
