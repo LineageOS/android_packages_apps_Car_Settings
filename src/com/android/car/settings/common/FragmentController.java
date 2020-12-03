@@ -47,6 +47,11 @@ public interface FragmentController {
     void showDialog(DialogFragment dialogFragment, @Nullable String tag);
 
     /**
+     * Shows/hides the Fragment's progress bar.
+     */
+    void showProgressBar(boolean visible);
+
+    /**
      * Finds dialog by tag. This is primarily used to reattach listeners to dialogs after
      * configuration change. This method will return null if the tag references a fragment that
      * isn't a dialog fragment or no dialog with the given tag exists.

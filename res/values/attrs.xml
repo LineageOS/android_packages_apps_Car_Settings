@@ -73,6 +73,11 @@
         <attr name="maxLabel" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="ColoredPreference">
+        <attr name="titleColor" format="color"/>
+        <attr name="iconColor" format="color"/>
+    </declare-styleable>
+
     <declare-styleable name="ColoredSwitchPreference">
         <attr name="disabledTitleColor" format="color"/>
         <attr name="enabledTitleColor" format="color"/>
