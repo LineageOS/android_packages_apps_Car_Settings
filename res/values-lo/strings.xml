@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ຕ້ອງການເປີດໃຊ້ Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ຕ້ອງການປິດ Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ຜິດພາດ"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"ອຸປະກອນທີ່ຈະໃຊ້ກັບ <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"ບໍ່ພົບອຸປະກອນ. ກະລຸນາກວດສອບວ່າເປີດອຸປະກອນແລ້ວ ແລະ ສາມາດເຊື່ອມຕໍ່ໄດ້."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"ລອງໃໝ່"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ມີບາງຢ່າງເກີດຂຶ້ນ. ແອັບພລິເຄຊັນໄດ້ຍົກເລີກຄຳຮ້ອງຂໍເພື່ອເລືອກອຸປະກອນແລ້ວ."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"ການເຊື່ອມຕໍ່ສຳເລັດແລ້ວ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ສະແດງທັງໝົດ"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"ກຳລັງຊອກຫາ..."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ອຸປະກອນທີ່ບໍ່ມີຊື່"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ອຸປະກອນທີ່ຈັບຄູ່ແລ້ວ"</string>
@@ -357,7 +364,7 @@
     <string name="hardware_info_summary" msgid="8262576443254075921">"ຮຸ່ນ: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"ເວີຊັນເບສແບນ"</string>
     <string name="kernel_version" msgid="7327212934187011508">"ເວີຊັນ Kernel"</string>
-    <string name="build_number" msgid="3997326631001009102">"ເລກທີລຸ້ນ"</string>
+    <string name="build_number" msgid="3997326631001009102">"ໝາຍເລກສ້າງ"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ທີ່ຢູ່ Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ບໍ່ສາມາດໃຊ້ໄດ້"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ສະຖານະ"</string>
@@ -562,11 +569,12 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ແຕ້ມຮູບແບບປົດລັອກ"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ປ່ອຍນິ້ວມືຂອງທ່ານເມື່ອເຮັດແລ້ວ"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ບັນທຶກຮູບແບບແລ້ວ"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ແຕ້ມຮູບແບບຄືນອີກຄັ້ງເພື່ອຢັ້ງຢືນ"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ແຕ້ມຮູບແບບຄືນອີກຄັ້ງເພື່ອຢືນຢັນ"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ເຊື່ອມຕໍ່ຢ່າງໜ້ອຍ 4 ຈຸດຫາກັນ. ກະລຸນາລອງໃໝ່."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ຮູບແບບບໍ່ຖືກຕ້ອງ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ວິທີແຕ້ມຮູບແບບປົດລັອກ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ເກີດຄວາມຜິດພາດໃນການບັນທຶກຮູບແບບ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ພະຍາຍາມຢ່າງບໍ່ຖືກຕ້ອງຫຼາຍຄັ້ງເກີນໄປ. ກະລຸນາລອງໃໝ່ໃນ <xliff:g id="NUMBER">%d</xliff:g> ວິນາທີ."</string>
     <string name="okay" msgid="4589873324439764349">"ຕົກລົງ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"ລຶບການລັອກໜ້າຈໍອອກບໍ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ນີ້ຈະອະນຸຍາດໃຫ້ທຸກຄົນເຂົ້າເຖິງບັນຊີຂອງທ່ານໄດ້"</string>
@@ -628,7 +636,7 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ມື້ກ່ອນ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ລຶບຂໍ້ມູນຮັບຮອງ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ລຶບໃບຮັບຮອງທັງໝົດອອກ"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"ລຶບເນື້ອຫາທັງໝົດອອກ?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"ລຶບເນື້ອຫາທັງໝົດອອກບໍ?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"ພື້ນທີ່ຈັດເກັບຂໍ້ມູນປະຈຳຕົວຖືກລຶບແລ້ວ."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"ບໍ່ສາມາດບ່ອນຈັດເກັບຂໍ້ມູນປະຈຳຕົວໄດ້."</string>
     <string name="forget" msgid="3971143908183848527">"ລືມ"</string>

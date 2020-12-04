@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Тохиргоо"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Бусад"</string>
-    <string name="display_settings" msgid="5325515247739279185">"Харуулах"</string>
+    <string name="display_settings" msgid="5325515247739279185">"Дэлгэц"</string>
     <string name="brightness" msgid="2919605130898772866">"Гэрэлтүүлгийн түвшин"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Дасан зохицох боломжтой гэрэлтүүлэг"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Боломжтой гэрлийн гэрэлтүүлгийн түвшнийг оновчлох"</string>
@@ -142,21 +142,28 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Аюулгүй байдал"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Хувийн"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Байхгүй"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Зурвас"</string>
-    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP зурвас сонгох"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Мессеж"</string>
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP мессеж сонгох"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Автомат"</string>
-    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 Гц зурвас"</string>
-    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5,0 Гц зурвас"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 Гц зурвасыг тохиромжтой гэж үздэг"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 Гц мессеж"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5,0 Гц мессеж"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 Гц мессежийг тохиромжтой гэж үздэг"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 Гц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 Гц"</string>
-    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi-Fi сүлжээний цэгт хамгийн багадаа нэг зурвас сонгоно уу:"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi-Fi сүлжээний цэгт хамгийн багадаа нэг мессеж сонгоно уу:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Сүлжээний цэг, модем болгох"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Сүлжээний цэгийг автоматаар унтраах"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Хэрэв төхөөрөмж холбогдоогүй бол Wi‑Fi сүлжээний цэг унтарна"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi-г асаах хүсэлтэй байна"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi-г унтраах хүсэлтэй байна"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Алдаа"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g>-тай ашиглах төхөөрөмж"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Төхөөрөмж олдсонгүй. Төхөөрөмжүүдийг асаалттай бөгөөд холбогдох боломжтой эсэхийг нь шалгана уу."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Дахин оролдох"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Ямар нэг асуудал гарлаа. Энэ апп төхөөрөмж сонгох хүсэлтийг цуцаллаа."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Амжилттай холбогдлоо"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Бүгдийг харуулах"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Хайж байна..."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Нэргүй төхөөрөмж"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Хослуулсан төхөөрөмжүүд"</string>
@@ -333,7 +340,7 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Энэ зөвшөөрөл аппад системийн тохиргоог өөрчлөхийг зөвшөөрдөг."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Мэдэгдлийн хандалт"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>-н мэдэгдлийн хандалтыг зөвшөөрөх үү?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> таны харилцагчийн нэр, хүлээн авсан зурвасын текст зэрэг хувийн мэдээлэл бүхий бүх мэдэгдлийг унших боломжтой бөгөөд мэдэгдлийг хаах, тэдгээрийн доторх үйлдлийн товчлуурыг хэрэгсэхгүй болгох боломжтой. \n\nМөн энэ нь аппад \'Бүү саад бол\' тохиргоог асаах, унтраах болон үүнтэй холбоотой тохиргоог өөрчлөхийг зөвшөөрнө."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> таны харилцагчийн нэр, хүлээн авсан мессежийн текст зэрэг хувийн мэдээлэл бүхий бүх мэдэгдлийг унших боломжтой бөгөөд мэдэгдлийг хаах, тэдгээрийн доторх үйлдлийн товчлуурыг хэрэгсэхгүй болгох боломжтой. \n\nМөн энэ нь аппад \'Бүү саад бол\' тохиргоог асаах, унтраах болон үүнтэй холбоотой тохиргоог өөрчлөхийг зөвшөөрнө."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Та <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-н мэдэгдлийн хандалтыг унтраасан тохиолдолд Бүү саад бол горимын хандалт мөн унтарна."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Унтраах"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Цуцлах"</string>
@@ -352,7 +359,7 @@
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системийн шинэчлэлт"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Андройд хувилбар"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Андройдын аюулгүй байдлын patch-н түвшин"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Андройдын аюулгүй байдлын засварын түвшин"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Загвар, техник хангамж"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Загвар: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Долгион баригчийн хувилбар"</string>
@@ -519,8 +526,8 @@
     <string name="add_an_account" msgid="1072285034300995091">"Бүртгэл нэмэх"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Хязгаарлагдсан профайлууд бүртгэл нэмэх боломжгүй"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Бүртгэл хасах"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"Бүртгэлийг устгах уу?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Энэ бүртгэлийг устгаснаар үүний бүх зурвас, харилцагч болон бусад өгөгдлийг төхөөрөмжөөс устгана!"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"Бүртгэлийг хасах уу?"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Энэ бүртгэлийг хассанаар үүний бүх мессеж, харилцагч болон бусад өгөгдлийг төхөөрөмжөөс устгана!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Бүртгэлийг хасаж чадсангүй."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Бүртгэл синк хийх"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g>-с <xliff:g id="ID_1">%1$d</xliff:g> зүйлд синк асаалттай"</string>
@@ -558,15 +565,16 @@
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Аюулгүй байдлын үүднээс загвар тохируулах"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Устгах"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Цуцлах"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Таны түгжээ тайлах шинэ загвар"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Түгжээ тайлах загварыг зурах"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Таны шинэ түгжээ тайлах хээ"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Түгжээ тайлах хээг зурна уу"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Дуусаад хуруугаа аваарай"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Загварыг бичсэн"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Баталгаажуулахын тулд загварыг дахин зурна уу"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Баталгаажуулахын тулд хээг дахин зурна уу"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Хамгийн багадаа 4 цэг холбоно уу. Дахин оролдоно уу."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Загвар буруу байна"</string>
-    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Түгжээг тайлах загварыг хэрхэн зурах вэ?"</string>
+    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Түгжээг тайлах хээг хэрхэн зурах вэ?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Загварыг хадгалахад алдаа гарлаа"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Хэт олон удаа буруу оруулсан байна. <xliff:g id="NUMBER">%d</xliff:g> секундын дараа дахин оролдоно уу."</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Дэлгэцийн түгжээг хасах уу?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ингэснээр хүн бүхэн таны бүртгэлд хандах боломжтой болно"</string>
@@ -574,7 +582,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Нууц үгээ оруулна уу"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Аюулгүй байдлын үүднээс ПИН тохируулах"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ПИН-ээ дахин оруулах"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ПИН хамгийн багадаа 4 оронтой цифр байх ёстой"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ПИН хамгийн багадаа 4 цифртэй байх ёстой"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Пин буруу байна. Хамгийн багадаа 4 цифр байх ёстой."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"ПИН таарахгүй байна"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"ПИН-г хадгалахад алдаа гарлаа"</string>

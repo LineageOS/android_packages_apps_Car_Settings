@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បើក Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បិទ Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"បញ្ហា"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"ឧបករណ៍​សម្រាប់ប្រើ​ជាមួយ <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"រកមិន​ឃើញ​ឧបករណ៍ទេ។ សូម​ប្រាកដថា​ឧបករណ៍​បានបើក និងអាច​ភ្ជាប់បាន។"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"ព្យាយាមម្ដងទៀត"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"មាន​បញ្ហា​អ្វីមួយ។ កម្មវិធី​បាន​បោះបង់សំណើ​ក្នុងការ​ជ្រើសរើស​ឧបករណ៍។"</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"ការតភ្ជាប់​ទទួលបាន​ជោគជ័យ​ហើយ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"បង្ហាញ​ទាំងអស់"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"ស្វែងរក"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ប៊្លូធូស"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ឧបករណ៍​គ្មានឈ្មោះ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ឧបករណ៍​ដែល​បាន​ផ្គូផ្គង"</string>
@@ -326,7 +333,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"សួរគ្រប់ពេល"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"កុំបើកនៅក្នុងកម្មវិធីនេះ"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"តំណដែលស្គាល់"</string>
-    <string name="special_access" msgid="5730278220917123811">"ការចូលប្រើកម្មវិធីពិសេស"</string>
+    <string name="special_access" msgid="5730278220917123811">"សិទ្ធិចូលប្រើប្រាស់កម្មវិធីពិសេស"</string>
     <string name="show_system" msgid="4401355756969485287">"បង្ហាញ​ប្រព័ន្ធ"</string>
     <string name="hide_system" msgid="8845453295584638040">"លាក់ប្រព័ន្ធ"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"កែការកំណត់ប្រព័ន្ធ"</string>
@@ -353,7 +360,7 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"បច្ចុប្បន្នភាព​ប្រព័ន្ធ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"កំណែ Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"កម្រិតបំណះសុវត្ថិភាព Android"</string>
-    <string name="hardware_info" msgid="3973165746261507658">"ម៉ូដែល និង​ផ្នែករឹង"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"ម៉ូដែល និង​ហាតវែរ"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"ម៉ូដែល៖ <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"កំណែ​មូលដ្ឋាន"</string>
     <string name="kernel_version" msgid="7327212934187011508">"កំណែ​ខឺណែល"</string>
@@ -567,15 +574,16 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"លំនាំ​មិន​ត្រឹមត្រូវ​ទេ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"របៀបគូរ​លំនាំ​ដោះ​សោ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"មាន​បញ្ហា​ក្នុងការរក្សាទុក​លំនាំ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ការព្យាយាម​ចូលខុស​ច្រើនដងពេក។ សូមព្យាយាម​ម្ដងទៀត​ក្នុងរយៈពេល <xliff:g id="NUMBER">%d</xliff:g> វិនាទី​។"</string>
     <string name="okay" msgid="4589873324439764349">"យល់ព្រម"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"លុប​ការ​ចាក់សោ​អេក្រង់?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"វា​នឹង​អនុញ្ញាត​ឱ្យ​នរណា​ម្នាក់​ចូល​ប្រើ​គណនី​របស់អ្នក"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"ការធ្វើបែបនេះ​នឹង​អនុញ្ញាតឱ្យ​នរណាក៏អាចចូល​ប្រើ​គណនី​របស់អ្នក"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"បញ្ចូល​កូដ PIN របស់​អ្នក"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"បញ្ចូល​ពាក្យ​សម្ងាត់​របស់​អ្នក"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ដើម្បី​សុវត្ថិភាព សូម​កំណត់​កូដ PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"បញ្ចូល​កូដ PIN របស់អ្នក​ឡើងវិញ"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"កូដ PIN ត្រូវតែ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ 4 ខ្ទង់"</string>
-    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"កូដ PIN មិនត្រឹមត្រូវ​ទេ ត្រូវ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ 4 ខ្ទង់។"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"កូដ PIN ត្រូវមានយ៉ាងតិច 4 ខ្ទង់"</string>
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"កូដ PIN មិនត្រឹមត្រូវ​ទេ ត្រូវ​មានយ៉ាងតិច 4 ខ្ទង់។"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"កូដ PIN មិន​ត្រូវគ្នាទេ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"មាន​បញ្ហា​ក្នុងការ​រក្សាទុក​កូដ PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"កូដ PIN មិន​ត្រឹមត្រូវ​"</string>
@@ -588,7 +596,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"បញ្ជាក់"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ត្រូវ​មាន​យ៉ាងហោចណាស់ 4 តួ"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ត្រូវ​​មាន​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> តួ"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"កូដ PIN ​ត្រូវ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> ខ្ទង់"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"កូដ PIN ​ត្រូវ​មានយ៉ាងតិច <xliff:g id="COUNT">%d</xliff:g> ខ្ទង់"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ត្រូវមានតិចជាង <xliff:g id="NUMBER">%d</xliff:g> តួ"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ត្រូវមានលេខតិចជាង <xliff:g id="NUMBER">%d</xliff:g> ខ្ទង់"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ត្រូវមាន​លេខពី 0-9 តែ​ប៉ុណ្ណោះ។"</string>

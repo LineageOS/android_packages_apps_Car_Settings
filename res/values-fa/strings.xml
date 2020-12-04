@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> می‌خواهد Wi-Fi را روشن کند"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> می‌خواهد Wi-Fi را خاموش کند"</string>
     <string name="wifi_error" msgid="3105105447117289410">"خطا"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"دستگاه مورداستفاده با <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"دستگاهی پیدا نشد. مطمئن شوید دستگاه‌ها روشن و برای اتصال دردسترس هستند."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"امتحان مجدد"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"مشکلی رخ داد. برنامه درخواست انتخاب دستگاه را لغو کرد."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"اتصال برقرار شد"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"نمایش همه"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"در حال جستجو"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"دستگاه بی‌نام"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"دستگاه‌های مرتبط‌شده"</string>
@@ -188,7 +195,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"کد مرتبط‌سازی بلوتوث"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"پین شامل حروف یا نماد است"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"کد مرتبط‌سازی را وارد کنید سپس بازگشت یا Enter را فشار دهید"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> مرتبط‌سازی شود؟"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"‏<xliff:g id="DEVICE_NAME">%1$s</xliff:g> مرتبط‌سازی شود؟"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"به <xliff:g id="DEVICE_NAME">%1$s</xliff:g> اجازه داده شود به مخاطبین و سابقه تماس شما دسترسی داشته باشد"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ممکن است لازم باشد که این پین را در دستگاه دیگر وارد کنید."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ممکن است لازم باشد این کلید عبور را نیز در دستگاه دیگر وارد کنید."</string>
@@ -294,15 +301,15 @@
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"مصرف داده برنامه"</string>
     <string name="computing_size" msgid="5791407621793083965">"درحال محاسبه..."</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> مجوز دیگر</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> مجوز دیگر</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> اجازه تکمیلی</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> اجازه‌های تکمیلی</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"توجه: پس از راه‌اندازی مجدد، تا قفل وسیله‌تان را باز نکنید، این برنامه نمی‌تواند شروع به کار کند."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"همیار و ورودی گفتاری"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"برنامه همیار"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"استفاده از نوشتار صفحه"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"اجازه به برنامه همیار برای دسترسی به محتوای صفحه به‌عنوان نوشتار"</string>
-    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"استفاده از عکس صفحه‌نمایش"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"استفاده از نماگرفت"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"اجازه به برنامه همیار برای دسترسی به تصویری از صفحه"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"ورودی صدا"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"سرویس تکمیل خودکار"</string>
@@ -347,7 +354,7 @@
     <string name="location_settings_title" msgid="901334356682423679">"مکان"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"درخواست‌های اخیر مکان"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"درخواست مکان جدیدی وجود ندارد"</string>
-    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"مجوزهای سطح برنامه"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"اجازه‌های سطح برنامه"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات مکان"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"سیستم"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"به‌روزرسانی‌های سیستم"</string>
@@ -497,7 +504,7 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"داده‌های کاربر"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"حافظهٔ پنهان"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"جمع"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"پاک کردن محل ذخیره‌سازی"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"پاک کردن فضای ذخیره‌سازی"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"پاک کردن حافظهٔ پنهان"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"داده‌های برنامه حذف شود؟"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"همه داده‌های این برنامه به‌صورت دائمی حذف می‌شود. این شامل تمام فایل‌ها، تنظیمات، حساب‌ها، پایگاه‌های داده و دیگر موارد می‌شود."</string>
@@ -562,11 +569,12 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"الگوی بازگشایی قفل را بکشید"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"وقتی الگو را کشیدید، انگشتتان را بردارید"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"الگو ضبط شد"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"برای تأیید دوباره الگو را بکشید"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"برای تأیید، دوباره الگو را بکشید"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"حداقل ۴ نقطه را وصل و دوباره امتحان کنید."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"الگو اشتباه است"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"نحوه ترسیم الگوی بازگشایی قفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"خطای ذخیره الگو"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تلاش‌های نادرست زیادی انجام شده است. <xliff:g id="NUMBER">%d</xliff:g> ثانیه دیگر دوباره امتحان کنید."</string>
     <string name="okay" msgid="4589873324439764349">"تأیید"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"قفل صفحه برداشته شود؟"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"این کار به همه افراد اجازه می‌دهد به حسابتان دسترسی پیدا کنند"</string>

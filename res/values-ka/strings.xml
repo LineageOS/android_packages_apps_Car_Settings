@@ -71,7 +71,7 @@
     <string name="app_data_usage" msgid="3878609885080232877">"აპის მონაცემთა გამოყენება"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"შეზღუდულია"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"გამოყენების ციკლის გადაყენების თარიღი"</string>
-    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"თითოეული თვის თარიღი:"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"თვის შემდეგ რიცხვში:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"დაყენება"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"მოხმარების შესახებ გაფრთხილება და ლიმიტი"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"აპების მიერ ტრაფიკის მოხმარების ციკლი"</string>
@@ -147,7 +147,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"ავტომატური"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 გჰც დიაპაზონი"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5 გჰც დიაპაზონი"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"სასურველია 5-გიგაჰერციანი დიაპაზონი"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"სასურველია 5 გჰც დიაპაზონი"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 გჰც"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 გჰც"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"აირჩიეთ 1 დიაპ. Wi‑Fi ქსელისთვის:"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>-ს სურს, ჩართოს Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>-ს სურს, გამორთოს Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"შეცდომა"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g>-თან გამოსაყენებელი მოწყობილობა"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"მოწყობილობები ვერ მოიძებნა. დარწმუნდით, რომ მოწყობილობები ჩართულია და ხელმისაწვდომია დასაკავშირებლად."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"ხელახლა ცდა"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"წარმოიქმნა შეფერხება. აპლიკაციამ გააუქმა მოწყობილობის არჩევის მოთხოვნა."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"წარმატებით დაკავშირდა"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ყველას ჩვენება"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"მიმდინარეობს ძიება"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"უსახელო მოწყობილობა"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"დაწყვილებული მოწყობილობები"</string>
@@ -219,7 +226,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"მაღვიძარა"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"ტელეფონის ზარი"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"შეტყობინების ნაგულისხმევი ხმა"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"მაღვიძარას ნაგულისხმევი ხმა"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"მაღვიძარას ნაგულ. ხმა"</string>
     <string name="units_settings" msgid="402325305096925886">"ერთეულები"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"სიჩქარე"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"მანძილი"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ნიმუში არასწორია"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"როგორ დახაზოთ განბლოკვის გრაფიკული გასაღები"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ნიმუშის შენახვისას მოხდა შეცდომა"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"დაფიქსირდა მეტისმეტად ბევრი არასწორი მცდელობა. ცადეთ ხელახლა <xliff:g id="NUMBER">%d</xliff:g> წამში."</string>
     <string name="okay" msgid="4589873324439764349">"კარგი"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"გაუქმდეს ეკრანის დაბლოკვა?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ეს ქმედება ხელმისაწვდომს გახდის თქვენს ანგარიშს ყველასთვის"</string>
