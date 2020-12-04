@@ -69,8 +69,13 @@
         <item name="android:colorControlNormal">@android:color/transparent</item>
     </style>
 
+    <style name="ColoredAccentPreferenceStyle">
+        <item name="titleColor">@color/text_color_accent_with_disable</item>
+        <item name="iconColor">?android:attr/colorAccent</item>
+    </style>
+
     <style name="ColoredSwitchPreferenceStyle">
-        <item name="disabledTitleColor">@color/car_grey_400</item>
-        <item name="enabledTitleColor">?android:attr/colorAccent</item>
+        <item name="disabledTitleColor">@color/car_grey_400_with_disable</item>
+        <item name="enabledTitleColor">@color/text_color_accent_with_disable</item>
     </style>
 </resources>

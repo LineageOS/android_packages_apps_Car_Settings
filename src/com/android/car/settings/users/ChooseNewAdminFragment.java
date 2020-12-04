@@ -27,10 +27,6 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
-import com.android.car.ui.toolbar.MenuItem;
-
-import java.util.Collections;
-import java.util.List;
 
 /**
  * This screen appears after the last admin on the device tries to delete themselves. (but only if
@@ -42,8 +38,6 @@ import java.util.List;
  * <p> After new admin has been selected and upgraded, the old Admin is removed.
  */
 public class ChooseNewAdminFragment extends SettingsFragment {
-
-    private MenuItem mCancelButton;
 
     /**
      * Creates a new instance of {@link ChooseNewAdminFragment} that enables the last remaining
@@ -57,21 +51,6 @@ public class ChooseNewAdminFragment extends SettingsFragment {
         bundle.putParcelable(Intent.EXTRA_USER, adminInfo);
         usersListFragment.setArguments(bundle);
         return usersListFragment;
-    }
-
-    @Override
-    public List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mCancelButton);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mCancelButton = new MenuItem.Builder(getContext())
-                .setTitle(R.string.cancel)
-                .setOnClickListener(i -> requireActivity().onBackPressed())
-                .build();
     }
 
     @Override

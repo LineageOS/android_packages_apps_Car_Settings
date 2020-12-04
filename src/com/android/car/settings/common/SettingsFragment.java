@@ -273,6 +273,11 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         dialogFragment.show(getFragmentManager(), tag);
     }
 
+    @Override
+    public void showProgressBar(boolean visible) {
+        getToolbar().getProgressBar().setVisible(visible);
+    }
+
     @Nullable
     @Override
     public DialogFragment findDialogByTag(String tag) {
