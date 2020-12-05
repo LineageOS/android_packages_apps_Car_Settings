@@ -100,7 +100,7 @@
     <string name="wifi_password" msgid="5565632142720292397">"Пароль"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Паказваць пароль"</string>
     <string name="wifi_no_network_name" msgid="6819604337231313594">"Увядзіце назву сеткі"</string>
-    <string name="wifi_ssid" msgid="488604828159458741">"Імя сеткі"</string>
+    <string name="wifi_ssid" msgid="488604828159458741">"Назва сеткі"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Увядзіце SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Бяспека"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"Узровень сігналу"</string>
@@ -156,7 +156,7 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Выберыце дыяпазон Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Хот-спот і мадэм"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Аўтаматычна выключыць хот-спот"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Аўтаматычна выключаць хот-спот"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Хот-спот Wi‑Fi выключыцца, калі прылады непадключаныя"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Уключыце Wi-Fi для праграмы \"<xliff:g id="REQUESTER">%s</xliff:g>\""</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Выключыце Wi-Fi для праграмы \"<xliff:g id="REQUESTER">%s</xliff:g>\""</string>
@@ -562,7 +562,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Прапусціць"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Задайце блакіроўку экрана"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Набярыце PIN-код"</string>
-    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Выберыце шаблон"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Выберыце ўзор разблакіроўкі"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Выберыце пароль"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Бягучая блакіроўка экрана"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Задайце ўзор, каб абараніць прыладу"</string>
@@ -572,14 +572,14 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Нарысуйце ўзор разблакіроўкі"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Адпусціце палец, калі скончыце"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Узор разблакіроўкі запісаны"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Увядзіце ўзор, каб пацвердзіць"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Нарысуйце яшчэ раз для пацвярджэння"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Злучыце не менш за 4 кропкі. Паўтарыце."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Няправільны ўзор"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Як нарысаваць узор разблакіроўкі"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Памылка захавання ўзору разблакіроўкі"</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Зняць блакіроўку экрана?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Доступ да вашага ўліковага запісу атрымае любы карыстальнік"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Доступ да вашага ўліковага запісу зможа атрымаць любы чалавек"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Увядзіце PIN-код"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Увядзіце пароль"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Задайце PIN-код, каб абараніць прыладу"</string>

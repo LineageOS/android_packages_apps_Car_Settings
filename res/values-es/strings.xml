@@ -65,7 +65,7 @@
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Queda menos de 1 día"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Actualizado por <xliff:g id="ID_1">^1</xliff:g> hace <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="no_carrier_update_text" msgid="4396108017586427442">"Actualizado hace <xliff:g id="ID_1">^2</xliff:g>"</string>
-    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Actualizado por <xliff:g id="ID_1">^1</xliff:g> ahora mismo"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Actualizado por <xliff:g id="ID_1">^1</xliff:g> justo ahora"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Actualizado ahora"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Ver plan"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Uso de datos de la app"</string>
@@ -276,7 +276,7 @@
     <string name="applications_settings" msgid="794261395191035632">"Información de la aplicación"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forzar detención"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"¿Quieres forzar la detención?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Si se fuerza la detención una aplicación, es posible que no funcione correctamente."</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Si se fuerza la detención de una aplicación, es posible que no funcione correctamente."</string>
     <string name="disable_text" msgid="4358165448648990820">"Inhabilitar"</string>
     <string name="enable_text" msgid="1794971777861881238">"Habilitar"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Desinstalar"</string>
@@ -412,7 +412,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Se restablecerán todas las preferencias de:\n\n"<li>"Aplicaciones desactivadas"</li>\n<li>"Notificaciones de aplicaciones desactivadas"</li>\n<li>"Aplicaciones para acciones predeterminadas"</li>\n<li>"Restricciones de datos en segundo plano de aplicaciones"</li>\n<li>"Restricciones de permisos"</li>\n\n"No se perderán los datos de las aplicaciones."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer aplicaciones"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se han restablecido las preferencias de las aplicaciones"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Borrar todos los datos (restablecer)"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Volver al estado de fábrica (borrar todo)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Se borrarán todos los datos de la unidad principal de tu vehículo, como:\n\n"<li>"Tu cuenta de Google"</li>\n<li>"Los ajustes y datos de aplicaciones y del sistema"</li>\n<li>"Las aplicaciones descargadas"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Has iniciado sesión en estas cuentas:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Hay otros usuarios presentes en este vehículo."</string>
@@ -464,7 +464,7 @@
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"No se ha podido crear el usuario"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"¿Eliminar este usuario?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Se eliminarán los datos y las aplicaciones."</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Se eliminarán todos los datos y aplicaciones."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"No se ha podido eliminar al usuario."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Cerrar"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Reintentar"</string>
@@ -480,7 +480,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"Tú (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nombre"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Sin configurar"</string>
-    <string name="edit_user_name_title" msgid="6890782937520262478">"Cambiar el nombre de usuario"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Cambiar nombre de usuario"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"El campo no puede estar vacío."</string>
     <string name="name_input_invalid_error" msgid="3523545780580744273">"El nombre de usuario introducido no es válido."</string>
     <string name="users_list_title" msgid="770764290290240909">"Usuarios"</string>
@@ -519,7 +519,7 @@
     <string name="add_an_account" msgid="1072285034300995091">"Añadir una cuenta"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Los perfiles restringidos no pueden añadir cuentas"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Quitar cuenta"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"¿Quitar la cuenta?"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"¿Quitar cuenta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Si quitas esta cuenta, se eliminarán todos sus mensajes, contactos y otros datos del dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"No se ha podido eliminar la cuenta."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Sincronización"</string>
@@ -562,7 +562,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dibuja un patrón de desbloqueo"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Levanta el dedo cuando termines"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patrón guardado"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuja el patrón de nuevo para confirmar"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuja el patrón de nuevo para confirmarlo"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Une mín. 4 puntos. Vuelve a intentarlo."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Patrón incorrecto"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cómo crear un patrón de desbloqueo"</string>

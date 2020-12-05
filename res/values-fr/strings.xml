@@ -33,6 +33,7 @@
     <string name="mobile_network_settings" msgid="1708621113321368597">"Réseau mobile"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> carte SIM</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%1$d</xliff:g> SIMs</item>
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> cartes SIM</item>
     </plurals>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Actif/Carte SIM"</string>
@@ -59,6 +60,7 @@
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Avertissement de consommation des données : <xliff:g id="ID_1">^1</xliff:g> - Limite de données : <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="one">%d jour restant</item>
+      <item quantity="many">%d days left</item>
       <item quantity="other">%d jours restants</item>
     </plurals>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Cycle de facturation arrivé à échéance"</string>
@@ -295,6 +297,7 @@
     <string name="computing_size" msgid="5791407621793083965">"Calcul…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> autorisation supplémentaire</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> additional permissions</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> autorisations supplémentaires</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Remarque : Après un redémarrage, vous ne pouvez pas lancer cette application tant que vous n\'avez pas déverrouillé votre véhicule."</string>
@@ -327,7 +330,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Ne pas ouvrir dans cette application"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Liens compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Droits d\'accès spécifiques accordés aux applications"</string>
-    <string name="show_system" msgid="4401355756969485287">"Afficher les processus système"</string>
+    <string name="show_system" msgid="4401355756969485287">"Afficher process. système"</string>
     <string name="hide_system" msgid="8845453295584638040">"Masquer les processus système"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Changer les paramètres système"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cette autorisation permet à une application de modifier les paramètres système."</string>
@@ -387,6 +390,7 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Chargement…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
       <item quantity="one">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étape pour devenir un développeur.</item>
+      <item quantity="many">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer.</item>
       <item quantity="other">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étapes pour devenir un développeur.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Vous êtes désormais un développeur !"</string>
@@ -409,8 +413,8 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Réinitialiser paramètres"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Les paramètres réseau ont bien été réinitialisés"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Réinitialiser les préférences des applis"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Toutes les préférences relatives aux éléments suivants seront réinitialisées :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Toutes les préférences liées à ces éléments seront réinitialisées :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applis par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applis"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applis"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences relatives aux applications ont été réinitialisées"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Effacer données (rétablir config. d\'usine)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Cette action effacera toutes les données de l\'unité principale du véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et paramètres du système et des applications"</li>\n<li>"Les applications téléchargées"</li></string>
@@ -460,6 +464,7 @@
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Limite nombre utilisateurs atteinte"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="one">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> profil utilisateur.</item>
+      <item quantity="many">You can create up to <xliff:g id="COUNT">%d</xliff:g> users.</item>
       <item quantity="other">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> profils utilisateur.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Échec de création profil utilisateur"</string>
@@ -552,7 +557,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Passer"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Configurer le verrouillage de l\'écran"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Sélectionner un code"</string>
-    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Choisir votre schéma"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Sélectionner un schéma"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Sélectionner un mot de passe"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Verrouillage actuel de l\'écran"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pour la sécurité, définissez un schéma"</string>
@@ -562,7 +567,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dessinez un schéma de déverrouillage"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Relevez le doigt quand vous avez terminé"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Schéma enregistré"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessiner le schéma pour le confirmer"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessinez le schéma pour le confirmer"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Reliez au moins 4 points. Réessayez."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Pour dessiner un schéma de déverrouillage"</string>
@@ -598,26 +603,32 @@
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Mot de passe non valide : il doit comporter au moins 4 caractères."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> lettre</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> letters</item>
       <item quantity="other">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> lettres</item>
     </plurals>
     <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
       <item quantity="one">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> lettre minuscule</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> lowercase letters</item>
       <item quantity="other">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> lettres minuscules</item>
     </plurals>
     <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
       <item quantity="one">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> lettre majuscule</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> uppercase letters</item>
       <item quantity="other">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> lettres majuscules</item>
     </plurals>
     <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
       <item quantity="one">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> chiffre</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> numerical digits</item>
       <item quantity="other">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> chiffres</item>
     </plurals>
     <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
       <item quantity="one">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> symbole spécial</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> special symbols</item>
       <item quantity="other">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> symboles spéciaux</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
       <item quantity="one">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> caractère autre qu\'une lettre</item>
+      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> non-letter characters</item>
       <item quantity="other">Le mot de passe doit comporter au moins <xliff:g id="COUNT">%d</xliff:g> caractères autres qu\'une lettre</item>
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'administrateur de l\'appareil n\'autorise pas l\'utilisation d\'un mot de passe récent"</string>

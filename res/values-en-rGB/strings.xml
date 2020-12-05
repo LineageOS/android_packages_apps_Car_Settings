@@ -29,7 +29,7 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"dim screen, touchscreen, battery"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"dim screen, night, tint"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Night mode"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"Network and internet"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Network and Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobile network"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIMs</item>
@@ -345,7 +345,7 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi control allows an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks add or remove networks, or start a local-only hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"More"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Location"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent Location Requests"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent location requests"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No recent location requests"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"App-level permissions"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Location Services"</string>
@@ -353,7 +353,7 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"System updates"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android security patch level"</string>
-    <string name="hardware_info" msgid="3973165746261507658">"Model &amp; hardware"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Model and hardware"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Model: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Baseband version"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel version"</string>
@@ -405,7 +405,7 @@
     <string name="reset_network_select" msgid="2433825874868038739">"Select network"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Reset settings"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Reset?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Reset all network settings? You can\'t undo this action!"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Reset all network settings? You can\'t undo this action."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Reset settings"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Network settings have been reset"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Reset app preferences"</string>
@@ -418,7 +418,7 @@
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"There are other users present on this vehicle."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Reset vehicle"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"Reset?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Erase all your personal information and downloaded apps? You can\'t undo this action!"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Delete all your personal information and downloaded apps? You won\'t be able to undo this action."</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Erase everything"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Erasing"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Please wait..."</string>

@@ -29,7 +29,7 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ekraani hämardamine, puuteekraan, aku"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ekraani hämardamine, öö, toon"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Öörežiim"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"Võrk ja Internet"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Võrk ja internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobiilsidevõrk"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-kaarti</item>
@@ -140,7 +140,7 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Muud seadmed saavad kuumkohaga <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ühenduse luua"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Kuumkoha parool"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Turvalisus"</string>
-    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2, isiklik"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Puudub"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP sagedusriba"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP-riba valimine"</string>
@@ -151,9 +151,9 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Valige WiFi-kuumkohale vähemalt üks riba:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Leviala ja jagamine"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Lülita leviala automaatselt välja"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Kui ükski seade pole ühendatud, lülitatakse WiFi-leviala välja"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Kuumkoht ja jagamine"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Lülita kuumkoht automaatselt välja"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Kui ükski seade pole ühendatud, lülitatakse WiFi-kuumkoht välja"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Rakendus <xliff:g id="REQUESTER">%s</xliff:g> soovib WiFi sisse lülitada"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Rakendus <xliff:g id="REQUESTER">%s</xliff:g> soovib WiFi välja lülitada"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Viga"</string>
@@ -276,7 +276,7 @@
     <string name="applications_settings" msgid="794261395191035632">"Rakenduste teave"</string>
     <string name="force_stop" msgid="2153183697014720520">"Sundpeata"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Kas sundpeatada?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Kui sundpeatate rakenduse, võib see valesti käituda."</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Kui sundpeatate rakenduse, võib see toimida valesti."</string>
     <string name="disable_text" msgid="4358165448648990820">"Keela"</string>
     <string name="enable_text" msgid="1794971777861881238">"Luba"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Desinstalli"</string>
@@ -394,7 +394,7 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Arendaja valikud"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Lähtestamise valikud"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Võrgu, rakenduste või seadme lähtestamine"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Võrgu taastamine"</string>
+    <string name="reset_network_title" msgid="1284233059990797263">"Võrgu lähtestamine"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"See lähtestab kõik võrguseaded, sh järgmised:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"WiFi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobiilne andmeside"</li></string>
@@ -408,11 +408,11 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Kas lähtestada kõik võrguseaded? Seda toimingut ei saa tagasi võtta."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Lähtesta seaded"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Võrguseaded on lähtestatud"</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"Lähtesta rakenduse eelistused"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Lähtesta rakenduste eelistused"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"See lähtestab kõik järgmised eelistused.\n\n"<li>"Keelatud rakendused"</li>\n<li>"Keelatud rakenduste märguanded"</li>\n<li>"Toimingute vaikerakendused"</li>\n<li>"Rakenduste taustaandmete piirangud"</li>\n<li>"Mis tahes lubade piirangud"</li>\n\n"Rakenduste andmed säilivad."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Lähtesta rakendused"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Rakenduse eelistused on lähtestatud"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Kustuta kõik andmed (tehases. lähtest.)"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Kõigi andmete kustutamine (tehaseseaded)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"See kustutab teie sõiduki keskseadmest kõik andmed, sh:\n\n"<li>"teie Google\'i konto;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Olete praegu sisse logitud järgmistele kontodele:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Selles sõidukis on teisi kasutajaid."</string>
@@ -429,7 +429,7 @@
     <string name="zone_auto" msgid="3701878581920206160">"Automaatne ajavöönd"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Kasuta võrgu pakutud ajavööndit"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-tunnine vorming"</string>
-    <string name="date_time_24hour" msgid="1137618702556486913">"Kasuta 24-tunnist vormingut"</string>
+    <string name="date_time_24hour" msgid="1137618702556486913">"Kasuta 24-tunni vormingut"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Aeg"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"Kellaaja määramine"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Ajavöönd"</string>
