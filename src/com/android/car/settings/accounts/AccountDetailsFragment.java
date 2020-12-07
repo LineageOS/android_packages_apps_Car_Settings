@@ -17,36 +17,19 @@ package com.android.car.settings.accounts;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.accounts.AccountManagerCallback;
-import android.accounts.AuthenticatorException;
-import android.accounts.OperationCanceledException;
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
-import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ErrorDialog;
-import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
-import com.android.car.settings.users.UserHelper;
-import com.android.car.ui.AlertDialogBuilder;
-import com.android.car.ui.preference.CarUiDialogFragment;
-import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
-import java.io.IOException;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Shows account details, and delete account option.
@@ -60,7 +43,6 @@ public class AccountDetailsFragment extends SettingsFragment implements
     private Account mAccount;
     private UserInfo mUserInfo;
     private AuthenticatorHelper mAuthenticatorHelper;
-    private MenuItem mRemoveButton;
 
     /**
      * Creates a new AccountDetailsFragment.
@@ -86,11 +68,6 @@ public class AccountDetailsFragment extends SettingsFragment implements
     }
 
     @Override
-    protected List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mRemoveButton);
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
 
@@ -108,20 +85,6 @@ public class AccountDetailsFragment extends SettingsFragment implements
                 .setAccount(mAccount);
         use(AccountSyncPreferenceController.class, R.string.pk_account_sync)
                 .setUserHandle(mUserInfo.getUserHandle());
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        boolean canModifyAccount = UserHelper.getInstance(getContext())
-                .canCurrentProcessModifyAccounts();
-
-        mRemoveButton = new MenuItem.Builder(getContext())
-                .setTitle(R.string.remove_button)
-                .setOnClickListener(i -> onRemoveAccountClicked())
-                .setVisible(canModifyAccount)
-                .build();
     }
 
     @Override
@@ -166,84 +129,5 @@ public class AccountDetailsFragment extends SettingsFragment implements
                 mUserInfo.getUserHandle());
 
         return Arrays.asList(accounts).contains(mAccount);
-    }
-
-    private void onRemoveAccountClicked() {
-        ConfirmRemoveAccountDialogFragment.show(this, mAccount, mUserInfo.getUserHandle());
-    }
-
-    /**
-     * Dialog to confirm with user about account removal
-     */
-    public static class ConfirmRemoveAccountDialogFragment extends CarUiDialogFragment {
-        private static final String KEY_ACCOUNT = "account";
-        private static final String DIALOG_TAG = "confirmRemoveAccount";
-        private static final Logger LOG = new Logger(ConfirmRemoveAccountDialogFragment.class);
-        private final AccountManagerCallback<Bundle> mCallback =
-                future -> {
-                    // If already out of this screen, don't proceed.
-                    if (!getTargetFragment().isResumed()) {
-                        return;
-                    }
-
-                    boolean success = false;
-                    try {
-                        success =
-                                future.getResult().getBoolean(
-                                        AccountManager.KEY_BOOLEAN_RESULT);
-                    } catch (OperationCanceledException | IOException | AuthenticatorException e) {
-                        LOG.v("removeAccount error: " + e);
-                    }
-                    final Activity activity = getTargetFragment().getActivity();
-                    if (!success && activity != null && !activity.isFinishing()) {
-                        ErrorDialog.show(getTargetFragment(),
-                                R.string.remove_account_error_title);
-                    } else {
-                        getTargetFragment().getFragmentManager().popBackStack();
-                    }
-                };
-        private Account mAccount;
-        private UserHandle mUserHandle;
-
-        public static void show(
-                Fragment parent, Account account, UserHandle userHandle) {
-            final ConfirmRemoveAccountDialogFragment dialog =
-                    new ConfirmRemoveAccountDialogFragment();
-            Bundle bundle = new Bundle();
-            bundle.putParcelable(KEY_ACCOUNT, account);
-            bundle.putParcelable(Intent.EXTRA_USER, userHandle);
-            dialog.setArguments(bundle);
-            dialog.setTargetFragment(parent, 0);
-            dialog.show(parent.getFragmentManager(), DIALOG_TAG);
-        }
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            final Bundle arguments = getArguments();
-            mAccount = arguments.getParcelable(KEY_ACCOUNT);
-            mUserHandle = arguments.getParcelable(Intent.EXTRA_USER);
-        }
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialogBuilder(getContext())
-                    .setTitle(R.string.really_remove_account_title)
-                    .setMessage(R.string.really_remove_account_message)
-                    .setNegativeButton(android.R.string.cancel, null)
-                    .setPositiveButton(R.string.remove_account_title, this)
-                    .create();
-        }
-
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            Activity activity = getTargetFragment().getActivity();
-            AccountManager.get(activity).removeAccountAsUser(
-                    mAccount, activity, mCallback, null, mUserHandle);
-            dialog.dismiss();
-        }
-
-        @Override
-        public void onDialogClosed(boolean positiveResult) {}
     }
 }
