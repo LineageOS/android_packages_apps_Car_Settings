@@ -16,8 +16,12 @@
 
 package com.android.car.settings.location;
 
+import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
@@ -30,6 +34,12 @@ import com.android.settingslib.search.SearchIndexable;
  */
 @SearchIndexable
 public class LocationSettingsFragment extends SettingsFragment {
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        enableRotaryScroll();
+    }
 
     @Override
     @XmlRes

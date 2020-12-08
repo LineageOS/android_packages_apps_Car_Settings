@@ -19,7 +19,10 @@ package com.android.car.settings.wifi.details;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
@@ -108,6 +111,11 @@ public class WifiDetailsFragment extends SettingsFragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        enableRotaryScroll();
+    }
+
     public void onDetach() {
         super.onDetach();
         getLifecycle().removeObserver(mWifiInfoProvider);
