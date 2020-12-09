@@ -25,6 +25,7 @@ import android.widget.TimePicker;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -36,6 +37,19 @@ public final class NumberPickerUtils {
     /** Allowed containers holding {@link NumberPicker} instances. */
     static final Set<Class> POSSIBLE_PARENT_TYPES = new HashSet<>(
             Arrays.asList(TimePicker.class, DatePicker.class));
+
+    /** Focuses the first child {@link NumberPicker} if it exists. */
+    public static boolean focusChildNumberPicker(View view) {
+        ViewGroup numberPickerParent = (ViewGroup) view;
+        List<NumberPicker> numberPickers = new ArrayList<>();
+        getNumberPickerDescendants(numberPickers, numberPickerParent);
+        if (numberPickers.isEmpty()) {
+            return false;
+        }
+        numberPickerParent.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
+        numberPickers.get(0).requestFocus();
+        return true;
+    }
 
     /**
      * We don't have API access to the inner views of a {@link TimePicker} or {@link DatePicker}.

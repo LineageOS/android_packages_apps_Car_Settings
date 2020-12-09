@@ -73,7 +73,7 @@ public class DirectManipulationHandler implements View.OnKeyListener,
     public static class Builder {
         private final DirectManipulationState mDmState;
         private View.OnKeyListener mNudgeDelegate;
-        private View.OnKeyListener mBackDelegate;
+        private BackListener mBackDelegate;
         private View.OnGenericMotionListener mRotationDelegate;
 
         public Builder(DirectManipulationState dmState) {
@@ -89,7 +89,7 @@ public class DirectManipulationHandler implements View.OnKeyListener,
         }
 
         /** Sets a back handler. */
-        public Builder setBackHandler(View.OnKeyListener backDelegate) {
+        public Builder setBackHandler(BackListener backDelegate) {
             Preconditions.checkNotNull(backDelegate);
             this.mBackDelegate = backDelegate;
             return this;
@@ -114,12 +114,12 @@ public class DirectManipulationHandler implements View.OnKeyListener,
 
     private final DirectManipulationState mDirectManipulationMode;
     private final View.OnKeyListener mNudgeDelegate;
-    private final View.OnKeyListener mBackDelegate;
+    private final BackListener mBackDelegate;
     private final View.OnGenericMotionListener mRotationDelegate;
 
     private DirectManipulationHandler(DirectManipulationState dmState,
             @Nullable View.OnKeyListener nudgeDelegate,
-            @Nullable View.OnKeyListener backDelegate,
+            @Nullable BackListener backDelegate,
             @Nullable View.OnGenericMotionListener rotationDelegate) {
         mDirectManipulationMode = dmState;
         mNudgeDelegate = nudgeDelegate;
@@ -135,17 +135,23 @@ public class DirectManipulationHandler implements View.OnKeyListener,
                 + " direct manipulation mode is "
                 + (mDirectManipulationMode.isActive() ? "active" : "inactive"));
 
+        boolean inDirectManipulationMode = mDirectManipulationMode.isActive();
         switch (keyCode) {
             case KeyEvent.KEYCODE_DPAD_CENTER:
-                // If not yet in Direct Manipulation mode, switch to that mode.
-
-                if (!mDirectManipulationMode.isActive() && isActionUp) {
-                    mDirectManipulationMode.enable(view);
+                // If not yet in Direct Manipulation mode, switch to that mode. If in Direct
+                // Manipulation mode, exit, and clean up state.
+                if (isActionUp) {
+                    if (inDirectManipulationMode) {
+                        mDirectManipulationMode.disable();
+                    } else {
+                        mDirectManipulationMode.enable(view);
+                    }
                 }
+
                 return true;
             case KeyEvent.KEYCODE_BACK:
                 // If in Direct Manipulation mode, exit, and clean up state.
-                if (mDirectManipulationMode.isActive() && isActionUp) {
+                if (inDirectManipulationMode && isActionUp) {
                     mDirectManipulationMode.disable();
                 }
                 // If no delegate is present, silently consume the events.
@@ -153,14 +159,14 @@ public class DirectManipulationHandler implements View.OnKeyListener,
                     return true;
                 }
 
-                return mBackDelegate.onKey(view, keyCode, keyEvent);
+                return mBackDelegate.onBackEvent(inDirectManipulationMode);
             case KeyEvent.KEYCODE_DPAD_UP:
             case KeyEvent.KEYCODE_DPAD_DOWN:
             case KeyEvent.KEYCODE_DPAD_LEFT:
             case KeyEvent.KEYCODE_DPAD_RIGHT:
                 // This handler is only responsible for nudging behavior during Direct Manipulation
                 // mode. When the mode is disabled, ignore events.
-                if (!mDirectManipulationMode.isActive()) {
+                if (!inDirectManipulationMode) {
                     return false;
                 }
                 // If no delegate is present, silently consume the events.
@@ -188,5 +194,14 @@ public class DirectManipulationHandler implements View.OnKeyListener,
         }
 
         return mRotationDelegate.onGenericMotion(v, event);
+    }
+
+    /** A custom back button listener. */
+    public interface BackListener {
+        /**
+         * Handles the back event. The parameter specifies whether we were in direct
+         * manipulation mode (before the back button is handled).
+         */
+        boolean onBackEvent(boolean inDirectManipulationMode);
     }
 }
