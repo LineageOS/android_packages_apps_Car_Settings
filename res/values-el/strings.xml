@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να ενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να απενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Σφάλμα"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Συσκευή για χρήση με την εφαρμογή <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Δεν βρέθηκαν συσκευές. Βεβαιωθείτε ότι οι συσκευές είναι ενεργοποιημένες και διαθέσιμες για σύνδεση."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Δοκιμάστε ξανά"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Παρουσιάστηκε κάποιο πρόβλημα. Η εφαρμογή ακύρωσε το αίτημα για επιλογή συσκευής."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Η σύνδεση είναι επιτυχής"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Εμφάνιση όλων"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Αναζήτηση"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Ανώνυμη συσκευή"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Συσκευές σε σύζευξη"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Λανθασμένο μοτίβο"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Τρόπος σχεδίασης μοτίβου ξεκλειδώματος"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Σφάλμα κατά την αποθήκευση του μοτίβου"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Πάρα πολλές αποτυχημένες προσπάθειες. Δοκιμάστε ξανά σε <xliff:g id="NUMBER">%d</xliff:g> δευτερόλεπτα."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Κατάργηση κλειδώματος οθόνης;"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Έτσι όλοι οι χρήστες θα έχουν πρόσβαση στον λογαριασμό σας"</string>

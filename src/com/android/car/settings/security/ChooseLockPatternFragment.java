@@ -232,6 +232,15 @@ public class ChooseLockPatternFragment extends BaseFragment {
         getToolbar().getProgressBar().setVisible(false);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        mLockPatternView.clearPattern();
+
+        PasswordHelper.zeroizeCredentials(mChosenPattern, mCurrentCredential);
+    }
+
     /**
      * Updates the messages and buttons appropriate to what stage the user
      * is at in choosing a pattern. This doesn't handle clearing out the pattern;

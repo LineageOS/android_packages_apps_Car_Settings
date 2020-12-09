@@ -58,7 +58,7 @@ public class ConfirmLockPinPasswordFragmentTest {
         View enterKey = mPinFragment.getView().findViewById(R.id.key_enter);
         enterKey.setEnabled(false);
 
-        mPinFragment.onCheckCompleted(false);
+        mPinFragment.onCheckCompleted(false, 0);
 
         assertThat(enterKey.isEnabled()).isTrue();
     }

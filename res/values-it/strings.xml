@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chiede di attivare il Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> chiede di disattivare il Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Errore"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispositivo da usare con <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nessun dispositivo trovato. Assicurati che i dispositivi siano accesi e disponibili per la connessione."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Riprova"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Si è verificato un problema. L\'applicazione ha annullato la richiesta di scegliere un dispositivo."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Connessione riuscita"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostra tutte"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Ricerca"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo senza nome"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivi accoppiati"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Sequenza errata"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Come creare una sequenza di sblocco"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Errore di salvataggio della sequenza"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Troppi tentativi errati. Riprova tra <xliff:g id="NUMBER">%d</xliff:g> secondi."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Rimuovere il blocco schermo?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"In questo modo chiunque potrà accedere al tuo dispositivo"</string>

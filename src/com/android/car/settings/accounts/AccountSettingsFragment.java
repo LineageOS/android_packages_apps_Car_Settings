@@ -31,7 +31,6 @@ import com.android.car.settings.users.UserHelper;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.search.SearchIndexable;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
@@ -115,12 +114,5 @@ public class AccountSettingsFragment extends SettingsFragment {
      */
     public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new CarBaseSearchIndexProvider(R.xml.account_settings_fragment,
-                    Settings.ACTION_SYNC_SETTINGS) {
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    List<String> nonIndexableKeys = new ArrayList<>();
-                    nonIndexableKeys.add(context.getString(R.string.pk_account_list));
-                    return nonIndexableKeys;
-                }
-            };
+                    Settings.ACTION_SYNC_SETTINGS);
 }

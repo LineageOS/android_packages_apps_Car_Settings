@@ -24,7 +24,6 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.car.Car;
 import android.car.user.CarUserManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -72,7 +71,6 @@ public class UserGridRecyclerView extends RecyclerView {
             "com.android.car.settings.users.ConfirmCreateNewUserDialog";
 
     private UserAdapter mAdapter;
-    private CarUserManagerHelper mCarUserManagerHelper;
     private UserManager mUserManager;
     private Context mContext;
     private BaseFragment mBaseFragment;
@@ -92,7 +90,6 @@ public class UserGridRecyclerView extends RecyclerView {
     public UserGridRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
         mUserManager = UserManager.get(mContext);
         mUserIconProvider = new UserIconProvider();
         mEnableAddUserButton = true;
@@ -257,10 +254,10 @@ public class UserGridRecyclerView extends RecyclerView {
     public final class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder>
             implements AddNewUserTask.AddNewUserListener {
 
-        private final Context mContext;
         private final Resources mRes;
         private final String mGuestName;
 
+        private Context mContext;
         private List<UserRecord> mUsers;
         private String mNewUserName;
         // View that holds the add user button.  Used to enable/disable the view
@@ -270,7 +267,7 @@ public class UserGridRecyclerView extends RecyclerView {
         private boolean mIsAddUserRestricted;
 
         private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
-            mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper,
+            mAddNewUserTask = new AddNewUserTask(mContext,
                     mCarUserManager, /* addNewUserListener= */this);
             mAddNewUserTask.execute(mNewUserName);
         };

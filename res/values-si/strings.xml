@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> හට Wi-Fi සක්‍රීය කිරීමට අවශ්‍යයි"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> හට Wi-Fi අක්‍රිය කිරීමට අවශ්‍ය ය"</string>
     <string name="wifi_error" msgid="3105105447117289410">"දෝෂය"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> සමඟ භාවිත කළ යුතු උපාංගය"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"උපාංග කිසිවක් හමු නොවිය. උපාංග සක්‍රීය කර තිබෙන අතර සම්බන්ධ කිරීමට ලද හැකි බව තහවුරු කර ගන්න."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"නැවත උත්සාහ කරන්න"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"යම් දෙයක් ඇත. යෙදුම උපාංගයක් තේරීමට කළ ඉල්ලීම අවලංගු කර ඇත."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"සම්බන්ධතාව සාර්ථකයි"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"සියල්ල පෙන්වන්න"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"සොයමින්"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"බ්ලූටූත්"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"නම් නොකළ උපාංගය"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"යුගල කළ උපාංග"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"වැරදි රටාවකි"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"අඟුළු හැරීමේ රටාවක් අඳින ආකාරය"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"රටාව සුරැකීමේ දෝෂයකි"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"වැරදි උත්සාහයන් ගණන වැඩියි. තත්පර <xliff:g id="NUMBER">%d</xliff:g> කින් නැවත උත්සාහ කරන්න."</string>
     <string name="okay" msgid="4589873324439764349">"හරි"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"තිර අගුල ඉවත් කරන්නද?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"මෙය ඔබගේ ගිණුමට පිවිසීමට ඕනෑම අයෙකුට ඉඩ දෙනු ඇත"</string>

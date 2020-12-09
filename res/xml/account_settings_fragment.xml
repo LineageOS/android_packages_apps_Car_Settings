@@ -23,7 +23,8 @@
     <PreferenceCategory
         android:key="@string/pk_account_list"
         android:title="@string/account_list_title"
-        settings:controller="com.android.car.settings.accounts.AccountListPreferenceController"/>
+        settings:controller="com.android.car.settings.accounts.AccountListPreferenceController"
+        settings:searchable="false"/>
     <SwitchPreference
         android:key="@string/pk_account_auto_sync"
         android:title="@string/account_auto_sync_title"

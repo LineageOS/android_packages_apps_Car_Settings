@@ -24,7 +24,8 @@
         android:icon="@drawable/ic_settings_wifi"
         android:key="@string/pk_wifi_settings_entry"
         android:title="@string/wifi_settings"
-        settings:controller="com.android.car.settings.wifi.WifiEntryPreferenceController">
+        settings:controller="com.android.car.settings.wifi.WifiEntryPreferenceController"
+        settings:searchable="false">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$WifiSettingsActivity"/>
     </com.android.car.settings.common.MasterSwitchPreference>
@@ -32,7 +33,8 @@
         android:key="@string/pk_wifi_tether_settings_entry"
         android:title="@string/tether_settings_title_all"
         android:icon="@drawable/ic_wifi_tethering"
-        settings:controller="com.android.car.settings.wifi.WifiTetherPreferenceController">
+        settings:controller="com.android.car.settings.wifi.WifiTetherPreferenceController"
+        settings:searchable="false">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$WifiTetherActivity"/>
     </Preference>
@@ -40,13 +42,15 @@
         android:icon="@drawable/ic_settings_cellular"
         android:key="@string/pk_mobile_network_settings_entry"
         android:title="@string/mobile_network_settings"
-        settings:controller="com.android.car.settings.network.MobileNetworkEntryPreferenceController">
+        settings:controller="com.android.car.settings.network.MobileNetworkEntryPreferenceController"
+        settings:searchable="false">
     </Preference>
     <Preference
         android:icon="@drawable/ic_settings_data_usage"
         android:key="@string/pk_data_usage_settings_entry"
         android:title="@string/data_usage_settings"
-        settings:controller="com.android.car.settings.datausage.DataUsageEntryPreferenceController">
+        settings:controller="com.android.car.settings.datausage.DataUsageEntryPreferenceController"
+        settings:searchable="false">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$DataUsageActivity"/>
     </Preference>

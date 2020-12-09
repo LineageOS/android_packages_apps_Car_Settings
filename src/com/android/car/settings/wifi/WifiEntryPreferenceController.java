@@ -18,6 +18,7 @@ package com.android.car.settings.wifi;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.net.wifi.WifiManager;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.MasterSwitchPreference;
@@ -77,7 +78,8 @@ public class WifiEntryPreferenceController extends PreferenceController<MasterSw
 
     @Override
     public void onWifiStateChanged(int state) {
-        getPreference().setSwitchChecked(mCarWifiManager.isWifiEnabled());
+        getPreference().setSwitchChecked(state == WifiManager.WIFI_STATE_ENABLED
+                || state == WifiManager.WIFI_STATE_ENABLING);
     }
 
     @Override

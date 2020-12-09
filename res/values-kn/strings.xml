@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ಗಾಗಿ ವೈ-ಫೈ ಆನ್ ಮಾಡಬೇಕು"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ಗಾಗಿ ವೈ-ಫೈ ಆನ್ ಮಾಡಬೇಕು"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ದೋಷ"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> ನ ಜೊತೆಗೆ ಬಳಸಲು ಸಾಧನ"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"ಯಾವುದೇ ಸಾಧನಗಳು ಕಂಡುಬಂದಿಲ್ಲ. ಸಾಧನಗಳನ್ನು ಆನ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಸಂಪರ್ಕಿಸಲು ಲಭ್ಯವಿದೆ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"ಪುನಃ ಪ್ರಯತ್ನಿಸಿ"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ಏನೋ ಬಂದಿದೆ. ಸಾಧನವನ್ನು ಆರಿಸಲು ಆ್ಯಪ್‌ ವಿನಂತಿಯನ್ನು ರದ್ದುಗೊಳಿಸಿದೆ."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"ಸಂಪರ್ಕ ಯಶಸ್ವಿಯಾಗಿದೆ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ಎಲ್ಲವನ್ನೂ ತೋರಿಸಿ"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"ಹುಡುಕಲಾಗುತ್ತಿದೆ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ಬ್ಲೂಟೂತ್‌"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ಹೆಸರಿಸದಿರುವ ಸಾಧನ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ಪ್ಯಾಟರ್ನ್ ತಪ್ಪಾಗಿದೆ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ಅನ್‌ಲಾಕ್ ನಮೂನೆಯನ್ನು ರಚಿಸುವುದು ಹೇಗೆ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ಪ್ಯಾಟರ್ನ್‌ ಉಳಿಸುವಲ್ಲಿ ದೋಷ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ಹಲವಾರು ತಪ್ಪು ಪ್ರಯತ್ನಗಳು. ಪುನಃ <xliff:g id="NUMBER">%d</xliff:g> ಸೆಕೆಂಡ್‌ಗಳ ನಂತರ ಪ್ರಯತ್ನಿಸಿ."</string>
     <string name="okay" msgid="4589873324439764349">"ಸರಿ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ತೆಗೆದುಹಾಕಿ"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ಇದು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಯಾರು ಬೇಕಾದರೂ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸುತ್ತದೆ"</string>

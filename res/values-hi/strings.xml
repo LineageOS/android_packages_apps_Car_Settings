@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> को वाई-फ़ाई चालू करने की अनुमति चाहिए"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> को वाई-फ़ाई बंद करने की अनुमति चाहिए"</string>
     <string name="wifi_error" msgid="3105105447117289410">"गड़बड़ी"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> के साथ इस्तेमाल किया जाने वाला डिवाइस"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"कोई डिवाइस नहीं मिला देख लें कि डिवाइस चालू हों और कनेक्ट किए जा सकते हों."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"फिर से कोशिश करें"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"कुछ गड़बड़ी हुई है ऐप्लिकेशन ने डिवाइस चुनने का अनुरोध रद्द कर दिया है."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"कनेक्शन कामयाब रहा"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"सभी दिखाएं"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"खोजना"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लूटूथ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"बिना नाम वाला डिवाइस"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"जुड़े हुए डिवाइस"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"गलत पैटर्न"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"लॉक खोलने का पैटर्न बनाने का तरीका"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"पैटर्न सेव करने में गड़बड़ी हुई"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"आपकी कोशिशें बहुत बार गलत हुई हैं. <xliff:g id="NUMBER">%d</xliff:g> सेकंड में फिर से कोशिश करें."</string>
     <string name="okay" msgid="4589873324439764349">"ठीक है"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"क्या आप स्क्रीन लॉक हटाना चाहते हैं?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"स्क्रीन लॉक हटाने पर कोई भी आपका खाता इस्तेमाल कर सकता है"</string>
