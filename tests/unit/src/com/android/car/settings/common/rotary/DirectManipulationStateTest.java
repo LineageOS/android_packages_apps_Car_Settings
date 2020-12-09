@@ -22,8 +22,6 @@ import static android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.NumberPicker;
@@ -51,26 +49,17 @@ public class DirectManipulationStateTest {
 
     @Before
     public void setUp() {
-        mDirectManipulationState = new DirectManipulationState(mContext.getResources());
+        mDirectManipulationState = new DirectManipulationState();
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.time_picker, /* root= */ null);
         mTimePicker = view.findViewById(R.id.time_picker);
-        mTimePicker.setBackgroundColor(android.R.color.black);
         mTimePicker.setDescendantFocusability(FOCUS_AFTER_DESCENDANTS);
 
         List<NumberPicker> numberPickers = new ArrayList<>();
         NumberPickerUtils.getNumberPickerDescendants(numberPickers, mTimePicker);
         mNumberPicker = numberPickers.get(0);
-        mNumberPicker.setBackgroundColor(android.R.color.white);
         mNumberPicker.setDescendantFocusability(FOCUS_BLOCK_DESCENDANTS);
-    }
-
-    @Test
-    public void enable_timePicker_storesBackgroundColor() {
-        mDirectManipulationState.enable(mTimePicker);
-
-        assertThat(mDirectManipulationState.getOriginalBackground()).isNotNull();
     }
 
     @Test
@@ -87,24 +76,6 @@ public class DirectManipulationStateTest {
 
         assertThat(mDirectManipulationState.getViewInDirectManipulationMode())
                 .isEqualTo(mTimePicker);
-    }
-
-    @Test
-    public void enable_timePicker_timePickerBackgroundSet() {
-        mDirectManipulationState.enable(mTimePicker);
-
-        assertThat(((ColorDrawable) mTimePicker.getBackground()).getColor())
-                .isEqualTo(mContext.getResources().getColor(
-                        R.color.rotary_direct_manipulation_background_color, null));
-    }
-
-    @Test
-    public void enable_timePickerChild_backgroundColorUpdates() {
-        mDirectManipulationState.enable(mTimePicker);
-        Drawable background = mDirectManipulationState.getOriginalBackground();
-        mDirectManipulationState.enable(mNumberPicker);
-
-        assertThat(mDirectManipulationState.getOriginalBackground()).isNotEqualTo(background);
     }
 
     @Test
@@ -131,14 +102,6 @@ public class DirectManipulationStateTest {
         mDirectManipulationState.disable();
 
         assertThat(mDirectManipulationState.getViewInDirectManipulationMode()).isNull();
-    }
-
-    @Test
-    public void disable_originalBackgroundReset() {
-        mDirectManipulationState.enable(mTimePicker);
-        mDirectManipulationState.disable();
-
-        assertThat(mDirectManipulationState.getOriginalBackground()).isNull();
     }
 
     @Test

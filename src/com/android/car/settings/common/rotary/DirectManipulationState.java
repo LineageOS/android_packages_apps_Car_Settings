@@ -18,17 +18,14 @@ package com.android.car.settings.common.rotary;
 
 import static android.view.ViewGroup.FOCUS_AFTER_DESCENDANTS;
 
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
-import com.android.car.settings.R;
 import com.android.car.ui.utils.DirectManipulationHelper;
 
 /**
@@ -43,9 +40,6 @@ public class DirectManipulationState {
     @VisibleForTesting
     static final int UNKNOWN_DESCENDANT_FOCUSABILITY = -1;
 
-    @ColorInt
-    private final int mDirectManipulationBackgroundColor;
-
     /** The view that is in direct manipulation mode, or null if none. */
     @Nullable
     private View mViewInDirectManipulationMode;
@@ -55,10 +49,7 @@ public class DirectManipulationState {
     /** The original descendant focusability value of the view in direct manipulation mode. */
     private int mOriginalDescendantFocusability = UNKNOWN_DESCENDANT_FOCUSABILITY;
 
-    public DirectManipulationState(Resources resources) {
-        // TODO(b/173054508): Update direct manipulation behavior based on updated UX specs.
-        mDirectManipulationBackgroundColor = resources.getColor(
-                R.color.rotary_direct_manipulation_background_color, /* theme= */ null);
+    public DirectManipulationState() {
     }
 
     /** Returns true if Direct Manipulation mode is active, false otherwise. */
@@ -77,13 +68,11 @@ public class DirectManipulationState {
      */
     public void enable(@NonNull View view) {
         mViewInDirectManipulationMode = view;
-        mOriginalBackground = view.getBackground();
         if (mViewInDirectManipulationMode instanceof ViewGroup) {
             ViewGroup viewGroup = (ViewGroup) mViewInDirectManipulationMode;
             mOriginalDescendantFocusability = viewGroup.getDescendantFocusability();
             viewGroup.setDescendantFocusability(FOCUS_AFTER_DESCENDANTS);
         }
-        view.setBackgroundColor(mDirectManipulationBackgroundColor);
         DirectManipulationHelper.enableDirectManipulationMode(view, /* enable= */ true);
     }
 
@@ -92,7 +81,6 @@ public class DirectManipulationState {
      * from which we entered into Direct Manipulation mode.
      */
     public void disable() {
-        mViewInDirectManipulationMode.setBackground(mOriginalBackground);
         DirectManipulationHelper.enableDirectManipulationMode(
                 mViewInDirectManipulationMode, /* enable= */ false);
         // For ViewGroup objects, restore descendant focusability to the previous value.
@@ -103,18 +91,12 @@ public class DirectManipulationState {
         }
 
         mViewInDirectManipulationMode = null;
-        mOriginalBackground = null;
         mOriginalDescendantFocusability = UNKNOWN_DESCENDANT_FOCUSABILITY;
     }
 
     @VisibleForTesting
     View getViewInDirectManipulationMode() {
         return mViewInDirectManipulationMode;
-    }
-
-    @VisibleForTesting
-    Drawable getOriginalBackground() {
-        return mOriginalBackground;
     }
 
     @VisibleForTesting

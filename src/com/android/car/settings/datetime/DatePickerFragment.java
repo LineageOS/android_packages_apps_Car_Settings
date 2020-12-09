@@ -19,6 +19,7 @@ import android.app.timedetector.ManualTimeSuggestion;
 import android.app.timedetector.TimeDetector;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.NumberPicker;
 
@@ -97,17 +98,27 @@ public class DatePickerFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mDirectManipulationMode = new DirectManipulationState(requireContext().getResources());
+        mDirectManipulationMode = new DirectManipulationState();
         mDatePicker = getView().findViewById(R.id.date_picker);
+        mDatePicker.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+
         DirectManipulationHandler.setDirectManipulationHandler(mDatePicker,
                 new DirectManipulationHandler.Builder(mDirectManipulationMode)
                         .setNudgeHandler(new NumberPickerParentNudgeHandler())
+                        .setBackHandler(inDirectManipulationMode -> {
+                            // Only handle back if we weren't previously in direct manipulation
+                            // mode.
+                            if (!inDirectManipulationMode) {
+                                onBackPressed();
+                            }
+                            return true;
+                        })
                         .build());
 
         DirectManipulationHandler numberPickerListener =
                 new DirectManipulationHandler.Builder(mDirectManipulationMode)
                         .setNudgeHandler(new NumberPickerNudgeHandler())
-                        .setBackHandler((v, keyCode, event) -> {
+                        .setBackHandler(inDirectManipulationMode -> {
                             mDatePicker.requestFocus();
                             return true;
                         })
