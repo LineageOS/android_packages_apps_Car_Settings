@@ -567,7 +567,7 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Tyhjennä"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Peruuta"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Uusi lukituksenpoistokuvio"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Piirrä lukituksenpoistokuvio"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Piirrä lukituksen avaava kuvio"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Nosta sormi, kun olet valmis"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Kuvio tallennettu"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Vahvista piirtämällä kuvio uudelleen"</string>
@@ -583,7 +583,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Syötä salasana"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Aseta PIN-koodi tietoturvasyistä"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Syötä PIN-koodi uudelleen"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-koodin vähimmäispituus on 4 merkkiä."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-koodissa täytyy olla ainakin 4 merkkiä."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Virheellinen PIN-koodi. Vähimmäispituus on 4 numeroa."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-koodit eivät täsmää"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Virhe tallennettaessa PIN-koodia"</string>
@@ -597,7 +597,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Vahvista"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Vähimmäispituus on 4 merkkiä."</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Salasanan vähimmäispituus on <xliff:g id="COUNT">%d</xliff:g> merkkiä."</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-koodin vähimmäispituus on <xliff:g id="COUNT">%d</xliff:g> numeroa."</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-koodissa täytyy olla ainakin <xliff:g id="COUNT">%d</xliff:g> numeroa."</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Salasanassa saa olla enintään <xliff:g id="NUMBER">%d</xliff:g> merkkiä."</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN-koodissa saa olla enintään <xliff:g id="NUMBER">%d</xliff:g> numeroa."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN-koodi saa sisältää vain numeroita 0–9."</string>
