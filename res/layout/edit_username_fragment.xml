@@ -14,14 +14,12 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.android.car.ui.FocusArea
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
@@ -39,5 +37,5 @@
             android:inputType="text"
             android:maxLines="1"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
-    </FrameLayout>
-</RelativeLayout>
+    </com.android.car.ui.FocusArea>
+</FrameLayout>
