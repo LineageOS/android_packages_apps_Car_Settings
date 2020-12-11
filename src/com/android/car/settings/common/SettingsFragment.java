@@ -42,9 +42,11 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.ui.preference.PreferenceFragment;
+import com.android.car.ui.recyclerview.CarUiRecyclerView;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.car.ui.toolbar.ToolbarController;
+import com.android.car.ui.utils.CarUiUtils;
 import com.android.settingslib.search.Indexable;
 
 import java.util.ArrayList;
@@ -128,6 +130,20 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             }
         }
         return null;
+    }
+
+    /**
+     * Enables rotary scrolling for the {@link CarUiRecyclerView} in this fragment.
+     * <p>
+     * Rotary scrolling should be enabled for scrolling views which contain content which the user
+     * may want to see but can't interact with, either alone or along with interactive (focusable)
+     * content.
+     */
+    protected void enableRotaryScroll() {
+        CarUiRecyclerView recyclerView = getView().findViewById(R.id.recycler_view);
+        if (recyclerView != null) {
+            CarUiUtils.setRotaryScrollEnabled(recyclerView, /* isVertical= */ true);
+        }
     }
 
     @Override
