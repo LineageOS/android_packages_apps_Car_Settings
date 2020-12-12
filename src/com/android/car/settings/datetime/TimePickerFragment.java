@@ -21,6 +21,7 @@ import android.app.timedetector.TimeDetector;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.ViewGroup;
 import android.widget.NumberPicker;
 import android.widget.TimePicker;
 
@@ -85,18 +86,27 @@ public class TimePickerFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mDirectManipulationMode = new DirectManipulationState(requireContext().getResources());
-        mTimePicker = (TimePicker) getView().findViewById(R.id.time_picker);
+        mDirectManipulationMode = new DirectManipulationState();
+        mTimePicker = getView().findViewById(R.id.time_picker);
+        mTimePicker.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
         mTimePicker.setIs24HourView(is24Hour());
         DirectManipulationHandler.setDirectManipulationHandler(mTimePicker,
                 new DirectManipulationHandler.Builder(mDirectManipulationMode)
                         .setNudgeHandler(new NumberPickerParentNudgeHandler())
+                        .setBackHandler(inDirectManipulationMode -> {
+                            // Only handle back if we weren't previously in direct manipulation
+                            // mode.
+                            if (!inDirectManipulationMode) {
+                                onBackPressed();
+                            }
+                            return true;
+                        })
                         .build());
 
         DirectManipulationHandler numberPickerListener =
                 new DirectManipulationHandler.Builder(mDirectManipulationMode)
                         .setNudgeHandler(new NumberPickerNudgeHandler())
-                        .setBackHandler((v, keyCode, event) -> {
+                        .setBackHandler(inDirectManipulationMode -> {
                             mTimePicker.requestFocus();
                             return true;
                         })

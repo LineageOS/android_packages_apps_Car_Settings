@@ -18,13 +18,9 @@ package com.android.car.settings.common.rotary;
 
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.NumberPicker;
 import android.widget.TimePicker;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A nudge handler for the parent container of the {@link NumberPicker} (such as {@link TimePicker}
@@ -40,21 +36,13 @@ public class NumberPickerParentNudgeHandler implements View.OnKeyListener {
         }
 
         switch (keyCode) {
+            // Any event focuses the child number picker.
             case KeyEvent.KEYCODE_DPAD_UP:
             case KeyEvent.KEYCODE_DPAD_DOWN:
-                // Disable by consuming the event and not doing anything.
-                return true;
             case KeyEvent.KEYCODE_DPAD_LEFT:
             case KeyEvent.KEYCODE_DPAD_RIGHT:
                 if (event.getAction() == KeyEvent.ACTION_UP) {
-                    ViewGroup numberPickerParent = (ViewGroup) view;
-                    List<NumberPicker> numberPickers = new ArrayList<>();
-                    NumberPickerUtils.getNumberPickerDescendants(numberPickers, numberPickerParent);
-                    if (numberPickers.isEmpty()) {
-                        return false;
-                    }
-                    numberPickerParent.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
-                    numberPickers.get(0).requestFocus();
+                    return NumberPickerUtils.focusChildNumberPicker(view);
                 }
                 return true;
             default:
