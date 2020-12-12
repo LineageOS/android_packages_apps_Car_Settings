@@ -38,4 +38,10 @@
                    android:value="com.android.settings.category.ia.accounts"/>
         </intent>
     </com.android.car.settings.common.LogicalPreferenceGroup>
+    <com.android.car.settings.common.ColoredPreference
+        android:key="@string/pk_account_settings_add"
+        style="@style/ColoredAccentPreferenceStyle"
+        android:title="@string/user_add_account_menu"
+        android:icon="@drawable/ic_add"
+        settings:controller="com.android.car.settings.accounts.AddAccountPreferenceController"/>
 </PreferenceScreen>

@@ -18,31 +18,20 @@ package com.android.car.settings.accounts;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
-import com.android.car.settings.users.UserHelper;
-import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.search.SearchIndexable;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 /**
  * Lists the user's accounts and any related options.
  */
 @SearchIndexable
 public class AccountSettingsFragment extends SettingsFragment {
-    private MenuItem mAddAccountButton;
 
     @Override
     @XmlRes
@@ -51,61 +40,17 @@ public class AccountSettingsFragment extends SettingsFragment {
     }
 
     @Override
-    protected List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mAddAccountButton);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        boolean canModifyAccounts = UserHelper.getInstance(getContext())
-                .canCurrentProcessModifyAccounts();
-
-        mAddAccountButton = new MenuItem.Builder(getContext())
-                .setTitle(R.string.user_add_account_menu)
-                .setOnClickListener(i -> onAddAccountClicked())
-                .setVisible(canModifyAccounts)
-                .build();
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        String[] authorities = getActivity().getIntent().getStringArrayExtra(
-                Settings.EXTRA_AUTHORITIES);
-        if (authorities != null) {
+        Intent activityIntent = requireActivity().getIntent();
+        String[] authorities = activityIntent.getStringArrayExtra(Settings.EXTRA_AUTHORITIES);
+        String[] accountTypes = activityIntent.getStringArrayExtra(Settings.EXTRA_ACCOUNT_TYPES);
+        if (authorities != null || accountTypes != null) {
             use(AccountListPreferenceController.class, R.string.pk_account_list)
                     .setAuthorities(authorities);
-        }
-    }
-
-    private void onAddAccountClicked() {
-        AccountTypesHelper helper = new AccountTypesHelper(getContext());
-        Intent activityIntent = requireActivity().getIntent();
-
-        String[] authorities = activityIntent.getStringArrayExtra(Settings.EXTRA_AUTHORITIES);
-        if (authorities != null) {
-            helper.setAuthorities(Arrays.asList(authorities));
-        }
-
-        String[] accountTypesForFilter =
-                activityIntent.getStringArrayExtra(Settings.EXTRA_ACCOUNT_TYPES);
-        if (accountTypesForFilter != null) {
-            helper.setAccountTypesFilter(
-                    new HashSet<>(Arrays.asList(accountTypesForFilter)));
-        }
-
-        Set<String> authorizedAccountTypes = helper.getAuthorizedAccountTypes();
-
-        if (authorizedAccountTypes.size() == 1) {
-            String accountType = authorizedAccountTypes.iterator().next();
-            startActivity(
-                    AddAccountActivity.createAddAccountActivityIntent(getContext(), accountType));
-        } else {
-            startActivity(new Intent(getContext(),
-                    CarSettingActivities.ChooseAccountActivity.class));
+            use(AddAccountPreferenceController.class, R.string.pk_account_settings_add)
+                    .setAuthorities(authorities).setAccountTypes(accountTypes);
         }
     }
 
