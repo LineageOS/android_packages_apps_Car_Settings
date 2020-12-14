@@ -20,7 +20,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/network_and_internet"
     android:key="@string/psk_network_and_internet">
-    <com.android.car.settings.common.SeparateSwitchPreference
+    <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
         android:icon="@drawable/ic_settings_wifi"
         android:key="@string/pk_wifi_settings_entry"
         android:title="@string/wifi_settings"
@@ -28,7 +28,7 @@
         settings:searchable="false">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$WifiSettingsActivity"/>
-    </com.android.car.settings.common.SeparateSwitchPreference>
+    </com.android.car.ui.preference.CarUiTwoActionSwitchPreference>
     <Preference
         android:key="@string/pk_wifi_tether_settings_entry"
         android:title="@string/tether_settings_title_all"

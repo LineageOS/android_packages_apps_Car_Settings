@@ -20,12 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/assist_and_voice_input_settings"
     android:key="@string/psk_manage_assist">
-    <com.android.car.settings.common.ButtonPreference
+    <com.android.car.ui.preference.CarUiTwoActionIconPreference
         android:key="@string/pk_default_assist"
         android:title="@string/assist_app_settings"
-        android:widgetLayout="@layout/details_preference_widget"
         settings:controller="com.android.car.settings.applications.defaultapps.DefaultAssistantPickerEntryPreferenceController"
-        settings:iconSpaceReserved="true"/>
+        settings:iconSpaceReserved="true"
+        settings:secondaryActionIcon="@drawable/ic_settings_gear"/>
     <SwitchPreference
         android:key="@string/pk_assist_use_text_context"
         android:summary="@string/assist_access_context_summary"
@@ -38,11 +38,11 @@
         android:title="@string/assist_access_screenshot_title"
         settings:controller="com.android.car.settings.applications.assist.ScreenshotContextPreferenceController"
         settings:iconSpaceReserved="true"/>
-    <com.android.car.settings.common.ButtonPreference
+    <com.android.car.ui.preference.CarUiTwoActionIconPreference
         android:fragment="com.android.car.settings.applications.assist.DefaultVoiceInputPickerFragment"
         android:key="@string/pk_default_voice_input"
         android:title="@string/voice_input_settings_title"
-        android:widgetLayout="@layout/details_preference_widget"
         settings:controller="com.android.car.settings.applications.assist.DefaultVoiceInputPickerEntryPreferenceController"
-        settings:iconSpaceReserved="true"/>
+        settings:iconSpaceReserved="true"
+        settings:secondaryActionIcon="@drawable/ic_settings_gear"/>
 </PreferenceScreen>
