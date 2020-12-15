@@ -27,5 +27,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_gravity="center_vertical"
+        android:layout_above="@+id/managed_device"
         android:background="?attr/userSwitcherBackground"/>
+
+     <com.android.car.ui.admin.ManagedDeviceTextView
+         android:id="@+id/managed_device"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="@dimen/car_user_switcher_margin_bottom"
+         android:gravity="center"/>
+
 </RelativeLayout>
