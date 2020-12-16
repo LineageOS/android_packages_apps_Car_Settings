@@ -41,6 +41,7 @@ android_app {
         "androidx-constraintlayout_constraintlayout-solver",
         "jsr305",
         "car-ui-lib",
+        "com.android.car.admin.ui",
     ],
 
     certificate: "platform",

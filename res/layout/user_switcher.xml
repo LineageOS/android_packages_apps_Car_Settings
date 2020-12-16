@@ -30,7 +30,7 @@
         android:layout_above="@+id/managed_device"
         android:background="?attr/userSwitcherBackground"/>
 
-     <com.android.car.ui.admin.ManagedDeviceTextView
+     <com.android.car.admin.ui.ManagedDeviceTextView
          android:id="@+id/managed_device"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
