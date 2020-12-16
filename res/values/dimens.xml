@@ -95,6 +95,7 @@
     </dimen>
     <dimen name="user_switcher_current_user_circle_width">126dp</dimen>
     <dimen name="user_switcher_current_user_circle_stroke_width">7dp</dimen>
+    <dimen name="car_user_switcher_margin_bottom">@*android:dimen/car_padding_4</dimen>
 
     <!-- Preferences -->
     <dimen name="two_action_preference_divider_width">1dp</dimen>
