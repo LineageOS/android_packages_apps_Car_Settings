@@ -20,15 +20,12 @@ import static com.android.car.ui.core.CarUi.requireToolbar;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.Context;
 import android.content.pm.UserInfo;
-
-import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.FragmentController;
@@ -57,7 +54,6 @@ import org.robolectric.shadow.api.Shadow;
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowAccountManager.class, ShadowContentResolver.class, ShadowUserHelper.class})
 public class AccountDetailsFragmentTest {
-    private static final String DIALOG_TAG = "confirmRemoveAccount";
     private final Account mAccount = new Account("Name", "com.acct");
     private final UserInfo mUserInfo = new UserInfo(/* id= */ 0, /* name= */ "name", /* flags= */
             0);
@@ -94,44 +90,6 @@ public class AccountDetailsFragmentTest {
         initFragment();
         ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getTitle()).isEqualTo(mAccountLabel);
-    }
-
-    @Test
-    public void cannotModifyUsers_removeAccountButtonShouldNotBeVisible() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts())
-                .thenReturn(false);
-        initFragment();
-
-        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
-        assertThat(toolbar.getMenuItems()).hasSize(1);
-        assertThat(toolbar.getMenuItems().get(0).isVisible()).isFalse();
-    }
-
-    @Test
-    public void canModifyUsers_removeAccountButtonShouldBeVisible() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts())
-                .thenReturn(true);
-        initFragment();
-
-        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
-        assertThat(toolbar.getMenuItems()).hasSize(1);
-        assertThat(toolbar.getMenuItems().get(0).isVisible()).isTrue();
-    }
-
-    @Test
-    public void onRemoveAccountButtonClicked_canModifyUsers_shouldShowConfirmRemoveAccountDialog() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts())
-                .thenReturn(true);
-        initFragment();
-
-        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
-        toolbar.getMenuItems().get(0).performClick();
-
-        Fragment dialogFragment = mFragment.findDialogByTag(DIALOG_TAG);
-
-        assertThat(dialogFragment).isNotNull();
-        assertThat(dialogFragment).isInstanceOf(
-                AccountDetailsFragment.ConfirmRemoveAccountDialogFragment.class);
     }
 
     @Test
