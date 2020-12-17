@@ -33,7 +33,6 @@
     <string name="mobile_network_settings" msgid="1708621113321368597">"Réseau cellulaire"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> carte SIM</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%1$d</xliff:g> SIMs</item>
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> cartes SIM</item>
     </plurals>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Services actifs/Carte SIM"</string>
@@ -60,7 +59,6 @@
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Avertissement d\'utilisation de données : <xliff:g id="ID_1">^1</xliff:g> / Limite d\'utilisation de données : <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="one">%d jour restant</item>
-      <item quantity="many">%d days left</item>
       <item quantity="other">%d jours restants</item>
     </plurals>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Aucun temps restant"</string>
@@ -304,7 +302,6 @@
     <string name="computing_size" msgid="5791407621793083965">"Traitement en cours…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> autorisation supplémentaire</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> additional permissions</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> autorisations supplémentaires</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Remarque : Après un redémarrage, vous ne pouvez pas lancer cette application tant que vous n\'avez pas déverrouillé votre véhicule."</string>
@@ -398,7 +395,6 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Chargement en cours…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
       <item quantity="one">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étape pour devenir un concepteur.</item>
-      <item quantity="many">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer.</item>
       <item quantity="other">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étapes pour devenir un concepteur.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Vous êtes désormais un concepteur!"</string>
@@ -472,7 +468,6 @@
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Limite d\'utilisateurs atteinte"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="one">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> utilisateur.</item>
-      <item quantity="many">You can create up to <xliff:g id="COUNT">%d</xliff:g> users.</item>
       <item quantity="other">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> utilisateurs.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Impossible de créer un utilisateur"</string>
@@ -612,32 +607,26 @@
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Le mot de passe doit comprendre au moins quatre caractères"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre</item>
-      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> letters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres</item>
     </plurals>
     <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre minuscule</item>
-      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> lowercase letters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres minuscules</item>
     </plurals>
     <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre majuscule</item>
-      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> uppercase letters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres majuscules</item>
     </plurals>
     <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> chiffre</item>
-      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> numerical digits</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> chiffres</item>
     </plurals>
     <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractère spécial</item>
-      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> special symbols</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractères spéciaux</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractère autre qu\'une lettre</item>
-      <item quantity="many">Must contain at least <xliff:g id="COUNT">%d</xliff:g> non-letter characters</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractères autres qu\'une lettre</item>
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'administrateur de l\'appareil ne permet pas l\'utilisation d\'un mot de passe récent"</string>
