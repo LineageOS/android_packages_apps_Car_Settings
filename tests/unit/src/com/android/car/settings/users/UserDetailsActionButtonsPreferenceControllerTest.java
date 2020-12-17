@@ -50,13 +50,15 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
+import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
 
 @RunWith(AndroidJUnit4.class)
 public class UserDetailsActionButtonsPreferenceControllerTest {
@@ -67,6 +69,7 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
     private ActionButtonsPreference mPreference;
     private CarUxRestrictions mCarUxRestrictions;
     private UserDetailsActionButtonsPreferenceController mPreferenceController;
+    private MockitoSession mSession;
 
     @Mock
     private FragmentController mFragmentController;
@@ -88,6 +91,13 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         mPreferenceController.setUserHelper(mMockUserHelper);
         mPreferenceController.setUserManager(mMockUserManager);
+    }
+
+    @After
+    public void tearDown() {
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
@@ -258,8 +268,10 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
     }
 
     @Test
-    @Ignore("b/173179832, b/172513940")
     public void onMakeAdminConfirmed_makeUserAdmin() {
+        mSession = ExtendedMockito.mockitoSession().mockStatic(
+                android.car.userlib.UserHelper.class).startMocking();
+
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
         when(mMockUserManager.isAdminUser()).thenReturn(true);
@@ -271,7 +283,8 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         arguments.putParcelable(UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN, userInfo);
         mPreferenceController.mMakeAdminConfirmListener.onConfirm(arguments);
 
-        // verify android.car.userlib.UserHelper.grantAdminPermissions called
+        ExtendedMockito.verify(
+                () -> android.car.userlib.UserHelper.grantAdminPermissions(mContext, userInfo));
     }
 
     @Test
