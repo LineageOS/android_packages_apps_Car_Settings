@@ -24,10 +24,11 @@ import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
 import android.content.SyncStatusObserver;
 
-import androidx.preference.Preference;
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.ui.preference.CarUiTwoActionTextPreference;
 import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.List;
@@ -35,10 +36,10 @@ import java.util.Set;
 
 /**
  * Controller for the preference that shows information about an account, including info about
- * failures.
+ * failures. It also handles a secondary button for account syncing.
  */
 public class AccountDetailsWithSyncStatusPreferenceController extends
-        AccountDetailsPreferenceController {
+        AccountDetailsBasePreferenceController {
     private boolean mIsStarted = false;
     private Object mStatusChangeListenerHandle;
     private SyncStatusObserver mSyncStatusObserver =
@@ -54,7 +55,6 @@ public class AccountDetailsWithSyncStatusPreferenceController extends
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
-
 
     /**
      * Registers the account update and sync status change callbacks.
@@ -80,18 +80,19 @@ public class AccountDetailsWithSyncStatusPreferenceController extends
     }
 
     @Override
-    protected void updateState(Preference preference) {
+    protected void updateState(CarUiTwoActionTextPreference preference) {
         super.updateState(preference);
         if (isSyncFailing()) {
             preference.setSummary(R.string.sync_is_failing);
         } else {
             preference.setSummary("");
         }
+        updateSyncButton();
     }
 
     private boolean isSyncFailing() {
         int userId = getUserHandle().getIdentifier();
-        List<SyncInfo> currentSyncs = ContentResolver.getCurrentSyncsAsUser(userId);
+        List<SyncInfo> currentSyncs = getCurrentSyncs(userId);
         boolean syncIsFailing = false;
 
         Set<SyncAdapterType> syncAdapters = AccountSyncHelper.getVisibleSyncAdaptersForAccount(
@@ -117,5 +118,54 @@ public class AccountDetailsWithSyncStatusPreferenceController extends
         }
 
         return syncIsFailing;
+    }
+
+    private void updateSyncButton() {
+        // Set the button to either request or cancel sync, depending on the current state
+        boolean hasActiveSyncs = !getCurrentSyncs(
+                getUserHandle().getIdentifier()).isEmpty();
+
+        // If there are active syncs, clicking the button with cancel them. Otherwise, clicking the
+        // button will start them.
+        getPreference().setSecondaryActionText(
+                hasActiveSyncs ? R.string.sync_button_sync_cancel : R.string.sync_button_sync_now);
+        getPreference().setOnSecondaryActionClickListener(hasActiveSyncs
+                ? this::cancelSyncForEnabledProviders
+                : this::requestSyncForEnabledProviders);
+    }
+
+    private void requestSyncForEnabledProviders() {
+        int userId = getUserHandle().getIdentifier();
+
+        Set<SyncAdapterType> adapters = AccountSyncHelper.getSyncableSyncAdaptersForAccount(
+                getAccount(), getUserHandle());
+        for (SyncAdapterType adapter : adapters) {
+            requestSync(adapter.authority, userId);
+        }
+    }
+
+    private void cancelSyncForEnabledProviders() {
+        int userId = getUserHandle().getIdentifier();
+
+        Set<SyncAdapterType> adapters = AccountSyncHelper.getSyncableSyncAdaptersForAccount(
+                getAccount(), getUserHandle());
+        for (SyncAdapterType adapter : adapters) {
+            cancelSync(adapter.authority, userId);
+        }
+    }
+
+    @VisibleForTesting
+    List<SyncInfo> getCurrentSyncs(int userId) {
+        return ContentResolver.getCurrentSyncsAsUser(userId);
+    }
+
+    @VisibleForTesting
+    void requestSync(String authority, int userId) {
+        AccountSyncHelper.requestSyncIfAllowed(getAccount(), authority, userId);
+    }
+
+    @VisibleForTesting
+    void cancelSync(String authority, int userId) {
+        ContentResolver.cancelSyncAsUser(getAccount(), authority, userId);
     }
 }
