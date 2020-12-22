@@ -18,6 +18,8 @@
 <resources>
     <!-- Whether all activities should be single pane views or not. -->
     <bool name="config_global_force_single_pane">false</bool>
+    <!-- Fully qualified class name for the homepage fragment. -->
+    <string name="config_homepage_fragment_class" translatable="false">com.android.car.settings.display.DisplaySettingsFragment</string>
     <!-- Whether quick settings should be the root settings activity or not. -->
     <bool name="config_is_quick_settings_root">false</bool>
     <!-- Whether to show the launcher icon for settings home or not. -->

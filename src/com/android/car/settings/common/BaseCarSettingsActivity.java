@@ -19,18 +19,23 @@ package com.android.car.settings.common;
 import static android.view.ViewGroup.FOCUS_BEFORE_DESCENDANTS;
 import static android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.drivingstate.CarUxRestrictionsManager;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -41,6 +46,15 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
+import com.android.car.ui.baselayout.Insets;
+import com.android.car.ui.baselayout.InsetsChangedListener;
+import com.android.car.ui.core.CarUi;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Base activity class for car settings, provides a action bar with a back button that goes to
@@ -48,7 +62,8 @@ import com.android.car.settings.R;
  */
 public abstract class BaseCarSettingsActivity extends FragmentActivity implements
         FragmentHost, OnUxRestrictionsChangedListener, UxRestrictionsProvider,
-        OnBackStackChangedListener, PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
+        OnBackStackChangedListener, PreferenceFragmentCompat.OnPreferenceStartFragmentCallback,
+        InsetsChangedListener {
 
     /**
      * Meta data key for specifying the preference key of the top level menu preference that the
@@ -66,9 +81,15 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     public static final String META_DATA_KEY_SINGLE_PANE = "com.android.car.settings.SINGLE_PANE";
 
     private static final Logger LOG = new Logger(BaseCarSettingsActivity.class);
+    private static final int SEARCH_REQUEST_CODE = 501;
+    private static final String KEY_HAS_NEW_INTENT = "key_has_new_intent";
 
+    private boolean mHasNewIntent = true;
     private String mTopLevelHeaderKey;
     private boolean mIsSinglePane;
+
+    private ToolbarController mGlobalToolbar;
+    private ToolbarController mMiniToolbar;
 
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private ViewGroup mFragmentContainer;
@@ -83,6 +104,9 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            mHasNewIntent = savedInstanceState.getBoolean(KEY_HAS_NEW_INTENT, mHasNewIntent);
+        }
         populateMetaData();
         setContentView(R.layout.car_setting_activity);
         mFragmentContainer = findViewById(R.id.fragment_container);
@@ -91,10 +115,25 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                     this);
         }
         mUxRestrictionsHelper.start();
+
+        // We do this so that the insets are not automatically sent to the fragments.
+        // The fragments have their own insets handled by the installBaseLayoutAround() method.
+        CarUi.replaceInsetsChangedListenerWith(this, this);
+
+        setUpToolbars();
         getSupportFragmentManager().addOnBackStackChangedListener(this);
         mRestrictedMessage = findViewById(R.id.restricted_message);
 
-        launchIfDifferent(getInitialFragment());
+        if (mHasNewIntent) {
+            launchIfDifferent(getInitialFragment());
+            mHasNewIntent = false;
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(KEY_HAS_NEW_INTENT, mHasNewIntent);
     }
 
     @Override
@@ -159,14 +198,34 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     }
 
     @Override
+    public ToolbarController getToolbar() {
+        if (mIsSinglePane) {
+            return mGlobalToolbar;
+        }
+        return mMiniToolbar;
+    }
+
+    @Override
     public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
         mCarUxRestrictions = restrictionInfo;
+
+        // Update restrictions for current fragment.
         Fragment currentFragment = getCurrentFragment();
         if (currentFragment instanceof OnUxRestrictionsChangedListener) {
             ((OnUxRestrictionsChangedListener) currentFragment)
                     .onUxRestrictionsChanged(restrictionInfo);
         }
         updateBlockingView(currentFragment);
+
+        if (!mIsSinglePane) {
+            // Update restrictions for top level menu (if present).
+            Fragment topLevelMenu =
+                    getSupportFragmentManager().findFragmentById(R.id.top_level_menu);
+            if (topLevelMenu instanceof CarUxRestrictionsManager.OnUxRestrictionsChangedListener) {
+                ((CarUxRestrictionsManager.OnUxRestrictionsChangedListener) topLevelMenu)
+                        .onUxRestrictionsChanged(restrictionInfo);
+            }
+        }
     }
 
     @Override
@@ -177,6 +236,20 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     @Override
     public void onBackStackChanged() {
         onUxRestrictionsChanged(getCarUxRestrictions());
+        if (!mIsSinglePane) {
+            if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+                mMiniToolbar.setState(Toolbar.State.SUBPAGE);
+                mMiniToolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
+            } else {
+                mMiniToolbar.setState(Toolbar.State.HOME);
+            }
+        }
+    }
+
+    @Override
+    public void onCarUiInsetsChanged(Insets insets) {
+        findViewById(R.id.car_settings_activity_wrapper).setPadding(insets.getLeft(),
+                insets.getTop(), insets.getRight(), insets.getBottom());
     }
 
     @Override
@@ -247,5 +320,50 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         } catch (PackageManager.NameNotFoundException e) {
             LOG.w("Unable to find package", e);
         }
+    }
+
+    private void setUpToolbars() {
+        mGlobalToolbar = requireToolbar(this);
+        mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
+        if (mIsSinglePane) {
+            findViewById(R.id.top_level_menu).setVisibility(View.GONE);
+            return;
+        }
+        mMiniToolbar = CarUi.installBaseLayoutAround(
+                findViewById(R.id.fragment_container_wrapper),
+                insets -> findViewById(R.id.fragment_container_wrapper).setPadding(
+                        insets.getLeft(), insets.getTop(), insets.getRight(),
+                        insets.getBottom()), /* hasToolbar= */ true);
+
+        MenuItem searchButton = new MenuItem.Builder(this)
+                .setToSearch()
+                .setOnClickListener(i -> onSearchButtonClicked())
+                .setUxRestrictions(CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD)
+                .setId(R.id.toolbar_menu_item_0)
+                .build();
+        List<MenuItem> items = Collections.singletonList(searchButton);
+
+        mGlobalToolbar.setTitle(R.string.settings_label);
+        mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
+        mGlobalToolbar.setNavButtonMode(Toolbar.NavButtonMode.CLOSE);
+        mGlobalToolbar.registerOnBackListener(() -> {
+            finish();
+            return true;
+        });
+        mGlobalToolbar.setLogo(R.drawable.ic_launcher_settings);
+        mGlobalToolbar.setMenuItems(items);
+    }
+
+    private void onSearchButtonClicked() {
+        Intent intent = new Intent(Settings.ACTION_APP_SEARCH_SETTINGS)
+                .setPackage(getSettingsIntelligencePkgName());
+        if (intent.resolveActivity(getPackageManager()) == null) {
+            return;
+        }
+        startActivityForResult(intent, SEARCH_REQUEST_CODE);
+    }
+
+    private String getSettingsIntelligencePkgName() {
+        return getString(R.string.config_settingsintelligence_package_name);
     }
 }

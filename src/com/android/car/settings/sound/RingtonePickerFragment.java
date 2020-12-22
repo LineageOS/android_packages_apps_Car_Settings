@@ -22,6 +22,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -73,8 +75,8 @@ public class RingtonePickerFragment extends SettingsFragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         // Logic to scroll to the selected item. This needs to be done in a global layout listener
         // so that it can be triggered after the sound items added dynamically in the
@@ -83,7 +85,7 @@ public class RingtonePickerFragment extends SettingsFragment {
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        // This should only be triggered once per resume.
+                        // This should only be triggered once per onViewCreated.
                         getListView().getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
                         // There are various methods on the PreferenceFragment and RecyclerView

@@ -15,27 +15,38 @@
     limitations under the License.
 -->
 
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/car_settings_activity_wrapper"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/car_ui_activity_background">
 
+    <fragment
+        class="com.android.car.settings.common.TopLevelMenuFragment"
+        android:id="@+id/top_level_menu"
+        android:layout_width="@dimen/top_level_menu_width"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_container_wrapper"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/fragment_container_wrapper"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top_level_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="@style/TrimmedHorizontalProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:indeterminate="true"
-            android:visibility="gone"/>
+
         <!-- set the text clickable to true so that it blocks touch event -->
         <TextView
             android:id="@+id/restricted_message"
@@ -48,5 +59,7 @@
             android:text="@string/restricted_while_driving"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:visibility="gone"/>
+
     </FrameLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@
     conflicts.
 -->
 <resources>
-    <string name="hk_HomepageActivity"></string>
+    <string name="hk_HomepageActivity">@string/pk_display_settings_entry</string>
     <string name="hk_DisplaySettingsActivity">@string/pk_display_settings_entry</string>
     <string name="hk_SoundSettingsActivity">@string/pk_sound_settings_entry</string>
     <string name="hk_RingtonePickerActivity">@string/pk_sound_settings_entry</string>
