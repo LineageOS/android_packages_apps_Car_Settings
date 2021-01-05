@@ -96,9 +96,7 @@
     <dimen name="user_switcher_current_user_circle_width">126dp</dimen>
     <dimen name="user_switcher_current_user_circle_stroke_width">7dp</dimen>
     <dimen name="user_switcher_margin_bottom">@*android:dimen/car_padding_4</dimen>
-    <!--  TODO(b/175214581): un-hardcode to something like car_large_avatar_badge_size, which would
-          have to be defined on frameworks/base -->
-    <dimen name="user_switcher_managed_badge_size">32dp</dimen>
+    <dimen name="user_switcher_managed_badge_size">@*android:dimen/car_large_avatar_badge_size</dimen>
     <dimen name="user_switcher_managed_badge_margin">1dp</dimen>
 
     <!-- Preferences -->
