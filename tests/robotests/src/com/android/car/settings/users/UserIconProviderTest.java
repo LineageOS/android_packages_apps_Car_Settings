@@ -23,9 +23,8 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.UserManager;
-
-import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 
 import com.android.car.settings.testutils.ShadowUserManager;
 
@@ -67,8 +66,7 @@ public class UserIconProviderTest {
     public void getRoundedUserIcon_AssignsIconIfNotPresent() {
         ShadowUserManager.setUserIcon(mUserInfo.id, null);
 
-        RoundedBitmapDrawable returnedIcon =
-                mUserIconProvider.getRoundedUserIcon(mUserInfo, mContext);
+        Drawable returnedIcon = mUserIconProvider.getRoundedUserIcon(mUserInfo, mContext);
 
         assertThat(returnedIcon).isNotNull();
         assertThat(getShadowUserManager().getUserIcon(mUserInfo.id)).isNotNull();
