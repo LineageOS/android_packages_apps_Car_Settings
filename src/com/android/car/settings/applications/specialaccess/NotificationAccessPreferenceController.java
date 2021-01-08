@@ -40,6 +40,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiSwitchPreference;
 import com.android.settingslib.applications.ServiceListing;
 
 import java.util.List;
@@ -146,7 +147,7 @@ public class NotificationAccessPreferenceController extends PreferenceController
                 LOG.e("can't find package name", e);
             }
             String summary = service.loadLabel(packageManager).toString();
-            SwitchPreference pref = new SwitchPreference(getContext());
+            SwitchPreference pref = new CarUiSwitchPreference(getContext());
             pref.setPersistent(false);
             pref.setIcon(mIconDrawableFactory.getBadgedIcon(service, service.applicationInfo,
                     UserHandle.getUserId(service.applicationInfo.uid)));

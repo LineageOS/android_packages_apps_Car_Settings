@@ -107,8 +107,6 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
 
     @Override
     protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
-        super.onApplyUxRestrictions(uxRestrictions);
-
         // If preference intents into an activity that's not distraction optimized, disable the
         // preference. This will override the UXRE flags config_ignore_ux_restrictions and
         // config_always_ignore_ux_restrictions because navigating to these non distraction
