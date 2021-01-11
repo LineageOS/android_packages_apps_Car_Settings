@@ -31,6 +31,7 @@ import android.content.IntentFilter;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.AttributeSet;
@@ -38,7 +39,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -47,6 +47,7 @@ import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.car.admin.ui.UserAvatarView;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.ConfirmationDialogFragment;
@@ -316,8 +317,14 @@ public class UserGridRecyclerView extends RecyclerView {
         @Override
         public void onBindViewHolder(UserAdapterViewHolder holder, int position) {
             UserRecord userRecord = mUsers.get(position);
-            RoundedBitmapDrawable circleIcon = getCircularUserRecordIcon(userRecord);
-            holder.mUserAvatarImageView.setImageDrawable(circleIcon);
+            Drawable circleIcon = getCircularUserRecordIcon(userRecord);
+            if (userRecord.mInfo != null) {
+                // User might have badges (like managed user)
+                holder.mUserAvatarImageView.setDrawableWithBadge(circleIcon, userRecord.mInfo.id);
+            } else {
+                // Guest or "Add User" don't have badges
+                holder.mUserAvatarImageView.setDrawable(circleIcon);
+            }
             holder.mUserNameTextView.setText(getUserRecordName(userRecord));
 
             // Defaults to 100% opacity and no circle around the icon.
@@ -424,9 +431,9 @@ public class UserGridRecyclerView extends RecyclerView {
                     mBaseFragment.getFragmentManager(), CONFIRM_CREATE_NEW_USER_DIALOG_TAG);
         }
 
-        private RoundedBitmapDrawable getCircularUserRecordIcon(UserRecord userRecord) {
+        private Drawable getCircularUserRecordIcon(UserRecord userRecord) {
             Resources resources = mContext.getResources();
-            RoundedBitmapDrawable circleIcon;
+            Drawable circleIcon;
             switch (userRecord.mType) {
                 case UserRecord.START_GUEST:
                     circleIcon = mUserIconProvider.getRoundedGuestDefaultIcon(resources);
@@ -498,7 +505,7 @@ public class UserGridRecyclerView extends RecyclerView {
          */
         public class UserAdapterViewHolder extends RecyclerView.ViewHolder {
 
-            public ImageView mUserAvatarImageView;
+            public UserAvatarView mUserAvatarImageView;
             public TextView mUserNameTextView;
             public View mView;
             public FrameLayout mFrame;

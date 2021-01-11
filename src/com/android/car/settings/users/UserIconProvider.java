@@ -22,11 +22,9 @@ import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 import android.os.UserManager;
-
-import androidx.core.graphics.drawable.RoundedBitmapDrawable;
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import com.android.internal.util.UserIcons;
 
@@ -41,9 +39,9 @@ public class UserIconProvider {
      *
      * @param userInfo User for which the icon is requested.
      * @param context Context to use for resources
-     * @return {@link RoundedBitmapDrawable} representing the icon for the user.
+     * @return {@link Drawable} representing the icon for the user.
      */
-    public RoundedBitmapDrawable getRoundedUserIcon(UserInfo userInfo, Context context) {
+    public Drawable getRoundedUserIcon(UserInfo userInfo, Context context) {
         UserManager userManager = UserManager.get(context);
         Resources res = context.getResources();
         Bitmap icon = userManager.getUserIcon(userInfo.id);
@@ -52,20 +50,13 @@ public class UserIconProvider {
             icon = assignDefaultIcon(userManager, res, userInfo);
         }
 
-        return createScaledRoundIcon(res, icon);
+        return new BitmapDrawable(res, icon);
     }
 
     /** Returns a scaled, rounded, default icon for the Guest user */
-    public RoundedBitmapDrawable getRoundedGuestDefaultIcon(Resources resources) {
-        return createScaledRoundIcon(resources, getGuestUserDefaultIcon(resources));
-    }
-
-    private RoundedBitmapDrawable createScaledRoundIcon(Resources resources, Bitmap icon) {
-        BitmapDrawable scaledIcon = UserUtils.scaleUserIcon(resources, icon);
-        RoundedBitmapDrawable circleIcon =
-                RoundedBitmapDrawableFactory.create(resources, scaledIcon.getBitmap());
-        circleIcon.setCircular(true);
-        return circleIcon;
+    public Drawable getRoundedGuestDefaultIcon(Resources resources) {
+        Bitmap icon = getGuestUserDefaultIcon(resources);
+        return new BitmapDrawable(resources, icon);
     }
 
     /**

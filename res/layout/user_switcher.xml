@@ -35,7 +35,7 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_alignParentBottom="true"
-         android:layout_marginBottom="@dimen/car_user_switcher_margin_bottom"
+         android:layout_marginBottom="@dimen/user_switcher_margin_bottom"
          android:gravity="center"/>
 
 </RelativeLayout>
