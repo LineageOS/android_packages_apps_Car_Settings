@@ -20,7 +20,7 @@ import androidx.preference.Preference;
 
 public class PreferenceControllerTestUtil {
     /**
-     * Associate a PreferenceController with its Preference.
+     * Associates a PreferenceController with its Preference.
      */
     public static void assignPreference(PreferenceController controller, Preference preference) {
         controller.setPreference(preference);
