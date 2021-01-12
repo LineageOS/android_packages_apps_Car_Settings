@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -23,6 +24,8 @@ import android.content.Context;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -97,6 +100,31 @@ public class PreferenceControllerTest {
 
         verify((DisabledPreferenceCallback) mPreference)
                 .setMessageToShowWhenDisabledPreferenceClicked("");
+    }
+
+    @Test
+    @UiThreadTest
+    public void onUxRestrictionsChanged_restricted_preferenceGroup_restrictedMessageSet() {
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen preferenceScreen = preferenceManager.createPreferenceScreen(mContext);
+        CarUiPreference preference1 = mock(CarUiPreference.class);
+        CarUiPreference preference2 = mock(CarUiPreference.class);
+        preferenceScreen.addPreference(preference1);
+        preferenceScreen.addPreference(preference2);
+
+        mPreferenceController.setPreference(preferenceScreen);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        Mockito.reset(preference1);
+        Mockito.reset(preference2);
+        mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        verify((DisabledPreferenceCallback) preference1)
+                .setMessageToShowWhenDisabledPreferenceClicked(
+                        ResourceTestUtils.getString(mContext, "restricted_while_driving"));
+        verify((DisabledPreferenceCallback) preference2)
+                .setMessageToShowWhenDisabledPreferenceClicked(
+                        ResourceTestUtils.getString(mContext, "restricted_while_driving"));
     }
 
     @Test
