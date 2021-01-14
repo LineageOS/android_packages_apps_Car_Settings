@@ -173,6 +173,23 @@ public class ExtraSettingsPreferenceControllerTest {
     }
 
     @Test
+    public void onUxRestrictionsChanged_distractionOptimized_restrictedMessageUnset() {
+        mMetaData.putBoolean(META_DATA_DISTRACTION_OPTIMIZED, true);
+        mPreferenceBundleMap.put(mPreference, mMetaData);
+        when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
+                mPreferenceBundleMap);
+        mPreferenceController.setExtraSettingsLoader(mExtraSettingsLoaderMock);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        Mockito.reset(mPreference);
+        mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        verify((DisabledPreferenceCallback) mPreference)
+                .setMessageToShowWhenDisabledPreferenceClicked("");
+    }
+
+    @Test
     public void onCreate_hasDynamicTitleData_placeholderAdded() {
         mMetaData.putString(META_DATA_PREFERENCE_TITLE_URI, TEST_PROVIDER);
         mPreferenceBundleMap.put(mPreference, mMetaData);
