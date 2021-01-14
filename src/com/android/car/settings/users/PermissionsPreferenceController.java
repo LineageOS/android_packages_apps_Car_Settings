@@ -27,6 +27,7 @@ import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.ui.preference.CarUiSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +86,7 @@ public class PermissionsPreferenceController extends
         super(context, preferenceKey, fragmentController, uxRestrictions);
 
         for (UserPermission permission : PERMISSIONS_LIST) {
-            SwitchPreference preference = new SwitchPreference(context);
+            SwitchPreference preference = new CarUiSwitchPreference(context);
             preference.setTitle(permission.getPermissionTitle());
             preference.getExtras().putString(PERMISSION_TYPE_KEY, permission.getPermissionKey());
             preference.setOnPreferenceChangeListener((pref, newValue) -> {
