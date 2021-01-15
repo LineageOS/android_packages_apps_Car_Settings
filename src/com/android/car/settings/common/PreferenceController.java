@@ -25,6 +25,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
 import com.android.car.ui.preference.DisabledPreferenceCallback;
@@ -459,12 +460,19 @@ public abstract class PreferenceController<V extends Preference> implements
                 showMessage = true;
             }
         }
-        setRestrictedWhileDrivingMessage(mPreference, showMessage);
+        if (mPreference instanceof PreferenceGroup) {
+            PreferenceGroup preferenceGroup = (PreferenceGroup) mPreference;
+            for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
+                setRestrictedWhileDrivingMessage(preferenceGroup.getPreference(i), showMessage);
+            }
+        } else {
+            setRestrictedWhileDrivingMessage(mPreference, showMessage);
+        }
     }
 
     /**
      * Updates the preference restricted while driving message.
-
+     *
      * @param preference  the preference to update.
      * @param showMessage whether or not the message should be shown.
      */

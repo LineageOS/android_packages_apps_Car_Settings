@@ -76,8 +76,6 @@ public class ExtraSettingsPreferenceControllerTest {
             new CarUxRestrictions.Builder(/* reqOpt= */ false,
                     CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-    // Fake provider that won't actually resolve to anything
-    private static final String FAKE_PROVIDER = "content://android.content.FakeProvider";
     // Real test provider
     private static final String TEST_PROVIDER =
             "content://com.android.car.settings.testutils.TestContentProvider";
@@ -175,8 +173,25 @@ public class ExtraSettingsPreferenceControllerTest {
     }
 
     @Test
+    public void onUxRestrictionsChanged_distractionOptimized_restrictedMessageUnset() {
+        mMetaData.putBoolean(META_DATA_DISTRACTION_OPTIMIZED, true);
+        mPreferenceBundleMap.put(mPreference, mMetaData);
+        when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
+                mPreferenceBundleMap);
+        mPreferenceController.setExtraSettingsLoader(mExtraSettingsLoaderMock);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        Mockito.reset(mPreference);
+        mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        verify((DisabledPreferenceCallback) mPreference)
+                .setMessageToShowWhenDisabledPreferenceClicked("");
+    }
+
+    @Test
     public void onCreate_hasDynamicTitleData_placeholderAdded() {
-        mMetaData.putString(META_DATA_PREFERENCE_TITLE_URI, FAKE_PROVIDER);
+        mMetaData.putString(META_DATA_PREFERENCE_TITLE_URI, TEST_PROVIDER);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
@@ -190,7 +205,7 @@ public class ExtraSettingsPreferenceControllerTest {
 
     @Test
     public void onCreate_hasDynamicSummaryData_placeholderAdded() {
-        mMetaData.putString(META_DATA_PREFERENCE_SUMMARY_URI, FAKE_PROVIDER);
+        mMetaData.putString(META_DATA_PREFERENCE_SUMMARY_URI, TEST_PROVIDER);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
@@ -204,7 +219,7 @@ public class ExtraSettingsPreferenceControllerTest {
 
     @Test
     public void onCreate_hasDynamicIconData_placeholderAdded() {
-        mMetaData.putString(META_DATA_PREFERENCE_ICON_URI, FAKE_PROVIDER);
+        mMetaData.putString(META_DATA_PREFERENCE_ICON_URI, TEST_PROVIDER);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
@@ -263,7 +278,7 @@ public class ExtraSettingsPreferenceControllerTest {
 
     @Test
     public void onStart_hasDynamicTitleData_observerAdded() {
-        mMetaData.putString(META_DATA_PREFERENCE_TITLE_URI, FAKE_PROVIDER);
+        mMetaData.putString(META_DATA_PREFERENCE_TITLE_URI, TEST_PROVIDER);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
@@ -277,7 +292,7 @@ public class ExtraSettingsPreferenceControllerTest {
 
     @Test
     public void onStart_hasDynamicSummaryData_observerAdded() {
-        mMetaData.putString(META_DATA_PREFERENCE_SUMMARY_URI, FAKE_PROVIDER);
+        mMetaData.putString(META_DATA_PREFERENCE_SUMMARY_URI, TEST_PROVIDER);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
@@ -291,7 +306,7 @@ public class ExtraSettingsPreferenceControllerTest {
 
     @Test
     public void onStart_hasDynamicIconData_observerAdded() {
-        mMetaData.putString(META_DATA_PREFERENCE_ICON_URI, FAKE_PROVIDER);
+        mMetaData.putString(META_DATA_PREFERENCE_ICON_URI, TEST_PROVIDER);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
