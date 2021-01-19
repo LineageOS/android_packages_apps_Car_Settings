@@ -16,6 +16,8 @@
 -->
 
 <resources>
+    <!-- Whether all activities should be single pane views or not. -->
+    <bool name="config_global_force_single_pane">false</bool>
     <!-- Whether quick settings should be the root settings activity or not. -->
     <bool name="config_is_quick_settings_root">false</bool>
     <!-- Whether to show the launcher icon for settings home or not. -->

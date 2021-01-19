@@ -24,11 +24,7 @@
         android:icon="@drawable/ic_lock"
         android:key="@string/pk_choose_lock_type"
         android:title="@string/lock_settings_picker_title"
-        settings:controller="com.android.car.settings.security.SecurityEntryPreferenceController">
-        <intent
-            android:targetClass="com.android.car.settings.security.SettingsScreenLockActivity"
-            android:targetPackage="com.android.car.settings"/>
-    </Preference>
+        settings:controller="com.android.car.settings.security.ChooseLockTypePreferenceController"/>
     <Preference
         android:key="@string/pk_credentials_reset"
         android:summary="@string/credentials_reset_summary"

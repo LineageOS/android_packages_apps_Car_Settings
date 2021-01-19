@@ -22,4 +22,6 @@
 
     <!-- ID for the selected item in the ringtone picker -->
     <item type="id" name="ringtone_picker_selected_id"/>
+    <!-- ID key for tagging whether a preference is highlighted or not -->
+    <item type="id" name="preference_highlighted" />
 </resources>
