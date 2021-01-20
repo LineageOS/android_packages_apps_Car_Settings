@@ -19,6 +19,9 @@ package com.android.car.settings.common;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -42,7 +45,26 @@ import com.android.car.settings.R;
 public abstract class BaseCarSettingsActivity extends FragmentActivity implements
         FragmentHost, OnUxRestrictionsChangedListener, UxRestrictionsProvider,
         OnBackStackChangedListener, PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
+
+    /**
+     * Meta data key for specifying the preference key of the top level menu preference that the
+     * initial activity's fragment falls under. If this is not specified in the activity's
+     * metadata, the top level menu preference will not be highlighted upon activity launch.
+     */
+    public static final String META_DATA_KEY_HEADER_KEY =
+            "com.android.car.settings.TOP_LEVEL_HEADER_KEY";
+
+    /**
+     * Meta data key for specifying activities that should always be shown in the single pane
+     * configuration. If not specified for the activity, the activity will default to the value
+     * {@link R.bool.config_global_force_single_pane}.
+     */
+    public static final String META_DATA_KEY_SINGLE_PANE = "com.android.car.settings.SINGLE_PANE";
+
     private static final Logger LOG = new Logger(BaseCarSettingsActivity.class);
+
+    private String mTopLevelHeaderKey;
+    private boolean mIsSinglePane;
 
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private View mRestrictedMessage;
@@ -56,6 +78,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        populateMetaData();
         setContentView(R.layout.car_setting_activity);
         if (mUxRestrictionsHelper == null) {
             mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
@@ -83,6 +106,16 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
             finish();
         }
+    }
+
+    @Override
+    public Intent getIntent() {
+        Intent superIntent = super.getIntent();
+        if (mTopLevelHeaderKey != null) {
+            superIntent.putExtra(META_DATA_KEY_HEADER_KEY, mTopLevelHeaderKey);
+        }
+        superIntent.putExtra(META_DATA_KEY_SINGLE_PANE, mIsSinglePane);
+        return superIntent;
     }
 
     @Override
@@ -188,6 +221,19 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         if (currentFragment instanceof BaseFragment) {
             boolean canBeShown = ((BaseFragment) currentFragment).canBeShown(mCarUxRestrictions);
             mRestrictedMessage.setVisibility(canBeShown ? View.GONE : View.VISIBLE);
+        }
+    }
+
+    private void populateMetaData() {
+        try {
+            ActivityInfo ai = getPackageManager().getActivityInfo(getComponentName(),
+                    PackageManager.GET_META_DATA);
+            if (ai == null || ai.metaData == null) return;
+            mTopLevelHeaderKey = ai.metaData.getString(META_DATA_KEY_HEADER_KEY);
+            mIsSinglePane = ai.metaData.getBoolean(META_DATA_KEY_SINGLE_PANE,
+                    getResources().getBoolean(R.bool.config_global_force_single_pane));
+        } catch (PackageManager.NameNotFoundException e) {
+            LOG.w("Unable to find package", e);
         }
     }
 }
