@@ -16,6 +16,7 @@
 
 package com.android.car.settings.security;
 
+import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.os.Bundle;
@@ -497,6 +498,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mPasswordField.setText("");
 
+        getActivity().setResult(Activity.RESULT_OK);
         getActivity().finish();
     }
 
