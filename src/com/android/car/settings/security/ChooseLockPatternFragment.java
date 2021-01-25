@@ -16,6 +16,7 @@
 
 package com.android.car.settings.security;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.view.View;
@@ -435,6 +436,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
             mCurrentCredential.zeroize();
         }
 
+        getActivity().setResult(Activity.RESULT_OK);
         getActivity().finish();
     }
 

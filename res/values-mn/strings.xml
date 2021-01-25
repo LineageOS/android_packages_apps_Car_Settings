@@ -32,13 +32,13 @@
     <string name="network_and_internet" msgid="4229023630498537530">"Сүлжээ &amp; интернэт"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобайл сүлжээ"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> СИМ</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> СИМ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> SIM</item>
     </plurals>
-    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Идэвхтэй / СИМ"</string>
-    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Идэвхгүй / СИМ"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Идэвхтэй / Татаж авсан СИМ"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Идэвхгүй / Татаж авсан СИМ"</string>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Идэвхтэй / SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Идэвхгүй / SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Идэвхтэй / Татаж авсан SIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Идэвхгүй / Татаж авсан SIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Бусдыг нэмэх"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобайл дата"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Мобайл сүлжээг ашиглан датад хандах"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Утасны хонхны ая"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Мэдэгдлийн өгөгдмөл ая"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Сэрүүлгийн өгөгдмөл ая"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Хадгалах"</string>
     <string name="units_settings" msgid="402325305096925886">"Нэгж"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Хурд"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Зай"</string>
