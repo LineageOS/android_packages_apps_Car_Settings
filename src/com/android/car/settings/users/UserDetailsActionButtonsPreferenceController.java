@@ -36,12 +36,14 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Displays the action buttons for user details.
  *
- * The actions shown depends on the current and selected user.
- * 1. Rename: shown if selected user is the current user
- * 2. Make admin: shown if current user is an admin and the selected user is not
- * 3. Delete: shown if the current user is allowed to remove users and is not a demo user
+ * <p>The actions shown depends on the current and selected user.
+ * <ol>
+ * <li>Rename: shown if selected user is the current user
+ * <li>Make admin: shown if current user is an admin and the selected user is not
+ * <li>Delete: shown if the current user is allowed to remove users and is not a demo user
+ * </ol>
  */
-public class UserDetailsActionButtonsPreferenceController
+public final class UserDetailsActionButtonsPreferenceController
         extends UserDetailsBasePreferenceController<ActionButtonsPreference> {
 
     @VisibleForTesting
@@ -49,8 +51,8 @@ public class UserDetailsActionButtonsPreferenceController
     @VisibleForTesting
     static final String REMOVE_USER_DIALOG_TAG = "RemoveUserDialogFragment";
 
-    private UserHelper mUserHelper;
-    private UserManager mUserManager;
+    private final UserHelper mUserHelper;
+    private final UserManager mUserManager;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mMakeAdminConfirmListener =
@@ -62,29 +64,40 @@ public class UserDetailsActionButtonsPreferenceController
             };
 
     @VisibleForTesting
-    final ConfirmationDialogFragment.ConfirmListener mRemoveConfirmListener = arguments -> {
-        String userType = arguments.getString(UsersDialogProvider.KEY_USER_TYPE);
-        if (userType.equals(UsersDialogProvider.LAST_ADMIN)) {
-            getFragmentController().launchFragment(
-                    ChooseNewAdminFragment.newInstance(getUserInfo()));
-        } else {
-            Context context = getContext();
-            if (mUserHelper.removeUser(context, getUserInfo())) {
-                getFragmentController().goBack();
-            } else {
-                // If failed, need to show error dialog for users.
-                getFragmentController().showDialog(
-                        ErrorDialog.newInstance(R.string.delete_user_error_title), null);
-            }
-        }
-    };
+    final ConfirmationDialogFragment.ConfirmListener mRemoveConfirmListener;
 
     public UserDetailsActionButtonsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
+        this(context, preferenceKey, fragmentController, uxRestrictions,
+                UserHelper.getInstance(context), UserManager.get(context));
+    }
+
+    @VisibleForTesting
+    UserDetailsActionButtonsPreferenceController(Context context,
+            String preferenceKey, FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions, UserHelper userHelper, UserManager userManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mUserHelper = UserHelper.getInstance(context);
-        mUserManager = UserManager.get(context);
+        mUserHelper = userHelper;
+        mUserManager = userManager;
+        mRemoveConfirmListener = arguments -> {
+            String userType = arguments.getString(UsersDialogProvider.KEY_USER_TYPE);
+            if (userType.equals(UsersDialogProvider.LAST_ADMIN)) {
+                getFragmentController().launchFragment(
+                        ChooseNewAdminFragment.newInstance(getUserInfo()));
+            } else {
+                int removeUserResult = mUserHelper.removeUser(context, getUserInfo());
+                if (removeUserResult == UserHelper.REMOVE_USER_RESULT_SUCCESS) {
+                    getFragmentController().goBack();
+                } else {
+                    // If failed, need to show error dialog for users.
+                    getFragmentController().showDialog(
+                            ErrorDialog.newInstance(
+                                    mUserHelper.getErrorMessageForUserResult(removeUserResult)),
+                            null);
+                }
+            }
+        };
     }
 
     @Override
@@ -143,16 +156,6 @@ public class UserDetailsActionButtonsPreferenceController
                 .setIcon(R.drawable.ic_delete)
                 .setVisible(isDeleteButtonVisible)
                 .setOnClickListener(v -> showConfirmRemoveUserDialog());
-    }
-
-    @VisibleForTesting
-    void setUserHelper(UserHelper userHelper) {
-        mUserHelper = userHelper;
-    }
-
-    @VisibleForTesting
-    void setUserManager(UserManager userManager) {
-        mUserManager = userManager;
     }
 
     private void showConfirmMakeAdminDialog() {

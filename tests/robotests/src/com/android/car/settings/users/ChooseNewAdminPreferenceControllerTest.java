@@ -31,7 +31,6 @@ import android.content.pm.UserInfo;
 import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.common.ConfirmationDialogFragment;
-import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowUserHelper;
@@ -107,7 +106,7 @@ public class ChooseNewAdminPreferenceControllerTest {
         mController.userClicked(/* userToMakeAdmin= */ TEST_OTHER_USER);
 
         verify(mControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmationDialogFragment.class),
+                any(),
                 eq(ConfirmationDialogFragment.TAG));
     }
 
@@ -123,26 +122,26 @@ public class ChooseNewAdminPreferenceControllerTest {
     public void testAssignNewAdminAndRemoveOldAdmin_removeUserCalled() {
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        verify(mUserHelper).removeUser(any(Context.class), eq(TEST_ADMIN_USER));
+        verify(mUserHelper).removeUser(any(), eq(TEST_ADMIN_USER));
     }
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_success_noErrorDialog() {
-        when(mUserHelper.removeUser(any(Context.class), eq(TEST_ADMIN_USER))).thenReturn(true);
+        when(mUserHelper.removeUser(any(), eq(TEST_ADMIN_USER)))
+                .thenReturn(UserHelper.REMOVE_USER_RESULT_SUCCESS);
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        verify(mControllerHelper.getMockFragmentController(), never()).showDialog(
-                any(ErrorDialog.class), any());
+        verify(mControllerHelper.getMockFragmentController(), never()).showDialog(any(), any());
     }
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_failure_errorDialog() {
-        when(mUserHelper.removeUser(any(Context.class), eq(TEST_ADMIN_USER))).thenReturn(false);
+        when(mUserHelper.removeUser(any(), eq(TEST_ADMIN_USER)))
+                .thenReturn(UserHelper.REMOVE_USER_RESULT_FAILED);
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        verify(mControllerHelper.getMockFragmentController()).showDialog(any(ErrorDialog.class),
-                any());
+        verify(mControllerHelper.getMockFragmentController()).showDialog(any(), any());
     }
 }

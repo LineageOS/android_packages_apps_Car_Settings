@@ -15,8 +15,10 @@
  */
 package com.android.car.settings.users;
 
+import android.annotation.IntDef;
 import android.annotation.NonNull;
 import android.annotation.Nullable;
+import android.annotation.StringRes;
 import android.annotation.UserIdInt;
 import android.app.ActivityManager;
 import android.car.Car;
@@ -37,6 +39,8 @@ import android.util.Log;
 import com.android.car.settings.R;
 import com.android.internal.annotations.VisibleForTesting;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -58,6 +62,38 @@ public class UserHelper {
     private final Resources mResources;
     private final String mDefaultAdminName;
     private final String mDefaultGuestName;
+
+    /**
+     * Result code for when a user was successfully marked for removal and the device switched to a
+     * different user.
+     */
+    public static final int REMOVE_USER_RESULT_SUCCESS = 0;
+
+    /**
+     * Result code for when there was a failure removing a user.
+     */
+    public static final int REMOVE_USER_RESULT_FAILED = 1;
+
+    /**
+     * Result code when the user was successfully marked for removal, but the switch to a new user
+     * failed. In this case the user marked for removal is set as ephemeral and will be removed
+     * on the next user switch or reboot.
+     */
+    public static final int REMOVE_USER_RESULT_SWITCH_FAILED = 2;
+
+    /**
+     * Possible return values for {@link #removeUser(int)}, which attempts to remove a user and
+     * switch to a new one. Note that this IntDef is distinct from {@link UserRemovalResult}, which
+     * is only a result code for the user removal operation.
+     */
+    @IntDef(prefix = {"REMOVE_USER_RESULT"}, value = {
+            REMOVE_USER_RESULT_SUCCESS,
+            REMOVE_USER_RESULT_FAILED,
+            REMOVE_USER_RESULT_SWITCH_FAILED,
+    })
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface RemoveUserResult {
+    }
 
     /**
      * Returns an instance of UserHelper.
@@ -96,69 +132,102 @@ public class UserHelper {
      * user first, and then removes the user.
      * If the user being removed is the last admin user, this will create a new admin user.
      *
-     * @param context An application context
+     * @param context  An application context
      * @param userInfo User to be removed
-     * @return {@code true} if user is successfully removed, {@code false} otherwise.
+     * @return {@link RemoveUserResult} indicating the result status for user removal and switching
      */
-    public boolean removeUser(Context context, UserInfo userInfo) {
+    @RemoveUserResult
+    public int removeUser(Context context, UserInfo userInfo) {
         if (userInfo.id == UserHandle.USER_SYSTEM) {
             Log.w(TAG, "User " + userInfo.id + " is system user, could not be removed.");
-            return false;
+            return REMOVE_USER_RESULT_FAILED;
         }
 
         // Try to create a new admin before deleting the current one.
         if (userInfo.isAdmin() && getAllAdminUsers().size() <= 1) {
-            return removeLastAdmin(userInfo);
+            return replaceLastAdmin(userInfo);
         }
 
         if (!mUserManager.isAdminUser() && !isCurrentProcessUser(userInfo)) {
             // If the caller is non-admin, they can only delete themselves.
             Log.e(TAG, "Non-admins cannot remove other users.");
-            return false;
+            return REMOVE_USER_RESULT_FAILED;
         }
 
-        // If the ID being removed is the current foreground user, we need to handle switching to
-        // another user first
         if (userInfo.id == ActivityManager.getCurrentUser()) {
-            if (mUserManager.getUserSwitchability() != UserManager.SWITCHABILITY_STATUS_OK) {
-                // If we can't switch to a different user, we can't exit this one and therefore
-                // can't delete it.
-                Log.w(TAG, "User switching is not allowed. Current user cannot be deleted");
-                return false;
-            }
-            UserInfo guestUser = createNewOrFindExistingGuest(context);
-            if (guestUser == null) {
-                Log.e(TAG, "Could not create a Guest user.");
-                return false;
-            }
-            if (!switchUser(guestUser.id)) {
-                return false;
-            }
+            return removeThisUserAndSwitchToGuest(context, userInfo);
         }
 
         return removeUser(userInfo.id);
     }
 
-    private boolean removeUser(@UserIdInt int userId) {
-        UserRemovalResult result = mCarUserManager.removeUser(userId);
-        boolean ok = result.isSuccess();
-        if (!ok) {
-            Log.w(TAG, "Failed to remove user " + userId + ": " + result);
+    /**
+     * If the ID being removed is the current foreground user, we need to handle switching to
+     * a new or existing guest.
+     */
+    @RemoveUserResult
+    private int removeThisUserAndSwitchToGuest(Context context, UserInfo userInfo) {
+        if (mUserManager.getUserSwitchability() != UserManager.SWITCHABILITY_STATUS_OK) {
+            // If we can't switch to a different user, we can't exit this one and therefore
+            // can't delete it.
+            Log.w(TAG, "User switching is not allowed. Current user cannot be deleted");
+            return REMOVE_USER_RESULT_FAILED;
         }
-        return ok;
+        UserInfo guestUser = createNewOrFindExistingGuest(context);
+        if (guestUser == null) {
+            Log.e(TAG, "Could not create a Guest user.");
+            return REMOVE_USER_RESULT_FAILED;
+        }
+
+        // since the user is still current, this will set it as ephemeral
+        int result = removeUser(userInfo.id);
+        if (result != REMOVE_USER_RESULT_SUCCESS) {
+            return result;
+        }
+
+        if (!switchUser(guestUser.id)) {
+            return REMOVE_USER_RESULT_SWITCH_FAILED;
+        }
+
+        return REMOVE_USER_RESULT_SUCCESS;
+    }
+
+    @RemoveUserResult
+    private int removeUser(@UserIdInt int userId) {
+        UserRemovalResult result = mCarUserManager.removeUser(userId);
+        if (Log.isLoggable(TAG, Log.INFO)) {
+            Log.i(TAG, "Remove user result: " + result);
+        }
+        if (result.isSuccess()) {
+            return REMOVE_USER_RESULT_SUCCESS;
+        } else {
+            Log.w(TAG, "Failed to remove user " + userId + ": " + result);
+            return REMOVE_USER_RESULT_FAILED;
+        }
     }
 
     private boolean switchUser(@UserIdInt int userId) {
         UserSwitchResult result = getResult("switch", mCarUserManager.switchUser(userId));
-        return result != null;
+        return result != null && result.isSuccess();
+    }
+
+    /**
+     * Returns the {@link StringRes} that corresponds to a {@link RemoveUserResult} result code.
+     */
+    @StringRes
+    public int getErrorMessageForUserResult(@RemoveUserResult int result) {
+        if (result == REMOVE_USER_RESULT_SWITCH_FAILED) {
+            return R.string.delete_user_error_set_ephemeral_title;
+        }
+
+        return R.string.delete_user_error_title;
     }
 
     /**
      * Gets the result of an async operation.
      *
      * @param operation name of the operation, to be logged in case of error
-     * @param future future holding the operation result.
-     *
+     * @param future    future holding the operation result.
      * @return result of the operation or {@code null} if it failed or timed out.
      */
     @Nullable
@@ -186,7 +255,8 @@ public class UserHelper {
         return result;
     }
 
-    private boolean removeLastAdmin(UserInfo userInfo) {
+    @RemoveUserResult
+    private int replaceLastAdmin(UserInfo userInfo) {
         if (Log.isLoggable(TAG, Log.INFO)) {
             Log.i(TAG, "User " + userInfo.id
                     + " is the last admin user on device. Creating a new admin.");
@@ -195,14 +265,19 @@ public class UserHelper {
         UserInfo newAdmin = createNewAdminUser(mDefaultAdminName);
         if (newAdmin == null) {
             Log.w(TAG, "Couldn't create another admin, cannot delete current user.");
-            return false;
+            return REMOVE_USER_RESULT_FAILED;
         }
 
-        if (!switchUser(newAdmin.id)) {
-            return false;
+        int removeUserResult = removeUser(userInfo.id);
+        if (removeUserResult != REMOVE_USER_RESULT_SUCCESS) {
+            return removeUserResult;
         }
 
-        return removeUser(userInfo.id);
+        if (switchUser(newAdmin.id)) {
+            return REMOVE_USER_RESULT_SUCCESS;
+        } else {
+            return REMOVE_USER_RESULT_SWITCH_FAILED;
+        }
     }
 
     /**
