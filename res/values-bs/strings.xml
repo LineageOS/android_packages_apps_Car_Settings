@@ -291,7 +291,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"Verzija: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nema dodijeljenih odobrenja"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nema zatraženih odobrenja"</string>
-    <string name="storage_type_internal" msgid="8918688427078709570">"%s u unutrašnjoj memoriji"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s u unutrašnjoj pohrani"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Prijenos podataka"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Prijenos podataka za apl."</string>
     <string name="computing_size" msgid="5791407621793083965">"Računanje…"</string>
@@ -416,7 +416,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Ovim će se vratiti sve postavke na zadano za:\n\n"<li>"Onemogućene aplikacije"</li>\n<li>"Obavještenja za onemogućene aplikacije"</li>\n<li>"Zadane aplikacije za radnje"</li>\n<li>"Ograničenje pozadinskih podataka za aplikacije"</li>\n<li>"Sva ograničenja za odobrenja"</li>\n\n"Nećete izgubiti podatke iz aplikacija."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Vrati aplikacije na zadano"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Postavke aplikacije su vraćene na zadano"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Potpuno izbriši sve podatke"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Izbriši sve podatke"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Na ovaj način će se izbrisati svi podaci s glavne jedinice vozila, uključujući:\n\n"<li>"vaš Google račun"</li>\n<li>"sistemske i aplikacijske podatke i postavke"</li>\n<li>"preuzete aplikacije"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Trenutno ste prijavljeni u sljedeće račune:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Drugi korisnici su prisutni u ovom vozilu."</string>
@@ -590,7 +590,7 @@
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Lozinke se ne podudaraju"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Obriši"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Otkaži"</string>
-    <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potvrdi"</string>
+    <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potvrdite"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mora sadržavati najmanje 4 znaka"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Broj znakova mora biti najmanje <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Broj cifri u PIN-u mora biti najmanje <xliff:g id="COUNT">%d</xliff:g>"</string>

@@ -593,7 +593,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Потврди"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мора да садржи најмање 4 знака"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Минималан број знакова је <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Минималан број цифара за PIN је <xliff:g id="COUNT">%d</xliff:g>"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN мора да садржи бар <xliff:g id="COUNT">%d</xliff:g> циф."</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Максималан број знакова је <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Максималан број цифара је <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Мора да садржи само цифре 0–9."</string>

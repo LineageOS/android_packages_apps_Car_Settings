@@ -386,11 +386,11 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ライセンスの読み込み中に問題が発生しました。"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"読み込んでいます…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">デベロッパー設定が有効になるまであと <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ステップです。</item>
-      <item quantity="one">デベロッパー設定が有効になるまであと <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ステップです。</item>
+      <item quantity="other">開発者向けオプションが有効になるまであと <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 回です。</item>
+      <item quantity="one">開発者向けオプションが有効になるまであと <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 回です</item>
     </plurals>
-    <string name="show_dev_on" msgid="5339077400040834808">"デベロッパー設定が有効になりました！"</string>
-    <string name="show_dev_already" msgid="1678087328973865736">"デベロッパー設定はすでに有効です。"</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"開発者向けオプションが有効になりました"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"開発者向けオプションはすでに有効です"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"開発者向けオプション"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"リセット オプション"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ネットワーク、アプリ、デバイスのリセット"</string>
