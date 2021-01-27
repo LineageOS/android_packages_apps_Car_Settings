@@ -88,9 +88,8 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
 
         mPreference = new ActionButtonsPreference(mContext);
         mPreferenceController = new UserDetailsActionButtonsPreferenceController(mContext,
-                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
-        mPreferenceController.setUserHelper(mMockUserHelper);
-        mPreferenceController.setUserManager(mMockUserManager);
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
+                mMockUserHelper, mMockUserManager);
     }
 
     @After

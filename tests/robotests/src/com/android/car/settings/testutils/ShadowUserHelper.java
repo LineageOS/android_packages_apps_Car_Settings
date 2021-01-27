@@ -77,7 +77,8 @@ public class ShadowUserHelper {
     }
 
     @Implementation
-    public boolean removeUser(Context context, UserInfo userInfo) {
+    @UserHelper.RemoveUserResult
+    public int removeUser(Context context, UserInfo userInfo) {
         return sInstance.removeUser(context, userInfo);
     }
 

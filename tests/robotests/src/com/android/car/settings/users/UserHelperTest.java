@@ -281,7 +281,8 @@ public class UserHelperTest {
                 /* flags= */ UserInfo.FLAG_ADMIN | UserInfo.FLAG_SYSTEM,
                 /* userType= */ USER_TYPE_SYSTEM_HEADLESS);
 
-        assertThat(mUserHelper.removeUser(mContext, systemUser)).isFalse();
+        assertThat(mUserHelper.removeUser(mContext, systemUser))
+                .isEqualTo(UserHelper.REMOVE_USER_RESULT_FAILED);
     }
 
     @Test
@@ -297,7 +298,8 @@ public class UserHelperTest {
         // If Admin is removing non-current, non-system user, simply calls removeUser.
         when(mMockUserManager.isAdminUser()).thenReturn(true);
 
-        assertThat(mUserHelper.removeUser(mContext, nonAdminUser)).isTrue();
+        assertThat(mUserHelper.removeUser(mContext, nonAdminUser))
+                .isEqualTo(UserHelper.REMOVE_USER_RESULT_SUCCESS);
         verify(mMockCarUserManager).removeUser(nonAdminUserId);
     }
 
@@ -315,7 +317,8 @@ public class UserHelperTest {
         mockRemoveUserSuccess();
 
         // If Non-Admin is trying to remove someone other than themselves, they should fail.
-        assertThat(mUserHelper.removeUser(mContext, user2)).isFalse();
+        assertThat(mUserHelper.removeUser(mContext, user2))
+                .isEqualTo(UserHelper.REMOVE_USER_RESULT_FAILED);
         verify(mMockCarUserManager, never()).removeUser(user2.id);
     }
 
@@ -336,7 +339,8 @@ public class UserHelperTest {
                 UserCreationResult.STATUS_SUCCESSFUL, newAdminInfo);
         mockSwitchUserSuccess();
 
-        mUserHelper.removeUser(mContext, adminUser);
+        assertThat(mUserHelper.removeUser(mContext, adminUser))
+                .isEqualTo(UserHelper.REMOVE_USER_RESULT_SUCCESS);
 
         verify(mMockCarUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManager).switchUser(newAdminInfo.id);
@@ -358,7 +362,8 @@ public class UserHelperTest {
         mockCreateUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN,
                 UserCreationResult.STATUS_ANDROID_FAILURE, null);
 
-        mUserHelper.removeUser(mContext, adminUser);
+        assertThat(mUserHelper.removeUser(mContext, adminUser))
+                .isEqualTo(UserHelper.REMOVE_USER_RESULT_FAILED);
         verify(mMockCarUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManager, never()).switchUser(anyInt());
         verify(mMockCarUserManager, never()).removeUser(adminUser.id);
@@ -378,10 +383,31 @@ public class UserHelperTest {
         mockCreateGuest(DEFAULT_GUEST_NAME, UserCreationResult.STATUS_SUCCESSFUL, guestUser);
         mockSwitchUserSuccess();
 
-        mUserHelper.removeUser(mContext, currentUser);
-        verify(mMockCarUserManager).createGuest(DEFAULT_GUEST_NAME);
-        verify(mMockCarUserManager).switchUser(guestUser.id);
-        verify(mMockCarUserManager).removeUser(currentUser.id);
+        assertUserRemoved(UserHelper.REMOVE_USER_RESULT_SUCCESS, guestUser, currentUser);
+    }
+
+    @Test
+    public void testRemoveUser_removeForegroundUser_switchFails_returnsSetEphemeralResult() {
+        // Create foreground user
+        int baseId = 10;
+        ShadowProcess.setUid(baseId * UserHandle.PER_USER_RANGE); // User 10
+        UserInfo currentUser = createNonAdminUser(baseId);
+        when(mMockUserManager.isAdminUser()).thenReturn(false);
+        mockGetUsers(currentUser);
+
+        UserInfo guestUser = createGuestUser(baseId + 1);
+        mockRemoveUserSuccess();
+        mockCreateGuest(DEFAULT_GUEST_NAME, UserCreationResult.STATUS_SUCCESSFUL, guestUser);
+        mockSwitchUserFailure();
+
+        assertUserRemoved(UserHelper.REMOVE_USER_RESULT_SWITCH_FAILED, guestUser, currentUser);
+    }
+
+    private void assertUserRemoved(int expectedResult, UserInfo newUser, UserInfo removedUser) {
+        assertThat(mUserHelper.removeUser(mContext, removedUser)).isEqualTo(expectedResult);
+        verify(mMockCarUserManager).createGuest(newUser.name);
+        verify(mMockCarUserManager).switchUser(newUser.id);
+        verify(mMockCarUserManager).removeUser(removedUser.id);
     }
 
     @Test
@@ -512,6 +538,12 @@ public class UserHelperTest {
     private void mockSwitchUserSuccess() {
         AndroidFuture<UserSwitchResult> future = new AndroidFuture<>();
         future.complete(new UserSwitchResult(UserSwitchResult.STATUS_SUCCESSFUL, null));
+        when(mMockCarUserManager.switchUser(anyInt())).thenReturn(new AndroidAsyncFuture<>(future));
+    }
+
+    private void mockSwitchUserFailure() {
+        AndroidFuture<UserSwitchResult> future = new AndroidFuture<>();
+        future.complete(new UserSwitchResult(UserSwitchResult.STATUS_ANDROID_FAILURE, null));
         when(mMockCarUserManager.switchUser(anyInt())).thenReturn(new AndroidAsyncFuture<>(future));
     }
 }
