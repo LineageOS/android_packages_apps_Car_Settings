@@ -22,7 +22,6 @@ import android.content.pm.UserInfo;
 
 import androidx.annotation.VisibleForTesting;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.FragmentController;
@@ -91,10 +90,14 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
 
     private void removeOldAdmin() {
         Context context = getContext();
-        if (!UserHelper.getInstance(context).removeUser(context, mAdminInfo)) {
+        UserHelper userHelper = UserHelper.getInstance(context);
+        int removeUserResult = userHelper.removeUser(context, mAdminInfo);
+        if (removeUserResult != UserHelper.REMOVE_USER_RESULT_SUCCESS) {
             // If failed, need to show error dialog for users.
             getFragmentController().showDialog(
-                    ErrorDialog.newInstance(R.string.delete_user_error_title), /* tag= */ null);
+                    ErrorDialog.newInstance(
+                            userHelper.getErrorMessageForUserResult(removeUserResult)),
+                    /* tag= */ null);
         }
     }
 }

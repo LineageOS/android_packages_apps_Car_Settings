@@ -1036,6 +1036,8 @@
     <string name="delete_user_dialog_message">"All apps and data will be deleted."</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=40] -->
     <string name="delete_user_error_title">Failed to delete user.</string>
+    <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=100] -->
+    <string name="delete_user_error_set_ephemeral_title">This profile will be deleted when you switch profiles or restart the vehicle.</string>
     <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->
     <string name="delete_user_error_dismiss">Dismiss</string>
     <!-- Button label to retry user deletion [CHAR LIMIT=25] -->
