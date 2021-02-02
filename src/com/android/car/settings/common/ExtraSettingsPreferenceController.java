@@ -32,7 +32,7 @@ import android.content.Context;
 import android.content.IContentProvider;
 import android.content.Intent;
 import android.database.ContentObserver;
-import android.graphics.drawable.Icon;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -255,17 +255,18 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
             Map<String, IContentProvider> providerMap = new ArrayMap<>();
             Pair<String, Integer> iconInfo = TileUtils.getIconFromUri(
                     mContext, packageName, uri, providerMap);
-            Icon icon;
+            Drawable icon;
             if (iconInfo != null) {
-                icon = Icon.createWithResource(iconInfo.first, iconInfo.second);
+                icon = ExtraSettingsUtil.loadDrawableFromPackage(mContext,
+                        iconInfo.first, iconInfo.second);
             } else {
                 LOG.w("Failed to get icon from uri " + uri);
-                icon = Icon.createWithResource(mContext, R.drawable.ic_settings_gear);
+                icon = mContext.getDrawable(R.drawable.ic_settings_gear);
                 LOG.d("use default icon.");
             }
             if (icon != null) {
                 executeUiTask(() -> {
-                    preference.setIcon(icon.loadDrawable(mContext));
+                    preference.setIcon(icon);
                     if (preference.getExtras().getBoolean(META_DATA_PREFERENCE_ICON_TINTABLE)) {
                         preference.getIcon().setTintList(
                                 Themes.getAttrColorStateList(mContext, R.attr.iconColor));
