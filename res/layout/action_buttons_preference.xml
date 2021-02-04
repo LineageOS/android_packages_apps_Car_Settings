@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <com.android.car.ui.uxr.DrawableStateLinearLayout
             android:id="@+id/button1"
             style="?android:attr/buttonBarButtonStyle"
             android:background="?android:attr/selectableItemBackground"
@@ -45,7 +45,7 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:minHeight="?android:attr/listPreferredItemHeightSmall">
-            <ImageView
+            <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button1Icon"
                 style="@style/PreferenceButtonIconAppearance"
                 android:layout_width="@dimen/secondary_icon_size"
@@ -53,15 +53,15 @@
                 android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
-            <TextView
+            <com.android.car.ui.uxr.DrawableStateTextView
                 android:id="@+id/button1Text"
                 style="@style/PreferenceButtonTextAppearance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:selectable="false"/>
-        </LinearLayout>
+        </com.android.car.ui.uxr.DrawableStateLinearLayout>
 
-        <LinearLayout
+        <com.android.car.ui.uxr.DrawableStateLinearLayout
             android:id="@+id/button2"
             style="?android:attr/buttonBarButtonStyle"
             android:background="?android:attr/selectableItemBackground"
@@ -70,7 +70,7 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:minHeight="?android:attr/listPreferredItemHeightSmall">
-            <ImageView
+            <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button2Icon"
                 style="@style/PreferenceButtonIconAppearance"
                 android:layout_width="@dimen/secondary_icon_size"
@@ -78,15 +78,15 @@
                 android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
-            <TextView
+            <com.android.car.ui.uxr.DrawableStateTextView
                 android:id="@+id/button2Text"
                 style="@style/PreferenceButtonTextAppearance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:selectable="false"/>
-        </LinearLayout>
+        </com.android.car.ui.uxr.DrawableStateLinearLayout>
 
-        <LinearLayout
+        <com.android.car.ui.uxr.DrawableStateLinearLayout
             android:id="@+id/button3"
             style="?android:attr/buttonBarButtonStyle"
             android:background="?android:attr/selectableItemBackground"
@@ -95,7 +95,7 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:minHeight="?android:attr/listPreferredItemHeightSmall">
-            <ImageView
+            <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button3Icon"
                 style="@style/PreferenceButtonIconAppearance"
                 android:layout_width="@dimen/secondary_icon_size"
@@ -103,15 +103,15 @@
                 android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
-            <TextView
+            <com.android.car.ui.uxr.DrawableStateTextView
                 android:id="@+id/button3Text"
                 style="@style/PreferenceButtonTextAppearance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:selectable="false"/>
-        </LinearLayout>
+        </com.android.car.ui.uxr.DrawableStateLinearLayout>
 
-        <LinearLayout
+        <com.android.car.ui.uxr.DrawableStateLinearLayout
             android:id="@+id/button4"
             style="?android:attr/buttonBarButtonStyle"
             android:background="?android:attr/selectableItemBackground"
@@ -120,7 +120,7 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:minHeight="?android:attr/listPreferredItemHeightSmall">
-            <ImageView
+            <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button4Icon"
                 style="@style/PreferenceButtonIconAppearance"
                 android:layout_width="@dimen/secondary_icon_size"
@@ -128,13 +128,13 @@
                 android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
-            <TextView
+            <com.android.car.ui.uxr.DrawableStateTextView
                 android:id="@+id/button4Text"
                 style="@style/PreferenceButtonTextAppearance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:selectable="false"/>
-        </LinearLayout>
+        </com.android.car.ui.uxr.DrawableStateLinearLayout>
 
     </LinearLayout>
 
