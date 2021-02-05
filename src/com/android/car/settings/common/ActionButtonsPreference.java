@@ -23,10 +23,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.CarUiPreference;
 
 /**
  * Preference that provides a four button layout.
@@ -40,7 +40,7 @@ import com.android.car.settings.R;
  * Preference_allowDividerAbove and Preference_allowDividerBelow attributes. The dividers are
  * enabled by default.
  */
-public class ActionButtonsPreference extends Preference implements
+public class ActionButtonsPreference extends CarUiPreference implements
         ActionButtonInfo.ButtonInfoChangeListener {
 
     /**
@@ -106,18 +106,29 @@ public class ActionButtonsPreference extends Preference implements
         holder.findViewById(R.id.bottomDivider).setVisibility(
                 mAllowDividerBelow ? View.VISIBLE : View.GONE);
 
-        mButton1Info.setButtonView(holder.findViewById(R.id.button1));
-        mButton1Info.setButtonTextView((TextView) holder.findViewById(R.id.button1Text));
-        mButton1Info.setButtonIconView((ImageView) holder.findViewById(R.id.button1Icon));
-        mButton2Info.setButtonView(holder.findViewById(R.id.button2));
-        mButton2Info.setButtonTextView((TextView) holder.findViewById(R.id.button2Text));
-        mButton2Info.setButtonIconView((ImageView) holder.findViewById(R.id.button2Icon));
-        mButton3Info.setButtonView(holder.findViewById(R.id.button3));
-        mButton3Info.setButtonTextView((TextView) holder.findViewById(R.id.button3Text));
-        mButton3Info.setButtonIconView((ImageView) holder.findViewById(R.id.button3Icon));
-        mButton4Info.setButtonView(holder.findViewById(R.id.button4));
-        mButton4Info.setButtonTextView((TextView) holder.findViewById(R.id.button4Text));
-        mButton4Info.setButtonIconView((ImageView) holder.findViewById(R.id.button4Icon));
+        mButton1Info
+                .setButtonView(holder.findViewById(R.id.button1))
+                .setButtonTextView((TextView) holder.findViewById(R.id.button1Text))
+                .setButtonIconView((ImageView) holder.findViewById(R.id.button1Icon))
+                .setPreferenceRestricted(isUxRestricted());
+
+        mButton2Info
+                .setButtonView(holder.findViewById(R.id.button2))
+                .setButtonTextView((TextView) holder.findViewById(R.id.button2Text))
+                .setButtonIconView((ImageView) holder.findViewById(R.id.button2Icon))
+                .setPreferenceRestricted(isUxRestricted());
+
+        mButton3Info
+                .setButtonView(holder.findViewById(R.id.button3))
+                .setButtonTextView((TextView) holder.findViewById(R.id.button3Text))
+                .setButtonIconView((ImageView) holder.findViewById(R.id.button3Icon))
+                .setPreferenceRestricted(isUxRestricted());
+
+        mButton4Info
+                .setButtonView(holder.findViewById(R.id.button4))
+                .setButtonTextView((TextView) holder.findViewById(R.id.button4Text))
+                .setButtonIconView((ImageView) holder.findViewById(R.id.button4Icon))
+                .setPreferenceRestricted(isUxRestricted());
 
         mButton1Info.setUpButton();
         mButton2Info.setUpButton();

@@ -23,10 +23,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
+
+import com.android.car.settings.R;
 
 import java.lang.ref.WeakReference;
 
@@ -42,13 +45,17 @@ public class ActionButtonInfo {
     private CharSequence mText;
     private Drawable mIcon;
     private View.OnClickListener mListener;
+    private boolean mIsPreferenceRestricted = false;
     private boolean mIsEnabled = true;
     private boolean mIsVisible = true;
     private WeakReference<ButtonInfoChangeListener> mButtonInfoChangeListener;
+    private String mMessageToShowWhenUxRestrictedPreferenceClicked;
 
     ActionButtonInfo(Context context, ButtonInfoChangeListener changeListener) {
         mContext = context;
         mButtonInfoChangeListener = new WeakReference<>(changeListener);
+        mMessageToShowWhenUxRestrictedPreferenceClicked = context.getString(
+                R.string.car_ui_restricted_while_driving);
     }
 
     /**
@@ -116,16 +123,24 @@ public class ActionButtonInfo {
         return this;
     }
 
-    void setButtonView(View view) {
+    ActionButtonInfo setButtonView(View view) {
         mButtonView = view;
+        return this;
     }
 
-    void setButtonTextView(TextView textView) {
+    ActionButtonInfo setButtonTextView(TextView textView) {
         mButtonTextView = textView;
+        return this;
     }
 
-    void setButtonIconView(ImageView iconView) {
+    ActionButtonInfo setButtonIconView(ImageView iconView) {
         mButtonIconView = iconView;
+        return this;
+    }
+
+    ActionButtonInfo setPreferenceRestricted(boolean isRestricted) {
+        mIsPreferenceRestricted = isRestricted;
+        return this;
     }
 
     /**
@@ -171,11 +186,10 @@ public class ActionButtonInfo {
     void setUpButton() {
         mButtonTextView.setText(mText);
         mButtonIconView.setImageDrawable(mIcon);
-        mButtonView.setOnClickListener(mListener);
+        mButtonView.setOnClickListener(this::performClick);
 
-        mButtonView.setEnabled(mIsEnabled);
-        mButtonTextView.setEnabled(mIsEnabled);
-        mButtonIconView.setEnabled(mIsEnabled);
+        mButtonView.setEnabled(isEnabled() || mIsPreferenceRestricted);
+
         mButtonIconView.setVisibility(mIcon != null ? View.VISIBLE : View.GONE);
 
         if (shouldBeVisible()) {
@@ -183,6 +197,24 @@ public class ActionButtonInfo {
         } else {
             mButtonView.setVisibility(View.GONE);
         }
+    }
+
+    @VisibleForTesting
+    void performClick(View v) {
+        if (!isEnabled()) {
+            return;
+        }
+        if (mListener == null) {
+            return;
+        }
+        if (mIsPreferenceRestricted) {
+            if (!TextUtils.isEmpty(mMessageToShowWhenUxRestrictedPreferenceClicked)) {
+                Toast.makeText(mContext, mMessageToShowWhenUxRestrictedPreferenceClicked,
+                        Toast.LENGTH_LONG).show();
+            }
+            return;
+        }
+        mListener.onClick(v);
     }
 
     /**

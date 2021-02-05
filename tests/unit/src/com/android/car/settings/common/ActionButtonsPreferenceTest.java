@@ -20,21 +20,33 @@ import static com.android.car.settings.common.ActionButtonsPreference.ActionButt
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.preference.PreferenceViewHolder;
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.MockitoSession;
 
 @RunWith(AndroidJUnit4.class)
 public class ActionButtonsPreferenceTest {
@@ -43,12 +55,22 @@ public class ActionButtonsPreferenceTest {
     private View mRootView;
     private ActionButtonsPreference mPref;
     private PreferenceViewHolder mHolder;
+    private MockitoSession mSession;
 
     @Before
     public void setUp() {
         mRootView = View.inflate(mContext, R.layout.action_buttons_preference, /* parent= */ null);
         mHolder = PreferenceViewHolder.createInstanceForTests(mRootView);
         mPref = new ActionButtonsPreference(mContext);
+
+        mSession = ExtendedMockito.mockitoSession().mockStatic(Toast.class).startMocking();
+    }
+
+    @After
+    public void tearDown() {
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
@@ -219,6 +241,63 @@ public class ActionButtonsPreferenceTest {
         Drawable icon = ((ImageView) mRootView.findViewById(R.id.button1Icon)).getDrawable();
 
         assertThat(icon).isNotNull();
+    }
+
+    @Test
+    public void onButtonClicked_shouldOnlyTriggerListenerIfEnabled() {
+        mPref.getButton(ActionButtons.BUTTON1).setEnabled(true);
+        mPref.getButton(ActionButtons.BUTTON2).setEnabled(false);
+
+        View.OnClickListener enabledListener = mock(View.OnClickListener.class);
+        View.OnClickListener disabledListener = mock(View.OnClickListener.class);
+        mPref.getButton(ActionButtons.BUTTON1).setOnClickListener(enabledListener);
+        mPref.getButton(ActionButtons.BUTTON2).setOnClickListener(disabledListener);
+
+        mPref.onBindViewHolder(mHolder);
+
+        mPref.getButton(ActionButtons.BUTTON1).performClick(null);
+        verify(enabledListener).onClick(any());
+
+        mPref.getButton(ActionButtons.BUTTON2).performClick(null);
+        verify(disabledListener, never()).onClick(any());
+    }
+
+    @Test
+    @UiThreadTest
+    public void onButtonClicked_makesToastIfPreferenceRestricted() {
+        Toast mockToast = mock(Toast.class);
+        ExtendedMockito.when(Toast.makeText(any(), anyString(), anyInt())).thenReturn(mockToast);
+
+        mPref.setUxRestricted(true);
+        mPref.getButton(ActionButtons.BUTTON1).setEnabled(true);
+
+        View.OnClickListener listener = mock(View.OnClickListener.class);
+        mPref.getButton(ActionButtons.BUTTON1).setOnClickListener(listener);
+
+        mPref.onBindViewHolder(mHolder);
+
+        mPref.getButton(ActionButtons.BUTTON1).performClick(null);
+        verify(listener, never()).onClick(any());
+
+        verify(mockToast).show();
+    }
+
+    @Test
+    @UiThreadTest
+    public void onButtonClicked_disabled_uxRestricted_shouldDoNothing() {
+        mPref.setUxRestricted(true);
+        mPref.getButton(ActionButtons.BUTTON1).setEnabled(false);
+
+        View.OnClickListener listener = mock(View.OnClickListener.class);
+        mPref.getButton(ActionButtons.BUTTON1).setOnClickListener(listener);
+
+        mPref.onBindViewHolder(mHolder);
+
+        mPref.getButton(ActionButtons.BUTTON1).performClick(null);
+        verify(listener, never()).onClick(any());
+
+        ExtendedMockito.verify(
+                () -> Toast.makeText(any(), anyString(), anyInt()), never());
     }
 
     @Test
