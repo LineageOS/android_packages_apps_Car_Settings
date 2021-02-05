@@ -42,7 +42,7 @@
         <item name="android:textColor">@*android:color/car_body3</item>
         <item name="android:tint">@*android:color/car_body3</item>
         <item name="android:clickable">true</item>
-        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
     </style>
 
     <style name="DataUsageSummaryCarrierInfoTextAppearance"
