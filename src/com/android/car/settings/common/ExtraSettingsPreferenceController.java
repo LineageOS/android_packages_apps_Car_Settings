@@ -115,18 +115,15 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
         // optimized activities will cause the blocking activity to come up, which dead ends the
         // user.
         for (int i = 0; i < getPreference().getPreferenceCount(); i++) {
-            boolean showMessage = false;
+            boolean restricted = false;
             Preference preference = getPreference().getPreference(i);
             if (uxRestrictions.isRequiresDistractionOptimization()
-                    && !preference.getExtras().getBoolean(META_DATA_DISTRACTION_OPTIMIZED)) {
-                preference.setEnabled(false);
-                if (getAvailabilityStatus() != AVAILABLE_FOR_VIEWING) {
-                    showMessage = true;
-                }
-            } else {
-                preference.setEnabled(getAvailabilityStatus() != AVAILABLE_FOR_VIEWING);
+                    && !preference.getExtras().getBoolean(META_DATA_DISTRACTION_OPTIMIZED)
+                    && getAvailabilityStatus() != AVAILABLE_FOR_VIEWING) {
+                restricted = true;
             }
-            setRestrictedWhileDrivingMessage(preference, showMessage);
+            preference.setEnabled(getAvailabilityStatus() != AVAILABLE_FOR_VIEWING);
+            restrictPreference(preference, restricted);
         }
     }
 
