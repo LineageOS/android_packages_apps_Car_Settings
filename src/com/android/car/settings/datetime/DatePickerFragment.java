@@ -31,7 +31,6 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.rotary.DirectManipulationHandler;
 import com.android.car.settings.common.rotary.DirectManipulationState;
 import com.android.car.settings.common.rotary.NumberPickerNudgeHandler;
-import com.android.car.settings.common.rotary.NumberPickerParentNudgeHandler;
 import com.android.car.settings.common.rotary.NumberPickerRotationHandler;
 import com.android.car.settings.common.rotary.NumberPickerUtils;
 
@@ -86,10 +85,25 @@ public class DatePickerFragment extends BaseFragment {
         mDirectManipulationMode = new DirectManipulationState();
         mDatePicker = getView().findViewById(R.id.date_picker);
         mDatePicker.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+        mNumberPickers = new ArrayList<>();
+        NumberPickerUtils.getNumberPickerDescendants(mNumberPickers, mDatePicker);
 
         DirectManipulationHandler.setDirectManipulationHandler(mDatePicker,
                 new DirectManipulationHandler.Builder(mDirectManipulationMode)
-                        .setNudgeHandler(new NumberPickerParentNudgeHandler())
+                        // Use no-op nudge handler, since we never stay on this view in direct
+                        // manipulation mode.
+                        .setNudgeHandler((v, keyCode, event) -> true)
+                        .setCenterButtonHandler(inDirectManipulationMode -> {
+                            if (inDirectManipulationMode) {
+                                return true;
+                            }
+
+                            NumberPicker picker = mNumberPickers.get(0);
+                            if (picker != null) {
+                                picker.requestFocus();
+                            }
+                            return true;
+                        })
                         .setBackHandler(inDirectManipulationMode -> {
                             // Only handle back if we weren't previously in direct manipulation
                             // mode.
@@ -103,6 +117,14 @@ public class DatePickerFragment extends BaseFragment {
         DirectManipulationHandler numberPickerListener =
                 new DirectManipulationHandler.Builder(mDirectManipulationMode)
                         .setNudgeHandler(new NumberPickerNudgeHandler())
+                        .setCenterButtonHandler(inDirectManipulationMode -> {
+                            if (!inDirectManipulationMode) {
+                                return true;
+                            }
+
+                            mDatePicker.requestFocus();
+                            return true;
+                        })
                         .setBackHandler(inDirectManipulationMode -> {
                             mDatePicker.requestFocus();
                             return true;
@@ -110,8 +132,6 @@ public class DatePickerFragment extends BaseFragment {
                         .setRotationHandler(new NumberPickerRotationHandler())
                         .build();
 
-        mNumberPickers = new ArrayList<>();
-        NumberPickerUtils.getNumberPickerDescendants(mNumberPickers, mDatePicker);
         for (int i = 0; i < mNumberPickers.size(); i++) {
             DirectManipulationHandler.setDirectManipulationHandler(mNumberPickers.get(i),
                     numberPickerListener);
