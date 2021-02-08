@@ -26,12 +26,17 @@ import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 import android.os.UserManager;
 
+import com.android.car.admin.ui.UserAvatarView;
 import com.android.internal.util.UserIcons;
 
 /**
  * Simple class for providing icons for users in Settings.
  */
 public class UserIconProvider {
+    // TODO (b/179802719) define this constant as MenuItem's attribute in 'Chassis' library
+    // Width of managed user's badge in ratio to user icon's width
+    private static final float BADGE_WIDTH_TO_ICON_RATIO = 0.15f;
+
     /**
      * Gets a scaled rounded icon for the given user to use in settings.  If a user does
      * not have an icon saved, this method will default to a generic icon and update UserManager to
@@ -75,6 +80,22 @@ public class UserIconProvider {
                 : getUserDefaultIcon(resources, userInfo.id);
         userManager.setUserIcon(userInfo.id, bitmap);
         return bitmap;
+    }
+
+    // TODO (b/179802719): refactor this method into getRoundedUserIcon().
+    /**
+     * Gets badge to user icon Drawable if the user is managed.
+     *
+     * @param context to use for the avatar view
+     * @param userInfo User for which the icon is requested and badge is set
+     * @return {@link Drawable} with badge
+     */
+    public Drawable getDrawableWithBadge(Context context, UserInfo userInfo) {
+        Drawable userIcon = getRoundedUserIcon(userInfo, context);
+        UserAvatarView userAvatarView = new UserAvatarView(context);
+        userAvatarView.setBadgeDiameter(userIcon.getIntrinsicWidth() * BADGE_WIDTH_TO_ICON_RATIO);
+        userAvatarView.setDrawableWithBadge(userIcon, userInfo.id);
+        return (Drawable) userAvatarView.getUserIconDrawable();
     }
 
     /**
