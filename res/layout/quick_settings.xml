@@ -27,6 +27,13 @@
         android:layout_alignParentTop="true"
         android:layout_above="@+id/build_info"/>
 
+    <com.android.car.admin.ui.ManagedDeviceTextView
+        android:id="@+id/managed_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/build_info"
+        android:gravity="center"/>
+
     <TextView
         android:id="@+id/build_info"
         android:layout_width="match_parent"
