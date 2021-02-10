@@ -16,6 +16,9 @@
 
 package com.android.car.settings.common;
 
+import static android.view.ViewGroup.FOCUS_BEFORE_DESCENDANTS;
+import static android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
@@ -24,6 +27,7 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
@@ -67,6 +71,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     private boolean mIsSinglePane;
 
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
+    private ViewGroup mFragmentContainer;
     private View mRestrictedMessage;
     // Default to minimum restriction.
     private CarUxRestrictions mCarUxRestrictions = new CarUxRestrictions.Builder(
@@ -80,6 +85,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         super.onCreate(savedInstanceState);
         populateMetaData();
         setContentView(R.layout.car_setting_activity);
+        mFragmentContainer = findViewById(R.id.fragment_container);
         if (mUxRestrictionsHelper == null) {
             mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
                     this);
@@ -218,9 +224,15 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     }
 
     private void updateBlockingView(@Nullable Fragment currentFragment) {
-        if (currentFragment instanceof BaseFragment) {
-            boolean canBeShown = ((BaseFragment) currentFragment).canBeShown(mCarUxRestrictions);
-            mRestrictedMessage.setVisibility(canBeShown ? View.GONE : View.VISIBLE);
+        if (currentFragment instanceof BaseFragment
+                && !((BaseFragment) currentFragment).canBeShown(mCarUxRestrictions)) {
+            mRestrictedMessage.setVisibility(View.VISIBLE);
+            mFragmentContainer.setDescendantFocusability(FOCUS_BLOCK_DESCENDANTS);
+            mFragmentContainer.clearFocus();
+            hideKeyboard();
+        } else {
+            mRestrictedMessage.setVisibility(View.GONE);
+            mFragmentContainer.setDescendantFocusability(FOCUS_BEFORE_DESCENDANTS);
         }
     }
 
