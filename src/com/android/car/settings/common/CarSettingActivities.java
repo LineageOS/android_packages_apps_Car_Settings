@@ -27,6 +27,7 @@ import android.text.TextUtils;
 
 import androidx.fragment.app.Fragment;
 
+import com.android.car.settings.R;
 import com.android.car.settings.accounts.AccountSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
@@ -43,7 +44,6 @@ import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datausage.DataUsageFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
-import com.android.car.settings.home.HomepageFragment;
 import com.android.car.settings.inputmethod.KeyboardFragment;
 import com.android.car.settings.language.LanguagePickerFragment;
 import com.android.car.settings.language.LanguagesAndInputFragment;
@@ -95,7 +95,13 @@ public class CarSettingActivities {
         @Nullable
         @Override
         protected Fragment getInitialFragment() {
-            return new HomepageFragment();
+            try {
+                return getSupportFragmentManager().getFragmentFactory().instantiate(
+                        getClassLoader(), getString(R.string.config_homepage_fragment_class));
+            } catch (Fragment.InstantiationException e) {
+                LOG.e("Unable to instantiate homepage fragment", e);
+                return null;
+            }
         }
     }
 

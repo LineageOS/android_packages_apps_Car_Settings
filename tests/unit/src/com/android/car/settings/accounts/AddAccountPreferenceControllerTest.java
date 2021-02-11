@@ -33,10 +33,10 @@ import android.content.Intent;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
@@ -101,19 +101,14 @@ public class AddAccountPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void clickAddAccountButton_shouldOpenChooseAccountFragment() {
         when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
 
         mController.onCreate(mLifecycleOwner);
         mPreference.performClick();
 
-        ArgumentCaptor<Intent> intentArgumentCaptor = ArgumentCaptor.forClass(
-                Intent.class);
-        verify(mContext).startActivity(intentArgumentCaptor.capture());
-
-        Intent intent = intentArgumentCaptor.getValue();
-        assertThat(intent.getComponent().getClassName()).isEqualTo(
-                CarSettingActivities.ChooseAccountActivity.class.getName());
+        verify(mFragmentController).launchFragment(any(ChooseAccountFragment.class));
     }
 
     @Test
@@ -136,6 +131,7 @@ public class AddAccountPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void clickAddAccountButton_shouldOpenChooseAccountFragmentWhenTwoTypes() {
         when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         Set<String> accountSet = new HashSet<>();
@@ -146,13 +142,7 @@ public class AddAccountPreferenceControllerTest {
         mController.onCreate(mLifecycleOwner);
         mPreference.performClick();
 
-        ArgumentCaptor<Intent> intentArgumentCaptor = ArgumentCaptor.forClass(
-                Intent.class);
-        verify(mContext).startActivity(intentArgumentCaptor.capture());
-
-        Intent intent = intentArgumentCaptor.getValue();
-        assertThat(intent.getComponent().getClassName()).isEqualTo(
-                CarSettingActivities.ChooseAccountActivity.class.getName());
+        verify(mFragmentController).launchFragment(any(ChooseAccountFragment.class));
     }
 
     private class TestAddAccountPreferenceController extends AddAccountPreferenceController {
