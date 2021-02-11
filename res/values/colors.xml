@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2021 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- Top-level icon colors -->
+    <color name="toplevel_display_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_sound_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_network_and_internet_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_bluetooth_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_units_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_location_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_applications_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_date_time_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_users_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_accounts_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_privacy_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_storage_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_security_icon">@color/toplevel_icon_default</color>
+    <color name="toplevel_system_icon">@color/toplevel_icon_default</color>
+    <!-- Default foreground color for injected top-level icons -->
+    <color name="toplevel_injected_icon_default">@color/toplevel_icon_default</color>
+
+    <!-- Default background color for injected top-level icons -->
+    <color name="toplevel_injected_default_background">#4285F4</color>
+</resources>
