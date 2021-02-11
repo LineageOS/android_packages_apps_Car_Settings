@@ -201,7 +201,7 @@ public class QuickSettingFragment extends BaseFragment {
 
     private void setupUserButton(Context context) {
         UserInfo currentUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
-        Drawable userIcon = mUserIconProvider.getRoundedUserIcon(currentUserInfo, context);
+        Drawable userIcon = mUserIconProvider.getDrawableWithBadge(context, currentUserInfo);
         mUserSwitcherBtn.setIcon(userIcon);
         mUserSwitcherBtn.setTitle(currentUserInfo.name);
     }
