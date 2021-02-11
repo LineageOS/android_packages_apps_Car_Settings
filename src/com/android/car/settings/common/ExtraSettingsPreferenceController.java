@@ -60,13 +60,17 @@ import java.util.Map;
  * name of this class. The preference should contain an intent which will be passed to
  * {@link ExtraSettingsLoader#loadPreferences(Intent)}.
  *
+ * {@link com.android.settingslib.drawer.TileUtils#EXTRA_SETTINGS_ACTION} is automatically added
+ * for backwards compatibility. Please make sure to use
+ * {@link com.android.settingslib.drawer.TileUtils#IA_SETTINGS_ACTION} instead.
+ *
  * <p>For example:
  * <pre>{@code
  * <PreferenceCategory
  *     android:key="@string/pk_system_extra_settings"
  *     android:title="@string/system_extra_settings_title"
  *     settings:controller="com.android.settings.common.ExtraSettingsPreferenceController">
- *     <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+ *     <intent android:action="com.android.settings.action.IA_SETTINGS">
  *         <extra android:name="com.android.settings.category"
  *                android:value="com.android.settings.category.system"/>
  *     </intent>
