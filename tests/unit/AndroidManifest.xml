@@ -67,6 +67,14 @@
             android:authorities="com.android.car.settings.testutils.TestContentProvider"
             android:exported="true">
         </provider>
+
+        <activity
+            android:name="com.android.car.settings.testutils.BaseCarSettingsTestActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
     </application>
 
     <instrumentation android:name="androidx.test.runner.AndroidJUnitRunner"

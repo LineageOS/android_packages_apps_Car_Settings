@@ -18,12 +18,10 @@ package com.android.car.settings.accounts;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
-import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.users.UserHelper;
@@ -82,8 +80,7 @@ public class AddAccountPreferenceController extends PreferenceController<Prefere
             getContext().startActivity(
                     AddAccountActivity.createAddAccountActivityIntent(getContext(), accountType));
         } else {
-            getContext().startActivity(new Intent(getContext(),
-                    CarSettingActivities.ChooseAccountActivity.class));
+            getFragmentController().launchFragment(new ChooseAccountFragment());
         }
         return true;
     }
