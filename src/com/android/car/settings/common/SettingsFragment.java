@@ -16,9 +16,6 @@
 
 package com.android.car.settings.common;
 
-import static com.android.car.ui.core.CarUi.requireInsets;
-import static com.android.car.ui.core.CarUi.requireToolbar;
-
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
@@ -30,6 +27,7 @@ import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
@@ -42,6 +40,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
+import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.recyclerview.CarUiRecyclerView;
 import com.android.car.ui.toolbar.MenuItem;
@@ -93,7 +92,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     protected abstract int getPreferenceScreenResId();
 
     protected ToolbarController getToolbar() {
-        return requireToolbar(requireActivity());
+        return getFragmentHost().getToolbar();
     }
     /**
      * Returns the MenuItems to display in the toolbar. Subclasses should override this to
@@ -183,12 +182,6 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         });
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        onCarUiInsetsChanged(requireInsets(requireActivity()));
-    }
-
     /**
      * Inflates the preferences from {@link #getPreferenceScreenResId()} and associates the
      * preference with their corresponding {@link PreferenceController} instances.
@@ -225,7 +218,9 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             }
             toolbar.setTitle(getPreferenceScreen().getTitle());
             toolbar.setMenuItems(items);
+            toolbar.setState(Toolbar.State.SUBPAGE);
             toolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
+            toolbar.setLogo(null);
         }
     }
 
@@ -355,6 +350,16 @@ public abstract class SettingsFragment extends PreferenceFragment implements
                 callback.processActivityResult(requestCode & 0xff, resultCode, data);
             }
         }
+    }
+
+    @Override
+    protected ToolbarController getPreferenceToolbar(@NonNull Fragment fragment) {
+        return getToolbar();
+    }
+
+    @Override
+    protected Insets getPreferenceInsets(@NonNull Fragment fragment) {
+        return null;
     }
 
     // Allocates the next available startActivityForResult request index.

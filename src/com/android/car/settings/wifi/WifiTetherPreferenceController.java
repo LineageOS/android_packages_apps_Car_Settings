@@ -19,13 +19,14 @@ package com.android.car.settings.wifi;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.TetheringManager;
+import android.os.Handler;
 import android.os.HandlerExecutor;
+import android.os.Looper;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.internal.os.BackgroundThread;
 
 /**
  * Controls the availability of wifi tethering preference based on whether tethering is supported
@@ -34,6 +35,7 @@ public class WifiTetherPreferenceController extends PreferenceController<Prefere
 
     private final TetheringManager mTetheringManager =
             getContext().getSystemService(TetheringManager.class);
+    private final Handler mHandler;
     private volatile boolean mIsTetheringSupported;
     private volatile boolean mReceivedTetheringEventCallback = false;
 
@@ -52,6 +54,7 @@ public class WifiTetherPreferenceController extends PreferenceController<Prefere
     public WifiTetherPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+        mHandler = new Handler(Looper.getMainLooper());
     }
 
     @Override
@@ -62,7 +65,7 @@ public class WifiTetherPreferenceController extends PreferenceController<Prefere
     @Override
     protected void onStartInternal() {
         mTetheringManager.registerTetheringEventCallback(
-                new HandlerExecutor(BackgroundThread.getHandler()), mTetheringCallback);
+                new HandlerExecutor(mHandler), mTetheringCallback);
     }
 
     @Override
