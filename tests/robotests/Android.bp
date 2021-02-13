@@ -13,6 +13,10 @@
 // limitations under the License.
 
 // Car Settings Robolectric test target.
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
 android_robolectric_test {
     name: "CarSettingsRoboTests",
     srcs: [
