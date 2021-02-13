@@ -46,11 +46,6 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
     }
 
     @Override
-    protected void onDestroyInternal() {
-        PasswordHelper.zeroizeCredentials(mCurrentPassword);
-    }
-
-    @Override
     protected Class<Preference> getPreferenceType() {
         return Preference.class;
     }
@@ -83,7 +78,9 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
         return false;
     }
 
-    /** Sets the current password so it can be provided in the bundle in the fragment. */
+    /**
+     * Sets the current password so it can be provided in the bundle in the fragment. The host
+     * fragment is responsible for zeroizing the credentials in memory. */
     public void setCurrentPassword(LockscreenCredential currentPassword) {
         mCurrentPassword = currentPassword;
     }
