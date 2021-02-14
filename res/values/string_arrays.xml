@@ -23,9 +23,9 @@
     </string-array>
 
     <!-- Security types for wireless tether -->
-    <string-array translatable="false" name="wifi_tether_security">
-        <item>@string/wifi_security_wpa2</item>
-        <item>@string/wifi_security_none</item>
+    <string-array name="wifi_tether_security">
+        <item>@string/wifi_hotspot_wpa2_personal</item>
+        <item>@string/wifi_hotspot_security_none</item>
     </string-array>
 
     <!-- Wi-Fi AP band settings.  Either Auto, 2.4GHz or 5GHz. -->

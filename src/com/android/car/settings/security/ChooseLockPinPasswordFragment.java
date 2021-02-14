@@ -138,6 +138,9 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         if (args != null) {
             mIsPin = args.getBoolean(EXTRA_IS_PIN);
             mExistingCredential = args.getParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
+            if (mExistingCredential != null) {
+                mExistingCredential = mExistingCredential.duplicate();
+            }
         }
 
         mPasswordHelper = new PasswordHelper(mIsPin);
