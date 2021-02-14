@@ -170,6 +170,9 @@ public class ChooseLockPatternFragment extends BaseFragment {
         Bundle args = getArguments();
         if (args != null) {
             mCurrentCredential = args.getParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
+            if (mCurrentCredential != null) {
+                mCurrentCredential = mCurrentCredential.duplicate();
+            }
         }
 
         if (savedInstanceState != null) {
