@@ -30,9 +30,8 @@ import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.ui.preference.CarUiPreference;
-import com.android.car.ui.preference.DisabledPreferenceCallback;
+import com.android.car.ui.preference.UxRestrictablePreference;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
@@ -77,20 +76,18 @@ public class PreferenceControllerTest {
     }
 
     @Test
-    public void onUxRestrictionsChanged_restricted_RestrictedMessageSet() {
+    public void onUxRestrictionsChanged_restricted_preferenceRestricted() {
         mPreferenceController.setPreference(mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
 
         Mockito.reset(mPreference);
         mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked(
-                        ResourceTestUtils.getString(mContext, "restricted_while_driving"));
+        verify((UxRestrictablePreference) mPreference).setUxRestricted(true);
     }
 
     @Test
-    public void onUxRestrictionsChanged_restricted_viewOnly_restrictedMessageUnset() {
+    public void onUxRestrictionsChanged_restricted_viewOnly_preferenceUnrestricted() {
         mPreferenceController.setPreference(mPreference);
         mPreferenceController.setAvailabilityStatus(PreferenceController.AVAILABLE_FOR_VIEWING);
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -98,13 +95,12 @@ public class PreferenceControllerTest {
         Mockito.reset(mPreference);
         mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked("");
+        verify((UxRestrictablePreference) mPreference).setUxRestricted(false);
     }
 
     @Test
     @UiThreadTest
-    public void onUxRestrictionsChanged_restricted_preferenceGroup_restrictedMessageSet() {
+    public void onUxRestrictionsChanged_restricted_preferenceGroup_preferencesRestricted() {
         PreferenceManager preferenceManager = new PreferenceManager(mContext);
         PreferenceScreen preferenceScreen = preferenceManager.createPreferenceScreen(mContext);
         CarUiPreference preference1 = mock(CarUiPreference.class);
@@ -119,22 +115,17 @@ public class PreferenceControllerTest {
         Mockito.reset(preference2);
         mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
-        verify((DisabledPreferenceCallback) preference1)
-                .setMessageToShowWhenDisabledPreferenceClicked(
-                        ResourceTestUtils.getString(mContext, "restricted_while_driving"));
-        verify((DisabledPreferenceCallback) preference2)
-                .setMessageToShowWhenDisabledPreferenceClicked(
-                        ResourceTestUtils.getString(mContext, "restricted_while_driving"));
+        verify((UxRestrictablePreference) preference1).setUxRestricted(true);
+        verify((UxRestrictablePreference) preference2).setUxRestricted(true);
     }
 
     @Test
-    public void onCreate_unrestricted_disabled_restrictedMessageUnset() {
+    public void onCreate_unrestricted_disabled_preferenceUnrestricted() {
         mPreference.setEnabled(false);
         mPreferenceController.setPreference(mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked("");
+        verify((UxRestrictablePreference) mPreference).setUxRestricted(false);
     }
 
     private static class FakePreferenceController extends
