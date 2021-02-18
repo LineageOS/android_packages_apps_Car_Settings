@@ -21,12 +21,12 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 
 /** Business logic for the preference which opens the EditUserNameFragment. */
 public class EditUserNameEntryPreferenceController extends
-        UserDetailsBasePreferenceController<ButtonPreference> {
+        UserDetailsBasePreferenceController<CarUiTwoActionIconPreference> {
 
     private final UserHelper mUserHelper;
 
@@ -37,13 +37,13 @@ public class EditUserNameEntryPreferenceController extends
     }
 
     @Override
-    protected Class<ButtonPreference> getPreferenceType() {
-        return ButtonPreference.class;
+    protected Class<CarUiTwoActionIconPreference> getPreferenceType() {
+        return CarUiTwoActionIconPreference.class;
     }
 
     @Override
-    protected void updateState(ButtonPreference preference) {
-        preference.setOnButtonClickListener(pref -> {
+    protected void updateState(CarUiTwoActionIconPreference preference) {
+        preference.setOnSecondaryActionClickListener(() -> {
             getFragmentController().launchFragment(EditUsernameFragment.newInstance(getUserInfo()));
         });
 
@@ -52,7 +52,7 @@ public class EditUserNameEntryPreferenceController extends
         preference.setTitle(UserUtils.getUserDisplayName(getContext(), getUserInfo()));
 
         if (!mUserHelper.isCurrentProcessUser(getUserInfo())) {
-            preference.showAction(false);
+            preference.setSecondaryActionVisible(false);
         }
         preference.setSummary(getSummary());
     }
