@@ -19,6 +19,7 @@ package com.android.car.settings.common;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
+import android.widget.Toast;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
@@ -28,7 +29,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
-import com.android.car.ui.preference.DisabledPreferenceCallback;
+import com.android.car.ui.preference.UxRestrictablePreference;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -163,7 +164,7 @@ public abstract class PreferenceController<V extends Preference> implements
         mAlwaysIgnoreUxRestrictions =
                 mContext.getResources().getBoolean(R.bool.config_always_ignore_ux_restrictions);
         mRestrictedWhileDrivingMessage =
-                mContext.getResources().getString(R.string.restricted_while_driving);
+                mContext.getResources().getString(R.string.car_ui_restricted_while_driving);
     }
 
     /**
@@ -451,35 +452,36 @@ public abstract class PreferenceController<V extends Preference> implements
      * additional driving restrictions.
      */
     protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
-        boolean showMessage = false;
+        boolean restrict = false;
         if (!isUxRestrictionsIgnored(mAlwaysIgnoreUxRestrictions,
                 mPreferencesIgnoringUxRestrictions)
-                && CarUxRestrictionsHelper.isNoSetup(uxRestrictions)) {
-            mPreference.setEnabled(false);
-            if (getAvailabilityStatus() != AVAILABLE_FOR_VIEWING) {
-                showMessage = true;
-            }
+                && CarUxRestrictionsHelper.isNoSetup(uxRestrictions)
+                && getAvailabilityStatus() != AVAILABLE_FOR_VIEWING) {
+            restrict = true;
         }
-        if (mPreference instanceof PreferenceGroup) {
-            PreferenceGroup preferenceGroup = (PreferenceGroup) mPreference;
-            for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
-                setRestrictedWhileDrivingMessage(preferenceGroup.getPreference(i), showMessage);
-            }
-        } else {
-            setRestrictedWhileDrivingMessage(mPreference, showMessage);
-        }
+        restrictPreference(mPreference, restrict);
     }
 
     /**
-     * Updates the preference restricted while driving message.
+     * Updates the UxRestricted state and action for a preference. This will also update all child
+     * preferences with the same state and action when {@param preference} is a PreferenceGroup.
      *
-     * @param preference  the preference to update.
-     * @param showMessage whether or not the message should be shown.
+     * @param preference the preference to update
+     * @param restrict whether or not the preference should be restricted
      */
-    protected void setRestrictedWhileDrivingMessage(Preference preference, boolean showMessage) {
-        if (preference instanceof DisabledPreferenceCallback) {
-            ((DisabledPreferenceCallback) preference).setMessageToShowWhenDisabledPreferenceClicked(
-                    showMessage ? mRestrictedWhileDrivingMessage : "");
+    protected void restrictPreference(Preference preference, boolean restrict) {
+        if (preference instanceof UxRestrictablePreference) {
+            UxRestrictablePreference restrictablePreference = (UxRestrictablePreference) preference;
+            restrictablePreference.setUxRestricted(restrict);
+            restrictablePreference.setOnClickWhileRestrictedListener(p ->
+                    Toast.makeText(mContext, mRestrictedWhileDrivingMessage,
+                            Toast.LENGTH_LONG).show());
+        }
+        if (preference instanceof PreferenceGroup) {
+            PreferenceGroup preferenceGroup = (PreferenceGroup) preference;
+            for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
+                restrictPreference(preferenceGroup.getPreference(i), restrict);
+            }
         }
     }
 
