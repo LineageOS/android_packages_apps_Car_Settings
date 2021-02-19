@@ -47,7 +47,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.settings.testutils.TestContentProvider;
 import com.android.car.ui.preference.CarUiPreference;
-import com.android.car.ui.preference.DisabledPreferenceCallback;
+import com.android.car.ui.preference.UxRestrictablePreference;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
@@ -120,7 +120,7 @@ public class ExtraSettingsPreferenceControllerTest {
     }
 
     @Test
-    public void onUxRestrictionsChanged_restricted_restrictedMessageSet() {
+    public void onUxRestrictionsChanged_restricted_preferenceRestricted() {
         mMetaData.putBoolean(META_DATA_DISTRACTION_OPTIMIZED, false);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
@@ -132,13 +132,11 @@ public class ExtraSettingsPreferenceControllerTest {
         Mockito.reset(mPreference);
         mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked(
-                        ResourceTestUtils.getString(mContext, "restricted_while_driving"));
+        verify((UxRestrictablePreference) mPreference).setUxRestricted(true);
     }
 
     @Test
-    public void onUxRestrictionsChanged_unrestricted_restrictedMessageUnset() {
+    public void onUxRestrictionsChanged_unrestricted_preferenceUnrestricted() {
         mMetaData.putBoolean(META_DATA_DISTRACTION_OPTIMIZED, false);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
@@ -150,12 +148,11 @@ public class ExtraSettingsPreferenceControllerTest {
         Mockito.reset(mPreference);
         mPreferenceController.onUxRestrictionsChanged(NO_UX_RESTRICTIONS);
 
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked("");
+        verify((UxRestrictablePreference) mPreference).setUxRestricted(false);
     }
 
     @Test
-    public void onUxRestrictionsChanged_restricted_viewOnly_restrictedMessageUnset() {
+    public void onUxRestrictionsChanged_restricted_viewOnly_preferenceUnrestricted() {
         mMetaData.putBoolean(META_DATA_DISTRACTION_OPTIMIZED, false);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
@@ -168,12 +165,11 @@ public class ExtraSettingsPreferenceControllerTest {
         Mockito.reset(mPreference);
         mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked("");
+        verify((UxRestrictablePreference) mPreference).setUxRestricted(false);
     }
 
     @Test
-    public void onUxRestrictionsChanged_distractionOptimized_restrictedMessageUnset() {
+    public void onUxRestrictionsChanged_distractionOptimized_preferenceUnrestricted() {
         mMetaData.putBoolean(META_DATA_DISTRACTION_OPTIMIZED, true);
         mPreferenceBundleMap.put(mPreference, mMetaData);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
@@ -185,8 +181,7 @@ public class ExtraSettingsPreferenceControllerTest {
         Mockito.reset(mPreference);
         mPreferenceController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
-        verify((DisabledPreferenceCallback) mPreference)
-                .setMessageToShowWhenDisabledPreferenceClicked("");
+        verify((UxRestrictablePreference) mPreference).setUxRestricted(false);
     }
 
     @Test
