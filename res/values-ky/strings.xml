@@ -316,7 +316,7 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"Автотолтуруу кызматы"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Жок"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Тандалды"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"Жардамчы тутумуңузда иштеп жаткан колдонмолор тууралуу маалыматтарды, анын ичинде экраныңызда көрүнүп турган же колдонмолордо жеткиликтүү болгон маалыматты окуй алат."</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Жардамчы системаңызда иштеп жаткан колдонмолор тууралуу маалыматтарды, анын ичинде экраныңызда көрүнүп турган же колдонмолордо жеткиликтүү болгон маалыматты окуй алат."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Бул колдонмо ишенимдүү экенин тактаңыз&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; экрандагы нерселерди аныктап, автоматтык түрдө толтурууга боло турган талааларды табат."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Кызмат кошуу"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Шилтемелерди ачуу"</string>
@@ -336,10 +336,10 @@
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Колдоого алынган шилтемелер"</string>
     <string name="special_access" msgid="5730278220917123811">"Колдонмонун атайын уруксаты"</string>
     <string name="show_system" msgid="4401355756969485287">"Тутум процесстерин көрсөтүү"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Тутумдагы процесстерди жашыруу"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Системалык процесстерди жашыруу"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Тутум колдонмолорун жашыруу"</string>
-    <string name="modify_system_settings_title" msgid="4596320571562433972">"Тутум жөндөөлөрүн өзгөртүү"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо тутум жөндөөлөрүн өзгөртө алат."</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Системанын жөндөөлөрүн өзгөртүү"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын жөндөөлөрүн өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат берилсинби?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> колдонмосу эскертмелердин баарын, ошону менен катар байланыштардын аты-жөнү жана кабыл алынган билдирүүлөр сыяктуу жеке маалыматты окуй алат. Мындан тышкары, ал билдирмелерди жок кылып же алардагы баскычтарды баса алат.\n\nУшуну менен колдонмо \"Тынчымды алба\" режимин иштетүү же өчүрүү, ошондой эле анын жөндөөлөрүн өзгөртүү мүмкүнчүлүгүнө ээ болот."</string>
@@ -359,7 +359,7 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Колдонмонун уруксаттары"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Тутум"</string>
-    <string name="system_update_settings_title" msgid="8448588267784138855">"Тутум жаңыртуулары"</string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"Системанын жаңыртуулары"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android версиясы"</string>
     <string name="security_patch" msgid="4794276590178386903">"Коопсуздук тутумун жаңыртуу:"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Үлгү жана аппараттык камсыздоо"</string>
@@ -475,8 +475,7 @@
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"Бул колдонуучуну өчүрөсүзбү?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Бардык колдонмолор жана алардагы нерселер өчүрүлөт."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Колдонуучу өчүрүлгөн жок."</string>
-    <!-- no translation found for delete_user_error_set_ephemeral_title (9062453678745644817) -->
-    <skip />
+    <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Профилдерди которуштуруп же унааны өчүрүп күйгүзгөнүңүздө, бул профиль өчүрүлөт."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Четке кагуу"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Кайталоо"</string>
     <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Акыркы колдонуучу өчүрүлсүнбү?"</string>
