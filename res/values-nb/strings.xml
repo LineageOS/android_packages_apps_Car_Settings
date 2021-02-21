@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker å slå på Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker å slå av Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Feil"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Enhet som skal brukes med <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Fant ingen enheter. Sørg for at enhetene er slått på og tilgjengelige for tilkobling."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Prøv igjen"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Noe dukket opp. Appen har kansellert forespørselen om å velge en enhet."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Tilkoblingen var vellykket"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Vis alle"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Søker"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Enhet uten navn"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Tilkoblede enheter"</string>
@@ -224,7 +217,7 @@
     <string name="media_volume_title" msgid="6697416686272606865">"Medier"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"Volum for musikk og video"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarm"</string>
-    <string name="ringtone_title" msgid="8370531086214517972">"Ringetone"</string>
+    <string name="ringtone_title" msgid="8370531086214517972">"Telefonringelyd"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Standard varsellyd"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Standard alarmlyd"</string>
     <string name="units_settings" msgid="402325305096925886">"Enheter"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Feil mønster"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Slik tegner du et opplåsingsmønster"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Feil ved lagring av mønster"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"For mange ugyldige forsøk. Prøv på nytt om <xliff:g id="NUMBER">%d</xliff:g> sekunder."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Vil du fjerne skjermlåsen?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Dette gir hvem som helst tilgang til kontoen din"</string>
@@ -634,6 +626,26 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"En sekvens av stigende, synkende eller like sifre er ikke tillatt."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Alternativer for skjermlås"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : for <xliff:g id="NUM_DAYS">%3$s</xliff:g> dager siden"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Legg til en godkjent enhet"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth slås på for å legge til godkjent enhet"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Godkjente enheter"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> enheter</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> enhet</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> låser opp denne bilen når den er tilkoblet. Hvis noen tar <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, får vedkommende tilgang til denne enheten."</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bekreft"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Fjern godkjent enhet"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Ferdig"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Bruk følgeappen for å konfigurere en godkjent enhet. Når den er konfigurert, låser brukerprofilen din opp automatisk når telefonen oppdages i nærheten av kjøretøyet."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Last ned følgeappen på telefonen din"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Velg <xliff:g id="CAR_NAME">%1$s</xliff:g> på telefonen for å koble til enhetene"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"En godkjent enhet i nærheten av bilen din låser opp brukerprofilen ved tenning – selv om noen andre holder enheten."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Bekreft at sammenkoblingskodene er like"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefonen er registrert"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Kunne ikke registrere <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Hvis du legger til en godkjent enhet, må du angi en autentiseringsmetode. Hvis du ikke har den godkjente enheten din med deg, kreves autentisering for å få tilgang til profilen din."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Enheten er frakoblet."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Tøm legitimasjonslageret"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Fjern alle sertifikater"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Vil du fjerne alt innholdet?"</string>
@@ -656,5 +668,4 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"AVVIS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funksjonen er ikke tilgjengelig når du kjører"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Du kan ikke legge til en bruker mens du kjører"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Søk"</string>
 </resources>

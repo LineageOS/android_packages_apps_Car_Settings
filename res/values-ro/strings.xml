@@ -159,13 +159,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> încearcă să activeze Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> încearcă să dezactiveze Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Eroare"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispozitivul care va fi folosit cu <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nu s-au găsit dispozitive. Asigurați-vă că dispozitivele sunt pornite și gata de conectare."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Reîncercați"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"A intervenit ceva. Această aplicație a anulat solicitarea de a alege un dispozitiv."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Conectare reușită"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Afișați-le pe toate"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Se caută dispozitive"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispozitiv nedenumit"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispozitive asociate"</string>
@@ -317,7 +310,7 @@
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Intrare vocală"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Serviciu de completare automată"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Niciuna"</string>
-    <string name="default_app_selected_app" msgid="5289396663745484773">"Selectat"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"Bifată"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Aplicația asistent va putea să citească informații despre aplicațiile în uz de pe sistem, inclusiv informațiile vizibile pe ecran sau accesibile în aplicații."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asigurați-vă că aveți încredere în această aplicație&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Completarea automată Google&gt;%1$s&lt;/xliff:g&gt; folosește conținutul de pe ecran pentru a stabili ce se poate completa automat."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Adăugați un serviciu"</string>
@@ -579,7 +572,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Model greșit"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Desenarea unui model pentru deblocare"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Eroare la salvarea modelului"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Prea multe încercări incorecte. Încercați din nou peste <xliff:g id="NUMBER">%d</xliff:g> secunde."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Eliminați blocarea ecranului?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Acțiunea va permite oricui să vă acceseze contul"</string>
@@ -645,6 +637,27 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Șirurile de cifre ascendente, descendente sau repetate nu sunt permise."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opțiuni de blocare a ecranului"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: acum <xliff:g id="NUM_DAYS">%3$s</xliff:g> zile"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Adăugați un dispozitiv de încredere"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth se va activa și va adăuga dispozitivul"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Dispozitive de încredere"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> dispozitive</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de dispozitive</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispozitiv</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> va debloca această mașină când este conectat. Dacă cineva vă ia <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, este posibil să poată accesa acest dispozitiv"</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmați"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Eliminați dispozitivul de încredere"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Gata"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Folosiți aplicația parteneră pentru a configura un dispozitiv de încredere. După configurare, profilul dvs. de utilizator va debloca automat mașina atunci când aceasta vă detectează telefonul în apropiere."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descărcați aplicația parteneră pe telefon"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selectați <xliff:g id="CAR_NAME">%1$s</xliff:g> de pe telefon pentru a asocia dispozitivele"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Un dispozitiv de încredere aflat în apropierea mașinii dvs. va debloca profilul utilizatorului atunci când mașina este pornită, chiar dacă este folosit de o altă persoană."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirmați potrivirea codurilor de conectare"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefonul a fost înregistrat"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Înscrierea dispozitivului <xliff:g id="DEVICE_NAME">%1$s</xliff:g> a eșuat"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Dacă adăugați un dispozitiv de încredere, trebuie să setați apoi o metodă de autentificare. Dacă nu aveți dispozitivul de încredere cu dvs., va fi necesar să vă autentificați pentru a vă accesa profilul."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Dispozitivul a fost deconectat."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Ștergeți datele de conectare"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Eliminați toate certificatele"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Eliminați întregul conținut?"</string>
@@ -667,5 +680,4 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"RESPINGEȚI"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funcția nu este disponibilă când conduceți"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Nu puteți adăuga un utilizator în timp ce conduceți"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Căutați"</string>
 </resources>

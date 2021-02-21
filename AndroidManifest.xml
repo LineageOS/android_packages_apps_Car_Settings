@@ -388,6 +388,7 @@
                 <action android:name="android.settings.NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.CHANNEL_NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.APP_NOTIFICATION_SETTINGS" />
+                <action android:name="android.intent.action.AUTO_REVOKE_PERMISSIONS" />
                 <data android:scheme="package" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -400,6 +401,7 @@
                 <action android:name="android.settings.NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.CHANNEL_NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.APP_NOTIFICATION_SETTINGS" />
+                <action android:name="android.intent.action.AUTO_REVOKE_PERMISSIONS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="distractionOptimized" android:value="true"/>

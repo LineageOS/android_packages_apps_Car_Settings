@@ -115,10 +115,12 @@ public class SeekBarPreference extends CarUiPreference {
                 return true;
             }
             if (keyCode == KeyEvent.KEYCODE_BACK) {
-                if (event.getAction() == KeyEvent.ACTION_DOWN && mInDirectManipulationMode) {
-                    setInDirectManipulationMode(v, false);
+                if (mInDirectManipulationMode) {
+                    if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                        setInDirectManipulationMode(v, false);
+                    }
+                    return true;
                 }
-                return true;
             }
 
             // Don't propagate confirm keys to the SeekBar to prevent a ripple effect on the thumb.

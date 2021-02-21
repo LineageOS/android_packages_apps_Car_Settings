@@ -22,6 +22,12 @@
 
     <application android:debuggable="true">
         <uses-library android:name="android.test.runner" />
+
+        <provider
+            android:name="com.android.car.settings.testutils.TestContentProvider"
+            android:authorities="com.android.car.settings.testutils.TestContentProvider"
+            android:exported="true">
+        </provider>
     </application>
 
     <instrumentation android:name="androidx.test.runner.AndroidJUnitRunner"

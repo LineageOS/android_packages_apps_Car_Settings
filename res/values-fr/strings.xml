@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Plus"</string>
     <string name="display_settings" msgid="5325515247739279185">"Écran"</string>
     <string name="brightness" msgid="2919605130898772866">"Niveau de luminosité"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosité adaptative"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptation de la luminosité"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimiser le niveau de luminosité en fonction de l\'éclairage ambiant"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Éclairage nocturne activé"</string>
     <string name="keywords_display" msgid="3978416985146943922">"écran, écran tactile"</string>
@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> requiert l\'activation du Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> requiert la désactivation du Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erreur"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Appareil à utiliser avec l\'application <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Aucun appareil trouvé. Assurez-vous que des appareils soient activés et prêts à être connectés."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Réessayer"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Un problème est survenu. L\'application a annulé la demande de sélection d\'un appareil."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Connexion réussie"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Tout afficher"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Recherche en cours"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Appareil sans nom"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Appareils associés"</string>
@@ -334,7 +327,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Ne pas ouvrir dans cette application"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Liens compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Droits d\'accès spécifiques accordés aux applications"</string>
-    <string name="show_system" msgid="4401355756969485287">"Afficher process. système"</string>
+    <string name="show_system" msgid="4401355756969485287">"Afficher les processus système"</string>
     <string name="hide_system" msgid="8845453295584638040">"Masquer les processus système"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Changer les paramètres système"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cette autorisation permet à une application de modifier les paramètres système."</string>
@@ -416,8 +409,8 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Réinitialiser paramètres"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Les paramètres réseau ont bien été réinitialisés"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Réinitialiser les préférences des applis"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Toutes les préférences liées à ces éléments seront réinitialisées :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applis par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applis"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applis"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Toutes les préférences relatives aux éléments suivants seront réinitialisées :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences relatives aux applications ont été réinitialisées"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Effacer données (rétablir config. d\'usine)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Cette action effacera toutes les données de l\'unité principale du véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et paramètres du système et des applications"</li>\n<li>"Les applications téléchargées"</li></string>
@@ -558,8 +551,8 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Réessayer"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Passer"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Configurer le verrouillage de l\'écran"</string>
-    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Choisissez votre code"</string>
-    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Sélectionner un schéma"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Sélectionner un code"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Choisir votre schéma"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Sélectionner un mot de passe"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Verrouillage actuel de l\'écran"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pour la sécurité, définissez un schéma"</string>
@@ -569,12 +562,11 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dessinez un schéma de déverrouillage"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Relevez le doigt quand vous avez terminé"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Schéma enregistré"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessinez le schéma pour le confirmer"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessiner le schéma pour le confirmer"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Reliez au moins 4 points. Réessayez."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Pour dessiner un schéma de déverrouillage"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erreur d\'enregistrement du schéma"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Trop de tentatives incorrectes. Réessayez dans <xliff:g id="NUMBER">%d</xliff:g> secondes."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Annuler le verrouillage écran ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Si vous continuez, n\'importe qui pourra accéder à votre compte"</string>
@@ -634,6 +626,26 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Les suites de chiffres croissantes, décroissantes ou répétitives ne sont pas autorisées."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Ajouter un appareil vérifié"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"L\'appareil vérifié sera ajouté via le Bluetooth"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Appareils vérifiés"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> appareil</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> appareils</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Votre <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> déverrouille cette voiture lorsqu\'il y est connecté. Si une personne saisit votre <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, il est possible qu\'elle puisse accéder à cet appareil"</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmer"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Supprimer l\'appareil vérifié"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"OK"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Utilisez l\'application associée pour configurer un appareil vérifié. Une fois configuré, votre profil utilisateur permettra de déverrouiller automatiquement la voiture si votre téléphone est détecté à proximité de cette dernière."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Téléchargez l\'application associée sur votre téléphone"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Sélectionnez <xliff:g id="CAR_NAME">%1$s</xliff:g> sur votre téléphone pour associer les appareils"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Le profil utilisateur sera déverrouillé au démarrage de la voiture en présence d\'un appareil vérifié se trouvant à proximité, même si une autre personne le tient dans sa main."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Veuillez confirmer que les codes d\'association correspondent"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Le téléphone a bien été enregistré"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Échec de l\'inscription de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Pour ajouter un appareil vérifié, vous devez définir une méthode d\'authentification à l\'étape suivante. Si vous n\'avez pas votre appareil vérifié avec vous, vous devrez obligatoirement passer par l\'étape d\'authentification pour accéder à votre profil."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Appareil déconnecté."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Effacer les identifiants"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Supprimer tous les certificats"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Supprimer l\'intégralité du contenu ?"</string>
@@ -656,5 +668,4 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Fonctionnalité non disponible lorsque vous conduisez"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Impossible d\'ajouter un utilisateur pendant la conduite"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Rechercher"</string>
 </resources>

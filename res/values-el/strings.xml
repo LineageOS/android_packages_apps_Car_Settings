@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να ενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να απενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Σφάλμα"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Συσκευή για χρήση με την εφαρμογή <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Δεν βρέθηκαν συσκευές. Βεβαιωθείτε ότι οι συσκευές είναι ενεργοποιημένες και διαθέσιμες για σύνδεση."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Δοκιμάστε ξανά"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Παρουσιάστηκε κάποιο πρόβλημα. Η εφαρμογή ακύρωσε το αίτημα για επιλογή συσκευής."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Η σύνδεση είναι επιτυχής"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Εμφάνιση όλων"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Αναζήτηση"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Ανώνυμη συσκευή"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Συσκευές σε σύζευξη"</string>
@@ -416,11 +409,11 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Επαναφορά ρυθμίσεων"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Έγινε επαναφορά των ρυθμίσεων δικτύου"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Επαναφορά προτιμήσεων εφαρμογών"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Με αυτήν την ενέργεια, θα γίνει επαναφορά όλων των προτιμήσεων για:\n\n"<li>"απενεργοποιημένες εφαρμογές"</li>\n<li>"απενεργοποιημένες ειδοποιήσεις εφαρμογών"</li>\n<li>"προεπιλεγμένες εφαρμογές για ενέργειες"</li>\n<li>"περιορισμούς δεδομένων παρασκηνίου για εφαρμογές"</li>\n<li>"τυχόν περιορισμούς αδειών"</li>\n\n"Δεν θα χάσετε τυχόν δεδομένα εφαρμογών."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Με αυτήν την ενέργεια, θα γίνει επαναφορά όλων των προτιμήσεων για:\n\n"<li>"Απενεργοποιημένες εφαρμογές"</li>\n<li>"Απενεργοποιημένες ειδοποιήσεις εφαρμογών"</li>\n<li>"Προεπιλεγμένες εφαρμογές για ενέργειες"</li>\n<li>"Περιορισμούς δεδομένων παρασκηνίου για εφαρμογές"</li>\n<li>"Τυχόν περιορισμούς αδειών"</li>\n\n"Δεν θα χάσετε τυχόν δεδομένα εφαρμογών."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Επαναφορά εφαρμογών"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Έγινε επαναφορά των προτιμήσεων των εφαρμογών"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Διαγραφή δεδομένων (Επαν. εργοστ. ρυθμ.)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από την κεντρική μονάδα του οχήματος, συμπεριλαμβανομένων:\n\n"<li>"του Λογαριασμού σας Google"</li>\n<li>"των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"των εφαρμογών που έχετε κατεβάσει"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από την κεντρική μονάδα του οχήματος, συμπεριλαμβανομένων:\n\n"<li>"Του Λογαριασμού σας Google"</li>\n<li>"Των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"Των εφαρμογών που έχετε κατεβάσει"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Αυτήν τη στιγμή είστε συνδεδεμένοι στους παρακάτω λογαριασμούς:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Υπάρχουν άλλοι χρήστες σε αυτό το όχημα."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Επαναφορά οχήματος"</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Λανθασμένο μοτίβο"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Τρόπος σχεδίασης μοτίβου ξεκλειδώματος"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Σφάλμα κατά την αποθήκευση του μοτίβου"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Πάρα πολλές αποτυχημένες προσπάθειες. Δοκιμάστε ξανά σε <xliff:g id="NUMBER">%d</xliff:g> δευτερόλεπτα."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Κατάργηση κλειδώματος οθόνης;"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Έτσι όλοι οι χρήστες θα έχουν πρόσβαση στον λογαριασμό σας"</string>
@@ -634,6 +626,26 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Δεν επιτρέπεται η αύξουσα, φθίνουσα ή επαναλαμβανόμενη ακολουθία ψηφίων."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Επιλογές κλειδώματος οθόνης"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ημέρες πριν"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Προσθήκη αξιόπιστης συσκευής"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"Ενεργοπ. Bluetooth για προσθήκη αξιόπ. συσκευής"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Αξιόπιστες συσκευές"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> συσκευές</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> συσκευή</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Το <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> θα ξεκλειδώσει αυτό το αυτοκίνητο όταν συνδεθεί. Εάν κάποιος αποκτήσει το <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> σας, θα μπορεί να αποκτήσει πρόσβαση σε αυτήν τη συσκευή"</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Επιβεβαίωση"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Κατάργηση αξιόπιστης συσκευής"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Τέλος"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Χρησιμοποιήστε τη συνοδευτική εφαρμογή για να ρυθμίσετε μια αξιόπιστη συσκευή. Μετά τη ρύθμιση, το προφίλ χρήστη θα ξεκλειδώνει αυτόματα όταν το τηλέφωνό σας εντοπίζεται κοντά στο όχημα."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Κατεβάστε τη συνοδευτική εφαρμογή στο τηλέφωνό σας"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Επιλέξτε το αυτοκίνητο <xliff:g id="CAR_NAME">%1$s</xliff:g> στο τηλέφωνό σας για να κάνετε σύζευξη των συσκευών"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Μια αξιόπιστη συσκευή κοντά στο αυτοκίνητό σας θα ξεκλειδώνει το προφίλ χρήστη κατά το ξεκίνημα, ακόμα και αν κάποιος άλλος κρατάει τη συσκευή."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Επιβεβαιώστε ότι υπάρχει αντιστοιχία μεταξύ κωδικών σύζευξης"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Η εγγραφή του τηλεφώνου ήταν επιτυχής"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Η εγγραφή της συσκευής <xliff:g id="DEVICE_NAME">%1$s</xliff:g> απέτυχε"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Η προσθήκη αξιόπιστης συσκευής απαιτεί να ορίσετε στη συνέχεια μια μέθοδο ελέγχου ταυτότητας. Εάν δεν έχετε μαζί σας την αξιόπιστη συσκευή σας, θα ζητηθεί έλεγχος ταυτότητας για την πρόσβαση στο προφίλ σας."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Η συσκευή αποσυνδέθηκε."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Διαγραφή διαπιστευτηρίων"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Κατάργηση όλων των πιστοποιητικών"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Να καταργηθεί όλο το περιεχόμενο;"</string>
@@ -656,5 +668,4 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ΠΑΡΑΒΛΕΨΗ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Η λειτουργία δεν διατίθεται κατά τη διάρκεια της οδήγησης."</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Δεν είναι δυνατή η προσθήκη χρήστη κατά την οδήγηση."</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Αναζήτηση"</string>
 </resources>
