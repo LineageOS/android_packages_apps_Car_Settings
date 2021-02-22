@@ -18,6 +18,7 @@ package com.android.car.settings.datetime;
 
 import android.app.timedetector.ManualTimeSuggestion;
 import android.app.timedetector.TimeDetector;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
@@ -154,6 +155,16 @@ public class TimePickerFragment extends BaseFragment {
         for (int i = 0; i < mNumberPickers.size(); i++) {
             DirectManipulationHandler.setDirectManipulationHandler(mNumberPickers.get(i),
                     numberPickerListener);
+        }
+    }
+
+    @Override
+    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
+        if (canBeShown(restrictionInfo)) {
+            return;
+        }
+        if (mDirectManipulationMode != null && mDirectManipulationMode.isActive()) {
+            mDirectManipulationMode.disable();
         }
     }
 
