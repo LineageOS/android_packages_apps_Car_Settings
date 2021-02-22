@@ -43,6 +43,7 @@
             android:layout_height="match_parent"
             android:background="?android:attr/colorPrimary"
             android:clickable="true"
+            android:focusable="false"
             android:gravity="center"
             android:text="@string/restricted_while_driving"
             android:textAppearance="?android:attr/textAppearanceLarge"
