@@ -41,12 +41,14 @@ public class PreferredEngineOptionsPreferenceController extends
 
     private final TtsEngines mEnginesHelper;
     private String mPreviousEngine;
+    private boolean mIsStarted;
     private TextToSpeech mTts;
 
     public PreferredEngineOptionsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mEnginesHelper = new TtsEngines(getContext());
+        mIsStarted = false;
     }
 
     @Override
@@ -78,6 +80,18 @@ public class PreferredEngineOptionsPreferenceController extends
             });
             getPreference().addPreference(preference);
         }
+    }
+
+    /** Note that the preference controller was started. */
+    @Override
+    protected void onStartInternal() {
+        mIsStarted = true;
+    }
+
+    /** Note that the preference controller was stopped. */
+    @Override
+    protected void onStopInternal() {
+        mIsStarted = false;
     }
 
     /** Cleans up the TTS object and clears the preferences representing the TTS engines. */
@@ -123,7 +137,7 @@ public class PreferredEngineOptionsPreferenceController extends
         // the app binds successfully to the engine.
         LOG.i("Updating engine : Attempting to connect to engine: " + engineName);
         mTts = new TextToSpeech(getContext(), status -> {
-            if (isStarted()) {
+            if (mIsStarted) {
                 onUpdateEngine(status);
                 refreshUi();
             }

@@ -51,6 +51,7 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
     UserManager mUserManager;
     private LockscreenCredential mCurrentPassword;
     private int mCurrentPasswordQuality;
+    private boolean mIsStarted = false;
     private boolean mHasPendingBack = false;
 
     public LockTypeBasePreferenceController(Context context, String preferenceKey,
@@ -140,6 +141,7 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
 
     @Override
     protected void onStartInternal() {
+        mIsStarted = true;
         if (mHasPendingBack) {
             mHasPendingBack = false;
 
@@ -147,6 +149,11 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
             // transactions during onStart.
             new Handler(Looper.getMainLooper()).post(() -> getFragmentController().goBack());
         }
+    }
+
+    @Override
+    protected void onStopInternal() {
+        mIsStarted = false;
     }
 
     @Override
@@ -163,7 +170,7 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
             LOG.d("Lock was not updated. Result code: " + resultCode);
             return;
         }
-        if (isStarted()) {
+        if (mIsStarted) {
             getFragmentController().goBack();
         } else {
             mHasPendingBack = true;
