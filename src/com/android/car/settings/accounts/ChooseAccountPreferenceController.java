@@ -52,7 +52,6 @@ public class ChooseAccountPreferenceController extends
 
     private AccountTypesHelper mAccountTypesHelper;
     private ArrayMap<String, AuthenticatorDescriptionPreference> mPreferences = new ArrayMap<>();
-    private boolean mIsStarted = false;
     private boolean mHasPendingBack = false;
 
     public ChooseAccountPreferenceController(Context context, String preferenceKey,
@@ -92,7 +91,6 @@ public class ChooseAccountPreferenceController extends
      */
     @Override
     protected void onStartInternal() {
-        mIsStarted = true;
         mAccountTypesHelper.listenToAccountUpdates();
 
         if (mHasPendingBack) {
@@ -110,7 +108,6 @@ public class ChooseAccountPreferenceController extends
     @Override
     protected void onStopInternal() {
         mAccountTypesHelper.stopListeningToAccountUpdates();
-        mIsStarted = false;
     }
 
     /** Forces a refresh of the authenticator description preferences. */
@@ -183,7 +180,7 @@ public class ChooseAccountPreferenceController extends
     @Override
     public void processActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == ADD_ACCOUNT_REQUEST_CODE) {
-            if (mIsStarted) {
+            if (isStarted()) {
                 getFragmentController().goBack();
             } else {
                 mHasPendingBack = true;

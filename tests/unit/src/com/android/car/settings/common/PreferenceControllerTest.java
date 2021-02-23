@@ -16,7 +16,14 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
+
+import static com.google.common.truth.Truth.assertThat;
+
+import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -44,6 +51,10 @@ import org.mockito.MockitoAnnotations;
 @RunWith(AndroidJUnit4.class)
 public class PreferenceControllerTest {
 
+    private static final CarUxRestrictions LIMIT_STRINGS_UX_RESTRICTIONS =
+            new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                    CarUxRestrictions.UX_RESTRICTIONS_LIMIT_STRING_LENGTH, /* timestamp= */
+                    0).build();
     private static final CarUxRestrictions NO_SETUP_UX_RESTRICTIONS =
             new CarUxRestrictions.Builder(/* reqOpt= */ true,
                     CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
@@ -128,10 +139,137 @@ public class PreferenceControllerTest {
         verify((UxRestrictablePreference) mPreference).setUxRestricted(false);
     }
 
+    @Test
+    public void refreshUi_onStop_doesNothing() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+        mPreferenceController.onStop(mLifecycleOwner);
+        Mockito.reset(mPreference);
+
+        mPreferenceController.refreshUi();
+
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(1);
+        verify(mPreference, never()).setVisible(anyBoolean());
+    }
+
+    @Test
+    public void refreshUi_notCreated_doesNothing() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.refreshUi();
+
+        verify(mPreference, never()).setVisible(anyBoolean());
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(0);
+    }
+
+    @Test
+    public void refreshUi_started_available_preferenceShownAndEnabled() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+        Mockito.reset(mPreference);
+
+        mPreferenceController.refreshUi();
+
+        verify(mPreference).setVisible(true);
+        verify(mPreference).setEnabled(true);
+    }
+
+    @Test
+    public void refreshUi_started_availableForViewing_preferenceShownAndDisabled() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(AVAILABLE_FOR_VIEWING);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+        Mockito.reset(mPreference);
+
+        mPreferenceController.refreshUi();
+
+        verify(mPreference).setVisible(true);
+        verify(mPreference).setEnabled(false);
+    }
+
+    @Test
+    public void refreshUi_started_notAvailable_preferenceHidden() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+        Mockito.reset(mPreference);
+
+        mPreferenceController.refreshUi();
+
+        verify(mPreference).setVisible(false);
+    }
+
+    @Test
+    public void refreshUi_started_available_updatesState() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        mPreferenceController.refreshUi();
+
+        // onStart, refreshUi.
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(2);
+        assertThat(mPreferenceController.getUpdateStateArg()).isEqualTo(mPreference);
+    }
+
+    @Test
+    public void refreshUi_started_notAvailable_doesNotUpdateState() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        mPreferenceController.refreshUi();
+
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(0);
+    }
+
+
+    @Test
+    public void onUxRestrictionsChanged_started_available_updatesState() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        mPreferenceController.onUxRestrictionsChanged(LIMIT_STRINGS_UX_RESTRICTIONS);
+
+        // onStart, onUxRestrictionsChanged.
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(2);
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_notCreated_available_doesNotUpdateState() {
+        mPreferenceController.onUxRestrictionsChanged(LIMIT_STRINGS_UX_RESTRICTIONS);
+
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(0);
+    }
+
+    @Test
+    public void onCreate_available_doesNotUpdatesState() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(0);
+    }
+
+    @Test
+    public void onStart_available_updatesState() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(1);
+    }
+
     private static class FakePreferenceController extends
             PreferenceController<Preference> {
 
         private int mAvailabilityStatus;
+        private int mUpdateStateCallCount;
+        private Preference mUpdateStateArg;
 
         FakePreferenceController(Context context, String preferenceKey,
                 FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -149,8 +287,22 @@ public class PreferenceControllerTest {
             return mAvailabilityStatus;
         }
 
+        @Override
+        protected void updateState(Preference preference) {
+            mUpdateStateArg = preference;
+            mUpdateStateCallCount++;
+        }
+
         public void setAvailabilityStatus(int availabilityStatus) {
             mAvailabilityStatus = availabilityStatus;
+        }
+
+        public Preference getUpdateStateArg() {
+            return mUpdateStateArg;
+        }
+
+        public int getUpdateStateCallCount() {
+            return mUpdateStateCallCount;
         }
     }
 }
