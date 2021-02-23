@@ -147,7 +147,7 @@ public abstract class PreferenceController<V extends Preference> implements
 
     private CarUxRestrictions mUxRestrictions;
     private V mPreference;
-    private boolean mIsCreated;
+    private boolean mIsStarted;
 
     /**
      * Controllers should be instantiated from XML. To pass additional arguments see
@@ -245,7 +245,7 @@ public abstract class PreferenceController<V extends Preference> implements
      * no-op if the controller is not yet created.
      */
     public final void refreshUi() {
-        if (!mIsCreated) {
+        if (!mIsStarted) {
             return;
         }
 
@@ -278,7 +278,6 @@ public abstract class PreferenceController<V extends Preference> implements
             return;
         }
         onCreateInternal();
-        mIsCreated = true;
         refreshUi();
     }
 
@@ -293,6 +292,7 @@ public abstract class PreferenceController<V extends Preference> implements
             return;
         }
         onStartInternal();
+        mIsStarted = true;
         refreshUi();
     }
 
@@ -330,6 +330,7 @@ public abstract class PreferenceController<V extends Preference> implements
             return;
         }
         onStopInternal();
+        mIsStarted = false;
     }
 
     /**
@@ -342,7 +343,6 @@ public abstract class PreferenceController<V extends Preference> implements
         if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
             return;
         }
-        mIsCreated = false;
         onDestroyInternal();
     }
 
@@ -512,5 +512,9 @@ public abstract class PreferenceController<V extends Preference> implements
 
     protected boolean isUxRestrictionsIgnored(boolean allIgnores, Set prefsThatIgnore) {
         return allIgnores || prefsThatIgnore.contains(mPreferenceKey);
+    }
+
+    protected boolean isStarted() {
+        return mIsStarted;
     }
 }
