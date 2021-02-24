@@ -47,10 +47,12 @@ public class AccountDetailsPreferenceController extends AccountDetailsBasePrefer
     private static final Logger LOG = new Logger(AccountDetailsPreferenceController.class);
     private static final int REMOVE_ACCOUNT_REQUEST = 101;
 
+    private boolean mIsStarted;
+
     private AccountManagerCallback<Bundle> mCallback =
             future -> {
                 // If already out of this screen, don't proceed.
-                if (!isStarted()) {
+                if (!mIsStarted) {
                     return;
                 }
 
@@ -115,16 +117,18 @@ public class AccountDetailsPreferenceController extends AccountDetailsBasePrefer
     @Override
     protected void onStartInternal() {
         super.onStartInternal();
+        mIsStarted = true;
     }
 
     @Override
     protected void onStopInternal() {
         super.onStopInternal();
+        mIsStarted = false;
     }
 
     @Override
     public void processActivityResult(int requestCode, int resultCode, Intent data) {
-        if (!isStarted()) {
+        if (!mIsStarted) {
             return;
         }
         if (requestCode == REMOVE_ACCOUNT_REQUEST) {
