@@ -40,9 +40,16 @@ import java.util.Set;
  */
 public class AccountDetailsWithSyncStatusPreferenceController extends
         AccountDetailsBasePreferenceController {
+    private boolean mIsStarted = false;
     private Object mStatusChangeListenerHandle;
     private SyncStatusObserver mSyncStatusObserver =
-            which -> ThreadUtils.postOnMainThread(this::refreshUi);
+            which -> ThreadUtils.postOnMainThread(() -> {
+                // The observer call may occur even if the fragment hasn't been started, so
+                // only force an update if the fragment hasn't been stopped.
+                if (mIsStarted) {
+                    refreshUi();
+                }
+            });
 
     public AccountDetailsWithSyncStatusPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -54,6 +61,7 @@ public class AccountDetailsWithSyncStatusPreferenceController extends
      */
     @Override
     protected void onStartInternal() {
+        mIsStarted = true;
         mStatusChangeListenerHandle = ContentResolver.addStatusChangeListener(
                 ContentResolver.SYNC_OBSERVER_TYPE_ACTIVE
                         | ContentResolver.SYNC_OBSERVER_TYPE_STATUS
@@ -65,6 +73,7 @@ public class AccountDetailsWithSyncStatusPreferenceController extends
      */
     @Override
     protected void onStopInternal() {
+        mIsStarted = false;
         if (mStatusChangeListenerHandle != null) {
             ContentResolver.removeStatusChangeListener(mStatusChangeListenerHandle);
         }
