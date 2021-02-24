@@ -25,6 +25,7 @@ import android.content.Context;
 import android.view.View;
 
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -34,7 +35,10 @@ import androidx.test.rule.ActivityTestRule;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
 import com.android.car.settings.testutils.BaseTestSettingsFragment;
+import com.android.car.settings.testutils.EmptySettingsFragment;
+import com.android.car.settings.testutils.TestTopLevelMenuFragment;
 import com.android.car.ui.baselayout.Insets;
+import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.car.ui.toolbar.ToolbarController;
 
@@ -51,6 +55,8 @@ public class BaseCarSettingsActivityTest {
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private BaseCarSettingsTestActivity mActivity;
+    private TopLevelMenuFragment mTopLevelFragment;
+    private FragmentManager mFragmentManager;
 
     @Rule
     public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
@@ -59,6 +65,7 @@ public class BaseCarSettingsActivityTest {
     @Before
     public void setUp() throws Throwable {
         mActivity = mActivityTestRule.getActivity();
+        mFragmentManager = mActivityTestRule.getActivity().getSupportFragmentManager();
     }
 
     @Test
@@ -189,5 +196,88 @@ public class BaseCarSettingsActivityTest {
         assertThat(activityWrapper.getPaddingRight()).isEqualTo(testInsets.getRight());
         assertThat(activityWrapper.getPaddingBottom()).isEqualTo(testInsets.getBottom());
         assertThat(activityWrapper.getPaddingLeft()).isEqualTo(testInsets.getLeft());
+    }
+
+    @Test
+    public void onActivityCreated_topLevelMenuFocused() throws Throwable {
+        assertThat(mActivity.findViewById(R.id.top_level_menu).hasFocus()).isTrue();
+    }
+
+    @Test
+    public void onTopLevelPreferenceTapped_focusUpdated() throws Throwable {
+        setUpTopLevelTestFragment();
+        mActivityTestRule.runOnUiThread(() ->
+                mTopLevelFragment.getPreferenceScreen().getPreference(0).performClick());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
+    }
+
+    @Test
+    public void onFragmentLaunched_maintainContentFocus() throws Throwable {
+        mActivityTestRule.runOnUiThread(() -> {
+            BaseTestSettingsFragment fragment = new BaseTestSettingsFragment();
+            mActivity.launchFragment(fragment);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
+        mActivityTestRule.runOnUiThread(() ->
+                getCurrentFragment().getPreferenceScreen().getPreference(0).performClick());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
+    }
+
+    @Test
+    public void onBack_maintainContentFocus() throws Throwable {
+        mActivityTestRule.runOnUiThread(() -> {
+            BaseTestSettingsFragment fragment1 = new BaseTestSettingsFragment();
+            mActivity.launchFragment(fragment1);
+            BaseTestSettingsFragment fragment2 = new BaseTestSettingsFragment();
+            mActivity.launchFragment(fragment2);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
+        mActivityTestRule.runOnUiThread(() -> mActivity.goBack());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
+    }
+
+    @Test
+    public void onPreferenceDisabled_maintainContentFocus() throws Throwable {
+        mActivityTestRule.runOnUiThread(() -> {
+            BaseTestSettingsFragment fragment = new BaseTestSettingsFragment();
+            mActivity.launchFragment(fragment);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
+        mActivityTestRule.runOnUiThread(() ->
+                getCurrentFragment().getPreferenceScreen().getPreference(0).setEnabled(false));
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
+    }
+
+    @Test
+    public void onFragmentLaunched_noFocusableElements_parkingViewFocused() throws Throwable {
+        mActivityTestRule.runOnUiThread(() -> {
+            EmptySettingsFragment fragment = new EmptySettingsFragment();
+            mActivity.launchFragment(fragment);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(mActivity.findViewById(R.id.settings_focus_parking_view).isFocused()).isTrue();
+    }
+
+    private void setUpTopLevelTestFragment() throws Throwable {
+        String topLevelMenuTag = "top_level_menu";
+        mActivityTestRule.runOnUiThread(() -> {
+            mFragmentManager.beginTransaction()
+                    .replace(R.id.top_level_menu, new TestTopLevelMenuFragment(), topLevelMenuTag)
+                    .commitNow();
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        mTopLevelFragment = (TopLevelMenuFragment) mFragmentManager.findFragmentByTag(
+                topLevelMenuTag);
+    }
+
+    private PreferenceFragment getCurrentFragment() {
+        return (PreferenceFragment) mFragmentManager.findFragmentById(R.id.fragment_container);
     }
 }
