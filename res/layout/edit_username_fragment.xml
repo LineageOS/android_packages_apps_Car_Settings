@@ -20,6 +20,7 @@
     android:layout_height="match_parent">
 
     <com.android.car.ui.FocusArea
+        android:id="@+id/settings_content_focus_area"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
