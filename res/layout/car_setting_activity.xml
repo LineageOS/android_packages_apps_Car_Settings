@@ -42,6 +42,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <com.android.car.settings.common.rotary.SettingsFocusParkingView
+            android:id="@+id/settings_focus_parking_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
