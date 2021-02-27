@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import static android.view.ViewGroup.FOCUS_BEFORE_DESCENDANTS;
 import static android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS;
+import static android.view.accessibility.AccessibilityNodeInfo.ACTION_FOCUS;
 
 import static com.android.car.ui.core.CarUi.requireToolbar;
 
@@ -32,6 +33,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
@@ -46,6 +48,7 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
+import com.android.car.settings.common.rotary.SettingsFocusParkingView;
 import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.baselayout.InsetsChangedListener;
 import com.android.car.ui.core.CarUi;
@@ -85,6 +88,8 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     private static final String KEY_HAS_NEW_INTENT = "key_has_new_intent";
 
     private boolean mHasNewIntent = true;
+    private boolean mHasInitialFocus = false;
+
     private String mTopLevelHeaderKey;
     private boolean mIsSinglePane;
 
@@ -100,6 +105,30 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
             /* timestamp= */ 0
     ).build();
+
+    private ViewTreeObserver.OnGlobalLayoutListener mGlobalLayoutListener;
+    private final ViewTreeObserver.OnGlobalFocusChangeListener mFocusChangeListener =
+            (oldFocus, newFocus) -> {
+                if (oldFocus instanceof SettingsFocusParkingView) {
+                    // Focus is manually shifted away from the SettingsFocusParkingView.
+                    // Therefore, the focus should no longer shift upon global layout.
+                    removeGlobalLayoutListener();
+                }
+                if (newFocus instanceof SettingsFocusParkingView && mGlobalLayoutListener == null) {
+                    // Attempting to shift focus to the SettingsFocusParkingView without a layout
+                    // listener is not allowed, since it can cause undermined focus behavior
+                    // in these rare edge cases.
+                    newFocus.clearFocus();
+                }
+
+                // This will maintain focus in the content pane if a view goes from
+                // focusable -> unfocusable.
+                if (oldFocus == null && mHasInitialFocus) {
+                    requestContentPaneFocus();
+                } else {
+                    mHasInitialFocus = true;
+                }
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +157,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             launchIfDifferent(getInitialFragment());
             mHasNewIntent = false;
         }
+        setUpFocusChangeListener(true);
     }
 
     @Override
@@ -138,9 +168,11 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
+        setUpFocusChangeListener(false);
+        removeGlobalLayoutListener();
         mUxRestrictionsHelper.stop();
         mUxRestrictionsHelper = null;
+        super.onDestroy();
     }
 
     @Override
@@ -237,6 +269,9 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     public void onBackStackChanged() {
         onUxRestrictionsChanged(getCarUxRestrictions());
         if (!mIsSinglePane) {
+            if (mHasInitialFocus) {
+                requestContentPaneFocus();
+            }
             if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
                 mMiniToolbar.setState(Toolbar.State.SUBPAGE);
                 mMiniToolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
@@ -352,6 +387,78 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         });
         mGlobalToolbar.setLogo(R.drawable.ic_launcher_settings);
         mGlobalToolbar.setMenuItems(items);
+    }
+
+    private void setUpFocusChangeListener(boolean enable) {
+        if (mIsSinglePane) {
+            // The focus change listener is only needed with two panes.
+            return;
+        }
+        ViewTreeObserver observer = findViewById(
+                R.id.car_settings_activity_wrapper).getViewTreeObserver();
+        if (enable) {
+            observer.addOnGlobalFocusChangeListener(mFocusChangeListener);
+        } else {
+            observer.removeOnGlobalFocusChangeListener(mFocusChangeListener);
+        }
+    }
+
+    private void requestContentPaneFocus() {
+        if (mIsSinglePane) {
+            return;
+        }
+        if (getCurrentFragment() == null) {
+            return;
+        }
+        View fragmentView = getCurrentFragment().getView();
+        if (fragmentView == null) {
+            return;
+        }
+        removeGlobalLayoutListener();
+        if (fragmentView.isInTouchMode()) {
+            mHasInitialFocus = false;
+            return;
+        }
+        View focusArea = fragmentView.findViewById(R.id.car_ui_focus_area);
+
+        if (focusArea == null) {
+            focusArea = fragmentView.findViewById(R.id.settings_content_focus_area);
+            if (focusArea == null) {
+                return;
+            }
+        }
+        View finalFocusArea = focusArea; // required to be effectively final for inner class access
+        mGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                boolean success = finalFocusArea.performAccessibilityAction(
+                        ACTION_FOCUS, /* arguments= */ null);
+                if (success) {
+                    removeGlobalLayoutListener();
+                } else {
+                    findViewById(
+                            R.id.settings_focus_parking_view).performAccessibilityAction(
+                            ACTION_FOCUS, /* arguments= */ null);
+                }
+            }
+        };
+        fragmentView.getViewTreeObserver().addOnGlobalLayoutListener(mGlobalLayoutListener);
+    }
+
+    private void removeGlobalLayoutListener() {
+        if (mGlobalLayoutListener == null) {
+            return;
+        }
+        if (getCurrentFragment() == null) {
+            return;
+        }
+        View fragmentView = getCurrentFragment().getView();
+        if (fragmentView == null) {
+            return;
+        }
+        fragmentView.getViewTreeObserver()
+                .removeOnGlobalLayoutListener(mGlobalLayoutListener);
+        mGlobalLayoutListener = null;
     }
 
     private void onSearchButtonClicked() {
