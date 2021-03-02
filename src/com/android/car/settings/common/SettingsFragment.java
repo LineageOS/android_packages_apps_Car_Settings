@@ -41,11 +41,12 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
-import com.android.car.ui.preference.DisabledPreferenceCallback;
 import com.android.car.ui.preference.PreferenceFragment;
+import com.android.car.ui.recyclerview.CarUiRecyclerView;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.car.ui.toolbar.ToolbarController;
+import com.android.car.ui.utils.CarUiUtils;
 import com.android.settingslib.search.Indexable;
 
 import java.util.ArrayList;
@@ -82,7 +83,6 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
     private CarUxRestrictions mUxRestrictions;
     private int mCurrentRequestIndex = 0;
-    private String mRestrictedWhileDrivingMessage;
 
     /**
      * Returns the resource id for the preference XML of this fragment.
@@ -132,6 +132,20 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         return null;
     }
 
+    /**
+     * Enables rotary scrolling for the {@link CarUiRecyclerView} in this fragment.
+     * <p>
+     * Rotary scrolling should be enabled for scrolling views which contain content which the user
+     * may want to see but can't interact with, either alone or along with interactive (focusable)
+     * content.
+     */
+    protected void enableRotaryScroll() {
+        CarUiRecyclerView recyclerView = getView().findViewById(R.id.recycler_view);
+        if (recyclerView != null) {
+            CarUiUtils.setRotaryScrollEnabled(recyclerView, /* isVertical= */ true);
+        }
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -165,8 +179,6 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             mPreferenceControllersLookup.computeIfAbsent(controller.getClass(),
                     k -> new ArrayList<>(/* initialCapacity= */ 1)).add(controller);
         });
-
-        mRestrictedWhileDrivingMessage = context.getString(R.string.restricted_while_driving);
     }
 
     @Override
@@ -192,12 +204,6 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             Preference pref = screen.findPreference(controller.getPreferenceKey());
 
             controller.setPreference(pref);
-
-            if (pref instanceof DisabledPreferenceCallback && controller.getAvailabilityStatus()
-                    != PreferenceController.AVAILABLE_FOR_VIEWING) {
-                ((DisabledPreferenceCallback) pref).setMessageToShowWhenDisabledPreferenceClicked(
-                        mRestrictedWhileDrivingMessage);
-            }
         }
     }
 

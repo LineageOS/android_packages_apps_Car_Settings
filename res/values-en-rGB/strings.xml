@@ -29,7 +29,7 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"dim screen, touchscreen, battery"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"dim screen, night, tint"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Night mode"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"Network and Internet"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Network and internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobile network"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIMs</item>
@@ -157,13 +157,6 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wants to turn on Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wants to turn off Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
-    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Device to use with <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"No devices found. Make sure that devices are turned on and available to connect."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Try again"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Something came up. The application has cancelled the request to choose a device."</string>
-    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Connection successful"</string>
-    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Show all"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"Searching"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Unnamed device"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Paired devices"</string>
@@ -352,7 +345,7 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi control allows an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks add or remove networks, or start a local-only hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"More"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Location"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent location requests"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent Location Requests"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No recent location requests"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"App-level permissions"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Location Services"</string>
@@ -360,7 +353,7 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"System updates"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android security patch level"</string>
-    <string name="hardware_info" msgid="3973165746261507658">"Model and hardware"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Model &amp; hardware"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Model: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Baseband version"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel version"</string>
@@ -412,20 +405,20 @@
     <string name="reset_network_select" msgid="2433825874868038739">"Select network"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Reset settings"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Reset?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Reset all network settings? You can\'t undo this action."</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Reset all network settings? You can\'t undo this action!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Reset settings"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Network settings have been reset"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Reset app preferences"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"This will reset all preferences for:\n\n"<li>"Disabled apps"</li>\n<li>"Disabled app notifications"</li>\n<li>"Default applications for actions"</li>\n<li>"Background data restrictions for apps"</li>\n<li>"Any permission restrictions"</li>\n\n"You will not lose any app data."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reset apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App preferences have been reset"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Delete all data (factory reset)"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Erase all data (factory reset)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"This will erase all data from your vehicle’s head unit, including:\n\n"<li>"Your Google Account"</li>\n<li>"System and app data and settings"</li>\n<li>"Downloaded apps"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"You are currently signed in to the following accounts:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"There are other users present on this vehicle."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Reset vehicle"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"Reset?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Delete all your personal information and downloaded apps? You won\'t be able to undo this action."</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Erase all your personal information and downloaded apps? You can\'t undo this action!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Erase everything"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Erasing"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Please wait..."</string>
@@ -574,7 +567,6 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Wrong pattern"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"How to draw an unlock pattern"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Error saving pattern"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Too many incorrect attempts. Try again in <xliff:g id="NUMBER">%d</xliff:g> seconds."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Remove screen lock?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"This will allow anyone to access your account"</string>
@@ -582,8 +574,8 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Enter your password"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"For security, set a PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Re-enter your PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least four digits"</string>
-    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least four digits."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least 4 digits"</string>
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least 4 digits."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINs don\'t match"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Error saving PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Wrong PIN"</string>
@@ -634,6 +626,26 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Ascending, descending or repeated sequence of digits isn\'t allowed."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Screen lock options"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> days ago"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Add trusted device"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth will turn on to add trusted device"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Trusted devices"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> devices</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> device</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Your <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> will unlock this car when it\'s connected. If someone takes your <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, they may be able to access this device"</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirm"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Remove trusted device"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Done"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Use the companion app to set up a trusted device. Once set up, your user profile will unlock automatically when your phone is detected near the vehicle."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download the companion app on your phone"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Select <xliff:g id="CAR_NAME">%1$s</xliff:g> on your phone to pair the devices"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"A trusted device near your car will unlock the user profile upon ignition, even if someone else is holding the device."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Please confirm that the pairing codes match"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Phone has been enrolled successfully"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> enrolment failed"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Adding a trusted device requires you to set an authentication method next. If you do not have your trusted device with you, authentication will be required to access your profile."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Device disconnected."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Clear credentials"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Remove all certificates"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Remove all the contents?"</string>
@@ -656,5 +668,4 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"DISMISS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Feature not available while driving"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Can\'t add user while driving"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
 </resources>

@@ -27,7 +27,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.loader.app.LoaderManager;
@@ -213,6 +216,12 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
                 .setOnClickListener(i -> handleClearCacheClick())
                 .setEnabled(false)
                 .build();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        enableRotaryScroll();
     }
 
     @Override

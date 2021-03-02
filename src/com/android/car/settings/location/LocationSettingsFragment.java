@@ -25,7 +25,10 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
@@ -73,6 +76,12 @@ public class LocationSettingsFragment extends SettingsFragment {
                                 UserHandle.myUserId(),
                                 Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS))
                 .build();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        enableRotaryScroll();
     }
 
     @Override
