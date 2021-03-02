@@ -28,6 +28,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
 import com.android.car.settings.testutils.TestSettingsFragment1;
 import com.android.car.settings.testutils.TestSettingsFragment2;
+import com.android.car.settings.testutils.TestTopLevelMenuFragment;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -106,12 +107,5 @@ public class TopLevelMenuFragmentTest {
 
     private Fragment getCurrentFragment() {
         return mFragmentManager.findFragmentById(R.id.fragment_container);
-    }
-
-    public static class TestTopLevelMenuFragment extends TopLevelMenuFragment {
-        @Override
-        protected int getPreferenceScreenResId() {
-            return R.xml.test_top_level_menu_fragment;
-        }
     }
 }

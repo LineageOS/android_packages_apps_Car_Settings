@@ -16,25 +16,12 @@
 
 package com.android.car.settings.testutils;
 
-import android.car.drivingstate.CarUxRestrictions;
-
 import com.android.car.settings.R;
-import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.common.TopLevelMenuFragment;
 
-public class BaseTestSettingsFragment extends SettingsFragment {
-    private CarUxRestrictions mCarUxRestrictions;
-
+public class TestTopLevelMenuFragment extends TopLevelMenuFragment {
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.test_preference_screen;
-    }
-
-    @Override
-    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
-        mCarUxRestrictions = restrictionInfo;
-    }
-
-    public CarUxRestrictions getUxRestrictions() {
-        return mCarUxRestrictions;
+        return R.xml.test_top_level_menu_fragment;
     }
 }
