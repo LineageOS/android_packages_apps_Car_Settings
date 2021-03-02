@@ -46,7 +46,8 @@ public class WifiEntryPreferenceController extends
 
     @Override
     protected void onCreateInternal() {
-        mCarWifiManager = new CarWifiManager(getContext());
+        mCarWifiManager = new CarWifiManager(getContext(),
+                getFragmentController().getSettingsLifecycle());
         getPreference().setOnSecondaryActionClickListener(isChecked -> {
             if (isChecked != mCarWifiManager.isWifiEnabled()) {
                 mCarWifiManager.setWifiEnabled(isChecked);
@@ -57,19 +58,12 @@ public class WifiEntryPreferenceController extends
     @Override
     protected void onStartInternal() {
         mCarWifiManager.addListener(this);
-        mCarWifiManager.start();
         getPreference().setSecondaryActionChecked(mCarWifiManager.isWifiEnabled());
     }
 
     @Override
     protected void onStopInternal() {
         mCarWifiManager.removeListener(this);
-        mCarWifiManager.stop();
-    }
-
-    @Override
-    protected void onDestroyInternal() {
-        mCarWifiManager.destroy();
     }
 
     @Override
@@ -84,7 +78,7 @@ public class WifiEntryPreferenceController extends
     }
 
     @Override
-    public void onAccessPointsChanged() {
+    public void onWifiEntriesChanged() {
         // don't care.
         return;
     }

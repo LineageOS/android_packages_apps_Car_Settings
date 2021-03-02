@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.wifi;
@@ -19,37 +19,40 @@ package com.android.car.settings.wifi;
 import android.content.Context;
 
 import com.android.car.settings.R;
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.wifitrackerlib.WifiEntry;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * Represents Security protocol for AccessPoint.
+ * Represents Security protocol for WifiEntry.
  */
-public class AccessPointSecurity {
+public class WifiEntrySecurity {
     public static final int SECURITY_NONE_POSITION = 0;
     private final int mSecurityType;
     private final Context mContext;
     private static final List<Integer> SECURITY_TYPES = Arrays.asList(
-            AccessPoint.SECURITY_NONE,
-            AccessPoint.SECURITY_WEP,
-            AccessPoint.SECURITY_PSK,
-            AccessPoint.SECURITY_EAP,
-            AccessPoint.SECURITY_SAE,
-            AccessPoint.SECURITY_OWE,
-            AccessPoint.SECURITY_EAP_SUITE_B);
+            WifiEntry.SECURITY_NONE,
+            WifiEntry.SECURITY_WEP,
+            WifiEntry.SECURITY_PSK,
+            WifiEntry.SECURITY_EAP,
+            WifiEntry.SECURITY_SAE,
+            WifiEntry.SECURITY_OWE,
+            WifiEntry.SECURITY_EAP_SUITE_B);
 
-    public static List<AccessPointSecurity> getSecurityTypes(Context context) {
-        List<AccessPointSecurity> securities = new ArrayList<>();
+    /**
+     * Returns a list of security protocols for WifiEntries.
+     */
+    public static List<WifiEntrySecurity> getSecurityTypes(Context context) {
+        List<WifiEntrySecurity> securities = new ArrayList<>();
         for (int security : SECURITY_TYPES) {
-            securities.add(new AccessPointSecurity(context, security));
+            securities.add(new WifiEntrySecurity(context, security));
         }
         return securities;
     }
 
-    private AccessPointSecurity(Context context, int securityType) {
+    private WifiEntrySecurity(Context context, int securityType) {
         mContext = context;
         mSecurityType = securityType;
     }
@@ -61,19 +64,19 @@ public class AccessPointSecurity {
     @Override
     public String toString() {
         switch(mSecurityType) {
-            case AccessPoint.SECURITY_EAP_SUITE_B:
+            case WifiEntry.SECURITY_EAP_SUITE_B:
                 return mContext.getString(R.string.wifi_security_eap_suiteb);
-            case AccessPoint.SECURITY_EAP:
+            case WifiEntry.SECURITY_EAP:
                 return mContext.getString(R.string.wifi_security_eap);
-            case AccessPoint.SECURITY_SAE:
+            case WifiEntry.SECURITY_SAE:
                 return mContext.getString(R.string.wifi_security_sae);
-            case AccessPoint.SECURITY_PSK:
+            case WifiEntry.SECURITY_PSK:
                 return mContext.getString(R.string.wifi_security_psk_generic);
-            case AccessPoint.SECURITY_WEP:
+            case WifiEntry.SECURITY_WEP:
                 return mContext.getString(R.string.wifi_security_wep);
-            case AccessPoint.SECURITY_OWE:
+            case WifiEntry.SECURITY_OWE:
                 return mContext.getString(R.string.wifi_security_owe);
-            case AccessPoint.SECURITY_NONE:
+            case WifiEntry.SECURITY_NONE:
             default:
                 return mContext.getString(R.string.wifi_security_none);
         }

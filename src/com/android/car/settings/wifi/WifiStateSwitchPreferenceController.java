@@ -38,7 +38,8 @@ public class WifiStateSwitchPreferenceController extends
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarWifiManager = new CarWifiManager(context);
+        mCarWifiManager = new CarWifiManager(context,
+                getFragmentController().getSettingsLifecycle());
     }
 
     @Override
@@ -67,23 +68,16 @@ public class WifiStateSwitchPreferenceController extends
     @Override
     protected void onStartInternal() {
         mCarWifiManager.addListener(this);
-        mCarWifiManager.start();
         onWifiStateChanged(mCarWifiManager.getWifiState());
     }
 
     @Override
     protected void onStopInternal() {
         mCarWifiManager.removeListener(this);
-        mCarWifiManager.stop();
     }
 
     @Override
-    protected void onDestroyInternal() {
-        mCarWifiManager.destroy();
-    }
-
-    @Override
-    public void onAccessPointsChanged() {
+    public void onWifiEntriesChanged() {
         // intentional no-op
     }
 

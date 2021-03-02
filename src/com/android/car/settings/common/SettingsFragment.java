@@ -319,6 +319,12 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         return null;
     }
 
+    @NonNull
+    @Override
+    public Lifecycle getSettingsLifecycle() {
+        return getLifecycle();
+    }
+
     @Override
     public void startActivityForResult(Intent intent, int requestCode,
             ActivityResultCallback callback) {
