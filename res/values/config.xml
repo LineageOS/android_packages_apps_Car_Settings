@@ -104,6 +104,20 @@
         <item>@string/pk_bluetooth_paired_devices</item>
     </string-array>
 
+    <!-- The shape for top-level icons: 0=RECTANGLE, 1=OVAL -->
+    <integer name="config_toplevel_icon_shape" translatable="false">1</integer>
+    <!--
+        Whether to always override the background color of the injecting application in favor of
+        the default color.
+    -->
+    <bool name="config_toplevel_injection_background_always_use_default" translatable="false">false</bool>
+    <!-- Array of injected setting categories that appear in the top-level menu. -->
+    <string-array name="config_toplevel_injection_categories">
+        <item>com.android.settings.category.wireless</item>
+        <item>com.android.settings.category.ia.device</item>
+        <item>com.android.settings.category.personal</item>
+    </string-array>
+
     <!-- The component which listens for the enabling of developer options. -->
     <string name="config_dev_options_module" translatable="false">
         com.android.car.developeroptions/.CarDevelopmentSettingsDashboardActivity
