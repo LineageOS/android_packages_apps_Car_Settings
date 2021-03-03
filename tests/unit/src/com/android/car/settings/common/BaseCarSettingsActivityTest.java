@@ -43,7 +43,6 @@ import com.android.car.ui.toolbar.Toolbar;
 import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -122,7 +121,6 @@ public class BaseCarSettingsActivityTest {
     }
 
     @Test
-    @Ignore("b/178512946")
     public void onBackStackChanged_uxRestrictionsChanged_currentFragmentHasUpdatedUxRestrictions()
             throws Throwable {
         CarUxRestrictions oldUxRestrictions = new CarUxRestrictions.Builder(
@@ -156,7 +154,6 @@ public class BaseCarSettingsActivityTest {
     }
 
     @Test
-    @Ignore("b/178512946")
     public void onBackStackChanged_toolbarUpdated() throws Throwable {
         ToolbarController toolbar = mActivity.getToolbar();
 

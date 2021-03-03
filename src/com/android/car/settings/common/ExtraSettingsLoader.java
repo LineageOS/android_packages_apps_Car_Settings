@@ -17,6 +17,7 @@
 package com.android.car.settings.common;
 
 import static com.android.settingslib.drawer.CategoryKey.CATEGORY_DEVICE;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_KEY_ORDER;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_KEYHINT;
@@ -24,6 +25,8 @@ import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMM
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE_URI;
+
+import static java.lang.String.CASE_INSENSITIVE_ORDER;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -43,7 +46,7 @@ import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.ui.preference.CarUiPreference;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -61,7 +64,7 @@ public class ExtraSettingsLoader {
     public ExtraSettingsLoader(Context context) {
         mContext = context;
         mPm = context.getPackageManager();
-        mPreferenceBundleMap = new HashMap<>();
+        mPreferenceBundleMap = new LinkedHashMap<>();
     }
 
     @VisibleForTesting
@@ -82,6 +85,22 @@ public class ExtraSettingsLoader {
                 PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
 
         String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
+
+        // Sort results based on [order, package within order]
+        results.sort((r1, r2) -> {
+            // First sort by order
+            int orderCompare = r2.activityInfo.metaData.getInt(META_DATA_KEY_ORDER)
+                    - r1.activityInfo.metaData.getInt(META_DATA_KEY_ORDER);
+            if (orderCompare != 0) {
+                return orderCompare;
+            }
+
+            // Then sort by package name
+            String package1 = r1.activityInfo.packageName;
+            String package2 = r2.activityInfo.packageName;
+            return CASE_INSENSITIVE_ORDER.compare(package1, package2);
+        });
+
         for (ResolveInfo resolved : results) {
             if (!resolved.system) {
                 // Do not allow any app to be added to settings, only system ones.
