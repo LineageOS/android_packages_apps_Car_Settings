@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import static com.android.settingslib.drawer.TileUtils.META_DATA_KEY_ORDER;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY_URI;
@@ -45,7 +46,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
@@ -53,6 +57,8 @@ public class ExtraSettingsLoaderTest {
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
     private static final String FAKE_CATEGORY = "fake_category";
     private static final String FAKE_TITLE = "fake_title";
+    private static final String FAKE_TITLE1 = "fake_title1";
+    private static final String FAKE_TITLE2 = "fake_title2";
     private static final String FAKE_SUMMARY = "fake_summary";
     private static final String TEST_CONTENT_PROVIDER =
             "content://com.android.car.settings.testutils.TestContentProvider";
@@ -70,10 +76,30 @@ public class ExtraSettingsLoaderTest {
         mExtraSettingsLoader.setPackageManager(mPm);
     }
 
-    @Test
-    public void testLoadPreference_uriResources_shouldNotLoadStaticResources() {
+    private ResolveInfo createResolveInfo(String packageName, String className, Bundle metaData) {
+        ActivityInfo activityInfo = new ActivityInfo();
+        activityInfo.packageName = packageName;
+        activityInfo.name = className;
+        activityInfo.metaData = metaData;
+
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
+
+        return resolveInfoSystem;
+    }
+
+    private Map<Preference, Bundle> executeLoadPreferences(List<ResolveInfo> resolveInfoList) {
         Intent intent = new Intent();
         intent.putExtra(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+
+        when(mPm.queryIntentActivitiesAsUser(eq(intent), eq(PackageManager.GET_META_DATA),
+                anyInt())).thenReturn(resolveInfoList);
+        return mExtraSettingsLoader.loadPreferences(intent);
+    }
+
+    @Test
+    public void testLoadPreference_uriResources_shouldNotLoadStaticResources() {
         Bundle bundle = new Bundle();
         bundle.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE);
         bundle.putString(META_DATA_PREFERENCE_SUMMARY, FAKE_SUMMARY);
@@ -82,19 +108,10 @@ public class ExtraSettingsLoaderTest {
         bundle.putString(META_DATA_PREFERENCE_SUMMARY_URI, TEST_CONTENT_PROVIDER);
         bundle.putString(META_DATA_PREFERENCE_ICON_URI, TEST_CONTENT_PROVIDER);
 
-        ActivityInfo activityInfo = new ActivityInfo();
-        activityInfo.metaData = bundle;
-        activityInfo.packageName = "package_name";
-        activityInfo.name = "class_name";
+        ResolveInfo resolveInfoSystem = createResolveInfo("package_name", "class_name", bundle);
 
-        ResolveInfo resolveInfoSystem = new ResolveInfo();
-        resolveInfoSystem.system = true;
-        resolveInfoSystem.activityInfo = activityInfo;
-
-        when(mPm.queryIntentActivitiesAsUser(eq(intent), eq(PackageManager.GET_META_DATA),
-                anyInt())).thenReturn(Collections.singletonList(resolveInfoSystem));
-        Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
-                intent);
+        Map<Preference, Bundle> preferenceToBundleMap =
+                executeLoadPreferences(Collections.singletonList(resolveInfoSystem));
 
         assertThat(preferenceToBundleMap).hasSize(1);
 
@@ -103,5 +120,89 @@ public class ExtraSettingsLoaderTest {
             assertThat(p.getSummary()).isNull();
             assertThat(p.getIcon()).isNull();
         }
+    }
+
+    @Test
+    public void testLoadPreference_sortPreferences_byMetadata() {
+        Bundle bundle1 = new Bundle();
+        bundle1.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE1);
+        bundle1.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+        bundle1.putInt(META_DATA_KEY_ORDER, 1);
+
+        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1", bundle1);
+
+        Bundle bundle2 = new Bundle();
+        bundle2.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE2);
+        bundle2.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+        bundle2.putInt(META_DATA_KEY_ORDER, 2);
+
+        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2", bundle2);
+
+        List<ResolveInfo> resolveInfoList = new ArrayList<>();
+        resolveInfoList.add(resolveInfoSystem1);
+        resolveInfoList.add(resolveInfoSystem2);
+
+        Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(resolveInfoList);
+
+        assertThat(preferenceToBundleMap).hasSize(2);
+
+        Iterator<Preference> iter = preferenceToBundleMap.keySet().iterator();
+        assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE2);
+        assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE1);
+    }
+
+    @Test
+    public void testLoadPreference_sortPreferences_byPackageName() {
+        Bundle bundle1 = new Bundle();
+        bundle1.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE1);
+        bundle1.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+
+        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1", bundle1);
+
+        Bundle bundle2 = new Bundle();
+        bundle2.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE2);
+        bundle2.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+
+        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2", bundle2);
+
+        List<ResolveInfo> resolveInfoList = new ArrayList<>();
+        resolveInfoList.add(resolveInfoSystem2);
+        resolveInfoList.add(resolveInfoSystem1);
+
+        Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(resolveInfoList);
+
+        assertThat(preferenceToBundleMap).hasSize(2);
+
+        Iterator<Preference> iter = preferenceToBundleMap.keySet().iterator();
+        assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE1);
+        assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE2);
+    }
+
+    @Test
+    public void testLoadPreference_sortPreferences_prioritizeMetadata() {
+        Bundle bundle1 = new Bundle();
+        bundle1.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE1);
+        bundle1.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+
+        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1", bundle1);
+
+        Bundle bundle2 = new Bundle();
+        bundle2.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE2);
+        bundle2.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+        bundle2.putInt(META_DATA_KEY_ORDER, 2);
+
+        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2", bundle2);
+
+        List<ResolveInfo> resolveInfoList = new ArrayList<>();
+        resolveInfoList.add(resolveInfoSystem1);
+        resolveInfoList.add(resolveInfoSystem2);
+
+        Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(resolveInfoList);
+
+        assertThat(preferenceToBundleMap).hasSize(2);
+
+        Iterator<Preference> iter = preferenceToBundleMap.keySet().iterator();
+        assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE2);
+        assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE1);
     }
 }
