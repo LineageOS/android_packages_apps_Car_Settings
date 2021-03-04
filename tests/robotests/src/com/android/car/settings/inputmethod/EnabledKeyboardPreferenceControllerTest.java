@@ -194,7 +194,7 @@ public class EnabledKeyboardPreferenceControllerTest {
     }
 
     @Test
-    public void performClick_noSettingsActivity_noCrash() {
+    public void performClick_missingSettingsActivity_noCrash() {
         // Set to true if you'd like Robolectric to strictly simulate the real Android behavior when
         // calling {@link Context#startActivity(android.content.Intent)}. Real Android throws a
         // {@link android.content.ActivityNotFoundException} if given an {@link Intent} that is not
@@ -214,18 +214,41 @@ public class EnabledKeyboardPreferenceControllerTest {
         assertThat(intent).isNull();
     }
 
+    @Test
+    public void performClick_noSettingsActivity_noCrash() {
+        ShadowApplication.getInstance().checkActivities(true);
+        getShadowDevicePolicyManager(mContext).setPermittedInputMethodsForCurrentUser(null);
+        List<InputMethodInfo> infos = createInputMethodInfoList(
+                DISALLOWED_PACKAGE_NAME, /* settingsActivity= */ null);
+        getShadowInputMethodManager(mContext).setEnabledInputMethodList(infos);
+
+        mControllerHelper.getController().refreshUi();
+
+        Preference preference = mPreferenceGroup.getPreference(0);
+        preference.performClick();
+
+        Intent intent = ShadowApplication.getInstance().getNextStartedActivity();
+        assertThat(intent).isNull();
+    }
+
     private List<InputMethodInfo> createInputMethodInfoList(String packageName) {
+        return createInputMethodInfoList(packageName, DUMMY_SETTINGS_ACTIVITY);
+    }
+
+    private List<InputMethodInfo> createInputMethodInfoList(String packageName,
+            String settingsName) {
         List<InputMethodInfo> infos = new ArrayList<>();
         PackageManager packageManager = mContext.getPackageManager();
         infos.add(createMockInputMethodInfoWithSubtypes(
-                packageManager, getShadowInputMethodManager(mContext), packageName));
+                packageManager, getShadowInputMethodManager(mContext), packageName, settingsName));
         return infos;
     }
 
     private static InputMethodInfo createMockInputMethodInfoWithSubtypes(
             PackageManager packageManager, ShadowInputMethodManager inputMethodManager,
-            String packageName) {
-        InputMethodInfo mockInfo = createMockInputMethodInfo(packageManager, packageName);
+            String packageName, String settingsName) {
+        InputMethodInfo mockInfo = createMockInputMethodInfo(packageManager, packageName,
+                settingsName);
         List<InputMethodSubtype> subtypes = createSubtypes();
         inputMethodManager.setEnabledInputMethodSubtypeList(subtypes);
 
@@ -233,13 +256,13 @@ public class EnabledKeyboardPreferenceControllerTest {
     }
 
     private static InputMethodInfo createMockInputMethodInfo(
-            PackageManager packageManager, String packageName) {
+            PackageManager packageManager, String packageName, String settingsName) {
         InputMethodInfo mockInfo = mock(InputMethodInfo.class);
         when(mockInfo.getPackageName()).thenReturn(packageName);
         when(mockInfo.getId()).thenReturn(DUMMY_ID);
         when(mockInfo.loadLabel(packageManager)).thenReturn(DUMMY_LABEL);
         when(mockInfo.getServiceInfo()).thenReturn(new ServiceInfo());
-        when(mockInfo.getSettingsActivity()).thenReturn(DUMMY_SETTINGS_ACTIVITY);
+        when(mockInfo.getSettingsActivity()).thenReturn(settingsName);
         return mockInfo;
     }
 
