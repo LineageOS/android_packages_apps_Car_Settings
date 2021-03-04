@@ -19,7 +19,6 @@ package com.android.car.settings.common;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_DYNAMIC_SUMMARY;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_DYNAMIC_TITLE;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_PROVIDER_ICON;
-import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_TINTABLE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY_URI;
@@ -45,7 +44,6 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.settingslib.drawer.TileUtils;
 import com.android.settingslib.utils.ThreadUtils;
@@ -168,8 +166,6 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
                         metaData.getBoolean(META_DATA_DISTRACTION_OPTIMIZED);
             }
             setting.getExtras().putBoolean(META_DATA_DISTRACTION_OPTIMIZED, distractionOptimized);
-            setting.getExtras().putBoolean(META_DATA_PREFERENCE_ICON_TINTABLE,
-                    ExtraSettingsUtil.isIconTintable(metaData));
             getDynamicData(setting, metaData);
             getPreference().addPreference(setting);
         }
@@ -186,7 +182,8 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
             Uri uri = ExtraSettingsUtil.getCompleteUri(metaData, META_DATA_PREFERENCE_TITLE_URI,
                     METHOD_GET_DYNAMIC_TITLE);
             refreshTitle(uri, preference);
-            mObservers.add(new DynamicDataObserver(METHOD_GET_DYNAMIC_TITLE, uri, preference));
+            mObservers.add(
+                    new DynamicDataObserver(METHOD_GET_DYNAMIC_TITLE, uri, metaData, preference));
         }
         if (metaData.containsKey(META_DATA_PREFERENCE_SUMMARY_URI)) {
             // Set a placeholder summary before starting to fetch real summary to prevent vertical
@@ -195,7 +192,8 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
             Uri uri = ExtraSettingsUtil.getCompleteUri(metaData, META_DATA_PREFERENCE_SUMMARY_URI,
                     METHOD_GET_DYNAMIC_SUMMARY);
             refreshSummary(uri, preference);
-            mObservers.add(new DynamicDataObserver(METHOD_GET_DYNAMIC_SUMMARY, uri, preference));
+            mObservers.add(
+                    new DynamicDataObserver(METHOD_GET_DYNAMIC_SUMMARY, uri, metaData, preference));
         }
         if (metaData.containsKey(META_DATA_PREFERENCE_ICON_URI)) {
             // Set a placeholder icon before starting to fetch real icon to prevent horizontal
@@ -203,8 +201,9 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
             preference.setIcon(R.drawable.ic_placeholder);
             Uri uri = ExtraSettingsUtil.getCompleteUri(metaData, META_DATA_PREFERENCE_ICON_URI,
                     METHOD_GET_PROVIDER_ICON);
-            refreshIcon(uri, preference);
-            mObservers.add(new DynamicDataObserver(METHOD_GET_PROVIDER_ICON, uri, preference));
+            refreshIcon(uri, metaData, preference);
+            mObservers.add(
+                    new DynamicDataObserver(METHOD_GET_PROVIDER_ICON, uri, metaData, preference));
         }
     }
 
@@ -240,7 +239,7 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
         });
     }
 
-    private void refreshIcon(Uri uri, Preference preference) {
+    private void refreshIcon(Uri uri, Bundle metaData, Preference preference) {
         executeBackgroundTask(() -> {
             Intent intent = preference.getIntent();
             String packageName = null;
@@ -254,20 +253,15 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
                     mContext, packageName, uri, providerMap);
             Drawable icon;
             if (iconInfo != null) {
-                icon = ExtraSettingsUtil.loadDrawableFromPackage(mContext,
-                        iconInfo.first, iconInfo.second);
+                icon = ExtraSettingsUtil.createIcon(mContext, metaData, iconInfo.first,
+                        iconInfo.second);
             } else {
                 LOG.w("Failed to get icon from uri " + uri);
-                icon = mContext.getDrawable(R.drawable.ic_settings_gear);
-                LOG.d("use default icon.");
+                icon = ExtraSettingsUtil.createIcon(mContext, metaData, packageName, 0);
             }
             if (icon != null) {
                 executeUiTask(() -> {
                     preference.setIcon(icon);
-                    if (preference.getExtras().getBoolean(META_DATA_PREFERENCE_ICON_TINTABLE)) {
-                        preference.getIcon().setTintList(
-                                Themes.getAttrColorStateList(mContext, R.attr.iconColor));
-                    }
                 });
             }
         });
@@ -279,12 +273,14 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
     private class DynamicDataObserver extends ContentObserver {
         private final String mMethod;
         private final Uri mUri;
+        private final Bundle mMetaData;
         private final Preference mPreference;
 
-        DynamicDataObserver(String method, Uri uri, Preference preference) {
+        DynamicDataObserver(String method, Uri uri, Bundle metaData, Preference preference) {
             super(new Handler(Looper.getMainLooper()));
             mMethod = method;
             mUri = uri;
+            mMetaData = metaData;
             mPreference = preference;
         }
 
@@ -308,7 +304,7 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
                     refreshSummary(mUri, mPreference);
                     break;
                 case METHOD_GET_PROVIDER_ICON:
-                    refreshIcon(mUri, mPreference);
+                    refreshIcon(mUri, mMetaData, mPreference);
                     break;
             }
         }

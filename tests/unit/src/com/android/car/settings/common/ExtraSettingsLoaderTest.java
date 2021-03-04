@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_PREFERENCE_IS_TOP_LEVEL;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_KEY_ORDER;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
@@ -62,6 +63,7 @@ public class ExtraSettingsLoaderTest {
     private static final String FAKE_SUMMARY = "fake_summary";
     private static final String TEST_CONTENT_PROVIDER =
             "content://com.android.car.settings.testutils.TestContentProvider";
+    private static final String DEVICE_CATEGORY = "com.android.settings.category.ia.device";
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private ExtraSettingsLoader mExtraSettingsLoader;
@@ -89,9 +91,10 @@ public class ExtraSettingsLoaderTest {
         return resolveInfoSystem;
     }
 
-    private Map<Preference, Bundle> executeLoadPreferences(List<ResolveInfo> resolveInfoList) {
+    private Map<Preference, Bundle> executeLoadPreferences(List<ResolveInfo> resolveInfoList,
+            String category) {
         Intent intent = new Intent();
-        intent.putExtra(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+        intent.putExtra(META_DATA_PREFERENCE_CATEGORY, category);
 
         when(mPm.queryIntentActivitiesAsUser(eq(intent), eq(PackageManager.GET_META_DATA),
                 anyInt())).thenReturn(resolveInfoList);
@@ -111,7 +114,7 @@ public class ExtraSettingsLoaderTest {
         ResolveInfo resolveInfoSystem = createResolveInfo("package_name", "class_name", bundle);
 
         Map<Preference, Bundle> preferenceToBundleMap =
-                executeLoadPreferences(Collections.singletonList(resolveInfoSystem));
+                executeLoadPreferences(Collections.singletonList(resolveInfoSystem), FAKE_CATEGORY);
 
         assertThat(preferenceToBundleMap).hasSize(1);
 
@@ -142,7 +145,8 @@ public class ExtraSettingsLoaderTest {
         resolveInfoList.add(resolveInfoSystem1);
         resolveInfoList.add(resolveInfoSystem2);
 
-        Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(resolveInfoList);
+        Map<Preference, Bundle> preferenceToBundleMap =
+                executeLoadPreferences(resolveInfoList, FAKE_CATEGORY);
 
         assertThat(preferenceToBundleMap).hasSize(2);
 
@@ -169,7 +173,8 @@ public class ExtraSettingsLoaderTest {
         resolveInfoList.add(resolveInfoSystem2);
         resolveInfoList.add(resolveInfoSystem1);
 
-        Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(resolveInfoList);
+        Map<Preference, Bundle> preferenceToBundleMap =
+                executeLoadPreferences(resolveInfoList, FAKE_CATEGORY);
 
         assertThat(preferenceToBundleMap).hasSize(2);
 
@@ -197,12 +202,31 @@ public class ExtraSettingsLoaderTest {
         resolveInfoList.add(resolveInfoSystem1);
         resolveInfoList.add(resolveInfoSystem2);
 
-        Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(resolveInfoList);
+        Map<Preference, Bundle> preferenceToBundleMap =
+                executeLoadPreferences(resolveInfoList, FAKE_CATEGORY);
 
         assertThat(preferenceToBundleMap).hasSize(2);
 
         Iterator<Preference> iter = preferenceToBundleMap.keySet().iterator();
         assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE2);
         assertThat(iter.next().getTitle().toString()).isEqualTo(FAKE_TITLE1);
+    }
+
+    @Test
+    public void testLoadPreference_isTopLevel_topLevelMetadataSet() {
+        Bundle bundle = new Bundle();
+        bundle.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE);
+        bundle.putString(META_DATA_PREFERENCE_SUMMARY, FAKE_SUMMARY);
+        bundle.putString(META_DATA_PREFERENCE_CATEGORY, DEVICE_CATEGORY);
+
+        ResolveInfo resolveInfo = createResolveInfo("package_name", "class_name", bundle);
+
+        Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(
+                Collections.singletonList(resolveInfo), DEVICE_CATEGORY);
+
+        assertThat(preferenceToBundleMap).hasSize(1);
+        for (Bundle b : preferenceToBundleMap.values()) {
+            assertThat(b.getBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL)).isTrue();
+        }
     }
 }

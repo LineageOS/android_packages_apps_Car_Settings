@@ -16,7 +16,10 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_PREFERENCE_IS_TOP_LEVEL;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_TINTABLE;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_KEYHINT;
 
 import android.content.ContentResolver;
@@ -28,11 +31,64 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+
+import com.android.car.apps.common.util.Themes;
+import com.android.car.settings.R;
+
 import java.util.List;
 
 /** Contains utility functions for injected settings. */
 public class ExtraSettingsUtil {
     private static final Logger LOG = new Logger(ExtraSettingsUtil.class);
+
+    /**
+     * See {@link #createIcon(Context, Bundle, String, int)
+     * <p>
+     * Will return null if the provided metadata does not specify
+     * {@link com.android.settingslib.drawer.TileUtils#META_DATA_PREFERENCE_ICON} but contains
+     * {@link com.android.settingslib.drawer.TileUtils#META_DATA_PREFERENCE_ICON_URI}.
+     */
+    @Nullable
+    public static Drawable createIcon(Context context, Bundle metaData, String packageName) {
+        if (metaData.containsKey(META_DATA_PREFERENCE_ICON)) {
+            int iconRes = metaData.getInt(META_DATA_PREFERENCE_ICON);
+            return createIcon(context, metaData, packageName, iconRes);
+        } else if (metaData.containsKey(META_DATA_PREFERENCE_ICON_URI)) {
+            return null;
+        }
+        return createIcon(context, metaData, packageName, /* resId= */ 0);
+    }
+
+    /**
+     * Returns an icon for an injected preference with the necessary styling, or null if the
+     * provided {@code resId} could not be loaded.
+     */
+    @Nullable
+    public static Drawable createIcon(Context context, Bundle metaData, String packageName,
+            @DrawableRes int resId) {
+        Drawable icon;
+        if (resId != 0) {
+            icon = loadDrawableFromPackage(context, packageName, resId);
+        } else {
+            icon = context.getDrawable(R.drawable.ic_settings_gear);
+            LOG.d("Icon not provided for " + packageName + "; using default icon");
+        }
+        if (icon == null) {
+            return null;
+        }
+        if (metaData.getBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL, /* defaultValue= */ false)) {
+            icon.mutate().setTintList(
+                    context.getColorStateList(R.color.toplevel_injected_icon_default));
+            icon = new TopLevelIcon(context, icon, R.dimen.toplevel_foreground_icon_inset);
+            ((TopLevelIcon) icon).setBackgroundColor(context, metaData, packageName);
+        } else if (isIconTintable(metaData)) {
+            // If the icon is tintable, tint it with the default icon color attribute
+            icon.mutate().setTintList(Themes.getAttrColorStateList(context, R.attr.iconColor));
+        }
+        return icon;
+    }
 
     /**
      * Returns whether or not an icon is tintable given the injected setting metadata.
