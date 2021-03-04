@@ -173,4 +173,7 @@
     <dimen name="action_buttons_icon_margin_end">@*android:dimen/car_padding_1</dimen>
     <dimen name="action_buttons_divider_height">@dimen/divider_preference_height</dimen>
 
+    <!-- Top-level menu icons -->
+    <dimen name="toplevel_foreground_icon_inset">8dp</dimen>
+
 </resources>
