@@ -27,19 +27,19 @@
     -->
     <Preference
         android:fragment="com.android.car.settings.display.DisplaySettingsFragment"
-        android:icon="@drawable/ic_settings_display"
+        android:icon="@drawable/ic_toplevel_display"
         android:key="@string/pk_display_settings_entry"
         android:title="@string/display_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.sound.SoundSettingsFragment"
-        android:icon="@drawable/ic_settings_sound"
+        android:icon="@drawable/ic_toplevel_sound"
         android:key="@string/pk_sound_settings_entry"
         android:title="@string/sound_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.network.NetworkAndInternetFragment"
-        android:icon="@drawable/ic_settings_wifi"
+        android:icon="@drawable/ic_toplevel_network_and_internet"
         android:key="@string/pk_network_and_internet_entry"
         android:title="@string/network_and_internet"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
@@ -53,66 +53,66 @@
     </com.android.car.settings.common.LogicalPreferenceGroup>
     <Preference
         android:fragment="com.android.car.settings.bluetooth.BluetoothSettingsFragment"
-        android:icon="@drawable/ic_settings_bluetooth"
+        android:icon="@drawable/ic_toplevel_bluetooth"
         android:key="@string/pk_bluetooth_settings_entry"
         android:title="@string/bluetooth_settings_title"
         settings:controller="com.android.car.settings.bluetooth.BluetoothEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.units.UnitsSettingsFragment"
-        android:icon="@drawable/ic_settings_units"
+        android:icon="@drawable/ic_toplevel_units"
         android:key="@string/pk_units_settings_entry"
         android:title="@string/units_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.location.LocationSettingsFragment"
-        android:icon="@drawable/ic_settings_location"
+        android:icon="@drawable/ic_toplevel_location"
         android:key="@string/pk_location_settings_entry"
         android:title="@string/location_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.applications.AppsAndNotificationsFragment"
-        android:icon="@drawable/ic_settings_applications"
+        android:icon="@drawable/ic_toplevel_applications"
         android:key="@string/pk_apps_and_notifications_settings_entry"
         android:title="@string/apps_and_notifications_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"
-        android:icon="@drawable/ic_settings_date_time"
+        android:icon="@drawable/ic_toplevel_date_time"
         android:key="@string/pk_date_time_settings_entry"
         android:title="@string/date_and_time_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_toplevel_users"
         android:key="@string/pk_users_settings_entry"
         android:title="@string/users_list_title"
         settings:controller="com.android.car.settings.users.UsersEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.accounts.AccountSettingsFragment"
-        android:icon="@drawable/ic_account"
+        android:icon="@drawable/ic_toplevel_accounts"
         android:key="@string/pk_accounts_settings_entry"
         android:title="@string/accounts_settings_title"
         settings:controller="com.android.car.settings.accounts.AccountsEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.privacy.PrivacySettingsFragment"
-        android:icon="@drawable/ic_privacy"
+        android:icon="@drawable/ic_toplevel_privacy"
         android:key="@string/pk_privacy_settings_entry"
         android:title="@string/privacy_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.storage.StorageSettingsFragment"
-        android:icon="@drawable/ic_storage"
+        android:icon="@drawable/ic_toplevel_storage"
         android:key="@string/pk_storage_settings_entry"
         android:title="@string/storage_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.security.SecuritySettingsFragment"
-        android:icon="@drawable/ic_lock"
+        android:icon="@drawable/ic_toplevel_security"
         android:key="@string/pk_security_settings_entry"
         android:title="@string/security_settings_title"
         settings:controller="com.android.car.settings.security.SecurityEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.system.SystemSettingsFragment"
-        android:icon="@drawable/ic_settings_about"
+        android:icon="@drawable/ic_toplevel_system"
         android:key="@string/pk_system_settings_entry"
         android:title="@string/system_setting_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
