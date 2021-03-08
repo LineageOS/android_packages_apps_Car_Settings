@@ -208,9 +208,17 @@ public class ActionButtonsPreferenceTest {
         mPref.onBindViewHolder(mHolder);
 
         assertThat(mRootView.findViewById(R.id.button1).isEnabled()).isTrue();
+        assertThat(mRootView.findViewById(R.id.button1Icon).isEnabled()).isTrue();
+        assertThat(mRootView.findViewById(R.id.button1Text).isEnabled()).isTrue();
         assertThat(mRootView.findViewById(R.id.button2).isEnabled()).isFalse();
+        assertThat(mRootView.findViewById(R.id.button2Icon).isEnabled()).isFalse();
+        assertThat(mRootView.findViewById(R.id.button2Text).isEnabled()).isFalse();
         assertThat(mRootView.findViewById(R.id.button3).isEnabled()).isTrue();
+        assertThat(mRootView.findViewById(R.id.button3Icon).isEnabled()).isTrue();
+        assertThat(mRootView.findViewById(R.id.button3Text).isEnabled()).isTrue();
         assertThat(mRootView.findViewById(R.id.button4).isEnabled()).isFalse();
+        assertThat(mRootView.findViewById(R.id.button4Icon).isEnabled()).isFalse();
+        assertThat(mRootView.findViewById(R.id.button4Text).isEnabled()).isFalse();
     }
 
     @Test
