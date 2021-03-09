@@ -42,6 +42,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.ui.preference.CarUiPreference;
+import com.android.settingslib.drawer.TileUtils;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -80,11 +81,25 @@ public class ExtraSettingsLoader {
      * resolving activities and a category with the key "com.android.settings.category" and one of
      * the values in {@link com.android.settingslib.drawer.CategoryKey}.
      *
+     * {@link com.android.settingslib.drawer.TileUtils#EXTRA_SETTINGS_ACTION} is automatically added
+     * for backwards compatibility. Please make sure to use
+     * {@link com.android.settingslib.drawer.TileUtils#IA_SETTINGS_ACTION} instead.
+     *
      * @param intent intent specifying the extra settings category to load
      */
     public Map<Preference, Bundle> loadPreferences(Intent intent) {
+        intent.setAction(TileUtils.IA_SETTINGS_ACTION);
         List<ResolveInfo> results = mPm.queryIntentActivitiesAsUser(intent,
                 PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
+
+        intent.setAction(TileUtils.EXTRA_SETTINGS_ACTION);
+        List<ResolveInfo> extra_settings_results = mPm.queryIntentActivitiesAsUser(intent,
+                PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
+        for (ResolveInfo extra_settings_resolveInfo : extra_settings_results) {
+            if (!results.contains(extra_settings_resolveInfo)) {
+                results.add(extra_settings_resolveInfo);
+            }
+        }
 
         String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
 
