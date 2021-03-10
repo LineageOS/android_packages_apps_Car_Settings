@@ -27,7 +27,7 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_account_settings"
         settings:controller="com.android.car.settings.accounts.AccountDetailsSettingController">
-        <intent android:action="com.android.settings.action.IA_SETTINGS">
+        <intent>
             <extra android:name="com.android.settings.category"
                    android:value="com.android.settings.category.ia.account_detail"/>
         </intent>
