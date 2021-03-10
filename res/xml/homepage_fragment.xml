@@ -46,7 +46,7 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_wireless_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
-        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+        <intent>
             <extra android:name="com.android.settings.category"
                    android:value="com.android.settings.category.wireless"/>
         </intent>
@@ -119,7 +119,7 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_device_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
-        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+        <intent>
             <extra android:name="com.android.settings.category"
                    android:value="com.android.settings.category.ia.device"/>
         </intent>
@@ -127,7 +127,7 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_personal_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
-        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+        <intent>
             <extra android:name="com.android.settings.category"
                    android:value="com.android.settings.category.personal"/>
         </intent>
