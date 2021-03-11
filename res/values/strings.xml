@@ -1187,6 +1187,20 @@
     <!-- Privacy --><skip/>
     <!-- Title for settings that lead into Privacy settings [CHAR LIMIT=40] -->
     <string name="privacy_settings_title">Privacy</string>
+    <!-- Title for vehicle data privacy settings containing controls for clearing/resetting local data in the vehicle. [CHAR LIMIT=40] -->
+    <string name="privacy_vehicle_data_title">Vehicle data</string>
+    <!-- Privacy settings screen, setting option that opens a page to manage location settings [CHAR LIMIT=NONE] -->
+    <string name="privacy_location_summary">Control access to your location</string>
+    <!-- Privacy settings screen, setting option name to globally mute the microphone [CHAR LIMIT=30] -->
+    <string name="auto_mute_mic_title">Mute microphone</string>
+    <!-- Privacy settings screen, setting option to globally mute the microphone [CHAR LIMIT=NONE] -->
+    <string name="auto_mute_mic_summary">Disable vehicle microphone access</string>
+    <!-- Privacy settings screen, button that navigates to a screen containing controls for clearing/resetting local data in the vehicle. [CHAR LIMIT=30] -->
+    <string name="vehicle_data_title">Vehicle data</string>
+    <!-- Summary text for a screen containing controls for clearing/resetting local data in the vehicle. [CHAR LIMIT=NONE] -->
+    <string name="vehicle_data_summary">Manage activities and info saved on this vehicle</string>
+    <!-- Privacy settings screen, title for button that deletes the current user. [CHAR LIMIT=30] -->
+    <string name="vehicle_data_delete_user_title">Delete current user profile</string>
 
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->
