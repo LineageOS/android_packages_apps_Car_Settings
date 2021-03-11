@@ -80,7 +80,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     private PinPadView mPinPad;
     private TextView mHintMessage;
-    private MenuItem mSecondaryButton;
     private MenuItem mPrimaryButton;
     private EditText mPasswordField;
     private ProgressBarController mProgressBar;
@@ -114,7 +113,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     @Override
     public List<MenuItem> getToolbarMenuItems() {
-        return Arrays.asList(mPrimaryButton, mSecondaryButton);
+        return Arrays.asList(mPrimaryButton);
     }
 
     @Override
@@ -157,9 +156,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mPrimaryButton = new MenuItem.Builder(getContext())
                 .setOnClickListener(i -> handlePrimaryButtonClick())
-                .build();
-        mSecondaryButton = new MenuItem.Builder(getContext())
-                .setOnClickListener(i -> handleSecondaryButtonClick())
                 .build();
     }
 
@@ -331,14 +327,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         mPrimaryButton.setTitle(textId);
     }
 
-    private void setSecondaryButtonEnabled(boolean enabled) {
-        mSecondaryButton.setEnabled(enabled);
-    }
-
-    private void setSecondaryButtonText(@StringRes int textId) {
-        mSecondaryButton.setTitle(textId);
-    }
-
     // Updates display message and proceed to next step according to the different text on
     // the primary button.
     private void handlePrimaryButtonClick() {
@@ -378,22 +366,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                 break;
             default:
                 // Do nothing.
-        }
-    }
-
-    // Updates display message and proceed to next step according to the different text on
-    // the secondary button.
-    private void handleSecondaryButtonClick() {
-        if (mSaveLockWorker != null) {
-            return;
-        }
-
-        if (mUiStage.secondaryButtonText == R.string.lockpassword_clear_label) {
-            mPasswordField.setText("");
-            mUiStage = Stage.Introduction;
-            setSecondaryButtonText(mUiStage.secondaryButtonText);
-        } else {
-            getFragmentHost().goBack();
         }
     }
 
@@ -438,10 +410,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         boolean inputAllowed = mSaveLockWorker == null || mSaveLockWorker.isFinished();
 
-        if (mUiStage != Stage.Introduction) {
-            setSecondaryButtonEnabled(inputAllowed);
-        }
-
         if (mIsPin) {
             mPinPad.setEnterKeyIcon(mUiStage.enterKeyIcon);
         }
@@ -466,7 +434,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
 
         setPrimaryButtonText(mUiStage.primaryButtonText);
-        setSecondaryButtonText(mUiStage.secondaryButtonText);
         mPasswordEntryInputDisabler.setInputEnabled(inputAllowed);
     }
 
@@ -512,52 +479,44 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                 R.string.choose_lock_password_hints,
                 R.string.choose_lock_pin_hints,
                 R.string.continue_button_text,
-                R.string.lockpassword_cancel_label,
                 R.drawable.ic_arrow_forward),
 
         PasswordInvalid(
                 R.string.lockpassword_invalid_password,
                 R.string.lockpin_invalid_pin,
                 R.string.continue_button_text,
-                R.string.lockpassword_clear_label,
                 R.drawable.ic_arrow_forward),
 
         NeedToConfirm(
                 R.string.confirm_your_password_header,
                 R.string.confirm_your_pin_header,
                 R.string.lockpassword_confirm_label,
-                R.string.lockpassword_cancel_label,
                 R.drawable.ic_check),
 
         ConfirmWrong(
                 R.string.confirm_passwords_dont_match,
                 R.string.confirm_pins_dont_match,
-                R.string.continue_button_text,
-                R.string.lockpassword_cancel_label,
+                R.string.lockpassword_confirm_label,
                 R.drawable.ic_check),
 
         SaveFailure(
                 R.string.error_saving_password,
                 R.string.error_saving_lockpin,
                 R.string.lockscreen_retry_button_text,
-                R.string.lockpassword_cancel_label,
                 R.drawable.ic_check);
 
         public final int alphaHint;
         public final int numericHint;
         public final int primaryButtonText;
-        public final int secondaryButtonText;
         public final int enterKeyIcon;
 
         Stage(@StringRes int hintInAlpha,
                 @StringRes int hintInNumeric,
                 @StringRes int primaryButtonText,
-                @StringRes int secondaryButtonText,
                 @DrawableRes int enterKeyIcon) {
             this.alphaHint = hintInAlpha;
             this.numericHint = hintInNumeric;
             this.primaryButtonText = primaryButtonText;
-            this.secondaryButtonText = secondaryButtonText;
             this.enterKeyIcon = enterKeyIcon;
         }
 
