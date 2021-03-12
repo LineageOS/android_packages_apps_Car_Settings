@@ -220,7 +220,6 @@
         <activity
             android:name=".common.CarSettingActivities$UserDetailsActivity"
             android:excludeFromRecents="true"
-            android:launchMode="singleInstance"
             android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.USER_SETTINGS" />
