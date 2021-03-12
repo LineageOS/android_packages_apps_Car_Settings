@@ -103,6 +103,10 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
             LOG.w("Check pin/password request issued while one is still running");
             return;
         }
+        if (password == null || password.isNone()) {
+            LOG.w("Empty pin/password LockscreenCredential");
+            return;
+        }
         mCheckInProgress = true;
         LockPatternChecker.checkCredential(mLockPatternUtils, password, userId, this);
     }
