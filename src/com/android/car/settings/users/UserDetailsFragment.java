@@ -75,6 +75,8 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
                 R.string.pk_user_details_action_buttons).setUserInfo(getUserInfo());
         use(AccountGroupPreferenceController.class,
                 R.string.pk_account_group).setUserInfo(getUserInfo());
+        use(ProfileDetailsDeletePreferenceController.class,
+                R.string.pk_profile_details_delete).setUserInfo(getUserInfo());
 
         // Accounts information
         Intent activityIntent = requireActivity().getIntent();
