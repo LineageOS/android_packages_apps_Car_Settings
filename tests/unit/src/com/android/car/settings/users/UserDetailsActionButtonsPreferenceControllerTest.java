@@ -280,6 +280,6 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
     }
 
     private ActionButtonInfo getDeleteButton() {
-        return mPreference.getButton(ActionButtons.BUTTON3);
+        return mPreference.getButton(ActionButtons.BUTTON4);
     }
 }

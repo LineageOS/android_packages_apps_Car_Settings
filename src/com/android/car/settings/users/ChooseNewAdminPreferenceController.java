@@ -44,8 +44,6 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
     public ChooseNewAdminPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        getPreferenceProvider().setIncludeCurrentUser(false);
-        getPreferenceProvider().setIncludeGuest(false);
     }
 
     /** Setter for the user info of the admin we're deleting. */

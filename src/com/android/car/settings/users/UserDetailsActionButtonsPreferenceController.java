@@ -48,6 +48,7 @@ public final class UserDetailsActionButtonsPreferenceController
     static final String MAKE_ADMIN_DIALOG_TAG = "MakeAdminDialogFragment";
 
     private final UserHelper mUserHelper;
+    private final UserManager mUserManager;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mMakeAdminConfirmListener =
@@ -76,6 +77,7 @@ public final class UserDetailsActionButtonsPreferenceController
             RemoveUserHandler removeUserHandler) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUserHelper = userHelper;
+        mUserManager = userManager;
         mRemoveUserHandler = removeUserHandler;
     }
 
@@ -101,7 +103,8 @@ public final class UserDetailsActionButtonsPreferenceController
 
         ActionButtonInfo renameButton = getPreference().getButton(ActionButtons.BUTTON1);
         ActionButtonInfo makeAdminButton = getPreference().getButton(ActionButtons.BUTTON2);
-        ActionButtonInfo deleteButton = getPreference().getButton(ActionButtons.BUTTON3);
+        ActionButtonInfo manageProfilesButton = getPreference().getButton(ActionButtons.BUTTON3);
+        ActionButtonInfo deleteButton = getPreference().getButton(ActionButtons.BUTTON4);
 
         renameButton
                 .setText(R.string.bluetooth_rename_button)
@@ -116,6 +119,14 @@ public final class UserDetailsActionButtonsPreferenceController
                 .setVisible(UserUtils.isAdminViewingNonAdmin(UserManager.get(getContext()),
                         getUserInfo()))
                 .setOnClickListener(v -> showConfirmMakeAdminDialog());
+
+        manageProfilesButton
+                .setText(R.string.manage_other_profiles_button_text)
+                .setIcon(R.drawable.ic_people)
+                .setVisible(mUserManager.isAdminUser()
+                        && mUserHelper.isCurrentProcessUser(getUserInfo()))
+                .setOnClickListener(v -> getFragmentController().launchFragment(
+                        new UsersListFragment()));
 
         // Do not show delete button if the current user can't remove the selected user
         deleteButton

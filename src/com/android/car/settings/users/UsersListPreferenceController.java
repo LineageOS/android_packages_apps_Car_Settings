@@ -21,6 +21,10 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
 
+import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
+
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 
 /** Business logic for populating the users for the users list settings. */
@@ -39,6 +43,21 @@ public class UsersListPreferenceController extends UsersBasePreferenceController
                     UserDetailsPermissionsFragment.newInstance(userInfo.id));
         } else {
             getFragmentController().launchFragment(UserDetailsFragment.newInstance(userInfo.id));
+        }
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        super.updateState(preferenceGroup);
+
+        if (getUsersToDisplay().isEmpty()) {
+            // Post the fragment navigation because FragmentManager may still be executing
+            // transactions
+            getContext().getMainExecutor().execute(() -> getFragmentController().goBack());
+        } else {
+            for (Preference preference : getUsersToDisplay()) {
+                preference.setWidgetLayoutResource(R.layout.preference_settings_icon);
+            }
         }
     }
 }
