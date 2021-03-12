@@ -28,7 +28,6 @@ import android.text.TextUtils;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
-import com.android.car.settings.accounts.AccountSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
@@ -228,17 +227,6 @@ public class CarSettingActivities {
                 LOG.v("Creating UserDetailsFragment for non-admin.");
                 return UserDetailsFragment.newInstance(UserHandle.myUserId());
             }
-        }
-    }
-
-    /**
-     * Account Settings Activity.
-     */
-    public static class AccountSettingsActivity extends BaseCarSettingsActivity {
-        @Nullable
-        @Override
-        protected Fragment getInitialFragment() {
-            return new AccountSettingsFragment();
         }
     }
 
