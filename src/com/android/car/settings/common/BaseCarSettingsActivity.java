@@ -20,8 +20,6 @@ import static android.view.ViewGroup.FOCUS_BEFORE_DESCENDANTS;
 import static android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS;
 import static android.view.accessibility.AccessibilityNodeInfo.ACTION_FOCUS;
 
-import static com.android.car.ui.core.CarUi.requireToolbar;
-
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
@@ -283,8 +281,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     @Override
     public void onCarUiInsetsChanged(Insets insets) {
-        findViewById(R.id.car_settings_activity_wrapper).setPadding(insets.getLeft(),
-                insets.getTop(), insets.getRight(), insets.getBottom());
+        // intentional no-op - insets are handled by the listeners created during toolbar setup
     }
 
     @Override
@@ -358,10 +355,17 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     }
 
     private void setUpToolbars() {
-        mGlobalToolbar = requireToolbar(this);
+        View globalToolbarWrappedView = mIsSinglePane ? findViewById(
+                R.id.fragment_container_wrapper) : findViewById(R.id.top_level_menu);
+        mGlobalToolbar = CarUi.installBaseLayoutAround(
+                globalToolbarWrappedView,
+                insets -> globalToolbarWrappedView.setPadding(
+                        insets.getLeft(), insets.getTop(), insets.getRight(),
+                        insets.getBottom()), /* hasToolbar= */ true);
         mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
         if (mIsSinglePane) {
             findViewById(R.id.top_level_menu).setVisibility(View.GONE);
+            findViewById(R.id.top_level_divider).setVisibility(View.GONE);
             return;
         }
         mMiniToolbar = CarUi.installBaseLayoutAround(
