@@ -285,6 +285,19 @@
         </activity>
 
         <activity
+            android:name=".common.CarSettingActivities$AssistantAndVoiceSettingsActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.VOICE_INPUT_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
+                       android:value="@string/hk_AssistantAndVoiceSettingsActivity" />
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
             android:name=".common.CarSettingActivities$SystemSettingsActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
@@ -686,19 +699,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.settings.MANAGE_DOMAIN_URLS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
-            <meta-data android:name="distractionOptimized" android:value="true"/>
-        </activity>
-
-        <activity
-            android:name=".applications.assist.ManageAssistActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.settings.VOICE_INPUT_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>

@@ -33,6 +33,7 @@ import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.AppsAndNotificationsFragment;
+import com.android.car.settings.applications.assist.AssistantAndVoiceFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
 import com.android.car.settings.applications.specialaccess.ModifySystemSettingsFragment;
 import com.android.car.settings.applications.specialaccess.NotificationAccessFragment;
@@ -271,6 +272,17 @@ public class CarSettingActivities {
         @Override
         protected Fragment getInitialFragment() {
             return new SecuritySettingsFragment();
+        }
+    }
+
+    /**
+     * Assistant & voice Settings Activity.
+     */
+    public static class AssistantAndVoiceSettingsActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new AssistantAndVoiceFragment();
         }
     }
 
