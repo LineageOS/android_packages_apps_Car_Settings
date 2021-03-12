@@ -22,7 +22,6 @@ import static org.testng.Assert.assertThrows;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.view.View;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
@@ -37,7 +36,6 @@ import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
 import com.android.car.settings.testutils.BaseTestSettingsFragment;
 import com.android.car.settings.testutils.EmptySettingsFragment;
 import com.android.car.settings.testutils.TestTopLevelMenuFragment;
-import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.car.ui.toolbar.ToolbarController;
@@ -178,21 +176,6 @@ public class BaseCarSettingsActivityTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
         assertThat(toolbar.getState()).isEqualTo(Toolbar.State.HOME);
-    }
-
-    @Test
-    public void onInsetsChanged_paddingUpdated() throws Throwable {
-        int testInsetValue = 15;
-        Insets testInsets =
-                new Insets(testInsetValue, testInsetValue, testInsetValue, testInsetValue);
-        mActivityTestRule.runOnUiThread(() -> mActivity.onCarUiInsetsChanged(testInsets));
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-
-        View activityWrapper = mActivity.findViewById(R.id.car_settings_activity_wrapper);
-        assertThat(activityWrapper.getPaddingTop()).isEqualTo(testInsets.getTop());
-        assertThat(activityWrapper.getPaddingRight()).isEqualTo(testInsets.getRight());
-        assertThat(activityWrapper.getPaddingBottom()).isEqualTo(testInsets.getBottom());
-        assertThat(activityWrapper.getPaddingLeft()).isEqualTo(testInsets.getLeft());
     }
 
     @Test
