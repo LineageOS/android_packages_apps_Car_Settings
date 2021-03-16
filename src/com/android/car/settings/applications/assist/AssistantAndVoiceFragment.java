@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,18 +27,18 @@ import com.android.settingslib.search.SearchIndexable;
 
 /** Assistant management settings screen. */
 @SearchIndexable
-public class ManageAssistFragment extends SettingsFragment {
+public class AssistantAndVoiceFragment extends SettingsFragment {
 
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.manage_assist_fragment;
+        return R.xml.assistant_and_voice_fragment;
     }
 
     /**
      * Data provider for Settings Search.
      */
     public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new CarBaseSearchIndexProvider(R.xml.manage_assist_fragment,
+            new CarBaseSearchIndexProvider(R.xml.assistant_and_voice_fragment,
                     Settings.ACTION_VOICE_INPUT_SETTINGS);
 }
