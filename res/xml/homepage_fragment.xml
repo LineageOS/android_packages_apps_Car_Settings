@@ -93,6 +93,12 @@
         android:title="@string/security_settings_title"
         settings:controller="com.android.car.settings.security.SecurityEntryPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.applications.assist.AssistantAndVoiceFragment"
+        android:icon="@drawable/ic_toplevel_assistant_and_voice"
+        android:key="@string/pk_assistant_and_voice_settings_entry"
+        android:title="@string/assistant_and_voice_setting_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.system.SystemSettingsFragment"
         android:icon="@drawable/ic_toplevel_system"
         android:key="@string/pk_system_settings_entry"
