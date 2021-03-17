@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,12 +31,12 @@ import com.android.settingslib.applications.DefaultAppInfo;
 /**
  * Business logic to show the currently selected default assist.
  */
-public class ManageAssistEntryPreferenceController extends
+public class AssistantAndVoiceEntryPreferenceController extends
         DefaultAppEntryBasePreferenceController<Preference> {
 
     private final AssistUtils mAssistUtils;
 
-    public ManageAssistEntryPreferenceController(Context context, String preferenceKey,
+    public AssistantAndVoiceEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mAssistUtils = new AssistUtils(context);

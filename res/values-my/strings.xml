@@ -48,7 +48,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"မိုဘိုင်းဒေတာအတွက် <xliff:g id="CARRIER2_0">%2$s</xliff:g> အသုံးပြုနေသည်။ <xliff:g id="CARRIER1">%1$s</xliff:g> သို့ပြောင်းလျှင် မိုဘိုင်းဒေတာအတွက် <xliff:g id="CARRIER2_1">%2$s</xliff:g> ကို အသုံးပြုတော့မည် မဟုတ်ပါ။"</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> သုံးရန်"</string>
     <string name="roaming_title" msgid="6218635014519017734">"ပြင်ပကွန်ရက်သို့ ချိတ်ဆက်ခြင်း"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"ပြင်ပကွန်ရက် သုံးသောအခါ ဒေတာဝန်ဆောင်မှုများနှင့် ချိတ်ဆက်သည်"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ပြင်ပကွန်ရက်သုံးလျှင် ဒေတာဝန်ဆောင်မှုများနှင့် ချိတ်ဆက်ရန်"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"ပြင်ပကွန်ရက် ဒေတာသုံးခွင့်ပြုမလား။"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"ပြင်ပကွန်ရက်နှင့် ချိတ်ဆက်သော အသုံးပြုခများ ကျသင့်နိုင်သည်။"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ဒေတာသုံးစွဲမှု"</string>
@@ -348,7 +348,7 @@
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ပိတ်ရန်"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"မလုပ်တော့"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ပရီမီယံ SMS သုံးခွင့်ရှိခြင်း"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"ပရီမီယံ SMS သည်ငွေကြေးကုန်ကျနိုင်ပြီး သင့်ဖုန်းဝန်ဆောင်မှုပေးသူ၏ ငွေတောင်းခံလွှာသို့ ပေါင်း၍ ထည့်သွင်းပါမည်။ အက်ပ်တစ်ခုကို သင်ခွင့်ပြုလိုက်လျှင် ၎င်းအက်ပ်ကိုအသုံးပြုပြီး ပရီမီယံ SMS ပို့နိုင်မည်ဖြစ်သည်။"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"ပရီမီယံ SMS သည်ငွေကြေးကုန်ကျနိုင်ပြီး သင့်ဖုန်းကုမ္ပဏီ၏ ငွေတောင်းခံလွှာသို့ ပေါင်း၍ ထည့်သွင်းပါမည်။ အက်ပ်တစ်ခုကို သင်ခွင့်ပြုလိုက်လျှင် ၎င်းအက်ပ်ကိုအသုံးပြုပြီး ပရီမီယံ SMS ပို့နိုင်မည်ဖြစ်သည်။"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"အသုံးပြုမှု ကြည့်ခြင်း"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ဝင်ရောက်အသုံးပြုခွင့်သည် အက်ပ်တစ်ခုအား သင်အသုံးပြုနေသော အခြားအက်ပ်များနှင့် သုံးသည့် အကြိမ်ရေနှင့်တကွ သင့်ဖုန်း၏ ဝန်ဆောင်မှုဌာန၊ ဘာသာစကား ဆက်တင်နှင့် အခြားအသေးစိတ်များကို ခြေရာခံရန် ခွင့်ပြုသည်။"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi ထိန်းချုပ်မှု"</string>
