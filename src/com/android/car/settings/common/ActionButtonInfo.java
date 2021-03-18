@@ -188,7 +188,10 @@ public class ActionButtonInfo {
         mButtonIconView.setImageDrawable(mIcon);
         mButtonView.setOnClickListener(this::performClick);
 
-        mButtonView.setEnabled(isEnabled() || mIsPreferenceRestricted);
+        boolean enabled = isEnabled() || mIsPreferenceRestricted;
+        mButtonView.setEnabled(enabled);
+        mButtonTextView.setEnabled(enabled);
+        mButtonIconView.setEnabled(enabled);
 
         mButtonIconView.setVisibility(mIcon != null ? View.VISIBLE : View.GONE);
 
