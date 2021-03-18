@@ -66,7 +66,8 @@ public class WifiTetherStateSwitchPreferenceController extends
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarWifiManager = new CarWifiManager(context);
+        mCarWifiManager = new CarWifiManager(context,
+                getFragmentController().getSettingsLifecycle());
         mTetheringManager = getContext().getSystemService(TetheringManager.class);
     }
 
@@ -105,19 +106,12 @@ public class WifiTetherStateSwitchPreferenceController extends
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mRestartReceiver,
                 new IntentFilter(
                         WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING));
-        mCarWifiManager.start();
     }
 
     @Override
     protected void onStopInternal() {
-        mCarWifiManager.stop();
         getContext().unregisterReceiver(mReceiver);
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mRestartReceiver);
-    }
-
-    @Override
-    protected void onDestroyInternal() {
-        mCarWifiManager.destroy();
     }
 
     @VisibleForTesting

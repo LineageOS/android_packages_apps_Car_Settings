@@ -182,6 +182,10 @@
     <string name="wifi_setup_add_network">Add network</string>
     <!-- Button label to connect to a Wi-Fi network. [CHAR LIMIT=10] -->
     <string name="wifi_setup_connect">Connect</string>
+    <!-- Label for button when the car is connecting to a Wi-Fi network. [CHAR LIMIT=20] -->
+    <string name="wifi_connecting">Connecting\u2026</string>
+    <!-- Toast message shown when a network connection failed because it's not in range. [CHAR LIMIT=40] -->
+    <string name="wifi_not_in_range_message">Network not in range</string>
     <!-- Label for the password of the secured network -->
     <string name="wifi_password">Password</string>
     <!-- Label for the check box to show password -->
