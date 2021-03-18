@@ -6,25 +6,32 @@ android_test {
     name: "CarSettingsUnitTests",
 
     certificate: "platform",
+    privileged: true,
 
     srcs: ["src/**/*.java"],
 
     libs: [
         "android.test.runner",
         "android.test.base",
+        "android.test.mock",
     ],
 
     static_libs: [
+        "CarSettingsForUnitTesting",
         "android.car",
         "androidx.test.core",
         "androidx.test.rules",
         "androidx.test.ext.junit",
         "androidx.test.ext.truth",
-        "mockito-target-minus-junit4",
+        "mockito-target-extended-minus-junit4",
         "platform-test-annotations",
         "truth-prebuilt",
         "testng",
     ],
+
+    jni_libs: ["libdexmakerjvmtiagent", "libstaticjvmtiagent"],
+
+    aaptflags: ["--extra-packages com.android.car.settings"],
 
     instrumentation_for: "CarSettingsForTesting",
 }

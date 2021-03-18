@@ -69,7 +69,6 @@ import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -215,7 +214,6 @@ public class ApplicationActionButtonsPreferenceControllerTest {
     }
 
     @Test
-    @Ignore("b/173179832")
     public void onCreate_bundledApp_enabledApp_keepEnabledPackage_disablesDisableButton() {
         setupAndAssignPreference();
         setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ true);
