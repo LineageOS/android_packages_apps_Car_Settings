@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,15 +18,21 @@ package com.android.car.settings.applications;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.os.UserHandle;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.Preference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.ui.preference.CarUiPreference;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
 
 import org.junit.Before;
@@ -34,17 +40,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ApplicationPreferenceControllerTest {
+
     private static final String PACKAGE_NAME = "Test Package Name";
 
-    private CarUiPreference mPreference;
-    private PreferenceControllerTestHelper<ApplicationPreferenceController>
-            mPreferenceControllerHelper;
+    private Preference mPreference;
+    private CarUxRestrictions mCarUxRestrictions;
     private ApplicationPreferenceController mController;
+
+    @Mock
+    private FragmentController mFragmentController;
     @Mock
     private ApplicationsState mMockAppState;
     @Mock
@@ -53,35 +60,40 @@ public class ApplicationPreferenceControllerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        Context context = spy(RuntimeEnvironment.application);
+        Context context = ApplicationProvider.getApplicationContext();
         mMockAppEntry.label = PACKAGE_NAME;
 
-        mPreference = new CarUiPreference(context);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(context,
-                ApplicationPreferenceController.class);
-        mController = mPreferenceControllerHelper.getController();
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        mPreference = new Preference(context);
+        mController = new ApplicationPreferenceController(context,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+
+        when(mMockAppState.getEntry(PACKAGE_NAME, UserHandle.myUserId())).thenReturn(mMockAppEntry);
     }
 
     @Test
     public void testCheckInitialized_noAppState_throwException() {
         mController.setAppEntry(mMockAppEntry);
         assertThrows(IllegalStateException.class,
-                () -> mPreferenceControllerHelper.setPreference(mPreference));
+                () -> PreferenceControllerTestUtil.assignPreference(mController, mPreference));
     }
 
     @Test
     public void testCheckInitialized_noAppEntry_throwException() {
         mController.setAppState(mMockAppState);
         assertThrows(IllegalStateException.class,
-                () -> mPreferenceControllerHelper.setPreference(mPreference));
+                () -> PreferenceControllerTestUtil.assignPreference(mController, mPreference));
     }
 
     @Test
     public void testRefreshUi_hasResolveInfo_setTitle() {
+        LifecycleOwner lifecycleOwner = new TestLifecycleOwner();
         mController.setAppEntry(mMockAppEntry);
         mController.setAppState(mMockAppState);
-        mPreferenceControllerHelper.setPreference(mPreference);
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        PreferenceControllerTestUtil.assignPreference(mController, mPreference);
+        mController.onCreate(lifecycleOwner);
         mController.refreshUi();
         assertThat(mPreference.getTitle()).isEqualTo(PACKAGE_NAME);
     }
