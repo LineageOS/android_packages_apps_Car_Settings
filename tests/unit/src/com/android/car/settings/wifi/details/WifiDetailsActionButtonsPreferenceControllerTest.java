@@ -36,8 +36,9 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.common.ActionButtonsPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.wifitrackerlib.WifiEntry;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -58,7 +59,9 @@ public class WifiDetailsActionButtonsPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private AccessPoint mMockAccessPoint;
+    private androidx.lifecycle.Lifecycle mMockLifecycle;
+    @Mock
+    private WifiEntry mMockWifiEntry;
     @Mock
     private WifiInfoProvider mMockWifiInfoProvider;
     @Mock
@@ -79,9 +82,10 @@ public class WifiDetailsActionButtonsPreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
         mActionButtonsPreference = new ActionButtonsPreference(mContext);
+        when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
         mPreferenceController = new WifiDetailsActionButtonsPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
-        mPreferenceController.init(mMockAccessPoint, mMockWifiInfoProvider);
+        mPreferenceController.init(mMockWifiEntry, mMockWifiInfoProvider);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController,
                 mActionButtonsPreference);
 
@@ -91,28 +95,33 @@ public class WifiDetailsActionButtonsPreferenceControllerTest {
     }
 
     @Test
-    public void updateState_connectNotNeeded_connectButtonHidden() {
-        when(mMockAccessPoint.isSaved()).thenReturn(true);
-        when(mMockAccessPoint.isActive()).thenReturn(true);
+    public void updateState_connectNotNeeded_disconnectButtonShown() {
+        when(mMockWifiEntry.isSaved()).thenReturn(true);
+        when(mMockWifiEntry.canDisconnect()).thenReturn(true);
+        when(mMockWifiEntry.getConnectedState()).thenReturn(WifiEntry.CONNECTED_STATE_CONNECTED);
 
         mPreferenceController.onCreate(mLifecycleOwner);
-        assertThat(mActionButtonsPreference.getButton(ActionButtons.BUTTON2).isVisible()).isFalse();
+        assertThat(mActionButtonsPreference.getButton(ActionButtons.BUTTON2).isVisible()).isTrue();
+        assertThat(mActionButtonsPreference.getButton(ActionButtons.BUTTON2).getText().toString())
+                .isEqualTo(ResourceTestUtils.getString(mContext, "disconnect"));
     }
 
     @Test
     public void updateState_needConnect_connectButtonShown() {
-        when(mMockAccessPoint.isSaved()).thenReturn(true);
-        when(mMockAccessPoint.isActive()).thenReturn(false);
+        when(mMockWifiEntry.isSaved()).thenReturn(true);
+        when(mMockWifiEntry.canConnect()).thenReturn(true);
+        when(mMockWifiEntry.getConnectedState()).thenReturn(WifiEntry.CONNECTED_STATE_DISCONNECTED);
 
         mPreferenceController.onCreate(mLifecycleOwner);
         assertThat(mActionButtonsPreference.getButton(ActionButtons.BUTTON2).isVisible()).isTrue();
+        assertThat(mActionButtonsPreference.getButton(ActionButtons.BUTTON2).getText().toString())
+                .isEqualTo(ResourceTestUtils.getString(mContext, "wifi_setup_connect"));
     }
 
     @Test
     public void updateState_canForget_forgetButtonShown() {
-        when(mMockAccessPoint.isSaved()).thenReturn(true);
-        when(mMockAccessPoint.isActive()).thenReturn(true);
-        when(mMockWifiInfo.isEphemeral()).thenReturn(true);
+        when(mMockWifiEntry.isSaved()).thenReturn(true);
+        when(mMockWifiEntry.canForget()).thenReturn(true);
 
         mPreferenceController.onCreate(mLifecycleOwner);
         assertThat(mActionButtonsPreference.getButton(ActionButtons.BUTTON1).isVisible()).isTrue();
@@ -120,9 +129,8 @@ public class WifiDetailsActionButtonsPreferenceControllerTest {
 
     @Test
     public void updateState_canNotForget_forgetButtonHidden() {
-        when(mMockAccessPoint.isSaved()).thenReturn(true);
-        when(mMockAccessPoint.isActive()).thenReturn(true);
-        when(mMockWifiInfo.isEphemeral()).thenReturn(false);
+        when(mMockWifiEntry.isSaved()).thenReturn(true);
+        when(mMockWifiEntry.canForget()).thenReturn(false);
 
         mPreferenceController.onCreate(mLifecycleOwner);
         assertThat(mActionButtonsPreference.getButton(ActionButtons.BUTTON1).isVisible()).isFalse();

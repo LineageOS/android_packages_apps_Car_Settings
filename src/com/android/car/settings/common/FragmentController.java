@@ -20,9 +20,11 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
 
 /**
  * Encapsulates a subset of the operations possible from a {@link Fragment}.
@@ -58,6 +60,12 @@ public interface FragmentController {
      */
     @Nullable
     DialogFragment findDialogByTag(String tag);
+
+    /**
+     * Returns the current Lifecycle instance for the fragment.
+     */
+    @NonNull
+    Lifecycle getSettingsLifecycle();
 
     /**
      * Starts an activity for a result. When the result is received, the {@link
