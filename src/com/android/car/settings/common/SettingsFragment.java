@@ -16,6 +16,8 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.BaseCarSettingsActivity.META_DATA_KEY_SINGLE_PANE;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
@@ -203,24 +205,22 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        ToolbarController toolbar = getToolbar();
-        if (toolbar != null) {
-            List<MenuItem> items = getToolbarMenuItems();
-            if (items != null) {
-                if (items.size() == 1) {
-                    items.get(0).setId(R.id.toolbar_menu_item_0);
-                } else if (items.size() == 2) {
-                    items.get(0).setId(R.id.toolbar_menu_item_0);
-                    items.get(1).setId(R.id.toolbar_menu_item_1);
-                }
+    protected void setupToolbar(@NonNull ToolbarController toolbar) {
+        List<MenuItem> items = getToolbarMenuItems();
+        if (items != null) {
+            if (items.size() == 1) {
+                items.get(0).setId(R.id.toolbar_menu_item_0);
+            } else if (items.size() == 2) {
+                items.get(0).setId(R.id.toolbar_menu_item_0);
+                items.get(1).setId(R.id.toolbar_menu_item_1);
             }
-            toolbar.setTitle(getPreferenceScreen().getTitle());
-            toolbar.setMenuItems(items);
+        }
+        toolbar.setTitle(getPreferenceScreen().getTitle());
+        toolbar.setMenuItems(items);
+        toolbar.setLogo(null);
+        if (getActivity().getIntent().getBooleanExtra(META_DATA_KEY_SINGLE_PANE, false)) {
             toolbar.setState(Toolbar.State.SUBPAGE);
             toolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
-            toolbar.setLogo(null);
         }
     }
 

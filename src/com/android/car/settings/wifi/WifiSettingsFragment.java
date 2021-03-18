@@ -27,6 +27,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.ProgressBarController;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -69,10 +70,10 @@ public class WifiSettingsFragment extends SettingsFragment
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    protected void setupToolbar(@NonNull ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
 
-        mProgressBar = getToolbar().getProgressBar();
+        mProgressBar = toolbar.getProgressBar();
     }
 
     @Override
