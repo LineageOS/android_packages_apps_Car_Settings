@@ -136,6 +136,9 @@
 
     <!-- Application Details -->
     <string name="pk_application_details_app" translatable="false">application_details_app</string>
+    <string name="pk_application_details_action_buttons" translatable="false">
+        application_details_action_buttons
+    </string>
     <string name="pk_application_details_notifications" translatable="false">
         application_details_notifications
     </string>
@@ -253,6 +256,9 @@
         storage_application_cache_size
     </string>
     <string name="pk_storage_application_details" translatable="false">storage_application_details
+    </string>
+    <string name="pk_storage_application_action_buttons" translatable="false">
+        storage_application_action_buttons
     </string>
     <string name="pk_storage_files" translatable="false">storage_files</string>
     <string name="pk_storage_system" translatable="false">storage_system</string>
