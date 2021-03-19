@@ -91,7 +91,7 @@ public class QuickSettingFragment extends BaseFragment {
         setupUserButton(activity);
 
         mGridAdapter
-                .addTile(new WifiTile(activity, mGridAdapter, getFragmentHost()))
+                .addTile(new WifiTile(activity, mGridAdapter, getLifecycle()))
                 .addTile(new BluetoothTile(activity, mGridAdapter, getFragmentHost()))
                 .addTile(new DayNightTile(activity, mGridAdapter, getFragmentHost()))
                 .addTile(new CelluarTile(activity, mGridAdapter, getFragmentHost()))

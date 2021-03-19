@@ -18,10 +18,13 @@ package com.android.car.settings.wifi;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.when;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.SwitchPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -46,19 +49,21 @@ public class WifiStateSwitchPreferenceControllerTest {
 
     @Mock
     private FragmentController mFragmentController;
+    @Mock
+    private Lifecycle mMockLifecycle;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        mCarWifiManager = new CarWifiManager(mContext);
-
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
         mSwitchPreference = new ColoredSwitchPreference(mContext);
+        when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
         mPreferenceController = new WifiStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        mCarWifiManager = new CarWifiManager(mContext, mMockLifecycle);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
     }
 

@@ -28,7 +28,7 @@ import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.ProgressBarController;
 import com.android.settingslib.search.SearchIndexable;
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.wifitrackerlib.WifiEntry;
 
 /**
  * Main page to host Wifi related preferences.
@@ -38,12 +38,12 @@ public class WifiSettingsFragment extends SettingsFragment
         implements CarWifiManager.Listener {
 
     private static final int SEARCHING_DELAY_MILLIS = 1700;
-    private static final String EXTRA_CONNECTED_ACCESS_POINT_KEY = "connected_access_point_key";
+    private static final String EXTRA_CONNECTED_WIFI_ENTRY_KEY = "connected_wifi_entry_key";
 
     private CarWifiManager mCarWifiManager;
     private ProgressBarController mProgressBar;
     @Nullable
-    private String mConnectedAccessPointKey;
+    private String mConnectedWifiEntryKey;
 
     @Override
     @XmlRes
@@ -54,18 +54,18 @@ public class WifiSettingsFragment extends SettingsFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mCarWifiManager = new CarWifiManager(getContext());
+        mCarWifiManager = new CarWifiManager(getContext(), getLifecycle());
 
         if (savedInstanceState != null) {
-            mConnectedAccessPointKey = savedInstanceState.getString(
-                    EXTRA_CONNECTED_ACCESS_POINT_KEY);
+            mConnectedWifiEntryKey = savedInstanceState.getString(
+                    EXTRA_CONNECTED_WIFI_ENTRY_KEY);
         }
     }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString(EXTRA_CONNECTED_ACCESS_POINT_KEY, mConnectedAccessPointKey);
+        outState.putString(EXTRA_CONNECTED_WIFI_ENTRY_KEY, mConnectedWifiEntryKey);
     }
 
     @Override
@@ -79,7 +79,6 @@ public class WifiSettingsFragment extends SettingsFragment
     public void onStart() {
         super.onStart();
         mCarWifiManager.addListener(this);
-        mCarWifiManager.start();
         onWifiStateChanged(mCarWifiManager.getWifiState());
     }
 
@@ -87,29 +86,27 @@ public class WifiSettingsFragment extends SettingsFragment
     public void onStop() {
         super.onStop();
         mCarWifiManager.removeListener(this);
-        mCarWifiManager.stop();
         mProgressBar.setVisible(false);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mCarWifiManager.destroy();
     }
 
     @Override
-    public void onAccessPointsChanged() {
+    public void onWifiEntriesChanged() {
         mProgressBar.setVisible(true);
         getView().postDelayed(() -> mProgressBar.setVisible(false), SEARCHING_DELAY_MILLIS);
-        AccessPoint connectedAccessPoint = mCarWifiManager.getConnectedAccessPoint();
-        if (connectedAccessPoint != null) {
-            String connectedAccessPointKey = connectedAccessPoint.getKey();
-            if (!connectedAccessPointKey.equals(mConnectedAccessPointKey)) {
-                scrollToPreference(connectedAccessPointKey);
-                mConnectedAccessPointKey = connectedAccessPointKey;
+        WifiEntry connectedWifiEntry = mCarWifiManager.getConnectedWifiEntry();
+        if (connectedWifiEntry != null) {
+            String connectedWifiEntryKey = connectedWifiEntry.getKey();
+            if (!connectedWifiEntryKey.equals(mConnectedWifiEntryKey)) {
+                scrollToPreference(connectedWifiEntryKey);
+                mConnectedWifiEntryKey = connectedWifiEntryKey;
             }
         } else {
-            mConnectedAccessPointKey = null;
+            mConnectedWifiEntryKey = null;
         }
     }
 

@@ -20,48 +20,27 @@ import static com.android.car.settings.common.ActionButtonsPreference.ActionButt
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.widget.Toast;
-
-import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ActionButtonsPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.wifi.WifiUtil;
+import com.android.wifitrackerlib.WifiEntry;
 
 /**
  * Shows Wifi details action buttons (forget and connect).
  */
 public class WifiDetailsActionButtonsPreferenceController
-        extends WifiDetailsBasePreferenceController<ActionButtonsPreference> {
-
-    private class ActionFailListener implements WifiManager.ActionListener {
-        @StringRes
-        private final int mMessageResId;
-
-        ActionFailListener(@StringRes int messageResId) {
-            mMessageResId = messageResId;
-        }
-
-        @Override
-        public void onSuccess() {
-        }
-
-        @Override
-        public void onFailure(int reason) {
-            Toast.makeText(getContext(), mMessageResId, Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private final WifiManager mWifiManager;
+        extends WifiDetailsBasePreferenceController<ActionButtonsPreference>
+        implements WifiEntry.ConnectCallback {
 
     public WifiDetailsActionButtonsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mWifiManager = context.getSystemService(WifiManager.class);
     }
 
     @Override
@@ -70,33 +49,27 @@ public class WifiDetailsActionButtonsPreferenceController
     }
 
     @Override
-    protected void onCreateInternal() {
-        super.onCreateInternal();
+    protected void updateState(ActionButtonsPreference preference) {
         getPreference()
                 .getButton(ActionButtons.BUTTON1)
                 .setText(R.string.forget)
                 .setIcon(R.drawable.ic_delete)
                 .setVisible(canForgetNetwork())
                 .setOnClickListener(v -> {
-                    WifiUtil.forget(getContext(), getAccessPoint());
+                    getWifiEntry().forget(/* callback= */ null);
                     getFragmentController().goBack();
                 });
-        getPreference()
-                .getButton(ActionButtons.BUTTON2)
-                .setText(R.string.wifi_setup_connect)
-                .setIcon(R.drawable.ic_settings_wifi)
-                .setVisible(needConnect())
-                .setOnClickListener(v -> {
-                    mWifiManager.connect(getAccessPoint().getConfig(),
-                            new ActionFailListener(R.string.wifi_failed_connect_message));
-                    getFragmentController().goBack();
-                });
-    }
 
-    @Override
-    protected void updateState(ActionButtonsPreference preference) {
-        preference.getButton(ActionButtons.BUTTON1).setVisible(canForgetNetwork());
-        preference.getButton(ActionButtons.BUTTON2).setVisible(needConnect());
+        boolean canConnectOrDisconnect = getWifiEntry().canConnect()
+                || getWifiEntry().canDisconnect();
+        preference
+                .getButton(ActionButtons.BUTTON2)
+                .setVisible(canConnectOrDisconnect || getWifiEntry().getConnectedState()
+                        == WifiEntry.CONNECTED_STATE_CONNECTING)
+                .setEnabled(canConnectOrDisconnect)
+                .setText(getConnectDisconnectButtonTextResource())
+                .setIcon(getConnectDisconnectButtonIconResource())
+                .setOnClickListener(v -> connectOrDisconnect());
     }
 
     @Override
@@ -107,27 +80,60 @@ public class WifiDetailsActionButtonsPreferenceController
         return AVAILABLE;
     }
 
-    private boolean needConnect() {
-        if (getWifiInfoProvider().getNetwork() == null
-                || getWifiInfoProvider().getNetworkInfo() == null
-                || getWifiInfoProvider().getWifiInfo() == null) {
-            return false;
+    @Override
+    public void onCapabilitiesChanged(Network network, NetworkCapabilities nc) {
+        refreshUi();
+    }
+
+    @Override
+    public void onConnectResult(@WifiEntry.ConnectCallback.ConnectStatus int status) {
+        if (getWifiEntry().getLevel() == WifiEntry.WIFI_LEVEL_UNREACHABLE) {
+            Toast.makeText(getContext(),
+                    R.string.wifi_not_in_range_message,
+                    Toast.LENGTH_SHORT).show();
+        } else if (status != WifiEntry.ConnectCallback.CONNECT_STATUS_SUCCESS) {
+            Toast.makeText(getContext(),
+                    R.string.wifi_failed_connect_message,
+                    Toast.LENGTH_SHORT).show();
         }
-        return getAccessPoint().isSaved() && !getAccessPoint().isActive();
     }
 
     private boolean canForgetNetwork() {
-        if (getWifiInfoProvider().getNetwork() == null
-                || getWifiInfoProvider().getNetworkInfo() == null
-                || getWifiInfoProvider().getWifiInfo() == null) {
-            return false;
-        }
-        return (getWifiInfoProvider().getWifiInfo() != null
-                && getWifiInfoProvider().getWifiInfo().isEphemeral()) || canModifyNetwork();
+        return getWifiEntry().canForget()
+                && !WifiUtil.isNetworkLockedDown(getContext(),
+                        getWifiEntry().getWifiConfiguration());
     }
 
-    private boolean canModifyNetwork() {
-        WifiConfiguration wifiConfig = getWifiInfoProvider().getNetworkConfiguration();
-        return wifiConfig != null && !WifiUtil.isNetworkLockedDown(getContext(), wifiConfig);
+    private void connectOrDisconnect() {
+        if (!WifiUtil.isWifiEntryConnectedOrConnecting(getWifiEntry())) {
+            getWifiEntry().connect(/* callback= */ this);
+        } else {
+            getWifiEntry().disconnect(/* callback= */ null);
+        }
+    }
+
+    private int getConnectDisconnectButtonTextResource() {
+        switch (getWifiEntry().getConnectedState()) {
+            case WifiEntry.CONNECTED_STATE_DISCONNECTED:
+                return R.string.wifi_setup_connect;
+            case WifiEntry.CONNECTED_STATE_CONNECTED:
+                return R.string.disconnect;
+            case WifiEntry.CONNECTED_STATE_CONNECTING:
+                return R.string.wifi_connecting;
+            default:
+                throw new IllegalStateException("Invalid WifiEntry connected state");
+        }
+    }
+
+    private int getConnectDisconnectButtonIconResource() {
+        switch (getWifiEntry().getConnectedState()) {
+            case WifiEntry.CONNECTED_STATE_DISCONNECTED:
+            case WifiEntry.CONNECTED_STATE_CONNECTING:
+                return R.drawable.ic_settings_wifi;
+            case WifiEntry.CONNECTED_STATE_CONNECTED:
+                return R.drawable.ic_close;
+            default:
+                throw new IllegalStateException("Invalid WifiEntry connected state");
+        }
     }
 }
