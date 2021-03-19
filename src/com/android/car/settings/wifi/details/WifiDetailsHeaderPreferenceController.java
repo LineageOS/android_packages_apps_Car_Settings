@@ -20,13 +20,17 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
+import android.net.Network;
+import android.net.NetworkCapabilities;
+import android.text.TextUtils;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.EntityHeaderPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.wifi.WifiUtil;
 
 /**
- * Shows Wifi network header with icon, Ssid, and access point summary.
+ * Shows Wi-Fi network header with icon, SSID, and Wi-Fi entry summary.
  */
 public class WifiDetailsHeaderPreferenceController extends
         WifiDetailsBasePreferenceController<EntityHeaderPreference> {
@@ -35,6 +39,7 @@ public class WifiDetailsHeaderPreferenceController extends
     private static final int[] STATE_NONE = {};
     private static final int[] sWifiSignalAttributes = {com.android.settingslib.R.attr.wifi_signal};
     private final StateListDrawable mWifiSld;
+    private final String mSummaryPlaceholder;
 
     public WifiDetailsHeaderPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
@@ -42,6 +47,7 @@ public class WifiDetailsHeaderPreferenceController extends
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mWifiSld = (StateListDrawable) context.getTheme()
                 .obtainStyledAttributes(sWifiSignalAttributes).getDrawable(0);
+        mSummaryPlaceholder = context.getString(R.string.empty_placeholder);
     }
 
     @Override
@@ -51,9 +57,15 @@ public class WifiDetailsHeaderPreferenceController extends
 
     @Override
     protected void updateState(EntityHeaderPreference preference) {
-        preference.setTitle(getAccessPoint().getSsid());
-        preference.setIcon(getAccessPointIcon());
-        preference.setSummary(getAccessPoint().getSummary());
+        preference.setTitle(getWifiEntry().getSsid());
+        preference.setIcon(getWifiEntryIcon());
+        String summary = getWifiEntry().getSummary(/* concise= */ false);
+        if (TextUtils.isEmpty(summary)) {
+            // If the summary is currently empty, use the placeholder string to prevent
+            // vertical shifting during the initial render.
+            summary = mSummaryPlaceholder;
+        }
+        preference.setSummary(summary);
     }
 
     @Override
@@ -64,16 +76,21 @@ public class WifiDetailsHeaderPreferenceController extends
         return AVAILABLE;
     }
 
-    private Drawable getAccessPointIcon() {
+    @Override
+    public void onCapabilitiesChanged(Network network, NetworkCapabilities nc) {
+        refreshUi();
+    }
+
+    private Drawable getWifiEntryIcon() {
         if (mWifiSld == null) {
             return null;
         }
         mWifiSld.setState(
-                WifiUtil.isOpenNetwork(getAccessPoint().getSecurity())
+                WifiUtil.isOpenNetwork(getWifiEntry().getSecurity())
                         ? STATE_NONE
                         : STATE_SECURED);
         Drawable drawable = mWifiSld.getCurrent();
-        drawable.setLevel(getAccessPoint().getLevel());
+        drawable.setLevel(getWifiEntry().getLevel());
         return drawable;
     }
 }

@@ -30,7 +30,7 @@
         settings:showChevron="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_wifi_list"
-        settings:controller="com.android.car.settings.wifi.AccessPointListPreferenceController"/>
+        settings:controller="com.android.car.settings.wifi.WifiEntryListPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.wifi.AddWifiFragment"
         android:icon="@drawable/ic_add"
