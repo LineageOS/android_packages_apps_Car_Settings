@@ -63,6 +63,8 @@ public class WifiTetherStateSwitchPreferenceControllerTest {
     private TetheringManager mTetheringManager;
     @Mock
     private FragmentController mFragmentController;
+    @Mock
+    private androidx.lifecycle.Lifecycle mMockLifecycle;
 
     @Before
     @UiThreadTest
@@ -75,6 +77,7 @@ public class WifiTetherStateSwitchPreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
         mSwitchPreference = new ColoredSwitchPreference(mContext);
+        when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
         mPreferenceController = new WifiTetherStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         mPreferenceController.setCarWifiManager(mCarWifiManager);

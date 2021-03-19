@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,15 +22,12 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.nullable;
 import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.ConnectivityManager.NetworkCallback;
 import android.net.LinkProperties;
 import android.net.Network;
 import android.net.NetworkCapabilities;
@@ -42,9 +39,11 @@ import android.net.wifi.WifiManager;
 import android.os.Handler;
 
 import androidx.lifecycle.LifecycleOwner;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.wifi.details.WifiInfoProvider.Listener;
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.wifitrackerlib.WifiEntry;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -52,11 +51,10 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class WifiInfoProviderTest {
     private static final int LEVEL = 1;
     private static final int RSSI = -55;
@@ -64,8 +62,12 @@ public class WifiInfoProviderTest {
     private static final String MAC_ADDRESS = WifiInfo.DEFAULT_MAC_ADDRESS;
     private static final String SECURITY = "None";
 
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+    private LifecycleOwner mLifecycleOwner;
+    private WifiInfoProvider mWifiInfoProvider;
+
     @Mock
-    private AccessPoint mMockAccessPoint;
+    private WifiEntry mMockWifiEntry;
     @Mock
     private ConnectivityManager mMockConnectivityManager;
     @Mock
@@ -73,13 +75,9 @@ public class WifiInfoProviderTest {
     @Mock
     private NetworkInfo mMockNetworkInfo;
     @Mock
-    private NetworkInfo mMockNetworkInfo2;
-    @Mock
     private WifiConfiguration mMockWifiConfig;
     @Mock
     private WifiInfo mMockWifiInfo;
-    @Mock
-    private WifiInfo mMockWifiInfo2;
     @Mock
     private LinkProperties mMockLinkProperties;
     @Mock
@@ -91,25 +89,22 @@ public class WifiInfoProviderTest {
     @Mock
     private WifiManager mMockWifiManager;
     @Mock
-    private Listener mMockListener;
+    private WifiInfoProvider.Listener mMockListener;
 
     @Captor
-    private ArgumentCaptor<NetworkCallback> mCallbackCaptor;
-
-    private Context mContext;
-    private WifiInfoProvider mWifiInfoProvider;
+    private ArgumentCaptor<ConnectivityManager.NetworkCallback> mCallbackCaptor;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
 
-        mContext = spy(RuntimeEnvironment.application);
         when(mContext.getSystemService(ConnectivityManager.class))
                 .thenReturn(mMockConnectivityManager);
         when(mContext.getSystemService(WifiManager.class)).thenReturn(mMockWifiManager);
-        when(mMockAccessPoint.getConfig()).thenReturn(mMockWifiConfig);
-        when(mMockAccessPoint.getLevel()).thenReturn(LEVEL);
-        when(mMockAccessPoint.getSecurityString(false)).thenReturn(SECURITY);
+        when(mMockWifiEntry.getWifiConfiguration()).thenReturn(mMockWifiConfig);
+        when(mMockWifiEntry.getLevel()).thenReturn(LEVEL);
+        when(mMockWifiEntry.getSecurityString(false)).thenReturn(SECURITY);
         when(mMockConnectivityManager.getNetworkInfo(any(Network.class)))
                 .thenReturn(mMockNetworkInfo);
         when(mMockConnectivityManager.getLinkProperties(any(Network.class)))
@@ -125,13 +120,13 @@ public class WifiInfoProviderTest {
 
         when(mMockWifiManager.getCurrentNetwork()).thenReturn(mMockNetwork);
 
-        mWifiInfoProvider = new WifiInfoProvider(mContext, mMockAccessPoint);
+        mWifiInfoProvider = new WifiInfoProvider(mContext, mMockWifiEntry);
         mWifiInfoProvider.addListener(mMockListener);
     }
 
     @Test
     public void onStart_allFieldsInitialized() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
+        mWifiInfoProvider.onStart(mLifecycleOwner);
 
         assertThat(mWifiInfoProvider.getNetworkInfo()).isNotNull();
         assertThat(mWifiInfoProvider.getWifiInfo()).isNotNull();
@@ -143,19 +138,19 @@ public class WifiInfoProviderTest {
 
     @Test
     public void onStart_listenerCallback() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
-        verify(mMockListener).onWifiChanged(eq(mMockNetworkInfo), eq(mMockWifiInfo));
+        mWifiInfoProvider.onStart(mLifecycleOwner);
+        verify(mMockListener).onWifiEntryUpdated();
     }
 
     @Test
     public void onStart_getsNetwork() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
+        mWifiInfoProvider.onStart(mLifecycleOwner);
         assertThat(mWifiInfoProvider.getNetwork()).isEqualTo(mMockNetwork);
     }
 
     @Test
     public void networkCallback_shouldBeRegisteredOnStart() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
+        mWifiInfoProvider.onStart(mLifecycleOwner);
 
         verify(mMockConnectivityManager).registerNetworkCallback(
                 nullable(NetworkRequest.class), mCallbackCaptor.capture(), nullable(Handler.class));
@@ -163,54 +158,25 @@ public class WifiInfoProviderTest {
 
     @Test
     public void networkCallback_shouldBeUnregisteredOnStop() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
-        mWifiInfoProvider.onStop(mock(LifecycleOwner.class));
+        mWifiInfoProvider.onStart(mLifecycleOwner);
+        mWifiInfoProvider.onStop(mLifecycleOwner);
 
         verify(mMockConnectivityManager)
                 .unregisterNetworkCallback(mCallbackCaptor.getValue());
     }
 
     @Test
-    public void networkStateChangedIntent_shouldRefetchInfo() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
+    public void onWifiEntryUpdated_listenerCallback() {
+        mWifiInfoProvider.onStart(mLifecycleOwner);
+        Mockito.reset(mMockListener);
+        mWifiInfoProvider.onUpdated();
 
-        assertThat(mWifiInfoProvider.getNetwork()).isEqualTo(mMockNetwork);
-        assertThat(mWifiInfoProvider.getWifiInfo()).isEqualTo(mMockWifiInfo);
-        assertThat(mWifiInfoProvider.getNetworkInfo()).isEqualTo(mMockNetworkInfo);
-
-        when(mMockWifiManager.getConnectionInfo()).thenReturn(mMockWifiInfo2);
-        when(mMockConnectivityManager.getNetworkInfo(any(Network.class)))
-                .thenReturn(mMockNetworkInfo2);
-
-        mContext.sendBroadcast(new Intent(WifiManager.NETWORK_STATE_CHANGED_ACTION));
-
-        assertThat(mWifiInfoProvider.getNetwork()).isEqualTo(mMockNetwork);
-        assertThat(mWifiInfoProvider.getWifiInfo()).isEqualTo(mMockWifiInfo2);
-        assertThat(mWifiInfoProvider.getNetworkInfo()).isEqualTo(mMockNetworkInfo2);
+        verify(mMockListener).onWifiEntryUpdated();
     }
 
     @Test
-    public void rssiChangedIntent_shouldRefetchInfo() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
-
-        assertThat(mWifiInfoProvider.getNetwork()).isEqualTo(mMockNetwork);
-        assertThat(mWifiInfoProvider.getWifiInfo()).isEqualTo(mMockWifiInfo);
-        assertThat(mWifiInfoProvider.getNetworkInfo()).isEqualTo(mMockNetworkInfo);
-
-        when(mMockWifiManager.getConnectionInfo()).thenReturn(mMockWifiInfo2);
-        when(mMockConnectivityManager.getNetworkInfo(any(Network.class)))
-                .thenReturn(mMockNetworkInfo2);
-
-        mContext.sendBroadcast(new Intent(WifiManager.RSSI_CHANGED_ACTION));
-
-        assertThat(mWifiInfoProvider.getNetwork()).isEqualTo(mMockNetwork);
-        assertThat(mWifiInfoProvider.getWifiInfo()).isEqualTo(mMockWifiInfo2);
-        assertThat(mWifiInfoProvider.getNetworkInfo()).isEqualTo(mMockNetworkInfo2);
-    }
-
-    @Test
-    public void onLost_lisntenerCallback() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
+    public void onLost_listenerCallback() {
+        mWifiInfoProvider.onStart(mLifecycleOwner);
 
         mCallbackCaptor.getValue().onLost(mMockNetwork);
 
@@ -218,8 +184,8 @@ public class WifiInfoProviderTest {
     }
 
     @Test
-    public void onLinkPropertiesChanged_lisntenerCallback() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
+    public void onLinkPropertiesChanged_listenerCallback() {
+        mWifiInfoProvider.onStart(mLifecycleOwner);
 
         mCallbackCaptor.getValue().onLinkPropertiesChanged(
                 mMockNetwork, mMockChangedLinkProperties);
@@ -229,8 +195,8 @@ public class WifiInfoProviderTest {
     }
 
     @Test
-    public void onCapabilitiesChanged_lisntenerCallback() {
-        mWifiInfoProvider.onStart(mock(LifecycleOwner.class));
+    public void onCapabilitiesChanged_listenerCallback() {
+        mWifiInfoProvider.onStart(mLifecycleOwner);
 
         mCallbackCaptor.getValue().onCapabilitiesChanged(
                 mMockNetwork, mMockChangedNetworkCapabilities);
