@@ -154,7 +154,10 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         if (mHasNewIntent) {
             launchIfDifferent(getInitialFragment());
             mHasNewIntent = false;
+        } else if (!mIsSinglePane) {
+            updateMiniToolbarState();
         }
+
         setUpFocusChangeListener(true);
     }
 
@@ -270,12 +273,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             if (mHasInitialFocus) {
                 requestContentPaneFocus();
             }
-            if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
-                mMiniToolbar.setState(Toolbar.State.SUBPAGE);
-                mMiniToolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
-            } else {
-                mMiniToolbar.setState(Toolbar.State.HOME);
-            }
+            updateMiniToolbarState();
         }
     }
 
@@ -391,6 +389,18 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         });
         mGlobalToolbar.setLogo(R.drawable.ic_launcher_settings);
         mGlobalToolbar.setMenuItems(items);
+    }
+
+    private void updateMiniToolbarState() {
+        if (mMiniToolbar == null) {
+            return;
+        }
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            mMiniToolbar.setState(Toolbar.State.SUBPAGE);
+            mMiniToolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
+        } else {
+            mMiniToolbar.setState(Toolbar.State.HOME);
+        }
     }
 
     private void setUpFocusChangeListener(boolean enable) {

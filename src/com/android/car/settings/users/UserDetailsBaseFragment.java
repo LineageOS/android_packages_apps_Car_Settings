@@ -21,7 +21,10 @@ import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.ToolbarController;
 
 /** Common logic shared for controlling the action bar which contains a button to delete a user. */
 public abstract class UserDetailsBaseFragment extends SettingsFragment {
@@ -44,10 +47,10 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    protected void setupToolbar(@NonNull ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
 
-        getToolbar().setTitle(getTitleText());
+        toolbar.setTitle(getTitleText());
     }
 
     /** Make UserInfo available to subclasses. */
