@@ -30,6 +30,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import java.util.Collections;
 import java.util.List;
@@ -68,10 +69,10 @@ public class RingtonePickerFragment extends SettingsFragment {
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    protected void setupToolbar(@NonNull ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
 
-        getToolbar().setTitle(getArguments().getCharSequence(RingtoneManager.EXTRA_RINGTONE_TITLE));
+        toolbar.setTitle(getArguments().getCharSequence(RingtoneManager.EXTRA_RINGTONE_TITLE));
     }
 
     @Override

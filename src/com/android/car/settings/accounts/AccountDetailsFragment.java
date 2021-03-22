@@ -22,11 +22,13 @@ import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.Arrays;
@@ -88,11 +90,11 @@ public class AccountDetailsFragment extends SettingsFragment implements
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    protected void setupToolbar(@NonNull ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
 
         // Set the fragment's title
-        getToolbar().setTitle(getArguments().getCharSequence(EXTRA_ACCOUNT_LABEL));
+        toolbar.setTitle(getArguments().getCharSequence(EXTRA_ACCOUNT_LABEL));
     }
 
     @Override
