@@ -16,6 +16,8 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.BaseCarSettingsActivity.META_DATA_KEY_SINGLE_PANE;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
@@ -139,8 +141,10 @@ public abstract class BaseFragment extends Fragment implements
             }
             toolbar.setTitle(getTitleId());
             toolbar.setMenuItems(items);
-            toolbar.setState(getToolbarState());
-            toolbar.setNavButtonMode(getToolbarNavButtonStyle());
+            if (getActivity().getIntent().getBooleanExtra(META_DATA_KEY_SINGLE_PANE, false)) {
+                toolbar.setState(getToolbarState());
+                toolbar.setNavButtonMode(getToolbarNavButtonStyle());
+            }
         }
     }
 
