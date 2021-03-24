@@ -21,7 +21,6 @@ import static com.android.car.settings.common.ActionButtonsPreference.ActionButt
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.UserInfo;
-import android.os.UserHandle;
 import android.os.UserManager;
 
 import androidx.annotation.VisibleForTesting;
@@ -30,7 +29,6 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ActionButtonInfo;
 import com.android.car.settings.common.ActionButtonsPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
-import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.FragmentController;
 
 /**
@@ -48,11 +46,8 @@ public final class UserDetailsActionButtonsPreferenceController
 
     @VisibleForTesting
     static final String MAKE_ADMIN_DIALOG_TAG = "MakeAdminDialogFragment";
-    @VisibleForTesting
-    static final String REMOVE_USER_DIALOG_TAG = "RemoveUserDialogFragment";
 
     private final UserHelper mUserHelper;
-    private final UserManager mUserManager;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mMakeAdminConfirmListener =
@@ -63,41 +58,25 @@ public final class UserDetailsActionButtonsPreferenceController
                 getFragmentController().goBack();
             };
 
-    @VisibleForTesting
-    final ConfirmationDialogFragment.ConfirmListener mRemoveConfirmListener;
+    private final RemoveUserHandler mRemoveUserHandler;
 
     public UserDetailsActionButtonsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions,
-                UserHelper.getInstance(context), UserManager.get(context));
+                UserHelper.getInstance(context), UserManager.get(context),
+                new RemoveUserHandler(context, UserHelper.getInstance(context),
+                        UserManager.get(context), fragmentController));
     }
 
     @VisibleForTesting
     UserDetailsActionButtonsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, UserHelper userHelper, UserManager userManager) {
+            CarUxRestrictions uxRestrictions, UserHelper userHelper, UserManager userManager,
+            RemoveUserHandler removeUserHandler) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUserHelper = userHelper;
-        mUserManager = userManager;
-        mRemoveConfirmListener = arguments -> {
-            String userType = arguments.getString(UsersDialogProvider.KEY_USER_TYPE);
-            if (userType.equals(UsersDialogProvider.LAST_ADMIN)) {
-                getFragmentController().launchFragment(
-                        ChooseNewAdminFragment.newInstance(getUserInfo()));
-            } else {
-                int removeUserResult = mUserHelper.removeUser(context, getUserInfo());
-                if (removeUserResult == UserHelper.REMOVE_USER_RESULT_SUCCESS) {
-                    getFragmentController().goBack();
-                } else {
-                    // If failed, need to show error dialog for users.
-                    getFragmentController().showDialog(
-                            ErrorDialog.newInstance(
-                                    mUserHelper.getErrorMessageForUserResult(removeUserResult)),
-                            null);
-                }
-            }
-        };
+        mRemoveUserHandler = removeUserHandler;
     }
 
     @Override
@@ -118,14 +97,7 @@ public final class UserDetailsActionButtonsPreferenceController
                 /* rejectListener= */ null,
                 /* neutralListener= */ null);
 
-        ConfirmationDialogFragment removeUserDialog =
-                (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
-                        REMOVE_USER_DIALOG_TAG);
-        ConfirmationDialogFragment.resetListeners(
-                removeUserDialog,
-                mRemoveConfirmListener,
-                /* rejectListener= */ null,
-                /* neutralListener= */ null);
+        mRemoveUserHandler.resetListeners();
 
         ActionButtonInfo renameButton = getPreference().getButton(ActionButtons.BUTTON1);
         ActionButtonInfo makeAdminButton = getPreference().getButton(ActionButtons.BUTTON2);
@@ -145,17 +117,18 @@ public final class UserDetailsActionButtonsPreferenceController
                         getUserInfo()))
                 .setOnClickListener(v -> showConfirmMakeAdminDialog());
 
-        // If the current user is not allowed to remove users, the user trying to be removed
-        // cannot be removed, or the current user is a demo user, do not show delete button.
-        boolean isDeleteButtonVisible = !mUserManager.hasUserRestriction(
-                UserManager.DISALLOW_REMOVE_USER)
-                && getUserInfo().id != UserHandle.USER_SYSTEM
-                && !mUserManager.isDemoUser();
+        // Do not show delete button if the current user can't remove the selected user
         deleteButton
                 .setText(R.string.delete_button)
                 .setIcon(R.drawable.ic_delete)
-                .setVisible(isDeleteButtonVisible)
-                .setOnClickListener(v -> showConfirmRemoveUserDialog());
+                .setVisible(mRemoveUserHandler.canRemoveUser(getUserInfo()))
+                .setOnClickListener(v -> mRemoveUserHandler.showConfirmRemoveUserDialog());
+    }
+
+    @Override
+    public void setUserInfo(UserInfo userInfo) {
+        super.setUserInfo(userInfo);
+        mRemoveUserHandler.setUserInfo(userInfo);
     }
 
     private void showConfirmMakeAdminDialog() {
@@ -164,25 +137,5 @@ public final class UserDetailsActionButtonsPreferenceController
                         mMakeAdminConfirmListener, /* rejectListener= */ null, getUserInfo());
 
         getFragmentController().showDialog(dialogFragment, MAKE_ADMIN_DIALOG_TAG);
-    }
-
-    private void showConfirmRemoveUserDialog() {
-        boolean isLastUser = mUserHelper.getAllPersistentUsers().size() == 1;
-        boolean isLastAdmin = getUserInfo().isAdmin()
-                && mUserHelper.getAllAdminUsers().size() == 1;
-
-        ConfirmationDialogFragment dialogFragment;
-
-        if (isLastUser) {
-            dialogFragment = UsersDialogProvider.getConfirmRemoveLastUserDialogFragment(
-                    getContext(), mRemoveConfirmListener, /* rejectListener= */ null);
-        } else if (isLastAdmin) {
-            dialogFragment = UsersDialogProvider.getConfirmRemoveLastAdminDialogFragment(
-                    getContext(), mRemoveConfirmListener, /* rejectListener= */ null);
-        } else {
-            dialogFragment = UsersDialogProvider.getConfirmRemoveUserDialogFragment(getContext(),
-                    mRemoveConfirmListener, /* rejectListener= */ null);
-        }
-        getFragmentController().showDialog(dialogFragment, REMOVE_USER_DIALOG_TAG);
     }
 }

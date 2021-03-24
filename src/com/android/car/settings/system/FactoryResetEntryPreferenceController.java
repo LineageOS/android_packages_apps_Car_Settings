@@ -48,7 +48,7 @@ public class FactoryResetEntryPreferenceController extends PreferenceController<
 
     @Override
     public int getAvailabilityStatus() {
-        return isUserRestricted() ? DISABLED_FOR_USER : AVAILABLE;
+        return isUserRestricted() ? AVAILABLE_FOR_VIEWING : AVAILABLE;
     }
 
     private boolean isUserRestricted() {
