@@ -123,7 +123,7 @@ public final class UsersDialogProvider {
             @Nullable ConfirmationDialogFragment.ConfirmListener confirmListener,
             @Nullable ConfirmationDialogFragment.RejectListener rejectListener) {
 
-        String message = context.getString(R.string.delete_last_user_admin_created_message)
+        String message = context.getString(R.string.delete_last_user_delete_warning)
                 .concat(System.lineSeparator())
                 .concat(System.lineSeparator())
                 .concat(context.getString(R.string.delete_last_user_system_setup_required_message));
