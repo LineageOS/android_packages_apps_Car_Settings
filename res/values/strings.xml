@@ -653,8 +653,8 @@
     <string name="app_disable_dialog_text">If you disable this app, Android and other apps may no longer function as intended.</string>
     <!-- Manage applications, label for option to disable app. [CHAR LIMIT=30] -->
     <string name="app_disable_dialog_positive">Disable app</string>
-    <!-- Manage applications, text informing that an application is not installed for the current user. [CHAR_LIMIT=NONE] -->
-    <string name="not_installed">Not installed for this user</string>
+    <!-- Manage applications, text informing that an application is not installed for the current profile. [CHAR_LIMIT=NONE] -->
+    <string name="not_installed">Not installed for this profile</string>
     <!-- Manage applications, individual application info screen, heading for settings related to the app's permissions. for example, it may list all the permissions the app has. -->
     <string name="permissions_label">Permissions</string>
     <!-- Label for the toggle that enables/disables an app's notifications. [CHAR LIMIT=20] -->
@@ -982,8 +982,8 @@
     <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s head unit, including:\n\n<li>Your Google account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
     <!-- The list of current accounts follows this text. [CHAR LIMIT=NONE] -->
     <string name="factory_reset_accounts">You are currently signed into the following accounts:</string>
-    <!-- Message on screen if other users are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_other_users_present">There are other users present on this vehicle.</string>
+    <!-- Message on screen if other profiles are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
+    <string name="factory_reset_other_users_present">There are other profiles present on this vehicle.</string>
     <!-- Button on screen after user selects factory reset. [CHAR LIMIT=30] -->
     <string name="factory_reset_button_text">Reset vehicle</string>
     <!-- Factory clear confirmation screen title. [CHAR LIMIT=30] -->
@@ -1043,8 +1043,8 @@
     <string name="grant_admin_permissions_title">All admin permissions</string>
     <!-- Button text for granting admin permissions to a user [CHAR LIMIT=35]-->
     <string name="grant_admin_permissions_button_text">Make Admin</string>
-    <!-- Message to inform the user of what will happen when another user is upgraded to Admin status. [CHAR LIMIT=NONE]-->
-    <string name="grant_admin_permissions_message">The user will be able to delete users, including other Admins, and factory reset the system.</string>
+    <!-- Message to inform the user of what will happen when another profile is upgraded to Admin status. [CHAR LIMIT=NONE]-->
+    <string name="grant_admin_permissions_message">The profile will be able to delete profiles, including other Admins, and factory reset the system.</string>
     <!-- Message to inform the user that granting admin permissions to another user is not reversible. [CHAR LIMIT=100]-->
     <string name="action_not_reversible_message">This action is not reversible.</string>
     <!-- Button text to confirm granting admin permissions to another user. [CHAR LIMIT=40]-->
@@ -1052,8 +1052,8 @@
 
     <!-- User Restrictions --><skip/>
     <!-- Creating Users --><skip/>
-    <!-- Title for toggle that controls whether a user is able to create other users [CHAR LIMIT=35] -->
-    <string name="create_user_permission_title">Create new users</string>
+    <!-- Title for toggle that controls whether a profile is able to create other profiles [CHAR LIMIT=35] -->
+    <string name="create_user_permission_title">Create new profiles</string>
 
     <!-- Outgoing Calls --><skip/>
     <!-- Title for toggle that controls whether a user is able to make outgoing calls [CHAR LIMIT=35] -->
@@ -1070,25 +1070,25 @@
     <string name="uninstall_apps_permission_title">Uninstall apps</string>
 
     <!-- Adding new users --><skip/>
-    <!-- User settings add user menu [CHAR LIMIT=35] -->
-    <string name="user_add_user_menu">Add user</string>
-    <!-- User details new user name [CHAR LIMIT=30] -->
-    <string name="user_new_user_name">New user</string>
-    <!-- Title of the alert dialog to ask user to confirm creation of new user. [CHAR LIMIT=30] -->
-    <string name="user_add_user_title">"Add new user?"</string>
-    <!-- Message to inform user that creation of new user requires that user to set up their space. [CHAR LIMIT=100] -->
-    <string name="user_add_user_message_setup">When you add a new user, that person needs to set up their space.</string>
-    <!-- Message to inform user that the newly created user will have permissions to update apps for all other users. [CHAR LIMIT=100] -->
-    <string name="user_add_user_message_update">Any user can update apps for all other users.</string>
-    <!-- Title for the dialog that lets users know that the maximum allowed number of users on the device has been reached. [CHAR LIMIT=35]-->
-    <string name="user_limit_reached_title">User limit reached</string>
-    <!-- Message that tells people what's the maximum number of uses allowed on the device. [CHAR_LIMIT=NONE]-->
+    <!-- Profile settings add profile menu [CHAR LIMIT=35] -->
+    <string name="user_add_user_menu">Add profile</string>
+    <!-- Profile details new profile name [CHAR LIMIT=30] -->
+    <string name="user_new_user_name">New profile</string>
+    <!-- Title of the alert dialog to ask user to confirm creation of new profile. [CHAR LIMIT=30] -->
+    <string name="user_add_user_title">"Add new profile?"</string>
+    <!-- Message to inform user that creation of new profile requires that profile to set up their space. [CHAR LIMIT=100] -->
+    <string name="user_add_user_message_setup">When you add a new profile, that person needs to set up their space.</string>
+    <!-- Message to inform user that the newly created profile will have permissions to update apps for all other profiles. [CHAR LIMIT=100] -->
+    <string name="user_add_user_message_update">Any profile can update apps for all other profiles.</string>
+    <!-- Title for the dialog that lets users know that the maximum allowed number of profiles on the device has been reached. [CHAR LIMIT=35]-->
+    <string name="user_limit_reached_title">Profile limit reached</string>
+    <!-- Message that tells people what's the maximum number of profiles allowed on the device. [CHAR_LIMIT=NONE]-->
     <plurals name="user_limit_reached_message">
-        <item quantity="one">Only one user can be created.</item>
-        <item quantity="other">You can create up to <xliff:g example="3" id="count">%d</xliff:g> users.</item>
+        <item quantity="one">Only one profile can be created.</item>
+        <item quantity="other">You can create up to <xliff:g example="3" id="count">%d</xliff:g> profiles.</item>
     </plurals>
-    <!-- Title of the alert dialog to notify that the creation of new user has failed. [CHAR LIMIT=40] -->
-    <string name="add_user_error_title">Failed to create a new user</string>
+    <!-- Title of the alert dialog to notify that the creation of new profile has failed. [CHAR LIMIT=40] -->
+    <string name="add_user_error_title">Failed to create a new profile</string>
 
     <!-- Deleting users --><skip/>
     <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=40] -->
@@ -1129,14 +1129,16 @@
     <string name="user_name_label">Name</string>
     <!-- User summary to indicate that user is currently not set up [CHAR LIMIT=100] -->
     <string name="user_summary_not_set_up">Not set up</string>
-    <!-- Title for edit user name page [CHAR LIMIT=30] -->
-    <string name="edit_user_name_title">Edit user name</string>
+    <!-- Title for edit profile name page [CHAR LIMIT=30] -->
+    <string name="edit_user_name_title">Edit profile name</string>
     <!-- An error message indicating that the name input field has been left blank and cannot be. [CHAR_LIMIT=50] -->
     <string name="name_input_blank_error">Field can\u2019t be blank.</string>
     <!-- An error message indicating that the name the user has entered is invalid. [CHAR_LIMIT=50] -->
-    <string name="name_input_invalid_error">Username entered is invalid.</string>
-    <!-- User settings header for list of users on the system. [CHAR LIMIT=35] -->
+    <string name="name_input_invalid_error">Profile name entered is invalid.</string>
+    <!-- Users settings header for list of users on the system. [CHAR LIMIT=35] -->
     <string name="users_list_title">Users</string>
+    <!-- Profiles settings header for list of profiles on the system. [CHAR LIMIT=35] -->
+    <string name="profiles_list_title">Profiles</string>
     <!-- Title for the user details page that shows the permissions granted to the user. The parameter is the name of the user. [CHAR LIMIT=40] -->
     <string name="user_details_admin_title">Permissions granted to %1$s</string>
 
@@ -1161,7 +1163,7 @@
     <!-- Individual application info screen, label under Storage heading. The amount of space taken up by the application itself (for example, the java compiled files) [CHAR LIMIT=35] -->
     <string name="storage_application_size_label">App size</string>
     <!-- Individual application info screen, label under Storage heading.  The amount of space taken up by the app's data (for example, downloaded emails) [CHAR LIMIT=35] -->
-    <string name="storage_data_size_label">User data</string>
+    <string name="storage_data_size_label">Profile data</string>
     <!-- Label that appears next to the cache size [CHAR LIMIT=35] -->
     <string name="storage_cache_size_label">Cache</string>
     <!-- Individual application info screen,label under Storage heading.  The total storage space taken up by this app. [CHAR LIMIT=35] -->
@@ -1506,7 +1508,7 @@
     <!-- Title of dialog asking the user if they really want to exit the demo, which requires a factory reset [CHAR LIMIT=30]-->
     <string name="exit_retail_mode_dialog_title">Exit demo mode</string>
     <!-- Message in dialog asking the user if they really want to exit the demo, which requires a factory reset [CHAR LIMIT=150]-->
-    <string name="exit_retail_mode_dialog_body">This will delete the demo account and factory data reset the system. All user data will be lost.</string>
+    <string name="exit_retail_mode_dialog_body">This will delete the demo account and factory data reset the system. All profile data will be lost.</string>
     <!-- Text of confirmation button in dialog that appears to confirm that Demo Mode should be exited. [CHAR LIMIT=25]-->
     <string name="exit_retail_mode_dialog_confirmation_button_text">Exit Demo</string>
 
@@ -1516,8 +1518,8 @@
 
     <!-- Warn user that the action they are trying to perform is blocked while the car is in motion [CHAR LIMIT=60] -->
     <string name="restricted_while_driving">Feature not available while driving</string>
-    <!-- Warn user that adding a user is blocked while the car is in motion [CHAR LIMIT=60] -->
-    <string name="add_user_restricted_while_driving">Can\'t add user while driving</string>
+    <!-- Warn user that adding a profile is blocked while the car is in motion [CHAR LIMIT=60] -->
+    <string name="add_user_restricted_while_driving">Can\'t add profile while driving</string>
 
     <!-- Placeholder query for settings search -->
     <string name="default_search_query">Search</string>
