@@ -25,13 +25,13 @@
     <!-- Sound & display settings screen, setting option name to enable adaptive brightness [CHAR LIMIT=30] -->
     <string name="auto_brightness_title">Adaptive brightness</string>
     <!-- Sound & display settings screen, setting option summary to enable adaptive brightness [CHAR LIMIT=100] -->
-    <string name="auto_brightness_summary">Optimize brightness level for available light</string>
+    <string name="auto_brightness_summary">Adjust screen brightness to environment</string>
     <!-- Title of condition that night display is on (renamed "Night Light" with title caps) [CHAR LIMIT=30] -->
     <string name="condition_night_display_title">Night Light is on</string>
-    <string name="keywords_display">screen, touchscreen</string>
-    <string name="keywords_display_brightness_level">dim screen, touchscreen, battery</string>
-    <string name="keywords_display_auto_brightness">dim screen, touchscreen, battery</string>
-    <string name="keywords_display_night_display">dim screen, night, tint</string>
+    <string name="keywords_display" translatable="false">screen, touchscreen</string>
+    <string name="keywords_display_brightness_level" translatable="false">dim screen, touchscreen, battery</string>
+    <string name="keywords_display_auto_brightness" translatable="false">dim screen, touchscreen, battery</string>
+    <string name="keywords_display_night_display" translatable="false">dim screen, night, tint</string>
     <!-- Label for night mode toggle tile in quick setting [CHAR LIMIT=20] -->
     <string name="night_mode_tile_label">Night mode</string>
     <!-- Empty placeholder string to be used while waiting for a string to be loaded asynchronously. [CHAR LIMIT=NONE] -->
@@ -162,6 +162,14 @@
         <item>@*android:string/megabyteShort</item>
         <item>@*android:string/gigabyteShort</item>
     </string-array>
+    <!-- Network & internet settings screen, setting option name to enable OEM network connectivity [CHAR LIMIT=60] -->
+    <string name="network_and_internet_oem_network_title">OEM network</string>
+    <!-- Network & internet settings screen, setting option description of how many MB of data has been used from a start date to end date ex. Oct 3 - Nov 2 [CHAR LIMIT=100] -->
+    <string name="network_and_internet_data_usage_time_range_summary">%1$d MB used %2$s - %3$s</string>
+    <!-- Network & internet settings screen, setting option name to view other wifi networks to connect to [CHAR LIMIT=60] -->
+    <string name="network_and_internet_join_other_network_title">Join other network</string>
+    <!-- Network & internet settings screen, setting option name to view network options, such as wifi connectivity [CHAR LIMIT=60] -->
+    <string name="network_and_internet_network_preferences_title">Network preferences</string>
 
     <!-- wifi settings--><skip/>
     <!-- Used in the 1st-level settings screen to go to the 2nd-level settings screen  [CHAR LIMIT=20]-->
@@ -386,6 +394,16 @@
     <string name="bluetooth_ask_enablement_and_discovery_no_name">An app wants to turn on Bluetooth and make your headunit visible to other devices for <xliff:g id="timeout">%1$d</xliff:g> seconds.</string>
     <!-- Content description for bluetooth state switch. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_state_switch_content_description" translatable="false">Bluetooth toggle switch</string>
+    <!-- Bluetooth settings screen, setting option description for how the user's device will show up on other devices [CHAR LIMIT=100] -->
+    <string name="bluetooth_state_switch_summary">Visible as %1$s to other devices</string>
+    <!-- Title of user's current connected devices category [CHAR LIMIT=60] -->
+    <string name="bluetooth_my_devices">My devices</string>
+    <!-- Title of user's previously connected devices category [CHAR LIMIT=60] -->
+    <string name="bluetooth_previously_connected">Previously connected</string>
+    <!-- Popup indicating that the user's bluetooth device has been connected [CHAR LIMIT=30] -->
+    <string name="bluetooth_device_connected_toast">%1$s connected</string>
+    <!-- Popup indicating that the user's bluetooth device has been disconnected [CHAR LIMIT=30] -->
+    <string name="bluetooth_device_disconnected_toast">%1$s disconnected</string>
 
     <!-- Bluetooth pairing --><skip/>
     <!-- Notification ticker text (shown in the status bar) when a Bluetooth device wants to pair with us -->
@@ -467,6 +485,16 @@
     <string name="alarm_ringtone_title">Default alarm sound</string>
     <!-- Ringtone picker save button. [CHAR LIMIT=30] -->
     <string name="ringtone_picker_save_title">Save</string>
+    <!-- Sound settings screen, setting option name to manage ringtone, notifications, and alarm sounds [CHAR LIMIT=60] -->
+    <string name="sound_alert_sounds">Alert sounds</string>
+    <!-- Sound settings screen, setting option description of different alerts that can be changed [CHAR LIMIT=100] -->
+    <string name="sound_alert_sounds_summary">Ringtone, notifications, alarm</string>
+
+    <!-- Display settings --><skip/>
+    <!-- Display settings screen, setting option name to manage display brightness [CHAR LIMIT=60] -->
+    <string name="display_brightness">Brightness</string>
+    <!-- Display settings screen, setting option description for enabling night/dark mode [CHAR LIMIT=100] -->
+    <string name="display_night_mode_summary">Adjust screen for low light</string>
 
     <!-- Units Settings -->
     <!-- Units Settings title [CHAR LIMIT=10] -->
@@ -726,6 +754,20 @@
     <string name="app_link_open_never">Don\u2019t open in this app</string>
     <!-- Title of dialog showing the supported link domains [CHAR LIMIT=40] -->
     <string name="app_launch_supported_domain_urls_title">Supported links</string>
+    <!-- Main Settings screen setting option name to go into the apps settings [CHAR LIMIT=40] -->
+    <string name="apps_settings_title">Apps</string>
+    <!-- Title of recently opened apps category [CHAR LIMIT=60] -->
+    <string name="apps_recently_opened">Recently opened</string>
+    <!-- Apps settings screen, setting option name to view all apps [CHAR LIMIT=60] -->
+    <string name="apps_view_all_apps_title">View all %1$d apps</string>
+    <!-- Apps settings screen, setting option name to manage permissions of all apps [CHAR LIMIT=60] -->
+    <string name="apps_permission_manager_title">Permission manager</string>
+    <!-- Apps settings screen, setting option description of app permission manager [CHAR LIMIT=100] -->
+    <string name="apps_permission_manager_summary">Control app access to your data</string>
+    <!-- Apps settings screen, setting option description of default apps [CHAR LIMIT=100] -->
+    <string name="apps_default_apps_summary">For Assistant and more</string>
+    <!-- Apps settings screen, setting option description of special app access [CHAR LIMIT=100] -->
+    <string name="apps_special_app_access_summary">To system and other settings</string>
 
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
@@ -779,12 +821,18 @@
     <string name="location_settings_services_title">Location Services</string>
     <!-- Content description for the location state switch. [CHAR LIMIT=NONE] -->
     <string name="location_state_switch_content_description" translatable="false">Location toggle switch</string>
+    <!-- Location settings screen, setting option name to enable location tracking [CHAR LIMIT=60] -->
+    <string name="location_use_location_title">Use location</string>
 
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->
     <string name="system_setting_title">System</string>
     <!-- System updates title.  Takes the user to the screen for seeing and installing system updates. [CHAR LIMIT=40] -->
     <string name="system_update_settings_title">System updates</string>
+    <!-- System settings screen, setting option name to view advanced system settings [CHAR LIMIT=60] -->
+    <string name="system_advanced_title">Advanced</string>
+    <!-- System settings screen, setting option description of advanced system settings [CHAR LIMIT=100] -->
+    <string name="system_advanced_summary">About, legal info, reset, and more</string>
 
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
     <string name="firmware_version">Android version</string>
@@ -1286,6 +1334,10 @@
     <string name="remove_screen_lock_title">Remove screen lock?</string>
     <!-- Message in dialog warning the user about the consequence if they choose to remove the screen lock [CHAR LIMIT=60]-->
     <string name="remove_screen_lock_message">This will allow anyone to access your account</string>
+    <!-- Security settings screen, setting option name to configure user profile security lock [CHAR LIMIT=60] -->
+    <string name="security_profile_lock_title">Profile lock</string>
+    <!-- Security settings screen, setting option description for unlocking user profile with phone [CHAR LIMIT=100] -->
+    <string name="security_unlock_profile_summary">Set up automatic unlocking</string>
 
     <!--  Title for screen asking user to enter their existing lock PIN [CHAR LIMIT=30] -->
     <string name="lock_settings_enter_pin">Enter your PIN</string>
@@ -1470,6 +1522,35 @@
     <!-- Placeholder query for settings search -->
     <string name="default_search_query">Search</string>
 
-    <!-- Assistant & voice -->
+    <!-- Assistant & voice --><skip/>
+    <!-- Main Settings screen setting option name to go into the assistant & voice settings [CHAR LIMIT=40] -->
     <string name="assistant_and_voice_setting_title">Assistant &amp; voice</string>
+    <!-- Assistant & voice settings screen, setting option name to choose the assistant app [CHAR LIMIT=60] -->
+    <string name="assistant_and_voice_assistant_app_title">Assistant app</string>
+    <!-- Assistant & voice settings screen, setting option name to allow the assistant app to read screen text [CHAR LIMIT=60] -->
+    <string name="assistant_and_voice_use_text_from_screen_title">Use text from screen</string>
+    <!-- Assistant & voice settings screen, setting option description for allowing the assistant app to read text from the screen [CHAR LIMIT=100] -->
+    <string name="assistant_and_voice_use_text_from_screen_summary">Allow assistant to access screen contents</string>
+    <!-- Assistant & voice settings screen, setting option name to allow the assistant app to access screen image [CHAR LIMIT=60] -->
+    <string name="assistant_and_voice_use_screenshot_title">Use screenshot</string>
+    <!-- Assistant & voice settings screen, setting option description for allowing the assistant app to use screenshots [CHAR LIMIT=100] -->
+    <string name="assistant_and_voice_use_screenshot_summary">Allow assistant to access screen image</string>
+
+    <!-- Notifications --><skip/>
+    <!-- Title of recently sent notifications category [CHAR LIMIT=60] -->
+    <string name="notifications_recently_sent">Recently sent</string>
+    <!-- Title of all apps category [CHAR LIMIT=60] -->
+    <string name="notifications_all_apps">All apps</string>
+
+    <!-- Profiles & accounts --><skip/>
+    <!-- Main Settings screen setting option name to go into the profiles & accounts settings [CHAR LIMIT=40] -->
+    <string name="profiles_and_accounts_settings_title">Profiles &amp; accounts</string>
+    <!-- Button text for viewing a list of other profiles [CHAR LIMIT=35] -->
+    <string name="manage_other_profiles_button_text">Manage other profiles</string>
+    <!-- Button text for creating a new user profile [CHAR LIMIT=35] -->
+    <string name="add_a_profile_button_text">Add a profile</string>
+    <!-- Button text for deleting the current user profile [CHAR LIMIT=35] -->
+    <string name="delete_this_profile_text">Delete this profile</string>
+    <!-- Profile settings add profile menu [CHAR LIMIT=35] -->
+    <string name="add_profile_text">Add profile</string>
 </resources>
