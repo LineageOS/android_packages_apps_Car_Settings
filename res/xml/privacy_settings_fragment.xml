@@ -23,8 +23,8 @@
 
     <SwitchPreference
         android:key="@string/pk_mute_mic_switch"
-        android:title="@string/auto_mute_mic_title"
-        android:summary="@string/auto_mute_mic_summary"
+        android:title="@string/mute_mic_title"
+        android:summary="@string/mute_mic_summary"
         settings:controller="com.android.car.settings.privacy.MuteMicTogglePreferenceController"/>
 
     <Preference
@@ -38,7 +38,7 @@
         android:key="@string/pk_privacy_manage_perms"
         android:title="@string/app_permissions"
         android:summary="@string/app_permissions_summary"
-        settings:controller="com.android.car.settings.applications.AppPermissionsEntryPreferenceController">
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
         <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
     </Preference>
 

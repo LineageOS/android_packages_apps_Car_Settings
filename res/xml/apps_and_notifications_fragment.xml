@@ -34,7 +34,8 @@
     <Preference
         android:key="@string/pk_app_permissions_entry"
         android:title="@string/app_permissions"
-        settings:controller="com.android.car.settings.applications.AppPermissionsEntryPreferenceController">
+        android:summary="@string/app_permissions_summary"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
         <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
     </Preference>
     <Preference
