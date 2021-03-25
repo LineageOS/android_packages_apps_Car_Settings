@@ -24,6 +24,7 @@
     <Preference
         android:key="@string/pk_vehicle_data_delete_user"
         android:title="@string/vehicle_data_delete_user_title"
+        android:summary="@string/vehicle_data_delete_user_summary"
         settings:controller="com.android.car.settings.privacy.DeleteUserPreferenceController"
         settings:searchable="false"/>
 
@@ -31,6 +32,7 @@
         android:fragment="com.android.car.settings.system.FactoryResetFragment"
         android:key="@string/pk_factory_reset"
         android:title="@string/factory_reset_title"
+        android:summary="@string/factory_reset_summary"
         settings:controller="com.android.car.settings.system.FactoryResetEntryPreferenceController"
         settings:searchable="false"/>
 

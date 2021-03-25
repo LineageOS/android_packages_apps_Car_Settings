@@ -634,7 +634,7 @@
     <!-- Label for list that shows all permissions [CHAR LIMIT=40] -->
     <string name="app_permissions">App permissions</string>
     <!-- Summary of permissions currently granted to apps [CHAR LIMIT=60] -->
-    <string name="app_permissions_summary">Apps using <xliff:g id="apps" example="location">%1$s</xliff:g></string>
+    <string name="app_permissions_summary">Control app access to your data</string>
     <!-- Applications settings title. If clicked, the user is taken to the list of installed applications. [CHAR LIMIT=40] -->
     <string name="applications_settings">App info</string>
     <!-- Manage applications, text label for button to kill / force stop an application. [CHAR LIMIT=30] -->
@@ -978,18 +978,20 @@
     <!-- Factory Clear --><skip/>
     <!-- Button title to factory data reset the entire device. The "(factory reset)" part is optional for translation. [CHAR LIMIT=40]-->
     <string name="factory_reset_title">Erase all data (factory reset)</string>
+    <!-- Button summary to factory data reset the entire device.  Factory reset will delete all data from the vehicle. [CHAR LIMIT=NONE]-->
+    <string name="factory_reset_summary">Erase all data and profiles from the infotainment system</string>
     <!-- Message on screen after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s head unit, including:\n\n<li>Your Google account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
+    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s infotainment system, including:\n\n<li>Your Google Account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
     <!-- The list of current accounts follows this text. [CHAR LIMIT=NONE] -->
     <string name="factory_reset_accounts">You are currently signed into the following accounts:</string>
     <!-- Message on screen if other users are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
     <string name="factory_reset_other_users_present">There are other users present on this vehicle.</string>
     <!-- Button on screen after user selects factory reset. [CHAR LIMIT=30] -->
-    <string name="factory_reset_button_text">Reset vehicle</string>
+    <string name="factory_reset_button_text">Erase all data</string>
     <!-- Factory clear confirmation screen title. [CHAR LIMIT=30] -->
-    <string name="factory_reset_confirm_title">Reset?</string>
+    <string name="factory_reset_confirm_title">Erase all data?</string>
     <!-- Message on screen after user selects Reset device button. [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_confirm_desc">Erase all your personal information and downloaded apps?  You can\u2019t undo this action!</string>
+    <string name="factory_reset_confirm_desc">This will erase all your personal profile data, accounts, and downloaded apps on this infotainment system.\n\nYou can\u2019t undo this action.</string>
     <string name="factory_reset_confirm_button_text">Erase everything</string>
     <!-- Factory clear progress screen title. [CHAR LIMIT=30] -->
     <string name="factory_reset_progress_title" >Erasing</string>
@@ -1092,11 +1094,11 @@
 
     <!-- Deleting users --><skip/>
     <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=40] -->
-    <string name="delete_user_dialog_title">Delete this user?</string>
+    <string name="delete_user_dialog_title">Delete this profile?</string>
     <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
-    <string name="delete_user_dialog_message">"All apps and data will be deleted."</string>
+    <string name="delete_user_dialog_message">"All apps and data for this profile will be deleted"</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=40] -->
-    <string name="delete_user_error_title">Failed to delete user.</string>
+    <string name="delete_user_error_title">Failed to delete profile.</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=100] -->
     <string name="delete_user_error_set_ephemeral_title">This profile will be deleted when you switch profiles or restart the vehicle.</string>
     <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->
@@ -1104,11 +1106,11 @@
     <!-- Button label to retry user deletion [CHAR LIMIT=25] -->
     <string name="delete_user_error_retry">Retry</string>
     <!-- Title of the alert dialog to ask user to confirm deletion of the last user on the device. [CHAR LIMIT=40] -->
-    <string name="delete_last_user_dialog_title">Delete last user?</string>
+    <string name="delete_last_user_dialog_title">Delete the last remaining profile?</string>
     <!-- Message to inform user that deletion of the last user will prompt the creation of a new admin user. [CHAR LIMIT=NONE] -->
-    <string name="delete_last_user_admin_created_message">"After deleting the only remaining user for this car, a new admin user will be created."</string>
+    <string name="delete_last_user_delete_warning">"If you delete the only remaining profile for this vehicle, all data, settings, and apps associated with this profile will be erased."</string>
     <!-- Message to inform user that deletion of the last user will require new system setup. [CHAR LIMIT=NONE] -->
-    <string name="delete_last_user_system_setup_required_message">"All data, settings, and apps associated with this user will be deleted. You'll need to set up the system again."</string>
+    <string name="delete_last_user_system_setup_required_message">"After reset, you can set up a new profile."</string>
     <!-- Title of the alert dialog to notify that new admin should be chosen. [CHAR LIMIT=40] -->
     <string name="choose_new_admin_title">Choose new admin</string>
     <!-- Message to notify that new admin must be chosen in order to delete the current one. [CHAR LIMIT=150] -->
@@ -1251,17 +1253,21 @@
     <!-- Title for vehicle data privacy settings containing controls for clearing/resetting local data in the vehicle. [CHAR LIMIT=40] -->
     <string name="privacy_vehicle_data_title">Vehicle data</string>
     <!-- Privacy settings screen, setting option that opens a page to manage location settings [CHAR LIMIT=NONE] -->
-    <string name="privacy_location_summary">Control access to your location</string>
-    <!-- Privacy settings screen, setting option name to globally mute the microphone [CHAR LIMIT=30] -->
-    <string name="auto_mute_mic_title">Mute microphone</string>
-    <!-- Privacy settings screen, setting option to globally mute the microphone [CHAR LIMIT=NONE] -->
-    <string name="auto_mute_mic_summary">Disable vehicle microphone access</string>
+    <string name="privacy_location_summary">Control app access to your location</string>
+    <!-- Privacy settings screen, title for setting option name enable/disable the microphone [CHAR LIMIT=30] -->
+    <string name="mute_mic_title">Microphone</string>
+    <!-- Privacy settings screen, summary for setting option to enable/disable the microphone [CHAR LIMIT=NONE] -->
+    <string name="mute_mic_summary">Control app access to microphone</string>
     <!-- Privacy settings screen, button that navigates to a screen containing controls for clearing/resetting local data in the vehicle. [CHAR LIMIT=30] -->
     <string name="vehicle_data_title">Vehicle data</string>
     <!-- Summary text for a screen containing controls for clearing/resetting local data in the vehicle. [CHAR LIMIT=NONE] -->
     <string name="vehicle_data_summary">Manage activities and info saved on this vehicle</string>
-    <!-- Privacy settings screen, title for button that deletes the current user. [CHAR LIMIT=30] -->
-    <string name="vehicle_data_delete_user_title">Delete current user profile</string>
+    <!-- Privacy settings screen, title for button that deletes the current user profile. [CHAR LIMIT=30] -->
+    <string name="vehicle_data_delete_user_title">Delete your profile</string>
+    <!-- Privacy settings screen, summary text for button that deletes the current user profile. [CHAR LIMIT=NONE] -->
+    <string name="vehicle_data_delete_user_summary">Erase your profile and accounts from the infotainment system</string>
+    <!-- Privacy settings screen, text that shows when a user tries to take an action that is unavailable to the current user. [CHAR LIMIT=60] -->
+    <string name="action_unavailable">This action is unavailable for your profile</string>
 
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->
