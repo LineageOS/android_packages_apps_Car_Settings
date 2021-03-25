@@ -43,7 +43,7 @@ public class UserSwitcherFragment extends BaseFragment {
     @Override
     @StringRes
     protected int getTitleId() {
-        return R.string.users_list_title;
+        return R.string.profiles_list_title;
     }
 
     @Override
