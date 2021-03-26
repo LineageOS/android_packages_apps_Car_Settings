@@ -44,7 +44,10 @@
         android:key="@string/pk_location_services"
         android:title="@string/location_settings_services_title"
         settings:controller="com.android.car.settings.location.LocationServicesPreferenceController"/>
-    <com.android.car.settings.common.LogicalPreferenceGroup
+
+    <Preference
         android:key="@string/pk_location_footer"
-        settings:controller="com.android.car.settings.location.LocationFooterPreferenceController"/>
+        android:summary="@string/location_settings_footer"
+        android:icon="@drawable/ic_settings_about"
+        android:selectable="false"/>
 </PreferenceScreen>
