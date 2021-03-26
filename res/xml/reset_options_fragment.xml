@@ -34,5 +34,6 @@
         android:fragment="com.android.car.settings.system.FactoryResetFragment"
         android:key="@string/pk_factory_reset"
         android:title="@string/factory_reset_title"
+        android:summary="@string/factory_reset_summary"
         settings:controller="com.android.car.settings.system.FactoryResetEntryPreferenceController"/>
 </PreferenceScreen>
