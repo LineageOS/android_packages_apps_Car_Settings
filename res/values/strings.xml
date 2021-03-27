@@ -823,6 +823,11 @@
     <string name="location_state_switch_content_description" translatable="false">Location toggle switch</string>
     <!-- Location settings screen, setting option name to enable location tracking [CHAR LIMIT=60] -->
     <string name="location_use_location_title">Use location</string>
+    <!-- Location settings footer warning text [CHAR LIMIT=NONE] -->
+    <string name="location_settings_footer">
+        Location may use sources like GPS, Wi\u2011Fi, mobile networks, and sensors to help estimate
+        your device\u2019s location.
+    </string>
 
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->
