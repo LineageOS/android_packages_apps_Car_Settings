@@ -702,7 +702,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>થી ઓછા અંક હોવા આવશ્યક છે"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"માત્ર 0-9 અંક શામેલ હોવા આવશ્યક છે."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ઉપકરણ વ્યવસ્થાપક તાજેતરના પિનનો ઉપયોગ કરવાની મંજૂરી આપતા નથી"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"સામાન્ય પિન તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવેલા છે. એક અલગ પિન અજમાવી જુઓ."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"સામાન્ય પિન તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવેલા છે. એક અલગ પિન અજમાવી જુઓ."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"આમાં અમાન્ય અક્ષરોનો સમાવેશ થઈ શકતો નથી."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"પાસવર્ડ અમાન્ય છે, ઓછામાં ઓછા 4 અક્ષર હોવા આવશ્યક છે."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -731,7 +731,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ઉપકરણ વ્યવસ્થાપક તાજેતરના પાસવર્ડનો ઉપયોગ કરવાની મંજૂરી આપતા નથી"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"પાસવર્ડ સાચવવામાં ભૂલ"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"સામાન્ય પાસવર્ડ તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવે છે. એક અલગ પાસવર્ડ અજમાવી જુઓ."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"સામાન્ય પાસવર્ડ તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવે છે. એક અલગ પાસવર્ડ અજમાવી જુઓ."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"અંકોના ચઢતા ક્રમની, ઉતરતા ક્રમની અથવા પુનરાવર્તિત અનુક્રમની મંજૂરી નથી."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"સ્ક્રીન લૉકના વિકલ્પો"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> દિવસ પહેલાં"</string>

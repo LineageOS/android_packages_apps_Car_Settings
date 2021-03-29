@@ -85,7 +85,7 @@ public class BluetoothUnbondedDevicesPreferenceController extends
         public boolean matches(BluetoothDevice device) {
             int[] unbondedMajorClassFilter = getContext()
                     .getResources()
-                    .getIntArray(R.array.config_unbonded_device_filter_whitelist);
+                    .getIntArray(R.array.config_unbonded_device_filter_allowlist);
             boolean matches = device.getBondState() != BluetoothDevice.BOND_BONDED;
             if (matches && unbondedMajorClassFilter.length > 0) {
                 matches = device.getBluetoothClass() != null

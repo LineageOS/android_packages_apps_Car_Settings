@@ -646,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"必须少于 <xliff:g id="NUMBER">%d</xliff:g> 位数"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"只能包含 0-9 的数字。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"设备管理员不允许使用最近用过的 PIN 码"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"常用 PIN 码已被您的 IT 管理员屏蔽。请尝试一个不同的 PIN 码。"</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"常用 PIN 码已被您的 IT 管理员屏蔽。请尝试一个不同的 PIN 码。"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"此密码不得包含无效字符。"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"密码无效，密码必须至少包含 4 个字符。"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -675,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"设备管理员不允许使用最近用过的密码"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"保存密码时出错"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"常用密码已被您的 IT 管理员屏蔽。请尝试一个不同的密码。"</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"常用密码已被您的 IT 管理员屏蔽。请尝试一个不同的密码。"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不允许使用以升序、降序或重复序列进行排列的一串数字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
