@@ -22,12 +22,8 @@
     <string name="display_settings" msgid="5325515247739279185">"Дисплей"</string>
     <string name="brightness" msgid="2919605130898772866">"Ниво на яркостта"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптивна яркост"</string>
-    <string name="auto_brightness_summary" msgid="4741887033140384352">"Оптимизиране на нивото на яркостта спрямо наличната светлина"</string>
+    <string name="auto_brightness_summary" msgid="2002570577219479702">"Коригиране на яркостта на екрана спрямо околната среда"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Нощно осветление: Включено"</string>
-    <string name="keywords_display" msgid="3978416985146943922">"екран, сензорен екран"</string>
-    <string name="keywords_display_brightness_level" msgid="3956411572536209195">"затъмняване на екрана, сензорен екран, батерия"</string>
-    <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"затъмняване на екрана, сензорен екран, батерия"</string>
-    <string name="keywords_display_night_display" msgid="2922294576679769957">"затъмняване на екрана, нощ, нюансиране"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Нощен режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мрежа и интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилна мрежа"</string>
@@ -84,6 +80,10 @@
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Задаване на предупреждение за преноса на данни"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Задаване на ограничение за преноса на данни"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Задаване"</string>
+    <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Мрежа на OEM"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"Използвали сте %1$d МБ в периода от %2$s до %3$s"</string>
+    <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Присъединяване към друга мрежа"</string>
+    <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Предпочитания за мрежата"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi се включва…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi се изключва…"</string>
@@ -192,6 +192,11 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Приложение иска да направи основното ви устройство видимо за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да включи Bluetooth и да направи основното ви устройство видимо за други устройства за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Приложение иска да включи Bluetooth и да направи основното ви устройство видимо за други устройства за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Вижда се като %1$s за други устройства"</string>
+    <string name="bluetooth_my_devices" msgid="6352010339607939612">"Моите устройства"</string>
+    <string name="bluetooth_previously_connected" msgid="5206229557831180323">"По-рано свързвани"</string>
+    <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Установена е връзка с(ъс) %1$s"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s – връзката е прекратена"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Заявка за сдвояване чрез Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Сдвояване и свързване"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код за сдвояване с Bluetooth"</string>
@@ -230,6 +235,10 @@
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Стандартен звук за известяване"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Стандартен звук за будилника"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Запазване"</string>
+    <string name="sound_alert_sounds" msgid="6838044721739163867">"Звук на сигналите"</string>
+    <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Мелодия, известия и будилници"</string>
+    <string name="display_brightness" msgid="5718970880488110840">"Яркост"</string>
+    <string name="display_night_mode_summary" msgid="4939425286027546230">"Коригиране на яркостта на екрана при слаба светлина"</string>
     <string name="units_settings" msgid="402325305096925886">"Мерни ед."</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Скорост"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Разстояние"</string>
@@ -282,7 +291,7 @@
     <string name="all_applications" msgid="7798210477486822168">"Показване на всички приложения"</string>
     <string name="default_applications" msgid="1558183275638697087">"Приложения по подразбиране"</string>
     <string name="app_permissions" msgid="32799922508313948">"Разрешения за приложенията"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"Приложения, използващи <xliff:g id="APPS">%1$s</xliff:g>"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"Управлявайте достъпа на приложенията до данните ви"</string>
     <string name="applications_settings" msgid="794261395191035632">"Информация за приложенията"</string>
     <string name="force_stop" msgid="2153183697014720520">"Принудително спиране"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Да се спре ли принудително?"</string>
@@ -292,13 +301,19 @@
     <string name="uninstall_text" msgid="277907956072833012">"Деинсталиране"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако деактивирате това приложение, Android и други приложения може да спрат да работят както трябва."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Деактивиране"</string>
-    <string name="not_installed" msgid="4218816013370552746">"Не е инсталирано за този потребител"</string>
+    <string name="not_installed" msgid="4163454337822508007">"Не е инсталирано за този потребителски профил"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Известия"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Хранилище и кеш"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версия: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Няма предоставени разрешения"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Няма заявени разрешения"</string>
+    <string name="unused_apps" msgid="648471933781010395">"Неизползвани приложения"</string>
+    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> неизползвани приложения</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> неизползвано приложение</item>
+    </plurals>
+    <string name="unused_apps_switch" msgid="4433958286200341563">"Премахване на разреш. и освоб. на място"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s във вътрешното хранилище"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Пренос на данни"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Прилож.: Пренос на данни"</string>
@@ -336,6 +351,13 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Извеждане на запитване всеки път"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Без отваряне в това приложение"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддържани връзки"</string>
+    <string name="apps_settings_title" msgid="3982535942394315336">"Приложения"</string>
+    <string name="apps_recently_opened" msgid="5320377037971195984">"Наскоро отваряни"</string>
+    <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Преглед на всичките %1$d приложения"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"Мениджър на разрешенията"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Управлявайте достъпа на приложенията до данните ви"</string>
+    <string name="apps_default_apps_summary" msgid="2017792579839972926">"За Асистент и др."</string>
+    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Към системните и други настройки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специален достъп за приложението"</string>
     <string name="show_system" msgid="4401355756969485287">"Системни процеси"</string>
     <string name="hide_system" msgid="8845453295584638040">"Скриване на системните процеси"</string>
@@ -360,8 +382,13 @@
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма скорошни заявки за местоположението"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения на ниво приложение"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги за местоположение"</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"Използване на местоположението"</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системни актуализации"</string>
+    <string name="system_advanced_title" msgid="6303355131691523362">"Разширени"</string>
+    <string name="system_advanced_summary" msgid="5833643795981791953">"Всичко за Android Auto, правна информация, нулиране и др."</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версия на Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Ниво на корекцията на сигурността под Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Модел и хардуер"</string>
@@ -424,12 +451,13 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Нулиране на приложенията"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Предпочитанията за приложенията са нулирани"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Изтр. на вс. данни (възст. на фабр. настр.)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Това ще изтрие всички данни от основното устройство на автомобила ви, включително:\n\n"<li>"профила ви в Google;"</li>\n<li>"данни и настройки от системата и приложенията;"</li>\n<li>"изтеглените приложения."</li></string>
+    <string name="factory_reset_summary" msgid="854815182943504327">"Изтриване на всички данни и потребителски профили от информационно-развлекателната система"</string>
+    <string name="factory_reset_desc" msgid="1688333312943433244">"Това ще изтрие всички данни от информационно-развлекателната система на автомобила ви, включително:\n\n"<li>"профила ви в Google;"</li>\n<li>"данни и настройки от системата и приложенията;"</li>\n<li>"изтеглените приложения."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Понастоящем сте влезли в следните профили:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"В този автомобил има други потребители."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Нулиране на автомобила"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Да се извърши ли нулиране?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Да се изтрият ли цялата ви лична информация и всички изтеглени приложения? Не можете да отмените това действие!"</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"В този автомобил има други потребителски профили."</string>
+    <string name="factory_reset_button_text" msgid="2626666247051368256">"Изтриване на всички данни"</string>
+    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Да се изтрият ли всички данни?"</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Това действие ще изтрие цялата информация от личния ви потребителски профил, всички профили и изтеглените на тази информационно-развлекателна система приложения.\n\nНе можете да го отмените."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Изтриване на всички данни"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Данните се изтриват"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Моля, изчакайте..."</string>
@@ -455,34 +483,34 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Влезли сте като администратор"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Всички администраторски разрешения"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Задаване като администратор"</string>
-    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Този потребител ще може да изтрива потребители, включително и други администратори, и да възстановява фабричните настройки на системата."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Този потребителски профил ще може да изтрива профили, включително на други администратори, и да възстановява фабричните настройки на системата."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Това действие не е обратимо."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Да, задаване като администратор"</string>
-    <string name="create_user_permission_title" msgid="7781550880565935298">"Създаване на нови потребители"</string>
+    <string name="create_user_permission_title" msgid="2402003632264628632">"Създаване на нови потр. профили"</string>
     <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Провеждане на телефонни обаждания"</string>
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"SMS чрез моб. данни на автомобила"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Инсталиране на нови приложения"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Деинсталиране на приложения"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"Добавяне на потребител"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"Нов потребител"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Добавяне на нов потребител?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Когато добавите нов потребител, той трябва да настрои работното си пространство."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"Всеки потребител може да актуализира приложенията за всички останали потребители."</string>
-    <string name="user_limit_reached_title" msgid="8803355734556061238">"Достигнахте огранич. за потребители"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
-      <item quantity="other">Можете да създадете до <xliff:g id="COUNT">%d</xliff:g> потребители.</item>
-      <item quantity="one">Може да бъде създаден само един потребител.</item>
+    <string name="user_add_user_menu" msgid="4125869008006021799">"Добавяне на потребителски профил"</string>
+    <string name="user_new_user_name" msgid="906698527658609819">"Нов потребителски профил"</string>
+    <string name="user_add_user_title" msgid="6296827596015729982">"Да се добави ли новият профил?"</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Когато добавите нов потребителски профил, съответният човек трябва да настрои работната си област."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Всеки потребителски профил може да актуализира приложенията за всички останали профили."</string>
+    <string name="user_limit_reached_title" msgid="5677729355746623293">"Достигнахте лимита за потр. профили"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
+      <item quantity="other">Можете да създадете до <xliff:g id="COUNT">%d</xliff:g> потребителски профила.</item>
+      <item quantity="one">Може да бъде създаден само един потребителски профил.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="3206300411663817038">"Неуспешно създаване на нов потребител"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Да се изтрие ли потребителят?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Всички приложения и данни ще бъдат изтрити."</string>
-    <string name="delete_user_error_title" msgid="7609819398530124827">"Изтриването на потребителя бе неуспешно."</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Новият потр. профил не бе създаден"</string>
+    <string name="delete_user_dialog_title" msgid="575517556232943687">"Да се изтрие ли този потр. профил?"</string>
+    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Всички приложения и данни, свързани с този потребителски профил, ще бъдат изтрити"</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Потребителският профил не бе изтрит"</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Този потр. профил ще бъде изтрит, когато превключите към друг или рестартирате превозното средство."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Отхвърляне"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Нов опит"</string>
-    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Изтриване на последния потребител?"</string>
-    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"След като изтриете единствения оставащ потребител за този автомобил, ще бъде създаден нов потребител с администраторски достъп."</string>
-    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Всички данни, настройки и приложения, свързани с този потребител, ще бъдат изтрити. Трябва да настроите системата отново."</string>
+    <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"Да се изтрие ли последният потр. профил?"</string>
+    <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"Ако премахнете единствения оставащ потребителски профил за това превозно средство, всички свързани с профила данни, настройки и приложения ще бъдат изтрити."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"След нулирането можете да настроите нов потребителски профил."</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Избиране на нов администратор"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Трябва да посочите поне един администратор. За да изтриете този, първо изберете заместник."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Избиране на администратор"</string>
@@ -492,10 +520,11 @@
     <string name="current_user_name" msgid="3813671533249316823">"Вие (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Име"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Не е настроен"</string>
-    <string name="edit_user_name_title" msgid="6890782937520262478">"Редактиране на потребит. име"</string>
+    <string name="edit_user_name_title" msgid="1118500707473139995">"Редактиране на името в профила"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"Полето трябва да се попълни."</string>
-    <string name="name_input_invalid_error" msgid="3523545780580744273">"Въведеното потребителско име е невалидно."</string>
+    <string name="name_input_invalid_error" msgid="4355625213535164704">"Въведеното име на потр. профил е невалидно."</string>
     <string name="users_list_title" msgid="770764290290240909">"Потребители"</string>
+    <string name="profiles_list_title" msgid="1443396686780460221">"Потребителски профили"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Разрешенията са дадени на %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Хранилище"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"Музика и аудио"</string>
@@ -506,7 +535,7 @@
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудиофайлове"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Изчислява се…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Размер на приложението"</string>
-    <string name="storage_data_size_label" msgid="5022911581004239367">"Потребителски данни"</string>
+    <string name="storage_data_size_label" msgid="7986110464268960652">"Данни в потребителския профил"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Кеш"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Общо"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Изчистване на данните"</string>
@@ -548,6 +577,15 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Анулиране на синхронизирането"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Понастоящем има проблеми със синхронизирането. Ще се решат скоро."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Поверителност"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Данни от превозното средство"</string>
+    <string name="privacy_location_summary" msgid="7019817848470566242">"Управление на достъпа на приложенията до местоположението ви"</string>
+    <string name="mute_mic_title" msgid="2813215197799569553">"Микрофон"</string>
+    <string name="mute_mic_summary" msgid="5426953935775303904">"Управление на достъпа на приложенията до микрофона"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Данни от превозното средство"</string>
+    <string name="vehicle_data_summary" msgid="9204836361819386115">"Управление на активностите и информацията, запазени на това превозно средство"</string>
+    <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Изтриване на потр. ви профил"</string>
+    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Изтриване на потребителския ви профил от информационно-развлекателната система"</string>
+    <string name="action_unavailable" msgid="7087119418684417249">"Това действие не е налице за потребителския ви профил"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Сигурност"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Заключване на екрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Без"</string>
@@ -583,6 +621,8 @@
     <string name="okay" msgid="4589873324439764349">"ОK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Премахване на закл. на екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Така ще разрешите на всеки да има достъп до профила ви"</string>
+    <string name="security_profile_lock_title" msgid="3082523481292617350">"Заключване на потребителския профил"</string>
+    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Настройване на функцията за автоматично отключване"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Въведете ПИН кода си"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Въведете паролата си"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"От съображения за сигурност задайте ПИН"</string>
@@ -656,11 +696,23 @@
     <string name="enter_key" msgid="2121394305541579468">"Въведете ключа"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Демонстр. режим: Изход"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Изход от демонстр. режим"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Това действие ще изтрие демонстрационния профил и ще възстанови фабричните настройки на системата. Всички потребителски данни ще бъдат изгубени."</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Това действие ще изтрие демонстрационния профил и ще възстанови фабричните настройки на системата. Всички данни в потр. профил ще бъдат изгубени."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демонстр. режим: Изход"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОТХВЪРЛЯНЕ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функцията не е налице по време на шофиране"</string>
-    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Потребителят не може да се добави по време на шофиране"</string>
+    <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Потр. профил не може да се добави по време на шофиране"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Търсете"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Асистент и Voice"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Приложение Асистент"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Използване на текста от екрана"</string>
+    <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Разрешете на Асистент да осъществява достъп до текстовото съдържание на екрана"</string>
+    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Използване на екранна снимка"</string>
+    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Разрешете на Асистент да осъществява достъп до изображението на екрана"</string>
+    <string name="notifications_recently_sent" msgid="9051696542615302799">"Наскоро изпратили известия"</string>
+    <string name="notifications_all_apps" msgid="3557079551048958846">"Всички приложения"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Потребители и профили"</string>
+    <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Управление на други потр. профили"</string>
+    <string name="add_a_profile_button_text" msgid="8027395095117925114">"Добавяне на потребителски профил"</string>
+    <string name="delete_this_profile_text" msgid="6035404714526922665">"Изтриване на този потр. профил"</string>
+    <string name="add_profile_text" msgid="9118410102199116969">"Добавяне на потребителски профил"</string>
 </resources>

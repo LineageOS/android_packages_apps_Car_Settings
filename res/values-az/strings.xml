@@ -22,12 +22,8 @@
     <string name="display_settings" msgid="5325515247739279185">"Displey"</string>
     <string name="brightness" msgid="2919605130898772866">"Parlaqlıq səviyyəsi"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptiv parlaqlıq"</string>
-    <string name="auto_brightness_summary" msgid="4741887033140384352">"Hazırkı işıq üçün parlaqlığı optimallaşdırın"</string>
+    <string name="auto_brightness_summary" msgid="2002570577219479702">"Ekran parlaqlığını ətraf mühitə uyğunlaşdırın"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Gecə İşığı aktivdir"</string>
-    <string name="keywords_display" msgid="3978416985146943922">"ekran, sensor ekran"</string>
-    <string name="keywords_display_brightness_level" msgid="3956411572536209195">"solğun ekran, sensor ekran, batareya"</string>
-    <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"solğun ekran, sensor ekran, batareya"</string>
-    <string name="keywords_display_night_display" msgid="2922294576679769957">"solğun ekran, gecə, rəng"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Gecə rejimi"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Şəbəkə və internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobil şəbəkə"</string>
@@ -84,6 +80,10 @@
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Data istifadə xəbərdarlığı ayarlayın"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Data istifadə limiti ayarlayın"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ayarlayın"</string>
+    <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM şəbəkəsi"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%2$s - %3$s arasında %1$d MB istifadə edilib"</string>
+    <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Digər şəbəkəyə qoşulun"</string>
+    <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Şəbəkə tərcihləri"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi yandırılır…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi söndürülür…"</string>
@@ -93,10 +93,8 @@
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Şəbəkəyə qoşulmaq alınmadı"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Şəbəkə əlavə edin"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Qoşun"</string>
-    <!-- no translation found for wifi_connecting (1930665730621677960) -->
-    <skip />
-    <!-- no translation found for wifi_not_in_range_message (2617126307140203787) -->
-    <skip />
+    <string name="wifi_connecting" msgid="1930665730621677960">"Qoşulur…"</string>
+    <string name="wifi_not_in_range_message" msgid="2617126307140203787">"Şəbəkənin əhatə dairəsində deyilsiniz"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Parol"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Parolu göstərin"</string>
     <string name="wifi_no_network_name" msgid="6819604337231313594">"Şəbəkə adı daxil edin"</string>
@@ -194,6 +192,11 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Tətbiq əsas cihazı digər Bluetooth cihazları üçün <xliff:g id="TIMEOUT">%1$d</xliff:g> saniyə ərzində görünən etmək istəyir."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth\'u aktiv etmək və əsas cihazı digər cihazlar üçün <xliff:g id="TIMEOUT">%2$d</xliff:g> saniyə ərzində görünən etmək istəyir."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Tətbiq Bluetooth\'u aktiv etmək və əsas cihazı digər cihazlar üçün <xliff:g id="TIMEOUT">%1$d</xliff:g> saniyə ərzində görünən etmək istəyir."</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Digər cihazlara %1$s olaraq görünür"</string>
+    <string name="bluetooth_my_devices" msgid="6352010339607939612">"Cihazlarım"</string>
+    <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Əvvəl qoşulmusunuz"</string>
+    <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s qoşulub"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ayrılıb"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth birləşdirmə sorğusu"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"birləşdirin və əlaqə yaradın"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth birləşdirmə kodu"</string>
@@ -232,6 +235,10 @@
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Defolt bildiriş səsi"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Defolt zəngli saat səsi"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Yadda saxlayın"</string>
+    <string name="sound_alert_sounds" msgid="6838044721739163867">"Siqnal səsləri"</string>
+    <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Zəng melodiyası, bildirişlər, siqnal"</string>
+    <string name="display_brightness" msgid="5718970880488110840">"Parlaqlıq"</string>
+    <string name="display_night_mode_summary" msgid="4939425286027546230">"Ekran parlaqlığını zəif işığa uyğunlaşdırın"</string>
     <string name="units_settings" msgid="402325305096925886">"Vahidlər"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Sürət"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Məsafə"</string>
@@ -284,7 +291,7 @@
     <string name="all_applications" msgid="7798210477486822168">"Bütün tətbiqləri göstərin"</string>
     <string name="default_applications" msgid="1558183275638697087">"Defolt tətbiqlər"</string>
     <string name="app_permissions" msgid="32799922508313948">"Tətbiq icazələri"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> istifadə edən tətbiqlər"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"Tətbiqin datanıza girişinə nəzarət edin"</string>
     <string name="applications_settings" msgid="794261395191035632">"Tətbiq haqqında məlumat"</string>
     <string name="force_stop" msgid="2153183697014720520">"Məcburən dayansın"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Məcburi dayandırılsın?"</string>
@@ -294,13 +301,19 @@
     <string name="uninstall_text" msgid="277907956072833012">"Sistemdən silin"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Əgər bu tətbiqi deaktiv etsəniz, Android və digər tətbiqlər düzgün işlməyə bilər."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Tətbiqi deaktiv edin"</string>
-    <string name="not_installed" msgid="4218816013370552746">"Bu istifadəçi üçün quraşdırılmayıb"</string>
+    <string name="not_installed" msgid="4163454337822508007">"Bu profil üçün quraşdırılmayıb"</string>
     <string name="permissions_label" msgid="2701446753515612685">"İcazələr"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Bildirişlər"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Yaddaş və keş"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versiya: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"İcazə verilməyib"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"İcazə sorğusu göndərilməyib"</string>
+    <string name="unused_apps" msgid="648471933781010395">"İstifadə olunmayan tətbiqlər"</string>
+    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> istifadə olunmayan tətbiq</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> istifadə olunmayan tətbiq</item>
+    </plurals>
+    <string name="unused_apps_switch" msgid="4433958286200341563">"İcazələri silin və yer boşaldın"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"Daxili yaddaşda %s"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Data istifadəsi"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Tətbiq data istifadəsi"</string>
@@ -338,6 +351,13 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Hər dəfə soruşun"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Bu tətbiqdə açmayın"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Dəstəklənən linklər"</string>
+    <string name="apps_settings_title" msgid="3982535942394315336">"Tətbiqlər"</string>
+    <string name="apps_recently_opened" msgid="5320377037971195984">"Ən son açılan"</string>
+    <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Bütün %1$d tətbiqə baxın"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"İcazə meneceri"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Tətbiqin datanıza girişinə nəzarət edin"</string>
+    <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistent və daha çoxu üçün"</string>
+    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Sistem və digər ayarlara"</string>
     <string name="special_access" msgid="5730278220917123811">"Xüsusi tətbiq girişi"</string>
     <string name="show_system" msgid="4401355756969485287">"Sistemi göstərin"</string>
     <string name="hide_system" msgid="8845453295584638040">"Sistemi gizlədin"</string>
@@ -362,8 +382,13 @@
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Məkan sorğusu yoxdur"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tətbiq səviyyəsi icazələri"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Məkan Xidmətləri"</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"Məkandan istifadə edin"</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistem yenilənməsi"</string>
+    <string name="system_advanced_title" msgid="6303355131691523362">"Qabaqcıl"</string>
+    <string name="system_advanced_summary" msgid="5833643795981791953">"Haqqında, hüquqi məlumat, sıfırlama və daha çoxu"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android versiyası"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android təhlükəsizlik gücləndirmə səviyyəsi"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model və avadanlıq"</string>
@@ -426,12 +451,13 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Tətbiqləri sıfırla"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Tətbiq seçimləri sıfırlanıb"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Bütün datanı silin (zavod sıfırlaması)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Bu, avtomobilin əsas blokundakı bütün datanı siləcək, bura daxildir:\n\n"<li>"Google Hesabınız"</li>\n<li>"Sistem və tətbiq datası və ayarları"</li>\n<li>"Endirilmiş tətbiqlər"</li></string>
+    <string name="factory_reset_summary" msgid="854815182943504327">"Məlumat-əyləncə sistemindəki bütün data və profilləri silin"</string>
+    <string name="factory_reset_desc" msgid="1688333312943433244">"Bu, avtomobilin məlumat-əyləncə sistemindəki bütün datanı, eləcə də bunları siləcək:\n\n"<li>"Google Hesabınız"</li>\n<li>"Sistem və tətbiq datası və ayarları"</li>\n<li>"Endirilmiş tətbiqlər"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Hazırda bu hesablara daxil olmusunuz:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Bu avtomobildə başqa istifadəçilər mövcuddur."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Avtomobili sıfırlayın"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Sıfırlansın?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Bütün şəxsi məlumatlarınız və endirilmiş tətbiqlər silinsin? Bu əməliyyatı geri qaytara bilməyəcəksiniz!"</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"Bu avtomobildə başqa profillər mövcuddur."</string>
+    <string name="factory_reset_button_text" msgid="2626666247051368256">"Bütün datanı silin"</string>
+    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Bütün data silinsin?"</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Bu, məlumat-əyləncə sistemindəki bütün şəxsi profil məlumatlarınızı, hesablarınızı və endirilmiş tətbiqləri siləcək.\n\nBu əməliyyatı geri qaytara bilməzsiniz."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Hər şeyi silin"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Silinir"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Gözləyin..."</string>
@@ -457,34 +483,34 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"İnzibatçı kimi daxil olunub"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Bütün admin icazələri"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Admin edin"</string>
-    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"İstifadəçi Adminlər daxil olmaqla istifadəçiləri silə və sistemi zavod ayarlarına qaytara biləcək."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Profil digər Adminlər daxil olmaqla profilləri silə və sistemdə zavod sıfırlaması edə biləcək."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Bu əməliyyat geri qaytarıla bilməz."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Bəli, admin edin"</string>
-    <string name="create_user_permission_title" msgid="7781550880565935298">"Yeni istifadəçilər yaradın"</string>
+    <string name="create_user_permission_title" msgid="2402003632264628632">"Yeni profillər yaradın"</string>
     <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Telefon zəngləri edin"</string>
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Maşının mobil datası ilə mesajlaşma"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Yeni tətbiqlər quraşdırın"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Tətbiqləri ləğv edin"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"İstifadəçi əlavə edin"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"Yeni istifadəçi"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Yeni istifadəçi əlavə edilsin?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Yeni istifadəçi əlavə etdiyinizdə həmin şəxs öz yerini təyin etməlidir."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"İstənilən istifadəçi digər bütün istifadəçilər üçün tətbiqləri güncəlləyə bilər."</string>
-    <string name="user_limit_reached_title" msgid="8803355734556061238">"İstifadəçi limitinə çatmısınız"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
-      <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> sayda istifadəçiyə qədər yarada bilərsiniz.</item>
-      <item quantity="one">Yalnız bir istifadəçi yaradıla bilər.</item>
+    <string name="user_add_user_menu" msgid="4125869008006021799">"Profil əlavə edin"</string>
+    <string name="user_new_user_name" msgid="906698527658609819">"Yeni profil"</string>
+    <string name="user_add_user_title" msgid="6296827596015729982">"Yeni profil əlavə edilsin?"</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Yeni profil əlavə etdiyinizdə həmin şəxs öz yerini təyin etməlidir."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"İstənilən profil digər bütün profillər üçün tətbiqləri güncəlləyə bilər."</string>
+    <string name="user_limit_reached_title" msgid="5677729355746623293">"Profil limitinə çatmısınız"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
+      <item quantity="other">Maksimum <xliff:g id="COUNT">%d</xliff:g> profil yarada bilərsiniz.</item>
+      <item quantity="one">Yalnız bir profil yaradıla bilər.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="3206300411663817038">"Yeni istifadəçi yaradılmadı"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Bu istifadəçi silinsin?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Bütün tətbiqlər və data silinəcək."</string>
-    <string name="delete_user_error_title" msgid="7609819398530124827">"İstifadəçi silinmədi"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Yeni profil yaratmaq alınmadı"</string>
+    <string name="delete_user_dialog_title" msgid="575517556232943687">"Bu profil silinsin?"</string>
+    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Bu profildəki bütün tətbiqlər və data silinəcək"</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Profili silmək alınmadı."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Bu profil profilləri dəyişdirdikdə və ya nəqliyyat vasitəsini yenidən başlatdıqda silinəcək."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Silin"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Yenidən cəhd edin"</string>
-    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Son istifadəçi silinsin?"</string>
-    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Bu avtomobil üçün qalan yeganə istifadəçini sildikdən sonra yeni admin istifadəçi yaradılacaq."</string>
-    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Bu istifadəçi ilə əlaqələndirilmiş bütün verilənlər, ayarlar və tətbiqlər silinəcək. Sistemi yenidən quraşdırmalı olacaqsınız."</string>
+    <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"Qalan son profil silinsin?"</string>
+    <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"Bu avtomobil üçün qalan bir profili silsəniz, bu profil ilə əlaqəli bütün data, ayarlar və tətbiqlər silinəcəkdir."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"Sıfırladıqdan sonra yeni profil ayarlaya bilərsiniz."</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Yeni admin seçin"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Ən azı bir admininiz olmalıdır. Bunu silmək üçün ilk növbədə əvəzləyici seçin."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Admin seçin"</string>
@@ -494,10 +520,11 @@
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ad"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Quraşdırılmayıb"</string>
-    <string name="edit_user_name_title" msgid="6890782937520262478">"İstifadəçi adını redaktə edin"</string>
+    <string name="edit_user_name_title" msgid="1118500707473139995">"Profil adını redaktə edin"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"Sahə boş ola bilməz."</string>
-    <string name="name_input_invalid_error" msgid="3523545780580744273">"Daxil edilən istifadəçi adı yanlışdır."</string>
+    <string name="name_input_invalid_error" msgid="4355625213535164704">"Daxil edilmiş profil adı yanlışdır."</string>
     <string name="users_list_title" msgid="770764290290240909">"İstifadəçilər"</string>
+    <string name="profiles_list_title" msgid="1443396686780460221">"Profillər"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s üçün verilmiş icazələr"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Yaddaş"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"Musiqi və audio"</string>
@@ -508,7 +535,7 @@
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Audio fayllar"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Hesablanır…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Tətbiq ölçüsü"</string>
-    <string name="storage_data_size_label" msgid="5022911581004239367">"İstifadəçi datası"</string>
+    <string name="storage_data_size_label" msgid="7986110464268960652">"Profil datası"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Keş"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Yekun"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Yaddaşı təmizləyin"</string>
@@ -550,6 +577,15 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Sinxronizasiyanı ləğv edin"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Hazırda sinxronizasiyada problemlər var. Bir azdan düzələcək."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Məxfilik"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Avtomobil datası"</string>
+    <string name="privacy_location_summary" msgid="7019817848470566242">"Məkanınıza tətbiqin girişinə nəzarət edin"</string>
+    <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
+    <string name="mute_mic_summary" msgid="5426953935775303904">"Tətbiqin mikrofona girişinə nəzarət edin"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Avtomobil datası"</string>
+    <string name="vehicle_data_summary" msgid="9204836361819386115">"Bu avtomobildə saxlanmış fəaliyyətlər və məlumatları idarə edin"</string>
+    <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Profilinizi silin"</string>
+    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Məlumat-əyləncə sistemindən profil və hesablarınızı silin"</string>
+    <string name="action_unavailable" msgid="7087119418684417249">"Bu əməliyyat profiliniz üçün əlçatan deyil"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Təhlükəsizlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Yoxdur"</string>
@@ -585,6 +621,8 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ekran kilidi ləğv edilsin?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu, hər kəsə hesabınıza daxil olmaq imkanı verəcək"</string>
+    <string name="security_profile_lock_title" msgid="3082523481292617350">"Profil kilidi"</string>
+    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Avtomatik kiliddən çıxarma ayarlayın"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN kodu daxil edin"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Şifrənizi daxil edin"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Təhlükəsizlik üçün PIN kod təyin edin"</string>
@@ -658,11 +696,23 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter düyməsi"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Demodan çıxın"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Demo rejimdən çıxın"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Bu, demo hesabı siləcək və sistemi istehsalçı nizamlarına qaytaracaq."</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Bu, demo hesabını siləcək və sistemi istehsalçı nizamlarına qaytaracaq. Bütün profil datası itəcək."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan çıxın"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"RƏDD EDİN"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funksiya avtomobil idarə edərkən əlçatan deyil"</string>
-    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Avtomobil idarə edərkən istifadəçi əlavə etmək mümkün deyil"</string>
+    <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Avtomobil idarə edərkən profil əlavə etmək mümkün deyil"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Axtarış"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent və səs"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Assistent tətbiqi"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Ekrandakı mətni istifadə edin"</string>
+    <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Assistentin ekran məzmununa girişinə icazə verin"</string>
+    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Skrinşot istifadə edin"</string>
+    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Assistentin ekran şəklinə girişinə icazə verin"</string>
+    <string name="notifications_recently_sent" msgid="9051696542615302799">"Ən son göndərilənlər"</string>
+    <string name="notifications_all_apps" msgid="3557079551048958846">"Bütün tətbiqlər"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Profillər və hesablar"</string>
+    <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Digər profilləri idarə edin"</string>
+    <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profil əlavə edin"</string>
+    <string name="delete_this_profile_text" msgid="6035404714526922665">"Bu profili silin"</string>
+    <string name="add_profile_text" msgid="9118410102199116969">"Profil əlavə edin"</string>
 </resources>
