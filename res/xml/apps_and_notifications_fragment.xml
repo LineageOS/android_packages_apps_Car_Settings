@@ -39,6 +39,13 @@
         <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
     </Preference>
     <Preference
+        android:key="@string/pk_hibernated_apps"
+        android:title="@string/unused_apps"
+        settings:controller=
+            "com.android.car.settings.applications.HibernatedAppsPreferenceController">
+        <intent android:action="android.intent.action.MANAGE_UNUSED_APPS"/>
+    </Preference>
+    <Preference
         android:fragment="com.android.car.settings.applications.specialaccess.SpecialAccessSettingsFragment"
         android:key="@string/pk_special_access_entry"
         android:title="@string/special_access"
