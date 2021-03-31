@@ -192,7 +192,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mMessageText = view.findViewById(R.id.description_text);
+        mMessageText = view.findViewById(R.id.title_text);
         mMessageText.setText(getString(R.string.choose_lock_pattern_message));
 
         mLockPatternView = view.findViewById(R.id.lockPattern);
