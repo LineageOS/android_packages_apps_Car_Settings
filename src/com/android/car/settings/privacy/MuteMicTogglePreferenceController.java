@@ -18,28 +18,86 @@ package com.android.car.settings.privacy;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-
-import androidx.preference.TwoStatePreference;
+import android.content.pm.PackageManager;
+import android.hardware.SensorPrivacyManager;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
+import com.android.internal.annotations.VisibleForTesting;
 
 /** Business logic for controlling the mute mic setting. */
-public class MuteMicTogglePreferenceController extends PreferenceController<TwoStatePreference> {
+public class MuteMicTogglePreferenceController
+        extends PreferenceController<CarUiTwoActionSwitchPreference> {
+
+    private SensorPrivacyManager mSensorPrivacyManager;
+    private PackageManager mPackageManager;
+
+    private SensorPrivacyManager.OnSensorPrivacyChangedListener mListener =
+            new SensorPrivacyManager.OnSensorPrivacyChangedListener() {
+                @Override
+                public void onSensorPrivacyChanged(boolean enabled) {
+                    refreshUi();
+                }
+            };
 
     public MuteMicTogglePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        this(context, preferenceKey, fragmentController, uxRestrictions,
+                SensorPrivacyManager.getInstance(context), context.getPackageManager());
+    }
+
+    @VisibleForTesting
+    MuteMicTogglePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            SensorPrivacyManager sensorPrivacyManager, PackageManager packageManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+        mSensorPrivacyManager = sensorPrivacyManager;
+        mPackageManager = packageManager;
     }
 
     @Override
-    protected Class<TwoStatePreference> getPreferenceType() {
-        return TwoStatePreference.class;
+    protected Class<CarUiTwoActionSwitchPreference> getPreferenceType() {
+        return CarUiTwoActionSwitchPreference.class;
     }
 
-    @AvailabilityStatus
+    @Override
+    protected void onCreateInternal() {
+        getPreference().setOnSecondaryActionClickListener(isChecked -> {
+            // Settings UX currently shows "checked means mic is enabled", but the underlying API is
+            // inversely written around "is mic muted?" So we must be careful when doing
+            // comparisons.
+            boolean isMicMuted = mSensorPrivacyManager.isSensorPrivacyEnabled(
+                    SensorPrivacyManager.Sensors.MICROPHONE);
+            if (isChecked == isMicMuted) {
+                // UX and underlying API state for mic do not match, so update sensor privacy
+                mSensorPrivacyManager.setSensorPrivacyForProfileGroup(
+                        SensorPrivacyManager.Sensors.MICROPHONE, !isChecked);
+            }
+        });
+    }
+
+    @Override
+    protected void onStartInternal() {
+        mSensorPrivacyManager.addSensorPrivacyListener(
+                SensorPrivacyManager.Sensors.MICROPHONE, mListener);
+    }
+
+    @Override
+    protected void onStopInternal() {
+        mSensorPrivacyManager.removeSensorPrivacyListener(mListener);
+    }
+
+    @Override
     protected int getAvailabilityStatus() {
-        // TODO: Mark as disabled until it's implemented
-        return AVAILABLE_FOR_VIEWING;
+        boolean hasFeatureMicToggle = mPackageManager
+                .hasSystemFeature(PackageManager.FEATURE_MICROPHONE_TOGGLE);
+        return hasFeatureMicToggle ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+    }
+
+    @Override
+    protected void updateState(CarUiTwoActionSwitchPreference preference) {
+        preference.setSecondaryActionChecked(!mSensorPrivacyManager.isSensorPrivacyEnabled(
+                SensorPrivacyManager.Sensors.MICROPHONE));
     }
 }
