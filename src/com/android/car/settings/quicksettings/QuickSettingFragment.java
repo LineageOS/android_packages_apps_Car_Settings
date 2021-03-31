@@ -84,7 +84,7 @@ public class QuickSettingFragment extends BaseFragment {
         Activity activity = requireActivity();
 
         mUserIconProvider = new UserIconProvider();
-        mListView = activity.findViewById(R.id.list);
+        mListView = activity.findViewById(R.id.quick_settings_list);
         mGridAdapter = new QuickSettingGridAdapter(activity);
         mListView.setLayoutManager(mGridAdapter.getGridLayoutManager());
 

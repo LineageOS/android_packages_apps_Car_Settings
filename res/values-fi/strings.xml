@@ -608,7 +608,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN-koodissa saa olla enintään <xliff:g id="NUMBER">%d</xliff:g> numeroa."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN-koodi saa sisältää vain numeroita 0–9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Järjestelmänvalvoja esti PIN-koodin, koska sitä on käytetty viime aikoina."</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"IT-järjestelmänvalvoja on estänyt yleiset PIN-koodit. Kokeile eri PIN-koodia."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"IT-järjestelmänvalvoja on estänyt yleiset PIN-koodit. Kokeile eri PIN-koodia."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Salasanassa ei saa olla virheellisiä merkkejä."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Virheellinen salasana. Vähimmäispituus on 4 merkkiä."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -637,7 +637,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Järjestelmänvalvoja esti salasanan, koska sitä on käytetty viime aikoina."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Virhe tallennettaessa salasanaa"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"IT-järjestelmänvalvoja on estänyt yleiset salasanat. Kokeile eri salasanaa."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"IT-järjestelmänvalvoja on estänyt yleiset salasanat. Kokeile eri salasanaa."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nousevat, laskevat tai toistuvat numerosarjat on kielletty."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Näytön lukitusvaihtoehdot"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> päivää sitten"</string>

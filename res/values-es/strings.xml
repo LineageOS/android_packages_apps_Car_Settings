@@ -608,7 +608,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Debe tener menos de <xliff:g id="NUMBER">%d</xliff:g> dígitos"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Solo debe tener dígitos comprendidos entre el 0 y el 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"El administrador de dispositivos no permite utilizar un PIN reciente"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"El administrador de TI bloquea los PIN comunes. Prueba a utilizar otro PIN."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"El administrador de TI bloquea los PIN comunes. Prueba a utilizar otro PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"No puede incluir un carácter que no sea válido."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"La contraseña no es válida porque debe tener al menos 4 caracteres."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -637,7 +637,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"El administrador de dispositivos no permite utilizar una contraseña reciente"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"No se ha podido guardar la contraseña"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"El administrador de TI bloquea las contraseñas comunes. Prueba a utilizar otra contraseña."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"El administrador de TI bloquea las contraseñas comunes. Prueba a utilizar otra contraseña."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No se permite utilizar una secuencia ascendente, descendente ni repetida de dígitos."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opciones de bloqueo de pantalla"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : hace <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>

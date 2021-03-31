@@ -92,7 +92,7 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
         Context context = spy(RuntimeEnvironment.application);
         Resources resources = spy(context.getResources());
         when(context.getResources()).thenReturn(resources);
-        when(resources.getIntArray(R.array.config_unbonded_device_filter_whitelist))
+        when(resources.getIntArray(R.array.config_unbonded_device_filter_allowlist))
                 .thenReturn(mUnbondedDeviceFilter);
 
         mLocalBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */
