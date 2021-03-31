@@ -45,14 +45,14 @@
         filter will return all unbonded devices.
 
         Example usage:
-        <integer-array name="config_unbonded_device_filter_whitelist">
+        <integer-array name="config_unbonded_device_filter_allowlist">
             <item>0x0200</item>
         </integer-array>
 
         This filter would only return unbonded devices which correspond to the
         major class for PHONE.
     -->
-    <integer-array name="config_unbonded_device_filter_whitelist"/>
+    <integer-array name="config_unbonded_device_filter_allowlist"/>
     <!--
         Array of keys that should be used for determining how audio attribute
         usage should be mapped to ringtone uris.

@@ -658,7 +658,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN-код должен содержать менее <xliff:g id="NUMBER">%d</xliff:g> цифр"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN-код должен содержать только цифры."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Использовать недавний PIN-код запрещено"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"ИТ-администратор запретил использовать простые PIN-коды. Выберите более сложную комбинацию."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"ИТ-администратор запретил использовать простые PIN-коды. Выберите более сложную комбинацию."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Использованы недопустимые символы."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Пароль должен содержать не менее четырех символов."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -699,7 +699,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Использовать недавний пароль запрещено"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не удалось сохранить пароль"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ИТ-администратор запретил использовать простые пароли. Выберите более сложную комбинацию."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"ИТ-администратор запретил использовать простые пароли. Выберите более сложную комбинацию."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Нельзя использовать последовательности из идущих подряд или повторяющихся цифр."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Варианты блокировки экрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> (<xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. назад)"</string>

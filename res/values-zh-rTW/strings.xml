@@ -646,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"長度必須少於 <xliff:g id="NUMBER">%d</xliff:g> 個數字"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"只能包含數字 0 到 9。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"裝置管理員不允許使用最近用過的 PIN 碼"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"你的 IT 管理員已封鎖常見 PIN 碼，請改用其他 PIN 碼。"</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"你的 IT 管理員已封鎖常見 PIN 碼，請改用其他 PIN 碼。"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"不得包含無效字元。"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"密碼無效，至少要有 4 個字元。"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -675,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"裝置管理員不允許使用最近用過的密碼"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"儲存密碼時發生錯誤"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"你的 IT 管理員已封鎖常見密碼，請改用其他密碼。"</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"你的 IT 管理員已封鎖常見密碼，請改用其他密碼。"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不得使用依遞增或遞減順序排列或是重複的數字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>

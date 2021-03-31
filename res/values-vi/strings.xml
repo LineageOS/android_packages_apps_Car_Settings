@@ -646,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Phải có ít hơn <xliff:g id="NUMBER">%d</xliff:g> chữ số"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Chỉ được chứa các chữ số từ 0 đến 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Quản trị viên thiết bị không cho phép dùng mã PIN gần đây"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Quản vị viên CNTT đã chặn những mã PIN phổ biến. Hãy thử mã PIN khác."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Quản vị viên CNTT đã chặn những mã PIN phổ biến. Hãy thử mã PIN khác."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Mật khẩu này không được bao gồm ký tự không hợp lệ."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Mật khẩu không hợp lệ, phải có ít nhất 4 ký tự."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -675,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Quản trị viên thiết bị không cho phép sử dụng mật khẩu gần đây"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Lỗi khi lưu mật khẩu"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Quản trị viên CNTT đã chặn những mật khẩu phổ biến. Hãy thử mật khẩu khác."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Quản trị viên CNTT đã chặn những mật khẩu phổ biến. Hãy thử mật khẩu khác."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Không cho phép thứ tự chữ số tăng dần, giảm dần hoặc lặp lại."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Tùy chọn phương thức khóa màn hình"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ngày trước"</string>

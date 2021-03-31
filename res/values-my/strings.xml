@@ -647,7 +647,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ဂဏန်း <xliff:g id="NUMBER">%d</xliff:g> လုံးထက် နည်းရပါမည်"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ဂဏန်း ၀−၉ အထိသာ ပါဝင်ရပါမည်။"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"စက်ပစ္စည်း၏ စီမံခန့်ခွဲသူသည် မကြာသေးမီက အသုံးပြုခဲ့သည့် ပင်နံပါတ်ကို သုံးခွင့်မပြုပါ"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"အသုံးပြုလေ့ရှိသော ပင်နံပါတ်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား ပင်နံပါတ်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"အသုံးပြုလေ့ရှိသော ပင်နံပါတ်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား ပင်နံပါတ်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"၎င်းတွင် မမှန်ကန်သည့် အက္ခရာများ ပါဝင်၍မရပါ။"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"စကားဝှက် မမှန်ပါ၊ အနည်းဆုံး အက္ခရာ ၄ လုံး ရှိရမည်။"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -676,7 +676,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"စက်ပစ္စည်းစီမံခန့်ခွဲသူသည် မကြာသေးမီက အသုံးပြုခဲ့သည့် စကားဝှက်ကို သုံးခွင့်မပြုပါ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"စကားဝှက်ကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"အသုံးပြုလေ့ရှိသော စကားဝှက်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား စကားဝှက်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"အသုံးပြုလေ့ရှိသော စကားဝှက်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား စကားဝှက်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"အစဉ်လိုက်ဖြစ်နေသော ဂဏန်း အငယ်မှအကြီး၊ အကြီးမှအငယ် သို့မဟုတ် ထပ်နေသည့် နံပါတ်စဉ်များကို ခွင့်မပြုပါ။"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"မျက်နှာပြင်လော့ခ်ချခြင်း ရွေးချယ်စရာများ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> - လွန်ခဲ့သော <xliff:g id="NUM_DAYS">%3$s</xliff:g> ရက်"</string>
