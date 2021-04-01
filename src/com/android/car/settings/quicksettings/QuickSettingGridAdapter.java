@@ -211,7 +211,7 @@ public class QuickSettingGridAdapter
 
         BrightnessViewHolder(View view) {
             super(view);
-            mSeekBar = (SeekBar) view.findViewById(R.id.seekbar);
+            mSeekBar = (SeekBar) view.findViewById(R.id.quick_settings_brightness_seekbar);
         }
     }
 
