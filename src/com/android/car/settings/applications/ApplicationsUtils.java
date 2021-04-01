@@ -16,10 +16,13 @@
 
 package com.android.car.settings.applications;
 
+import static android.provider.DeviceConfig.NAMESPACE_APP_HIBERNATION;
+
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.provider.DeviceConfig;
 import android.telecom.DefaultDialerManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
@@ -32,6 +35,9 @@ import java.util.Set;
 
 /** Utility functions for use in applications settings. */
 public class ApplicationsUtils {
+
+    /** Whether or not app hibernation is enabled on the device **/
+    public static final String PROPERTY_APP_HIBERNATION_ENABLED = "app_hibernation_enabled";
 
     private ApplicationsUtils() {
     }
@@ -73,5 +79,14 @@ public class ApplicationsUtils {
             }
         }
         return false;
+    }
+
+    /**
+     * Returns {@code true} if the hibernation feature is enabled, as configured through {@link
+     * DeviceConfig}, which can be overridden remotely with a flag or through adb.
+     */
+    public static boolean isHibernationEnabled() {
+        return DeviceConfig.getBoolean(
+                NAMESPACE_APP_HIBERNATION, PROPERTY_APP_HIBERNATION_ENABLED, false);
     }
 }
