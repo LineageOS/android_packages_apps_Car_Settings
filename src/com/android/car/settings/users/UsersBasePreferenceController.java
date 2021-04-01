@@ -99,6 +99,10 @@ public abstract class UsersBasePreferenceController extends PreferenceController
         return mPreferenceProvider;
     }
 
+    protected List<Preference> getUsersToDisplay() {
+        return mUsersToDisplay;
+    }
+
     private boolean userListsAreDifferent(List<Preference> currentList,
             List<Preference> newList) {
         if (currentList.size() != newList.size()) {

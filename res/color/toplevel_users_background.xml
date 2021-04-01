@@ -18,9 +18,9 @@
           xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:state_enabled="false"
           android:alpha="?android:attr/disabledAlpha"
-          android:color="#FB49FF"/>
+          android:color="#F15B8D"/>
     <item app:state_ux_restricted="true"
           android:alpha="?android:attr/disabledAlpha"
-          android:color="#FB49FF"/>
-    <item android:color="#FB49FF"/>
+          android:color="#F15B8D"/>
+    <item android:color="#F15B8D"/>
 </selector>

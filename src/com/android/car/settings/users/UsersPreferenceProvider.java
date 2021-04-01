@@ -53,8 +53,8 @@ public class UsersPreferenceProvider {
     public UsersPreferenceProvider(Context context, UserClickListener listener) {
         mContext = context;
         mUserPreferenceClickListener = listener;
-        mIncludeCurrentUser = true;
-        mIncludeGuest = true;
+        mIncludeCurrentUser = false;
+        mIncludeGuest = false;
     }
 
     /**
