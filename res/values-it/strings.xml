@@ -606,7 +606,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Deve contenere meno di <xliff:g id="NUMBER">%d</xliff:g> cifre"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Deve contenere solo cifre da 0 a 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"L\'amministratore del dispositivo non consente l\'utilizzo di un PIN recente"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"I PIN comuni sono stati bloccati dall\'amministratore IT. Prova a usare un altro PIN."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"I PIN comuni sono stati bloccati dall\'amministratore IT. Prova a usare un altro PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Non può contenere un carattere non valido."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Password non valida: deve avere almeno 4 caratteri."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -635,7 +635,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'amministratore del dispositivo non consente l\'utilizzo di una password recente"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Errore di salvataggio della password"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Le password comuni sono state bloccate dall\'amministratore IT. Prova a usare un\'altra password."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Le password comuni sono state bloccate dall\'amministratore IT. Prova a usare un\'altra password."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Non sono consentite sequenze di cifre in ordine crescente o decrescente oppure ripetute."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opzioni di blocco schermo"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> giorni fa"</string>

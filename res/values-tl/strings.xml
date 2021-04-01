@@ -608,7 +608,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Dapat ay wala pang <xliff:g id="NUMBER">%d</xliff:g> (na) digit"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Binubuo lang dapat ito ng mga digit na 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Hindi pinapayagan ng admin ng device ang paggamit ng kamakailang PIN"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Bina-block ng iyong IT admin ang mga pangkaraniwang PIN. Sumubok ng ibang PIN."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Bina-block ng iyong IT admin ang mga pangkaraniwang PIN. Sumubok ng ibang PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Hindi ito maaaring maglaman ng invalid na character."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Invalid ang password, dapat ay may hindi bababa sa 4 na character."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -637,7 +637,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Hindi pinapayagan ng admin ng device ang paggamit ng kamakailang password"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Nagka-error sa pag-save ng password"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Bina-block ng iyong IT admin ang mga pangkaraniwang password. Sumubok ng ibang password."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Bina-block ng iyong IT admin ang mga pangkaraniwang password. Sumubok ng ibang password."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Hindi pinapayagan ang pataas, pababa, o paulit-ulit na pagkakasunod-sunod ng mga digit."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Mga opsyon sa lock ng screen"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> (na) araw ang nakalipas"</string>

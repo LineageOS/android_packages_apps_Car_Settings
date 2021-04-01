@@ -611,7 +611,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Mora imati manje od ovoliko znamenki: <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Smije sadržavati samo znamenke od 0 do 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator uređaja ne dopušta upotrebu nedavnog PIN-a"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Vaš je IT administrator blokirao uobičajene PIN-ove. Pokušajte s nekom drugim PIN-om."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Vaš je IT administrator blokirao uobičajene PIN-ove. Pokušajte s nekom drugim PIN-om."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Unos ne smije sadržavati nevažeće znakove."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Zaporka nije važeća, mora imati najmanje četiri znaka."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -646,7 +646,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administrator uređaja ne dopušta upotrebu nedavne zaporke"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Pogreška pri spremanju zaporke"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Vaš je IT administrator blokirao uobičajene zaporke. Pokušajte s nekom drugom zaporkom."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Vaš je IT administrator blokirao uobičajene zaporke. Pokušajte s nekom drugom zaporkom."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Uzastopno rastući ili padajući slijed brojeva ili ponavljanje brojeva nisu dopušteni."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcije zaključavanja zaslona"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : prije <xliff:g id="NUM_DAYS">%3$s</xliff:g> dana"</string>
