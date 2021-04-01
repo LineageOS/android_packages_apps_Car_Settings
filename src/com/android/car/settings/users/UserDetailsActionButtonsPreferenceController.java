@@ -48,6 +48,9 @@ public final class UserDetailsActionButtonsPreferenceController
     static final String MAKE_ADMIN_DIALOG_TAG = "MakeAdminDialogFragment";
 
     private final UserHelper mUserHelper;
+    private final UserManager mUserManager;
+    private DemoUserDialogHandler mDemoUserDialogHandler;
+    private AddProfileHandler mAddProfileHandler;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mMakeAdminConfirmListener =
@@ -76,7 +79,10 @@ public final class UserDetailsActionButtonsPreferenceController
             RemoveUserHandler removeUserHandler) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUserHelper = userHelper;
+        mUserManager = userManager;
         mRemoveUserHandler = removeUserHandler;
+        mDemoUserDialogHandler = new DemoUserDialogHandler(context, fragmentController);
+        mAddProfileHandler = new AddProfileHandler(context, fragmentController, this);
     }
 
     @Override
@@ -88,6 +94,9 @@ public final class UserDetailsActionButtonsPreferenceController
     protected void onCreateInternal() {
         super.onCreateInternal();
 
+        mDemoUserDialogHandler.onCreateInternal();
+        mAddProfileHandler.onCreateInternal();
+
         ConfirmationDialogFragment makeAdminDialog =
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         MAKE_ADMIN_DIALOG_TAG);
@@ -98,10 +107,34 @@ public final class UserDetailsActionButtonsPreferenceController
                 /* neutralListener= */ null);
 
         mRemoveUserHandler.resetListeners();
+    }
+
+    @Override
+    protected void onStartInternal() {
+        super.onStartInternal();
 
         ActionButtonInfo renameButton = getPreference().getButton(ActionButtons.BUTTON1);
         ActionButtonInfo makeAdminButton = getPreference().getButton(ActionButtons.BUTTON2);
-        ActionButtonInfo deleteButton = getPreference().getButton(ActionButtons.BUTTON3);
+        ActionButtonInfo profilesButton = getPreference().getButton(ActionButtons.BUTTON3);
+        ActionButtonInfo deleteButton = getPreference().getButton(ActionButtons.BUTTON4);
+
+        boolean isDemoUser = mUserManager.isDemoUser();
+        boolean shouldShowAddUser = mUserManager.isAdminUser()
+                && mUserHelper.isCurrentProcessUser(getUserInfo())
+                && mAddProfileHandler.canAddUser(mUserManager)
+                && !areThereOtherProfiles();
+        boolean shouldShowProfilesButton = isDemoUser || shouldShowAddUser
+                || mUserManager.isAdminUser() && mUserHelper.isCurrentProcessUser(getUserInfo())
+                && areThereOtherProfiles();
+
+        int profileButtonText;
+        if (isDemoUser) {
+            profileButtonText = R.string.exit_retail_button_text;
+        } else if (shouldShowAddUser) {
+            profileButtonText = R.string.add_a_profile_button_text;
+        } else {
+            profileButtonText = R.string.manage_other_profiles_button_text;
+        }
 
         renameButton
                 .setText(R.string.bluetooth_rename_button)
@@ -117,11 +150,32 @@ public final class UserDetailsActionButtonsPreferenceController
                         getUserInfo()))
                 .setOnClickListener(v -> showConfirmMakeAdminDialog());
 
+        profilesButton
+                .setText(profileButtonText)
+                .setVisible(shouldShowProfilesButton)
+                .setOnClickListener(v -> {
+                    if (shouldShowAddUser && isDemoUser) {
+                        mDemoUserDialogHandler.showExitRetailDialog();
+                    } else if (shouldShowAddUser) {
+                        mAddProfileHandler.showAddProfileDialog();
+                    } else {
+                        getFragmentController().launchFragment(
+                                new UsersListFragment());
+                    }
+                });
+
+        if (!isDemoUser && shouldShowAddUser) {
+            profilesButton.setIcon(R.drawable.ic_add);
+        } else if (!isDemoUser && shouldShowProfilesButton) {
+            profilesButton.setIcon(R.drawable.ic_people);
+        }
+
         // Do not show delete button if the current user can't remove the selected user
         deleteButton
                 .setText(R.string.delete_button)
                 .setIcon(R.drawable.ic_delete)
-                .setVisible(mRemoveUserHandler.canRemoveUser(getUserInfo()))
+                .setVisible(mRemoveUserHandler.canRemoveUser(getUserInfo())
+                    && !mUserHelper.isCurrentProcessUser(getUserInfo()))
                 .setOnClickListener(v -> mRemoveUserHandler.showConfirmRemoveUserDialog());
     }
 
@@ -131,11 +185,34 @@ public final class UserDetailsActionButtonsPreferenceController
         mRemoveUserHandler.setUserInfo(userInfo);
     }
 
+    @Override
+    protected void onStopInternal() {
+        super.onStopInternal();
+        mAddProfileHandler.onStopInternal();
+    }
+
+    @Override
+    protected void onDestroyInternal() {
+        super.onDestroyInternal();
+        mAddProfileHandler.onDestroyInternal();
+    }
+
+    @Override
+    protected void updateState(ActionButtonsPreference preference) {
+        mAddProfileHandler.updateState(preference);
+    }
+
     private void showConfirmMakeAdminDialog() {
         ConfirmationDialogFragment dialogFragment =
                 UsersDialogProvider.getConfirmGrantAdminDialogFragment(getContext(),
                         mMakeAdminConfirmListener, /* rejectListener= */ null, getUserInfo());
 
         getFragmentController().showDialog(dialogFragment, MAKE_ADMIN_DIALOG_TAG);
+    }
+
+    private boolean areThereOtherProfiles() {
+        UserInfo currUserInfo = mUserHelper.getCurrentProcessUserInfo();
+        return !mUserHelper.getAllLivingUsers(
+                userInfo -> !userInfo.isGuest() && userInfo.id != currUserInfo.id).isEmpty();
     }
 }

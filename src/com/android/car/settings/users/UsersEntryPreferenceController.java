@@ -22,9 +22,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.os.UserManager;
 
-import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 
@@ -40,12 +38,9 @@ public class UsersEntryPreferenceController extends PreferenceController<Prefere
 
     private static final Logger LOG = new Logger(UsersEntryPreferenceController.class);
 
-    private UserManager mUserManager;
-
     public UsersEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mUserManager = UserManager.get(context);
     }
 
     @Override
@@ -55,16 +50,8 @@ public class UsersEntryPreferenceController extends PreferenceController<Prefere
 
     @Override
     public boolean handlePreferenceClicked(Preference preference) {
-        Fragment fragment;
-        if (mUserManager.isAdminUser()) {
-            // Admins can see a full list of users in Settings.
-            LOG.v("Creating UsersListFragment for admin user.");
-            fragment = new UsersListFragment();
-        } else {
-            // Non-admins can only manage themselves in Settings.
-            LOG.v("Creating UserDetailsFragment for non-admin.");
-            fragment = UserDetailsFragment.newInstance(UserHandle.myUserId());
-        }
+        Fragment fragment = UserDetailsFragment.newInstance(UserHandle.myUserId());
+
         Bundle args = fragment.getArguments();
         if (args == null) {
             args = new Bundle();
@@ -73,10 +60,5 @@ public class UsersEntryPreferenceController extends PreferenceController<Prefere
         args.putString(FRAGMENT_MENU_PREFERENCE_KEY, getPreferenceKey());
         getFragmentController().launchFragment(fragment);
         return true;
-    }
-
-    @VisibleForTesting
-    void setUserManager(UserManager userManager) {
-        mUserManager = userManager;
     }
 }

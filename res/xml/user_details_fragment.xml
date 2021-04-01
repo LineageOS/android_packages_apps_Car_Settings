@@ -26,4 +26,37 @@
         android:key="@string/pk_user_details_action_buttons"
         settings:controller="com.android.car.settings.users.UserDetailsActionButtonsPreferenceController"
         settings:searchable="false"/>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_account_group"
+        settings:controller="com.android.car.settings.accounts.AccountGroupPreferenceController">
+        <PreferenceCategory
+            android:key="@string/pk_account_list"
+            android:title="@string/account_list_title"
+            settings:controller="com.android.car.settings.accounts.AccountListPreferenceController"
+            settings:searchable="false"/>
+        <Preference
+            android:key="@string/pk_account_settings_add"
+            android:title="@string/user_add_account_menu"
+            android:icon="@drawable/ic_add"
+            settings:controller="com.android.car.settings.accounts.AddAccountPreferenceController"/>
+        <com.android.car.settings.common.DividerPreference/>
+        <SwitchPreference
+            android:key="@string/pk_account_auto_sync"
+            android:title="@string/account_auto_sync_title"
+            android:summary="@string/account_auto_sync_summary"
+            settings:controller="com.android.car.settings.accounts.AccountAutoSyncPreferenceController"/>
+    <com.android.car.settings.common.DividerPreference/>
+        <com.android.car.settings.common.LogicalPreferenceGroup
+            android:key="@string/pk_accounts_extra_settings"
+            settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
+            <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+                <extra android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.accounts"/>
+            </intent>
+        </com.android.car.settings.common.LogicalPreferenceGroup>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
+    <Preference
+        android:key="@string/pk_profile_details_delete"
+        android:title="@string/delete_this_profile_text"
+        settings:controller="com.android.car.settings.users.ProfileDetailsDeletePreferenceController"/>
 </PreferenceScreen>
