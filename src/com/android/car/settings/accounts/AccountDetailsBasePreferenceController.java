@@ -27,12 +27,12 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.ui.preference.CarUiTwoActionTextPreference;
+import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 /** Base controller for preferences that shows the details of an account. */
 public abstract class AccountDetailsBasePreferenceController
-        extends PreferenceController<CarUiTwoActionTextPreference> {
+        extends PreferenceController<CarUiTwoActionIconPreference> {
     private static final Logger LOG = new Logger(AccountDetailsBasePreferenceController.class);
 
     private Account mAccount;
@@ -65,8 +65,8 @@ public abstract class AccountDetailsBasePreferenceController
     }
 
     @Override
-    protected Class<CarUiTwoActionTextPreference> getPreferenceType() {
-        return CarUiTwoActionTextPreference.class;
+    protected Class<CarUiTwoActionIconPreference> getPreferenceType() {
+        return CarUiTwoActionIconPreference.class;
     }
 
     /**
@@ -93,7 +93,7 @@ public abstract class AccountDetailsBasePreferenceController
 
     @Override
     @CallSuper
-    protected void updateState(CarUiTwoActionTextPreference preference) {
+    protected void updateState(CarUiTwoActionIconPreference preference) {
         preference.setTitle(mAccount.name);
         // Get the icon corresponding to the account's type and set it.
         AuthenticatorHelper helper = getAuthenticatorHelper();
