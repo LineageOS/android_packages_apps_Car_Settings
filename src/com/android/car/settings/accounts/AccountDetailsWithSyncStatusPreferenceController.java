@@ -28,7 +28,7 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.ui.preference.CarUiTwoActionTextPreference;
+import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.List;
@@ -77,7 +77,7 @@ public class AccountDetailsWithSyncStatusPreferenceController extends
     }
 
     @Override
-    protected void updateState(CarUiTwoActionTextPreference preference) {
+    protected void updateState(CarUiTwoActionIconPreference preference) {
         super.updateState(preference);
         if (isSyncFailing()) {
             preference.setSummary(R.string.sync_is_failing);
@@ -124,8 +124,8 @@ public class AccountDetailsWithSyncStatusPreferenceController extends
 
         // If there are active syncs, clicking the button with cancel them. Otherwise, clicking the
         // button will start them.
-        getPreference().setSecondaryActionText(
-                hasActiveSyncs ? R.string.sync_button_sync_cancel : R.string.sync_button_sync_now);
+        getPreference().setSecondaryActionIcon(
+                hasActiveSyncs ? R.drawable.ic_sync_cancel : R.drawable.ic_sync);
         getPreference().setOnSecondaryActionClickListener(hasActiveSyncs
                 ? this::cancelSyncForEnabledProviders
                 : this::requestSyncForEnabledProviders);
