@@ -990,7 +990,7 @@
     <!-- The list of current accounts follows this text. [CHAR LIMIT=NONE] -->
     <string name="factory_reset_accounts">You are currently signed into the following accounts:</string>
     <!-- Message on screen if other profiles are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_other_users_present">There are other profiles present on this vehicle.</string>
+    <string name="factory_reset_other_users_present">Other profiles have been set up for this vehicle.</string>
     <!-- Button on screen after user selects factory reset. [CHAR LIMIT=30] -->
     <string name="factory_reset_button_text">Erase all data</string>
     <!-- Factory clear confirmation screen title. [CHAR LIMIT=30] -->
@@ -1047,11 +1047,11 @@
     <!-- User summary to be displayed next to the currently logged-in user if they are also an admin. [CHAR LIMIT=35] -->
     <string name="signed_in_admin_user">Signed in as admin</string>
     <!-- Title for the dialog that grants the user admin permissions. [CHAR LIMIT=50]-->
-    <string name="grant_admin_permissions_title">All admin permissions</string>
+    <string name="grant_admin_permissions_title">Grant admin permissions?</string>
     <!-- Button text for granting admin permissions to a user [CHAR LIMIT=35]-->
     <string name="grant_admin_permissions_button_text">Make Admin</string>
     <!-- Message to inform the user of what will happen when another profile is upgraded to Admin status. [CHAR LIMIT=NONE]-->
-    <string name="grant_admin_permissions_message">The profile will be able to delete profiles, including other Admins, and factory reset the system.</string>
+    <string name="grant_admin_permissions_message">The admin will be able to delete other profiles, including those for other admins, and factory reset the infotainment system.</string>
     <!-- Message to inform the user that granting admin permissions to another user is not reversible. [CHAR LIMIT=100]-->
     <string name="action_not_reversible_message">This action is not reversible.</string>
     <!-- Button text to confirm granting admin permissions to another user. [CHAR LIMIT=40]-->
@@ -1083,10 +1083,10 @@
     <string name="user_new_user_name">New profile</string>
     <!-- Title of the alert dialog to ask user to confirm creation of new profile. [CHAR LIMIT=30] -->
     <string name="user_add_user_title">"Add new profile?"</string>
-    <!-- Message to inform user that creation of new profile requires that profile to set up their space. [CHAR LIMIT=100] -->
-    <string name="user_add_user_message_setup">When you add a new profile, that person needs to set up their space.</string>
+    <!-- Message to inform the profile creator that the user it's intended for should customize it for themselves. [CHAR LIMIT=100] -->
+    <string name="user_add_user_message_setup">After you create a new profile, that person should customize it for themselves.</string>
     <!-- Message to inform user that the newly created profile will have permissions to update apps for all other profiles. [CHAR LIMIT=100] -->
-    <string name="user_add_user_message_update">Any profile can update apps for all other profiles.</string>
+    <string name="user_add_user_message_update">Apps can be updated from any profile for use by all other profiles.</string>
     <!-- Title for the dialog that lets users know that the maximum allowed number of profiles on the device has been reached. [CHAR LIMIT=35]-->
     <string name="user_limit_reached_title">Profile limit reached</string>
     <!-- Message that tells people what's the maximum number of profiles allowed on the device. [CHAR_LIMIT=NONE]-->
@@ -1095,7 +1095,7 @@
         <item quantity="other">You can create up to <xliff:g example="3" id="count">%d</xliff:g> profiles.</item>
     </plurals>
     <!-- Title of the alert dialog to notify that the creation of new profile has failed. [CHAR LIMIT=40] -->
-    <string name="add_user_error_title">Failed to create a new profile</string>
+    <string name="add_user_error_title">Couldn\'t create new profile</string>
 
     <!-- Deleting users --><skip/>
     <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=40] -->
@@ -1103,7 +1103,7 @@
     <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
     <string name="delete_user_dialog_message">"All apps and data for this profile will be deleted"</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=40] -->
-    <string name="delete_user_error_title">Failed to delete profile.</string>
+    <string name="delete_user_error_title">Couldn\'t delete profile.</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=100] -->
     <string name="delete_user_error_set_ephemeral_title">This profile will be deleted when you switch profiles or restart the vehicle.</string>
     <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->
@@ -1537,7 +1537,7 @@
     <!-- Main Settings screen setting option name to go into the assistant & voice settings [CHAR LIMIT=40] -->
     <string name="assistant_and_voice_setting_title">Assistant &amp; voice</string>
     <!-- Assistant & voice settings screen, setting option name to choose the assistant app [CHAR LIMIT=60] -->
-    <string name="assistant_and_voice_assistant_app_title">Assistant app</string>
+    <string name="assistant_and_voice_assistant_app_title">Digital assistant app</string>
     <!-- Assistant & voice settings screen, setting option name to allow the assistant app to read screen text [CHAR LIMIT=60] -->
     <string name="assistant_and_voice_use_text_from_screen_title">Use text from screen</string>
     <!-- Assistant & voice settings screen, setting option description for allowing the assistant app to read text from the screen [CHAR LIMIT=100] -->

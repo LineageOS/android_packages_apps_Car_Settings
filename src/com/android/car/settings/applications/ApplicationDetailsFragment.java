@@ -25,6 +25,7 @@ import android.os.UserHandle;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.applications.appinfo.HibernationSwitchPreferenceController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.applications.ApplicationsState;
@@ -83,6 +84,9 @@ public class ApplicationDetailsFragment extends SettingsFragment {
         use(StoragePreferenceController.class,
                 R.string.pk_application_details_storage)
                 .setAppEntry(mAppEntry).setPackageName(mPackageName);
+        use(HibernationSwitchPreferenceController.class,
+                R.string.pk_hibernation_switch)
+                .setPackageName(mPackageName);
         use(VersionPreferenceController.class,
                 R.string.pk_application_details_version).setPackageInfo(mPackageInfo);
     }

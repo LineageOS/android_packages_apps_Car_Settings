@@ -36,6 +36,7 @@ import android.os.Bundle;
 import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -54,6 +55,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.MockitoSession;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RunWith(AndroidJUnit4.class)
 public class UserDetailsActionButtonsPreferenceControllerTest {
@@ -97,41 +101,44 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
     }
 
     @Test
-    public void onCreate_isCurrentUser_renameButtonShown() {
+    public void onStart_isCurrentUser_renameButtonShown() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         assertThat(getRenameButton().isVisible()).isTrue();
     }
 
     @Test
-    public void onCreate_isNotCurrentUser_renameButtonHidden() {
+    public void onStart_isNotCurrentUser_renameButtonHidden() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         assertThat(getRenameButton().isVisible()).isFalse();
     }
 
     @Test
-    public void onCreate_isAdminViewingNonAdmin_makeAdminButtonShown() {
+    public void onStart_isAdminViewingNonAdmin_makeAdminButtonShown() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
         when(mMockUserManager.isAdminUser()).thenReturn(true);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         assertThat(getMakeAdminButton().isVisible()).isTrue();
     }
 
     @Test
-    public void onCreate_isAdminViewingAdmin_makeAdminButtonHidden() {
+    public void onStart_isAdminViewingAdmin_makeAdminButtonHidden() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME,
                 FLAG_INITIALIZED | FLAG_ADMIN);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
@@ -139,57 +146,141 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         assertThat(getMakeAdminButton().isVisible()).isFalse();
     }
 
     @Test
-    public void onCreate_userIsRemovable_deleteButtonShown() {
+    public void onStart_isAdminViewingSelf_makeManageOtherProfilesButtonShown() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME,
+                FLAG_INITIALIZED | FLAG_ADMIN);
+        List<UserInfo> otherUsers = new ArrayList<>();
+        otherUsers.add(userInfo);
+        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
+        when(mMockUserHelper.getAllLivingUsers(any())).thenReturn(otherUsers);
+        mPreferenceController.setUserInfo(userInfo);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        when(mRemoveUserHandler.canRemoveUser(userInfo)).thenReturn(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(getProfilesButton().isVisible()).isTrue();
+    }
+
+    @Test
+    public void onStart_isAdminViewingOther_makeManageOtherProfilesButtonHidden() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME,
+                FLAG_INITIALIZED | FLAG_ADMIN);
+        List<UserInfo> otherUsers = new ArrayList<>();
+        otherUsers.add(userInfo);
+        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
+        when(mMockUserHelper.getAllLivingUsers(any())).thenReturn(otherUsers);
+        mPreferenceController.setUserInfo(userInfo);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(getProfilesButton().isVisible()).isFalse();
+    }
+
+    @Test
+    public void onStart_isNonAdmin_makeManageOtherProfilesButtonHidden() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME,
+                FLAG_INITIALIZED | FLAG_ADMIN);
+        List<UserInfo> otherUsers = new ArrayList<>();
+        otherUsers.add(userInfo);
+        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
+        when(mMockUserManager.isAdminUser()).thenReturn(false);
+        when(mMockUserHelper.getAllLivingUsers(any())).thenReturn(otherUsers);
+        mPreferenceController.setUserInfo(userInfo);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(getProfilesButton().isVisible()).isFalse();
+    }
+
+    @Test
+    public void onStart_isOnlyUser_makeAddAProfileButtonShown() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME,
+                FLAG_INITIALIZED | FLAG_ADMIN);
+        List<UserInfo> otherUsers = new ArrayList<>();
+        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
+        when(mMockUserHelper.getAllLivingUsers(any())).thenReturn(otherUsers);
+        mPreferenceController.setUserInfo(userInfo);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(getProfilesButton().isVisible()).isTrue();
+    }
+
+    @Test
+    public void onStart_userIsRemovable_deleteButtonShown() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         when(mRemoveUserHandler.canRemoveUser(userInfo)).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         assertThat(getDeleteButton().isVisible()).isTrue();
     }
 
     @Test
-    public void onCreate_userIsNotRemovable_deleteButtonHidden() {
+    public void onStart_userIsNotRemovable_deleteButtonHidden() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        when(mMockUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER))
+                .thenReturn(true);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
-        when(mRemoveUserHandler.canRemoveUser(userInfo)).thenReturn(false);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         assertThat(getDeleteButton().isVisible()).isFalse();
     }
 
     @Test
-    public void onCreate_hasPreviousMakeAdminDialog_dialogListenerSet() {
-        ConfirmationDialogFragment dialog = new ConfirmationDialogFragment.Builder(
-                mContext).build();
+    public void onStart_userIsViewingSelf_deleteButtonHidden() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
-        when(mMockUserManager.isAdminUser()).thenReturn(true);
+        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
-        when(mFragmentController.findDialogByTag(
-                MAKE_ADMIN_DIALOG_TAG)).thenReturn(dialog);
+        when(mRemoveUserHandler.canRemoveUser(userInfo)).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
-        assertThat(dialog.getConfirmListener()).isNotNull();
+        assertThat(getDeleteButton().isVisible()).isFalse();
+    }
+
+    @Test
+    public void onStart_userIsNotViewingSelf_deleteButtonShown() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
+        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        mPreferenceController.setUserInfo(userInfo);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        when(mRemoveUserHandler.canRemoveUser(userInfo)).thenReturn(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(getDeleteButton().isVisible()).isTrue();
     }
 
     @Test
     public void onCreate_hasPreviousDeleteDialog_dialogListenerSet() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         verify(mRemoveUserHandler).resetListeners();
     }
@@ -201,6 +292,7 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         getRenameButton().getOnClickListener().onClick(/* view= */ null);
 
@@ -215,6 +307,7 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         getMakeAdminButton().getOnClickListener().onClick(/* view= */ null);
 
@@ -228,7 +321,9 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        when(mRemoveUserHandler.canRemoveUser(userInfo)).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         getDeleteButton().getOnClickListener().onClick(/* view= */ null);
 
@@ -247,6 +342,7 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
 
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
         Bundle arguments = new Bundle();
         arguments.putParcelable(UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN, userInfo);
         mPreferenceController.mMakeAdminConfirmListener.onConfirm(arguments);
@@ -263,12 +359,32 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         mPreferenceController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
 
         Bundle arguments = new Bundle();
         arguments.putParcelable(UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN, userInfo);
         mPreferenceController.mMakeAdminConfirmListener.onConfirm(arguments);
 
         verify(mFragmentController).goBack();
+    }
+
+    @Test
+    @UiThreadTest
+    public void onManageOtherProfilesButtonClicked_launchUsersListFragment() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
+        List<UserInfo> otherUsers = new ArrayList<>();
+        otherUsers.add(userInfo);
+        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
+        when(mMockUserHelper.getAllLivingUsers(any())).thenReturn(otherUsers);
+        mPreferenceController.setUserInfo(userInfo);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        getProfilesButton().getOnClickListener().onClick(/* view= */ null);
+
+        verify(mFragmentController).launchFragment(any(UsersListFragment.class));
     }
 
     private ActionButtonInfo getRenameButton() {
@@ -279,7 +395,11 @@ public class UserDetailsActionButtonsPreferenceControllerTest {
         return mPreference.getButton(ActionButtons.BUTTON2);
     }
 
-    private ActionButtonInfo getDeleteButton() {
+    private ActionButtonInfo getProfilesButton() {
         return mPreference.getButton(ActionButtons.BUTTON3);
+    }
+
+    private ActionButtonInfo getDeleteButton() {
+        return mPreference.getButton(ActionButtons.BUTTON4);
     }
 }

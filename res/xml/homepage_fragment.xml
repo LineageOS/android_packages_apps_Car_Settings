@@ -66,14 +66,8 @@
     <Preference
         android:icon="@drawable/ic_toplevel_users"
         android:key="@string/pk_users_settings_entry"
-        android:title="@string/profiles_list_title"
+        android:title="@string/profiles_and_accounts_settings_title"
         settings:controller="com.android.car.settings.users.UsersEntryPreferenceController"/>
-    <Preference
-        android:fragment="com.android.car.settings.accounts.AccountSettingsFragment"
-        android:icon="@drawable/ic_toplevel_accounts"
-        android:key="@string/pk_accounts_settings_entry"
-        android:title="@string/accounts_settings_title"
-        settings:controller="com.android.car.settings.accounts.AccountsEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.location.LocationSettingsFragment"
         android:icon="@drawable/ic_toplevel_location"
