@@ -22,11 +22,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.UserManager;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
@@ -55,8 +53,6 @@ public class UsersEntryPreferenceControllerTest {
 
     @Mock
     private FragmentController mFragmentController;
-    @Mock
-    private UserManager mUserManager;
 
     @Before
     public void setUp() {
@@ -67,7 +63,6 @@ public class UsersEntryPreferenceControllerTest {
         mPreference = new Preference(mContext);
         mPreferenceController = new UsersEntryPreferenceController(mContext,
                 PREFERENCE_KEY, mFragmentController, mCarUxRestrictions);
-        mPreferenceController.setUserManager(mUserManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
     }
 
@@ -79,16 +74,7 @@ public class UsersEntryPreferenceControllerTest {
 
     @Test
     @UiThreadTest
-    public void handlePreferenceClicked_isAdmin_launchesUsersListFragment() {
-        when(mUserManager.isAdminUser()).thenReturn(true);
-        mPreferenceController.handlePreferenceClicked(mPreference);
-        verify(mFragmentController).launchFragment(any(UsersListFragment.class));
-    }
-
-    @Test
-    @UiThreadTest
-    public void handlePreferenceClicked_isNotAdmin_launchesUserDetailsFragment() {
-        when(mUserManager.isAdminUser()).thenReturn(false);
+    public void handlePreferenceClicked_launchesUserDetailsFragment() {
         mPreferenceController.handlePreferenceClicked(mPreference);
         verify(mFragmentController).launchFragment(any(UserDetailsFragment.class));
     }

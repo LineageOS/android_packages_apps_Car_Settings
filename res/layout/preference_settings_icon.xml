@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2018 The Android Open Source Project
+    Copyright 2021 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -14,16 +14,9 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
-<PreferenceScreen
+<ImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/manage_other_profiles_button_text"
-    android:key="@string/psk_users_list">
-    <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_users_list"
-        settings:controller="com.android.car.settings.users.UsersListPreferenceController"/>
-    <Preference
-        android:key="@string/pk_add_user"
-        settings:controller="com.android.car.settings.users.AddUserPreferenceController"/>
-</PreferenceScreen>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:src="@drawable/ic_settings_gear"/>

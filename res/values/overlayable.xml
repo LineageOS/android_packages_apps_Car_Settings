@@ -69,8 +69,6 @@ limitations under the License.-->
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="toggle_bg"/>
       <item type="color" name="toggle_icon_tint"/>
-      <item type="color" name="toplevel_accounts_background"/>
-      <item type="color" name="toplevel_accounts_icon"/>
       <item type="color" name="toplevel_applications_background"/>
       <item type="color" name="toplevel_applications_icon"/>
       <item type="color" name="toplevel_assistant_and_voice_background"/>
@@ -247,6 +245,7 @@ limitations under the License.-->
       <item type="drawable" name="ic_package_verifier_disabled"/>
       <item type="drawable" name="ic_package_verifier_enabled"/>
       <item type="drawable" name="ic_package_verifier_removed"/>
+      <item type="drawable" name="ic_people"/>
       <item type="drawable" name="ic_placeholder"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
@@ -263,10 +262,11 @@ limitations under the License.-->
       <item type="drawable" name="ic_settings_wifi"/>
       <item type="drawable" name="ic_settings_wifi_disabled"/>
       <item type="drawable" name="ic_storage_apps"/>
+      <item type="drawable" name="ic_sync"/>
       <item type="drawable" name="ic_sync_anim"/>
+      <item type="drawable" name="ic_sync_cancel"/>
       <item type="drawable" name="ic_sync_problem"/>
       <item type="drawable" name="ic_system_update"/>
-      <item type="drawable" name="ic_toplevel_accounts"/>
       <item type="drawable" name="ic_toplevel_applications"/>
       <item type="drawable" name="ic_toplevel_assistant_and_voice"/>
       <item type="drawable" name="ic_toplevel_bluetooth"/>
@@ -432,6 +432,7 @@ limitations under the License.-->
       <item type="layout" name="logical_preference_group"/>
       <item type="layout" name="pin_pad_view"/>
       <item type="layout" name="preference_dialog_password_edittext"/>
+      <item type="layout" name="preference_settings_icon"/>
       <item type="layout" name="preference_wifi_entry"/>
       <item type="layout" name="progress_bar_preference"/>
       <item type="layout" name="quick_settings"/>
@@ -725,7 +726,6 @@ limitations under the License.-->
       <item type="string" name="hide_system"/>
       <item type="string" name="hide_system_apps"/>
       <item type="string" name="hk_AboutSettingsActivity"/>
-      <item type="string" name="hk_AccountSettingsActivity"/>
       <item type="string" name="hk_AddWifiActivity"/>
       <item type="string" name="hk_ApplicationsDetailsActivity"/>
       <item type="string" name="hk_ApplicationsSettingsActivity"/>
@@ -1214,7 +1214,6 @@ limitations under the License.-->
       <item type="style" name="PreferenceButtonTextAppearance"/>
       <item type="xml" name="about_settings_fragment"/>
       <item type="xml" name="account_details_fragment"/>
-      <item type="xml" name="account_settings_fragment"/>
       <item type="xml" name="account_sync_details_fragment"/>
       <item type="xml" name="add_wifi_fragment"/>
       <item type="xml" name="app_data_usage_fragment"/>
