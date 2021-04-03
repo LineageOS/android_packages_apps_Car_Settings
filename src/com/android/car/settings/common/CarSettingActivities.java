@@ -21,14 +21,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.os.UserManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
-import com.android.car.settings.accounts.AccountSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
@@ -65,7 +63,6 @@ import com.android.car.settings.system.SystemSettingsFragment;
 import com.android.car.settings.tts.TextToSpeechOutputFragment;
 import com.android.car.settings.units.UnitsSettingsFragment;
 import com.android.car.settings.users.UserDetailsFragment;
-import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.AddWifiFragment;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 import com.android.car.settings.wifi.WifiTetherFragment;
@@ -218,27 +215,7 @@ public class CarSettingActivities {
         @Nullable
         @Override
         protected Fragment getInitialFragment() {
-            UserManager userManager = UserManager.get(this);
-            if (userManager.isAdminUser()) {
-                // Admins can see a full list of users in Settings.
-                LOG.v("Creating UsersListFragment for admin user.");
-                return new UsersListFragment();
-            } else {
-                // Non-admins can only manage themselves in Settings.
-                LOG.v("Creating UserDetailsFragment for non-admin.");
-                return UserDetailsFragment.newInstance(UserHandle.myUserId());
-            }
-        }
-    }
-
-    /**
-     * Account Settings Activity.
-     */
-    public static class AccountSettingsActivity extends BaseCarSettingsActivity {
-        @Nullable
-        @Override
-        protected Fragment getInitialFragment() {
-            return new AccountSettingsFragment();
+            return UserDetailsFragment.newInstance(UserHandle.myUserId());
         }
     }
 

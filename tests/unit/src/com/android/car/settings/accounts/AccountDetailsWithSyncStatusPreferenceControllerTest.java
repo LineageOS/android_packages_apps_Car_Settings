@@ -42,7 +42,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.ui.preference.CarUiTwoActionTextPreference;
+import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
@@ -70,7 +70,7 @@ public class AccountDetailsWithSyncStatusPreferenceControllerTest {
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private LifecycleOwner mLifecycleOwner;
-    private CarUiTwoActionTextPreference mPreference;
+    private CarUiTwoActionIconPreference mPreference;
     private AccountDetailsWithSyncStatusPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
     private MockitoSession mSession;
@@ -92,7 +92,7 @@ public class AccountDetailsWithSyncStatusPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mPreference = new CarUiTwoActionTextPreference(mContext);
+        mPreference = new CarUiTwoActionIconPreference(mContext);
         mPreferenceController = new TestAccountDetailsWithSyncStatusPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         mPreferenceController.setAccount(mAccount);
@@ -156,25 +156,6 @@ public class AccountDetailsWithSyncStatusPreferenceControllerTest {
 
         assertThat(mPreference.getSummary()).isEqualTo(
                 ResourceTestUtils.getString(mContext, "sync_is_failing"));
-    }
-
-    @Test
-    public void onCreate_doesNotHaveActiveSyncs_actionButtonShouldSaySyncNow() {
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        assertThat(mPreference.getSecondaryActionText()).isEqualTo(
-                ResourceTestUtils.getString(mContext, "sync_button_sync_now"));
-    }
-
-    @Test
-    public void onCreate_hasActiveSyncs_actionButtonShouldSayCancelSync() {
-        SyncInfo syncInfo = mock(SyncInfo.class);
-        mCurrentSyncs.add(syncInfo);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        assertThat(mPreference.getSecondaryActionText()).isEqualTo(
-                ResourceTestUtils.getString(mContext, "sync_button_sync_cancel"));
     }
 
     @Test

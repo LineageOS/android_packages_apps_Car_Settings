@@ -16,19 +16,14 @@
 
 package com.android.car.settings.users;
 
-import android.provider.Settings;
-
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
-import com.android.car.settings.search.CarBaseSearchIndexProvider;
-import com.android.settingslib.search.SearchIndexable;
 
 /**
  * Lists all Users available on this device.
  */
-@SearchIndexable
 public class UsersListFragment extends SettingsFragment {
 
     @Override
@@ -36,11 +31,4 @@ public class UsersListFragment extends SettingsFragment {
     protected int getPreferenceScreenResId() {
         return R.xml.users_list_fragment;
     }
-
-    /**
-     * Data provider for Settings Search.
-     */
-    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new CarBaseSearchIndexProvider(R.xml.users_list_fragment,
-                    Settings.ACTION_USER_SETTINGS);
 }

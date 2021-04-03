@@ -21,15 +21,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.accounts.AccountGroupPreferenceController;
+import com.android.car.settings.accounts.AccountListPreferenceController;
+import com.android.car.settings.accounts.AddAccountPreferenceController;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.settingslib.search.SearchIndexable;
 
 /**
  * Shows details for a user with the ability to remove user and edit current user.
  */
+@SearchIndexable
 public class UserDetailsFragment extends UserDetailsBaseFragment {
 
     private boolean mIsStarted;
@@ -66,6 +73,21 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
                 R.string.pk_user_details_header).setUserInfo(getUserInfo());
         use(UserDetailsActionButtonsPreferenceController.class,
                 R.string.pk_user_details_action_buttons).setUserInfo(getUserInfo());
+        use(AccountGroupPreferenceController.class,
+                R.string.pk_account_group).setUserInfo(getUserInfo());
+        use(ProfileDetailsDeletePreferenceController.class,
+                R.string.pk_profile_details_delete).setUserInfo(getUserInfo());
+
+        // Accounts information
+        Intent activityIntent = requireActivity().getIntent();
+        String[] authorities = activityIntent.getStringArrayExtra(Settings.EXTRA_AUTHORITIES);
+        String[] accountTypes = activityIntent.getStringArrayExtra(Settings.EXTRA_ACCOUNT_TYPES);
+        if (authorities != null || accountTypes != null) {
+            use(AccountListPreferenceController.class, R.string.pk_account_list)
+                    .setAuthorities(authorities);
+            use(AddAccountPreferenceController.class, R.string.pk_account_settings_add)
+                    .setAuthorities(authorities).setAccountTypes(accountTypes);
+        }
     }
 
     @Override
@@ -95,7 +117,7 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
 
     @Override
     protected String getTitleText() {
-        return UserUtils.getUserDisplayName(getContext(), getUserInfo());
+        return getString(R.string.profiles_and_accounts_settings_title);
     }
 
     private void registerForUserEvents() {
@@ -106,4 +128,11 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
     private void unregisterForUserEvents() {
         getContext().unregisterReceiver(mUserUpdateReceiver);
     }
+
+    /**
+     * Data provider for Settings Search.
+     */
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.user_details_fragment,
+                    Settings.ACTION_USER_SETTINGS);
 }
