@@ -37,7 +37,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.settings.users.UserHelper;
-import com.android.car.ui.preference.CarUiTwoActionTextPreference;
+import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -54,7 +54,7 @@ public class AccountDetailsPreferenceControllerTest {
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private LifecycleOwner mLifecycleOwner;
-    private CarUiTwoActionTextPreference mPreference;
+    private CarUiTwoActionIconPreference mPreference;
     private AccountDetailsPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
 
@@ -71,7 +71,7 @@ public class AccountDetailsPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mPreference = new CarUiTwoActionTextPreference(mContext);
+        mPreference = new CarUiTwoActionIconPreference(mContext);
         mPreferenceController = new TestAccountDetailsPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         mPreferenceController.setAccount(mAccount);
