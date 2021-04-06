@@ -34,7 +34,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.profiles.UserHelper;
 
 import java.io.IOException;
 
@@ -107,7 +107,7 @@ public class AccountDetailsPreferenceController extends AccountDetailsBasePrefer
                 /* rejectListener= */ null,
                 /* neutralListener= */ null);
 
-        getPreference().setSecondaryActionVisible(getUserHelper()
+        getPreference().setSecondaryActionVisible(getProfileHelper()
                 .canCurrentProcessModifyAccounts());
         getPreference().setOnSecondaryActionClickListener(this::onRemoveAccountClicked);
     }
@@ -151,7 +151,7 @@ public class AccountDetailsPreferenceController extends AccountDetailsBasePrefer
     }
 
     @VisibleForTesting
-    UserHelper getUserHelper() {
+    UserHelper getProfileHelper() {
         return UserHelper.getInstance(getContext());
     }
 }

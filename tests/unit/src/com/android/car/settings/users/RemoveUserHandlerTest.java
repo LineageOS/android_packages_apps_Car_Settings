@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.users;
+package com.android.car.settings.profiles;
 
 import static android.content.pm.UserInfo.FLAG_INITIALIZED;
 
-import static com.android.car.settings.users.RemoveUserHandler.REMOVE_USER_DIALOG_TAG;
-import static com.android.car.settings.users.UsersDialogProvider.ANY_USER;
-import static com.android.car.settings.users.UsersDialogProvider.KEY_USER_TYPE;
-import static com.android.car.settings.users.UsersDialogProvider.LAST_ADMIN;
+import static com.android.car.settings.profiles.ProfilesDialogProvider.ANY_PROFILE;
+import static com.android.car.settings.profiles.ProfilesDialogProvider.KEY_PROFILE_TYPE;
+import static com.android.car.settings.profiles.ProfilesDialogProvider.LAST_ADMIN;
+import static com.android.car.settings.profiles.RemoveUserHandler.REMOVE_PROFILE_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -50,108 +50,108 @@ import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
 public class RemoveUserHandlerTest {
-    private static final String TEST_USERNAME = "Test Username";
+    private static final String TEST_PROFILE_NAME = "Test Profile Name";
 
     private Context mContext = ApplicationProvider.getApplicationContext();
-    private RemoveUserHandler mRemoveUserHandler;
+    private RemoveProfileHandler mRemoveProfileHandler;
 
     @Mock
     private FragmentController mMockFragmentController;
     @Mock
-    private UserHelper mMockUserHelper;
+    private ProfileHelper mMockProfileHelper;
     @Mock
     private UserManager mMockUserManager;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mRemoveUserHandler = new RemoveUserHandler(
-                mContext, mMockUserHelper, mMockUserManager, mMockFragmentController);
+        mRemoveProfileHandler = new RemoveProfileHandler(
+                mContext, mMockProfileHelper, mMockUserManager, mMockFragmentController);
     }
 
     @Test
-    public void userNotRestricted_canRemoveUser() {
-        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
-        assertThat(mRemoveUserHandler.canRemoveUser(userInfo)).isTrue();
+    public void userNotRestricted_canRemoveProfile() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        assertThat(mRemoveProfileHandler.canRemoveProfile(userInfo)).isTrue();
     }
 
     @Test
-    public void userRestricted_cannotRemoveUser() {
-        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+    public void userRestricted_cannotRemoveProfile() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
         when(mMockUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER))
                 .thenReturn(true);
 
-        assertThat(mRemoveUserHandler.canRemoveUser(userInfo)).isFalse();
+        assertThat(mRemoveProfileHandler.canRemoveProfile(userInfo)).isFalse();
     }
 
     @Test
-    public void viewingSystemUser_cannotRemoveUser() {
-        UserInfo userInfo = new UserInfo(/* id= */ 0, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
-        assertThat(mRemoveUserHandler.canRemoveUser(userInfo)).isFalse();
+    public void viewingSystemUser_cannotRemoveProfile() {
+        UserInfo userInfo = new UserInfo(/* id= */ 0, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        assertThat(mRemoveProfileHandler.canRemoveProfile(userInfo)).isFalse();
     }
 
     @Test
-    public void isDemoUser_cannotRemoveUser() {
-        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
+    public void isDemoUser_cannotRemoveProfile() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
         when(mMockUserManager.isDemoUser()).thenReturn(true);
-        assertThat(mRemoveUserHandler.canRemoveUser(userInfo)).isFalse();
+        assertThat(mRemoveProfileHandler.canRemoveProfile(userInfo)).isFalse();
     }
 
     @Test
     public void hasPreviousDeleteDialog_dialogListenerSet() {
-        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
         ConfirmationDialogFragment dialog = new ConfirmationDialogFragment.Builder(
                 mContext).build();
-        when(mMockFragmentController.findDialogByTag(REMOVE_USER_DIALOG_TAG)).thenReturn(dialog);
+        when(mMockFragmentController.findDialogByTag(REMOVE_PROFILE_DIALOG_TAG)).thenReturn(dialog);
 
-        mRemoveUserHandler.resetListeners();
+        mRemoveProfileHandler.resetListeners();
 
         assertThat(dialog.getConfirmListener()).isNotNull();
     }
 
     @Test
-    public void showConfirmRemoveUserDialog_showsConfirmationDialog() {
-        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+    public void showConfirmRemoveProfileDialog_showsConfirmationDialog() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
 
-        mRemoveUserHandler.showConfirmRemoveUserDialog();
+        mRemoveProfileHandler.showConfirmRemoveProfileDialog();
 
         verify(mMockFragmentController).showDialog(any(ConfirmationDialogFragment.class),
-                eq(REMOVE_USER_DIALOG_TAG));
+                eq(REMOVE_PROFILE_DIALOG_TAG));
     }
 
     @Test
-    public void onDeleteConfirmed_removeUser() {
-        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+    public void onDeleteConfirmed_removeProfile() {
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
 
         Bundle arguments = new Bundle();
-        arguments.putString(KEY_USER_TYPE, ANY_USER);
-        mRemoveUserHandler.mRemoveConfirmListener.onConfirm(arguments);
+        arguments.putString(KEY_PROFILE_TYPE, ANY_PROFILE);
+        mRemoveProfileHandler.mRemoveConfirmListener.onConfirm(arguments);
 
-        verify(mMockUserHelper).removeUser(mContext, userInfo);
+        verify(mMockProfileHelper).removeProfile(mContext, userInfo);
     }
 
     @Test
     @UiThreadTest
     public void onDeleteConfirmed_lastAdmin_launchChooseNewAdminFragment() {
-        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        mRemoveUserHandler.setUserInfo(userInfo);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
+        mRemoveProfileHandler.setUserInfo(userInfo);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
 
         Bundle arguments = new Bundle();
-        arguments.putString(KEY_USER_TYPE, LAST_ADMIN);
-        mRemoveUserHandler.mRemoveConfirmListener.onConfirm(arguments);
+        arguments.putString(KEY_PROFILE_TYPE, LAST_ADMIN);
+        mRemoveProfileHandler.mRemoveConfirmListener.onConfirm(arguments);
 
         verify(mMockFragmentController).launchFragment(any(ChooseNewAdminFragment.class));
     }

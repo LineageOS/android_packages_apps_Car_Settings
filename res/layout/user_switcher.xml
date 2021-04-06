@@ -20,7 +20,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.android.car.settings.users.UserGridRecyclerView
+    <com.android.car.settings.profiles.UserGridRecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/user_grid"
         android:layout_width="match_parent"

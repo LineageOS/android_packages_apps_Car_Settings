@@ -53,7 +53,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.profiles.UserHelper;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -99,7 +99,7 @@ public class ApplicationActionButtonsPreferenceController extends
     private DevicePolicyManager mDpm;
     private PackageManager mPm;
     private UserManager mUserManager;
-    private UserHelper mUserHelper;
+    private UserHelper mProfileHelper;
     private ApplicationsState.Session mSession;
 
     private ApplicationsState.AppEntry mAppEntry;
@@ -224,7 +224,7 @@ public class ApplicationActionButtonsPreferenceController extends
         mDpm = context.getSystemService(DevicePolicyManager.class);
         mPm = context.getPackageManager();
         mUserManager = UserManager.get(context);
-        mUserHelper = UserHelper.getInstance(context);
+        mProfileHelper = UserHelper.getInstance(context);
     }
 
     @Override
@@ -406,10 +406,10 @@ public class ApplicationActionButtonsPreferenceController extends
             return true;
         }
 
-        // We don't allow uninstalling profile/device owner on any user because if it's a system
+        // We don't allow uninstalling profile/device owner on any profile because if it's a system
         // app, "uninstall" is actually "downgrade to the system version + disable", and
-        // "downgrade" will clear data on all users.
-        if (isProfileOrDeviceOwner(mPackageName, mDpm, mUserHelper)) {
+        // "downgrade" will clear data on all profiles.
+        if (isProfileOrDeviceOwner(mPackageName, mDpm, mProfileHelper)) {
             LOG.d("Uninstall disabled because package is profile or device owner");
             return true;
         }

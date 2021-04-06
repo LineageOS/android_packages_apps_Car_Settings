@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.car.settings.users;
+package com.android.car.settings.profiles;
 
 import android.annotation.IntDef;
 import android.annotation.NonNull;
@@ -50,10 +50,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Helper class for providing basic user logic that applies across the Settings app for Cars.
+ * Helper class for providing basic profile logic that applies across the Settings app for Cars.
  */
 public class UserHelper {
-    private static final String TAG = "UserHelper";
+    private static final String TAG = "ProfileHelper";
     private static final int TIMEOUT_MS = CarProperties.user_hal_timeout().orElse(5_000) + 500;
     private static UserHelper sInstance;
 
@@ -64,39 +64,39 @@ public class UserHelper {
     private final String mDefaultGuestName;
 
     /**
-     * Result code for when a user was successfully marked for removal and the device switched to a
-     * different user.
+     * Result code for when a profile was successfully marked for removal and the
+     * device switched to a different profile.
      */
-    public static final int REMOVE_USER_RESULT_SUCCESS = 0;
+    public static final int REMOVE_PROFILE_RESULT_SUCCESS = 0;
 
     /**
-     * Result code for when there was a failure removing a user.
+     * Result code for when there was a failure removing a profile.
      */
-    public static final int REMOVE_USER_RESULT_FAILED = 1;
+    public static final int REMOVE_PROFILE_RESULT_FAILED = 1;
 
     /**
-     * Result code when the user was successfully marked for removal, but the switch to a new user
-     * failed. In this case the user marked for removal is set as ephemeral and will be removed
-     * on the next user switch or reboot.
+     * Result code when the profile was successfully marked for removal, but the switch to a new
+     * profile failed. In this case the profile marked for removal is set as ephemeral and will be
+     * removed on the next profile switch or reboot.
      */
-    public static final int REMOVE_USER_RESULT_SWITCH_FAILED = 2;
+    public static final int REMOVE_PROFILE_RESULT_SWITCH_FAILED = 2;
 
     /**
-     * Possible return values for {@link #removeUser(int)}, which attempts to remove a user and
-     * switch to a new one. Note that this IntDef is distinct from {@link UserRemovalResult}, which
-     * is only a result code for the user removal operation.
+     * Possible return values for {@link #removeProfile(int)}, which attempts to remove a profile
+     * and switch to a new one. Note that this IntDef is distinct from {@link UserRemovalResult},
+     * which is only a result code for the profile removal operation.
      */
-    @IntDef(prefix = {"REMOVE_USER_RESULT"}, value = {
-            REMOVE_USER_RESULT_SUCCESS,
-            REMOVE_USER_RESULT_FAILED,
-            REMOVE_USER_RESULT_SWITCH_FAILED,
+    @IntDef(prefix = {"REMOVE_PROFILE_RESULT"}, value = {
+            REMOVE_PROFILE_RESULT_SUCCESS,
+            REMOVE_PROFILE_RESULT_FAILED,
+            REMOVE_PROFILE_RESULT_SWITCH_FAILED,
     })
     @Retention(RetentionPolicy.SOURCE)
-    public @interface RemoveUserResult {
+    public @interface RemoveProfileResult {
     }
 
     /**
-     * Returns an instance of UserHelper.
+     * Returns an instance of ProfileHelper.
      */
     public static UserHelper getInstance(Context context) {
         if (sInstance == null) {
@@ -127,96 +127,97 @@ public class UserHelper {
     }
 
     /**
-     * Tries to remove the user that's passed in. System user cannot be removed.
-     * If the user to be removed is user currently running the process, it switches to the guest
-     * user first, and then removes the user.
-     * If the user being removed is the last admin user, this will create a new admin user.
+     * Tries to remove the profile that's passed in. System profile cannot be removed.
+     * If the profile to be removed is profile currently running the process, it switches to the
+     * guest profile first, and then removes the profile.
+     * If the profile being removed is the last admin profile, this will create a new admin profile.
      *
      * @param context  An application context
-     * @param userInfo User to be removed
-     * @return {@link RemoveUserResult} indicating the result status for user removal and switching
+     * @param userInfo Profile to be removed
+     * @return {@link RemoveProfileResult} indicating the result status for profile removal and
+     * switching
      */
-    @RemoveUserResult
-    public int removeUser(Context context, UserInfo userInfo) {
+    @RemoveProfileResult
+    public int removeProfile(Context context, UserInfo userInfo) {
         if (userInfo.id == UserHandle.USER_SYSTEM) {
             Log.w(TAG, "User " + userInfo.id + " is system user, could not be removed.");
-            return REMOVE_USER_RESULT_FAILED;
+            return REMOVE_PROFILE_RESULT_FAILED;
         }
 
         // Try to create a new admin before deleting the current one.
-        if (userInfo.isAdmin() && getAllAdminUsers().size() <= 1) {
+        if (userInfo.isAdmin() && getAllAdminProfiles().size() <= 1) {
             return replaceLastAdmin(userInfo);
         }
 
         if (!mUserManager.isAdminUser() && !isCurrentProcessUser(userInfo)) {
             // If the caller is non-admin, they can only delete themselves.
-            Log.e(TAG, "Non-admins cannot remove other users.");
-            return REMOVE_USER_RESULT_FAILED;
+            Log.e(TAG, "Non-admins cannot remove other profiles.");
+            return REMOVE_PROFILE_RESULT_FAILED;
         }
 
         if (userInfo.id == ActivityManager.getCurrentUser()) {
-            return removeThisUserAndSwitchToGuest(context, userInfo);
+            return removeThisProfileAndSwitchToGuest(context, userInfo);
         }
 
-        return removeUser(userInfo.id);
+        return removeProfile(userInfo.id);
     }
 
     /**
-     * If the ID being removed is the current foreground user, we need to handle switching to
+     * If the ID being removed is the current foreground profile, we need to handle switching to
      * a new or existing guest.
      */
-    @RemoveUserResult
-    private int removeThisUserAndSwitchToGuest(Context context, UserInfo userInfo) {
+    @RemoveProfileResult
+    private int removeThisProfileAndSwitchToGuest(Context context, UserInfo userInfo) {
         if (mUserManager.getUserSwitchability() != UserManager.SWITCHABILITY_STATUS_OK) {
-            // If we can't switch to a different user, we can't exit this one and therefore
+            // If we can't switch to a different profile, we can't exit this one and therefore
             // can't delete it.
-            Log.w(TAG, "User switching is not allowed. Current user cannot be deleted");
-            return REMOVE_USER_RESULT_FAILED;
+            Log.w(TAG, "Profile switching is not allowed. Current profile cannot be deleted");
+            return REMOVE_PROFILE_RESULT_FAILED;
         }
         UserInfo guestUser = createNewOrFindExistingGuest(context);
         if (guestUser == null) {
-            Log.e(TAG, "Could not create a Guest user.");
-            return REMOVE_USER_RESULT_FAILED;
+            Log.e(TAG, "Could not create a Guest profile.");
+            return REMOVE_PROFILE_RESULT_FAILED;
         }
 
-        // since the user is still current, this will set it as ephemeral
-        int result = removeUser(userInfo.id);
-        if (result != REMOVE_USER_RESULT_SUCCESS) {
+        // since the profile is still current, this will set it as ephemeral
+        int result = removeProfile(userInfo.id);
+        if (result != REMOVE_PROFILE_RESULT_SUCCESS) {
             return result;
         }
 
-        if (!switchUser(guestUser.id)) {
-            return REMOVE_USER_RESULT_SWITCH_FAILED;
+        if (!switchProfile(guestUser.id)) {
+            return REMOVE_PROFILE_RESULT_SWITCH_FAILED;
         }
 
-        return REMOVE_USER_RESULT_SUCCESS;
+        return REMOVE_PROFILE_RESULT_SUCCESS;
     }
 
-    @RemoveUserResult
-    private int removeUser(@UserIdInt int userId) {
+    @RemoveProfileResult
+    private int removeProfile(@UserIdInt int userId) {
         UserRemovalResult result = mCarUserManager.removeUser(userId);
         if (Log.isLoggable(TAG, Log.INFO)) {
-            Log.i(TAG, "Remove user result: " + result);
+            Log.i(TAG, "Remove profile result: " + result);
         }
         if (result.isSuccess()) {
-            return REMOVE_USER_RESULT_SUCCESS;
+            return REMOVE_PROFILE_RESULT_SUCCESS;
         } else {
-            Log.w(TAG, "Failed to remove user " + userId + ": " + result);
-            return REMOVE_USER_RESULT_FAILED;
+            Log.w(TAG, "Failed to remove profile " + userId + ": " + result);
+            return REMOVE_PROFILE_RESULT_FAILED;
         }
     }
 
-    private boolean switchUser(@UserIdInt int userId) {
+    private boolean switchProfile(@UserIdInt int userId) {
         UserSwitchResult result = getResult("switch", mCarUserManager.switchUser(userId));
         return result != null && result.isSuccess();
     }
 
     /**
-     * Returns the {@link StringRes} that corresponds to a {@link RemoveUserResult} result code.
+     * Returns the {@link StringRes} that corresponds to a {@link RemoveProfileResult} result code.
      */
     @StringRes
-    public int getErrorMessageForUserResult(@RemoveUserResult int result) {
-        if (result == REMOVE_USER_RESULT_SWITCH_FAILED) {
+    public int getErrorMessageForProfileResult(@RemoveProfileResult int result) {
+        if (result == REMOVE_PROFILE_RESULT_SWITCH_FAILED) {
             return R.string.delete_user_error_set_ephemeral_title;
         }
 
@@ -238,60 +239,60 @@ public class UserHelper {
             result = future.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            Log.w(TAG, "Interrupted waiting to " + operation + " user", e);
+            Log.w(TAG, "Interrupted waiting to " + operation + " profile", e);
             return null;
         } catch (ExecutionException | TimeoutException e) {
-            Log.w(TAG, "Exception waiting to " + operation + " user", e);
+            Log.w(TAG, "Exception waiting to " + operation + " profile", e);
             return null;
         }
         if (result == null) {
-            Log.w(TAG, "Time out (" + TIMEOUT_MS + " ms) trying to " + operation + " user");
+            Log.w(TAG, "Time out (" + TIMEOUT_MS + " ms) trying to " + operation + " profile");
             return null;
         }
         if (!result.isSuccess()) {
-            Log.w(TAG, "Failed to " + operation + " user: " + result);
+            Log.w(TAG, "Failed to " + operation + " profile: " + result);
             return null;
         }
         return result;
     }
 
-    @RemoveUserResult
+    @RemoveProfileResult
     private int replaceLastAdmin(UserInfo userInfo) {
         if (Log.isLoggable(TAG, Log.INFO)) {
-            Log.i(TAG, "User " + userInfo.id
-                    + " is the last admin user on device. Creating a new admin.");
+            Log.i(TAG, "Profile " + userInfo.id
+                    + " is the last admin profile on device. Creating a new admin.");
         }
 
-        UserInfo newAdmin = createNewAdminUser(mDefaultAdminName);
+        UserInfo newAdmin = createNewAdminProfile(mDefaultAdminName);
         if (newAdmin == null) {
-            Log.w(TAG, "Couldn't create another admin, cannot delete current user.");
-            return REMOVE_USER_RESULT_FAILED;
+            Log.w(TAG, "Couldn't create another admin, cannot delete current profile.");
+            return REMOVE_PROFILE_RESULT_FAILED;
         }
 
-        int removeUserResult = removeUser(userInfo.id);
-        if (removeUserResult != REMOVE_USER_RESULT_SUCCESS) {
+        int removeUserResult = removeProfile(userInfo.id);
+        if (removeUserResult != REMOVE_PROFILE_RESULT_SUCCESS) {
             return removeUserResult;
         }
 
-        if (switchUser(newAdmin.id)) {
-            return REMOVE_USER_RESULT_SUCCESS;
+        if (switchProfile(newAdmin.id)) {
+            return REMOVE_PROFILE_RESULT_SUCCESS;
         } else {
-            return REMOVE_USER_RESULT_SWITCH_FAILED;
+            return REMOVE_PROFILE_RESULT_SWITCH_FAILED;
         }
     }
 
     /**
-     * Creates a new user on the system, the created user would be granted admin role.
+     * Creates a new profile on the system, the created profile would be granted admin role.
      * Only admins can create other admins.
      *
-     * @param userName Name to give to the newly created user.
-     * @return Newly created admin user, null if failed to create a user.
+     * @param userName Name to give to the newly created profile.
+     * @return Newly created admin profile, null if failed to create a profile.
      */
     @Nullable
-    private UserInfo createNewAdminUser(String userName) {
+    private UserInfo createNewAdminProfile(String userName) {
         if (!(mUserManager.isAdminUser() || mUserManager.isSystemUser())) {
-            // Only Admins or System user can create other privileged users.
-            Log.e(TAG, "Only admin users and system user can create other admins.");
+            // Only Admins or System profile can create other privileged profiles.
+            Log.e(TAG, "Only admin profiles and system profile can create other admins.");
             return null;
         }
         UserCreationResult result = getResult("create admin",
@@ -299,12 +300,12 @@ public class UserHelper {
         if (result == null) return null;
         UserInfo user = result.getUser();
 
-        new UserIconProvider().assignDefaultIcon(mUserManager, mResources, user);
+        new ProfileIconProvider().assignDefaultIcon(mUserManager, mResources, user);
         return user;
     }
 
     /**
-     * Creates and returns a new guest user or returns the existing one.
+     * Creates and returns a new guest profile or returns the existing one.
      * Returns null if it fails to create a new guest.
      *
      * @param context an application context
@@ -318,7 +319,7 @@ public class UserHelper {
         UserInfo newGuest = result == null ? null : result.getUser();
 
         if (newGuest != null) {
-            new UserIconProvider().assignDefaultIcon(mUserManager, mResources, newGuest);
+            new ProfileIconProvider().assignDefaultIcon(mUserManager, mResources, newGuest);
             return newGuest;
         }
 
@@ -326,8 +327,8 @@ public class UserHelper {
     }
 
     /**
-     * Checks if the current process user can modify accounts. Demo and Guest users cannot modify
-     * accounts even if the DISALLOW_MODIFY_ACCOUNTS restriction is not applied.
+     * Checks if the current process profile can modify accounts. Demo and Guest profiles cannot
+     * modify accounts even if the DISALLOW_MODIFY_ACCOUNTS restriction is not applied.
      */
     public boolean canCurrentProcessModifyAccounts() {
         return !mUserManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)
@@ -336,46 +337,46 @@ public class UserHelper {
     }
 
     /**
-     * Returns a list of {@code UserInfo} representing all users that can be brought to the
+     * Returns a list of {@code UserInfo} representing all profiles that can be brought to the
      * foreground.
      */
-    public List<UserInfo> getAllUsers() {
-        return getAllLivingUsers(/* filter= */ null);
+    public List<UserInfo> getAllProfiles() {
+        return getAllLivingProfiles(/* filter= */ null);
     }
 
     /**
-     * Returns a list of {@code UserInfo} representing all users that can be swapped with the
-     * current user into the foreground.
+     * Returns a list of {@code UserInfo} representing all profiles that can be swapped with the
+     * current profile into the foreground.
      */
-    public List<UserInfo> getAllSwitchableUsers() {
+    public List<UserInfo> getAllSwitchableProfiles() {
         final int foregroundUserId = ActivityManager.getCurrentUser();
-        return getAllLivingUsers(userInfo -> userInfo.id != foregroundUserId);
+        return getAllLivingProfiles(userInfo -> userInfo.id != foregroundUserId);
     }
 
     /**
-     * Returns a list of {@code UserInfo} representing all users that are non-ephemeral and are
+     * Returns a list of {@code UserInfo} representing all profiles that are non-ephemeral and are
      * valid to have in the foreground.
      */
-    public List<UserInfo> getAllPersistentUsers() {
-        return getAllLivingUsers(userInfo -> !userInfo.isEphemeral());
+    public List<UserInfo> getAllPersistentProfiles() {
+        return getAllLivingProfiles(userInfo -> !userInfo.isEphemeral());
     }
 
     /**
-     * Returns a list of {@code UserInfo} representing all admin users and are
+     * Returns a list of {@code UserInfo} representing all admin profiles and are
      * valid to have in the foreground.
      */
-    public List<UserInfo> getAllAdminUsers() {
-        return getAllLivingUsers(UserInfo::isAdmin);
+    public List<UserInfo> getAllAdminProfiles() {
+        return getAllLivingProfiles(UserInfo::isAdmin);
     }
 
     /**
-     * Gets all users that are not dying.  This method will handle
-     * {@link UserManager#isHeadlessSystemUserMode} and ensure the system user is not
+     * Gets all profiles that are not dying.  This method will handle
+     * {@link UserManager#isHeadlessSystemUserMode} and ensure the system profile is not
      * part of the return list when the flag is on.
-     * @param filter Optional filter to apply to the list of users.  Pass null to skip.
-     * @return An optionally filtered list containing all living users
+     * @param filter Optional filter to apply to the list of profiles.  Pass null to skip.
+     * @return An optionally filtered list containing all living profiles
      */
-    public List<UserInfo> getAllLivingUsers(@Nullable Predicate<? super UserInfo> filter) {
+    public List<UserInfo> getAllLivingProfiles(@Nullable Predicate<? super UserInfo> filter) {
         Stream<UserInfo> filteredListStream = mUserManager.getAliveUsers().stream();
 
         if (filter != null) {
@@ -416,14 +417,14 @@ public class UserHelper {
     }
 
     /**
-     * Maximum number of users allowed on the device. This includes real users, managed profiles
-     * and restricted users, but excludes guests.
+     * Maximum number of profiles allowed on the device. This includes real profiles, managed
+     * profiles and restricted profiles, but excludes guests.
      *
-     * <p> It excludes system user in headless system user model.
+     * <p> It excludes system profile in headless system profile model.
      *
-     * @return Maximum number of users that can be present on the device.
+     * @return Maximum number of profiles that can be present on the device.
      */
-    private int getMaxSupportedUsers() {
+    private int getMaxSupportedProfiles() {
         int maxSupportedUsers = UserManager.getMaxSupportedUsers();
         if (UserManager.isHeadlessSystemUserMode()) {
             maxSupportedUsers -= 1;
@@ -432,7 +433,7 @@ public class UserHelper {
     }
 
     private int getManagedProfilesCount() {
-        List<UserInfo> users = getAllUsers();
+        List<UserInfo> users = getAllProfiles();
 
         // Count all users that are managed profiles of another user.
         int managedProfilesCount = 0;
@@ -445,15 +446,15 @@ public class UserHelper {
     }
 
     /**
-     * Get the maximum number of real (non-guest, non-managed profile) users that can be created on
-     * the device. This is a dynamic value and it decreases with the increase of the number of
+     * Get the maximum number of real (non-guest, non-managed profile) profiles that can be created
+     * on the device. This is a dynamic value and it decreases with the increase of the number of
      * managed profiles on the device.
      *
-     * <p> It excludes system user in headless system user model.
+     * <p> It excludes system profile in headless system profile model.
      *
-     * @return Maximum number of real users that can be created.
+     * @return Maximum number of real profiles that can be created.
      */
-    public int getMaxSupportedRealUsers() {
-        return getMaxSupportedUsers() - getManagedProfilesCount();
+    public int getMaxSupportedRealProfiles() {
+        return getMaxSupportedProfiles() - getManagedProfilesCount();
     }
 }

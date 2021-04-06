@@ -42,9 +42,9 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.profiles.UserHelper;
 import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.settings.users.UserHelper;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 

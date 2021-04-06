@@ -228,7 +228,7 @@
         </activity>
 
         <activity
-            android:name=".common.CarSettingActivities$UserDetailsActivity"
+            android:name=".common.CarSettingActivities$ProfileDetailsActivity"
             android:excludeFromRecents="true"
             android:exported="true">
             <intent-filter android:priority="1">
@@ -772,7 +772,7 @@
         </activity>
 
         <activity
-            android:name=".users.UserSwitcherActivity"
+            android:name=".profiles.ProfileSwitcherActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">

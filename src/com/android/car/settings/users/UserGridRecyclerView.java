@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.users;
+package com.android.car.settings.profiles;
 
 import static android.os.UserManager.DISALLOW_ADD_USER;
 import static android.os.UserManager.SWITCHABILITY_STATUS_OK;
@@ -61,30 +61,30 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Displays a GridLayout with icons for the users in the system to allow switching between users.
- * One of the uses of this is for the lock screen in auto.
+ * Displays a GridLayout with icons for the profiles in the system to allow switching between
+ * profiles. One of the uses of this is for the lock screen in auto.
  */
 public class UserGridRecyclerView extends RecyclerView {
 
-    private static final String MAX_USERS_LIMIT_REACHED_DIALOG_TAG =
-            "com.android.car.settings.users.MaxUsersLimitReachedDialog";
-    private static final String CONFIRM_CREATE_NEW_USER_DIALOG_TAG =
-            "com.android.car.settings.users.ConfirmCreateNewUserDialog";
+    private static final String MAX_PROFILES_LIMIT_REACHED_DIALOG_TAG =
+            "com.android.car.settings.profiles.MaxProfilesLimitReachedDialog";
+    private static final String CONFIRM_CREATE_NEW_PROFILE_DIALOG_TAG =
+            "com.android.car.settings.profiles.ConfirmCreateNewProfileDialog";
 
-    private UserAdapter mAdapter;
+    private ProfileAdapter mAdapter;
     private UserManager mUserManager;
     private Context mContext;
     private BaseFragment mBaseFragment;
-    private AddNewUserTask mAddNewUserTask;
-    private boolean mEnableAddUserButton;
-    private UserIconProvider mUserIconProvider;
+    private AddNewProfileTask mAddNewProfileTask;
+    private boolean mEnableAddProfileButton;
+    private ProfileIconProvider mProfileIconProvider;
     private Car mCar;
     private CarUserManager mCarUserManager;
 
-    private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mProfileUpdateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            onUsersUpdate();
+            onProfilesUpdate();
         }
     };
 
@@ -92,8 +92,8 @@ public class UserGridRecyclerView extends RecyclerView {
         super(context, attrs);
         mContext = context;
         mUserManager = UserManager.get(mContext);
-        mUserIconProvider = new UserIconProvider();
-        mEnableAddUserButton = true;
+        mProfileIconProvider = new ProfileIconProvider();
+        mEnableAddProfileButton = true;
         mCar = Car.createCar(mContext);
         mCarUserManager = (CarUserManager) mCar.getCarManager(Car.CAR_USER_SERVICE);
 
@@ -102,23 +102,23 @@ public class UserGridRecyclerView extends RecyclerView {
     }
 
     /**
-     * Register listener for any update to the users
+     * Register listener for any update to the profiles
      */
     @Override
     public void onFinishInflate() {
         super.onFinishInflate();
-        registerForUserEvents();
+        registerForProfileEvents();
     }
 
     /**
-     * Unregisters listener checking for any change to the users
+     * Unregisters listener checking for any change to the profiles
      */
     @Override
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        unregisterForUserEvents();
-        if (mAddNewUserTask != null) {
-            mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
+        unregisterForProfileEvents();
+        if (mAddNewProfileTask != null) {
+            mAddNewProfileTask.cancel(/* mayInterruptIfRunning= */ false);
         }
         if (mCar != null) {
             mCar.disconnect();
@@ -129,23 +129,24 @@ public class UserGridRecyclerView extends RecyclerView {
      * Initializes the adapter that populates the grid layout
      */
     public void buildAdapter() {
-        List<UserRecord> userRecords = createUserRecords(getUsersForUserGrid());
-        mAdapter = new UserAdapter(mContext, userRecords);
+        List<ProfileRecord> profileRecords = createProfileRecords(getProfilesForProfileGrid());
+        mAdapter = new ProfileAdapter(mContext, profileRecords);
         super.setAdapter(mAdapter);
     }
 
-    private List<UserRecord> createUserRecords(List<UserInfo> userInfoList) {
+    private List<ProfileRecord> createProfileRecords(List<UserInfo> userInfoList) {
         int fgUserId = ActivityManager.getCurrentUser();
         UserHandle fgUserHandle = UserHandle.of(fgUserId);
-        List<UserRecord> userRecords = new ArrayList<>();
+        List<ProfileRecord> profileRecords = new ArrayList<>();
 
-        // If the foreground user CANNOT switch to other users, only display the foreground user.
+        // If the foreground profile CANNOT switch to other profiles, only display the foreground
+        // profile.
         if (mUserManager.getUserSwitchability(fgUserHandle) != SWITCHABILITY_STATUS_OK) {
-            userRecords.add(createForegroundUserRecord());
-            return userRecords;
+            profileRecords.add(createForegroundProfileRecord());
+            return profileRecords;
         }
 
-        // If the foreground user CAN switch to other users, iterate through all users.
+        // If the foreground profile CAN switch to other profiles, iterate through all profiles.
         for (UserInfo userInfo : userInfoList) {
             boolean isForeground = fgUserId == userInfo.id;
 
@@ -154,82 +155,83 @@ public class UserGridRecyclerView extends RecyclerView {
                 continue;
             }
 
-            UserRecord record = new UserRecord(userInfo,
-                    isForeground ? UserRecord.FOREGROUND_USER : UserRecord.BACKGROUND_USER);
-            userRecords.add(record);
+            ProfileRecord record = new ProfileRecord(userInfo, isForeground
+                    ? ProfileRecord.FOREGROUND_PROFILE : ProfileRecord.BACKGROUND_PROFILE);
+            profileRecords.add(record);
         }
 
-        // Add start guest user record if the system is not logged in as guest already.
-        if (!getCurrentForegroundUserInfo().isGuest()) {
-            userRecords.add(createStartGuestUserRecord());
+        // Add start guest profile record if the system is not logged in as guest already.
+        if (!getCurrentForegroundProfileInfo().isGuest()) {
+            profileRecords.add(createStartGuestProfileRecord());
         }
 
-        // Add "add user" record if the foreground user can add users
+        // Add "add profile" record if the foreground profile can add profiles
         if (!mUserManager.hasUserRestriction(DISALLOW_ADD_USER, fgUserHandle)) {
-            userRecords.add(createAddUserRecord());
+            profileRecords.add(createAddProfileRecord());
         }
 
-        return userRecords;
+        return profileRecords;
     }
 
-    private UserRecord createForegroundUserRecord() {
-        return new UserRecord(getCurrentForegroundUserInfo(), UserRecord.FOREGROUND_USER);
+    private ProfileRecord createForegroundProfileRecord() {
+        return new ProfileRecord(getCurrentForegroundProfileInfo(),
+                ProfileRecord.FOREGROUND_PROFILE);
     }
 
-    private UserInfo getCurrentForegroundUserInfo() {
+    private UserInfo getCurrentForegroundProfileInfo() {
         return mUserManager.getUserInfo(ActivityManager.getCurrentUser());
     }
 
     /**
-     * Show the "Add User" Button
+     * Show the "Add Profile" Button
      */
-    public void enableAddUser() {
-        mEnableAddUserButton = true;
-        onUsersUpdate();
+    public void enableAddProfile() {
+        mEnableAddProfileButton = true;
+        onProfilesUpdate();
     }
 
     /**
-     * Hide the "Add User" Button
+     * Hide the "Add Profile" Button
      */
-    public void disableAddUser() {
-        mEnableAddUserButton = false;
-        onUsersUpdate();
+    public void disableAddProfile() {
+        mEnableAddProfileButton = false;
+        onProfilesUpdate();
     }
 
     /**
-     * Create guest user record
+     * Create guest profile record
      */
-    private UserRecord createStartGuestUserRecord() {
-        return new UserRecord(/* userInfo= */ null, UserRecord.START_GUEST);
+    private ProfileRecord createStartGuestProfileRecord() {
+        return new ProfileRecord(/* profileInfo= */ null, ProfileRecord.START_GUEST);
     }
 
     /**
-     * Create add user record
+     * Create add profile record
      */
-    private UserRecord createAddUserRecord() {
-        return new UserRecord(/* userInfo= */ null, UserRecord.ADD_USER);
+    private ProfileRecord createAddProfileRecord() {
+        return new ProfileRecord(/* profileInfo= */ null, ProfileRecord.ADD_PROFILE);
     }
 
     public void setFragment(BaseFragment fragment) {
         mBaseFragment = fragment;
     }
 
-    private void onUsersUpdate() {
-        // If you can show the add user button, there is no restriction
-        mAdapter.setAddUserRestricted(!mEnableAddUserButton);
-        mAdapter.clearUsers();
-        mAdapter.updateUsers(createUserRecords(getUsersForUserGrid()));
+    private void onProfilesUpdate() {
+        // If you can show the add profile button, there is no restriction
+        mAdapter.setAddProfileRestricted(!mEnableAddProfileButton);
+        mAdapter.clearProfiles();
+        mAdapter.updateProfiles(createProfileRecords(getProfilesForProfileGrid()));
         mAdapter.notifyDataSetChanged();
     }
 
-    private List<UserInfo> getUsersForUserGrid() {
+    private List<UserInfo> getProfilesForProfileGrid() {
         List<UserInfo> users = UserManager.get(mContext).getAliveUsers();
         return users.stream()
                 .filter(UserInfo::supportsSwitchToByUser)
                 .collect(Collectors.toList());
     }
 
-    private void registerForUserEvents() {
+    private void registerForProfileEvents() {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_USER_REMOVED);
         filter.addAction(Intent.ACTION_USER_ADDED);
@@ -238,137 +240,140 @@ public class UserGridRecyclerView extends RecyclerView {
         filter.addAction(Intent.ACTION_USER_STOPPED);
         filter.addAction(Intent.ACTION_USER_UNLOCKED);
         mContext.registerReceiverAsUser(
-                mUserUpdateReceiver,
+                mProfileUpdateReceiver,
                 UserHandle.ALL,
                 filter,
                 /* broadcastPermission= */ null,
                 /* scheduler= */ null);
     }
 
-    private void unregisterForUserEvents() {
-        mContext.unregisterReceiver(mUserUpdateReceiver);
+    private void unregisterForProfileEvents() {
+        mContext.unregisterReceiver(mProfileUpdateReceiver);
     }
 
     /**
      * Adapter to populate the grid layout with the available user profiles
      */
-    public final class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder>
-            implements AddNewUserTask.AddNewUserListener {
+    public final class ProfileAdapter extends
+            RecyclerView.Adapter<ProfileAdapter.ProfileAdapterViewHolder>
+            implements AddNewProfileTask.AddNewProfileListener {
 
         private final Resources mRes;
         private final String mGuestName;
 
         private Context mContext;
-        private List<UserRecord> mUsers;
-        private String mNewUserName;
-        // View that holds the add user button.  Used to enable/disable the view
-        private View mAddUserView;
+        private List<ProfileRecord> mProfiles;
+        private String mNewProfileName;
+        // View that holds the add profile button.  Used to enable/disable the view
+        private View mAddProfileView;
         private float mOpacityDisabled;
         private float mOpacityEnabled;
-        private boolean mIsAddUserRestricted;
+        private boolean mIsAddProfileRestricted;
 
         private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
-            mAddNewUserTask = new AddNewUserTask(mContext,
-                    mCarUserManager, /* addNewUserListener= */this);
-            mAddNewUserTask.execute(mNewUserName);
+            mAddNewProfileTask = new AddNewProfileTask(mContext,
+                    mCarUserManager, /* addNewProfileListener= */this);
+            mAddNewProfileTask.execute(mNewProfileName);
         };
 
         /**
-         * Enable the "add user" button if the user cancels adding an user
+         * Enable the "add profile" button if the user cancels adding a profile
          */
         private final ConfirmationDialogFragment.RejectListener mRejectListener =
                 arguments -> enableAddView();
 
 
-        public UserAdapter(Context context, List<UserRecord> users) {
+        public ProfileAdapter(Context context, List<ProfileRecord> profiles) {
             mRes = context.getResources();
             mContext = context;
-            updateUsers(users);
+            updateProfiles(profiles);
             mGuestName = mRes.getString(R.string.user_guest);
-            mNewUserName = mRes.getString(R.string.user_new_user_name);
+            mNewProfileName = mRes.getString(R.string.user_new_user_name);
             mOpacityDisabled = mRes.getFloat(R.dimen.opacity_disabled);
             mOpacityEnabled = mRes.getFloat(R.dimen.opacity_enabled);
             resetDialogListeners();
         }
 
         /**
-         * Removes all the users from the User Grid.
+         * Removes all the profiles from the Profile Grid.
          */
-        public void clearUsers() {
-            mUsers.clear();
+        public void clearProfiles() {
+            mProfiles.clear();
         }
 
         /**
-         * Refreshes the User Grid with the new List of users.
+         * Refreshes the Profile Grid with the new List of profiles.
          */
-        public void updateUsers(List<UserRecord> users) {
-            mUsers = users;
+        public void updateProfiles(List<ProfileRecord> profiles) {
+            mProfiles = profiles;
         }
 
         @Override
-        public UserAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public ProfileAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(mContext)
                     .inflate(R.layout.user_switcher_pod, parent, false);
             view.setAlpha(mOpacityEnabled);
             view.bringToFront();
-            return new UserAdapterViewHolder(view);
+            return new ProfileAdapterViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(UserAdapterViewHolder holder, int position) {
-            UserRecord userRecord = mUsers.get(position);
-            Drawable circleIcon = getCircularUserRecordIcon(userRecord);
-            if (userRecord.mInfo != null) {
-                // User might have badges (like managed user)
-                holder.mUserAvatarImageView.setDrawableWithBadge(circleIcon, userRecord.mInfo.id);
+        public void onBindViewHolder(ProfileAdapterViewHolder holder, int position) {
+            ProfileRecord profileRecord = mProfiles.get(position);
+            Drawable circleIcon = getCircularProfileRecordIcon(profileRecord);
+            if (profileRecord.mInfo != null) {
+                // Profile might have badges (like managed profile)
+                holder.mProfileAvatarImageView.setDrawableWithBadge(circleIcon,
+                        profileRecord.mInfo.id);
             } else {
-                // Guest or "Add User" don't have badges
-                holder.mUserAvatarImageView.setDrawable(circleIcon);
+                // Guest or "Add Profile" don't have badges
+                holder.mProfileAvatarImageView.setDrawable(circleIcon);
             }
-            holder.mUserNameTextView.setText(getUserRecordName(userRecord));
+            holder.mProfileNameTextView.setText(getProfileRecordName(profileRecord));
 
             // Defaults to 100% opacity and no circle around the icon.
             holder.mView.setAlpha(mOpacityEnabled);
             holder.mFrame.setBackgroundResource(0);
 
-            // Foreground user record.
-            switch (userRecord.mType) {
-                case UserRecord.FOREGROUND_USER:
+            // Foreground profile record.
+            switch (profileRecord.mType) {
+                case ProfileRecord.FOREGROUND_PROFILE:
                     // Add a circle around the icon.
                     holder.mFrame.setBackgroundResource(R.drawable.user_avatar_bg_circle);
-                    // Go back to quick settings if user selected is already the foreground user.
+                    // Go back to quick settings if profile selected is already the foreground
+                    // profile.
                     holder.mView.setOnClickListener(v
                             -> mBaseFragment.getActivity().onBackPressed());
                     break;
 
-                case UserRecord.START_GUEST:
+                case ProfileRecord.START_GUEST:
                     holder.mView.setOnClickListener(v -> handleGuestSessionClicked());
                     break;
 
-                case UserRecord.ADD_USER:
-                    if (mIsAddUserRestricted) {
-                        // If there are restrictions, show a 50% opaque "add user" view
+                case ProfileRecord.ADD_PROFILE:
+                    if (mIsAddProfileRestricted) {
+                        // If there are restrictions, show a 50% opaque "add profile" view
                         holder.mView.setAlpha(mOpacityDisabled);
                         holder.mView.setOnClickListener(
                                 v -> mBaseFragment.getFragmentHost().showBlockingMessage());
                     } else {
-                        holder.mView.setOnClickListener(v -> handleAddUserClicked(v));
+                        holder.mView.setOnClickListener(v -> handleAddProfileClicked(v));
                     }
                     break;
 
                 default:
-                    // User record;
-                    holder.mView.setOnClickListener(v -> handleUserSwitch(userRecord.mInfo));
+                    // Profile record;
+                    holder.mView.setOnClickListener(v -> handleProfileSwitch(profileRecord.mInfo));
             }
         }
 
         /**
-         * Specify if adding a user should be restricted.
+         * Specify if adding a profile should be restricted.
          *
-         * @param isAddUserRestricted should adding a user be restricted
+         * @param isAddProfileRestricted should adding a profile be restricted
          */
-        public void setAddUserRestricted(boolean isAddUserRestricted) {
-            mIsAddUserRestricted = isAddUserRestricted;
+        public void setAddProfileRestricted(boolean isAddProfileRestricted) {
+            mIsAddProfileRestricted = isAddProfileRestricted;
         }
 
         /** Resets listeners for shown dialog fragments. */
@@ -377,7 +382,7 @@ public class UserGridRecyclerView extends RecyclerView {
                 ConfirmationDialogFragment dialog =
                         (ConfirmationDialogFragment) mBaseFragment
                                 .getFragmentManager()
-                                .findFragmentByTag(CONFIRM_CREATE_NEW_USER_DIALOG_TAG);
+                                .findFragmentByTag(CONFIRM_CREATE_NEW_PROFILE_DIALOG_TAG);
                 ConfirmationDialogFragment.resetListeners(
                         dialog,
                         mConfirmListener,
@@ -386,7 +391,7 @@ public class UserGridRecyclerView extends RecyclerView {
             }
         }
 
-        private void handleUserSwitch(UserInfo userInfo) {
+        private void handleProfileSwitch(UserInfo userInfo) {
             mCarUserManager.switchUser(userInfo.id).whenCompleteAsync((r, e) -> {
                 // Successful switch, close Settings app.
                 closeSettingsTask();
@@ -395,7 +400,7 @@ public class UserGridRecyclerView extends RecyclerView {
 
         private void handleGuestSessionClicked() {
             UserInfo guest =
-                    UserHelper.getInstance(mContext).createNewOrFindExistingGuest(mContext);
+                    ProfileHelper.getInstance(mContext).createNewOrFindExistingGuest(mContext);
             if (guest != null) {
                 mCarUserManager.switchUser(guest.id).whenCompleteAsync((r, e) -> {
                     // Successful start, will switch to guest now. Close Settings app.
@@ -404,50 +409,51 @@ public class UserGridRecyclerView extends RecyclerView {
             }
         }
 
-        private void handleAddUserClicked(View addUserView) {
+        private void handleAddProfileClicked(View addProfileView) {
             if (!mUserManager.canAddMoreUsers()) {
-                showMaxUsersLimitReachedDialog();
+                showMaxProfilesLimitReachedDialog();
             } else {
-                mAddUserView = addUserView;
+                mAddProfileView = addProfileView;
                 // Disable button so it cannot be clicked multiple times
-                mAddUserView.setEnabled(false);
-                showConfirmCreateNewUserDialog();
+                mAddProfileView.setEnabled(false);
+                showConfirmCreateNewProfileDialog();
             }
         }
 
-        private void showMaxUsersLimitReachedDialog() {
+        private void showMaxProfilesLimitReachedDialog() {
             ConfirmationDialogFragment dialogFragment =
-                    UsersDialogProvider.getMaxUsersLimitReachedDialogFragment(getContext(),
-                            UserHelper.getInstance(mContext).getMaxSupportedRealUsers());
+                    ProfilesDialogProvider.getMaxProfilesLimitReachedDialogFragment(getContext(),
+                            ProfileHelper.getInstance(mContext).getMaxSupportedRealProfiles());
             dialogFragment.show(
-                    mBaseFragment.getFragmentManager(), MAX_USERS_LIMIT_REACHED_DIALOG_TAG);
+                    mBaseFragment.getFragmentManager(), MAX_PROFILES_LIMIT_REACHED_DIALOG_TAG);
         }
 
-        private void showConfirmCreateNewUserDialog() {
+        private void showConfirmCreateNewProfileDialog() {
             ConfirmationDialogFragment dialogFragment =
-                    UsersDialogProvider.getConfirmCreateNewUserDialogFragment(getContext(),
+                    ProfilesDialogProvider.getConfirmCreateNewProfileDialogFragment(getContext(),
                             mConfirmListener, mRejectListener);
             dialogFragment.show(
-                    mBaseFragment.getFragmentManager(), CONFIRM_CREATE_NEW_USER_DIALOG_TAG);
+                    mBaseFragment.getFragmentManager(), CONFIRM_CREATE_NEW_PROFILE_DIALOG_TAG);
         }
 
-        private Drawable getCircularUserRecordIcon(UserRecord userRecord) {
+        private Drawable getCircularProfileRecordIcon(ProfileRecord profileRecord) {
             Resources resources = mContext.getResources();
             Drawable circleIcon;
-            switch (userRecord.mType) {
-                case UserRecord.START_GUEST:
-                    circleIcon = mUserIconProvider.getRoundedGuestDefaultIcon(resources);
+            switch (profileRecord.mType) {
+                case ProfileRecord.START_GUEST:
+                    circleIcon = mProfileIconProvider.getRoundedGuestDefaultIcon(resources);
                     break;
-                case UserRecord.ADD_USER:
-                    circleIcon = getCircularAddUserIcon();
+                case ProfileRecord.ADD_PROFILE:
+                    circleIcon = getCircularAddProfileIcon();
                     break;
                 default:
-                    circleIcon = mUserIconProvider.getRoundedUserIcon(userRecord.mInfo, mContext);
+                    circleIcon = mProfileIconProvider.getRoundedProfileIcon(profileRecord.mInfo,
+                            mContext);
             }
             return circleIcon;
         }
 
-        private RoundedBitmapDrawable getCircularAddUserIcon() {
+        private RoundedBitmapDrawable getCircularAddProfileIcon() {
             RoundedBitmapDrawable circleIcon =
                     RoundedBitmapDrawableFactory.create(mRes, UserIcons.convertToBitmap(
                             mContext.getDrawable(R.drawable.user_add_circle)));
@@ -455,30 +461,30 @@ public class UserGridRecyclerView extends RecyclerView {
             return circleIcon;
         }
 
-        private String getUserRecordName(UserRecord userRecord) {
+        private String getProfileRecordName(ProfileRecord profileRecord) {
             String recordName;
-            switch (userRecord.mType) {
-                case UserRecord.START_GUEST:
+            switch (profileRecord.mType) {
+                case ProfileRecord.START_GUEST:
                     recordName = mContext.getString(R.string.start_guest_session);
                     break;
-                case UserRecord.ADD_USER:
+                case ProfileRecord.ADD_PROFILE:
                     recordName = mContext.getString(R.string.user_add_user_menu);
                     break;
                 default:
-                    recordName = userRecord.mInfo.name;
+                    recordName = profileRecord.mInfo.name;
             }
             return recordName;
         }
 
         @Override
-        public void onUserAddedSuccess() {
+        public void onProfileAddedSuccess() {
             enableAddView();
-            // New user added. Will switch to new user, therefore close the app.
+            // New profile added. Will switch to new profile, therefore close the app.
             closeSettingsTask();
         }
 
         @Override
-        public void onUserAddedFailure() {
+        public void onProfileAddedFailure() {
             enableAddView();
             // Display failure dialog.
             if (mBaseFragment != null) {
@@ -487,8 +493,8 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         /**
-         * When we switch users, we also want to finish the QuickSettingActivity, so we send back a
-         * result telling the QuickSettingActivity to finish.
+         * When we switch profiles, we also want to finish the QuickSettingActivity, so we send back
+         * a result telling the QuickSettingActivity to finish.
          */
         private void closeSettingsTask() {
             mBaseFragment.getActivity().setResult(Activity.FINISH_TASK_WITH_ACTIVITY, new Intent());
@@ -497,54 +503,54 @@ public class UserGridRecyclerView extends RecyclerView {
 
         @Override
         public int getItemCount() {
-            return mUsers.size();
+            return mProfiles.size();
         }
 
         /**
          * Layout for each individual pod in the Grid RecyclerView
          */
-        public class UserAdapterViewHolder extends RecyclerView.ViewHolder {
+        public class ProfileAdapterViewHolder extends RecyclerView.ViewHolder {
 
-            public UserAvatarView mUserAvatarImageView;
-            public TextView mUserNameTextView;
+            public UserAvatarView mProfileAvatarImageView;
+            public TextView mProfileNameTextView;
             public View mView;
             public FrameLayout mFrame;
 
-            public UserAdapterViewHolder(View view) {
+            public ProfileAdapterViewHolder(View view) {
                 super(view);
                 mView = view;
-                mUserAvatarImageView = view.findViewById(R.id.user_avatar);
-                mUserNameTextView = view.findViewById(R.id.user_name);
+                mProfileAvatarImageView = view.findViewById(R.id.user_avatar);
+                mProfileNameTextView = view.findViewById(R.id.user_name);
                 mFrame = view.findViewById(R.id.current_user_frame);
             }
         }
 
         private void enableAddView() {
-            if (mAddUserView != null) {
-                mAddUserView.setEnabled(true);
+            if (mAddProfileView != null) {
+                mAddProfileView.setEnabled(true);
             }
         }
     }
 
     /**
      * Object wrapper class for the userInfo.  Use it to distinguish if a profile is a
-     * guest profile, add user profile, or the foreground user.
+     * guest profile, add user profile, or the foreground profile.
      */
-    public static final class UserRecord {
+    public static final class ProfileRecord {
 
         public final UserInfo mInfo;
-        public final @UserRecordType int mType;
+        public final @ProfileRecordType int mType;
 
         public static final int START_GUEST = 0;
-        public static final int ADD_USER = 1;
-        public static final int FOREGROUND_USER = 2;
-        public static final int BACKGROUND_USER = 3;
+        public static final int ADD_PROFILE = 1;
+        public static final int FOREGROUND_PROFILE = 2;
+        public static final int BACKGROUND_PROFILE = 3;
 
-        @IntDef({START_GUEST, ADD_USER, FOREGROUND_USER, BACKGROUND_USER})
+        @IntDef({START_GUEST, ADD_PROFILE, FOREGROUND_PROFILE, BACKGROUND_PROFILE})
         @Retention(RetentionPolicy.SOURCE)
-        public @interface UserRecordType {}
+        public @interface ProfileRecordType {}
 
-        public UserRecord(@Nullable UserInfo userInfo, @UserRecordType int recordType) {
+        public ProfileRecord(@Nullable UserInfo userInfo, @ProfileRecordType int recordType) {
             mInfo = userInfo;
             mType = recordType;
         }

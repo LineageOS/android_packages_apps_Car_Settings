@@ -20,7 +20,7 @@ import android.annotation.Nullable;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.profiles.UserHelper;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -36,8 +36,8 @@ import java.util.function.Predicate;
 public class ShadowUserHelper {
     private static UserHelper sInstance;
 
-    public static void setInstance(UserHelper userHelper) {
-        sInstance = userHelper;
+    public static void setInstance(UserHelper profileHelper) {
+        sInstance = profileHelper;
     }
 
     @Resetter
@@ -52,18 +52,18 @@ public class ShadowUserHelper {
 
     @Implementation
     protected List<UserInfo> getAllUsers() {
-        return sInstance.getAllUsers();
+        return sInstance.getAllProfiles();
     }
 
     @Implementation
     protected List<UserInfo> getAllSwitchableUsers() {
-        return sInstance.getAllSwitchableUsers();
+        return sInstance.getAllSwitchableProfiles();
     }
 
 
     @Implementation
     protected List<UserInfo> getAllPersistentUsers() {
-        return sInstance.getAllPersistentUsers();
+        return sInstance.getAllPersistentProfiles();
     }
 
     @Implementation
@@ -77,9 +77,9 @@ public class ShadowUserHelper {
     }
 
     @Implementation
-    @UserHelper.RemoveUserResult
+    @UserHelper.RemoveProfileResult
     public int removeUser(Context context, UserInfo userInfo) {
-        return sInstance.removeUser(context, userInfo);
+        return sInstance.removeProfile(context, userInfo);
     }
 
     @Implementation
@@ -89,6 +89,6 @@ public class ShadowUserHelper {
 
     @Implementation
     public List<UserInfo> getAllLivingUsers(@Nullable Predicate<? super UserInfo> filter) {
-        return sInstance.getAllLivingUsers(filter);
+        return sInstance.getAllLivingProfiles(filter);
     }
 }

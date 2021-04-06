@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.users;
+package com.android.car.settings.profiles;
 
 import android.content.Context;
 import android.content.pm.UserInfo;
@@ -28,45 +28,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Constructs the preferences to be displayed in {@link UsersListFragment} and
+ * Constructs the preferences to be displayed in {@link ProfilesListFragment} and
  * {@link ChooseNewAdminFragment}.
  */
 public class UsersPreferenceProvider {
 
     /**
-     * Interface for registering clicks on users.
+     * Interface for registering clicks on profiles.
      */
-    public interface UserClickListener {
+    public interface ProfileClickListener {
         /**
-         * Invoked when user is clicked.
+         * Invoked when profile is clicked.
          *
          * @param userInfo User for which the click is registered.
          */
-        void onUserClicked(UserInfo userInfo);
+        void onProfileClicked(UserInfo userInfo);
     }
 
     private final Context mContext;
-    private final UserClickListener mUserPreferenceClickListener;
-    private boolean mIncludeCurrentUser;
+    private final ProfileClickListener mProfilePreferenceClickListener;
+    private boolean mIncludeCurrentProfile;
     private boolean mIncludeGuest;
 
-    public UsersPreferenceProvider(Context context, UserClickListener listener) {
+    public UsersPreferenceProvider(Context context, ProfileClickListener listener) {
         mContext = context;
-        mUserPreferenceClickListener = listener;
-        mIncludeCurrentUser = false;
+        mProfilePreferenceClickListener = listener;
+        mIncludeCurrentProfile = false;
         mIncludeGuest = false;
     }
 
     /**
-     * Sets whether createUserList should include an entry for the current user. Default is
+     * Sets whether createProfileList should include an entry for the current profile. Default is
      * {@code true}.
      */
-    public void setIncludeCurrentUser(boolean includeCurrentUser) {
-        mIncludeCurrentUser = includeCurrentUser;
+    public void setIncludeCurrentProfile(boolean includeCurrentProfile) {
+        mIncludeCurrentProfile = includeCurrentProfile;
     }
 
     /**
-     * Sets whether createUserList should include an entry for the guest profile. Default is
+     * Sets whether createProfileList should include an entry for the guest profile. Default is
      * {@code true}.
      */
     public void setIncludeGuest(boolean includeGuest) {
@@ -74,68 +74,69 @@ public class UsersPreferenceProvider {
     }
 
     /**
-     * Creates the list of users (as preferences). The first user will be the current user (if
-     * requested) and the last user will be the guest user (if requested). Otherwise, the list is
-     * populated with all of the remaining switchable users.
+     * Creates the list of profiles (as preferences). The first profile will be the current profile
+     * (if requested) and the last profile will be the guest profile (if requested). Otherwise, the
+     * list is populated with all of the remaining switchable profiles.
      */
-    public List<Preference> createUserList() {
-        List<Preference> users = new ArrayList<>();
-        UserInfo currUserInfo = UserHelper.getInstance(mContext).getCurrentProcessUserInfo();
+    public List<Preference> createProfileList() {
+        List<Preference> profiles = new ArrayList<>();
+        UserInfo currUserInfo = ProfileHelper.getInstance(mContext).getCurrentProcessUserInfo();
 
-        // Show current user at the top of the list.
-        if (mIncludeCurrentUser) {
-            users.add(createUserPreference(currUserInfo));
+        // Show current profile at the top of the list.
+        if (mIncludeCurrentProfile) {
+            profiles.add(createProfilePreference(currUserInfo));
         }
 
-        // Display all users on the system, except: Guests and current user who's displayed already.
-        List<UserInfo> infos = UserHelper.getInstance(mContext).getAllLivingUsers(
+        // Display all profiles on the system, except: Guests and current profile who's displayed
+        // already.
+        List<UserInfo> infos = ProfileHelper.getInstance(mContext).getAllLivingProfiles(
                 userInfo -> !userInfo.isGuest() && userInfo.id != currUserInfo.id);
         for (UserInfo userInfo : infos) {
-            users.add(createUserPreference(userInfo));
+            profiles.add(createProfilePreference(userInfo));
         }
 
         // Display guest session option.
         if (mIncludeGuest) {
-            users.add(createGuestUserPreference());
+            profiles.add(createGuestProfilePreference());
         }
 
-        return users;
+        return profiles;
     }
 
-    private Preference createUserPreference(UserInfo userInfo) {
+    private Preference createProfilePreference(UserInfo userInfo) {
         CarUiPreference preference = new CarUiPreference(mContext);
         preference.setIcon(
-                new UserIconProvider().getRoundedUserIcon(userInfo, mContext));
-        preference.setTitle(UserUtils.getUserDisplayName(mContext, userInfo));
+                new ProfileIconProvider().getRoundedProfileIcon(userInfo, mContext));
+        preference.setTitle(ProfileUtils.getProfileDisplayName(mContext, userInfo));
 
         if (!userInfo.isInitialized()) {
             preference.setSummary(R.string.user_summary_not_set_up);
         }
         if (userInfo.isAdmin()) {
-            preference.setSummary(
-                    isCurrentUser(userInfo) ? R.string.signed_in_admin_user : R.string.user_admin);
+            preference.setSummary(isCurrentProfile(userInfo)
+                    ? R.string.signed_in_admin_user : R.string.user_admin);
         }
 
         preference.setOnPreferenceClickListener(pref -> {
-            if (mUserPreferenceClickListener == null) {
+            if (mProfilePreferenceClickListener == null) {
                 return false;
             }
-            mUserPreferenceClickListener.onUserClicked(userInfo);
+            mProfilePreferenceClickListener.onProfileClicked(userInfo);
             return true;
         });
 
         return preference;
     }
 
-    private Preference createGuestUserPreference() {
+    private Preference createGuestProfilePreference() {
         CarUiPreference preference = new CarUiPreference(mContext);
         preference.setIcon(
-                new UserIconProvider().getRoundedGuestDefaultIcon(mContext.getResources()));
+                new ProfileIconProvider().getRoundedGuestDefaultIcon(mContext.getResources()));
         preference.setTitle(R.string.user_guest);
         return preference;
     }
 
-    private boolean isCurrentUser(UserInfo userInfo) {
-        return UserHelper.getInstance(mContext).isCurrentProcessUser(userInfo);
+    private boolean isCurrentProfile(UserInfo userInfo) {
+        return ProfileHelper.getInstance(mContext).isCurrentProcessUser(userInfo);
     }
 }

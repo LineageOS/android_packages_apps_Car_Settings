@@ -23,15 +23,15 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.users.UserDetailsBasePreferenceController;
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.profiles.ProfileDetailsBasePreferenceController;
+import com.android.car.settings.profiles.UserHelper;
 
 /**
  * Controller for displaying accounts and associated actions.
  * Ensures changes can only be made by the appropriate users.
  */
 public class AccountGroupPreferenceController extends
-        UserDetailsBasePreferenceController<PreferenceGroup> {
+        ProfileDetailsBasePreferenceController<PreferenceGroup> {
 
     public AccountGroupPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -45,13 +45,13 @@ public class AccountGroupPreferenceController extends
 
     @Override
     protected int getAvailabilityStatus() {
-        boolean isCurrentUser = getUserHelper().isCurrentProcessUser(getUserInfo());
-        boolean canModifyAccounts = getUserHelper().canCurrentProcessModifyAccounts();
-        return (isCurrentUser && canModifyAccounts) ? AVAILABLE : DISABLED_FOR_USER;
+        boolean isCurrentUser = getProfileHelper().isCurrentProcessUser(getUserInfo());
+        boolean canModifyAccounts = getProfileHelper().canCurrentProcessModifyAccounts();
+        return (isCurrentUser && canModifyAccounts) ? AVAILABLE : DISABLED_FOR_PROFILE;
     }
 
     @VisibleForTesting
-    UserHelper getUserHelper() {
+    UserHelper getProfileHelper() {
         return UserHelper.getInstance(getContext());
     }
 }
