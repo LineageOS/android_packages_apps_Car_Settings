@@ -29,7 +29,6 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 
 import androidx.lifecycle.LifecycleOwner;
-import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -39,8 +38,8 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.BluetoothTestUtils;
 import com.android.car.settings.testutils.ResourceTestUtils;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
-import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +51,6 @@ import org.mockito.MockitoAnnotations;
 @RunWith(AndroidJUnit4.class)
 public class BluetoothDeviceActionButtonsPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
-    private Lifecycle mLifecycle;
     private Context mContext = ApplicationProvider.getApplicationContext();
     private ActionButtonsPreference mActionButtonsPreference;
     private BluetoothDeviceActionButtonsPreferenceController mPreferenceController;
@@ -64,10 +62,8 @@ public class BluetoothDeviceActionButtonsPreferenceControllerTest {
     private CachedBluetoothDevice mCachedDevice;
 
     @Before
-    @UiThreadTest
     public void setUp() {
-        mLifecycleOwner = () -> mLifecycle;
-        mLifecycle = new Lifecycle(mLifecycleOwner);
+        mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
