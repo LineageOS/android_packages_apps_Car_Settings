@@ -51,12 +51,12 @@ public class ProfileDetailsDeletePreferenceControllerTest {
     private Preference mPreference;
     private CarUxRestrictions mCarUxRestrictions;
     private ProfileDetailsDeletePreferenceController mPreferenceController;
-    private RemoveUserHandler mRemoveProfileHandler;
+    private RemoveProfileHandler mRemoveProfileHandler;
 
     @Mock
     private FragmentController mMockFragmentController;
     @Mock
-    private UserHelper mMockProfileHelper;
+    private ProfileHelper mMockProfileHelper;
     @Mock
     private UserManager mMockUserManager;
 
@@ -69,7 +69,7 @@ public class ProfileDetailsDeletePreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
         mPreference = new Preference(mContext);
-        mRemoveProfileHandler = new RemoveUserHandler(
+        mRemoveProfileHandler = new RemoveProfileHandler(
                 mContext, mMockProfileHelper, mMockUserManager, mMockFragmentController);
         mPreferenceController = new ProfileDetailsDeletePreferenceController(mContext,
                 /* preferenceKey= */ "key", mMockFragmentController, mCarUxRestrictions,

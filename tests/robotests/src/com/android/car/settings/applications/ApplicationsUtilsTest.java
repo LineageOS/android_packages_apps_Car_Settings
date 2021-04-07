@@ -25,7 +25,7 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.pm.UserInfo;
 
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.ShadowDefaultDialerManager;
 import com.android.car.settings.testutils.ShadowSmsApplication;
 import com.android.car.settings.testutils.ShadowUserHelper;
@@ -81,7 +81,7 @@ public class ApplicationsUtilsTest {
         UserInfo userInfo = new UserInfo();
         userInfo.id = 123;
         DevicePolicyManager dpm = mock(DevicePolicyManager.class);
-        UserHelper profileHelper = mock(UserHelper.class);
+        ProfileHelper profileHelper = mock(ProfileHelper.class);
         ShadowUserHelper.setInstance(profileHelper);
         when(profileHelper.getAllProfiles()).thenReturn(Collections.singletonList(userInfo));
         when(dpm.getProfileOwnerAsUser(userInfo.id)).thenReturn(
@@ -97,13 +97,13 @@ public class ApplicationsUtilsTest {
         when(dpm.isDeviceOwnerAppOnAnyUser(PACKAGE_NAME)).thenReturn(true);
 
         assertThat(ApplicationsUtils.isProfileOrDeviceOwner(PACKAGE_NAME, dpm,
-                mock(UserHelper.class))).isTrue();
+                mock(ProfileHelper.class))).isTrue();
     }
 
     @Test
     public void isProfileOrDeviceOwner_returnsFalse() {
         assertThat(ApplicationsUtils.isProfileOrDeviceOwner(PACKAGE_NAME,
-                mock(DevicePolicyManager.class), mock(UserHelper.class))).isFalse();
+                mock(DevicePolicyManager.class), mock(ProfileHelper.class))).isFalse();
     }
 
 }

@@ -71,7 +71,7 @@ public class EditProfileNameFragment extends BaseFragment {
     @Override
     @LayoutRes
     protected int getLayoutId() {
-        return R.layout.edit_username_fragment;
+        return R.layout.edit_profile_name_fragment;
     }
 
     @Override
@@ -105,7 +105,7 @@ public class EditProfileNameFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mProfileNameEditText = view.findViewById(R.id.user_name_text_edit);
+        mProfileNameEditText = view.findViewById(R.id.profile_name_text_edit);
     }
 
     @Override

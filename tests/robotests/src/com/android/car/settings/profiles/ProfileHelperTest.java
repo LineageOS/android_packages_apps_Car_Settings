@@ -64,7 +64,7 @@ public class ProfileHelperTest {
     private static final String DEFAULT_GUEST_NAME = "default_guest";
 
     private Context mContext;
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
 
     @Mock
     private UserManager mMockUserManager;
@@ -77,7 +77,7 @@ public class ProfileHelperTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        mProfileHelper = new UserHelper(mMockUserManager, mMockResources,
+        mProfileHelper = new ProfileHelper(mMockUserManager, mMockResources,
                 DEFAULT_ADMIN_NAME, DEFAULT_GUEST_NAME, mMockCarUserManager);
 
         when(mMockUserManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS))
@@ -284,7 +284,7 @@ public class ProfileHelperTest {
                 /* userType= */ USER_TYPE_SYSTEM_HEADLESS);
 
         assertThat(mProfileHelper.removeProfile(mContext, systemUser))
-                .isEqualTo(UserHelper.REMOVE_PROFILE_RESULT_FAILED);
+                .isEqualTo(ProfileHelper.REMOVE_PROFILE_RESULT_FAILED);
     }
 
     @Test
@@ -301,7 +301,7 @@ public class ProfileHelperTest {
         when(mMockUserManager.isAdminUser()).thenReturn(true);
 
         assertThat(mProfileHelper.removeProfile(mContext, nonAdminUser))
-                .isEqualTo(UserHelper.REMOVE_PROFILE_RESULT_SUCCESS);
+                .isEqualTo(ProfileHelper.REMOVE_PROFILE_RESULT_SUCCESS);
         verify(mMockCarUserManager).removeUser(nonAdminUserId);
     }
 
@@ -320,7 +320,7 @@ public class ProfileHelperTest {
 
         // If Non-Admin is trying to remove someone other than themselves, they should fail.
         assertThat(mProfileHelper.removeProfile(mContext, user2))
-                .isEqualTo(UserHelper.REMOVE_PROFILE_RESULT_FAILED);
+                .isEqualTo(ProfileHelper.REMOVE_PROFILE_RESULT_FAILED);
         verify(mMockCarUserManager, never()).removeUser(user2.id);
     }
 
@@ -342,7 +342,7 @@ public class ProfileHelperTest {
         mockSwitchUserSuccess();
 
         assertThat(mProfileHelper.removeProfile(mContext, adminUser))
-                .isEqualTo(UserHelper.REMOVE_PROFILE_RESULT_SUCCESS);
+                .isEqualTo(ProfileHelper.REMOVE_PROFILE_RESULT_SUCCESS);
 
         verify(mMockCarUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManager).switchUser(newAdminInfo.id);
@@ -365,7 +365,7 @@ public class ProfileHelperTest {
                 UserCreationResult.STATUS_ANDROID_FAILURE, null);
 
         assertThat(mProfileHelper.removeProfile(mContext, adminUser))
-                .isEqualTo(UserHelper.REMOVE_PROFILE_RESULT_FAILED);
+                .isEqualTo(ProfileHelper.REMOVE_PROFILE_RESULT_FAILED);
         verify(mMockCarUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManager, never()).switchUser(anyInt());
         verify(mMockCarUserManager, never()).removeUser(adminUser.id);
@@ -385,7 +385,7 @@ public class ProfileHelperTest {
         mockCreateGuest(DEFAULT_GUEST_NAME, UserCreationResult.STATUS_SUCCESSFUL, guestUser);
         mockSwitchUserSuccess();
 
-        assertUserRemoved(UserHelper.REMOVE_PROFILE_RESULT_SUCCESS, guestUser, currentUser);
+        assertUserRemoved(ProfileHelper.REMOVE_PROFILE_RESULT_SUCCESS, guestUser, currentUser);
     }
 
     @Test
@@ -402,7 +402,7 @@ public class ProfileHelperTest {
         mockCreateGuest(DEFAULT_GUEST_NAME, UserCreationResult.STATUS_SUCCESSFUL, guestUser);
         mockSwitchUserFailure();
 
-        assertUserRemoved(UserHelper.REMOVE_PROFILE_RESULT_SWITCH_FAILED, guestUser,
+        assertUserRemoved(ProfileHelper.REMOVE_PROFILE_RESULT_SWITCH_FAILED, guestUser,
                 currentUser);
     }
 

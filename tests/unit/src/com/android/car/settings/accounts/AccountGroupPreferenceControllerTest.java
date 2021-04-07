@@ -38,7 +38,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
@@ -60,7 +60,7 @@ public class AccountGroupPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private UserHelper mMockProfileHelper;
+    private ProfileHelper mMockProfileHelper;
 
     @Before
     @UiThreadTest
@@ -136,7 +136,7 @@ public class AccountGroupPreferenceControllerTest {
         }
 
         @Override
-        UserHelper getProfileHelper() {
+        ProfileHelper getProfileHelper() {
             return mMockProfileHelper;
         }
     }

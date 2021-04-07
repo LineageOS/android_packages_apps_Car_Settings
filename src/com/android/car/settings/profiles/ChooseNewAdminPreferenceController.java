@@ -88,9 +88,9 @@ public class ChooseNewAdminPreferenceController extends ProfilesBasePreferenceCo
 
     private void removeOldAdmin() {
         Context context = getContext();
-        UserHelper profileHelper = UserHelper.getInstance(context);
+        ProfileHelper profileHelper = ProfileHelper.getInstance(context);
         int removeUserResult = profileHelper.removeProfile(context, mAdminInfo);
-        if (removeUserResult != UserHelper.REMOVE_PROFILE_RESULT_SUCCESS) {
+        if (removeUserResult != ProfileHelper.REMOVE_PROFILE_RESULT_SUCCESS) {
             // If failed, need to show error dialog for users.
             getFragmentController().showDialog(
                     ErrorDialog.newInstance(

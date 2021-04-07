@@ -32,7 +32,7 @@ import android.util.SparseArray;
 
 import com.android.car.settings.common.AsyncLoader;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.settingslib.applications.StorageStatsSource;
 
 import java.io.IOException;
@@ -50,13 +50,13 @@ public class StorageAsyncLoader
 
     private final StorageStatsSource mStatsManager;
     private final PackageManager mPackageManager;
-    private final UserHelper mProfileHelper;
+    private final ProfileHelper mProfileHelper;
 
     public StorageAsyncLoader(Context context, StorageStatsSource source) {
         super(context);
         mStatsManager = source;
         mPackageManager = context.getPackageManager();
-        mProfileHelper = UserHelper.getInstance(context);
+        mProfileHelper = ProfileHelper.getInstance(context);
     }
 
     @Override

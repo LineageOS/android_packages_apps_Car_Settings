@@ -16,17 +16,17 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:key="@string/psk_user_details_permissions">
+                  android:key="@string/psk_profile_details_permissions">
     <com.android.car.settings.common.EntityHeaderPreference
-        android:key="@string/pk_user_details_permissions_header"
+        android:key="@string/pk_profile_details_permissions_header"
         android:selectable="false"
         settings:controller="com.android.car.settings.profiles.ProfileDetailsHeaderPreferenceController"
         settings:searchable="false"/>
     <com.android.car.settings.common.ActionButtonsPreference
-        android:key="@string/pk_user_details_permissions_action_buttons"
-        settings:controller="com.android.car.settings.profiles.UserDetailsActionButtonsPreferenceController"
+        android:key="@string/pk_profile_details_permissions_action_buttons"
+        settings:controller="com.android.car.settings.profiles.ProfileDetailsActionButtonsPreferenceController"
         settings:searchable="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_user_permissions"
+        android:key="@string/pk_profile_permissions"
         settings:controller="com.android.car.settings.profiles.PermissionsPreferenceController"/>
 </PreferenceScreen>

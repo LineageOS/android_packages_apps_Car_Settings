@@ -63,16 +63,16 @@ public class ProfileDetailsFragment extends ProfileDetailsBaseFragment {
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.user_details_fragment;
+        return R.xml.profile_details_fragment;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         use(ProfileDetailsHeaderPreferenceController.class,
-                R.string.pk_user_details_header).setUserInfo(getUserInfo());
-        use(UserDetailsActionButtonsPreferenceController.class,
-                R.string.pk_user_details_action_buttons).setUserInfo(getUserInfo());
+                R.string.pk_profile_details_header).setUserInfo(getUserInfo());
+        use(ProfileDetailsActionButtonsPreferenceController.class,
+                R.string.pk_profile_details_action_buttons).setUserInfo(getUserInfo());
         use(AccountGroupPreferenceController.class,
                 R.string.pk_account_group).setUserInfo(getUserInfo());
         use(ProfileDetailsDeletePreferenceController.class,
@@ -133,6 +133,6 @@ public class ProfileDetailsFragment extends ProfileDetailsBaseFragment {
      * Data provider for Settings Search.
      */
     public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new CarBaseSearchIndexProvider(R.xml.user_details_fragment,
+            new CarBaseSearchIndexProvider(R.xml.profile_details_fragment,
                     Settings.ACTION_USER_SETTINGS);
 }

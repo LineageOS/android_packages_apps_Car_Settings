@@ -130,7 +130,7 @@ public class QuickSettingFragment extends BaseFragment {
                 .setOnClickListener(i ->
                         mStartForResult.launch(
                                 new Intent(getContext(), ProfileSwitcherActivity.class)))
-                .setIcon(R.drawable.ic_user)
+                .setIcon(R.drawable.ic_profile)
                 .setShowIconAndTitle(true)
                 .setVisible(showProfileSwitcher())
                 .setTinted(false)

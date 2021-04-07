@@ -19,12 +19,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/manage_other_profiles_button_text"
-    android:key="@string/psk_users_list">
+    android:key="@string/psk_profiles_list">
     <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_users_list"
+        android:key="@string/pk_profiles_list"
         settings:controller="com.android.car.settings.profiles.ProfilesListPreferenceController"/>
     <com.android.car.ui.preference.CarUiPreference
-        android:key="@string/pk_add_user"
+        android:key="@string/pk_add_profile"
         settings:controller="com.android.car.settings.profiles.AddProfilePreferenceController"
         settings:showChevron="false"/>
 </PreferenceScreen>

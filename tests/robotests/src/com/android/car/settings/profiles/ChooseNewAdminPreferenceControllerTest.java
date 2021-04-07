@@ -64,7 +64,7 @@ public class ChooseNewAdminPreferenceControllerTest {
     private ConfirmationDialogFragment mDialog;
 
     @Mock
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
 
     @Before
     public void setUp() {
@@ -128,7 +128,7 @@ public class ChooseNewAdminPreferenceControllerTest {
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_success_noErrorDialog() {
         when(mProfileHelper.removeProfile(any(), eq(TEST_ADMIN_USER)))
-                .thenReturn(UserHelper.REMOVE_PROFILE_RESULT_SUCCESS);
+                .thenReturn(ProfileHelper.REMOVE_PROFILE_RESULT_SUCCESS);
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
@@ -138,7 +138,7 @@ public class ChooseNewAdminPreferenceControllerTest {
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_failure_errorDialog() {
         when(mProfileHelper.removeProfile(any(), eq(TEST_ADMIN_USER)))
-                .thenReturn(UserHelper.REMOVE_PROFILE_RESULT_FAILED);
+                .thenReturn(ProfileHelper.REMOVE_PROFILE_RESULT_FAILED);
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 

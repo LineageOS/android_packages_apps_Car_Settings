@@ -31,7 +31,7 @@ import java.util.List;
  * Constructs the preferences to be displayed in {@link ProfilesListFragment} and
  * {@link ChooseNewAdminFragment}.
  */
-public class UsersPreferenceProvider {
+public class ProfilesPreferenceProvider {
 
     /**
      * Interface for registering clicks on profiles.
@@ -50,7 +50,7 @@ public class UsersPreferenceProvider {
     private boolean mIncludeCurrentProfile;
     private boolean mIncludeGuest;
 
-    public UsersPreferenceProvider(Context context, ProfileClickListener listener) {
+    public ProfilesPreferenceProvider(Context context, ProfileClickListener listener) {
         mContext = context;
         mProfilePreferenceClickListener = listener;
         mIncludeCurrentProfile = false;

@@ -237,7 +237,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
-                       android:value="@string/hk_UserDetailsActivity" />
+                       android:value="@string/hk_ProfileDetailsActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 

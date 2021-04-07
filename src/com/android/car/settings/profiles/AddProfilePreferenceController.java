@@ -97,7 +97,7 @@ public class AddProfilePreferenceController extends PreferenceController<Prefere
         if (!mUserManager.canAddMoreUsers()) {
             ConfirmationDialogFragment dialogFragment =
                     ProfilesDialogProvider.getMaxProfilesLimitReachedDialogFragment(getContext(),
-                            UserHelper.getInstance(getContext()).getMaxSupportedRealProfiles());
+                            ProfileHelper.getInstance(getContext()).getMaxSupportedRealProfiles());
 
             getFragmentController().showDialog(dialogFragment,
                     MAX_PROFILES_LIMIT_REACHED_DIALOG_TAG);

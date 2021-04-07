@@ -21,7 +21,7 @@ import static android.content.pm.UserInfo.FLAG_INITIALIZED;
 import static com.android.car.settings.profiles.ProfilesDialogProvider.ANY_PROFILE;
 import static com.android.car.settings.profiles.ProfilesDialogProvider.KEY_PROFILE_TYPE;
 import static com.android.car.settings.profiles.ProfilesDialogProvider.LAST_ADMIN;
-import static com.android.car.settings.profiles.RemoveUserHandler.REMOVE_PROFILE_DIALOG_TAG;
+import static com.android.car.settings.profiles.RemoveProfileHandler.REMOVE_PROFILE_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -49,7 +49,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
-public class RemoveUserHandlerTest {
+public class RemoveProfileHandlerTest {
     private static final String TEST_PROFILE_NAME = "Test Profile Name";
 
     private Context mContext = ApplicationProvider.getApplicationContext();

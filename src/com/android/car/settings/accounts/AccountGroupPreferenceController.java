@@ -24,7 +24,7 @@ import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.profiles.ProfileDetailsBasePreferenceController;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 
 /**
  * Controller for displaying accounts and associated actions.
@@ -51,7 +51,7 @@ public class AccountGroupPreferenceController extends
     }
 
     @VisibleForTesting
-    UserHelper getProfileHelper() {
-        return UserHelper.getInstance(getContext());
+    ProfileHelper getProfileHelper() {
+        return ProfileHelper.getInstance(getContext());
     }
 }

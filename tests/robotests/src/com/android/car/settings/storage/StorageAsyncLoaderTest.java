@@ -34,7 +34,7 @@ import android.net.TrafficStats;
 import android.os.UserHandle;
 import android.util.SparseArray;
 
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.settingslib.applications.StorageStatsSource;
@@ -67,7 +67,7 @@ public class StorageAsyncLoaderTest {
     @Mock
     private StorageStatsSource mSource;
     @Mock
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
 
     private Context mContext;
     private List<ApplicationInfo> mInfo = new ArrayList<>();

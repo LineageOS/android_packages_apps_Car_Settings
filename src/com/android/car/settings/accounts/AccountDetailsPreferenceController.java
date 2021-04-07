@@ -34,7 +34,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 
 import java.io.IOException;
 
@@ -151,7 +151,7 @@ public class AccountDetailsPreferenceController extends AccountDetailsBasePrefer
     }
 
     @VisibleForTesting
-    UserHelper getProfileHelper() {
-        return UserHelper.getInstance(getContext());
+    ProfileHelper getProfileHelper() {
+        return ProfileHelper.getInstance(getContext());
     }
 }

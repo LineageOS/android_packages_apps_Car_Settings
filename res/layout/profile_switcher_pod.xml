@@ -26,26 +26,26 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/current_user_frame"
+        android:id="@+id/current_profile_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <com.android.car.admin.ui.UserAvatarView
-            android:id="@+id/user_avatar"
-            android:layout_width="@dimen/user_switcher_image_avatar_size"
-            android:layout_height="@dimen/user_switcher_image_avatar_size"
+            android:id="@+id/profile_avatar"
+            android:layout_width="@dimen/profile_switcher_image_avatar_size"
+            android:layout_height="@dimen/profile_switcher_image_avatar_size"
             android:layout_gravity="center"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            admin_ui:badgeDiameter="@dimen/user_switcher_managed_badge_size"
-            admin_ui:badgeMargin="@dimen/user_switcher_managed_badge_margin" />
+            admin_ui:badgeDiameter="@dimen/profile_switcher_managed_badge_size"
+            admin_ui:badgeMargin="@dimen/profile_switcher_managed_badge_margin" />
     </FrameLayout>
 
     <TextView
-        android:id="@+id/user_name"
+        android:id="@+id/profile_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/user_switcher_vertical_spacing_between_name_and_avatar"
+        android:layout_marginTop="@dimen/profile_switcher_vertical_spacing_between_name_and_avatar"
         android:gravity="center"
         android:singleLine="true"
-        android:textAppearance="?attr/userSwitcherNameTextAppearance"/>
+        android:textAppearance="?attr/profileSwitcherNameTextAppearance"/>
 
 </LinearLayout>

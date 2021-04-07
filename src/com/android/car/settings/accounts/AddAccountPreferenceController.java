@@ -24,7 +24,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -94,8 +94,8 @@ public class AddAccountPreferenceController extends PreferenceController<Prefere
     }
 
     @VisibleForTesting
-    UserHelper getProfileHelper() {
-        return UserHelper.getInstance(getContext());
+    ProfileHelper getProfileHelper() {
+        return ProfileHelper.getInstance(getContext());
     }
 
     @VisibleForTesting

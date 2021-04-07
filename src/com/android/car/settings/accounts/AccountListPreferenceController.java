@@ -34,7 +34,7 @@ import androidx.preference.PreferenceCategory;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.accounts.AuthenticatorHelper;
@@ -73,7 +73,7 @@ public class AccountListPreferenceController extends
     public AccountListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mUserInfo = UserHelper.getInstance(context).getCurrentProcessUserInfo();
+        mUserInfo = ProfileHelper.getInstance(context).getCurrentProcessUserInfo();
         mAuthenticatorHelper = createAuthenticatorHelper();
     }
 
@@ -94,7 +94,7 @@ public class AccountListPreferenceController extends
 
     @Override
     protected int getAvailabilityStatus() {
-        boolean canModifyAccounts = UserHelper.getInstance(getContext())
+        boolean canModifyAccounts = ProfileHelper.getInstance(getContext())
                 .canCurrentProcessModifyAccounts();
         return canModifyAccounts ? AVAILABLE : DISABLED_FOR_PROFILE;
     }

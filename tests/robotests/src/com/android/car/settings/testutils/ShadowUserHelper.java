@@ -20,7 +20,7 @@ import android.annotation.Nullable;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -30,13 +30,13 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Shadow for {@link UserHelper}.
+ * Shadow for {@link ProfileHelper}.
  */
-@Implements(UserHelper.class)
+@Implements(ProfileHelper.class)
 public class ShadowUserHelper {
-    private static UserHelper sInstance;
+    private static ProfileHelper sInstance;
 
-    public static void setInstance(UserHelper profileHelper) {
+    public static void setInstance(ProfileHelper profileHelper) {
         sInstance = profileHelper;
     }
 
@@ -77,7 +77,7 @@ public class ShadowUserHelper {
     }
 
     @Implementation
-    @UserHelper.RemoveProfileResult
+    @ProfileHelper.RemoveProfileResult
     public int removeUser(Context context, UserInfo userInfo) {
         return sInstance.removeProfile(context, userInfo);
     }

@@ -23,7 +23,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 
 /**
  * Displays a warning message on the factory reset screen when multiple switchable profiles
@@ -45,7 +45,7 @@ public class FactoryResetOtherProfilesPresentPreferenceController extends
 
     @Override
     protected void updateState(Preference preference) {
-        UserHelper profileHelper = UserHelper.getInstance(getContext());
+        ProfileHelper profileHelper = ProfileHelper.getInstance(getContext());
         preference.setVisible(!profileHelper.getAllSwitchableProfiles().isEmpty());
     }
 }

@@ -15,16 +15,13 @@
     limitations under the License.
 -->
 
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="oval">
-            <solid android:color="?attr/userSwitcherAddIconBackgroundColor"/>
-            <size
-                android:width="@dimen/user_switcher_image_avatar_size"
-                android:height="@dimen/user_switcher_image_avatar_size"/>
-        </shape>
-    </item>
-    <item
-        android:drawable="@drawable/ic_user_add"
-        android:gravity="center"/>
-</layer-list>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <stroke
+        android:width="@dimen/profile_switcher_current_profile_circle_stroke_width"
+        android:color="?attr/profileSwitcherCurrentProfileColor"/>
+    <size
+        android:width="@dimen/profile_switcher_current_profile_circle_width"
+        android:height="@dimen/profile_switcher_current_profile_circle_width"/>
+</shape>
