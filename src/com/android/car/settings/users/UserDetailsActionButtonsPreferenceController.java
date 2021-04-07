@@ -146,7 +146,7 @@ public final class UserDetailsActionButtonsPreferenceController
         makeAdminButton
                 .setText(R.string.grant_admin_permissions_button_text)
                 .setIcon(R.drawable.ic_person)
-                .setVisible(UserUtils.isAdminViewingNonAdmin(UserManager.get(getContext()),
+                .setVisible(UserUtils.isAdminViewingNonAdmin(mUserManager,
                         getUserInfo()))
                 .setOnClickListener(v -> showConfirmMakeAdminDialog());
 
