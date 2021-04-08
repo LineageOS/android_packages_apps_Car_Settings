@@ -16,7 +16,7 @@
 
 import os
 import sys
-from resource_utils import get_all_resources, Resource
+from resource_utils import get_all_resources, get_chassis_overlayable, is_resource_in_overlayable
 from datetime import datetime
 import lxml.etree as etree
 
@@ -54,6 +54,7 @@ def main():
 
 def generate_overlayable_file(resources):
     resources = sorted(resources, key=lambda x: x.type + x.name)
+    chassis_mapping = get_chassis_overlayable()
 
     root = etree.Element('resources')
 
@@ -67,6 +68,8 @@ def generate_overlayable_file(resources):
     policy.set('type', 'public')
 
     for resource in resources:
+        if (is_resource_in_overlayable(resource, chassis_mapping)):
+            continue
         item = etree.SubElement(policy, 'item')
         item.set('type', resource.type)
         item.set('name', resource.name)
