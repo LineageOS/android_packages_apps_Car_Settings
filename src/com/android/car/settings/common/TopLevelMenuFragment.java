@@ -31,6 +31,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
@@ -118,6 +119,14 @@ public class TopLevelMenuFragment extends SettingsFragment {
         clearBackStack();
         updatePreferenceHighlight(preference.getKey());
         return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
+    protected HighlightablePreferenceGroupAdapter createHighlightableAdapter(
+            PreferenceScreen preferenceScreen) {
+        return new HighlightablePreferenceGroupAdapter(preferenceScreen,
+                R.drawable.toplevel_preference_background,
+                R.drawable.toplevel_preference_highlight);
     }
 
     private void updatePreferenceHighlight(String key) {

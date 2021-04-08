@@ -63,9 +63,9 @@ limitations under the License.-->
       <item type="bool" name="config_show_system_update_settings"/>
       <item type="bool" name="config_show_wifi_mac_address"/>
       <item type="bool" name="config_toplevel_injection_background_always_use_default"/>
+      <item type="bool" name="config_toplevel_injection_enable_summaries"/>
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
-      <item type="color" name="preference_highlight_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="toggle_bg"/>
       <item type="color" name="toggle_icon_tint"/>
@@ -185,6 +185,8 @@ limitations under the License.-->
       <item type="dimen" name="top_level_menu_width"/>
       <item type="dimen" name="top_level_recyclerview_margin_right"/>
       <item type="dimen" name="toplevel_foreground_icon_inset"/>
+      <item type="dimen" name="toplevel_preference_corner_radius"/>
+      <item type="dimen" name="toplevel_preference_min_height"/>
       <item type="dimen" name="touch_target_size"/>
       <item type="dimen" name="two_action_preference_divider_width"/>
       <item type="dimen" name="usage_bytes_picker_edit_text_min_width"/>
@@ -293,11 +295,14 @@ limitations under the License.-->
       <item type="drawable" name="ic_wifi_signal_4"/>
       <item type="drawable" name="ic_wifi_signal_lock"/>
       <item type="drawable" name="ic_wifi_tethering"/>
+      <item type="drawable" name="preference_highlight_default"/>
       <item type="drawable" name="privacy_app_permissions"/>
       <item type="drawable" name="privacy_location"/>
       <item type="drawable" name="privacy_mic"/>
       <item type="drawable" name="privacy_vehicle_data"/>
       <item type="drawable" name="rectangle_ripple_mask"/>
+      <item type="drawable" name="toplevel_preference_background"/>
+      <item type="drawable" name="toplevel_preference_highlight"/>
       <item type="drawable" name="user_add_circle"/>
       <item type="drawable" name="user_avatar_bg_circle"/>
       <item type="drawable" name="wifi_signal"/>
@@ -446,6 +451,7 @@ limitations under the License.-->
       <item type="layout" name="tile"/>
       <item type="layout" name="time_picker"/>
       <item type="layout" name="top_level_recyclerview"/>
+      <item type="layout" name="toplevel_preference"/>
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
