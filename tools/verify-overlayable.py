@@ -16,7 +16,8 @@
 
 import os
 import sys
-from resource_utils import get_all_resources, get_resources_from_single_file, Resource
+from resource_utils import get_all_resources, get_resources_from_single_file, \
+    get_chassis_overlayable, is_resource_in_overlayable
 
 if sys.version_info[0] != 3:
     print("Must use python 3")
@@ -31,6 +32,8 @@ Script used to verify the 'overlayable.xml' file.
 """
 def main():
     resources = get_all_resources(ROOT_FOLDER + '/res')
+    chassis_mapping = get_chassis_overlayable()
+    resources = set(filter(lambda x:not is_resource_in_overlayable(x, chassis_mapping), resources))
     old_mapping = get_resources_from_single_file(OVERLAYABLE_FILE_PATH)
     compare_resources(old_mapping, resources, OVERLAYABLE_FILE_PATH)
 

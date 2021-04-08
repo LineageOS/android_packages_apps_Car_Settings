@@ -28,6 +28,8 @@ import android.util.ArrayMap;
 import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -202,6 +204,13 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
             controller.setPreference(pref);
         }
+    }
+
+    @Override
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+            Bundle savedInstanceState) {
+        inflater.inflate(R.layout.settings_recyclerview_default, parent, /* attachToRoot= */ true);
+        return parent.requireViewById(R.id.recycler_view);
     }
 
     @Override
