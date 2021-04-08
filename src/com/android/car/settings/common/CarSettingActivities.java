@@ -51,6 +51,7 @@ import com.android.car.settings.network.MobileNetworkFragment;
 import com.android.car.settings.network.MobileNetworkListFragment;
 import com.android.car.settings.network.NetworkAndInternetFragment;
 import com.android.car.settings.privacy.PrivacySettingsFragment;
+import com.android.car.settings.privacy.VehicleDataFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.security.SecuritySettingsFragment;
 import com.android.car.settings.sound.RingtonePickerFragment;
@@ -227,6 +228,17 @@ public class CarSettingActivities {
         @Override
         protected Fragment getInitialFragment() {
             return new PrivacySettingsFragment();
+        }
+    }
+
+    /**
+     * Vehicle Data Activity.
+     */
+    public static class VehicleDataActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new VehicleDataFragment();
         }
     }
 
