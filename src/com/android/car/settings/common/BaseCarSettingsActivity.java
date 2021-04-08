@@ -360,8 +360,8 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                 insets -> globalToolbarWrappedView.setPadding(
                         insets.getLeft(), insets.getTop(), insets.getRight(),
                         insets.getBottom()), /* hasToolbar= */ true);
-        mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
         if (mIsSinglePane) {
+            mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
             findViewById(R.id.top_level_menu).setVisibility(View.GONE);
             findViewById(R.id.top_level_divider).setVisibility(View.GONE);
             return;
@@ -381,12 +381,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         List<MenuItem> items = Collections.singletonList(searchButton);
 
         mGlobalToolbar.setTitle(R.string.settings_label);
-        mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
-        mGlobalToolbar.setNavButtonMode(Toolbar.NavButtonMode.CLOSE);
-        mGlobalToolbar.registerOnBackListener(() -> {
-            finish();
-            return true;
-        });
+        mGlobalToolbar.setState(Toolbar.State.HOME);
         mGlobalToolbar.setLogo(R.drawable.ic_launcher_settings);
         mGlobalToolbar.setMenuItems(items);
     }
@@ -395,7 +390,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         if (mMiniToolbar == null) {
             return;
         }
-        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1 || !isTaskRoot()) {
             mMiniToolbar.setState(Toolbar.State.SUBPAGE);
             mMiniToolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
         } else {
