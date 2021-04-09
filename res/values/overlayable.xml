@@ -183,6 +183,7 @@ limitations under the License.-->
       <item type="dimen" name="tile_padding"/>
       <item type="dimen" name="top_level_divider_width"/>
       <item type="dimen" name="top_level_menu_width"/>
+      <item type="dimen" name="top_level_recyclerview_margin_right"/>
       <item type="dimen" name="toplevel_foreground_icon_inset"/>
       <item type="dimen" name="touch_target_size"/>
       <item type="dimen" name="two_action_preference_divider_width"/>
@@ -437,11 +438,14 @@ limitations under the License.-->
       <item type="layout" name="progress_bar_preference"/>
       <item type="layout" name="quick_settings"/>
       <item type="layout" name="regulatory_info"/>
+      <item type="layout" name="settings_preference_fragment"/>
+      <item type="layout" name="settings_recyclerview_default"/>
       <item type="layout" name="suggestion_preference"/>
       <item type="layout" name="summary_preference_widget"/>
       <item type="layout" name="switch_widget"/>
       <item type="layout" name="tile"/>
       <item type="layout" name="time_picker"/>
+      <item type="layout" name="top_level_recyclerview"/>
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
@@ -1201,6 +1205,8 @@ limitations under the License.-->
       <item type="string" name="zone_list_menu_sort_by_timezone"/>
       <item type="style" name="ActionDialogTheme"/>
       <item type="style" name="CarSettingTheme"/>
+      <item type="style" name="CarSettingsPreferenceFragment"/>
+      <item type="style" name="CarSettingsPreferenceTheme"/>
       <item type="style" name="ColoredAccentPreferenceStyle"/>
       <item type="style" name="ColoredSwitchPreferenceStyle"/>
       <item type="style" name="DataUsageSummaryCarrierInfoTextAppearance"/>
