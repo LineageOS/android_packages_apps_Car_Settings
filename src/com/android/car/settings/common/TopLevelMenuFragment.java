@@ -18,7 +18,9 @@ package com.android.car.settings.common;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +31,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
 
@@ -73,6 +76,13 @@ public class TopLevelMenuFragment extends SettingsFragment {
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(KEY_SAVED_SELECTED_PREFERENCE_KEY, mSelectedPreferenceKey);
+    }
+
+    @Override
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+            Bundle savedInstanceState) {
+        inflater.inflate(R.layout.top_level_recyclerview, parent, /* attachToRoot= */ true);
+        return parent.requireViewById(R.id.recycler_view);
     }
 
     @Override
