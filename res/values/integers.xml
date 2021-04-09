@@ -51,4 +51,7 @@
 
     <!-- Millisecond interval between app data update -->
     <integer name="millisecond_max_app_load_wait_interval">5000</integer>
+
+    <!-- Maximum number of networks to be shown in LimitedWifiEntryListPreferenceController -->
+    <integer name="limited_wifi_entry_list_count">3</integer>
 </resources>
