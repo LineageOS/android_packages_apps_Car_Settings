@@ -24,10 +24,6 @@
     <dimen name="button_fading_edge_length">40dp</dimen>
     <dimen name="button_ripple_radius">@*android:dimen/car_radius_1</dimen>
 
-    <!-- Activity -->
-    <dimen name="top_level_menu_width">550dp</dimen>
-    <dimen name="top_level_divider_width">1dp</dimen>
-
     <!-- Action Bar -->
     <dimen name="action_bar_height">@*android:dimen/car_app_bar_height</dimen>
     <!-- Guideline begin margin for when not showing exit icon -->
@@ -174,7 +170,10 @@
     <dimen name="action_buttons_icon_margin_end">@*android:dimen/car_padding_1</dimen>
     <dimen name="action_buttons_divider_height">@dimen/divider_preference_height</dimen>
 
-    <!-- Top-level menu icons -->
+    <!-- Top-level menu -->
+    <dimen name="top_level_menu_width">550dp</dimen>
+    <dimen name="top_level_divider_width">1dp</dimen>
+    <dimen name="top_level_recyclerview_margin_right">@*android:dimen/car_padding_2</dimen>
     <dimen name="toplevel_foreground_icon_inset">8dp</dimen>
 
 </resources>

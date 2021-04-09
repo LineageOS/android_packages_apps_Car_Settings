@@ -18,6 +18,11 @@ import os
 import re
 import lxml.etree as etree
 
+# path to car-ui-lib overlayable.xml file
+CHASSIS_OVERLAYABLE_PATH = \
+    os.path.dirname(os.path.abspath(__file__)) \
+    + '/../../libs/car-ui-lib/car-ui-lib/src/main/res-overlayable/values/overlayable.xml'
+
 excluded_resource_files = {"overlayable.xml", "preference_keys.xml", "preference_screen_keys.xml"}
 
 class ResourceLocation:
@@ -118,13 +123,22 @@ def get_resources_from_single_file(filename):
                 for overlayable in policy:
                     resName = overlayable.get('name')
                     resType = overlayable.get('type')
-                    add_resource_to_set(result, Resource(resName, resType,
-                                                        ResourceLocation(filename, resource.sourceline)))
+                    add_resource_to_set(result,
+                                        Resource(resName, resType,
+                                                 ResourceLocation(filename, resource.sourceline)))
         else:
             add_resource_to_set(result, Resource(resName, resType,
                                                  ResourceLocation(filename, resource.sourceline)))
 
     return result
+
+def get_chassis_overlayable():
+    return get_resources_from_single_file(CHASSIS_OVERLAYABLE_PATH)
+
+def is_resource_in_overlayable(resource, overlay):
+    if (resource in overlay):
+        return True
+    return False
 
 # Used to get objects out of sets
 class _Grab:
