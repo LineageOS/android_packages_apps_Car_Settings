@@ -98,7 +98,7 @@
     <string name="wifi_no_network_name" msgid="6819604337231313594">"Şəbəkə adı daxil edin"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Şəbəkə adı"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID daxil edin"</string>
-    <string name="wifi_security" msgid="158358046038876532">"Təhlükəsizlik"</string>
+    <string name="wifi_security" msgid="158358046038876532">"Güvənlik"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"Siqnal gücü"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Status"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Link sürəti"</string>
@@ -371,7 +371,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Töhfəçilər"</string>
     <string name="manual" msgid="4819839169843240804">"Təlimat"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Tənzimləyici etiketlər"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Təhlükəsizlik və tənzimləyici təlimat"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Güvənlik və tənzimləmə bələdçisi"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Müəllif hüququ"</string>
     <string name="license_title" msgid="936705938435249965">"Lisenziya"</string>
     <string name="terms_title" msgid="5201471373602628765">"Şərtlər və qaydalar"</string>
@@ -528,7 +528,7 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Bütün elementlər üçün sinxronizasiya deaktivdir"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Sinxronizasiya deaktivdir"</string>
     <string name="sync_error" msgid="6698021343089247914">"Sinxronizasiya xətası"</string>
-    <string name="last_synced" msgid="4745124489150101529">"Son sinxronlaşdırma <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="4745124489150101529">"Son sinxronizasiya <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"İndi sinxronlaşdırılır…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"İndi sinxronlaşdırmaq üçün tıklayın<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
@@ -536,7 +536,7 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Sinxronizasiyanı ləğv edin"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Hazırda sinxronizasiyada problemlər var. Bir azdan düzələcək."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Məxfilik"</string>
-    <string name="security_settings_title" msgid="6955331714774709746">"Təhlükəsizlik"</string>
+    <string name="security_settings_title" msgid="6955331714774709746">"Güvənlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Yoxdur"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"Model"</string>
@@ -573,7 +573,7 @@
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN kodu daxil edin"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Şifrənizi daxil edin"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Təhlükəsizlik üçün PIN kod təyin edin"</string>
-    <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN kodu yenidən daxil edin"</string>
+    <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN-i təkrar daxil edin"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN ən az 4 rəqəmdən ibarət olmalıdır"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pın kod yanlışdır, ən azı 4 rəqəm olmalıdır."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodlar uyğun gəlmir"</string>

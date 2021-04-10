@@ -313,7 +313,7 @@
     <string name="autofill_add_service" msgid="6413893366443609951">"Thêm dịch vụ"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Mở đường liên kết"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Ứng dụng đã cài đặt"</string>
-    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Không mở các liên kết được hỗ trợ"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Không mở các đường liên kết được hỗ trợ"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Mở <xliff:g id="DOMAIN">%s</xliff:g>"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"Mở <xliff:g id="DOMAIN">%s</xliff:g> và các URL khác"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"Mở theo mặc định"</string>
@@ -321,16 +321,16 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Chưa đặt làm mặc định."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Bạn đã chọn chạy ứng dụng này theo mặc định cho một số hành động."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Xóa tùy chọn mặc định"</string>
-    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Mở các liên kết được hỗ trợ"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Mở các đường liên kết được hỗ trợ"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Mở trong ứng dụng này"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"Luôn hỏi"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Không mở trong ứng dụng này"</string>
-    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Các liên kết được hỗ trợ"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Các đường liên kết được hỗ trợ"</string>
     <string name="special_access" msgid="5730278220917123811">"Quyền truy cập đặc biệt"</string>
     <string name="show_system" msgid="4401355756969485287">"Hiển thị hệ thống"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ẩn hệ thống"</string>
-    <string name="modify_system_settings_title" msgid="4596320571562433972">"Sửa đổi các tùy chọn cài đặt hệ thống"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Quyền này cho phép ứng dụng sửa đổi các tùy chọn cài đặt hệ thống."</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Sửa đổi các chế độ cài đặt hệ thống"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Quyền này cho phép ứng dụng sửa đổi các chế độ cài đặt hệ thống."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Quyền truy cập thông báo"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cấp quyền truy cập thông báo cho <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> có thể đọc tất cả các thông báo, bao gồm cả thông tin cá nhân như tên liên hệ và nội dung của thông báo mà bạn nhận được. Dịch vụ này cũng có thể bỏ qua thông báo hoặc kích hoạt các nút hành động trong các thông báo đó.\n\nĐiều này cũng sẽ cho phép ứng dụng bật hoặc tắt chế độ Không làm phiền và thay đổi các tùy chọn cài đặt có liên quan."</string>
@@ -523,10 +523,10 @@
     <string name="really_remove_account_message" msgid="4296769280849579900">"Nếu bạn xóa tài khoản này, tất cả thư, danh bạ và dữ liệu khác có liên quan sẽ bị xóa khỏi thiết bị!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Không xóa được tài khoản."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Đồng bộ hóa tài khoản"</string>
-    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Đã bật đồng bộ hóa cho <xliff:g id="ID_1">%1$d</xliff:g>/<xliff:g id="ID_2">%2$d</xliff:g> mục"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Đã bật đồng bộ hóa cho tất cả các mục"</string>
-    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Đã tắt đồng bộ hóa cho tất cả các mục"</string>
-    <string name="sync_disabled" msgid="393531064334628258">"Đồng bộ hóa TẮT"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Tính năng đồng bộ hóa đang bật đối với <xliff:g id="ID_1">%1$d</xliff:g>/<xliff:g id="ID_2">%2$d</xliff:g> mục"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Tính năng đồng bộ hóa đang bật đối với tất cả các mục"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Tính năng đồng bộ hóa đang tắt đối với tất cả các mục"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"Tính năng đồng bộ hóa đang TẮT"</string>
     <string name="sync_error" msgid="6698021343089247914">"Lỗi đồng bộ hóa"</string>
     <string name="last_synced" msgid="4745124489150101529">"Đồng bộ hóa lần gần đây nhất vào <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"Đang đồng bộ hóa…"</string>
@@ -587,7 +587,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Hủy"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Xác nhận"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mật khẩu phải chứa ít nhất 4 ký tự"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> ký tự"</string>
+    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Mật khẩu phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> ký tự"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Mã PIN phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> chữ số"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Chỉ được có ít hơn <xliff:g id="NUMBER">%d</xliff:g> ký tự"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Phải có ít hơn <xliff:g id="NUMBER">%d</xliff:g> chữ số"</string>

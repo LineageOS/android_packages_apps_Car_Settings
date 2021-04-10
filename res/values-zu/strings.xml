@@ -273,7 +273,7 @@
     <string name="default_applications" msgid="1558183275638697087">"Izinhlelo zokusebenza ezizenzakalelayo"</string>
     <string name="app_permissions" msgid="32799922508313948">"Izimvume zohlelo lokusebenza"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Izinhlelo zokusebenza ezisebenzisa ama-<xliff:g id="APPS">%1$s</xliff:g>"</string>
-    <string name="applications_settings" msgid="794261395191035632">"Ulwazi lohlelo lokusebenza"</string>
+    <string name="applications_settings" msgid="794261395191035632">"Ulwazi nge-app"</string>
     <string name="force_stop" msgid="2153183697014720520">"Phoqelela ukuma"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Phoqelela ukumisa?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Uma uphoqa ukumisa uhlelo lokusebenza, kungenzeka ukuthi lungasebenzi."</string>
@@ -305,18 +305,18 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Sebenzisa isithombe-skrini"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Vumela uhlelo lokusebenza lokusiza ukuthi lufinyelele kusithombe sesikrini"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Ukuthayipha ngezwi"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Isevisi yokugcwalisa ngokuzenzakalela"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Isevisi yokugcwalisa ngokuzenzekela"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Lutho"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Ekhethiwe"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Isilekeleli sizokwazi ukufunda ulwazi mayelana nezinhlelo zokusebenza ezisetshenziswayo kusistimu yakho, ezifaka ulwazi olubonakala kusikrini sakho noma ezifinyeleleka ngaphakathi kwezinhlelo zokusebenza."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Qiniseka ukuthi wethemba lolu hlelo lokusebenza&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; isebenzisa okusesikrinini sakho ukunquma okungagcwaliswa ngokuzenzakalela."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Engeza isevisi"</string>
-    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Ivula izixhumanisi"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Ivula amalinki"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Izinhlelo zokusebenza ezifakiwe"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"Ungavuli izixhumanisi ezisekelwayo"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Vula i-<xliff:g id="DOMAIN">%s</xliff:g>"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"Vula i-<xliff:g id="DOMAIN">%s</xliff:g> namanye ama-URL"</string>
-    <string name="app_launch_title" msgid="3442601467010363057">"Vula ngokuzenzakalelayo"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Vula ngokuzenzekelayo"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Okunye okuzenzakalelayo"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Akukho okuzenzakalelayo okusethiwe."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Ukhethe ukufaka lolu hlelo lokusebenza ngokuzenzekelayo kwezinye izinhlelo zokwenziwayo."</string>
@@ -326,10 +326,10 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Buza njalo"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Ungavuli kulolu hlelo lokusebenza"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Izixhumanisi ezisekelwayo"</string>
-    <string name="special_access" msgid="5730278220917123811">"Ukungena kohlelo okukhethekile"</string>
+    <string name="special_access" msgid="5730278220917123811">"Ukufinyelela kwi-app okukhethekile"</string>
     <string name="show_system" msgid="4401355756969485287">"Bonisa isistimu"</string>
     <string name="hide_system" msgid="8845453295584638040">"Fihla isistimu"</string>
-    <string name="modify_system_settings_title" msgid="4596320571562433972">"Shintsha izilungiselelo zesistimu"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Shintsha amasethingi esistimu"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Le mvume ivumela uhlelo lokusebenza ukushintsha izilungiselelo zesistimu."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Ukufinyelela isaziso"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vumela ukufinyelela kwesaziso kwe-<xliff:g id="SERVICE">%1$s</xliff:g>?"</string>

@@ -334,7 +334,7 @@
     <string name="notification_access_title" msgid="1467340098885813473">"通知へのアクセス"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"通知へのアクセス を <xliff:g id="SERVICE">%1$s</xliff:g> に許可しますか？"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> がすべての通知を読み取れるようになります。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内の操作ボタンをタップしたりすることも許可されます。\n\nこれにより、アプリがサイレント モード設定を切り替えたり、関連する設定を変更したりすることも可能になります。"</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> の通知アクセスを無効にすると、サイレント モードのアクセスも無効になります。"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> の通知アクセスを無効にすると、サイレント モードの利用許可も無効になります。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"無効にする"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"キャンセル"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"プレミアム SMS へのアクセス"</string>
@@ -574,7 +574,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"パスワードの入力"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"セキュリティ強化のために PIN を設定"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN の再入力"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN は 4 桁以上にしてください"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN は 4 桁以上で作成してください"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN が無効です。4 桁以上にしてください。"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN が一致しません"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN の保存中にエラーが発生しました"</string>
@@ -588,7 +588,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"確認"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"4 文字以上で入力してください"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"<xliff:g id="COUNT">%d</xliff:g> 文字以上にしてください"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN は <xliff:g id="COUNT">%d</xliff:g> 桁以上必要です"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN は <xliff:g id="COUNT">%d</xliff:g> 桁以上で作成してください"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> 文字未満にしてください"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> 桁未満にしてください"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"使用できるのは 0～9 の数字のみです。"</string>

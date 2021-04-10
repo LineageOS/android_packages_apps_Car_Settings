@@ -304,7 +304,7 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Дозволи апликацијата за помош да пристапи до содржините на екранот како текст"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Користи ја сликата од екранот"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Дозволи апликацијата за помош да пристапи до слика од екранот"</string>
-    <string name="voice_input_settings_title" msgid="3238707827815647526">"Гласовен запис"</string>
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Гласовно внесување"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Услуга за автоматско пополнување"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Нема"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Избрана"</string>
@@ -330,7 +330,7 @@
     <string name="show_system" msgid="4401355756969485287">"Прикажи го системот"</string>
     <string name="hide_system" msgid="8845453295584638040">"Сокриј го системот"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Менување системски поставки"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Оваа дозвола овозможува апликацијата да менува поставки на системот."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Оваа дозвола ѝ овозможува на апликацијата да менува системски поставки."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Пристап до известувања"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Дозволи пристап до известувања за <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ќе може да ги чита сите известувања, вклучувајќи лични информации, како што се имињата на контактите и текстот од пораките што ги добивате. Ќе може и да отфрла известувања или да активира копчиња за дејство што ги содржат.\n\nИсто така, ќе ѝ овозможи на апликацијата да го вклучува и исклучува „Не вознемирувај“ и да ги менува поврзаните поставки."</string>
@@ -627,7 +627,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заклучување на екранот"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пред <xliff:g id="NUM_DAYS">%3$s</xliff:g> дена"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Избриши акредитиви"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"Отстрани ги сите акредитиви"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Отстрани ги сите сертификати"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Дали да се отстранат сите содржини?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Меморијата на акредитиви е избришана."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Меморијата на акредитиви не може да се избрише."</string>

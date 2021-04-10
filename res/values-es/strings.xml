@@ -315,7 +315,7 @@
     <string name="domain_url_section_title" msgid="9070403140947787214">"Aplicaciones instaladas"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"No abrir enlaces compatibles"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Abrir <xliff:g id="DOMAIN">%s</xliff:g>"</string>
-    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Abrir <xliff:g id="DOMAIN">%s</xliff:g> y otras URL"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Abrir <xliff:g id="DOMAIN">%s</xliff:g> y otras URLs"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"Abrir de forma predeterminada"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Otros valores predeterminados"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Valores predeterminados no definidos."</string>
@@ -326,11 +326,11 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Preguntar siempre"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"No abrir en esta aplicación"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Enlaces compatibles"</string>
-    <string name="special_access" msgid="5730278220917123811">"Acceso especial de aplicaciones"</string>
+    <string name="special_access" msgid="5730278220917123811">"Aplicaciones con accesos especiales"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar ajustes del sistema"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Cuando se concede este permiso, la aplicación puede modificar los ajustes del sistema."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Este permiso permite que una aplicación modifique los ajustes del sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a las notificaciones"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"¿Permitir que <xliff:g id="SERVICE">%1$s</xliff:g> acceda a las notificaciones?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> podrá leer todas las notificaciones, incluidas aquellas relacionadas con información personal, como nombres de contactos y texto de mensajes que hayas recibido. También podrá cerrar las notificaciones o utilizar los botones de acción que incluyan.\n\nAdemás, concede a la aplicación la capacidad de activar o desactivar el modo No molestar y de cambiar las opciones de configuración relacionadas."</string>
@@ -522,7 +522,7 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"¿Quitar cuenta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Si quitas esta cuenta, se eliminarán todos sus mensajes, contactos y otros datos del dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"No se ha podido eliminar la cuenta."</string>
-    <string name="account_sync_title" msgid="6541844336300236915">"Sincronización"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Sincronización de cuenta"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Elementos con la sincronización activada: <xliff:g id="ID_1">%1$d</xliff:g> de <xliff:g id="ID_2">%2$d</xliff:g>"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Sincronización activada para todos los elementos"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sincronización desactivada para todos los elementos"</string>
@@ -561,7 +561,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Tu nuevo patrón de desbloqueo"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dibuja un patrón de desbloqueo"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Levanta el dedo cuando termines"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patrón guardado"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patrón registrado"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuja el patrón de nuevo para confirmarlo"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Une mín. 4 puntos. Vuelve a intentarlo."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Patrón incorrecto"</string>

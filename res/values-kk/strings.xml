@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Тағы"</string>
     <string name="display_settings" msgid="5325515247739279185">"Дисплей"</string>
     <string name="brightness" msgid="2919605130898772866">"Жарықтық деңгейі"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Бейімделгіш жарықтық"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Жарықтықты бейімдеу"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Жарықтық деңгейін жарықтандыруға сәйкес оңтайландыру"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Түнгі жарық режимі қосулы"</string>
     <string name="keywords_display" msgid="3978416985146943922">"экран, сенсорлық экран"</string>
@@ -344,11 +344,11 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi желісін басқару"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi желісін басқару функциясы қолданбаға Wi-Fi желісін қосуға немесе өшіруге, Wi-Fi желілерін іздеуге және оларға жалғануға, желілерді енгізуге не өшіруге немесе тек жергілікті хотспотты іске қосуға рұқсат етеді."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Тағы"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"Орналасу"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Локация"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Соңғы орынды анықтау сұраулары"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Орналасқан жерді анықтау сұраулары жақында жасалмаған"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Қолданба деңгейіндегі рұқсаттар"</string>
-    <string name="location_settings_services_title" msgid="1186133632690970468">"Орынды анықтау қызметтері"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Локация қызметтері"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Жүйе"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Жүйенің жаңа нұсқалары"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android нұсқасы"</string>
@@ -382,7 +382,7 @@
     <string name="status_serial_number" msgid="9158889113131907656">"Сериялық нөмірі"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"Жабдық нұсқасы"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
-    <string name="settings_license_activity_title" msgid="8499293744313077709">"Үшінші тараптық лицензиялар"</string>
+    <string name="settings_license_activity_title" msgid="8499293744313077709">"Үшінші тарап лицензиялары"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Лицензияларды жүктеу барысында ақау орын алды."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Жүктелуде…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
@@ -587,7 +587,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Бас тарту"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Растау"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Ең кемі 4 таңбадан тұруы керек"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Кемінде <xliff:g id="COUNT">%d</xliff:g> таңба болуы керек"</string>
+    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Кемінде <xliff:g id="COUNT">%d</xliff:g> таңба болуы керек."</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN коды кемінде <xliff:g id="COUNT">%d</xliff:g> таңбадан тұруы керек"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Ең көбі <xliff:g id="NUMBER">%d</xliff:g> таңба болуы керек"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Ең көбі <xliff:g id="NUMBER">%d</xliff:g> сан болуы керек"</string>
