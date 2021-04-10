@@ -22,7 +22,7 @@
     android:key="@string/psk_assistant_and_voice_settings">
     <com.android.car.ui.preference.CarUiTwoActionIconPreference
         android:key="@string/pk_default_assist"
-        android:title="@string/assist_app_settings"
+        android:title="@string/assistant_and_voice_assistant_app_title"
         settings:controller="com.android.car.settings.applications.defaultapps.DefaultAssistantPickerEntryPreferenceController"
         settings:iconSpaceReserved="true"
         settings:secondaryActionIcon="@drawable/ic_settings_gear"/>

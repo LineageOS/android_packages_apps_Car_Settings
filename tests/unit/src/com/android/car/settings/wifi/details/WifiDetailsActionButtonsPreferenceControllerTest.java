@@ -29,7 +29,6 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 
 import androidx.lifecycle.LifecycleOwner;
-import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -37,7 +36,7 @@ import com.android.car.settings.common.ActionButtonsPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.ResourceTestUtils;
-import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.wifitrackerlib.WifiEntry;
 
 import org.junit.Before;
@@ -51,7 +50,6 @@ public class WifiDetailsActionButtonsPreferenceControllerTest {
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private LifecycleOwner mLifecycleOwner;
-    private Lifecycle mLifecycle;
     private ActionButtonsPreference mActionButtonsPreference;
     private WifiDetailsActionButtonsPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
@@ -72,10 +70,8 @@ public class WifiDetailsActionButtonsPreferenceControllerTest {
     private WifiInfo mMockWifiInfo;
 
     @Before
-    @UiThreadTest
     public void setUp() {
-        mLifecycleOwner = () -> mLifecycle;
-        mLifecycle = new Lifecycle(mLifecycleOwner);
+        mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,

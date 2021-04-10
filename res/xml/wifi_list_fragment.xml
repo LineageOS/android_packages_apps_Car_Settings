@@ -20,6 +20,7 @@
                   android:key="@string/psk_wifi_list">
     <com.android.car.settings.common.ColoredSwitchPreference
         android:key="@string/pk_wifi_state_switch"
+        android:title="@string/wifi_settings"
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.wifi.WifiStateSwitchPreferenceController"
         settings:searchable="false"/>
@@ -37,10 +38,4 @@
         android:key="@string/pk_add_wifi"
         android:title="@string/wifi_setup_add_network"
         settings:controller="com.android.car.settings.wifi.AddWifiPreferenceController"/>
-    <Preference
-        android:fragment="com.android.car.settings.wifi.preferences.WifiPreferencesFragment"
-        android:key="@string/pk_wifi_preferences"
-        android:title="@string/wifi_preferences_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
-        settings:searchable="false"/>
 </PreferenceScreen>

@@ -88,8 +88,6 @@ public class WifiStateSwitchPreferenceController extends
     }
 
     private void updateSwitchPreference(ColoredSwitchPreference preference, boolean enabled) {
-        preference.setTitle(enabled ? R.string.car_ui_preference_switch_on
-                : R.string.car_ui_preference_switch_off);
         preference.setChecked(enabled);
     }
 }
