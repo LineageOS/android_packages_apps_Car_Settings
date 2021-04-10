@@ -31,14 +31,13 @@ import android.net.wifi.WifiManager;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
-import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
-import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -51,7 +50,6 @@ import java.util.concurrent.Executor;
 @RunWith(AndroidJUnit4.class)
 public class WifiTetherStateSwitchPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
-    private Lifecycle mLifecycle;
     private Context mContext = ApplicationProvider.getApplicationContext();
     private SwitchPreference mSwitchPreference;
     private WifiTetherStateSwitchPreferenceController mPreferenceController;
@@ -67,10 +65,8 @@ public class WifiTetherStateSwitchPreferenceControllerTest {
     private androidx.lifecycle.Lifecycle mMockLifecycle;
 
     @Before
-    @UiThreadTest
     public void setUp() {
-        mLifecycleOwner = () -> mLifecycle;
-        mLifecycle = new Lifecycle(mLifecycleOwner);
+        mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
