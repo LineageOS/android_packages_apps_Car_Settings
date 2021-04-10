@@ -37,9 +37,9 @@ import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.car.ui.preference.UxRestrictablePreference;
-import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -64,7 +64,6 @@ public class PreferenceControllerTest {
                     CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
     private LifecycleOwner mLifecycleOwner;
-    private Lifecycle mLifecycle;
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private FakePreferenceController mPreferenceController;
@@ -75,10 +74,8 @@ public class PreferenceControllerTest {
     private CarUiPreference mPreference;
 
     @Before
-    @UiThreadTest
     public void setUp() {
-        mLifecycleOwner = () -> mLifecycle;
-        mLifecycle = new Lifecycle(mLifecycleOwner);
+        mLifecycleOwner = new TestLifecycleOwner();
 
         MockitoAnnotations.initMocks(this);
 

@@ -29,15 +29,14 @@ import android.os.UserManager;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
 import androidx.test.InstrumentationRegistry;
-import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
-import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.After;
 import org.junit.Before;
@@ -49,7 +48,6 @@ import org.mockito.MockitoAnnotations;
 @RunWith(AndroidJUnit4.class)
 public class BluetoothStateSwitchPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
-    private Lifecycle mLifecycle;
     private Context mContext = ApplicationProvider.getApplicationContext();
     private SwitchPreference mSwitchPreference;
     private BluetoothStateSwitchPreferenceController mPreferenceController;
@@ -61,10 +59,8 @@ public class BluetoothStateSwitchPreferenceControllerTest {
     private FragmentController mFragmentController;
 
     @Before
-    @UiThreadTest
     public void setUp() {
-        mLifecycleOwner = () -> mLifecycle;
-        mLifecycle = new Lifecycle(mLifecycleOwner);
+        mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
         mLocalBluetoothManager = LocalBluetoothManager.getInstance(mContext, /* onInitCallback= */

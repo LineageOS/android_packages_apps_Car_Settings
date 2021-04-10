@@ -76,7 +76,6 @@ public class WifiEntryListPreferenceController extends
                 }
             };
 
-    private WifiEntry mConnectedWifiEntry;
     private List<WifiEntry> mWifiEntries = new ArrayList<>();
 
     public WifiEntryListPreferenceController(@NonNull Context context, String preferenceKey,
@@ -94,23 +93,22 @@ public class WifiEntryListPreferenceController extends
         if (getCarWifiManager() == null) {
             return;
         }
-        mConnectedWifiEntry = getCarWifiManager().getConnectedWifiEntry();
-        mWifiEntries = CarUxRestrictionsHelper.isNoSetup(getUxRestrictions())
-                ? getCarWifiManager().getSavedWifiEntries()
-                : getCarWifiManager().getAllWifiEntries();
+        mWifiEntries = fetchWifiEntries();
 
         LOG.d("showing wifiEntries: " + mWifiEntries.size());
 
-        preferenceGroup.setVisible(mConnectedWifiEntry != null || !mWifiEntries.isEmpty());
+        preferenceGroup.setVisible(!mWifiEntries.isEmpty());
         preferenceGroup.removeAll();
 
-        if (mConnectedWifiEntry != null) {
-            preferenceGroup.addPreference(
-                    createWifiEntryPreference(mConnectedWifiEntry, /* connected= */  true));
-        }
+        WifiEntry connectedWifiEntry = getCarWifiManager().getConnectedWifiEntry();
         for (WifiEntry wifiEntry : mWifiEntries) {
-            preferenceGroup.addPreference(
-                    createWifiEntryPreference(wifiEntry, /* connected= */ false));
+            if (wifiEntry.equals(connectedWifiEntry)) {
+                preferenceGroup.addPreference(
+                        createWifiEntryPreference(wifiEntry, /* connected= */  true));
+            } else {
+                preferenceGroup.addPreference(
+                        createWifiEntryPreference(wifiEntry, /* connected= */ false));
+            }
         }
     }
 
@@ -130,6 +128,23 @@ public class WifiEntryListPreferenceController extends
         if (state == WifiManager.WIFI_STATE_ENABLED) {
             refreshUi();
         }
+    }
+
+    /**
+     * Get all {@link WifiEntry} that should be displayed as a list.
+     * @return List of wifi entries that should be displayed
+     */
+    protected List<WifiEntry> fetchWifiEntries() {
+        List<WifiEntry> wifiEntries = CarUxRestrictionsHelper.isNoSetup(getUxRestrictions())
+                ? getCarWifiManager().getSavedWifiEntries()
+                : getCarWifiManager().getAllWifiEntries();
+
+        WifiEntry connectedWifiEntry = getCarWifiManager().getConnectedWifiEntry();
+        // Insert current connected network as first item, if available
+        if (connectedWifiEntry != null) {
+            wifiEntries.add(0, connectedWifiEntry);
+        }
+        return wifiEntries;
     }
 
     @VisibleForTesting
