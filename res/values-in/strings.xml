@@ -70,7 +70,7 @@
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Lihat paket"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Penggunaan kuota aplikasi"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"terbatas"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tanggal penyetelan ulang siklus penggunaan"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tanggal peresetan siklus penggunaan"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Tanggal setiap bulannya:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Setel"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Peringatan &amp; batas data"</string>
@@ -90,9 +90,9 @@
     <string name="loading_wifi_list" msgid="8584901433195876465">"Memuat daftar Wi‑Fi"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi dinonaktifkan"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Gagal melupakan jaringan"</string>
-    <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Gagal menyambung ke jaringan"</string>
+    <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Gagal menghubungkan ke jaringan"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Tambahkan jaringan"</string>
-    <string name="wifi_setup_connect" msgid="3512399573397979101">"Sambungkan"</string>
+    <string name="wifi_setup_connect" msgid="3512399573397979101">"Hubungkan"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Sandi"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Tampilkan sandi"</string>
     <string name="wifi_no_network_name" msgid="6819604337231313594">"Harap masukkan nama jaringan"</string>
@@ -152,17 +152,24 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pilih minimal satu band untuk hotspot Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot &amp; tethering"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Nonaktifkan hotspot secara otomatis"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Otomatis nonaktifkan hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspot Wi-Fi akan dinonaktifkan jika tidak ada perangkat yang terhubung"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ingin mengaktifkan Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ingin menonaktifkan Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Perangkat yang digunakan dengan <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Perangkat tidak ditemukan. Pastikan perangkat dihidupkan dan dapat terhubung ke jaringan."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Coba lagi"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Ada masalah. Aplikasi telah membatalkan permintaan untuk memilih perangkat."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Koneksi berhasil"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Tampilkan semua"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Menelusuri"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Perangkat tanpa nama"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Perangkat yang tersambung"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Sambungkan perangkat baru"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth akan diaktifkan untuk menyambungkan"</string>
-    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Putuskan sambungan perangkat?"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Hubungkan perangkat baru"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth akan diaktifkan untuk menghubungkan"</string>
+    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Putuskan hubungan perangkat?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Kendaraan Anda akan diputuskan sambungannya dari <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Alamat Bluetooth kendaraan: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Alamat Bluetooth perangkat: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -188,14 +195,14 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Kode penyambungan Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN berisi huruf atau simbol"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Ketik kode penghubung, lalu tekan Kembali atau Enter"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Sambungkan dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Hubungkan dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Izinkan <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mengakses kontak dan histori panggilan"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Anda mungkin juga perlu mengetikkan PIN ini ke perangkat lain."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Anda mungkin juga perlu mengetikkan kode sandi ini ke perangkat lain."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Harus berisi 16 digit"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Biasanya 0000 atau 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Permintaan penyambungan"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Ketuk untuk menyambungkan dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Ketuk agar terhubung dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Pilih perangkat Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Bahasa"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Bahasa &amp; masukan"</string>
@@ -206,9 +213,9 @@
     <string name="text_to_speech_settings" msgid="811985746199507343">"Keluaran text-to-speech"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Mesin yang dipilih"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Mesin saat ini"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"Laju Bicara"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Kecepatan Ucapan"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Tinggi nada"</string>
-    <string name="tts_reset" msgid="6289481549801844709">"Setel ulang"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"Reset"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Suara"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume dering"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volume navigasi"</string>
@@ -276,11 +283,11 @@
     <string name="applications_settings" msgid="794261395191035632">"Info aplikasi"</string>
     <string name="force_stop" msgid="2153183697014720520">"Paksa berhenti"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Paksa berhenti?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Jika aplikasi dihentikan secara paksa, mungkin fungsinya akan terganggu."</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Jika aplikasi dihentikan paksa, fungsinya mungkin akan terganggu."</string>
     <string name="disable_text" msgid="4358165448648990820">"Nonaktifkan"</string>
     <string name="enable_text" msgid="1794971777861881238">"Aktifkan"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Uninstal"</string>
-    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Jika Anda menonaktifkan aplikasi ini, Android dan aplikasi lain mungkin tidak berfungsi lagi sesuai harapan."</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Jika aplikasi ini dinonaktifkan, Android dan aplikasi lain mungkin tidak berfungsi normal."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Nonaktifkan aplikasi"</string>
     <string name="not_installed" msgid="4218816013370552746">"Tidak diinstal untuk pengguna ini"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Izin"</string>
@@ -305,7 +312,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Gunakan screenshot"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Izinkan aplikasi bantuan mengakses gambar layar"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Masukan suara"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Layanan IsiOtomatis"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Layanan isi otomatis"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Tidak Ada"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Dipilih"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asisten dapat membaca informasi tentang aplikasi yang sedang digunakan di sistem, termasuk informasi yang terlihat di layar atau dapat diakses dalam aplikasi."</string>
@@ -392,9 +399,9 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Sekarang Anda adalah seorang developer!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Tidak perlu, Anda sudah menjadi developer."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsi developer"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Opsi setel ulang"</string>
-    <string name="reset_options_summary" msgid="5508201367420359293">"Menyetel ulang jaringan, aplikasi, atau perangkat"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Setel ulang jaringan"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Opsi reset"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"Mereset jaringan, aplikasi, atau perangkat"</string>
+    <string name="reset_network_title" msgid="1284233059990797263">"Reset jaringan"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Tindakan ini akan menyetel ulang semua setelan jaringan, termasuk:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Kuota"</li></string>
@@ -403,21 +410,21 @@
     <string name="reset_esim_desc" msgid="1437276625485586740">"Tindakan ini tidak akan membatalkan paket layanan Anda."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Tidak dapat menyetel ulang eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Pilih jaringan"</string>
-    <string name="reset_network_button_text" msgid="8374174455632765033">"Setel ulang setelan"</string>
-    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Setel ulang?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Setel ulang semua setelan jaringan? Tindakan ini tidak dapat diurungkan!"</string>
-    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Setel ulang setelan"</string>
-    <string name="reset_network_complete_toast" msgid="3804108209431416865">"Setelan jaringan telah disetel ulang"</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"Setel ulang preferensi aplikasi"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Reset setelan"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Reset?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Reset semua setelan jaringan? Tindakan ini tidak dapat diurungkan!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Reset setelan"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"Setelan jaringan telah direset"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Reset preferensi aplikasi"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Tindakan ini akan menyetel ulang semua preferensi untuk:\n\n"<li>"Aplikasi yang dinonaktifkan"</li>\n<li>"Notifikasi aplikasi yang dinonaktifkan"</li>\n<li>"Aplikasi default untuk tindakan"</li>\n<li>"Batasan data latar belakang untuk aplikasi"</li>\n<li>"Batasan izin apa pun"</li>\n\n"Data aplikasi Anda tidak akan hilang."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Setel ulang aplikasi"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferensi aplikasi telah disetel ulang"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Hapus semua (reset ke setelan pabrik)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Tindakan ini akan menghapus semua data dari head unit kendaraan, termasuk:\n\n"<li>"Akun Google Anda"</li>\n<li>"Data sistem dan aplikasi serta setelan"</li>\n<li>"Aplikasi yang diunduh"</li></string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reset aplikasi"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferensi aplikasi telah direset"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Hapus semua (kembali ke setelan pabrik)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Tindakan ini akan menghapus semua data dari head unit kendaraan, termasuk:\n\n"<li>"Akun Google Anda"</li>\n<li>"Data dan setelan sistem dan aplikasi"</li>\n<li>"Aplikasi yang didownload"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Saat ini Anda telah login ke akun berikut:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Ada pengguna lain yang aktif di kendaraan ini."</string>
-    <string name="master_clear_button_text" msgid="8010754220392741160">"Setel ulang kendaraan"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Setel ulang?"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Reset kendaraan"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Reset?"</string>
     <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Hapus semua informasi pribadi dan aplikasi yang didownload? Tindakan ini tidak dapat diurungkan!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Hapus semua"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Menghapus"</string>
@@ -444,7 +451,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Sedang login admin"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Semua izin admin"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Jadikan Admin"</string>
-    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Pengguna dapat menghapus pengguna, termasuk Admin lain, dan me-reset sistem ke setelan pabrik."</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Pengguna dapat menghapus pengguna lain, termasuk Admin lain, dan mengembalikan sistem ke setelan pabrik."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Tindakan ini tidak dapat dibatalkan."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Ya, jadikan admin"</string>
     <string name="create_user_permission_title" msgid="7781550880565935298">"Membuat pengguna baru"</string>
@@ -455,7 +462,7 @@
     <string name="user_add_user_menu" msgid="5319151436895941496">"Tambahkan pengguna"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Pengguna baru"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Tambahkan pengguna baru?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Saat Anda menambahkan pengguna baru, orang tersebut perlu menyiapkan ruang mereka sendiri."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Jika ditambahkan, pengguna baru harus menyiapkan ruangnya sendiri."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Setiap pengguna dapat mengupdate aplikasi untuk semua pengguna lain."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Batas pengguna tercapai"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
@@ -509,7 +516,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Tidak ada akun yang ditambahkan"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Akun untuk <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Otomatis sinkronkan data"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Izinkan aplikasi memuat ulang data secara otomatis"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Izinkan aplikasi otomatis memuat ulang data"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Aktifkan sinkronisasi data otomatis?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Perubahan apa pun yang dilakukan pada akun Anda di web akan disalin ke perangkat secara otomatis.\n\nBeberapa akun juga dapat otomatis menyalin setiap perubahan yang dilakukan di ponsel ke web. Akun Google mengikuti cara kerja tersebut."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Nonaktifkan sinkronisasi data otomatis?"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pola salah"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cara menggambar pola pembuka kunci"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Error saat menyimpan pola"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Terlalu banyak kesalahan pola. Coba kembali dalam <xliff:g id="NUMBER">%d</xliff:g> detik."</string>
     <string name="okay" msgid="4589873324439764349">"Oke"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Hapus kunci layar?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Tindakan ini akan mengizinkan siapa pun mengakses akun Anda"</string>
@@ -626,26 +634,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Urutan digit naik, turun, atau berulang tidak diizinkan."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsi kunci layar"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> hari yang lalu"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Tambahkan perangkat tepercaya"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth akan aktif guna menambah perangkat dipercaya"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Perangkat tepercaya"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> perangkat</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> perangkat</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> akan membuka kunci mobil Anda saat terhubung. Jika seseorang mengambil <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> Anda, orang tersebut mungkin dapat mengakses perangkat ini"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Konfirmasi"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Hapus perangkat tepercaya"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Selesai"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Gunakan aplikasi pendamping untuk menyiapkan perangkat dipercaya. Setelah disiapkan, profil pengguna akan dibuka kuncinya secara otomatis saat ponsel terdeteksi di dekat kendaraan."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download aplikasi pendamping di ponsel"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pilih <xliff:g id="CAR_NAME">%1$s</xliff:g> di ponsel untuk menghubungkan perangkat"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Perangkat dipercaya di dekat mobil Anda akan membuka kunci profil pengguna setelah mobil distarter, meskipun orang lain memegang perangkat."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Konfirmasi bahwa kode penghubung cocok"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Ponsel telah berhasil didaftarkan"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Pendaftaran <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gagal"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Menambahkan perangkat dipercaya mewajibkan Anda menetapkan metode autentikasi setelahnya. Jika Anda tidak membawa perangkat dipercaya, autentikasi akan diperlukan untuk mengakses profil Anda."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Perangkat tidak terhubung."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hapus kredensial"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Hapus semua sertifikat"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Hapus semua konten?"</string>
@@ -663,9 +651,10 @@
     <string name="enter_key" msgid="2121394305541579468">"Tombol enter"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Keluar dari Demo"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Keluar dari mode demo"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Tindakan ini akan menghapus akun demo dan mereset sistem ke setelan pabrik. Semua data pengguna akan hilang."</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Tindakan ini akan menghapus akun demo dan mengembalikan sistem ke setelan pabrik. Semua data pengguna akan hilang."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Keluar dari Demo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"TOLAK"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Fitur tidak tersedia saat mengemudi"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Tidak dapat menambahkan pengguna saat mengemudi"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Telusuri"</string>
 </resources>

@@ -87,8 +87,8 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Подесите ограничење потрошње података"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Подеси"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi се укључује..."</string>
-    <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi се искључује..."</string>
+    <string name="wifi_starting" msgid="473253087503153167">"WiFi се укључује..."</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"WiFi се искључује..."</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Учитава се Wi‑Fi листа"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi је онемогућен"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Брисање мреже није успело"</string>
@@ -131,7 +131,7 @@
     <string name="wifi_wakeup" msgid="7451825226044542000">"Аутоматски укључи Wi‑Fi"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi ће се поново укључити у близини сачуваних мрежа високог квалитета, као што је кућна мрежа"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Није доступно јер је локација искључена. Укључите "<annotation id="link">"локацију"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Желите ли да укључите Wi-Fi скенирање?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Желите ли да укључите WiFi скенирање?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Укључи"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi скенирање је укључено"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Аутоматски пређи на мобилне податке"</string>
@@ -149,16 +149,23 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Аутоматски"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Опсег од 2,4 GHz"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Опсег од 5,0 GHz"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Предност се даје опсегу од 5,0 GHz"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Предност има опсег од 5,0 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Одаберите бар један опсег за Wi‑Fi хотспот:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот и привезивање"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Аутоматски искључи хотспот"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi хотспот ће се искључити ако ниједан уређај није повезан"</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> жели да укључи Wi-Fi"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> жели да искључи Wi-Fi"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> жели да укључи WiFi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> жели да искључи WiFi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Грешка"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Уређај који ће се користити за <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Није пронађен ниједан уређај Проверите да ли је уређај укључен и доступан за повезивање."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Пробај поново"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Дошло је до неког проблема. Апликација је отказала захтев за избор уређаја."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Повезивање је успело"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Прикажи све"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Претражује се"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Неименовани уређај"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Упарени уређаји"</string>
@@ -190,7 +197,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Кôд за упаривање са Bluetooth уређајем"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN садржи слова или симболе"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Унесите кôд за упаривање, па притисните Return или Enter"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Упарити са уређајем <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Желите да упарите са <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Дозволите уређају <xliff:g id="DEVICE_NAME">%1$s</xliff:g> да приступа контактима и историји позива"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Треба да унесете овај PIN и на другом уређају."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Треба да унесете овај приступни кôд и на другом уређају."</string>
@@ -344,8 +351,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Премијум SMS-ови могу да коштају и повећаће рачуне код мобилног оператера. Ако омогућите дозволу за неку апликацију, моћи ћете да шаљете премијум SMS-ове помоћу те апликације."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Приступ коришћењу"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Приступ коришћењу омогућава апликацији да прати које друге апликације користите и колико често, као и да види мобилног оператера, језичка подешавања и друге податке."</string>
-    <string name="wifi_control_title" msgid="5660436566907731929">"Контрола Wi-Fi мреже"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Контрола Wi-Fi мреже омогућава апликацији да укључи или искључи Wi-Fi, тражи и повезује се на Wi-Fi мреже, додаје или уклања мреже или покреће само локални хотспот."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Контрола WiFi мреже"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Контрола WiFi мреже омогућава апликацији да укључи или искључи WiFi, тражи и повезује се на WiFi мреже, додаје или уклања мреже или покреће само локални хотспот."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Још"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
@@ -400,7 +407,7 @@
     <string name="reset_options_summary" msgid="5508201367420359293">"Ресетовање мреже, апликација или уређаја"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Ресетуј мрежу"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Овим ресетујете сва подешавања мреже, укључујући:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi-Fi"</li></string>
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"WiFi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобилни подаци"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Избриши све eSIM-ове возила"</string>
@@ -413,10 +420,10 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ресетуј подешавања"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Подешавања мреже су ресетована"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Ресетуј подешавања апликација"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Овим ће се ресетовати сва подешавања за:\n\n"<li>"Онемогућене апликације"</li>\n<li>"Обавештења о онемогућеним апликацијама"</li>\n<li>"Подразумеване апликације за радње"</li>\n<li>"Ограничења за позадинске податке за апликације"</li>\n<li>"Сва ограничења за дозволе"</li>\n\n"Нећете изгубити никакве податке апликације."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Овим ћете ресетовати сва подешавања за:\n\n"<li>"Онемогућене апликације"</li>\n<li>"Обавештења о онемогућеним апликацијама"</li>\n<li>"Подразумеване апликације за радње"</li>\n<li>"Ограничења за позадинске податке за апликације"</li>\n<li>"Сва ограничења за дозволе"</li>\n\n"Нећете изгубити никакве податке апликације."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетуј апликације"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Подешавања апликација су ресетована"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке (фабричка подешавања)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Овим бришете све податке из интерне меморије возила, укључујући:\n\n"<li>"Google налог"</li>\n<li>"податке и подешавања система и апликација"</li>\n<li>"преузете апликације"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Тренутно сте пријављени на следеће налоге:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"У овом возилу су присутни и други корисници."</string>
@@ -525,7 +532,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Ограничени профили не могу да додају налоге"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Уклони налог"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Желите да уклоните налог?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Ако уклоните овај налог, избрисаћете све поруке, контакте и друге податке са уређаја!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Ако уклоните овај налог, избрисаћете све поруке, контакте и друге податке са уређаја."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Уклањање налога није успело."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Синхронизација налога"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Синхронизација је укључена за одређене ставке (<xliff:g id="ID_1">%1$d</xliff:g> од <xliff:g id="ID_2">%2$d</xliff:g>)"</string>
@@ -567,14 +574,15 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Нацртајте шаблон за откључавање"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Подигните прст када завршите"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Шаблон је снимљен"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Поново нацртајте шаблон ради потврде"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Поново нацртајте шаблон да бисте потврдили"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Повежите бар 4 тачке. Пробајте поново."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Погрешан шаблон"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Како нацртати шаблон за откључавање"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Грешка при чувању шаблона"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Превише нетачних покушаја. Пробајте поново за <xliff:g id="NUMBER">%d</xliff:g> сек."</string>
     <string name="okay" msgid="4589873324439764349">"Потврди"</string>
-    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Желите ли да укл. зак. екрана?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Овим ћете дозволити свима приступ вашем налогу"</string>
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Уклонићете закључавање екрана?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Тада ће свако моћи да приступи вашем налогу"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Унесите PIN"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Унесите лозинку"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Подесите PIN из безбедносних разлога"</string>
@@ -593,7 +601,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Потврди"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мора да садржи најмање 4 знака"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Минималан број знакова је <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Минималан број цифара за PIN је <xliff:g id="COUNT">%d</xliff:g>"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN мора да садржи бар <xliff:g id="COUNT">%d</xliff:g> циф."</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Максималан број знакова је <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Максималан број цифара је <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Мора да садржи само цифре 0–9."</string>
@@ -637,27 +645,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Растући, опадајући или поновљени низ цифара није дозвољен."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опције закључавања екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пре <xliff:g id="NUM_DAYS">%3$s</xliff:g> дан(а)"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Додај поуздани уређај"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth се укључује ради додавања поузд. уређаја"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Поуздани уређаји"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> уређај</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> уређаја</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> уређаја</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ће откључати овај аутомобил када се повеже. Ако вам неко узме <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, можда ће моћи да приступа овом уређају"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Уклони поуздани уређај"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Поуздани уређај подесите помоћу пратеће апликације. Када га подесите, кориснички профил се аутоматски откључава када се открије да је телефон близу возила."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преузмите пратећу апликацију на телефону"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изаберите <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефону да бисте упарили уређаје"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Поуздани уређај у близини аутомобила откључава профил корисника после паљења, чак и када га неко други држи."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Потврдите да се кодови за упаривање подударају"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефон је регистрован"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрација уређаја <xliff:g id="DEVICE_NAME">%1$s</xliff:g> није успела"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"За додавање поузданог уређаја следеће што треба да урадите је да подесите метод потврде идентитета. Ако немате поуздани уређај са собом, потврда идентитета ће бити потребна да бисте приступили профилу."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Прекинута је веза са уређајем."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Обриши акредитиве"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Уклoните све сертификате"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Желите ли да уклоните сав садржај?"</string>
@@ -680,4 +667,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОДБАЦИ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функција није доступна током вожње"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Не можете да додајете кориснике током вожње"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Претражите"</string>
 </resources>

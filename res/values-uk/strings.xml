@@ -19,11 +19,11 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Налаштування"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Більше"</string>
-    <string name="display_settings" msgid="5325515247739279185">"Дисплей"</string>
+    <string name="display_settings" msgid="5325515247739279185">"Екран"</string>
     <string name="brightness" msgid="2919605130898772866">"Рівень яскравості"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптивна яскравість"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Оптимізація рівня яскравості з урахуванням умов освітлення"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Нічний режим увімкнено"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Нічний екран увімкнено"</string>
     <string name="keywords_display" msgid="3978416985146943922">"екран, сенсорний екран"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"затемнений екран, сенсорний екран, акумулятор"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"затемнений екран, сенсорний екран, акумулятор"</string>
@@ -116,7 +116,7 @@
     <item msgid="4897376984576812606">"Слабкий"</item>
     <item msgid="7683058295076342057">"Слабкий"</item>
     <item msgid="1639222824821660744">"Задовільний"</item>
-    <item msgid="1838705897358163300">"Добрий"</item>
+    <item msgid="1838705897358163300">"Хороший"</item>
     <item msgid="6067166649320533751">"Чудовий"</item>
   </string-array>
     <string name="link_speed" msgid="7868861844075624445">"%1$d Мбіт/с"</string>
@@ -151,7 +151,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Автоматично"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Діапазон частот 2,4 ГГц"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Діапазон частот 5,0 ГГц"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Бажано використовувати діапазон частот 5,0 ГГц"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Діапазон 5,0 ГГц (рекомендовано)"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Виберіть принаймні один діапазон частот для точки доступу Wi-Fi:"</string>
@@ -161,6 +161,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Додаток <xliff:g id="REQUESTER">%s</xliff:g> хоче ввімкнути Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Додаток <xliff:g id="REQUESTER">%s</xliff:g> хоче вимкнути Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Помилка"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Пристрій для використання з додатком <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Немає пристроїв. Переконайтеся, що пристрої ввімкнені й готові до з’єднання."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Повторити спробу"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Щось трапилося. Додаток скасував запит на вибір пристрою."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Підключено"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Показати всі"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Пошук"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Пристрій без назви"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Пристрої, з якими створено пару"</string>
@@ -275,8 +282,8 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Додатки та сповіщення"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показати всі додатки"</string>
     <string name="default_applications" msgid="1558183275638697087">"Додатки за умовчанням"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Дозволи додатка"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"Додатки, які мають доступ (<xliff:g id="APPS">%1$s</xliff:g>)"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Дозволи додатків"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Додатки з доступом таких категорій: <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Про додаток"</string>
     <string name="force_stop" msgid="2153183697014720520">"Примусово припинити роботу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Примусово припинити роботу?"</string>
@@ -350,7 +357,7 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Керування Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Додаток із дозволом на керування Wi-Fi може вмикати й вимикати Wi-Fi, шукати, додавати й вилучати мережі, підключатися до них, а також запускати локальну точку доступу."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Більше"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"Місце"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Геодані"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Останні запити на геодані"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Немає останніх запитів на геодані"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на рівні додатка"</string>
@@ -400,7 +407,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Тепер ви розробник."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Непотрібно, ви вже розробник."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Параметри розробника"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Скинути параметри"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Варіанти скидання"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Скидання налаштувань мережі, додатків або пристрою"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Скинути налаштування мережі"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Буде скинуто налаштування всіх мереж, зокрема:"</string>
@@ -417,7 +424,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Скинути налаштування"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Налаштування мереж скинуто"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Cкинути налаштування додатків"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Буде скинуто всі налаштування для:\n\n"<li>"вимкнених додатків;"</li>\n<li>"сповіщень вимкнених додатків;"</li>\n<li>"додатків для виконання дій за умовчанням;"</li>\n<li>"обмежень щодо використання даних додатками у фоновому режимі;"</li>\n<li>"усіх обмежень щодо дозволів."</li>\n\n"Ви не втратите жодних даних додатків."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Буде скинуто всі налаштування для:\n\n"<li>"вимкнених додатків"</li>\n<li>"вимкнених сповіщень із додатків"</li>\n<li>"додатків за умовчанням"</li>\n<li>"обмежень щодо передавання даних у фоновому режимі"</li>\n<li>"усіх обмежень щодо дозволів"</li>\n\n"Дані додатків видалено не буде."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Скинути налаштування додатків"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Налаштування додатків скинуто"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Стерти всі дані (скинути налаштування)"</string>
@@ -464,7 +471,7 @@
     <string name="user_new_user_name" msgid="7115771396412339662">"Новий користувач"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Додати нового користувача?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Після створення новий профіль потрібно налаштувати."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"Будь-який користувач може оновлювати додатки для решти людей."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"Будь-який користувач пристрою може оновлювати додатки для решти користувачів."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Ви досягли ліміту користувачів"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="one">Можна створити до <xliff:g id="COUNT">%d</xliff:g> користувача.</item>
@@ -577,6 +584,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Неправильний ключ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Як намалювати ключ розблокування"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Не вдалося зберегти ключ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Забагато невдалих спроб. Повторіть через <xliff:g id="NUMBER">%d</xliff:g> с."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Вимкнути блокування екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Будь-хто зможе ввійти у ваш обліковий запис"</string>
@@ -648,28 +656,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Заборонено однакові цифри або в порядку зростання чи спадання."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Способи блокування екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. тому"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Додати надійний пристрій"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth увімкнеться, щоб додати надійні пристрої"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Надійні пристрої"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> пристрій</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> пристрої</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> пристроїв</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> пристрою</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> буде розблоковувати автомобіль, якщо його підключити. <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> надає доступ до цього пристрою в будь-чиїх руках"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Підтвердити"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Вилучити надійний пристрій"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Налаштуйте надійний пристрій у супутньому додатку. Тоді ваш профіль користувача розблокуватиметься автоматично, коли телефон підключиться до транспортного засобу."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Завантажте супутній додаток на телефон"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. На телефоні виберіть <xliff:g id="CAR_NAME">%1$s</xliff:g>, щоб підключити пристрої"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Надійний пристрій розблоковує профіль користувача після запалювання, якщо він поруч, навіть в іншої людини."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Підтвердьте, що коди підключення збігаються"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефон зареєстровано"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Не вдалося зареєструвати пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Додавши надійний пристрій, потрібно налаштувати спосіб автентифікації. Якщо пристрій не з вами, автентифікація знадобиться для доступу в профіль."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Утрачено з’єднання з пристроєм."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Очистити облікові дані"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Вилучити всі сертифікати"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Вилучити весь вміст?"</string>
@@ -692,4 +678,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЗАКРИТИ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функція недоступна під час руху автомобіля"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Неможливо додати користувача під час руху автомобіля"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Пошук"</string>
 </resources>

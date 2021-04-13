@@ -127,7 +127,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"Porta e kalimit"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Preferencat e Wi‑Fi"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Aktivizo automatikisht Wi‑Fi"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi do të aktivizohet përsëri në afërsi të rrjeteve të ruajtura me cilësi të lartë, si p.sh. rrjetin e shtëpisë"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi do të aktivizohet përsëri në afërsi të rrjeteve të ruajtura me cilësi të lartë, si p.sh. rrjeti i shtëpisë"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Nuk ofrohet sepse vendndodhja është e çaktivizuar. Aktivizo "<annotation id="link">"vendndodhjen"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Të aktivizohet skanimi për Wi‑Fi?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktivizo"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> kërkon të aktivizojë Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> kërkon të çaktivizojë Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Gabim"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Pajisja që do të përdoret me <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nuk u gjet asnjë pajisje. Sigurohu që pajisjet të jenë të ndezura dhe të gatshme për t\'u lidhur."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Provo sërish"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Ndodhi diçka. Aplikacioni ka anuluar kërkesën për të zgjedhur një pajisje."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Lidhja ishte e suksesshme"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Shfaq të gjitha"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Po kërkon"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Pajisje e paemërtuar"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Pajisjet e çiftuara"</string>
@@ -191,14 +198,14 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Të çiftohet me <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Lejo që <xliff:g id="DEVICE_NAME">%1$s</xliff:g> të ketë qasje te kontaktet dhe historiku i telefonatave"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Mund të duhet gjithashtu ta shkruash këtë kod PIN në pajisjen tjetër."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Mund të duhet gjithashtu ta shkruash këtë kod në pajisjen tjetër."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Mund të duhet gjithashtu ta shkruash këtë çelës kalimi në pajisjen tjetër."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Duhet të ketë 16 shifra"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Zakonisht 0000 ose 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Kërkesa e çiftimit"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Trokit për ta çiftuar me <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Zgjidh pajisjen me Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Gjuhët"</string>
-    <string name="languages_and_input_settings" msgid="3672322610529408248">"Gjuhët dhe të dhënat"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Gjuhët dhe metodat e hyrjes"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugjeruar"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Të gjitha gjuhët"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastiera"</string>
@@ -307,7 +314,7 @@
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Të dhënat zanore"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Shërbimi i plotësimit automatik"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Asnjë"</string>
-    <string name="default_app_selected_app" msgid="5289396663745484773">"I zgjedhur"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"Zgjedhur"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asistenti do të jetë në gjendje të lexojë informacion rreth aplikacioneve në përdorim në sistemin tënd, duke përfshirë informacionin e dukshëm në ekran ose të qasshëm brenda aplikacioneve."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sigurohu që ke besim te ky aplikacion&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=\"Plotësimi automatik i Google\"&gt;%1$s&lt;/xliff:g&gt; përdor atë që ndodhet në ekranin tënd për të përcaktuar se çfarë mund të plotësohet automatikisht."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Shto shërbim"</string>
@@ -339,19 +346,19 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulo"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Qasja te mesazhet SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Mesazhet SMS premium mund të kushtojnë dhe do të rritin faturat e operatorit tënd celular. Nëse e aktivizon lejen për një aplikacion, do të mund të dërgosh mesazhe SMS premium me atë aplikacion."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Qasja në përdorim"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Qasja në përdorim lejon që një aplikacion të monitorojë se çfarë aplikacionesh të tjera po përdor ti dhe sa shpesh i përdor, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Qasja te përdorimi"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Qasja te përdorimi lejon që një aplikacion të monitorojë se çfarë aplikacionesh të tjera po përdor ti dhe sa shpesh i përdor, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kontrolli i lidhjes Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontrolli i lidhjes Wi-Fi lejon që një aplikacion të aktivizojë ose të çaktivizojë Wi-Fi, të skanojë dhe të lidhet me rrjetet Wi-Fi, të shtojë ose të heqë rrjetet ose të nisë një zonë qasjeje për internetin vetëm në nivel lokal."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Më shumë"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vendndodhja"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Kërkesat e vendndodhjeve të fundit"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nuk ka kërkesa të vendndodhjeve të fundit"</string>
-    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizimet në nivel aplikacioni"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lejet në nivel aplikacioni"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Shërbimet e vendndodhjes"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistemi"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Përditësimet e sistemit"</string>
-    <string name="firmware_version" msgid="8491753744549309333">"Versioni i Android-it"</string>
+    <string name="firmware_version" msgid="8491753744549309333">"Versioni i Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Niveli i korrigjimit të sigurisë së Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modeli dhe hardueri"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Modeli: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
@@ -386,8 +393,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ka një problem me ngarkimin e licencave."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Po ngarkohet…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa që të bëhesh një zhvillues</item>
-      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap që të bëhesh një zhvillues</item>
+      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa për t\'u bërë zhvillues.</item>
+      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap për t\'u bërë zhvillues.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Tani je një zhvillues!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Nuk ka nevojë, ti je tashmë një zhvillues."</string>
@@ -430,7 +437,7 @@
     <string name="zone_auto_summary" msgid="4345856882906981864">"Përdor brezin orar të ofruar nga rrjeti"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Formati 24 orë"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Përdor formatin 24 orë"</string>
-    <string name="date_time_set_time_title" msgid="5884883050656937853">"Koha"</string>
+    <string name="date_time_set_time_title" msgid="5884883050656937853">"Ora"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"Vendos orën"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Brezi orar"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Brezi orar"</string>
@@ -439,7 +446,7 @@
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"Rendit alfabetikisht"</string>
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Rendit sipas brezit orar"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Data"</string>
-    <string name="time_picker_title" msgid="7436045944320504639">"Koha"</string>
+    <string name="time_picker_title" msgid="7436045944320504639">"Ora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administratori"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Identifikuar si administrator"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Të gjitha autorizimet e administratorit"</string>
@@ -506,7 +513,7 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> nuk mund të nxirrej në mënyrë të sigurt"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Llogaritë"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Shto llogari"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Nuk u shtua asnjë llogari"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nuk është shtuar asnjë llogari"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Llogaritë për <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizo automatikisht të dhënat"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Lejo që aplikacionet t\'i rifreskojnë automatikisht të dhënat"</string>
@@ -528,7 +535,7 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sinkronizimi joaktiv për të gjithë artikujt"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Sinkronizimi është JOAKTIV"</string>
     <string name="sync_error" msgid="6698021343089247914">"Gabim gjatë sinkronizimit"</string>
-    <string name="last_synced" msgid="4745124489150101529">"Sinkronizuar për herë të fundit <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="4745124489150101529">"Sinkronizimi i fundit më <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"Po sinkronizon tani…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"Trokit për ta sinkronizuar tani<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Motiv i gabuar"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Si të vizatosh një motiv shkyçjeje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Gabim gjatë ruajtjes së motivit"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Shumë tentativa të pasakta. Provo sërish brenda <xliff:g id="NUMBER">%d</xliff:g> sekondash."</string>
     <string name="okay" msgid="4589873324439764349">"Në rregull"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Të hiqet kyçja e ekranit?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Kjo do të lejojë këdo që të ketë qasje në llogarinë tënde"</string>
@@ -626,26 +634,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Shto një pajisje të besuar"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth-i do të aktivizohet për të shtuar pajisjen e besuar"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Pajisjet e besuara"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pajisje</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> pajisje</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Pajisja jote <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> do ta shkyçë këtë makinë kur është e lidhur. Nëse dikush merr pajisjen tënde <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, mund të jetë në gjendje të ketë qasje te kjo pajisje"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Konfirmo"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Hiq pajisjen e besuar"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"U krye"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Përdor aplikacionin shoqërues për të konfiguruar një pajisje të besuar. Pasi të konfigurohet, profili yt si përdorues do të shkyçet automatikisht kur telefoni yt të zbulohet pranë automjetit."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Shkarko aplikacionin shoqërues në telefonin tënd"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Zgjidh <xliff:g id="CAR_NAME">%1$s</xliff:g> në telefon për të çiftuar pajisjet"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Një pajisje e besuar në afërsi do ta shkyçë profilin e përdoruesit pas ndezjes, edhe nëse pajisjen e mban dikush tjetër."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Konfirmo se kodet e çiftimit përputhen"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefoni është regjistruar me sukses"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Regjistrimi i <xliff:g id="DEVICE_NAME">%1$s</xliff:g> dështoi"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Shtimi i një pajisjeje të besuar kërkon që të caktosh më pas një metodë vërtetimi. Nëse nuk e ke pajisjen e besuar me vete, do të kërkohet vërtetim për të pasur qasje te profili yt."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Pajisja u shkëput"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Pastro kredencialet"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Hiqi të gjitha certifikatat"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Të hiqen të gjitha përmbajtjet?"</string>
@@ -668,4 +656,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"HIQ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Veçoria nuk ofrohet gjatë drejtimit të makinës"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Përdoruesi nuk mund të shtohet gjatë drejtimit të makinës"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Kërko"</string>
 </resources>
