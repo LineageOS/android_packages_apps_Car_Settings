@@ -106,6 +106,8 @@
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
+        <activity android:name=".common.SubSettingsActivity" />
+
         <activity
             android:name=".common.CarSettingActivities$DisplaySettingsActivity"
             android:windowSoftInputMode="adjustPan"
