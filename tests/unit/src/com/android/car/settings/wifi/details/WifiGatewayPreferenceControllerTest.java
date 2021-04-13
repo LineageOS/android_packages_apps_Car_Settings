@@ -22,6 +22,7 @@ import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.net.IpPrefix;
 import android.net.LinkProperties;
 import android.net.RouteInfo;
 
@@ -65,6 +66,8 @@ public class WifiGatewayPreferenceControllerTest {
     private RouteInfo mMockRouteInfo;
     @Mock
     private InetAddress mMockInetAddress;
+    @Mock
+    private IpPrefix mMockIpPrefix;
 
     @Before
     public void setUp() {
@@ -86,7 +89,12 @@ public class WifiGatewayPreferenceControllerTest {
     public void onCreate_shouldHaveDetailTextSet() {
         when(mMockWifiEntry.getConnectedState()).thenReturn(WifiEntry.CONNECTED_STATE_CONNECTED);
         when(mMockLinkProperties.getRoutes()).thenReturn(Arrays.asList(mMockRouteInfo));
-        when(mMockRouteInfo.isIPv4Default()).thenReturn(true);
+        when(mMockRouteInfo.isDefaultRoute()).thenReturn(true);
+        try {
+            when(mMockRouteInfo.getDestination()).thenReturn(mMockIpPrefix);
+            when(mMockIpPrefix.getAddress()).thenReturn(
+                    InetAddress.getByAddress(new byte[]{4, 3, 2, 1}));
+        } catch (Exception e) { }
         when(mMockRouteInfo.hasGateway()).thenReturn(true);
         when(mMockRouteInfo.getGateway()).thenReturn(mMockInetAddress);
         when(mMockInetAddress.getHostAddress()).thenReturn(GATE_WAY);
