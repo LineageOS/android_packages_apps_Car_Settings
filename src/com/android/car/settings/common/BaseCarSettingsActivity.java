@@ -198,6 +198,15 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     @Override
     public void launchFragment(Fragment fragment) {
+        if (mIsSinglePane) {
+            Intent intent = SubSettingsActivity.newInstance(/* context= */ this, fragment);
+            startActivity(intent);
+        } else {
+            launchFragmentInternal(fragment);
+        }
+    }
+
+    private void launchFragmentInternal(Fragment fragment) {
         if (fragment instanceof DialogFragment) {
             throw new IllegalArgumentException(
                     "cannot launch dialogs with launchFragment() - use showDialog() instead");
@@ -300,16 +309,16 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     @Nullable
     protected abstract Fragment getInitialFragment();
 
-    protected void launchIfDifferent(Fragment newFragment) {
+    protected Fragment getCurrentFragment() {
+        return getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+    }
+
+    private void launchIfDifferent(Fragment newFragment) {
         Fragment currentFragment = getCurrentFragment();
         if ((newFragment != null) && differentFragment(newFragment, currentFragment)) {
             LOG.d("launchIfDifferent: " + newFragment + " replacing " + currentFragment);
-            launchFragment(newFragment);
+            launchFragmentInternal(newFragment);
         }
-    }
-
-    protected Fragment getCurrentFragment() {
-        return getSupportFragmentManager().findFragmentById(R.id.fragment_container);
     }
 
     /**
@@ -343,7 +352,10 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         try {
             ActivityInfo ai = getPackageManager().getActivityInfo(getComponentName(),
                     PackageManager.GET_META_DATA);
-            if (ai == null || ai.metaData == null) return;
+            if (ai == null || ai.metaData == null) {
+                mIsSinglePane = getResources().getBoolean(R.bool.config_global_force_single_pane);
+                return;
+            }
             mTopLevelHeaderKey = ai.metaData.getString(META_DATA_KEY_HEADER_KEY);
             mIsSinglePane = ai.metaData.getBoolean(META_DATA_KEY_SINGLE_PANE,
                     getResources().getBoolean(R.bool.config_global_force_single_pane));
