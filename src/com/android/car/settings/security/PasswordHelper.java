@@ -137,7 +137,7 @@ public class PasswordHelper {
 
     private int validatePin(byte[] pin) {
         int errorCode = NO_ERROR;
-        PasswordMetrics metrics = PasswordMetrics.computeForPassword(pin);
+        PasswordMetrics metrics = PasswordMetrics.computeForPasswordOrPin(pin, /* isPin */ true);
         int passwordQuality = getPasswordQuality();
 
         if (metrics.length < MIN_LENGTH) {
