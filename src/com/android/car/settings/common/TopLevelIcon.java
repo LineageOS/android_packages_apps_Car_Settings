@@ -51,7 +51,7 @@ public class TopLevelIcon extends LayerDrawable {
     ColorStateList mBackgroundColorStateList;
 
     public TopLevelIcon(Context context, Drawable foreground) {
-        this(context, foreground, R.dimen.toplevel_foreground_icon_inset);
+        this(context, foreground, R.dimen.top_level_foreground_icon_inset);
     }
 
     public TopLevelIcon(Context context, Drawable foreground, int insetResId) {
@@ -64,7 +64,7 @@ public class TopLevelIcon extends LayerDrawable {
         setLayerInset(FOREGROUND_INDEX , insetPx, insetPx, insetPx, insetPx);
         mAdaptiveConstantState = new AdaptiveConstantState(context, foreground);
         mAlwaysDefaultColor = context.getResources().getBoolean(
-                R.bool.config_toplevel_injection_background_always_use_default);
+                R.bool.config_top_level_injection_background_always_use_default);
     }
 
     /**
@@ -95,7 +95,7 @@ public class TopLevelIcon extends LayerDrawable {
         } catch (PackageManager.NameNotFoundException e) {
             LOG.e("Failed to set background color for " + packageName);
         }
-        setBackgroundColor(context.getColor(R.color.toplevel_injected_default_background));
+        setBackgroundColor(context.getColor(R.color.top_level_injected_default_background));
     }
 
     /**
