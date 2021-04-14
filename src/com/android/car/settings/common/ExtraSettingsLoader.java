@@ -59,6 +59,7 @@ public class ExtraSettingsLoader {
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
     private final Context mContext;
     private final Set<String> mTopLevelCategories;
+    private final boolean mIsTopLevelSummariesEnabled;
     private Map<Preference, Bundle> mPreferenceBundleMap;
     private PackageManager mPm;
 
@@ -68,6 +69,8 @@ public class ExtraSettingsLoader {
         mPreferenceBundleMap = new LinkedHashMap<>();
         mTopLevelCategories = Set.of(mContext.getResources().getStringArray(
                 R.array.config_toplevel_injection_categories));
+        mIsTopLevelSummariesEnabled = mContext.getResources().getBoolean(
+                R.bool.config_toplevel_injection_enable_summaries);
     }
 
     @VisibleForTesting
@@ -160,15 +163,25 @@ public class ExtraSettingsLoader {
                 // If category is not specified or not supported, default to device.
                 category = CATEGORY_DEVICE;
             }
-            metaData.putBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL,
-                    mTopLevelCategories.contains(category));
+            boolean isTopLevel = mTopLevelCategories.contains(category);
+            metaData.putBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL, isTopLevel);
             Drawable icon = ExtraSettingsUtil.createIcon(mContext, metaData,
                     activityInfo.packageName);
 
             if (!TextUtils.equals(extraCategory, category)) {
                 continue;
             }
-            CarUiPreference preference = new CarUiPreference(mContext);
+            CarUiPreference preference;
+            if (isTopLevel) {
+                preference = new TopLevelPreference(mContext);
+                if (!mIsTopLevelSummariesEnabled) {
+                    // remove summary data
+                    summary = null;
+                    metaData.remove(META_DATA_PREFERENCE_SUMMARY_URI);
+                }
+            } else {
+                preference = new CarUiPreference(mContext);
+            }
             preference.setTitle(title);
             preference.setSummary(summary);
             if (key != null) {
