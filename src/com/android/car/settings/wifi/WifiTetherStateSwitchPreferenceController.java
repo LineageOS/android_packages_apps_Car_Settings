@@ -43,15 +43,13 @@ public class WifiTetherStateSwitchPreferenceController extends
     private CarWifiManager mCarWifiManager;
     private TetheringManager mTetheringManager;
     private boolean mRestartBooked = false;
-
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+    private WifiManager.SoftApCallback mSoftApCallback = new WifiManager.SoftApCallback() {
         @Override
-        public void onReceive(Context context, Intent intent) {
-            int state = intent.getIntExtra(
-                    WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_FAILED);
+        public void onStateChanged(int state, int failureReason) {
             handleWifiApStateChanged(state);
         }
     };
+
     private final BroadcastReceiver mRestartReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -101,8 +99,7 @@ public class WifiTetherStateSwitchPreferenceController extends
 
     @Override
     protected void onStartInternal() {
-        getContext().registerReceiver(mReceiver,
-                new IntentFilter(WifiManager.WIFI_AP_STATE_CHANGED_ACTION));
+        mCarWifiManager.registerSoftApCallback(getContext().getMainExecutor(), mSoftApCallback);
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mRestartReceiver,
                 new IntentFilter(
                         WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING));
@@ -110,7 +107,7 @@ public class WifiTetherStateSwitchPreferenceController extends
 
     @Override
     protected void onStopInternal() {
-        getContext().unregisterReceiver(mReceiver);
+        mCarWifiManager.unregisterSoftApCallback(mSoftApCallback);
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mRestartReceiver);
     }
 
