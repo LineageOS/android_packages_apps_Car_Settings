@@ -164,8 +164,8 @@
     </string-array>
     <!-- Network & internet settings screen, setting option name to enable OEM network connectivity [CHAR LIMIT=60] -->
     <string name="network_and_internet_oem_network_title">OEM network</string>
-    <!-- Network & internet settings screen, setting option description of how many MB of data has been used from a start date to end date ex. Oct 3 - Nov 2 [CHAR LIMIT=100] -->
-    <string name="network_and_internet_data_usage_time_range_summary">%1$d MB used %2$s - %3$s</string>
+    <!-- Network & internet settings screen, setting option description of how much data has been used from a start date to end date ex. 80MB used Oct 3 - Nov 2 [CHAR LIMIT=100] -->
+    <string name="network_and_internet_data_usage_time_range_summary">%1$s used %2$s - %3$s</string>
     <!-- Network & internet settings screen, setting option name to view other wifi networks to connect to [CHAR LIMIT=60] -->
     <string name="network_and_internet_join_other_network_title">Join other network</string>
     <!-- Network & internet settings screen, setting option name to view network options, such as wifi connectivity [CHAR LIMIT=60] -->
@@ -312,6 +312,8 @@
     <string name="wifi_ap_band_select_one">Choose at least one band for Wi\u2011Fi hotspot:</string>
     <!-- Tethering controls, item title to go into the tethering settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
     <string name="tether_settings_title_all">Hotspot &amp; tethering</string>
+    <!-- Settings title to go into the hotspot settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
+    <string name="hotspot_settings_title">Hotspot</string>
     <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
     <string name="wifi_hotspot_auto_off_title">Turn off hotspot automatically</string>
     <!-- Summary for the toggle to turn off hotspot automatically [CHAR LIMIT=100]-->
