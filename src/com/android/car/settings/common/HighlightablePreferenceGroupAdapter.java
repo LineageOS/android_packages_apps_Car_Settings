@@ -20,7 +20,6 @@ import android.content.Context;
 import android.util.TypedValue;
 import android.view.View;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceGroupAdapter;
@@ -32,10 +31,10 @@ import com.android.car.settings.R;
 /** RecyclerView adapter that supports single-preference highlighting. */
 public class HighlightablePreferenceGroupAdapter extends PreferenceGroupAdapter {
 
-    @ColorInt
-    private final int mHighlightColor;
     @DrawableRes
     private final int mNormalBackgroundRes;
+    @DrawableRes
+    private final int mHighlightBackgroundRes;
     private int mHighlightPosition = RecyclerView.NO_POSITION;
 
     public HighlightablePreferenceGroupAdapter(PreferenceGroup preferenceGroup) {
@@ -45,7 +44,14 @@ public class HighlightablePreferenceGroupAdapter extends PreferenceGroupAdapter 
         context.getTheme().resolveAttribute(android.R.attr.selectableItemBackground,
                 outValue, /* resolveRefs= */ true);
         mNormalBackgroundRes = outValue.resourceId;
-        mHighlightColor = context.getColor(R.color.preference_highlight_color);
+        mHighlightBackgroundRes = R.drawable.preference_highlight_default;
+    }
+
+    public HighlightablePreferenceGroupAdapter(PreferenceGroup preferenceGroup,
+            @DrawableRes int normalBackgroundRes, @DrawableRes int highlightBackgroundRes) {
+        super(preferenceGroup);
+        mNormalBackgroundRes = normalBackgroundRes;
+        mHighlightBackgroundRes = highlightBackgroundRes;
     }
 
     @Override
@@ -105,7 +111,7 @@ public class HighlightablePreferenceGroupAdapter extends PreferenceGroupAdapter 
 
     private void addHighlightBackground(View v) {
         v.setTag(R.id.preference_highlighted, true);
-        v.setBackgroundColor(mHighlightColor);
+        v.setBackgroundResource(mHighlightBackgroundRes);
     }
 
     private void removeHighlightBackground(View v) {
