@@ -243,8 +243,18 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
     @Override
     protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
-        mAdapter = new HighlightablePreferenceGroupAdapter(preferenceScreen);
+        mAdapter = createHighlightableAdapter(preferenceScreen);
         return mAdapter;
+    }
+
+    /**
+     * Returns a HighlightablePreferenceGroupAdapter to be used as the RecyclerView.Adapter for
+     * this fragment. Subclasses can override this method to return their own
+     * HighlightablePreferenceGroupAdapter instance.
+     */
+    protected HighlightablePreferenceGroupAdapter createHighlightableAdapter(
+            PreferenceScreen preferenceScreen) {
+        return new HighlightablePreferenceGroupAdapter(preferenceScreen);
     }
 
     protected void requestPreferenceHighlight(String key) {
