@@ -51,6 +51,6 @@ public class TopLevelIconShapeDrawable extends GradientDrawable {
     }
 
     private void init(Resources resources) {
-        setShape(resources.getInteger(R.integer.config_toplevel_icon_shape));
+        setShape(resources.getInteger(R.integer.config_top_level_icon_shape));
     }
 }

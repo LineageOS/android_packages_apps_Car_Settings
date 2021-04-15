@@ -80,8 +80,8 @@ public class ExtraSettingsUtil {
         }
         if (metaData.getBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL, /* defaultValue= */ false)) {
             icon.mutate().setTintList(
-                    context.getColorStateList(R.color.toplevel_injected_icon_default));
-            icon = new TopLevelIcon(context, icon, R.dimen.toplevel_foreground_icon_inset);
+                    context.getColorStateList(R.color.top_level_injected_icon_default));
+            icon = new TopLevelIcon(context, icon, R.dimen.top_level_foreground_icon_inset);
             ((TopLevelIcon) icon).setBackgroundColor(context, metaData, packageName);
         } else if (isIconTintable(metaData)) {
             // If the icon is tintable, tint it with the default icon color attribute
