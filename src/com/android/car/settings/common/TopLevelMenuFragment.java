@@ -125,8 +125,8 @@ public class TopLevelMenuFragment extends SettingsFragment {
     protected HighlightablePreferenceGroupAdapter createHighlightableAdapter(
             PreferenceScreen preferenceScreen) {
         return new HighlightablePreferenceGroupAdapter(preferenceScreen,
-                R.drawable.toplevel_preference_background,
-                R.drawable.toplevel_preference_highlight);
+                R.drawable.top_level_preference_background,
+                R.drawable.top_level_preference_highlight);
     }
 
     private void updatePreferenceHighlight(String key) {

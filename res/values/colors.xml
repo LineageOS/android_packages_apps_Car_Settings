@@ -17,23 +17,23 @@
 
 <resources>
     <!-- Top-level icon colors -->
-    <color name="toplevel_display_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_sound_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_network_and_internet_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_bluetooth_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_units_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_location_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_applications_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_date_time_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_users_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_privacy_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_storage_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_security_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_system_icon">@color/toplevel_icon_default</color>
-    <color name="toplevel_assistant_and_voice_icon">@color/toplevel_icon_default</color>
+    <color name="top_level_display_icon">@color/top_level_icon_default</color>
+    <color name="top_level_sound_icon">@color/top_level_icon_default</color>
+    <color name="top_level_network_and_internet_icon">@color/top_level_icon_default</color>
+    <color name="top_level_bluetooth_icon">@color/top_level_icon_default</color>
+    <color name="top_level_units_icon">@color/top_level_icon_default</color>
+    <color name="top_level_location_icon">@color/top_level_icon_default</color>
+    <color name="top_level_applications_icon">@color/top_level_icon_default</color>
+    <color name="top_level_date_time_icon">@color/top_level_icon_default</color>
+    <color name="top_level_users_icon">@color/top_level_icon_default</color>
+    <color name="top_level_privacy_icon">@color/top_level_icon_default</color>
+    <color name="top_level_storage_icon">@color/top_level_icon_default</color>
+    <color name="top_level_security_icon">@color/top_level_icon_default</color>
+    <color name="top_level_system_icon">@color/top_level_icon_default</color>
+    <color name="top_level_assistant_and_voice_icon">@color/top_level_icon_default</color>
     <!-- Default foreground color for injected top-level icons -->
-    <color name="toplevel_injected_icon_default">@color/toplevel_icon_default</color>
+    <color name="top_level_injected_icon_default">@color/top_level_icon_default</color>
 
     <!-- Default background color for injected top-level icons -->
-    <color name="toplevel_injected_default_background">#4285F4</color>
+    <color name="top_level_injected_default_background">#4285F4</color>
 </resources>
