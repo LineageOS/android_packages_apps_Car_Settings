@@ -105,12 +105,14 @@
     </string-array>
 
     <!-- The shape for top-level icons: 0=RECTANGLE, 1=OVAL -->
-    <integer name="config_toplevel_icon_shape" translatable="false">1</integer>
+    <integer name="config_toplevel_icon_shape">1</integer>
     <!--
         Whether to always override the background color of the injecting application in favor of
         the default color.
     -->
-    <bool name="config_toplevel_injection_background_always_use_default" translatable="false">false</bool>
+    <bool name="config_toplevel_injection_background_always_use_default">false</bool>
+    <!-- Whether to include the preference summaries of injected top-level preferences. -->
+    <bool name="config_toplevel_injection_enable_summaries">true</bool>
     <!-- Array of injected setting categories that appear in the top-level menu. -->
     <string-array name="config_toplevel_injection_categories">
         <item>com.android.settings.category.wireless</item>
