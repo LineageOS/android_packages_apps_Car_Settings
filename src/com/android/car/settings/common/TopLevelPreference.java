@@ -48,6 +48,6 @@ public class TopLevelPreference extends CarUiPreference {
     }
 
     private void init() {
-        setLayoutResource(R.layout.toplevel_preference);
+        setLayoutResource(R.layout.top_level_preference);
     }
 }

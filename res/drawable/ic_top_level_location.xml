@@ -20,21 +20,21 @@
         <com.android.car.settings.common.TopLevelIconShapeDrawable
             android:width="@dimen/icon_size"
             android:height="@dimen/icon_size"
-            android:tint="@color/toplevel_users_background"/>
+            android:tint="@color/top_level_location_background"/>
     </item>
     <item
-        android:start="@dimen/toplevel_foreground_icon_inset"
-        android:top="@dimen/toplevel_foreground_icon_inset"
-        android:end="@dimen/toplevel_foreground_icon_inset"
-        android:bottom="@dimen/toplevel_foreground_icon_inset">
+        android:start="@dimen/top_level_foreground_icon_inset"
+        android:top="@dimen/top_level_foreground_icon_inset"
+        android:end="@dimen/top_level_foreground_icon_inset"
+        android:bottom="@dimen/top_level_foreground_icon_inset">
         <vector
             android:width="@dimen/icon_size"
             android:height="@dimen/icon_size"
             android:viewportHeight="24.0"
             android:viewportWidth="24.0">
             <path
-                android:fillColor="@color/toplevel_users_icon"
-                android:pathData="M15,8c0,-1.42 -0.5,-2.73 -1.33,-3.76C14.09,4.1 14.53,4 15,4c2.21,0 4,1.79 4,4s-1.79,4 -4,4c-0.43,0 -0.84,-0.09 -1.23,-0.21c-0.03,-0.01 -0.06,-0.02 -0.1,-0.03C14.5,10.73 15,9.42 15,8zM16.66,13.13C18.03,14.06 19,15.32 19,17v3h4v-3C23,14.82 19.42,13.53 16.66,13.13zM9,4c2.21,0 4,1.79 4,4s-1.79,4 -4,4s-4,-1.79 -4,-4S6.79,4 9,4zM9,13c2.67,0 8,1.34 8,4v3H1v-3C1,14.34 6.33,13 9,13z"/>
+                android:fillColor="@color/top_level_location_icon"
+                android:pathData="M12,2C8.13,2 5,5.13 5,9c0,5.34 4.21,6.79 6.03,12.28C11.17,21.7 11.55,22 12,22s0.83,-0.3 0.97,-0.72C14.79,15.79 19,14.34 19,9C19,5.13 15.87,2 12,2zM12,11.5c-1.38,0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5s2.5,1.12 2.5,2.5C14.5,10.38 13.38,11.5 12,11.5z"/>
         </vector>
     </item>
 </layer-list>

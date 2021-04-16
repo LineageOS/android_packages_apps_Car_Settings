@@ -68,9 +68,9 @@ public class ExtraSettingsLoader {
         mPm = context.getPackageManager();
         mPreferenceBundleMap = new LinkedHashMap<>();
         mTopLevelCategories = Set.of(mContext.getResources().getStringArray(
-                R.array.config_toplevel_injection_categories));
+                R.array.config_top_level_injection_categories));
         mIsTopLevelSummariesEnabled = mContext.getResources().getBoolean(
-                R.bool.config_toplevel_injection_enable_summaries);
+                R.bool.config_top_level_injection_enable_summaries);
     }
 
     @VisibleForTesting
