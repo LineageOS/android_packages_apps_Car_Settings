@@ -65,6 +65,14 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="bool" name="config_top_level_enable_chevrons"/>
       <item type="bool" name="config_top_level_injection_background_always_use_default"/>
       <item type="bool" name="config_top_level_injection_enable_summaries"/>
+      <item type="color" name="bluetooth_bonded_device_background"/>
+      <item type="color" name="bluetooth_bonded_device_foreground"/>
+      <item type="color" name="bluetooth_bonded_device_icon_color_checked"/>
+      <item type="color" name="bluetooth_bonded_device_icon_color_unchecked"/>
+      <item type="color" name="bluetooth_bonded_device_off_background_color"/>
+      <item type="color" name="bluetooth_device_icon_color"/>
+      <item type="color" name="bluetooth_disabled_device_background_color"/>
+      <item type="color" name="bluetooth_disabled_device_icon_color"/>
       <item type="color" name="brightness_thumb_inner_ring_color"/>
       <item type="color" name="brightness_thumb_outer_ring_color"/>
       <item type="color" name="car_grey_400_with_disable"/>
@@ -123,6 +131,11 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="dimen" name="ap_preference_item_icon_margin_end"/>
       <item type="dimen" name="ap_preference_item_padding_end"/>
       <item type="dimen" name="ap_preference_item_padding_start"/>
+      <item type="dimen" name="bluetooth_bonded_device_button_radius"/>
+      <item type="dimen" name="bluetooth_bonded_device_button_size"/>
+      <item type="dimen" name="bluetooth_bonded_device_foreground_icon_inset"/>
+      <item type="dimen" name="bluetooth_device_foreground_icon_inset"/>
+      <item type="dimen" name="bluetooth_device_icon_size"/>
       <item type="dimen" name="bluetooth_pin_dialog_margin_end"/>
       <item type="dimen" name="bluetooth_pin_dialog_margin_start"/>
       <item type="dimen" name="bluetooth_pin_dialog_section_height"/>
@@ -229,9 +242,16 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_audio_navi"/>
       <item type="drawable" name="ic_backspace"/>
       <item type="drawable" name="ic_block"/>
+      <item type="drawable" name="ic_bluetooth_button"/>
+      <item type="drawable" name="ic_bluetooth_button_unavailable"/>
+      <item type="drawable" name="ic_bluetooth_media"/>
+      <item type="drawable" name="ic_bluetooth_media_unavailable"/>
+      <item type="drawable" name="ic_bluetooth_phone"/>
+      <item type="drawable" name="ic_bluetooth_phone_unavailable"/>
       <item type="drawable" name="ic_brightness_knob"/>
       <item type="drawable" name="ic_brightness_knob_stretched"/>
       <item type="drawable" name="ic_brightness_knob_with_focus"/>
+      <item type="drawable" name="ic_car"/>
       <item type="drawable" name="ic_cellular_data"/>
       <item type="drawable" name="ic_check"/>
       <item type="drawable" name="ic_check_box"/>

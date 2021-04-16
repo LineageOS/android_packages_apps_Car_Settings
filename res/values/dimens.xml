@@ -73,6 +73,11 @@
     <dimen name="bluetooth_pin_dialog_text_margin_start">@*android:dimen/car_keyline_3</dimen>
     <dimen name="bluetooth_pin_dialog_text_margin_end">@*android:dimen/car_keyline_3</dimen>
     <dimen name="bluetooth_pin_dialog_subtext_margin_top">@*android:dimen/car_padding_1</dimen>
+    <dimen name="bluetooth_bonded_device_button_size">80dp</dimen>
+    <dimen name="bluetooth_bonded_device_button_radius">16dp</dimen>
+    <dimen name="bluetooth_bonded_device_foreground_icon_inset">18dp</dimen>
+    <dimen name="bluetooth_device_icon_size">44dp</dimen>
+    <dimen name="bluetooth_device_foreground_icon_inset">8dp</dimen>
 
     <!-- Edit Username -->
     <dimen name="edit_username_padding_start">@*android:dimen/car_margin</dimen>

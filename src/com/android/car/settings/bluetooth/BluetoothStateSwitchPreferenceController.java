@@ -149,8 +149,9 @@ public class BluetoothStateSwitchPreferenceController extends
     }
 
     private void updateSwitchPreference(boolean enabled) {
-        getPreference().setTitle(enabled ? R.string.car_ui_preference_switch_on
-                : R.string.car_ui_preference_switch_off);
+        String bluetoothName = BluetoothAdapter.getDefaultAdapter().getName();
+        getPreference().setSummary(enabled ? getContext()
+                .getString(R.string.bluetooth_state_switch_summary, bluetoothName) : null);
         getPreference().setChecked(enabled);
     }
 }
