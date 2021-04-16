@@ -81,7 +81,7 @@ public class TopLevelIconTest {
         icon.setBackgroundColor(mContext, metaData, mContext.getPackageName());
 
         assertThat(icon.mBackgroundColorStateList.getDefaultColor()).isEqualTo(
-                mContext.getColor(R.color.toplevel_injected_default_background));
+                mContext.getColor(R.color.top_level_injected_default_background));
     }
 
     @Test
