@@ -73,13 +73,13 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"កាលបរិច្ឆេទ​កំណត់​វដ្តនៃការប្រើប្រាស់​​​ឡើង​វិញ"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"កាលបរិច្ឆេទ​នៃ​ខែ​នីមួយៗ៖"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"កំណត់"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"ការកម្រិត និង​ការព្រមាន​ពីការប្រើទិន្នន័យ"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"កំហិត និង​ការព្រមាន​អំពីការប្រើទិន្នន័យ"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"វដ្ត​នៃការ​ប្រើ​ទិន្នន័យ​កម្មវិធី"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"កំណត់ការព្រមានពីការប្រើទិន្នន័យ"</string>
     <string name="data_warning" msgid="116776633806885370">"ការព្រមានពីការប្រើទិន្នន័យ"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"កំណត់កម្រិត​ទិន្នន័យ"</string>
     <string name="data_limit" msgid="227338836292511425">"កម្រិត​កំណត់​ទិន្នន័យ"</string>
-    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ការ​កម្រិត​លើ​ការ​ប្រើ​ទិន្នន័យ"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ការដាក់កំហិតលើ​ការប្រើ​ទិន្នន័យ"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​អ្នក​នឹង​បិទ​ទិន្នន័យ​ទូរសព្ទចល័ត ​នៅ​ពេល​ដែល​វា​ប្រើប្រាស់​ទិន្នន័យ​​ដល់កម្រិតដែល​អ្នក​បាន​កំណត់។\n\nដោយសារ​​ការ​ប្រើ​ប្រាស់​ទិន្នន័យ​ត្រូវ​បាន​វាស់​ស្ទង់ដោយឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​ ​ហើយក្រុមហ៊ុនបម្រើសេវាទូរសព្ទ​របស់​អ្នកអាចគណនាលើការប្រើប្រាស់​ខុសពីនោះ សូមពិចារណា​កំណត់កម្រិតប្រើប្រាស់​ទិន្នន័យ​ទាប។"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"កំណត់​ការ​ព្រមានពី​ការ​ប្រើ​ទិន្នន័យ"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"កំណត់​ដែន​កំណត់​ប្រើទិន្នន័យ"</string>
@@ -192,7 +192,7 @@
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"កម្មវិធីមួយ​ចង់បើក​ប៊្លូធូស និង​ធ្វើឱ្យ​ឧបករណ៍​ផ្សេងទៀត​អាចមើលឃើញ​ឧបករណ៍​ចាក់សំឡេង​របស់អ្នក​រយៈពេល <xliff:g id="TIMEOUT">%1$d</xliff:g> វិនាទី។"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"សំណើ​ផ្គូផ្គង​តាម​ប៊្លូធូស"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ផ្គូផ្គង និងភ្ជាប់"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"កូដ​ផ្គូផ្គង​តាម​ប៊្លូធូស"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"លេខកូដផ្គូផ្គងប៊្លូធូស"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"កូដ PIN មាន​អក្សរ ឬសញ្ញា"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"វាយ​បញ្ចូល​កូដ​ផ្គូផ្គង បន្ទាប់​មក​ចុច Return ឬ Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"ផ្គូផ្គងជាមួយ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> មែនទេ?"</string>
@@ -209,7 +209,7 @@
     <string name="keyboard_settings" msgid="1959697870618278081">"ក្ដារចុច"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"គ្រប់គ្រងក្តារចុច"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"លទ្ធផលនៃការបំប្លែងអត្ថបទទៅជាការនិយាយ"</string>
-    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ម៉ាស៊ីន​ដែល​ចង់បាន"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ម៉ាស៊ីន​ដែល​ចង់ប្រើ"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ម៉ាស៊ីន​បច្ចុប្បន្ន"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"ល្បឿននៃការនិយាយ"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"កម្រិត​សំឡេង"</string>
@@ -316,7 +316,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"ជំនួយការនឹងអាចអានព័ត៌មានអំពីកម្មវិធីដែលកំពុងប្រើនៅក្នុងប្រព័ន្ធរបស់អ្នក រួម​ទាំងព័ត៌មានដែលអាចមើលឃើញនៅលើអេក្រង់របស់អ្នក ឬព័ត៌មានដែលអាចចូលប្រើនៅក្នុងកម្មវិធី​នោះផងដែរ​។"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;សូម​ប្រាកដថា​អ្នក​ទុក​ចិត្ត​លើ​កម្មវិធី​នេះ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ប្រើប្រាស់​អ្វី​ដែល​មាននៅ​លើ​អេក្រង់​របស់អ្នក ដើម្បី​កំណត់​អ្វីដែល​អាចបំពេញ​ដោយ​ស្វ័យប្រវត្តិ។"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"បញ្ចូល​សេវាកម្ម"</string>
-    <string name="app_launch_domain_links_title" msgid="774480184927726651">"បើកតំណ"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"ការបើកតំណ"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"កម្មវិធី​ដែល​បាន​ដំឡើង"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"កុំបើក​តំណ​ដែលស្គាល់"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"បើក <xliff:g id="DOMAIN">%s</xliff:g>"</string>

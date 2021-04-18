@@ -103,7 +103,7 @@
     <string name="wifi_status" msgid="5688013206066543952">"స్థితి"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"లింక్ వేగం"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"తరచుదనం"</string>
-    <string name="wifi_ip_address" msgid="3128140627890954061">"IP చిరునామా"</string>
+    <string name="wifi_ip_address" msgid="3128140627890954061">"IP అడ్రస్"</string>
     <string name="show_password" msgid="2074628020371139240">"పాస్‌వర్డ్‌ను చూపు"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"నెట్‌వర్క్ పేరును నమోదు చేయండి"</string>
     <string name="default_password_summary" msgid="8789594645836902982">"పాస్‌వర్డ్‌ని నమోదు చేయండి"</string>
@@ -120,7 +120,7 @@
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
     <string name="wifi_network_detail" msgid="9070182553555487360">"నెట్‌వర్క్ వివరాలు"</string>
     <string name="wifi_mac_address" msgid="1466178247802349180">"MAC చిరునామా"</string>
-    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP చిరునామా"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP అడ్రస్"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"సబ్‌నెట్ మాస్క్"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 చిరునామాలు"</string>
@@ -172,7 +172,7 @@
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"పరికరాన్ని డిస్‌కనెక్ట్ చేయాలా?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"మీ వాహనం <xliff:g id="DEVICE_NAME">%1$s</xliff:g> నుండి డిస్‌కనెక్ట్ అవుతుంది."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"వాహనం బ్లూటూత్ చిరునామా: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"పరికరం యొక్క బ్లూటూత్ చిరునామా: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"పరికర బ్లూటూత్ అడ్రస్: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"వాహనం పేరు"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"ఈ వాహనం పేరు మార్చండి"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"పరికరం పేరు మార్చండి"</string>
@@ -192,7 +192,7 @@
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"యాప్ బ్లూటూత్‌ను ప్రారంభించి, మీ పరికర హెడ్ యూనిట్‌ను ఇతర పరికరాలకు <xliff:g id="TIMEOUT">%1$d</xliff:g> సెకన్ల పాటు కనిపించేలా చేయాలనుకుంటుంది."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"బ్లూటూత్ జత చేయడానికి అభ్యర్థన"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"జత చేసి, కనెక్ట్ చేయి"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"బ్లూటూత్ జత చేసే కోడ్"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"బ్లూటూత్ పెయిరింగ్ కోడ్"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"పిన్‌ అక్షరాలను లేదా చిహ్నాలను కలిగి ఉంది"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"జత చేసే కోడ్‌ను టైప్ చేసి, ఆపై Return లేదా Enter నొక్కండి"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>తో జత చేయాలా?"</string>
@@ -282,7 +282,7 @@
     <string name="force_stop" msgid="2153183697014720520">"ఫోర్స్ స్టాప్"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ఫోర్స్ స్టాప్ చేయాలా?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"మీరు ఏదైనా యాప్‌ను ఫోర్స్ స్టాప్ చేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
-    <string name="disable_text" msgid="4358165448648990820">"నిలిపివేయి"</string>
+    <string name="disable_text" msgid="4358165448648990820">"డిజేబుల్ చేయి"</string>
     <string name="enable_text" msgid="1794971777861881238">"ప్రారంభించు"</string>
     <string name="uninstall_text" msgid="277907956072833012">"అన్ఇన్‌స్టాల్ చేయి"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"మీరు ఈ యాప్‌ను నిలిపివేస్తే, Android మరియు ఇతర యాప్‌లు ఇకపై ఉద్దేశించిన రీతిలో పని చేయకపోవచ్చు."</string>
@@ -361,8 +361,8 @@
     <string name="model_info" msgid="4966408071657934452">"మోడల్"</string>
     <string name="baseband_version" msgid="2370088062235041897">"బేస్‌బ్యాండ్ వెర్షన్"</string>
     <string name="kernel_version" msgid="7327212934187011508">"కెర్నెల్ వెర్షన్"</string>
-    <string name="build_number" msgid="3997326631001009102">"బిల్డ్ సంఖ్య"</string>
-    <string name="bluetooth_mac_address" msgid="7641425947941688072">"బ్లూటూత్ చిరునామా"</string>
+    <string name="build_number" msgid="3997326631001009102">"బిల్డ్ నంబర్"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"బ్లూటూత్ అడ్రస్"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"అందుబాటులో లేదు"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"స్థితి"</string>
     <string name="device_status" msgid="267298179806290920">"స్థితి"</string>

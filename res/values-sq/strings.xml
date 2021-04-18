@@ -198,7 +198,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Të çiftohet me <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Lejo që <xliff:g id="DEVICE_NAME">%1$s</xliff:g> të ketë qasje te kontaktet dhe historiku i telefonatave"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Mund të duhet gjithashtu ta shkruash këtë kod PIN në pajisjen tjetër."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Mund të duhet gjithashtu ta shkruash këtë kod në pajisjen tjetër."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Mund të duhet gjithashtu ta shkruash këtë çelës kalimi në pajisjen tjetër."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Duhet të ketë 16 shifra"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Zakonisht 0000 ose 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Kërkesa e çiftimit"</string>
@@ -344,8 +344,8 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulo"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Qasja te mesazhet SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Mesazhet SMS premium mund të kushtojnë dhe do të rritin faturat e operatorit tënd celular. Nëse e aktivizon lejen për një aplikacion, do të mund të dërgosh mesazhe SMS premium me atë aplikacion."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Qasja në përdorim"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Qasja në përdorim lejon që një aplikacion të monitorojë se çfarë aplikacionesh të tjera po përdor ti dhe sa shpesh i përdor, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Qasja te përdorimi"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Qasja te përdorimi lejon që një aplikacion të monitorojë se çfarë aplikacionesh të tjera po përdor ti dhe sa shpesh i përdor, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kontrolli i lidhjes Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontrolli i lidhjes Wi-Fi lejon që një aplikacion të aktivizojë ose të çaktivizojë Wi-Fi, të skanojë dhe të lidhet me rrjetet Wi-Fi, të shtojë ose të heqë rrjetet ose të nisë një zonë qasjeje për internetin vetëm në nivel lokal."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Më shumë"</string>
@@ -527,7 +527,7 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sinkronizimi joaktiv për të gjithë artikujt"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Sinkronizimi është JOAKTIV"</string>
     <string name="sync_error" msgid="6698021343089247914">"Gabim gjatë sinkronizimit"</string>
-    <string name="last_synced" msgid="4745124489150101529">"Sinkronizuar për herë të fundit <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="4745124489150101529">"Sinkronizimi i fundit më <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"Po sinkronizon tani…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"Trokit për ta sinkronizuar tani<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
