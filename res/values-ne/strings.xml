@@ -39,7 +39,7 @@
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"निष्क्रिय / SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"सक्रिय / डाउनलोड गरिएको SIM"</string>
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"निष्क्रिय / डाउनलोड गरिएको SIM"</string>
-    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"थप थप्नुहोस्"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"अरू थप्नुहोस्"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क प्रयोग गरी डेटामाथि पहुँच राख्नु…"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा निष्क्रिय पार्ने हो?"</string>
@@ -54,9 +54,9 @@
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटाको प्रयोग"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"प्राथमिक डेटा"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g><xliff:g id="ID_2">^2</xliff:g> प्रयोग गरियो"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"डेटासम्बन्धी चेतावनी: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"डेटाको खपतसम्बन्धी चेतावनी: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"डेटाको सीमा: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"डेटासम्बन्धी चेतावनी: <xliff:g id="ID_1">^1</xliff:g> / डेटाको सीमा: <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"डेटाको खपतसम्बन्धी चेतावनी: <xliff:g id="ID_1">^1</xliff:g> / डेटाको सीमा: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="other">%d दिन बाँकी</item>
       <item quantity="one">%d दिन बाँकी</item>
@@ -73,16 +73,16 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"प्रयोगको चक्र रिसेट गर्ने मिति"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"प्रत्येक महिनाको निम्न मिति:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"सेट गर्नुहोस्"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटासम्बन्धी चेतावनी तथा सीमा"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटाको खपतसम्बन्धी चेतावनी तथा सीमा"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"एपको डेटा प्रयोगको चक्र"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"डेटासम्बन्धी चेतावनी सेट गर्नु"</string>
-    <string name="data_warning" msgid="116776633806885370">"डेटासम्बन्धी चेतावनी"</string>
-    <string name="set_data_limit" msgid="7136539812414500084">"डेटाको सीमा सेट गर्नुहोस्"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"डेटा खपतको चेतावनी सेट गर्नुहोस्"</string>
+    <string name="data_warning" msgid="116776633806885370">"डेटाको खपतसम्बन्धी चेतावनी"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"डेटाको डेटा खपतको सीमा सेट गरियोस्"</string>
     <string name="data_limit" msgid="227338836292511425">"डेटाको सीमा"</string>
-    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"डेटाको प्रयोग सीमित गर्दै"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"डेटा खपतको सीमा तोक्दा"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"तपाईंले सेट गर्नुभएको अधिकतम डेटा प्रयोगको सीमामा पुगेपछि तपाईंको सवारी साधनको मुख्य भागले मोबाइल डेटालाई निष्क्रिय पार्ने छ।\n\nतपाईंको सवारी साधनको मुख्य भागले र तपाईंको सेवा प्रदायकले फरक तरिकाले डेटा प्रयोगको मापन गर्ने हुनाले विवेकपूर्ण तरिकाले यसको सीमा सेट गर्ने कुराबारे विचार गर्नुहोस्।"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"डेटा उपयोगसम्बन्धी चेतावनी सेट गर्नुहोस्"</string>
-    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"डेटा उपयोगसम्बन्धी सीमा सेट गर्नुहोस्"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"डेटा खपतको सीमा तोक्नुहोस्"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"सेट गर्नुहोस्"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi सक्रिय गरिँदै…"</string>
@@ -126,14 +126,14 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ठेगानाहरू"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi का प्राथमिकताहरू"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi स्वतः सक्रिय गर्नुहोस्"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तपाईंको घरको नेटवर्क जस्ता सुरक्षित गरिएका उच्च गुणस्तरका नेटवर्कहरू नजिक हुँदा Wi‑Fi फेरि सक्रिय हुने छ"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi स्वतः अन गरियोस्"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तपाईंको घरको नेटवर्क जस्ता सेभ गरिएका उच्च गुणस्तरका नेटवर्कहरू नजिक हुँदा Wi‑Fi फेरि सक्रिय हुने छ"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान निष्क्रिय पारिएको हुनाले उपलब्ध छैन। "<annotation id="link">"स्थान"</annotation>" सक्रिय गर्नुहोस्।"</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi स्क्यान गर्ने सुविधा सक्रिय गर्ने हो?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"सक्रिय गर्नुहोस्"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi स्क्यान गर्ने सेवा सक्रिय छ"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Wi-Fi  बाट बदलेर स्वतः मोबाइल डेटा प्रयोग गर्नुहोस्"</string>
-    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi मार्फत इन्टरनेट उपलब्ध नभएको बेलामा मोबाइल डेटाको प्रयोग गर्नुहोस्। डेटा प्रयोगको शुल्क लाग्न सक्छ।"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi मार्फत इन्टरनेट उपलब्ध नभएको बेलामा मोबाइल डेटाको खपत गर्नुहोस्। डेटा प्रयोगको शुल्क लाग्न सक्छ।"</string>
     <string name="learn_more" msgid="8214605928933358604">"थप जान्नुहोस्"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"हटस्पटको नाम"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> सक्रिय गर्दै..."</string>
@@ -159,7 +159,7 @@
     <string name="wifi_error" msgid="3105105447117289410">"त्रुटि"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लुटुथ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"बेनामी यन्त्र"</string>
-    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"जोडा बनाइएका यन्त्रहरू"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"कनेक्ट गरिएका डिभाइस"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"नयाँ डिभाइससँग कनेक्ट गर्नुहोस्"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"जोडा बनाउनका लागि ब्लुटुथ सक्रिय हुने छ"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"यन्त्र विच्छेद गर्ने हो?"</string>
@@ -203,10 +203,10 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"सबै भाषाहरू"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"किबोर्ड"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"किबोर्डहरू व्यवस्थित गर्नुहोस्"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"पाठवाचकको आउटपुट"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"टेक्स्ट टु स्पिच आउटपुट"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"रुचाइएको इन्जिन"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"हालको इन्जिन"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"वाणीको दर"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"स्पिच रेट"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"पिच"</string>
     <string name="tts_reset" msgid="6289481549801844709">"रिसेट गर्नुहोस्"</string>
     <string name="sound_settings" msgid="3072423952331872246">"आवाज"</string>
@@ -218,8 +218,8 @@
     <string name="media_volume_summary" msgid="2961762827637127239">"सङ्गीत र भिडियोहरूका लागि भोल्युम सेट गर्नुहोस्"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"अलार्म"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"फोनको रिङटोन"</string>
-    <string name="notification_ringtone_title" msgid="8661716239594010288">"सूचनाको पूर्वनिर्धारित ध्वनि"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"अलार्मको पूर्वनिर्धारित ध्वनि"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"सूचनाको डिफल्ट साउन्ड"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"अलार्मको डिफल्ट साउन्ड"</string>
     <string name="units_settings" msgid="402325305096925886">"एकाइहरू"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"गति"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"दूरी"</string>
@@ -291,7 +291,7 @@
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"कुनै पनि अनुमतिका लागि अनुरोध गरिएको छैन"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s इन्चको आन्तरिक भण्डारण"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटाको प्रयोग"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"एपको डेटाको प्रयोग"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"एपले खपत गरेको डेटा"</string>
     <string name="computing_size" msgid="5791407621793083965">"गणना गरिँदै…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतिहरू</item>
@@ -316,19 +316,19 @@
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"समर्थित लिंकहरू नखोल्नुहोस्"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> खोल्नुहोस्"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> र अन्य URL हरू खोल्नुहोस्"</string>
-    <string name="app_launch_title" msgid="3442601467010363057">"पूर्वनिर्धारित रूपमा खोल्नुहोस्"</string>
-    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"अन्य पूर्वनिर्धारित मानहरू"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"कुनै पूर्वनिर्धारित मान सेट गरिएको छैन।"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"डिफल्ट रूपमा खोल्नुहोस्"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"अन्य डिफल्ट मानहरू"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"कुनै डिफल्ट मान सेट गरिएको छैन।"</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"तपाईंले केही कारवाहीका लागि यो एप पूर्वनिर्धारति रूपमा छनौट गर्नुभएको छ।"</string>
-    <string name="auto_launch_reset_text" msgid="590439611312092392">"पूर्वनिर्धारित मानहरू हटाउनुहोस्"</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"डिफल्ट मानहरू हटाउनुहोस्"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"समर्थित लिंकहरू खोल्नुहोस्"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"यो अनुप्रयोगमा खोल्नुहोस्"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"प्रत्येक पटक सोधियोस्"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"यो अनुप्रयोगमा नखोल्नुहोस्"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"समर्थित लिंकहरू"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अनुप्रयोगमाथिको पहुँच"</string>
-    <string name="show_system" msgid="4401355756969485287">"प्रणाली देखाउनुहोस्"</string>
-    <string name="hide_system" msgid="8845453295584638040">"प्रणाली लुकाउनुहोस्"</string>
+    <string name="show_system" msgid="4401355756969485287">"सिस्टम देखाउनुहोस्"</string>
+    <string name="hide_system" msgid="8845453295584638040">"सिस्टम लुकाउनुहोस्"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"प्रणालीसम्बन्धी सेटिङ परिमार्जन गर्नुहोस्"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"यस अनुमतिले एपलाई प्रणालीको सेटिङ परिमार्जन गर्न दिन्छ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचनामाथिको पहुँच"</string>
@@ -409,7 +409,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिङहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्कसम्बन्धी सेटिङहरू रिसेट गरिएको छ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"एपका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएका एपका सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"एपका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं एपको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका एपहरू"</li>\n<li>"असक्षम पारिएका एपसम्बन्धी सूचनाहरू"</li>\n<li>"कारबाहीका लागि तोकिएका डिफल्ट एप"</li>\n<li>"एपको ब्याकग्राउन्ड डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं एपको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"एपहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"एपका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
@@ -463,7 +463,7 @@
       <item quantity="one">एउटा प्रयोगकर्ता मात्र सिर्जना गर्न सकिन्छ।</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"कुनै नयाँ प्रयोगकर्ता सिर्जना गर्न सकिएन"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"यस प्रयोगकर्तालाई हटाउने हो?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"यो प्रयोगकर्ता हटाउने हो?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"सबै एप र डेटा मेटाइने छन्।"</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"प्रयोगकर्ता मेटाउन सकिएन।"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"खारेज गर्नुहोस्"</string>
@@ -511,7 +511,7 @@
     <string name="account_auto_sync_title" msgid="3238816995364191432">"डेटा स्वतः सिंक गर्नुहोस्"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"एपहरूलाई डेटा स्वतः पुनः ताजा गर्न दिनुहोस्"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"डेटा स्वतः सिंक गर्ने कार्य सक्रिय गर्ने हो?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"तपाईंले वेबमार्फत आफ्नो खातामा गर्ने सबै परिवर्तनहरू स्वतः तपाईंको यन्त्रमा प्रतिलिपि गरिने छन्।\n\nकेही खाताहरूले तपाईंले फोनमा गर्ने सबै परिवर्तनहरूलाई वेबमा स्वतः प्रतिलिपि गर्न पनि सक्छन्। Google खाताले यसरी काम गर्दछ।"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"तपाईंले वेबमार्फत आफ्नो खातामा गर्ने सबै परिवर्तनहरू स्वतः तपाईंको डिभाइसमा प्रतिलिपि गरिने छन्।\n\nकेही खाताहरूले तपाईंले फोनमा गर्ने सबै परिवर्तनहरूलाई वेबमा स्वतः प्रतिलिपि गर्न पनि सक्छन्। Google खाताले यसरी काम गर्दछ।"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"डेटा स्वतः सिंक गर्ने कार्य निष्क्रिय पार्ने हो?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"यस कार्यले डेटाको बचत गर्ने छ तर तपाईंले हालसालको जानकारी सङ्कलन गर्न प्रत्येक खातालाई म्यानुअल तरिकाले सिंक गर्नु पर्ने हुन्छ। यसका अतिरिक्त, अद्याविधिक हुँदा तपाईं सूचना प्राप्त गर्नु हुने छैन।"</string>
     <string name="account_details_title" msgid="7529571432258448573">"खातासम्बन्धी जानकारी"</string>
@@ -520,7 +520,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"प्रतिबन्धित प्रोफाइलहरूले खाताहरू थप्न सक्दैनन्"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"खाता हटाउनुहोस्"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाता हटाउने हो?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"यो खातालाई हटाउनुले यस यन्त्रबाट यस खातामा रहेका सम्पूर्ण सन्देश, सम्पर्कहरू र अन्य डेटा मेटाउने छ!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"यो खातालाई हटाउनुले यस डिभाइसबाट यस खातामा रहेका सम्पूर्ण सन्देश, सम्पर्कहरू र अन्य डेटा मेटाउने छ!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"खाता हटाउन सकिएन।"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"खाताको सिंक"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> मध्ये <xliff:g id="ID_1">%1$d</xliff:g> वस्तु सिंक गर्ने सुविधा अन छ"</string>

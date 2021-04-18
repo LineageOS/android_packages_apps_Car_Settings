@@ -37,8 +37,8 @@
     </plurals>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Đang hoạt động/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Không hoạt động/SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Đang hoạt động/Đã tải SIM xuống"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Không hoạt động/Đã tải SIM xuống"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Đang hoạt động / Đã tải SIM xuống"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Không hoạt động / Đã tải SIM xuống"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Thêm"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dữ liệu di động"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Sử dụng dữ liệu qua mạng di động"</string>
@@ -159,7 +159,7 @@
     <string name="wifi_error" msgid="3105105447117289410">"Lỗi"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Thiết bị chưa có tên"</string>
-    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Thiết bị được ghép nối"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Thiết bị đã ghép nối"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Ghép nối thiết bị mới"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth sẽ bật để ghép nối"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Ngắt kết nối thiết bị?"</string>
@@ -219,7 +219,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"Báo thức"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Nhạc chuông điện thoại"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Âm thanh thông báo mặc định"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Âm thanh báo thức mặc định"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Âm thanh chuông báo mặc định"</string>
     <string name="units_settings" msgid="402325305096925886">"Đơn vị"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Tốc độ"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Khoảng cách"</string>
@@ -403,13 +403,13 @@
     <string name="reset_esim_desc" msgid="1437276625485586740">"Thao tác này sẽ không hủy gói dịch vụ của bạn."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Không thể đặt lại eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Chọn mạng"</string>
-    <string name="reset_network_button_text" msgid="8374174455632765033">"Đặt lại các tùy chọn cài đặt"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Đặt lại chế độ cài đặt"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Bạn có muốn đặt lại không?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Bạn có muốn đặt lại tất cả cài đặt mạng không? Bạn không thể hoàn tác hành động này!"</string>
-    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Đặt lại các tùy chọn cài đặt"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Đặt lại chế độ cài đặt"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Đã đặt lại cài đặt mạng"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Đặt lại các lựa chọn ưu tiên về ứng dụng?"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Thao tác này sẽ đặt lại tất cả tùy chọn cho:\n\n"<li>"Ứng dụng bị tắt"</li>\n<li>"Thông báo ứng dụng bị tắt"</li>\n<li>"Ứng dụng mặc định cho các thao tác"</li>\n<li>"Giới hạn dữ liệu nền cho ứng dụng"</li>\n<li>"Bất kỳ giới hạn về quyền nào"</li>\n\n"Bạn sẽ không mất bất kỳ dữ liệu ứng dụng nào."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Thao tác này sẽ đặt lại tất cả các lựa chọn ưu tiên cho:\n\n"<li>"Ứng dụng bị tắt"</li>\n<li>"Thông báo ứng dụng bị tắt"</li>\n<li>"Ứng dụng mặc định cho các thao tác"</li>\n<li>"Giới hạn dữ liệu nền cho ứng dụng"</li>\n<li>"Bất kỳ giới hạn về quyền nào"</li>\n\n"Bạn sẽ không mất bất kỳ dữ liệu ứng dụng nào."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Đặt lại ứng dụng"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Đã đặt lại tùy chọn ứng dụng"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Xóa mọi dữ liệu (đặt lại về trạng thái ban đầu)"</string>

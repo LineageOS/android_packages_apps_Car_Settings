@@ -48,7 +48,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"Мобилдик Интернет үчүн <xliff:g id="CARRIER2_0">%2$s</xliff:g> операторун колдонуп жатасыз. Эгер <xliff:g id="CARRIER1">%1$s</xliff:g> операторуна которулсаңыз, <xliff:g id="CARRIER2_1">%2$s</xliff:g> мобилдик Интернет үчүн колдонулбай калат."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> операторун колдонуу"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Роуминг"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"Роуминг учурунда маалыматтарды өткөрүүчү кызматтарга туташуу"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Роуминг учурунда маалыматтарды өткөрүүчү кызматтарга туташасыз"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Интернет-роумингди иштетесизби?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Роуминг акысын төлөп калышыңыз мүмкүн."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Маалымат алмашуу"</string>
@@ -328,7 +328,7 @@
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Колдоого алынган шилтемелер"</string>
     <string name="special_access" msgid="5730278220917123811">"Колдонмонун атайын уруксаты"</string>
     <string name="show_system" msgid="4401355756969485287">"Тутум процесстерин көрсөтүү"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Системалык процесстерди жашыруу"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Системдик процесстерди жашыруу"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Системанын жөндөөлөрүн өзгөртүү"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын жөндөөлөрүн өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
@@ -409,7 +409,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Жөндөөлөрдү кайра коюу"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Тармак жөндөөлөрү кайра коюлду"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Колдонмонун жөндөөлөрүн баштапкы абалга келтирүү"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөрдүн жөндөөлөрү баштапкы абалга келтирилет:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык дайындары сакталып калат."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөр кайра жөндөлөт:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык маалыматтары сакталып калат."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Баштапкы абалга келтирүү"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Бардык маалыматтарды өчүрүү"</string>
@@ -472,7 +472,7 @@
     <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Бул унаанын жалгыз колдонуучусун өчүргөндөн кийин, жаңы администратордун профили түзүлөт."</string>
     <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Бул колдонуучуга байланышкан бардык дайындар, жөндөөлөр жана колдонмолор өчүрүлөт. Тутумду кайрадан жөндөшүңүз керек болот."</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Жаңы администраторду тандоо"</string>
-    <string name="choose_new_admin_message" msgid="7468286545352043354">"Жок дегенде бир администраторуңуз болушу керек. Бул администраторду өчүрүү үчүн, биринчиден ордуна башка бирөөнү тандаңыз."</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Жок дегенде бир администраторуңуз болушу керек. Бул администраторду өчүрүү үчүн биринчиден ордуна башка бирөөнү тандаңыз."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Администраторду тандоо"</string>
     <string name="user_guest" msgid="3465399481257448601">"Конок"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Конок"</string>
@@ -643,7 +643,7 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter баскычы"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Демо режимден чыгуу"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Демо режимден чыгасызбы?"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ушуну менен демо аккаунт жок кылынып, тутум кайра башынан жөндөлөт. Колдонуучунун бардык дайындары өчүрүлөт."</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ушуну менен демо аккаунт жок кылынып, тутум кайра башынан жөндөлөт. Колдонуучунун бардык маалыматтары өчүрүлөт."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демо режимден чыгуу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЧЕТКЕ КАГУУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Унаа айдаганда бул функция жеткиликтүү эмес"</string>
