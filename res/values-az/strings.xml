@@ -538,7 +538,7 @@
     <string name="security_settings_title" msgid="6955331714774709746">"Güvənlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Yoxdur"</string>
-    <string name="security_lock_pattern" msgid="1174352995619563104">"Model"</string>
+    <string name="security_lock_pattern" msgid="1174352995619563104">"Qrafik açar"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Parol"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Kilid növü seçin"</string>
@@ -558,10 +558,10 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Silin"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Ləğv edin"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Yeni sxem kilidiniz"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Sxem kilidi çizin"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Qrafik açar çəkin"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Ediləndən sonra barmağı götürün"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Model qeyd edildi"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Təsdiq üçün modeli yenidən çəkin"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Qrafik açar qeyd edildi"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Qrafik açarı təkrar çəkin"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Ən azı 4 rəqəmi birləşdirin. Yenidən sınayın."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Yanlış model"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Sxem kilidini necə çəkməli"</string>
@@ -576,13 +576,13 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN-i təkrar daxil edin"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN ən az 4 rəqəmdən ibarət olmalıdır"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pın kod yanlışdır, ən azı 4 rəqəm olmalıdır."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodlar uyğun gəlmir"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-lər eyni deyil"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN kodu saxlamaqla bağlı problem var"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Yanlış PIN"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Yanlış parol"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Təhlükəsizlik üçün parol təyin edin"</string>
-    <string name="confirm_your_password_header" msgid="7052891840366724938">"Parolunuzu yenidən daxil edin"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Parollar uyğun gəlmir"</string>
+    <string name="confirm_your_password_header" msgid="7052891840366724938">"Parolu təkrar daxil edin"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Parollar eyni deyil"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Silin"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Ləğv edin"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Təsdiq edin"</string>
