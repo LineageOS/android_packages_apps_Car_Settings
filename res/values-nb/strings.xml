@@ -308,16 +308,16 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Merk: Etter en ny oppstart kan ikke denne appen starte før du låser opp kjøretøyet ditt."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistent og taleinndata"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistentapp"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"Bruk teksten fra skjermen"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"Bruk tekst fra skjermen"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Gi assistentappen tilgang til skjerminnholdet som tekst"</string>
-    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Bruk skjermdumpen"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Bruk skjermdump"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Gi assistentappen tilgang til et bilde av skjermen"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Taleinndata"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Autofylltjeneste"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ingen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Valgt"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistenten kan lese informasjon om appene du bruker i systemet ditt, inkludert informasjon som er synlig på skjermen eller tilgjengelig i appene."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sørg for at appen er pålitelig&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google autofyll&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen, til å fastslå hva som kan fylles ut automatisk."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Stoler du på denne appen?&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google autofyll&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen, til å fastslå hva som kan fylles ut automatisk."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Legg til tjeneste"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Åpning av linker"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Installerte apper"</string>
@@ -422,7 +422,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Appinnstillingene er tilbakestilt"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Slett alle data (tilbakestill)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Dette sletter alle dataene fra kjøretøyets hovedenhet, inkludert\n\n"<li>"Google-kontoen din"</li>\n<li>"system- og appdata samt innstillinger"</li>\n<li>"nedlastede apper"</li></string>
-    <string name="master_clear_accounts" msgid="7797522012993567494">"Du er for øyeblikket pålogget følgende kontoer:"</string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Du er logget på disse kontoene nå:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Andre brukere er til stede i dette kjøretøyet."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Tilbakestill kjøretøyet"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vil du tilbakestille?"</string>
@@ -532,8 +532,8 @@
     <string name="remove_account_error_title" msgid="8368044943174826635">"Kunne ikke fjerne kontoen."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Kontosynkronisering"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Synkronisering er slått på for <xliff:g id="ID_1">%1$d</xliff:g> av <xliff:g id="ID_2">%2$d</xliff:g> elementer"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synkronisering er slått på for alle elementene"</string>
-    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Synkronisering er slått av for alle elementene"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synkronisering er slått på for alle elementer"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Synkronisering er slått av for alle elementer"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Synkronisering er av"</string>
     <string name="sync_error" msgid="6698021343089247914">"Synkroniseringsfeil"</string>
     <string name="last_synced" msgid="4745124489150101529">"Sist synkronisert <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>

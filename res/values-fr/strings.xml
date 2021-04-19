@@ -75,7 +75,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Définir"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Avertissement et limite pour les données"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cycle de consommation des données"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"Définir une alerte données"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Activer l\'avertissement"</string>
     <string name="data_warning" msgid="116776633806885370">"Avertissement de conso données"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Définir la limite des données"</string>
     <string name="data_limit" msgid="227338836292511425">"Limite de données"</string>
@@ -126,7 +126,7 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Adresses IPv6"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Passerelle"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Préférences Wi-Fi"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Activation automatique du Wi‑Fi"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Activer automatiquement le Wi‑Fi"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Réactiver Wi‑Fi près réseaux haute qualité déjà enregistrés, comme réseau domestique"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisponible, car "<annotation id="link">"localisation"</annotation>" désactivée. Activez-la."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Activer la recherche de réseaux Wi-Fi ?"</string>
@@ -226,7 +226,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarme"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Sonnerie du téléphone"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notification par défaut"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Son de l\'alarme par défaut"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Sonnerie du réveil"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Enregistrer"</string>
     <string name="units_settings" msgid="402325305096925886">"Unités"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Vitesse"</string>
@@ -317,7 +317,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Aucune"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Sélectionnée"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"L\'Assistant pourra accéder aux informations relatives aux applications en cours d\'utilisation sur votre système, y compris aux informations visibles à l\'écran ou accessibles dans les applications."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Assurez-vous de faire confiance à cette application&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; utilise les éléments affichés à l\'écran pour déterminer les champs qui peuvent bénéficier de la saisie automatique."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Assurez-vous que cette appli est fiable&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; se sert de ce qui figure à l\'écran pour déterminer ce qui peut être saisi automatiquement."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Ajouter un service"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Ouverture des liens"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Applications installées"</string>
@@ -379,11 +379,11 @@
     <string name="contributors_title" msgid="7698463793409916113">"Contributeurs"</string>
     <string name="manual" msgid="4819839169843240804">"Manuel"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Libellés réglementaires"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Manuel de sécurité et de réglementation"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Manuel de sécurité et réglementation"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Copyright"</string>
     <string name="license_title" msgid="936705938435249965">"Licence"</string>
     <string name="terms_title" msgid="5201471373602628765">"Conditions d\'utilisation"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Licences système WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Licences System WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Fonds d\'écran"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Fournisseurs d\'images satellite :\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Modèle"</string>

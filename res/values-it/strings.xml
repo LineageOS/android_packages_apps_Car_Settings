@@ -317,7 +317,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nessuna"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Selezionata"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"L\'assistente potrà leggere informazioni sulle app utilizzate dal sistema, incluse quelle visibili su schermo o accessibili all\'interno delle app."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Verifica che questa app sia attendibile&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=La Compilazione Automatica di Google&gt;%1$s&lt;/xliff:g&gt; si basa sui contenuti visualizzati sullo schermo per stabilire quali dati è possibile compilare automaticamente."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Verifica che questa app sia attendibile&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=La Compilazione automatica di Google&gt;%1$s&lt;/xliff:g&gt; usa ciò che appare sullo schermo per stabilire quali contenuti possono essere compilati automaticamente."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Aggiungi servizio"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Apertura link"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"App installate"</string>
@@ -531,7 +531,7 @@
     <string name="really_remove_account_message" msgid="4296769280849579900">"La rimozione di questo account comporta l\'eliminazione di tutti i relativi messaggi, contatti e altri dati dal dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Impossibile rimuovere l\'account."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Sincronizzazione account"</string>
-    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Sincronizzazione attiva per <xliff:g id="ID_1">%1$d</xliff:g> elementi su <xliff:g id="ID_2">%2$d</xliff:g>"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Sincronizzazione attiva per <xliff:g id="ID_1">%1$d</xliff:g> di <xliff:g id="ID_2">%2$d</xliff:g> elementi"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Sincronizzazione attivata per tutti gli elementi"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sincronizzazione disattivata per tutti gli elementi"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Sincronizzaz. non attiva"</string>

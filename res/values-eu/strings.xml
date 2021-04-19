@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Gehiago"</string>
     <string name="display_settings" msgid="5325515247739279185">"Pantaila"</string>
     <string name="brightness" msgid="2919605130898772866">"Distira"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Distira doigarria"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Distira egokitua"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimizatu pantailaren distira inguruko argitasunaren arabera"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Aktibatuta dago Gaueko argia"</string>
     <string name="keywords_display" msgid="3978416985146943922">"ukipen-pantaila, pantaila"</string>
@@ -417,7 +417,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Berrezarri ezarpenak"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Berrezarri dira sareko ezarpenak"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Berrezarri aplikazioen hobespenak"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Hauen hobespen guztiak berrezarriko dira:\n\n"<li>"desgaitutako aplikazioak,"</li>\n<li>"desgaitutako aplikazio-jakinarazpenak,"</li>\n<li>"ekintza jakinetarako aplikazio lehenetsiak,"</li>\n<li>"aplikazioen atzeko planoko datuen murriztapenak eta"</li>\n<li>"baimen-murriztapenak."</li>\n\n"Ez dituzu galduko aplikazioetako datuak."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Hauen hobespen guztiak berrezarriko dira:\n\n"<li>"desgaitutako aplikazioak"</li>\n<li>"desgaitutako aplikazio-jakinarazpenak"</li>\n<li>"ekintza jakinetarako aplikazio lehenetsiak"</li>\n<li>"aplikazioen atzeko planoko datuen murriztapenak"</li>\n<li>"baimen-murriztapenak"</li>\n\n"Ez dituzu galduko aplikazioetako datuak."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Berrezarri aplikazioak"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Berrezarri dira aplikazioen hobespenak"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Ezabatu datu guztiak (berrezarri jatorrizkoak)"</string>
@@ -460,7 +460,7 @@
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Autoko datu-konexioa mezuetarako"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Aplikazio berriak instalatu"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Aplikazioak desinstalatu"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"Gehitu erabiltzailea"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"Gehitu erabiltzaile bat"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Erabiltzaile berria"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Beste erabiltzaile bat gehitu?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Erabiltzaile bat gehitzen duzunean, bere eremua konfiguratu beharko du."</string>
@@ -585,7 +585,7 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Idatzi berriro PIN kodea"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PINak lau digitu izan behar ditu gutxienez"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kodeak ez du balio: gutxienez lau digitu izan behar ditu."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodeak ez datoz bat"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINak ez datoz bat"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Errore bat gertatu da PINa gordetzean"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN kodea ez da zuzena"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Pasahitza ez da zuzena"</string>
@@ -597,7 +597,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Berretsi"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Lau karaktere izan behar ditu gutxienez"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Gutxienez <xliff:g id="COUNT">%d</xliff:g> karaktere izan behar ditu"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kodeak <xliff:g id="COUNT">%d</xliff:g> digitu izan behar ditu gutxienez"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PINak <xliff:g id="COUNT">%d</xliff:g> digitu izan behar ditu gutxienez"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> karaktere izan behar ditu"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> digitu izan behar ditu"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0 eta 9 arteko zenbakiak soilik izan ditzake."</string>

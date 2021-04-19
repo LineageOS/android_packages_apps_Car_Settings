@@ -47,10 +47,10 @@
     <string name="sim_change_data_title" msgid="6677115745127365131">"¿Usar <xliff:g id="CARRIER">%1$s</xliff:g> para los datos móviles?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Estás utilizando <xliff:g id="CARRIER2_0">%2$s</xliff:g> para los datos móviles. Si cambias a <xliff:g id="CARRIER1">%1$s</xliff:g>, no se utilizará más a <xliff:g id="CARRIER2_1">%2$s</xliff:g> para los datos móviles."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Usar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
-    <string name="roaming_title" msgid="6218635014519017734">"Itinerancia"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"Conectarse a servicios de datos en itinerancia"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"¿Quieres permitir la itinerancia de datos?"</string>
-    <string name="roaming_warning" msgid="4908184914868720704">"Es posible que se apliquen cargos por itinerancia."</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Conectarse a servicios de datos en roaming"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"¿Quieres permitir el roaming de datos?"</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Es posible que se apliquen cargos por roaming."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Uso de datos"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Datos principales"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Datos usados: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -80,7 +80,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Establecer límite de datos"</string>
     <string name="data_limit" msgid="227338836292511425">"Límite de datos"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitando uso de datos"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"La unidad principal de tu vehículo desactivará los datos móviles cuando se alcance el límite establecido.\n\nSe tiene en cuenta el uso de datos medido por la unidad principal, aunque tu operador podría registrarlo de forma diferente. Por tanto, debes ser prudente al establecer un límite."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"La unidad principal de tu vehículo desactivará los datos móviles cuando se alcance el límite que configures.\n\nSe tiene en cuenta el uso de datos medido por la unidad principal, aunque tu operador podría registrarlo de forma diferente. Por tanto, debes ser prudente al establecer un límite."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Establece la advertencia de uso de datos"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limitar uso de datos"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Definir"</string>
@@ -150,10 +150,10 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Banda preferida: 5,0 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
-    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Elige mín. 1 banda para punto acceso Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Punto de acceso/Conexión compartida"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar punto de acceso automáticamente"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"El punto de acceso Wi‑Fi se desactivará si no hay dispositivos conectados"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Elige al menos 1 banda para Compartir Internet:"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Compartir Internet"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar Compartir Internet automáticamente"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Compartir Internet se desactivará si no hay dispositivos conectados"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quiere activar la conexión Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quiere desactivar la conexión Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
@@ -167,8 +167,8 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos vinculados"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Vincular nuevo dispositivo"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"El Bluetooth se activará para vincular el dispositivo"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Emparejar nuevo dispositivo"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"El Bluetooth se activará para emparejar el dispositivo"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"¿Desconectar dispositivo?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Tu vehículo se desconectará de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Dirección de Bluetooth del vehículo: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -195,14 +195,14 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de vinculación por Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"El PIN contiene letras o símbolos"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Escribe el código de vinculación y, a continuación, pulsa Intro"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"¿Vincular con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"¿Emparejar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> acceda a tus contactos y al historial de llamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Es posible que tengas que introducir este PIN en el otro dispositivo."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Es posible que tengas que introducir la clave de acceso en el otro dispositivo."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Debe tener 16 dígitos"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalmente: 0000 o 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitud de vinculación"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para vincular con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para emparejar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Seleccionar dispositivo Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e introducción de texto"</string>
@@ -210,7 +210,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Todos los idiomas"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Teclado"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Gestionar teclados"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"Síntesis de voz"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Salida de conversión de texto a voz"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferido"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor actual"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Velocidad de la voz"</string>
@@ -323,7 +323,7 @@
     <string name="domain_url_section_title" msgid="9070403140947787214">"Aplicaciones instaladas"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"No abrir enlaces compatibles"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Abrir <xliff:g id="DOMAIN">%s</xliff:g>"</string>
-    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Abrir <xliff:g id="DOMAIN">%s</xliff:g> y otras URL"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Abrir <xliff:g id="DOMAIN">%s</xliff:g> y otras URLs"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"Abrir de forma predeterminada"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Otros valores predeterminados"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Valores predeterminados no definidos."</string>
@@ -334,11 +334,11 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Preguntar siempre"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"No abrir en esta aplicación"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Enlaces compatibles"</string>
-    <string name="special_access" msgid="5730278220917123811">"Acceso especial de aplicaciones"</string>
+    <string name="special_access" msgid="5730278220917123811">"Aplicaciones con accesos especiales"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar ajustes del sistema"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Cuando se concede este permiso, la aplicación puede modificar los ajustes del sistema."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Este permiso permite que una aplicación modifique los ajustes del sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a las notificaciones"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"¿Permitir que <xliff:g id="SERVICE">%1$s</xliff:g> acceda a las notificaciones?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> podrá leer todas las notificaciones, incluidas aquellas relacionadas con información personal, como nombres de contactos y texto de mensajes que hayas recibido. También podrá cerrar las notificaciones o utilizar los botones de acción que incluyan.\n\nAdemás, concede a la aplicación la capacidad de activar o desactivar el modo No molestar y de cambiar las opciones de configuración relacionadas."</string>
@@ -530,7 +530,7 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"¿Quitar cuenta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Si quitas esta cuenta, se eliminarán todos sus mensajes, contactos y otros datos del dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"No se ha podido eliminar la cuenta."</string>
-    <string name="account_sync_title" msgid="6541844336300236915">"Sincronización"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Sincronización de cuenta"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Elementos con la sincronización activada: <xliff:g id="ID_1">%1$d</xliff:g> de <xliff:g id="ID_2">%2$d</xliff:g>"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Sincronización activada para todos los elementos"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sincronización desactivada para todos los elementos"</string>
@@ -569,7 +569,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Tu nuevo patrón de desbloqueo"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dibuja un patrón de desbloqueo"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Levanta el dedo cuando termines"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patrón guardado"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patrón registrado"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuja el patrón de nuevo para confirmarlo"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Une mín. 4 puntos. Vuelve a intentarlo."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Patrón incorrecto"</string>

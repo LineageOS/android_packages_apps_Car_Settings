@@ -279,7 +279,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Sovellukset ja ilmoitukset"</string>
     <string name="all_applications" msgid="7798210477486822168">"Näytä kaikki sovellukset"</string>
     <string name="default_applications" msgid="1558183275638697087">"Oletussovellukset"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Sovellusten käyttöoikeudet"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Sovellusluvat"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Sovellukset, joilla on lupa käyttää seuraavia: <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Sovellustiedot"</string>
     <string name="force_stop" msgid="2153183697014720520">"Pakota sulkeutumaan"</string>
@@ -344,7 +344,7 @@
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> voi lukea kaikki ilmoitukset ja niiden sisältämät henkilökohtaiset tiedot, kuten yhteystietojen nimet ja saamiesi viestien sisällön. Se voi myös ohittaa ilmoitukset tai käyttää niiden toimintopainikkeita.\n\nTämä antaa sovellukselle myös oikeuden ottaa Älä häiritse ‑tilan käyttöön, poistaa sen käytöstä ja muuttaa sen asetuksia."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jos <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ei enää pääse ilmoituksiin, myös Älä häiritse ‑tilaan pääsy voidaan estää."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Estä pääsy"</string>
-    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Peruuta"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Peru"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium-tekstiviestien käyttö"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-tekstiviestien käyttö saattaa olla maksullista, ja kulut lisätään operaattorisi laskuun. Jos annat sovellukselle käyttöoikeuden, voit lähettää premium-tekstiviestejä kyseisellä sovelluksella."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Käyttöoikeus"</string>
@@ -408,7 +408,7 @@
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobiilidata"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Tyhjennä kaikki ajoneuvon eSIMit"</string>
-    <string name="reset_esim_desc" msgid="1437276625485586740">"Tämä ei peruuta palvelupakettiasi."</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"Tämä ei peru palvelupakettiasi."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIMien nollaus epäonnistui"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Valitse verkko"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Nollaa asetukset"</string>
@@ -541,7 +541,7 @@
     <string name="sync_one_time_sync" msgid="491707183321353107">"Synkronoi nyt napauttamalla – <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Synkronoi nyt"</string>
-    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Peruuta synkronointi"</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Peru synkronointi"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Synkronoinnissa on tällä hetkellä ongelmia. Palvelu palaa pian takaisin käyttöön."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Tietosuoja"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Tietoturva"</string>
@@ -565,7 +565,7 @@
     <string name="current_screen_lock" msgid="637651611145979587">"Nykyinen näytön lukitus"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Aseta kuvio tietoturvasyistä"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Tyhjennä"</string>
-    <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Peruuta"</string>
+    <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Peru"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Uusi lukituksenpoistokuvio"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Piirrä lukituksen avaava kuvio"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Nosta sormi, kun olet valmis"</string>
@@ -593,7 +593,7 @@
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Syötä salasana uudelleen"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Salasanat eivät täsmää"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Tyhjennä"</string>
-    <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Peruuta"</string>
+    <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Peru"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Vahvista"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Vähimmäispituus on 4 merkkiä."</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Salasanan vähimmäispituus on <xliff:g id="COUNT">%d</xliff:g> merkkiä."</string>
@@ -645,7 +645,7 @@
     <string name="disconnect" msgid="6140789953324820336">"Katkaise yhteys"</string>
     <string name="delete_button" msgid="5840500432614610850">"Poista"</string>
     <string name="remove_button" msgid="6664656962868194178">"Poista"</string>
-    <string name="cancel" msgid="750286395700355455">"Peruuta"</string>
+    <string name="cancel" msgid="750286395700355455">"Peru"</string>
     <string name="allow" msgid="7519431342750394402">"Salli"</string>
     <string name="deny" msgid="340512788979930804">"Estä"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Askelpalautin"</string>

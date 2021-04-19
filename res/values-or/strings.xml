@@ -210,7 +210,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"ସମସ୍ତ ଭାଷା"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"କୀବୋର୍ଡ"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"କୀବୋର୍ଡଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ୍‍-ରୁ-ସ୍ପିଚ୍‍ ଆଉଟ୍‍ପୁଟ୍"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ୍‍-ଟୁ-ସ୍ପିଚ୍‍ ଆଉଟ୍‍ପୁଟ୍"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ଅଗ୍ରାଧିକାର ଦିଆଯାଇଥିବା ଇଞ୍ଜିନ୍"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ସାମ୍ପ୍ରତିକ ଇଞ୍ଜିନ୍"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"ସ୍ପୀଚ୍‌ ହାର"</string>
@@ -400,7 +400,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"ବର୍ତ୍ତମାନ ଆପଣ ଜଣେ ଡେଭେଲପର୍‌ ଅଟନ୍ତି!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"ଆବଶ୍ୟକତା ନାହିଁ, ଆପଣ ଜଣେ ଡେଭେଲପର୍‍ ଅଟନ୍ତି।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ଡେଭ୍‌ଲପର୍‌ମାନଙ୍କ ପାଇଁ ବିକଳ୍ପଗୁଡ଼ିକ"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"ରିସେଟ୍‌ କରିବାର ବିକଳ୍ପମାନ"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"ରିସେଟ୍‌ କରିବାର ବିକଳ୍ପଗୁଡ଼ିକ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ନେଟ୍‌ୱାର୍କ, ଆପ୍‌, କିମ୍ବା ଡିଭାଇସ୍‌ ରିସେଟ୍‍"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"ନେଟ୍‍ୱାର୍କ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"ଏହା ସମସ୍ତ ନେଟ୍‍ୱାର୍କ ସେଟିଂକୁ ରିସେଟ୍‍ କରିବ, ଅନ୍ତର୍ଭୁକ୍ତ ଅଟେ:"</string>
@@ -441,7 +441,7 @@
     <string name="date_time_set_time_title" msgid="5884883050656937853">"ସମୟ"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"ସମୟ ସେଟ୍ କରନ୍ତୁ"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"ଟାଇମ୍‌ ଜୋନ୍‌"</string>
-    <string name="date_time_set_timezone" msgid="4759353576185916944">"ସମୟ କ୍ଷେତ୍ର ବାଛନ୍ତୁ"</string>
+    <string name="date_time_set_timezone" msgid="4759353576185916944">"ଟାଇମ୍ ଜୋନ୍ ଚୟନ କରନ୍ତୁ"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"ତାରିଖ"</string>
     <string name="date_time_set_date" msgid="2537494485643283230">"ତାରିଖ ସେଟ୍‍ କରନ୍ତୁ"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"ବର୍ଣ୍ଣାନୁକ୍ରମିକ ସର୍ଟ୍ କରନ୍ତୁ"</string>
@@ -585,13 +585,13 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ନିଜ PIN ପୁଣି ପ୍ରବେଶ କରନ୍ତୁ"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PINରେ ଅତିକମ୍‌ରେ 4ଟିଅଙ୍କ ରହିବା ଦରକାର"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin ଅମାନ୍ୟ ଅଟେ, ଅତିକମରେ 4ଟି ସଂଖ୍ୟା ରହିବା ଆବଶ୍ୟକ।"</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINଗୁଡିକ ମେଳ ଖାଉ ନାହିଁ"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINଗୁଡ଼ିକ ମେଳ ହେଉନାହିଁ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"ଭୁଲ PIN"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"ଭୁଲ ପାସ୍‌ୱର୍ଡ"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"ସୁରକ୍ଷା ପାଇଁ ଗୋଟିଏ ପାସ୍‌ୱର୍ଡ ସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"ପାସ୍‌ୱର୍ଡ ପୁନଃ-ପ୍ରବେଶ କରନ୍ତୁ"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"ପାସ୍‌ୱର୍ଡ ମେଳ ଖାଉନାହିଁ"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"ପାସୱାର୍ଡଗୁଡ଼ିକ ମେଳ ହେଉନାହିଁ"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ଖାଲି କରନ୍ତୁ"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ବାତିଲ୍ କରନ୍ତୁ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ନିଶ୍ଚିତ"</string>
