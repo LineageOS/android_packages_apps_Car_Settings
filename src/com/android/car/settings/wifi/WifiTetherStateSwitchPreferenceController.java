@@ -17,56 +17,29 @@
 package com.android.car.settings.wifi;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.net.TetheringManager;
-import android.net.wifi.WifiManager;
-
-import androidx.annotation.VisibleForTesting;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.internal.util.ConcurrentUtils;
 
 /**
  * Enables/disables tether state via SwitchPreference.
  */
 public class WifiTetherStateSwitchPreferenceController extends
-        PreferenceController<ColoredSwitchPreference> {
+        PreferenceController<ColoredSwitchPreference> implements
+        WifiTetheringHandler.WifiTetheringAvailabilityListener {
 
-    private CarWifiManager mCarWifiManager;
-    private TetheringManager mTetheringManager;
-    private boolean mRestartBooked = false;
-    private WifiManager.SoftApCallback mSoftApCallback = new WifiManager.SoftApCallback() {
-        @Override
-        public void onStateChanged(int state, int failureReason) {
-            handleWifiApStateChanged(state);
-        }
-    };
-
-    private final BroadcastReceiver mRestartReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (mCarWifiManager != null && mCarWifiManager.isWifiApEnabled()) {
-                restartTethering();
-            }
-        }
-    };
+    private WifiTetheringHandler mWifiTetheringHandler;
 
     public WifiTetherStateSwitchPreferenceController(Context context,
             String preferenceKey,
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarWifiManager = new CarWifiManager(context,
-                getFragmentController().getSettingsLifecycle());
-        mTetheringManager = getContext().getSystemService(TetheringManager.class);
+        mWifiTetheringHandler = new WifiTetheringHandler(context,
+                fragmentController.getSettingsLifecycle(), this);
     }
 
     @Override
@@ -76,18 +49,14 @@ public class WifiTetherStateSwitchPreferenceController extends
 
     @Override
     protected void updateState(ColoredSwitchPreference preference) {
-        updateSwitchPreference(mCarWifiManager.isWifiApEnabled());
+        updateSwitchPreference(mWifiTetheringHandler.isWifiTetheringEnabled());
     }
 
     @Override
     protected boolean handlePreferenceChanged(ColoredSwitchPreference preference, Object newValue) {
         boolean switchOn = (Boolean) newValue;
         updateSwitchPreference(switchOn);
-        if (switchOn) {
-            startTethering();
-        } else {
-            stopTethering();
-        }
+        mWifiTetheringHandler.updateWifiTetheringState(switchOn);
         return true;
     }
 
@@ -99,85 +68,32 @@ public class WifiTetherStateSwitchPreferenceController extends
 
     @Override
     protected void onStartInternal() {
-        mCarWifiManager.registerSoftApCallback(getContext().getMainExecutor(), mSoftApCallback);
-        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mRestartReceiver,
-                new IntentFilter(
-                        WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING));
+        mWifiTetheringHandler.onStartInternal();
     }
 
     @Override
     protected void onStopInternal() {
-        mCarWifiManager.unregisterSoftApCallback(mSoftApCallback);
-        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mRestartReceiver);
+        mWifiTetheringHandler.onStopInternal();
     }
 
-    @VisibleForTesting
-    void setCarWifiManager(CarWifiManager carWifiManager) {
-        mCarWifiManager = carWifiManager;
+    @Override
+    public void onWifiTetheringAvailable() {
+        updateSwitchPreference(/* switchOn= */ true);
     }
 
-    @VisibleForTesting
-    void setTetheringManager(TetheringManager tetheringManager) {
-        mTetheringManager = tetheringManager;
+    @Override
+    public void onWifiTetheringUnavailable() {
+        updateSwitchPreference(/* switchOn= */ false);
     }
 
-    /**
-     * When the state of the hotspot changes, update the state of the tethering switch as well
-     */
-    @VisibleForTesting
-    void handleWifiApStateChanged(int state) {
-        switch (state) {
-            case WifiManager.WIFI_AP_STATE_ENABLING:
-                getPreference().setEnabled(false);
-                break;
-            case WifiManager.WIFI_AP_STATE_ENABLED:
-                getPreference().setEnabled(true);
-                if (!getPreference().isChecked()) {
-                    updateSwitchPreference(/* switchOn= */ true);
-                }
-                break;
-            case WifiManager.WIFI_AP_STATE_DISABLING:
-                getPreference().setEnabled(false);
-                if (getPreference().isChecked()) {
-                    updateSwitchPreference(/* switchOn= */ false);
-                }
-                break;
-            case WifiManager.WIFI_AP_STATE_DISABLED:
-                updateSwitchPreference(/* switchOn= */ false);
-                getPreference().setEnabled(true);
-                if (mRestartBooked) {
-                    // Hotspot was disabled as part of a restart request - we can now re-enable it
-                    getPreference().setEnabled(false);
-                    startTethering();
-                    mRestartBooked = false;
-                }
-                break;
-            default:
-                updateSwitchPreference(/* switchOn= */ false);
-                getPreference().setEnabled(true);
-                break;
-        }
+    @Override
+    public void enablePreference() {
+        getPreference().setEnabled(true);
     }
 
-    private void startTethering() {
-        mTetheringManager.startTethering(ConnectivityManager.TETHERING_WIFI,
-                ConcurrentUtils.DIRECT_EXECUTOR,
-                new TetheringManager.StartTetheringCallback() {
-                    @Override
-                    public void onTetheringFailed(final int result) {
-                        updateSwitchPreference(/* switchOn= */ false);
-                        getPreference().setEnabled(true);
-                    }
-                });
-    }
-
-    private void stopTethering() {
-        mTetheringManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
-    }
-
-    private void restartTethering() {
-        stopTethering();
-        mRestartBooked = true;
+    @Override
+    public void disablePreference() {
+        getPreference().setEnabled(false);
     }
 
     private void updateSwitchPreference(boolean switchOn) {
