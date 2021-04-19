@@ -20,10 +20,10 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/network_and_internet"
     android:key="@string/psk_network_and_internet">
-    <Preference
+    <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
         android:fragment="com.android.car.settings.wifi.WifiTetherFragment"
         android:key="@string/pk_wifi_tether_settings_entry"
-        android:title="@string/tether_settings_title_all"
+        android:title="@string/hotspot_settings_title"
         android:icon="@drawable/ic_wifi_tethering"
         settings:controller="com.android.car.settings.wifi.WifiTetherPreferenceController"
         settings:searchable="false"/>
