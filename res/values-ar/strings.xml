@@ -345,8 +345,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"يتيح هذا الإذن للتطبيق إمكانية تعديل إعدادات النظام."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"الوصول إلى الإشعارات"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"هل تسمح بوصول خدمة <xliff:g id="SERVICE">%1$s</xliff:g> إلى الإشعارات؟"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"سيكون بإمكان \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\" قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونصوص الرسائل التي تتلقّاها. وسيتمكّن كذلك من تجاهل الإشعارات أو تشغيل أزرار الإجراءات التي تحتوي عليها.\n\nوتتيح هذه الميزة أيضًا للتطبيق إمكانية تفعيل ميزة \"عدم الإزعاج\" أو إيقافها وتغيير الإعدادات ذات الصلة."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"عند إيقاف الوصول إلى الإشعار لـ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>، قد يتم إيقاف الوصول إلى ميزة \"عدم الإزعاج\" أيضًا."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"سيكون بإمكان <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونصوص الرسائل التي تتلقّاها. وسيتمكّن كذلك من تجاهل الإشعارات أو تشغيل أزرار الإجراءات التي تحتوي عليها.\n\nوتتيح هذه الميزة أيضًا للتطبيق إمكانية تفعيل ميزة \"عدم الإزعاج\" أو إيقافها وتغيير الإعدادات ذات الصلة."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"عند إيقاف الوصول إلى الإشعارات لخدمة <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>، قد يتم إيقاف الوصول إلى ميزة \"عدم الإزعاج\" أيضًا."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"إيقاف"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"إلغاء"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"إمكانية إرسال رسائل قصيرة SMS مميزة"</string>
@@ -510,7 +510,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"تطبيقات أخرى"</string>
     <string name="storage_files" msgid="6382081694781340364">"الملفات"</string>
     <string name="storage_system" msgid="1271345630248014010">"النظام"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"يتضمّن النظام الملفات المستخدمة لتشغيل إصدار Android <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"يتضمّن النظام الملفات المستخدمة لتشغيل إصدار Android <xliff:g id="VERSION">%s</xliff:g>."</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"الملفات الصوتية"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"جارٍ الحساب…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"حجم التطبيق"</string>
