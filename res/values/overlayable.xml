@@ -64,6 +64,8 @@ limitations under the License.-->
       <item type="bool" name="config_show_wifi_mac_address"/>
       <item type="bool" name="config_top_level_injection_background_always_use_default"/>
       <item type="bool" name="config_top_level_injection_enable_summaries"/>
+      <item type="color" name="brightness_thumb_inner_ring_color"/>
+      <item type="color" name="brightness_thumb_outer_ring_color"/>
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
       <item type="color" name="text_color_accent_with_disable"/>
@@ -126,7 +128,11 @@ limitations under the License.-->
       <item type="dimen" name="bluetooth_pin_dialog_subtext_margin_top"/>
       <item type="dimen" name="bluetooth_pin_dialog_text_margin_end"/>
       <item type="dimen" name="bluetooth_pin_dialog_text_margin_start"/>
+      <item type="dimen" name="brightness_knob_inner_ring_inner_radius"/>
       <item type="dimen" name="brightness_knob_size"/>
+      <item type="dimen" name="brightness_knob_thumb_inner_ring_thickness"/>
+      <item type="dimen" name="brightness_knob_thumb_outer_ring_inner_radius"/>
+      <item type="dimen" name="brightness_knob_thumb_outer_ring_thickness"/>
       <item type="dimen" name="brightness_seekbar_height"/>
       <item type="dimen" name="brightness_seekbar_margin_bottom"/>
       <item type="dimen" name="brightness_seekbar_padding_horizontal"/>
@@ -208,6 +214,7 @@ limitations under the License.-->
       <item type="dimen" name="user_switcher_margin_bottom"/>
       <item type="dimen" name="user_switcher_vertical_spacing_between_name_and_avatar"/>
       <item type="dimen" name="user_switcher_vertical_spacing_between_users"/>
+      <item type="drawable" name="brightness_seekbar_background"/>
       <item type="drawable" name="brightness_seekbar_track"/>
       <item type="drawable" name="button_ripple_bg"/>
       <item type="drawable" name="car_ic_navigation"/>
@@ -223,6 +230,7 @@ limitations under the License.-->
       <item type="drawable" name="ic_block"/>
       <item type="drawable" name="ic_brightness_knob"/>
       <item type="drawable" name="ic_brightness_knob_stretched"/>
+      <item type="drawable" name="ic_brightness_knob_with_focus"/>
       <item type="drawable" name="ic_cellular_data"/>
       <item type="drawable" name="ic_check"/>
       <item type="drawable" name="ic_check_box"/>

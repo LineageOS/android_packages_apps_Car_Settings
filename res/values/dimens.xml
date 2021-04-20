@@ -52,6 +52,11 @@
     <dimen name="brightness_seekbar_track_height">6dp</dimen>
     <dimen name="brightness_seekbar_track_corner">3dp</dimen>
     <dimen name="brightness_knob_size">44dp</dimen>
+    <dimen name="brightness_knob_inner_ring_inner_radius">22dp</dimen>
+    <dimen name="brightness_knob_thumb_inner_ring_thickness">8dp</dimen>
+    <dimen name="brightness_knob_thumb_outer_ring_inner_radius">30dp</dimen>
+    <dimen name="brightness_knob_thumb_outer_ring_thickness">8dp</dimen>
+
     <dimen name="tile_margin_start">@*android:dimen/car_padding_2</dimen>
     <dimen name="tile_margin_end">@*android:dimen/car_padding_2</dimen>
     <dimen name="tile_margin_bottom">@*android:dimen/car_padding_5</dimen>
