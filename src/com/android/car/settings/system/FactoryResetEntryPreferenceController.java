@@ -21,9 +21,10 @@ import static android.os.UserManager.DISALLOW_FACTORY_RESET;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserManager;
+import android.widget.Toast;
 
-import androidx.preference.Preference;
-
+import com.android.car.settings.R;
+import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
@@ -31,7 +32,8 @@ import com.android.car.settings.common.PreferenceController;
  * Controller which determines if factory clear (aka "factory reset") should be displayed based on
  * user status.
  */
-public class FactoryResetEntryPreferenceController extends PreferenceController<Preference> {
+public class FactoryResetEntryPreferenceController
+        extends PreferenceController<ClickableWhileDisabledPreference> {
 
     private final UserManager mUserManager;
 
@@ -42,8 +44,16 @@ public class FactoryResetEntryPreferenceController extends PreferenceController<
     }
 
     @Override
-    protected Class<Preference> getPreferenceType() {
-        return Preference.class;
+    protected Class<ClickableWhileDisabledPreference> getPreferenceType() {
+        return ClickableWhileDisabledPreference.class;
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        super.onCreateInternal();
+        getPreference().setDisabledClickListener(p ->
+                Toast.makeText(getContext(), getContext().getString(R.string.action_unavailable),
+                        Toast.LENGTH_LONG).show());
     }
 
     @Override
