@@ -338,7 +338,7 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"यस अनुमतिले एपलाई प्रणालीको सेटिङ परिमार्जन गर्न दिन्छ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचनामाथिको पहुँच"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> लाई सूचनामाथि पहुँच राख्ने अनुमति दिने हो?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सम्पर्क सूचीका व्यक्तीको नाम र तपाईंले प्राप्त गर्ने सन्देशहरूका पाठ जस्ता व्यक्तिगत जानकारीलगायतका सबै सूचनाहरू पढ्न सक्ने छ। यसले सूचनाहरू खारेज गर्न वा तिनीहरूमा रहेका कारबाहीसम्बन्धी बटनहरू ट्रिगर गर्न पनि सक्ने छ। \n\nयसले एपलाई बाधा नपुऱ्याउनुहोस् नामक मोड सक्रिय गर्ने वा निष्क्रिय पार्ने र सम्बन्धित सेटिङ परिवर्तन गर्ने क्षमता पनि प्रदान गर्ने छ।"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सम्पर्क सूचीका व्यक्तीको नाम र तपाईंले प्राप्त गर्ने सन्देशहरूका पाठ जस्ता व्यक्तिगत जानकारीलगायतका सबै सूचनाहरू पढ्न सक्ने छ। यसले सूचनाहरू खारेज गर्न वा तिनीहरूमा रहेका कारबाहीसम्बन्धी बटनहरू ट्रिगर गर्न पनि सक्ने छ। \n\nयसले एपलाई बाधा नपुऱ्याउनुहोस् मोड अन र अफ गर्ने र सम्बन्धित सेटिङ परिवर्तन गर्ने क्षमता पनि प्रदान गर्ने छ।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"तपाईंले <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> का सूचनामाथिको पहुँच निष्क्रिय पार्नुभएका खण्डमा बाधा नपुऱ्याउनुहोस् नामक मोडमाथिको पहुँच पनि निष्क्रिय पारिन सक्छ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"निष्क्रिय पार्नुहोस्"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द गर्नुहोस्"</string>
@@ -489,7 +489,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"अन्य एपहरू"</string>
     <string name="storage_files" msgid="6382081694781340364">"फाइलहरू"</string>
     <string name="storage_system" msgid="1271345630248014010">"प्रणाली"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"प्रणालीमा Android को संस्करण <xliff:g id="VERSION">%s</xliff:g> चलाउन प्रयोग भएका फाइलहरू समावेश छन्"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममा Android को संस्करण <xliff:g id="VERSION">%s</xliff:g> चलाउन प्रयोग भएका फाइलहरू समावेश छन्"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"अडियो फाइलहरू"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"गणना गर्दै…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"एपको आकार"</string>

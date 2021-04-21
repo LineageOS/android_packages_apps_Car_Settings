@@ -340,9 +340,9 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Izmjena postavki sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Ovo odobrenje omogućava aplikaciji da izmijeni postavke sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obavještenjima"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Dozvoliti pristup obavještenjima za uslugu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Dozvoliti aplikaciji <xliff:g id="SERVICE">%1$s</xliff:g> pristup obavještenjima?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> će moći čitati sva obavještenja, uključujući lične informacije kao što su imena kontakata i tekst primljenih poruka. Također će moći odbaciti obavještenja ili koristiti dugmad za radnje u obavještenjima.\n\nTime će se aplikaciji dati i mogućnost da uključi i isključi način rada Ne ometaj te da promijeni postavke povezane s tom opcijom."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako korisniku <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> isključite pristup obavještenjima, može se isključiti i pristup načinu rada Ne ometaj."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako aplikaciji <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> isključite pristup obavještenjima, može se isključiti i pristup načinu rada Ne ometaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Otkaži"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup premium SMS-ovima"</string>
