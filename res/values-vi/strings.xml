@@ -94,7 +94,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Thêm mạng"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Kết nối"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Mật khẩu"</string>
-    <string name="wifi_show_password" msgid="8423293211933521097">"Hiển thị mật khẩu"</string>
+    <string name="wifi_show_password" msgid="8423293211933521097">"Hiện mật khẩu"</string>
     <string name="wifi_no_network_name" msgid="6819604337231313594">"Vui lòng nhập một tên mạng"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Tên mạng"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Nhập SSID"</string>
@@ -104,7 +104,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"Tốc độ liên kết"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Tần số"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"Địa chỉ IP"</string>
-    <string name="show_password" msgid="2074628020371139240">"Hiển thị mật khẩu"</string>
+    <string name="show_password" msgid="2074628020371139240">"Hiện mật khẩu"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"Nhập tên mạng"</string>
     <string name="default_password_summary" msgid="8789594645836902982">"Nhập mật khẩu"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
@@ -332,7 +332,7 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Sửa đổi các chế độ cài đặt hệ thống"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Quyền này cho phép ứng dụng sửa đổi các chế độ cài đặt hệ thống."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Quyền truy cập thông báo"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cấp quyền truy cập thông báo cho <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cho phép <xliff:g id="SERVICE">%1$s</xliff:g> truy cập thông báo?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> có thể đọc tất cả các thông báo, bao gồm cả thông tin cá nhân như tên liên hệ và nội dung của thông báo mà bạn nhận được. Dịch vụ này cũng có thể bỏ qua thông báo hoặc kích hoạt các nút hành động trong các thông báo đó.\n\nĐiều này cũng sẽ cho phép ứng dụng bật hoặc tắt chế độ Không làm phiền và thay đổi các tùy chọn cài đặt có liên quan."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nếu bạn tắt quyền truy cập thông báo của <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, thì quyền truy cập chế độ Không làm phiền cũng có thể bị tắt."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Tắt"</string>

@@ -337,8 +337,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Эгер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үчүн билдирмени угуу уруксатын өчүрсөңүз, анын \"Тынчымды алба\" режимине да уруксаты жок болуп калышы мүмкүн."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өчүрүү"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Жок"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Артыкчылыктуу SMS жөнөтүүгө уруксат"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"Артыкчылыктуу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу артыкчылыктуу SMS жөнөтө аласыз."</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Акы алынуучу SMS жөнөтүүгө уруксат"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Акы алынуучу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу акы алынуучу SMS жөнөтө аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Колдонуу таржымалын көрүү"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Колдонуу таржымалы аркылуу кайсы колдонмолор канчалык көп колдонула турганын, ошондой эле байланыш операторуңузду, тил жөндөөлөрүн жана башка параметрлерди көрө аласыз."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi\'ды көзөмөлдөө"</string>
@@ -495,10 +495,10 @@
     <string name="memory_calculating_size" msgid="1672238502950390033">"Эсептелүүдө…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Колдонмонун көлөмү"</string>
     <string name="storage_data_size_label" msgid="5022911581004239367">"Колдонуучунун дайындары"</string>
-    <string name="storage_cache_size_label" msgid="6361308766707419555">"Кэш"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Кеш"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Жалпы"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Сактагычты тазалоо"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Кэшти тазалоо"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Кешти тазалоо"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Колдонмонун дайындары өчүрүлсүнбү?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Бул колдонмодогу файлдар, жөндөөлөр, аккаунттар жана маалымат базасы сыяктуу бардык нерселер биротоло өчүрүлөт."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Колдонмонун сактагычы тазаланган жок."</string>

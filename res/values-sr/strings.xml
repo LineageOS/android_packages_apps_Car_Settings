@@ -337,7 +337,7 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Приступ обавештењима"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Желите ли да дозволите да <xliff:g id="SERVICE">%1$s</xliff:g> има приступ обавештењима?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ће моћи да чита сва обавештења, укључујући личне податке, попут имена контаката и текста порука које примате. Моћи ће и да одбацује обавештења или да користи дугмад за радње која садрже. \n\nОво ће апликацији омогућити и да укључује или искључује режим Не узнемиравај и мења сродна подешавања."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако искључите приступ обавештењима за корисника <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, можда ћете искључити и приступ режиму Не узнемиравај."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако искључите приступ обавештењима за <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, можда ћете искључити и приступ режиму Не узнемиравај."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Искључи"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Откажи"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Приступ премијум SMS-овима"</string>
