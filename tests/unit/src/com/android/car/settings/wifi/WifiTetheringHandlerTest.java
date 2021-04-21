@@ -36,6 +36,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 
@@ -48,11 +49,12 @@ import org.mockito.MockitoAnnotations;
 import java.util.concurrent.Executor;
 
 @RunWith(AndroidJUnit4.class)
-public class WifiTetherStateSwitchPreferenceControllerTest {
+public class WifiTetheringHandlerTest {
     private LifecycleOwner mLifecycleOwner;
     private Context mContext = ApplicationProvider.getApplicationContext();
     private SwitchPreference mSwitchPreference;
-    private WifiTetherStateSwitchPreferenceController mPreferenceController;
+    private TestWifiTetheringPreferenceController mPreferenceController;
+    private WifiTetheringHandler mWifiTetheringHandler;
     private CarUxRestrictions mCarUxRestrictions;
 
     @Mock
@@ -74,35 +76,36 @@ public class WifiTetherStateSwitchPreferenceControllerTest {
 
         mSwitchPreference = new ColoredSwitchPreference(mContext);
         when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
-        mPreferenceController = new WifiTetherStateSwitchPreferenceController(mContext,
+        mPreferenceController = new TestWifiTetheringPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
-        mPreferenceController.setCarWifiManager(mCarWifiManager);
-        mPreferenceController.setTetheringManager(mTetheringManager);
+        mWifiTetheringHandler = new WifiTetheringHandler(mContext, mMockLifecycle,
+                mPreferenceController);
+        mWifiTetheringHandler.setCarWifiManager(mCarWifiManager);
+        mWifiTetheringHandler.setTetheringManager(mTetheringManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
     }
 
     @Test
-    public void onStart_tetherStateOn_shouldReturnSwitchStateOn() {
+    public void onCreate_tetherStateOn_shouldReturnSwitchStateOn() {
         when(mCarWifiManager.isWifiApEnabled()).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mSwitchPreference.isChecked()).isTrue();
+        assertThat(mWifiTetheringHandler.isWifiTetheringEnabled()).isTrue();
     }
 
     @Test
-    public void onStart_tetherStateOff_shouldReturnSwitchStateOff() {
+    public void onCreate_tetherStateOff_shouldReturnSwitchStateOff() {
         when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mSwitchPreference.isChecked()).isFalse();
+        assertThat(mWifiTetheringHandler.isWifiTetheringEnabled()).isFalse();
     }
 
     @Test
     public void onSwitchOn_shouldAttemptTetherOn() {
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        mSwitchPreference.performClick();
+        mWifiTetheringHandler.updateWifiTetheringState(true);
 
         verify(mTetheringManager).startTethering(
                 eq(ConnectivityManager.TETHERING_WIFI),
@@ -112,31 +115,30 @@ public class WifiTetherStateSwitchPreferenceControllerTest {
 
     @Test
     public void onSwitchOff_shouldAttemptTetherOff() {
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        mSwitchPreference.performClick();
+        mWifiTetheringHandler.updateWifiTetheringState(false);
 
         verify(mTetheringManager).stopTethering(ConnectivityManager.TETHERING_WIFI);
     }
 
     @Test
     public void onTetherEnabling_shouldReturnSwitchStateDisabled() {
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
+        mSwitchPreference.setEnabled(true);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        mPreferenceController.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_ENABLING);
+        mWifiTetheringHandler.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_ENABLING);
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
     }
 
     @Test
     public void onTetherEnabled_shouldReturnSwitchStateEnabledAndOn() {
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
+        mSwitchPreference.setEnabled(false);
+        mSwitchPreference.setChecked(false);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(true);
-        mPreferenceController.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_ENABLED);
+        mWifiTetheringHandler.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_ENABLED);
 
         assertThat(mSwitchPreference.isEnabled()).isTrue();
         assertThat(mSwitchPreference.isChecked()).isTrue();
@@ -144,11 +146,11 @@ public class WifiTetherStateSwitchPreferenceControllerTest {
 
     @Test
     public void onTetherDisabled_shouldReturnSwitchStateEnabledAndOff() {
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(true);
+        mSwitchPreference.setEnabled(false);
+        mSwitchPreference.setChecked(true);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
-        mPreferenceController.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_DISABLED);
+        mWifiTetheringHandler.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_DISABLED);
 
         assertThat(mSwitchPreference.isEnabled()).isTrue();
         assertThat(mSwitchPreference.isChecked()).isFalse();
@@ -156,13 +158,50 @@ public class WifiTetherStateSwitchPreferenceControllerTest {
 
     @Test
     public void onEnableTetherFailed_shouldReturnSwitchStateEnabledAndOff() {
-        when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
+        mSwitchPreference.setEnabled(false);
+        mSwitchPreference.setChecked(true);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        mPreferenceController.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_ENABLING);
-        mPreferenceController.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_FAILED);
+        mWifiTetheringHandler.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_ENABLING);
+        mWifiTetheringHandler.handleWifiApStateChanged(WifiManager.WIFI_AP_STATE_FAILED);
 
         assertThat(mSwitchPreference.isEnabled()).isTrue();
         assertThat(mSwitchPreference.isChecked()).isFalse();
+    }
+
+    private class TestWifiTetheringPreferenceController
+            extends PreferenceController<ColoredSwitchPreference>
+            implements WifiTetheringHandler.WifiTetheringAvailabilityListener{
+
+        TestWifiTetheringPreferenceController(Context context, String preferenceKey,
+                FragmentController fragmentController,
+                CarUxRestrictions uxRestrictions) {
+            super(context, preferenceKey, fragmentController, uxRestrictions);
+        }
+
+        @Override
+        protected Class<ColoredSwitchPreference> getPreferenceType() {
+            return ColoredSwitchPreference.class;
+        }
+
+        @Override
+        public void onWifiTetheringAvailable() {
+            getPreference().setChecked(true);
+        }
+
+        @Override
+        public void onWifiTetheringUnavailable() {
+            getPreference().setChecked(false);
+        }
+
+        @Override
+        public void enablePreference() {
+            getPreference().setEnabled(true);
+        }
+
+        @Override
+        public void disablePreference() {
+            getPreference().setEnabled(false);
+        }
     }
 }
