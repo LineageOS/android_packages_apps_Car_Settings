@@ -19,7 +19,7 @@ package com.android.car.settings.system;
 import static android.os.UserManager.DISALLOW_FACTORY_RESET;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -29,8 +29,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
-
+import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.After;
@@ -50,15 +49,17 @@ public class FactoryResetEntryPreferenceControllerTest {
 
     private Context mContext;
     private FactoryResetEntryPreferenceController mController;
+    private ClickableWhileDisabledPreference mPref;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
+        mPref = new ClickableWhileDisabledPreference(mContext);
 
         mController = new PreferenceControllerTestHelper<>(mContext,
                 FactoryResetEntryPreferenceController.class,
-                new Preference(mContext)).getController();
+                mPref).getController();
     }
 
     @After
@@ -70,13 +71,15 @@ public class FactoryResetEntryPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_nonAdminUser_disabledForUser() {
         createAndSwitchToSecondaryUserWithFlags(/* flags= */ 0);
+        mController.onCreateInternal();
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
     }
 
     @Test
     public void getAvailabilityStatus_adminUser_available() {
         createAndSwitchToSecondaryUserWithFlags(UserInfo.FLAG_ADMIN);
+        mController.onCreateInternal();
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
@@ -86,8 +89,9 @@ public class FactoryResetEntryPreferenceControllerTest {
         createAndSwitchToSecondaryUserWithFlags(UserInfo.FLAG_ADMIN);
         getShadowUserManager().setUserRestriction(
                 UserHandle.of(SECONDARY_USER_ID), DISALLOW_FACTORY_RESET, true);
+        mController.onCreateInternal();
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
     }
 
     @Test
@@ -95,6 +99,7 @@ public class FactoryResetEntryPreferenceControllerTest {
         createAndSwitchToSecondaryUserWithFlags(UserInfo.FLAG_DEMO);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 1);
+        mController.onCreateInternal();
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
@@ -106,8 +111,9 @@ public class FactoryResetEntryPreferenceControllerTest {
                 UserHandle.of(SECONDARY_USER_ID), DISALLOW_FACTORY_RESET, true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 1);
+        mController.onCreateInternal();
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
     }
 
     private void createAndSwitchToSecondaryUserWithFlags(int flags) {
