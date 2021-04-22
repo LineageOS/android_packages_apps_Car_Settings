@@ -21,9 +21,10 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
+import android.widget.Toast;
 
-import androidx.preference.Preference;
-
+import com.android.car.settings.R;
+import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.users.RemoveUserHandler;
@@ -32,7 +33,8 @@ import com.android.car.settings.users.UserUtils;
 import com.android.internal.annotations.VisibleForTesting;
 
 /** Business logic for preference that deletes the current user profile. */
-public class DeleteUserPreferenceController extends PreferenceController<Preference> {
+public class DeleteUserPreferenceController
+        extends PreferenceController<ClickableWhileDisabledPreference> {
 
     private final UserInfo mUserInfo;
     private final RemoveUserHandler mRemoveUserHandler;
@@ -59,15 +61,18 @@ public class DeleteUserPreferenceController extends PreferenceController<Prefere
     protected void onCreateInternal() {
         super.onCreateInternal();
         mRemoveUserHandler.resetListeners();
+        getPreference().setDisabledClickListener(p ->
+                Toast.makeText(getContext(), getContext().getString(R.string.action_unavailable),
+                        Toast.LENGTH_LONG).show());
     }
 
     @Override
-    protected Class<Preference> getPreferenceType() {
-        return Preference.class;
+    protected Class<ClickableWhileDisabledPreference> getPreferenceType() {
+        return ClickableWhileDisabledPreference.class;
     }
 
     @Override
-    protected boolean handlePreferenceClicked(Preference preference) {
+    protected boolean handlePreferenceClicked(ClickableWhileDisabledPreference preference) {
         mRemoveUserHandler.showConfirmRemoveUserDialog();
         return true;
     }
