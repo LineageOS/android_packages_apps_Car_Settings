@@ -1571,7 +1571,7 @@
     <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined -->
     <!-- Device Policy Management --><skip/>
     <!-- Device admin add activity title -->
-    <string name="device_admin_add_title" translatable="false">Device admin</string>
+    <string name="device_admin_details_title" translatable="false">Device admin</string>
     <!-- Shown in dialog to allow user to see more information about the device admin [CHAR LIMIT=30] -->
     <string name="admin_support_more_info" translatable="false">More details</string>
     <!-- Shown in admin details page to warn user about policies the admin can set in a work profile. [CHAR LIMIT=NONE] -->

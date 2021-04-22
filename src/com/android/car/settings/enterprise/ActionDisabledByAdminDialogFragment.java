@@ -25,6 +25,7 @@ import android.app.Dialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
@@ -33,9 +34,9 @@ import android.os.Process;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.IconDrawableFactory;
-import android.util.Log;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 import com.android.car.ui.AlertDialogBuilder;
 import com.android.car.ui.preference.CarUiDialogFragment;
 import com.android.settingslib.RestrictedLockUtils;
@@ -49,6 +50,7 @@ import com.android.settingslib.RestrictedLockUtilsInternal;
 public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragment {
 
     private static final String TAG = ActionDisabledByAdminDialogFragment.class.getSimpleName();
+    private static final Logger LOG = new Logger(TAG);
 
     private static final String EXTRA_RESTRICTION = TAG + "_restriction";
     private static final String EXTRA_USER_ID = TAG + "_userId";
@@ -194,7 +196,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     private void setAdminSupportDetails(Context context, AlertDialogBuilder builder,
             @Nullable EnforcedAdmin enforcedAdmin) {
         if (enforcedAdmin == null || enforcedAdmin.component == null) {
-            Log.i(TAG, "setAdminSupportDetails(): no admin on " + enforcedAdmin);
+            LOG.i("setAdminSupportDetails(): no admin on " + enforcedAdmin);
             return;
         }
         CharSequence supportMessage = null;
@@ -219,18 +221,17 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
 
     private void showAdminPolicies(Context context, EnforcedAdmin enforcedAdmin) {
         if (enforcedAdmin.component != null) {
-            // TODO(b/186054346): launch DeviceAdminInfoActivity
-            Log.w(TAG, "DeviceAdminInfoActivity not supported yet");
-//            Intent intent = new Intent();
-//            intent.setClass(context, DeviceAdminInfoActivity.class);
-//            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,
-//                    enforcedAdmin.component);
-//            intent.putExtra(DeviceAdminInfoActivity.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
-//            // DeviceAdminInfoActivity class may need to run as managed profile.
-//            context.startActivityAsUser(intent, enforcedAdmin.user);
+            LOG.w("DeviceAdminInfoActivity not supported yet");
+            Intent intent = new Intent();
+            intent.setClass(context, DeviceAdminDetailsActivity.class);
+            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,
+                    enforcedAdmin.component);
+            intent.putExtra(DeviceAdminDetailsActivity.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
+            // DeviceAdminInfoActivity class may need to run as managed profile.
+            context.startActivityAsUser(intent, enforcedAdmin.user);
         } else {
             // TODO(b/185183049): launch DeviceAdminSettingsActivity
-            Log.w(TAG, "DeviceAdminSettingsActivity not supported yet");
+            LOG.w("DeviceAdminSettingsActivity not supported yet");
         }
     }
 
