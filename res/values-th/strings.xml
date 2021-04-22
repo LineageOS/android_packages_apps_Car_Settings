@@ -157,13 +157,20 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ต้องการเปิด Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ต้องการปิด Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ข้อผิดพลาด"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"อุปกรณ์ที่จะใช้กับ <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"ไม่พบอุปกรณ์ ตรวจสอบว่าอุปกรณ์เปิดอยู่และพร้อมเชื่อมต่อ"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"ลองอีกครั้ง"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"เกิดข้อผิดพลาด แอปพลิเคชันยกเลิกคำขอเลือกอุปกรณ์"</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"เชื่อมต่อสำเร็จ"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"แสดงทั้งหมด"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"กำลังค้นหา"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"บลูทูธ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"อุปกรณ์ไม่มีชื่อ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"อุปกรณ์ที่จับคู่"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"จับคู่อุปกรณ์ใหม่"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"บลูทูธจะเปิดเพื่อจับคู่อุปกรณ์"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"เลิกเชื่อมต่ออุปกรณ์ไหม"</string>
-    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"พาหนะจะยกเลิกการเชื่อมต่อจาก <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"รถของคุณจะยกเลิกการเชื่อมต่อกับ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"ที่อยู่บลูทูธของพาหนะ: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"ที่อยู่บลูทูธของอุปกรณ์: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"ชื่อพาหนะ"</string>
@@ -305,7 +312,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ใช้ภาพหน้าจอ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"อนุญาตให้แอปผู้ช่วยเข้าถึงรูปภาพของหน้าจอ"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"การป้อนข้อมูลด้วยเสียง"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"บริการป้อนอัตโนมัติ"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"บริการป้อนข้อความอัตโนมัติ"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ไม่มี"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"เลือกไว้"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant จะอ่านข้อมูลเกี่ยวกับแอปที่ใช้งานอยู่ในระบบของคุณได้ รวมถึงข้อมูลที่ปรากฏบนหน้าจอหรือที่เข้าถึงได้ภายในแอป"</string>
@@ -353,11 +360,11 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"การอัปเดตระบบ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"เวอร์ชันของ Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"ระดับแพตช์ความปลอดภัยของ Android"</string>
-    <string name="hardware_info" msgid="3973165746261507658">"สื่อและฮาร์ดแวร์"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"รุ่นและฮาร์ดแวร์"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"รุ่น: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"เวอร์ชันเบสแบนด์"</string>
     <string name="kernel_version" msgid="7327212934187011508">"เวอร์ชันเคอร์เนล"</string>
-    <string name="build_number" msgid="3997326631001009102">"หมายเลขบิวด์"</string>
+    <string name="build_number" msgid="3997326631001009102">"หมายเลขบิลด์"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ที่อยู่บลูทูธ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ไม่พร้อมให้บริการ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"สถานะ"</string>
@@ -409,10 +416,10 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"รีเซ็ตการตั้งค่า"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"รีเซ็ตการตั้งค่าเครือข่ายแล้ว"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"รีเซ็ตค่ากำหนดของแอป"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"คำสั่งนี้จะรีเซ็ตค่ากำหนดทั้งหมดของ:\n\n"<li>"แอปที่ปิดใช้"</li>\n<li>"การแจ้งเตือนของแอปที่ปิดใช้"</li>\n<li>"แอปพลิเคชันเริ่มต้นสำหรับการทำงานต่างๆ"</li>\n<li>"ข้อจำกัดข้อมูลในพื้นหลังสำหรับแอป"</li>\n<li>"ข้อจำกัดสิทธิ์ใดๆ"</li>\n\n"ข้อมูลของแอปจะไม่หายไป"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"คำสั่งนี้จะรีเซ็ตค่ากำหนดทั้งหมดของ\n\n"<li>"แอปที่ปิดใช้"</li>\n<li>"การแจ้งเตือนของแอปที่ปิดใช้"</li>\n<li>"แอปเริ่มต้นที่จะใช้งาน"</li>\n<li>"ข้อจำกัดของอินเทอร์เน็ตที่ใช้งานอยู่เบื้องหลังเกี่ยวกับการใช้แอป"</li>\n<li>"ข้อจำกัดสิทธิ์ใดๆ"</li>\n\n"ข้อมูลแอปทั้งหมดของคุณจะยังคงอยู่เหมือนเดิม"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"รีเซ็ตแอป"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"รีเซ็ตค่ากำหนดของแอปแล้ว"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"ลบข้อมูล (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"ลบข้อมูลทั้งหมด (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"การดำเนินการนี้จะลบข้อมูลทั้งหมดออกจากระบบเครื่องเสียงในยานพาหนะ โดยรวมถึงสิ่งต่อไปนี้\n\n"<li>"บัญชี Google ของคุณ"</li>\n<li>"ข้อมูลและการตั้งค่าของระบบและแอป"</li>\n<li>"แอปที่ดาวน์โหลด"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"คุณลงชื่อเข้าใช้บัญชีต่อไปนี้อยู่ในขณะนี้"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"มีผู้ใช้รายอื่นอยู่บนยานพาหนะคันนี้"</string>
@@ -520,7 +527,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"โปรไฟล์ที่ถูกจำกัดจะเพิ่มบัญชีไม่ได้"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"นำบัญชีออก"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"นำบัญชีออกใช่ไหม"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"การนำบัญชีนี้ออกจะเป็นการลบข้อความ รายชื่อติดต่อ และข้อมูลอื่นๆ ทั้งหมดออกจากอุปกรณ์!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"การนำบัญชีนี้ออกจะเป็นการลบข้อความ รายชื่อติดต่อ และข้อมูลอื่นๆ ทั้งหมดออกจากอุปกรณ์"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"นำบัญชีออกไม่สำเร็จ"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"การซิงค์บัญชี"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"การซิงค์เปิดอยู่สำหรับ <xliff:g id="ID_1">%1$d</xliff:g> จาก <xliff:g id="ID_2">%2$d</xliff:g> รายการ"</string>
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"รูปแบบไม่ถูกต้อง"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"วิธีวาดรูปแบบการปลดล็อก"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"เกิดข้อผิดพลาดในการบันทึกรูปแบบ"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ดำเนินการไม่ถูกต้องหลายครั้งเกินไป ลองอีกครั้งใน <xliff:g id="NUMBER">%d</xliff:g> วินาที"</string>
     <string name="okay" msgid="4589873324439764349">"ตกลง"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"นำการล็อกหน้าจอออกไหม"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"การดำเนินการนี้จะทำให้ทุกคนเข้าถึงบัญชีของคุณได้"</string>
@@ -626,26 +634,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ไม่อนุญาตให้เรียงจากน้อยไปมาก จากมากไปน้อย หรือเรียงลำดับตัวเลขที่ซ้ำกัน"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ตัวเลือกการล็อกหน้าจอ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> วันที่ผ่านมา"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"เพิ่มอุปกรณ์ที่เชื่อถือได้"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"บลูทูธจะเปิดเพื่อเพิ่มอุปกรณ์ที่เชื่อถือได้"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"อุปกรณ์ที่เชื่อถือได้"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other">อุปกรณ์ <xliff:g id="COUNT_1">%d</xliff:g> เครื่อง</item>
-      <item quantity="one">อุปกรณ์ <xliff:g id="COUNT_0">%d</xliff:g> เครื่อง</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> จะปลดล็อกรถคันนี้เมื่อมีการเชื่อมต่อ หากมีคนเอา <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ของคุณไป เขาก็อาจใช้งานอุปกรณ์นี้ได้"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ยืนยัน"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"นำอุปกรณ์ที่เชื่อถือได้ออก"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"เสร็จ"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ใช้แอปที่ใช้ร่วมกันเพื่อตั้งค่าอุปกรณ์ที่เชื่อถือได้ เมื่อตั้งค่าแล้ว โปรไฟล์ผู้ใช้ของคุณจะปลดล็อกโดยอัตโนมัติเมื่อระบบตรวจพบโทรศัพท์ใกล้ยานพาหนะ"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ดาวน์โหลดแอปที่ใช้ร่วมกันในโทรศัพท์"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. เลือก <xliff:g id="CAR_NAME">%1$s</xliff:g> ในโทรศัพท์เพื่อจับคู่กับอุปกรณ์"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"อุปกรณ์ที่เชื่อถือได้ใกล้รถของคุณจะปลดล็อกโปรไฟล์ผู้ใช้เมื่อสตาร์ทรถ แม้อุปกรณ์จะอยู่ในมือคนอื่น"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"โปรดยืนยันว่ารหัสการจับคู่อุปกรณ์ตรงกัน"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ลงทะเบียนโทรศัพท์เรียบร้อยแล้ว"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"การลงทะเบียน <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ล้มเหลว"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ในการเพิ่มอุปกรณ์ที่เชื่อถือได้ คุณจำเป็นต้องกำหนดวิธีการตรวจสอบสิทธิ์ในขั้นถัดไป หากไม่มีอุปกรณ์ที่เชื่อถือได้ ระบบจะขอให้มีการตรวจสอบสิทธิ์ในการเข้าถึงโปรไฟล์ของคุณ"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"อุปกรณ์ถูกตัดการเชื่อมต่อ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ล้างข้อมูลรับรอง"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"นำใบรับรองทั้งหมดออก"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ลบเนื้อหาทั้งหมดหรือไม่"</string>
@@ -668,4 +656,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ปิด"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ฟีเจอร์ไม่พร้อมใช้งานขณะขับรถ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"เพิ่มผู้ใช้ขณะขับรถไม่ได้"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"ค้นหา"</string>
 </resources>

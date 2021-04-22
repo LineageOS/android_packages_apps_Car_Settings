@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Instellingen"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Meer"</string>
-    <string name="display_settings" msgid="5325515247739279185">"Display"</string>
+    <string name="display_settings" msgid="5325515247739279185">"Scherm"</string>
     <string name="brightness" msgid="2919605130898772866">"Helderheidsniveau"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Helderheidsniveau optimaliseren voor het beschikbare licht"</string>
@@ -28,7 +28,7 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"scherm dimmen, touchscreen, batterij"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"scherm dimmen, touchscreen, batterij"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"scherm dimmen, nacht, tint"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Nachtmodus"</string>
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"Nachtstand"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netwerk en internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobiel netwerk"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
@@ -38,7 +38,7 @@
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Actief/simkaart"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inactief/simkaart"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Actief, gedownloade simkaart"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactief/gedownloade simkaart"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactief, gedownloade simkaart"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Meer toevoegen"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datatoegang via mobiel netwerk"</string>
@@ -71,7 +71,7 @@
     <string name="app_data_usage" msgid="3878609885080232877">"Datagebruik van app"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"beperkt"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Datum voor resetten gebruikscyclus"</string>
-    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Datum van elke maand:"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Dag van elke maand:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Instellen"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datawaarschuwing- en limiet"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Gebruikscyclus app-data"</string>
@@ -142,7 +142,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Beveiliging"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Geen"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Band toegangsp."</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Toegangspunt"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Frequentieband TP kiezen"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Auto"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4GHz-frequentieband"</string>
@@ -157,6 +157,13 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi inschakelen"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitschakelen"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
+    <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Apparaat om te gebruiken met <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Geen apparaten gevonden. Zorg dat apparaten zijn ingeschakeld en beschikbaar zijn voor verbinding."</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Opnieuw proberen"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Er is een probleem opgetreden. De app heeft het verzoek om een apparaat te kiezen geannuleerd."</string>
+    <string name="network_connection_connect_successful" msgid="7893957133113302365">"Verbinding gemaakt"</string>
+    <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Alles tonen"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"Zoeken"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Naamloos apparaat"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Gekoppelde apparaten"</string>
@@ -305,7 +312,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Screenshot gebruiken"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Toestaan dat de app voor assistentie toegang krijgt tot een afbeelding van het scherm"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Spraakinvoer"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Service voor automatisch aanvullen"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Service voor automatisch invullen"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Geen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Geselecteerd"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"De Assistent kan informatie over de gebruikte apps in je systeem lezen, waaronder informatie die zichtbaar is op je scherm of toegankelijk is in de apps."</string>
@@ -455,7 +462,7 @@
     <string name="user_add_user_menu" msgid="5319151436895941496">"Gebruiker toevoegen"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Nieuwe gebruiker"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Nieuwe gebruiker?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Wanneer je een nieuwe gebruiker toevoegt, moet die persoon een eigen profiel instellen."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Als je een nieuwe gebruiker toevoegt, moet die persoon een eigen profiel instellen."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Elke gebruiker kan apps updaten voor alle andere gebruikers"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Gebruikerslimiet bereikt"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
@@ -567,6 +574,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Onjuist patroon"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ontgrendelingspatroon tekenen"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Fout bij patroon opslaan"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Te veel onjuiste pogingen. Probeer het over <xliff:g id="NUMBER">%d</xliff:g> seconden opnieuw."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Schermvergrendeling verwijderen?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Zo kan iedereen toegang tot je account krijgen"</string>
@@ -626,26 +634,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Een oplopende, aflopende of herhaalde reeks cijfers is niet toegestaan."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Schermvergrendelingsopties"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> dagen geleden"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Vertrouwd apparaat toevoegen"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Vertrouwd apparaat wordt toegevoegd via Bluetooth"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Vertrouwde apparaten"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apparaten</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> apparaat</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Je <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ontgrendelt deze auto wanneer je apparaat is verbonden. Als iemand je <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> in handen krijgt, kan die persoon mogelijk toegang krijgen tot dit apparaat."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bevestigen"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Veilig apparaat verwijderen"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Klaar"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Gebruik de bijbehorende app om een vertrouwd apparaat in te stellen. Na het instellen wordt je gebruikersprofiel automatisch ontgrendeld wanneer je telefoon in de buurt van het voertuig wordt waargenomen."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download de bijbehorende app op je telefoon"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecteer <xliff:g id="CAR_NAME">%1$s</xliff:g> op je telefoon om de apparaten te koppelen"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Een vertrouwd apparaat in de buurt van je auto ontgrendelt het gebruikersprofiel wanneer de auto wordt gestart, ook als iemand anders het apparaat vasthoudt."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Bevestig dat de koppelingscodes overeenkomen"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"De telefoon is ingeschreven"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Inschrijving van <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mislukt"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Als je een vertrouwd apparaat toevoegt, moet je daarna een verificatiemethode instellen. Als je je vertrouwde apparaat niet bij je hebt, is verificatie vereist voor toegang tot je profiel."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Verbinding met apparaat verbroken."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Certificaatgegevens wissen"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Alle certificaten verwijderen"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Alle content verwijderen?"</string>
@@ -668,4 +656,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"SLUITEN"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Functie niet beschikbaar tijdens het rijden"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Kan geen gebruikers toevoegen tijdens het rijden"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Zoeken"</string>
 </resources>
