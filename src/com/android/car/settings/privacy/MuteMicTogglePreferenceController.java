@@ -18,7 +18,6 @@ package com.android.car.settings.privacy;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.hardware.SensorPrivacyManager;
 
 import com.android.car.settings.common.FragmentController;
@@ -31,12 +30,11 @@ public class MuteMicTogglePreferenceController
         extends PreferenceController<CarUiTwoActionSwitchPreference> {
 
     private SensorPrivacyManager mSensorPrivacyManager;
-    private PackageManager mPackageManager;
 
     private SensorPrivacyManager.OnSensorPrivacyChangedListener mListener =
             new SensorPrivacyManager.OnSensorPrivacyChangedListener() {
                 @Override
-                public void onSensorPrivacyChanged(boolean enabled) {
+                public void onSensorPrivacyChanged(int sensor, boolean enabled) {
                     refreshUi();
                 }
             };
@@ -44,16 +42,15 @@ public class MuteMicTogglePreferenceController
     public MuteMicTogglePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions,
-                SensorPrivacyManager.getInstance(context), context.getPackageManager());
+                SensorPrivacyManager.getInstance(context));
     }
 
     @VisibleForTesting
     MuteMicTogglePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
-            SensorPrivacyManager sensorPrivacyManager, PackageManager packageManager) {
+            SensorPrivacyManager sensorPrivacyManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mSensorPrivacyManager = sensorPrivacyManager;
-        mPackageManager = packageManager;
     }
 
     @Override
@@ -90,8 +87,8 @@ public class MuteMicTogglePreferenceController
 
     @Override
     protected int getAvailabilityStatus() {
-        boolean hasFeatureMicToggle = mPackageManager
-                .hasSystemFeature(PackageManager.FEATURE_MICROPHONE_TOGGLE);
+        boolean hasFeatureMicToggle = mSensorPrivacyManager.supportsSensorToggle(
+                SensorPrivacyManager.Sensors.MICROPHONE);
         return hasFeatureMicToggle ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
