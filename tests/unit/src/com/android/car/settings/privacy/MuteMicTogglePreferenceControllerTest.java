@@ -27,7 +27,6 @@ import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.hardware.SensorPrivacyManager;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -60,8 +59,6 @@ public class MuteMicTogglePreferenceControllerTest {
     private FragmentController mFragmentController;
     @Mock
     private SensorPrivacyManager mMockSensorPrivacyManager;
-    @Mock
-    private PackageManager mMockPackageManager;
     @Captor
     private ArgumentCaptor<SensorPrivacyManager.OnSensorPrivacyChangedListener> mListener;
 
@@ -78,7 +75,7 @@ public class MuteMicTogglePreferenceControllerTest {
         mSwitchPreference = new CarUiTwoActionSwitchPreference(mContext);
         mPreferenceController = new MuteMicTogglePreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
-                mMockSensorPrivacyManager, mMockPackageManager);
+                mMockSensorPrivacyManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
     }
 
@@ -110,7 +107,7 @@ public class MuteMicTogglePreferenceControllerTest {
                 eq(SensorPrivacyManager.Sensors.MICROPHONE), eq(true));
         setIsSensorPrivacyEnabled(true);
 
-        mListener.getValue().onSensorPrivacyChanged(true);
+        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.MICROPHONE, true);
 
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
     }
@@ -124,7 +121,7 @@ public class MuteMicTogglePreferenceControllerTest {
         verify(mMockSensorPrivacyManager).setSensorPrivacyForProfileGroup(
                 eq(SensorPrivacyManager.Sensors.MICROPHONE), eq(false));
         setIsSensorPrivacyEnabled(false);
-        mListener.getValue().onSensorPrivacyChanged(false);
+        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.MICROPHONE, false);
 
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
     }
@@ -134,7 +131,7 @@ public class MuteMicTogglePreferenceControllerTest {
         initializePreference(/* isMicEnabled= */ false);
 
         setIsSensorPrivacyEnabled(false);
-        mListener.getValue().onSensorPrivacyChanged(false);
+        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.MICROPHONE, false);
 
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
     }
@@ -144,7 +141,7 @@ public class MuteMicTogglePreferenceControllerTest {
         initializePreference(/* isMicEnabled= */ true);
 
         setIsSensorPrivacyEnabled(true);
-        mListener.getValue().onSensorPrivacyChanged(true);
+        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.MICROPHONE, true);
 
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
     }
@@ -163,7 +160,8 @@ public class MuteMicTogglePreferenceControllerTest {
     }
 
     private void setMicMuteFeatureAvailable(boolean isAvailable) {
-        when(mMockPackageManager.hasSystemFeature(eq(PackageManager.FEATURE_MICROPHONE_TOGGLE)))
+        when(mMockSensorPrivacyManager
+                .supportsSensorToggle(eq(SensorPrivacyManager.Sensors.MICROPHONE)))
                 .thenReturn(isAvailable);
     }
 }
