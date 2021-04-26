@@ -173,8 +173,13 @@ public class ChooseAccountPreferenceController extends
 
     /** Used for testing to trigger an account update. */
     @VisibleForTesting
-    AuthenticatorHelper getAuthenticatorHelper() {
-        return mAccountTypesHelper.getAuthenticatorHelper();
+    AccountTypesHelper getAccountTypesHelper() {
+        return mAccountTypesHelper;
+    }
+
+    @VisibleForTesting
+    void setAuthenticatorHelper(AuthenticatorHelper helper) {
+        mAccountTypesHelper.setAuthenticatorHelper(helper);
     }
 
     @Override
