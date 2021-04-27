@@ -23,9 +23,26 @@ import com.android.car.settings.common.BaseCarSettingsActivity;
 
 public class BaseCarSettingsTestActivity extends BaseCarSettingsActivity {
 
+    private boolean mOnBackPressedFlag;
+
     @Nullable
     @Override
     protected Fragment getInitialFragment() {
         return null;
+    }
+
+    @Override
+    public void onBackPressed() {
+        mOnBackPressedFlag = true;
+        super.onBackPressed();
+    }
+
+    /**
+     * Gets a boolean flag indicating whether onBackPressed has been called.
+     *
+     * @return {@code true} if onBackPressed called, {@code false} otherwise.
+     */
+    public boolean getOnBackPressedFlag() {
+        return mOnBackPressedFlag;
     }
 }
