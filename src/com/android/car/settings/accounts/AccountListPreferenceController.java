@@ -74,8 +74,7 @@ public class AccountListPreferenceController extends
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUserInfo = UserHelper.getInstance(context).getCurrentProcessUserInfo();
-        mAuthenticatorHelper = new AuthenticatorHelper(context,
-                mUserInfo.getUserHandle(), /* listener= */ this);
+        mAuthenticatorHelper = createAuthenticatorHelper();
     }
 
     /** Sets the account authorities that are available. */
@@ -132,6 +131,11 @@ public class AccountListPreferenceController extends
         forceUpdateAccountsCategory();
     }
 
+    @VisibleForTesting
+    AuthenticatorHelper createAuthenticatorHelper() {
+        return new AuthenticatorHelper(getContext(), mUserInfo.getUserHandle(), this);
+    }
+
     private boolean onAccountPreferenceClicked(AccountPreference preference) {
         // Show the account's details when an account is clicked on.
         getFragmentController().launchFragment(AccountDetailsFragment.newInstance(
@@ -147,8 +151,7 @@ public class AccountListPreferenceController extends
 
         // Recreate the authentication helper to refresh the list of enabled accounts
         mAuthenticatorHelper.stopListeningToAccountUpdates();
-        mAuthenticatorHelper = new AuthenticatorHelper(getContext(), mUserInfo.getUserHandle(),
-                this);
+        mAuthenticatorHelper = createAuthenticatorHelper();
         if (mListenerRegistered) {
             mAuthenticatorHelper.listenToAccountUpdates();
         }
