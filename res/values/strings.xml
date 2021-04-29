@@ -1566,4 +1566,24 @@
     <string name="delete_this_profile_text">Delete this profile</string>
     <!-- Profile settings add profile menu [CHAR LIMIT=35] -->
     <string name="add_profile_text">Add profile</string>
+
+
+    <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined -->
+    <!-- Device Policy Management --><skip/>
+    <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30] -->
+    <string name="disabled_by_policy_title" translatable="false">Action not allowed</string>
+    <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_adjust_volume" translatable="false">Can’t change volume</string>
+    <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_outgoing_calls" translatable="false">Calling not allowed</string>
+    <!-- Title for dialog displayed to tell user that sending SMS were disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_sms" translatable="false">SMS not allowed</string>
+    <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_camera" translatable="false">Camera not allowed</string>
+    <!-- Title for dialog displayed to tell user that screenshots are disabled by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_screen_capture" translatable="false">Screenshot not allowed</string>
+    <!-- Title for dialog displayed to tell user that the app was suspended by an admin [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_suspend_packages" translatable="false">Can’t open this app</string>
+    <!-- Dialog title. This dialog lets a user know that a specific setting is blocked by their credit provider. Since the user purchased the device from the credit provider, the credit provider controls what they can access. [CHAR LIMIT=50] -->
+    <string name="disabled_by_policy_title_financed_device" translatable="false">Blocked by your credit provider</string>
 </resources>
