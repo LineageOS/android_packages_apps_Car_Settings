@@ -78,14 +78,15 @@ public class ExtraSettingsLoaderTest {
         mExtraSettingsLoader.setPackageManager(mPm);
     }
 
-    private ResolveInfo createResolveInfo(String packageName, String className, Bundle metaData) {
+    private ResolveInfo createResolveInfo(String packageName, String className, Bundle metaData,
+            boolean isSystem) {
         ActivityInfo activityInfo = new ActivityInfo();
         activityInfo.packageName = packageName;
         activityInfo.name = className;
         activityInfo.metaData = metaData;
 
         ResolveInfo resolveInfoSystem = new ResolveInfo();
-        resolveInfoSystem.system = true;
+        resolveInfoSystem.system = isSystem;
         resolveInfoSystem.activityInfo = activityInfo;
 
         return resolveInfoSystem;
@@ -111,7 +112,8 @@ public class ExtraSettingsLoaderTest {
         bundle.putString(META_DATA_PREFERENCE_SUMMARY_URI, TEST_CONTENT_PROVIDER);
         bundle.putString(META_DATA_PREFERENCE_ICON_URI, TEST_CONTENT_PROVIDER);
 
-        ResolveInfo resolveInfoSystem = createResolveInfo("package_name", "class_name", bundle);
+        ResolveInfo resolveInfoSystem = createResolveInfo("package_name", "class_name",
+                bundle, /* isSystem= */ true);
 
         Map<Preference, Bundle> preferenceToBundleMap =
                 executeLoadPreferences(Collections.singletonList(resolveInfoSystem), FAKE_CATEGORY);
@@ -132,14 +134,16 @@ public class ExtraSettingsLoaderTest {
         bundle1.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
         bundle1.putInt(META_DATA_KEY_ORDER, 1);
 
-        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1", bundle1);
+        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1",
+                bundle1, /* isSystem= */ true);
 
         Bundle bundle2 = new Bundle();
         bundle2.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE2);
         bundle2.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
         bundle2.putInt(META_DATA_KEY_ORDER, 2);
 
-        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2", bundle2);
+        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2",
+                bundle2, /* isSystem= */ true);
 
         List<ResolveInfo> resolveInfoList = new ArrayList<>();
         resolveInfoList.add(resolveInfoSystem1);
@@ -161,13 +165,15 @@ public class ExtraSettingsLoaderTest {
         bundle1.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE1);
         bundle1.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
 
-        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1", bundle1);
+        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1",
+                bundle1, /* isSystem= */ true);
 
         Bundle bundle2 = new Bundle();
         bundle2.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE2);
         bundle2.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
 
-        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2", bundle2);
+        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2",
+                bundle2, /* isSystem= */ true);
 
         List<ResolveInfo> resolveInfoList = new ArrayList<>();
         resolveInfoList.add(resolveInfoSystem2);
@@ -189,14 +195,16 @@ public class ExtraSettingsLoaderTest {
         bundle1.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE1);
         bundle1.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
 
-        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1", bundle1);
+        ResolveInfo resolveInfoSystem1 = createResolveInfo("package_name1", "class_name1",
+                bundle1, /* isSystem= */ true);
 
         Bundle bundle2 = new Bundle();
         bundle2.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE2);
         bundle2.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
         bundle2.putInt(META_DATA_KEY_ORDER, 2);
 
-        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2", bundle2);
+        ResolveInfo resolveInfoSystem2 = createResolveInfo("package_name2", "class_name2",
+                bundle2, /* isSystem= */ true);
 
         List<ResolveInfo> resolveInfoList = new ArrayList<>();
         resolveInfoList.add(resolveInfoSystem1);
@@ -219,7 +227,8 @@ public class ExtraSettingsLoaderTest {
         bundle.putString(META_DATA_PREFERENCE_SUMMARY, FAKE_SUMMARY);
         bundle.putString(META_DATA_PREFERENCE_CATEGORY, DEVICE_CATEGORY);
 
-        ResolveInfo resolveInfo = createResolveInfo("package_name", "class_name", bundle);
+        ResolveInfo resolveInfo = createResolveInfo("package_name", "class_name",
+                bundle, /* isSystem= */ true);
 
         Map<Preference, Bundle> preferenceToBundleMap = executeLoadPreferences(
                 Collections.singletonList(resolveInfo), DEVICE_CATEGORY);
@@ -228,5 +237,31 @@ public class ExtraSettingsLoaderTest {
         for (Bundle b : preferenceToBundleMap.values()) {
             assertThat(b.getBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL)).isTrue();
         }
+    }
+
+    @Test
+    public void testLoadPreference_notSystem_notLoaded() {
+        Bundle bundle = new Bundle();
+        bundle.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE);
+        bundle.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
+
+        ResolveInfo resolveInfo = createResolveInfo("package_name1", "class_name1",
+                bundle, /* isSystem= */ false);
+
+        Map<Preference, Bundle> preferenceToBundleMap =
+                executeLoadPreferences(Collections.singletonList(resolveInfo), FAKE_CATEGORY);
+
+        assertThat(preferenceToBundleMap).hasSize(0);
+    }
+
+    @Test
+    public void testLoadPreference_noMetaData_notLoaded() {
+        ResolveInfo resolveInfo = createResolveInfo("package_name1", "class_name1",
+                /* metaData= */ null, /* isSystem= */ true);
+
+        Map<Preference, Bundle> preferenceToBundleMap =
+                executeLoadPreferences(Collections.singletonList(resolveInfo), FAKE_CATEGORY);
+
+        assertThat(preferenceToBundleMap).hasSize(0);
     }
 }
