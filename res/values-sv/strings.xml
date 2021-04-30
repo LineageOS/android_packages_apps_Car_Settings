@@ -84,11 +84,11 @@
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ange varning för dataanvändning"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ange gräns för dataanvändning"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Använd"</string>
-    <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi aktiveras …"</string>
+    <string name="wifi_settings" msgid="7701477685273103841">"wifi"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"wifi aktiveras …"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi inaktiveras …"</string>
-    <string name="loading_wifi_list" msgid="8584901433195876465">"Wi-Fi-listan läses in"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi har inaktiverats"</string>
+    <string name="loading_wifi_list" msgid="8584901433195876465">"wifi-listan läses in"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"wifi har inaktiverats"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Det gick inte att glömma nätverket"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Det gick inte att ansluta till nätverket"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Lägg till nätverk"</string>
@@ -125,15 +125,15 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6-adresser"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Gateway"</string>
-    <string name="wifi_preferences_title" msgid="772788844257225510">"Inställningar för Wi-Fi"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Inställningar för wifi"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Aktivera Wi‑Fi automatiskt"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi aktiveras i närheten av sparade nätverk, t.ex ditt hemnätverk"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ej tillgängligt när plats är inaktiverat. Aktivera "<annotation id="link">"plats"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vill du aktivera Wi-Fi-sökning?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vill du aktivera wifi-sökning?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktivera"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-sökning har aktiverats"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Byt till mobildata automatiskt"</string>
-    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Använd mobildata när Wi-Fi-nätverket inte är anslutet till internet. Avgifter för dataanvändning kan tillkomma."</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Använd mobildata när wifi-nätverket inte är anslutet till internet. Avgifter för dataanvändning kan tillkomma."</string>
     <string name="learn_more" msgid="8214605928933358604">"Läs mer"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Namn på surfzon"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Aktiverar <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> …"</string>
@@ -154,8 +154,8 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Trådlös surfzon och internetdelning"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Inaktivera surfzon automatiskt"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-surfzonen inaktiveras om inga enheter är anslutna"</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> vill aktivera Wi-Fi"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> vill inaktivera Wi-Fi"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> vill aktivera wifi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> vill inaktivera wifi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fel"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Använd enheten med <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Inga enheter hittades. Kontrollera att enheterna är på och går att ansluta till."</string>
