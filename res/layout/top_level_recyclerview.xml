@@ -18,11 +18,11 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
     <com.android.car.ui.FocusArea
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/car_ui_focus_area"
+        android:id="@+id/settings_car_ui_focus_area"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <com.android.car.ui.recyclerview.CarUiRecyclerView
-            android:id="@+id/recycler_view"
+            android:id="@+id/top_level_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="@dimen/top_level_recyclerview_margin_right"

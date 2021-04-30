@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!--Copyright (C) 2021 The Android Open Source Project
-
+<!-- Copyright (C) 2021 The Android Open Source Project
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
   http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.-->
-<!-- THIS FILE WAS AUTO GENERATED, DO NOT EDIT MANUALLY. -->
+<!--
+THIS FILE WAS AUTO GENERATED, DO NOT EDIT MANUALLY.
+REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
+-->
 <resources>
   <overlayable name="CarSettings">
-    <policy type="public">
+    <policy type="system|product|signature">
       <item type="animator" name="trans_left_in"/>
       <item type="animator" name="trans_left_out"/>
       <item type="animator" name="trans_right_in"/>
@@ -390,8 +390,10 @@ limitations under the License.-->
       <item type="id" name="remaining_billing_cycle_time_text"/>
       <item type="id" name="restricted_message"/>
       <item type="id" name="ringtone_picker_selected_id"/>
+      <item type="id" name="settings_car_ui_focus_area"/>
       <item type="id" name="settings_content_focus_area"/>
       <item type="id" name="settings_focus_parking_view"/>
+      <item type="id" name="settings_recycler_view"/>
       <item type="id" name="subtitle_text"/>
       <item type="id" name="switch_widget"/>
       <item type="id" name="text"/>
@@ -405,6 +407,7 @@ limitations under the License.-->
       <item type="id" name="top_level_divider"/>
       <item type="id" name="top_level_guideline"/>
       <item type="id" name="top_level_menu"/>
+      <item type="id" name="top_level_recycler_view"/>
       <item type="id" name="up_arrow_container"/>
       <item type="id" name="user_avatar"/>
       <item type="id" name="user_grid"/>
