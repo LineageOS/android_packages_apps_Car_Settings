@@ -48,6 +48,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Loads Activity with TileUtils.EXTRA_SETTINGS_ACTION.
@@ -106,26 +107,27 @@ public class ExtraSettingsLoader {
 
         String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
 
-        // Sort results based on [order, package within order]
-        results.sort((r1, r2) -> {
-            // First sort by order
-            int orderCompare = r2.activityInfo.metaData.getInt(META_DATA_KEY_ORDER)
-                    - r1.activityInfo.metaData.getInt(META_DATA_KEY_ORDER);
-            if (orderCompare != 0) {
-                return orderCompare;
-            }
+        // Filter to only include valid results and then sort the results
+        // Filter criteria: must be a system application and must have metaData
+        // Sort criteria: sort results based on [order, package within order]
+        results = results.stream()
+                .filter(r -> r.system && r.activityInfo != null && r.activityInfo.metaData != null)
+                .sorted((r1, r2) -> {
+                    // First sort by order
+                    int orderCompare = r2.activityInfo.metaData.getInt(META_DATA_KEY_ORDER)
+                            - r1.activityInfo.metaData.getInt(META_DATA_KEY_ORDER);
+                    if (orderCompare != 0) {
+                        return orderCompare;
+                    }
 
-            // Then sort by package name
-            String package1 = r1.activityInfo.packageName;
-            String package2 = r2.activityInfo.packageName;
-            return CASE_INSENSITIVE_ORDER.compare(package1, package2);
-        });
+                    // Then sort by package name
+                    String package1 = r1.activityInfo.packageName;
+                    String package2 = r2.activityInfo.packageName;
+                    return CASE_INSENSITIVE_ORDER.compare(package1, package2);
+                })
+                .collect(Collectors.toList());
 
         for (ResolveInfo resolved : results) {
-            if (!resolved.system) {
-                // Do not allow any app to be added to settings, only system ones.
-                continue;
-            }
             String key = null;
             String title = null;
             String summary = null;
