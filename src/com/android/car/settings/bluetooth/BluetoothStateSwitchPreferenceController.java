@@ -143,6 +143,11 @@ public class BluetoothStateSwitchPreferenceController extends
         mUpdating = false;
     }
 
+    @VisibleForTesting
+    void setUserManager(UserManager userManager) {
+        mUserManager = userManager;
+    }
+
     private void updateSwitchPreference(boolean enabled) {
         getPreference().setTitle(enabled ? R.string.car_ui_preference_switch_on
                 : R.string.car_ui_preference_switch_off);
