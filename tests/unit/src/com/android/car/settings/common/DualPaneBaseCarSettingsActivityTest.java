@@ -18,51 +18,35 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.testng.Assert.assertThrows;
-
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.Context;
 
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
-import androidx.test.core.app.ApplicationProvider;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
 import com.android.car.settings.testutils.BaseTestSettingsFragment;
+import com.android.car.settings.testutils.DualPaneTestActivity;
 import com.android.car.settings.testutils.EmptySettingsFragment;
 import com.android.car.settings.testutils.TestTopLevelMenuFragment;
-import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.car.ui.toolbar.ToolbarController;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-@RunWith(AndroidJUnit4.class)
-public class BaseCarSettingsActivityTest {
-
-    private Context mContext = ApplicationProvider.getApplicationContext();
-    private BaseCarSettingsTestActivity mActivity;
-    private TopLevelMenuFragment mTopLevelFragment;
-    private FragmentManager mFragmentManager;
+public class DualPaneBaseCarSettingsActivityTest
+        extends BaseCarSettingsActivityTestCase<DualPaneTestActivity> {
 
     @Rule
-    public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
-            new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
+    public ActivityTestRule<DualPaneTestActivity> mActivityTestRule =
+            new ActivityTestRule<>(DualPaneTestActivity.class);
 
-    @Before
-    public void setUp() throws Throwable {
-        mActivity = mActivityTestRule.getActivity();
-        mFragmentManager = mActivityTestRule.getActivity().getSupportFragmentManager();
+    @Override
+    ActivityTestRule<DualPaneTestActivity> getActivityTestRule() {
+        return mActivityTestRule;
     }
 
     @Test
@@ -76,14 +60,6 @@ public class BaseCarSettingsActivityTest {
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentById(
                 R.id.fragment_container)).isInstanceOf(BaseTestSettingsFragment.class);
-    }
-
-    @Test
-    public void launchFragment_dialogFragment_throwsError() {
-        DialogFragment dialogFragment = new DialogFragment();
-
-        assertThrows(IllegalArgumentException.class,
-                () -> mActivity.launchFragment(dialogFragment));
     }
 
     @Test
@@ -255,9 +231,5 @@ public class BaseCarSettingsActivityTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         mTopLevelFragment = (TopLevelMenuFragment) mFragmentManager.findFragmentByTag(
                 topLevelMenuTag);
-    }
-
-    private PreferenceFragment getCurrentFragment() {
-        return (PreferenceFragment) mFragmentManager.findFragmentById(R.id.fragment_container);
     }
 }

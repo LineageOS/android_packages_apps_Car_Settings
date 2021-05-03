@@ -25,7 +25,7 @@ import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
+import com.android.car.settings.testutils.DualPaneTestActivity;
 import com.android.car.settings.testutils.TestSettingsFragment1;
 import com.android.car.settings.testutils.TestSettingsFragment2;
 import com.android.car.settings.testutils.TestTopLevelMenuFragment;
@@ -40,12 +40,12 @@ import org.mockito.MockitoAnnotations;
 public class TopLevelMenuFragmentTest {
 
     private TopLevelMenuFragment mFragment;
-    private BaseCarSettingsTestActivity mActivity;
+    private DualPaneTestActivity mActivity;
     private FragmentManager mFragmentManager;
 
     @Rule
-    public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
-            new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
+    public ActivityTestRule<DualPaneTestActivity> mActivityTestRule =
+            new ActivityTestRule<>(DualPaneTestActivity.class);
 
     @Before
     public void setUp() throws Throwable {
