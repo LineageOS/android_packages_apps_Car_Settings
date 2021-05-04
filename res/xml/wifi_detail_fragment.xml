@@ -86,7 +86,7 @@
     <PreferenceCategory
         android:selectable="false"
         android:title="@string/wifi_details_ipv6_address_header">
-        <Preference
+        <com.android.car.ui.preference.CarUiPreference
             android:key="@string/pk_wifi_ipv6"
             android:selectable="false"
             settings:controller="com.android.car.settings.wifi.details.WifiIpv6AddressPreferenceController"
