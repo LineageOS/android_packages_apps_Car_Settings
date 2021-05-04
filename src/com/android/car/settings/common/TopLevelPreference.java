@@ -29,25 +29,26 @@ public class TopLevelPreference extends CarUiPreference {
     public TopLevelPreference(Context context, AttributeSet attrs,
             int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
+        init(context);
     }
 
     public TopLevelPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(context);
     }
 
     public TopLevelPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context);
     }
 
     public TopLevelPreference(Context context) {
         super(context);
-        init();
+        init(context);
     }
 
-    private void init() {
+    private void init(Context context) {
         setLayoutResource(R.layout.top_level_preference);
+        setShowChevron(context.getResources().getBoolean(R.bool.config_top_level_enable_chevrons));
     }
 }
