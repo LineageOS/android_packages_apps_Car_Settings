@@ -440,7 +440,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             mHasInitialFocus = false;
             return;
         }
-        View focusArea = fragmentView.findViewById(R.id.car_ui_focus_area);
+        View focusArea = fragmentView.findViewById(R.id.settings_car_ui_focus_area);
 
         if (focusArea == null) {
             focusArea = fragmentView.findViewById(R.id.settings_content_focus_area);

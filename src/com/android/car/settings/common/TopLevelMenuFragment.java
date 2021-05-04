@@ -83,7 +83,7 @@ public class TopLevelMenuFragment extends SettingsFragment {
     public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
             Bundle savedInstanceState) {
         inflater.inflate(R.layout.top_level_recyclerview, parent, /* attachToRoot= */ true);
-        return parent.requireViewById(R.id.recycler_view);
+        return parent.requireViewById(R.id.top_level_recycler_view);
     }
 
     @Override
