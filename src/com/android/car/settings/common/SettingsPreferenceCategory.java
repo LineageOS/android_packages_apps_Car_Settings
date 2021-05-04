@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,25 +20,26 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
+import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceCategory;
 
 import com.android.car.ui.R;
 import com.android.car.ui.preference.CarUiEditTextPreference;
 import com.android.car.ui.preference.CarUiPreference;
 
 /**
- * {@link PreferenceGroup} which does not display a title, icon, or summary. This allows for
- * logical grouping of preferences without indications in the UI.
+ * {@link PreferenceCategory} which allows for CarUiPreference chevrons to be hidden for the entire
+ * category with {@link R.styleable.PreferenceGroup_showChevron}
  */
-public class LogicalPreferenceGroup extends PreferenceGroup {
+public class SettingsPreferenceCategory extends PreferenceCategory {
 
     private final boolean mShouldShowChevron;
 
-    public LogicalPreferenceGroup(Context context, AttributeSet attrs, int defStyleAttr,
-            int defStyleRes) {
+    public SettingsPreferenceCategory(Context context, AttributeSet attrs,
+            int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        setLayoutResource(R.layout.logical_preference_group);
+
         TypedArray a = context.obtainStyledAttributes(
                 attrs,
                 R.styleable.PreferenceGroup,
@@ -49,15 +50,16 @@ public class LogicalPreferenceGroup extends PreferenceGroup {
         a.recycle();
     }
 
-    public LogicalPreferenceGroup(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SettingsPreferenceCategory(Context context, AttributeSet attrs, int defStyleAttr) {
         this(context, attrs, defStyleAttr, 0);
     }
 
-    public LogicalPreferenceGroup(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+    public SettingsPreferenceCategory(Context context, AttributeSet attrs) {
+        this(context, attrs, TypedArrayUtils.getAttr(context, R.attr.preferenceCategoryStyle,
+                android.R.attr.preferenceCategoryStyle));
     }
 
-    public LogicalPreferenceGroup(Context context) {
+    public SettingsPreferenceCategory(Context context) {
         this(context, null);
     }
 

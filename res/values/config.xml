@@ -104,6 +104,11 @@
         <item>@string/pk_bluetooth_paired_devices</item>
     </string-array>
 
+    <!--
+        Whether to allow chevrons on top-level preferences when enabled for
+        car-ui-lib preferences.
+    -->
+    <bool name="config_top_level_enable_chevrons">true</bool>
     <!-- The shape for top-level icons: 0=RECTANGLE, 1=OVAL -->
     <integer name="config_top_level_icon_shape" translatable="false">1</integer>
     <!--
