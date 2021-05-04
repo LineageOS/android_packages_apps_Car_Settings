@@ -17,6 +17,7 @@
 
 <resources>
     <!-- Top-level icon colors -->
+    <color name="top_level_icon_default">@android:color/black</color>
     <color name="top_level_display_icon">@color/top_level_icon_default</color>
     <color name="top_level_sound_icon">@color/top_level_icon_default</color>
     <color name="top_level_network_and_internet_icon">@color/top_level_icon_default</color>
