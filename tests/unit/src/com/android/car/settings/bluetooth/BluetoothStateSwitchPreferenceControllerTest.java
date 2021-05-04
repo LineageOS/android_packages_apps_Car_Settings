@@ -20,15 +20,15 @@ import static android.os.UserManager.DISALLOW_BLUETOOTH;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.when;
+
 import android.bluetooth.BluetoothAdapter;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.UserHandle;
 import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
-import androidx.test.InstrumentationRegistry;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -38,7 +38,6 @@ import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,6 +52,8 @@ public class BluetoothStateSwitchPreferenceControllerTest {
     private BluetoothStateSwitchPreferenceController mPreferenceController;
     private LocalBluetoothManager mLocalBluetoothManager;
     private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
     private UserManager mUserManager;
 
     @Mock
@@ -68,19 +69,11 @@ public class BluetoothStateSwitchPreferenceControllerTest {
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
-        mUserManager = (UserManager) InstrumentationRegistry.getContext().getSystemService(
-                Context.USER_SERVICE);
 
         mSwitchPreference = new ColoredSwitchPreference(mContext);
         mPreferenceController = new BluetoothStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
-    }
-
-    @After
-    public void tearDown() {
-        mUserManager.setUserRestriction(
-                DISALLOW_BLUETOOTH, false, UserHandle.of(UserHandle.myUserId()));
     }
 
     @Test
@@ -209,10 +202,9 @@ public class BluetoothStateSwitchPreferenceControllerTest {
 
     @Test
     public void stateChanged_on_userRestricted_setsSwitchDisabled() {
-        mUserManager.setUserRestriction(
-                DISALLOW_BLUETOOTH, true, UserHandle.of(UserHandle.myUserId()));
         mPreferenceController.onCreate(mLifecycleOwner);
-
+        mPreferenceController.setUserManager(mUserManager);
+        when(mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)).thenReturn(true);
         mPreferenceController.handleStateChanged(BluetoothAdapter.STATE_ON);
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
@@ -220,9 +212,9 @@ public class BluetoothStateSwitchPreferenceControllerTest {
 
     @Test
     public void stateChanged_off_userRestricted_setsSwitchDisabled() {
-        mUserManager.setUserRestriction(
-                DISALLOW_BLUETOOTH, true, UserHandle.of(UserHandle.myUserId()));
         mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.setUserManager(mUserManager);
+        when(mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)).thenReturn(true);
 
         mPreferenceController.handleStateChanged(BluetoothAdapter.STATE_OFF);
 
