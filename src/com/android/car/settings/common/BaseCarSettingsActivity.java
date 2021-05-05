@@ -374,7 +374,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                         insets.getBottom()), /* hasToolbar= */ true);
         if (mIsSinglePane) {
             mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
-            findViewById(R.id.top_level_menu).setVisibility(View.GONE);
+            findViewById(R.id.top_level_menu_container).setVisibility(View.GONE);
             findViewById(R.id.top_level_divider).setVisibility(View.GONE);
             return;
         }
