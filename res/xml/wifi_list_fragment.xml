@@ -32,10 +32,11 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_wifi_list"
         settings:controller="com.android.car.settings.wifi.WifiEntryListPreferenceController"/>
-    <Preference
+    <com.android.car.ui.preference.CarUiPreference
         android:fragment="com.android.car.settings.wifi.AddWifiFragment"
         android:icon="@drawable/ic_add"
         android:key="@string/pk_add_wifi"
         android:title="@string/wifi_setup_add_network"
-        settings:controller="com.android.car.settings.wifi.AddWifiPreferenceController"/>
+        settings:controller="com.android.car.settings.wifi.AddWifiPreferenceController"
+        settings:showChevron="false"/>
 </PreferenceScreen>
