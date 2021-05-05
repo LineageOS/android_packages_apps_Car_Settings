@@ -34,11 +34,12 @@
             android:title="@string/account_list_title"
             settings:controller="com.android.car.settings.accounts.AccountListPreferenceController"
             settings:searchable="false"/>
-        <Preference
+        <com.android.car.ui.preference.CarUiPreference
             android:key="@string/pk_account_settings_add"
             android:title="@string/user_add_account_menu"
             android:icon="@drawable/ic_add"
-            settings:controller="com.android.car.settings.accounts.AddAccountPreferenceController"/>
+            settings:controller="com.android.car.settings.accounts.AddAccountPreferenceController"
+            settings:showChevron="false"/>
         <com.android.car.settings.common.DividerPreference/>
         <SwitchPreference
             android:key="@string/pk_account_auto_sync"
@@ -55,8 +56,9 @@
             </intent>
         </com.android.car.settings.common.LogicalPreferenceGroup>
     </com.android.car.settings.common.LogicalPreferenceGroup>
-    <Preference
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_profile_details_delete"
         android:title="@string/delete_this_profile_text"
-        settings:controller="com.android.car.settings.users.ProfileDetailsDeletePreferenceController"/>
+        settings:controller="com.android.car.settings.users.ProfileDetailsDeletePreferenceController"
+        settings:showChevron="false"/>
 </PreferenceScreen>

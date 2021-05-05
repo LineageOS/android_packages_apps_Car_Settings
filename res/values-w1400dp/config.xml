@@ -16,8 +16,7 @@
 -->
 
 <resources>
-    <!-- Whether all activities should be single pane views or not. -->
     <bool name="config_global_force_single_pane">false</bool>
-    <!-- Fully qualified class name for the homepage fragment. -->
     <string name="config_homepage_fragment_class" translatable="false">com.android.car.settings.bluetooth.BluetoothSettingsFragment</string>
+    <bool name="config_top_level_enable_chevrons">false</bool>
 </resources>
