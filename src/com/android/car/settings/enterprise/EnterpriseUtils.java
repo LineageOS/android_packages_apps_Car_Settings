@@ -22,7 +22,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 
 import com.android.car.settings.common.Logger;
 
@@ -68,10 +67,8 @@ final class EnterpriseUtils {
             return null;
         }
 
-        ResolveInfo ri = new ResolveInfo();
-        ri.activityInfo = ai;
         try {
-            return new DeviceAdminInfo(context, ri);
+            return new DeviceAdminInfo(context, ai);
         } catch (XmlPullParserException | IOException e) {
             LOG.v("Unable to retrieve device policy for " + admin.flattenToShortString() + ": "
                     + e);
