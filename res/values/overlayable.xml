@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!--Copyright (C) 2021 The Android Open Source Project
-
+<!-- Copyright (C) 2021 The Android Open Source Project
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
   http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.-->
-<!-- THIS FILE WAS AUTO GENERATED, DO NOT EDIT MANUALLY. -->
+<!--
+THIS FILE WAS AUTO GENERATED, DO NOT EDIT MANUALLY.
+REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
+-->
 <resources>
   <overlayable name="CarSettings">
-    <policy type="public">
+    <policy type="system|product|signature">
       <item type="animator" name="trans_left_in"/>
       <item type="animator" name="trans_left_out"/>
       <item type="animator" name="trans_right_in"/>
@@ -62,6 +62,7 @@ limitations under the License.-->
       <item type="bool" name="config_show_settings_root_exit_icon"/>
       <item type="bool" name="config_show_system_update_settings"/>
       <item type="bool" name="config_show_wifi_mac_address"/>
+      <item type="bool" name="config_top_level_enable_chevrons"/>
       <item type="bool" name="config_top_level_injection_background_always_use_default"/>
       <item type="bool" name="config_top_level_injection_enable_summaries"/>
       <item type="color" name="brightness_thumb_inner_ring_color"/>
@@ -390,8 +391,10 @@ limitations under the License.-->
       <item type="id" name="remaining_billing_cycle_time_text"/>
       <item type="id" name="restricted_message"/>
       <item type="id" name="ringtone_picker_selected_id"/>
+      <item type="id" name="settings_car_ui_focus_area"/>
       <item type="id" name="settings_content_focus_area"/>
       <item type="id" name="settings_focus_parking_view"/>
+      <item type="id" name="settings_recycler_view"/>
       <item type="id" name="subtitle_text"/>
       <item type="id" name="switch_widget"/>
       <item type="id" name="text"/>
@@ -405,6 +408,7 @@ limitations under the License.-->
       <item type="id" name="top_level_divider"/>
       <item type="id" name="top_level_guideline"/>
       <item type="id" name="top_level_menu"/>
+      <item type="id" name="top_level_recycler_view"/>
       <item type="id" name="up_arrow_container"/>
       <item type="id" name="user_avatar"/>
       <item type="id" name="user_grid"/>
@@ -500,6 +504,11 @@ limitations under the License.-->
       <item type="string" name="add_profile_text"/>
       <item type="string" name="add_user_error_title"/>
       <item type="string" name="add_user_restricted_while_driving"/>
+      <item type="string" name="admin_device_owner_message"/>
+      <item type="string" name="admin_financed_message"/>
+      <item type="string" name="admin_profile_owner_message"/>
+      <item type="string" name="admin_profile_owner_user_message"/>
+      <item type="string" name="admin_support_more_info"/>
       <item type="string" name="alarm_ringtone_title"/>
       <item type="string" name="alarm_volume_title"/>
       <item type="string" name="all_applications"/>
@@ -692,6 +701,7 @@ limitations under the License.-->
       <item type="string" name="delete_user_error_title"/>
       <item type="string" name="deny"/>
       <item type="string" name="developer_options_settings"/>
+      <item type="string" name="device_admin_details_title"/>
       <item type="string" name="device_info_not_available"/>
       <item type="string" name="device_status"/>
       <item type="string" name="device_status_activity_title"/>
@@ -1270,6 +1280,7 @@ limitations under the License.-->
       <item type="xml" name="default_autofill_picker_fragment"/>
       <item type="xml" name="default_voice_input_picker_fragment"/>
       <item type="xml" name="developer_options_fragment"/>
+      <item type="xml" name="device_admin_details"/>
       <item type="xml" name="display_settings_fragment"/>
       <item type="xml" name="factory_reset_confirm_fragment"/>
       <item type="xml" name="factory_reset_fragment"/>
