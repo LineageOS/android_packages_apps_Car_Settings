@@ -18,43 +18,36 @@ package com.android.car.settings.enterprise;
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminDetailsSupportPreferenceControllerTest extends
+public final class DeviceAdminDetailsHeaderPreferenceControllerTest extends
         BaseDeviceAdminDetailsPreferenceControllerTestCase
-                <DeviceAdminDetailsSupportPreferenceController> {
+                <DeviceAdminDetailsHeaderPreferenceController> {
 
-    private DeviceAdminDetailsSupportPreferenceController mController;
+    private DeviceAdminDetailsHeaderPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminDetailsSupportPreferenceController(mSpiedContext,
+        mController = new DeviceAdminDetailsHeaderPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
 
     @Test
-    public void testUpdateState_nullMessage() {
-        mockGetLongSupportMessageForUser(null);
-
+    public void testUpdateState_adminWithNoProperties() throws Exception {
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleNeverSet();
+        verifyPreferenceTitleSet(DefaultDeviceAdminReceiver.class.getName());
+        verifyPreferenceSummaryNeverSet();
+        verifyPreferenceIconSet();
     }
 
     @Test
-    public void testUpdateState_emptyMessage() {
-        mockGetLongSupportMessageForUser("");
+    public void testUpdateState_adminWithAllProperties() throws Exception {
+        mController.setDeviceAdmin(mFancyDeviceAdminInfo);
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleNeverSet();
-    }
-
-    @Test
-    public void testUpdate_validMessage() {
-        mockGetLongSupportMessageForUser("WHAZZZZUP");
-
-        mController.updateState(mPreference);
-
-        verifyPreferenceTitleSet("WHAZZZZUP");
+        verifyPreferenceTitleSet("LordOfTheSevenReceiverKingdoms");
+        verifyPreferenceSummarySet("One Receiver to Rule them All");
+        verifyPreferenceIconSet();
     }
 }
