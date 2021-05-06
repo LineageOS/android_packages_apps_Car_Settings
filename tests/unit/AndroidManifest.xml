@@ -78,7 +78,16 @@
         </activity>
 
         <receiver
-            android:name="com.android.car.settings.enterprise.TestDeviceAdminReceiver">
+            android:name="com.android.car.settings.enterprise.DefaultDeviceAdminReceiver">
+            <meta-data android:name="android.app.device_admin"
+                 android:resource="@xml/empty_device_admin"/>
+        </receiver>
+
+        <receiver
+            android:name="com.android.car.settings.enterprise.FancyDeviceAdminReceiver"
+            android:label="@string/fancy_device_admin_label"
+            android:icon="@drawable/test_icon"
+            android:description="@string/fancy_device_admin_description">
             <meta-data android:name="android.app.device_admin"
                  android:resource="@xml/empty_device_admin"/>
         </receiver>

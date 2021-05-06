@@ -15,25 +15,27 @@
  */
 package com.android.car.settings.enterprise;
 
+import com.android.car.settings.R;
+
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminDetailsSupportPreferenceControllerTest extends
+public final class DeviceAdminDetailsWarningPreferenceControllerTest extends
         BaseDeviceAdminDetailsPreferenceControllerTestCase
-                <DeviceAdminDetailsSupportPreferenceController> {
+                <DeviceAdminDetailsWarningPreferenceController> {
 
-    private DeviceAdminDetailsSupportPreferenceController mController;
+    private DeviceAdminDetailsWarningPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminDetailsSupportPreferenceController(mSpiedContext,
+        mController = new DeviceAdminDetailsWarningPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
 
     @Test
-    public void testUpdateState_nullMessage() {
-        mockGetLongSupportMessageForUser(null);
+    public void testUpdateState_adminNotActive() {
+        // No need to mock anything, as mockito returns false / null by default
 
         mController.updateState(mPreference);
 
@@ -41,20 +43,30 @@ public final class DeviceAdminDetailsSupportPreferenceControllerTest extends
     }
 
     @Test
-    public void testUpdateState_emptyMessage() {
-        mockGetLongSupportMessageForUser("");
+    public void testUpdateState_profileOwner() {
+        mockProfileOwner();
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleNeverSet();
+        verifyPreferenceTitleSet(R.string.admin_profile_owner_user_message);
     }
 
     @Test
-    public void testUpdate_validMessage() {
-        mockGetLongSupportMessageForUser("WHAZZZZUP");
+    public void testUpdateState_deviceOwner() {
+        mockDeviceOwner();
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet("WHAZZZZUP");
+        verifyPreferenceTitleSet(R.string.admin_device_owner_message);
+    }
+
+    @Test
+    public void testUpdateState_deviceOwner_financialDevice() {
+        mockDeviceOwner();
+        mockFinancialDevice();
+
+        mController.updateState(mPreference);
+
+        verifyPreferenceTitleSet(R.string.admin_financed_message);
     }
 }
