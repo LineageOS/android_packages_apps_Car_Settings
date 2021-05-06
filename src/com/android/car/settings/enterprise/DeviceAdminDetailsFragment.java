@@ -44,7 +44,7 @@ public final class DeviceAdminDetailsFragment extends SettingsFragment {
     }
 
     @Override
-        public void onAttach(Context context) {
+    public void onAttach(Context context) {
         super.onAttach(context);
 
         Activity activity = requireActivity();
