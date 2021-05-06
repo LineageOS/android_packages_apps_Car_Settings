@@ -17,6 +17,6 @@ package com.android.car.settings.enterprise;
 
 import android.app.admin.DeviceAdminReceiver;
 
-public final class TestDeviceAdminReceiver extends DeviceAdminReceiver {
+public final class DefaultDeviceAdminReceiver extends DeviceAdminReceiver {
 
 }
