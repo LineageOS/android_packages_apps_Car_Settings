@@ -16,6 +16,7 @@
 package com.android.car.settings.accounts;
 
 import static android.content.Intent.EXTRA_USER;
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
 
 import android.accounts.AccountManager;
 import android.accounts.AccountManagerCallback;
@@ -123,6 +124,7 @@ public class AddAccountActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
         if (savedInstanceState != null) {
             mAddAccountCalled = savedInstanceState.getBoolean(KEY_ADD_CALLED);
             LOG.v("Restored from previous add account call: " + mAddAccountCalled);
