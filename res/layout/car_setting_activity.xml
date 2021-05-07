@@ -15,46 +15,39 @@
     limitations under the License.
 -->
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/car_settings_activity_wrapper"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/car_ui_activity_background">
 
-    <fragment
-        class="com.android.car.settings.common.TopLevelMenuFragment"
-        android:id="@+id/top_level_menu"
+    <FrameLayout
+        android:id="@+id/top_level_menu_container"
         android:layout_width="@dimen/top_level_menu_width"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/top_level_guideline"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_alignParentLeft="true">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top_level_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"/>
+        <fragment
+            class="com.android.car.settings.common.TopLevelMenuFragment"
+            android:id="@+id/top_level_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
 
     <View
         android:id="@+id/top_level_divider"
         android:layout_width="@dimen/top_level_divider_width"
         android:layout_height="match_parent"
-        style="@style/Preference.CarUi.Divider"
-        app:layout_constraintLeft_toRightOf="@+id/top_level_guideline"
-        app:layout_constraintRight_toLeftOf="@+id/fragment_container_wrapper"/>
+        android:layout_toRightOf="@id/top_level_menu_container"
+        style="@style/Preference.CarUi.Divider"/>
 
     <FrameLayout
         android:id="@+id/fragment_container_wrapper"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/top_level_divider"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_toRightOf="@id/top_level_divider"
+        android:layout_alignParentRight="true">
 
         <com.android.car.settings.common.rotary.SettingsFocusParkingView
             android:id="@+id/settings_focus_parking_view"
@@ -80,5 +73,4 @@
             android:visibility="gone"/>
 
     </FrameLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
