@@ -16,8 +16,6 @@
 
 package com.android.car.settings.bluetooth;
 
-import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
-
 import android.annotation.Nullable;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -28,6 +26,8 @@ import android.os.Bundle;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.FragmentActivity;
+
+import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
 /**
  * BluetoothPairingDialog asks the user to enter a PIN / Passkey / simple confirmation
@@ -67,7 +67,7 @@ public class BluetoothPairingDialog extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
+        getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
 
         Intent intent = getIntent();
         mBluetoothPairingController = new BluetoothPairingController(intent, this);
