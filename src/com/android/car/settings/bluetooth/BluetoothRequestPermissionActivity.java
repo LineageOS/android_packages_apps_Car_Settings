@@ -16,8 +16,6 @@
 
 package com.android.car.settings.bluetooth;
 
-import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
-
 import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.app.Activity;
@@ -37,6 +35,7 @@ import android.os.Bundle;
 import android.os.UserManager;
 import android.text.TextUtils;
 
+import androidx.activity.ComponentActivity;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
@@ -45,6 +44,7 @@ import com.android.car.ui.AlertDialogBuilder;
 import com.android.settingslib.bluetooth.BluetoothDiscoverableTimeoutReceiver;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
+import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
 import java.util.List;
 
@@ -53,7 +53,7 @@ import java.util.List;
  * consent and waiting until the state change is completed. It can also be used to make the device
  * explicitly discoverable for a given amount of time.
  */
-public class BluetoothRequestPermissionActivity extends Activity {
+public class BluetoothRequestPermissionActivity extends ComponentActivity {
     private static final Logger LOG = new Logger(BluetoothRequestPermissionActivity.class);
 
     @VisibleForTesting
@@ -91,7 +91,7 @@ public class BluetoothRequestPermissionActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
+        getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
 
         mRequest = parseIntent();
         if (mRequest == REQUEST_UNKNOWN) {
