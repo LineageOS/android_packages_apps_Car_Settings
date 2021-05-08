@@ -41,6 +41,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
 import java.lang.ref.WeakReference;
 
@@ -66,6 +67,7 @@ public class CredentialStorageActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
         mUserManager = UserManager.get(getApplicationContext());
         mUtils = new LockPatternUtils(this);
 

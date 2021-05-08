@@ -22,12 +22,8 @@
     <string name="display_settings" msgid="5325515247739279185">"Екран"</string>
     <string name="brightness" msgid="2919605130898772866">"Рівень яскравості"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптивна яскравість"</string>
-    <string name="auto_brightness_summary" msgid="4741887033140384352">"Оптимізація рівня яскравості з урахуванням умов освітлення"</string>
+    <string name="auto_brightness_summary" msgid="2002570577219479702">"Регулювати яскравість екрана відповідно до оточення"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Нічний екран увімкнено"</string>
-    <string name="keywords_display" msgid="3978416985146943922">"екран, сенсорний екран"</string>
-    <string name="keywords_display_brightness_level" msgid="3956411572536209195">"затемнений екран, сенсорний екран, акумулятор"</string>
-    <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"затемнений екран, сенсорний екран, акумулятор"</string>
-    <string name="keywords_display_night_display" msgid="2922294576679769957">"затемнений екран, ніч, відтінок"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Нічний режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мережа й Інтернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобільна мережа"</string>
@@ -88,6 +84,10 @@
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Налаштуйте застереження про використання трафіку"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Налаштуйте ліміт використання трафіку"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Налаштувати"</string>
+    <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Мережа OEM"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"З %2$s до %3$s було використано %1$s"</string>
+    <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Під\'єднатися до іншої мережі"</string>
+    <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Налаштування мережі"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Увімкнення Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Вимкнення Wi‑Fi…"</string>
@@ -158,6 +158,7 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Виберіть принаймні один діапазон частот для точки доступу Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступу та модем"</string>
+    <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка доступу"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматично вимикати точку доступу"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Якщо немає під’єднаних пристроїв, точка доступу Wi-Fi вимикатиметься"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Додаток <xliff:g id="REQUESTER">%s</xliff:g> хоче ввімкнути Wi-Fi"</string>
@@ -196,6 +197,11 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Додаток хоче зробити головний пристрій аудіосистеми видимим для інших пристроїв Bluetooth упродовж <xliff:g id="TIMEOUT">%1$d</xliff:g> с."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"Додаток <xliff:g id="APP_NAME">%1$s</xliff:g> хоче ввімкнути Bluetooth і зробити головний пристрій аудіосистеми видимим для інших упродовж <xliff:g id="TIMEOUT">%2$d</xliff:g> с."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Додаток хоче ввімкнути Bluetooth і зробити головний пристрій аудіосистеми видимим для інших упродовж <xliff:g id="TIMEOUT">%1$d</xliff:g> с."</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Інші пристрої бачать ваш пристрій під назвою \"%1$s\""</string>
+    <string name="bluetooth_my_devices" msgid="6352010339607939612">"Мої пристрої"</string>
+    <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Підключені раніше"</string>
+    <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s підключено"</string>
+    <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s відключено"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Запит Bluetooth на створення пари"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Створити пару та підключитися"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код підключення Bluetooth"</string>
@@ -234,6 +240,10 @@
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Стандартний сигнал сповіщень"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Стандартний сигнал будильника"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Зберегти"</string>
+    <string name="sound_alert_sounds" msgid="6838044721739163867">"Звуки сповіщень"</string>
+    <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Сигнал дзвінка, сповіщення, будильник"</string>
+    <string name="display_brightness" msgid="5718970880488110840">"Яскравість"</string>
+    <string name="display_night_mode_summary" msgid="4939425286027546230">"Коригувати параметри екрана для слабкого освітлення"</string>
     <string name="units_settings" msgid="402325305096925886">"Одиниці"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Швидкість"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Відстань"</string>
@@ -286,7 +296,7 @@
     <string name="all_applications" msgid="7798210477486822168">"Показати всі додатки"</string>
     <string name="default_applications" msgid="1558183275638697087">"Додатки за умовчанням"</string>
     <string name="app_permissions" msgid="32799922508313948">"Дозволи додатків"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"Додатки з доступом таких категорій: <xliff:g id="APPS">%1$s</xliff:g>"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"Контролюйте доступ додатка до даних"</string>
     <string name="applications_settings" msgid="794261395191035632">"Про додаток"</string>
     <string name="force_stop" msgid="2153183697014720520">"Примусово припинити роботу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Примусово припинити роботу?"</string>
@@ -296,13 +306,21 @@
     <string name="uninstall_text" msgid="277907956072833012">"Видалити"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Якщо вимкнути цей додаток, система Android та інші додатки можуть працювати неналежним чином."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Вимкнути додаток"</string>
-    <string name="not_installed" msgid="4218816013370552746">"Не встановлено для цього користувача"</string>
+    <string name="not_installed" msgid="4163454337822508007">"Не встановлено для цього профілю"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Дозволи"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Сповіщення"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Пам\'ять і кеш"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версія: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Дозволи не надано"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Немає запитів на дозволи"</string>
+    <string name="unused_apps" msgid="648471933781010395">"Додатки, що не використовуються"</string>
+    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> додаток, що не використовується</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> додатки, що не використовуються</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> додатків, що не використовуються</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> додатка, що не використовується</item>
+    </plurals>
+    <string name="unused_apps_switch" msgid="4433958286200341563">"Скасувати дозволи й звільняти місце"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s у внутрішній пам\'яті"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Використання трафіку"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Використання трафіку"</string>
@@ -342,6 +360,13 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Запитувати щоразу"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Не відкривати в цьому додатку"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Підтримувані посилання"</string>
+    <string name="apps_settings_title" msgid="3982535942394315336">"Додатки"</string>
+    <string name="apps_recently_opened" msgid="5320377037971195984">"Нещодавно відкриті"</string>
+    <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Переглянути всі додатки (%1$d)"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"Диспетчер дозволів"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Контролюйте доступ додатка до даних"</string>
+    <string name="apps_default_apps_summary" msgid="2017792579839972926">"Для Асистента й інших додатків"</string>
+    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Системні та інші налаштування"</string>
     <string name="special_access" msgid="5730278220917123811">"Спеціальний доступ"</string>
     <string name="show_system" msgid="4401355756969485287">"Показати системні додатки"</string>
     <string name="hide_system" msgid="8845453295584638040">"Сховати системні додатки"</string>
@@ -366,8 +391,12 @@
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Немає останніх запитів на геодані"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на рівні додатка"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Служби локації"</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"Використовувати геодані"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Оновлення системи"</string>
+    <string name="system_advanced_title" msgid="6303355131691523362">"Додатково"</string>
+    <string name="system_advanced_summary" msgid="5833643795981791953">"Докладніше, правова інформація, скидання тощо"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версія Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Рівень виправлення системи безпеки Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Модель і апаратне забезпечення"</string>
@@ -432,12 +461,13 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Скинути налаштування додатків"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Налаштування додатків скинуто"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Видалити всі дані (скинути налаштування)"</string>
-    <string name="factory_reset_desc" msgid="7133390564019035242">"Буде видалено всі дані головного пристрою автомобіля, зокрема:\n\n"<li>"обліковий запис Google;"</li>\n<li>"дані й налаштування системи та додатків;"</li>\n<li>"завантажені додатки."</li></string>
+    <string name="factory_reset_summary" msgid="854815182943504327">"Видалити всі дані й профілі з інформаційно-розважальної системи"</string>
+    <string name="factory_reset_desc" msgid="1688333312943433244">"Буде видалено всі дані інформаційно-розважальної системи автомобіля, зокрема:\n\n"<li>"обліковий запис Google;"</li>\n<li>"дані й налаштування системи та додатків;"</li>\n<li>"завантажені додатки."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Ви ввійшли в такі облікові записи:"</string>
-    <string name="factory_reset_other_users_present" msgid="3708751471946901936">"Цим автомобілем користуються інші люди."</string>
-    <string name="factory_reset_button_text" msgid="5364900277201550546">"Скинути параметри автомобіля"</string>
-    <string name="factory_reset_confirm_title" msgid="569087764460471326">"Скинути?"</string>
-    <string name="factory_reset_confirm_desc" msgid="5075292788128840731">"Видалити всю особисту інформацію та завантажені додатки? Цю дію не можна відмінити."</string>
+    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Для цього транспортного засобу налаштовано інші профілі."</string>
+    <string name="factory_reset_button_text" msgid="2626666247051368256">"Видалити всі дані"</string>
+    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Видалити всі дані?"</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Буде видалено всі дані, облікові записи та завантажені додатки особистого профілю в цій інформаційно-розважальній системі.\n\nЦю дію неможливо відмінити."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Видалити все"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Видалення всіх даних"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Зачекайте…"</string>
@@ -461,38 +491,38 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Час"</string>
     <string name="user_admin" msgid="1535484812908584809">"Адміністратор"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Ви ввійшли як адміністратор"</string>
-    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Усі дозволи адміністратора"</string>
+    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Надати дозволи адміністратора?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Зробити адміністратором"</string>
-    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Це дасть змогу видаляти користувачів, зокрема інших адміністраторів, і відновлювати заводські налаштування системи."</string>
+    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Адміністратор зможе видаляти інші профілі, зокрема інших адміністраторів, і скидати налаштування інформаційно-розважальної системи."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Цю дію не можна відмінити."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Так, зробити адміністратором"</string>
-    <string name="create_user_permission_title" msgid="7781550880565935298">"Створювати нових користувачів"</string>
+    <string name="create_user_permission_title" msgid="2402003632264628632">"Створювати нові профілі"</string>
     <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Телефонувати"</string>
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Обмінюватися SMS з автомобіля"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Установлювати нові додатки"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Видаляти додатки"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"Додати користувача"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"Новий користувач"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Додати нового користувача?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Після створення новий профіль потрібно налаштувати."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"Будь-який користувач пристрою може оновлювати додатки для решти користувачів."</string>
-    <string name="user_limit_reached_title" msgid="8803355734556061238">"Ви досягли ліміту користувачів"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
-      <item quantity="one">Можна створити до <xliff:g id="COUNT">%d</xliff:g> користувача.</item>
-      <item quantity="few">Можна створити до <xliff:g id="COUNT">%d</xliff:g> користувачів.</item>
-      <item quantity="many">Можна створити до <xliff:g id="COUNT">%d</xliff:g> користувачів.</item>
-      <item quantity="other">Можна створити до <xliff:g id="COUNT">%d</xliff:g> користувача.</item>
+    <string name="user_add_user_menu" msgid="4125869008006021799">"Додати профіль"</string>
+    <string name="user_new_user_name" msgid="906698527658609819">"Новий профіль"</string>
+    <string name="user_add_user_title" msgid="6296827596015729982">"Додати новий профіль?"</string>
+    <string name="user_add_user_message_setup" msgid="812616230454605159">"Коли ви створите новий профіль, цій людині потрібно налаштувати його для себе."</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"Користувачі всіх профілів можуть оновлювати додатки для інших профілів."</string>
+    <string name="user_limit_reached_title" msgid="5677729355746623293">"Досягнуто ліміту профілів"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
+      <item quantity="one">Можна створити до <xliff:g id="COUNT">%d</xliff:g> профілю.</item>
+      <item quantity="few">Можна створити до <xliff:g id="COUNT">%d</xliff:g> профілів.</item>
+      <item quantity="many">Можна створити до <xliff:g id="COUNT">%d</xliff:g> профілів.</item>
+      <item quantity="other">Можна створити до <xliff:g id="COUNT">%d</xliff:g> профілю.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="3206300411663817038">"Не вдалося створити нового користувача"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Видалити користувача?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Усі додатки й дані буде видалено."</string>
-    <string name="delete_user_error_title" msgid="7609819398530124827">"Не вдалося видалити користувача."</string>
+    <string name="add_user_error_title" msgid="7589792057846396341">"Не вдалося створити новий профіль"</string>
+    <string name="delete_user_dialog_title" msgid="575517556232943687">"Видалити цей профіль?"</string>
+    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Усі додатки та дані для цього профілю буде видалено"</string>
+    <string name="delete_user_error_title" msgid="6422249596301690254">"Не вдалося видалити профіль."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Цей профіль видалиться, коли ви ввійдете в інший або перезапустите транспортний засіб."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Закрити"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Повторити"</string>
-    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Видалити останнього користувача?"</string>
-    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Коли ви видалите останнього користувача цього автомобіля, буде створено нового адміністратора."</string>
-    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Буде видалено всі дані, налаштування й додатки, зв’язані з цим користувачем. Потрібно буде знову налаштовувати систему."</string>
+    <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"Видалити останній профіль?"</string>
+    <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"Якщо ви видалите останній профіль для цього автомобіля, усі дані, налаштування та додатки, пов\'язані з профілем, буде видалено."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"Після цього ви зможете налаштувати новий профіль."</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Вибрати нового адміністратора"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"У вас має бути принаймні один адміністратор. Щоб видалити цього, спершу виберіть іншого."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Вибрати адміністратора"</string>
@@ -502,10 +532,11 @@
     <string name="current_user_name" msgid="3813671533249316823">"Ви (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ім’я"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Не налаштовано"</string>
-    <string name="edit_user_name_title" msgid="6890782937520262478">"Змінити ім’я користувача"</string>
+    <string name="edit_user_name_title" msgid="1118500707473139995">"Змінити ім\'я профілю"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"Поле не може бути порожнім."</string>
-    <string name="name_input_invalid_error" msgid="3523545780580744273">"Введене ім\'я користувача недійсне."</string>
+    <string name="name_input_invalid_error" msgid="4355625213535164704">"Указане ім\'я профілю недійсне."</string>
     <string name="users_list_title" msgid="770764290290240909">"Користувачі"</string>
+    <string name="profiles_list_title" msgid="1443396686780460221">"Профілі"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s отримує дозволи"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Пам’ять"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"Музика й аудіо"</string>
@@ -516,7 +547,7 @@
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудіофайли"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Обчислення…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Розмір додатка"</string>
-    <string name="storage_data_size_label" msgid="5022911581004239367">"Дані користувача"</string>
+    <string name="storage_data_size_label" msgid="7986110464268960652">"Дані профілю"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Кеш"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Усього"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Очистити пам’ять"</string>
@@ -558,6 +589,15 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Скасувати синхронізацію"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Виникли проблеми із синхронізацією. Незабаром вона відновиться."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Конфіденційність"</string>
+    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Дані інформаційно-розважальної системи"</string>
+    <string name="privacy_location_summary" msgid="7019817848470566242">"Контролюйте доступ додатка до геоданих"</string>
+    <string name="mute_mic_title" msgid="2813215197799569553">"Мікрофон"</string>
+    <string name="mute_mic_summary" msgid="5426953935775303904">"Контролюйте доступ додатка до мікрофона"</string>
+    <string name="vehicle_data_title" msgid="935933215161763721">"Дані інфо-розважальної системи"</string>
+    <string name="vehicle_data_summary" msgid="9204836361819386115">"Керуйте діями й інформацією, що зберігаються в пам\'яті цього транспортного засобу"</string>
+    <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Видалити профіль"</string>
+    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Видалити всі дані з профілю та облікові записи з інформаційно-розважальної системи"</string>
+    <string name="action_unavailable" msgid="7087119418684417249">"Ця дія недоступна для вашого профілю"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безпека"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блокування екрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Немає"</string>
@@ -574,7 +614,6 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Пропустити"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Налаштуйте блокування екрана"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Придумайте PIN-код"</string>
-    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Створіть ключ"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Створіть пароль"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Поточне блокування екрана"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"З міркувань безпеки налаштуйте ключ"</string>
@@ -593,6 +632,8 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Вимкнути блокування екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Будь-хто зможе ввійти у ваш обліковий запис"</string>
+    <string name="security_profile_lock_title" msgid="3082523481292617350">"Блокування профілю"</string>
+    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Налаштувати автоматичне розблокування"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Введіть PIN-код"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Введіть пароль"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"З міркувань безпеки налаштуйте PIN-код"</string>
@@ -616,7 +657,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Максимальна кількість цифр: <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Має містити лише цифри від 0 до 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Адміністратор пристрою не дозволяє використовувати останній PIN-код"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"IT-адміністратор заблокував загальні PIN-коди. Введіть інший PIN-код."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Системний адміністратор заблокував загальні PIN-коди. Введіть інший PIN-код."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Не може містити недійсні символи."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Пароль недійсний. Потрібно ввести принаймні 4 символи."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -657,7 +698,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Адміністратор пристрою не дозволяє використовувати останній пароль"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не вдалося зберегти пароль"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"IT-адміністратор заблокував загальні паролі. Введіть інший пароль."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Системний адміністратор заблокував загальні паролі. Введіть інший пароль."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Заборонено однакові цифри або в порядку зростання чи спадання."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Способи блокування екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. тому"</string>
@@ -678,11 +719,23 @@
     <string name="enter_key" msgid="2121394305541579468">"Клавіша Enter"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Вийти з демо-режиму"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Вийти з демо-режиму"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Буде видалено демонстраційний обліковий запис і відновлено заводські налаштування системи. Усі дані користувача буде втрачено."</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Буде видалено демонстраційний обліковий запис і відновлено заводські налаштування системи. Усі дані профілю буде втрачено."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Вийти з демо-режиму"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЗАКРИТИ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функція недоступна під час руху автомобіля"</string>
-    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Неможливо додати користувача під час руху автомобіля"</string>
+    <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Не вдається додати профіль під час руху автомобіля"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Пошук"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Асистент і Voice"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Цифровий помічник"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Використовувати текст з екрана"</string>
+    <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Надати Асистенту доступ до контенту на екрані"</string>
+    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Використовувати знімки екрана"</string>
+    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Надати Асистенту доступ до зображень екрана"</string>
+    <string name="notifications_recently_sent" msgid="9051696542615302799">"Нещодавно надіслані"</string>
+    <string name="notifications_all_apps" msgid="3557079551048958846">"Усі додатки"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Профілі та облікові записи"</string>
+    <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Керувати іншими профілями"</string>
+    <string name="add_a_profile_button_text" msgid="8027395095117925114">"Додати профіль"</string>
+    <string name="delete_this_profile_text" msgid="6035404714526922665">"Видалити цей профіль"</string>
+    <string name="add_profile_text" msgid="9118410102199116969">"Додати профіль"</string>
 </resources>
