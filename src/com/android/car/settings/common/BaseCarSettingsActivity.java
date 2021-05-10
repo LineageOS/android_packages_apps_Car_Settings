@@ -200,6 +200,11 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     @Override
     public void launchFragment(Fragment fragment) {
+        if (fragment instanceof DialogFragment) {
+            throw new IllegalArgumentException(
+                    "cannot launch dialogs with launchFragment() - use showDialog() instead");
+        }
+
         if (mIsSinglePane) {
             Intent intent = SubSettingsActivity.newInstance(/* context= */ this, fragment);
             startActivity(intent);
@@ -209,11 +214,6 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     }
 
     private void launchFragmentInternal(Fragment fragment) {
-        if (fragment instanceof DialogFragment) {
-            throw new IllegalArgumentException(
-                    "cannot launch dialogs with launchFragment() - use showDialog() instead");
-        }
-
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(
