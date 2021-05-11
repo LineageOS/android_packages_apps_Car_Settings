@@ -90,11 +90,11 @@
     <attr name="wifiSignalColor" format="color"/>
     <attr name="iconColor" format="color"/>
     <attr name="dividerColor" format="color"/>
-    <attr name="userSwitcherBackground" format="reference"/>
-    <attr name="userSwitcherCurrentUserColor" format="color"/>
-    <attr name="userSwitcherAddIconColor" format="color"/>
-    <attr name="userSwitcherNameTextAppearance" format="reference"/>
-    <attr name="userSwitcherAddIconBackgroundColor" format="color"/>
+    <attr name="profileSwitcherBackground" format="reference"/>
+    <attr name="profileSwitcherCurrentProfileColor" format="color"/>
+    <attr name="profileSwitcherAddIconColor" format="color"/>
+    <attr name="profileSwitcherNameTextAppearance" format="reference"/>
+    <attr name="profileSwitcherAddIconBackgroundColor" format="color"/>
     <attr name="quickSettingsEnabledColor" format="color"/>
     <attr name="quickSettingsDisabledColor" format="color"/>
     <attr name="quickSettingsIconEnabledColor" format="color"/>

@@ -75,7 +75,7 @@ public class BluetoothUnbondedDevicesPreferenceController extends
         int availabilityStatus = super.getAvailabilityStatus();
         if (availabilityStatus == AVAILABLE
                 && getUserManager().hasUserRestriction(DISALLOW_CONFIG_BLUETOOTH)) {
-            return DISABLED_FOR_USER;
+            return DISABLED_FOR_PROFILE;
         }
         return availabilityStatus;
     }
