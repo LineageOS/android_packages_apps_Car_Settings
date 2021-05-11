@@ -22,11 +22,11 @@
         <item name="iconColor">@color/car_ui_text_color_primary</item>
         <item name="dividerColor">@*android:color/car_list_divider</item>
         <item name="preferenceTheme">@style/CarSettingsPreferenceTheme</item>
-        <item name="userSwitcherBackground">@android:color/transparent</item>
-        <item name="userSwitcherCurrentUserColor">?android:attr/colorAccent</item>
-        <item name="userSwitcherAddIconColor">@*android:color/car_tint</item>
-        <item name="userSwitcherAddIconBackgroundColor">?android:attr/colorPrimaryDark</item>
-        <item name="userSwitcherNameTextAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="profileSwitcherBackground">@android:color/transparent</item>
+        <item name="profileSwitcherCurrentProfileColor">?android:attr/colorAccent</item>
+        <item name="profileSwitcherAddIconColor">@*android:color/car_tint</item>
+        <item name="profileSwitcherAddIconBackgroundColor">?android:attr/colorPrimaryDark</item>
+        <item name="profileSwitcherNameTextAppearance">?android:attr/textAppearanceLarge</item>
         <item name="quickSettingsEnabledColor">?android:attr/colorControlActivated</item>
         <item name="quickSettingsDisabledColor">?android:attr/colorControlNormal</item>
         <item name="quickSettingsIconEnabledColor">?android:attr/colorPrimary</item>

@@ -27,9 +27,9 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.users.RemoveUserHandler;
-import com.android.car.settings.users.UserHelper;
-import com.android.car.settings.users.UserUtils;
+import com.android.car.settings.profiles.ProfileHelper;
+import com.android.car.settings.profiles.ProfileUtils;
+import com.android.car.settings.profiles.RemoveProfileHandler;
 import com.android.internal.annotations.VisibleForTesting;
 
 /** Business logic for preference that deletes the current user profile. */
@@ -37,30 +37,30 @@ public class DeleteUserPreferenceController
         extends PreferenceController<ClickableWhileDisabledPreference> {
 
     private final UserInfo mUserInfo;
-    private final RemoveUserHandler mRemoveUserHandler;
+    private final RemoveProfileHandler mRemoveProfileHandler;
 
     public DeleteUserPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions,
-                new RemoveUserHandler(context, UserHelper.getInstance(context),
+                new RemoveProfileHandler(context, ProfileHelper.getInstance(context),
                         UserManager.get(context), fragmentController));
     }
 
     @VisibleForTesting
     DeleteUserPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, RemoveUserHandler removeUserHandler) {
+            CarUxRestrictions uxRestrictions, RemoveProfileHandler removeProfileHandler) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mRemoveUserHandler = removeUserHandler;
-        mUserInfo = UserUtils.getUserInfo(getContext(), ActivityManager.getCurrentUser());
-        mRemoveUserHandler.setUserInfo(mUserInfo);
+        mRemoveProfileHandler = removeProfileHandler;
+        mUserInfo = ProfileUtils.getUserInfo(getContext(), ActivityManager.getCurrentUser());
+        mRemoveProfileHandler.setUserInfo(mUserInfo);
     }
 
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-        mRemoveUserHandler.resetListeners();
+        mRemoveProfileHandler.resetListeners();
         getPreference().setDisabledClickListener(p ->
                 Toast.makeText(getContext(), getContext().getString(R.string.action_unavailable),
                         Toast.LENGTH_LONG).show());
@@ -73,12 +73,13 @@ public class DeleteUserPreferenceController
 
     @Override
     protected boolean handlePreferenceClicked(ClickableWhileDisabledPreference preference) {
-        mRemoveUserHandler.showConfirmRemoveUserDialog();
+        mRemoveProfileHandler.showConfirmRemoveProfileDialog();
         return true;
     }
 
     @AvailabilityStatus
     protected int getAvailabilityStatus() {
-        return mRemoveUserHandler.canRemoveUser(mUserInfo) ? AVAILABLE : AVAILABLE_FOR_VIEWING;
+        return mRemoveProfileHandler.canRemoveProfile(mUserInfo) ? AVAILABLE
+                : AVAILABLE_FOR_VIEWING;
     }
 }

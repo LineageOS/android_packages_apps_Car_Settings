@@ -22,7 +22,7 @@
     android:key="@string/psk_vehicle_data">
 
     <com.android.car.settings.common.ClickableWhileDisabledPreference
-        android:key="@string/pk_vehicle_data_delete_user"
+        android:key="@string/pk_vehicle_data_delete_profile"
         android:title="@string/vehicle_data_delete_user_title"
         android:summary="@string/vehicle_data_delete_user_summary"
         settings:controller="com.android.car.settings.privacy.DeleteUserPreferenceController"/>

@@ -35,8 +35,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.settings.users.UserHelper;
 import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 
 import org.junit.Before;
@@ -61,7 +61,7 @@ public class AccountDetailsPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private UserHelper mMockUserHelper;
+    private ProfileHelper mMockProfileHelper;
 
     @Before
     public void setUp() {
@@ -81,7 +81,7 @@ public class AccountDetailsPreferenceControllerTest {
 
     @Test
     public void cannotModifyUsers_removeAccountButtonShouldNotBeVisible() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -90,7 +90,7 @@ public class AccountDetailsPreferenceControllerTest {
 
     @Test
     public void canModifyUsers_removeAccountButtonShouldBeVisible() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -99,7 +99,7 @@ public class AccountDetailsPreferenceControllerTest {
 
     @Test
     public void onRemoveAccountButtonClicked_canModifyUsers_shouldShowConfirmRemoveAccountDialog() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -119,8 +119,8 @@ public class AccountDetailsPreferenceControllerTest {
         }
 
         @Override
-        UserHelper getUserHelper() {
-            return mMockUserHelper;
+        ProfileHelper getProfileHelper() {
+            return mMockProfileHelper;
         }
     }
 }

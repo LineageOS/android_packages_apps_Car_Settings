@@ -68,7 +68,7 @@ public class SystemUpdatePreferenceController extends PreferenceController<Prefe
         if (!getContext().getResources().getBoolean(R.bool.config_show_system_update_settings)) {
             return UNSUPPORTED_ON_DEVICE;
         }
-        return mUserManager.isAdminUser() ? AVAILABLE : DISABLED_FOR_USER;
+        return mUserManager.isAdminUser() ? AVAILABLE : DISABLED_FOR_PROFILE;
     }
 
     @Override
