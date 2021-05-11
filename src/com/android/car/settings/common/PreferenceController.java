@@ -97,7 +97,7 @@ public abstract class PreferenceController<V extends Preference> implements
      * @see #getAvailabilityStatus()
      */
     @Retention(RetentionPolicy.SOURCE)
-    @IntDef({AVAILABLE, CONDITIONALLY_UNAVAILABLE, UNSUPPORTED_ON_DEVICE, DISABLED_FOR_USER,
+    @IntDef({AVAILABLE, CONDITIONALLY_UNAVAILABLE, UNSUPPORTED_ON_DEVICE, DISABLED_FOR_PROFILE,
             AVAILABLE_FOR_VIEWING})
     public @interface AvailabilityStatus {
     }
@@ -109,7 +109,7 @@ public abstract class PreferenceController<V extends Preference> implements
 
     /**
      * The setting is currently unavailable but may become available in the future. Use
-     * {@link #DISABLED_FOR_USER} if it describes the condition more accurately.
+     * {@link #DISABLED_FOR_PROFILE} if it describes the condition more accurately.
      */
     public static final int CONDITIONALLY_UNAVAILABLE = 1;
 
@@ -119,9 +119,9 @@ public abstract class PreferenceController<V extends Preference> implements
     public static final int UNSUPPORTED_ON_DEVICE = 2;
 
     /**
-     * The setting cannot be changed by the current user.
+     * The setting cannot be changed by the current profile.
      */
-    public static final int DISABLED_FOR_USER = 3;
+    public static final int DISABLED_FOR_PROFILE = 3;
 
     /**
      * The setting cannot be changed.

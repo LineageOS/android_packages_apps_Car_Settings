@@ -17,7 +17,7 @@
 package com.android.car.settings.system;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -86,7 +86,7 @@ public class SystemUpdatePreferenceControllerTest {
     public void getAvailabilityStatus_nonAdminUser_disabledForUser() {
         setCurrentUserWithFlags(/* flags= */ 0);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test

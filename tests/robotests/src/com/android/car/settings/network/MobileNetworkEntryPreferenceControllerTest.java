@@ -19,7 +19,7 @@ package com.android.car.settings.network;
 import static android.os.UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -124,7 +124,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
                 true);
         getShadowUserManager().setIsAdminUser(false);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test
@@ -135,7 +135,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
         getShadowUserManager().setUserRestriction(
                 mMyUserHandle, DISALLOW_CONFIG_MOBILE_NETWORKS, true);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test
