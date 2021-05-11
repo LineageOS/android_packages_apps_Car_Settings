@@ -27,7 +27,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.ShadowUserHelper;
 
 import org.junit.After;
@@ -48,7 +48,7 @@ import java.util.Collections;
 public class FactoryResetOtherProfilesPresentPreferenceControllerTest {
 
     @Mock
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
     private Preference mPreference;
     private FactoryResetOtherProfilesPresentPreferenceController mController;
 

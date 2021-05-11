@@ -64,7 +64,7 @@ import java.util.stream.Collectors;
  * Displays a GridLayout with icons for the profiles in the system to allow switching between
  * profiles. One of the uses of this is for the lock screen in auto.
  */
-public class UserGridRecyclerView extends RecyclerView {
+public class ProfileGridRecyclerView extends RecyclerView {
 
     private static final String MAX_PROFILES_LIMIT_REACHED_DIALOG_TAG =
             "com.android.car.settings.profiles.MaxProfilesLimitReachedDialog";
@@ -88,7 +88,7 @@ public class UserGridRecyclerView extends RecyclerView {
         }
     };
 
-    public UserGridRecyclerView(Context context, AttributeSet attrs) {
+    public ProfileGridRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         mUserManager = UserManager.get(mContext);
@@ -98,7 +98,7 @@ public class UserGridRecyclerView extends RecyclerView {
         mCarUserManager = (CarUserManager) mCar.getCarManager(Car.CAR_USER_SERVICE);
 
         addItemDecoration(new ItemSpacingDecoration(context.getResources().getDimensionPixelSize(
-                R.dimen.user_switcher_vertical_spacing_between_users)));
+                R.dimen.profile_switcher_vertical_spacing_between_profiles)));
     }
 
     /**
@@ -311,7 +311,7 @@ public class UserGridRecyclerView extends RecyclerView {
         @Override
         public ProfileAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(mContext)
-                    .inflate(R.layout.user_switcher_pod, parent, false);
+                    .inflate(R.layout.profile_switcher_pod, parent, false);
             view.setAlpha(mOpacityEnabled);
             view.bringToFront();
             return new ProfileAdapterViewHolder(view);
@@ -339,7 +339,7 @@ public class UserGridRecyclerView extends RecyclerView {
             switch (profileRecord.mType) {
                 case ProfileRecord.FOREGROUND_PROFILE:
                     // Add a circle around the icon.
-                    holder.mFrame.setBackgroundResource(R.drawable.user_avatar_bg_circle);
+                    holder.mFrame.setBackgroundResource(R.drawable.profile_avatar_bg_circle);
                     // Go back to quick settings if profile selected is already the foreground
                     // profile.
                     holder.mView.setOnClickListener(v
@@ -456,7 +456,7 @@ public class UserGridRecyclerView extends RecyclerView {
         private RoundedBitmapDrawable getCircularAddProfileIcon() {
             RoundedBitmapDrawable circleIcon =
                     RoundedBitmapDrawableFactory.create(mRes, UserIcons.convertToBitmap(
-                            mContext.getDrawable(R.drawable.user_add_circle)));
+                            mContext.getDrawable(R.drawable.profile_add_circle)));
             circleIcon.setCircular(true);
             return circleIcon;
         }
@@ -519,9 +519,9 @@ public class UserGridRecyclerView extends RecyclerView {
             public ProfileAdapterViewHolder(View view) {
                 super(view);
                 mView = view;
-                mProfileAvatarImageView = view.findViewById(R.id.user_avatar);
-                mProfileNameTextView = view.findViewById(R.id.user_name);
-                mFrame = view.findViewById(R.id.current_user_frame);
+                mProfileAvatarImageView = view.findViewById(R.id.profile_avatar);
+                mProfileNameTextView = view.findViewById(R.id.profile_name);
+                mFrame = view.findViewById(R.id.current_profile_frame);
             }
         }
 

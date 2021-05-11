@@ -14,29 +14,28 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<FrameLayout
+
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.android.car.ui.FocusArea
-        android:id="@+id/settings_content_focus_area"
+    <com.android.car.settings.profiles.ProfileGridRecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/profile_grid"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:paddingEnd="@dimen/edit_username_padding_end"
-        android:paddingStart="@dimen/edit_username_padding_start"
-        android:paddingTop="@dimen/edit_username_text_padding_top">
+        android:layout_gravity="center_vertical"
+        android:layout_above="@+id/managed_device"
+        android:background="?attr/profileSwitcherBackground"/>
 
-        <EditText
-            android:id="@+id/user_name_text_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
-            android:hint="@string/user_name_label"
-            android:imeOptions="actionDone|flagNoExtractUi"
-            android:inputType="text"
-            android:maxLines="1"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-    </com.android.car.ui.FocusArea>
-</FrameLayout>
+     <com.android.car.admin.ui.ManagedDeviceTextView
+         android:id="@+id/managed_device"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="@dimen/profile_switcher_margin_bottom"
+         android:gravity="center"/>
+
+</RelativeLayout>

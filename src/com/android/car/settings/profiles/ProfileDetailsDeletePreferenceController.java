@@ -37,13 +37,13 @@ public class ProfileDetailsDeletePreferenceController
 
     private ProfileHelper mProfileHelper;
 
-    private final RemoveUserHandler mRemoveProfileHandler;
+    private final RemoveProfileHandler mRemoveProfileHandler;
 
     public ProfileDetailsDeletePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions,
                 ProfileHelper.getInstance(context),
-                new RemoveUserHandler(context, ProfileHelper.getInstance(context),
+                new RemoveProfileHandler(context, ProfileHelper.getInstance(context),
                         UserManager.get(context), fragmentController));
     }
 
@@ -51,7 +51,7 @@ public class ProfileDetailsDeletePreferenceController
     ProfileDetailsDeletePreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions, ProfileHelper profileHelper,
-            RemoveUserHandler removeProfileHandler) {
+            RemoveProfileHandler removeProfileHandler) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mProfileHelper = profileHelper;
         mRemoveProfileHandler = removeProfileHandler;

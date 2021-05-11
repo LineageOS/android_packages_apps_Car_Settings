@@ -29,6 +29,6 @@ public class ProfilesListFragment extends SettingsFragment {
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.users_list_fragment;
+        return R.xml.profiles_list_fragment;
     }
 }

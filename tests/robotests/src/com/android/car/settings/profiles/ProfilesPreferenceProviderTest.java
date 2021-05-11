@@ -69,9 +69,9 @@ public class ProfilesPreferenceProviderTest {
 
     private Context mContext;
     @Mock
-    private UsersPreferenceProvider.ProfileClickListener mProfileClickListener;
+    private ProfilesPreferenceProvider.ProfileClickListener mProfileClickListener;
     @Mock
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
 
     @Before
     public void setUp() {
@@ -97,7 +97,7 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testCreateUserList_firstUserIsCurrentUser() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
 
         Preference first = provider.createProfileList().get(0);
         assertThat(first.getTitle()).isEqualTo(
@@ -106,7 +106,7 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testCreateUserList_repeatedGuestUserNotShown() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
 
         List<Preference> userList = provider.createProfileList();
         assertThat(userList.size()).isEqualTo(4); // 3 real users + guest item.
@@ -118,7 +118,7 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testCreateUserList_guestShownAsSeparateLastElement() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
 
         List<Preference> userList = provider.createProfileList();
         assertThat(userList.get(userList.size() - 1).getTitle()).isEqualTo(
@@ -127,7 +127,7 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testCreateUserList_currentUserNotShown() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
         provider.setIncludeCurrentProfile(false);
 
         List<Preference> userList = provider.createProfileList();
@@ -140,7 +140,7 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testCreateUserList_guestNotShown() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
         provider.setIncludeGuest(false);
 
         List<Preference> userList = provider.createProfileList();
@@ -153,7 +153,7 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testPerformClick_currentUser_invokesUserClickListener() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
 
         List<Preference> userList = provider.createProfileList();
         userList.get(0).performClick();
@@ -162,7 +162,7 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testPerformClick_otherUser_invokesUserClickListener() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
 
         List<Preference> userList = provider.createProfileList();
         userList.get(1).performClick();
@@ -171,14 +171,14 @@ public class ProfilesPreferenceProviderTest {
 
     @Test
     public void testPerformClick_guestUser_doesntInvokeUserClickListener() {
-        UsersPreferenceProvider provider = createProvider();
+        ProfilesPreferenceProvider provider = createProvider();
 
         List<Preference> userList = provider.createProfileList();
         userList.get(userList.size() - 1).performClick();
         verify(mProfileClickListener, never()).onProfileClicked(any(UserInfo.class));
     }
 
-    private UsersPreferenceProvider createProvider() {
-        return new UsersPreferenceProvider(mContext, mProfileClickListener);
+    private ProfilesPreferenceProvider createProvider() {
+        return new ProfilesPreferenceProvider(mContext, mProfileClickListener);
     }
 }

@@ -47,7 +47,7 @@ import com.android.car.settings.common.FragmentController;
  * profile, and selected profile is not the current profile
  * </ol>
  */
-public final class UserDetailsActionButtonsPreferenceController
+public final class ProfileDetailsActionButtonsPreferenceController
         extends ProfileDetailsBasePreferenceController<ActionButtonsPreference> {
 
     @VisibleForTesting
@@ -70,7 +70,7 @@ public final class UserDetailsActionButtonsPreferenceController
 
     private final RemoveProfileHandler mRemoveProfileHandler;
 
-    public UserDetailsActionButtonsPreferenceController(Context context,
+    public ProfileDetailsActionButtonsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions,
@@ -80,7 +80,7 @@ public final class UserDetailsActionButtonsPreferenceController
     }
 
     @VisibleForTesting
-    UserDetailsActionButtonsPreferenceController(Context context,
+    ProfileDetailsActionButtonsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions, ProfileHelper profileHelper, UserManager userManager,
             RemoveProfileHandler removeProfileHandler) {

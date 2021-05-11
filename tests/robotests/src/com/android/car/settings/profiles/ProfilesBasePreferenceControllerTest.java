@@ -83,7 +83,7 @@ public class ProfilesBasePreferenceControllerTest {
     private PreferenceGroup mPreferenceGroup;
     private Context mContext;
     @Mock
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
 
     @Before
     public void setUp() {

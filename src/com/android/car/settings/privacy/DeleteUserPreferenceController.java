@@ -27,9 +27,9 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.profiles.ProfileUtils;
-import com.android.car.settings.profiles.RemoveUserHandler;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.RemoveProfileHandler;
 import com.android.internal.annotations.VisibleForTesting;
 
 /** Business logic for preference that deletes the current user profile. */
@@ -37,20 +37,20 @@ public class DeleteUserPreferenceController
         extends PreferenceController<ClickableWhileDisabledPreference> {
 
     private final UserInfo mUserInfo;
-    private final RemoveUserHandler mRemoveProfileHandler;
+    private final RemoveProfileHandler mRemoveProfileHandler;
 
     public DeleteUserPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions,
-                new RemoveUserHandler(context, UserHelper.getInstance(context),
+                new RemoveProfileHandler(context, ProfileHelper.getInstance(context),
                         UserManager.get(context), fragmentController));
     }
 
     @VisibleForTesting
     DeleteUserPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, RemoveUserHandler removeProfileHandler) {
+            CarUxRestrictions uxRestrictions, RemoveProfileHandler removeProfileHandler) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mRemoveProfileHandler = removeProfileHandler;
         mUserInfo = ProfileUtils.getUserInfo(getContext(), ActivityManager.getCurrentUser());

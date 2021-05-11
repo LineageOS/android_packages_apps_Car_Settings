@@ -64,8 +64,8 @@
         android:title="@string/display_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <com.android.car.settings.common.TopLevelPreference
-        android:icon="@drawable/ic_top_level_users"
-        android:key="@string/pk_users_settings_entry"
+        android:icon="@drawable/ic_top_level_profiles_and_accounts"
+        android:key="@string/pk_profiles_and_accounts_settings_entry"
         android:title="@string/profiles_and_accounts_settings_title"
         settings:controller="com.android.car.settings.profiles.ProfilesEntryPreferenceController"/>
     <com.android.car.settings.common.TopLevelPreference

@@ -49,7 +49,7 @@ public class ProfileUtils {
      * directly, because the display name is modified for the current process user.
      */
     public static String getProfileDisplayName(Context context, UserInfo userInfo) {
-        return UserHelper.getInstance(context).isCurrentProcessUser(userInfo)
+        return ProfileHelper.getInstance(context).isCurrentProcessUser(userInfo)
                 ? context.getString(R.string.current_user_name, userInfo.name) : userInfo.name;
     }
 

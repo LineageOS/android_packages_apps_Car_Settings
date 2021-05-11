@@ -30,12 +30,12 @@ import com.android.car.settings.common.FragmentController;
 public class ProfileDetailsHeaderPreferenceController extends
         ProfileDetailsBasePreferenceController<Preference> {
 
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
 
     public ProfileDetailsHeaderPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mProfileHelper = UserHelper.getInstance(getContext());
+        mProfileHelper = ProfileHelper.getInstance(getContext());
     }
 
     @Override
@@ -53,7 +53,7 @@ public class ProfileDetailsHeaderPreferenceController extends
     }
 
     @VisibleForTesting
-    void setProfileHelper(UserHelper profileHelper) {
+    void setProfileHelper(ProfileHelper profileHelper) {
         mProfileHelper = profileHelper;
     }
 

@@ -73,7 +73,7 @@ public class EditProfileNameFragmentTest {
         UserInfo testUser = new UserInfo(/* id= */ 10, testUserName, /* flags= */ 0);
         createEditUsernameFragment(testUser);
 
-        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.profile_name_text_edit);
         assertThat(userNameEditText.getText().toString()).isEqualTo(testUserName);
     }
 
@@ -85,7 +85,7 @@ public class EditProfileNameFragmentTest {
         int userId = 10;
         UserInfo testUser = new UserInfo(userId, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
-        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.profile_name_text_edit);
         MenuItem okButton = ((ToolbarController) requireToolbar(mTestActivity))
                 .getMenuItems().get(1);
 
@@ -106,7 +106,7 @@ public class EditProfileNameFragmentTest {
         int userId = 10;
         UserInfo testUser = new UserInfo(userId, /* name= */ "test_user", /* flags= */ 0);
         createEditUsernameFragment(testUser);
-        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.profile_name_text_edit);
         MenuItem cancelButton = ((ToolbarController) requireToolbar(mTestActivity))
                 .getMenuItems().get(0);
 
@@ -128,7 +128,7 @@ public class EditProfileNameFragmentTest {
     public void testEmptyUsernameCannotBeSaved() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
-        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.profile_name_text_edit);
         MenuItem okButton = ((ToolbarController) requireToolbar(mTestActivity))
                 .getMenuItems().get(1);
 

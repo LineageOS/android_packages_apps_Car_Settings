@@ -56,7 +56,7 @@ public class ProfileDetailsHeaderPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private UserHelper mMockProfileHelper;
+    private ProfileHelper mMockProfileHelper;
 
     @Before
     public void setUp() {

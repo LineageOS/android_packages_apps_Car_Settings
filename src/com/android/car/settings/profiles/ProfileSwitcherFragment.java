@@ -37,7 +37,7 @@ public class ProfileSwitcherFragment extends BaseFragment {
     @Override
     @LayoutRes
     protected int getLayoutId() {
-        return R.layout.user_switcher;
+        return R.layout.profile_switcher;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class ProfileSwitcherFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mProfileGridView = getView().findViewById(R.id.user_grid);
+        mProfileGridView = getView().findViewById(R.id.profile_grid);
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(),
                 getContext().getResources().getInteger(R.integer.user_switcher_num_col));
         mProfileGridView.setFragment(this);

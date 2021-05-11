@@ -31,7 +31,7 @@ import com.android.car.settings.common.FragmentController;
  * Consolidates profile removal logic into one handler so we can have consistent logic across
  * various parts of the Settings app.
  */
-public class RemoveUserHandler {
+public class RemoveProfileHandler {
     @VisibleForTesting
     static final String REMOVE_PROFILE_DIALOG_TAG = "RemoveProfileDialogFragment";
 
@@ -45,7 +45,7 @@ public class RemoveUserHandler {
     @VisibleForTesting
     ConfirmationDialogFragment.ConfirmListener mRemoveConfirmListener;
 
-    public RemoveUserHandler(Context context, ProfileHelper profileHelper,
+    public RemoveProfileHandler(Context context, ProfileHelper profileHelper,
             UserManager userManager, FragmentController fragmentController) {
         mContext = context;
         mProfileHelper = profileHelper;

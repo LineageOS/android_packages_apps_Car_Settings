@@ -40,7 +40,7 @@ import java.util.Objects;
 public abstract class ProfilesBasePreferenceController extends
         PreferenceController<PreferenceGroup> {
 
-    private UsersPreferenceProvider mPreferenceProvider;
+    private ProfilesPreferenceProvider mPreferenceProvider;
     private List<Preference> mProfilesToDisplay = new ArrayList<>();
 
     private final BroadcastReceiver mProfileUpdateReceiver = new BroadcastReceiver() {
@@ -54,8 +54,8 @@ public abstract class ProfilesBasePreferenceController extends
     public ProfilesBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        UsersPreferenceProvider.ProfileClickListener profileClickListener = this::profileClicked;
-        mPreferenceProvider = new UsersPreferenceProvider(context, profileClickListener);
+        ProfilesPreferenceProvider.ProfileClickListener profileClickListener = this::profileClicked;
+        mPreferenceProvider = new ProfilesPreferenceProvider(context, profileClickListener);
     }
 
     @Override
@@ -98,7 +98,7 @@ public abstract class ProfilesBasePreferenceController extends
 
 
     /** Gets the preference provider to set additional arguments if necessary. */
-    protected UsersPreferenceProvider getPreferenceProvider() {
+    protected ProfilesPreferenceProvider getPreferenceProvider() {
         return mPreferenceProvider;
     }
 

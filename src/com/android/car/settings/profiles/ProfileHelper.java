@@ -52,10 +52,10 @@ import java.util.stream.Stream;
 /**
  * Helper class for providing basic profile logic that applies across the Settings app for Cars.
  */
-public class UserHelper {
+public class ProfileHelper {
     private static final String TAG = "ProfileHelper";
     private static final int TIMEOUT_MS = CarProperties.user_hal_timeout().orElse(5_000) + 500;
-    private static UserHelper sInstance;
+    private static ProfileHelper sInstance;
 
     private final UserManager mUserManager;
     private final CarUserManager mCarUserManager;
@@ -98,11 +98,11 @@ public class UserHelper {
     /**
      * Returns an instance of ProfileHelper.
      */
-    public static UserHelper getInstance(Context context) {
+    public static ProfileHelper getInstance(Context context) {
         if (sInstance == null) {
             Context appContext = context.getApplicationContext();
             Resources resources = appContext.getResources();
-            sInstance = new UserHelper(UserManager.get(appContext), resources,
+            sInstance = new ProfileHelper(UserManager.get(appContext), resources,
                     resources.getString(com.android.internal.R.string.owner_name),
                     resources.getString(R.string.user_guest),
                     getCarUserManager(appContext));
@@ -111,7 +111,7 @@ public class UserHelper {
     }
 
     @VisibleForTesting
-    UserHelper(UserManager userManager, Resources resources, String defaultAdminName,
+    ProfileHelper(UserManager userManager, Resources resources, String defaultAdminName,
             String defaultGuestName, CarUserManager carUserManager) {
         mUserManager = userManager;
         mResources = resources;

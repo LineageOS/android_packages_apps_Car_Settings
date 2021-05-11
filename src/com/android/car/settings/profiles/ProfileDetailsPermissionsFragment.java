@@ -39,17 +39,17 @@ public class ProfileDetailsPermissionsFragment extends ProfileDetailsBaseFragmen
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.user_details_permissions_fragment;
+        return R.xml.profile_details_permissions_fragment;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         use(ProfileDetailsHeaderPreferenceController.class,
-                R.string.pk_user_details_permissions_header).setUserInfo(getUserInfo());
-        use(UserDetailsActionButtonsPreferenceController.class,
-                R.string.pk_user_details_permissions_action_buttons).setUserInfo(getUserInfo());
-        use(PermissionsPreferenceController.class, R.string.pk_user_permissions).setUserInfo(
+                R.string.pk_profile_details_permissions_header).setUserInfo(getUserInfo());
+        use(ProfileDetailsActionButtonsPreferenceController.class,
+                R.string.pk_profile_details_permissions_action_buttons).setUserInfo(getUserInfo());
+        use(PermissionsPreferenceController.class, R.string.pk_profile_permissions).setUserInfo(
                 getUserInfo());
     }
 

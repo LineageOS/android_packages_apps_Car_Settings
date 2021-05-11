@@ -20,7 +20,7 @@ import static android.content.pm.UserInfo.FLAG_ADMIN;
 import static android.content.pm.UserInfo.FLAG_INITIALIZED;
 
 import static com.android.car.settings.common.ActionButtonsPreference.ActionButtons;
-import static com.android.car.settings.profiles.UserDetailsActionButtonsPreferenceController.MAKE_ADMIN_DIALOG_TAG;
+import static com.android.car.settings.profiles.ProfileDetailsActionButtonsPreferenceController.MAKE_ADMIN_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -67,17 +67,17 @@ public class ProfileDetailsActionButtonsPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private ActionButtonsPreference mPreference;
     private CarUxRestrictions mCarUxRestrictions;
-    private UserDetailsActionButtonsPreferenceController mPreferenceController;
+    private ProfileDetailsActionButtonsPreferenceController mPreferenceController;
     private MockitoSession mSession;
 
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private UserHelper mMockProfileHelper;
+    private ProfileHelper mMockProfileHelper;
     @Mock
     private UserManager mMockUserManager;
     @Mock
-    private RemoveUserHandler mRemoveProfileHandler;
+    private RemoveProfileHandler mRemoveProfileHandler;
 
     @Before
     public void setUp() {
@@ -88,7 +88,7 @@ public class ProfileDetailsActionButtonsPreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
         mPreference = new ActionButtonsPreference(mContext);
-        mPreferenceController = new UserDetailsActionButtonsPreferenceController(mContext,
+        mPreferenceController = new ProfileDetailsActionButtonsPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
                 mMockProfileHelper, mMockUserManager, mRemoveProfileHandler);
     }

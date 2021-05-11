@@ -53,7 +53,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
-import com.android.car.settings.profiles.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -99,7 +99,7 @@ public class ApplicationActionButtonsPreferenceController extends
     private DevicePolicyManager mDpm;
     private PackageManager mPm;
     private UserManager mUserManager;
-    private UserHelper mProfileHelper;
+    private ProfileHelper mProfileHelper;
     private ApplicationsState.Session mSession;
 
     private ApplicationsState.AppEntry mAppEntry;
@@ -224,7 +224,7 @@ public class ApplicationActionButtonsPreferenceController extends
         mDpm = context.getSystemService(DevicePolicyManager.class);
         mPm = context.getPackageManager();
         mUserManager = UserManager.get(context);
-        mProfileHelper = UserHelper.getInstance(context);
+        mProfileHelper = ProfileHelper.getInstance(context);
     }
 
     @Override
