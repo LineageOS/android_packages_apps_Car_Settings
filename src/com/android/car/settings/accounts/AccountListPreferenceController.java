@@ -34,7 +34,7 @@ import androidx.preference.PreferenceCategory;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.profiles.UserHelper;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.accounts.AuthenticatorHelper;
@@ -96,7 +96,7 @@ public class AccountListPreferenceController extends
     protected int getAvailabilityStatus() {
         boolean canModifyAccounts = UserHelper.getInstance(getContext())
                 .canCurrentProcessModifyAccounts();
-        return canModifyAccounts ? AVAILABLE : DISABLED_FOR_USER;
+        return canModifyAccounts ? AVAILABLE : DISABLED_FOR_PROFILE;
     }
 
     /**

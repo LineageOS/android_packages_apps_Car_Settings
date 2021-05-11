@@ -17,7 +17,7 @@
 package com.android.car.settings.security;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.security.LockTypeBasePreferenceController.CHOOSE_LOCK_REQUEST;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -125,7 +125,7 @@ public class LockTypeBasePreferenceControllerTest {
     @Test
     public void testGetAvailabilityStatus_guestUser() {
         when(mMockUserManager.isGuestUser()).thenReturn(true);
-        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test

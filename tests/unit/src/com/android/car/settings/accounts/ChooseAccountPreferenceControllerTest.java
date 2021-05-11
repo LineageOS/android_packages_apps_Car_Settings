@@ -47,8 +47,8 @@ import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.profiles.UserHelper;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.settings.users.UserHelper;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
@@ -85,7 +85,7 @@ public class ChooseAccountPreferenceControllerTest {
     @Mock
     private AuthenticatorHelper mMockAuthenticatorHelper;
     @Mock
-    private UserHelper mMockUserHelper;
+    private UserHelper mMockProfileHelper;
     @Mock
     private AccountManager mMockAccountManager;
 
@@ -207,10 +207,10 @@ public class ChooseAccountPreferenceControllerTest {
                 .mockStatic(AccountManager.class, withSettings().lenient())
                 .startMocking();
 
-        when(UserHelper.getInstance(mContext)).thenReturn(mMockUserHelper);
+        when(UserHelper.getInstance(mContext)).thenReturn(mMockProfileHelper);
         UserInfo userInfo = new UserInfo(USER_ID, USER_NAME, 0);
-        when(mMockUserHelper.getCurrentProcessUserInfo()).thenReturn(userInfo);
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.getCurrentProcessUserInfo()).thenReturn(userInfo);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
 
         when(AccountManager.get(mContext)).thenReturn(mMockAccountManager);
         mAuthenticatorDescriptions = new AuthenticatorDescription[]{

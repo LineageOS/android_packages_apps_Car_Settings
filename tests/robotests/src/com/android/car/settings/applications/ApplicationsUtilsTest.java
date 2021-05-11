@@ -25,10 +25,10 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.pm.UserInfo;
 
+import com.android.car.settings.profiles.UserHelper;
 import com.android.car.settings.testutils.ShadowDefaultDialerManager;
 import com.android.car.settings.testutils.ShadowSmsApplication;
 import com.android.car.settings.testutils.ShadowUserHelper;
-import com.android.car.settings.users.UserHelper;
 
 import org.junit.After;
 import org.junit.Test;
@@ -81,13 +81,13 @@ public class ApplicationsUtilsTest {
         UserInfo userInfo = new UserInfo();
         userInfo.id = 123;
         DevicePolicyManager dpm = mock(DevicePolicyManager.class);
-        UserHelper userHelper = mock(UserHelper.class);
-        ShadowUserHelper.setInstance(userHelper);
-        when(userHelper.getAllUsers()).thenReturn(Collections.singletonList(userInfo));
+        UserHelper profileHelper = mock(UserHelper.class);
+        ShadowUserHelper.setInstance(profileHelper);
+        when(profileHelper.getAllProfiles()).thenReturn(Collections.singletonList(userInfo));
         when(dpm.getProfileOwnerAsUser(userInfo.id)).thenReturn(
                 new ComponentName(PACKAGE_NAME, "cls"));
 
-        assertThat(ApplicationsUtils.isProfileOrDeviceOwner(PACKAGE_NAME, dpm, userHelper))
+        assertThat(ApplicationsUtils.isProfileOrDeviceOwner(PACKAGE_NAME, dpm, profileHelper))
                 .isTrue();
     }
 

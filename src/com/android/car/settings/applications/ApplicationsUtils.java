@@ -27,7 +27,7 @@ import android.telecom.DefaultDialerManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
 
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.profiles.UserHelper;
 import com.android.internal.telephony.SmsApplication;
 
 import java.util.List;
@@ -67,11 +67,11 @@ public class ApplicationsUtils {
      * least one user.
      */
     public static boolean isProfileOrDeviceOwner(String packageName, DevicePolicyManager dpm,
-            UserHelper userHelper) {
+            UserHelper profileHelper) {
         if (dpm.isDeviceOwnerAppOnAnyUser(packageName)) {
             return true;
         }
-        List<UserInfo> userInfos = userHelper.getAllUsers();
+        List<UserInfo> userInfos = profileHelper.getAllProfiles();
         for (int i = 0; i < userInfos.size(); i++) {
             ComponentName cn = dpm.getProfileOwnerAsUser(userInfos.get(i).id);
             if (cn != null && cn.getPackageName().equals(packageName)) {

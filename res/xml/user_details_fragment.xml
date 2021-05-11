@@ -20,11 +20,11 @@
     <com.android.car.settings.common.EntityHeaderPreference
         android:key="@string/pk_user_details_header"
         android:selectable="false"
-        settings:controller="com.android.car.settings.users.UserDetailsHeaderPreferenceController"
+        settings:controller="com.android.car.settings.profiles.ProfileDetailsHeaderPreferenceController"
         settings:searchable="false"/>
     <com.android.car.settings.common.ActionButtonsPreference
         android:key="@string/pk_user_details_action_buttons"
-        settings:controller="com.android.car.settings.users.UserDetailsActionButtonsPreferenceController"
+        settings:controller="com.android.car.settings.profiles.UserDetailsActionButtonsPreferenceController"
         settings:searchable="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_account_group"
@@ -59,6 +59,6 @@
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_profile_details_delete"
         android:title="@string/delete_this_profile_text"
-        settings:controller="com.android.car.settings.users.ProfileDetailsDeletePreferenceController"
+        settings:controller="com.android.car.settings.profiles.ProfileDetailsDeletePreferenceController"
         settings:showChevron="false"/>
 </PreferenceScreen>
