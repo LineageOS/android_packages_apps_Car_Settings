@@ -76,7 +76,7 @@ public abstract class BluetoothPreferenceController<V extends Preference> extend
             return UNSUPPORTED_ON_DEVICE;
         }
         if (mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)) {
-            return DISABLED_FOR_USER;
+            return DISABLED_FOR_PROFILE;
         }
         return BluetoothAdapter.getDefaultAdapter().isEnabled() ? AVAILABLE
                 : CONDITIONALLY_UNAVAILABLE;

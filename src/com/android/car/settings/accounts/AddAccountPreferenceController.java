@@ -24,7 +24,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.profiles.ProfileHelper;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -87,15 +87,15 @@ public class AddAccountPreferenceController extends PreferenceController<Prefere
 
     @Override
     protected int getAvailabilityStatus() {
-        if (getUserHelper().canCurrentProcessModifyAccounts()) {
+        if (getProfileHelper().canCurrentProcessModifyAccounts()) {
             return AVAILABLE;
         }
-        return DISABLED_FOR_USER;
+        return DISABLED_FOR_PROFILE;
     }
 
     @VisibleForTesting
-    UserHelper getUserHelper() {
-        return UserHelper.getInstance(getContext());
+    ProfileHelper getProfileHelper() {
+        return ProfileHelper.getInstance(getContext());
     }
 
     @VisibleForTesting
