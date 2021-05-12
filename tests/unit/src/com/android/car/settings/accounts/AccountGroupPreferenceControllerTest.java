@@ -19,7 +19,7 @@ package com.android.car.settings.accounts;
 import static android.content.pm.UserInfo.FLAG_INITIALIZED;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -38,8 +38,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.settings.users.UserHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -60,7 +60,7 @@ public class AccountGroupPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private UserHelper mMockUserHelper;
+    private ProfileHelper mMockProfileHelper;
 
     @Before
     @UiThreadTest
@@ -79,21 +79,21 @@ public class AccountGroupPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_currentUser_cannotModifyAccounts_notAvailable() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
         mController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mController, mPreference);
 
         mController.onCreate(mLifecycleOwner);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test
     public void getAvailabilityStatus_currentUser_canModifyAccounts_available() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         mController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mController, mPreference);
 
@@ -105,27 +105,27 @@ public class AccountGroupPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_notCurrentUser_canModifyAccounts_notAvailable() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         mController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mController, mPreference);
 
         mController.onCreate(mLifecycleOwner);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test
     public void getAvailabilityStatus_notCurrentUser_cannotModifyAccounts_notAvailable() {
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_USERNAME, FLAG_INITIALIZED);
-        when(mMockUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
+        when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
         mController.setUserInfo(userInfo);
         PreferenceControllerTestUtil.assignPreference(mController, mPreference);
 
         mController.onCreate(mLifecycleOwner);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     private class TestAccountGroupPreferenceController extends AccountGroupPreferenceController {
@@ -136,8 +136,8 @@ public class AccountGroupPreferenceControllerTest {
         }
 
         @Override
-        UserHelper getUserHelper() {
-            return mMockUserHelper;
+        ProfileHelper getProfileHelper() {
+            return mMockProfileHelper;
         }
     }
 }

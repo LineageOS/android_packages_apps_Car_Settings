@@ -19,7 +19,7 @@ package com.android.car.settings.system;
 import static android.os.UserManager.DISALLOW_NETWORK_RESET;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -62,7 +62,7 @@ public class ResetNetworkEntryPreferenceControllerTest {
     public void getAvailabilityStatus_nonAdminUser_disabledForUser() {
         getShadowUserManager().setIsAdminUser(false);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test
@@ -78,7 +78,7 @@ public class ResetNetworkEntryPreferenceControllerTest {
         getShadowUserManager().setUserRestriction(
                 UserHandle.of(UserHandle.myUserId()), DISALLOW_NETWORK_RESET, true);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     private ShadowUserManager getShadowUserManager() {

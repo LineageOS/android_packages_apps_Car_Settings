@@ -91,18 +91,18 @@
     <dimen name="confirm_pattern_dimension">350dp</dimen>
     <dimen name="confirm_lock_message_vertical_spacing">@*android:dimen/car_padding_2</dimen>
 
-    <!-- User Switcher -->
-    <dimen name="user_switcher_image_avatar_size">96dp</dimen>
-    <dimen name="user_switcher_vertical_spacing_between_users">@*android:dimen/car_padding_5
+    <!-- Profile Switcher -->
+    <dimen name="profile_switcher_image_avatar_size">96dp</dimen>
+    <dimen name="profile_switcher_vertical_spacing_between_profiles">@*android:dimen/car_padding_5
     </dimen>
-    <dimen name="user_switcher_vertical_spacing_between_name_and_avatar">
+    <dimen name="profile_switcher_vertical_spacing_between_name_and_avatar">
         @*android:dimen/car_padding_4
     </dimen>
-    <dimen name="user_switcher_current_user_circle_width">126dp</dimen>
-    <dimen name="user_switcher_current_user_circle_stroke_width">7dp</dimen>
-    <dimen name="user_switcher_margin_bottom">@*android:dimen/car_padding_4</dimen>
-    <dimen name="user_switcher_managed_badge_size">@*android:dimen/car_large_avatar_badge_size</dimen>
-    <dimen name="user_switcher_managed_badge_margin">1dp</dimen>
+    <dimen name="profile_switcher_current_profile_circle_width">126dp</dimen>
+    <dimen name="profile_switcher_current_profile_circle_stroke_width">7dp</dimen>
+    <dimen name="profile_switcher_margin_bottom">@*android:dimen/car_padding_4</dimen>
+    <dimen name="profile_switcher_managed_badge_size">@*android:dimen/car_large_avatar_badge_size</dimen>
+    <dimen name="profile_switcher_managed_badge_margin">1dp</dimen>
 
     <!-- Preferences -->
     <dimen name="two_action_preference_divider_width">1dp</dimen>

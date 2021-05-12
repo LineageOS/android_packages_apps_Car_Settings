@@ -17,7 +17,7 @@
 package com.android.car.settings.accounts;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -39,8 +39,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.settings.users.UserHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -63,7 +63,7 @@ public class AddAccountPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private UserHelper mMockUserHelper;
+    private ProfileHelper mMockProfileHelper;
     @Mock
     private AccountTypesHelper mMockAccountTypesHelper;
 
@@ -84,16 +84,16 @@ public class AddAccountPreferenceControllerTest {
 
     @Test
     public void cannotModifyUsers_addAccountButtonShouldBeDisabled() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
 
         mController.onCreate(mLifecycleOwner);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test
     public void canModifyUsers_addAccountButtonShouldBeAvailable() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
 
         mController.onCreate(mLifecycleOwner);
 
@@ -103,7 +103,7 @@ public class AddAccountPreferenceControllerTest {
     @Test
     @UiThreadTest
     public void clickAddAccountButton_shouldOpenChooseAccountFragment() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
 
         mController.onCreate(mLifecycleOwner);
         mPreference.performClick();
@@ -113,7 +113,7 @@ public class AddAccountPreferenceControllerTest {
 
     @Test
     public void clickAddAccountButton_shouldNotOpenChooseAccountFragmentWhenOneType() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         Set<String> accountSet = new HashSet<>();
         accountSet.add("TEST_ACCOUNT_TYPE_1");
         when(mMockAccountTypesHelper.getAuthorizedAccountTypes()).thenReturn(accountSet);
@@ -133,7 +133,7 @@ public class AddAccountPreferenceControllerTest {
     @Test
     @UiThreadTest
     public void clickAddAccountButton_shouldOpenChooseAccountFragmentWhenTwoTypes() {
-        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         Set<String> accountSet = new HashSet<>();
         accountSet.add("TEST_ACCOUNT_TYPE_1");
         accountSet.add("TEST_ACCOUNT_TYPE_2");
@@ -154,8 +154,8 @@ public class AddAccountPreferenceControllerTest {
         }
 
         @Override
-        UserHelper getUserHelper() {
-            return mMockUserHelper;
+        ProfileHelper getProfileHelper() {
+            return mMockProfileHelper;
         }
 
         @Override
