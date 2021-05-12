@@ -35,7 +35,9 @@
     </string>
     <string name="pk_date_time_settings_entry" translatable="false">date_time_settings_entry
     </string>
-    <string name="pk_users_settings_entry" translatable="false">users_settings_entry</string>
+    <string name="pk_profiles_and_accounts_settings_entry" translatable="false">
+        profiles_and_accounts_settings_entry
+    </string>
     <string name="pk_privacy_settings_entry" translatable="false">privacy_settings_entry</string>
     <string name="pk_storage_settings_entry" translatable="false">storage_settings_entry</string>
     <string name="pk_security_settings_entry" translatable="false">security_settings_entry</string>
@@ -272,7 +274,7 @@
     <string name="pk_privacy_extra_settings" translatable="false">privacy_extra_settings</string>
     <string name="pk_mute_mic_switch" translatable="false">privacy_mute_mic</string>
     <string name="pk_vehicle_data" translatable="false">vehicle_data</string>
-    <string name="pk_vehicle_data_delete_user" translatable="false">vehicle_data_delete_user</string>
+    <string name="pk_vehicle_data_delete_profile" translatable="false">vehicle_data_delete_profile</string>
 
     <!-- Storage -->
     <string name="pk_storage_music_audio" translatable="false">storage_music_audio</string>
@@ -345,21 +347,21 @@
     <string name="pk_location_footer" translatable="false">location_footer</string>
     <string name="pk_location_state_switch" translatable="false">location_state_switch</string>
 
-    <!-- Users Settings -->
-    <string name="pk_users_list" translatable="false">users_list</string>
-    <string name="pk_add_user" translatable="false">add_user</string>
+    <!-- Profiles and Accounts Settings -->
+    <string name="pk_profiles_list" translatable="false">profiles_list</string>
+    <string name="pk_add_profile" translatable="false">add_profile</string>
     <string name="pk_choose_new_admin" translatable="false">choose_new_admin</string>
-    <string name="pk_user_details_header" translatable="false">user_details_header</string>
-    <string name="pk_user_details_action_buttons" translatable="false">user_details_action_buttons
+    <string name="pk_profile_details_header" translatable="false">profile_details_header</string>
+    <string name="pk_profile_details_action_buttons" translatable="false">profile_details_action_buttons
     </string>
-    <string name="pk_user_details_permissions_header" translatable="false">
-        user_details_permissions_header
+    <string name="pk_profile_details_permissions_header" translatable="false">
+        profile_details_permissions_header
     </string>
-    <string name="pk_user_details_permissions_action_buttons" translatable="false">
-        user_details_permissions_action_buttons
+    <string name="pk_profile_details_permissions_action_buttons" translatable="false">
+        profile_details_permissions_action_buttons
     </string>
     <string name="pk_profile_details_delete" translatable="false">profile_details_delete</string>
-    <string name="pk_user_permissions" translatable="false">user_permissions</string>
+    <string name="pk_profile_permissions" translatable="false">profile_permissions</string>
 
     <!-- Security Settings -->
     <string name="pk_no_lock" translatable="false">no_lock</string>
@@ -449,8 +451,8 @@
     <string name="pk_factory_reset_desc" translatable="false">factory_reset_desc</string>
     <string name="pk_factory_reset_account_list" translatable="false">factory_reset_account_list
     </string>
-    <string name="pk_factory_reset_other_users_present" translatable="false">
-        factory_reset_other_users_present
+    <string name="pk_factory_reset_other_profiles_present" translatable="false">
+        factory_reset_other_profiles_present
     </string>
     <string name="pk_factory_reset_reset_esim" translatable="false">factory_reset_reset_esim</string>
     <string name="pk_factory_reset_confirm_desc" translatable="false">factory_reset_confirm_desc

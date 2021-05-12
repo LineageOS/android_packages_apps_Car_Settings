@@ -33,10 +33,10 @@
         android:title="@string/factory_reset_accounts"
         settings:controller="com.android.car.settings.system.FactoryResetAccountsPreferenceController"/>
     <Preference
-        android:key="@string/pk_factory_reset_other_users_present"
+        android:key="@string/pk_factory_reset_other_profiles_present"
         android:selectable="false"
         android:title="@string/factory_reset_other_users_present"
-        settings:controller="com.android.car.settings.system.FactoryResetOtherUsersPresentPreferenceController"
+        settings:controller="com.android.car.settings.system.FactoryResetOtherProfilesPresentPreferenceController"
         settings:singleLineTitle="false"/>
     <CheckBoxPreference
         android:defaultValue="true"
