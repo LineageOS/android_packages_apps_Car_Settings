@@ -52,6 +52,7 @@ import com.android.car.settings.network.MobileNetworkListFragment;
 import com.android.car.settings.network.NetworkAndInternetFragment;
 import com.android.car.settings.privacy.PrivacySettingsFragment;
 import com.android.car.settings.privacy.VehicleDataFragment;
+import com.android.car.settings.profiles.ProfileDetailsFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.security.SecuritySettingsFragment;
 import com.android.car.settings.sound.RingtonePickerFragment;
@@ -63,7 +64,6 @@ import com.android.car.settings.system.ResetOptionsFragment;
 import com.android.car.settings.system.SystemSettingsFragment;
 import com.android.car.settings.tts.TextToSpeechOutputFragment;
 import com.android.car.settings.units.UnitsSettingsFragment;
-import com.android.car.settings.users.UserDetailsFragment;
 import com.android.car.settings.wifi.AddWifiFragment;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 import com.android.car.settings.wifi.WifiTetherFragment;
@@ -209,14 +209,13 @@ public class CarSettingActivities {
     }
 
     /**
-     * User Details Activity.
-     * The initial fragment shown is based on whether the current user is an admin.
+     * Profile Details Activity.
      */
-    public static class UserDetailsActivity extends BaseCarSettingsActivity {
+    public static class ProfileDetailsActivity extends BaseCarSettingsActivity {
         @Nullable
         @Override
         protected Fragment getInitialFragment() {
-            return UserDetailsFragment.newInstance(UserHandle.myUserId());
+            return ProfileDetailsFragment.newInstance(UserHandle.myUserId());
         }
     }
 

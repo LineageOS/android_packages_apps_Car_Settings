@@ -228,7 +228,7 @@
         </activity>
 
         <activity
-            android:name=".common.CarSettingActivities$UserDetailsActivity"
+            android:name=".common.CarSettingActivities$ProfileDetailsActivity"
             android:excludeFromRecents="true"
             android:exported="true">
             <intent-filter android:priority="1">
@@ -237,7 +237,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
-                       android:value="@string/hk_UserDetailsActivity" />
+                       android:value="@string/hk_ProfileDetailsActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
@@ -772,7 +772,7 @@
         </activity>
 
         <activity
-            android:name=".users.UserSwitcherActivity"
+            android:name=".profiles.ProfileSwitcherActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
@@ -875,6 +875,17 @@
             android:exported="false">
             <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
             <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity android:name=".enterprise.ActionDisabledByAdminActivity"
+                android:theme="@style/ActionDialogTheme"
+                android:taskAffinity=".enterprise"
+                android:excludeFromRecents="true"
+                android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.SHOW_ADMIN_SUPPORT_DETAILS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <service android:name=".bluetooth.BluetoothPairingService" />

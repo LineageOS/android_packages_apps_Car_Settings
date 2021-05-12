@@ -78,7 +78,7 @@ public class MobileNetworkEntryPreferenceController extends
         boolean hasRestriction =
                 mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS);
         if (isNotAdmin || hasRestriction) {
-            return DISABLED_FOR_USER;
+            return DISABLED_FOR_PROFILE;
         }
         return AVAILABLE;
     }
