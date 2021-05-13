@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,17 +23,23 @@ import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_O
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.TetheringManager;
-import android.net.wifi.SoftApConfiguration;
 
 import androidx.lifecycle.Lifecycle;
-import androidx.preference.Preference;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,51 +47,64 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.shadows.ShadowApplication;
 
 import java.util.concurrent.Executor;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class WifiTetherPreferenceControllerTest {
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+    private LifecycleOwner mLifecycleOwner;
+    private CarUiTwoActionSwitchPreference mPreference;
+    private WifiTetherPreferenceController mController;
+    private CarUxRestrictions mCarUxRestrictions;
 
-    private Context mContext;
-    private Preference mPreference;
-    private PreferenceControllerTestHelper<WifiTetherPreferenceController> mControllerHelper;
+    @Mock
+    private FragmentController mFragmentController;
+    @Mock
+    private Lifecycle mMockLifecycle;
     @Mock
     private TetheringManager mTetheringManager;
-    private SoftApConfiguration mSoftApConfiguration;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
 
-        mContext = ApplicationProvider.getApplicationContext();
-        ShadowApplication.getInstance().setSystemService(
-                Context.TETHERING_SERVICE, mTetheringManager);
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mPreference = new Preference(mContext);
-        mControllerHelper =
-                new PreferenceControllerTestHelper<WifiTetherPreferenceController>(mContext,
-                        WifiTetherPreferenceController.class, mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        when(mContext.getSystemService(TetheringManager.class)).thenReturn(mTetheringManager);
+        when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
+
+        mPreference = new CarUiTwoActionSwitchPreference(mContext);
+        mController = new WifiTetherPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mController, mPreference);
     }
 
     @Test
     public void onStart_isAvailableForViewing() {
-        assertThat(mControllerHelper.getController().getAvailabilityStatus()).isEqualTo(
+        mController.onCreate(mLifecycleOwner);
+        mController.onStart(mLifecycleOwner);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(
                 AVAILABLE_FOR_VIEWING);
     }
 
     @Test
     public void onStart_registersTetheringEventCallback() {
+        mController.onCreate(mLifecycleOwner);
+        mController.onStart(mLifecycleOwner);
+
         verify(mTetheringManager).registerTetheringEventCallback(
                 any(Executor.class), any(TetheringManager.TetheringEventCallback.class));
     }
 
     @Test
     public void onStop_unregistersTetheringEventCallback() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
+        mController.onCreate(mLifecycleOwner);
+        mController.onStart(mLifecycleOwner);
+        mController.onStop(mLifecycleOwner);
 
         verify(mTetheringManager).unregisterTetheringEventCallback(
                 any(TetheringManager.TetheringEventCallback.class));
@@ -93,6 +112,9 @@ public class WifiTetherPreferenceControllerTest {
 
     @Test
     public void onTetheringSupported_false_isUnsupportedOnDevice() {
+        mController.onCreate(mLifecycleOwner);
+        mController.onStart(mLifecycleOwner);
+
         ArgumentCaptor<TetheringManager.TetheringEventCallback> captor =
                 ArgumentCaptor.forClass(TetheringManager.TetheringEventCallback.class);
         verify(mTetheringManager).registerTetheringEventCallback(
@@ -100,12 +122,15 @@ public class WifiTetherPreferenceControllerTest {
 
         captor.getValue().onTetheringSupported(false);
 
-        assertThat(mControllerHelper.getController().getAvailabilityStatus()).isEqualTo(
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(
                 UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
     public void onTetheringSupported_true_isAvailable() {
+        mController.onCreate(mLifecycleOwner);
+        mController.onStart(mLifecycleOwner);
+
         ArgumentCaptor<TetheringManager.TetheringEventCallback> captor =
                 ArgumentCaptor.forClass(TetheringManager.TetheringEventCallback.class);
         verify(mTetheringManager).registerTetheringEventCallback(
@@ -114,6 +139,6 @@ public class WifiTetherPreferenceControllerTest {
 
         captor.getValue().onTetheringSupported(true);
 
-        assertThat(mControllerHelper.getController().getAvailabilityStatus()).isEqualTo(AVAILABLE);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 }
