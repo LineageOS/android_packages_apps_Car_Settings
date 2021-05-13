@@ -143,6 +143,20 @@ public class BluetoothDevicePreference extends MultiActionPreference {
                 .compareTo(((BluetoothDevicePreference) another).mCachedDevice);
     }
 
+    @Override
+    public ToggleButtonActionItem getActionItem(ActionItem actionItem) {
+        switch(actionItem) {
+            case ACTION_ITEM1:
+                return (ToggleButtonActionItem) mActionItemArray[0];
+            case ACTION_ITEM2:
+                return (ToggleButtonActionItem) mActionItemArray[1];
+            case ACTION_ITEM3:
+                return (ToggleButtonActionItem) mActionItemArray[2];
+            default:
+                throw new IllegalArgumentException("Invalid button requested");
+        }
+    }
+
     /**
      * Callback for when toggle buttons may need to be updated
      */

@@ -144,11 +144,11 @@ public class BluetoothBondedDevicesPreferenceController extends
         }
     }
 
-    private void toggleBluetoothConnectivity(CachedBluetoothDevice cachedDevice) {
-        if (cachedDevice.isConnected()) {
-            cachedDevice.disconnect();
-        } else {
+    private void toggleBluetoothConnectivity(boolean connect, CachedBluetoothDevice cachedDevice) {
+        if (connect) {
             cachedDevice.connect();
+        } else if (cachedDevice.isConnected()) {
+            cachedDevice.disconnect();
         }
     }
 
@@ -184,13 +184,16 @@ public class BluetoothBondedDevicesPreferenceController extends
         bluetoothItem.setChecked(isConnected);
         bluetoothItem.setOnClickListener(
                 isChecked -> {
+                    if (cachedDevice.isBusy()) {
+                        return;
+                    }
                     if (finalPhoneProfile != null) {
                         finalPhoneProfile.setEnabled(cachedDevice.getDevice(), isChecked);
                     }
                     if (finalMediaProfile != null) {
                         finalMediaProfile.setEnabled(cachedDevice.getDevice(), isChecked);
                     }
-                    toggleBluetoothConnectivity(cachedDevice);
+                    toggleBluetoothConnectivity(isChecked, cachedDevice);
                 });
 
         if (phoneProfile == null || !isConnected) {

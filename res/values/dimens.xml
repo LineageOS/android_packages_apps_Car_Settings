@@ -76,6 +76,7 @@
     <dimen name="bluetooth_bonded_device_button_size">80dp</dimen>
     <dimen name="bluetooth_bonded_device_button_radius">16dp</dimen>
     <dimen name="bluetooth_bonded_device_foreground_icon_inset">18dp</dimen>
+    <dimen name="bluetooth_bonded_device_border_width">2dp</dimen>
     <dimen name="bluetooth_device_icon_size">44dp</dimen>
     <dimen name="bluetooth_device_foreground_icon_inset">8dp</dimen>
 
@@ -139,6 +140,11 @@
     <dimen name="progress_bar_preference_label_margin_top">@*android:dimen/car_padding_0</dimen>
     <dimen name="progress_bar_preference_padding_top">@*android:dimen/car_padding_1</dimen>
     <dimen name="progress_bar_preference_padding_bottom">@*android:dimen/car_padding_1</dimen>
+    <dimen name="multi_action_preference_item_divider_margin_end">12dp</dimen>
+    <dimen name="multi_action_preference_item_container_padding">@dimen/car_ui_padding_2</dimen>
+    <dimen name="multi_action_preference_toggle_button_size">80dp</dimen>
+    <dimen name="multi_action_preference_toggle_button_radius">11dp</dimen>
+    <dimen name="multi_action_preference_toggle_button_margin">12dp</dimen>
 
     <!-- Data usage -->
     <dimen name="usage_number_text_size">36sp</dimen>

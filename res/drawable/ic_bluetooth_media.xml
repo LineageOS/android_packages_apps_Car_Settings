@@ -24,6 +24,9 @@
             <corners android:radius="@dimen/bluetooth_bonded_device_button_radius" />
         </shape>
     </item>
+    <item android:width="@dimen/bluetooth_bonded_device_button_size"
+          android:height="@dimen/bluetooth_bonded_device_button_size"
+          android:drawable="@drawable/bluetooth_bonded_device_rotary_background"/>
     <item
         android:start="@dimen/bluetooth_bonded_device_foreground_icon_inset"
         android:top="@dimen/bluetooth_bonded_device_foreground_icon_inset"

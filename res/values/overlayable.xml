@@ -131,6 +131,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="dimen" name="ap_preference_item_icon_margin_end"/>
       <item type="dimen" name="ap_preference_item_padding_end"/>
       <item type="dimen" name="ap_preference_item_padding_start"/>
+      <item type="dimen" name="bluetooth_bonded_device_border_width"/>
       <item type="dimen" name="bluetooth_bonded_device_button_radius"/>
       <item type="dimen" name="bluetooth_bonded_device_button_size"/>
       <item type="dimen" name="bluetooth_bonded_device_foreground_icon_inset"/>
@@ -176,6 +177,11 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="dimen" name="entity_header_inner_margin"/>
       <item type="dimen" name="entity_header_margin_bottom"/>
       <item type="dimen" name="icon_size"/>
+      <item type="dimen" name="multi_action_preference_item_container_padding"/>
+      <item type="dimen" name="multi_action_preference_item_divider_margin_end"/>
+      <item type="dimen" name="multi_action_preference_toggle_button_margin"/>
+      <item type="dimen" name="multi_action_preference_toggle_button_radius"/>
+      <item type="dimen" name="multi_action_preference_toggle_button_size"/>
       <item type="dimen" name="number_picker_text_size"/>
       <item type="dimen" name="opacity_disabled"/>
       <item type="dimen" name="opacity_enabled"/>
@@ -228,6 +234,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="dimen" name="usage_number_text_size"/>
       <item type="dimen" name="usage_pickers_margin_vertical"/>
       <item type="dimen" name="usage_pickers_text_margin_end"/>
+      <item type="drawable" name="bluetooth_bonded_device_rotary_background"/>
       <item type="drawable" name="brightness_seekbar_background"/>
       <item type="drawable" name="brightness_seekbar_track"/>
       <item type="drawable" name="button_ripple_bg"/>
@@ -393,6 +400,13 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="id" name="managed_device"/>
       <item type="id" name="message"/>
       <item type="id" name="message_below_pin"/>
+      <item type="id" name="multi_action_preference_divider"/>
+      <item type="id" name="multi_action_preference_first_action_container"/>
+      <item type="id" name="multi_action_preference_item_container1"/>
+      <item type="id" name="multi_action_preference_item_container2"/>
+      <item type="id" name="multi_action_preference_item_container3"/>
+      <item type="id" name="multi_action_preference_second_action_container"/>
+      <item type="id" name="multi_action_preference_toggle_button"/>
       <item type="id" name="pairing_caption"/>
       <item type="id" name="pairing_code_message"/>
       <item type="id" name="pairing_subhead"/>
@@ -470,6 +484,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="entity_header_preference"/>
       <item type="layout" name="fallback_home_finishing_boot"/>
       <item type="layout" name="logical_preference_group"/>
+      <item type="layout" name="multi_action_preference"/>
+      <item type="layout" name="multi_action_preference_toggle_button"/>
       <item type="layout" name="pin_pad_view"/>
       <item type="layout" name="preference_dialog_password_edittext"/>
       <item type="layout" name="preference_settings_icon"/>

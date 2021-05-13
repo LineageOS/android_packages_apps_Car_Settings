@@ -100,20 +100,6 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mLocalBluetoothManager = spy(BluetoothUtils.getLocalBtManager(mContext));
-        when(mLocalBluetoothManager.getCachedDeviceManager()).thenReturn(mCachedDeviceManager);
-        when(mCachedDeviceManager.getCachedDevicesCopy()).thenReturn(mCachedDevices);
-
-        PreferenceManager preferenceManager = new PreferenceManager(mContext);
-        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
-        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
-        screen.addPreference(mPreferenceGroup);
-        mPreferenceController = new BluetoothBondedDevicesPreferenceController(mContext,
-                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
-                mLocalBluetoothManager, mUserManager);
-
-        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
-
         when(mBondedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDED);
         when(mBondedCachedDevice.getDevice()).thenReturn(mBondedDevice);
 
@@ -127,6 +113,20 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         when(unbondedCachedDevice.getDevice()).thenReturn(unbondedDevice);
 
         mCachedDevices = Arrays.asList(mBondedCachedDevice, unbondedCachedDevice);
+
+        mLocalBluetoothManager = spy(BluetoothUtils.getLocalBtManager(mContext));
+        when(mLocalBluetoothManager.getCachedDeviceManager()).thenReturn(mCachedDeviceManager);
+        when(mCachedDeviceManager.getCachedDevicesCopy()).thenReturn(mCachedDevices);
+
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        screen.addPreference(mPreferenceGroup);
+        mPreferenceController = new BluetoothBondedDevicesPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
+                mLocalBluetoothManager, mUserManager);
+
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
     }
 
     @Test
@@ -306,11 +306,11 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
         assertThat(devicePreference.getActionItem(
-                CarUiMultiActionPreference.ActionItem.ACTION_ITEM1).isEnabled()).isTrue();
+                MultiActionPreference.ActionItem.ACTION_ITEM1).isEnabled()).isTrue();
         assertThat(devicePreference.getActionItem(
-                CarUiMultiActionPreference.ActionItem.ACTION_ITEM2).isEnabled()).isTrue();
+                MultiActionPreference.ActionItem.ACTION_ITEM2).isEnabled()).isTrue();
         assertThat(devicePreference.getActionItem(
-                CarUiMultiActionPreference.ActionItem.ACTION_ITEM3).isEnabled()).isTrue();
+                MultiActionPreference.ActionItem.ACTION_ITEM3).isEnabled()).isTrue();
     }
 
     private class TestLocalBluetoothProfile implements LocalBluetoothProfile {
