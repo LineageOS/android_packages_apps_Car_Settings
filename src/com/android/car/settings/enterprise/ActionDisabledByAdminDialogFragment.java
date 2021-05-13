@@ -18,7 +18,6 @@ package com.android.car.settings.enterprise;
 
 import static android.app.admin.DevicePolicyManager.DEVICE_OWNER_TYPE_FINANCED;
 
-import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.annotation.UserIdInt;
 import android.app.Dialog;
@@ -44,9 +43,10 @@ import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 
 /**
- * Shows a dialog explain that an action is not enabled due to restrictions imposed by an active
+ * Shows a dialog explaining that an action is not enabled due to restrictions imposed by an active
  * device administrator.
  */
+// TODO(b/186905050): add unit tests
 public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragment {
 
     private static final String TAG = ActionDisabledByAdminDialogFragment.class.getSimpleName();
@@ -98,7 +98,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
                 .setPositiveButton(R.string.okay, /* listener= */ null);
         maybeSetLearnMoreButton(context, builder, enforcedAdmin);
-        initializeDialogViews(context, builder, enforcedAdmin.component,
+        initializeDialogViews(context, builder, enforcedAdmin,
                 getEnforcementAdminUserId(enforcedAdmin));
         return builder;
     }
@@ -107,12 +107,14 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     // (com.android.settings.enterprise.ActionDisabledByAdminDialogHelper), but adjusted to
     // use a AlertDialogBuilder directly, instead of an Activity hosting a dialog.
 
-    private static @UserIdInt int getEnforcementAdminUserId(@NonNull EnforcedAdmin admin) {
-        return admin.user == null ? UserHandle.USER_NULL : admin.user.getIdentifier();
+    private static @UserIdInt int getEnforcementAdminUserId(@Nullable EnforcedAdmin admin) {
+        return admin == null || admin.user == null ? UserHandle.USER_NULL
+                : admin.user.getIdentifier();
     }
 
     private void maybeSetLearnMoreButton(Context context, AlertDialogBuilder builder,
-            EnforcedAdmin enforcedAdmin) {
+            @Nullable EnforcedAdmin enforcedAdmin) {
+        if (enforcedAdmin == null) return;
         // The "Learn more" button appears only if the restriction is enforced by an admin in the
         // same profile group. Otherwise the admin package and its policies are not accessible to
         // the current user.
@@ -124,7 +126,9 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     }
 
     private void initializeDialogViews(Context context, AlertDialogBuilder builder,
-            ComponentName admin, @UserIdInt int userId) {
+            @Nullable EnforcedAdmin enforcedAdmin, @UserIdInt int userId) {
+        ComponentName admin = enforcedAdmin != null ? enforcedAdmin.component : null;
+
         setAdminSupportIcon(context, builder, admin, userId);
 
         if (isNotCurrentUserOrProfile(context, admin, userId)) {
@@ -133,9 +137,9 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
 
         setAdminSupportTitle(context, builder, mRestriction);
 
-        UserHandle user = userId == UserHandle.USER_NULL ? null : UserHandle.of(userId);
-
-        setAdminSupportDetails(context, builder, new EnforcedAdmin(admin, user));
+        if (enforcedAdmin != null) {
+            setAdminSupportDetails(context, builder, enforcedAdmin);
+        }
     }
 
     private boolean isNotCurrentUserOrProfile(Context context, ComponentName admin,
