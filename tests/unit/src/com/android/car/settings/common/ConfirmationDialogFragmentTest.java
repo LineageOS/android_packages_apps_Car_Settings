@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,28 +21,30 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.verify;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.R;
+import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
-import com.android.car.settings.testutils.FragmentController;
 
-import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowDialog;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ConfirmationDialogFragmentTest {
 
     private static final String TEST_ARG_KEY = "arg_key";
@@ -50,8 +52,15 @@ public class ConfirmationDialogFragmentTest {
     private static final String TEST_TITLE = "Test Title";
     private static final String TEST_MESSAGE = "Test Message";
 
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private ConfirmationDialogFragment mFragment;
     private ConfirmationDialogFragment.Builder mDialogFragmentBuilder;
-    private Fragment mFragment;
+    private FragmentManager mFragmentManager;
+
+    @Rule
+    public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule = new ActivityTestRule<>(
+            BaseCarSettingsTestActivity.class);
+
     @Mock
     private ConfirmationDialogFragment.ConfirmListener mConfirmListener;
     @Mock
@@ -60,25 +69,19 @@ public class ConfirmationDialogFragmentTest {
     private ConfirmationDialogFragment.DismissListener mDismissListener;
 
     @Before
-    public void setUp() {
+    public void setup() {
         MockitoAnnotations.initMocks(this);
-        mFragment = FragmentController.of(new Fragment()).setup();
-        mDialogFragmentBuilder = new ConfirmationDialogFragment.Builder(
-                RuntimeEnvironment.application);
+        mFragmentManager = mActivityTestRule.getActivity().getSupportFragmentManager();
+        mDialogFragmentBuilder = new ConfirmationDialogFragment.Builder(mContext);
         mDialogFragmentBuilder.setTitle(TEST_TITLE);
         mDialogFragmentBuilder.setMessage(TEST_MESSAGE);
         mDialogFragmentBuilder.addArgumentString(TEST_ARG_KEY, TEST_ARG_VALUE);
     }
 
-    @After
-    public void tearDown() {
-        ShadowDialog.reset();
-    }
-
     @Test
-    public void buildDialogFragment_hasTitleAndMessage() {
+    public void buildDialogFragment_hasTitleAndMessage() throws Throwable {
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
-        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+        launchDialogFragment(dialogFragment);
 
         // TODO(b/148687802): Figure out why title returns empty string.
         // assertThat(DialogTestUtils.getTitle(dialogFragment)).isEqualTo(TEST_TITLE);
@@ -86,12 +89,13 @@ public class ConfirmationDialogFragmentTest {
     }
 
     @Test
-    public void buildDialogFragment_positiveButtonSet_negativeAndNeutralButtonNotVisible() {
+    public void buildDialogFragment_positiveButtonSet_negativeAndNeutralButtonNotVisible()
+            throws Throwable {
         mDialogFragmentBuilder.setPositiveButton(R.string.test_positive_button_label, null);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
-        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+        launchDialogFragment(dialogFragment);
 
-        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
+        AlertDialog dialog = (AlertDialog) mFragment.getDialog();
         assertThat(dialog.getButton(DialogInterface.BUTTON_POSITIVE).getVisibility()).isEqualTo(
                 View.VISIBLE);
         assertThat(dialog.getButton(DialogInterface.BUTTON_NEGATIVE).getVisibility()).isEqualTo(
@@ -101,12 +105,13 @@ public class ConfirmationDialogFragmentTest {
     }
 
     @Test
-    public void buildDialogFragment_negativeButtonSet_positiveAndNeutralButtonNotVisible() {
+    public void buildDialogFragment_negativeButtonSet_positiveAndNeutralButtonNotVisible()
+            throws Throwable {
         mDialogFragmentBuilder.setNegativeButton(R.string.test_negative_button_label, null);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
-        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+        launchDialogFragment(dialogFragment);
 
-        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
+        AlertDialog dialog = (AlertDialog) mFragment.getDialog();
         assertThat(dialog.getButton(DialogInterface.BUTTON_POSITIVE).getVisibility()).isEqualTo(
                 View.GONE);
         assertThat(dialog.getButton(DialogInterface.BUTTON_NEGATIVE).getVisibility()).isEqualTo(
@@ -116,12 +121,13 @@ public class ConfirmationDialogFragmentTest {
     }
 
     @Test
-    public void buildDialogFragment_neutralButtonSet_positiveAndNegativeButtonNotVisible() {
+    public void buildDialogFragment_neutralButtonSet_positiveAndNegativeButtonNotVisible()
+            throws Throwable {
         mDialogFragmentBuilder.setNeutralButton(R.string.test_neutral_button_label, null);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
-        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+        launchDialogFragment(dialogFragment);
 
-        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
+        AlertDialog dialog = (AlertDialog) mFragment.getDialog();
         assertThat(dialog.getButton(DialogInterface.BUTTON_POSITIVE).getVisibility()).isEqualTo(
                 View.GONE);
         assertThat(dialog.getButton(DialogInterface.BUTTON_NEGATIVE).getVisibility()).isEqualTo(
@@ -131,43 +137,58 @@ public class ConfirmationDialogFragmentTest {
     }
 
     @Test
-    public void clickPositiveButton_callsCallbackWithArgs() {
+    public void clickPositiveButton_callsCallbackWithArgs() throws Throwable {
         mDialogFragmentBuilder.setPositiveButton(R.string.test_positive_button_label,
                 mConfirmListener);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
-        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+        launchDialogFragment(dialogFragment);
 
-        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
-        dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+        AlertDialog dialog = (AlertDialog) mFragment.getDialog();
+        mActivityTestRule.runOnUiThread(() ->
+                dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         ArgumentCaptor<Bundle> bundle = ArgumentCaptor.forClass(Bundle.class);
         verify(mConfirmListener).onConfirm(bundle.capture());
         assertThat(bundle.getValue().getString(TEST_ARG_KEY)).isEqualTo(TEST_ARG_VALUE);
     }
 
     @Test
-    public void clickNegativeButton_callsCallbackWithArgs() {
+    public void clickNegativeButton_callsCallbackWithArgs() throws Throwable {
         mDialogFragmentBuilder.setNegativeButton(R.string.test_negative_button_label,
                 mRejectListener);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
-        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+        launchDialogFragment(dialogFragment);
 
-        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
-        dialog.getButton(DialogInterface.BUTTON_NEGATIVE).performClick();
+        AlertDialog dialog = (AlertDialog) mFragment.getDialog();
+        mActivityTestRule.runOnUiThread(() ->
+                dialog.getButton(DialogInterface.BUTTON_NEGATIVE).performClick());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         ArgumentCaptor<Bundle> bundle = ArgumentCaptor.forClass(Bundle.class);
         verify(mRejectListener).onReject(bundle.capture());
         assertThat(bundle.getValue().getString(TEST_ARG_KEY)).isEqualTo(TEST_ARG_VALUE);
     }
 
     @Test
-    public void dismissDialog_callsCallbackWithArgs() {
+    public void dismissDialog_callsCallbackWithArgs() throws Throwable {
         mDialogFragmentBuilder.setDismissListener(mDismissListener);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
-        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+        launchDialogFragment(dialogFragment);
 
-        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
+        AlertDialog dialog = (AlertDialog) mFragment.getDialog();
+        mActivityTestRule.runOnUiThread(() -> dialog.dismiss());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         dialog.dismiss();
         ArgumentCaptor<Bundle> bundle = ArgumentCaptor.forClass(Bundle.class);
         verify(mDismissListener).onDismiss(bundle.capture());
         assertThat(bundle.getValue().getString(TEST_ARG_KEY)).isEqualTo(TEST_ARG_VALUE);
+    }
+
+    private void launchDialogFragment(ConfirmationDialogFragment dialog) throws Throwable {
+        mActivityTestRule.runOnUiThread(
+                () -> dialog.show(mFragmentManager,
+                        ConfirmationDialogFragment.TAG));
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        mFragment = (ConfirmationDialogFragment) mFragmentManager.findFragmentByTag(
+                ConfirmationDialogFragment.TAG);
     }
 }
