@@ -16,6 +16,8 @@
 
 package com.android.car.settings.testutils;
 
+import android.content.Intent;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -23,6 +25,7 @@ import com.android.car.settings.common.BaseCarSettingsActivity;
 
 public class BaseCarSettingsTestActivity extends BaseCarSettingsActivity {
 
+    private final TestEventListener<Intent> mStartActivityListener = new TestEventListener<>();
     private boolean mOnBackPressedFlag;
 
     @Nullable
@@ -37,6 +40,12 @@ public class BaseCarSettingsTestActivity extends BaseCarSettingsActivity {
         super.onBackPressed();
     }
 
+    @Override
+    public void startActivity(Intent intent) {
+        mStartActivityListener.accept(intent);
+        super.startActivity(intent);
+    }
+
     /**
      * Gets a boolean flag indicating whether onBackPressed has been called.
      *
@@ -44,5 +53,12 @@ public class BaseCarSettingsTestActivity extends BaseCarSettingsActivity {
      */
     public boolean getOnBackPressedFlag() {
         return mOnBackPressedFlag;
+    }
+
+    /**
+     * Gets an event listener for {@link #startActivity(Intent)}
+     */
+    public TestEventListener<Intent> getStartActivityListener() {
+        return mStartActivityListener;
     }
 }
