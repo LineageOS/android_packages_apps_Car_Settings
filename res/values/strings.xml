@@ -1586,19 +1586,24 @@
     <string name="admin_financed_message" translatable="false">Your device administrator may be able to access data
         associated with this device, manage apps, and change this device\’s settings.</string>
     <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30] -->
-    <string name="disabled_by_policy_title" translatable="false">Action not allowed</string>
+    <string name="disabled_by_policy_title" translatable="false">Blocked by your IT admin</string>
     <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_adjust_volume" translatable="false">Can’t change volume</string>
     <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_outgoing_calls" translatable="false">Calling not allowed</string>
+    <string name="disabled_by_policy_title_outgoing_calls" translatable="false">Can’t make calls</string>
     <!-- Title for dialog displayed to tell user that sending SMS were disabled by an admin [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_sms" translatable="false">SMS not allowed</string>
     <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_camera" translatable="false">Camera not allowed</string>
+    <string name="disabled_by_policy_title_camera" translatable="false">Can’t use camera</string>
     <!-- Title for dialog displayed to tell user that screenshots are disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_screen_capture" translatable="false">Screenshot not allowed</string>
+    <string name="disabled_by_policy_title_screen_capture" translatable="false">Can’t take screenshots</string>
     <!-- Title for dialog displayed to tell user that the app was suspended by an admin [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_suspend_packages" translatable="false">Can’t open this app</string>
     <!-- Dialog title. This dialog lets a user know that a specific setting is blocked by their credit provider. Since the user purchased the device from the credit provider, the credit provider controls what they can access. [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_financed_device" translatable="false">Blocked by your credit provider</string>
+    <!-- Shown when the user tries to change a settings locked by an admin [CHAR LIMIT=200] -->
+    <string name="default_admin_support_msg" translatable="false">If you have questions, contact your IT admin</string>
+    <!-- url for learning more about IT admin policy disabling -->
+    <string name="help_url_action_disabled_by_it_admin" translatable="false"></string>
+
 </resources>
