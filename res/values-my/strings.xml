@@ -464,10 +464,8 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"ခဏစောင့်ပါ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ရက်စွဲနှင့် အချိန်"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ရက်စွဲ၊ အချိန်၊ စံတော်ချိန်နှင့် စနစ်များကို သတ်မှတ်ပါ"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"ရက်စွဲနှင့် အချိန် အလိုအလျောက်"</string>
-    <string name="date_time_auto_summary" msgid="3311706425095342759">"ကွန်ရက်က ဖော်ပြသောအချိန်ကို အသုံးပြုရန်"</string>
-    <string name="zone_auto" msgid="3701878581920206160">"အလိုအလျောက် စံတော်ချိန်"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"ကွန်ရက်က ဖော်ပြထားသောအချိန်ဇုန်ကို အသုံးပြုရန်"</string>
+    <string name="date_time_auto" msgid="6018635902717385962">"အချိန် အလိုအလျောက်ထည့်ရန်"</string>
+    <string name="zone_auto" msgid="4174874778459184605">"စံတော်ချိန် အလိုအလျောက်ထည့်ရန်"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"၂၄-နာရီ စနစ်"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"၂၄-နာရီ စနစ်ကို သုံးရန်"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"အချိန်"</string>
@@ -588,7 +586,7 @@
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်မှ သင့်ပရိုဖိုင်နှင့် အကောင့်များကို ဖျက်မည်"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ဤလုပ်ဆောင်ချက်ကို သင့်ပရိုဖိုင်အတွက် မရနိုင်ပါ"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"လုံခြုံရေး"</string>
-    <string name="security_settings_subtitle" msgid="2244635550239273229">"မျက်နှာပြင်လော့ခ်"</string>
+    <string name="security_settings_subtitle" msgid="2244635550239273229">"ဖန်သားပြင်လော့ခ်"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"မရှိ"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"ပုံစံ"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"ပင်နံပါတ်"</string>
@@ -604,7 +602,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"မျက်နှာပြင်လော့ခ် သတ်မှတ်ခြင်း"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"သင့် PIN နံပါတ် ရွေးချယ်ခြင်း"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"သင့်စကားဝှက်ကိုရွေးချယ်ပါ"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"လက်ရှိ မျက်နှာပြင်လော့ခ်"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"လက်ရှိဖန်သားပြင်လော့ခ်"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"လုံခြုံရေးအတွက် ပုံစံတစ်ခု သတ်မှတ်ပါ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ရှင်းရန်"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"မလုပ်တော့"</string>
