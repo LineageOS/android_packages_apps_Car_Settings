@@ -71,7 +71,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Définir"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Avertissement et limite pour les données"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cycle de consommation des données"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"Activer l\'avertissement"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Définir une alerte données"</string>
     <string name="data_warning" msgid="116776633806885370">"Avertissement de conso données"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Définir la limite des données"</string>
     <string name="data_limit" msgid="227338836292511425">"Limite de données"</string>
@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Définir la limite de consommation des données"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Définir"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Réseau OEM"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s utilisé(s), %2$s - %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%1$d Mo utilisé(s) du %2$s au %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Rejoindre un autre réseau"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Préférences réseau"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -128,7 +128,7 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Adresses IPv6"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Passerelle"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Préférences Wi-Fi"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Activer automatiquement le Wi‑Fi"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Activation automatique du Wi‑Fi"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Réactiver Wi‑Fi près réseaux haute qualité déjà enregistrés, comme réseau domestique"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisponible, car "<annotation id="link">"localisation"</annotation>" désactivée. Activez-la."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Activer la recherche de réseaux Wi-Fi ?"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Sélectionnez au moins une bande pour le point d\'accès Wi-Fi :"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Point d\'accès et partage de connexion"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Point d\'accès"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Désactiver le point d\'accès automatiquement"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Le point d\'accès Wi-Fi se désactive si aucun appareil n\'est connecté"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> requiert l\'activation du Wi-Fi"</string>
@@ -234,7 +233,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarme"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Sonnerie du téléphone"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notification par défaut"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Sonnerie par défaut du réveil"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Son de l\'alarme par défaut"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Enregistrer"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Alertes sonores"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Sonnerie, notifications, alarme"</string>
@@ -335,7 +334,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Aucune"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Sélectionnée"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"L\'Assistant pourra accéder aux informations relatives aux applications en cours d\'utilisation sur votre système, y compris aux informations visibles à l\'écran ou accessibles dans les applications."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Assurez-vous que cette appli est fiable&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; se sert de ce qui figure à l\'écran pour déterminer ce qui peut être saisi automatiquement."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Assurez-vous de faire confiance à cette application&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; utilise les éléments affichés à l\'écran pour déterminer les champs qui peuvent bénéficier de la saisie automatique."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Ajouter un service"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Ouverture des liens"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Applications installées"</string>
@@ -384,7 +383,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations des applis"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utiliser ma position"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Les services de localisation peuvent utiliser des sources telles que le GPS, le Wi-Fi, les réseaux mobiles et les capteurs pour estimer la position de votre appareil."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Système"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour du système"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Paramètres avancés"</string>
@@ -409,11 +409,11 @@
     <string name="contributors_title" msgid="7698463793409916113">"Contributeurs"</string>
     <string name="manual" msgid="4819839169843240804">"Manuel"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Libellés réglementaires"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Manuel de sécurité et réglementation"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Manuel de sécurité et de réglementation"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Copyright"</string>
     <string name="license_title" msgid="936705938435249965">"Licence"</string>
     <string name="terms_title" msgid="5201471373602628765">"Conditions d\'utilisation"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Licences System WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Licences système WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Fonds d\'écran"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Fournisseurs d\'images satellite :\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Modèle"</string>
@@ -454,7 +454,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"Effacer tous les profils et données du système d\'infoloisirs"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Cela effacera toutes les données du système d\'infoloisirs du véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et paramètres du système et des applis"</li>\n<li>"Les applis téléchargées"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Vous êtes actuellement connecté aux comptes suivants :"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"D\'autres profils ont été configurés pour ce véhicule."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"D\'autres profils utilisent ce véhicule."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Effacer toutes les données"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Effacer toutes les données ?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Tous vos comptes, données de profil personnelles et applis téléchargées sur ce système d\'infoloisirs seront supprimés.\n\nCette action est irréversible."</string>
@@ -481,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Heure"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrateur"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Connecté en tant qu\'administrateur"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Accorder les droits d\'administrateur ?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Tous les droits d\'administrateur"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Changer en administrateur"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"L\'administrateur pourra supprimer des profils, y compris ceux d\'autres administrateurs, et rétablir la configuration d\'usine du système d\'infoloisirs."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Ce profil pourra supprimer des profils, y compris ceux d\'autres administrateurs, et rétablir la configuration d\'usine du système."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Cette action est irréversible."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Oui, changer en administrateur"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Créer des profils"</string>
@@ -494,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Ajouter un profil"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Nouveau profil"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Ajouter un profil ?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Lorsque vous aurez créé un profil, cette personne devra le configurer elle-même."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Les applis peuvent être mises à jour depuis un profil pour tous les autres profils."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Lorsque vous ajoutez un profil, l\'utilisateur concerné doit configurer son espace."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"N\'importe quel profil peut mettre à jour les applis pour tous les autres profils."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Nombre maximal de profils atteint"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="one">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> profil.</item>
       <item quantity="other">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> profils.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Impossible de créer un profil"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Échec de la création d\'un profil"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Supprimer ce profil ?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Toutes les applis et données associées à ce profil seront supprimées"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Impossible de supprimer le profil"</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Échec de la suppression du profil."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Ce profil sera supprimé lorsque vous changerez de profil ou que vous redémarrerez le véhicule."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ignorer"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Réessayer"</string>
@@ -577,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Annuler la synchronisation"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"La synchronisation rencontre des problèmes et sera bientôt rétablie."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Confidentialité"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Données du système d\'infoloisirs"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Données du véhicule"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Contrôler l\'accès des applis à votre position"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micro"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Contrôler l\'accès des applis au micro"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Données système d\'infoloisirs"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Données du véhicule"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Gérer les activités et les infos enregistrées sur ce véhicule"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Supprimer votre profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Effacer votre profil et vos comptes du système d\'infoloisirs"</string>
@@ -602,6 +602,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Passer"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Configurer le verrouillage de l\'écran"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Choisissez votre code"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Sélectionner un schéma"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Sélectionner un mot de passe"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Verrouillage actuel de l\'écran"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pour la sécurité, définissez un schéma"</string>
@@ -645,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Le code doit contenir moins de <xliff:g id="NUMBER">%d</xliff:g> chiffres"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Le code ne doit comporter que des chiffres compris entre 0 et 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"L\'administrateur de l\'appareil n\'autorise pas l\'utilisation d\'un code récent"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Les codes courants sont bloqués par votre administrateur informatique. Choisissez un autre code."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Les codes courants sont bloqués par votre administrateur informatique. Choisissez un autre code."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Vous ne pouvez pas inclure de caractère non valide."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Mot de passe non valide : il doit comporter au moins 4 caractères."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -674,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'administrateur de l\'appareil n\'autorise pas l\'utilisation d\'un mot de passe récent"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Erreur d\'enregistrement du mot de passe"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Les mots de passe courants sont bloqués par votre administrateur informatique. Choisissez un autre mot de passe."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Les mots de passe courants sont bloqués par votre administrateur informatique. Choisissez un autre mot de passe."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Les suites de chiffres croissantes, décroissantes ou répétitives ne sont pas autorisées."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
@@ -702,7 +703,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Impossible d\'ajouter un profil en conduisant"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Rechercher"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant et voix"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Application d\'assistance numérique"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Appli Assistant"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Utiliser le texte affiché à l\'écran"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Autoriser l\'Assistant à accéder au contenu affiché à l\'écran"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Utiliser une capture d\'écran"</string>

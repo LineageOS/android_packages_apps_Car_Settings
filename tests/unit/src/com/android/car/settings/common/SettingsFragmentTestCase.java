@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,80 +16,93 @@
 
 package com.android.car.settings.common;
 
-import static com.android.car.ui.core.CarUi.requireToolbar;
-
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.withSettings;
 import static org.testng.Assert.assertThrows;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.widget.Toast;
 
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.DummyFragment;
-import com.android.car.settings.testutils.FragmentController;
-import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
-import com.android.car.ui.toolbar.Toolbar;
-import com.android.car.ui.toolbar.ToolbarController;
+import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
+import com.android.car.settings.testutils.TestFinishActivity;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowToast;
+import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
 
-/** Unit test for {@link SettingsFragment}. */
-@RunWith(RobolectricTestRunner.class)
-public class SettingsFragmentTest {
+import java.util.concurrent.atomic.AtomicReference;
 
-    private static final String TEST_TAG = "test_tag";
+@RunWith(AndroidJUnit4.class)
+public abstract class SettingsFragmentTestCase<T extends BaseCarSettingsTestActivity> {
+    protected static final String TEST_TAG = "test_tag";
 
-    private Context mContext;
-    private FragmentController<TestSettingsFragment> mFragmentController;
-    private SettingsFragment mFragment;
+    protected Context mContext = ApplicationProvider.getApplicationContext();
+    protected BaseCarSettingsTestActivity mActivity;
+    protected FragmentManager mFragmentManager;
+    protected SettingsFragment mFragment;
+
+    abstract ActivityTestRule<T> getActivityTestRule();
 
     @Before
-    public void setUp() {
-        mContext = RuntimeEnvironment.application;
-        mFragmentController = FragmentController.of(new TestSettingsFragment());
-        mFragment = mFragmentController.get();
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
+    public void setUp() throws Throwable {
+        MockitoAnnotations.initMocks(this);
+        mActivity = getActivityTestRule().getActivity();
+        mFragmentManager = mActivity.getSupportFragmentManager();
+        setUpFragment();
     }
 
     @Test
+    @UiThreadTest
     public void use_returnsController() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         assertThat(mFragment.use(FakePreferenceController.class,
                 R.string.tpk_fake_controller)).isNotNull();
     }
 
     @Test
-    public void onAttach_registersLifecycleObservers() {
-        mFragmentController.create();
-        FakePreferenceController controller = mFragment.use(FakePreferenceController.class,
-                R.string.tpk_fake_controller);
-        assertThat(controller.getOnCreateInternalCallCount()).isEqualTo(1);
-        mFragmentController.destroy();
-        assertThat(controller.getOnDestroyInternalCallCount()).isEqualTo(1);
+    public void onAttach_registersLifecycleObservers() throws Throwable {
+        AtomicReference<FakePreferenceController> controller = new AtomicReference<>();
+        getActivityTestRule().runOnUiThread(() -> {
+            mFragment.onCreate(null);
+            controller.set(mFragment.use(FakePreferenceController.class,
+                    R.string.tpk_fake_controller));
+            assertThat(controller.get().getOnCreateInternalCallCount()).isEqualTo(1);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        getActivityTestRule().finishActivity();
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        assertThat(controller.get().getOnCreateInternalCallCount()).isEqualTo(1);
     }
 
     @Test
+    @UiThreadTest
     public void onUxRestrictionsChanged_propagatesToControllers() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         FakePreferenceController controller = mFragment.use(FakePreferenceController.class,
                 R.string.tpk_fake_controller);
         CarUxRestrictions uxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
@@ -99,92 +112,102 @@ public class SettingsFragmentTest {
     }
 
     @Test
+    @UiThreadTest
     public void onUxRestrictedPreferenceTapped_showToast() {
-        mFragmentController.setup();
+        MockitoSession session = ExtendedMockito.mockitoSession().mockStatic(Toast.class,
+                withSettings().lenient()).startMocking();
+        Toast mockToast = mock(Toast.class);
+        ExtendedMockito.when(Toast.makeText(any(), anyString(), anyInt()))
+                .thenReturn(mockToast);
+
+        mFragment.onCreate(null);
         FakePreferenceController controller = mFragment.use(FakePreferenceController.class,
                 R.string.tpk_fake_controller);
         CarUxRestrictions uxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
         mFragment.onUxRestrictionsChanged(uxRestrictions);
         controller.getPreference().performClick();
-        assertThat(ShadowToast.showedToast(
-                mContext.getString(R.string.restricted_while_driving))).isTrue();
+        verify(mockToast).show();
+
+        session.finishMocking();
     }
 
     @Test
+    @UiThreadTest
     public void onDisplayPreferenceDialog_unknownPreferenceType_throwsIllegalArgumentException() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
 
         assertThrows(IllegalArgumentException.class,
                 () -> mFragment.onDisplayPreferenceDialog(new Preference(mContext)));
     }
 
     @Test
-    public void launchFragment_otherFragment_opensFragment() {
-        mFragmentController.setup();
-        TestSettingsFragment otherFragment = new TestSettingsFragment();
-        mFragment.launchFragment(otherFragment);
-        assertThat(
-                mFragment.getFragmentManager().findFragmentById(R.id.fragment_container)).isEqualTo(
-                otherFragment);
-    }
-
-    @Test
+    @UiThreadTest
     public void launchFragment_dialogFragment_throwsError() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         DialogFragment dialogFragment = new DialogFragment();
         assertThrows(IllegalArgumentException.class,
                 () -> mFragment.launchFragment(dialogFragment));
     }
 
     @Test
+    @UiThreadTest
     public void showDialog_noTag_launchesDialogFragment() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         DialogFragment dialogFragment = mock(DialogFragment.class);
         mFragment.showDialog(dialogFragment, /* tag= */ null);
         verify(dialogFragment).show(mFragment.getFragmentManager(), null);
     }
 
     @Test
+    @UiThreadTest
     public void showDialog_withTag_launchesDialogFragment() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         DialogFragment dialogFragment = mock(DialogFragment.class);
         mFragment.showDialog(dialogFragment, TEST_TAG);
         verify(dialogFragment).show(mFragment.getFragmentManager(), TEST_TAG);
     }
 
     @Test
-    public void findDialogByTag_retrieveOriginalDialog_returnsDialog() {
-        mFragmentController.setup();
+    public void findDialogByTag_retrieveOriginalDialog_returnsDialog() throws Throwable {
         DialogFragment dialogFragment = new DialogFragment();
-        mFragment.showDialog(dialogFragment, TEST_TAG);
+        getActivityTestRule().runOnUiThread(() -> {
+            mFragment.onCreate(null);
+            mFragment.showDialog(dialogFragment, TEST_TAG);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         assertThat(mFragment.findDialogByTag(TEST_TAG)).isEqualTo(dialogFragment);
     }
 
     @Test
+    @UiThreadTest
     public void findDialogByTag_notDialogFragment_returnsNull() {
-        mFragmentController.setup();
-        TestSettingsFragment fragment = new TestSettingsFragment();
+        mFragment.onCreate(null);
+        TestSettingsFragment
+                fragment = new TestSettingsFragment();
         mFragment.getFragmentManager().beginTransaction().add(fragment, TEST_TAG).commit();
         assertThat(mFragment.findDialogByTag(TEST_TAG)).isNull();
     }
 
     @Test
+    @UiThreadTest
     public void findDialogByTag_noSuchFragment_returnsNull() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         assertThat(mFragment.findDialogByTag(TEST_TAG)).isNull();
     }
 
     @Test
+    @UiThreadTest
     public void startActivityForResult_largeRequestCode_throwsError() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         assertThrows(() -> mFragment.startActivityForResult(new Intent(), 0xffff,
                 mock(ActivityResultCallback.class)));
     }
 
     @Test
+    @UiThreadTest
     public void startActivityForResult_tooManyRequests_throwsError() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         assertThrows(() -> {
             for (int i = 0; i < 0xff; i++) {
                 mFragment.startActivityForResult(new Intent(), i,
@@ -194,8 +217,9 @@ public class SettingsFragmentTest {
     }
 
     @Test
+    @UiThreadTest
     public void startIntentSenderForResult_largeRequestCode_throwsError() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         assertThrows(
                 () -> mFragment.startIntentSenderForResult(
                         mock(IntentSender.class), /* requestCode= */ 0xffff,
@@ -205,8 +229,9 @@ public class SettingsFragmentTest {
     }
 
     @Test
+    @UiThreadTest
     public void startIntentSenderForResult_tooManyRequests_throwsError() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         assertThrows(() -> {
             for (int i = 0; i < 0xff; i++) {
                 mFragment.startIntentSenderForResult(
@@ -219,63 +244,60 @@ public class SettingsFragmentTest {
     }
 
     @Test
+    @UiThreadTest
     public void onActivityResult_hasValidRequestCode_triggersOnActivityResult() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         ActivityResultCallback callback = mock(ActivityResultCallback.class);
+        Intent intent = new Intent(mContext, TestFinishActivity.class);
 
         int reqCode = 100;
         int resCode = -1;
-        mFragment.startActivityForResult(new Intent(), reqCode, callback);
+        mFragment.startActivityForResult(intent, reqCode, callback);
         int fragmentReqCode = (1 << 8) + reqCode;
-        mFragment.onActivityResult(fragmentReqCode, resCode, new Intent());
+        mFragment.onActivityResult(fragmentReqCode, resCode, intent);
         verify(callback).processActivityResult(eq(reqCode), eq(resCode), any(Intent.class));
     }
 
     @Test
+    @UiThreadTest
     public void onActivityResult_wrongRequestCode_doesntTriggerOnActivityResult() {
-        mFragmentController.setup();
+        mFragment.onCreate(null);
         ActivityResultCallback callback = mock(ActivityResultCallback.class);
+        Intent intent = new Intent(mContext, TestFinishActivity.class);
 
         int reqCode = 100;
         int resCode = -1;
-        mFragment.startActivityForResult(new Intent(), reqCode,
-                callback);
+        mFragment.startActivityForResult(intent, reqCode, callback);
         int fragmentReqCode = (2 << 8) + reqCode;
-        mFragment.onActivityResult(fragmentReqCode, resCode, new Intent());
+        mFragment.onActivityResult(fragmentReqCode, resCode, intent);
         verify(callback, never()).processActivityResult(anyInt(), anyInt(),
                 any(Intent.class));
     }
 
-    @Test
-    public void onActivityCreated_hasAppIconIfRoot() {
-        mFragmentController.setup();
-        DummyFragment otherFragment = new DummyFragment();
-        mFragment.launchFragment(otherFragment);
-
-        ToolbarController toolbar = requireToolbar(otherFragment.requireActivity());
-
-        assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.HOME);
+    protected void setUpFragment() throws Throwable {
+        setUpFragment(null);
     }
 
-    @Test
-    public void onActivityCreated_hasBackArrowIconIfNotRoot() {
-        mFragmentController.setup();
-
-        TestSettingsFragment otherFragment = new TestSettingsFragment();
-        mFragment.launchFragment(otherFragment);
-
-        ToolbarController toolbar = requireToolbar(otherFragment.requireActivity());
-
-        assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.SUBPAGE);
-        assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(
-                Toolbar.NavButtonMode.BACK);
+    protected void setUpFragment(Fragment fragment) throws Throwable {
+        String settingsFragmentTag = "settings_fragment";
+        getActivityTestRule().runOnUiThread(() -> {
+            mFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container,
+                            fragment != null ? fragment : new TestSettingsFragment(),
+                            settingsFragmentTag)
+                    .commitNow();
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        mFragment = (SettingsFragment) mFragmentManager.findFragmentByTag(settingsFragmentTag);
     }
 
     /** Concrete {@link SettingsFragment} for testing. */
     public static class TestSettingsFragment extends SettingsFragment {
+
         @Override
         protected int getPreferenceScreenResId() {
-            return R.xml.settings_fragment;
+            return R.xml.test_base_settings_fragment;
         }
+
     }
 }
