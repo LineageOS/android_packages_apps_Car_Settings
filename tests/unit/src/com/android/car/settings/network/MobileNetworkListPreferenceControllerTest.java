@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,93 +18,105 @@ package com.android.car.settings.network;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowSubscriptionManager;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import com.google.android.collect.Lists;
 
-import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-@Ignore
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowSubscriptionManager.class})
+@RunWith(AndroidJUnit4.class)
 public class MobileNetworkListPreferenceControllerTest {
 
     private static final int SUB_ID = 1;
-    private Context mContext;
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+    private LifecycleOwner mLifecycleOwner;
     private PreferenceGroup mPreferenceGroup;
-    private PreferenceControllerTestHelper<MobileNetworkListPreferenceController> mControllerHelper;
+    private MobileNetworkListPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
+    @Mock
+    private SubscriptionManager mSubscriptionManager;
 
     @Before
+    @UiThreadTest
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        when(mContext.getSystemService(SubscriptionManager.class)).thenReturn(mSubscriptionManager);
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                MobileNetworkListPreferenceController.class, mPreferenceGroup);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowSubscriptionManager.reset();
+        screen.addPreference(mPreferenceGroup);
+        mPreferenceController = new MobileNetworkListPreferenceController(mContext,
+                "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
     }
 
     @Test
-    public void refreshUi_containsElements() {
+    public void onCreate_containsElements() {
         SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
                 /* simSlotIndex= */ 1, /* cardString= */"", "mncString");
         List<SubscriptionInfo> selectable = Lists.newArrayList(info);
-        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
+        when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mControllerHelper.getController().refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
     }
 
     @Test
+    @UiThreadTest
     public void onPreferenceClicked_launchesFragment() {
         SubscriptionInfo info = createSubscriptionInfo(SUB_ID, /* simSlotIndex= */ 1,
                 /* cardString= */"", "mncString");
         List<SubscriptionInfo> selectable = Lists.newArrayList(info);
-        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
+        when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mControllerHelper.getController().refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
         Preference preference = mPreferenceGroup.getPreference(0);
         preference.performClick();
 
         ArgumentCaptor<MobileNetworkFragment> captor = ArgumentCaptor.forClass(
                 MobileNetworkFragment.class);
-        verify(mControllerHelper.getMockFragmentController()).launchFragment(captor.capture());
+        verify(mFragmentController).launchFragment(captor.capture());
 
         assertThat(captor.getValue().getArguments().getInt(MobileNetworkFragment.ARG_NETWORK_SUB_ID,
                 -1)).isEqualTo(SUB_ID);
-    }
-
-    private ShadowSubscriptionManager getShadowSubscriptionManager() {
-        return Shadow.extract(mContext.getSystemService(SubscriptionManager.class));
     }
 
     private SubscriptionInfo createSubscriptionInfo(int subId, int simSlotIndex,
