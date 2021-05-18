@@ -348,9 +348,9 @@
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"तपाईंले केही कारवाहीका लागि यो एप पूर्वनिर्धारति रूपमा छनौट गर्नुभएको छ।"</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"डिफल्ट मानहरू हटाउनुहोस्"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"समर्थित लिंकहरू खोल्नुहोस्"</string>
-    <string name="app_link_open_always" msgid="5783167184335545230">"यो अनुप्रयोगमा खोल्नुहोस्"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"यो एपमा खोल्नुहोस्"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"प्रत्येक पटक सोधियोस्"</string>
-    <string name="app_link_open_never" msgid="2173174327831792316">"यो अनुप्रयोगमा नखोल्नुहोस्"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"यो एपमा नखोल्नुहोस्"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"समर्थित लिंकहरू"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"एपहरू"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"हालसालै खोलिएका"</string>
@@ -463,10 +463,8 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"कृपया प्रतीक्षा गर्नुहोस्..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"मिति र समय"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"मिति, समय, समय क्षेत्र र प्रारूपहरू सेट गर्नुहोस्"</string>
-    <!-- no translation found for date_time_auto (6018635902717385962) -->
-    <skip />
-    <!-- no translation found for zone_auto (4174874778459184605) -->
-    <skip />
+    <string name="date_time_auto" msgid="6018635902717385962">"समय स्वतः सेट गरियोस्"</string>
+    <string name="zone_auto" msgid="4174874778459184605">"प्रामाणिक समय स्वतः सेट गरियोस्"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"२४ घन्टे ढाँचा"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"२४-घन्टे ढाँचा प्रयोग गर्नुहोस्"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"समय"</string>
