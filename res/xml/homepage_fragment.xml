@@ -46,10 +46,10 @@
         </intent>
     </com.android.car.settings.common.LogicalPreferenceGroup>
     <com.android.car.settings.common.TopLevelPreference
-        android:fragment="com.android.car.settings.applications.AppsAndNotificationsFragment"
+        android:fragment="com.android.car.settings.notifications.NotificationsFragment"
         android:icon="@drawable/ic_top_level_applications"
-        android:key="@string/pk_apps_and_notifications_settings_entry"
-        android:title="@string/apps_and_notifications_settings"
+        android:key="@string/pk_notifications_settings_entry"
+        android:title="@string/notifications_label"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <com.android.car.settings.common.TopLevelPreference
         android:fragment="com.android.car.settings.sound.SoundSettingsFragment"
@@ -86,6 +86,12 @@
         android:key="@string/pk_security_settings_entry"
         android:title="@string/security_settings_title"
         settings:controller="com.android.car.settings.security.SecurityEntryPreferenceController"/>
+    <com.android.car.settings.common.TopLevelPreference
+        android:fragment="com.android.car.settings.applications.AppsFragment"
+        android:icon="@drawable/ic_top_level_applications"
+        android:key="@string/pk_apps_settings_entry"
+        android:title="@string/apps_settings_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <com.android.car.settings.common.TopLevelPreference
         android:fragment="com.android.car.settings.applications.assist.AssistantAndVoiceFragment"
         android:icon="@drawable/ic_top_level_assistant_and_voice"
