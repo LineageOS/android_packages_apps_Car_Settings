@@ -16,11 +16,14 @@
 
 package com.android.car.settings.wifi;
 
+import static android.car.hardware.power.PowerComponent.WIFI;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.hardware.power.CarPowerPolicy;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
@@ -29,7 +32,7 @@ import androidx.preference.SwitchPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.ColoredSwitchPreference;
+import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 
@@ -59,7 +62,7 @@ public class WifiStateSwitchPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mSwitchPreference = new ColoredSwitchPreference(mContext);
+        mSwitchPreference = new ClickableWhileDisabledSwitchPreference(mContext);
         when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
         mPreferenceController = new WifiStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
@@ -69,7 +72,7 @@ public class WifiStateSwitchPreferenceControllerTest {
 
     @Test
     public void onWifiStateChanged_disabled_setsSwitchUnchecked() {
-        initializePreference(/* enabled= */ true);
+        initializePreference(/* checked= */ true, /* enabled= */ true);
         mPreferenceController.onWifiStateChanged(WifiManager.WIFI_STATE_DISABLED);
 
         assertThat(mSwitchPreference.isChecked()).isFalse();
@@ -77,7 +80,7 @@ public class WifiStateSwitchPreferenceControllerTest {
 
     @Test
     public void onWifiStateChanged_enabled_setsSwitchChecked() {
-        initializePreference(/* enabled= */ false);
+        initializePreference(/* checked= */ false, /* enabled= */ true);
         mPreferenceController.onWifiStateChanged(WifiManager.WIFI_STATE_ENABLED);
 
         assertThat(mSwitchPreference.isChecked()).isTrue();
@@ -85,14 +88,33 @@ public class WifiStateSwitchPreferenceControllerTest {
 
     @Test
     public void onWifiStateChanged_enabling_setsSwitchChecked() {
-        initializePreference(/* enabled= */ false);
+        initializePreference(/* checked= */ false, /* enabled= */ true);
         mPreferenceController.onWifiStateChanged(WifiManager.WIFI_STATE_ENABLING);
 
         assertThat(mSwitchPreference.isChecked()).isTrue();
     }
 
-    private void initializePreference(boolean enabled) {
-        mCarWifiManager.setWifiEnabled(enabled);
-        mSwitchPreference.setChecked(enabled);
+    @Test
+    public void onPolicyChanged_enabled_setsSwitchEnabled() {
+        initializePreference(/* checked= */ false, /* enabled= */ false);
+        CarPowerPolicy policy = new CarPowerPolicy("wifi_on", new int[]{WIFI}, new int[0]);
+        mPreferenceController.mPolicyListener.onPolicyChanged(policy);
+
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void onPolicyChanged_disabled_setsSwitchDisabled() {
+        initializePreference(/* checked= */ false, /* enabled= */ true);
+        CarPowerPolicy policy = new CarPowerPolicy("wifi_off", new int[0], new int[]{WIFI});
+        mPreferenceController.mPolicyListener.onPolicyChanged(policy);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+    }
+
+    private void initializePreference(boolean checked, boolean enabled) {
+        mCarWifiManager.setWifiEnabled(checked);
+        mSwitchPreference.setChecked(checked);
+        mSwitchPreference.setEnabled(enabled);
     }
 }
