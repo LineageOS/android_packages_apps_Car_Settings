@@ -20,4 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/notifications_label"
     android:key="@string/psk_notifications">
+    <PreferenceCategory
+        android:key="@string/pk_notifications_settings_recently_sent"
+        android:title="@string/notifications_recently_sent"
+        settings:controller="com.android.car.settings.notifications.RecentNotificationsAppsPreferenceController"/>
+    <PreferenceCategory
+        android:key="@string/pk_notifications_settings_all_apps"
+        android:title="@string/notifications_all_apps"
+        settings:controller="com.android.car.settings.notifications.NotificationsAppListPreferenceController"/>
 </PreferenceScreen>

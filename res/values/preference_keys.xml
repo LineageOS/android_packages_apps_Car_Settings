@@ -137,7 +137,15 @@
         bluetooth_device_action_buttons
     </string>
 
-    <!-- Applications and Notifications Settings -->
+    <!-- Notifications Settings -->
+    <string name="pk_notifications_settings_recently_sent" translatable="false">
+        notifications_settings_recently_sent
+    </string>
+    <string name="pk_notifications_settings_all_apps" translatable="false">
+        notifications_settings_all_apps
+    </string>
+
+    <!-- Applications Settings -->
     <string name="pk_applications_settings_screen_entry" translatable="false">
         applications_settings_screen_entry
     </string>

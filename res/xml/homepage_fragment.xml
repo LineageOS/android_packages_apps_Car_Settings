@@ -47,7 +47,7 @@
     </com.android.car.settings.common.LogicalPreferenceGroup>
     <com.android.car.settings.common.TopLevelPreference
         android:fragment="com.android.car.settings.notifications.NotificationsFragment"
-        android:icon="@drawable/ic_top_level_applications"
+        android:icon="@drawable/ic_top_level_notifications"
         android:key="@string/pk_notifications_settings_entry"
         android:title="@string/notifications_label"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>

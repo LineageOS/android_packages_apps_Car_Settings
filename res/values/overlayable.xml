@@ -432,6 +432,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="integer" name="millisecond_app_data_update_interval"/>
       <item type="integer" name="millisecond_max_app_load_wait_interval"/>
       <item type="integer" name="quick_setting_column_count"/>
+      <item type="integer" name="recent_notifications_apps_list_count"/>
+      <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
       <item type="layout" name="action_buttons_preference"/>
       <item type="layout" name="bluetooth_pin_confirm"/>
