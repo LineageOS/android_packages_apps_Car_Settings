@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,31 +18,37 @@ package com.android.car.settings.applications;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CarSettingActivities;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.Shadows;
-import org.robolectric.shadows.ShadowIntent;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 
-/** Unit test for {@link ApplicationsSettingsPreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ApplicationsSettingsPreferenceControllerTest {
 
     private static final String SOURCE = "source";
@@ -50,25 +56,37 @@ public class ApplicationsSettingsPreferenceControllerTest {
     private static final String LABEL = "label";
     private static final String SIZE_STR = "12.34 MB";
 
-    private Context mContext;
-    private LogicalPreferenceGroup mLogicalPreferenceGroup;
-    private PreferenceControllerTestHelper<ApplicationsSettingsPreferenceController>
-            mPreferenceControllerHelper;
-    private ApplicationsSettingsPreferenceController mController;
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private LogicalPreferenceGroup mPreferenceGroup;
+    private ApplicationsSettingsPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
 
     @Before
+    @UiThreadTest
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
-        mLogicalPreferenceGroup = new LogicalPreferenceGroup(mContext);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                ApplicationsSettingsPreferenceController.class, mLogicalPreferenceGroup);
-        mController = mPreferenceControllerHelper.getController();
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        screen.addPreference(mPreferenceGroup);
+        mPreferenceController = new ApplicationsSettingsPreferenceController(mContext,
+                "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
+        mPreferenceController.onCreate(mLifecycleOwner);
     }
 
     @Test
     public void defaultInitialize_hasNoPreference() {
-        assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
@@ -85,14 +103,15 @@ public class ApplicationsSettingsPreferenceControllerTest {
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
         apps.add(appEntry);
 
-        mController.onDataLoaded(apps);
+        mPreferenceController.onDataLoaded(apps);
 
-        assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(1);
-        assertThat(mLogicalPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
-        assertThat(mLogicalPreferenceGroup.getPreference(0).getSummary()).isEqualTo(SIZE_STR);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        assertThat(mPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
+        assertThat(mPreferenceGroup.getPreference(0).getSummary()).isEqualTo(SIZE_STR);
     }
 
     @Test
+    @UiThreadTest
     public void preferenceClick_launchesDetailFragment() {
         ArrayList<ApplicationsState.AppEntry> apps = new ArrayList<>();
         ApplicationInfo appInfo = new ApplicationInfo();
@@ -106,15 +125,11 @@ public class ApplicationsSettingsPreferenceControllerTest {
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
         apps.add(appEntry);
 
-        mController.onDataLoaded(apps);
+        mPreferenceController.onDataLoaded(apps);
 
-        Preference preference = mLogicalPreferenceGroup.getPreference(0);
+        Preference preference = mPreferenceGroup.getPreference(0);
         preference.performClick();
 
-        Intent intent = Shadows.shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
-        ShadowIntent shadowIntent = Shadows.shadowOf(intent);
-        assertThat(shadowIntent.getIntentClass()).isEqualTo(
-                CarSettingActivities.ApplicationsDetailsActivity.class);
+        verify(mFragmentController).launchFragment(any(ApplicationDetailsFragment.class));
     }
-
 }
