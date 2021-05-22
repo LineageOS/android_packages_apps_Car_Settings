@@ -560,6 +560,21 @@ public class ApplicationActionButtonsPreferenceControllerTest {
     }
 
     @Test
+    public void forceStopClicked_notDisabledByDeviceAdminDialog_forDifferentUserRestrictionType() {
+        mockDisabledByDevicePolicyManagerRestriction(UserManager.DISALLOW_UNINSTALL_APPS);
+
+        setupAndAssignPreference();
+        setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        getForceStopButton().getOnClickListener().onClick(/* view= */ null);
+
+        verify(mFragmentController).showDialog(any(ConfirmationDialogFragment.class),
+                eq(FORCE_STOP_CONFIRM_DIALOG_TAG));
+    }
+
+    @Test
     public void forceStopDialogConfirmed_forceStopsPackage() {
         setupAndAssignPreference();
         setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
@@ -634,8 +649,19 @@ public class ApplicationActionButtonsPreferenceControllerTest {
     }
 
     @Test
-    public void uninstallClicked_whenDisabledByDeviceAdminDialog() {
-        mockDisabledByDevicePolicyManagerRestriction(UserManager.DISALLOW_APPS_CONTROL);
+    public void uninstallClicked_showsDisabledByDeviceAdminDialog_forDisallowAppsControl() {
+        testShowingDisabledByDeviceAdminDialogWhenUninstallClicked(
+                UserManager.DISALLOW_APPS_CONTROL);
+    }
+
+    @Test
+    public void uninstallClicked_showsDisabledByDeviceAdminDialog_forDisallowUninstallApps() {
+        testShowingDisabledByDeviceAdminDialogWhenUninstallClicked(
+                UserManager.DISALLOW_UNINSTALL_APPS);
+    }
+
+    private void testShowingDisabledByDeviceAdminDialogWhenUninstallClicked(String restriction) {
+        mockDisabledByDevicePolicyManagerRestriction(restriction);
         setupAndAssignPreference();
         setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
 
