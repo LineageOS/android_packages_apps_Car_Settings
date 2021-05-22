@@ -58,6 +58,7 @@ import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -83,6 +84,11 @@ public class ApplicationActionButtonsPreferenceController extends
         PreferenceController<ActionButtonsPreference> implements ActivityResultCallback {
     private static final Logger LOG = new Logger(
             ApplicationActionButtonsPreferenceController.class);
+
+    private static final List<String> FORCE_STOP_RESTRICTIONS =
+            Arrays.asList(UserManager.DISALLOW_APPS_CONTROL);
+    private static final List<String> UNINSTALL_RESTRICTIONS =
+            Arrays.asList(UserManager.DISALLOW_UNINSTALL_APPS, UserManager.DISALLOW_APPS_CONTROL);
 
     @VisibleForTesting
     static final String DISABLE_CONFIRM_DIALOG_TAG =
@@ -123,7 +129,7 @@ public class ApplicationActionButtonsPreferenceController extends
             };
 
     private final View.OnClickListener mForceStopClickListener = i -> {
-        if (ignoreActionBecauseItsDisabledByAdmin()) return;
+        if (ignoreActionBecauseItsDisabledByAdmin(FORCE_STOP_RESTRICTIONS)) return;
         ConfirmationDialogFragment dialogFragment =
                 new ConfirmationDialogFragment.Builder(getContext())
                         .setTitle(R.string.force_stop_dialog_title)
@@ -174,7 +180,7 @@ public class ApplicationActionButtonsPreferenceController extends
     };
 
     private final View.OnClickListener mUninstallClickListener = i -> {
-        if (ignoreActionBecauseItsDisabledByAdmin()) return;
+        if (ignoreActionBecauseItsDisabledByAdmin(UNINSTALL_RESTRICTIONS)) return;
         Uri packageUri = Uri.parse("package:" + mPackageName);
         Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
         uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
@@ -540,8 +546,8 @@ public class ApplicationActionButtonsPreferenceController extends
         }
     }
 
-    private boolean ignoreActionBecauseItsDisabledByAdmin() {
-        if (mRestriction == null) return false;
+    private boolean ignoreActionBecauseItsDisabledByAdmin(List<String> restrictions) {
+        if (mRestriction == null || !restrictions.contains(mRestriction)) return false;
 
         LOG.d("Ignoring action because of " + mRestriction);
         getFragmentController().showDialog(ActionDisabledByAdminDialogFragment.newInstance(
