@@ -82,7 +82,8 @@ public class MuteMicTogglePreferenceController
 
     @Override
     protected void onStopInternal() {
-        mSensorPrivacyManager.removeSensorPrivacyListener(mListener);
+        mSensorPrivacyManager.removeSensorPrivacyListener(SensorPrivacyManager.Sensors.MICROPHONE,
+                mListener);
     }
 
     @Override
