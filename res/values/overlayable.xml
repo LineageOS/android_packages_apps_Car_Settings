@@ -683,6 +683,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="date_time_set_timezone"/>
       <item type="string" name="date_time_set_timezone_title"/>
       <item type="string" name="default_admin_support_msg"/>
+      <item type="string" name="decline_remote_bugreport_action"/>
       <item type="string" name="default_app_selected_app"/>
       <item type="string" name="default_applications"/>
       <item type="string" name="default_network_name_summary"/>
@@ -999,6 +1000,11 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="settings_license_activity_unavailable"/>
       <item type="string" name="setup_lock_settings_options_button_label"/>
       <item type="string" name="seven"/>
+      <item type="string" name="share_remote_bugreport_action"/>
+      <item type="string" name="share_remote_bugreport_dialog_message"/>
+      <item type="string" name="share_remote_bugreport_dialog_message_finished"/>
+      <item type="string" name="share_remote_bugreport_dialog_title"/>
+      <item type="string" name="sharing_remote_bugreport_dialog_message"/>
       <item type="string" name="show_dev_already"/>
       <item type="string" name="show_dev_on"/>
       <item type="string" name="show_password"/>

@@ -1610,4 +1610,20 @@
     <!-- Power policy --><skip/>
     <!-- Power components which are disabled by the current power policy cannot be toggled in Setting. [CHAR LIMIT=80] -->
     <string name="power_component_disabled" translatable="false">This action is not allowed by the current power policy</string>
+
+
+    <!-- TODO(b/186566325): remove translatable="false" once the string is finalized -->
+    <!-- Remote rquest bugreport --><skip/>
+    <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager. [CHAR LIMIT=50] -->
+    <string name="share_remote_bugreport_dialog_title" translatable="false">Share bug report?</string>
+    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager. [CHAR LIMIT=NONE] -->
+    <string name="share_remote_bugreport_dialog_message_finished" translatable="false">This vehicle\'s fleet manager requested a bug report to help troubleshoot this device. Apps and data may be shared.</string>
+    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager and it's still being taken. [CHAR LIMIT=NONE] -->
+    <string name="share_remote_bugreport_dialog_message" translatable="false">This vehicle\'s fleet manager requested a bug report to help troubleshoot this device. Apps and data may be shared, and your device may temporarily slow down.</string>
+    <!-- Message of a dialog shown to inform that the remote bugreport that was requested remotely by the vehicle\'s fleet manager is still being taken and will be shared when finished. [CHAR LIMIT=NONE]  -->
+    <string name="sharing_remote_bugreport_dialog_message" translatable="false">This bug report is being shared with this vehicle\'s fleet manager. Contact them for more details.</string>
+    <!-- Acceptance label of dialog shown to ask for user consent for sharing the remote bugreport. [CHAR LIMIT=20] -->
+    <string name="share_remote_bugreport_action" translatable="false">Share</string>
+    <!-- Decline label of dialog shown to ask for user consent for sharing the remote bugreport. [CHAR LIMIT=20] -->
+    <string name="decline_remote_bugreport_action" translatable="false">Decline</string>
 </resources>

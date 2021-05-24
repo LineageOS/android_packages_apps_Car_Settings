@@ -658,6 +658,16 @@
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity-alias>
 
+        <activity android:name=".enterprise.RemoteRequestBugreportActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="android.settings.SHOW_REMOTE_BUGREPORT_DIALOG" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".bluetooth.BluetoothPairingDialog"
             android:excludeFromRecents="true"
