@@ -18,8 +18,11 @@ package com.android.car.settings.system;
 
 import static android.os.UserManager.DISALLOW_FACTORY_RESET;
 
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.widget.Toast;
 
@@ -27,6 +30,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 
 /**
  * Controller which determines if factory clear (aka "factory reset") should be displayed based on
@@ -57,17 +61,31 @@ public class FactoryResetEntryPreferenceController
     }
 
     @Override
-    public int getAvailabilityStatus() {
-        return isUserRestricted() ? AVAILABLE_FOR_VIEWING : AVAILABLE;
+    protected boolean handlePreferenceClicked(ClickableWhileDisabledPreference preference) {
+        if (mUserManager.hasUserRestriction(DISALLOW_FACTORY_RESET)) {
+            getFragmentController().showDialog(ActionDisabledByAdminDialogFragment.newInstance(
+                    DISALLOW_FACTORY_RESET, UserHandle.USER_SYSTEM),
+                    DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
+            return true;
+        }
+        return super.handlePreferenceClicked(preference);
     }
 
-    private boolean isUserRestricted() {
-        return !(mUserManager.isAdminUser() || isDemoUser())
-                || mUserManager.hasUserRestriction(DISALLOW_FACTORY_RESET);
+    @Override
+    public int getAvailabilityStatus() {
+        return shouldDisable() ? AVAILABLE_FOR_VIEWING : AVAILABLE;
+    }
+
+    private boolean shouldDisable() {
+        if (!mUserManager.isAdminUser() && !isDemoUser()) {
+            // Disable for non-admin and non-demo users.
+            return true;
+        }
+        UserHandle userHandle = UserHandle.of(getContext().getUserId());
+        return mUserManager.hasBaseUserRestriction(DISALLOW_FACTORY_RESET, userHandle);
     }
 
     private boolean isDemoUser() {
-        return UserManager.isDeviceInDemoMode(getContext())
-                && mUserManager.isDemoUser();
+        return UserManager.isDeviceInDemoMode(getContext()) && mUserManager.isDemoUser();
     }
 }
