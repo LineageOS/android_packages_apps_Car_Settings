@@ -16,22 +16,18 @@
 
 package com.android.car.settings.enterprise;
 
-import static android.app.admin.DevicePolicyManager.DEVICE_OWNER_TYPE_FINANCED;
-
 import android.annotation.Nullable;
 import android.annotation.UserIdInt;
 import android.app.Dialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Process;
 import android.os.UserHandle;
-import android.os.UserManager;
 import android.util.IconDrawableFactory;
 
 import com.android.car.settings.R;
@@ -41,12 +37,15 @@ import com.android.car.ui.preference.CarUiDialogFragment;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
+import com.android.settingslib.enterprise.ActionDisabledByAdminController;
+import com.android.settingslib.enterprise.ActionDisabledByAdminControllerFactory;
 
 /**
  * Shows a dialog explaining that an action is not enabled due to restrictions imposed by an active
  * device administrator.
  */
 // TODO(b/186905050): add unit tests
+// TODO(b/188836559): move most of this class' logic to settingslib
 public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragment {
 
     private static final String TAG = ActionDisabledByAdminDialogFragment.class.getSimpleName();
@@ -59,6 +58,8 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
 
     @UserIdInt
     private int mUserId;
+
+    private ActionDisabledByAdminController mActionDisabledByAdminController;
 
     /**
      * Gets the dialog for the given user and restriction.
@@ -95,9 +96,17 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     private AlertDialogBuilder initialize(Context context) {
         EnforcedAdmin enforcedAdmin = RestrictedLockUtilsInternal
                 .checkIfRestrictionEnforced(context, mRestriction, mUserId);
+
+        mActionDisabledByAdminController = ActionDisabledByAdminControllerFactory.createInstance(
+                context.getSystemService(DevicePolicyManager.class),
+                new ActionDisabledLearnMoreButtonLauncherImpl(),
+                new DeviceAdminStringProviderImpl(context));
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
                 .setPositiveButton(R.string.okay, /* listener= */ null);
-        maybeSetLearnMoreButton(context, builder, enforcedAdmin);
+        if (enforcedAdmin != null) {
+            mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, mUserId);
+            mActionDisabledByAdminController.setupLearnMoreButton(context, builder);
+        }
         initializeDialogViews(context, builder, enforcedAdmin,
                 getEnforcementAdminUserId(enforcedAdmin));
         return builder;
@@ -112,29 +121,23 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
                 : admin.user.getIdentifier();
     }
 
-    private void maybeSetLearnMoreButton(Context context, AlertDialogBuilder builder,
-            @Nullable EnforcedAdmin enforcedAdmin) {
-        if (enforcedAdmin == null) return;
-        // The "Learn more" button appears only if the restriction is enforced by an admin in the
-        // same profile group. Otherwise the admin package and its policies are not accessible to
-        // the current user.
-        UserManager um = UserManager.get(context.getApplicationContext());
-        if (um.isSameProfileGroup(getEnforcementAdminUserId(enforcedAdmin), um.getUserHandle())) {
-            builder.setNeutralButton(R.string.learn_more, (d, i) ->
-                    showAdminPolicies(context, enforcedAdmin));
-        }
-    }
-
     private void initializeDialogViews(Context context, AlertDialogBuilder builder,
             @Nullable EnforcedAdmin enforcedAdmin, @UserIdInt int userId) {
-        ComponentName admin = enforcedAdmin != null ? enforcedAdmin.component : null;
+        ComponentName admin = null;
 
-        setAdminSupportIcon(context, builder, admin, userId);
+        if (enforcedAdmin != null) {
+            admin = enforcedAdmin.component;
+            if (admin == null) {
+                return;
+            }
+
+            mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, userId);
+        }
 
         if (isNotCurrentUserOrProfile(context, admin, userId)) {
             admin = null;
         }
-
+        setAdminSupportIcon(context, builder, admin, userId);
         setAdminSupportTitle(context, builder, mRestriction);
 
         if (enforcedAdmin != null) {
@@ -164,37 +167,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
 
     private void setAdminSupportTitle(Context context, AlertDialogBuilder builder,
             String restriction) {
-        if (isFinancedDevice(context)) {
-            builder.setTitle(R.string.disabled_by_policy_title_financed_device);
-            return;
-        }
-        if (restriction == null) {
-            builder.setTitle(R.string.disabled_by_policy_title);
-            return;
-        }
-        switch (restriction) {
-            case UserManager.DISALLOW_ADJUST_VOLUME:
-                builder.setTitle(R.string.disabled_by_policy_title_adjust_volume);
-                break;
-            case UserManager.DISALLOW_OUTGOING_CALLS:
-                builder.setTitle(R.string.disabled_by_policy_title_outgoing_calls);
-                break;
-            case UserManager.DISALLOW_SMS:
-                builder.setTitle(R.string.disabled_by_policy_title_sms);
-                break;
-            case DevicePolicyManager.POLICY_DISABLE_CAMERA:
-                builder.setTitle(R.string.disabled_by_policy_title_camera);
-                break;
-            case DevicePolicyManager.POLICY_DISABLE_SCREEN_CAPTURE:
-                builder.setTitle(R.string.disabled_by_policy_title_screen_capture);
-                break;
-            case DevicePolicyManager.POLICY_SUSPEND_PACKAGES:
-                builder.setTitle(R.string.disabled_by_policy_title_suspend_packages);
-                break;
-            default:
-                // Use general text if no specialized title applies
-                builder.setTitle(R.string.disabled_by_policy_title);
-        }
+        builder.setTitle(mActionDisabledByAdminController.getAdminSupportTitle(restriction));
     }
 
     private void setAdminSupportDetails(Context context, AlertDialogBuilder builder,
@@ -218,31 +191,12 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
                                 getEnforcementAdminUserId(enforcedAdmin));
             }
         }
-        if (supportMessage != null) {
-            builder.setMessage(supportMessage);
+        CharSequence supportContentString =
+                mActionDisabledByAdminController.getAdminSupportContentString(
+                        context, supportMessage);
+        if (supportContentString != null) {
+            builder.setMessage(supportContentString);
         }
-    }
-
-    private void showAdminPolicies(Context context, EnforcedAdmin enforcedAdmin) {
-        if (enforcedAdmin.component != null) {
-            LOG.w("DeviceAdminInfoActivity not supported yet");
-            Intent intent = new Intent();
-            intent.setClass(context, DeviceAdminDetailsActivity.class);
-            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,
-                    enforcedAdmin.component);
-            intent.putExtra(DeviceAdminDetailsActivity.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
-            // DeviceAdminInfoActivity class may need to run as managed profile.
-            context.startActivityAsUser(intent, enforcedAdmin.user);
-        } else {
-            // TODO(b/185183049): launch DeviceAdminSettingsActivity
-            LOG.w("DeviceAdminSettingsActivity not supported yet");
-        }
-    }
-
-    private boolean isFinancedDevice(Context context) {
-        DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
-        return dpm.isDeviceManaged() && dpm.getDeviceOwnerType(
-                dpm.getDeviceOwnerComponentOnAnyUser()) == DEVICE_OWNER_TYPE_FINANCED;
     }
 
     // Copied from com.android.settings.Utils
