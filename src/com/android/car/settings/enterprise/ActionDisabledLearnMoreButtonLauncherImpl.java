@@ -18,75 +18,57 @@ package com.android.car.settings.enterprise;
 import static java.util.Objects.requireNonNull;
 
 import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.UserHandle;
-import android.os.UserManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.ui.AlertDialogBuilder;
-import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.enterprise.ActionDisabledLearnMoreButtonLauncher;
 
 /**
  * Car's implementation of {@link ActionDisabledLearnMoreButtonLauncher}.
  */
+// TODO(b/186905050): add unit tests
 final class ActionDisabledLearnMoreButtonLauncherImpl
-        implements ActionDisabledLearnMoreButtonLauncher {
+        extends ActionDisabledLearnMoreButtonLauncher {
 
     private static final Logger LOG = new Logger(ActionDisabledLearnMoreButtonLauncherImpl.class);
 
-    // TODO(b/188836559): move logic below to superclass so this method is just
-    // setLearnMore(context, enforcedAdmin). Or even better: setLearnMore(builder, runnable)
-    @Override
-    public void setupLearnMoreButtonToShowAdminPolicies(Context context, Object alertDialogBuilder,
-            int enforcementAdminUserId, EnforcedAdmin enforcedAdmin) {
-        requireNonNull(context, "context cannot be null");
-        requireNonNull(alertDialogBuilder, "alertDialogBuilder cannot be null");
-        requireNonNull(enforcedAdmin, "enforcedAdmin cannot be null");
+    private final AlertDialogBuilder mBuilder;
 
-        // The "Learn more" button appears only if the restriction is enforced by an admin in the
-        // same profile group. Otherwise the admin package and its policies are not accessible to
-        // the current user.
-        UserManager um = UserManager.get(context);
-        if (um.isSameProfileGroup(enforcementAdminUserId, um.getUserHandle())) {
-            ((AlertDialogBuilder) alertDialogBuilder).setNeutralButton(R.string.learn_more,
-                    (d, i) -> showAdminPolicies(context, enforcedAdmin));
-        }
+    ActionDisabledLearnMoreButtonLauncherImpl(AlertDialogBuilder builder) {
+        mBuilder = requireNonNull(builder, "builder cannot be null");
     }
 
     @Override
-    public void setupLearnMoreButtonToLaunchHelpPage(Context context, Object alertDialogBuilder,
-            String url) {
+    public void setLearnMoreButton(Runnable action) {
+        requireNonNull(action, "action cannot be null");
+
+        mBuilder.setNeutralButton(R.string.learn_more, (dialog, which) -> action.run());
+    }
+
+    @Override
+    protected void launchShowAdminPolicies(Context context, UserHandle user, ComponentName admin) {
         requireNonNull(context, "context cannot be null");
-        requireNonNull(alertDialogBuilder, "alertDialogBuilder cannot be null");
-        requireNonNull(url, "url cannot be null");
+        requireNonNull(user, "user cannot be null");
+        requireNonNull(admin, "admin cannot be null");
 
-        context.startActivityAsUser(createLearnMoreIntent(url), UserHandle.of(context.getUserId()));
+        Intent intent = new Intent()
+                .setClass(context, DeviceAdminDetailsActivity.class)
+                .putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, admin)
+                .putExtra(DeviceAdminDetailsActivity.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
+        LOG.d("launching " + intent + " for user " + user);
+        context.startActivityAsUser(intent, user);
     }
 
-    // TODO(b/188836559): move logic to superclass ?
-    private static Intent createLearnMoreIntent(String url) {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse(url)).setFlags(
-                Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
-    }
+    @Override
+    protected void launchShowAdminSettings(Context context) {
+        requireNonNull(context, "context cannot be null");
 
-    // TODO(b/188836559): move logic to superclass
-    private void showAdminPolicies(Context context, EnforcedAdmin enforcedAdmin) {
-        if (enforcedAdmin.component != null) {
-            LOG.w("DeviceAdminInfoActivity not supported yet");
-            Intent intent = new Intent();
-            intent.setClass(context, DeviceAdminDetailsActivity.class);
-            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,
-                    enforcedAdmin.component);
-            intent.putExtra(DeviceAdminDetailsActivity.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
-            // DeviceAdminInfoActivity class may need to run as managed profile.
-            context.startActivityAsUser(intent, enforcedAdmin.user);
-        } else {
-            // TODO(b/185183049): launch DeviceAdminSettingsActivity
-            LOG.w("DeviceAdminSettingsActivity not supported yet");
-        }
+        // TODO(b/185182679): implement it
+        LOG.w("launchShowAdminSettings(): not implemented yet");
     }
 }

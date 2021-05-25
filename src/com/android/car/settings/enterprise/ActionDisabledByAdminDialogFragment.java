@@ -97,15 +97,15 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         EnforcedAdmin enforcedAdmin = RestrictedLockUtilsInternal
                 .checkIfRestrictionEnforced(context, mRestriction, mUserId);
 
-        mActionDisabledByAdminController = ActionDisabledByAdminControllerFactory.createInstance(
-                context.getSystemService(DevicePolicyManager.class),
-                new ActionDisabledLearnMoreButtonLauncherImpl(),
-                new DeviceAdminStringProviderImpl(context));
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
                 .setPositiveButton(R.string.okay, /* listener= */ null);
+        mActionDisabledByAdminController = ActionDisabledByAdminControllerFactory
+                .createInstance(context, new DeviceAdminStringProviderImpl(context));
+        mActionDisabledByAdminController.initialize(
+                new ActionDisabledLearnMoreButtonLauncherImpl(builder));
         if (enforcedAdmin != null) {
             mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, mUserId);
-            mActionDisabledByAdminController.setupLearnMoreButton(context, builder);
+            mActionDisabledByAdminController.setupLearnMoreButton(context);
         }
         initializeDialogViews(context, builder, enforcedAdmin,
                 getEnforcementAdminUserId(enforcedAdmin));
