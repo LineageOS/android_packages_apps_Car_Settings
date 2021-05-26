@@ -682,6 +682,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="date_time_set_time_title"/>
       <item type="string" name="date_time_set_timezone"/>
       <item type="string" name="date_time_set_timezone_title"/>
+      <item type="string" name="default_admin_support_msg"/>
       <item type="string" name="default_app_selected_app"/>
       <item type="string" name="default_applications"/>
       <item type="string" name="default_network_name_summary"/>
@@ -760,6 +761,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="hardware_info_summary"/>
       <item type="string" name="hardware_revision"/>
       <item type="string" name="help_uri_wifi_scanning_required"/>
+      <item type="string" name="help_url_action_disabled_by_it_admin"/>
       <item type="string" name="hide_system"/>
       <item type="string" name="hide_system_apps"/>
       <item type="string" name="hk_AboutSettingsActivity"/>
