@@ -311,8 +311,8 @@
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"リクエストされた権限はありません"</string>
     <string name="unused_apps" msgid="648471933781010395">"使用されていないアプリ"</string>
     <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="other">使用していないアプリ: <xliff:g id="COUNT_1">%d</xliff:g> 個</item>
-      <item quantity="one">使用していないアプリ: <xliff:g id="COUNT_0">%d</xliff:g> 個</item>
+      <item quantity="other">使用されていないアプリ: <xliff:g id="COUNT_1">%d</xliff:g> 個</item>
+      <item quantity="one">使用されていないアプリ: <xliff:g id="COUNT_0">%d</xliff:g> 個</item>
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"権限を削除して空き容量を増やす"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s（内部ストレージ）"</string>
