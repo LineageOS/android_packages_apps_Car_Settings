@@ -613,6 +613,10 @@
             android:name=".common.CarSettingActivities$TextToSpeechOutputActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.TTS_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_TextToSpeechOutputActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
