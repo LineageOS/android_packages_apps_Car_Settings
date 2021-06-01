@@ -75,7 +75,7 @@
     <string name="app_data_usage" msgid="3878609885080232877">"استخدام بيانات التطبيق"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"مقيَّد"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"تاريخ إعادة ضبط دورة الاستخدام"</string>
-    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"تاريخ كل شهر:"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"اليوم من كل شهر:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"ضبط"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"تحذير بشأن قيود البيانات"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"دورة استخدام التطبيقات للبيانات"</string>
@@ -696,7 +696,7 @@
     </plurals>
     <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
       <item quantity="zero">يجب أن تحتوي كلمة المرور على <xliff:g id="COUNT">%d</xliff:g> رقم عددي على الأقل.</item>
-      <item quantity="two">يجب أن تحتوي كلمة المرور على رقمين عددين (<xliff:g id="COUNT">%d</xliff:g>) على الأقل.</item>
+      <item quantity="two">يجب أن تحتوي كلمة المرور على رقمين عدديين (<xliff:g id="COUNT">%d</xliff:g>) على الأقل.</item>
       <item quantity="few">يجب أن تحتوي كلمة المرور على <xliff:g id="COUNT">%d</xliff:g> أرقام عددية على الأقل.</item>
       <item quantity="many">يجب أن تحتوي كلمة المرور على <xliff:g id="COUNT">%d</xliff:g> رقمًا عدديًا على الأقل.</item>
       <item quantity="other">يجب أن تحتوي كلمة المرور على <xliff:g id="COUNT">%d</xliff:g> رقم عددي على الأقل.</item>
