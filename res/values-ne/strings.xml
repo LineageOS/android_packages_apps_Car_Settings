@@ -125,7 +125,7 @@
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP एड्रेस"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"सबनेट मास्क"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
-    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ठेगानाहरू"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 एड्रेसहरू"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi का प्राथमिकताहरू"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi स्वतः अन गरियोस्"</string>
@@ -180,7 +180,7 @@
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"यो सवारी साधनको पुनः नामकरण गर्नुहोस्"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"यन्त्रको पुनः नामकरण गर्नुहोस्"</string>
     <string name="bluetooth_rename_button" msgid="2397892174725986383">"पुनः नामकरण गर्नुहोस्"</string>
-    <string name="bluetooth_available_devices" msgid="1854446368146061448">"उपलब्ध यन्त्रहरू"</string>
+    <string name="bluetooth_available_devices" msgid="1854446368146061448">"उपलब्ध डिभाइस"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"प्रोफाइलहरू"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"ब्लुटुथ सक्रिय गर्दै…"</string>
@@ -199,7 +199,7 @@
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s कनेक्ट गरिएको छ"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s डिस्कनेक्ट गरिएको छ"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लुटुथसँग जोडा बनाउने अनुरोध"</string>
-    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"जोडा बनाउनुहोस् र जडान गर्नुहोस्"</string>
+    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"जोडा बनाउनुहोस् र कनेक्ट गर्नुहोस्"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लुटुथसँग जोडा बनाउने कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN मा अक्षर वा प्रतीकहरू समाविष्ट हुन्छन्"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"जोडा मिलाउने कोड टाइप गर्नुहोस् त्यसपछि फिर्ता गर्नुहोस् वा प्रविष्टि गर्नुहोस् नामक बटन थिच्नुहोस्"</string>
@@ -360,8 +360,8 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"सहायक तथा अन्य एप हेर्न"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"प्रणालीसम्बन्धी सेटिङ तथा अन्य सेटिङ हेर्न"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अनुप्रयोगमाथिको पहुँच"</string>
-    <string name="show_system" msgid="4401355756969485287">"सिस्टम देखाउनुहोस्"</string>
-    <string name="hide_system" msgid="8845453295584638040">"सिस्टम लुकाउनुहोस्"</string>
+    <string name="show_system" msgid="4401355756969485287">"सिस्टम देखाइयोस्"</string>
+    <string name="hide_system" msgid="8845453295584638040">"सिस्टम लुकाइयोस्"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"प्रणालीका एप लुकाइयोस्"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"प्रणालीसम्बन्धी सेटिङ परिमार्जन गर्नुहोस्"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"यस अनुमतिले एपलाई प्रणालीको सेटिङ परिमार्जन गर्न दिन्छ।"</string>
@@ -682,7 +682,7 @@
     <string name="credentials_erased" msgid="2515915439705550379">"क्रिडेन्सियलको भण्डारण मेटियो।"</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"क्रिडेन्सियलको भण्डारण मेटाउन सकिएन।"</string>
     <string name="forget" msgid="3971143908183848527">"बिर्सनुहोस्"</string>
-    <string name="connect" msgid="5861699594602380150">"जडान गर्नुहोस्"</string>
+    <string name="connect" msgid="5861699594602380150">"कनेक्ट गर्नुहोस्"</string>
     <string name="disconnect" msgid="6140789953324820336">"विच्छेद गर्नुहोस्"</string>
     <string name="delete_button" msgid="5840500432614610850">"मेट्नुहोस्"</string>
     <string name="remove_button" msgid="6664656962868194178">"हटाउनुहोस्"</string>
