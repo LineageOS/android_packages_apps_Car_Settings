@@ -51,7 +51,7 @@ import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.baselayout.InsetsChangedListener;
 import com.android.car.ui.core.CarUi;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.NavButtonMode;
 import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
@@ -375,7 +375,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                         insets.getLeft(), insets.getTop(), insets.getRight(),
                         insets.getBottom()), /* hasToolbar= */ true);
         if (mIsSinglePane) {
-            mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
+            mGlobalToolbar.setNavButtonMode(NavButtonMode.BACK);
             findViewById(R.id.top_level_menu_container).setVisibility(View.GONE);
             findViewById(R.id.top_level_divider).setVisibility(View.GONE);
             return;
@@ -395,7 +395,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         List<MenuItem> items = Collections.singletonList(searchButton);
 
         mGlobalToolbar.setTitle(R.string.settings_label);
-        mGlobalToolbar.setState(Toolbar.State.HOME);
+        mGlobalToolbar.setNavButtonMode(NavButtonMode.DISABLED);
         mGlobalToolbar.setLogo(R.drawable.ic_launcher_settings);
         mGlobalToolbar.setMenuItems(items);
     }
@@ -405,10 +405,9 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             return;
         }
         if (getSupportFragmentManager().getBackStackEntryCount() > 1 || !isTaskRoot()) {
-            mMiniToolbar.setState(Toolbar.State.SUBPAGE);
-            mMiniToolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
+            mMiniToolbar.setNavButtonMode(NavButtonMode.BACK);
         } else {
-            mMiniToolbar.setState(Toolbar.State.HOME);
+            mMiniToolbar.setNavButtonMode(NavButtonMode.DISABLED);
         }
     }
 
