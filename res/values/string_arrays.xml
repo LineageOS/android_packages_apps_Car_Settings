@@ -54,4 +54,14 @@
         <item>@string/wifi_ap_choose_auto</item>
         <item>@string/wifi_ap_choose_2G</item>
     </string-array>
+
+    <string-array translatable="false" name="recent_apps_ignored_packages">
+        <item>android</item>
+        <item>com.android.phone</item>
+        <item>com.android.settings</item>
+        <item>com.android.car.settings</item>
+        <item>com.android.systemui</item>
+        <item>com.android.providers.calendar</item>
+        <item>com.android.providers.media</item>
+    </string-array>
 </resources>
