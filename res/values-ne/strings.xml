@@ -321,7 +321,7 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"कुनै डिफल्ट मान सेट गरिएको छैन।"</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"तपाईंले केही कारवाहीका लागि यो एप पूर्वनिर्धारति रूपमा छनौट गर्नुभएको छ।"</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"डिफल्ट मानहरू हटाउनुहोस्"</string>
-    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"समर्थित लिंकहरू खोल्नुहोस्"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"खोल्न मिल्ने लिंक खोल्न सकियोस्"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"यो एपमा खोल्नुहोस्"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"प्रत्येक पटक सोधियोस्"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"यो एपमा नखोल्नुहोस्"</string>
@@ -423,21 +423,21 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"मेटाउँदै"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"कृपया प्रतीक्षा गर्नुहोला..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"मिति र समय"</string>
-    <string name="date_and_time_settings_summary" msgid="7669856855390804666">"मिति, समय, समय क्षेत्र र प्रारूपहरू सेट गर्नुहोस्"</string>
+    <string name="date_and_time_settings_summary" msgid="7669856855390804666">"मिति, समय, प्रामाणिक समय र प्रारूपहरू सेट गर्नुहोस्"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"स्वचालित मिति र समय"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"नेटवर्कद्वारा उपलब्ध गराइएको समय प्रयोग गर्नुहोस्"</string>
-    <string name="zone_auto" msgid="3701878581920206160">"स्वचालित समय क्षेत्र"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"नेटवर्कले उपलव्ध गराएको समय क्षेत्र प्रयोग गर्नुहोस्"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"स्वचालित प्रामाणिक समय"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"नेटवर्कले उपलव्ध गराएको प्रामाणिक समय प्रयोग गर्नुहोस्"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"२४ घन्टे ढाँचा"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"२४-घन्टे ढाँचा प्रयोग गर्नुहोस्"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"समय"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"समय सेट गर्नुहोस्"</string>
-    <string name="date_time_set_timezone_title" msgid="3001779256157093425">"समय क्षेत्र"</string>
-    <string name="date_time_set_timezone" msgid="4759353576185916944">"समय क्षेत्र चयन गर्नुहोस्"</string>
+    <string name="date_time_set_timezone_title" msgid="3001779256157093425">"प्रामाणिक समय"</string>
+    <string name="date_time_set_timezone" msgid="4759353576185916944">"प्रामाणिक समय चयन गर्नुहोस्"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"मिति"</string>
     <string name="date_time_set_date" msgid="2537494485643283230">"मिति सेट गर्नुहोस्"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"वर्णानुक्रममा क्रमबद्ध गर्नुहोस्"</string>
-    <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"समय क्षेत्रका आधारमा क्रमबद्ध गर्नुहोस्"</string>
+    <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"प्रामाणिक समयका आधारमा क्रमबद्ध गर्नुहोस्"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"मिति"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"समय"</string>
     <string name="user_admin" msgid="1535484812908584809">"प्रशासक"</string>

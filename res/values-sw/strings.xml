@@ -68,13 +68,13 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Imesasishwa na <xliff:g id="ID_1">^1</xliff:g> sasa hivi"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Imesasishwa sasa hivi"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Angalia mpango wa data"</string>
-    <string name="app_data_usage" msgid="3878609885080232877">"Matumizi ya data ya programu"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Programu zinavyotumia data"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"imedhibitiwa"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Badilisha tarehe ya kipindi cha kutumia data"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Tarehe ya kila mwezi:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Weka"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Kikomo na onyo kuhusu matumizi ya data"</string>
-    <string name="app_usage_cycle" msgid="8445927080245880296">"Awamu ya matumizi ya data ya programu"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Awamu ya programu zinavyotumia data"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Weka onyo la matumizi ya data"</string>
     <string name="data_warning" msgid="116776633806885370">"Onyo kuhusu matumizi ya data"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Weka kikomo cha data"</string>
@@ -291,7 +291,7 @@
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Hakuna ruhusa zilizoombwa"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s katika hifadhi ya mfumo"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Matumizi ya data"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Matumizi ya data ya programu"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Programu inavyotumia data"</string>
     <string name="computing_size" msgid="5791407621793083965">"Inahesabu…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other">Ruhusa <xliff:g id="COUNT_1">%d</xliff:g> za ziada</item>
