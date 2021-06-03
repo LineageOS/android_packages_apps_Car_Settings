@@ -33,8 +33,8 @@
     </plurals>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktibo / SIM txartela"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktibo / SIM txartela"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktibo / Deskargatutako SIM txartela"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inaktibo / Deskargatutako SIM txartela"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktibo / Deskargatutako SIMa"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inaktibo / Deskargatutako SIMa"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Gehitu beste batzuk"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datu-konexioa"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Atzitu datuak datu-konexioaren bidez"</string>
@@ -588,7 +588,7 @@
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Pantailaren blokeoa"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Bat ere ez"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"Eredua"</string>
-    <string name="security_lock_pin" msgid="4891899974369503200">"PIN kodea"</string>
+    <string name="security_lock_pin" msgid="4891899974369503200">"PINa"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Pasahitza"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Aukeratu blokeo mota"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Blokeatzeko aukerak"</string>
@@ -620,7 +620,7 @@
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Edonork atzitu ahalko du zure kontua"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"Profilaren blokeoa"</string>
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Konfiguratu desblokeo automatikoa"</string>
-    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Idatzi PIN kodea"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Idatzi PINa"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Idatzi pasahitza"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Babestuta egoteko, ezarri PIN bat"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Idatzi berriro PINa"</string>
@@ -628,7 +628,7 @@
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kodeak ez du balio: gutxienez lau digitu izan behar ditu."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINak ez datoz bat"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Errore bat gertatu da PINa gordetzean"</string>
-    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN kodea ez da zuzena"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PINa ez da zuzena"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Pasahitza ez da zuzena"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Babestuta egoteko, ezarri pasahitz bat"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Idatzi berriro pasahitza"</string>
