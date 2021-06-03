@@ -25,6 +25,7 @@ import android.content.pm.PackageManager;
 import android.os.UserManager;
 
 import androidx.annotation.CallSuper;
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
@@ -54,6 +55,15 @@ public abstract class BluetoothPreferenceController<V extends Preference> extend
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mBluetoothManager = BluetoothUtils.getLocalBtManager(context);
         mUserManager = UserManager.get(context);
+    }
+
+    @VisibleForTesting
+    BluetoothPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            LocalBluetoothManager localBluetoothManager, UserManager userManager) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mBluetoothManager = localBluetoothManager;
+        mUserManager = userManager;
     }
 
     /** Returns a {@link UserManager} retrieved with the controller context. **/
