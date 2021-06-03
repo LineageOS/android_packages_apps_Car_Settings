@@ -23,6 +23,7 @@
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_bluetooth_name"
         android:title="@string/bluetooth_name"
+        android:icon="@drawable/ic_car"
         settings:controller="com.android.car.settings.bluetooth.BluetoothNamePreferenceController"
         settings:showChevron="false"/>
     <com.android.car.settings.common.SettingsPreferenceCategory
