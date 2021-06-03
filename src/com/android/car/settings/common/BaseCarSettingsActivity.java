@@ -139,11 +139,6 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         populateMetaData();
         setContentView(R.layout.car_setting_activity);
         mFragmentContainer = findViewById(R.id.fragment_container);
-        if (mUxRestrictionsHelper == null) {
-            mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
-                    this);
-        }
-        mUxRestrictionsHelper.start();
 
         // We do this so that the insets are not automatically sent to the fragments.
         // The fragments have their own insets handled by the installBaseLayoutAround() method.
@@ -159,7 +154,8 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         } else if (!mIsSinglePane) {
             updateMiniToolbarState();
         }
-
+        mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
+                this);
         setUpFocusChangeListener(true);
     }
 
@@ -173,7 +169,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     public void onDestroy() {
         setUpFocusChangeListener(false);
         removeGlobalLayoutListener();
-        mUxRestrictionsHelper.stop();
+        mUxRestrictionsHelper.destroy();
         mUxRestrictionsHelper = null;
         super.onDestroy();
     }
@@ -338,6 +334,9 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     }
 
     private void updateBlockingView(@Nullable Fragment currentFragment) {
+        if (mRestrictedMessage == null) {
+            return;
+        }
         if (currentFragment instanceof BaseFragment
                 && !((BaseFragment) currentFragment).canBeShown(mCarUxRestrictions)) {
             mRestrictedMessage.setVisibility(View.VISIBLE);
