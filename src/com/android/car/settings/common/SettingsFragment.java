@@ -50,7 +50,7 @@ import com.android.car.ui.recyclerview.CarUiRecyclerView;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.NavButtonMode;
 import com.android.car.ui.toolbar.ToolbarController;
-import com.android.car.ui.utils.CarUiUtils;
+import com.android.car.ui.utils.ViewUtils;
 import com.android.settingslib.search.Indexable;
 
 import java.util.ArrayList;
@@ -147,7 +147,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     protected void enableRotaryScroll() {
         CarUiRecyclerView recyclerView = getView().findViewById(R.id.settings_recycler_view);
         if (recyclerView != null) {
-            CarUiUtils.setRotaryScrollEnabled(recyclerView, /* isVertical= */ true);
+            ViewUtils.setRotaryScrollEnabled(recyclerView, /* isVertical= */ true);
         }
     }
 
