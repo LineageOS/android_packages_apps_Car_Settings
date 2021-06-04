@@ -16,14 +16,11 @@
 
 package com.android.car.settings.wifi;
 
-import static android.car.hardware.power.PowerComponent.WIFI;
-
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.hardware.power.CarPowerPolicy;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
@@ -97,8 +94,9 @@ public class WifiStateSwitchPreferenceControllerTest {
     @Test
     public void onPolicyChanged_enabled_setsSwitchEnabled() {
         initializePreference(/* checked= */ false, /* enabled= */ false);
-        CarPowerPolicy policy = new CarPowerPolicy("wifi_on", new int[]{WIFI}, new int[0]);
-        mPreferenceController.mPolicyListener.onPolicyChanged(policy);
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
 
         assertThat(mSwitchPreference.isEnabled()).isTrue();
     }
@@ -106,8 +104,9 @@ public class WifiStateSwitchPreferenceControllerTest {
     @Test
     public void onPolicyChanged_disabled_setsSwitchDisabled() {
         initializePreference(/* checked= */ false, /* enabled= */ true);
-        CarPowerPolicy policy = new CarPowerPolicy("wifi_off", new int[0], new int[]{WIFI});
-        mPreferenceController.mPolicyListener.onPolicyChanged(policy);
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ false);
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
     }
