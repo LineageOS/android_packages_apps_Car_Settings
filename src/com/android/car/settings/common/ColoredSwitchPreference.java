@@ -59,8 +59,7 @@ public class ColoredSwitchPreference extends CarUiSwitchPreference {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        TypedArray a = context.obtainStyledAttributes(attrs,
-                R.styleable.ColoredSwitchPreference);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ColoredSwitchPreference);
         mDisabledColor = a.getColorStateList(
                 R.styleable.ColoredSwitchPreference_disabledTitleColor);
         if (mDisabledColor == null) {
