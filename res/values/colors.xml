@@ -37,4 +37,12 @@
 
     <!-- Default background color for injected top-level icons -->
     <color name="top_level_injected_default_background">#4285F4</color>
+
+    <!-- Bluetooth -->
+    <color name="bluetooth_bonded_device_off_background_color">#626262</color>
+    <color name="bluetooth_bonded_device_icon_color_checked">@android:color/black</color>
+    <color name="bluetooth_bonded_device_icon_color_unchecked">@android:color/white</color>
+    <color name="bluetooth_disabled_device_background_color">@android:color/black</color>
+    <color name="bluetooth_disabled_device_icon_color">#75FFFFFF</color>
+    <color name="bluetooth_device_icon_color">@android:color/white</color>
 </resources>

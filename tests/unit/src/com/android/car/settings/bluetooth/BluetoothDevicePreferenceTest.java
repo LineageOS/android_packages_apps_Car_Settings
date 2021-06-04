@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,10 @@ import android.content.Context;
 import android.os.SystemProperties;
 
 import androidx.preference.Preference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.common.MultiActionPreference;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 import org.junit.Before;
@@ -38,28 +41,30 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-/** Unit test for {@link BluetoothDevicePreference}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class BluetoothDevicePreferenceTest {
+
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private BluetoothDevicePreference mPreference;
 
     @Mock
     private CachedBluetoothDevice mCachedDevice;
-    private Context mContext;
-    private BluetoothDevicePreference mPreference;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
         mPreference = new BluetoothDevicePreference(mContext, mCachedDevice);
     }
 
     @Test
     public void actionIsHiddenByDefault() {
-        assertThat(mPreference.isSecondaryActionVisible()).isFalse();
+        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
+                .isVisible()).isFalse();
+        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
+                .isVisible()).isFalse();
+        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
+                .isVisible()).isFalse();
     }
 
     @Test
@@ -119,7 +124,9 @@ public class BluetoothDevicePreferenceTest {
 
     @Test
     public void onAttached_deviceNameNotHumanReadable_setsHidden() {
+        SystemProperties.set("persist.bluetooth.showdeviceswithoutnames", Boolean.FALSE.toString());
         when(mCachedDevice.hasHumanReadableName()).thenReturn(false);
+        mPreference = new BluetoothDevicePreference(mContext, mCachedDevice);
 
         mPreference.onAttached();
 

@@ -55,14 +55,14 @@ public class SinglePaneSettingsFragmentTest
 
         ToolbarController toolbar = mActivity.getToolbar();
 
-        assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.HOME);
+        assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(
+                Toolbar.NavButtonMode.DISABLED);
     }
 
     @Test
     public void onActivityCreated_hasBackArrowIconIfNotRoot() {
         ToolbarController toolbar = mActivity.getToolbar();
 
-        assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.SUBPAGE);
         assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(
                 Toolbar.NavButtonMode.BACK);
     }
