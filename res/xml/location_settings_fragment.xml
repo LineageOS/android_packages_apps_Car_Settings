@@ -20,7 +20,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/location_settings_title"
     android:key="@string/psk_location_settings">
-    <com.android.car.settings.common.ColoredSwitchPreference
+    <com.android.car.settings.common.ClickableWhileDisabledSwitchPreference
         android:key="@string/pk_location_state_switch"
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.location.LocationStateSwitchPreferenceController"
