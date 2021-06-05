@@ -32,7 +32,7 @@ import androidx.preference.SwitchPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.ColoredSwitchPreference;
+import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
@@ -70,7 +70,7 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mSwitchPreference = new ColoredSwitchPreference(mContext);
+        mSwitchPreference = new ClickableWhileDisabledSwitchPreference(mContext);
         mPreferenceController = new BluetoothStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
@@ -217,6 +217,28 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         when(mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)).thenReturn(true);
 
         mPreferenceController.handleStateChanged(BluetoothAdapter.STATE_OFF);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void onPolicyChanged_enabled_setsSwitchEnabled() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mSwitchPreference.setEnabled(false);
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
+
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void onPolicyChanged_disabled_setsSwitchDisabled() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mSwitchPreference.setEnabled(true);
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ false);
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
     }
