@@ -48,9 +48,9 @@ import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.recyclerview.CarUiRecyclerView;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.NavButtonMode;
 import com.android.car.ui.toolbar.ToolbarController;
-import com.android.car.ui.utils.CarUiUtils;
+import com.android.car.ui.utils.ViewUtils;
 import com.android.settingslib.search.Indexable;
 
 import java.util.ArrayList;
@@ -147,7 +147,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     protected void enableRotaryScroll() {
         CarUiRecyclerView recyclerView = getView().findViewById(R.id.settings_recycler_view);
         if (recyclerView != null) {
-            CarUiUtils.setRotaryScrollEnabled(recyclerView, /* isVertical= */ true);
+            ViewUtils.setRotaryScrollEnabled(recyclerView, /* isVertical= */ true);
         }
     }
 
@@ -228,8 +228,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         toolbar.setMenuItems(items);
         toolbar.setLogo(null);
         if (getActivity().getIntent().getBooleanExtra(META_DATA_KEY_SINGLE_PANE, false)) {
-            toolbar.setState(Toolbar.State.SUBPAGE);
-            toolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
+            toolbar.setNavButtonMode(NavButtonMode.BACK);
         }
     }
 
