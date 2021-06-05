@@ -137,7 +137,8 @@ public class DualPaneBaseCarSettingsActivityTest
         });
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
-        assertThat(toolbar.getState()).isEqualTo(Toolbar.State.HOME);
+        assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(
+                Toolbar.NavButtonMode.DISABLED);
 
         mActivityTestRule.runOnUiThread(() -> {
             BaseTestSettingsFragment fragment2 = new BaseTestSettingsFragment();
@@ -145,13 +146,13 @@ public class DualPaneBaseCarSettingsActivityTest
         });
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
-        assertThat(toolbar.getState()).isEqualTo(Toolbar.State.SUBPAGE);
         assertThat(toolbar.getNavButtonMode()).isEqualTo(Toolbar.NavButtonMode.BACK);
 
         mActivityTestRule.runOnUiThread(() -> mActivity.goBack());
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
-        assertThat(toolbar.getState()).isEqualTo(Toolbar.State.HOME);
+        assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(
+                Toolbar.NavButtonMode.DISABLED);
     }
 
     @Test
