@@ -34,7 +34,7 @@ import androidx.preference.SwitchPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.ColoredSwitchPreference;
+import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
@@ -70,7 +70,7 @@ public class LocationStateSwitchPreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mUserHandle = UserHandle.of(UserHandle.myUserId());
 
-        mSwitchPreference = new ColoredSwitchPreference(mContext);
+        mSwitchPreference = new ClickableWhileDisabledSwitchPreference(mContext);
         mPreferenceController = new LocationStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
@@ -78,7 +78,7 @@ public class LocationStateSwitchPreferenceControllerTest {
 
     @Test
     public void onIntentReceived_updateUi() {
-        initializePreference(/* enabled= */ false);
+        initializePreference(/* checked= */ false, /* enabled= */ true);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
         ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
@@ -93,7 +93,7 @@ public class LocationStateSwitchPreferenceControllerTest {
 
     @Test
     public void onPreferenceClicked_locationDisabled_shouldEnable() {
-        initializePreference(/* enabled= */ false);
+        initializePreference(/* checked= */ false, /* enabled= */ true);
 
         mSwitchPreference.performClick();
 
@@ -103,7 +103,7 @@ public class LocationStateSwitchPreferenceControllerTest {
 
     @Test
     public void onPreferenceClicked_locationEnabled_shouldDisable() {
-        initializePreference(/* enabled= */ true);
+        initializePreference(/* checked= */ true, /* enabled= */ true);
 
         mSwitchPreference.performClick();
 
@@ -111,8 +111,29 @@ public class LocationStateSwitchPreferenceControllerTest {
         assertThat(mLocationManager.isLocationEnabledForUser(mUserHandle)).isFalse();
     }
 
-    private void initializePreference(boolean enabled) {
-        mLocationManager.setLocationEnabledForUser(enabled, mUserHandle);
-        mSwitchPreference.setChecked(enabled);
+    @Test
+    public void onPolicyChanged_enabled_setsSwitchEnabled() {
+        initializePreference(/* checked= */ false, /* enabled= */ false);
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
+
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void onPolicyChanged_disabled_setsSwitchDisabled() {
+        initializePreference(/* checked= */ false, /* enabled= */ true);
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ false);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+    }
+
+    private void initializePreference(boolean checked, boolean enabled) {
+        mLocationManager.setLocationEnabledForUser(checked, mUserHandle);
+        mSwitchPreference.setChecked(checked);
+        mSwitchPreference.setEnabled(enabled);
     }
 }

@@ -51,7 +51,7 @@ import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.baselayout.InsetsChangedListener;
 import com.android.car.ui.core.CarUi;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.NavButtonMode;
 import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
@@ -139,11 +139,6 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         populateMetaData();
         setContentView(R.layout.car_setting_activity);
         mFragmentContainer = findViewById(R.id.fragment_container);
-        if (mUxRestrictionsHelper == null) {
-            mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
-                    this);
-        }
-        mUxRestrictionsHelper.start();
 
         // We do this so that the insets are not automatically sent to the fragments.
         // The fragments have their own insets handled by the installBaseLayoutAround() method.
@@ -159,7 +154,8 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         } else if (!mIsSinglePane) {
             updateMiniToolbarState();
         }
-
+        mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
+                this);
         setUpFocusChangeListener(true);
     }
 
@@ -173,7 +169,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     public void onDestroy() {
         setUpFocusChangeListener(false);
         removeGlobalLayoutListener();
-        mUxRestrictionsHelper.stop();
+        mUxRestrictionsHelper.destroy();
         mUxRestrictionsHelper = null;
         super.onDestroy();
     }
@@ -338,6 +334,9 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     }
 
     private void updateBlockingView(@Nullable Fragment currentFragment) {
+        if (mRestrictedMessage == null) {
+            return;
+        }
         if (currentFragment instanceof BaseFragment
                 && !((BaseFragment) currentFragment).canBeShown(mCarUxRestrictions)) {
             mRestrictedMessage.setVisibility(View.VISIBLE);
@@ -375,7 +374,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                         insets.getLeft(), insets.getTop(), insets.getRight(),
                         insets.getBottom()), /* hasToolbar= */ true);
         if (mIsSinglePane) {
-            mGlobalToolbar.setState(Toolbar.State.SUBPAGE);
+            mGlobalToolbar.setNavButtonMode(NavButtonMode.BACK);
             findViewById(R.id.top_level_menu_container).setVisibility(View.GONE);
             findViewById(R.id.top_level_divider).setVisibility(View.GONE);
             return;
@@ -395,7 +394,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         List<MenuItem> items = Collections.singletonList(searchButton);
 
         mGlobalToolbar.setTitle(R.string.settings_label);
-        mGlobalToolbar.setState(Toolbar.State.HOME);
+        mGlobalToolbar.setNavButtonMode(NavButtonMode.DISABLED);
         mGlobalToolbar.setLogo(R.drawable.ic_launcher_settings);
         mGlobalToolbar.setMenuItems(items);
     }
@@ -405,10 +404,9 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             return;
         }
         if (getSupportFragmentManager().getBackStackEntryCount() > 1 || !isTaskRoot()) {
-            mMiniToolbar.setState(Toolbar.State.SUBPAGE);
-            mMiniToolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
+            mMiniToolbar.setNavButtonMode(NavButtonMode.BACK);
         } else {
-            mMiniToolbar.setState(Toolbar.State.HOME);
+            mMiniToolbar.setNavButtonMode(NavButtonMode.DISABLED);
         }
     }
 

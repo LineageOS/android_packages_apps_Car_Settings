@@ -42,7 +42,7 @@ import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.profiles.ProfileIconProvider;
 import com.android.car.settings.profiles.ProfileSwitcherActivity;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.NavButtonMode;
 
 import java.util.Arrays;
 import java.util.List;
@@ -101,18 +101,13 @@ public class QuickSettingFragment extends BaseFragment {
 
 
     @Override
-    protected Toolbar.NavButtonMode getToolbarNavButtonStyle() {
-        return Toolbar.NavButtonMode.CLOSE;
-    }
-
-    @Override
-    protected Toolbar.State getToolbarState() {
+    protected NavButtonMode getToolbarNavButtonStyle() {
         if (getContext().getResources().getBoolean(R.bool.config_is_quick_settings_root)
                 && !getContext().getResources()
                 .getBoolean(R.bool.config_show_settings_root_exit_icon)) {
-            return Toolbar.State.HOME;
+            return NavButtonMode.DISABLED;
         } else {
-            return Toolbar.State.SUBPAGE;
+            return NavButtonMode.CLOSE;
         }
     }
 
