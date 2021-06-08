@@ -532,6 +532,7 @@
             android:exported="true">
             <intent-filter android:priority="100">
                 <action android:name="android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS" />
+                <action android:name="android.settings.NOTIFICATION_LISTENER_DETAIL_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
