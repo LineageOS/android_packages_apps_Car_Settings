@@ -326,10 +326,10 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Remarque : Après un redémarrage, vous ne pouvez pas lancer cette application tant que vous n\'avez pas déverrouillé votre véhicule."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistance et saisie vocale"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Application d\'assistance"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"Utiliser le texte affiché à l\'écran"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Autoriser l\'application d\'assistance à accéder au contenu affiché à l\'écran sous forme de texte"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"Utiliser le texte de l\'écran"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Autoriser l\'appli d\'assistance à accéder au contenu textuel de l\'écran"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Utiliser une capture d\'écran"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Autoriser l\'application d\'assistance à accéder au contenu affiché à l\'écran sous forme d\'image"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Autoriser l\'appli d\'assistance à accéder à une image de l\'écran"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Saisie vocale"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Service de saisie automatique"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Aucune"</string>
@@ -367,7 +367,7 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cette autorisation permet à une application de modifier les paramètres système."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accès aux notifications"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Autoriser <xliff:g id="SERVICE">%1$s</xliff:g> à accéder aux notifications ?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> pourra lire toutes les notifications, y compris des informations personnelles, telles que le nom des contacts et le texte des messages que vous recevez. Il pourra également fermer des notifications ou déclencher les boutons d\'action que celles-ci contiennent. \n\nL\'application pourra aussi activer ou désactiver le mode Ne pas déranger, et modifier les paramètres associés."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"L\'appli <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> pourra lire toutes les notifications, y compris des infos personnelles telles que le nom des contacts et le texte des messages que vous recevez. Elle pourra aussi fermer des notifications ou agir sur les boutons y figurant. \n\nL\'appli pourra aussi activer ou désactiver le mode Ne pas déranger, et modifier les paramètres associés."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si vous désactivez l\'accès aux notifications pour <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, l\'accès au mode Ne pas déranger peut également être désactivé."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Désactiver"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
@@ -701,7 +701,7 @@
     <string name="default_search_query" msgid="3137420627428857068">"Rechercher"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant et voix"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Appli d\'assistant numérique"</string>
-    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Utiliser le texte affiché à l\'écran"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Utiliser le texte de l\'écran"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Autoriser l\'Assistant à accéder au contenu affiché à l\'écran"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Utiliser une capture d\'écran"</string>
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Autoriser l\'Assistant à accéder aux captures d\'écran"</string>
