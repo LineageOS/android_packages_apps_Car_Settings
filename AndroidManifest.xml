@@ -205,11 +205,28 @@
         </activity>
 
         <activity
-            android:name=".common.CarSettingActivities$AppsAndNotificationsActivity"
+            android:name=".common.CarSettingActivities$AppsActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.APPLICATION_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
-                       android:value="@string/hk_AppsAndNotificationsActivity" />
+                       android:value="@string/hk_AppsActivity" />
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name=".common.CarSettingActivities$NotificationsActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.NOTIFICATION_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
+                       android:value="@string/hk_NotificationsActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
@@ -378,7 +395,6 @@
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
             <intent-filter android:priority="1">
-                <action android:name="android.settings.APPLICATION_SETTINGS" />
                 <action android:name="android.settings.MANAGE_APPLICATIONS_SETTINGS" />
                 <action android:name="android.settings.MANAGE_ALL_APPLICATIONS_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -475,7 +491,6 @@
                       -d "package:<package name>" -->
             <intent-filter android:priority="100">
                 <action android:name="android.settings.APPLICATION_DETAILS_SETTINGS" />
-                <action android:name="android.settings.NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.CHANNEL_NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.APP_NOTIFICATION_SETTINGS" />
                 <action android:name="android.intent.action.AUTO_REVOKE_PERMISSIONS" />
@@ -488,7 +503,6 @@
                       -e "android.provider.extra.APP_PACKAGE" "<package name>" -->
             <intent-filter android:priority="100">
                 <action android:name="android.settings.APPLICATION_DETAILS_SETTINGS" />
-                <action android:name="android.settings.NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.CHANNEL_NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.APP_NOTIFICATION_SETTINGS" />
                 <action android:name="android.intent.action.AUTO_REVOKE_PERMISSIONS" />
