@@ -30,8 +30,8 @@
     <string name="pk_bluetooth_settings_entry" translatable="false">bluetooth_settings_entry
     </string>
     <string name="pk_location_settings_entry" translatable="false">location_settings_entry</string>
-    <string name="pk_apps_and_notifications_settings_entry" translatable="false">
-        apps_and_notifications_settings_entry
+    <string name="pk_notifications_settings_entry" translatable="false">
+        notifications_settings_entry
     </string>
     <string name="pk_date_time_settings_entry" translatable="false">date_time_settings_entry
     </string>
@@ -41,6 +41,9 @@
     <string name="pk_privacy_settings_entry" translatable="false">privacy_settings_entry</string>
     <string name="pk_storage_settings_entry" translatable="false">storage_settings_entry</string>
     <string name="pk_security_settings_entry" translatable="false">security_settings_entry</string>
+    <string name="pk_apps_settings_entry" translatable="false">
+        apps_settings_entry
+    </string>
     <string name="pk_assistant_and_voice_settings_entry" translatable="false">
         assistant_and_voice_settings_entry
     </string>
@@ -134,7 +137,15 @@
         bluetooth_device_action_buttons
     </string>
 
-    <!-- Applications and Notifications Settings -->
+    <!-- Notifications Settings -->
+    <string name="pk_notifications_settings_recently_sent" translatable="false">
+        notifications_settings_recently_sent
+    </string>
+    <string name="pk_notifications_settings_all_apps" translatable="false">
+        notifications_settings_all_apps
+    </string>
+
+    <!-- Applications Settings -->
     <string name="pk_applications_settings_screen_entry" translatable="false">
         applications_settings_screen_entry
     </string>
