@@ -23,33 +23,40 @@ import static org.mockito.Mockito.when;
 
 import android.app.INotificationManager;
 import android.app.NotificationChannel;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class NotificationsPreferenceControllerTest {
     private static final String PKG_NAME = "package.name";
     private static final int UID = 1001010;
-    private Context mContext;
+
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private CarUxRestrictions mCarUxRestrictions;
     private NotificationsPreferenceController mController;
-    private PreferenceControllerTestHelper<NotificationsPreferenceController>
-            mPreferenceControllerHelper;
     private TwoStatePreference mTwoStatePreference;
+
+    @Mock
+    private FragmentController mFragmentController;
     @Mock
     private INotificationManager mMockManager;
     @Mock
@@ -58,13 +65,16 @@ public class NotificationsPreferenceControllerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mContext = RuntimeEnvironment.application;
         mTwoStatePreference = new SwitchPreference(mContext);
 
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                NotificationsPreferenceController.class, mTwoStatePreference);
-        mController = mPreferenceControllerHelper.getController();
+        mController = new NotificationsPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mController, mTwoStatePreference);
+
         mController.mNotificationManager = mMockManager;
 
         PackageInfo packageInfo = new PackageInfo();
@@ -81,7 +91,7 @@ public class NotificationsPreferenceControllerTest {
     public void onCreate_notificationEnabled_isChecked() throws Exception {
         when(mMockManager.areNotificationsEnabledForPackage(PKG_NAME, UID)).thenReturn(true);
 
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.onCreate(mLifecycleOwner);
 
         assertThat(mTwoStatePreference.isChecked()).isTrue();
     }
@@ -90,7 +100,7 @@ public class NotificationsPreferenceControllerTest {
     public void onCreate_notificationDisabled_isNotChecked() throws Exception {
         when(mMockManager.areNotificationsEnabledForPackage(PKG_NAME, UID)).thenReturn(false);
 
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.onCreate(mLifecycleOwner);
 
         assertThat(mTwoStatePreference.isChecked()).isFalse();
     }

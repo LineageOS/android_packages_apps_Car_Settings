@@ -97,6 +97,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="top_level_location_icon"/>
       <item type="color" name="top_level_network_and_internet_background"/>
       <item type="color" name="top_level_network_and_internet_icon"/>
+      <item type="color" name="top_level_notifications_background"/>
+      <item type="color" name="top_level_notifications_icon"/>
       <item type="color" name="top_level_privacy_background"/>
       <item type="color" name="top_level_privacy_icon"/>
       <item type="color" name="top_level_profiles_and_accounts_background"/>
@@ -315,6 +317,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_top_level_display"/>
       <item type="drawable" name="ic_top_level_location"/>
       <item type="drawable" name="ic_top_level_network_and_internet"/>
+      <item type="drawable" name="ic_top_level_notifications"/>
       <item type="drawable" name="ic_top_level_privacy"/>
       <item type="drawable" name="ic_top_level_profiles_and_accounts"/>
       <item type="drawable" name="ic_top_level_security"/>
@@ -463,6 +466,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="integer" name="millisecond_app_data_update_interval"/>
       <item type="integer" name="millisecond_max_app_load_wait_interval"/>
       <item type="integer" name="quick_setting_column_count"/>
+      <item type="integer" name="recent_notifications_apps_list_count"/>
+      <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
       <item type="layout" name="action_buttons_preference"/>
       <item type="layout" name="bluetooth_pin_confirm"/>
@@ -804,7 +809,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="hk_AddWifiActivity"/>
       <item type="string" name="hk_ApplicationsDetailsActivity"/>
       <item type="string" name="hk_ApplicationsSettingsActivity"/>
-      <item type="string" name="hk_AppsAndNotificationsActivity"/>
+      <item type="string" name="hk_AppsActivity"/>
       <item type="string" name="hk_AssistantAndVoiceSettingsActivity"/>
       <item type="string" name="hk_BluetoothDevicePickerActivity"/>
       <item type="string" name="hk_BluetoothSettingsActivity"/>
@@ -825,6 +830,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="hk_ModifySystemSettingsActivity"/>
       <item type="string" name="hk_NetworkAndInternetActivity"/>
       <item type="string" name="hk_NotificationAccessActivity"/>
+      <item type="string" name="hk_NotificationsActivity"/>
       <item type="string" name="hk_PremiumSmsAccessActivity"/>
       <item type="string" name="hk_PrivacySettingsActivity"/>
       <item type="string" name="hk_ProfileDetailsActivity"/>
@@ -1299,7 +1305,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="application_details_fragment"/>
       <item type="xml" name="application_launch_settings_fragment"/>
       <item type="xml" name="applications_settings_fragment"/>
-      <item type="xml" name="apps_and_notifications_fragment"/>
+      <item type="xml" name="apps_fragment"/>
       <item type="xml" name="assistant_and_voice_fragment"/>
       <item type="xml" name="bluetooth_device_details_fragment"/>
       <item type="xml" name="bluetooth_device_picker_fragment"/>
@@ -1336,6 +1342,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="modify_system_settings_fragment"/>
       <item type="xml" name="network_and_internet_fragment"/>
       <item type="xml" name="notification_access_fragment"/>
+      <item type="xml" name="notifications_fragment"/>
       <item type="xml" name="preferred_engine_fragment"/>
       <item type="xml" name="premium_sms_access_fragment"/>
       <item type="xml" name="privacy_settings_fragment"/>
