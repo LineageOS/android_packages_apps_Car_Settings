@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,99 +23,119 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.withSettings;
 import static org.testng.Assert.assertThrows;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.ConfirmationDialogFragment;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowUserHelper;
-import com.android.car.settings.testutils.ShadowUserIconProvider;
-import com.android.car.settings.testutils.ShadowUserManager;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
+import org.mockito.MockitoSession;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowUserIconProvider.class,
-        ShadowUserManager.class, ShadowUserHelper.class})
+@RunWith(AndroidJUnit4.class)
 public class ChooseNewAdminPreferenceControllerTest {
-
     private static final UserInfo TEST_ADMIN_USER = new UserInfo(/* id= */ 10,
             "TEST_USER_NAME", /* flags= */ 0);
     private static final UserInfo TEST_OTHER_USER = new UserInfo(/* id= */ 11,
             "TEST_OTHER_NAME", /* flags= */ 0);
 
-    private Context mContext;
-    private PreferenceControllerTestHelper<ChooseNewAdminPreferenceController> mControllerHelper;
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private LogicalPreferenceGroup mPreference;
+    private CarUxRestrictions mCarUxRestrictions;
     private ChooseNewAdminPreferenceController mController;
     private ConfirmationDialogFragment mDialog;
+    private MockitoSession mSession;
 
+    @Mock
+    private FragmentController mFragmentController;
     @Mock
     private ProfileHelper mProfileHelper;
 
     @Before
+    @UiThreadTest
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
-        ShadowUserHelper.setInstance(mProfileHelper);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                ChooseNewAdminPreferenceController.class);
-        mController = mControllerHelper.getController();
-        mController.setAdminInfo(TEST_ADMIN_USER);
-        mControllerHelper.setPreference(new LogicalPreferenceGroup(mContext));
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mDialog = new ConfirmationDialogFragment.Builder(mContext).build();
+
+        mSession = ExtendedMockito.mockitoSession()
+                .mockStatic(ProfileHelper.class, withSettings().lenient())
+                .mockStatic(android.car.userlib.UserHelper.class)
+                .startMocking();
+        when(ProfileHelper.getInstance(any(Context.class))).thenReturn(mProfileHelper);
+
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
+        mPreference = new LogicalPreferenceGroup(mContext);
+        screen.addPreference(mPreference);
+        mController = new ChooseNewAdminPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        mController.setAdminInfo(TEST_ADMIN_USER);
+        PreferenceControllerTestUtil.assignPreference(mController, mPreference);
     }
 
     @After
+    @UiThreadTest
     public void tearDown() {
-        ShadowUserManager.reset();
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
     public void testOnCreate_hasPreviousDialog_dialogListenerSet() {
-        when(mControllerHelper.getMockFragmentController().findDialogByTag(
+        when(mFragmentController.findDialogByTag(
                 ConfirmationDialogFragment.TAG)).thenReturn(mDialog);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.onCreate(mLifecycleOwner);
 
         assertThat(mDialog.getConfirmListener()).isNotNull();
     }
 
     @Test
     public void testCheckInitialized_noAdminInfoSet_throwsError() {
+        ChooseNewAdminPreferenceController controller = new ChooseNewAdminPreferenceController(
+                mContext, /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         assertThrows(IllegalStateException.class,
-                () -> new PreferenceControllerTestHelper<>(mContext,
-                        ChooseNewAdminPreferenceController.class,
-                        new LogicalPreferenceGroup(mContext)));
+                () -> PreferenceControllerTestUtil.assignPreference(controller, mPreference));
     }
 
     @Test
     public void testUserClicked_opensDialog() {
         mController.profileClicked(/* userToMakeAdmin= */ TEST_OTHER_USER);
 
-        verify(mControllerHelper.getMockFragmentController()).showDialog(
-                any(),
-                eq(ConfirmationDialogFragment.TAG));
+        verify(mFragmentController).showDialog(any(), eq(ConfirmationDialogFragment.TAG));
     }
 
     @Test
-    @Ignore("b/172513940")
     public void testAssignNewAdminAndRemoveOldAdmin_grantAdminCalled() {
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        // verify(mCarUserManagerHelper).grantAdminPermissions(TEST_OTHER_USER);
+        ExtendedMockito.verify(() -> android.car.userlib.UserHelper.grantAdminPermissions(mContext,
+                TEST_OTHER_USER));
     }
 
     @Test
@@ -132,7 +152,7 @@ public class ChooseNewAdminPreferenceControllerTest {
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        verify(mControllerHelper.getMockFragmentController(), never()).showDialog(any(), any());
+        verify(mFragmentController, never()).showDialog(any(), any());
     }
 
     @Test
@@ -142,6 +162,6 @@ public class ChooseNewAdminPreferenceControllerTest {
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        verify(mControllerHelper.getMockFragmentController()).showDialog(any(), any());
+        verify(mFragmentController).showDialog(any(), any());
     }
 }
