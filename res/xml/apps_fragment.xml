@@ -18,8 +18,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/apps_and_notifications_settings"
-    android:key="@string/psk_apps_and_notifications">
+    android:title="@string/apps_settings_title"
+    android:key="@string/psk_apps">
     <Preference
         android:fragment="com.android.car.settings.applications.ApplicationsSettingsFragment"
         android:key="@string/pk_applications_settings_screen_entry"
