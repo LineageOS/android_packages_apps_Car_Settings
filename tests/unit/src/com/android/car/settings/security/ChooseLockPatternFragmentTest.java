@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,27 +21,37 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
-import com.android.car.settings.testutils.FragmentController;
-import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
+import androidx.fragment.app.FragmentManager;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.rule.ActivityTestRule;
+
+import com.android.car.settings.R;
+import com.android.car.settings.testutils.SinglePaneTestActivity;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
+import org.mockito.MockitoAnnotations;
 
 /**
  * Tests for ChooseLockPatternFragment class.
  */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ChooseLockPatternFragmentTest {
     private ChooseLockPatternFragment mFragment;
+    private FragmentManager mFragmentManager;
+
+    @Rule
+    public ActivityTestRule<SinglePaneTestActivity> mActivityTestRule =
+            new ActivityTestRule<>(SinglePaneTestActivity.class);
 
     @Before
-    public void initFragment() {
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
-
-        mFragment = FragmentController.of(new ChooseLockPatternFragment()).setup();
+    public void setUp() throws Throwable {
+        MockitoAnnotations.initMocks(this);
+        mFragmentManager = mActivityTestRule.getActivity().getSupportFragmentManager();
+        setUpFragment();
     }
 
     /**
@@ -69,5 +79,19 @@ public class ChooseLockPatternFragmentTest {
 
         verify(spyFragment, never()).onComplete();
         verify(spyFragment).updateStage(ChooseLockPatternFragment.Stage.SaveFailure);
+    }
+
+    private void setUpFragment() throws Throwable {
+        String chooseLockPatternFragmentTag = "choose_lock_pattern_fragment";
+        mActivityTestRule.runOnUiThread(() -> {
+            mFragmentManager.beginTransaction()
+                    .replace(
+                            R.id.fragment_container, new ChooseLockPatternFragment(),
+                            chooseLockPatternFragmentTag)
+                    .commitNow();
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        mFragment = (ChooseLockPatternFragment) mFragmentManager
+                .findFragmentByTag(chooseLockPatternFragmentTag);
     }
 }
