@@ -30,7 +30,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
-import com.android.car.settings.applications.AppsAndNotificationsFragment;
+import com.android.car.settings.applications.AppsFragment;
 import com.android.car.settings.applications.assist.AssistantAndVoiceFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
 import com.android.car.settings.applications.specialaccess.ModifySystemSettingsFragment;
@@ -50,6 +50,7 @@ import com.android.car.settings.location.LocationSettingsFragment;
 import com.android.car.settings.network.MobileNetworkFragment;
 import com.android.car.settings.network.MobileNetworkListFragment;
 import com.android.car.settings.network.NetworkAndInternetFragment;
+import com.android.car.settings.notifications.NotificationsFragment;
 import com.android.car.settings.privacy.PrivacySettingsFragment;
 import com.android.car.settings.privacy.VehicleDataFragment;
 import com.android.car.settings.profiles.ProfileDetailsFragment;
@@ -187,13 +188,24 @@ public class CarSettingActivities {
     }
 
     /**
-     * Apps and Notifications Activity.
+     * Apps Activity.
      */
-    public static class AppsAndNotificationsActivity extends BaseCarSettingsActivity {
+    public static class AppsActivity extends BaseCarSettingsActivity {
         @Nullable
         @Override
         protected Fragment getInitialFragment() {
-            return new AppsAndNotificationsFragment();
+            return new AppsFragment();
+        }
+    }
+
+    /**
+     * Notifications Activity.
+     */
+    public static class NotificationsActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new NotificationsFragment();
         }
     }
 
