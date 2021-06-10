@@ -17,6 +17,7 @@
 package com.android.car.settings;
 
 import static android.car.settings.CarSettings.Global.ENABLE_USER_SWITCH_DEVELOPER_MESSAGE;
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -70,6 +71,7 @@ public class FallbackHome extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
 
         // Set ourselves totally black before the device is provisioned
         mProvisioned = Settings.Global.getInt(getContentResolver(),

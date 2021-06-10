@@ -16,6 +16,8 @@
 
 package com.android.car.settings.common;
 
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
@@ -56,6 +58,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
         setContentView(R.layout.car_setting_activity);
         if (mUxRestrictionsHelper == null) {
             mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
