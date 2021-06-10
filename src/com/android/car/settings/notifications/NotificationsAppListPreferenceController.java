@@ -61,17 +61,15 @@ public class NotificationsAppListPreferenceController extends
         getPreference().removeAll();
         for (ApplicationsState.AppEntry appEntry : apps) {
             getPreference().addPreference(
-                    createPreference(appEntry.label, appEntry.sizeStr, appEntry.icon,
+                    createPreference(appEntry.label, appEntry.icon,
                             appEntry.info.packageName, appEntry.info.uid));
         }
     }
 
-    private Preference createPreference(String title, String summary, Drawable icon,
-            String packageName, int uid) {
+    private Preference createPreference(String title, Drawable icon, String packageName, int uid) {
         CarUiTwoActionSwitchPreference preference =
                 new CarUiTwoActionSwitchPreference(getContext());
         preference.setTitle(title);
-        preference.setSummary(summary);
         preference.setIcon(icon);
         preference.setKey(packageName);
         preference.setOnPreferenceClickListener(p -> {
