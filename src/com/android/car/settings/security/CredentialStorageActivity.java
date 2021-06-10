@@ -16,6 +16,8 @@
 
 package com.android.car.settings.security;
 
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -66,6 +68,7 @@ public class CredentialStorageActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
         mUserManager = UserManager.get(getApplicationContext());
         mUtils = new LockPatternUtils(this);
 

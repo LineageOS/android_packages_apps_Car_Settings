@@ -16,6 +16,8 @@
 
 package com.android.car.settings.wifi;
 
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 import android.annotation.NonNull;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -100,6 +102,7 @@ public class WifiRequestToggleActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
 
         mCarWifiManager = new CarWifiManager(getApplicationContext());
 
