@@ -16,6 +16,8 @@
 
 package com.android.car.settings.system;
 
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -65,6 +67,7 @@ public class RegulatoryInfoDisplayActivity extends Activity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
         Resources resources = getResources();
 
         if (!resources.getBoolean(R.bool.config_show_regulatory_info)) {

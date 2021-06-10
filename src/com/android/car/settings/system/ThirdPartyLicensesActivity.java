@@ -16,6 +16,8 @@
 
 package com.android.car.settings.system;
 
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -50,6 +52,7 @@ public class ThirdPartyLicensesActivity extends FragmentActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
 
         final String licenseHtmlPath =
                 SystemProperties.get(PROPERTY_LICENSE_PATH, DEFAULT_LICENSE_PATH);
