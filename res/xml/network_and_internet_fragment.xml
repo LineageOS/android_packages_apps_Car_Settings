@@ -63,7 +63,7 @@
         <Preference
             android:fragment="com.android.car.settings.wifi.preferences.WifiPreferencesFragment"
             android:key="@string/pk_wifi_preferences"
-            android:title="@string/network_and_internet_network_preferences_title"
+            android:title="@string/wifi_preferences_title"
             android:summary="@string/wifi_wakeup"
             settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
             settings:searchable="false"/>
