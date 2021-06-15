@@ -80,7 +80,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Ezarri datuen muga"</string>
     <string name="data_limit" msgid="227338836292511425">"Datuen muga"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datuen erabilera mugatzea"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Ibilgailua ezarri duzun datuen mugara heltzen denean, ibilgailuaren gailu nagusiak datu-konexioa desaktibatuko du.\n\nIbilgailuaren gailu nagusiak datuen erabilera neurtzen du, baina baliteke operadoreak erabilera hori beste era batera neurtzea. Horregatik, muga zuhurra ezartzea gomendatzen dugu."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Ibilgailua ezarri duzun datuen mugara heltzen denean, ibilgailuaren unitate nagusiak datu-konexioa desaktibatuko du.\n\nIbilgailuaren unitate nagusiak datuen erabilera neurtzen du, baina baliteke operadoreak erabilera hori beste era batera neurtzea. Horregatik, muga zuhurra ezartzea gomendatzen dugu."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ezarri datuen erabileraren abisua"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ezarri datuen erabilera-muga"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ezarri"</string>
@@ -413,7 +413,7 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Berrezarri aplikazioak"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Berrezarri dira aplikazioen hobespenak"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Ezabatu datu guztiak (berrezarri jatorrizkoak)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Ibilgailuaren gailu nagusiko datu guztiak ezabatuko dira, honako hauek barne:\n\n"<li>"Google-ko kontua,"</li>\n<li>"sistemako eta aplikazioetako datuak eta ezarpenak,"</li>\n<li>"deskargatutako aplikazioak."</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Ibilgailuaren unitate nagusiko datu guztiak ezabatuko dira, honako hauek barne:\n\n"<li>"Google-ko kontua"</li>\n<li>"sistemako eta aplikazioetako datuak eta ezarpenak"</li>\n<li>"deskargatutako aplikazioak"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Kontu hauetan hasi duzu saioa:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Beste erabiltzaile batzuk daude ibilgailu honetan."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Berrezarri ibilgailua"</string>
