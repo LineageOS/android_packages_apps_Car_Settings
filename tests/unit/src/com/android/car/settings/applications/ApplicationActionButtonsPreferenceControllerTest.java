@@ -16,11 +16,11 @@
 
 package com.android.car.settings.applications;
 
-import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.DISABLE_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.FORCE_STOP_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.UNINSTALL_REQUEST_CODE;
 import static com.android.car.settings.common.ActionButtonsPreference.ActionButtons;
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
 
