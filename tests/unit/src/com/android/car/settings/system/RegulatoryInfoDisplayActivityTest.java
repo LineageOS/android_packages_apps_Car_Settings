@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,41 +18,55 @@ package com.android.car.settings.system;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.withSettings;
+
 import android.os.SystemProperties;
+
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.rule.ActivityTestRule;
+
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.android.controller.ActivityController;
-import org.robolectric.shadows.ShadowAlertDialog;
+import org.mockito.MockitoSession;
 
 /** Unit test for {@link RegulatoryInfoDisplayActivity}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class RegulatoryInfoDisplayActivityTest {
 
-    private ActivityController<RegulatoryInfoDisplayActivity> mActivityController;
     private RegulatoryInfoDisplayActivity mActivity;
+    private MockitoSession mSession;
+
+    @Rule
+    public ActivityTestRule<RegulatoryInfoDisplayActivity> mActivityTestRule =
+            new ActivityTestRule<>(RegulatoryInfoDisplayActivity.class);
 
     @Before
-    public void setUp() {
+    public void setUp() throws Throwable {
         MockitoAnnotations.initMocks(this);
-
-        mActivityController = ActivityController.of(new RegulatoryInfoDisplayActivity());
-        mActivity = mActivityController.get();
-        mActivityController.create();
+        mActivity = mActivityTestRule.getActivity();
+        mSession = ExtendedMockito.mockitoSession().mockStatic(
+                SystemProperties.class, withSettings().lenient()).startMocking();
     }
 
     @After
     public void tearDown() {
-        ShadowAlertDialog.reset();
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
     public void getRegulatoryInfoImageFileName_skuIsNotEmpty() {
-        SystemProperties.set("ro.boot.hardware.sku", "test");
+        ExtendedMockito.when(SystemProperties.get(eq("ro.boot.hardware.sku"), anyString()))
+                .thenReturn("test");
 
         assertThat(mActivity.getRegulatoryInfoImageFileName())
                 .isEqualTo("/data/misc/elabel/regulatory_info_test.png");
@@ -60,7 +74,8 @@ public class RegulatoryInfoDisplayActivityTest {
 
     @Test
     public void getRegulatoryInfoImageFileName_skuIsEmpty() {
-        SystemProperties.set("ro.boot.hardware.sku", "");
+        ExtendedMockito.when(SystemProperties.get(eq("ro.boot.hardware.sku"), anyString()))
+                .thenReturn("");
 
         assertThat(mActivity.getRegulatoryInfoImageFileName())
                 .isEqualTo("/data/misc/elabel/regulatory_info.png");
@@ -69,7 +84,8 @@ public class RegulatoryInfoDisplayActivityTest {
     @Test
     public void getSku_shouldReturnSystemProperty() {
         String testSku = "test";
-        SystemProperties.set("ro.boot.hardware.sku", testSku);
+        ExtendedMockito.when(SystemProperties.get(eq("ro.boot.hardware.sku"), anyString()))
+                .thenReturn(testSku);
 
         assertThat(mActivity.getSku()).isEqualTo(testSku);
     }
