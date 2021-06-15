@@ -21,6 +21,7 @@ import static android.app.Activity.RESULT_OK;
 import static com.android.car.settings.applications.ApplicationsUtils.isKeepEnabledPackage;
 import static com.android.car.settings.applications.ApplicationsUtils.isProfileOrDeviceOwner;
 import static com.android.car.settings.common.ActionButtonsPreference.ActionButtons;
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -96,9 +97,7 @@ public class ApplicationActionButtonsPreferenceController extends
     @VisibleForTesting
     static final String FORCE_STOP_CONFIRM_DIALOG_TAG =
             "com.android.car.settings.applications.ForceStopConfirmDialog";
-    @VisibleForTesting
-    static final String DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG =
-            "com.android.car.settings.applications.DisabledByAdminConfirmDialog";
+
     @VisibleForTesting
     static final int UNINSTALL_REQUEST_CODE = 10;
 

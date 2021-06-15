@@ -25,6 +25,7 @@ android_robolectric_test {
 
     libs: [
         "Robolectric_all-target",
+        "Settings-robo-testutils",
         "robolectric_android-all-stub",
         "mockito-robolectric-prebuilt",
         "truth-prebuilt",
