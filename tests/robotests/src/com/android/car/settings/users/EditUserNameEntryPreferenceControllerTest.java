@@ -32,10 +32,10 @@ import android.content.pm.UserInfo;
 import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 
 import org.junit.After;
 import org.junit.Before;
@@ -57,7 +57,7 @@ public class EditUserNameEntryPreferenceControllerTest {
     private PreferenceControllerTestHelper<EditUserNameEntryPreferenceController>
             mPreferenceControllerHelper;
     private EditUserNameEntryPreferenceController mController;
-    private ButtonPreference mButtonPreference;
+    private CarUiTwoActionIconPreference mButtonPreference;
     @Mock
     private UserHelper mUserHelper;
 
@@ -70,7 +70,7 @@ public class EditUserNameEntryPreferenceControllerTest {
                 EditUserNameEntryPreferenceController.class);
         mController = mPreferenceControllerHelper.getController();
         mController.setUserInfo(new UserInfo());
-        mButtonPreference = new ButtonPreference(mContext);
+        mButtonPreference = new CarUiTwoActionIconPreference(mContext);
         mButtonPreference.setSelectable(false);
         mPreferenceControllerHelper.setPreference(mButtonPreference);
     }
@@ -86,7 +86,7 @@ public class EditUserNameEntryPreferenceControllerTest {
         when(mUserHelper.isCurrentProcessUser(userInfo)).thenReturn(true);
         mController.setUserInfo(userInfo);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mButtonPreference.performButtonClick();
+        mButtonPreference.performSecondaryActionClick();
         verify(mPreferenceControllerHelper.getMockFragmentController()).launchFragment(
                 any(EditUsernameFragment.class));
     }
@@ -97,7 +97,7 @@ public class EditUserNameEntryPreferenceControllerTest {
         when(mUserHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
         mController.setUserInfo(userInfo);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mButtonPreference.performButtonClick();
+        mButtonPreference.performSecondaryActionClick();
         verify(mPreferenceControllerHelper.getMockFragmentController(), never()).launchFragment(
                 any(EditUsernameFragment.class));
     }

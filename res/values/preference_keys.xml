@@ -136,6 +136,9 @@
 
     <!-- Application Details -->
     <string name="pk_application_details_app" translatable="false">application_details_app</string>
+    <string name="pk_application_details_action_buttons" translatable="false">
+        application_details_action_buttons
+    </string>
     <string name="pk_application_details_notifications" translatable="false">
         application_details_notifications
     </string>
@@ -254,6 +257,9 @@
     </string>
     <string name="pk_storage_application_details" translatable="false">storage_application_details
     </string>
+    <string name="pk_storage_application_action_buttons" translatable="false">
+        storage_application_action_buttons
+    </string>
     <string name="pk_storage_files" translatable="false">storage_files</string>
     <string name="pk_storage_system" translatable="false">storage_system</string>
 
@@ -269,6 +275,7 @@
     <string name="pk_default_notification" translatable="false">default_notification</string>
     <string name="pk_default_alarm" translatable="false">default_alarm</string>
     <string name="pk_sounds_extra_settings" translatable="false">sounds_extra_settings</string>
+    <string name="pk_ringtone_picker" translatable="false">ringtone_picker</string>
 
     <!-- Units Settings -->
     <string name="pk_units_settings_entry" translatable="false">units_settings_entry</string>

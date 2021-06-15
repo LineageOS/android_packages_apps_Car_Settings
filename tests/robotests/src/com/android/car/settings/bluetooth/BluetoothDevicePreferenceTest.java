@@ -59,7 +59,7 @@ public class BluetoothDevicePreferenceTest {
 
     @Test
     public void actionIsHiddenByDefault() {
-        assertThat(mPreference.isActionShown()).isFalse();
+        assertThat(mPreference.isSecondaryActionVisible()).isFalse();
     }
 
     @Test

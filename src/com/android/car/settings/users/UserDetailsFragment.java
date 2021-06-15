@@ -32,6 +32,8 @@ import com.android.internal.annotations.VisibleForTesting;
  */
 public class UserDetailsFragment extends UserDetailsBaseFragment {
 
+    private boolean mIsStarted;
+
     /** Creates instance of UserDetailsFragment. */
     public static UserDetailsFragment newInstance(int userId) {
         return (UserDetailsFragment) UserDetailsBaseFragment.addUserIdToFragmentArguments(
@@ -44,8 +46,10 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
         public void onReceive(Context context, Intent intent) {
             // Update the user info value, as it may have changed.
             refreshUserInfo();
-            // Update the text in the action bar when there is a user update.
-            getToolbar().setTitle(getTitleText());
+            if (mIsStarted) {
+                // Update the text in the action bar when there is a user update.
+                getToolbar().setTitle(getTitleText());
+            }
         }
     };
 
@@ -66,6 +70,19 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         registerForUserEvents();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mIsStarted = true;
+        getToolbar().setTitle(getTitleText());
+    }
+
+    @Override
+    public void onStop() {
+        mIsStarted = false;
+        super.onStop();
     }
 
     @Override
