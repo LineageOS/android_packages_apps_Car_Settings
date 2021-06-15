@@ -61,4 +61,10 @@
     <!-- Maximum number of days old for a notification to be shown in
      RecentNotificationsAppsPreferenceController -->
     <integer name="recent_notifications_days_threshold">3</integer>
+
+    <!-- Maximum number of apps to be shown in RecentAppsItemManager -->
+    <integer name="recent_apps_max_count">3</integer>
+
+    <!-- Maximum number of days old for an app to be shown in RecentAppsItemManager -->
+    <integer name="recent_apps_days_threshold">1</integer>
 </resources>

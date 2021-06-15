@@ -16,6 +16,8 @@
 
 package com.android.car.settings.applications;
 
+import android.content.Context;
+import android.os.Bundle;
 import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
@@ -28,10 +30,40 @@ import com.android.settingslib.search.SearchIndexable;
 /** Shows subsettings related to apps. */
 @SearchIndexable
 public class AppsFragment extends SettingsFragment {
+
+    private RecentAppsItemManager mRecentAppsItemManager;
+    private InstalledAppCountItemManager mInstalledAppCountItemManager;
+
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
         return R.xml.apps_fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mRecentAppsItemManager = new RecentAppsItemManager(context,
+                context.getResources().getInteger(R.integer.recent_apps_max_count));
+        mRecentAppsItemManager.addListener(use(AllAppsPreferenceController.class,
+                R.string.pk_applications_settings_screen_entry));
+        mRecentAppsItemManager.addListener(use(RecentAppsGroupPreferenceController.class,
+                R.string.pk_recent_apps_group));
+        mRecentAppsItemManager.addListener(use(RecentAppsListPreferenceController.class,
+                R.string.pk_recent_apps_list));
+
+        mInstalledAppCountItemManager = new InstalledAppCountItemManager(context);
+        mInstalledAppCountItemManager.addListener(use(AllAppsPreferenceController.class,
+                R.string.pk_applications_settings_screen_entry));
+        mInstalledAppCountItemManager.addListener(use(RecentAppsViewAllPreferenceController.class,
+                R.string.pk_recent_apps_view_all));
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mRecentAppsItemManager.startLoading();
+        mInstalledAppCountItemManager.startLoading();
     }
 
     /**
