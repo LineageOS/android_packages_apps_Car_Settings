@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,10 @@ package com.android.car.settings.system.legal;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.when;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
@@ -26,61 +30,57 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.Shadows;
-import org.robolectric.shadows.ShadowPackageManager;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 /** Unit test for {@link LegalPreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class LegalPreferenceControllerTest {
-    private static class TestLegalPreferenceControllerTest extends
-            LegalPreferenceController {
-
-        private static final Intent INTENT = new Intent("test_intent");
-
-        TestLegalPreferenceControllerTest(Context context, String preferenceKey,
-                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
-            super(context, preferenceKey, fragmentController, uxRestrictions);
-        }
-
-        @Override
-        protected Intent getIntent() {
-            return INTENT;
-        }
-    }
-
     private static final String TEST_LABEL = "test_label";
-    private Context mContext;
-    private PreferenceControllerTestHelper<TestLegalPreferenceControllerTest> mControllerHelper;
+
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
     private Preference mPreference;
+    private LegalPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
+    @Mock
+    private PackageManager mMockPm;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
+        mLifecycleOwner = new TestLifecycleOwner();
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
         mPreference = new Preference(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                TestLegalPreferenceControllerTest.class, mPreference);
+        mPreferenceController = new TestLegalPreferenceController(mContext,
+                "key", mFragmentController, mCarUxRestrictions, mMockPm);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
     }
 
     @Test
-    public void refreshUi_intentResolvesToActivity_isVisible() {
-        Intent intent = mControllerHelper.getController().getIntent();
+    public void onCreate_intentResolvesToActivity_isVisible() {
+        Intent intent = mPreferenceController.getIntent();
 
         ActivityInfo activityInfo = new ActivityInfo();
         activityInfo.packageName = "some.test.package";
@@ -98,18 +98,16 @@ public class LegalPreferenceControllerTest {
         List<ResolveInfo> list = new LinkedList();
         list.add(resolveInfo);
 
-        ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
-        packageManager.addResolveInfoForIntent(intent, list);
+        when(mMockPm.queryIntentActivities(eq(intent), anyInt())).thenReturn(list);
 
-        mControllerHelper.markState(Lifecycle.State.CREATED);
-        mControllerHelper.getController().refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isVisible()).isTrue();
     }
 
     @Test
-    public void refreshUi_intentResolvesToActivity_updatesTitle() {
-        Intent intent = mControllerHelper.getController().getIntent();
+    public void onCreate_intentResolvesToActivity_updatesTitle() {
+        Intent intent = mPreferenceController.getIntent();
 
         ActivityInfo activityInfo = new ActivityInfo();
         activityInfo.packageName = "some.test.package";
@@ -124,18 +122,16 @@ public class LegalPreferenceControllerTest {
         List<ResolveInfo> list = new LinkedList();
         list.add(resolveInfo);
 
-        ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
-        packageManager.addResolveInfoForIntent(intent, list);
+        when(mMockPm.queryIntentActivities(eq(intent), anyInt())).thenReturn(list);
 
-        mControllerHelper.markState(Lifecycle.State.CREATED);
-        mControllerHelper.getController().refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.getTitle()).isEqualTo(TEST_LABEL);
     }
 
     @Test
-    public void refreshUi_intentResolvesToActivity_updatesIntentToSpecificActivity() {
-        Intent intent = mControllerHelper.getController().getIntent();
+    public void onCreate_intentResolvesToActivity_updatesIntentToSpecificActivity() {
+        Intent intent = mPreferenceController.getIntent();
 
         String packageName = "com.android.car.settings.testutils";
         String activityName = "BaseTestActivity";
@@ -156,26 +152,35 @@ public class LegalPreferenceControllerTest {
         List<ResolveInfo> list = new LinkedList();
         list.add(resolveInfo);
 
-        ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
-        packageManager.addResolveInfoForIntent(intent, list);
+        when(mMockPm.queryIntentActivities(eq(intent), anyInt())).thenReturn(list);
 
-        mControllerHelper.markState(Lifecycle.State.CREATED);
-        mControllerHelper.getController().refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.getIntent().getComponent().flattenToString()).isEqualTo(
                 packageName + "/" + activityName);
     }
 
     @Test
-    public void refreshUi_intentResolvesToNull_isNotVisible() {
-        ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
-
-        packageManager.addResolveInfoForIntent(mControllerHelper.getController().getIntent(),
-                Collections.emptyList());
-
-        mControllerHelper.markState(Lifecycle.State.CREATED);
-        mControllerHelper.getController().refreshUi();
+    public void onCreate_intentResolvesToNull_isNotVisible() {
+        when(mMockPm.queryIntentActivities(eq(mPreferenceController.getIntent()), anyInt()))
+                .thenReturn(Collections.emptyList());
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isVisible()).isFalse();
+    }
+
+    private static class TestLegalPreferenceController extends LegalPreferenceController {
+        private static final Intent INTENT = new Intent("test_intent");
+
+        TestLegalPreferenceController(Context context, String preferenceKey,
+                FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+                PackageManager packageManager) {
+            super(context, preferenceKey, fragmentController, uxRestrictions, packageManager);
+        }
+
+        @Override
+        protected Intent getIntent() {
+            return INTENT;
+        }
     }
 }
