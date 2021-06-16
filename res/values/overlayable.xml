@@ -29,6 +29,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="array" name="config_top_level_injection_categories"/>
       <item type="array" name="config_unbonded_device_filter_allowlist"/>
       <item type="array" name="premium_sms_access_values"/>
+      <item type="array" name="recent_apps_ignored_packages"/>
       <item type="array" name="wifi_ap_band"/>
       <item type="array" name="wifi_ap_band_config_2G_only"/>
       <item type="array" name="wifi_ap_band_config_full"/>
@@ -466,6 +467,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="integer" name="millisecond_app_data_update_interval"/>
       <item type="integer" name="millisecond_max_app_load_wait_interval"/>
       <item type="integer" name="quick_setting_column_count"/>
+      <item type="integer" name="recent_apps_days_threshold"/>
+      <item type="integer" name="recent_apps_max_count"/>
       <item type="integer" name="recent_notifications_apps_list_count"/>
       <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
