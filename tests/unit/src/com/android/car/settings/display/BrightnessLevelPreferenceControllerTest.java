@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,23 +21,27 @@ import static com.android.settingslib.display.BrightnessUtils.convertLinearToGam
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.common.SeekBarPreference;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class BrightnessLevelPreferenceControllerTest {
     private Context mContext;
     private BrightnessLevelPreferenceController mController;
@@ -46,11 +50,15 @@ public class BrightnessLevelPreferenceControllerTest {
     private int mMax;
     private int mMid;
 
+    @Mock
+    private FragmentController mFragmentController;
+
     @Before
     public void setUp() {
+        LifecycleOwner lifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
         mMin = mContext.getResources().getInteger(
                 com.android.internal.R.integer.config_screenBrightnessSettingMinimum);
         mMax = mContext.getResources().getInteger(
@@ -58,11 +66,13 @@ public class BrightnessLevelPreferenceControllerTest {
         mMid = (mMax + mMin) / 2;
 
         mSeekBarPreference = new SeekBarPreference(mContext);
-        PreferenceControllerTestHelper<BrightnessLevelPreferenceController>
-                preferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                BrightnessLevelPreferenceController.class, mSeekBarPreference);
-        mController = preferenceControllerHelper.getController();
-        preferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        CarUxRestrictions carUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mController = new BrightnessLevelPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, carUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mController, mSeekBarPreference);
+
+        mController.onCreate(lifecycleOwner);
     }
 
     @Test
