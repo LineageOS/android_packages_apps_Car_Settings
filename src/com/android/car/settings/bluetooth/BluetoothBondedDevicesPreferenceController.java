@@ -187,11 +187,13 @@ public class BluetoothBondedDevicesPreferenceController extends
                     if (cachedDevice.isBusy()) {
                         return;
                     }
-                    if (finalPhoneProfile != null) {
-                        finalPhoneProfile.setEnabled(cachedDevice.getDevice(), isChecked);
-                    }
-                    if (finalMediaProfile != null) {
-                        finalMediaProfile.setEnabled(cachedDevice.getDevice(), isChecked);
+                    // If trying to connect and both phone and media are disabled, connecting will
+                    // always fail. In this case force both profiles on.
+                    if (isChecked && finalPhoneProfile != null && finalMediaProfile != null
+                            && !finalPhoneProfile.isEnabled(cachedDevice.getDevice())
+                            && !finalMediaProfile.isEnabled(cachedDevice.getDevice())) {
+                        finalPhoneProfile.setEnabled(cachedDevice.getDevice(), true);
+                        finalMediaProfile.setEnabled(cachedDevice.getDevice(), true);
                     }
                     toggleBluetoothConnectivity(isChecked, cachedDevice);
                 });
@@ -199,9 +201,6 @@ public class BluetoothBondedDevicesPreferenceController extends
         if (phoneProfile == null || !isConnected) {
             // Disable phone button
             updatePhoneActionItemAvailability(preference, true);
-            if (finalPhoneProfile != null) {
-                finalPhoneProfile.setEnabled(cachedDevice.getDevice(), false);
-            }
         } else {
             // Enable phone button
             updatePhoneActionItemAvailability(preference, false);
@@ -215,9 +214,6 @@ public class BluetoothBondedDevicesPreferenceController extends
         if (mediaProfile == null || !isConnected) {
             // Disable media button
             updateMediaActionItemAvailability(preference, true);
-            if (finalMediaProfile != null) {
-                finalMediaProfile.setEnabled(cachedDevice.getDevice(), false);
-            }
         } else {
             // Enable media button
             updateMediaActionItemAvailability(preference, false);
