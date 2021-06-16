@@ -88,7 +88,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="top_level_bluetooth_background"/>
       <item type="color" name="top_level_bluetooth_icon"/>
       <item type="color" name="top_level_date_time_background"/>
-      <item type="color" name="top_level_date_time_icon"/>
       <item type="color" name="top_level_display_background"/>
       <item type="color" name="top_level_display_icon"/>
       <item type="color" name="top_level_icon_default"/>
@@ -270,6 +269,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_check_circle"/>
       <item type="drawable" name="ic_chevron_right"/>
       <item type="drawable" name="ic_close"/>
+      <item type="drawable" name="ic_date_time"/>
       <item type="drawable" name="ic_delete"/>
       <item type="drawable" name="ic_edit"/>
       <item type="drawable" name="ic_find_device_disabled"/>
@@ -314,7 +314,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_top_level_applications"/>
       <item type="drawable" name="ic_top_level_assistant_and_voice"/>
       <item type="drawable" name="ic_top_level_bluetooth"/>
-      <item type="drawable" name="ic_top_level_date_time"/>
       <item type="drawable" name="ic_top_level_display"/>
       <item type="drawable" name="ic_top_level_location"/>
       <item type="drawable" name="ic_top_level_network_and_internet"/>
