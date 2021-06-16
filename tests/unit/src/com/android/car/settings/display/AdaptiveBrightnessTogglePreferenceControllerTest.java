@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,37 +18,51 @@ package com.android.car.settings.display;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class AdaptiveBrightnessTogglePreferenceControllerTest {
 
     private Context mContext;
-    private AdaptiveBrightnessTogglePreferenceController mController;
+    private AdaptiveBrightnessTogglePreferenceController mPreferenceController;
     private TwoStatePreference mTwoStatePreference;
+
+    @Mock
+    private FragmentController mFragmentController;
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        LifecycleOwner lifecycleOwner = new TestLifecycleOwner();
+        MockitoAnnotations.initMocks(this);
+
+        mContext = ApplicationProvider.getApplicationContext();
         mTwoStatePreference = new SwitchPreference(mContext);
-        PreferenceControllerTestHelper<AdaptiveBrightnessTogglePreferenceController>
-                preferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                AdaptiveBrightnessTogglePreferenceController.class, mTwoStatePreference);
-        mController = preferenceControllerHelper.getController();
-        preferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+
+        CarUxRestrictions carUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mPreferenceController = new AdaptiveBrightnessTogglePreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, carUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mTwoStatePreference);
+
+        mPreferenceController.onCreate(lifecycleOwner);
     }
 
     @Test
@@ -57,7 +71,7 @@ public class AdaptiveBrightnessTogglePreferenceControllerTest {
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
 
-        mController.refreshUi();
+        mPreferenceController.refreshUi();
         assertThat(mTwoStatePreference.isChecked()).isFalse();
     }
 
@@ -67,7 +81,7 @@ public class AdaptiveBrightnessTogglePreferenceControllerTest {
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
 
-        mController.refreshUi();
+        mPreferenceController.refreshUi();
         assertThat(mTwoStatePreference.isChecked()).isTrue();
     }
 
