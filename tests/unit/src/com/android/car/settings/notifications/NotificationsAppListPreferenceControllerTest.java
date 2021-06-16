@@ -59,7 +59,6 @@ public class NotificationsAppListPreferenceControllerTest {
     private static final int UID = 1001010;
     private static final int ID = 1;
     private static final String LABEL = "label";
-    private static final String SUMMARY = "summary";
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private LifecycleOwner mLifecycleOwner;
@@ -101,7 +100,6 @@ public class NotificationsAppListPreferenceControllerTest {
         ApplicationsState.AppEntry appEntry =
                 new ApplicationsState.AppEntry(mContext, applicationInfo, ID);
         appEntry.label = LABEL;
-        appEntry.sizeStr = SUMMARY;
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
 
         mAppEntryList = new ArrayList<>();
@@ -121,7 +119,6 @@ public class NotificationsAppListPreferenceControllerTest {
                 mPreferenceCategory.getPreference(0);
 
         assertThat(preference.getTitle()).isEqualTo(LABEL);
-        assertThat(preference.getSummary()).isEqualTo(SUMMARY);
         assertThat(preference.getIcon()).isNotNull();
     }
 
