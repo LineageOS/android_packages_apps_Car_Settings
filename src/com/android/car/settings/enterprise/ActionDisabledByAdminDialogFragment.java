@@ -100,7 +100,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
                 .setPositiveButton(R.string.okay, /* listener= */ null);
         mActionDisabledByAdminController = ActionDisabledByAdminControllerFactory
-                .createInstance(context, new DeviceAdminStringProviderImpl(context));
+                .createInstance(context, mRestriction, new DeviceAdminStringProviderImpl(context));
         mActionDisabledByAdminController.initialize(
                 new ActionDisabledLearnMoreButtonLauncherImpl(builder));
         if (enforcedAdmin != null) {
