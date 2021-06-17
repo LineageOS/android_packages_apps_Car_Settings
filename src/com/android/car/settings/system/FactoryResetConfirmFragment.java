@@ -18,7 +18,6 @@ package com.android.car.settings.system;
 
 import android.app.ActivityManager;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -52,11 +51,9 @@ public class FactoryResetConfirmFragment extends SettingsFragment {
             return;
         }
 
-        PersistentDataBlockManager pdbManager =
-                (PersistentDataBlockManager) requireContext().getSystemService(
-                        Context.PERSISTENT_DATA_BLOCK_SERVICE);
-        OemLockManager oemLockManager = (OemLockManager) requireContext().getSystemService(
-                Context.OEM_LOCK_SERVICE);
+        PersistentDataBlockManager pdbManager = requireContext().getSystemService(
+                PersistentDataBlockManager.class);
+        OemLockManager oemLockManager = requireContext().getSystemService(OemLockManager.class);
         if (pdbManager != null && !oemLockManager.isOemUnlockAllowed()
                 && isDeviceProvisioned()) {
             // If OEM unlock is allowed, the persistent data block will be wiped during the factory
@@ -89,18 +86,19 @@ public class FactoryResetConfirmFragment extends SettingsFragment {
                 .build();
     }
 
-    private boolean isDeviceProvisioned() {
-        return Settings.Global.getInt(requireContext().getContentResolver(),
-                Settings.Global.DEVICE_PROVISIONED, 0) != 0;
-    }
-
-    private ProgressDialog getProgressDialog() {
+    @VisibleForTesting
+    ProgressDialog getProgressDialog() {
         ProgressDialog progressDialog = new ProgressDialog(requireContext());
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
         progressDialog.setTitle(requireContext().getString(R.string.factory_reset_progress_title));
         progressDialog.setMessage(requireContext().getString(R.string.factory_reset_progress_text));
         return progressDialog;
+    }
+
+    private boolean isDeviceProvisioned() {
+        return Settings.Global.getInt(requireContext().getContentResolver(),
+                Settings.Global.DEVICE_PROVISIONED, 0) != 0;
     }
 
     private void resetEverything() {
