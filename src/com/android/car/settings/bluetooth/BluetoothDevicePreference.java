@@ -16,6 +16,7 @@
 
 package com.android.car.settings.bluetooth;
 
+import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.SystemProperties;
@@ -30,6 +31,7 @@ import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.settings.common.MultiActionPreference;
 import com.android.car.settings.common.ToggleButtonActionItem;
+import com.android.settingslib.bluetooth.BluetoothUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 /**
@@ -100,7 +102,16 @@ public class BluetoothDevicePreference extends MultiActionPreference {
 
     private void refreshUi() {
         setTitle(mCachedDevice.getName());
-        setSummary(mCachedDevice.getCarConnectionSummary());
+
+        // If connected, we only want the "Connected" text without details (ex. "no media")
+        // TODO: Move branching logic into getCarConnectionSummary()
+        if (mCachedDevice.isConnected()) {
+            setSummary(getContext().getString(BluetoothUtils
+                    .getConnectionStateSummary(BluetoothProfile.STATE_CONNECTED),
+                    /* appended text= */ ""));
+        } else {
+            setSummary(mCachedDevice.getCarConnectionSummary());
+        }
 
         Pair<Drawable, String> pair = com.android.settingslib.bluetooth.BluetoothUtils
                 .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
