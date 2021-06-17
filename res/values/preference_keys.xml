@@ -257,17 +257,6 @@
     </string>
     <string name="pk_more_special_access" translatable="false">more_special_access</string>
 
-    <!-- DateTime Settings -->
-    <string name="pk_auto_datetime_switch" translatable="false">auto_datetime_switch</string>
-    <string name="pk_auto_timezone_switch" translatable="false">auto_timezone_switch</string>
-    <string name="pk_date_picker_entry" translatable="false">date_picker_entry</string>
-    <string name="pk_time_picker_entry" translatable="false">time_picker_entry</string>
-    <string name="pk_timezone_picker_screen_entry" translatable="false">
-        timezone_picker_screen_entry
-    </string>
-    <string name="pk_use_24hour_switch" translatable="false">use_24hour_switch</string>
-    <string name="pk_timezone_picker_screen" translatable="false">timezone_picker_screen</string>
-
     <!-- Accounts -->
     <string name="pk_account_list" translatable="false">account_list</string>
     <string name="pk_account_settings" translatable="false">account_settings</string>
@@ -283,6 +272,7 @@
     <string name="pk_account_group" translatable="false">account_group</string>
 
     <!-- Privacy -->
+    <string name="pk_privacy_work_policy" translatable="false">privacy_work_policy</string>
     <string name="pk_privacy_manage_perms" translatable="false">privacy_manage_perms</string>
     <string name="pk_show_password" translatable="false">privacy_show_password</string>
     <string name="pk_privacy_extra_settings" translatable="false">privacy_extra_settings</string>
@@ -329,6 +319,16 @@
     </string>
     <string name="pk_brightness_level" translatable="false">brightness_level</string>
     <string name="pk_display_extra_settings" translatable="false">display_extra_settings</string>
+    <!-- DateTime Settings -->
+    <string name="pk_auto_datetime_switch" translatable="false">auto_datetime_switch</string>
+    <string name="pk_auto_timezone_switch" translatable="false">auto_timezone_switch</string>
+    <string name="pk_date_picker_entry" translatable="false">date_picker_entry</string>
+    <string name="pk_time_picker_entry" translatable="false">time_picker_entry</string>
+    <string name="pk_timezone_picker_screen_entry" translatable="false">
+        timezone_picker_screen_entry
+    </string>
+    <string name="pk_use_24hour_switch" translatable="false">use_24hour_switch</string>
+    <string name="pk_timezone_picker_screen" translatable="false">timezone_picker_screen</string>
 
     <!-- Sound Settings -->
     <string name="pk_volume_settings" translatable="false">volume_settings</string>
