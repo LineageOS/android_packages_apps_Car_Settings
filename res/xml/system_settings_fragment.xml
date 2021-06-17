@@ -21,6 +21,13 @@
     android:title="@string/system_setting_title"
     android:key="@string/psk_system_settings">
     <Preference
+        android:icon="@drawable/ic_system_update"
+        android:key="@string/pk_system_update_settings"
+        android:title="@string/system_update_settings_title"
+        settings:controller="com.android.car.settings.system.SystemUpdatePreferenceController">
+        <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"/>
+    </Preference>
+    <Preference
         android:fragment="com.android.car.settings.language.LanguagesAndInputFragment"
         android:key="@string/pk_languages_and_input_settings"
         android:icon="@drawable/ic_language"
@@ -28,12 +35,11 @@
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
         settings:searchable="false"/>
     <Preference
-        android:icon="@drawable/ic_system_update"
-        android:key="@string/pk_system_update_settings"
-        android:title="@string/system_update_settings_title"
-        settings:controller="com.android.car.settings.system.SystemUpdatePreferenceController">
-        <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"/>
-    </Preference>
+        android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"
+        android:key="@string/pk_date_time_settings_entry"
+        android:icon="@drawable/ic_date_time"
+        android:title="@string/date_and_time_settings_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.system.AboutSettingsFragment"
         android:icon="@drawable/ic_settings_about"
