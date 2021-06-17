@@ -34,7 +34,7 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.internal.annotations.VisibleForTesting;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -48,8 +48,7 @@ public class EditProfileNameFragment extends BaseFragment {
 
     private EditText mProfileNameEditText;
     @VisibleForTesting UserManager mUserManager;
-    private MenuItem mOkButton;
-    private MenuItem mCancelButton;
+    private MenuItem mSaveButton;
 
     /**
      * Creates instance of EditProfileNameFragment.
@@ -65,7 +64,7 @@ public class EditProfileNameFragment extends BaseFragment {
 
     @Override
     public List<MenuItem> getToolbarMenuItems() {
-        return Arrays.asList(mCancelButton, mOkButton);
+        return Collections.singletonList(mSaveButton);
     }
 
     @Override
@@ -85,11 +84,7 @@ public class EditProfileNameFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         mUserInfo = getArguments().getParcelable(Intent.EXTRA_USER);
 
-        mCancelButton = new MenuItem.Builder(getContext())
-                .setTitle(android.R.string.cancel)
-                .setOnClickListener(i -> getActivity().onBackPressed())
-                .build();
-        mOkButton = new MenuItem.Builder(getContext())
+        mSaveButton = new MenuItem.Builder(getContext())
                 .setTitle(android.R.string.ok)
                 .setOnClickListener(i -> {
                     // Save new user's name.
@@ -128,13 +123,13 @@ public class EditProfileNameFragment extends BaseFragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (TextUtils.isEmpty(s)) {
-                    mOkButton.setEnabled(false);
+                    mSaveButton.setEnabled(false);
                     mProfileNameEditText.setError(getString(R.string.name_input_blank_error));
                 } else if (!TextUtils.isGraphic(s)) {
-                    mOkButton.setEnabled(false);
+                    mSaveButton.setEnabled(false);
                     mProfileNameEditText.setError(getString(R.string.name_input_invalid_error));
                 } else {
-                    mOkButton.setEnabled(true);
+                    mSaveButton.setEnabled(true);
                     mProfileNameEditText.setError(null);
                 }
             }
