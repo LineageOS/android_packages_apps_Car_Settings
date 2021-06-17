@@ -47,7 +47,7 @@ abstract class BaseCarSettingsActivityTestCase<T extends BaseCarSettingsTestActi
     @Before
     public void setUp() throws Throwable {
         mActivity = getActivityTestRule().getActivity();
-        mFragmentManager = getActivityTestRule().getActivity().getSupportFragmentManager();
+        mFragmentManager = mActivity.getSupportFragmentManager();
     }
 
     @Test

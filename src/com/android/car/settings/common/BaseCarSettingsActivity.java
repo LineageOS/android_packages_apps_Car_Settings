@@ -156,6 +156,11 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         }
         mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
                 this);
+
+        if (shouldFocusContentOnLaunch()) {
+            requestContentPaneFocus();
+            mHasInitialFocus = true;
+        }
         setUpFocusChangeListener(true);
     }
 
@@ -309,6 +314,13 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     protected Fragment getCurrentFragment() {
         return getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+    }
+
+    /**
+     * Returns whether the content pane should get focus initially when in dual-pane configuration.
+     */
+    protected boolean shouldFocusContentOnLaunch() {
+        return true;
     }
 
     private void launchIfDifferent(Fragment newFragment) {
