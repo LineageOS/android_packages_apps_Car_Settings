@@ -23,7 +23,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
-import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
@@ -41,16 +40,8 @@ public abstract class LegalPreferenceController extends PreferenceController<Pre
 
     public LegalPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
-        this(context, preferenceKey, fragmentController, uxRestrictions,
-                context.getPackageManager());
-    }
-
-    @VisibleForTesting
-    LegalPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
-            PackageManager packageManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mPackageManager = packageManager;
+        mPackageManager = context.getPackageManager();
     }
 
     @Override
