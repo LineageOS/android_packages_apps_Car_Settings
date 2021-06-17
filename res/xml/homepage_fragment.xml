@@ -116,12 +116,6 @@
         android:key="@string/pk_units_settings_entry"
         android:title="@string/units_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
-    <com.android.car.settings.common.TopLevelPreference
-        android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"
-        android:icon="@drawable/ic_top_level_date_time"
-        android:key="@string/pk_date_time_settings_entry"
-        android:title="@string/date_and_time_settings_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_device_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
