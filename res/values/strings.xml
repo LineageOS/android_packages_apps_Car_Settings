@@ -1601,6 +1601,10 @@
     <string name="disabled_by_policy_title_suspend_packages" translatable="false">Can’t open this app</string>
     <!-- Dialog title. This dialog lets a user know that a specific setting is blocked by their credit provider. Since the user purchased the device from the credit provider, the credit provider controls what they can access. [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_financed_device" translatable="false">Blocked by your credit provider</string>
+    <!-- Dialog title shown when parental consent is required for the child to set up biometric authentication. [CHAR LIMIT=30] -->
+    <string name="disabled_by_policy_title_biometric_parental_consent" translatable="false">Parent needed</string>
+    <!-- Dialog content shown when parental consent is required for the child to set up biometric authentication. [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_policy_content_biometric_parental_consent" translatable="false">Hand the phone to your parent to start setting this up</string>
     <!-- Shown when the user tries to change a settings locked by an admin [CHAR LIMIT=200] -->
     <string name="default_admin_support_msg" translatable="false">If you have questions, contact your IT admin</string>
     <!-- url for learning more about IT admin policy disabling -->
