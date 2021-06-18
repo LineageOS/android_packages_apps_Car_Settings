@@ -16,41 +16,20 @@
 
 package com.android.car.settings.system.legal;
 
-import android.car.drivingstate.CarUxRestrictions;
-import android.content.Context;
-import android.content.Intent;
-
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-
-import com.android.car.settings.common.FragmentController;
 
 import org.junit.runner.RunWith;
 
-/** Unit test for {@link LegalPreferenceController}. */
 @RunWith(AndroidJUnit4.class)
-public class LegalPreferenceControllerTest extends LegalPreferenceControllerTestCase {
+public class WebViewLicensePreferenceControllerTest extends LegalPreferenceControllerTestCase {
     @Override
     protected LegalPreferenceController getPreferenceController() {
-        return new TestLegalPreferenceController(mContext,
+        return new WebViewLicensePreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
     }
 
     @Override
     protected String getIntentAction() {
-        return "test_intent";
-    }
-
-    private static class TestLegalPreferenceController extends LegalPreferenceController {
-        private static final Intent INTENT = new Intent("test_intent");
-
-        TestLegalPreferenceController(Context context, String preferenceKey,
-                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
-            super(context, preferenceKey, fragmentController, uxRestrictions);
-        }
-
-        @Override
-        protected Intent getIntent() {
-            return INTENT;
-        }
+        return "android.settings.WEBVIEW_LICENSE";
     }
 }
