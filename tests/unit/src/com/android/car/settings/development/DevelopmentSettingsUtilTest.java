@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,94 +18,90 @@ package com.android.car.settings.development;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.when;
+
 import android.content.Context;
-import android.content.pm.UserInfo;
-import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
+
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.Shadows;
-import org.robolectric.shadows.ShadowUserManager;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class DevelopmentSettingsUtilTest {
+    private Context mContext = ApplicationProvider.getApplicationContext();
 
-    private Context mContext;
-    private UserManager mUserManager;
+    @Mock
+    private UserManager mMockUserManager;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
-        mUserManager = UserManager.get(mContext);
+
+        // default to no debugging restrictions
+        when(mMockUserManager.hasUserRestriction(
+                UserManager.DISALLOW_DEBUGGING_FEATURES)).thenReturn(false);
     }
 
     @Test
     public void isEnabled_settingsOff_isAdmin_shouldReturnFalse() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
                 .isFalse();
     }
 
     @Test
     public void isEnabled_settingsOn_isAdmin_shouldReturnTrue() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
                 .isTrue();
     }
 
     @Test
     public void isEnabled_settingsOn_notAdmin_shouldReturnFalse() {
-        setCurrentUserWithFlags(/* flags= */ 0);
+        when(mMockUserManager.isAdminUser()).thenReturn(false);
 
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
                 .isFalse();
     }
 
     @Test
     public void isEnabled_hasDisallowDebuggingRestriction_shouldReturnFalse() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
 
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        getShadowUserManager().setUserRestriction(
-                UserHandle.of(UserHandle.myUserId()),
-                UserManager.DISALLOW_DEBUGGING_FEATURES,
-                true);
+        when(mMockUserManager.hasUserRestriction(
+                UserManager.DISALLOW_DEBUGGING_FEATURES)).thenReturn(true);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
                 .isFalse();
     }
 
     @Test
     public void isEnabled_doesNotHaveDisallowDebuggingRestriction_shouldReturnTrue() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
 
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        getShadowUserManager().setUserRestriction(
-                UserHandle.of(UserHandle.myUserId()),
-                UserManager.DISALLOW_DEBUGGING_FEATURES,
-                false);
-
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
                 .isTrue();
     }
 
@@ -143,13 +139,5 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 0);
         assertThat(DevelopmentSettingsUtil.isDeviceProvisioned(mContext)).isFalse();
-    }
-
-    private void setCurrentUserWithFlags(int flags) {
-        getShadowUserManager().addUser(UserHandle.myUserId(), "test name", flags);
-    }
-
-    private ShadowUserManager getShadowUserManager() {
-        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

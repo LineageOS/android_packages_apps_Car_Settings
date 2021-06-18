@@ -19,6 +19,7 @@ android_test {
     static_libs: [
         "CarSettingsForUnitTesting",
         "android.car",
+        "android.car.test.utils",
         "androidx.test.core",
         "androidx.test.rules",
         "androidx.test.ext.junit",
