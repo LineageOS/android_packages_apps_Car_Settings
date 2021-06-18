@@ -23,13 +23,13 @@ import android.graphics.drawable.Drawable;
 
 import androidx.annotation.VisibleForTesting;
 
-import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.ui.preference.CarUiTwoActionTextPreference;
 
 /** Business Logic for preference which promotes a regular user to an admin user. */
 public class MakeAdminPreferenceController extends
-        UserDetailsBasePreferenceController<ButtonPreference> {
+        UserDetailsBasePreferenceController<CarUiTwoActionTextPreference> {
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mConfirmListener =
@@ -46,8 +46,8 @@ public class MakeAdminPreferenceController extends
     }
 
     @Override
-    protected Class<ButtonPreference> getPreferenceType() {
-        return ButtonPreference.class;
+    protected Class<CarUiTwoActionTextPreference> getPreferenceType() {
+        return CarUiTwoActionTextPreference.class;
     }
 
 
@@ -67,8 +67,8 @@ public class MakeAdminPreferenceController extends
     }
 
     @Override
-    protected void updateState(ButtonPreference preference) {
-        preference.setOnButtonClickListener(pref -> {
+    protected void updateState(CarUiTwoActionTextPreference preference) {
+        preference.setOnSecondaryActionClickListener(() -> {
 
             ConfirmationDialogFragment dialogFragment =
                     UsersDialogProvider.getConfirmGrantAdminDialogFragment(getContext(),

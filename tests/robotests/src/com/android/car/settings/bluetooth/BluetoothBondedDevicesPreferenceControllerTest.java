@@ -176,8 +176,8 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         BluetoothDevicePreference devicePreference =
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
 
-        assertThat(devicePreference.isActionShown()).isTrue();
-        devicePreference.performButtonClick();
+        assertThat(devicePreference.isSecondaryActionVisible()).isTrue();
+        devicePreference.performSecondaryActionClick();
 
         verify(mControllerHelper.getMockFragmentController()).launchFragment(
                 any(BluetoothDeviceDetailsFragment.class));
@@ -190,7 +190,7 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         BluetoothDevicePreference devicePreference =
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
 
-        assertThat(devicePreference.isActionShown()).isFalse();
+        assertThat(devicePreference.isSecondaryActionVisible()).isFalse();
     }
 
     @Test
@@ -203,7 +203,7 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
                 true, CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, 0).build();
         mController.onUxRestrictionsChanged(restrictions);
 
-        assertThat(devicePreference.isActionShown()).isFalse();
+        assertThat(devicePreference.isSecondaryActionVisible()).isFalse();
     }
 
     @Test
@@ -220,7 +220,7 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
                 true, CarUxRestrictions.UX_RESTRICTIONS_BASELINE, 0).build();
         mController.onUxRestrictionsChanged(noRestrictions);
 
-        assertThat(devicePreference.isActionShown()).isTrue();
+        assertThat(devicePreference.isSecondaryActionVisible()).isTrue();
     }
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {

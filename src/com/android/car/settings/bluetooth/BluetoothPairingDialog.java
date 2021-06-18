@@ -16,6 +16,8 @@
 
 package com.android.car.settings.bluetooth;
 
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 import android.annotation.Nullable;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -64,6 +66,9 @@ public class BluetoothPairingDialog extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
+
         Intent intent = getIntent();
         mBluetoothPairingController = new BluetoothPairingController(intent, this);
         // build the dialog fragment

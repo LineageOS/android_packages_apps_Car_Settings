@@ -19,6 +19,7 @@ package com.android.car.settings.common;
 import android.annotation.Nullable;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
@@ -53,6 +54,7 @@ import com.android.car.settings.network.NetworkAndInternetFragment;
 import com.android.car.settings.privacy.PrivacySettingsFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.security.SecuritySettingsFragment;
+import com.android.car.settings.sound.RingtonePickerFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.storage.StorageSettingsFragment;
 import com.android.car.settings.system.AboutSettingsFragment;
@@ -118,6 +120,20 @@ public class CarSettingActivities {
         @Override
         protected Fragment getInitialFragment() {
             return new SoundSettingsFragment();
+        }
+    }
+
+    /**
+     * Ringtone Picker Activity.
+     */
+    public static class RingtonePickerActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            Bundle args = getIntent().getExtras().deepCopy();
+            Fragment fragment = new RingtonePickerFragment();
+            fragment.setArguments(args);
+            return fragment;
         }
     }
 

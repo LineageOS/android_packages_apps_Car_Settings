@@ -198,7 +198,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Queres sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> acceda aos teus contactos e ao historial de chamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"É posible que tamén teñas que escribir este PIN no outro dispositivo."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"É posible que tamén teñas que escribir esta clave de acceso no outro dispositivo."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"É posible que tamén teñas que escribir este contrasinal no outro dispositivo."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Debe ter 16 díxitos"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalmente 0000 ou 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitude de sincronización"</string>
@@ -344,8 +344,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desactivas o acceso de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ás notificacións, tamén se pode desactivar o acceso no modo Non molestar."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS de tarificación adicional"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"As SMS de tarificación adicional poden implicar cargos engadidos nas facturas do teu operador. Se activas o permiso para unha aplicación, poderás enviar este tipo de mensaxes a través desa aplicación."</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS premium"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Podes ter que pagar polas mensaxes premium, cuxos custos se engadirán ás facturas do teu operador. Se activas o permiso para unha aplicación, poderás enviar SMS premium a través desa aplicación."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acceso ao uso"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Co acceso ao uso unha aplicación poden realizar un seguimento das demais aplicacións que usas e de con que frecuencia as utilizas, así como do teu operador, da configuración do idioma e doutros detalles."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control da wifi"</string>

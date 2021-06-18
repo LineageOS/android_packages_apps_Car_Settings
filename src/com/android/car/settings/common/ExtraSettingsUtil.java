@@ -20,6 +20,10 @@ import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_KEYHINT;
 
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -38,6 +42,21 @@ public class ExtraSettingsUtil {
             return metaData.getBoolean(META_DATA_PREFERENCE_ICON_TINTABLE);
         }
         return false;
+    }
+
+    /**
+     * Returns a drawable from an resource's package context.
+     */
+    public static Drawable loadDrawableFromPackage(Context context, String resPackage, int resId) {
+        try {
+            return context.createPackageContext(resPackage, /* flags= */ 0)
+                    .getDrawable(resId);
+        } catch (PackageManager.NameNotFoundException ex) {
+            LOG.e("loadDrawableFromPackage: package name not found: ", ex);
+        } catch (Resources.NotFoundException ex) {
+            LOG.w("loadDrawableFromPackage: resource not found with id " + resId, ex);
+        }
+        return null;
     }
 
     /**

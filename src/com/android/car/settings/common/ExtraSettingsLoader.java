@@ -32,7 +32,7 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-import android.graphics.drawable.Icon;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 
@@ -118,12 +118,13 @@ public class ExtraSettingsLoader {
             } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
                 LOG.d("Couldn't find info", e);
             }
-            Icon icon = null;
+            Drawable icon = null;
             if (metaData.containsKey(META_DATA_PREFERENCE_ICON)) {
                 int iconRes = metaData.getInt(META_DATA_PREFERENCE_ICON);
-                icon = Icon.createWithResource(activityInfo.packageName, iconRes);
+                icon = ExtraSettingsUtil.loadDrawableFromPackage(mContext,
+                        activityInfo.packageName, iconRes);
             } else if (!metaData.containsKey(META_DATA_PREFERENCE_ICON_URI)) {
-                icon = Icon.createWithResource(mContext, R.drawable.ic_settings_gear);
+                icon = mContext.getDrawable(R.drawable.ic_settings_gear);
                 LOG.d("use default icon.");
             }
             Intent extraSettingIntent =
@@ -143,7 +144,7 @@ public class ExtraSettingsLoader {
                 preference.setKey(key);
             }
             if (icon != null) {
-                preference.setIcon(icon.loadDrawable(mContext));
+                preference.setIcon(icon);
                 if (ExtraSettingsUtil.isIconTintable(metaData)) {
                     preference.getIcon().setTintList(
                             Themes.getAttrColorStateList(mContext, R.attr.iconColor));

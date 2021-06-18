@@ -26,16 +26,16 @@
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$LanguagePickerActivity"/>
     </Preference>
-    <com.android.car.settings.common.ButtonPreference
+    <com.android.car.ui.preference.CarUiTwoActionIconPreference
         android:key="@string/pk_autofill_picker_entry"
         android:summary="@string/app_list_preference_none"
         android:title="@string/autofill_settings_title"
-        android:widgetLayout="@layout/details_preference_widget"
         settings:controller="com.android.car.settings.applications.defaultapps.DefaultAutofillPickerEntryPreferenceController"
-        settings:iconSpaceReserved="true">
+        settings:iconSpaceReserved="true"
+        settings:secondaryActionIcon="@drawable/ic_settings_gear">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$DefaultAutofillPickerActivity"/>
-    </com.android.car.settings.common.ButtonPreference>
+    </com.android.car.ui.preference.CarUiTwoActionIconPreference>
     <Preference
         android:key="@string/pk_keyboard_entry"
         android:title="@string/keyboard_settings"

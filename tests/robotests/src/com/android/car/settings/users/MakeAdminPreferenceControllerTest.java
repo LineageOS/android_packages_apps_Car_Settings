@@ -30,11 +30,11 @@ import android.os.Bundle;
 
 import androidx.lifecycle.Lifecycle;
 
-import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.ui.preference.CarUiTwoActionTextPreference;
 
 import org.junit.After;
 import org.junit.Before;
@@ -56,7 +56,7 @@ public class MakeAdminPreferenceControllerTest {
     private PreferenceControllerTestHelper<MakeAdminPreferenceController>
             mPreferenceControllerHelper;
     private MakeAdminPreferenceController mController;
-    private ButtonPreference mButtonPreference;
+    private CarUiTwoActionTextPreference mButtonPreference;
     private ConfirmationDialogFragment mDialog;
 
     @Mock
@@ -71,7 +71,7 @@ public class MakeAdminPreferenceControllerTest {
                 MakeAdminPreferenceController.class);
         mController = mPreferenceControllerHelper.getController();
         mController.setUserInfo(TEST_USER);
-        mButtonPreference = new ButtonPreference(context);
+        mButtonPreference = new CarUiTwoActionTextPreference(context);
         mButtonPreference.setSelectable(false);
         mPreferenceControllerHelper.setPreference(mButtonPreference);
         mDialog = new ConfirmationDialogFragment.Builder(context).build();
@@ -94,7 +94,7 @@ public class MakeAdminPreferenceControllerTest {
     @Test
     public void testOnButtonClick_showsDialog() {
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mButtonPreference.performButtonClick();
+        mButtonPreference.performSecondaryActionClick();
         verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
                 any(ConfirmationDialogFragment.class),
                 matches(ConfirmationDialogFragment.TAG));

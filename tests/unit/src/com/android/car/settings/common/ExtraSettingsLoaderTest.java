@@ -54,7 +54,8 @@ public class ExtraSettingsLoaderTest {
     private static final String FAKE_CATEGORY = "fake_category";
     private static final String FAKE_TITLE = "fake_title";
     private static final String FAKE_SUMMARY = "fake_summary";
-    private static final String FAKE_CONTENT_PROVIDER = "content://android.content.FakeProvider";
+    private static final String TEST_CONTENT_PROVIDER =
+            "content://com.android.car.settings.testutils.TestContentProvider";
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private ExtraSettingsLoader mExtraSettingsLoader;
@@ -77,9 +78,9 @@ public class ExtraSettingsLoaderTest {
         bundle.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE);
         bundle.putString(META_DATA_PREFERENCE_SUMMARY, FAKE_SUMMARY);
         bundle.putString(META_DATA_PREFERENCE_CATEGORY, FAKE_CATEGORY);
-        bundle.putString(META_DATA_PREFERENCE_TITLE_URI, FAKE_CONTENT_PROVIDER);
-        bundle.putString(META_DATA_PREFERENCE_SUMMARY_URI, FAKE_CONTENT_PROVIDER);
-        bundle.putString(META_DATA_PREFERENCE_ICON_URI, FAKE_CONTENT_PROVIDER);
+        bundle.putString(META_DATA_PREFERENCE_TITLE_URI, TEST_CONTENT_PROVIDER);
+        bundle.putString(META_DATA_PREFERENCE_SUMMARY_URI, TEST_CONTENT_PROVIDER);
+        bundle.putString(META_DATA_PREFERENCE_ICON_URI, TEST_CONTENT_PROVIDER);
 
         ActivityInfo activityInfo = new ActivityInfo();
         activityInfo.metaData = bundle;

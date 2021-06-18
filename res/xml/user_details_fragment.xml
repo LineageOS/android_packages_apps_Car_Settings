@@ -17,9 +17,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:key="@string/psk_user_details">
-    <com.android.car.settings.common.ButtonPreference
+    <com.android.car.ui.preference.CarUiTwoActionIconPreference
         android:key="@string/pk_edit_user_name_entry"
         android:selectable="false"
-        android:widgetLayout="@layout/edit_icon_preference_widget"
-        settings:controller="com.android.car.settings.users.EditUserNameEntryPreferenceController"/>
+        settings:controller="com.android.car.settings.users.EditUserNameEntryPreferenceController"
+        settings:secondaryActionIcon="@drawable/ic_edit"/>
 </PreferenceScreen>

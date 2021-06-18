@@ -26,7 +26,7 @@ import androidx.preference.Preference;
 
 import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
-import com.android.car.settings.common.ButtonPreference;
+import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 /**
@@ -37,7 +37,7 @@ import com.android.settingslib.bluetooth.CachedBluetoothDevice;
  * CachedBluetoothDevice#compareTo(CachedBluetoothDevice)}. If two devices are considered equal, the
  * default preference sort ordering is used (see {@link #compareTo(Preference)}.
  */
-public class BluetoothDevicePreference extends ButtonPreference {
+public class BluetoothDevicePreference extends CarUiTwoActionIconPreference {
     private static final String BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY =
             "persist.bluetooth.showdeviceswithoutnames";
 
@@ -51,7 +51,7 @@ public class BluetoothDevicePreference extends ButtonPreference {
         mShowDevicesWithoutNames = SystemProperties.getBoolean(
                 BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY, false);
         // Hide action by default.
-        showAction(false);
+        setSecondaryActionVisible(false);
     }
 
     /**
