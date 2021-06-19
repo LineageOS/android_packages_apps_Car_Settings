@@ -18,13 +18,14 @@ package com.android.car.settings.system;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -32,8 +33,10 @@ import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
 import android.service.persistentdata.PersistentDataBlockManager;
 
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.PreferenceManager;
+import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
@@ -55,8 +58,8 @@ import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
 public class FactoryResetConfirmFragmentTest {
-    private static final int PDB_TASK_TIMEOUT = 10; // in seconds
 
+    private final Context mContext = spy(ApplicationProvider.getApplicationContext());
     private FactoryResetConfirmFragment mFragment;
     private BaseCarSettingsTestActivity mActivity;
     private FragmentManager mFragmentManager;
@@ -72,31 +75,34 @@ public class FactoryResetConfirmFragmentTest {
     private PersistentDataBlockManager mPersistentDataBlockManager;
     @Mock
     private OemLockManager mOemLockManager;
+    @Mock
+    private FragmentActivity mMockActivity;
 
     @Before
     public void setUp() throws Throwable {
         MockitoAnnotations.initMocks(this);
 
         mActivity = mActivityTestRule.getActivity();
-        ExtendedMockito.spyOn(mActivity);
-        doNothing().when(mActivity).sendBroadcast(any());
-        doReturn(mPersistentDataBlockManager).when(mActivity).getSystemService(
-                Context.PERSISTENT_DATA_BLOCK_SERVICE);
-        doReturn(mOemLockManager).when(mActivity).getSystemService(
-                Context.OEM_LOCK_SERVICE);
         mFragmentManager = mActivity.getSupportFragmentManager();
         mDeviceProvisioned = Settings.Global.getInt(
-                mActivity.getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 0);
+                mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 0);
         // Default to not provisioned.
-        Settings.Global.putInt(mActivity.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 0);
+
         setUpFragment();
+        when(mFragment.requireContext()).thenReturn(mContext);
+        when(mContext.getSystemService(PersistentDataBlockManager.class))
+                .thenReturn(mPersistentDataBlockManager);
+        when(mContext.getSystemService(OemLockManager.class)).thenReturn(mOemLockManager);
+        when(mFragment.requireActivity()).thenReturn(mMockActivity);
+        when(mFragment.getActivity()).thenReturn(mMockActivity);
         mResetButton = mActivity.getToolbar().getMenuItems().get(0);
     }
 
     @After
     public void tearDown() {
-        Settings.Global.putInt(mActivity.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 mDeviceProvisioned);
     }
 
@@ -105,7 +111,7 @@ public class FactoryResetConfirmFragmentTest {
         triggerFactoryResetConfirmButton();
 
         ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify(mActivity).sendBroadcast(argumentCaptor.capture());
+        verify(mMockActivity).sendBroadcast(argumentCaptor.capture());
         Intent resetIntent = argumentCaptor.getValue();
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
         assertThat(resetIntent.getPackage()).isEqualTo("android");
@@ -117,25 +123,25 @@ public class FactoryResetConfirmFragmentTest {
 
     @Test
     public void confirmClicked_resetEsimFalse_resetIntentReflectsChoice() throws Throwable {
-        PreferenceManager.getDefaultSharedPreferences(mActivity).edit().putBoolean(
-                mActivity.getString(R.string.pk_factory_reset_reset_esim), false).commit();
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putBoolean(
+                mContext.getString(R.string.pk_factory_reset_reset_esim), false).commit();
 
         triggerFactoryResetConfirmButton();
 
         ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify(mActivity).sendBroadcast(argumentCaptor.capture());
+        verify(mMockActivity).sendBroadcast(argumentCaptor.capture());
         Intent resetIntent = argumentCaptor.getValue();
         assertThat(resetIntent.getExtras().getBoolean(Intent.EXTRA_WIPE_ESIMS)).isEqualTo(false);
     }
 
     @Test
     public void confirmClicked_pdbManagerNull_sendsResetIntent() throws Throwable {
-        when(mActivity.getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE)).thenReturn(null);
+        when(mContext.getSystemService(PersistentDataBlockManager.class)).thenReturn(null);
 
         triggerFactoryResetConfirmButton();
 
         ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify(mActivity).sendBroadcast(argumentCaptor.capture());
+        verify(mMockActivity).sendBroadcast(argumentCaptor.capture());
         Intent resetIntent = argumentCaptor.getValue();
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
     }
@@ -156,7 +162,7 @@ public class FactoryResetConfirmFragmentTest {
         triggerFactoryResetConfirmButton();
 
         ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify(mActivity).sendBroadcast(argumentCaptor.capture());
+        verify(mMockActivity).sendBroadcast(argumentCaptor.capture());
         Intent resetIntent = argumentCaptor.getValue();
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
     }
@@ -178,7 +184,7 @@ public class FactoryResetConfirmFragmentTest {
         triggerFactoryResetConfirmButton();
 
         ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify(mActivity).sendBroadcast(argumentCaptor.capture());
+        verify(mMockActivity).sendBroadcast(argumentCaptor.capture());
         Intent resetIntent = argumentCaptor.getValue();
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
     }
@@ -186,7 +192,7 @@ public class FactoryResetConfirmFragmentTest {
     @Test
     public void confirmClicked_noOemUnlockAllowed_provisioned_wipesPdb() throws Throwable {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(false);
-        Settings.Global.putInt(mActivity.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 1);
 
         triggerFactoryResetConfirmButton();
@@ -200,13 +206,16 @@ public class FactoryResetConfirmFragmentTest {
     @Test
     public void confirmClicked_noOemUnlockAllowed_provisioned_sendsResetIntent() throws Throwable {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(false);
-        Settings.Global.putInt(mActivity.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 1);
 
         triggerFactoryResetConfirmButton();
+        // wait for async task
+        PollingCheck.waitFor(
+                () -> mFragment.mPersistentDataWipeTask.getStatus() == AsyncTask.Status.FINISHED);
 
         ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify(mActivity).sendBroadcast(argumentCaptor.capture());
+        verify(mMockActivity).sendBroadcast(argumentCaptor.capture());
         Intent resetIntent = argumentCaptor.getValue();
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
     }
@@ -216,17 +225,28 @@ public class FactoryResetConfirmFragmentTest {
         mActivityTestRule.runOnUiThread(() -> {
             mFragmentManager.beginTransaction()
                     .replace(
-                            R.id.fragment_container, new FactoryResetConfirmFragment(),
+                            R.id.fragment_container, new TestFactoryResetConfirmFragment(),
                             factoryResetConfirmFragmentTag)
                     .commitNow();
         });
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         mFragment = (FactoryResetConfirmFragment)
                 mFragmentManager.findFragmentByTag(factoryResetConfirmFragmentTag);
+        ExtendedMockito.spyOn(mFragment);
     }
 
     private void triggerFactoryResetConfirmButton() throws Throwable {
         mActivityTestRule.runOnUiThread(() -> mResetButton.performClick());
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+    }
+
+    public static class TestFactoryResetConfirmFragment extends FactoryResetConfirmFragment {
+        @Override
+        ProgressDialog getProgressDialog() {
+            ProgressDialog dialog = mock(ProgressDialog.class);
+            doNothing().when(dialog).show();
+            doNothing().when(dialog).hide();
+            return dialog;
+        }
     }
 }

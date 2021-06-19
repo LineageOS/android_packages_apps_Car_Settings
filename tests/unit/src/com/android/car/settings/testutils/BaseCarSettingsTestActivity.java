@@ -56,6 +56,13 @@ public class BaseCarSettingsTestActivity extends BaseCarSettingsActivity {
     }
 
     /**
+     * Clear the boolean flag for onBackPressed by setting it to false.
+     */
+    public void clearOnBackPressedFlag() {
+        mOnBackPressedFlag = false;
+    }
+
+    /**
      * Gets an event listener for {@link #startActivity(Intent)}
      */
     public TestEventListener<Intent> getStartActivityListener() {
