@@ -1614,10 +1614,9 @@
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
     <string name="work_policy_privacy_settings_summary" translatable="false">Settings managed by your IT admin</string>
 
-    <!-- TODO(b/189123139): remove translatable="false" once the string is finalized -->
     <!-- Power policy --><skip/>
     <!-- Power components which are disabled by the current power policy cannot be toggled in Setting. [CHAR LIMIT=80] -->
-    <string name="power_component_disabled" translatable="false">This action is not allowed by the current power policy</string>
+    <string name="power_component_disabled">This setting can\'t be changed right now</string>
 
 
     <!-- TODO(b/186566325): remove translatable="false" once the string is finalized -->
