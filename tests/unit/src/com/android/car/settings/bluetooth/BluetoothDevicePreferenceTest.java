@@ -25,6 +25,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.bluetooth.BluetoothClass;
+import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.os.SystemProperties;
 
@@ -33,6 +34,7 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.MultiActionPreference;
+import com.android.settingslib.bluetooth.BluetoothUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 import org.junit.Before;
@@ -85,13 +87,25 @@ public class BluetoothDevicePreferenceTest {
     }
 
     @Test
-    public void onAttached_setsCarConnectionSummaryAsSummary() {
+    public void onAttached_notConnected_setsCarConnectionSummaryAsSummary() {
         String summary = "summary";
+        when(mCachedDevice.isConnected()).thenReturn(false);
         when(mCachedDevice.getCarConnectionSummary()).thenReturn(summary);
 
         mPreference.onAttached();
 
         assertThat(mPreference.getSummary()).isEqualTo(summary);
+    }
+
+    @Test
+    public void onAttached_connected_setsConnectedAsSummary() {
+        when(mCachedDevice.isConnected()).thenReturn(true);
+
+        mPreference.onAttached();
+
+        assertThat(mPreference.getSummary()).isEqualTo(mContext.getString(BluetoothUtils
+                .getConnectionStateSummary(BluetoothProfile.STATE_CONNECTED),
+                /* appended text= */ ""));
     }
 
     @Test
