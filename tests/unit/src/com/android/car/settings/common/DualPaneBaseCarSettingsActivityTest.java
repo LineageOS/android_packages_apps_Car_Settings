@@ -18,8 +18,10 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 
+import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
@@ -156,8 +158,30 @@ public class DualPaneBaseCarSettingsActivityTest
     }
 
     @Test
-    public void onActivityCreated_topLevelMenuFocused() throws Throwable {
+    public void onActivityCreated_noFragment_topLevelMenuFocused() throws Throwable {
         assertThat(mActivity.findViewById(R.id.top_level_menu).hasFocus()).isTrue();
+    }
+
+    @Test
+    public void onActivityCreated_homepage_topLevelMenuFocused() throws Throwable {
+        ActivityTestRule<TestDualPaneHomepageActivity> activityTestRule =
+                new ActivityTestRule<>(TestDualPaneHomepageActivity.class);
+        activityTestRule.launchActivity(null);
+        mActivity = activityTestRule.getActivity();
+        mFragmentManager = activityTestRule.getActivity().getSupportFragmentManager();
+
+        assertThat(mActivity.findViewById(R.id.top_level_menu).hasFocus()).isTrue();
+    }
+
+    @Test
+    public void onActivityCreated_hasFragment_contentFocused() throws Throwable {
+        ActivityTestRule<TestDualPaneFragmentActivity> activityTestRule =
+                new ActivityTestRule<>(TestDualPaneFragmentActivity.class);
+        activityTestRule.launchActivity(null);
+        mActivity = activityTestRule.getActivity();
+        mFragmentManager = activityTestRule.getActivity().getSupportFragmentManager();
+
+        assertThat(getCurrentFragment().getView().hasFocus()).isTrue();
     }
 
     @Test
@@ -232,5 +256,26 @@ public class DualPaneBaseCarSettingsActivityTest
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         mTopLevelFragment = (TopLevelMenuFragment) mFragmentManager.findFragmentByTag(
                 topLevelMenuTag);
+    }
+
+    public static class TestDualPaneHomepageActivity extends DualPaneTestActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new BaseTestSettingsFragment();
+        }
+
+        @Override
+        protected boolean shouldFocusContentOnLaunch() {
+            return false;
+        }
+    }
+
+    public static class TestDualPaneFragmentActivity extends DualPaneTestActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new BaseTestSettingsFragment();
+        }
     }
 }
