@@ -38,19 +38,43 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="array" name="wifi_security_method"/>
       <item type="array" name="wifi_signals"/>
       <item type="array" name="wifi_tether_security"/>
+      <item type="attr" name="action_item_one"/>
+      <item type="attr" name="action_item_one_enabled"/>
+      <item type="attr" name="action_item_one_shown"/>
+      <item type="attr" name="action_item_three"/>
+      <item type="attr" name="action_item_three_enabled"/>
+      <item type="attr" name="action_item_three_shown"/>
+      <item type="attr" name="action_item_two"/>
+      <item type="attr" name="action_item_two_enabled"/>
+      <item type="attr" name="action_item_two_shown"/>
+      <item type="attr" name="controller"/>
+      <item type="attr" name="disabledTitleColor"/>
       <item type="attr" name="dividerColor"/>
+      <item type="attr" name="enabledTitleColor"/>
+      <item type="attr" name="icon"/>
       <item type="attr" name="iconColor"/>
+      <item type="attr" name="layout"/>
+      <item type="attr" name="max"/>
+      <item type="attr" name="maxLabel"/>
+      <item type="attr" name="min"/>
+      <item type="attr" name="minLabel"/>
       <item type="attr" name="profileSwitcherAddIconBackgroundColor"/>
       <item type="attr" name="profileSwitcherAddIconColor"/>
       <item type="attr" name="profileSwitcherBackground"/>
       <item type="attr" name="profileSwitcherCurrentProfileColor"/>
       <item type="attr" name="profileSwitcherNameTextAppearance"/>
+      <item type="attr" name="progress"/>
       <item type="attr" name="quickSettingsDisabledColor"/>
       <item type="attr" name="quickSettingsEnabledColor"/>
       <item type="attr" name="quickSettingsIconDisabledColor"/>
       <item type="attr" name="quickSettingsIconEnabledColor"/>
+      <item type="attr" name="searchable"/>
+      <item type="attr" name="showChevron"/>
       <item type="attr" name="suggestionsPrimaryColor"/>
       <item type="attr" name="suggestionsSecondaryColor"/>
+      <item type="attr" name="titleColor"/>
+      <item type="attr" name="titleText"/>
+      <item type="attr" name="usage"/>
       <item type="attr" name="wifiSignalColor"/>
       <item type="bool" name="config_always_ignore_ux_restrictions"/>
       <item type="bool" name="config_automatic_brightness_available"/>
@@ -725,6 +749,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="date_time_set_time_title"/>
       <item type="string" name="date_time_set_timezone"/>
       <item type="string" name="date_time_set_timezone_title"/>
+      <item type="string" name="decline_remote_bugreport_action"/>
       <item type="string" name="default_admin_support_msg"/>
       <item type="string" name="default_app_selected_app"/>
       <item type="string" name="default_applications"/>
@@ -751,8 +776,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="device_status_summary"/>
       <item type="string" name="direct_boot_unaware_dialog_message_car"/>
       <item type="string" name="disable_text"/>
+      <item type="string" name="disabled_by_policy_content_biometric_parental_consent"/>
       <item type="string" name="disabled_by_policy_title"/>
       <item type="string" name="disabled_by_policy_title_adjust_volume"/>
+      <item type="string" name="disabled_by_policy_title_biometric_parental_consent"/>
       <item type="string" name="disabled_by_policy_title_camera"/>
       <item type="string" name="disabled_by_policy_title_financed_device"/>
       <item type="string" name="disabled_by_policy_title_outgoing_calls"/>
@@ -1043,6 +1070,11 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="settings_license_activity_unavailable"/>
       <item type="string" name="setup_lock_settings_options_button_label"/>
       <item type="string" name="seven"/>
+      <item type="string" name="share_remote_bugreport_action"/>
+      <item type="string" name="share_remote_bugreport_dialog_message"/>
+      <item type="string" name="share_remote_bugreport_dialog_message_finished"/>
+      <item type="string" name="share_remote_bugreport_dialog_title"/>
+      <item type="string" name="sharing_remote_bugreport_dialog_message"/>
       <item type="string" name="show_dev_already"/>
       <item type="string" name="show_dev_on"/>
       <item type="string" name="show_password"/>

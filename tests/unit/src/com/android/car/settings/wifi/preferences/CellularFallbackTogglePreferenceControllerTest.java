@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,58 +18,69 @@ package com.android.car.settings.wifi.preferences;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class CellularFallbackTogglePreferenceControllerTest {
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private SwitchPreference mSwitchPreference;
+    private CellularFallbackTogglePreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
 
-    private Context mContext;
-    private SwitchPreference mPreference;
-    private PreferenceControllerTestHelper<CellularFallbackTogglePreferenceController>
-            mPreferenceControllerHelper;
-    private CellularFallbackTogglePreferenceController mController;
+    @Mock
+    private FragmentController mFragmentController;
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
 
-        mPreference = new SwitchPreference(mContext);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                CellularFallbackTogglePreferenceController.class, mPreference);
-        mController = mPreferenceControllerHelper.getController();
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        mSwitchPreference = new SwitchPreference(mContext);
+        mPreferenceController = new CellularFallbackTogglePreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
     }
 
     @Test
     public void refreshUi_unchecked() {
         Settings.Global.putString(mContext.getContentResolver(),
                 Settings.Global.NETWORK_AVOID_BAD_WIFI, null);
-        mPreference.setChecked(true);
+        mSwitchPreference.setChecked(true);
 
-        mController.refreshUi();
-        assertThat(mPreference.isChecked()).isFalse();
+        mPreferenceController.refreshUi();
+        assertThat(mSwitchPreference.isChecked()).isFalse();
     }
 
     @Test
     public void refreshUi_checked() {
         Settings.Global.putString(mContext.getContentResolver(),
                 Settings.Global.NETWORK_AVOID_BAD_WIFI, "1");
-        mPreference.setChecked(false);
+        mSwitchPreference.setChecked(false);
 
-        mController.refreshUi();
-        assertThat(mPreference.isChecked()).isTrue();
+        mPreferenceController.refreshUi();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
     }
 
     @Test
@@ -77,7 +88,7 @@ public class CellularFallbackTogglePreferenceControllerTest {
         Settings.Global.putString(mContext.getContentResolver(),
                 Settings.Global.NETWORK_AVOID_BAD_WIFI, "1");
 
-        mPreference.callChangeListener(false);
+        mSwitchPreference.callChangeListener(false);
         assertThat(Settings.Global.getString(mContext.getContentResolver(),
                 Settings.Global.NETWORK_AVOID_BAD_WIFI)).isNull();
     }
@@ -87,7 +98,7 @@ public class CellularFallbackTogglePreferenceControllerTest {
         Settings.Global.putString(mContext.getContentResolver(),
                 Settings.Global.NETWORK_AVOID_BAD_WIFI, null);
 
-        mPreference.callChangeListener(true);
+        mSwitchPreference.callChangeListener(true);
         assertThat(Settings.Global.getString(mContext.getContentResolver(),
                 Settings.Global.NETWORK_AVOID_BAD_WIFI)).isEqualTo("1");
     }
