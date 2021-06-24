@@ -27,7 +27,6 @@ import androidx.preference.Preference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
-import com.android.internal.util.Preconditions;
 
 import java.util.Objects;
 
@@ -57,8 +56,8 @@ abstract class BaseDeviceAdminDetailsPreferenceController extends PreferenceCont
     }
 
     @Override
-    protected void checkInitialized() {
-        Preconditions.checkState(mDeviceAdminInfo != null, "setDeviceAdmin() not called");
+    protected int getAvailabilityStatus() {
+        return mDeviceAdminInfo != null ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 
     final void setDeviceAdmin(DeviceAdminInfo deviceAdminInfo) {
