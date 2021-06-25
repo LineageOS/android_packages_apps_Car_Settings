@@ -171,7 +171,7 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"बेनामी यन्त्र"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"कनेक्ट गरिएका डिभाइस"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"नयाँ डिभाइससँग कनेक्ट गर्नुहोस्"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"जोडा बनाउनका लागि ब्लुटुथ सक्रिय हुने छ"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"कनेक्ट गर्नका लागि ब्लुटुथ अन हुने छ"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"यन्त्र विच्छेद गर्ने हो?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"तपाईंको यन्त्र <xliff:g id="DEVICE_NAME">%1$s</xliff:g> बाट विच्छेद हुने छ।"</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"सवारी साधनको ब्लुटुथ एड्रेस: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -382,8 +382,8 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हालसालैका स्थानसम्बन्धी कुनै पनि अनुरोध छैन"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"एप स्तरीय अनुमति"</string>
-    <string name="location_settings_services_title" msgid="1186133632690970468">"लोकेसनमा आधारित सेवाहरू"</string>
-    <string name="location_use_location_title" msgid="117735895374606680">"लोकेसन सर्भिस प्रयोग गर्नुहोस्"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"लोकेसन सर्भिस"</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"लोकेसन प्रयोग गरियोस्"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"तपाईंको डिभाइसको स्थान अनुमान गर्न लोकेसन सर्भिसले GPS, Wi‑Fi, मोबाइल नेटवर्क र सेन्सरलगायतका स्रोतहरू प्रयोग गर्न सक्छ।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"प्रणाली"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"प्रणालीसम्बन्धी अद्यावधिकहरू"</string>
@@ -712,4 +712,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"कुनै प्रोफाइल थप्नुहोस्"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"यो प्रोफाइल मेटाउनुहोस्"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"प्रोफाइल थप्नुहोस्"</string>
+    <!-- no translation found for power_component_disabled (7084144472096800457) -->
+    <skip />
 </resources>
