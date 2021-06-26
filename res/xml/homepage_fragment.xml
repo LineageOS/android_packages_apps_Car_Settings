@@ -110,12 +110,6 @@
         android:key="@string/pk_storage_settings_entry"
         android:title="@string/storage_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
-    <com.android.car.settings.common.TopLevelPreference
-        android:fragment="com.android.car.settings.units.UnitsSettingsFragment"
-        android:icon="@drawable/ic_top_level_units"
-        android:key="@string/pk_units_settings_entry"
-        android:title="@string/units_settings"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_device_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">

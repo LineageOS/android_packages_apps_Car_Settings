@@ -41,6 +41,12 @@
         android:title="@string/date_and_time_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.units.UnitsSettingsFragment"
+        android:icon="@drawable/ic_units"
+        android:key="@string/pk_units_settings_entry"
+        android:title="@string/units_settings"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.system.AboutSettingsFragment"
         android:icon="@drawable/ic_settings_about"
         android:key="@string/pk_about_settings_entry"
