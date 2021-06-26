@@ -135,7 +135,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="top_level_storage_icon"/>
       <item type="color" name="top_level_system_background"/>
       <item type="color" name="top_level_system_icon"/>
-      <item type="color" name="top_level_units_background"/>
       <item type="color" name="top_level_units_icon"/>
       <item type="color" name="white_disabled_material"/>
       <item type="dimen" name="action_bar_height"/>
@@ -348,8 +347,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_top_level_sound"/>
       <item type="drawable" name="ic_top_level_storage"/>
       <item type="drawable" name="ic_top_level_system"/>
-      <item type="drawable" name="ic_top_level_units"/>
       <item type="drawable" name="ic_translate"/>
+      <item type="drawable" name="ic_units"/>
       <item type="drawable" name="ic_warning"/>
       <item type="drawable" name="ic_wifi_signal_0"/>
       <item type="drawable" name="ic_wifi_signal_1"/>
