@@ -689,7 +689,7 @@
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:taskAffinity="car.settings.bluetooth"
             android:launchMode="singleTask"
-            android:theme="@*android:style/Theme.DeviceDefault.Settings.Dialog.NoActionBar">
+            android:theme="@style/ActionDialogTheme">
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
