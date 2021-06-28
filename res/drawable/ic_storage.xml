@@ -14,13 +14,14 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:state_enabled="false"
-          android:alpha="?android:attr/disabledAlpha"
-          android:color="#C14CE6"/>
-    <item app:state_ux_restricted="true"
-          android:alpha="?android:attr/disabledAlpha"
-          android:color="#C14CE6"/>
-    <item android:color="#C14CE6"/>
-</selector>
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/icon_size"
+    android:height="@dimen/icon_size"
+    android:viewportHeight="24.0"
+    android:viewportWidth="24.0">
+    <path
+        android:fillColor="?attr/iconColor"
+        android:pathData="M3,20h18v-4H3V20zM5,17h2v2H5V17zM3,4v4h18V4H3zM7,7H5V5h2V7zM3,14h18v-4H3V14zM5,11h2v2H5V11z"/>
+</vector>
