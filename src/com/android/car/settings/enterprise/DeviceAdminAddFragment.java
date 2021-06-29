@@ -51,9 +51,12 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
         ComponentName admin = (ComponentName)
                 intent.getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
+        LOG.d("Admin using " + DevicePolicyManager.EXTRA_DEVICE_ADMIN + ": " + admin);
         if (admin == null) {
             String adminPackage = intent
                     .getStringExtra(DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME);
+            LOG.d("Admin package using " + DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME
+                    + ": " + adminPackage);
             if (adminPackage == null) {
                 LOG.w("Finishing " + activity + " as its intent doesn't have "
                         +  DevicePolicyManager.EXTRA_DEVICE_ADMIN + " or "
@@ -70,17 +73,22 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
         }
 
         DeviceAdminInfo deviceAdminInfo = getDeviceAdminInfo(context, admin);
-        if (admin == null) {
+        LOG.d("Admin: " + admin + " DeviceAdminInfo: " + deviceAdminInfo);
+
+        if (deviceAdminInfo == null) {
             LOG.w("Finishing " + activity + " as it could not get DeviceAdminInfo for "
                     + admin.flattenToShortString());
             activity.finish();
             return;
         }
 
-        LOG.d("Admin: " + deviceAdminInfo);
-
         use(DeviceAdminAddHeaderPreferenceController.class,
                 R.string.pk_device_admin_add_header).setDeviceAdmin(deviceAdminInfo);
+        ((DeviceAdminAddExplanationPreferenceController) use(
+                DeviceAdminAddExplanationPreferenceController.class,
+                R.string.pk_device_admin_add_explanation).setDeviceAdmin(deviceAdminInfo))
+                        .setExplanation(intent
+                                .getCharSequenceExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION));
         use(DeviceAdminAddWarningPreferenceController.class,
                 R.string.pk_device_admin_add_warning).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddSupportPreferenceController.class,
