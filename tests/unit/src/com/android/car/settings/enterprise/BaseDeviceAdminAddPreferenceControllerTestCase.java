@@ -20,8 +20,8 @@ import static org.mockito.ArgumentMatchers.notNull;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
-abstract class BaseDeviceAdminDetailsPreferenceControllerTestCase<T extends
-        BaseDeviceAdminDetailsPreferenceController> extends BasePreferenceControllerTestCase {
+abstract class BaseDeviceAdminAddPreferenceControllerTestCase<T extends
+        BaseDeviceAdminAddPreferenceController> extends BasePreferenceControllerTestCase {
 
     protected final void verifyPreferenceTitleNeverSet() {
         verify(mPreference, never()).setTitle(any());

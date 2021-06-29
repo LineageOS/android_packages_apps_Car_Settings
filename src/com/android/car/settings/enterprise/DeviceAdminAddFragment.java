@@ -34,13 +34,13 @@ import com.android.car.settings.common.SettingsFragment;
  * A screen that shows details about a device administrator.
  */
 //TODO(b/186054346): add unit test
-public final class DeviceAdminDetailsFragment extends SettingsFragment {
+public final class DeviceAdminAddFragment extends SettingsFragment {
 
-    private static final Logger LOG = new Logger(DeviceAdminDetailsFragment.class);
+    private static final Logger LOG = new Logger(DeviceAdminAddFragment.class);
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.device_admin_details;
+        return R.xml.device_admin_add;
     }
 
     @Override
@@ -54,11 +54,11 @@ public final class DeviceAdminDetailsFragment extends SettingsFragment {
                 intent.getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
         if (admin == null) {
             String adminPackage = intent
-                    .getStringExtra(DeviceAdminDetailsActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME);
+                    .getStringExtra(DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME);
             if (adminPackage == null) {
                 LOG.w("Finishing " + activity + " as its intent doesn't have "
                         +  DevicePolicyManager.EXTRA_DEVICE_ADMIN + " or "
-                        + DeviceAdminDetailsActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME);
+                        + DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME);
                 activity.finish();
                 return;
             }
@@ -80,11 +80,11 @@ public final class DeviceAdminDetailsFragment extends SettingsFragment {
 
         LOG.d("Admin: " + deviceAdminInfo);
 
-        use(DeviceAdminDetailsHeaderPreferenceController.class,
-                R.string.pk_device_admin_details_header).setDeviceAdmin(deviceAdminInfo);
-        use(DeviceAdminDetailsWarningPreferenceController.class,
-                R.string.pk_device_admin_details_warning).setDeviceAdmin(deviceAdminInfo);
-        use(DeviceAdminDetailsSupportPreferenceController.class,
-                R.string.pk_device_admin_details_support).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddHeaderPreferenceController.class,
+                R.string.pk_device_admin_add_header).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddWarningPreferenceController.class,
+                R.string.pk_device_admin_add_warning).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddSupportPreferenceController.class,
+                R.string.pk_device_admin_add_support).setDeviceAdmin(deviceAdminInfo);
     }
 }
