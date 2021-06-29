@@ -20,15 +20,15 @@ import com.android.car.settings.R;
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminDetailsWarningPreferenceControllerTest extends
-        BaseDeviceAdminDetailsPreferenceControllerTestCase
-                <DeviceAdminDetailsWarningPreferenceController> {
+public final class DeviceAdminAddWarningPreferenceControllerTest extends
+        BaseDeviceAdminAddPreferenceControllerTestCase
+                <DeviceAdminAddWarningPreferenceController> {
 
-    private DeviceAdminDetailsWarningPreferenceController mController;
+    private DeviceAdminAddWarningPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminDetailsWarningPreferenceController(mSpiedContext,
+        mController = new DeviceAdminAddWarningPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
