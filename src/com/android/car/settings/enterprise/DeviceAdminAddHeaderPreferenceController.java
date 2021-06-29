@@ -28,10 +28,10 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Controller for the header preference the device admin details screen.
  */
-public final class DeviceAdminDetailsHeaderPreferenceController
-        extends BaseDeviceAdminDetailsPreferenceController {
+public final class DeviceAdminAddHeaderPreferenceController
+        extends BaseDeviceAdminAddPreferenceController {
 
-    public DeviceAdminDetailsHeaderPreferenceController(Context context, String preferenceKey,
+    public DeviceAdminAddHeaderPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
