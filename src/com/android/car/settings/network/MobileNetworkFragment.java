@@ -71,7 +71,7 @@ public class MobileNetworkFragment extends SettingsFragment implements
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
+        mSubscriptionManager = getSubscriptionManager(context);
 
         int subId = getArguments() != null
                 ? getArguments().getInt(ARG_NETWORK_SUB_ID, MobileNetworkUpdateManager.SUB_ID_NULL)
@@ -125,6 +125,11 @@ public class MobileNetworkFragment extends SettingsFragment implements
                 getToolbar().setTitle(mTitle);
             }
         }
+    }
+
+    @VisibleForTesting
+    SubscriptionManager getSubscriptionManager(Context context) {
+        return context.getSystemService(SubscriptionManager.class);
     }
 
     public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
