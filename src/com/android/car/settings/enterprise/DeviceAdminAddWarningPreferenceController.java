@@ -30,10 +30,10 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Controller for the warning info preference the device admin details screen.
  */
-public final class DeviceAdminDetailsWarningPreferenceController
-        extends BaseDeviceAdminDetailsPreferenceController {
+public final class DeviceAdminAddWarningPreferenceController
+        extends BaseDeviceAdminAddPreferenceController {
 
-    public DeviceAdminDetailsWarningPreferenceController(Context context, String preferenceKey,
+    public DeviceAdminAddWarningPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
