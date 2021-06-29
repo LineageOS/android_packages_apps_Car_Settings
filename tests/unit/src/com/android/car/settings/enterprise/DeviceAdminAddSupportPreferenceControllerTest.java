@@ -18,15 +18,15 @@ package com.android.car.settings.enterprise;
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminDetailsSupportPreferenceControllerTest extends
-        BaseDeviceAdminDetailsPreferenceControllerTestCase
-                <DeviceAdminDetailsSupportPreferenceController> {
+public final class DeviceAdminAddSupportPreferenceControllerTest extends
+        BaseDeviceAdminAddPreferenceControllerTestCase
+                <DeviceAdminAddSupportPreferenceController> {
 
-    private DeviceAdminDetailsSupportPreferenceController mController;
+    private DeviceAdminAddSupportPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminDetailsSupportPreferenceController(mSpiedContext,
+        mController = new DeviceAdminAddSupportPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }

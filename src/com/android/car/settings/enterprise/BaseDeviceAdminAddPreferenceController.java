@@ -33,7 +33,7 @@ import java.util.Objects;
 /**
  * Base class for controllers in the device admin details screen.
  */
-abstract class BaseDeviceAdminDetailsPreferenceController extends PreferenceController<Preference> {
+abstract class BaseDeviceAdminAddPreferenceController extends PreferenceController<Preference> {
 
     protected final Logger mLogger = new Logger(getClass());
 
@@ -42,7 +42,7 @@ abstract class BaseDeviceAdminDetailsPreferenceController extends PreferenceCont
 
     protected DeviceAdminInfo mDeviceAdminInfo;
 
-    protected BaseDeviceAdminDetailsPreferenceController(Context context, String preferenceKey,
+    protected BaseDeviceAdminAddPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
 
