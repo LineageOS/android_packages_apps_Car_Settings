@@ -32,7 +32,7 @@ abstract class BaseDeviceAdminAddPreferenceControllerTestCase<T extends
     }
 
     protected final void verifyPreferenceTitleSet(int resId) {
-        verify(mPreference).setTitle(mRealContext.getString(resId));
+        verify(mPreference).setTitle(resId);
     }
 
     protected final void verifyPreferenceSummarySet(CharSequence title) {
