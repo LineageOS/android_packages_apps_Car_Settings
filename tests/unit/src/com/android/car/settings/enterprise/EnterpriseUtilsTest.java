@@ -29,20 +29,18 @@ public final class EnterpriseUtilsTest extends BaseEnterpriseTestCase {
 
     @Test
     public void testGetAdminWithinPackage_notFound() {
-        String pkgName = mRealContext.getPackageName();
-        ComponentName admin = getAdminWithinPackage(mSpiedContext, pkgName);
+        ComponentName admin = getAdminWithinPackage(mSpiedContext, mPackageName);
 
-        assertWithMessage("Admin for %s", pkgName).that(admin).isNull();
+        assertWithMessage("Admin for %s", mPackageName).that(admin).isNull();
     }
 
     @Test
     public void testGetAdminWithinPackage_found() {
         mockActiveAdmin(mDefaultAdmin);
 
-        String pkgName = mRealContext.getPackageName();
-        ComponentName admin = getAdminWithinPackage(mSpiedContext, pkgName);
+        ComponentName admin = getAdminWithinPackage(mSpiedContext, mPackageName);
 
-        assertWithMessage("Admin for %s", pkgName).that(admin).isEqualTo(mDefaultAdmin);
+        assertWithMessage("Admin for %s", mPackageName).that(admin).isEqualTo(mDefaultAdmin);
     }
 
     @Test
