@@ -18,32 +18,30 @@ package com.android.car.settings.enterprise;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.UserHandle;
-import android.text.TextUtils;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 
 /**
- * Controller for the support info preference the device admin details screen.
+ * Controller for the cancel button in the device admin details screen.
  */
-public final class DeviceAdminDetailsSupportPreferenceController
-        extends BaseDeviceAdminDetailsPreferenceController {
+public final class DeviceAdminAddCancelPreferenceController
+        extends BaseDeviceAdminAddPreferenceController {
 
-    public DeviceAdminDetailsSupportPreferenceController(Context context, String preferenceKey,
+    public DeviceAdminAddCancelPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
     protected void updateState(Preference preference) {
-        CharSequence supportMessage = mDpm.getLongSupportMessageForUser(
-                mDeviceAdminInfo.getComponent(), UserHandle.myUserId());
-        if (TextUtils.isEmpty(supportMessage)) {
-            mLogger.v("no support message");
-            return;
-        }
-        preference.setTitle(supportMessage);
+        preference.setTitle(com.android.internal.R.string.cancel);
+    }
+
+    @Override
+    protected boolean handlePreferenceClicked(Preference preference) {
+        getFragmentController().goBack();
+        return true;
     }
 }

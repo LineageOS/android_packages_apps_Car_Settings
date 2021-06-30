@@ -23,7 +23,7 @@ import com.android.car.settings.common.BaseCarSettingsActivity;
 /**
  * A screen that shows details about a device administrator.
  */
-public final class DeviceAdminDetailsActivity extends BaseCarSettingsActivity {
+public final class DeviceAdminAddActivity extends BaseCarSettingsActivity {
 
     static final String EXTRA_DEVICE_ADMIN_PACKAGE_NAME =
             "android.app.extra.DEVICE_ADMIN_PACKAGE_NAME";
@@ -33,6 +33,6 @@ public final class DeviceAdminDetailsActivity extends BaseCarSettingsActivity {
 
     @Override
     protected Fragment getInitialFragment() {
-        return new DeviceAdminDetailsFragment();
+        return new DeviceAdminAddFragment();
     }
 }

@@ -17,25 +17,29 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/device_admin_details_title"
-    android:key="@string/psk_device_admin_details">
+    android:title="@string/device_admin_add_title"
+    android:key="@string/psk_device_admin_add">
 
     <com.android.car.ui.preference.CarUiPreference
-        android:key="@string/pk_device_admin_details_header"
+        android:key="@string/pk_device_admin_add_header"
         android:selectable="false"
-        settings:controller="com.android.car.settings.enterprise.DeviceAdminDetailsHeaderPreferenceController"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminAddHeaderPreferenceController"
         settings:searchable="false"/>
     <com.android.car.ui.preference.CarUiPreference
-        android:key="@string/pk_device_admin_details_warning"
+        android:key="@string/pk_device_admin_add_warning"
         android:selectable="false"
         settings:singleLineTitle="false"
-        settings:controller="com.android.car.settings.enterprise.DeviceAdminDetailsWarningPreferenceController"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminAddWarningPreferenceController"
         settings:showChevron="false"/>
     <com.android.car.ui.preference.CarUiPreference
-        android:key="@string/pk_device_admin_details_support"
+        android:key="@string/pk_device_admin_add_support"
         android:selectable="false"
         settings:singleLineTitle="false"
-        settings:controller="com.android.car.settings.enterprise.DeviceAdminDetailsSupportPreferenceController"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminAddSupportPreferenceController"
+        settings:showChevron="false"/>
+    <com.android.car.ui.preference.CarUiPreference
+        android:key="@string/pk_device_admin_add_cancel"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminAddCancelPreferenceController"
         settings:showChevron="false"/>
 
 </PreferenceScreen>

@@ -16,11 +16,8 @@
 
 package com.android.car.settings.profiles;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.Bundle;
 import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
@@ -30,7 +27,6 @@ import com.android.car.settings.accounts.AccountGroupPreferenceController;
 import com.android.car.settings.accounts.AccountListPreferenceController;
 import com.android.car.settings.accounts.AddAccountPreferenceController;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
-import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.search.SearchIndexable;
 
 /**
@@ -39,26 +35,11 @@ import com.android.settingslib.search.SearchIndexable;
 @SearchIndexable
 public class ProfileDetailsFragment extends ProfileDetailsBaseFragment {
 
-    private boolean mIsStarted;
-
     /** Creates instance of ProfileDetailsFragment. */
     public static ProfileDetailsFragment newInstance(int userId) {
         return (ProfileDetailsFragment) addUserIdToFragmentArguments(
                 new ProfileDetailsFragment(), userId);
     }
-
-    @VisibleForTesting
-    final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            // Update the user info value, as it may have changed.
-            refreshUserInfo();
-            if (mIsStarted) {
-                // Update the text in the action bar when there is a user update.
-                getToolbar().setTitle(getTitleText());
-            }
-        }
-    };
 
     @Override
     @XmlRes
@@ -91,42 +72,8 @@ public class ProfileDetailsFragment extends ProfileDetailsBaseFragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        registerForUserEvents();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mIsStarted = true;
-        getToolbar().setTitle(getTitleText());
-    }
-
-    @Override
-    public void onStop() {
-        mIsStarted = false;
-        super.onStop();
-    }
-
-    @Override
-    public void onDestroy() {
-        unregisterForUserEvents();
-        super.onDestroy();
-    }
-
-    @Override
     protected String getTitleText() {
         return getString(R.string.profiles_and_accounts_settings_title);
-    }
-
-    private void registerForUserEvents() {
-        IntentFilter filter = new IntentFilter(Intent.ACTION_USER_INFO_CHANGED);
-        getContext().registerReceiver(mUserUpdateReceiver, filter);
-    }
-
-    private void unregisterForUserEvents() {
-        getContext().unregisterReceiver(mUserUpdateReceiver);
     }
 
     /**
