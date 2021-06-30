@@ -45,8 +45,13 @@ abstract class BaseEnterpriseTestCase {
     @Rule
     public final MockitoRule mockitorule = MockitoJUnit.rule();
 
-    protected final Context mRealContext = ApplicationProvider.getApplicationContext();
+    private final Context mRealContext = ApplicationProvider.getApplicationContext();
     protected final Context mSpiedContext = spy(mRealContext);
+
+    protected final String mPackageName = mRealContext.getPackageName();
+
+    private final PackageManager mRealPm = mRealContext.getPackageManager();
+    protected PackageManager mSpiedPm = spy(mRealPm);
 
     protected final ComponentName mDefaultAdmin =
             new ComponentName(mSpiedContext, DefaultDeviceAdminReceiver.class);
@@ -59,20 +64,17 @@ abstract class BaseEnterpriseTestCase {
     @Mock
     private DevicePolicyManager mDpm;
 
-    @Mock
-    protected PackageManager mPm;
-
     @Before
     public final void setFixtures() throws Exception {
         when(mSpiedContext.getSystemService(DevicePolicyManager.class)).thenReturn(mDpm);
-        when(mSpiedContext.getSystemService(PackageManager.class)).thenReturn(mPm);
-        when(mSpiedContext.getPackageManager()).thenReturn(mPm);
+        when(mSpiedContext.getSystemService(PackageManager.class)).thenReturn(mSpiedPm);
+        when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
 
-        PackageManager pm = mRealContext.getPackageManager();
-        ActivityInfo defaultInfo = pm.getReceiverInfo(mDefaultAdmin, PackageManager.GET_META_DATA);
+        ActivityInfo defaultInfo = mRealPm.getReceiverInfo(mDefaultAdmin,
+                PackageManager.GET_META_DATA);
         mDefaultDeviceAdminInfo = new DeviceAdminInfo(mRealContext, defaultInfo);
 
-        ActivityInfo fancyInfo = pm.getReceiverInfo(mFancyAdmin, PackageManager.GET_META_DATA);
+        ActivityInfo fancyInfo = mRealPm.getReceiverInfo(mFancyAdmin, PackageManager.GET_META_DATA);
         mFancyDeviceAdminInfo = new DeviceAdminInfo(mRealContext, fancyInfo);
     }
 
@@ -106,10 +108,10 @@ abstract class BaseEnterpriseTestCase {
     }
 
     protected final void mockHasDeviceAdminFeature() {
-        when(mPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN)).thenReturn(true);
+        when(mSpiedPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN)).thenReturn(true);
     }
 
     protected final void mockNoDeviceAdminFeature() {
-        when(mPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN)).thenReturn(false);
+        when(mSpiedPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN)).thenReturn(false);
     }
 }
