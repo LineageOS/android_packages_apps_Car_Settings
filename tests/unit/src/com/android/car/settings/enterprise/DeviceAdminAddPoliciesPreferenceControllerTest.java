@@ -15,28 +15,38 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.google.common.truth.Truth.assertWithMessage;
+
+import androidx.preference.PreferenceGroup;
+
 import com.android.car.settings.common.PreferenceController;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminAddExplanationPreferenceControllerTest extends
+public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
         BaseDeviceAdminAddPreferenceControllerTestCase
-                <DeviceAdminAddExplanationPreferenceController> {
+                <DeviceAdminAddPoliciesPreferenceController> {
 
-    private DeviceAdminAddExplanationPreferenceController mController;
+    private DeviceAdminAddPoliciesPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminAddExplanationPreferenceController(mSpiedContext,
+        mController = new DeviceAdminAddPoliciesPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
 
     @Test
+    public void testGetPreferenceType() throws Exception {
+        assertWithMessage("preference type").that(mController.getPreferenceType())
+                .isEqualTo(PreferenceGroup.class);
+    }
+
+    @Test
     public void testGetAvailabilityStatus_noAdmin() throws Exception {
-        DeviceAdminAddExplanationPreferenceController controller =
-                new DeviceAdminAddExplanationPreferenceController(mSpiedContext, mPreferenceKey,
+        DeviceAdminAddPoliciesPreferenceController controller =
+                new DeviceAdminAddPoliciesPreferenceController(mSpiedContext, mPreferenceKey,
                         mFragmentController, mUxRestrictions);
 
         assertAvailability(controller.getAvailabilityStatus(),
@@ -44,36 +54,25 @@ public final class DeviceAdminAddExplanationPreferenceControllerTest extends
     }
 
     @Test
-    public void testGetAvailabilityStatus_nullReason() throws Exception {
-        mController.setExplanation(null);
+    public void testGetAvailabilityStatus_deviceOwner() throws Exception {
+        mockDeviceOwner();
 
         assertAvailability(mController.getAvailabilityStatus(),
-                PreferenceController.CONDITIONALLY_UNAVAILABLE);
+                PreferenceController.DISABLED_FOR_PROFILE);
     }
 
     @Test
-    public void testGetAvailabilityStatus_emptyReason() throws Exception {
-        mController.setExplanation("");
+    public void testGetAvailabilityStatus_profileOwner() throws Exception {
+        mockProfileOwner();
 
         assertAvailability(mController.getAvailabilityStatus(),
-                PreferenceController.CONDITIONALLY_UNAVAILABLE);
+                PreferenceController.DISABLED_FOR_PROFILE);
     }
 
     @Test
-    public void testGetAvailabilityStatus_validReason() throws Exception {
-        mController.setExplanation("To conquer the universe");
+    public void testGetAvailabilityStatus_regularAdmin() throws Exception {
+        // Admin is neither PO nor DO
 
         assertAvailability(mController.getAvailabilityStatus(), PreferenceController.AVAILABLE);
-    }
-
-    @Test
-    public void testUpdateState() throws Exception {
-        mController.setExplanation("To conquer the universe");
-
-        mController.updateState(mPreference);
-
-        verifyPreferenceTitleSet("To conquer the universe");
-        verifyPreferenceSummaryNeverSet();
-        verifyPreferenceIconNeverSet();
     }
 }
