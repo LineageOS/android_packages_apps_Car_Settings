@@ -57,9 +57,9 @@ final class ActionDisabledLearnMoreButtonLauncherImpl
         requireNonNull(admin, "admin cannot be null");
 
         Intent intent = new Intent()
-                .setClass(context, DeviceAdminDetailsActivity.class)
+                .setClass(context, DeviceAdminAddActivity.class)
                 .putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, admin)
-                .putExtra(DeviceAdminDetailsActivity.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
+                .putExtra(DeviceAdminAddActivity.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
         LOG.d("launching " + intent + " for user " + user);
         context.startActivityAsUser(intent, user);
     }
