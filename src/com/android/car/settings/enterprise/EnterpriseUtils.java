@@ -70,8 +70,8 @@ final class EnterpriseUtils {
         try {
             return new DeviceAdminInfo(context, ai);
         } catch (XmlPullParserException | IOException e) {
-            LOG.v("Unable to retrieve device policy for " + admin.flattenToShortString() + ": "
-                    + e);
+            LOG.v("Unable to retrieve device policy for " + admin.flattenToShortString() + ": ",
+                    e);
             return null;
         }
     }
