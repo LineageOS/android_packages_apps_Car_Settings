@@ -35,16 +35,22 @@
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
         settings:searchable="false"/>
     <Preference
+        android:fragment="com.android.car.settings.units.UnitsSettingsFragment"
+        android:icon="@drawable/ic_units"
+        android:key="@string/pk_units_settings_entry"
+        android:title="@string/units_settings"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"
         android:key="@string/pk_date_time_settings_entry"
         android:icon="@drawable/ic_date_time"
         android:title="@string/date_and_time_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.units.UnitsSettingsFragment"
-        android:icon="@drawable/ic_units"
-        android:key="@string/pk_units_settings_entry"
-        android:title="@string/units_settings"
+        android:fragment="com.android.car.settings.storage.StorageSettingsFragment"
+        android:icon="@drawable/ic_storage"
+        android:key="@string/pk_storage_settings_entry"
+        android:title="@string/storage_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.system.AboutSettingsFragment"

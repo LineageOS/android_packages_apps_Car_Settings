@@ -18,36 +18,43 @@ package com.android.car.settings.enterprise;
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminDetailsHeaderPreferenceControllerTest extends
-        BaseDeviceAdminDetailsPreferenceControllerTestCase
-                <DeviceAdminDetailsHeaderPreferenceController> {
+public final class DeviceAdminAddSupportPreferenceControllerTest extends
+        BaseDeviceAdminAddPreferenceControllerTestCase
+                <DeviceAdminAddSupportPreferenceController> {
 
-    private DeviceAdminDetailsHeaderPreferenceController mController;
+    private DeviceAdminAddSupportPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminDetailsHeaderPreferenceController(mSpiedContext,
+        mController = new DeviceAdminAddSupportPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
 
     @Test
-    public void testUpdateState_adminWithNoProperties() throws Exception {
+    public void testUpdateState_nullMessage() {
+        mockGetLongSupportMessageForUser(null);
+
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet(DefaultDeviceAdminReceiver.class.getName());
-        verifyPreferenceSummaryNeverSet();
-        verifyPreferenceIconSet();
+        verifyPreferenceTitleNeverSet();
     }
 
     @Test
-    public void testUpdateState_adminWithAllProperties() throws Exception {
-        mController.setDeviceAdmin(mFancyDeviceAdminInfo);
+    public void testUpdateState_emptyMessage() {
+        mockGetLongSupportMessageForUser("");
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet("LordOfTheSevenReceiverKingdoms");
-        verifyPreferenceSummarySet("One Receiver to Rule them All");
-        verifyPreferenceIconSet();
+        verifyPreferenceTitleNeverSet();
+    }
+
+    @Test
+    public void testUpdate_validMessage() {
+        mockGetLongSupportMessageForUser("WHAZZZZUP");
+
+        mController.updateState(mPreference);
+
+        verifyPreferenceTitleSet("WHAZZZZUP");
     }
 }
