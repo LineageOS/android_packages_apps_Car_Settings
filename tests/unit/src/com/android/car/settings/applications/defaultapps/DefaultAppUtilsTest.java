@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,20 +21,21 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
 import com.android.car.settings.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class DefaultAppUtilsTest {
 
     @Test
     public void setSafeIcon_smallerThanLimit() {
-        Context context = RuntimeEnvironment.application;
-        Drawable drawable = context.getDrawable(R.drawable.test_icon);
+        Context context = ApplicationProvider.getApplicationContext();
+        Drawable drawable = context.getDrawable(R.drawable.test_icon_2);
         int height = drawable.getMinimumHeight();
         int width = drawable.getMinimumWidth();
 
@@ -48,7 +49,22 @@ public class DefaultAppUtilsTest {
 
     @Test
     public void setSafeIcon_largerThanLimit() {
-        Context context = RuntimeEnvironment.application;
+        Context context = ApplicationProvider.getApplicationContext();
+        Drawable drawable = context.getDrawable(R.drawable.test_icon_2);
+        int height = drawable.getMinimumHeight();
+        int width = drawable.getMinimumWidth();
+
+        // Set to some value smaller than current height or width;
+        int testMaxDimensions = Math.min(height, width) - 5;
+        Drawable icon = DefaultAppUtils.getSafeIcon(drawable, testMaxDimensions);
+
+        assertThat(icon.getMinimumHeight()).isEqualTo(testMaxDimensions);
+        assertThat(icon.getMinimumWidth()).isEqualTo(testMaxDimensions);
+    }
+
+    @Test
+    public void setSafeIcon_noChangeForVectorDrawable() {
+        Context context = ApplicationProvider.getApplicationContext();
         Drawable drawable = context.getDrawable(R.drawable.test_icon);
         int height = drawable.getMinimumHeight();
         int width = drawable.getMinimumWidth();
@@ -57,7 +73,7 @@ public class DefaultAppUtilsTest {
         int testMaxDimensions = Math.min(height, width) - 1;
         Drawable icon = DefaultAppUtils.getSafeIcon(drawable, testMaxDimensions);
 
-        assertThat(icon.getMinimumHeight()).isEqualTo(testMaxDimensions);
-        assertThat(icon.getMinimumWidth()).isEqualTo(testMaxDimensions);
+        assertThat(icon.getMinimumHeight()).isEqualTo(height);
+        assertThat(icon.getMinimumWidth()).isEqualTo(width);
     }
 }
