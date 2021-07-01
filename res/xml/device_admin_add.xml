@@ -26,6 +26,12 @@
         settings:controller="com.android.car.settings.enterprise.DeviceAdminAddHeaderPreferenceController"
         settings:searchable="false"/>
     <com.android.car.ui.preference.CarUiPreference
+        android:key="@string/pk_device_admin_add_explanation"
+        android:selectable="false"
+        settings:singleLineTitle="false"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminAddExplanationPreferenceController"
+        settings:searchable="false"/>
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_device_admin_add_warning"
         android:selectable="false"
         settings:singleLineTitle="false"
