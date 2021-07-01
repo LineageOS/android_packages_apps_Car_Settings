@@ -50,6 +50,10 @@
         settings:controller="com.android.car.settings.enterprise.DeviceAdminAddSupportPreferenceController"
         settings:showChevron="false"/>
     <com.android.car.ui.preference.CarUiPreference
+        android:key="@string/pk_device_admin_add_action"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminAddActionPreferenceController"
+        settings:showChevron="false"/>
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_device_admin_add_cancel"
         settings:controller="com.android.car.settings.enterprise.DeviceAdminAddCancelPreferenceController"
         settings:showChevron="false"/>

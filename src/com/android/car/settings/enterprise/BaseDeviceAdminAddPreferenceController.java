@@ -19,6 +19,7 @@ package com.android.car.settings.enterprise;
 import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.UserManager;
@@ -78,5 +79,14 @@ abstract class BaseDeviceAdminAddPreferenceController<P extends Preference>
         @SuppressWarnings("unchecked")
         T safeCast = (T) this;
         return safeCast;
+    }
+
+    final boolean isProfileOrDeviceOwner() {
+        return isProfileOrDeviceOwner(mDeviceAdminInfo.getComponent());
+    }
+
+    final boolean isProfileOrDeviceOwner(ComponentName admin) {
+        return admin.equals(mDpm.getProfileOwner())
+                || admin.equals(mDpm.getDeviceOwnerComponentOnCallingUser());
     }
 }

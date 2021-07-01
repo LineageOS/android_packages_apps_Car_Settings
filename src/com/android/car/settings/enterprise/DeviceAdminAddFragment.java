@@ -95,6 +95,8 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 R.string.pk_device_admin_add_policies).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddSupportPreferenceController.class,
                 R.string.pk_device_admin_add_support).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddActionPreferenceController.class,
+                R.string.pk_device_admin_add_action).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddCancelPreferenceController.class,
                 R.string.pk_device_admin_add_cancel).setDeviceAdmin(deviceAdminInfo);
     }
