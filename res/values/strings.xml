@@ -1590,6 +1590,10 @@
         following operations:</string>
     <!-- Title for screen to add a device admin app [CHAR LIMIT=40] -->
     <string name="add_device_admin_msg" translatable="false">Activate device admin app?</string>
+    <!-- Label for button to set the active device admin [CHAR_LIMIT=80] -->
+    <string name="add_device_admin" translatable="false">Activate this device admin app</string>
+    <!-- Label for button to remove the active device admin app [CHAR LIMIT=80] -->
+    <string name="remove_device_admin" translatable="false">Deactivate this device admin app</string>
     <!-- Shown in dialog to allow user to see more information about the device admin [CHAR LIMIT=30] -->
     <string name="admin_support_more_info" translatable="false">More details</string>
     <!-- Shown in admin details page to warn user about policies the admin can set in a work profile. [CHAR LIMIT=NONE] -->
