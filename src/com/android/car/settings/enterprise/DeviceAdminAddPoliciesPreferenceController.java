@@ -43,12 +43,7 @@ public final class DeviceAdminAddPoliciesPreferenceController
     }
 
     @Override
-    protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) {
-            return superStatus;
-        }
-
+    protected int getRealAvailabilityStatus() {
         ComponentName admin = mDeviceAdminInfo.getComponent();
         boolean isOwner = admin.equals(mDpm.getProfileOwner())
                 || admin.equals(mDpm.getDeviceOwnerComponentOnCallingUser());
