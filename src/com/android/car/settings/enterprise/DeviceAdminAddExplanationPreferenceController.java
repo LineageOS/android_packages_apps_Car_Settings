@@ -40,14 +40,7 @@ public final class DeviceAdminAddExplanationPreferenceController
     }
 
     @Override
-    protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) {
-            return superStatus;
-        }
-
-        // TODO(b/188585303): should also be disabled when admin is device/profile owner or when
-        // not launched with ADD_DEVICE_ADMIN
+    protected int getRealAvailabilityStatus() {
         return TextUtils.isEmpty(mExplanation) ? CONDITIONALLY_UNAVAILABLE : AVAILABLE;
     }
 
