@@ -147,7 +147,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     protected void enableRotaryScroll() {
         CarUiRecyclerView recyclerView = getView().findViewById(R.id.settings_recycler_view);
         if (recyclerView != null) {
-            ViewUtils.setRotaryScrollEnabled(recyclerView, /* isVertical= */ true);
+            ViewUtils.setRotaryScrollEnabled(recyclerView.getView(), /* isVertical= */ true);
         }
     }
 
@@ -210,7 +210,8 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
             Bundle savedInstanceState) {
         inflater.inflate(R.layout.settings_recyclerview_default, parent, /* attachToRoot= */ true);
-        return parent.requireViewById(R.id.settings_recycler_view);
+        return ((CarUiRecyclerView) parent.requireViewById(R.id.settings_recycler_view))
+                .getRecyclerView();
     }
 
     @Override
