@@ -23,7 +23,7 @@
     <Preference
         android:icon="@drawable/ic_lock"
         android:key="@string/pk_choose_lock_type"
-        android:title="@string/lock_settings_picker_title"
+        android:title="@string/security_profile_lock_title"
         settings:controller="com.android.car.settings.security.ChooseLockTypePreferenceController"/>
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_credentials_reset"
