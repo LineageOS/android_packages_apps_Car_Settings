@@ -44,7 +44,25 @@ public final class DeviceAdminAddExplanationPreferenceControllerTest extends
     }
 
     @Test
-    public void testGetAvailabilityStatus_nullReason() throws Exception {
+    public void testGetAvailabilityStatus_deviceOwner() throws Exception {
+        mockDeviceOwner();
+        mController.setExplanation("To conquer the universe");
+
+        assertAvailability(mController.getAvailabilityStatus(),
+                PreferenceController.DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_profileOwner() throws Exception {
+        mockProfileOwner();
+        mController.setExplanation("To conquer the universe");
+
+        assertAvailability(mController.getAvailabilityStatus(),
+                PreferenceController.DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetRealAvailabilityStatus_nullReason() throws Exception {
         mController.setExplanation(null);
 
         assertAvailability(mController.getAvailabilityStatus(),
