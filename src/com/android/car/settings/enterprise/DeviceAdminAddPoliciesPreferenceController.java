@@ -18,7 +18,6 @@ package com.android.car.settings.enterprise;
 
 import android.app.admin.DeviceAdminInfo;
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.ComponentName;
 import android.content.Context;
 
 import androidx.preference.Preference;
@@ -44,18 +43,14 @@ public final class DeviceAdminAddPoliciesPreferenceController
 
     @Override
     protected int getRealAvailabilityStatus() {
-        ComponentName admin = mDeviceAdminInfo.getComponent();
-        boolean isOwner = admin.equals(mDpm.getProfileOwner())
-                || admin.equals(mDpm.getDeviceOwnerComponentOnCallingUser());
-
-        return isOwner ? DISABLED_FOR_PROFILE : AVAILABLE;
+        return isProfileOrDeviceOwner() ? DISABLED_FOR_PROFILE : AVAILABLE;
     }
 
     // TODO(b/188585303): add unit tests
-    // TODO(b/188585303): make PreferenceGroup scrolable / limit to ~5 or less values
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
         preferenceGroup.removeAll();
+        preferenceGroup.setInitialExpandedChildrenCount(3);
         Context context = getContext();
         boolean isAdminUser = mUm.isAdminUser();
 
