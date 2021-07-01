@@ -18,11 +18,8 @@ package com.android.car.settings.applications;
 
 import static com.android.car.settings.applications.ApplicationsUtils.isHibernationEnabled;
 
-import android.apphibernation.AppHibernationManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 
 import androidx.preference.Preference;
 
@@ -30,12 +27,11 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
-import java.util.List;
-
 /**
  * A preference controller handling the logic for updating summary of hibernated apps.
  */
-public final class HibernatedAppsPreferenceController extends PreferenceController<Preference> {
+public final class HibernatedAppsPreferenceController extends PreferenceController<Preference>
+        implements HibernatedAppsItemManager.HibernatedAppsCountListener {
     private static final String TAG = "HibernatedAppsPrefController";
 
     public HibernatedAppsPreferenceController(Context context, String preferenceKey,
@@ -51,39 +47,13 @@ public final class HibernatedAppsPreferenceController extends PreferenceControll
 
     @Override
     public int getAvailabilityStatus() {
-        return isHibernationEnabled() && getNumHibernated() > 0
-                ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+        return isHibernationEnabled() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 
     @Override
-    protected void updateState(Preference preference) {
-        int numHibernated = getNumHibernated();
-        preference.setSummary(getContext().getResources().getQuantityString(
-                R.plurals.unused_apps_summary, numHibernated, numHibernated));
-    }
-
-    private int getNumHibernated() {
-        PackageManager pm = getContext().getPackageManager();
-        AppHibernationManager ahm =
-                getContext().getSystemService(AppHibernationManager.class);
-        List<String> hibernatedPackages = ahm.getHibernatingPackagesForUser();
-        int numHibernated = hibernatedPackages.size();
-
-        // Also need to count packages that are auto revoked but not hibernated.
-        List<PackageInfo> packages = pm.getInstalledPackages(
-                PackageManager.MATCH_DISABLED_COMPONENTS | PackageManager.GET_PERMISSIONS);
-        for (PackageInfo pi : packages) {
-            String packageName = pi.packageName;
-            if (!hibernatedPackages.contains(packageName) && pi.requestedPermissions != null) {
-                for (String perm : pi.requestedPermissions) {
-                    if ((pm.getPermissionFlags(perm, packageName, getContext().getUser())
-                            & PackageManager.FLAG_PERMISSION_AUTO_REVOKED) != 0) {
-                        numHibernated++;
-                        break;
-                    }
-                }
-            }
-        }
-        return numHibernated;
+    public void onHibernatedAppsCountLoaded(int hibernatedAppsCount) {
+        getPreference().setSummary(getContext().getResources().getQuantityString(
+                R.plurals.unused_apps_summary, hibernatedAppsCount, hibernatedAppsCount));
+        refreshUi();
     }
 }
