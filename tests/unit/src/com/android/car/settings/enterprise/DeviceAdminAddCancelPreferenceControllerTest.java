@@ -15,46 +15,36 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.google.common.truth.Truth.assertWithMessage;
+
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminDetailsSupportPreferenceControllerTest extends
-        BaseDeviceAdminDetailsPreferenceControllerTestCase
-                <DeviceAdminDetailsSupportPreferenceController> {
+public final class DeviceAdminAddCancelPreferenceControllerTest extends
+        BaseDeviceAdminAddPreferenceControllerTestCase
+                <DeviceAdminAddCancelPreferenceController> {
 
-    private DeviceAdminDetailsSupportPreferenceController mController;
+    private DeviceAdminAddCancelPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminDetailsSupportPreferenceController(mSpiedContext,
+        mController = new DeviceAdminAddCancelPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
 
     @Test
-    public void testUpdateState_nullMessage() {
-        mockGetLongSupportMessageForUser(null);
-
+    public void testUpdateState() throws Exception {
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleNeverSet();
+        verifyPreferenceTitleSet(com.android.internal.R.string.cancel);
     }
 
     @Test
-    public void testUpdateState_emptyMessage() {
-        mockGetLongSupportMessageForUser("");
+    public void testHandlePreferenceClicked() throws Exception {
+        boolean handled = mController.handlePreferenceClicked(mPreference);
 
-        mController.updateState(mPreference);
-
-        verifyPreferenceTitleNeverSet();
-    }
-
-    @Test
-    public void testUpdate_validMessage() {
-        mockGetLongSupportMessageForUser("WHAZZZZUP");
-
-        mController.updateState(mPreference);
-
-        verifyPreferenceTitleSet("WHAZZZZUP");
+        assertWithMessage("handlePreferenceClicked() result").that(handled).isTrue();
+        verifyGoBack();
     }
 }

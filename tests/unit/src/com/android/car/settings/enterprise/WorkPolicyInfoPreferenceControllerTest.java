@@ -25,9 +25,9 @@ import static com.google.common.truth.Truth.assertWithMessage;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
@@ -149,8 +149,9 @@ public final class WorkPolicyInfoPreferenceControllerTest extends BasePreference
     }
 
     private void mockHasIntent() {
-        when(mPm.queryIntentActivities(showWorkPolicyInfoIntent(), eq(/* flags= */ 0)))
-                .thenReturn(Arrays.asList(mResolveInfo));
+        // Must use doReturn() instead of when() because it's a spy
+        doReturn(Arrays.asList(mResolveInfo)).when(mSpiedPm)
+                .queryIntentActivities(showWorkPolicyInfoIntent(), eq(/* flags= */ 0));
     }
 
     private Intent showWorkPolicyInfoIntent() {

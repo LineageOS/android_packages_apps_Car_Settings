@@ -20,8 +20,14 @@ import static org.mockito.ArgumentMatchers.notNull;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
-abstract class BaseDeviceAdminDetailsPreferenceControllerTestCase<T extends
-        BaseDeviceAdminDetailsPreferenceController> extends BasePreferenceControllerTestCase {
+import android.content.Context;
+
+import androidx.test.core.app.ApplicationProvider;
+
+abstract class BaseDeviceAdminAddPreferenceControllerTestCase<T extends
+        BaseDeviceAdminAddPreferenceController> extends BasePreferenceControllerTestCase {
+
+    private final Context mRealContext = ApplicationProvider.getApplicationContext();
 
     protected final void verifyPreferenceTitleNeverSet() {
         verify(mPreference, never()).setTitle(any());
@@ -32,7 +38,7 @@ abstract class BaseDeviceAdminDetailsPreferenceControllerTestCase<T extends
     }
 
     protected final void verifyPreferenceTitleSet(int resId) {
-        verify(mPreference).setTitle(mRealContext.getString(resId));
+        verify(mPreference).setTitle(resId);
     }
 
     protected final void verifyPreferenceSummarySet(CharSequence title) {

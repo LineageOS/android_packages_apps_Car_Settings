@@ -17,6 +17,8 @@ package com.android.car.settings.enterprise;
 
 import static com.google.common.truth.Truth.assertWithMessage;
 
+import static org.mockito.Mockito.verify;
+
 import android.car.drivingstate.CarUxRestrictions;
 
 import androidx.preference.Preference;
@@ -59,5 +61,9 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
                 actualValue, availabilityToString(actualValue),
                 expectedValue, availabilityToString(expectedValue))
                         .that(actualValue).isEqualTo(expectedValue);
+    }
+
+    protected final void verifyGoBack() {
+        verify(mFragmentController).goBack();
     }
 }
