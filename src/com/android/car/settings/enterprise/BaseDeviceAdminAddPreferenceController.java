@@ -60,8 +60,16 @@ abstract class BaseDeviceAdminAddPreferenceController<P extends Preference>
     }
 
     @Override
-    protected int getAvailabilityStatus() {
-        return mDeviceAdminInfo != null ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    protected final int getAvailabilityStatus() {
+        return mDeviceAdminInfo == null ? CONDITIONALLY_UNAVAILABLE : getRealAvailabilityStatus();
+    }
+
+    /**
+     * Method that can be overridden to define the real value of {@link #getAvailabilityStatus()}
+     * when the {@link #setDeviceAdmin(DeviceAdminInfo) DeviceAdminInfo} is set.
+     */
+    protected int getRealAvailabilityStatus() {
+        return AVAILABLE;
     }
 
     final <T extends BaseDeviceAdminAddPreferenceController<P>> T setDeviceAdmin(
