@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,15 +27,21 @@ import static org.mockito.Mockito.when;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiRadioButtonPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
@@ -44,13 +50,202 @@ import com.google.android.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class DefaultAppsPickerBasePreferenceControllerTest {
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private PreferenceGroup mPreferenceGroup;
+    private TestDefaultAppsPickerBasePreferenceController mController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
+
+    @Before
+    @UiThreadTest
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        screen.addPreference(mPreferenceGroup);
+        mController = new TestDefaultAppsPickerBasePreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mController, mPreferenceGroup);
+    }
+
+    @Test
+    public void refreshUi_noCandidates_hasSingleNoneElement() {
+        mController.setCurrentDefault("");
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        // Has the "None" element.
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+
+        Preference preference = mPreferenceGroup.getPreference(0);
+        assertThat(preference.getTitle()).isEqualTo(
+                mContext.getString(R.string.app_list_preference_none));
+        assertThat(preference.getIcon()).isNotNull();
+    }
+
+    @Test
+    public void refreshUi_noCandidates_noNoneElement() {
+        mController.setCurrentDefault("");
+        mController.setIncludeNonePreference(false);
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        // None element removed.
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+    }
+
+    @Test
+    public void refreshUi_hasAdditionalCandidate_hasTwoElements() {
+        String testKey = "testKey";
+
+        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
+        when(testApp.getKey()).thenReturn(testKey);
+        mController.setTestCandidates(Lists.newArrayList(testApp));
+
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
+    }
+
+    @Test
+    public void refreshUi_hasAdditionalCandidateAsDefault_secondElementIsSelected() {
+        String testKey = "testKey";
+
+        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
+        when(testApp.getKey()).thenReturn(testKey);
+        mController.setTestCandidates(Lists.newArrayList(testApp));
+        mController.setCurrentDefault(testKey);
+
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        CarUiRadioButtonPreference preference = mPreferenceGroup.findPreference(testKey);
+        assertThat(preference.isChecked()).isTrue();
+    }
+
+    @Test
+    public void performClick_currentDefaultApp_nothingHappened() {
+        String testKey = "testKey";
+
+        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
+        when(testApp.getKey()).thenReturn(testKey);
+        mController.setTestCandidates(Lists.newArrayList(testApp));
+        mController.setCurrentDefault(testKey);
+
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
+
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
+
+        currentDefault.performClick();
+
+        currentDefault = mPreferenceGroup.findPreference(testKey);
+        otherOption = (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
+
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
+    }
+
+    @Test
+    public void performClick_otherOptionNoMessage_otherOptionSelected() {
+        String testKey = "testKey";
+
+        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
+        when(testApp.getKey()).thenReturn(testKey);
+        mController.setTestCandidates(Lists.newArrayList(testApp));
+        mController.setCurrentDefault(testKey);
+        mController.setTestMessage(null);
+
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
+
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
+
+        otherOption.performClick();
+
+        currentDefault = mPreferenceGroup.findPreference(testKey);
+        otherOption = (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
+
+        assertThat(currentDefault.isChecked()).isFalse();
+        assertThat(otherOption.isChecked()).isTrue();
+    }
+
+    @Test
+    public void performClick_otherOptionHasMessage_dialogOpened() {
+        String testKey = "testKey";
+
+        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
+        when(testApp.getKey()).thenReturn(testKey);
+        mController.setTestCandidates(Lists.newArrayList(testApp));
+        mController.setCurrentDefault(testKey);
+        mController.setTestMessage("Non-empty message");
+
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
+
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
+
+        otherOption.performClick();
+
+        verify(mFragmentController).showDialog(
+                any(ConfirmationDialogFragment.class),
+                eq(ConfirmationDialogFragment.TAG));
+    }
+
+    @Test
+    public void performClick_otherOptionNoMessage_newKeySet() {
+        String testKey = "testKey";
+
+        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
+        when(testApp.getKey()).thenReturn(testKey);
+        mController.setTestCandidates(Lists.newArrayList(testApp));
+
+        // Currently, the testApp is the default selection.
+        mController.setCurrentDefault(testKey);
+
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        // This preference represents the "None" option.
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
+        assertThat(mController.getCurrentDefaultKey()).isEqualTo(testKey);
+
+        otherOption.performClick();
+        assertThat(mController.getCurrentDefaultKey()).isEqualTo("");
+    }
 
     private static class TestDefaultAppsPickerBasePreferenceController extends
             DefaultAppsPickerBasePreferenceController {
@@ -101,183 +296,5 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         protected boolean includeNonePreference() {
             return mIncludeNone;
         }
-    }
-
-    private Context mContext;
-    private PreferenceGroup mPreferenceGroup;
-    private PreferenceControllerTestHelper<TestDefaultAppsPickerBasePreferenceController>
-            mControllerHelper;
-    private TestDefaultAppsPickerBasePreferenceController mController;
-
-    @Before
-    public void setUp() {
-        mContext = RuntimeEnvironment.application;
-        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                TestDefaultAppsPickerBasePreferenceController.class, mPreferenceGroup);
-        mController = mControllerHelper.getController();
-    }
-
-    @Test
-    public void refreshUi_noCandidates_hasSingleNoneElement() {
-        mController.setCurrentDefault("");
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        // Has the "None" element.
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
-
-        Preference preference = mPreferenceGroup.getPreference(0);
-        assertThat(preference.getTitle()).isEqualTo(
-                mContext.getString(R.string.app_list_preference_none));
-        assertThat(preference.getIcon()).isNotNull();
-    }
-
-    @Test
-    public void refreshUi_noCandidates_noNoneElement() {
-        mController.setCurrentDefault("");
-        mController.setIncludeNonePreference(false);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        // None element removed.
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
-    }
-
-    @Test
-    public void refreshUi_hasAdditionalCandidate_hasTwoElements() {
-        String testKey = "testKey";
-
-        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
-        when(testApp.getKey()).thenReturn(testKey);
-        mController.setTestCandidates(Lists.newArrayList(testApp));
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
-    }
-
-    @Test
-    public void refreshUi_hasAdditionalCandidateAsDefault_secondElementIsSelected() {
-        String testKey = "testKey";
-
-        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
-        when(testApp.getKey()).thenReturn(testKey);
-        mController.setTestCandidates(Lists.newArrayList(testApp));
-        mController.setCurrentDefault(testKey);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        CarUiRadioButtonPreference preference = mPreferenceGroup.findPreference(testKey);
-        assertThat(preference.isChecked()).isTrue();
-    }
-
-    @Test
-    public void performClick_currentDefaultApp_nothingHappened() {
-        String testKey = "testKey";
-
-        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
-        when(testApp.getKey()).thenReturn(testKey);
-        mController.setTestCandidates(Lists.newArrayList(testApp));
-        mController.setCurrentDefault(testKey);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
-        CarUiRadioButtonPreference otherOption =
-                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
-
-        assertThat(currentDefault.isChecked()).isTrue();
-        assertThat(otherOption.isChecked()).isFalse();
-
-        currentDefault.performClick();
-
-        currentDefault = mPreferenceGroup.findPreference(testKey);
-        otherOption = (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
-
-        assertThat(currentDefault.isChecked()).isTrue();
-        assertThat(otherOption.isChecked()).isFalse();
-    }
-
-    @Test
-    public void performClick_otherOptionNoMessage_otherOptionSelected() {
-        String testKey = "testKey";
-
-        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
-        when(testApp.getKey()).thenReturn(testKey);
-        mController.setTestCandidates(Lists.newArrayList(testApp));
-        mController.setCurrentDefault(testKey);
-        mController.setTestMessage(null);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
-        CarUiRadioButtonPreference otherOption =
-                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
-
-        assertThat(currentDefault.isChecked()).isTrue();
-        assertThat(otherOption.isChecked()).isFalse();
-
-        otherOption.performClick();
-
-        currentDefault = mPreferenceGroup.findPreference(testKey);
-        otherOption = (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
-
-        assertThat(currentDefault.isChecked()).isFalse();
-        assertThat(otherOption.isChecked()).isTrue();
-    }
-
-    @Test
-    public void performClick_otherOptionHasMessage_dialogOpened() {
-        String testKey = "testKey";
-
-        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
-        when(testApp.getKey()).thenReturn(testKey);
-        mController.setTestCandidates(Lists.newArrayList(testApp));
-        mController.setCurrentDefault(testKey);
-        mController.setTestMessage("Non-empty message");
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
-        CarUiRadioButtonPreference otherOption =
-                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
-
-        assertThat(currentDefault.isChecked()).isTrue();
-        assertThat(otherOption.isChecked()).isFalse();
-
-        otherOption.performClick();
-
-        verify(mControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmationDialogFragment.class),
-                eq(ConfirmationDialogFragment.TAG));
-    }
-
-    @Test
-    public void performClick_otherOptionNoMessage_newKeySet() {
-        String testKey = "testKey";
-
-        DefaultAppInfo testApp = mock(DefaultAppInfo.class);
-        when(testApp.getKey()).thenReturn(testKey);
-        mController.setTestCandidates(Lists.newArrayList(testApp));
-
-        // Currently, the testApp is the default selection.
-        mController.setCurrentDefault(testKey);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mController.refreshUi();
-
-        // This preference represents the "None" option.
-        CarUiRadioButtonPreference otherOption =
-                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
-        assertThat(mController.getCurrentDefaultKey()).isEqualTo(testKey);
-
-        otherOption.performClick();
-        assertThat(mController.getCurrentDefaultKey()).isEqualTo("");
     }
 }

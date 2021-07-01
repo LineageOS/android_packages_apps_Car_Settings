@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,24 +25,87 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import androidx.annotation.Nullable;
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class DefaultAppEntryBasePreferenceControllerTest {
     private static final CharSequence TEST_LABEL = "Test Label";
+
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private CarUiPreference mPreference;
+    private TestDefaultAppEntryBasePreferenceController mController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mPreference = new CarUiPreference(mContext);
+        mController = new TestDefaultAppEntryBasePreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mController, mPreference);
+    }
+
+    @Test
+    public void refreshUi_hasDefaultAppWithLabel_summaryAndIconAreSet() {
+        DefaultAppInfo defaultAppInfo = mock(DefaultAppInfo.class);
+        when(defaultAppInfo.loadLabel()).thenReturn(TEST_LABEL);
+        when(defaultAppInfo.loadIcon()).thenReturn(mContext.getDrawable(R.drawable.test_icon));
+        mController.setCurrentDefaultAppInfo(defaultAppInfo);
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        assertThat(mPreference.getSummary()).isEqualTo(TEST_LABEL);
+        assertThat(mPreference.getIcon()).isNotNull();
+    }
+
+    @Test
+    public void refreshUi_hasDefaultAppWithoutLabel_summaryAndIconAreNotSet() {
+        DefaultAppInfo defaultAppInfo = mock(DefaultAppInfo.class);
+        when(defaultAppInfo.loadLabel()).thenReturn(null);
+        when(defaultAppInfo.loadIcon()).thenReturn(null);
+        mController.setCurrentDefaultAppInfo(defaultAppInfo);
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        assertThat(mPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.app_list_preference_none));
+        assertThat(mPreference.getIcon()).isNull();
+    }
+
+    @Test
+    public void refreshUi_hasNoDefaultApp_summaryAndIconAreNotSet() {
+        mController.setCurrentDefaultAppInfo(null);
+        mController.onCreate(mLifecycleOwner);
+        mController.refreshUi();
+
+        assertThat(mPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.app_list_preference_none));
+        assertThat(mPreference.getIcon()).isNull();
+    }
 
     private static class TestDefaultAppEntryBasePreferenceController extends
             DefaultAppEntryBasePreferenceController<Preference> {
@@ -69,59 +132,5 @@ public class DefaultAppEntryBasePreferenceControllerTest {
         protected void setCurrentDefaultAppInfo(DefaultAppInfo defaultAppInfo) {
             mDefaultAppInfo = defaultAppInfo;
         }
-    }
-
-    private Context mContext;
-    private CarUiPreference mPreference;
-    private PreferenceControllerTestHelper<TestDefaultAppEntryBasePreferenceController>
-            mControllerHelper;
-    private TestDefaultAppEntryBasePreferenceController mController;
-
-    @Before
-    public void setUp() {
-        mContext = RuntimeEnvironment.application;
-        mPreference = new CarUiPreference(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                TestDefaultAppEntryBasePreferenceController.class,
-                mPreference);
-        mController = mControllerHelper.getController();
-    }
-
-    @Test
-    public void refreshUi_hasDefaultAppWithLabel_summaryAndIconAreSet() {
-        DefaultAppInfo defaultAppInfo = mock(DefaultAppInfo.class);
-        when(defaultAppInfo.loadLabel()).thenReturn(TEST_LABEL);
-        when(defaultAppInfo.loadIcon()).thenReturn(mContext.getDrawable(R.drawable.test_icon));
-        mController.setCurrentDefaultAppInfo(defaultAppInfo);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
-
-        assertThat(mPreference.getSummary()).isEqualTo(TEST_LABEL);
-        assertThat(mPreference.getIcon()).isNotNull();
-    }
-
-    @Test
-    public void refreshUi_hasDefaultAppWithoutLabel_summaryAndIconAreNotSet() {
-        DefaultAppInfo defaultAppInfo = mock(DefaultAppInfo.class);
-        when(defaultAppInfo.loadLabel()).thenReturn(null);
-        when(defaultAppInfo.loadIcon()).thenReturn(null);
-        mController.setCurrentDefaultAppInfo(defaultAppInfo);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
-
-        assertThat(mPreference.getSummary()).isEqualTo(
-                mContext.getString(R.string.app_list_preference_none));
-        assertThat(mPreference.getIcon()).isNull();
-    }
-
-    @Test
-    public void refreshUi_hasNoDefaultApp_summaryAndIconAreNotSet() {
-        mController.setCurrentDefaultAppInfo(null);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
-
-        assertThat(mPreference.getSummary()).isEqualTo(
-                mContext.getString(R.string.app_list_preference_none));
-        assertThat(mPreference.getIcon()).isNull();
     }
 }
