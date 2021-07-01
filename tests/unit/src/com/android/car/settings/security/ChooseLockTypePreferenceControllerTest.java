@@ -16,20 +16,29 @@
 
 package com.android.car.settings.security;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.security.ChooseLockTypePreferenceController.LOCK_CHECK;
+import static com.android.internal.widget.LockPatternUtils.CREDENTIAL_TYPE_NONE;
+import static com.android.internal.widget.LockPatternUtils.CREDENTIAL_TYPE_PASSWORD;
+import static com.android.internal.widget.LockPatternUtils.CREDENTIAL_TYPE_PATTERN;
+import static com.android.internal.widget.LockPatternUtils.CREDENTIAL_TYPE_PIN;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
+import android.os.UserManager;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
@@ -40,8 +49,10 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiTwoActionTextPreference;
+import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockscreenCredential;
 
 import org.junit.Before;
@@ -66,6 +77,10 @@ public class ChooseLockTypePreferenceControllerTest {
 
     @Mock
     private FragmentController mFragmentController;
+    @Mock
+    private UserManager mUserManager;
+    @Mock
+    private LockPatternUtils mLockPatternUtils;
 
     @Before
     public void setUp() {
@@ -77,8 +92,12 @@ public class ChooseLockTypePreferenceControllerTest {
 
         mPreference = new CarUiTwoActionTextPreference(mContext);
         mPreferenceController = new ChooseLockTypePreferenceController(mContext,
-                "key", mFragmentController, mCarUxRestrictions);
+                "key", mFragmentController, mCarUxRestrictions, mUserManager,
+                mLockPatternUtils);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+
+        when(mUserManager.isGuestUser()).thenReturn(false);
+        when(mLockPatternUtils.getCredentialTypeForUser(anyInt())).thenReturn(CREDENTIAL_TYPE_NONE);
     }
 
     @Test
@@ -142,6 +161,58 @@ public class ChooseLockTypePreferenceControllerTest {
         Fragment fragment = fragmentArgumentCaptor.getValue();
         assertThat(fragment.getArguments().getInt(
                 PasswordHelper.EXTRA_CURRENT_PASSWORD_QUALITY)).isEqualTo(TEST_PASSWORD_QUALITY);
+    }
+
+    @Test
+    public void isNotGuestUser_isAvailable() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void isGuestUser_isNotAvailable() {
+        when(mUserManager.isGuestUser()).thenReturn(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void lockTypeNone_setsSummary() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreference.getSummary()).isEqualTo(
+                ResourceTestUtils.getString(mContext, "security_lock_none"));
+    }
+
+    @Test
+    public void lockTypePattern_setsSummary() {
+        when(mLockPatternUtils.getCredentialTypeForUser(anyInt()))
+                .thenReturn(CREDENTIAL_TYPE_PATTERN);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreference.getSummary()).isEqualTo(
+                ResourceTestUtils.getString(mContext, "security_lock_pattern"));
+    }
+
+    @Test
+    public void lockTypePin_setsSummary() {
+        when(mLockPatternUtils.getCredentialTypeForUser(anyInt())).thenReturn(CREDENTIAL_TYPE_PIN);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreference.getSummary()).isEqualTo(
+                ResourceTestUtils.getString(mContext, "security_lock_pin"));
+    }
+
+    @Test
+    public void lockTypePassword_setsSummary() {
+        when(mLockPatternUtils.getCredentialTypeForUser(anyInt()))
+                .thenReturn(CREDENTIAL_TYPE_PASSWORD);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreference.getSummary()).isEqualTo(
+                ResourceTestUtils.getString(mContext, "security_lock_password"));
     }
 
     private Intent createDataBundle() {
