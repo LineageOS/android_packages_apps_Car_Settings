@@ -30,7 +30,7 @@ import com.android.car.settings.common.FragmentController;
  * Controller for the warning info preference the device admin details screen.
  */
 public final class DeviceAdminAddWarningPreferenceController
-        extends BaseDeviceAdminAddPreferenceController {
+        extends BaseDeviceAdminAddPreferenceController<Preference> {
 
     public DeviceAdminAddWarningPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -38,34 +38,37 @@ public final class DeviceAdminAddWarningPreferenceController
     }
 
     @Override
-    protected void updateState(Preference preference) {
+    protected void updateState(Preference preferenceGroup) {
+        Context context = getContext();
         ComponentName admin = mDeviceAdminInfo.getComponent();
-        if (!mDpm.isAdminActive(admin)) {
-            mLogger.d(admin.flattenToShortString() + " is not active");
-            return;
-        }
 
-        Integer warningResId = null;
+        CharSequence title = null;
         boolean isProfileOwner = admin.equals(mDpm.getProfileOwner());
         if (isProfileOwner || admin.equals(mDpm.getDeviceOwnerComponentOnCallingUser())) {
             // Profile owner in a user or device owner, user can't disable admin.
             if (isProfileOwner) {
                 // Show profile owner in a user description.
-                warningResId = R.string.admin_profile_owner_user_message;
+                title = context.getString(R.string.admin_profile_owner_user_message);
             } else {
                 // Show device owner description.
                 if (isFinancedDevice()) {
-                    warningResId = R.string.admin_financed_message;
+                    title = context.getString(R.string.admin_financed_message);
                 } else {
-                    warningResId = R.string.admin_device_owner_message;
+                    title = context.getString(R.string.admin_device_owner_message);
                 }
             }
+        } else {
+            int resId = mDpm.isAdminActive(admin) ? R.string.device_admin_status
+                    : R.string.device_admin_warning;
+            CharSequence label = mDeviceAdminInfo.getActivityInfo().applicationInfo.loadLabel(mPm);
+            title = context.getString(resId, label);
         }
-        if (warningResId == null) {
+        if (title == null) {
             mLogger.v("no warning message");
             return;
         }
-        preference.setTitle(warningResId.intValue());
+
+        preferenceGroup.setTitle(title);
     }
 
     private boolean isFinancedDevice() {
