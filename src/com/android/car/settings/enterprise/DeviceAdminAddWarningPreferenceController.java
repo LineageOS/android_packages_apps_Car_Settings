@@ -20,7 +20,6 @@ import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
-import android.text.TextUtils;
 
 import androidx.preference.Preference;
 
@@ -46,27 +45,27 @@ public final class DeviceAdminAddWarningPreferenceController
             return;
         }
 
-        CharSequence warning = null;
+        Integer warningResId = null;
         boolean isProfileOwner = admin.equals(mDpm.getProfileOwner());
         if (isProfileOwner || admin.equals(mDpm.getDeviceOwnerComponentOnCallingUser())) {
             // Profile owner in a user or device owner, user can't disable admin.
             if (isProfileOwner) {
                 // Show profile owner in a user description.
-                warning = getContext().getString(R.string.admin_profile_owner_user_message);
+                warningResId = R.string.admin_profile_owner_user_message;
             } else {
                 // Show device owner description.
                 if (isFinancedDevice()) {
-                    warning = getContext().getString(R.string.admin_financed_message);
+                    warningResId = R.string.admin_financed_message;
                 } else {
-                    warning = getContext().getString(R.string.admin_device_owner_message);
+                    warningResId = R.string.admin_device_owner_message;
                 }
             }
         }
-        if (TextUtils.isEmpty(warning)) {
+        if (warningResId == null) {
             mLogger.v("no warning message");
             return;
         }
-        preference.setTitle(warning);
+        preference.setTitle(warningResId.intValue());
     }
 
     private boolean isFinancedDevice() {

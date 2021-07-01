@@ -33,7 +33,6 @@ import com.android.car.settings.common.SettingsFragment;
 /**
  * A screen that shows details about a device administrator.
  */
-//TODO(b/186054346): add unit test
 public final class DeviceAdminAddFragment extends SettingsFragment {
 
     private static final Logger LOG = new Logger(DeviceAdminAddFragment.class);
@@ -86,5 +85,7 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 R.string.pk_device_admin_add_warning).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddSupportPreferenceController.class,
                 R.string.pk_device_admin_add_support).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddCancelPreferenceController.class,
+                R.string.pk_device_admin_add_cancel).setDeviceAdmin(deviceAdminInfo);
     }
 }
