@@ -60,7 +60,11 @@ abstract class BaseDeviceAdminAddPreferenceController extends PreferenceControll
         return mDeviceAdminInfo != null ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 
-    final void setDeviceAdmin(DeviceAdminInfo deviceAdminInfo) {
+    final <T extends BaseDeviceAdminAddPreferenceController> T setDeviceAdmin(
+            DeviceAdminInfo deviceAdminInfo) {
         mDeviceAdminInfo = Objects.requireNonNull(deviceAdminInfo);
+        @SuppressWarnings("unchecked")
+        T safeCast = (T) this;
+        return safeCast;
     }
 }
