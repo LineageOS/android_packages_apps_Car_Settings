@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,56 +18,76 @@ package com.android.car.settings.datetime;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 import android.app.timezonedetector.ManualTimeZoneSuggestion;
 import android.app.timezonedetector.TimeZoneDetector;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowApplication;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class TimeZonePickerScreenPreferenceControllerTest {
 
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+    private LifecycleOwner mLifecycleOwner;
     private PreferenceGroup mPreferenceGroup;
-    private PreferenceControllerTestHelper<TimeZonePickerScreenPreferenceController>
-            mPreferenceControllerHelper;
-    private TimeZonePickerScreenPreferenceController mController;
+    private TimeZonePickerScreenPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
     @Mock
     private TimeZoneDetector mTimeZoneDetector;
 
     @Before
+    @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        Context context = RuntimeEnvironment.application;
-        mPreferenceGroup = new LogicalPreferenceGroup(context);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(context,
-                TimeZonePickerScreenPreferenceController.class, mPreferenceGroup);
-        mController = mPreferenceControllerHelper.getController();
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        screen.addPreference(mPreferenceGroup);
+        mPreferenceController = new TimeZonePickerScreenPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
 
         // Test setup.
-        mController.mTimeZoneDetector = mTimeZoneDetector;
+        mPreferenceController.mTimeZoneDetector = mTimeZoneDetector;
     }
 
     @Test
@@ -81,8 +101,9 @@ public class TimeZonePickerScreenPreferenceControllerTest {
                 createTimeZoneMap("testKey3", "Coordinated Universal Time", "GMT+00:00", 0));
         testTimeZones.add(
                 createTimeZoneMap("testKey4", "Kabul", "GMT+04:30", 430));
-        mController.setZonesList(testTimeZones);
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController.setZonesList(testTimeZones);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(4);
     }
 
@@ -90,8 +111,9 @@ public class TimeZonePickerScreenPreferenceControllerTest {
     public void testOnPreferenceClick_setTimeZoneCalled() {
         List<Map<String, Object>> testTimeZone = new ArrayList<>();
         testTimeZone.add(createTimeZoneMap("testKey", "London", "GMT+01:00", 100));
-        mController.setZonesList(testTimeZone);
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController.setZonesList(testTimeZone);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
         Preference preference = mPreferenceGroup.findPreference("testKey");
         preference.performClick();
         ManualTimeZoneSuggestion suggestion =
@@ -103,23 +125,27 @@ public class TimeZonePickerScreenPreferenceControllerTest {
     public void testOnPreferenceClick_fragmentControllerGoBack() {
         List<Map<String, Object>> testTimeZone = new ArrayList<>();
         testTimeZone.add(createTimeZoneMap("testKey", "London", "GMT+01:00", 100));
-        mController.setZonesList(testTimeZone);
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController.setZonesList(testTimeZone);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
         Preference preference = mPreferenceGroup.findPreference("testKey");
         preference.performClick();
-        verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
+        verify(mFragmentController).goBack();
     }
 
     @Test
     public void testOnPreferenceClick_broadcastFired() {
         List<Map<String, Object>> testTimeZone = new ArrayList<>();
         testTimeZone.add(createTimeZoneMap("testKey", "London", "GMT+01:00", 100));
-        mController.setZonesList(testTimeZone);
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController.setZonesList(testTimeZone);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
         Preference preference = mPreferenceGroup.findPreference("testKey");
         preference.performClick();
 
-        List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
+        ArgumentCaptor<Intent> captor = ArgumentCaptor.forClass(Intent.class);
+        verify(mContext, times(1)).sendBroadcast(captor.capture());
+        List<Intent> intentsFired = captor.getAllValues();
         assertThat(intentsFired.size()).isEqualTo(1);
         Intent intentFired = intentsFired.get(0);
         assertThat(intentFired.getAction()).isEqualTo(Intent.ACTION_TIME_CHANGED);
@@ -140,8 +166,8 @@ public class TimeZonePickerScreenPreferenceControllerTest {
                 "GMT-02:00", -200));
         testTimeZones.add(createTimeZoneMap("testKey6", "St. John's",
                 "GMT-02:30", -230));
-        mController.setZonesList(testTimeZones);
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController.setZonesList(testTimeZones);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         List<String> computedOrder = new ArrayList<>();
         for (int i = 0; i < mPreferenceGroup.getPreferenceCount(); i++) {
