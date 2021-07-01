@@ -33,7 +33,6 @@ import com.android.car.settings.common.SettingsFragment;
 /**
  * A screen that shows details about a device administrator.
  */
-//TODO(b/186054346): add unit test
 public final class DeviceAdminAddFragment extends SettingsFragment {
 
     private static final Logger LOG = new Logger(DeviceAdminAddFragment.class);

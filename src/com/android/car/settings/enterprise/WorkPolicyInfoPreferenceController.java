@@ -40,7 +40,7 @@ import java.util.List;
  */
 public final class WorkPolicyInfoPreferenceController extends PreferenceController<Preference> {
 
-    private static final Logger LOGGER = new Logger(WorkPolicyInfoPreferenceController.class);
+    private static final Logger LOG = new Logger(WorkPolicyInfoPreferenceController.class);
     private static final int MY_USER_ID = UserHandle.myUserId();
 
     private final DevicePolicyManager mDpm;
@@ -60,7 +60,7 @@ public final class WorkPolicyInfoPreferenceController extends PreferenceControll
         mUm = context.getSystemService(UserManager.class);
         mEnabled = mPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN);
 
-        LOGGER.d("Constructed on user " + MY_USER_ID + ": " + (mEnabled ? "enabled" : "disabled"));
+        LOG.d("Constructed on user " + MY_USER_ID + ": " + (mEnabled ? "enabled" : "disabled"));
     }
 
     @Override
@@ -91,7 +91,7 @@ public final class WorkPolicyInfoPreferenceController extends PreferenceControll
 
         ComponentName admin = mDpm.getProfileOwner();
         if (admin == null) {
-            LOGGER.d("no profile owner for user " + MY_USER_ID + ")");
+            LOG.d("no profile owner for user " + MY_USER_ID + ")");
             return;
         }
 
@@ -101,12 +101,12 @@ public final class WorkPolicyInfoPreferenceController extends PreferenceControll
 
         List<ResolveInfo> activities = mPm.queryIntentActivities(mIntent, /* flags= */ 0);
         if (activities.isEmpty()) {
-            LOGGER.d(admin.flattenToShortString() + " does not declare "
+            LOG.d(admin.flattenToShortString() + " does not declare "
                     + Settings.ACTION_SHOW_WORK_POLICY_INFO);
             mIntent = null;
             return;
         }
 
-        LOGGER.d("updateIntent(): " + admin.flattenToShortString());
+        LOG.d("updateIntent(): " + admin.flattenToShortString());
     }
 }
