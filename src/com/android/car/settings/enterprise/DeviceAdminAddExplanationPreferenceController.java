@@ -29,7 +29,7 @@ import com.android.car.settings.common.FragmentController;
  * Controller for the (optional, set by intent extra ) explanation of why the admin is being added.
  */
 public final class DeviceAdminAddExplanationPreferenceController
-        extends BaseDeviceAdminAddPreferenceController {
+        extends BaseDeviceAdminAddPreferenceController<Preference> {
 
     @Nullable
     private CharSequence mExplanation;
@@ -46,6 +46,8 @@ public final class DeviceAdminAddExplanationPreferenceController
             return superStatus;
         }
 
+        // TODO(b/188585303): should also be disabled when admin is device/profile owner or when
+        // not launched with ADD_DEVICE_ADMIN
         return TextUtils.isEmpty(mExplanation) ? CONDITIONALLY_UNAVAILABLE : AVAILABLE;
     }
 
