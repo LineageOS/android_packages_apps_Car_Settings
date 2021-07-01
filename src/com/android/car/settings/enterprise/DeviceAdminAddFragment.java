@@ -91,9 +91,14 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                                 .getCharSequenceExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION));
         use(DeviceAdminAddWarningPreferenceController.class,
                 R.string.pk_device_admin_add_warning).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddPoliciesPreferenceController.class,
+                R.string.pk_device_admin_add_policies).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddSupportPreferenceController.class,
                 R.string.pk_device_admin_add_support).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddCancelPreferenceController.class,
                 R.string.pk_device_admin_add_cancel).setDeviceAdmin(deviceAdminInfo);
     }
+
+    // TODO(b/188585303): must override onCreatePreferences() to change title of preference screen
+    // to add_device_admin_msg when launched with DEVICE_ADMIN_ADD
 }
