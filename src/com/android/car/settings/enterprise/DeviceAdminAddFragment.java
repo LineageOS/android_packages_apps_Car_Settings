@@ -29,6 +29,7 @@ import android.content.Intent;
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.ToolbarController;
 
 /**
  * A screen that shows details about a device administrator.
@@ -101,6 +102,14 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 R.string.pk_device_admin_add_cancel).setDeviceAdmin(deviceAdminInfo);
     }
 
-    // TODO(b/188585303): must override onCreatePreferences() to change title of preference screen
-    // to add_device_admin_msg when launched with DEVICE_ADMIN_ADD
+    @Override
+    protected void setupToolbar(ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
+
+        Intent intent = requireActivity().getIntent();
+        String action = intent == null ? null : intent.getAction();
+        if (DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN.equals(action)) {
+            toolbar.setTitle(R.string.add_device_admin_msg);
+        }
+    }
 }
