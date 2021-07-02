@@ -34,12 +34,23 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
     }
 
     @Test
-    public void testUpdateState_adminNotActive() {
-        // No need to mock anything, as mockito returns false / null by default
+    public void testUpdateState_adminInactive() {
+        mockInactiveAdmin();
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleNeverSet();
+        verifyPreferenceTitleSet(
+                mRealContext.getString(R.string.device_admin_warning, mPackageName));
+    }
+
+    @Test
+    public void testUpdateState_adminActive() {
+        mockActiveAdmin();
+
+        mController.updateState(mPreference);
+
+        verifyPreferenceTitleSet(
+                mRealContext.getString(R.string.device_admin_status, mPackageName));
     }
 
     @Test
@@ -48,7 +59,7 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet(R.string.admin_profile_owner_user_message);
+        verifyPreferenceTitleSet(mRealContext.getString(R.string.admin_profile_owner_user_message));
     }
 
     @Test
@@ -57,7 +68,7 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet(R.string.admin_device_owner_message);
+        verifyPreferenceTitleSet(mRealContext.getString(R.string.admin_device_owner_message));
     }
 
     @Test
@@ -67,6 +78,6 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet(R.string.admin_financed_message);
+        verifyPreferenceTitleSet(mRealContext.getString(R.string.admin_financed_message));
     }
 }

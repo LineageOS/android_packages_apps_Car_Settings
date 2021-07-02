@@ -21,6 +21,8 @@ import android.content.Context;
 import android.os.UserHandle;
 import android.text.TextUtils;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
@@ -29,7 +31,10 @@ import com.android.car.settings.common.FragmentController;
  * Controller for the support info preference the device admin details screen.
  */
 public final class DeviceAdminAddSupportPreferenceController
-        extends BaseDeviceAdminAddPreferenceController {
+        extends BaseDeviceAdminAddPreferenceController<Preference> {
+
+    @Nullable
+    private CharSequence mSupportMessage;
 
     public DeviceAdminAddSupportPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -37,13 +42,21 @@ public final class DeviceAdminAddSupportPreferenceController
     }
 
     @Override
+    protected int getRealAvailabilityStatus() {
+        setSupportMessage();
+
+        return TextUtils.isEmpty(mSupportMessage) ? CONDITIONALLY_UNAVAILABLE : AVAILABLE;
+    }
+
+    @Override
     protected void updateState(Preference preference) {
-        CharSequence supportMessage = mDpm.getLongSupportMessageForUser(
-                mDeviceAdminInfo.getComponent(), UserHandle.myUserId());
-        if (TextUtils.isEmpty(supportMessage)) {
-            mLogger.v("no support message");
-            return;
-        }
-        preference.setTitle(supportMessage);
+        preference.setTitle(mSupportMessage);
+    }
+
+    @VisibleForTesting
+    void setSupportMessage() {
+        mSupportMessage = mDpm.getLongSupportMessageForUser(mDeviceAdminInfo.getComponent(),
+                UserHandle.myUserId());
+        mLogger.d("setSupportMessage(): " + mSupportMessage);
     }
 }

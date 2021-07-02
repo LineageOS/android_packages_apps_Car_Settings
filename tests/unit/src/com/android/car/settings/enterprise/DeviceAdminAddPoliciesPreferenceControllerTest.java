@@ -15,28 +15,38 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.google.common.truth.Truth.assertWithMessage;
+
+import androidx.preference.PreferenceGroup;
+
 import com.android.car.settings.common.PreferenceController;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminAddSupportPreferenceControllerTest extends
+public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
         BaseDeviceAdminAddPreferenceControllerTestCase
-                <DeviceAdminAddSupportPreferenceController> {
+                <DeviceAdminAddPoliciesPreferenceController> {
 
-    private DeviceAdminAddSupportPreferenceController mController;
+    private DeviceAdminAddPoliciesPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminAddSupportPreferenceController(mSpiedContext,
+        mController = new DeviceAdminAddPoliciesPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
 
     @Test
+    public void testGetPreferenceType() throws Exception {
+        assertWithMessage("preference type").that(mController.getPreferenceType())
+                .isEqualTo(PreferenceGroup.class);
+    }
+
+    @Test
     public void testGetAvailabilityStatus_noAdmin() throws Exception {
-        DeviceAdminAddSupportPreferenceController controller =
-                new DeviceAdminAddSupportPreferenceController(mSpiedContext, mPreferenceKey,
+        DeviceAdminAddPoliciesPreferenceController controller =
+                new DeviceAdminAddPoliciesPreferenceController(mSpiedContext, mPreferenceKey,
                         mFragmentController, mUxRestrictions);
 
         assertAvailability(controller.getAvailabilityStatus(),
@@ -44,35 +54,25 @@ public final class DeviceAdminAddSupportPreferenceControllerTest extends
     }
 
     @Test
-    public void testGetAvailabilityStatus_nullMessage() {
-        mockGetLongSupportMessageForUser(null);
+    public void testGetAvailabilityStatus_deviceOwner() throws Exception {
+        mockDeviceOwner();
 
         assertAvailability(mController.getAvailabilityStatus(),
-                PreferenceController.CONDITIONALLY_UNAVAILABLE);
+                PreferenceController.DISABLED_FOR_PROFILE);
     }
 
     @Test
-    public void testGetAvailabilityStatus_emptyMessage() {
-        mockGetLongSupportMessageForUser("");
+    public void testGetAvailabilityStatus_profileOwner() throws Exception {
+        mockProfileOwner();
 
         assertAvailability(mController.getAvailabilityStatus(),
-                PreferenceController.CONDITIONALLY_UNAVAILABLE);
+                PreferenceController.DISABLED_FOR_PROFILE);
     }
 
     @Test
-    public void testGetAvailabilityStatus_validMessage() {
-        mockGetLongSupportMessageForUser("WHAZZZZUP");
+    public void testGetAvailabilityStatus_regularAdmin() throws Exception {
+        // Admin is neither PO nor DO
 
         assertAvailability(mController.getAvailabilityStatus(), PreferenceController.AVAILABLE);
-    }
-
-    @Test
-    public void testUpdateState() {
-        mockGetLongSupportMessageForUser("WHAZZZZUP");
-        mController.setSupportMessage();
-
-        mController.updateState(mPreference);
-
-        verifyPreferenceTitleSet("WHAZZZZUP");
     }
 }
