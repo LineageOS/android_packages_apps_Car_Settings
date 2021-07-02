@@ -297,6 +297,10 @@
     <string name="force_stop" msgid="2153183697014720520">"ບັງຄັບຢຸດ"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ບັງຄັບປິດບໍ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ຖ້າທ່ານບັງຄັບປິດແອັບໃດໜຶ່ງ, ມັນອາດເຮັດວຽກຜິດປົກກະຕິໄດ້."</string>
+    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"ປິດການປົກປ້ອງປະສິດທິພາບບໍ?"</string>
+    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"ຖ້າທ່ານປິດການນຳໃຊ້, ຊອບແວ ແລະ ຮາດແວຂອງທ່ານອາດຈະບໍ່ເຮັດວຽກເຊັ່ນກັນ."</string>
+    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"ເປີດໄວ້"</string>
+    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"ປິດໄວ້"</string>
     <string name="disable_text" msgid="4358165448648990820">"ປິດນຳໃຊ້"</string>
     <string name="enable_text" msgid="1794971777861881238">"ເປິດນຳໃຊ້"</string>
     <string name="uninstall_text" msgid="277907956072833012">"ຖອນການຕິດຕັ້ງ"</string>
@@ -306,6 +310,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"ການອະນຸຍາດ"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ການແຈ້ງເຕືອນ"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ບ່ອນຈັດເກັບຂໍ້ມູນ ແລະ ແຄສ"</string>
+    <string name="peak_performance_label" msgid="1592816366516845648">"ຮັບປະກັນປະສິດທິພາບສູງສຸດ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ເວີຊັນ: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ບໍ່ໄດ້ໃຫ້ການອະນຸຍາດໃດ"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ບໍ່ມີການຮ້ອງຂໍການອະນຸຍາດໃດ"</string>
@@ -316,6 +321,7 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ລຶບການອະນຸຍາດອອກ ແລະ ຂະຫຍາຍພື້ນທີ່ຫວ່າງ"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s ໃນພື້ນທີ່ຈັດເກັບພາຍໃນ"</string>
+    <string name="peak_performance_summary" msgid="2450911487290019786">"ເມື່ອຈຳເປັນ, ກະລຸນາປິດແອັບເພື່ອຫຼີກເວັ້ນການນຳໃຊ້ຊັບພະຍາກອນຫຼາຍເກີນໄປ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ການໃຊ້ຂໍ້ມູນ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ການໃຊ້ຂໍ້ມູນແອັບ"</string>
     <string name="computing_size" msgid="5791407621793083965">"ກຳລັງຄຳນວນ..."</string>
