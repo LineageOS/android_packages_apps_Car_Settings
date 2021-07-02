@@ -297,14 +297,10 @@
     <string name="force_stop" msgid="2153183697014720520">"በኃይል አቁም"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"በኃይል አቁም?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"መተግበሪያን በጉልበት እንዲቆም ካደረጉት ከአደብ ውጪ ሊሆን ይችላል።"</string>
-    <!-- no translation found for peak_performance_dialog_title (5970933611683430870) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_text (7648337738884134499) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_on (2139033153500237350) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_off (1019653666533456482) -->
-    <skip />
+    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"የአፈጻጸም ጥበቃ ይጥፋ?"</string>
+    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"ይህን ካደረጉ የእርስዎ ሶፍትዌር እና ሃርድዌር እንዲሁም ላይሰሩ ይችላሉ።"</string>
+    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"እንደበራ ተወው"</string>
+    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"አጥፋ"</string>
     <string name="disable_text" msgid="4358165448648990820">"አሰናክል"</string>
     <string name="enable_text" msgid="1794971777861881238">"አንቃ"</string>
     <string name="uninstall_text" msgid="277907956072833012">"አራግፍ"</string>
@@ -314,8 +310,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"ፈቃዶች"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ማሳወቂያዎች"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ማከማቻ እና መሸጎጫ"</string>
-    <!-- no translation found for peak_performance_label (1592816366516845648) -->
-    <skip />
+    <string name="peak_performance_label" msgid="1592816366516845648">"ከፍተኛ አፈጻጸምን አረጋግጥ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ስሪት፦ %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ምንም ፈቃዶች አልተሰጡም"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ምንም ፈቃዶች አልተጠየቁም"</string>
@@ -326,8 +321,7 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ፈቃዶችን ያስወግዱ እና ቦታ ያስለቅቁ"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s በውስጣዊ ማከማቻ ውስጥ ነው"</string>
-    <!-- no translation found for peak_performance_summary (2450911487290019786) -->
-    <skip />
+    <string name="peak_performance_summary" msgid="2450911487290019786">"አስፈላጊ ሆኖ ሲገኝ ግብዓቶችን ከልክ በላይ ላለመጠቀም መተግበሪያን ይዝጉ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"የውሂብ አጠቃቀም"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"የመተግበሪያ ውሂብ አጠቃቀም"</string>
     <string name="computing_size" msgid="5791407621793083965">"በማስላት ላይ…"</string>

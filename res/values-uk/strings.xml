@@ -301,14 +301,10 @@
     <string name="force_stop" msgid="2153183697014720520">"Примусово припинити роботу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Примусово припинити роботу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Після примусового припинення роботи додаток може працювати неналежним чином."</string>
-    <!-- no translation found for peak_performance_dialog_title (5970933611683430870) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_text (7648337738884134499) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_on (2139033153500237350) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_off (1019653666533456482) -->
-    <skip />
+    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Вимкнути захист продуктивності?"</string>
+    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"У такому разі програмне й апаратне забезпечення також може не працюватиме."</string>
+    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Не вимикати"</string>
+    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Вимкнути"</string>
     <string name="disable_text" msgid="4358165448648990820">"Вимкнути"</string>
     <string name="enable_text" msgid="1794971777861881238">"Увімкнути"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Видалити"</string>
@@ -318,8 +314,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"Дозволи"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Сповіщення"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Пам\'ять і кеш"</string>
-    <!-- no translation found for peak_performance_label (1592816366516845648) -->
-    <skip />
+    <string name="peak_performance_label" msgid="1592816366516845648">"Макс. продуктивність"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версія: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Дозволи не надано"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Немає запитів на дозволи"</string>
@@ -332,8 +327,7 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Скасувати дозволи й звільняти місце"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s у внутрішній пам\'яті"</string>
-    <!-- no translation found for peak_performance_summary (2450911487290019786) -->
-    <skip />
+    <string name="peak_performance_summary" msgid="2450911487290019786">"Закривати додаток для економії ресурсів"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Використання трафіку"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Використання трафіку"</string>
     <string name="computing_size" msgid="5791407621793083965">"Обчислення…"</string>

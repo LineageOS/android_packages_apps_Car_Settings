@@ -297,14 +297,10 @@
     <string name="force_stop" msgid="2153183697014720520">"ಬಲವಂತವಾಗಿ ನಿಲ್ಲಿಸಿ"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ಬಲವಂತವಾಗಿ ಸ್ಥಗಿತಗೊಳಿಸುವುದೇ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ಆ್ಯಪ್‍ ಅನ್ನು ಬಲವಂತವಾಗಿ ಸ್ಥಗಿತಗೊಳಿಸಿದರೆ, ಅದು ಸರಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸದಿರಬಹುದು."</string>
-    <!-- no translation found for peak_performance_dialog_title (5970933611683430870) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_text (7648337738884134499) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_on (2139033153500237350) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_off (1019653666533456482) -->
-    <skip />
+    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"ಕಾರ್ಯಕ್ಷಮತೆ ರಕ್ಷಣೆಯನ್ನು ಆಫ್ ಮಾಡಬೇಕೇ?"</string>
+    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"ಹಾಗೆ ಮಾಡಿದರೆ, ನಿಮ್ಮ ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ಹಾರ್ಡ್‌ವೇರ್ ಸಹ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದಿಲ್ಲ."</string>
+    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"ಆನ್ ಆಗಿರಿಸಿ"</string>
+    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"ಆಫ್ ಮಾಡಿ"</string>
     <string name="disable_text" msgid="4358165448648990820">"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="enable_text" msgid="1794971777861881238">"ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="uninstall_text" msgid="277907956072833012">"ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್"</string>
@@ -314,8 +310,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"ಅನುಮತಿಗಳು"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ಅಧಿಸೂಚನೆಗಳು"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ಸಂಗ್ರಹಣೆ ಮತ್ತು ಕ್ಯಾಷ್"</string>
-    <!-- no translation found for peak_performance_label (1592816366516845648) -->
-    <skip />
+    <string name="peak_performance_label" msgid="1592816366516845648">"ಗರಿಷ್ಠ ಕಾರ್ಯಕ್ಷಮತೆ ಖಚಿತಪಡಿಸಿ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ಆವೃತ್ತಿ: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ಯಾವುದೇ ಅನುಮತಿಗಳನ್ನು ನೀಡಲಾಗಿಲ್ಲ"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ಯಾವುದೇ ಅನುಮತಿಗಳನ್ನು ವಿನಂತಿಸಿಲ್ಲ"</string>
@@ -326,8 +321,7 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ಅನುಮತಿಗಳನ್ನು ತೆಗೆಯಿರಿ, ಸ್ಥಳ ಮುಕ್ತಗೊಳಿಸಿ"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯಲ್ಲಿ %s"</string>
-    <!-- no translation found for peak_performance_summary (2450911487290019786) -->
-    <skip />
+    <string name="peak_performance_summary" msgid="2450911487290019786">"ಅಗತ್ಯವಿದ್ದಾಗ, ಸಂಪನ್ಮೂಲಗಳ ಅತಿಯಾದ ಬಳಕೆ ತಪ್ಪಿಸಲು ಆ್ಯಪ್ ಮುಚ್ಚಿ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ಡೇಟಾ ಬಳಕೆ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ಆ್ಯಪ್‍ ಡೇಟಾ ಬಳಕೆ"</string>
     <string name="computing_size" msgid="5791407621793083965">"ಗಣನೆ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
