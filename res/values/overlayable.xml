@@ -566,6 +566,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="add_a_profile_button_text"/>
       <item type="string" name="add_account_title"/>
       <item type="string" name="add_an_account"/>
+      <item type="string" name="add_device_admin"/>
+      <item type="string" name="add_device_admin_msg"/>
       <item type="string" name="add_profile_text"/>
       <item type="string" name="add_user_error_title"/>
       <item type="string" name="add_user_restricted_while_driving"/>
@@ -768,6 +770,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="deny"/>
       <item type="string" name="developer_options_settings"/>
       <item type="string" name="device_admin_add_title"/>
+      <item type="string" name="device_admin_status"/>
+      <item type="string" name="device_admin_warning"/>
       <item type="string" name="device_info_not_available"/>
       <item type="string" name="device_status"/>
       <item type="string" name="device_status_activity_title"/>
@@ -1021,6 +1025,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="remove_account_error_title"/>
       <item type="string" name="remove_account_title"/>
       <item type="string" name="remove_button"/>
+      <item type="string" name="remove_device_admin"/>
       <item type="string" name="remove_screen_lock_message"/>
       <item type="string" name="remove_screen_lock_title"/>
       <item type="string" name="reset_app_pref_button_text"/>

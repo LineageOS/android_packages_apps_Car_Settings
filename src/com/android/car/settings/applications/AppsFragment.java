@@ -33,6 +33,7 @@ public class AppsFragment extends SettingsFragment {
 
     private RecentAppsItemManager mRecentAppsItemManager;
     private InstalledAppCountItemManager mInstalledAppCountItemManager;
+    private HibernatedAppsItemManager mHibernatedAppsItemManager;
 
     @Override
     @XmlRes
@@ -57,6 +58,10 @@ public class AppsFragment extends SettingsFragment {
                 R.string.pk_applications_settings_screen_entry));
         mInstalledAppCountItemManager.addListener(use(RecentAppsViewAllPreferenceController.class,
                 R.string.pk_recent_apps_view_all));
+
+        mHibernatedAppsItemManager = new HibernatedAppsItemManager(context);
+        mHibernatedAppsItemManager.setListener(use(HibernatedAppsPreferenceController.class,
+                R.string.pk_hibernated_apps));
     }
 
     @Override
@@ -64,6 +69,7 @@ public class AppsFragment extends SettingsFragment {
         super.onCreate(savedInstanceState);
         mRecentAppsItemManager.startLoading();
         mInstalledAppCountItemManager.startLoading();
+        mHibernatedAppsItemManager.startLoading();
     }
 
     /**
