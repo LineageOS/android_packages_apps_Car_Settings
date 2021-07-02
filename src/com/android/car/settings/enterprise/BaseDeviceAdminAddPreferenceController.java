@@ -21,6 +21,7 @@ import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.UserManager;
 
 import androidx.preference.Preference;
 
@@ -33,12 +34,14 @@ import java.util.Objects;
 /**
  * Base class for controllers in the device admin details screen.
  */
-abstract class BaseDeviceAdminAddPreferenceController extends PreferenceController<Preference> {
+abstract class BaseDeviceAdminAddPreferenceController<P extends Preference>
+        extends PreferenceController<P> {
 
     protected final Logger mLogger = new Logger(getClass());
 
     protected final DevicePolicyManager mDpm;
     protected final PackageManager mPm;
+    protected final UserManager mUm;
 
     protected DeviceAdminInfo mDeviceAdminInfo;
 
@@ -48,19 +51,32 @@ abstract class BaseDeviceAdminAddPreferenceController extends PreferenceControll
 
         mDpm = context.getSystemService(DevicePolicyManager.class);
         mPm = context.getPackageManager();
+        mUm = context.getSystemService(UserManager.class);
     }
 
     @Override
-    protected Class<Preference> getPreferenceType() {
-        return Preference.class;
+    protected Class<P> getPreferenceType() {
+        return (Class<P>) Preference.class;
     }
 
     @Override
-    protected int getAvailabilityStatus() {
-        return mDeviceAdminInfo != null ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    protected final int getAvailabilityStatus() {
+        return mDeviceAdminInfo == null ? CONDITIONALLY_UNAVAILABLE : getRealAvailabilityStatus();
     }
 
-    final void setDeviceAdmin(DeviceAdminInfo deviceAdminInfo) {
+    /**
+     * Method that can be overridden to define the real value of {@link #getAvailabilityStatus()}
+     * when the {@link #setDeviceAdmin(DeviceAdminInfo) DeviceAdminInfo} is set.
+     */
+    protected int getRealAvailabilityStatus() {
+        return AVAILABLE;
+    }
+
+    final <T extends BaseDeviceAdminAddPreferenceController<P>> T setDeviceAdmin(
+            DeviceAdminInfo deviceAdminInfo) {
         mDeviceAdminInfo = Objects.requireNonNull(deviceAdminInfo);
+        @SuppressWarnings("unchecked")
+        T safeCast = (T) this;
+        return safeCast;
     }
 }

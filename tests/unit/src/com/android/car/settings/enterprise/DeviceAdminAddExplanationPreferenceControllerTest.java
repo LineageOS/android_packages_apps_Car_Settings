@@ -20,23 +20,23 @@ import com.android.car.settings.common.PreferenceController;
 import org.junit.Before;
 import org.junit.Test;
 
-public final class DeviceAdminAddSupportPreferenceControllerTest extends
+public final class DeviceAdminAddExplanationPreferenceControllerTest extends
         BaseDeviceAdminAddPreferenceControllerTestCase
-                <DeviceAdminAddSupportPreferenceController> {
+                <DeviceAdminAddExplanationPreferenceController> {
 
-    private DeviceAdminAddSupportPreferenceController mController;
+    private DeviceAdminAddExplanationPreferenceController mController;
 
     @Before
     public void setController() {
-        mController = new DeviceAdminAddSupportPreferenceController(mSpiedContext,
+        mController = new DeviceAdminAddExplanationPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions);
         mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
     }
 
     @Test
     public void testGetAvailabilityStatus_noAdmin() throws Exception {
-        DeviceAdminAddSupportPreferenceController controller =
-                new DeviceAdminAddSupportPreferenceController(mSpiedContext, mPreferenceKey,
+        DeviceAdminAddExplanationPreferenceController controller =
+                new DeviceAdminAddExplanationPreferenceController(mSpiedContext, mPreferenceKey,
                         mFragmentController, mUxRestrictions);
 
         assertAvailability(controller.getAvailabilityStatus(),
@@ -44,35 +44,54 @@ public final class DeviceAdminAddSupportPreferenceControllerTest extends
     }
 
     @Test
-    public void testGetAvailabilityStatus_nullMessage() {
-        mockGetLongSupportMessageForUser(null);
+    public void testGetAvailabilityStatus_deviceOwner() throws Exception {
+        mockDeviceOwner();
+        mController.setExplanation("To conquer the universe");
+
+        assertAvailability(mController.getAvailabilityStatus(),
+                PreferenceController.DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_profileOwner() throws Exception {
+        mockProfileOwner();
+        mController.setExplanation("To conquer the universe");
+
+        assertAvailability(mController.getAvailabilityStatus(),
+                PreferenceController.DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetRealAvailabilityStatus_nullReason() throws Exception {
+        mController.setExplanation(null);
 
         assertAvailability(mController.getAvailabilityStatus(),
                 PreferenceController.CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
-    public void testGetAvailabilityStatus_emptyMessage() {
-        mockGetLongSupportMessageForUser("");
+    public void testGetAvailabilityStatus_emptyReason() throws Exception {
+        mController.setExplanation("");
 
         assertAvailability(mController.getAvailabilityStatus(),
                 PreferenceController.CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
-    public void testGetAvailabilityStatus_validMessage() {
-        mockGetLongSupportMessageForUser("WHAZZZZUP");
+    public void testGetAvailabilityStatus_validReason() throws Exception {
+        mController.setExplanation("To conquer the universe");
 
         assertAvailability(mController.getAvailabilityStatus(), PreferenceController.AVAILABLE);
     }
 
     @Test
-    public void testUpdateState() {
-        mockGetLongSupportMessageForUser("WHAZZZZUP");
-        mController.setSupportMessage();
+    public void testUpdateState() throws Exception {
+        mController.setExplanation("To conquer the universe");
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet("WHAZZZZUP");
+        verifyPreferenceTitleSet("To conquer the universe");
+        verifyPreferenceSummaryNeverSet();
+        verifyPreferenceIconNeverSet();
     }
 }

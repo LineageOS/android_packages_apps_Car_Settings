@@ -18,30 +18,44 @@ package com.android.car.settings.enterprise;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.text.TextUtils;
 
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 
 /**
- * Controller for the cancel button in the device admin details screen.
+ * Controller for the (optional, set by intent extra ) explanation of why the admin is being added.
  */
-public final class DeviceAdminAddCancelPreferenceController
+public final class DeviceAdminAddExplanationPreferenceController
         extends BaseDeviceAdminAddPreferenceController<Preference> {
 
-    public DeviceAdminAddCancelPreferenceController(Context context, String preferenceKey,
+    @Nullable
+    private CharSequence mExplanation;
+
+    public DeviceAdminAddExplanationPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    protected void updateState(Preference preference) {
-        preference.setTitle(com.android.internal.R.string.cancel);
+    protected int getRealAvailabilityStatus() {
+        return TextUtils.isEmpty(mExplanation) ? CONDITIONALLY_UNAVAILABLE : AVAILABLE;
     }
 
     @Override
-    protected boolean handlePreferenceClicked(Preference preference) {
-        getFragmentController().goBack();
-        return true;
+    protected void updateState(Preference preference) {
+        preference.setTitle(mExplanation);
+    }
+
+    /**
+     * Sets the explanation of why this admin is being added.
+     */
+    public DeviceAdminAddExplanationPreferenceController setExplanation(
+            @Nullable CharSequence explanation) {
+        mLogger.d("setExplanation(): " + explanation);
+        mExplanation = explanation;
+        return this;
     }
 }

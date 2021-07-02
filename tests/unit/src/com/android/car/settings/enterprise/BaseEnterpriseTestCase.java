@@ -45,7 +45,7 @@ abstract class BaseEnterpriseTestCase {
     @Rule
     public final MockitoRule mockitorule = MockitoJUnit.rule();
 
-    private final Context mRealContext = ApplicationProvider.getApplicationContext();
+    protected final Context mRealContext = ApplicationProvider.getApplicationContext();
     protected final Context mSpiedContext = spy(mRealContext);
 
     protected final String mPackageName = mRealContext.getPackageName();
