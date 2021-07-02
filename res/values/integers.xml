@@ -67,4 +67,7 @@
 
     <!-- Maximum number of days old for an app to be shown in RecentAppsItemManager -->
     <integer name="recent_apps_days_threshold">1</integer>
+
+    <!-- Maximum number of device policies to be shown on ADD_DEVICE_ADMIN screen -->
+    <integer name="max_device_policies_shown">3</integer>
 </resources>
