@@ -297,6 +297,14 @@
     <string name="force_stop" msgid="2153183697014720520">"உடனே நிறுத்து"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"உடனே நிறுத்தவா?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ஆப்ஸை உடனே நிறுத்தினால் சரியாக இயங்காமல் போகக்கூடும்."</string>
+    <!-- no translation found for peak_performance_dialog_title (5970933611683430870) -->
+    <skip />
+    <!-- no translation found for peak_performance_dialog_text (7648337738884134499) -->
+    <skip />
+    <!-- no translation found for peak_performance_dialog_action_on (2139033153500237350) -->
+    <skip />
+    <!-- no translation found for peak_performance_dialog_action_off (1019653666533456482) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"முடக்கு"</string>
     <string name="enable_text" msgid="1794971777861881238">"இயக்கு"</string>
     <string name="uninstall_text" msgid="277907956072833012">"நிறுவல் நீக்கு"</string>
@@ -306,6 +314,8 @@
     <string name="permissions_label" msgid="2701446753515612685">"அனுமதிகள்"</string>
     <string name="notifications_label" msgid="6586089149665170731">"அறிவிப்புகள்"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"சேமிப்பகமும் தற்காலிக சேமிப்பும்"</string>
+    <!-- no translation found for peak_performance_label (1592816366516845648) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"பதிப்பு: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"அனுமதிகள் எதையும் கோரவில்லை"</string>
@@ -316,6 +326,8 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"அனுமதிகளை அகற்றி இடத்தைக் காலியாக்குதல்"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"அகச் சேமிப்பகத்தில் %s"</string>
+    <!-- no translation found for peak_performance_summary (2450911487290019786) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
@@ -606,13 +618,13 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"அழி"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ரத்துசெய்"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"திறப்பதற்கான புதிய பேட்டர்ன்"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"திறப்பதற்கான பேட்டர்னை வரைக"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"அன்லாக் பேட்டர்னை வரைக"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"முடிந்ததும் விரலை எடுக்கவும்"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"பேட்டர்ன் பதிவுசெய்யப்பட்டது"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"உறுதிப்படுத்த, மீண்டும் பேட்டர்னை வரைக"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"குறைந்தது 4 புள்ளிகளை இணைக்கவும். மீண்டும் முயல்க."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"தவறான பேட்டர்ன்"</string>
-    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"திறப்பதற்கான பேட்டர்னை வரைவது எப்படி?"</string>
+    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"அன்லாக் பேட்டர்னை வரைவது எப்படி?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"பேட்டர்னைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"பலமுறை தவறாக முயன்றுவிட்டீர்கள். <xliff:g id="NUMBER">%d</xliff:g> வினாடிகளில் மீண்டும் முயலவும்."</string>
     <string name="okay" msgid="4589873324439764349">"சரி"</string>
