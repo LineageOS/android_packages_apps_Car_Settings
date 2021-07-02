@@ -148,7 +148,7 @@
             android:icon="@drawable/test_icon"
             android:description="@string/fancy_device_admin_description">
             <meta-data android:name="android.app.device_admin"
-                 android:resource="@xml/empty_device_admin"/>
+                 android:resource="@xml/fancy_device_admin"/>
         </receiver>
 
     </application>
