@@ -50,4 +50,12 @@ abstract class BaseDeviceAdminAddPreferenceControllerTestCase<T extends
     protected final void verifyPreferenceIconNeverSet() {
         verify(mPreference, never()).setIcon(notNull());
     }
+
+    protected final void verifyPreferenceDisabled() {
+        verify(mPreference).setEnabled(false);
+    }
+
+    protected final void verifyPreferenceEnabled() {
+        verify(mPreference).setEnabled(true);
+    }
 }

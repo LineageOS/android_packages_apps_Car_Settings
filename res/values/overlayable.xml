@@ -485,6 +485,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="integer" name="enable_developer_settings_clicks_to_show_toast_count"/>
       <item type="integer" name="illustration_weight"/>
       <item type="integer" name="limited_wifi_entry_list_count"/>
+      <item type="integer" name="max_device_policies_shown"/>
       <item type="integer" name="millisecond_app_data_update_interval"/>
       <item type="integer" name="millisecond_max_app_load_wait_interval"/>
       <item type="integer" name="quick_setting_column_count"/>
@@ -566,6 +567,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="add_a_profile_button_text"/>
       <item type="string" name="add_account_title"/>
       <item type="string" name="add_an_account"/>
+      <item type="string" name="add_device_admin"/>
       <item type="string" name="add_device_admin_msg"/>
       <item type="string" name="add_profile_text"/>
       <item type="string" name="add_user_error_title"/>
@@ -1024,6 +1026,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="remove_account_error_title"/>
       <item type="string" name="remove_account_title"/>
       <item type="string" name="remove_button"/>
+      <item type="string" name="remove_device_admin"/>
       <item type="string" name="remove_screen_lock_message"/>
       <item type="string" name="remove_screen_lock_title"/>
       <item type="string" name="reset_app_pref_button_text"/>

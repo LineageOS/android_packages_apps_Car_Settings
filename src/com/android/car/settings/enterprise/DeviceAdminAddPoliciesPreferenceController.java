@@ -18,13 +18,13 @@ package com.android.car.settings.enterprise;
 
 import android.app.admin.DeviceAdminInfo;
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.ComponentName;
 import android.content.Context;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.ui.preference.CarUiPreference;
 
 /**
  * Controller for the screen that shows the device policies requested by a device admin app.
@@ -32,9 +32,13 @@ import com.android.car.settings.common.FragmentController;
 public final class DeviceAdminAddPoliciesPreferenceController
         extends BaseDeviceAdminAddPreferenceController<PreferenceGroup> {
 
+    private final int mMaxDevicePoliciesShown;
+
     public DeviceAdminAddPoliciesPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+        mMaxDevicePoliciesShown = context.getResources()
+                .getInteger(R.integer.max_device_policies_shown);
     }
 
     @Override
@@ -44,19 +48,15 @@ public final class DeviceAdminAddPoliciesPreferenceController
 
     @Override
     protected int getRealAvailabilityStatus() {
-        ComponentName admin = mDeviceAdminInfo.getComponent();
-        boolean isOwner = admin.equals(mDpm.getProfileOwner())
-                || admin.equals(mDpm.getDeviceOwnerComponentOnCallingUser());
-
-        return isOwner ? DISABLED_FOR_PROFILE : AVAILABLE;
+        return isProfileOrDeviceOwner() ? DISABLED_FOR_PROFILE : AVAILABLE;
     }
 
-    // TODO(b/188585303): add unit tests
-    // TODO(b/188585303): make PreferenceGroup scrolable / limit to ~5 or less values
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
-        preferenceGroup.removeAll();
         Context context = getContext();
+        preferenceGroup.removeAll();
+        preferenceGroup.setInitialExpandedChildrenCount(mMaxDevicePoliciesShown);
+
         boolean isAdminUser = mUm.isAdminUser();
 
         for (DeviceAdminInfo.PolicyInfo pi : mDeviceAdminInfo.getUsedPolicies()) {
@@ -65,7 +65,7 @@ public final class DeviceAdminAddPoliciesPreferenceController
             CharSequence label = context.getText(labelId);
             CharSequence description = context.getText(descriptionId);
             mLogger.v("Adding policy '" + label + "': " + description);
-            Preference preference = new Preference(context);
+            CarUiPreference preference = new CarUiPreference(context);
             preference.setTitle(label);
             preference.setSummary(description);
             preferenceGroup.addPreference(preference);

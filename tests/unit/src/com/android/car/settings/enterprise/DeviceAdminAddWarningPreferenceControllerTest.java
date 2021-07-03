@@ -35,7 +35,7 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
 
     @Test
     public void testUpdateState_adminInactive() {
-        // No need to mock anything, as mockito returns false / null by default
+        mockInactiveAdmin();
 
         mController.updateState(mPreference);
 
@@ -45,7 +45,7 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
 
     @Test
     public void testUpdateState_adminActive() {
-        mockIsAdminActive();
+        mockActiveAdmin();
 
         mController.updateState(mPreference);
 
