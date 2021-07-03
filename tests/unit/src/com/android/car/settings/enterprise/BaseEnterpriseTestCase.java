@@ -30,6 +30,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.UserInfo;
 import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
@@ -116,6 +117,10 @@ abstract class BaseEnterpriseTestCase {
         when(mDpm.getActiveAdmins()).thenReturn(Arrays.asList(admin));
     }
 
+    protected final void mockActiveAdmins(ComponentName... componentNames) {
+        when(mDpm.getActiveAdminsAsUser(anyInt())).thenReturn(Arrays.asList(componentNames));
+    }
+
     protected final void mockGetLongSupportMessageForUser(CharSequence message) {
         when(mDpm.getLongSupportMessageForUser(eq(mDefaultAdmin), anyInt())).thenReturn(message);
     }
@@ -150,5 +155,9 @@ abstract class BaseEnterpriseTestCase {
 
     protected final void mockNonAdminUser() {
         when(mUm.isAdminUser()).thenReturn(false);
+    }
+
+    protected final void mockGetProfiles(UserInfo... userProfiles) {
+        when(mUm.getProfiles(anyInt())).thenReturn(Arrays.asList(userProfiles));
     }
 }
