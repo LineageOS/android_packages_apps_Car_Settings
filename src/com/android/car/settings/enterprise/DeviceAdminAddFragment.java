@@ -29,6 +29,7 @@ import android.content.Intent;
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.ToolbarController;
 
 /**
  * A screen that shows details about a device administrator.
@@ -51,9 +52,12 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
         ComponentName admin = (ComponentName)
                 intent.getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
+        LOG.d("Admin using " + DevicePolicyManager.EXTRA_DEVICE_ADMIN + ": " + admin);
         if (admin == null) {
             String adminPackage = intent
                     .getStringExtra(DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME);
+            LOG.d("Admin package using " + DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME
+                    + ": " + adminPackage);
             if (adminPackage == null) {
                 LOG.w("Finishing " + activity + " as its intent doesn't have "
                         +  DevicePolicyManager.EXTRA_DEVICE_ADMIN + " or "
@@ -70,22 +74,42 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
         }
 
         DeviceAdminInfo deviceAdminInfo = getDeviceAdminInfo(context, admin);
-        if (admin == null) {
+        LOG.d("Admin: " + admin + " DeviceAdminInfo: " + deviceAdminInfo);
+
+        if (deviceAdminInfo == null) {
             LOG.w("Finishing " + activity + " as it could not get DeviceAdminInfo for "
                     + admin.flattenToShortString());
             activity.finish();
             return;
         }
 
-        LOG.d("Admin: " + deviceAdminInfo);
-
         use(DeviceAdminAddHeaderPreferenceController.class,
                 R.string.pk_device_admin_add_header).setDeviceAdmin(deviceAdminInfo);
+        ((DeviceAdminAddExplanationPreferenceController) use(
+                DeviceAdminAddExplanationPreferenceController.class,
+                R.string.pk_device_admin_add_explanation).setDeviceAdmin(deviceAdminInfo))
+                        .setExplanation(intent
+                                .getCharSequenceExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION));
         use(DeviceAdminAddWarningPreferenceController.class,
                 R.string.pk_device_admin_add_warning).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddPoliciesPreferenceController.class,
+                R.string.pk_device_admin_add_policies).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddSupportPreferenceController.class,
                 R.string.pk_device_admin_add_support).setDeviceAdmin(deviceAdminInfo);
+        use(DeviceAdminAddActionPreferenceController.class,
+                R.string.pk_device_admin_add_action).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddCancelPreferenceController.class,
                 R.string.pk_device_admin_add_cancel).setDeviceAdmin(deviceAdminInfo);
+    }
+
+    @Override
+    protected void setupToolbar(ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
+
+        Intent intent = requireActivity().getIntent();
+        String action = intent == null ? null : intent.getAction();
+        if (DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN.equals(action)) {
+            toolbar.setTitle(R.string.add_device_admin_msg);
+        }
     }
 }

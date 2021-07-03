@@ -27,7 +27,7 @@ import com.android.car.settings.common.FragmentController;
  * Controller for the cancel button in the device admin details screen.
  */
 public final class DeviceAdminAddCancelPreferenceController
-        extends BaseDeviceAdminAddPreferenceController {
+        extends BaseDeviceAdminAddPreferenceController<Preference> {
 
     public DeviceAdminAddCancelPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
