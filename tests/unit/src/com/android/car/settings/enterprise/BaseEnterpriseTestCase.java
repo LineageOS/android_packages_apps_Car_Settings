@@ -30,6 +30,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -68,11 +69,15 @@ abstract class BaseEnterpriseTestCase {
     @Mock
     private DevicePolicyManager mDpm;
 
+    @Mock
+    private UserManager mUm;
+
     @Before
     public final void setFixtures() throws Exception {
         when(mSpiedContext.getSystemService(DevicePolicyManager.class)).thenReturn(mDpm);
         when(mSpiedContext.getSystemService(PackageManager.class)).thenReturn(mSpiedPm);
         when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
+        when(mSpiedContext.getSystemService(UserManager.class)).thenReturn(mUm);
 
         ActivityInfo defaultInfo = mRealPm.getReceiverInfo(mDefaultAdmin,
                 PackageManager.GET_META_DATA);
@@ -137,5 +142,13 @@ abstract class BaseEnterpriseTestCase {
 
     protected final void verifyAdminNeverDeactivated() {
         verify(mDpm, never()).removeActiveAdmin(any());
+    }
+
+    protected final void mockAdminUser() {
+        when(mUm.isAdminUser()).thenReturn(true);
+    }
+
+    protected final void mockNonAdminUser() {
+        when(mUm.isAdminUser()).thenReturn(false);
     }
 }

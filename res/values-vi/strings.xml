@@ -297,14 +297,10 @@
     <string name="force_stop" msgid="2153183697014720520">"Buộc dừng"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Buộc dừng?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Nếu bạn buộc dừng một ứng dụng, thì ứng dụng đó có thể hoạt động không đúng cách."</string>
-    <!-- no translation found for peak_performance_dialog_title (5970933611683430870) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_text (7648337738884134499) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_on (2139033153500237350) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_off (1019653666533456482) -->
-    <skip />
+    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Tắt chế độ bảo vệ hiệu suất?"</string>
+    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Nếu bạn chọn như vậy, phần mềm và phần cứng của bạn cũng có thể sẽ không hoạt động."</string>
+    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Để bật"</string>
+    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Tắt"</string>
     <string name="disable_text" msgid="4358165448648990820">"Tắt"</string>
     <string name="enable_text" msgid="1794971777861881238">"Bật"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Gỡ cài đặt"</string>
@@ -314,8 +310,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"Quyền"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Thông báo"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Bộ nhớ và bộ nhớ đệm"</string>
-    <!-- no translation found for peak_performance_label (1592816366516845648) -->
-    <skip />
+    <string name="peak_performance_label" msgid="1592816366516845648">"Giữ hiệu suất cao nhất"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Phiên bản: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Chưa được cấp quyền nào"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Không yêu cầu quyền"</string>
@@ -326,8 +321,7 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Xóa quyền và giải phóng dung lượng"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s trong bộ nhớ trong"</string>
-    <!-- no translation found for peak_performance_summary (2450911487290019786) -->
-    <skip />
+    <string name="peak_performance_summary" msgid="2450911487290019786">"Nếu cần, hãy đóng ứng dụng để tránh dùng quá nhiều tài nguyên"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Mức sử dụng dữ liệu"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Sử dụng dữ liệu ứng dụng"</string>
     <string name="computing_size" msgid="5791407621793083965">"Đang tính toán…"</string>
@@ -379,7 +373,7 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Quyền này cho phép ứng dụng sửa đổi các chế độ cài đặt hệ thống."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Quyền truy cập thông báo"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cho phép <xliff:g id="SERVICE">%1$s</xliff:g> truy cập thông báo?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> có thể đọc tất cả các thông báo, bao gồm cả thông tin cá nhân như tên liên hệ và nội dung của thông báo mà bạn nhận được. Dịch vụ này cũng có thể bỏ qua thông báo hoặc kích hoạt các nút hành động trong các thông báo đó.\n\nĐiều này cũng sẽ cho phép ứng dụng bật hoặc tắt chế độ Không làm phiền và thay đổi các tùy chọn cài đặt có liên quan."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> có thể đọc tất cả các thông báo, bao gồm cả thông tin cá nhân như tên của người liên hệ và nội dung của thông báo mà bạn nhận được. Ứng dụng này cũng có thể bỏ qua thông báo hoặc kích hoạt các nút thao tác trong những thông báo đó.\n\nĐiều này cũng sẽ cho phép ứng dụng bật hoặc tắt chế độ Không làm phiền và thay đổi chế độ cài đặt có liên quan."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nếu bạn tắt quyền truy cập thông báo của <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, thì quyền truy cập chế độ Không làm phiền cũng có thể bị tắt."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Tắt"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hủy"</string>
