@@ -299,14 +299,10 @@
     <string name="force_stop" msgid="2153183697014720520">"Принудно заустави"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Желите ли да принудно зауставите?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ако принудно зауставите апликацију, можда ће се понашати неочекивано."</string>
-    <!-- no translation found for peak_performance_dialog_title (5970933611683430870) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_text (7648337738884134499) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_on (2139033153500237350) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_off (1019653666533456482) -->
-    <skip />
+    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Желите да искључите заштиту учинка?"</string>
+    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Ако је искључите, софтвер и хардвер можда неће радити тако добро."</string>
+    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Остави укључено"</string>
+    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Искључи"</string>
     <string name="disable_text" msgid="4358165448648990820">"Онемогући"</string>
     <string name="enable_text" msgid="1794971777861881238">"Омогући"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Деинсталирај"</string>
@@ -316,8 +312,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"Дозволе"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Обавештења"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Меморијски простор и кеш"</string>
-    <!-- no translation found for peak_performance_label (1592816366516845648) -->
-    <skip />
+    <string name="peak_performance_label" msgid="1592816366516845648">"Обезбеди најбољи учинак"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Верзија: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ниједна дозвола није одобрена"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ниједна дозвола није захтевана"</string>
@@ -329,8 +324,7 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Уклони дозволе и ослободи простор"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s у интерној меморији"</string>
-    <!-- no translation found for peak_performance_summary (2450911487290019786) -->
-    <skip />
+    <string name="peak_performance_summary" msgid="2450911487290019786">"По потреби затвара апликацију ради мањег коришћења ресурса"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Потрошња података"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Потрошња података апл."</string>
     <string name="computing_size" msgid="5791407621793083965">"Израчунава се..."</string>
