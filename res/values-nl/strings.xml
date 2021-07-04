@@ -38,7 +38,7 @@
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Actief/simkaart"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inactief/simkaart"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Actief, gedownloade simkaart"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactief/gedownloade simkaart"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactief, gedownloade simkaart"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Meer toevoegen"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datatoegang via mobiel netwerk"</string>
@@ -80,7 +80,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Datalimiet instellen"</string>
     <string name="data_limit" msgid="227338836292511425">"Datalimiet"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datagebruik beperken"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"De hoofdeenheid van je voertuig schakelt mobiele data uit zodra je de ingestelde limiet bereikt.\n\nAangezien het datagebruik wordt gemeten door de hoofdeenheid en je provider het gebruik op een andere manier kan berekenen, kun je overwegen een conservatieve limiet in te stellen."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"De hoofdeenheid van je voertuig schakelt mobiele data uit zodra je de ingestelde limiet bereikt.\n\nAangezien het datagebruik wordt gemeten door de hoofdeenheid, en je provider tot een ander totaal kan komen, kun je het beste een voorzichtige limiet instellen."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Waarschuwing voor datagebruik instellen"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limiet voor datagebruik instellen"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Instellen"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Ringtone telefoon"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Standaard meldingsgeluid"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Standaard wekkergeluid"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Opslaan"</string>
     <string name="units_settings" msgid="402325305096925886">"Eenheden"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Snelheid"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Afstand"</string>

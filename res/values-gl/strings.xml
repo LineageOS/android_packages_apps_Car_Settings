@@ -101,7 +101,7 @@
     <string name="wifi_security" msgid="158358046038876532">"Seguranza"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"Intensidade do sinal"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Estado"</string>
-    <string name="wifi_speed" msgid="1650692446731850781">"Velocidade de vinculación"</string>
+    <string name="wifi_speed" msgid="1650692446731850781">"Velocidade de ligazón"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Frecuencia"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"Enderezo IP"</string>
     <string name="show_password" msgid="2074628020371139240">"Mostrar contrasinal"</string>
@@ -198,7 +198,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Queres sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> acceda aos teus contactos e ao historial de chamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"É posible que tamén teñas que escribir este PIN no outro dispositivo."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"É posible que tamén teñas que escribir este contrasinal no outro dispositivo."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"É posible que tamén teñas que escribir esta clave de acceso no outro dispositivo."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Debe ter 16 díxitos"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalmente 0000 ou 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitude de sincronización"</string>
@@ -210,7 +210,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Todos os idiomas"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Teclado"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Xestionar teclados"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"Saída da síntese de voz"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Saída da conversión de texto a voz"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferido"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor actual"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Velocidade da fala"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Ton de chamada do teléfono"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notificación predeterminado"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Son de alarma predeterminado"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Gardar"</string>
     <string name="units_settings" msgid="402325305096925886">"Unidades"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Velocidade"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Distancia"</string>
@@ -296,7 +297,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"Versión %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Non se outorgou ningún permiso"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Non se solicitou ningún permiso"</string>
-    <string name="storage_type_internal" msgid="8918688427078709570">"%s de almacenamento interno"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s do almacenamento interno"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Uso de datos"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Uso de datos da aplicación"</string>
     <string name="computing_size" msgid="5791407621793083965">"Calculando…"</string>
@@ -341,13 +342,13 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a notificacións"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Queres permitir que <xliff:g id="SERVICE">%1$s</xliff:g> teña acceso ás notificacións?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> poderá ler todas as notificacións, incluída a información persoal, coma os nomes dos contactos e o texto das mensaxes que recibas. Tamén poderá ignorar notificacións ou activar os botóns de acción que estas conteñan.\n\nAdemais, poderá activar ou desactivar o modo Non molestar e cambiar a configuración asociada."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desactivas o acceso de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ás notificacións, tamén se pode desactivar o acceso no modo Non molestar."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desactivas o acceso de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ás notificacións, tamén se pode desactivar o acceso a Non molestar."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS premium"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"Podes ter que pagar polas mensaxes premium, cuxos custos se engadirán ás facturas do teu operador. Se activas o permiso para unha aplicación, poderás enviar SMS premium a través desa aplicación."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Acceso ao uso"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Co acceso ao uso unha aplicación poden realizar un seguimento das demais aplicacións que usas e de con que frecuencia as utilizas, así como do teu operador, da configuración do idioma e doutros detalles."</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS de tarificación adicional"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"As SMS de tarificación adicional poden implicar cargos engadidos nas facturas do teu operador. Se activas o permiso para unha aplicación, poderás enviar este tipo de mensaxes a través desa aplicación."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Acceso a datos de uso"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Co acceso aos datos de uso unha aplicación pode realizar un seguimento das demais aplicacións que usas e de con que frecuencia as utilizas, así como do teu operador, da configuración do idioma e doutros detalles."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control da wifi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Co control da wifi, as aplicacións poden activar ou desactivar a wifi, buscar redes wifi, conectarse a elas, engadir ou eliminar redes e iniciar unha zona wifi local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Máis"</string>
