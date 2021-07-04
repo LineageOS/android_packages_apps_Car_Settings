@@ -198,7 +198,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Vols vincular el dispositiu amb <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permet que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> accedeixi als contactes i a l\'historial de trucades"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Pot ser que també hagis d\'introduir aquest PIN a l\'altre dispositiu."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Pot ser que també hagis d\'introduir aquesta contrasenya a l\'altre dispositiu."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Pot ser que també hagis d\'introduir aquesta clau d\'accés a l\'altre dispositiu."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Ha de tenir 16 dígits"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Generalment 0000 o 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Sol·licitud de vinculació"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"So de trucada del telèfon"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"So de notificació predeterminat"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"So d\'alarma predeterminat"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Desa"</string>
     <string name="units_settings" msgid="402325305096925886">"Unitats"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Velocitat"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Distància"</string>
@@ -328,7 +329,7 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"No s\'ha definit cap valor predeterminat."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Has triat executar l\'aplicació de manera predeterminada per fer algunes accions."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Esborra els valors predeterminats"</string>
-    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Obrir els enllaços admesos"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Obre els enllaços admesos"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Obre en aquesta aplicació"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"Pregunta sempre"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"No obris en aquesta aplicació"</string>
@@ -532,7 +533,7 @@
     <string name="account_sync_title" msgid="6541844336300236915">"Sincronització del compte"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Sincronització activada per a <xliff:g id="ID_1">%1$d</xliff:g> de <xliff:g id="ID_2">%2$d</xliff:g> elements"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Sincronització activada per a tots els elements"</string>
-    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"La sincronització està desactivada per a tots els elements"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sincronització desactivada per a tots els elements"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Sincronització desactivada"</string>
     <string name="sync_error" msgid="6698021343089247914">"Error de sincronització"</string>
     <string name="last_synced" msgid="4745124489150101529">"Última sincronització: <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>

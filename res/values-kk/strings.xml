@@ -39,7 +39,7 @@
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Іске қосылмаған/SIM картасы"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Іске қосулы/Жүктеп алынған SIM картасы"</string>
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Өшірулі/Жүктеп алынған SIM картасы"</string>
-    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Тағы енгізу"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Тағы қосу"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобильдік интернет"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Деректерге мобильдік желі арқылы кіру"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Мобильдік интернет өшірілсін бе?"</string>
@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Роуминг"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Роуминг кезінде дерек тасымалдау қызметтеріне қосылу"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Деректер роумингіне рұқсат етілсін бе?"</string>
-    <string name="roaming_warning" msgid="4908184914868720704">"Роуминг ақылары алынуы мүмкін."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Роуминг үшін ақы алынуы мүмкін."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Дерек трафигі"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Негізгі деректер"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> пайдаланылды."</string>
@@ -68,20 +68,20 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Жаңа ғана <xliff:g id="ID_1">^1</xliff:g> арқылы жаңартылды."</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Жаңа ғана жаңартылды."</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Жоспарды көру"</string>
-    <string name="app_data_usage" msgid="3878609885080232877">"Қолданбаның дерек трафигі"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Қолданбаның дерек шығыны"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"шектеулі"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Пайдалану циклін бастапқы күйге қайтару күні"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Әр айдағы күн:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Орнату"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Дерек ескертуі және шегі"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Қолданбаның дерек шығыны циклі"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"Дерек ескертуін белгілеу"</string>
-    <string name="data_warning" msgid="116776633806885370">"Дерек ескертуі"</string>
-    <string name="set_data_limit" msgid="7136539812414500084">"Дерек шегін белгілеу"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Дерек шығыны туралы ескерту"</string>
+    <string name="data_warning" msgid="116776633806885370">"Дерек шығыны туралы ескерту"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Дерек шығынын шектеу"</string>
     <string name="data_limit" msgid="227338836292511425">"Дерек шегі"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Дерек трафигін шектеу"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Орнатқан шекке жеткеннен кейін, көліктегі құрылғы мобильдік деректерді өшіреді.\n\nҚұрылғы деректерді пайдалану шегін белгілейтіндіктен және оператор трафикті басқаша есептеуі мүмкін болғандықтан, қатаңырақ шек қойған жөн."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Дерек трафигі туралы ескертуді орнату"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Дерек шығыны туралы ескерту"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Дерек трафигі шегін орнату"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Орнату"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -127,7 +127,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"Шлюз"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi параметрлері"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi желісін автоматты түрде қосу"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi бұрын сақталған жоғары сапалы желі аймағында (үйдегідей) қайта қосылады"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi бұрын сақталған жоғары сапалы желі (мысалы, үйдегі желі) аймағында қайта қосылады."</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Орынды анықтау функциясы өшірулі болғандықтан, қолжетімді емес. "<annotation id="link">"Орынды анықтау"</annotation>" қызметін қосыңыз."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi іздеу функциясы қосылсын ба?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Қосу"</string>
@@ -168,7 +168,7 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"Атаусыз құрылғы"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Жұпталған құрылғылар"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Жаңа құрылғымен жұптау"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Жұптау үшін Bluetooth функциясы қосылады."</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth қосылады."</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Құрылғы ажыратылсын ба?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Көлігіңіз <xliff:g id="DEVICE_NAME">%1$s</xliff:g> құрылғысынан ажыратылады."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Көліктің Bluetooth мекенжайы: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Телефон рингтоны"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Әдепкі хабарландыру дыбысы"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Әдепкі оятқыш дыбысы"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Сақтау"</string>
     <string name="units_settings" msgid="402325305096925886">"Өлшем бірліктер"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Жылдамдық"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Арақашықтық"</string>
@@ -308,7 +309,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Көмекші және дауыспен енгізу"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Көмекші қолданба"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Экрандағы мәтінді пайдалану"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Көмекші қолданбаға мәтін сияқты экран мазмұнына кіруге рұқсат ету"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Көмекші қолданбаға экрандағы мәтінді пайдалануға рұқсат ету"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Скриншотты пайдалану"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Көмекші қолданбаға экран кескінін пайдалануға рұқсат ету"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Дауыспен енгізу"</string>
@@ -436,7 +437,7 @@
     <string name="zone_auto" msgid="3701878581920206160">"Aвтоматты уақыт белдеуі"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Желідегі уақыт белдеуін қолдану"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 сағаттық формат"</string>
-    <string name="date_time_24hour" msgid="1137618702556486913">"24 сағаттық форматты қолдану"</string>
+    <string name="date_time_24hour" msgid="1137618702556486913">"24 сағаттық формат"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Уақыт"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"Уақытты реттеу"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Уақыт белдеуі"</string>
@@ -471,7 +472,7 @@
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Жаңа пайдаланушы жасалмады"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"Пайдаланушы жойылсын ба?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Барлық қолданбалар және деректер жойылады."</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Барлық қолданба мен дерек жойылады."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Пайдаланушы жойылмады."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Қабылдамау"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Қайталау"</string>
@@ -561,7 +562,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN кодын таңдаңыз"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Өрнегіңізді жасаңыз"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Құпия сөзді таңдаңыз"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"Ағымдағы экран құлпы"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"Қазіргі экран құлпы"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Қауіпсіздік үшін өрнекті орнатыңыз"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Өшіру"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Бас тарту"</string>

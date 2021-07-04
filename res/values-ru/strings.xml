@@ -42,7 +42,7 @@
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активно (cкачанная SIM-карта)"</string>
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Неактивно (скачанная SIM-карта)"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Добавить"</string>
-    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобильный Интернет"</string>
+    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобильный интернет"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ к Интернету по мобильной сети"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Отключить мобильный Интернет?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Выберите SIM-карту"</string>
@@ -215,7 +215,7 @@
     <string name="keyboard_settings" msgid="1959697870618278081">"Клавиатура"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Управление клавиатурами"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Озвучивание текста"</string>
-    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Синтезатор по умолчанию"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Синтезатор речи по умолчанию"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Текущий синтезатор"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Скорость речи"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Тон"</string>
@@ -231,6 +231,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Рингтон"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Звук уведомления по умолчанию"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Звук будильника по умолчанию"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Сохранить"</string>
     <string name="units_settings" msgid="402325305096925886">"Единицы"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Скорость"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Расстояние"</string>
@@ -314,9 +315,9 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Помощник и голосовой ввод"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Помощник"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Использовать текст с экрана"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Разрешить Помощнику доступ к тексту на экране."</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Разрешить просматривать содержимое экрана в виде текста"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Использовать скриншот"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Разрешить Помощнику доступ к изображению экрана."</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Разрешить приложению-помощнику доступ к изображению экрана"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Голосовой ввод"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Автозаполнение"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Нет"</string>
@@ -388,7 +389,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Авторские права"</string>
     <string name="license_title" msgid="936705938435249965">"Лицензия"</string>
     <string name="terms_title" msgid="5201471373602628765">"Условия использования"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Системные лицензии WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Лицензии System WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Обои"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Спутниковые фотографии:\n© 2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Модель"</string>
@@ -412,7 +413,7 @@
     <string name="reset_network_title" msgid="1284233059990797263">"Сбросить настройки сети"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Будут сброшены все настройки, в том числе:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
-    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильный Интернет"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильный интернет"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Удалить данные всех eSIM автомобиля"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Это действие не отменит ваш тарифный план."</string>

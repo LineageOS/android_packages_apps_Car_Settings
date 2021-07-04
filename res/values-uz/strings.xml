@@ -210,8 +210,8 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Barcha tillar"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Klaviatura"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Klaviaturalar boshqaruvi"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"Matnni nutqqa aylantirish vositasi"</string>
-    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Standart sintezator"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Matnni nutqqa aylantirish"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Asosiy vosita"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Joriy sintezator"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Nutq tezligi"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Ohang"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Telefon ringtoni"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Standart bildirishnoma tovushi"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Standart signal"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Saqlash"</string>
     <string name="units_settings" msgid="402325305096925886">"Birliklar"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Tezlik"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Masofa"</string>
@@ -344,7 +345,7 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Agar <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> uchun bildirishnomalar ruxsati faolsizlantirilganda, Bezovta qilinmasin ruxsati ham faolsizlantirilishi mumkin."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Ha"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Bekor qilish"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Pulli SMS yuborishga ruxsat"</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Pulli SMS yuborish"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS uchun sizdan haq olinishi va operatorga qoʻshimcha to‘lov amalga oshirilishi mumkin. Agar ilova uchun ruxsatnoma taqdim etsangiz, oʻsha ilovadan SMS yuborishingiz mumkin boʻladi."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Foydalanish tarixiga kirish"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Foydalanish tarixiga kirish huquqi qanday ilovalardan va qancha muddatda foydalanishingiz, shuningdek, tarmoq operatori, til va boshqa parametrlarni kuzatish imkonini beradi."</string>

@@ -210,7 +210,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"ସମସ୍ତ ଭାଷା"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"କୀବୋର୍ଡ"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"କୀବୋର୍ଡଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ୍‍-ରୁ-ସ୍ପିଚ୍‍ ଆଉଟ୍‍ପୁଟ୍"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ୍‍-ଟୁ-ସ୍ପିଚ୍‍ ଆଉଟ୍‍ପୁଟ୍"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ଅଗ୍ରାଧିକାର ଦିଆଯାଇଥିବା ଇଞ୍ଜିନ୍"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ସାମ୍ପ୍ରତିକ ଇଞ୍ଜିନ୍"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"ସ୍ପୀଚ୍‌ ହାର"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ଫୋନ୍‌ ରିଙ୍ଗଟୋନ୍‌"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ଡିଫଲ୍ଟ ବିଜ୍ଞପ୍ତି ସାଉଣ୍ଡ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ଡିଫଲ୍ଟ ଆଲାର୍ମ ସାଉଣ୍ଡ"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ସେଭ୍ କରନ୍ତୁ"</string>
     <string name="units_settings" msgid="402325305096925886">"ୟୁନିଟ୍"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"ବେଗ"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"ଦୂରତା"</string>
@@ -358,7 +359,7 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ସିଷ୍ଟମ୍‌"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ସିଷ୍ଟମ୍‌ ଅପ୍‌ଡେଟ୍"</string>
-    <string name="firmware_version" msgid="8491753744549309333">"Android ଭର୍ସନ୍‌"</string>
+    <string name="firmware_version" msgid="8491753744549309333">"Android ସଂସ୍କରଣ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ସୁରକ୍ଷା ପାଚ୍‌ ସ୍ତର"</string>
     <string name="hardware_info" msgid="3973165746261507658">"ମଡେଲ୍ ଓ ହାର୍ଡୱେୟାର୍"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"ମଡେଲ୍: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
@@ -377,8 +378,8 @@
     <string name="legal_information" msgid="1838443759229784762">"ଆଇନ ସୂଚନା"</string>
     <string name="contributors_title" msgid="7698463793409916113">"ଅବଦାନକାରୀ"</string>
     <string name="manual" msgid="4819839169843240804">"ମାନୁଆଲ୍‌"</string>
-    <string name="regulatory_labels" msgid="3165587388499646779">"ରେଗୁଲେଟରୀ ଲେବଲ୍ସ"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"ସୁରକ୍ଷା ଓ ନିୟାମକ ପୁସ୍ତିକା"</string>
+    <string name="regulatory_labels" msgid="3165587388499646779">"ନିୟାମକ ଲେବଲଗୁଡ଼ିକ"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"ସୁରକ୍ଷା ଓ ନିୟାମକ ମାନୁଆଲ୍"</string>
     <string name="copyright_title" msgid="4220237202917417876">"କପୀରାଇଟ୍‌"</string>
     <string name="license_title" msgid="936705938435249965">"ଲାଇସେନ୍ସ"</string>
     <string name="terms_title" msgid="5201471373602628765">"ନିୟମ ଓ ସର୍ତ୍ତାବଳୀ"</string>
@@ -399,7 +400,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"ବର୍ତ୍ତମାନ ଆପଣ ଜଣେ ଡେଭେଲପର୍‌ ଅଟନ୍ତି!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"ଆବଶ୍ୟକତା ନାହିଁ, ଆପଣ ଜଣେ ଡେଭେଲପର୍‍ ଅଟନ୍ତି।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ଡେଭ୍‌ଲପର୍‌ମାନଙ୍କ ପାଇଁ ବିକଳ୍ପଗୁଡ଼ିକ"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"ରିସେଟ୍‌ କରିବାର ବିକଳ୍ପମାନ"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"ରିସେଟ୍‌ କରିବାର ବିକଳ୍ପଗୁଡ଼ିକ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ନେଟ୍‌ୱାର୍କ, ଆପ୍‌, କିମ୍ବା ଡିଭାଇସ୍‌ ରିସେଟ୍‍"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"ନେଟ୍‍ୱାର୍କ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"ଏହା ସମସ୍ତ ନେଟ୍‍ୱାର୍କ ସେଟିଂକୁ ରିସେଟ୍‍ କରିବ, ଅନ୍ତର୍ଭୁକ୍ତ ଅଟେ:"</string>
@@ -440,7 +441,7 @@
     <string name="date_time_set_time_title" msgid="5884883050656937853">"ସମୟ"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"ସମୟ ସେଟ୍ କରନ୍ତୁ"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"ଟାଇମ୍‌ ଜୋନ୍‌"</string>
-    <string name="date_time_set_timezone" msgid="4759353576185916944">"ସମୟ କ୍ଷେତ୍ର ବାଛନ୍ତୁ"</string>
+    <string name="date_time_set_timezone" msgid="4759353576185916944">"ଟାଇମ୍ ଜୋନ୍ ଚୟନ କରନ୍ତୁ"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"ତାରିଖ"</string>
     <string name="date_time_set_date" msgid="2537494485643283230">"ତାରିଖ ସେଟ୍‍ କରନ୍ତୁ"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"ବର୍ଣ୍ଣାନୁକ୍ରମିକ ସର୍ଟ୍ କରନ୍ତୁ"</string>
@@ -569,7 +570,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ଏକ ଅନଲକ ପାଟର୍ନ ଆଙ୍କନ୍ତୁ"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ହୋଇଯିବା ପରେ ଆଙ୍ଗୁଠି କାଢ଼ିଦିଅନ୍ତୁ"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ପାଟର୍ନ ରେକର୍ଡ ହେଲା"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ନିଶ୍ଚିତ କରିବାକୁ ପାଟର୍ନ ପୁନଃ ଅଙ୍କନ କରନ୍ତୁ"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ସୁନିଶ୍ଚିତ କରିବାକୁ ପାଟର୍ନ ପୁଣି ଡ୍ର କରନ୍ତୁ"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ଅତିକମରେ 4ଟି ଡଟ୍ ଯୋଗ କରନ୍ତୁ। ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ଭୁଲ ପାଟର୍ନ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ଏକ ଅନ୍‌ଲକ୍‌ ପାଟର୍ନ କିପରି ଅଙ୍କାଯିବ"</string>
