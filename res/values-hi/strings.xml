@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"ज़्यादा"</string>
     <string name="display_settings" msgid="5325515247739279185">"डिसप्ले"</string>
     <string name="brightness" msgid="2919605130898772866">"स्क्रीन की रोशनी का लेवल"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"रोशनी के अनुसार सेट होने वाली चमक"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"आस-पास की रोशनी के हिसाब से स्क्रीन की चमक"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"आस-पास मौजूद रोशनी के हिसाब से स्क्रीन की चमक कम या ज़्यादा करें"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"नाइट लाइट चालू है"</string>
     <string name="keywords_display" msgid="3978416985146943922">"स्क्रीन, टचस्क्रीन"</string>
@@ -49,7 +49,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> का इस्तेमाल करें"</string>
     <string name="roaming_title" msgid="6218635014519017734">"रोमिंग"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"रोमिंग के समय डेटा सेवाएं कनेक्ट करें"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"डेटा रोमिंग की अनुमति दें?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"डेटा रोमिंग की अनुमति देना चाहते हैं?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"रोमिंग शुल्क लागू हो सकते हैं."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा खर्च"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"प्राइमरी डेटा"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"फ़ोन की रिंगटोन"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"सूचना की डिफ़ॉल्ट आवाज़"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"अलार्म की डिफ़ॉल्ट आवाज़"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"सेव करें"</string>
     <string name="units_settings" msgid="402325305096925886">"इकाइयां"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"रफ़्तार"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"दूरी"</string>
@@ -504,9 +505,9 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"उपयोगकर्ता डेटा"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"कैश"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"कुल"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"मेमोरी खाली करें"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"स्टोरेज खाली करें"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"कैश मिटाएं"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ऐप्लिकेशन डेटा मिटाएं?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ऐप्लिकेशन डेटा मिटाना चाहते हैं?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"इस ऐप्लिकेशन का पूरा डेटा हमेशा के लिए मिटा दिया जाएगा. इसमें सभी फ़ाइलें, सेटिंग, खाते, डेटाबेस वगैरह शामिल हैं."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ऐप्लिकेशन के लिए मेमोरी खाली नहीं की जा सकी."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> को सुरक्षित रूप से निकाला गया"</string>
@@ -582,19 +583,19 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"अपना पासवर्ड डालें"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षा के लिए पिन सेट करें"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"पिन दोबारा डालें"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"पिन में कम से कम 4 अंक होने चाहिए"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"पिन कम से कम चार अंकों का होना चाहिए"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"यह पिन अमान्य है, इसमें कम से कम 4 अंक होने चाहिए."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"पिन मेल नहीं खाते"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"पिन मेल नहीं खा रहे"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"पिन सेव करने में गडबड़ी हुई"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"डाला गया पिन गलत है"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"डाला गया पासवर्ड गलत है"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षा के लिए पासवर्ड सेट करें"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"पासवर्ड दोबारा डालें"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"पासवर्ड मेल नहीं खाते"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"पासवर्ड मेल नहीं खा रहे"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"हटाएं"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"अभी नहीं"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"पुष्टि करें"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"पासवर्ड में कम से कम 4 वर्ण होने चाहिए"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"पासवर्ड में कम से कम चार वर्ण होने चाहिए"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> वर्ण होने चाहिए"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"पिन में कम से कम <xliff:g id="COUNT">%d</xliff:g> अंक होने चाहिए"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"पासवर्ड में <xliff:g id="NUMBER">%d</xliff:g> से कम वर्ण होने चाहिए"</string>
@@ -634,8 +635,8 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"अंकों को बढ़ते, घटते या दोहराए गए क्रम में लिखने की मंज़ूरी नहीं है."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक विकल्प"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> days ago"</string>
-    <string name="credentials_reset" msgid="873900550885788639">"क्रेडेंशियल मिटाएं"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"सभी सर्टिफ़िकेट हटाएं"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"क्रेडेंशियल हटाएं"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"सभी प्रमाणपत्र हटाएं"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"सभी सामग्री हटाएं?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"क्रेडेंशियल स्टोरेज हमेशा के लिए मिटाई गई."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"क्रेडेंशियल स्टोरेज हमेशा के लिए नहीं मिटाई जा सकती."</string>

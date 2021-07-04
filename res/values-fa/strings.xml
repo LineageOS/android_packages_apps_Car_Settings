@@ -70,7 +70,7 @@
     <string name="launch_manage_plan_text" msgid="906657488611815787">"مشاهده طرح"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"مصرف داده برنامه"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"محدود شده"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"تاریخ بازنشانی چرخه استفاده"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"تاریخ بازنشانی چرخه مصرف داده"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"تاریخ هر ماه:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"تنظیم"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"محدودیت و هشدار داده"</string>
@@ -226,7 +226,8 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"زنگ"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"آهنگ زنگ تلفن"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"صدای اعلان پیش‌فرض"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"صدای زنگ پیش‌فرض"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"صدای زنگ ساعت پیش‌فرض"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ذخیره"</string>
     <string name="units_settings" msgid="402325305096925886">"واحدها"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"سرعت"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"فاصله"</string>
@@ -565,7 +566,7 @@
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"برای حفظ امنیت، الگو تنظیم کنید"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"پاک کردن"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"لغو"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"الگوی جدید بازگشایی قفلتان"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"الگوی جدید بازگشایی قفل"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"الگوی بازگشایی قفل را بکشید"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"وقتی الگو را کشیدید، انگشتتان را بردارید"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"الگو ضبط شد"</string>

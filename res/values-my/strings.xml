@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ဖုန်းမြည်သံ"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"အကြောင်းကြားချက် မူရင်းအသံ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"မူရင်းနှိုးစက်သံ"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"သိမ်းရန်"</string>
     <string name="units_settings" msgid="402325305096925886">"ယူနစ်များ"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"မြန်နှုန်း"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"အကွာအဝေး"</string>
@@ -331,14 +332,14 @@
     <string name="auto_launch_reset_text" msgid="590439611312092392">"မူရင်းများ ရှင်းလင်းရန်"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"ပံ့ပိုးထားသော လင့်များကို ဖွင့်မည်"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"ဤအက်ပ်တွင် ဖွင့်မည်"</string>
-    <string name="app_link_open_ask" msgid="7242075065136237456">"အမြဲမေးပါ"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"အမြဲမေးရန်"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"ဤအက်ပ်တွင် မဖွင့်ပါနှင့်"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"ပံ့ပိုးထားသော လင့်ခ်များ"</string>
     <string name="special_access" msgid="5730278220917123811">"အထူးအက်ပ်များ သုံးခွင့်ရှိသည်"</string>
     <string name="show_system" msgid="4401355756969485287">"စနစ်ကိုပြသရန်"</string>
     <string name="hide_system" msgid="8845453295584638040">"စနစ်ကို ဖျောက်ရန်"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"စနစ်ဆက်တင်များ ပြန်ပြင်ခြင်း"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"ဤခွင့်ပြုချက်သည် အက်ပ်တစ်ခုကို စက်စနစ်ဆက်တင်များအား ပြန်ပြင်ခွင့်ပေးသည်။"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"ဤခွင့်ပြုချက်က အက်ပ်ကို စနစ်ဆက်တင်များ ပြင်ခွင့်ပေးသည်။"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"အကြောင်းကြားချက် ရယူခြင်း"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> အတွက် အကြောင်းကြားချက်ကို အသုံးပြုခွင့်ပေးမလား။"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> သည် အဆက်အသွယ် အမည်များနှင့် သင်လက်ခံရရှိသည့် မက်ဆေ့ဂျ်များကဲ့သို့ ကိုယ်ရေးကိုယ်တာ အချက်အလက်များ အပါအဝင် အကြောင်းကြားချက်များ အားလုံးကို ဖတ်နိုင်ပါလိမ့်မည်။ ၎င်းသည် အကြောင်းကြားချက်များကို ပယ်ခြင်း (သို့) ထိုအကြောင်းကြားချက်တွင် ပါဝင်သည့် လုပ်ဆောင်ချက်ခလုတ်များနှိပ်ခြင်းတို့ကို ပြုလုပ်နိုင်ပါသည်။ \n\n၎င်းသည် အက်ပ်ကို \'မနှောင့်ယှက်ရ\' အား အဖွင့်အပိတ် လုပ်စေနိုင်ပြီး အခြားဆက်စပ်ဆက်တင်များကိုလည်း ပြောင်းလဲနိုင်စွမ်းရှိစေပါသည်။"</string>
@@ -472,7 +473,7 @@
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"အသုံးပြုသူအသစ် ပြုလုပ်၍မရပါ"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"ဤအသုံးပြုသူကို ဖျက်မလား။"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"အက်ပ်နှင့် ဒေတာများ အားလုံးကို ဖျက်လိုက်ပါမည်။"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"အက်ပ်အားလုံးနှင့် ဒေတာကို ဖျက်ပါမည်။"</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"အသုံးပြုသူကို ဖျက်၍မရပါ။"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"ပယ်ရန်"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"ထပ်စမ်းကြည့်ရန်"</string>
@@ -545,7 +546,7 @@
     <string name="sync_is_failing" msgid="5766255460901806206">"စင့်ခ်လုပ်ရန် လက်ရှိတွင် ပြဿနာရှိနေပါသည်။ ခဏကြာလျှင် ပြန်လည်ရရှိပါမည်။"</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"ကန့်သတ်ဆက်တင်"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"လုံခြုံရေး"</string>
-    <string name="security_settings_subtitle" msgid="2244635550239273229">"မျက်နှာပြင်လော့ခ်"</string>
+    <string name="security_settings_subtitle" msgid="2244635550239273229">"ဖန်သားပြင်လော့ခ်"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"မရှိ"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"ပုံစံ"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"ပင်နံပါတ်"</string>
@@ -562,7 +563,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"သင့် PIN နံပါတ် ရွေးချယ်ခြင်း"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"သင့်လော့ခ်ဖွင့်ပုံစံ ရွေးပါ"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"သင့်စကားဝှက်ကိုရွေးချယ်ပါ"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"လက်ရှိ မျက်နှာပြင်လော့ခ်"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"လက်ရှိဖန်သားပြင်လော့ခ်"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"လုံခြုံရေးအတွက် ပုံစံတစ်ခု သတ်မှတ်ပါ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ရှင်းရန်"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"မလုပ်တော့"</string>

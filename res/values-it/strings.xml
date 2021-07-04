@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Suoneria telefono"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Suono di notifica predefinito"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Suono sveglia predefinito"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Salva"</string>
     <string name="units_settings" msgid="402325305096925886">"Unità"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Velocità"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Distanza"</string>
@@ -308,7 +309,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistenza e input vocale"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"App di assistenza"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Utilizza testo sullo schermo"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Consenti all\'app di assistenza di accedere ai contenuti dello schermo come il testo"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Consenti all\'app di assistenza di accedere ai contenuti testuali sullo schermo"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Utilizza screenshot"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Consenti all\'app di assistenza di accedere a un\'immagine dello schermo"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Input vocale"</string>
@@ -333,7 +334,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Chiedi ogni volta"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Non aprire in questa app"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Link supportati"</string>
-    <string name="special_access" msgid="5730278220917123811">"App con accesso speciale"</string>
+    <string name="special_access" msgid="5730278220917123811">"Accesso speciale per le app"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostra sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Nascondi sistema"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modifica impostazioni sistema"</string>
@@ -399,7 +400,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Ora sei sviluppatore."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Non è necessario, sei già sviluppatore."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opzioni sviluppatore"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Opzioni di reimpostazione"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Opzioni di ripristino"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Reimpostazione di rete, app o dispositivo"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Reimposta rete"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"L\'operazione reimposta tutte le impostazioni di rete, tra cui:"</string>

@@ -129,7 +129,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"Mrežni prolaz"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Podešavanja Wi‑Fi-ja"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Automatski uključi Wi‑Fi"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi će se ponovo uključiti u blizini sačuvanih mreža visokog kvaliteta, kao što je kućna mreža"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"WiFi će se ponovo uključiti u  blizini sačuvanih mreža visokog kvaliteta, kao što je kućna mreža"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Nije dostupno jer je lokacija isključena. Uključite "<annotation id="link">"lokaciju"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Želite li da uključite WiFi skeniranje?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Uključi"</string>
@@ -229,6 +229,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Melodija zvona telefona"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Podrazumevani zvuk obaveštenja"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Podrazumevani zvuk alarma"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Sačuvaj"</string>
     <string name="units_settings" msgid="402325305096925886">"Jedinice"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Brzina"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Razdaljina"</string>
@@ -344,7 +345,7 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obaveštenjima"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Želite li da dozvolite da <xliff:g id="SERVICE">%1$s</xliff:g> ima pristup obaveštenjima?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> će moći da čita sva obaveštenja, uključujući lične podatke, poput imena kontakata i teksta poruka koje primate. Moći će i da odbacuje obaveštenja ili da koristi dugmad za radnje koja sadrže. \n\nOvo će aplikaciji omogućiti i da uključuje ili isključuje režim Ne uznemiravaj i menja srodna podešavanja."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obaveštenjima za korisnika <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda ćete isključiti i pristup režimu Ne uznemiravaj."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obaveštenjima za <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda ćete isključiti i pristup režimu Ne uznemiravaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Otkaži"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup premijum SMS-ovima"</string>
@@ -392,7 +393,7 @@
     <string name="status_serial_number" msgid="9158889113131907656">"Serijski broj"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"Verzija hardvera"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
-    <string name="settings_license_activity_title" msgid="8499293744313077709">"Licence treće strane"</string>
+    <string name="settings_license_activity_title" msgid="8499293744313077709">"Licence trećih strana"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Došlo je do problema pri učitavanju licenci."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Učitava se…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
@@ -521,7 +522,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Nijedan nalog nije dodat"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Nalozi za korisnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatski sinhronizuj podatke"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Omogući aplikacijama da automatski osvežavaju podatke"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Omogućava aplikacijama da automatski osvežavaju podatke"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Uključiti autom. sinh. podataka?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Sve promene koje unesete na naloge na vebu će automatski biti kopirane na uređaj.\n\nNeki nalozi mogu i automatski da kopiraju na veb sve promene koje unesete na telefonu. Tako funkcioniše Google nalog."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Isključiti autom. sinh. podataka?"</string>
@@ -573,7 +574,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Novi šablon za otključavanje"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Nacrtajte šablon za otključavanje"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Podignite prst kada završite"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Šablon je snimljen"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Šablon je zapamćen"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Ponovo nacrtajte šablon da biste potvrdili"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Povežite bar 4 tačke. Probajte ponovo."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pogrešan šablon"</string>

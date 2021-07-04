@@ -32,8 +32,8 @@
     <string name="network_and_internet" msgid="4229023630498537530">"ネットワークとインターネット"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"モバイル ネットワーク"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="other">SIM: <xliff:g id="COUNT_1">%1$d</xliff:g> 枚</item>
-      <item quantity="one">SIM: <xliff:g id="COUNT_0">%1$d</xliff:g> 枚</item>
+      <item quantity="other">SIM: <xliff:g id="COUNT_1">%1$d</xliff:g> つ</item>
+      <item quantity="one">SIM: <xliff:g id="COUNT_0">%1$d</xliff:g> つ</item>
     </plurals>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"有効 / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"無効 / SIM"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"着信音"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"デフォルトの通知音"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"デフォルトのアラーム音"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"保存"</string>
     <string name="units_settings" msgid="402325305096925886">"単位"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"速度"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"距離"</string>
@@ -337,7 +338,7 @@
     <string name="show_system" msgid="4401355756969485287">"システムアプリを表示"</string>
     <string name="hide_system" msgid="8845453295584638040">"システムアプリを表示しない"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"システム設定の変更"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"この権限により、アプリはシステム設定を変更できるようになります。"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"この権限により、アプリはシステム設定を変更できます。"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"通知へのアクセス"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"通知へのアクセス を <xliff:g id="SERVICE">%1$s</xliff:g> に許可しますか？"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> がすべての通知を読み取れるようになります。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内の操作ボタンをタップしたりすることも許可されます。\n\nこれにより、アプリがサイレント モード設定を切り替えたり、関連する設定を変更したりすることも可能になります。"</string>

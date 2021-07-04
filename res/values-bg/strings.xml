@@ -70,7 +70,7 @@
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Преглед на плана"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Пренос на данни от прилож."</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"ограничено"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Дата на възстановяване на цикъла за използване"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Дата на нулиране на цикъла за използване"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Дата от всеки месец:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Задаване"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Предупреждение и лимит за данните"</string>
@@ -227,6 +227,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Мелодия на телефона"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Стандартен звук за известяване"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Стандартен звук за будилника"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Запазване"</string>
     <string name="units_settings" msgid="402325305096925886">"Мерни ед."</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Скорост"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Разстояние"</string>
@@ -497,7 +498,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Други приложения"</string>
     <string name="storage_files" msgid="6382081694781340364">"Файлове"</string>
     <string name="storage_system" msgid="1271345630248014010">"Система"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Категорията „Система Android“ включва файлове, използвани за изпълняването на версия <xliff:g id="VERSION">%s</xliff:g> на Android"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Системата включва файлове, използвани за изпълняването на версия <xliff:g id="VERSION">%s</xliff:g> на Android"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудиофайлове"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Изчислява се…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Размер на приложението"</string>
