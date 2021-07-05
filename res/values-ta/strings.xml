@@ -297,14 +297,10 @@
     <string name="force_stop" msgid="2153183697014720520">"உடனே நிறுத்து"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"உடனே நிறுத்தவா?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ஆப்ஸை உடனே நிறுத்தினால் சரியாக இயங்காமல் போகக்கூடும்."</string>
-    <!-- no translation found for peak_performance_dialog_title (5970933611683430870) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_text (7648337738884134499) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_on (2139033153500237350) -->
-    <skip />
-    <!-- no translation found for peak_performance_dialog_action_off (1019653666533456482) -->
-    <skip />
+    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"செயல்திறன் பாதுகாப்பு அம்சத்தை முடக்கவா?"</string>
+    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"இவ்வாறு செய்தால் மென்பொருளும் சாதன பாகங்களும் சரியாக வேலை செய்யாமல் போகலாம்."</string>
+    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"இயக்கத்திலேயே வை"</string>
+    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"முடக்கு"</string>
     <string name="disable_text" msgid="4358165448648990820">"முடக்கு"</string>
     <string name="enable_text" msgid="1794971777861881238">"இயக்கு"</string>
     <string name="uninstall_text" msgid="277907956072833012">"நிறுவல் நீக்கு"</string>
@@ -314,8 +310,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"அனுமதிகள்"</string>
     <string name="notifications_label" msgid="6586089149665170731">"அறிவிப்புகள்"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"சேமிப்பகமும் தற்காலிக சேமிப்பும்"</string>
-    <!-- no translation found for peak_performance_label (1592816366516845648) -->
-    <skip />
+    <string name="peak_performance_label" msgid="1592816366516845648">"அதிக செயல்திறனை உறுதிசெய்தல்"</string>
     <string name="application_version_label" msgid="8556889839783311649">"பதிப்பு: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"அனுமதிகள் எதையும் கோரவில்லை"</string>
@@ -326,8 +321,7 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"அனுமதிகளை அகற்றி இடத்தைக் காலியாக்குதல்"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"அகச் சேமிப்பகத்தில் %s"</string>
-    <!-- no translation found for peak_performance_summary (2450911487290019786) -->
-    <skip />
+    <string name="peak_performance_summary" msgid="2450911487290019786">"தேவைப்பட்டால் சாதன வளங்களின் அதிகப்படியான உபயோகத்தைத் தவிர்க்க ஆப்ஸை மூடும்"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
