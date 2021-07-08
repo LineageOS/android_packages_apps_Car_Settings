@@ -104,7 +104,9 @@ public class MuteMicTogglePreferenceControllerTest {
         mSwitchPreference.performSecondaryActionClick();
 
         verify(mMockSensorPrivacyManager).setSensorPrivacyForProfileGroup(
-                eq(SensorPrivacyManager.Sensors.MICROPHONE), eq(true));
+                eq(SensorPrivacyManager.Sources.SETTINGS),
+                eq(SensorPrivacyManager.Sensors.MICROPHONE),
+                eq(true));
         setIsSensorPrivacyEnabled(true);
 
         mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.MICROPHONE, true);
@@ -119,7 +121,9 @@ public class MuteMicTogglePreferenceControllerTest {
         mSwitchPreference.performSecondaryActionClick();
 
         verify(mMockSensorPrivacyManager).setSensorPrivacyForProfileGroup(
-                eq(SensorPrivacyManager.Sensors.MICROPHONE), eq(false));
+                eq(SensorPrivacyManager.Sources.SETTINGS),
+                eq(SensorPrivacyManager.Sensors.MICROPHONE),
+                eq(false));
         setIsSensorPrivacyEnabled(false);
         mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.MICROPHONE, false);
 
