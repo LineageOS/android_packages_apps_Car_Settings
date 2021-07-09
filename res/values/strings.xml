@@ -1635,6 +1635,15 @@
     <string name="default_admin_support_msg" translatable="false">If you have questions, contact your IT admin</string>
     <!-- url for learning more about IT admin policy disabling -->
     <string name="help_url_action_disabled_by_it_admin" translatable="false"></string>
+    <!-- Title of preference to manage device admin apps, which are used by IT admins to manage devices. [CHAR LIMIT=40] -->
+    <string name="manage_device_admin" translatable="false">Device admin apps</string>
+    <!-- Summary of preference to manage device admin apps, informing the user how many device admin apps are installed and active -->
+    <plurals name="number_of_device_admins" translatable="false">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> active app</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> active apps</item>
+    </plurals>
+    <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
+    <string name="number_of_device_admins_none" translatable="false">No active apps</string>
     <!-- Title of setting on privacy settings screen that will show work policy info. [CHAR LIMIT=NONE] -->
     <string name="work_policy_privacy_settings" translatable="false">Your work policy info</string>
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
