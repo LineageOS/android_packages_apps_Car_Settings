@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.google.common.truth.Truth.assertWithMessage;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -26,6 +28,7 @@ import static org.mockito.Mockito.when;
 
 import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
+import android.car.test.mocks.AbstractExtendedMockitoTestCase;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -36,19 +39,13 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
 
 import java.util.Arrays;
 
 @RunWith(AndroidJUnit4.class)
-abstract class BaseEnterpriseTestCase {
-
-    @Rule
-    public final MockitoRule mockitorule = MockitoJUnit.rule();
+abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
 
     protected final Context mRealContext = ApplicationProvider.getApplicationContext();
     protected final Context mSpiedContext = spy(mRealContext);
@@ -74,6 +71,10 @@ abstract class BaseEnterpriseTestCase {
 
     @Before
     public final void setFixtures() throws Exception {
+        // Make sure session was properly initialized
+        assertWithMessage("mDpm").that(mDpm).isNotNull();
+        assertWithMessage("mUm").that(mUm).isNotNull();
+
         when(mSpiedContext.getSystemService(DevicePolicyManager.class)).thenReturn(mDpm);
         when(mSpiedContext.getSystemService(PackageManager.class)).thenReturn(mSpiedPm);
         when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
