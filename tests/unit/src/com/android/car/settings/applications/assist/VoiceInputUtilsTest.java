@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,38 +22,27 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.provider.Settings;
 
-import com.android.car.settings.testutils.ShadowSecureSettings;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowSecureSettings.class})
+@RunWith(AndroidJUnit4.class)
 public class VoiceInputUtilsTest {
 
     private static final String TEST_PACKAGE = "test.package";
     private static final String TEST_CLASS_1 = "Class1";
     private static final String TEST_CLASS_2 = "Class2";
 
-    private Context mContext;
-
-    @Before
-    public void setUp() {
-        mContext = RuntimeEnvironment.application;
-    }
-
-    @After
-    public void tearDown() {
-        ShadowSecureSettings.reset();
-    }
+    private Context mContext = ApplicationProvider.getApplicationContext();
 
     @Test
     public void getCurrentService_nullInteraction_nullRecognition_returnsNull() {
+        Settings.Secure.putString(mContext.getContentResolver(),
+                Settings.Secure.VOICE_INTERACTION_SERVICE, null);
+        Settings.Secure.putString(mContext.getContentResolver(),
+                Settings.Secure.VOICE_RECOGNITION_SERVICE, null);
         assertThat(VoiceInputUtils.getCurrentService(mContext)).isNull();
     }
 
