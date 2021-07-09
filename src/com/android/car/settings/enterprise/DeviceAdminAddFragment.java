@@ -26,8 +26,11 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
+import androidx.annotation.VisibleForTesting;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.ToolbarController;
 
@@ -47,8 +50,18 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        Activity activity = requireActivity();
+        // Split in 2 as it would be hard to mock requireActivity();
+        onAttach(context, requireActivity());
+    }
+
+    @VisibleForTesting
+    void onAttach(Context context, Activity activity) {
         Intent intent = activity.getIntent();
+        if (intent == null) {
+            LOG.e("no intent on " + activity);
+            activity.finish();
+            return;
+        }
 
         ComponentName admin = (ComponentName)
                 intent.getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
@@ -106,10 +119,23 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
     protected void setupToolbar(ToolbarController toolbar) {
         super.setupToolbar(toolbar);
 
+        // Must split in 2, otherwise tests would need to mock what's needed by super.setupToolbar()
+        setToolbarTitle(toolbar);
+    }
+
+    @VisibleForTesting
+    void setToolbarTitle(ToolbarController toolbar) {
         Intent intent = requireActivity().getIntent();
         String action = intent == null ? null : intent.getAction();
         if (DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN.equals(action)) {
             toolbar.setTitle(R.string.add_device_admin_msg);
         }
+    }
+
+    // Must override so it can be spied (it's the exact same signature and modifier access, but it
+    // works now because the test class is in the same package).
+    @Override
+    protected <T extends PreferenceController> T use(Class<T> clazz, int preferenceKeyResId) {
+        return super.use(clazz, preferenceKeyResId);
     }
 }
