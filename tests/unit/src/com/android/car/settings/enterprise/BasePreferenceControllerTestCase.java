@@ -63,6 +63,11 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
                         .that(actualValue).isEqualTo(expectedValue);
     }
 
+    protected static final void assertPreferenceSummary(Preference preference, String summary) {
+        assertWithMessage("(preference %s).getSummary()", preference).that(preference.getSummary())
+                .isEqualTo(summary);
+    }
+
     protected final void verifyGoBack() {
         verify(mFragmentController).goBack();
     }
