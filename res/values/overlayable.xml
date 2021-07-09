@@ -545,6 +545,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="plurals" name="lockpassword_password_requires_symbols"/>
       <item type="plurals" name="lockpassword_password_requires_uppercase"/>
       <item type="plurals" name="mobile_network_summary_count"/>
+      <item type="plurals" name="number_of_device_admins"/>
       <item type="plurals" name="runtime_permissions_additional_count"/>
       <item type="plurals" name="show_dev_countdown"/>
       <item type="plurals" name="unused_apps_summary"/>
@@ -948,6 +949,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="lockscreen_skip_button_text"/>
       <item type="string" name="lockscreen_wrong_password"/>
       <item type="string" name="lockscreen_wrong_pin"/>
+      <item type="string" name="manage_device_admin"/>
       <item type="string" name="manage_keyboard"/>
       <item type="string" name="manage_other_profiles_button_text"/>
       <item type="string" name="manual"/>
@@ -1000,6 +1002,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="notifications_all_apps"/>
       <item type="string" name="notifications_label"/>
       <item type="string" name="notifications_recently_sent"/>
+      <item type="string" name="number_of_device_admins_none"/>
       <item type="string" name="okay"/>
       <item type="string" name="one"/>
       <item type="string" name="outgoing_calls_permission_title"/>
