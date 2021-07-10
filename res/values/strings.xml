@@ -671,7 +671,7 @@
     <string name="notifications_label">Notifications</string>
     <!-- Label that lead into individual application storage info screen -->
     <string name="storage_application_label">Storage &amp; cache</string>
-    <!-- Label for the toggle that enables/disables car watchdog's I/O overuse killing feature for the app. [CHAR LIMIT=20] -->
+    <!-- Label for the toggle that enables/disables car watchdog's I/O overuse killing feature for the app. [CHAR LIMIT=50] -->
     <string name="peak_performance_label">Ensure peak performance</string>
     <!-- Label for displaying application version. -->
     <string name="application_version_label">Version: %1$s</string>
@@ -690,7 +690,7 @@
     <string name="unused_apps_switch">Remove permissions and free up space</string>
     <!-- Application's internal storage size preference summary. [CHAR LIMIT=40] -->
     <string name="storage_type_internal">%s in internal storage</string>
-    <!-- Application's peak performance preference summary. [CHAR LIMIT=40] -->
+    <!-- Application's peak performance preference summary. [CHAR LIMIT=100] -->
     <string name="peak_performance_summary">When necessary, close app to avoid excessive use of resources</string>
     <!-- Activity title for network data usage summary. [CHAR LIMIT=25] -->
     <string name="data_usage_summary_title">Data usage</string>
@@ -1635,6 +1635,15 @@
     <string name="default_admin_support_msg" translatable="false">If you have questions, contact your IT admin</string>
     <!-- url for learning more about IT admin policy disabling -->
     <string name="help_url_action_disabled_by_it_admin" translatable="false"></string>
+    <!-- Title of preference to manage device admin apps, which are used by IT admins to manage devices. [CHAR LIMIT=40] -->
+    <string name="manage_device_admin" translatable="false">Device admin apps</string>
+    <!-- Summary of preference to manage device admin apps, informing the user how many device admin apps are installed and active -->
+    <plurals name="number_of_device_admins" translatable="false">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> active app</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> active apps</item>
+    </plurals>
+    <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
+    <string name="number_of_device_admins_none" translatable="false">No active apps</string>
     <!-- Title of setting on privacy settings screen that will show work policy info. [CHAR LIMIT=NONE] -->
     <string name="work_policy_privacy_settings" translatable="false">Your work policy info</string>
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
