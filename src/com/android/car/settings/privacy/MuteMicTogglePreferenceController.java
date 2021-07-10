@@ -69,7 +69,9 @@ public class MuteMicTogglePreferenceController
             if (isChecked == isMicMuted) {
                 // UX and underlying API state for mic do not match, so update sensor privacy
                 mSensorPrivacyManager.setSensorPrivacyForProfileGroup(
-                        SensorPrivacyManager.Sensors.MICROPHONE, !isChecked);
+                        SensorPrivacyManager.Sources.SETTINGS,
+                        SensorPrivacyManager.Sensors.MICROPHONE,
+                        !isChecked);
             }
         });
     }

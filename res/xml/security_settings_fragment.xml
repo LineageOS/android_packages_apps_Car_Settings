@@ -43,4 +43,10 @@
                    android:value="com.android.settings.category.ia.security"/>
         </intent>
     </com.android.car.settings.common.LogicalPreferenceGroup>
+    <Preference
+        android:key="manage_device_admin"
+        android:title="@string/manage_device_admin"
+        android:summary="@string/empty_placeholder"
+        settings:controller=
+            "com.android.car.settings.enterprise.ManageDeviceAdminPreferenceController" />
 </PreferenceScreen>
