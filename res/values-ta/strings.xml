@@ -329,7 +329,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> கூடுதல் அனுமதிகள்</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> கூடுதல் அனுமதி</item>
     </plurals>
-    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"கவனத்திற்கு: மறுபடி தொடங்கிய பிறகு நீங்கள் வாகனத்தைத் திறக்கும் வரை இந்த ஆப்ஸால் செயல்பட இயலாது."</string>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"கவனத்திற்கு: மறுபடி தொடங்கிய பிறகு நீங்கள் வாகனத்தை அன்லாக் செய்யும் வரை இந்த ஆப்ஸால் செயல்பட இயலாது."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"அசிஸ்டண்ட் &amp; குரல் உள்ளீடு"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"அசிஸ்ட் ஆப்ஸ்"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"திரையில் உள்ள உரையைப் பயன்படுத்துதல்"</string>
@@ -611,7 +611,7 @@
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"பாதுகாப்பிற்கு, பேட்டர்னை அமைக்கவும்"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"அழி"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ரத்துசெய்"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"திறப்பதற்கான புதிய பேட்டர்ன்"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"புதிய அன்லாக் பேட்டர்ன்"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"அன்லாக் பேட்டர்னை வரைக"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"முடிந்ததும் விரலை எடுக்கவும்"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"பேட்டர்ன் பதிவுசெய்யப்பட்டது"</string>
