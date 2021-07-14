@@ -87,6 +87,6 @@ public class ApplicationsUtils {
      */
     public static boolean isHibernationEnabled() {
         return DeviceConfig.getBoolean(
-                NAMESPACE_APP_HIBERNATION, PROPERTY_APP_HIBERNATION_ENABLED, false);
+                NAMESPACE_APP_HIBERNATION, PROPERTY_APP_HIBERNATION_ENABLED, true);
     }
 }
