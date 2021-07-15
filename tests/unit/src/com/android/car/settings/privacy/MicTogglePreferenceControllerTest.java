@@ -149,6 +149,15 @@ public class MicTogglePreferenceControllerTest {
         assertThat(mSwitchPreference.isChecked()).isFalse();
     }
 
+    @Test
+    public void onStop_removesSensorPrivacyListener() {
+        initializePreference(/* isMicEnabled= */ true);
+        mPreferenceController.onStop(mLifecycleOwner);
+
+        verify(mMockSensorPrivacyManager).removeSensorPrivacyListener(
+                SensorPrivacyManager.Sensors.MICROPHONE, mListener.getValue());
+    }
+
     private void initializePreference(boolean isMicEnabled) {
         setIsSensorPrivacyEnabled(!isMicEnabled);
         mPreferenceController.onCreate(mLifecycleOwner);
