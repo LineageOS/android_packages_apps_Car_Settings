@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,42 +19,39 @@ package com.android.car.settings.tts;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.provider.Settings;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TtsEngines;
 import android.speech.tts.Voice;
 
-import com.android.car.settings.testutils.ShadowSecureSettings;
-import com.android.car.settings.testutils.ShadowTextToSpeech;
-import com.android.car.settings.testutils.ShadowTtsEngines;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowAlertDialog;
 
 import java.util.Locale;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowTtsEngines.class, ShadowTextToSpeech.class, ShadowSecureSettings.class})
+@RunWith(AndroidJUnit4.class)
 public class TtsPlaybackSettingsManagerTest {
-
     private static final String ENGINE_NAME = "com.android.car.settings.tts.test";
     private static final String SAMPLE_TEXT = "Sample text";
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
     private TtsPlaybackSettingsManager mPlaybackSettingsManager;
+
     @Mock
     private TextToSpeech mTts;
     @Mock
@@ -63,10 +60,7 @@ public class TtsPlaybackSettingsManagerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowTextToSpeech.setInstance(mTts);
-        ShadowTtsEngines.setInstance(mEnginesHelper);
 
-        mContext = RuntimeEnvironment.application;
         mPlaybackSettingsManager = new TtsPlaybackSettingsManager(mContext, mTts, mEnginesHelper);
 
         when(mTts.getCurrentEngine()).thenReturn(ENGINE_NAME);
@@ -74,14 +68,6 @@ public class TtsPlaybackSettingsManagerTest {
                 TextToSpeech.Engine.DEFAULT_RATE);
         Settings.Secure.putInt(mContext.getContentResolver(), Settings.Secure.TTS_DEFAULT_PITCH,
                 TextToSpeech.Engine.DEFAULT_PITCH);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowTextToSpeech.reset();
-        ShadowTtsEngines.reset();
-        ShadowAlertDialog.reset();
-        ShadowSecureSettings.reset();
     }
 
     @Test
@@ -200,7 +186,12 @@ public class TtsPlaybackSettingsManagerTest {
     }
 
     @Test
+    @UiThreadTest
     public void speakSampleText_requiresNetworkConnection_languageNotAvailable_showsAlert() {
+        TtsPlaybackSettingsManager spiedManager = spy(mPlaybackSettingsManager);
+        AlertDialog alertDialog = mock(AlertDialog.class);
+        when(spiedManager.createNetworkAlertDialog()).thenReturn(alertDialog);
+
         Voice voice = new Voice("Test Name", Locale.FRANCE, /* quality= */ 0,
                 /* latency= */ 0, /* requiresNetworkConnection= */ true, /* features= */ null);
         when(mTts.getVoice()).thenReturn(voice);
@@ -208,9 +199,9 @@ public class TtsPlaybackSettingsManagerTest {
         when(mTts.isLanguageAvailable(any(Locale.class))).thenReturn(
                 TextToSpeech.LANG_MISSING_DATA);
 
-        mPlaybackSettingsManager.speakSampleText(SAMPLE_TEXT);
+        spiedManager.speakSampleText(SAMPLE_TEXT);
 
-        assertThat(ShadowAlertDialog.getLatestAlertDialog()).isNotNull();
+        verify(alertDialog).show();
     }
 
     @Test
