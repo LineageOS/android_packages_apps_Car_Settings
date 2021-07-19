@@ -57,10 +57,10 @@ public class ChooseLockPatternFragment extends BaseFragment {
      */
     private final List<LockPatternView.Cell> mAnimatePattern =
             Collections.unmodifiableList(Lists.newArrayList(
-                    LockPatternView.Cell.of(0, 0),
-                    LockPatternView.Cell.of(0, 1),
-                    LockPatternView.Cell.of(1, 1),
-                    LockPatternView.Cell.of(2, 1)
+                    LockPatternView.Cell.of(0, 0, LockPatternUtils.PATTERN_SIZE_DEFAULT),
+                    LockPatternView.Cell.of(0, 1, LockPatternUtils.PATTERN_SIZE_DEFAULT),
+                    LockPatternView.Cell.of(1, 1, LockPatternUtils.PATTERN_SIZE_DEFAULT),
+                    LockPatternView.Cell.of(2, 1, LockPatternUtils.PATTERN_SIZE_DEFAULT)
             ));
     // How long we wait to clear a wrong pattern
     private int mWrongPatternClearTimeOut;
@@ -117,7 +117,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
                                 "null chosen pattern in stage 'need to confirm");
                     }
                     try (LockscreenCredential credential =
-                            LockscreenCredential.createPattern(pattern)) {
+                            LockscreenCredential.createPattern(pattern,
+                                    LockPatternUtils.PATTERN_SIZE_DEFAULT)) {
                         if (mChosenPattern.equals(credential)) {
                             updateStage(Stage.ChoiceConfirmed);
                         } else {
@@ -130,7 +131,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
                     if (pattern.size() < LockPatternUtils.MIN_LOCK_PATTERN_SIZE) {
                         updateStage(Stage.ChoiceTooShort);
                     } else {
-                        mChosenPattern = LockscreenCredential.createPattern(pattern);
+                        mChosenPattern = LockscreenCredential.createPattern(pattern,
+                                LockPatternUtils.PATTERN_SIZE_DEFAULT);
                         updateStage(Stage.FirstChoiceValid);
                     }
                 }
