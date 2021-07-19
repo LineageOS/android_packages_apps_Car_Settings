@@ -159,7 +159,8 @@ public class ConfirmLockPatternFragment extends BaseFragment {
                 public void onPatternCellAdded(List<LockPatternView.Cell> pattern) {
                 }
 
-                public void onPatternDetected(List<LockPatternView.Cell> pattern) {
+                public void onPatternDetected(List<LockPatternView.Cell> pattern,
+                        byte patternSize) {
                     mLockPatternView.setEnabled(false);
 
                     if (mCheckLockWorker == null) {
@@ -180,7 +181,8 @@ public class ConfirmLockPatternFragment extends BaseFragment {
 
     private void onCheckCompleted(boolean lockMatched, Duration timeout) {
         if (lockMatched) {
-            try (LockscreenCredential patternCred = LockscreenCredential.createPattern(mPattern)) {
+            try (LockscreenCredential patternCred = LockscreenCredential.createPattern(mPattern,
+                    mConfirmLockLockoutHelper.getLockPatternUtils().getLockPatternSize(mUserId))) {
                 // onLockVerified does not take ownership of the LockscreenCredential
                 // see CheckLockActivity#onLockVerified and VerifyLockChangeActivity#onLockVerified
                 mCheckLockListener.onLockVerified(patternCred);
