@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "675c8550_0d38b1c0",
+        "filename": "src/com/android/car/settings/security/CheckLockWorker.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 29072
+      },
+      "writtenOn": "2021-07-19T10:54:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2a48ca5_27f6fdf8",
+      "range": {
+        "startLine": 95,
+        "startChar": 16,
+        "endLine": 95,
+        "endChar": 20
+      },
+      "revId": "824e9d1ac87dc2143c8e27a983cea3207e7c4ec3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "04435e79_2b5b81e4",
         "filename": "src/com/android/car/settings/security/ChooseLockPatternFragment.java",
         "patchSetId": 1
@@ -45,6 +69,30 @@
       "revId": "824e9d1ac87dc2143c8e27a983cea3207e7c4ec3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a59ae364_d488f59c",
+        "filename": "src/com/android/car/settings/security/ChooseLockPatternFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 29072
+      },
+      "writtenOn": "2021-07-19T10:54:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04435e79_2b5b81e4",
+      "range": {
+        "startLine": 120,
+        "startChar": 28,
+        "endLine": 120,
+        "endChar": 32
+      },
+      "revId": "824e9d1ac87dc2143c8e27a983cea3207e7c4ec3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "1a4045e3_99c15266",
+        "filename": "src/com/android/car/settings/security/ChooseLockPatternFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 29072
+      },
+      "writtenOn": "2021-07-19T10:54:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7865c607_6faee0c5",
+      "range": {
+        "startLine": 134,
+        "startChar": 24,
+        "endLine": 134,
+        "endChar": 45
+      },
+      "revId": "824e9d1ac87dc2143c8e27a983cea3207e7c4ec3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7acda313_e182811c",
         "filename": "src/com/android/car/settings/setupservice/InitialLockSetupService.java",
         "patchSetId": 1
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "87f1204b_ce2d4f7b",
+        "filename": "src/com/android/car/settings/setupservice/InitialLockSetupService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 29072
+      },
+      "writtenOn": "2021-07-19T10:54:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7acda313_e182811c",
+      "range": {
+        "startLine": 92,
+        "startChar": 20,
+        "endLine": 92,
+        "endChar": 21
+      },
+      "revId": "824e9d1ac87dc2143c8e27a983cea3207e7c4ec3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b2ded6db_e49dc187",
         "filename": "src/com/android/car/settings/setupservice/InitialLockSetupService.java",
         "patchSetId": 1
@@ -114,6 +210,30 @@
       "revId": "824e9d1ac87dc2143c8e27a983cea3207e7c4ec3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fc2ee5e_86d6abd0",
+        "filename": "src/com/android/car/settings/setupservice/InitialLockSetupService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 29072
+      },
+      "writtenOn": "2021-07-19T10:54:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b2ded6db_e49dc187",
+      "range": {
+        "startLine": 186,
+        "startChar": 32,
+        "endLine": 186,
+        "endChar": 36
+      },
+      "revId": "824e9d1ac87dc2143c8e27a983cea3207e7c4ec3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
