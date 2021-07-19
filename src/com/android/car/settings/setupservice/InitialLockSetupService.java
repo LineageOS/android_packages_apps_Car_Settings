@@ -110,11 +110,13 @@ public class InitialLockSetupService extends Service {
                 List<LockPatternView.Cell> pattern = new ArrayList<>();
                 for (int i = 0; i < bytes.length; i++) {
                     pattern.add(LockPatternView.Cell.of(
-                                (byte) ((bytes[i] - 1) / 3), (byte) ((bytes[i] - 1) % 3)));
+                                (byte) ((bytes[i] - 1) / 3), (byte) ((bytes[i] - 1) % 3),
+                                LockPatternUtils.PATTERN_SIZE_DEFAULT));
                 }
                 return pattern;
             }
-            return LockPatternUtils.byteArrayToPattern(bytes);
+            return LockPatternUtils.byteArrayToPattern(bytes,
+                    LockPatternUtils.PATTERN_SIZE_DEFAULT);
         }
 
         private LockscreenCredential createLockscreenCredential(
@@ -128,7 +130,8 @@ public class InitialLockSetupService extends Service {
                     return LockscreenCredential.createPin(pinStr);
                 case LockTypes.PATTERN:
                     List<LockPatternView.Cell> pattern = byteArrayToPattern(password);
-                    return LockscreenCredential.createPattern(pattern);
+                    return LockscreenCredential.createPattern(pattern,
+                            LockPatternUtils.PATTERN_SIZE_DEFAULT);
                 default:
                     LOG.e("Unrecognized lockscreen credential type: " + lockType);
                     return null;
