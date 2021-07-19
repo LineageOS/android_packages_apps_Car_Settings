@@ -179,7 +179,8 @@ public class ConfirmLockPatternFragment extends BaseFragment {
 
     private void onCheckCompleted(boolean lockMatched, int timeoutMs) {
         if (lockMatched) {
-            mCheckLockListener.onLockVerified(LockscreenCredential.createPattern(mPattern));
+            mCheckLockListener.onLockVerified(LockscreenCredential.createPattern(mPattern,
+                    mConfirmLockLockoutHelper.getLockPatternUtils().getLockPatternSize(mUserId)));
         } else {
             if (timeoutMs > 0) {
                 mConfirmLockLockoutHelper.onCheckCompletedWithTimeout(timeoutMs);
