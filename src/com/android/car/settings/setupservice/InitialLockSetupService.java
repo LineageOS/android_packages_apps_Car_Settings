@@ -89,7 +89,8 @@ public class InitialLockSetupService extends Service {
         for (int i = 0; i < pattern.length; i++) {
             outputList.add(LockPatternView.Cell.of(
                     InitialLockSetupHelper.getPatternCellRowFromByte(pattern[i]),
-                    InitialLockSetupHelper.getPatternCellColumnFromByte(pattern[i])));
+                    InitialLockSetupHelper.getPatternCellColumnFromByte(pattern[i]),
+                            LockPatternUtils.PATTERN_SIZE_DEFAULT));
         }
         return outputList;
     }
@@ -186,7 +187,8 @@ public class InitialLockSetupService extends Service {
                         // LockPatternUtils pattern format.
                         List<LockPatternView.Cell> pattern = toSettingsPattern(password);
                         lockPatternUtils.setLockCredential(
-                                LockscreenCredential.createPattern(pattern),
+                                LockscreenCredential.createPattern(pattern,
+                                        LockPatternUtils.PATTERN_SIZE_DEFAULT),
                                 /* savedPassword= */ LockscreenCredential.createNone(),
                                 userId);
                         pattern.clear();
