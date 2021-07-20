@@ -18,9 +18,15 @@ package com.android.car.settings.privacy;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.pm.PermissionGroupInfo;
+import android.graphics.drawable.Drawable;
 import android.hardware.SensorPrivacyManager;
 
+import com.android.car.apps.common.util.Themes;
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 import com.android.internal.annotations.VisibleForTesting;
@@ -28,6 +34,8 @@ import com.android.internal.annotations.VisibleForTesting;
 /** Business logic for controlling the mute mic setting. */
 public class MuteMicTogglePreferenceController
         extends PreferenceController<CarUiTwoActionSwitchPreference> {
+    private static final Logger LOG = new Logger(MuteMicTogglePreferenceController.class);
+    public static final String PERMISSION_GROUP_MICROPHONE = "android.permission-group.MICROPHONE";
 
     private SensorPrivacyManager mSensorPrivacyManager;
 
@@ -38,6 +46,8 @@ public class MuteMicTogglePreferenceController
                     refreshUi();
                 }
             };
+
+    private PackageManager mPm;
 
     public MuteMicTogglePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -51,6 +61,7 @@ public class MuteMicTogglePreferenceController
             SensorPrivacyManager sensorPrivacyManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mSensorPrivacyManager = sensorPrivacyManager;
+        mPm = context.getPackageManager();
     }
 
     @Override
@@ -60,6 +71,18 @@ public class MuteMicTogglePreferenceController
 
     @Override
     protected void onCreateInternal() {
+        try {
+            PermissionGroupInfo groupInfo = mPm.getPermissionGroupInfo(
+                    PERMISSION_GROUP_MICROPHONE,
+                    /* flags= */ 0);
+            Drawable icon = groupInfo.loadIcon(mPm);
+            icon.mutate().setTintList(Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
+            getPreference().setIcon(icon);
+        } catch (PackageManager.NameNotFoundException e) {
+            // fall back to using the CarSettings icon specified in the resource file
+            LOG.e("Unable to load permission icon from PackageManager", e);
+        }
+
         getPreference().setOnSecondaryActionClickListener(isChecked -> {
             // Settings UX currently shows "checked means mic is enabled", but the underlying API is
             // inversely written around "is mic muted?" So we must be careful when doing
