@@ -58,6 +58,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="attr" name="maxLabel"/>
       <item type="attr" name="min"/>
       <item type="attr" name="minLabel"/>
+      <item type="attr" name="mute_icon"/>
       <item type="attr" name="profileSwitcherAddIconBackgroundColor"/>
       <item type="attr" name="profileSwitcherAddIconColor"/>
       <item type="attr" name="profileSwitcherBackground"/>
@@ -263,6 +264,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="brightness_seekbar_track"/>
       <item type="drawable" name="button_ripple_bg"/>
       <item type="drawable" name="car_ic_navigation"/>
+      <item type="drawable" name="car_ic_navigation_mute"/>
+      <item type="drawable" name="car_ic_phone_volume"/>
+      <item type="drawable" name="car_ic_phone_volume_mute"/>
       <item type="drawable" name="circle_bg"/>
       <item type="drawable" name="circle_ripple_bg"/>
       <item type="drawable" name="color_progress_bar"/>
