@@ -825,6 +825,8 @@
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
     <string name="location_settings_title">Location</string>
+    <!-- Title of location toggle setting [CHAR LIMIT=40] -->
+    <string name="location_toggle_title">Use location</string>
     <!-- Title of Recent Location Requests setting [CHAR LIMIT=60] -->
     <string name="location_settings_recent_requests_title">Recent Location Requests</string>
     <!-- Message indicating that no apps have requested location recently [CHAR LIMIT=60] -->
