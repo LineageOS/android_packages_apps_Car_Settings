@@ -73,8 +73,16 @@ public class MobileDataTogglePreferenceController extends
 
     public MobileDataTogglePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        this(context, preferenceKey, fragmentController, uxRestrictions,
+                context.getSystemService(SubscriptionManager.class));
+    }
+
+    @VisibleForTesting
+    MobileDataTogglePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            SubscriptionManager subscriptionManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mSubscriptionManager = getContext().getSystemService(SubscriptionManager.class);
+        mSubscriptionManager = subscriptionManager;
     }
 
     @Override
@@ -137,7 +145,7 @@ public class MobileDataTogglePreferenceController extends
     protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
         boolean newToggleValue = (boolean) newValue;
         boolean isMultiSim = (mTelephonyManager.getSimCount() > 1);
-        int defaultSubId = mSubscriptionManager.getDefaultDataSubscriptionId();
+        int defaultSubId = SubscriptionManager.getDefaultDataSubscriptionId();
         boolean needToDisableOthers = mSubscriptionManager.isActiveSubscriptionId(defaultSubId)
                 && mSubId != defaultSubId;
 
