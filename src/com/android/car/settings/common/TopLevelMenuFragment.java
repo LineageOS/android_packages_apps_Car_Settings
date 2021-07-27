@@ -32,7 +32,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
 import com.android.car.ui.recyclerview.CarUiRecyclerView;
@@ -81,11 +80,10 @@ public class TopLevelMenuFragment extends SettingsFragment {
     }
 
     @Override
-    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+    public CarUiRecyclerView onCreateCarUiRecyclerView(LayoutInflater inflater, ViewGroup parent,
             Bundle savedInstanceState) {
         inflater.inflate(R.layout.top_level_recyclerview, parent, /* attachToRoot= */ true);
-        return ((CarUiRecyclerView) parent.requireViewById(R.id.top_level_recycler_view))
-                .getRecyclerView();
+        return super.onCreateCarUiRecyclerView(inflater, parent, savedInstanceState);
     }
 
     @Override
