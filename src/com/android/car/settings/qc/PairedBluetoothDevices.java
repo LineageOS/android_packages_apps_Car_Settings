@@ -1,0 +1,290 @@
+/*
+ * Copyright (C) 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.android.car.settings.qc;
+
+import static android.os.UserManager.DISALLOW_BLUETOOTH;
+
+import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
+import static com.android.car.qc.QCItem.QC_TYPE_ACTION_TOGGLE;
+
+import android.app.PendingIntent;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothClass;
+import android.bluetooth.BluetoothProfile;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Icon;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.UserManager;
+import android.provider.Settings;
+import android.util.Pair;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.VisibleForTesting;
+
+import com.android.car.qc.QCActionItem;
+import com.android.car.qc.QCItem;
+import com.android.car.qc.QCList;
+import com.android.car.qc.QCRow;
+import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
+import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
+import com.android.settingslib.bluetooth.BluetoothUtils;
+import com.android.settingslib.bluetooth.CachedBluetoothDevice;
+import com.android.settingslib.bluetooth.HidProfile;
+import com.android.settingslib.bluetooth.LocalBluetoothManager;
+import com.android.settingslib.bluetooth.LocalBluetoothProfile;
+
+import java.util.Collection;
+import java.util.List;
+
+/**
+ * QCItem for showing paired bluetooth devices.
+ */
+public class PairedBluetoothDevices extends SettingsQCItem {
+    @VisibleForTesting
+    static final String EXTRA_DEVICE_KEY = "BT_EXTRA_DEVICE_KEY";
+    @VisibleForTesting
+    static final String EXTRA_BUTTON_TYPE = "BT_EXTRA_BUTTON_TYPE";
+    @VisibleForTesting
+    static final String BLUETOOTH_BUTTON = "BLUETOOTH_BUTTON";
+    @VisibleForTesting
+    static final String PHONE_BUTTON = "PHONE_BUTTON";
+    @VisibleForTesting
+    static final String MEDIA_BUTTON = "MEDIA_BUTTON";
+    private static final Logger LOG = new Logger(PairedBluetoothDevices.class);
+
+    private final LocalBluetoothManager mBluetoothManager;
+    private final UserManager mUserManager;
+
+    public PairedBluetoothDevices(Context context) {
+        super(context);
+        mBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */ null);
+        mUserManager = UserManager.get(context);
+    }
+
+    @Override
+    QCItem getQCItem() {
+        if (!getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
+                || mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)
+                || !BluetoothAdapter.getDefaultAdapter().isEnabled()) {
+            return null;
+        }
+
+        Intent primaryIntent = new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);
+        primaryIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        Collection<CachedBluetoothDevice> cachedDevices =
+                mBluetoothManager.getCachedDeviceManager().getCachedDevicesCopy();
+
+        QCList.Builder listBuilder = new QCList.Builder();
+
+        int i = 0;
+        for (CachedBluetoothDevice cachedDevice : cachedDevices) {
+            if (BluetoothDeviceFilter.BONDED_DEVICE_FILTER.matches(cachedDevice.getDevice())) {
+                listBuilder.addRow(new QCRow.Builder()
+                        .setTitle(cachedDevice.getName())
+                        .setSubtitle(getSubtitle(cachedDevice))
+                        .setIcon(Icon.createWithResource(getContext(), getIconRes(cachedDevice)))
+                        .setPrimaryAction(getActivityIntent(primaryIntent))
+                        .addEndItem(createBluetoothButton(cachedDevice, i++))
+                        .addEndItem(createPhoneButton(cachedDevice, i++))
+                        .addEndItem(createMediaButton(cachedDevice, i++))
+                        .build()
+                );
+            }
+        }
+
+        return listBuilder.build();
+    }
+
+    @Override
+    Uri getUri() {
+        return SettingsQCRegistry.PAIRED_BLUETOOTH_DEVICES_URI;
+    }
+
+
+    @Override
+    void onNotifyChange(Intent intent) {
+        String deviceKey = intent.getStringExtra(EXTRA_DEVICE_KEY);
+        if (deviceKey == null) {
+            return;
+        }
+        CachedBluetoothDevice device = null;
+        Collection<CachedBluetoothDevice> cachedDevices =
+                mBluetoothManager.getCachedDeviceManager().getCachedDevicesCopy();
+        for (CachedBluetoothDevice cachedDevice : cachedDevices) {
+            if (cachedDevice.getAddress().equals(deviceKey)) {
+                device = cachedDevice;
+                break;
+            }
+        }
+        if (device == null) {
+            return;
+        }
+
+        String buttonType = intent.getStringExtra(EXTRA_BUTTON_TYPE);
+        boolean newState = intent.getBooleanExtra(QC_ACTION_TOGGLE_STATE, true);
+        if (BLUETOOTH_BUTTON.equals(buttonType)) {
+            if (newState) {
+                LocalBluetoothProfile phoneProfile = getProfile(device,
+                        BluetoothProfile.HEADSET_CLIENT);
+                LocalBluetoothProfile mediaProfile = getProfile(device, BluetoothProfile.A2DP_SINK);
+                // If trying to connect and both phone and media are disabled, connecting will
+                // always fail. In this case force both profiles on.
+                if (phoneProfile != null && mediaProfile != null
+                        && !phoneProfile.isEnabled(device.getDevice())
+                        && !mediaProfile.isEnabled(device.getDevice())) {
+                    phoneProfile.setEnabled(device.getDevice(), true);
+                    mediaProfile.setEnabled(device.getDevice(), true);
+                }
+                device.connect();
+            } else if (device.isConnected()) {
+                device.disconnect();
+            }
+        } else if (PHONE_BUTTON.equals(buttonType)) {
+            LocalBluetoothProfile profile = getProfile(device, BluetoothProfile.HEADSET_CLIENT);
+            if (profile != null) {
+                profile.setEnabled(device.getDevice(), newState);
+            }
+        } else if (MEDIA_BUTTON.equals(buttonType)) {
+            LocalBluetoothProfile profile = getProfile(device, BluetoothProfile.A2DP_SINK);
+            if (profile != null) {
+                profile.setEnabled(device.getDevice(), newState);
+            }
+        } else {
+            LOG.d("Unknown button type: " + buttonType);
+        }
+    }
+
+    @Override
+    Class getBackgroundWorkerClass() {
+        return PairedBluetoothDevicesWorker.class;
+    }
+
+    private String getSubtitle(CachedBluetoothDevice device) {
+        if (device.isConnected()) {
+            return getContext().getString(BluetoothUtils
+                            .getConnectionStateSummary(BluetoothProfile.STATE_CONNECTED),
+                    /* appended text= */ "");
+        }
+        return device.getCarConnectionSummary();
+    }
+
+    @DrawableRes
+    private int getIconRes(CachedBluetoothDevice device) {
+        BluetoothClass btClass = device.getBtClass();
+        if (btClass != null) {
+            switch (btClass.getMajorDeviceClass()) {
+                case BluetoothClass.Device.Major.COMPUTER:
+                    return com.android.internal.R.drawable.ic_bt_laptop;
+                case BluetoothClass.Device.Major.PHONE:
+                    return com.android.internal.R.drawable.ic_phone;
+                case BluetoothClass.Device.Major.PERIPHERAL:
+                    return HidProfile.getHidClassDrawable(btClass);
+                case BluetoothClass.Device.Major.IMAGING:
+                    return com.android.internal.R.drawable.ic_settings_print;
+                default:
+                    // unrecognized device class; continue
+            }
+        }
+
+        List<LocalBluetoothProfile> profiles = device.getProfiles();
+        for (LocalBluetoothProfile profile : profiles) {
+            int resId = profile.getDrawableResource(btClass);
+            if (resId != 0) {
+                return resId;
+            }
+        }
+        if (btClass != null) {
+            if (btClass.doesClassMatch(BluetoothClass.PROFILE_HEADSET)) {
+                return com.android.internal.R.drawable.ic_bt_headset_hfp;
+            }
+            if (btClass.doesClassMatch(BluetoothClass.PROFILE_A2DP)) {
+                return com.android.internal.R.drawable.ic_bt_headphones_a2dp;
+            }
+        }
+        return com.android.internal.R.drawable.ic_settings_bluetooth;
+    }
+
+    private QCActionItem createBluetoothButton(CachedBluetoothDevice device, int requestCode) {
+        return createBluetoothDeviceToggle(device, requestCode, BLUETOOTH_BUTTON,
+                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth), !device.isBusy(),
+                device.isConnected());
+    }
+
+    private QCActionItem createPhoneButton(CachedBluetoothDevice device, int requestCode) {
+        Pair<Boolean, Boolean> phoneState = getBluetoothProfileState(device,
+                BluetoothProfile.HEADSET_CLIENT);
+        return createBluetoothDeviceToggle(device, requestCode, PHONE_BUTTON,
+                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth_phone),
+                phoneState.first, phoneState.second);
+    }
+
+    private QCActionItem createMediaButton(CachedBluetoothDevice device, int requestCode) {
+        Pair<Boolean, Boolean> mediaState = getBluetoothProfileState(device,
+                BluetoothProfile.A2DP_SINK);
+        return createBluetoothDeviceToggle(device, requestCode, MEDIA_BUTTON,
+                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth_media),
+                mediaState.first, mediaState.second);
+    }
+
+    private QCActionItem createBluetoothDeviceToggle(CachedBluetoothDevice device, int requestCode,
+            String buttonType, Icon icon, boolean enabled, boolean checked) {
+        Bundle extras = new Bundle();
+        extras.putString(EXTRA_BUTTON_TYPE, buttonType);
+        extras.putString(EXTRA_DEVICE_KEY, device.getAddress());
+        PendingIntent action = getBroadcastIntent(extras, requestCode);
+
+        return new QCActionItem.Builder(QC_TYPE_ACTION_TOGGLE)
+                .setChecked(checked)
+                .setEnabled(enabled)
+                .setAction(action)
+                .setIcon(icon)
+                .build();
+    }
+
+    /**
+     * Returns a pair representing the state for a profile button.
+     * Pair.first = enabled state
+     * Pair.second = checked state
+     */
+    private Pair<Boolean, Boolean> getBluetoothProfileState(CachedBluetoothDevice device,
+            int profileId) {
+        if (device.isBusy()) {
+            return Pair.create(false, false);
+        }
+
+        LocalBluetoothProfile profile = getProfile(device, profileId);
+        boolean isConnected = device.isConnected();
+        if (profile == null || !isConnected) {
+            return Pair.create(false, false);
+        }
+        return Pair.create(true, profile.isEnabled(device.getDevice()));
+    }
+
+    private LocalBluetoothProfile getProfile(CachedBluetoothDevice device, int profileId) {
+        for (LocalBluetoothProfile profile : device.getProfiles()) {
+            if (profile.getProfileId() == profileId) {
+                return profile;
+            }
+        }
+        return null;
+    }
+}
