@@ -45,4 +45,11 @@
     <color name="bluetooth_disabled_device_background_color">@android:color/black</color>
     <color name="bluetooth_disabled_device_icon_color">#75FFFFFF</color>
     <color name="bluetooth_device_icon_color">@android:color/white</color>
+
+    <!-- Quick Controls -->
+    <!--
+        By default, the Quick Controls view will tint the provided icon to the configured value.
+        Therefore, the color specified here is more of a placeholder to create the initial fill.
+    -->
+    <color name="qc_default_icon_color">@android:color/white</color>
 </resources>
