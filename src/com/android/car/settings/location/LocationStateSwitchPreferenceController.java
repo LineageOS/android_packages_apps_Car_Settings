@@ -125,8 +125,6 @@ public class LocationStateSwitchPreferenceController extends
 
     private void updateSwitchPreference(ClickableWhileDisabledSwitchPreference preference,
             boolean enabled) {
-        preference.setTitle(enabled ? R.string.car_ui_preference_switch_on
-                : R.string.car_ui_preference_switch_off);
         preference.setChecked(enabled);
     }
 
