@@ -22,6 +22,7 @@
     android:key="@string/psk_location_settings">
     <com.android.car.settings.common.ClickableWhileDisabledSwitchPreference
         android:key="@string/pk_location_state_switch"
+        android:title="@string/location_toggle_title"
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.location.LocationStateSwitchPreferenceController"
         settings:searchable="false"/>
