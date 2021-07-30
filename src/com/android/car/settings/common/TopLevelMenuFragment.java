@@ -83,7 +83,7 @@ public class TopLevelMenuFragment extends SettingsFragment {
     public CarUiRecyclerView onCreateCarUiRecyclerView(LayoutInflater inflater, ViewGroup parent,
             Bundle savedInstanceState) {
         inflater.inflate(R.layout.top_level_recyclerview, parent, /* attachToRoot= */ true);
-        return super.onCreateCarUiRecyclerView(inflater, parent, savedInstanceState);
+        return parent.findViewById(R.id.top_level_recycler_view);
     }
 
     @Override
