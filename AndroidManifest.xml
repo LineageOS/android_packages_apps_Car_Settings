@@ -794,7 +794,7 @@
 
         <activity
             android:name=".security.ChooseLockPasswordActivity"
-            android:windowSoftInputMode="adjustPan"
+            android:windowSoftInputMode="adjustResize"
             android:noHistory="true"
             android:exported="false">
             <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
