@@ -957,6 +957,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="media_volume_summary"/>
       <item type="string" name="media_volume_title"/>
       <item type="string" name="memory_calculating_size"/>
+      <item type="string" name="microphone_settings_title"/>
+      <item type="string" name="microphone_toggle_title"/>
       <item type="string" name="mobile_network_active_esim"/>
       <item type="string" name="mobile_network_active_sim"/>
       <item type="string" name="mobile_network_inactive_esim"/>
@@ -1395,6 +1397,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="notifications_fragment"/>
       <item type="xml" name="preferred_engine_fragment"/>
       <item type="xml" name="premium_sms_access_fragment"/>
+      <item type="xml" name="privacy_microphone_settings_fragment"/>
       <item type="xml" name="privacy_settings_fragment"/>
       <item type="xml" name="profile_details_fragment"/>
       <item type="xml" name="profile_details_permissions_fragment"/>

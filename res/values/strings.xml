@@ -845,6 +845,12 @@
         your device\u2019s location.
     </string>
 
+    <!-- Microphone --><skip/>
+    <!-- Title of microphone settings screen [CHAR LIMIT=40] -->
+    <string name="microphone_settings_title">Microphone</string>
+    <!-- Title of setting to toggle microphone [CHAR LIMIT=40] -->
+    <string name="microphone_toggle_title">Use microphone</string>
+
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->
     <string name="system_setting_title">System</string>
