@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
@@ -52,19 +53,20 @@ public class LocationStateSwitchPreferenceControllerTest {
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private SwitchPreference mSwitchPreference;
     private LocationStateSwitchPreferenceController mPreferenceController;
-    private LocationManager mLocationManager;
     private CarUxRestrictions mCarUxRestrictions;
     private UserHandle mUserHandle;
 
     @Mock
     private FragmentController mFragmentController;
+    @Mock
+    private LocationManager mLocationManager;
 
     @Before
     public void setUp() {
         mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
-        mLocationManager = mContext.getSystemService(LocationManager.class);
+        when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -85,7 +87,7 @@ public class LocationStateSwitchPreferenceControllerTest {
                 BroadcastReceiver.class);
         verify(mContext).registerReceiver(broadcastReceiverArgumentCaptor.capture(), any());
 
-        mLocationManager.setLocationEnabledForUser(/* enabled= */ true, mUserHandle);
+        when(mLocationManager.isLocationEnabled()).thenReturn(true);
         broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
                 new Intent(LocationManager.MODE_CHANGED_ACTION));
         assertThat(mSwitchPreference.isChecked()).isTrue();
@@ -98,7 +100,7 @@ public class LocationStateSwitchPreferenceControllerTest {
         mSwitchPreference.performClick();
 
         assertThat(mSwitchPreference.isChecked()).isTrue();
-        assertThat(mLocationManager.isLocationEnabledForUser(mUserHandle)).isTrue();
+        verify(mLocationManager).setLocationEnabledForUser(/* enabled= */ true, mUserHandle);
     }
 
     @Test
@@ -108,7 +110,7 @@ public class LocationStateSwitchPreferenceControllerTest {
         mSwitchPreference.performClick();
 
         assertThat(mSwitchPreference.isChecked()).isFalse();
-        assertThat(mLocationManager.isLocationEnabledForUser(mUserHandle)).isFalse();
+        verify(mLocationManager).setLocationEnabledForUser(/* enabled= */ false, mUserHandle);
     }
 
     @Test
@@ -132,7 +134,7 @@ public class LocationStateSwitchPreferenceControllerTest {
     }
 
     private void initializePreference(boolean checked, boolean enabled) {
-        mLocationManager.setLocationEnabledForUser(checked, mUserHandle);
+        when(mLocationManager.isLocationEnabled()).thenReturn(enabled);
         mSwitchPreference.setChecked(checked);
         mSwitchPreference.setEnabled(enabled);
     }
