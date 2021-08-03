@@ -31,10 +31,10 @@ import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 import com.android.internal.annotations.VisibleForTesting;
 
-/** Business logic for controlling the mute mic setting. */
-public class MuteMicTogglePreferenceController
+/** Business logic for controlling the privacy center mic setting. */
+public class MicPreferenceController
         extends PreferenceController<CarUiTwoActionSwitchPreference> {
-    private static final Logger LOG = new Logger(MuteMicTogglePreferenceController.class);
+    private static final Logger LOG = new Logger(MicPreferenceController.class);
     public static final String PERMISSION_GROUP_MICROPHONE = "android.permission-group.MICROPHONE";
 
     private SensorPrivacyManager mSensorPrivacyManager;
@@ -49,14 +49,14 @@ public class MuteMicTogglePreferenceController
 
     private PackageManager mPm;
 
-    public MuteMicTogglePreferenceController(Context context, String preferenceKey,
+    public MicPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions,
                 SensorPrivacyManager.getInstance(context));
     }
 
     @VisibleForTesting
-    MuteMicTogglePreferenceController(Context context, String preferenceKey,
+    MicPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
             SensorPrivacyManager sensorPrivacyManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
