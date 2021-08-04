@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
@@ -54,10 +55,11 @@ public class LocationTogglePreferenceControllerTest {
     private LocationTogglePreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
     private UserHandle mUserHandle;
-    private LocationManager mLocationManager;
 
     @Mock
     private FragmentController mFragmentController;
+    @Mock
+    private LocationManager mLocationManager;
 
     @Captor
     private ArgumentCaptor<BroadcastReceiver> mListener;
@@ -67,7 +69,7 @@ public class LocationTogglePreferenceControllerTest {
         mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
-        mLocationManager = mContext.getSystemService(LocationManager.class);
+        when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -85,7 +87,7 @@ public class LocationTogglePreferenceControllerTest {
 
         mSwitchPreference.performSecondaryActionClick();
 
-        assertThat(mLocationManager.isLocationEnabledForUser(mUserHandle)).isFalse();
+        verify(mLocationManager).setLocationEnabledForUser(/* enabled= */ false, mUserHandle);
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
     }
 
@@ -95,7 +97,7 @@ public class LocationTogglePreferenceControllerTest {
 
         mSwitchPreference.performSecondaryActionClick();
 
-        assertThat(mLocationManager.isLocationEnabledForUser(mUserHandle)).isTrue();
+        verify(mLocationManager).setLocationEnabledForUser(/* enabled= */ true, mUserHandle);
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
     }
 
@@ -103,7 +105,7 @@ public class LocationTogglePreferenceControllerTest {
     public void onListenerUpdate_locationDisabled_shouldUpdateChecked() {
         initializePreference(/* isLocationEnabled= */ false);
 
-        mLocationManager.setLocationEnabledForUser(true, mUserHandle);
+        when(mLocationManager.isLocationEnabled()).thenReturn(true);
         mListener.getValue().onReceive(mContext, new Intent(LocationManager.MODE_CHANGED_ACTION));
 
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
@@ -113,16 +115,17 @@ public class LocationTogglePreferenceControllerTest {
     public void onListenerUpdate_locationEnabled_shouldUpdateChecked() {
         initializePreference(/* isLocationEnabled= */ true);
 
-        mLocationManager.setLocationEnabledForUser(false, mUserHandle);
+        when(mLocationManager.isLocationEnabled()).thenReturn(false);
         mListener.getValue().onReceive(mContext, new Intent(LocationManager.MODE_CHANGED_ACTION));
 
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
     }
 
     private void initializePreference(boolean isLocationEnabled) {
-        mLocationManager.setLocationEnabledForUser(isLocationEnabled, mUserHandle);
+        when(mLocationManager.isLocationEnabled()).thenReturn(isLocationEnabled);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
         verify(mContext).registerReceiver(mListener.capture(),
                 eq(LocationTogglePreferenceController.INTENT_FILTER_LOCATION_MODE_CHANGED));
-    }}
+    }
+}
