@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,39 +17,44 @@
 package com.android.car.settings.applications.managedomainurls;
 
 import static android.content.pm.PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS;
-import static android.content.pm.PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK;
+import static android.content.pm.PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ASK;
 import static android.content.pm.PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_NEVER;
+import static android.content.pm.PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_UNDEFINED;
+
+import static com.android.car.settings.applications.managedomainurls.AppLaunchSettingsBasePreferenceController.sBrowserIntent;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.when;
+
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.UserHandle;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.ListPreference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowApplicationPackageManager;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
 
-import java.util.Arrays;
+import java.util.Collections;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowApplicationPackageManager.class})
+@RunWith(AndroidJUnit4.class)
 public class AppLinkStatePreferenceControllerTest {
 
     private static final String TEST_PACKAGE_NAME = "com.example.test";
@@ -57,29 +62,33 @@ public class AppLinkStatePreferenceControllerTest {
     private static final String TEST_PATH = "TEST_PATH";
     private final int mUserId = UserHandle.myUserId();
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
     private ListPreference mPreference;
-    private PreferenceControllerTestHelper<AppLinkStatePreferenceController> mControllerHelper;
-    private AppLinkStatePreferenceController mController;
+    private AppLinkStatePreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mMockFragmentController;
+    @Mock
+    private PackageManager mMockPackageManager;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
 
-        mContext = RuntimeEnvironment.application;
         mPreference = new ListPreference(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                AppLinkStatePreferenceController.class);
-        mController = mControllerHelper.getController();
-    }
-
-    @After
-    public void tearDown() {
-        ShadowApplicationPackageManager.reset();
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mPreferenceController = new AppLinkStatePreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController,
+                mCarUxRestrictions, mMockPackageManager);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
     }
 
     @Test
-    public void refreshUi_isBrowserApp_isDisabled() {
+    public void onCreate_isBrowserApp_isDisabled() {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
         info.uid = TEST_PACKAGE_ID;
@@ -89,17 +98,14 @@ public class AppLinkStatePreferenceControllerTest {
 
         setupIsBrowserApp(true);
 
-        mController.setAppEntry(entry);
-        mControllerHelper.setPreference(mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        mController.refreshUi();
+        mPreferenceController.setAppEntry(entry);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isEnabled()).isFalse();
     }
 
     @Test
-    public void refreshUi_isNotBrowserApp_noDomainUrls_isDisabled() {
+    public void onCreate_isNotBrowserApp_noDomainUrls_isDisabled() {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
         info.uid = TEST_PACKAGE_ID;
@@ -110,17 +116,14 @@ public class AppLinkStatePreferenceControllerTest {
 
         setupIsBrowserApp(false);
 
-        mController.setAppEntry(entry);
-        mControllerHelper.setPreference(mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        mController.refreshUi();
+        mPreferenceController.setAppEntry(entry);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isEnabled()).isFalse();
     }
 
     @Test
-    public void refreshUi_isNotBrowserApp_hasDomainUrls_isEnabled() {
+    public void onCreate_isNotBrowserApp_hasDomainUrls_isEnabled() {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
         info.uid = TEST_PACKAGE_ID;
@@ -131,17 +134,14 @@ public class AppLinkStatePreferenceControllerTest {
 
         setupIsBrowserApp(false);
 
-        mController.setAppEntry(entry);
-        mControllerHelper.setPreference(mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        mController.refreshUi();
+        mPreferenceController.setAppEntry(entry);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isEnabled()).isTrue();
     }
 
     @Test
-    public void refreshUi_isNotBrowserApp_hasDomainUrls_defaultState_entrySetToAsk() {
+    public void onCreate_isNotBrowserApp_hasDomainUrls_defaultState_entrySetToAsk() {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
         info.uid = TEST_PACKAGE_ID;
@@ -151,19 +151,18 @@ public class AppLinkStatePreferenceControllerTest {
                 TEST_PACKAGE_ID);
 
         setupIsBrowserApp(false);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE_NAME, mUserId))
+                .thenReturn(INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_UNDEFINED);
 
-        mController.setAppEntry(entry);
-        mControllerHelper.setPreference(mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        mController.refreshUi();
+        mPreferenceController.setAppEntry(entry);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.getEntry()).isEqualTo(
                 mContext.getString(R.string.app_link_open_ask));
     }
 
     @Test
-    public void refreshUi_isNotBrowserApp_hasDomainUrls_askState_entrySetToAsk() {
+    public void onCreate_isNotBrowserApp_hasDomainUrls_askState_entrySetToAsk() {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
         info.uid = TEST_PACKAGE_ID;
@@ -173,21 +172,18 @@ public class AppLinkStatePreferenceControllerTest {
                 TEST_PACKAGE_ID);
 
         setupIsBrowserApp(false);
-        mContext.getPackageManager().updateIntentVerificationStatusAsUser(TEST_PACKAGE_NAME,
-                INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK, mUserId);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE_NAME, mUserId))
+                .thenReturn(INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ASK);
 
-        mController.setAppEntry(entry);
-        mControllerHelper.setPreference(mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        mController.refreshUi();
+        mPreferenceController.setAppEntry(entry);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.getEntry()).isEqualTo(
                 mContext.getString(R.string.app_link_open_ask));
     }
 
     @Test
-    public void refreshUi_isNotBrowserApp_hasDomainUrls_alwaysState_entrySetToAlways() {
+    public void onCreate_isNotBrowserApp_hasDomainUrls_alwaysState_entrySetToAlways() {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
         info.uid = TEST_PACKAGE_ID;
@@ -197,21 +193,18 @@ public class AppLinkStatePreferenceControllerTest {
                 TEST_PACKAGE_ID);
 
         setupIsBrowserApp(false);
-        mContext.getPackageManager().updateIntentVerificationStatusAsUser(TEST_PACKAGE_NAME,
-                INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS, mUserId);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE_NAME, mUserId))
+                .thenReturn(INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS);
 
-        mController.setAppEntry(entry);
-        mControllerHelper.setPreference(mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        mController.refreshUi();
+        mPreferenceController.setAppEntry(entry);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.getEntry()).isEqualTo(
                 mContext.getString(R.string.app_link_open_always));
     }
 
     @Test
-    public void refreshUi_isNotBrowserApp_hasDomainUrls_neverState_entrySetToNever() {
+    public void onCreate_isNotBrowserApp_hasDomainUrls_neverState_entrySetToNever() {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
         info.uid = TEST_PACKAGE_ID;
@@ -221,14 +214,11 @@ public class AppLinkStatePreferenceControllerTest {
                 TEST_PACKAGE_ID);
 
         setupIsBrowserApp(false);
-        mContext.getPackageManager().updateIntentVerificationStatusAsUser(TEST_PACKAGE_NAME,
-                INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_NEVER, mUserId);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE_NAME, mUserId))
+                .thenReturn(INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_NEVER);
 
-        mController.setAppEntry(entry);
-        mControllerHelper.setPreference(mPreference);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        mController.refreshUi();
+        mPreferenceController.setAppEntry(entry);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.getEntry()).isEqualTo(
                 mContext.getString(R.string.app_link_open_never));
@@ -238,13 +228,10 @@ public class AppLinkStatePreferenceControllerTest {
         ResolveInfo resolveInfo = new ResolveInfo();
         resolveInfo.activityInfo = new ActivityInfo();
         resolveInfo.handleAllWebDataURI = isBrowserApp;
-        AppLaunchSettingsBasePreferenceController.sBrowserIntent.setPackage(TEST_PACKAGE_NAME);
-        getShadowPackageManager().addResolveInfoForIntent(
-                AppLaunchSettingsBasePreferenceController.sBrowserIntent,
-                Arrays.asList(resolveInfo));
-    }
+        sBrowserIntent.setPackage(TEST_PACKAGE_NAME);
 
-    private ShadowApplicationPackageManager getShadowPackageManager() {
-        return Shadow.extract(mContext.getPackageManager());
+        when(mMockPackageManager.queryIntentActivitiesAsUser(sBrowserIntent,
+                PackageManager.MATCH_ALL, mUserId)).thenReturn(
+                Collections.singletonList(resolveInfo));
     }
 }
