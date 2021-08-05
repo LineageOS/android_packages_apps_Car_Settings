@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,13 +24,16 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.content.Context;
 import android.os.Looper;
 
-import com.android.car.settings.testutils.ShadowApplicationsState;
-import com.android.settingslib.applications.ApplicationsState;
-import com.android.settingslib.applications.ApplicationsState.AppEntry;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
 
-import org.junit.After;
+import com.android.settingslib.applications.ApplicationsState;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,125 +41,123 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/** Unit test for {@link AppEntryListManager}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowApplicationsState.class})
+@RunWith(AndroidJUnit4.class)
 public class AppEntryListManagerTest {
 
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private AppEntryListManager mAppEntryListManager;
+
     @Mock
-    private ApplicationsState mApplicationsState;
+    private ApplicationsState mMockApplicationsState;
     @Mock
-    private ApplicationsState.Session mSession;
+    private ApplicationsState.Session mMockSession;
     @Mock
-    private AppEntryListManager.ExtraInfoBridge mExtraInfoBridge;
+    private AppEntryListManager.ExtraInfoBridge mMockExtraInfoBridge;
     @Mock
-    private AppEntryListManager.AppFilterProvider mFilterProvider;
+    private AppEntryListManager.AppFilterProvider mMockFilterProvider;
     @Mock
-    private AppEntryListManager.Callback mCallback;
+    private AppEntryListManager.Callback mMockCallback;
     @Captor
     private ArgumentCaptor<ApplicationsState.Callbacks> mSessionCallbacksCaptor;
     @Captor
-    private ArgumentCaptor<List<AppEntry>> mEntriesCaptor;
-
-    private AppEntryListManager mAppEntryListManager;
+    private ArgumentCaptor<List<ApplicationsState.AppEntry>> mEntriesCaptor;
 
     @Before
+    @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowApplicationsState.setInstance(mApplicationsState);
-        when(mApplicationsState.newSession(mSessionCallbacksCaptor.capture())).thenReturn(mSession);
-        when(mApplicationsState.getBackgroundLooper()).thenReturn(Looper.getMainLooper());
 
-        mAppEntryListManager = new AppEntryListManager(RuntimeEnvironment.application);
-        mAppEntryListManager.init(mExtraInfoBridge, mFilterProvider, mCallback);
-    }
+        when(mMockApplicationsState.newSession(mSessionCallbacksCaptor.capture()))
+                .thenReturn(mMockSession);
+        when(mMockApplicationsState.getBackgroundLooper()).thenReturn(Looper.getMainLooper());
 
-    @After
-    public void tearDown() {
-        ShadowApplicationsState.reset();
+        mAppEntryListManager = new AppEntryListManager(mContext, mMockApplicationsState);
+        mAppEntryListManager.init(mMockExtraInfoBridge, mMockFilterProvider, mMockCallback);
     }
 
     @Test
     public void start_resumesSession() {
         mAppEntryListManager.start();
 
-        verify(mSession).onResume();
+        verify(mMockSession).onResume();
     }
 
     @Test
     public void onPackageListChanged_loadsExtraInfo() {
         mSessionCallbacksCaptor.getValue().onPackageListChanged();
 
-        verify(mExtraInfoBridge).loadExtraInfo(any());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        verify(mMockExtraInfoBridge).loadExtraInfo(any());
     }
 
     @Test
     public void onLoadEntriesComplete_loadsExtraInfo() {
         mSessionCallbacksCaptor.getValue().onLoadEntriesCompleted();
 
-        verify(mExtraInfoBridge).loadExtraInfo(any());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        verify(mMockExtraInfoBridge).loadExtraInfo(any());
     }
 
     @Test
     public void stop_pausesSession() {
         mAppEntryListManager.stop();
 
-        verify(mSession).onPause();
+        verify(mMockSession).onPause();
     }
 
     @Test
     public void destroy_destroysSession() {
         mAppEntryListManager.destroy();
 
-        verify(mSession).onDestroy();
+        verify(mMockSession).onDestroy();
     }
 
     @Test
     public void forceUpdate_loadsExtraInfo() {
-        ArrayList<AppEntry> entries = new ArrayList<>();
-        entries.add(mock(AppEntry.class));
-        when(mSession.getAllApps()).thenReturn(entries);
+        ArrayList<ApplicationsState.AppEntry> entries = new ArrayList<>();
+        entries.add(mock(ApplicationsState.AppEntry.class));
+        when(mMockSession.getAllApps()).thenReturn(entries);
 
         mAppEntryListManager.forceUpdate();
 
-        verify(mExtraInfoBridge).loadExtraInfo(entries);
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        verify(mMockExtraInfoBridge).loadExtraInfo(entries);
     }
 
     @Test
     public void forceUpdate_forEntry_loadsExtraInfo() {
-        AppEntry entry = mock(AppEntry.class);
+        ApplicationsState.AppEntry entry = mock(ApplicationsState.AppEntry.class);
 
         mAppEntryListManager.forceUpdate(entry);
 
-        verify(mExtraInfoBridge).loadExtraInfo(mEntriesCaptor.capture());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        verify(mMockExtraInfoBridge).loadExtraInfo(mEntriesCaptor.capture());
         assertThat(mEntriesCaptor.getValue()).containsExactly(entry);
     }
 
     @Test
     public void loadingFinished_rebuildsSession() {
         ApplicationsState.AppFilter appFilter = mock(ApplicationsState.AppFilter.class);
-        when(mFilterProvider.getAppFilter()).thenReturn(appFilter);
+        when(mMockFilterProvider.getAppFilter()).thenReturn(appFilter);
 
         mSessionCallbacksCaptor.getValue().onLoadEntriesCompleted();
 
-        verify(mSession).rebuild(eq(appFilter),
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        verify(mMockSession).rebuild(eq(appFilter),
                 eq(ApplicationsState.ALPHA_COMPARATOR), /* foreground= */ eq(false));
     }
 
     @Test
     public void onRebuildComplete_callsCallback() {
-        ArrayList<AppEntry> entries = new ArrayList<>();
-        entries.add(mock(AppEntry.class));
+        ArrayList<ApplicationsState.AppEntry> entries = new ArrayList<>();
+        entries.add(mock(ApplicationsState.AppEntry.class));
 
         mSessionCallbacksCaptor.getValue().onRebuildComplete(entries);
 
-        verify(mCallback).onAppEntryListChanged(entries);
+        verify(mMockCallback).onAppEntryListChanged(entries);
     }
 }
