@@ -1701,12 +1701,6 @@
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
     <string name="work_policy_privacy_settings_summary" translatable="false">Settings managed by your IT admin</string>
 
-    <!-- Power policy --><skip/>
-    <!-- Power components which are disabled by the current power policy cannot be toggled in Setting. [CHAR LIMIT=80] -->
-    <string name="power_component_disabled">This setting can\'t be changed right now</string>
-
-
-    <!-- TODO(b/186566325): remove translatable="false" once the string is finalized -->
     <!-- Remote request bugreport --><skip/>
     <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager. [CHAR LIMIT=50] -->
     <string name="share_remote_bugreport_dialog_title" translatable="false">Share bug report?</string>
@@ -1720,4 +1714,29 @@
     <string name="share_remote_bugreport_action" translatable="false">Share</string>
     <!-- Decline label of dialog shown to ask for user consent for sharing the remote bugreport. [CHAR LIMIT=20] -->
     <string name="decline_remote_bugreport_action" translatable="false">Decline</string>
+
+    <!-- Strings used by FactoryResetActivity --><skip/>
+    <!-- Title for the dialog when delayed factory reset is required [CHAR_LIMIT=60] -->
+    <string name="factory_reset_parked_title">Reset the infotainment system</string>
+    <!-- Message for the dialog when delayed factory reset is required [CHAR_LIMIT=NONE] -->
+    <string name="factory_reset_parked_text">Your system has received a request to factory reset and erase all data. You can reset it now, or it will reset the next time the car starts. You can then set up a new profile.</string>
+    <!-- Label for the button that will reset the device now [CHAR_LIMIT=20] -->
+    <string name="factory_reset_now_button">Reset Now</string>
+    <!-- Label for the button that will reset the device later [CHAR_LIMIT=20] -->
+    <string name="factory_reset_later_button">Reset Later</string>
+    <!-- Text of the toast shown when the factory reset will be delayed [CHAR_LIMIT=50] -->
+    <string name="factory_reset_later_text">The infotainment system will reset the next time the car starts.</string>
+    <!-- Text of the toast shown to when detailed factory reset information is requested when driving [CHAR_LIMIT=50]-->
+    <string name="factory_reset_driving_text">The car must be parked to start the reset.</string>
+
+    <!-- Strings used by NewUserDisclaimerActivity --><skip/>
+    <!--  TODO(b/177552737): STOPSHIP use proper sentence and remove translatable=false -->
+    <!--  Button on screen that warns the user that device is owned and managed by an enterprise
+          (like a car rental company), asking user to accept [CHAR_LIMIT=20] -->
+    <string name="new_user_managed_device_acceptance" translatable="false">Accept and continue</string>
+    <!-- End of Device Policy Management --><skip/>
+
+    <!-- Power policy --><skip/>
+    <!-- Power components which are disabled by the current power policy cannot be toggled in Setting. [CHAR LIMIT=80] -->
+    <string name="power_component_disabled">This setting can\'t be changed right now</string>
 </resources>
