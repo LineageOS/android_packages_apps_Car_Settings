@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,106 +16,95 @@
 
 package com.android.car.settings.applications.managedomainurls;
 
-import static android.content.pm.UserInfo.FLAG_ADMIN;
-
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
-import android.os.UserHandle;
-import android.os.UserManager;
+import android.content.pm.PackageManager;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowApplicationsState;
-import com.android.car.settings.testutils.ShadowIconDrawableFactory;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
-import com.android.settingslib.core.lifecycle.Lifecycle;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowUserManager;
 
 import java.util.ArrayList;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowIconDrawableFactory.class, ShadowApplicationsState.class})
+@RunWith(AndroidJUnit4.class)
 public class DomainAppPreferenceControllerTest {
 
     private static final String TEST_PACKAGE_NAME = "com.android.test.package";
     private static final int TEST_PACKAGE_ID = 1;
     private static final String TEST_LABEL = "Test App";
     private static final String TEST_PATH = "TEST_PATH";
-    private final int mUserId = UserHandle.myUserId();
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
     private PreferenceGroup mPreferenceGroup;
-    private PreferenceControllerTestHelper<DomainAppPreferenceController> mControllerHelper;
-    private DomainAppPreferenceController mController;
-    private Lifecycle mLifecycle;
+    private DomainAppPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
     @Mock
-    private ApplicationsState mApplicationsState;
+    private FragmentController mMockFragmentController;
+    @Mock
+    private PackageManager mMockPackageManager;
+    @Mock
+    private ApplicationsState mMockApplicationsState;
+    @Mock
+    private ApplicationsState.Session mMockSession;
 
     @Before
+    @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowApplicationsState.setInstance(mApplicationsState);
+        mLifecycleOwner = new TestLifecycleOwner();
 
-        mContext = RuntimeEnvironment.application;
-        getShadowUserManager().addProfile(mUserId, mUserId, "Test Name", /* profileFlags= */
-                FLAG_ADMIN);
-
-        when(mApplicationsState.newSession(any(), any())).thenReturn(
-                mock(ApplicationsState.Session.class));
-
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                DomainAppPreferenceController.class);
-        mController = mControllerHelper.getController();
-
-        LifecycleOwner lifecycleOwner = () -> mLifecycle;
-        mLifecycle = new Lifecycle(lifecycleOwner);
-        mController.setLifecycle(mLifecycle);
-
-        mControllerHelper.setPreference(mPreferenceGroup);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowApplicationsState.reset();
+        screen.addPreference(mPreferenceGroup);
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mPreferenceController = new DomainAppPreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController,
+                mCarUxRestrictions, mMockApplicationsState, mMockPackageManager);
     }
 
     @Test
     public void checkInitialized_noLifecycle_throwsError() {
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                DomainAppPreferenceController.class);
-
         assertThrows(IllegalStateException.class,
-                () -> mControllerHelper.setPreference(mPreferenceGroup));
+                () -> PreferenceControllerTestUtil.assignPreference(mPreferenceController,
+                        mPreferenceGroup));
     }
 
     @Test
     public void onRebuildComplete_sessionLoadsValues_preferenceGroupHasValues() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        setupPreferenceController();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
         ArrayList<ApplicationsState.AppEntry> apps = new ArrayList<>();
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
@@ -125,14 +114,18 @@ public class DomainAppPreferenceControllerTest {
                 TEST_PACKAGE_ID);
         entry.label = TEST_LABEL;
         apps.add(entry);
-        mController.mApplicationStateCallbacks.onRebuildComplete(apps);
+        mPreferenceController.mApplicationStateCallbacks.onRebuildComplete(apps);
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
     }
 
     @Test
+    @UiThreadTest
     public void performClick_startsApplicationLaunchSettingsFragmentWithPackageName() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        setupPreferenceController();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
         ArrayList<ApplicationsState.AppEntry> apps = new ArrayList<>();
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = TEST_PACKAGE_NAME;
@@ -142,21 +135,23 @@ public class DomainAppPreferenceControllerTest {
                 TEST_PACKAGE_ID);
         entry.label = TEST_LABEL;
         apps.add(entry);
-        mController.mApplicationStateCallbacks.onRebuildComplete(apps);
+        mPreferenceController.mApplicationStateCallbacks.onRebuildComplete(apps);
 
         Preference preference = mPreferenceGroup.getPreference(0);
         preference.performClick();
 
         ArgumentCaptor<ApplicationLaunchSettingsFragment> captor = ArgumentCaptor.forClass(
                 ApplicationLaunchSettingsFragment.class);
-        verify(mControllerHelper.getMockFragmentController()).launchFragment(captor.capture());
+        verify(mMockFragmentController).launchFragment(captor.capture());
 
         String pkgName = captor.getValue().getArguments().getString(
                 ApplicationLaunchSettingsFragment.ARG_PACKAGE_NAME);
         assertThat(pkgName).isEqualTo(TEST_PACKAGE_NAME);
     }
 
-    private ShadowUserManager getShadowUserManager() {
-        return Shadows.shadowOf(UserManager.get(mContext));
+    private void setupPreferenceController() {
+        when(mMockApplicationsState.newSession(any(), any())).thenReturn(mMockSession);
+        mPreferenceController.setLifecycle(mLifecycleOwner.getLifecycle());
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
     }
 }

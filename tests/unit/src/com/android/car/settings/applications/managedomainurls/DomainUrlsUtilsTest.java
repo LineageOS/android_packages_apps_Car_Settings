@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@ package com.android.car.settings.applications.managedomainurls;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
@@ -28,36 +29,40 @@ import android.content.pm.IntentFilterVerificationInfo;
 import android.content.pm.PackageManager;
 import android.util.ArraySet;
 
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowApplicationPackageManager.class})
+@RunWith(AndroidJUnit4.class)
 public class DomainUrlsUtilsTest {
 
     private static final String TEST_PACKAGE = "com.test.android.Package";
     private static final int USER_ID = 10;
 
-    private Context mContext;
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+
+    @Mock
+    private PackageManager mMockPackageManager;
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        MockitoAnnotations.initMocks(this);
     }
 
     @Test
     public void getDomainsSummary_domainStatusSetToNever_showNoneText() {
-        mContext.getPackageManager().updateIntentVerificationStatusAsUser(TEST_PACKAGE,
-                PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_NEVER, USER_ID);
+        when(mContext.getPackageManager()).thenReturn(mMockPackageManager);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE, USER_ID))
+                .thenReturn(PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_NEVER);
 
         assertThat(DomainUrlsUtils.getDomainsSummary(mContext, TEST_PACKAGE, USER_ID,
                 new ArraySet<>())).isEqualTo(mContext.getString(R.string.domain_urls_summary_none));
@@ -65,8 +70,9 @@ public class DomainUrlsUtilsTest {
 
     @Test
     public void getDomainsSummary_domainStatusSet_noDomains_showNoneText() {
-        mContext.getPackageManager().updateIntentVerificationStatusAsUser(TEST_PACKAGE,
-                PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK, USER_ID);
+        when(mContext.getPackageManager()).thenReturn(mMockPackageManager);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE, USER_ID))
+                .thenReturn(PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK);
 
         assertThat(DomainUrlsUtils.getDomainsSummary(mContext, TEST_PACKAGE, USER_ID,
                 new ArraySet<>())).isEqualTo(mContext.getString(R.string.domain_urls_summary_none));
@@ -74,8 +80,9 @@ public class DomainUrlsUtilsTest {
 
     @Test
     public void getDomainsSummary_domainStatusSet_oneDomain_showSingleDomain() {
-        mContext.getPackageManager().updateIntentVerificationStatusAsUser(TEST_PACKAGE,
-                PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK, USER_ID);
+        when(mContext.getPackageManager()).thenReturn(mMockPackageManager);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE, USER_ID))
+                .thenReturn(PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK);
         ArraySet<String> domains = new ArraySet<>();
         domains.add("test.domain.com");
 
@@ -86,8 +93,9 @@ public class DomainUrlsUtilsTest {
 
     @Test
     public void getDomainsSummary_domainStatusSet_multipleDomain_showMultipleDomains() {
-        mContext.getPackageManager().updateIntentVerificationStatusAsUser(TEST_PACKAGE,
-                PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK, USER_ID);
+        when(mContext.getPackageManager()).thenReturn(mMockPackageManager);
+        when(mMockPackageManager.getIntentVerificationStatusAsUser(TEST_PACKAGE, USER_ID))
+                .thenReturn(PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_ALWAYS_ASK);
         ArraySet<String> domains = new ArraySet<>();
         domains.add("test.domain.com");
         domains.add("test.domain2.com");
@@ -99,45 +107,56 @@ public class DomainUrlsUtilsTest {
 
     @Test
     public void getHandledDomains_includeIntentFilterVerificationInfoDomains() {
-        PackageManager pm = mock(PackageManager.class);
         String domain = "test.domain.com";
         ArraySet<String> domains = new ArraySet<>();
         domains.add(domain);
         IntentFilterVerificationInfo info = new IntentFilterVerificationInfo(TEST_PACKAGE, domains);
-        when(pm.getIntentFilterVerifications(TEST_PACKAGE)).thenReturn(Arrays.asList(info));
+        when(mMockPackageManager.getIntentFilterVerifications(TEST_PACKAGE))
+                .thenReturn(Arrays.asList(info));
+        when(mMockPackageManager.getAllIntentFilters(TEST_PACKAGE)).thenReturn(null);
 
-        assertThat(DomainUrlsUtils.getHandledDomains(pm, TEST_PACKAGE)).hasSize(1);
-        assertThat(DomainUrlsUtils.getHandledDomains(pm, TEST_PACKAGE)).contains(domain);
+        assertThat(DomainUrlsUtils.getHandledDomains(mMockPackageManager, TEST_PACKAGE))
+                .hasSize(1);
+        assertThat(DomainUrlsUtils.getHandledDomains(mMockPackageManager, TEST_PACKAGE))
+                .contains(domain);
     }
 
     @Test
     public void getHandledDomains_includeBrowsableIntentFiltersWithHttpDataScheme() {
-        PackageManager pm = mock(PackageManager.class);
         String domain = "test.domain.com";
         String port = "80";
         IntentFilter filter = new IntentFilter();
         filter.addCategory(Intent.CATEGORY_BROWSABLE);
         filter.addDataScheme(IntentFilter.SCHEME_HTTP);
         filter.addDataAuthority(new IntentFilter.AuthorityEntry(domain, port));
-        when(pm.getAllIntentFilters(TEST_PACKAGE)).thenReturn(Arrays.asList(filter));
+        when(mMockPackageManager.getIntentFilterVerifications(TEST_PACKAGE))
+                .thenReturn(null);
+        when(mMockPackageManager.getAllIntentFilters(TEST_PACKAGE))
+                .thenReturn(Arrays.asList(filter));
 
-        assertThat(DomainUrlsUtils.getHandledDomains(pm, TEST_PACKAGE)).hasSize(1);
-        assertThat(DomainUrlsUtils.getHandledDomains(pm, TEST_PACKAGE)).contains(domain);
+        assertThat(DomainUrlsUtils.getHandledDomains(mMockPackageManager, TEST_PACKAGE))
+                .hasSize(1);
+        assertThat(DomainUrlsUtils.getHandledDomains(mMockPackageManager, TEST_PACKAGE))
+                .contains(domain);
     }
 
     @Test
     public void getHandledDomains_includeBrowsableIntentFiltersWithHttpsDataScheme() {
-        PackageManager pm = mock(PackageManager.class);
         String domain = "test.domain.com";
         String port = "80";
         IntentFilter filter = new IntentFilter();
         filter.addCategory(Intent.CATEGORY_BROWSABLE);
         filter.addDataScheme(IntentFilter.SCHEME_HTTPS);
         filter.addDataAuthority(new IntentFilter.AuthorityEntry(domain, port));
-        when(pm.getAllIntentFilters(TEST_PACKAGE)).thenReturn(Arrays.asList(filter));
+        when(mMockPackageManager.getIntentFilterVerifications(TEST_PACKAGE))
+                .thenReturn(null);
+        when(mMockPackageManager.getAllIntentFilters(TEST_PACKAGE))
+                .thenReturn(Arrays.asList(filter));
 
-        assertThat(DomainUrlsUtils.getHandledDomains(pm, TEST_PACKAGE)).hasSize(1);
-        assertThat(DomainUrlsUtils.getHandledDomains(pm, TEST_PACKAGE)).contains(domain);
+        assertThat(DomainUrlsUtils.getHandledDomains(mMockPackageManager, TEST_PACKAGE))
+                .hasSize(1);
+        assertThat(DomainUrlsUtils.getHandledDomains(mMockPackageManager, TEST_PACKAGE))
+                .contains(domain);
     }
 
     @Test
@@ -148,7 +167,10 @@ public class DomainUrlsUtilsTest {
         IntentFilter filter = new IntentFilter();
         filter.addCategory(Intent.CATEGORY_BROWSABLE);
         filter.addDataAuthority(new IntentFilter.AuthorityEntry(domain, port));
-        when(pm.getAllIntentFilters(TEST_PACKAGE)).thenReturn(Arrays.asList(filter));
+        when(mMockPackageManager.getIntentFilterVerifications(TEST_PACKAGE))
+                .thenReturn(null);
+        when(mMockPackageManager.getAllIntentFilters(TEST_PACKAGE))
+                .thenReturn(Arrays.asList(filter));
 
         assertThat(DomainUrlsUtils.getHandledDomains(pm, TEST_PACKAGE)).isEmpty();
     }
