@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,12 +21,13 @@ import static com.android.car.settings.common.PreferenceController.CONDITIONALLY
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.robolectric.shadow.api.Shadow.extract;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.NetworkTemplate;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.SubscriptionPlan;
@@ -34,95 +35,90 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.Formatter;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowDataUsageController;
-import com.android.car.settings.testutils.ShadowSubscriptionManager;
-import com.android.car.settings.testutils.ShadowTelephonyManager;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.net.DataUsageController;
 
 import com.google.android.collect.Lists;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
 
 import java.time.Period;
 import java.time.ZonedDateTime;
 import java.util.concurrent.TimeUnit;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowTelephonyManager.class, ShadowSubscriptionManager.class,
-        ShadowDataUsageController.class})
+@RunWith(AndroidJUnit4.class)
 public class DataUsageSummaryPreferenceControllerTest {
 
     private static final CharSequence TEST_CARRIER_NAME = "TEST_CARRIER_NAME";
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private CarUxRestrictions mCarUxRestrictions;
     private DataUsageSummaryPreference mDataUsageSummaryPreference;
-    private DataUsageSummaryPreferenceController mController;
-    private PreferenceControllerTestHelper<DataUsageSummaryPreferenceController> mControllerHelper;
-    private NetworkTemplate mNetworkTemplate;
+    private DataUsageSummaryPreferenceController mPreferenceController;
+
     @Mock
-    private DataUsageController mDataUsageController;
+    private FragmentController mMockFragmentController;
+    @Mock
+    private DataUsageController mMockDataUsageController;
+    @Mock
+    private SubscriptionManager mMockSubscriptionManager;
+    @Mock
+    private TelephonyManager mMockTelephonyManager;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mPreferenceController = new DataUsageSummaryPreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController,
+                mCarUxRestrictions, mMockSubscriptionManager, mMockTelephonyManager,
+                mMockDataUsageController);
+        mDataUsageSummaryPreference = new DataUsageSummaryPreference(mContext);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController,
+                mDataUsageSummaryPreference);
 
         SubscriptionInfo info = mock(SubscriptionInfo.class);
         when(info.getSubscriptionId()).thenReturn(1);
-        ShadowSubscriptionManager.setDefaultDataSubscriptionInfo(info);
-        ShadowDataUsageController.setInstance(mDataUsageController);
+        when(mMockSubscriptionManager.getDefaultDataSubscriptionInfo()).thenReturn(info);
 
-        mContext = ApplicationProvider.getApplicationContext();
-        mDataUsageSummaryPreference = new DataUsageSummaryPreference(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                DataUsageSummaryPreferenceController.class, mDataUsageSummaryPreference);
-        mController = mControllerHelper.getController();
-
-        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(
-                mContext.getSystemService(TelephonyManager.class),
-                DataUsageUtils.getDefaultSubscriptionId(
-                        mContext.getSystemService(SubscriptionManager.class)));
-    }
-
-    @After
-    public void tearDown() {
-        ShadowTelephonyManager.reset();
-        ShadowSubscriptionManager.reset();
-        ShadowDataUsageController.reset();
+        when(mMockTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_LOADED);
     }
 
     @Test
     public void getAvailabilityStatus_hasSim_isAvailable() {
-        getShadowTelephonyManager().setSimState(TelephonyManager.SIM_STATE_LOADED);
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
     public void getAvailabilityStatus_noSim_isConditionallyUnavailable() {
-        getShadowTelephonyManager().setSimState(TelephonyManager.SIM_STATE_UNKNOWN);
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
+        when(mMockTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_UNKNOWN);
+        assertThat(mPreferenceController.getAvailabilityStatus())
+                .isEqualTo(CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
     public void refreshUi_hasUsage_titleSet() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         String usedValueString = Formatter.formatBytes(mContext.getResources(), info.usageLevel,
                 Formatter.FLAG_CALCULATE_ROUNDED | Formatter.FLAG_IEC_UNITS).value;
@@ -135,10 +131,10 @@ public class DataUsageSummaryPreferenceControllerTest {
         info.usageLevel = 10000;
         info.limitLevel = -1;
         info.warningLevel = -1;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getDataLimitText()).isNull();
     }
@@ -149,10 +145,10 @@ public class DataUsageSummaryPreferenceControllerTest {
         info.usageLevel = 10000;
         info.limitLevel = 100000;
         info.warningLevel = -1;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.cell_data_limit),
@@ -165,10 +161,10 @@ public class DataUsageSummaryPreferenceControllerTest {
         info.usageLevel = 10000;
         info.limitLevel = -1;
         info.warningLevel = 50000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.cell_data_warning),
@@ -181,10 +177,10 @@ public class DataUsageSummaryPreferenceControllerTest {
         info.usageLevel = 10000;
         info.limitLevel = 100000;
         info.warningLevel = 50000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.cell_data_warning_and_limit),
@@ -200,10 +196,10 @@ public class DataUsageSummaryPreferenceControllerTest {
         // System.currentTimeMillis() vs when the code calls it.
         info.cycleEnd = System.currentTimeMillis() + TimeUnit.DAYS.toMillis(numDays)
                 + TimeUnit.HOURS.toMillis(1);
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
                 .isEqualTo(
@@ -215,10 +211,10 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_endTimeIsLessThanOneDay_setsBillingCycleText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.cycleEnd = System.currentTimeMillis() + TimeUnit.HOURS.toMillis(22);
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
                 .isEqualTo(
@@ -229,10 +225,10 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_endTimeIsNow_setsBillingCycleText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.cycleEnd = System.currentTimeMillis();
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
                 .isEqualTo(
@@ -243,13 +239,13 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_hasCarrierName_hasRecentUpdate_setsCarrierInfoText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
         setCarrierName(TEST_CARRIER_NAME);
         setSubscriptionPlan(/* usageBytes= */ 1000L, System.currentTimeMillis());
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getCarrierInfoText()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.carrier_and_update_now_text),
@@ -260,15 +256,15 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_hasCarrierName_hasOldUpdate_setsCarrierInfoText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
         int numDays = 15;
         setCarrierName(TEST_CARRIER_NAME);
         setSubscriptionPlan(/* usageBytes= */ 1000L,
                 System.currentTimeMillis() - TimeUnit.DAYS.toMillis(numDays));
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getCarrierInfoText()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.carrier_and_update_text),
@@ -279,12 +275,12 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_noCarrierName_hasRecentUpdate_setsCarrierInfoText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
         setSubscriptionPlan(/* usageBytes= */ 1000L, System.currentTimeMillis());
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getCarrierInfoText().toString()).isEqualTo(
                 mContext.getString(R.string.no_carrier_update_now_text));
@@ -294,14 +290,14 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_noCarrierName_hasOldUpdate_setsCarrierInfoText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
         int numDays = 15;
         setSubscriptionPlan(/* usageBytes= */ 1000L,
                 System.currentTimeMillis() - TimeUnit.DAYS.toMillis(numDays));
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getCarrierInfoText()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.no_carrier_update_text),
@@ -312,7 +308,7 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_hasUpdateTimeOlderThanWarning_setsCarrierInfoStyle() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
 
         // Subtract an extra hour to account fo the difference in calls to
@@ -321,8 +317,8 @@ public class DataUsageSummaryPreferenceControllerTest {
                 System.currentTimeMillis() - DataUsageSummaryPreferenceController.WARNING_AGE
                         - TimeUnit.HOURS.toMillis(1));
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getCarrierInfoTextStyle()).isEqualTo(
                 R.style.DataUsageSummaryCarrierInfoWarningTextAppearance);
@@ -332,7 +328,7 @@ public class DataUsageSummaryPreferenceControllerTest {
     public void refreshUi_hasUpdateTimeYoungerThanWarning_setsCarrierInfoStyle() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
-        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
 
         // Subtract an extra hour to account fo the difference in calls to
         // System.currentTimeMillis().
@@ -340,20 +336,11 @@ public class DataUsageSummaryPreferenceControllerTest {
                 System.currentTimeMillis() - DataUsageSummaryPreferenceController.WARNING_AGE
                         + TimeUnit.HOURS.toMillis(1));
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getCarrierInfoTextStyle()).isEqualTo(
                 R.style.DataUsageSummaryCarrierInfoTextAppearance);
-    }
-
-    private ShadowTelephonyManager getShadowTelephonyManager() {
-        return (ShadowTelephonyManager) extract(
-                mContext.getSystemService(TelephonyManager.class));
-    }
-
-    private ShadowSubscriptionManager getShadowSubscriptionManager() {
-        return Shadow.extract(mContext.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE));
     }
 
     private void setCarrierName(CharSequence name) {
@@ -363,7 +350,7 @@ public class DataUsageSummaryPreferenceControllerTest {
                 /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", /* mnc= */ "",
                 /* countryIso= */ "", /* isEmbedded= */ false,
                 /* accessRules= */ null, /* cardString= */ "");
-        ShadowSubscriptionManager.setDefaultDataSubscriptionInfo(subInfo);
+        when(mMockSubscriptionManager.getDefaultDataSubscriptionInfo()).thenReturn(subInfo);
     }
 
     private void setSubscriptionPlan(long usageBytes, long snapshotMillis) {
@@ -374,6 +361,7 @@ public class DataUsageSummaryPreferenceControllerTest {
                         SubscriptionPlan.LIMIT_BEHAVIOR_DISABLED)
                 .setDataUsage(usageBytes, snapshotMillis)
                 .build();
-        getShadowSubscriptionManager().setSubscriptionPlans(Lists.newArrayList(plan));
+        when(mMockSubscriptionManager.getSubscriptionPlans(anyInt()))
+                .thenReturn(Lists.newArrayList(plan));
     }
 }
