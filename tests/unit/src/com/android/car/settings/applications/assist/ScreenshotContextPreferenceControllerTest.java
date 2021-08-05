@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,103 +18,103 @@ package com.android.car.settings.applications.assist;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import android.content.ComponentName;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.UserHandle;
 import android.provider.Settings;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.preference.SwitchPreference;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.TwoStatePreference;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.car.ui.preference.CarUiSwitchPreference;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ScreenshotContextPreferenceControllerTest {
 
-    private static final String TEST_PACKAGE_NAME = "com.test.package";
-    private static final String TEST_SERVICE = "TestService";
-    private final int mUserId = UserHandle.myUserId();
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private TwoStatePreference mPreference;
+    private ScreenshotContextPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
 
-    private Context mContext;
-    private TwoStatePreference mTwoStatePreference;
-    private PreferenceControllerTestHelper<ScreenshotContextPreferenceController>
-            mControllerHelper;
-    private ScreenshotContextPreferenceController mController;
+    @Mock
+    private FragmentController mMockFragmentController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
 
-        mContext = RuntimeEnvironment.application;
-        mTwoStatePreference = new SwitchPreference(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                ScreenshotContextPreferenceController.class, mTwoStatePreference);
-        mController = mControllerHelper.getController();
+        mPreference = new CarUiSwitchPreference(mContext);
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mPreferenceController = new ScreenshotContextPreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController,
+                mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
 
-        String key = new ComponentName(TEST_PACKAGE_NAME, TEST_SERVICE).flattenToString();
-        Settings.Secure.putStringForUser(mContext.getContentResolver(), Settings.Secure.ASSISTANT,
-                key, mUserId);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreferenceController.onCreate(mLifecycleOwner);
     }
 
     @Test
     public void refreshUi_screenshotEnabled_preferenceChecked() {
-        mTwoStatePreference.setChecked(false);
+        mPreference.setChecked(false);
 
         Settings.Secure.putInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_SCREENSHOT_ENABLED, 1);
-        mController.refreshUi();
+        mPreferenceController.refreshUi();
 
-        assertThat(mTwoStatePreference.isChecked()).isTrue();
+        assertThat(mPreference.isChecked()).isTrue();
     }
 
     @Test
     public void refreshUi_screenshotDisabled_preferenceUnchecked() {
-        mTwoStatePreference.setChecked(true);
+        mPreference.setChecked(true);
 
         Settings.Secure.putInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_SCREENSHOT_ENABLED, 0);
-        mController.refreshUi();
+        mPreferenceController.refreshUi();
 
-        assertThat(mTwoStatePreference.isChecked()).isFalse();
+        assertThat(mPreference.isChecked()).isFalse();
     }
 
     @Test
     public void refreshUi_structureEnabled_preferenceEnabled() {
-        mTwoStatePreference.setEnabled(false);
+        mPreference.setEnabled(false);
 
         Settings.Secure.putInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_STRUCTURE_ENABLED, 1);
-        mController.refreshUi();
+        mPreferenceController.refreshUi();
 
-        assertThat(mTwoStatePreference.isEnabled()).isTrue();
+        assertThat(mPreference.isEnabled()).isTrue();
     }
 
     @Test
     public void refreshUi_structureDisabled_preferenceDisabled() {
-        mTwoStatePreference.setEnabled(true);
+        mPreference.setEnabled(true);
 
         Settings.Secure.putInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_STRUCTURE_ENABLED, 0);
-        mController.refreshUi();
+        mPreferenceController.refreshUi();
 
-        assertThat(mTwoStatePreference.isEnabled()).isFalse();
+        assertThat(mPreference.isEnabled()).isFalse();
     }
 
     @Test
     public void callChangeListener_toggleTrue_screenshotEnabled() {
         Settings.Secure.putInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_SCREENSHOT_ENABLED, 0);
-        mTwoStatePreference.callChangeListener(true);
+        mPreference.callChangeListener(true);
 
         assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_SCREENSHOT_ENABLED, 0)).isEqualTo(1);
@@ -124,7 +124,7 @@ public class ScreenshotContextPreferenceControllerTest {
     public void callChangeListener_toggleFalse_screenshotDisabled() {
         Settings.Secure.putInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_SCREENSHOT_ENABLED, 1);
-        mTwoStatePreference.callChangeListener(false);
+        mPreference.callChangeListener(false);
 
         assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
                 Settings.Secure.ASSIST_SCREENSHOT_ENABLED, 1)).isEqualTo(0);
