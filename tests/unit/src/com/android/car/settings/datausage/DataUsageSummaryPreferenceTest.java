@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,11 @@ package com.android.car.settings.datausage;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
@@ -25,28 +30,28 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.preference.PreferenceViewHolder;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowApplication;
+import org.mockito.ArgumentCaptor;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class DataUsageSummaryPreferenceTest {
+
     private static final String TEST_LABEL = "TEST_LABEL";
     private static final Intent TEST_INTENT = new Intent("test_action");
 
-    private Context mContext;
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private PreferenceViewHolder mViewHolder;
     private DataUsageSummaryPreference mDataUsageSummaryPreference;
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
         View rootView = View.inflate(mContext, R.layout.data_usage_summary_preference,
                 /* root= */ null);
         mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);
@@ -143,10 +148,14 @@ public class DataUsageSummaryPreferenceTest {
     public void onButtonClick_hasManagePlanIntent_startsActivity() {
         mDataUsageSummaryPreference.setManageSubscriptionIntent(TEST_INTENT);
         mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
+        doNothing().when(mContext).startActivity(any());
         getManageSubscriptionButton().performClick();
 
-        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
-        assertThat(actual.getAction()).isEqualTo(TEST_INTENT.getAction());
+        ArgumentCaptor<Intent> captor = ArgumentCaptor.forClass(Intent.class);
+        verify(mContext).startActivity(captor.capture());
+
+        Intent intent = captor.getValue();
+        assertThat(intent.getAction()).isEqualTo(TEST_INTENT.getAction());
     }
 
     private TextView getDataUsageText() {
