@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,25 +23,28 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.os.Looper;
-import android.os.RemoteException;
 import android.telephony.SmsManager;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowApplicationsState;
-import com.android.car.settings.testutils.ShadowSmsManager;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
-import com.android.settingslib.applications.ApplicationsState.AppEntry;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,80 +52,83 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/** Unit test for {@link PremiumSmsAccessPreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowApplicationsState.class, ShadowSmsManager.class})
+@RunWith(AndroidJUnit4.class)
 public class PremiumSmsAccessPreferenceControllerTest {
 
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
+    private PreferenceGroup mPreferenceGroup;
+    private PremiumSmsAccessPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
     @Mock
-    private AppEntryListManager mAppEntryListManager;
+    private FragmentController mMockFragmentController;
     @Mock
-    private ApplicationsState mApplicationsState;
+    private AppEntryListManager mMockAppEntryListManager;
     @Mock
-    private SmsManager mSmsManager;
+    private ApplicationsState mMockApplicationsState;
+    @Mock
+    private SmsManager mMockSmsManager;
     @Captor
     private ArgumentCaptor<AppEntryListManager.Callback> mCallbackCaptor;
 
-    private PreferenceGroup mPreferenceGroup;
-    private PreferenceControllerTestHelper<PremiumSmsAccessPreferenceController> mControllerHelper;
-
     @Before
+    @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowApplicationsState.setInstance(mApplicationsState);
-        when(mApplicationsState.getBackgroundLooper()).thenReturn(Looper.getMainLooper());
-        ShadowSmsManager.setDefault(mSmsManager);
+        mLifecycleOwner = new TestLifecycleOwner();
+        when(mMockApplicationsState.getBackgroundLooper()).thenReturn(Looper.getMainLooper());
 
-        Context context = RuntimeEnvironment.application;
-        mPreferenceGroup = new LogicalPreferenceGroup(context);
-        mControllerHelper = new PreferenceControllerTestHelper<>(context,
-                PremiumSmsAccessPreferenceController.class, mPreferenceGroup);
-        mControllerHelper.getController().mAppEntryListManager = mAppEntryListManager;
-        mControllerHelper.markState(Lifecycle.State.CREATED);
-        verify(mAppEntryListManager).init(any(AppStatePremiumSmsBridge.class), any(),
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        screen.addPreference(mPreferenceGroup);
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mPreferenceController = new PremiumSmsAccessPreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController,
+                mCarUxRestrictions, mMockSmsManager, mMockAppEntryListManager);
+
+        PreferenceControllerTestUtil
+                .assignPreference(mPreferenceController, mPreferenceGroup);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        verify(mMockAppEntryListManager).init(any(AppStatePremiumSmsBridge.class), any(),
                 mCallbackCaptor.capture());
-    }
-
-    @After
-    public void tearDown() {
-        ShadowApplicationsState.reset();
-        ShadowSmsManager.reset();
     }
 
     @Test
     public void onStart_startsListManager() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        mPreferenceController.onStart(mLifecycleOwner);
 
-        verify(mAppEntryListManager).start();
+        verify(mMockAppEntryListManager).start();
     }
 
     @Test
     public void onStop_stopsListManager() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
+        mPreferenceController.onStart(mLifecycleOwner);
+        mPreferenceController.onStop(mLifecycleOwner);
 
-        verify(mAppEntryListManager).stop();
+        verify(mMockAppEntryListManager).stop();
     }
 
     @Test
     public void onDestroy_destroysListManager() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_DESTROY);
+        mPreferenceController.onDestroy(mLifecycleOwner);
 
-        verify(mAppEntryListManager).destroy();
+        verify(mMockAppEntryListManager).destroy();
     }
 
     @Test
     public void onAppEntryListChanged_addsPreferencesForEntries() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        List<AppEntry> entries = Arrays.asList(
+        mPreferenceController.onStart(mLifecycleOwner);
+        List<ApplicationsState.AppEntry> entries = Arrays.asList(
                 createAppEntry("test.package", /* uid= */ 1,
                         SmsManager.PREMIUM_SMS_CONSENT_ALWAYS_ALLOW),
                 createAppEntry("another.test.package", /* uid= */ 2,
@@ -138,10 +144,10 @@ public class PremiumSmsAccessPreferenceControllerTest {
     }
 
     @Test
-    public void onPreferenceChange_setsPremiumSmsPermission() throws RemoteException {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
+    public void onPreferenceChange_setsPremiumSmsPermission() {
+        mPreferenceController.onStart(mLifecycleOwner);
         String packageName = "test.package";
-        List<AppEntry> entries = Collections.singletonList(
+        List<ApplicationsState.AppEntry> entries = Collections.singletonList(
                 createAppEntry(packageName, /* uid= */ 1,
                         SmsManager.PREMIUM_SMS_CONSENT_NEVER_ALLOW));
         mCallbackCaptor.getValue().onAppEntryListChanged(entries);
@@ -151,13 +157,13 @@ public class PremiumSmsAccessPreferenceControllerTest {
         appPref.getOnPreferenceChangeListener().onPreferenceChange(appPref,
                 String.valueOf(updatedValue));
 
-        verify(mSmsManager).setPremiumSmsConsent(packageName, updatedValue);
+        verify(mMockSmsManager).setPremiumSmsConsent(packageName, updatedValue);
     }
 
     @Test
     public void onPreferenceChange_updatesEntry() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        List<AppEntry> entries = Collections.singletonList(
+        mPreferenceController.onStart(mLifecycleOwner);
+        List<ApplicationsState.AppEntry> entries = Collections.singletonList(
                 createAppEntry("test.package", /* uid= */ 1,
                         SmsManager.PREMIUM_SMS_CONSENT_NEVER_ALLOW));
         mCallbackCaptor.getValue().onAppEntryListChanged(entries);
@@ -166,28 +172,28 @@ public class PremiumSmsAccessPreferenceControllerTest {
         appPref.getOnPreferenceChangeListener().onPreferenceChange(appPref,
                 String.valueOf(SmsManager.PREMIUM_SMS_CONSENT_ASK_USER));
 
-        verify(mAppEntryListManager).forceUpdate(entries.get(0));
+        verify(mMockAppEntryListManager).forceUpdate(entries.get(0));
     }
 
     @Test
     public void appFilter_removesUnknownStates() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
+        mPreferenceController.onStart(mLifecycleOwner);
         ArgumentCaptor<AppEntryListManager.AppFilterProvider> filterCaptor =
                 ArgumentCaptor.forClass(AppEntryListManager.AppFilterProvider.class);
-        verify(mAppEntryListManager).init(any(), filterCaptor.capture(), any());
+        verify(mMockAppEntryListManager).init(any(), filterCaptor.capture(), any());
         ApplicationsState.AppFilter filter = filterCaptor.getValue().getAppFilter();
-        AppEntry unknownStateApp = createAppEntry("test.package", /* uid= */ 1,
+        ApplicationsState.AppEntry unknownStateApp = createAppEntry("test.package", /* uid= */ 1,
                 SmsManager.PREMIUM_SMS_CONSENT_UNKNOWN);
 
         assertThat(filter.filterApp(unknownStateApp)).isFalse();
     }
 
-    private AppEntry createAppEntry(String packageName, int uid, int smsState) {
+    private ApplicationsState.AppEntry createAppEntry(String packageName, int uid, int smsState) {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = packageName;
         info.uid = uid;
 
-        AppEntry appEntry = mock(AppEntry.class);
+        ApplicationsState.AppEntry appEntry = mock(ApplicationsState.AppEntry.class);
         appEntry.info = info;
         appEntry.label = packageName;
         appEntry.extraInfo = smsState;
