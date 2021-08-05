@@ -31,16 +31,12 @@
     </Preference>
 
     <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
+        android:fragment="com.android.car.settings.privacy.MicrophoneSettingsFragment"
         android:key="@string/pk_mute_mic_switch"
         android:title="@string/mute_mic_title"
         android:summary="@string/mute_mic_summary"
         android:icon="@drawable/privacy_mic"
-        settings:controller="com.android.car.settings.privacy.MuteMicTogglePreferenceController">
-        <intent android:action="android.intent.action.MANAGE_PERMISSION_APPS">
-            <extra android:name="android.intent.extra.PERMISSION_NAME"
-                   android:value="android.permission-group.MICROPHONE"/>
-        </intent>
-    </com.android.car.ui.preference.CarUiTwoActionSwitchPreference>
+        settings:controller="com.android.car.settings.privacy.MicPreferenceController"/>
 
     <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
         android:fragment="com.android.car.settings.location.LocationSettingsFragment"

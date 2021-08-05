@@ -48,11 +48,11 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
-public class MuteMicTogglePreferenceControllerTest {
+public class MicPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private Context mContext = ApplicationProvider.getApplicationContext();
     private CarUiTwoActionSwitchPreference mSwitchPreference;
-    private MuteMicTogglePreferenceController mPreferenceController;
+    private MicPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
 
     @Mock
@@ -73,7 +73,7 @@ public class MuteMicTogglePreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
         mSwitchPreference = new CarUiTwoActionSwitchPreference(mContext);
-        mPreferenceController = new MuteMicTogglePreferenceController(mContext,
+        mPreferenceController = new MicPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
                 mMockSensorPrivacyManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
@@ -100,6 +100,7 @@ public class MuteMicTogglePreferenceControllerTest {
     @Test
     public void onPreferenceClicked_clickMicEnabled_shouldSetPrivacySensor() {
         initializePreference(/* isMicEnabled= */ true);
+        assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
 
         mSwitchPreference.performSecondaryActionClick();
 
@@ -117,6 +118,7 @@ public class MuteMicTogglePreferenceControllerTest {
     @Test
     public void onPreferenceClicked_clickMicDisabled_shouldClearPrivacySensor() {
         initializePreference(/* isMicEnabled= */ false);
+        assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
 
         mSwitchPreference.performSecondaryActionClick();
 
