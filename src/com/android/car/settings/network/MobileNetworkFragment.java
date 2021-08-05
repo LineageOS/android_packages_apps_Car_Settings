@@ -76,7 +76,7 @@ public class MobileNetworkFragment extends SettingsFragment implements
         int subId = getArguments() != null
                 ? getArguments().getInt(ARG_NETWORK_SUB_ID, MobileNetworkUpdateManager.SUB_ID_NULL)
                 : MobileNetworkUpdateManager.SUB_ID_NULL;
-        mMobileNetworkUpdateManager = new MobileNetworkUpdateManager(context, subId);
+        mMobileNetworkUpdateManager = getMobileNetworkUpdateManager(context, subId);
         getLifecycle().addObserver(mMobileNetworkUpdateManager);
 
         List<MobileNetworkUpdateManager.MobileNetworkUpdateListener> listeners =
@@ -130,6 +130,11 @@ public class MobileNetworkFragment extends SettingsFragment implements
     @VisibleForTesting
     SubscriptionManager getSubscriptionManager(Context context) {
         return context.getSystemService(SubscriptionManager.class);
+    }
+
+    @VisibleForTesting
+    MobileNetworkUpdateManager getMobileNetworkUpdateManager(Context context, int subId) {
+        return new MobileNetworkUpdateManager(context, subId);
     }
 
     public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

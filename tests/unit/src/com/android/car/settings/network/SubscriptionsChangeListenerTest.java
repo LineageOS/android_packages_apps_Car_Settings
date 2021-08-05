@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,64 +16,65 @@
 
 package com.android.car.settings.network;
 
-import static com.google.common.truth.Truth.assertThat;
+import static com.android.car.settings.network.SubscriptionsChangeListener.RADIO_TECH_CHANGED_FILTER;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.content.Context;
 import android.content.Intent;
 import android.telephony.SubscriptionManager;
 
-import com.android.car.settings.testutils.ShadowSubscriptionManager;
-import com.android.internal.telephony.TelephonyIntents;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
-import org.robolectric.shadows.ShadowApplication;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowSubscriptionManager.class})
+@RunWith(AndroidJUnit4.class)
 public class SubscriptionsChangeListenerTest {
 
-    private Context mContext;
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private SubscriptionsChangeListener mSubscriptionsChangeListener;
+
     @Mock
     private SubscriptionsChangeListener.SubscriptionsChangeAction mSubscriptionsChangeAction;
+    @Mock
+    private SubscriptionManager mMockSubscriptionManager;
 
     @Before
+    @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        mContext = RuntimeEnvironment.application;
+        when(mContext.getSystemService(SubscriptionManager.class))
+                .thenReturn(mMockSubscriptionManager);
         mSubscriptionsChangeListener = new SubscriptionsChangeListener(mContext,
                 mSubscriptionsChangeAction);
     }
 
-    @After
-    public void tearDown() {
-        ShadowSubscriptionManager.reset();
-    }
-
     @Test
     public void start_registersListener() {
-        assertThat(getShadowSubscriptionManager().getOnSubscriptionChangedListeners()).isEmpty();
+        verify(mMockSubscriptionManager, never()).addOnSubscriptionsChangedListener(
+                mSubscriptionsChangeListener.mSubscriptionsChangedListener);
         mSubscriptionsChangeListener.start();
-        assertThat(getShadowSubscriptionManager().getOnSubscriptionChangedListeners()).isNotEmpty();
+
+        verify(mMockSubscriptionManager).addOnSubscriptionsChangedListener(
+                mSubscriptionsChangeListener.mSubscriptionsChangedListener);
     }
 
     @Test
     public void onSubscriptionChange_triggersAction() {
         mSubscriptionsChangeListener.start();
-        // This is a way to trigger subscription change on the shadows.
-        getShadowSubscriptionManager().setActiveSubscriptionInfoList(null);
+        mSubscriptionsChangeListener.mSubscriptionsChangedListener.onSubscriptionsChanged();
 
         verify(mSubscriptionsChangeAction).onSubscriptionsChanged();
     }
@@ -82,28 +83,22 @@ public class SubscriptionsChangeListenerTest {
     public void stop_unregistersListener() {
         mSubscriptionsChangeListener.start();
         mSubscriptionsChangeListener.stop();
-        assertThat(getShadowSubscriptionManager().getOnSubscriptionChangedListeners()).isEmpty();
+
+        verify(mMockSubscriptionManager).removeOnSubscriptionsChangedListener(
+                mSubscriptionsChangeListener.mSubscriptionsChangedListener);
     }
 
     @Test
     public void start_registersReceiver() {
         mSubscriptionsChangeListener.start();
 
-        boolean hasMatch = false;
-        for (ShadowApplication.Wrapper wrapper :
-                ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().matchAction(
-                    TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED)) {
-                hasMatch = true;
-            }
-        }
-        assertThat(hasMatch).isTrue();
+        verify(mContext).registerReceiver(any(), eq(RADIO_TECH_CHANGED_FILTER));
     }
 
     @Test
     public void onReceive_triggersAction() {
         mSubscriptionsChangeListener.start();
-        mContext.sendBroadcast(new Intent(TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED));
+        mSubscriptionsChangeListener.mRadioTechChangeReceiver.onReceive(mContext, new Intent());
 
         verify(mSubscriptionsChangeAction).onSubscriptionsChanged();
     }
@@ -113,18 +108,6 @@ public class SubscriptionsChangeListenerTest {
         mSubscriptionsChangeListener.start();
         mSubscriptionsChangeListener.stop();
 
-        boolean hasMatch = false;
-        for (ShadowApplication.Wrapper wrapper :
-                ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().matchAction(
-                    TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED)) {
-                hasMatch = true;
-            }
-        }
-        assertThat(hasMatch).isFalse();
-    }
-
-    private ShadowSubscriptionManager getShadowSubscriptionManager() {
-        return Shadow.extract(mContext.getSystemService(SubscriptionManager.class));
+        verify(mContext).unregisterReceiver(any());
     }
 }
