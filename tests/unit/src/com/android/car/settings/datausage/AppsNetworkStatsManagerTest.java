@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,18 +24,15 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
-import android.net.INetworkStatsService;
 import android.net.INetworkStatsSession;
 import android.net.NetworkPolicyManager;
 import android.net.NetworkStats;
 import android.os.Bundle;
 
 import androidx.loader.app.LoaderManager;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.testutils.ShadowINetworkStatsServiceStub;
-import com.android.car.settings.testutils.ShadowNetworkPolicyManager;
-
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,62 +40,38 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
-/** Unit test for {@link AppsNetworkStatsManager}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowINetworkStatsServiceStub.class, ShadowNetworkPolicyManager.class})
+@RunWith(AndroidJUnit4.class)
 public class AppsNetworkStatsManagerTest {
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
     private AppsNetworkStatsManager mAppsNetworkStatsManager;
 
     @Captor
-    private ArgumentCaptor<LoaderManager.LoaderCallbacks<NetworkStats>>
-            mCallbacksArgumentCaptor;
-
+    private ArgumentCaptor<LoaderManager.LoaderCallbacks<NetworkStats>> mCallbacksArgumentCaptor;
     @Mock
     private AppsNetworkStatsManager.Callback mCallback1;
-
     @Mock
     private AppsNetworkStatsManager.Callback mCallback2;
-
     @Mock
     private LoaderManager mLoaderManager;
-
-    @Mock
-    private INetworkStatsService mINetworkStatsService;
-
     @Mock
     private INetworkStatsSession mINetworkStatsSession;
-
     @Mock
     private NetworkPolicyManager mNetworkPolicyManager;
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
-
-        when(mINetworkStatsService.openSession()).thenReturn(mINetworkStatsSession);
-        ShadowINetworkStatsServiceStub.setINetworkStatsSession(mINetworkStatsService);
 
         when(mNetworkPolicyManager.getUidsWithPolicy(anyInt())).thenReturn(new int[0]);
-        ShadowNetworkPolicyManager.setNetworkPolicyManager(mNetworkPolicyManager);
 
-        mAppsNetworkStatsManager = new AppsNetworkStatsManager(mContext);
+        mAppsNetworkStatsManager = new AppsNetworkStatsManager(mContext, mNetworkPolicyManager,
+                mINetworkStatsSession);
         mAppsNetworkStatsManager.startLoading(mLoaderManager, Bundle.EMPTY);
 
         verify(mLoaderManager).restartLoader(eq(1), eq(Bundle.EMPTY),
                 mCallbacksArgumentCaptor.capture());
-    }
-
-    @After
-    public void tearDown() {
-        ShadowINetworkStatsServiceStub.reset();
-        ShadowNetworkPolicyManager.reset();
     }
 
     @Test
