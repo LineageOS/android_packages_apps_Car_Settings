@@ -26,6 +26,7 @@ import android.net.NetworkStats;
 import android.os.UserHandle;
 import android.util.SparseArray;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
@@ -57,8 +58,16 @@ public class AppDataUsagePreferenceController extends
 
     public AppDataUsagePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        this(context, preferenceKey, fragmentController, uxRestrictions,
+                new UidDetailProvider(context));
+    }
+
+    @VisibleForTesting
+    AppDataUsagePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            UidDetailProvider uidDetailProvider) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mUidDetailProvider = new UidDetailProvider(getContext());
+        mUidDetailProvider = uidDetailProvider;
     }
 
     @Override
