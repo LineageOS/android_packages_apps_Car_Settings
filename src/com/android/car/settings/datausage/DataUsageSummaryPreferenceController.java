@@ -92,10 +92,20 @@ public class DataUsageSummaryPreferenceController extends
 
     public DataUsageSummaryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        this(context, preferenceKey, fragmentController, uxRestrictions,
+                context.getSystemService(SubscriptionManager.class),
+                context.getSystemService(TelephonyManager.class), new DataUsageController(context));
+    }
+
+    @VisibleForTesting
+    DataUsageSummaryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            SubscriptionManager subscriptionManager, TelephonyManager telephonyManager,
+            DataUsageController dataUsageController) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
-        mTelephonyManager = context.getSystemService(TelephonyManager.class);
-        mDataUsageController = new DataUsageController(context);
+        mSubscriptionManager = subscriptionManager;
+        mTelephonyManager = telephonyManager;
+        mDataUsageController = dataUsageController;
 
         int defaultSubId = DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager);
         mDefaultTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager, defaultSubId);
