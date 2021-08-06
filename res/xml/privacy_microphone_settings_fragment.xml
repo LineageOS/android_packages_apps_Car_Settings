@@ -27,6 +27,13 @@
         settings:controller="com.android.car.settings.privacy.MicTogglePreferenceController"
         settings:searchable="false"/>
     <com.android.car.settings.common.DividerPreference/>
+    <PreferenceCategory
+        android:key="@string/pk_microphone_recent_accesses_category"
+        android:title="@string/microphone_recently_accessed"
+        settings:controller="com.android.car.settings.privacy.MicrophoneRecentAccessesPreferenceController">
+        <com.android.car.settings.common.DividerPreference
+            android:order="999"/>
+    </PreferenceCategory>
     <Preference
         android:key="@string/pk_microphone_manage_permissions"
         android:title="@string/microphone_manage_permissions">
