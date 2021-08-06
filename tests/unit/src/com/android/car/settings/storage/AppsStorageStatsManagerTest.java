@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,8 @@ import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 
 import androidx.loader.app.LoaderManager;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.settingslib.applications.StorageStatsSource;
 
@@ -36,16 +38,13 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-/** Unit test for {@link AppsStorageStatsManager}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class AppsStorageStatsManagerTest {
 
     private static final int USER_ID = 10;
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
     private AppsStorageStatsManager mAppsStorageStatsManager;
 
     @Captor
@@ -67,7 +66,7 @@ public class AppsStorageStatsManagerTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
+
         mAppsStorageStatsManager = new AppsStorageStatsManager(mContext);
         mAppsStorageStatsManager.startLoading(mLoaderManager, mApplicationInfo, USER_ID, false,
                 false);
@@ -76,7 +75,7 @@ public class AppsStorageStatsManagerTest {
     }
 
     @Test
-    public void callback_onLoadFinished_listenerOnDataLoadedCalled() throws Exception {
+    public void callback_onLoadFinished_listenerOnDataLoadedCalled() {
         mAppsStorageStatsManager.registerListener(mCallback1);
         mAppsStorageStatsManager.registerListener(mCallback2);
 
@@ -91,7 +90,7 @@ public class AppsStorageStatsManagerTest {
     }
 
     @Test
-    public void callback_unregisterListener_onlyOneListenerOnDataLoadedCalled() throws Exception {
+    public void callback_unregisterListener_onlyOneListenerOnDataLoadedCalled() {
         mAppsStorageStatsManager.registerListener(mCallback1);
         mAppsStorageStatsManager.registerListener(mCallback2);
         mAppsStorageStatsManager.unregisterListener(mCallback2);
@@ -106,7 +105,7 @@ public class AppsStorageStatsManagerTest {
     }
 
     @Test
-    public void callback_notLoaded_listenerOnDataLoadedCalled() throws Exception {
+    public void callback_notLoaded_listenerOnDataLoadedCalled() {
         mAppsStorageStatsManager.registerListener(mCallback1);
         mAppsStorageStatsManager.registerListener(mCallback2);
 
@@ -119,7 +118,7 @@ public class AppsStorageStatsManagerTest {
     }
 
     @Test
-    public void callback_cachedCleared_listenerOnDataLoadedCalled() throws Exception {
+    public void callback_cachedCleared_listenerOnDataLoadedCalled() {
         mAppsStorageStatsManager = new AppsStorageStatsManager(mContext);
         mAppsStorageStatsManager.startLoading(mLoaderManager, mApplicationInfo, USER_ID, true,
                 false);
@@ -136,7 +135,7 @@ public class AppsStorageStatsManagerTest {
     }
 
     @Test
-    public void callback_userDataCleared_listenerOnDataLoadedCalled() throws Exception {
+    public void callback_userDataCleared_listenerOnDataLoadedCalled() {
         mAppsStorageStatsManager = new AppsStorageStatsManager(mContext);
         mAppsStorageStatsManager.startLoading(mLoaderManager, mApplicationInfo, USER_ID, false,
                 true);

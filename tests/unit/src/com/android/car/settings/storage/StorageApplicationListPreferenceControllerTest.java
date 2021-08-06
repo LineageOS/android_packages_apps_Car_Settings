@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,26 +18,33 @@ package com.android.car.settings.storage;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
+import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 
-/** Unit test for {@link StorageApplicationListPreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class StorageApplicationListPreferenceControllerTest {
 
     private static final String SOURCE = "source";
@@ -47,20 +54,33 @@ public class StorageApplicationListPreferenceControllerTest {
     private static final String UPDATED_SIZE_STR = "15.34 MB";
     private static final String PACKAGE_NAME = "com.google.packageName";
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
     private LogicalPreferenceGroup mLogicalPreferenceGroup;
-    private StorageApplicationListPreferenceController mController;
-    private PreferenceControllerTestHelper<StorageApplicationListPreferenceController>
-            mPreferenceControllerHelper;
+    private StorageApplicationListPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mMockFragmentController;
 
     @Before
+    @UiThreadTest
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
         mLogicalPreferenceGroup = new LogicalPreferenceGroup(mContext);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                StorageApplicationListPreferenceController.class, mLogicalPreferenceGroup);
-        mController = mPreferenceControllerHelper.getController();
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        screen.addPreference(mLogicalPreferenceGroup);
+        mPreferenceController = new StorageApplicationListPreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController,
+                mLogicalPreferenceGroup);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
     }
 
     @Test
@@ -83,7 +103,7 @@ public class StorageApplicationListPreferenceControllerTest {
         appEntry.info.packageName = PACKAGE_NAME;
         apps.add(appEntry);
 
-        mController.onDataLoaded(apps);
+        mPreferenceController.onDataLoaded(apps);
 
         assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(1);
         assertThat(mLogicalPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
@@ -105,7 +125,7 @@ public class StorageApplicationListPreferenceControllerTest {
         appEntry.info.packageName = PACKAGE_NAME;
         apps.add(appEntry);
 
-        mController.onDataLoaded(apps);
+        mPreferenceController.onDataLoaded(apps);
 
         apps.clear();
         appEntry = new ApplicationsState.AppEntry(mContext, appInfo, 1234L);
@@ -115,7 +135,7 @@ public class StorageApplicationListPreferenceControllerTest {
         appEntry.info.packageName = PACKAGE_NAME;
         apps.add(appEntry);
 
-        mController.onDataLoaded(apps);
+        mPreferenceController.onDataLoaded(apps);
 
         assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(1);
         assertThat(mLogicalPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
