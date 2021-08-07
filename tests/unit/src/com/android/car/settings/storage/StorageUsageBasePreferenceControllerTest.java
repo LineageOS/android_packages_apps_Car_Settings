@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,30 +24,34 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.util.SparseArray;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.common.ProgressBarPreference;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.StorageStatsSource;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-/** Unit test for {@link StorageUsageBasePreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class StorageUsageBasePreferenceControllerTest {
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
     private ProgressBarPreference mProgressBarPreference;
-    private TestStorageUsageBasePreferenceController mController;
-    private PreferenceControllerTestHelper<TestStorageUsageBasePreferenceController>
-            mPreferenceControllerHelper;
+    private TestStorageUsageBasePreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mMockFragmentController;
 
     private static class TestStorageUsageBasePreferenceController extends
             StorageUsageBasePreferenceController {
@@ -67,12 +71,16 @@ public class StorageUsageBasePreferenceControllerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mProgressBarPreference = new ProgressBarPreference(mContext);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                TestStorageUsageBasePreferenceController.class, mProgressBarPreference);
-        mController = mPreferenceControllerHelper.getController();
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController = new TestStorageUsageBasePreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController,
+                mProgressBarPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
     }
 
     @Test
@@ -93,7 +101,7 @@ public class StorageUsageBasePreferenceControllerTest {
                         MEGABYTE_IN_BYTES * 150, // video
                         MEGABYTE_IN_BYTES * 200, 0)); // image
         results.put(0, result);
-        mController.onDataLoaded(results, 100, 100);
+        mPreferenceController.onDataLoaded(results, 100, 100);
 
         assertThat(mProgressBarPreference.getSummary().toString()).isEqualTo("1.0 GB");
     }
@@ -110,7 +118,7 @@ public class StorageUsageBasePreferenceControllerTest {
                         MEGABYTE_IN_BYTES * 150, // video
                         MEGABYTE_IN_BYTES * 200, 0)); // image
         results.put(0, result);
-        mController.onDataLoaded(results, 100, 2_000_000_000);
+        mPreferenceController.onDataLoaded(results, 100, 2_000_000_000);
         // usage size is half the total size i.e percentage of storage used should be 50.
         assertThat(mProgressBarPreference.getProgress()).isEqualTo(50);
     }

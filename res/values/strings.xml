@@ -850,6 +850,8 @@
     <string name="microphone_settings_title">Microphone</string>
     <!-- Title of setting to toggle microphone [CHAR LIMIT=40] -->
     <string name="microphone_toggle_title">Use microphone</string>
+    <!-- Title of setting linking to microphone permission management screen [CHAR LIMIT=60] -->
+    <string name="microphone_manage_permissions">Manage microphone permissions</string>
 
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->
@@ -1121,7 +1123,7 @@
     <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
     <string name="delete_user_dialog_message">"All apps and data for this profile will be deleted"</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=40] -->
-    <string name="delete_user_error_title">Couldn\'t delete profile.</string>
+    <string name="delete_user_error_title">Profile wasn\'t deleted. You can restart the device and try again.</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=100] -->
     <string name="delete_user_error_set_ephemeral_title">This profile will be deleted when you switch profiles or restart the vehicle.</string>
     <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->

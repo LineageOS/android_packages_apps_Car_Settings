@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,22 +23,16 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 
-import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-
-/** Unit test for {@link FileSizeFormatter}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class FileSizeFormatterTest {
-    private Context mContext;
 
-    @Before
-    public void setUp() throws Exception {
-        mContext = RuntimeEnvironment.application;
-    }
+    private Context mContext = ApplicationProvider.getApplicationContext();
 
     @Test
     public void formatFileSize_zero() {
