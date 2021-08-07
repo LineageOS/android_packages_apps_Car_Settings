@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,8 @@ import android.os.storage.VolumeInfo;
 import android.util.SparseArray;
 
 import androidx.loader.app.LoaderManager;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.settingslib.deviceinfo.PrivateStorageInfo;
 import com.android.settingslib.deviceinfo.StorageVolumeProvider;
@@ -41,35 +43,30 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-/** Unit test for {@link StorageSettingsManager}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class StorageSettingsManagerTest {
 
-    private Context mContext;
+    private Context mContext = ApplicationProvider.getApplicationContext();
     private VolumeInfo mVolumeInfo;
     private StorageSettingsManager mStorageSettingsManager;
+
     @Captor
     private ArgumentCaptor<LoaderManager
             .LoaderCallbacks<SparseArray<StorageAsyncLoader.AppsStorageResult>>> mAppsStorageResult;
     @Captor
     private ArgumentCaptor<LoaderManager.LoaderCallbacks<PrivateStorageInfo>> mVolumeSizeCallback;
-
     @Mock
     private StorageSettingsManager.VolumeListener mVolumeListener1;
-
     @Mock
     private StorageSettingsManager.VolumeListener mVolumeListener2;
-
     @Mock
     private LoaderManager mLoaderManager;
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
+
         mStorageSettingsManager = new StorageSettingsManager(mContext, mVolumeInfo);
         mStorageSettingsManager.startLoading(mLoaderManager);
         verify(mLoaderManager, times(1)).restartLoader(eq(0), eq(Bundle.EMPTY),
