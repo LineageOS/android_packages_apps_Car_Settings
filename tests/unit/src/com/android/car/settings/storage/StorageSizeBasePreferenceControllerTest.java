@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,10 +24,13 @@ import android.app.usage.StorageStats;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.StorageStatsSource;
 
 import org.junit.Before;
@@ -35,18 +38,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-/** Unit test for {@link StorageSizeBasePreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class StorageSizeBasePreferenceControllerTest {
 
+    private Context mContext = ApplicationProvider.getApplicationContext();
+    private LifecycleOwner mLifecycleOwner;
     private StorageAppDetailPreference mStorageAppDetailPreference;
-    private TestStorageSizeBasePreferenceController mController;
-    private PreferenceControllerTestHelper<TestStorageSizeBasePreferenceController>
-            mPreferenceControllerHelper;
+    private TestStorageSizeBasePreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
 
+    @Mock
+    private FragmentController mMockFragmentController;
     @Mock
     private AppsStorageStatsManager mAppsStorageStatsManager;
 
@@ -67,56 +70,61 @@ public class StorageSizeBasePreferenceControllerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        Context context = RuntimeEnvironment.application;
-        mStorageAppDetailPreference = new StorageAppDetailPreference(context);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(context,
-                TestStorageSizeBasePreferenceController.class, mStorageAppDetailPreference);
-        mController = mPreferenceControllerHelper.getController();
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mStorageAppDetailPreference = new StorageAppDetailPreference(mContext);
+        mPreferenceController = new TestStorageSizeBasePreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController,
+                mStorageAppDetailPreference);
     }
 
     @Test
-    public void refreshUi_defaultState_nothingIsSet() {
+    public void onCreate_defaultState_nothingIsSet() {
+        mPreferenceController.onCreate(mLifecycleOwner);
         assertThat(mStorageAppDetailPreference.getDetailText()).isNull();
-        assertThat(mController.isCachedCleared()).isFalse();
-        assertThat(mController.isDataCleared()).isFalse();
-        assertThat(mController.getAppStorageStats()).isNull();
+        assertThat(mPreferenceController.isCachedCleared()).isFalse();
+        assertThat(mPreferenceController.isDataCleared()).isFalse();
+        assertThat(mPreferenceController.getAppStorageStats()).isNull();
     }
 
     @Test
     public void setAppsStorageStatsManager_shouldRegisterController() {
-        mController.setAppsStorageStatsManager(mAppsStorageStatsManager);
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController.setAppsStorageStatsManager(mAppsStorageStatsManager);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
-        verify(mAppsStorageStatsManager).registerListener(mController);
+        verify(mAppsStorageStatsManager).registerListener(mPreferenceController);
     }
 
     @Test
     public void onDataLoaded_shouldUpdateCachedAndDataClearedState() {
-        mController.onDataLoaded(null, true, true);
+        mPreferenceController.onDataLoaded(null, true, true);
 
-        assertThat(mController.isCachedCleared()).isTrue();
-        assertThat(mController.isDataCleared()).isTrue();
+        assertThat(mPreferenceController.isCachedCleared()).isTrue();
+        assertThat(mPreferenceController.isDataCleared()).isTrue();
     }
 
     @Test
     public void onDataLoaded_appStorageStatsNotSet_shouldNotUpdateDetailText() {
-        mController.onDataLoaded(null, true, true);
+        mPreferenceController.onDataLoaded(null, true, true);
 
-        assertThat(mController.getAppStorageStats()).isNull();
+        assertThat(mPreferenceController.getAppStorageStats()).isNull();
         assertThat(mStorageAppDetailPreference.getDetailText()).isNull();
     }
 
     @Test
     public void onDataLoaded_appStorageStatsSet_shouldUpdateDetailText() {
-        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         StorageStats stats = new StorageStats();
         StorageStatsSource.AppStorageStats storageStats =
                 new StorageStatsSource.AppStorageStatsImpl(stats);
-        mController.setAppStorageStats(storageStats);
-        mController.onDataLoaded(null, true, true);
+        mPreferenceController.setAppStorageStats(storageStats);
+        mPreferenceController.onDataLoaded(null, true, true);
 
-        assertThat(mController.getAppStorageStats()).isNotNull();
+        assertThat(mPreferenceController.getAppStorageStats()).isNotNull();
         assertThat(mStorageAppDetailPreference.getDetailText()).isEqualTo("1.00 GB");
     }
 }

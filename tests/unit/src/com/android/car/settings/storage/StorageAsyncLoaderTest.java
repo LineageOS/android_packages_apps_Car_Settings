@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,88 +19,82 @@ package com.android.car.settings.storage;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Matchers.anyInt;
-import static org.mockito.Matchers.eq;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 import android.app.usage.StorageStats;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
 import android.net.TrafficStats;
 import android.os.UserHandle;
 import android.util.SparseArray;
 
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
 import com.android.car.settings.profiles.ProfileHelper;
-import com.android.car.settings.testutils.ShadowApplicationPackageManager;
-import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.settingslib.applications.StorageStatsSource;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-/** Unit test for {@link StorageAsyncLoader}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowApplicationPackageManager.class, ShadowUserHelper.class})
+@RunWith(AndroidJUnit4.class)
 public class StorageAsyncLoaderTest {
+
     private static final int PRIMARY_USER_ID = 0;
     private static final int SECONDARY_USER_ID = 10;
     private static final String PACKAGE_NAME_1 = "com.blah.test";
     private static final String PACKAGE_NAME_2 = "com.blah.test2";
-    private static final String DEFAULT_PACKAGE_NAME = "com.android.car.settings";
     private static final long DEFAULT_QUOTA = 64 * TrafficStats.MB_IN_BYTES;
 
-    @Mock
-    private StorageStatsSource mSource;
-    @Mock
-    private ProfileHelper mProfileHelper;
-
-    private Context mContext;
-    private List<ApplicationInfo> mInfo = new ArrayList<>();
+    private Context mContext = ApplicationProvider.getApplicationContext();
     private List<UserInfo> mUsers;
 
     private StorageAsyncLoader mLoader;
 
+    @Mock
+    private StorageStatsSource mMockSource;
+    @Mock
+    private PackageManager mMockPackageManager;
+    @Mock
+    private ProfileHelper mMockProfileHelper;
+
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
-        mInfo = new ArrayList<>();
-        mLoader = new StorageAsyncLoader(mContext, mSource);
+
+        mLoader = new StorageAsyncLoader(mContext, mMockSource, mMockPackageManager,
+                mMockProfileHelper);
         UserInfo info = new UserInfo();
+        info.id = PRIMARY_USER_ID;
         mUsers = new ArrayList<>();
         mUsers.add(info);
-        ShadowUserHelper.setInstance(mProfileHelper);
-        when(mProfileHelper.getAllProfiles()).thenReturn(mUsers);
-        when(mSource.getCacheQuotaBytes(any(), anyInt())).thenReturn(DEFAULT_QUOTA);
-        // there is always a "com.android.car.settings" package added by default with category
-        // otherAppsSize lets remove it first for testing.
-        getShadowApplicationManager().removePackage(DEFAULT_PACKAGE_NAME);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowApplicationPackageManager.reset();
+        when(mMockProfileHelper.getAllProfiles()).thenReturn(mUsers);
+        when(mMockSource.getCacheQuotaBytes(any(), anyInt())).thenReturn(DEFAULT_QUOTA);
     }
 
     @Test
     public void testLoadingApps() throws Exception {
-        addPackage(PACKAGE_NAME_1, 0, 1, 10, ApplicationInfo.CATEGORY_UNDEFINED);
-        addPackage(PACKAGE_NAME_2, 0, 100, 1000, ApplicationInfo.CATEGORY_UNDEFINED);
+        ApplicationInfo appInfo1 = createAppInfo(PACKAGE_NAME_1, 0, 1, 10,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+        ApplicationInfo appInfo2 = createAppInfo(PACKAGE_NAME_2, 0, 100, 1000,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Arrays.asList(appInfo1, appInfo2));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -111,7 +105,11 @@ public class StorageAsyncLoaderTest {
 
     @Test
     public void testGamesAreFiltered() throws Exception {
-        addPackage(PACKAGE_NAME_1, 0, 1, 10, ApplicationInfo.CATEGORY_GAME);
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 0, 1, 10,
+                ApplicationInfo.CATEGORY_GAME);
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Collections.singletonList(appInfo));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -122,9 +120,12 @@ public class StorageAsyncLoaderTest {
 
     @Test
     public void testLegacyGamesAreFiltered() throws Exception {
-        ApplicationInfo info =
-                addPackage(PACKAGE_NAME_1, 0, 1, 10, ApplicationInfo.CATEGORY_UNDEFINED);
-        info.flags = ApplicationInfo.FLAG_IS_GAME;
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 0, 1, 10,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+        appInfo.flags = ApplicationInfo.FLAG_IS_GAME;
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Collections.singletonList(appInfo));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -135,7 +136,11 @@ public class StorageAsyncLoaderTest {
 
     @Test
     public void testCacheIsNotIgnored() throws Exception {
-        addPackage(PACKAGE_NAME_1, 100, 1, 10, ApplicationInfo.CATEGORY_UNDEFINED);
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 100, 1, 10,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Collections.singletonList(appInfo));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -148,9 +153,14 @@ public class StorageAsyncLoaderTest {
         UserInfo info = new UserInfo();
         info.id = SECONDARY_USER_ID;
         mUsers.add(info);
-        when(mSource.getExternalStorageStats(any(), eq(UserHandle.SYSTEM)))
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 100, 1, 10,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ eq(0), anyInt()))
+                .thenReturn(Collections.singletonList(appInfo));
+        when(mMockSource.getExternalStorageStats(any(), eq(UserHandle.SYSTEM)))
                 .thenReturn(new StorageStatsSource.ExternalStorageStats(9, 2, 3, 4, 0));
-        when(mSource.getExternalStorageStats(any(), eq(new UserHandle(SECONDARY_USER_ID))))
+        when(mMockSource.getExternalStorageStats(any(), eq(new UserHandle(SECONDARY_USER_ID))))
                 .thenReturn(new StorageStatsSource.ExternalStorageStats(10, 3, 3, 4, 0));
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -161,9 +171,12 @@ public class StorageAsyncLoaderTest {
 
     @Test
     public void testUpdatedSystemAppCodeSizeIsCounted() throws Exception {
-        ApplicationInfo systemApp =
-                addPackage(PACKAGE_NAME_1, 100, 1, 10, ApplicationInfo.CATEGORY_UNDEFINED);
-        systemApp.flags = ApplicationInfo.FLAG_SYSTEM & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP;
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 100, 1, 10,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+        appInfo.flags = ApplicationInfo.FLAG_SYSTEM & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP;
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Collections.singletonList(appInfo));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -173,7 +186,11 @@ public class StorageAsyncLoaderTest {
 
     @Test
     public void testVideoAppsAreFiltered() throws Exception {
-        addPackage(PACKAGE_NAME_1, 0, 1, 10, ApplicationInfo.CATEGORY_VIDEO);
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 0, 1, 10,
+                ApplicationInfo.CATEGORY_VIDEO);
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Collections.singletonList(appInfo));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -184,12 +201,13 @@ public class StorageAsyncLoaderTest {
 
     @Test
     public void testRemovedPackageDoesNotCrash() throws Exception {
-        ApplicationInfo info = new ApplicationInfo();
-        info.packageName = PACKAGE_NAME_1;
-        info.category = ApplicationInfo.CATEGORY_UNDEFINED;
-        mInfo.add(info);
-        when(mSource.getStatsForPackage(any(), anyString(), any(UserHandle.class)))
-                .thenThrow(new NameNotFoundException());
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 0, 1, 10,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Collections.singletonList(appInfo));
+        when(mMockSource.getStatsForPackage(any(), anyString(), any(UserHandle.class)))
+                .thenThrow(new PackageManager.NameNotFoundException());
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -201,16 +219,19 @@ public class StorageAsyncLoaderTest {
         UserInfo info = new UserInfo();
         info.id = SECONDARY_USER_ID;
         mUsers.add(info);
-        when(mSource.getExternalStorageStats(anyString(), eq(UserHandle.SYSTEM)))
-                .thenReturn(new StorageStatsSource.ExternalStorageStats(9, 2, 3, 4, 0));
-        when(mSource.getExternalStorageStats(anyString(), eq(new UserHandle(SECONDARY_USER_ID))))
-                .thenReturn(new StorageStatsSource.ExternalStorageStats(10, 3, 3, 4, 0));
-        addPackage(PACKAGE_NAME_1, 0, 1, 10, ApplicationInfo.CATEGORY_VIDEO);
-        ArrayList<ApplicationInfo> secondaryUserApps = new ArrayList<>();
-        ApplicationInfo appInfo = new ApplicationInfo();
-        appInfo.packageName = PACKAGE_NAME_1;
-        appInfo.category = ApplicationInfo.CATEGORY_VIDEO;
-        secondaryUserApps.add(appInfo);
+        when(mMockSource.getExternalStorageStats(anyString(), eq(UserHandle.SYSTEM)))
+                .thenReturn(new StorageStatsSource.ExternalStorageStats(9, 2, 3,
+                        4, 0));
+        when(mMockSource.getExternalStorageStats(anyString(),
+                eq(new UserHandle(SECONDARY_USER_ID))))
+                .thenReturn(new StorageStatsSource.ExternalStorageStats(10, 3, 3,
+                        4, 0));
+
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, 0, 1, 10,
+                ApplicationInfo.CATEGORY_VIDEO);
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ eq(0), anyInt()))
+                .thenReturn(Collections.singletonList(appInfo));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -222,7 +243,12 @@ public class StorageAsyncLoaderTest {
 
     @Test
     public void testCacheOveragesAreCountedAsFree() throws Exception {
-        addPackage(PACKAGE_NAME_1, DEFAULT_QUOTA + 100, 1, 10, ApplicationInfo.CATEGORY_UNDEFINED);
+        ApplicationInfo appInfo = createAppInfo(PACKAGE_NAME_1, DEFAULT_QUOTA + 100, 1, 10,
+                ApplicationInfo.CATEGORY_UNDEFINED);
+
+        when(mMockPackageManager.getInstalledApplicationsAsUser(
+                /* getAllInstalledApplications= */ 0, PRIMARY_USER_ID))
+                .thenReturn(Collections.singletonList(appInfo));
 
         SparseArray<StorageAsyncLoader.AppsStorageResult> result = mLoader.loadInBackground();
 
@@ -230,7 +256,7 @@ public class StorageAsyncLoaderTest {
         assertThat(result.get(PRIMARY_USER_ID).getOtherAppsSize()).isEqualTo(DEFAULT_QUOTA + 11);
     }
 
-    private ApplicationInfo addPackage(String packageName, long cacheSize, long codeSize,
+    private ApplicationInfo createAppInfo(String packageName, long cacheSize, long codeSize,
             long dataSize, int category) throws Exception {
         StorageStats stats = new StorageStats();
         stats.codeBytes = codeSize;
@@ -239,7 +265,7 @@ public class StorageAsyncLoaderTest {
         StorageStatsSource.AppStorageStats storageStats =
                 new StorageStatsSource.AppStorageStatsImpl(stats);
 
-        when(mSource.getStatsForPackage(any(), anyString(), any(UserHandle.class)))
+        when(mMockSource.getStatsForPackage(any(), anyString(), any(UserHandle.class)))
                 .thenReturn(storageStats);
 
         ApplicationInfo info = new ApplicationInfo();
@@ -248,11 +274,7 @@ public class StorageAsyncLoaderTest {
         PackageInfo packageInfo = new PackageInfo();
         packageInfo.applicationInfo = info;
         packageInfo.packageName = packageName;
-        getShadowApplicationManager().addPackage(packageInfo);
-        return info;
-    }
 
-    private ShadowApplicationPackageManager getShadowApplicationManager() {
-        return Shadow.extract(mContext.getPackageManager());
+        return info;
     }
 }
