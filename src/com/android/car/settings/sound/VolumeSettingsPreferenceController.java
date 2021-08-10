@@ -18,7 +18,11 @@ package com.android.car.settings.sound;
 
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_VOLUME_GROUP_MUTING;
 import static android.car.media.CarAudioManager.PRIMARY_AUDIO_ZONE;
+import static android.os.UserManager.DISALLOW_ADJUST_VOLUME;
 
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByUm;
 import static com.android.car.settings.sound.VolumeItemParser.VolumeItem;
 
 import android.car.Car;
@@ -30,6 +34,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.SparseArray;
+import android.widget.Toast;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
@@ -43,6 +48,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SeekBarPreference;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,6 +123,15 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
                 VolumeSeekBarPreference volumePreference = createVolumeSeekBarPreference(
                         groupId, volumeItem.getUsage(), volumeItem.getIcon(),
                         volumeItem.getMuteIcon(), volumeItem.getTitle());
+                volumePreference.setDisabledClickListener(p -> {
+                    if (hasUserRestrictionByDpm(getContext(), DISALLOW_ADJUST_VOLUME)) {
+                        showActionDisabledByAdminDialog();
+                    } else {
+                        Toast.makeText(getContext(),
+                                getContext().getString(R.string.action_unavailable),
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
                 mVolumePreferences.add(volumePreference);
             }
             mCarAudioManager.registerCarVolumeCallback(mVolumeChangeCallback);
@@ -245,5 +260,21 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
             }
         }
         return result;
+    }
+
+    @Override
+    public int getAvailabilityStatus() {
+        if (hasUserRestrictionByUm(getContext(), DISALLOW_ADJUST_VOLUME)
+                || hasUserRestrictionByDpm(getContext(), DISALLOW_ADJUST_VOLUME)) {
+            return AVAILABLE_FOR_VIEWING;
+        }
+        return AVAILABLE;
+    }
+
+    private void showActionDisabledByAdminDialog() {
+        getFragmentController().showDialog(
+                EnterpriseUtils.getActionDisabledByAdminDialog(getContext(),
+                        DISALLOW_ADJUST_VOLUME),
+                DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
     }
 }
