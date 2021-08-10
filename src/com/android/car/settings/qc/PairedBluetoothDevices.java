@@ -33,7 +33,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.util.Pair;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.VisibleForTesting;
@@ -225,58 +224,40 @@ public class PairedBluetoothDevices extends SettingsQCItem {
 
     private QCActionItem createBluetoothButton(CachedBluetoothDevice device, int requestCode) {
         return createBluetoothDeviceToggle(device, requestCode, BLUETOOTH_BUTTON,
-                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth), !device.isBusy(),
-                device.isConnected());
+                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth), true,
+                !device.isBusy(), device.isConnected());
     }
 
     private QCActionItem createPhoneButton(CachedBluetoothDevice device, int requestCode) {
-        Pair<Boolean, Boolean> phoneState = getBluetoothProfileState(device,
+        BluetoothProfileToggleState phoneState = geBluetoothProfileToggleState(device,
                 BluetoothProfile.HEADSET_CLIENT);
         return createBluetoothDeviceToggle(device, requestCode, PHONE_BUTTON,
                 Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth_phone),
-                phoneState.first, phoneState.second);
+                phoneState.mIsAvailable, phoneState.mIsEnabled, phoneState.mIsChecked);
     }
 
     private QCActionItem createMediaButton(CachedBluetoothDevice device, int requestCode) {
-        Pair<Boolean, Boolean> mediaState = getBluetoothProfileState(device,
+        BluetoothProfileToggleState mediaState = geBluetoothProfileToggleState(device,
                 BluetoothProfile.A2DP_SINK);
         return createBluetoothDeviceToggle(device, requestCode, MEDIA_BUTTON,
                 Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth_media),
-                mediaState.first, mediaState.second);
+                mediaState.mIsAvailable, mediaState.mIsEnabled, mediaState.mIsChecked);
     }
 
     private QCActionItem createBluetoothDeviceToggle(CachedBluetoothDevice device, int requestCode,
-            String buttonType, Icon icon, boolean enabled, boolean checked) {
+            String buttonType, Icon icon, boolean available, boolean enabled, boolean checked) {
         Bundle extras = new Bundle();
         extras.putString(EXTRA_BUTTON_TYPE, buttonType);
         extras.putString(EXTRA_DEVICE_KEY, device.getAddress());
         PendingIntent action = getBroadcastIntent(extras, requestCode);
 
         return new QCActionItem.Builder(QC_TYPE_ACTION_TOGGLE)
+                .setAvailable(available)
                 .setChecked(checked)
                 .setEnabled(enabled)
                 .setAction(action)
                 .setIcon(icon)
                 .build();
-    }
-
-    /**
-     * Returns a pair representing the state for a profile button.
-     * Pair.first = enabled state
-     * Pair.second = checked state
-     */
-    private Pair<Boolean, Boolean> getBluetoothProfileState(CachedBluetoothDevice device,
-            int profileId) {
-        if (device.isBusy()) {
-            return Pair.create(false, false);
-        }
-
-        LocalBluetoothProfile profile = getProfile(device, profileId);
-        boolean isConnected = device.isConnected();
-        if (profile == null || !isConnected) {
-            return Pair.create(false, false);
-        }
-        return Pair.create(true, profile.isEnabled(device.getDevice()));
     }
 
     private LocalBluetoothProfile getProfile(CachedBluetoothDevice device, int profileId) {
@@ -286,5 +267,27 @@ public class PairedBluetoothDevices extends SettingsQCItem {
             }
         }
         return null;
+    }
+
+    private BluetoothProfileToggleState geBluetoothProfileToggleState(CachedBluetoothDevice device,
+            int profileId) {
+        LocalBluetoothProfile profile = getProfile(device, profileId);
+        if (!device.isConnected() || profile == null) {
+            return new BluetoothProfileToggleState(false, false, false);
+        }
+        return new BluetoothProfileToggleState(true, !device.isBusy(),
+                profile.isEnabled(device.getDevice()));
+    }
+
+    private static class BluetoothProfileToggleState {
+        final boolean mIsAvailable;
+        final boolean mIsEnabled;
+        final boolean mIsChecked;
+
+        BluetoothProfileToggleState(boolean isAvailable, boolean isEnabled, boolean isChecked) {
+            mIsAvailable = isAvailable;
+            mIsEnabled = isEnabled;
+            mIsChecked = isChecked;
+        }
     }
 }
