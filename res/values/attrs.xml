@@ -52,6 +52,7 @@
         <!-- Title and icon resource ids to render on UI -->
         <attr name="titleText" format="reference"/>
         <attr name="icon" format="reference"/>
+        <attr name="mute_icon" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="PinPadView">
