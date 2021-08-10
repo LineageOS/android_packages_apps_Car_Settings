@@ -392,9 +392,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги според локација"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Користи ја локацијата"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Услугата „Локација“ може да користи извори како GPS, Wi‑Fi, мобилни мрежи и сензори за да помогне да се процени локацијата на уредот."</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
+    <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"Користи го микрофонот"</string>
+    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања на системот"</string>
@@ -513,7 +513,8 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Не можеше да се создаде нов профил"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Да се избрише профилов?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Ќе се избришат сите апликации и податоци за профилов."</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Не можеше да се избрише профилот."</string>
+    <!-- no translation found for delete_user_error_title (287249031795906102) -->
+    <skip />
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Профилов ќе се избрише кога ќе промените профил или ќе го рестартирате возилото."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Отфрли"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Повторно"</string>
