@@ -16,6 +16,9 @@
 
 package com.android.car.settings.sound;
 
+import static android.car.media.CarAudioManager.AUDIO_FEATURE_VOLUME_GROUP_MUTING;
+import static android.car.media.CarAudioManager.PRIMARY_AUDIO_ZONE;
+
 import static com.android.car.settings.sound.VolumeItemParser.VolumeItem;
 
 import android.car.Car;
@@ -57,7 +60,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
     private static final String VOLUME_USAGE_KEY = "volume_usage_key";
 
     private final SparseArray<VolumeItem> mVolumeItems;
-    private final List<SeekBarPreference> mVolumePreferences = new ArrayList<>();
+    private final List<VolumeSeekBarPreference> mVolumePreferences = new ArrayList<>();
     private final VolumeSettingsRingtoneManager mRingtoneManager;
 
     private final Handler mUiHandler;
@@ -67,32 +70,18 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
             new CarAudioManager.CarVolumeCallback() {
                 @Override
                 public void onGroupVolumeChanged(int zoneId, int groupId, int flags) {
-                    if (mCarAudioManager != null) {
-                        int value = mCarAudioManager.getGroupVolume(groupId);
-
-                        for (SeekBarPreference volumePreference : mVolumePreferences) {
-                            Bundle extras = volumePreference.getExtras();
-                            if (extras.getInt(VOLUME_GROUP_KEY) == groupId) {
-                                // Only setValue if the value is different, since changing the
-                                // seekbar of the volume directly will trigger CarVolumeCallback as
-                                // well, causing janky movement.
-                                if (volumePreference.getValue() != value) {
-                                    // CarVolumeCallback is run on a binder thread. In order to
-                                    // make updates to the SeekBarPreference, we need to switch
-                                    // over to the UI thread.
-                                    mUiHandler.post(() -> {
-                                        volumePreference.setValue(value);
-                                    });
-                                }
-                                break;
-                            }
-                        }
-                    }
+                    updateVolumeAndMute(zoneId, groupId);
                 }
 
                 @Override
                 public void onMasterMuteChanged(int zoneId, int flags) {
+
                     // Mute is not being used yet
+                }
+
+                @Override
+                public void onGroupMuteChanged(int zoneId, int groupId, int flags) {
+                    updateVolumeAndMute(zoneId, groupId);
                 }
             };
 
@@ -125,9 +114,9 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
             for (int groupId = 0; groupId < volumeGroupCount; groupId++) {
                 VolumeItem volumeItem = getVolumeItemForUsages(
                         mCarAudioManager.getUsagesForVolumeGroupId(groupId));
-                SeekBarPreference volumePreference = createVolumeSeekBarPreference(
+                VolumeSeekBarPreference volumePreference = createVolumeSeekBarPreference(
                         groupId, volumeItem.getUsage(), volumeItem.getIcon(),
-                        volumeItem.getTitle());
+                        volumeItem.getMuteIcon(), volumeItem.getTitle());
                 mVolumePreferences.add(volumePreference);
             }
             mCarAudioManager.registerCarVolumeCallback(mVolumeChangeCallback);
@@ -162,18 +151,25 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
         return R.xml.car_volume_items;
     }
 
-    private SeekBarPreference createVolumeSeekBarPreference(
-            int volumeGroupId, int usage, @DrawableRes int iconResId,
-            @StringRes int titleId) {
-        SeekBarPreference preference = new SeekBarPreference(getContext());
+    private VolumeSeekBarPreference createVolumeSeekBarPreference(
+            int volumeGroupId, int usage, @DrawableRes int primaryIconResId,
+            @DrawableRes int secondaryIconResId, @StringRes int titleId) {
+        VolumeSeekBarPreference preference = new VolumeSeekBarPreference(getContext());
         preference.setTitle(getContext().getString(titleId));
-        preference.setIcon(getContext().getDrawable(iconResId));
-        preference.getIcon().setTintList(
+        preference.setUnMutedIcon(getContext().getDrawable(primaryIconResId));
+        preference.getUnMutedIcon().setTintList(
+                Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
+        preference.setMutedIcon(getContext().getDrawable(secondaryIconResId));
+        preference.getMutedIcon().setTintList(
                 Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
         try {
             preference.setValue(mCarAudioManager.getGroupVolume(volumeGroupId));
             preference.setMin(mCarAudioManager.getGroupMinVolume(volumeGroupId));
             preference.setMax(mCarAudioManager.getGroupMaxVolume(volumeGroupId));
+            if (mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_MUTING)) {
+                preference.setIsMuted(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE,
+                        volumeGroupId));
+            }
         } catch (CarNotConnectedException e) {
             LOG.e("Car is not connected!", e);
         }
@@ -191,6 +187,32 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
             return true;
         });
         return preference;
+    }
+
+    private void updateVolumeAndMute(int zoneId, int groupId) {
+        // Settings only handles primary zone changes
+        if (zoneId != PRIMARY_AUDIO_ZONE) {
+            return;
+        }
+        if (mCarAudioManager != null) {
+            boolean isMuted =
+                    mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, groupId);
+            int value = mCarAudioManager.getGroupVolume(groupId);
+
+            for (VolumeSeekBarPreference volumePreference : mVolumePreferences) {
+                Bundle extras = volumePreference.getExtras();
+                if (extras.getInt(VOLUME_GROUP_KEY) == groupId) {
+                    if (volumePreference.isMuted() != isMuted
+                            || value != volumePreference.getValue()) {
+                        mUiHandler.post(() -> {
+                            volumePreference.setIsMuted(isMuted);
+                            volumePreference.setValue(value);
+                        });
+                    }
+                    break;
+                }
+            }
+        }
     }
 
     private void setGroupVolume(int volumeGroupId, int newVolume) {
