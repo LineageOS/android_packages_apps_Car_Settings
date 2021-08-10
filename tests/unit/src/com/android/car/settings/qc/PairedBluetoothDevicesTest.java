@@ -163,8 +163,8 @@ public class PairedBluetoothDevicesTest {
         QCActionItem mediaToggle = row.getEndItems().get(2);
         assertThat(btToggle.isChecked()).isFalse();
         assertThat(btToggle.isEnabled()).isTrue();
-        assertThat(phoneToggle.isEnabled()).isFalse();
-        assertThat(mediaToggle.isEnabled()).isFalse();
+        assertThat(phoneToggle.isAvailable()).isFalse();
+        assertThat(mediaToggle.isAvailable()).isFalse();
     }
 
     @Test
@@ -180,8 +180,10 @@ public class PairedBluetoothDevicesTest {
         assertThat(btToggle.isEnabled()).isTrue();
         assertThat(phoneToggle.isChecked()).isTrue();
         assertThat(phoneToggle.isEnabled()).isTrue();
+        assertThat(phoneToggle.isAvailable()).isTrue();
         assertThat(mediaToggle.isChecked()).isTrue();
         assertThat(mediaToggle.isEnabled()).isTrue();
+        assertThat(mediaToggle.isAvailable()).isTrue();
     }
 
     @Test
