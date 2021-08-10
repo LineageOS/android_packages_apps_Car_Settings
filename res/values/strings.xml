@@ -192,6 +192,8 @@
     <string name="wifi_setup_connect">Connect</string>
     <!-- Label for button when the car is connecting to a Wi-Fi network. [CHAR LIMIT=20] -->
     <string name="wifi_connecting">Connecting\u2026</string>
+    <!-- Wi-Fi state - Disconnected [CHAR LIMIT=NONE] -->
+    <string name="wifi_disconnected">Not connected</string>
     <!-- Toast message shown when a network connection failed because it's not in range. [CHAR LIMIT=40] -->
     <string name="wifi_not_in_range_message">Network not in range</string>
     <!-- Label for the password of the secured network -->
