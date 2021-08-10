@@ -392,9 +392,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"សេវាកម្ម​ទីតាំង"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
+    <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
+    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"ប្រព័ន្ធ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"បច្ចុប្បន្នភាព​ប្រព័ន្ធ"</string>
@@ -513,7 +513,8 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"មិនអាចបង្កើតកម្រងព័ត៌មានថ្មីបានទេ"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"លុប​កម្រងព័ត៌មាន​នេះឬ?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"កម្មវិធី និង​ទិន្នន័យទាំងអស់​សម្រាប់កម្រងព័ត៌មាននេះ​នឹងត្រូវបានលុប"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"មិនអាចលុបកម្រងព័ត៌មានបានទេ។"</string>
+    <!-- no translation found for delete_user_error_title (287249031795906102) -->
+    <skip />
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"កម្រងព័ត៌មាន​នេះនឹងត្រូវបានលុប នៅពេលអ្នក​ប្ដូរកម្រងព័ត៌មាន ឬបញ្ឆេះ​យានជំនិះឡើងវិញ។"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"ច្រានចោល"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"ព្យាយាមម្ដងទៀត"</string>
