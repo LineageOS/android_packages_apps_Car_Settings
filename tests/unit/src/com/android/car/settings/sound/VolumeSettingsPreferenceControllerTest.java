@@ -16,6 +16,8 @@
 
 package com.android.car.settings.sound;
 
+import static android.car.media.CarAudioManager.PRIMARY_AUDIO_ZONE;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -93,6 +95,7 @@ public class VolumeSettingsPreferenceControllerTest {
         when(mCarAudioManager.getGroupMinVolume(GROUP_ID)).thenReturn(TEST_MIN_VOLUME);
         when(mCarAudioManager.getGroupVolume(GROUP_ID)).thenReturn(TEST_VOLUME);
         when(mCarAudioManager.getGroupMaxVolume(GROUP_ID)).thenReturn(TEST_MAX_VOLUME);
+        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(false);
 
         PreferenceManager preferenceManager = new PreferenceManager(mContext);
         PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
@@ -185,6 +188,32 @@ public class VolumeSettingsPreferenceControllerTest {
 
         SeekBarPreference preference = (SeekBarPreference) mPreferenceGroup.getPreference(0);
         assertThat(preference.getValue()).isEqualTo(TEST_NEW_VOLUME);
+    }
+
+    @Test
+    public void onGroupMuteChanged_sameValue_doesNotUpdateIsMuted() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        mPreferenceController.mVolumeChangeCallback.onGroupMuteChanged(ZONE_ID,
+                GROUP_ID, /* flags= */ 0);
+
+        verify(preference, never()).setIsMuted(any(Boolean.class));
+    }
+
+    @Test
+    public void onGroupMuteChanged_differentValue_updatesMutedState() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
+        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(true);
+        mPreferenceController.mVolumeChangeCallback.onGroupMuteChanged(ZONE_ID,
+                GROUP_ID, /* flags= */ 0);
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+
+        VolumeSeekBarPreference preference =
+                (VolumeSeekBarPreference) mPreferenceGroup.getPreference(0);
+        assertThat(preference.isMuted()).isEqualTo(true);
     }
 
     private static class TestVolumeSettingsPreferenceController extends
