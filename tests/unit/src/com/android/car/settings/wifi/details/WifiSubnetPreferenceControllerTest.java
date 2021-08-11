@@ -18,21 +18,39 @@ package com.android.car.settings.wifi.details;
 
 import static org.mockito.Mockito.when;
 
+import android.net.LinkAddress;
+import android.net.LinkProperties;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.util.Collections;
 
 @RunWith(AndroidJUnit4.class)
-public class WifiMacAddressPreferenceControllerTest
-        extends WifiDetailsBasePreferenceControllerTestCase {
-    private static final String MAC_ADDRESS = "mac_address";
+public class WifiSubnetPreferenceControllerTest
+        extends WifiDetailsBasePreferenceControllerTestCase{
 
-    private WifiMacAddressPreferenceController mPreferenceController;
+    private WifiSubnetPreferenceController mPreferenceController;
+
+    @Mock
+    private LinkProperties mMockLinkProperties;
+    @Mock
+    private LinkAddress mMockLinkAddress;
+
+    @Override
+    protected void initTest() {
+        when(mMockWifiInfoProvider.getLinkProperties()).thenReturn(mMockLinkProperties);
+        when(mMockLinkProperties.getLinkAddresses()).thenReturn(Collections.emptyList());
+    }
 
     @Override
     protected WifiDetailsBasePreferenceController<WifiDetailsPreference> getController() {
         if (mPreferenceController == null) {
-            mPreferenceController = new WifiMacAddressPreferenceController(mContext,
+            mPreferenceController = new WifiSubnetPreferenceController(mContext,
                     /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         }
         return mPreferenceController;
@@ -41,17 +59,14 @@ public class WifiMacAddressPreferenceControllerTest
     @Override
     protected void setUpConnectedState() {
         super.setUpConnectedState();
-        when(mMockWifiEntry.getMacAddress()).thenReturn(MAC_ADDRESS);
-    }
-
-    @Override
-    protected void setUpDisconnectedState() {
-        super.setUpDisconnectedState();
-        when(mMockWifiEntry.getMacAddress()).thenReturn(null);
+        when(mMockLinkProperties.getLinkAddresses()).thenReturn(
+                Collections.singletonList(mMockLinkAddress));
+        InetAddress address = Inet4Address.LOOPBACK;
+        when(mMockLinkAddress.getAddress()).thenReturn(address);
     }
 
     @Override
     protected String getDesiredDetailText() {
-        return MAC_ADDRESS;
+        return "0.0.0.0";
     }
 }
