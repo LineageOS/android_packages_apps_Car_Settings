@@ -16,23 +16,39 @@
 
 package com.android.car.settings.wifi.details;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.Mockito.when;
+
+import android.net.wifi.WifiInfo;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.R;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 
 @RunWith(AndroidJUnit4.class)
-public class WifiMacAddressPreferenceControllerTest
+public class WifiLinkSpeedPreferenceControllerTest
         extends WifiDetailsBasePreferenceControllerTestCase {
-    private static final String MAC_ADDRESS = "mac_address";
+    private static final int VALID_LINK_SPEED = 100;
 
-    private WifiMacAddressPreferenceController mPreferenceController;
+    private WifiLinkSpeedPreferenceController mPreferenceController;
+
+    @Mock
+    private WifiInfo mMockWifiInfo;
+
+    @Override
+    protected void initTest() {
+        when(mMockWifiInfoProvider.getWifiInfo()).thenReturn(mMockWifiInfo);
+    }
 
     @Override
     protected WifiDetailsBasePreferenceController<WifiDetailsPreference> getController() {
         if (mPreferenceController == null) {
-            mPreferenceController = new WifiMacAddressPreferenceController(mContext,
+            mPreferenceController = new WifiLinkSpeedPreferenceController(mContext,
                     /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         }
         return mPreferenceController;
@@ -41,17 +57,22 @@ public class WifiMacAddressPreferenceControllerTest
     @Override
     protected void setUpConnectedState() {
         super.setUpConnectedState();
-        when(mMockWifiEntry.getMacAddress()).thenReturn(MAC_ADDRESS);
-    }
-
-    @Override
-    protected void setUpDisconnectedState() {
-        super.setUpDisconnectedState();
-        when(mMockWifiEntry.getMacAddress()).thenReturn(null);
+        when(mMockWifiInfo.getLinkSpeed()).thenReturn(VALID_LINK_SPEED);
     }
 
     @Override
     protected String getDesiredDetailText() {
-        return MAC_ADDRESS;
+        return mContext.getString(R.string.link_speed, VALID_LINK_SPEED);
+    }
+
+    @Test
+    public void onCreate_negativeLinkSpeed_preferenceNotVisible() {
+        super.setUpConnectedState();
+        int linkSpeed = -1;
+        when(mMockWifiInfo.getLinkSpeed()).thenReturn(linkSpeed);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreference.isVisible()).isFalse();
     }
 }
