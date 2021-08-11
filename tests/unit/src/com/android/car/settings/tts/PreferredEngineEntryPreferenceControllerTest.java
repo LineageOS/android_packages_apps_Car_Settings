@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,32 +18,35 @@ package com.android.car.settings.tts;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TtsEngines;
 
-import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowTtsEngines;
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowApplication;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowTtsEngines.class})
+@RunWith(AndroidJUnit4.class)
 public class PreferredEngineEntryPreferenceControllerTest {
 
     private static final TextToSpeech.EngineInfo ENGINE_INFO = new TextToSpeech.EngineInfo();
@@ -54,40 +57,48 @@ public class PreferredEngineEntryPreferenceControllerTest {
         ENGINE_INFO.name = "com.android.car.settings.tts.test.Engine";
     }
 
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+    private LifecycleOwner mLifecycleOwner;
     private CarUiTwoActionIconPreference mPreference;
+    private PreferredEngineEntryPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
     @Mock
     private TtsEngines mEnginesHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowTtsEngines.setInstance(mEnginesHelper);
-        Context context = RuntimeEnvironment.application;
+        mLifecycleOwner = new TestLifecycleOwner();
 
-        mPreference = new CarUiTwoActionIconPreference(context);
-        PreferenceControllerTestHelper<PreferredEngineEntryPreferenceController> controllerHelper =
-                new PreferenceControllerTestHelper<>(context,
-                        PreferredEngineEntryPreferenceController.class, mPreference);
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        mPreference = new CarUiTwoActionIconPreference(mContext);
+        mPreferenceController = new PreferredEngineEntryPreferenceController(mContext,
+                "key", mFragmentController, mCarUxRestrictions, mEnginesHelper);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
 
         Intent intent = new Intent(INTENT_ACTION);
         when(mEnginesHelper.getSettingsIntent(ENGINE_INFO.name)).thenReturn(intent);
         when(mEnginesHelper.getEngineInfo(ENGINE_INFO.name)).thenReturn(
                 ENGINE_INFO);
         when(mEnginesHelper.getDefaultEngine()).thenReturn(ENGINE_INFO.name);
-
-        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowTtsEngines.reset();
+        doNothing().when(mContext).startActivity(any());
     }
 
     @Test
     public void performButtonClick_navigateToNextActivity() {
+        mPreferenceController.onCreate(mLifecycleOwner);
         mPreference.performSecondaryActionClick();
 
-        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
-        assertThat(actual.getAction()).isEqualTo(INTENT_ACTION);
+        ArgumentCaptor<Intent> intentArgumentCaptor = ArgumentCaptor.forClass(
+                Intent.class);
+        verify(mContext).startActivity(intentArgumentCaptor.capture());
+
+        Intent intent = intentArgumentCaptor.getValue();
+        assertThat(intent.getAction()).isEqualTo(INTENT_ACTION);
     }
 }

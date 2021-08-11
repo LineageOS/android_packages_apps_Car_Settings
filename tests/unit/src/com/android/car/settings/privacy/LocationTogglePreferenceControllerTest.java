@@ -121,6 +121,14 @@ public class LocationTogglePreferenceControllerTest {
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
     }
 
+    @Test
+    public void onStop_unregistersListener() {
+        initializePreference(/* isLocationEnabled= */ true);
+        mPreferenceController.onStop(mLifecycleOwner);
+
+        verify(mContext).unregisterReceiver(mListener.getValue());
+    }
+
     private void initializePreference(boolean isLocationEnabled) {
         when(mLocationManager.isLocationEnabled()).thenReturn(isLocationEnabled);
         mPreferenceController.onCreate(mLifecycleOwner);

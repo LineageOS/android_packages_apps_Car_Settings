@@ -16,6 +16,7 @@
 
 package com.android.car.settings.wifi.details;
 
+import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.Mockito.when;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -23,16 +24,16 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class WifiMacAddressPreferenceControllerTest
+public class WifiSecurityPreferenceControllerTest
         extends WifiDetailsBasePreferenceControllerTestCase {
-    private static final String MAC_ADDRESS = "mac_address";
+    private static final String TEST_SECURITY_STRING = "test_security";
 
-    private WifiMacAddressPreferenceController mPreferenceController;
+    private WifiSecurityPreferenceController mPreferenceController;
 
     @Override
     protected WifiDetailsBasePreferenceController<WifiDetailsPreference> getController() {
         if (mPreferenceController == null) {
-            mPreferenceController = new WifiMacAddressPreferenceController(mContext,
+            mPreferenceController = new WifiSecurityPreferenceController(mContext,
                     /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         }
         return mPreferenceController;
@@ -41,17 +42,11 @@ public class WifiMacAddressPreferenceControllerTest
     @Override
     protected void setUpConnectedState() {
         super.setUpConnectedState();
-        when(mMockWifiEntry.getMacAddress()).thenReturn(MAC_ADDRESS);
-    }
-
-    @Override
-    protected void setUpDisconnectedState() {
-        super.setUpDisconnectedState();
-        when(mMockWifiEntry.getMacAddress()).thenReturn(null);
+        when(mMockWifiEntry.getSecurityString(anyBoolean())).thenReturn(TEST_SECURITY_STRING);
     }
 
     @Override
     protected String getDesiredDetailText() {
-        return MAC_ADDRESS;
+        return TEST_SECURITY_STRING;
     }
 }

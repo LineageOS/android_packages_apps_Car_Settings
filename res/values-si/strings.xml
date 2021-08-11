@@ -392,9 +392,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"ස්ථානීය සේවා"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ස්ථානය භාවිත කරන්න"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ස්ථානය ඔබගේ උපාංගයෙහි ස්ථානය තක්සේරු කිරීමට උදවු කිරීමට, GPS, Wi-Fi, ජංගම ජාල සහ සංවේදක වැනි මූලාශ්‍ර භාවිත කළ හැකිය."</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
+    <string name="microphone_settings_title" msgid="7125554350537136922">"මයික්‍රෆෝනය"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"මයික්‍රෆෝනය භාවිත කරන්න"</string>
+    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"පද්ධතිය"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"පද්ධති යාවත්කාලීන"</string>
@@ -513,7 +513,8 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"නව පැතිකඩ තැනීමට නොහැකි විය"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"මෙම පැතිකඩ මකන්නද?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"මෙම පැතිකඩ සඳහා වන සියලු යෙදුම් සහ දත්ත මකනු ඇත."</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"පැතිකඩ මැකීමට නොහැකි විය."</string>
+    <!-- no translation found for delete_user_error_title (287249031795906102) -->
+    <skip />
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"ඔබ පැතිකඩවල් මාරු කරන විට හෝ වාහනය යළි පණගන්වන විට මෙම පැතිකඩ මකනු ඇත."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"ඉවතලන්න"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"යළි උත්සාහ කරන්න"</string>
