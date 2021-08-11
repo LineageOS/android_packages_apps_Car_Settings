@@ -400,10 +400,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Служби локації"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Використовувати геодані"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
-    <skip />
+    <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрофон"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"Використовувати мікрофон"</string>
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Керувати доступом до мікрофона"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Оновлення системи"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Додатково"</string>
@@ -525,7 +524,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Не вдалося створити новий профіль"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Видалити цей профіль?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Усі додатки та дані для цього профілю буде видалено"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Не вдалося видалити профіль."</string>
+    <string name="delete_user_error_title" msgid="287249031795906102">"Профіль не видалено. Перезапустіть пристрій і повторіть спробу."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Цей профіль видалиться, коли ви ввійдете в інший або перезапустите транспортний засіб."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Закрити"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Повторити"</string>

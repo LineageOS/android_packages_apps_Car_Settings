@@ -392,9 +392,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Placeringstjenester"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Brug placering"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Placering kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds placering."</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
+    <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"Brug mikrofonen"</string>
+    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemopdateringer"</string>
@@ -513,7 +513,8 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Den nye profil kunne ikke oprettes"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Vil du slette denne profil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Alle apps og data, der er knyttet til denne profil, slettes"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Profilen kunne ikke oprettes."</string>
+    <!-- no translation found for delete_user_error_title (287249031795906102) -->
+    <skip />
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Denne profil slettes, når du skifter profil eller starter køretøjet igen."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Luk"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Prøv igen"</string>
