@@ -34,6 +34,7 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
@@ -53,7 +54,7 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
 
     protected final String mPackageName = mRealContext.getPackageName();
 
-    private final PackageManager mRealPm = mRealContext.getPackageManager();
+    protected final PackageManager mRealPm = mRealContext.getPackageManager();
     protected PackageManager mSpiedPm = spy(mRealPm);
 
     protected final ComponentName mDefaultAdmin =
@@ -61,6 +62,8 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
     protected final ComponentName mFancyAdmin =
             new ComponentName(mSpiedContext, FancyDeviceAdminReceiver.class);
 
+    protected ActivityInfo mDefaultActivityInfo;
+    protected ActivityInfo mFancyActivityInfo;
     protected DeviceAdminInfo mDefaultDeviceAdminInfo;
     protected DeviceAdminInfo mFancyDeviceAdminInfo;
 
@@ -81,12 +84,12 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
         when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
         when(mSpiedContext.getSystemService(UserManager.class)).thenReturn(mUm);
 
-        ActivityInfo defaultInfo = mRealPm.getReceiverInfo(mDefaultAdmin,
+        mDefaultActivityInfo = mRealPm.getReceiverInfo(mDefaultAdmin,
                 PackageManager.GET_META_DATA);
-        mDefaultDeviceAdminInfo = new DeviceAdminInfo(mRealContext, defaultInfo);
+        mDefaultDeviceAdminInfo = new DeviceAdminInfo(mRealContext, mDefaultActivityInfo);
 
-        ActivityInfo fancyInfo = mRealPm.getReceiverInfo(mFancyAdmin, PackageManager.GET_META_DATA);
-        mFancyDeviceAdminInfo = new DeviceAdminInfo(mRealContext, fancyInfo);
+        mFancyActivityInfo = mRealPm.getReceiverInfo(mFancyAdmin, PackageManager.GET_META_DATA);
+        mFancyDeviceAdminInfo = new DeviceAdminInfo(mRealContext, mFancyActivityInfo);
     }
 
     protected final void mockProfileOwner() {
@@ -160,5 +163,9 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
 
     protected final void mockGetProfiles(UserInfo... userProfiles) {
         when(mUm.getProfiles(anyInt())).thenReturn(Arrays.asList(userProfiles));
+    }
+
+    protected final void mockGetUserProfiles(UserHandle... userHandles) {
+        when(mUm.getUserProfiles()).thenReturn(Arrays.asList(userHandles));
     }
 }

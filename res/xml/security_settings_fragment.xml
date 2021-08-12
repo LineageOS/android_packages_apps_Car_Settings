@@ -47,6 +47,7 @@
         android:key="manage_device_admin"
         android:title="@string/manage_device_admin"
         android:summary="@string/empty_placeholder"
+        android:fragment="com.android.car.settings.enterprise.DeviceAdminAppsFragment"
         settings:controller=
             "com.android.car.settings.enterprise.ManageDeviceAdminPreferenceController" />
 </PreferenceScreen>
