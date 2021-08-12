@@ -392,9 +392,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"위치 서비스"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"위치 사용"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
+    <string name="microphone_settings_title" msgid="7125554350537136922">"마이크"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"마이크 사용"</string>
+    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"시스템"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
@@ -513,7 +513,8 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"새 프로필을 만들 수 없음"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"프로필을 삭제하시겠습니까?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"이 프로필의 모든 앱과 데이터가 삭제됩니다."</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"프로필을 삭제할 수 없음"</string>
+    <!-- no translation found for delete_user_error_title (287249031795906102) -->
+    <skip />
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"이 프로필은 프로필을 전환하거나 차량을 다시 시작할 때 삭제됩니다"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"닫기"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"재시도"</string>

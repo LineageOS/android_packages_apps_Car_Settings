@@ -392,10 +392,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Locatieservices"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Locatie gebruiken"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Voor de schatting van je apparaatlocatie kunnen bronnen worden gebruikt zoals gps, wifi, mobiele netwerken en sensoren."</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
-    <skip />
+    <string name="microphone_settings_title" msgid="7125554350537136922">"Microfoon"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"Microfoon gebruiken"</string>
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Microfoonrechten beheren"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Systeem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systeemupdates"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Geavanceerd"</string>
@@ -513,7 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Kan nieuw profiel niet maken"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Dit profiel verwijderen?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Alle apps en gegevens voor dit profiel worden verwijderd"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Kan profiel niet verwijderen."</string>
+    <string name="delete_user_error_title" msgid="287249031795906102">"Profiel is niet verwijderd. Start het apparaat opnieuw op en probeer het opnieuw."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Dit profiel wordt verwijderd als je van profiel wisselt of het voertuig opnieuw start."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Sluiten"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Opnieuw proberen"</string>
