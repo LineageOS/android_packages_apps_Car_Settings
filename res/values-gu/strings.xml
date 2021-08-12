@@ -392,9 +392,9 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"જગ્યાની સેવાઓ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"સ્થાન સેવામાં તમારા ડિવાઇસનું સ્થાન નક્કી કરવામાં સહાય કરવા માટે GPS, વાઇ-ફાઇ, મોબાઇલ નેટવર્ક અને સેન્સર જેવા સૉર્સનો ઉપયોગ કરવામાં આવી શકે છે."</string>
-    <!-- no translation found for microphone_settings_title (7125554350537136922) -->
-    <skip />
-    <!-- no translation found for microphone_toggle_title (911586035332827275) -->
+    <string name="microphone_settings_title" msgid="7125554350537136922">"માઇક્રોફોન"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"માઇક્રોફોનનો ઉપયોગ કરો"</string>
+    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"સિસ્ટમ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"સિસ્ટમ અપડેટ"</string>
@@ -513,7 +513,8 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"નવી પ્રોફાઇલ બનાવી શકાઈ નથી"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"આ પ્રોફાઇલ ડિલીટ કરીએ?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"આ પ્રોફાઇલ માટેની તમામ ઍપ અને ડેટા ડિલીટ કરવામાં આવશે"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"પ્રોફાઇલ ડિલીટ કરી શકાઈ નથી."</string>
+    <!-- no translation found for delete_user_error_title (287249031795906102) -->
+    <skip />
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"જ્યારે તમે પ્રોફાઇલ સ્વિચ કરો કે વાહન ફરી ચાલુ કરો ત્યારે આ પ્રોફાઇલ ડિલીટ કરવામાં આવશે."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"છોડી દો"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"ફરી પ્રયાસ કરો"</string>
