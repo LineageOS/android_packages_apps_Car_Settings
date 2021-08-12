@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Os servizos de localización poden usar fontes como o GPS, a wifi, as redes de telefonía móbil e os sensores para determinar onde está o teu dispositivo."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Xestionar permisos relativos ao micrófono"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizacións do sistema"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Configuración avanzada"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Non se puido crear un novo perfil"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Queres eliminar este perfil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Eliminaranse todas as aplicacións e os datos deste perfil"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"Non se eliminou o perfil. Reinicia o dispositivo e volve tentalo."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Este perfil eliminarase cando cambies de perfil ou reinicies o vehículo."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ignorar"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Tentar de novo"</string>

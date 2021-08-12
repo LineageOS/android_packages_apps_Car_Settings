@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Der Standortdienst kann Quellen wie GPS, WLANs, Mobilfunknetze und Sensoren nutzen, um den Standort deines Geräts zu ermitteln."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofon verwenden"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Mikrofonberechtigungen verwalten"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemupdates"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Erweitert"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Profil konnte nicht erstellt werden"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Dieses Profil löschen?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Alle Apps und Daten für dieses Profil werden gelöscht"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"Das Profil wurde nicht gelöscht. Starte das Gerät neu und versuch es noch einmal."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Dieses Profil wird gelöscht, wenn das Profil gewechselt oder das Fahrzeug wieder gestartet wird."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Schließen"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Noch einmal versuchen"</string>

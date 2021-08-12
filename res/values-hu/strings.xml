@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Eszköze helyének meghatározásához a Hely szolgáltatás a GPS, a Wi-Fi- és mobilhálózatok, továbbá az érzékelők adatait használhatja fel."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofon használata"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Mikrofonhasználati engedélyek kezelése"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Rendszer"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Haladó"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Nem sikerült az új profil létrehozása"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Törli ezt a profilt?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"A profilhoz tartozó összes alkalmazás és adat törlődik"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"A profil nem lett törölve. Indítsa újra az eszközt, és próbálja újra."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Ez a profil a következő profilváltáskor vagy a jármű újraindításakor lesz törölve."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Bezárás"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Újra"</string>

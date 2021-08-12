@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Posibleng gumamit ang mga lokasyon ng mga source na gaya ng GPS, Wi‑Fi, mga mobile network, at sensor para tumulong sa pagtantiya ng lokasyon ng iyong device."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikropono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gamitin ang mikropono"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Pamahalaan ang mga pahintulot sa mikropono"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mga pag-update ng system"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Advanced"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Hindi makagawa ng bagong profile"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"I-delete ang profile na ito?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Made-delete ang lahat ng app at data para sa profile na ito"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"Hindi na-delete ang profile. I-restart ang device at ulitin."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Ide-delete ang profile na ito kapag nagpalit ka ng profile o ni-restart mo ang sasakyan."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"I-dismiss"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Subukang muli"</string>
