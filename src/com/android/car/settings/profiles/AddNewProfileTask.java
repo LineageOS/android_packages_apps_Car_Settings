@@ -18,12 +18,12 @@ package com.android.car.settings.profiles;
 
 import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
-import android.car.userlib.UserHelper;
 import android.car.util.concurrent.AsyncFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.AsyncTask;
 
+import com.android.car.internal.user.UserHelper;
 import com.android.car.settings.common.Logger;
 
 import java.util.concurrent.ExecutionException;
