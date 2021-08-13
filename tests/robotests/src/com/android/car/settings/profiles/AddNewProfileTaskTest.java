@@ -24,6 +24,7 @@ import static org.mockito.Mockito.when;
 import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
 import android.car.util.concurrent.AndroidAsyncFuture;
+import android.car.util.concurrent.AndroidFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -31,8 +32,6 @@ import android.os.UserManager;
 
 import androidx.annotation.Nullable;
 import androidx.test.InstrumentationRegistry;
-
-import com.android.internal.infra.AndroidFuture;
 
 import org.junit.Before;
 import org.junit.Test;
