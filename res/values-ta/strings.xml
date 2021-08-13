@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"உங்கள் சாதனத்தின் இருப்பிடத்தைக் கணிக்க உதவுவதற்கு GPS, வைஃபை, மொபைல் நெட்வொர்க்குகள், சென்சார்கள் போன்றவற்றை இருப்பிட அமைப்புகள் பயன்படுத்தக்கூடும்."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"மைக்ரோஃபோன்"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"மைக்ரோஃபோனைப் பயன்படுத்துதல்"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"மைக்ரோஃபோன் அனுமதிகளை நிர்வகித்தல்"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"சிஸ்டம்"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"சிஸ்டம் புதுப்பிப்புகள்"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"மேம்பட்டவை"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"புதிய சுயவிவரத்தை உருவாக்க முடியவில்லை"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"இந்தச் சுயவிவரத்தை நீக்கவா?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"இந்தச் சுயவிவரத்திற்கான அனைத்து ஆப்ஸும் தரவும் நீக்கப்படும்"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"சுயவிவரம் நீக்கப்படவில்லை. சாதனத்தை மீண்டும் தொடங்கி, முயலவும்."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"சுயவிவரங்களை மாற்றும்போதோ வாகனத்தை மீண்டும் தொடங்கும்போதோ இந்தச் சுயவிவரம் நீக்கப்படும்."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"நிராகரி"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"மீண்டும் முயலவும்"</string>
