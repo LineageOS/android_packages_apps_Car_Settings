@@ -30,6 +30,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="array" name="config_unbonded_device_filter_allowlist"/>
       <item type="array" name="premium_sms_access_values"/>
       <item type="array" name="recent_apps_ignored_packages"/>
+      <item type="array" name="settings_qc_provider_package_allowlist"/>
       <item type="array" name="wifi_ap_band"/>
       <item type="array" name="wifi_ap_band_config_2G_only"/>
       <item type="array" name="wifi_ap_band_config_full"/>
@@ -103,6 +104,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="brightness_thumb_outer_ring_color"/>
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
+      <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="toggle_bg"/>
       <item type="color" name="toggle_icon_tint"/>
@@ -317,6 +319,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_placeholder"/>
       <item type="drawable" name="ic_profile"/>
       <item type="drawable" name="ic_profile_add"/>
+      <item type="drawable" name="ic_qc_bluetooth"/>
+      <item type="drawable" name="ic_qc_bluetooth_media"/>
+      <item type="drawable" name="ic_qc_bluetooth_phone"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
       <item type="drawable" name="ic_settings_about"/>

@@ -963,5 +963,18 @@
             </intent-filter>
         </provider>
 
+        <provider android:name=".qc.SettingsQCProvider"
+                  android:authorities="com.android.car.settings.qc"
+                  android:grantUriPermissions="true"
+                  android:exported="true">
+        </provider>
+
+        <!-- For security purposes, only intents created by the CarSettings application should be
+        able to call this receiver. Therefore, it should not be exported. -->
+        <receiver
+            android:name=".qc.SettingsQCBroadcastReceiver"
+            android:exported="false">
+        </receiver>
+
     </application>
 </manifest>
