@@ -58,15 +58,99 @@
     <uses-permission android:name="android.permission.SUGGEST_MANUAL_TIME_AND_ZONE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MANAGE_SENSOR_PRIVACY"/>
+    <uses-permission android:name="android.permission.OBSERVE_SENSOR_PRIVACY"/>
 
     <application android:debuggable="true">
         <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.android.car.settings.common.SubSettingsActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
 
         <provider
             android:name="com.android.car.settings.testutils.TestContentProvider"
             android:authorities="com.android.car.settings.testutils.TestContentProvider"
             android:exported="true">
         </provider>
+
+        <activity
+            android:name="com.android.car.settings.testutils.TestFinishActivity">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name="com.android.car.settings.testutils.BaseCarSettingsTestActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name="com.android.car.settings.testutils.SinglePaneTestActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name="com.android.car.settings.testutils.DualPaneTestActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="false"/>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name="com.android.car.settings.common.DualPaneBaseCarSettingsActivityTest$TestDualPaneHomepageActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="false"/>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name="com.android.car.settings.common.DualPaneBaseCarSettingsActivityTest$TestDualPaneFragmentActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="false"/>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name="com.android.car.settings.testutils.TestSettingsScreenLockActivity"
+            android:theme="@style/CarSettingTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name="com.android.car.settings.system.RegulatoryInfoDisplayActivity"
+            android:theme="@style/CarSettingTheme"
+            android:label="@string/regulatory_labels">
+        </activity>
+
+        <receiver
+            android:name="com.android.car.settings.enterprise.DefaultDeviceAdminReceiver">
+            <meta-data android:name="android.app.device_admin"
+                 android:resource="@xml/empty_device_admin"/>
+        </receiver>
+
+        <receiver
+            android:name="com.android.car.settings.enterprise.FancyDeviceAdminReceiver"
+            android:label="@string/fancy_device_admin_label"
+            android:icon="@drawable/test_icon"
+            android:description="@string/fancy_device_admin_description">
+            <meta-data android:name="android.app.device_admin"
+                 android:resource="@xml/fancy_device_admin"/>
+        </receiver>
+
     </application>
 
     <instrumentation android:name="androidx.test.runner.AndroidJUnitRunner"

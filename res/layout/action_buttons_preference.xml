@@ -48,8 +48,9 @@
             <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button1Icon"
                 style="@style/PreferenceButtonIconAppearance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/secondary_icon_size"
+                android:layout_height="@dimen/secondary_icon_size"
+                android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
             <com.android.car.ui.uxr.DrawableStateTextView
@@ -72,8 +73,9 @@
             <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button2Icon"
                 style="@style/PreferenceButtonIconAppearance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/secondary_icon_size"
+                android:layout_height="@dimen/secondary_icon_size"
+                android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
             <com.android.car.ui.uxr.DrawableStateTextView
@@ -96,8 +98,9 @@
             <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button3Icon"
                 style="@style/PreferenceButtonIconAppearance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/secondary_icon_size"
+                android:layout_height="@dimen/secondary_icon_size"
+                android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
             <com.android.car.ui.uxr.DrawableStateTextView
@@ -120,8 +123,9 @@
             <com.android.car.ui.uxr.DrawableStateImageView
                 android:id="@+id/button4Icon"
                 style="@style/PreferenceButtonIconAppearance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/secondary_icon_size"
+                android:layout_height="@dimen/secondary_icon_size"
+                android:scaleType="fitCenter"
                 android:layout_marginEnd="@dimen/action_buttons_icon_margin_end"
                 android:selectable="false"/>
             <com.android.car.ui.uxr.DrawableStateTextView

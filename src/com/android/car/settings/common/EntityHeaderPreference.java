@@ -17,6 +17,7 @@
 package com.android.car.settings.common;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -39,27 +40,28 @@ public class EntityHeaderPreference extends Preference {
     public EntityHeaderPreference(Context context, AttributeSet attrs,
             int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
+        init(context, attrs);
     }
 
     public EntityHeaderPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(context, attrs);
     }
 
     public EntityHeaderPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context, attrs);
     }
 
     public EntityHeaderPreference(Context context) {
         super(context);
-        init();
+        init(context, /* attrs= */ null);
     }
 
-    private void init() {
+    private void init(Context context, AttributeSet attrs) {
         setLayoutResource(R.layout.entity_header_preference);
-        setSelectable(false);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Preference);
+        setSelectable(a.getBoolean(R.styleable.Preference_selectable, /* defValue= */ false));
     }
 
     @Override

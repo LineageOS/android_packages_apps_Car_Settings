@@ -18,13 +18,14 @@ package com.android.car.settings.sound;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Bundle;
 
-import com.android.car.settings.common.CarSettingActivities;
+import androidx.fragment.app.Fragment;
+
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
@@ -64,29 +65,30 @@ public class RingtonePreferenceController extends PreferenceController<RingtoneP
 
     @Override
     protected boolean handlePreferenceClicked(RingtonePreference preference) {
-        onPrepareRingtonePickerIntent(preference, preference.getIntent());
-        getContext().startActivity(preference.getIntent());
+        getFragmentController().launchFragment(createRingtonePickerFragment(preference));
         return true;
     }
 
     /**
-     * Prepares the intent to launch the ringtone picker. This can be modified
+     * Prepares the fragment to launch the ringtone picker. This can be modified
      * to adjust the parameters of the ringtone picker.
      */
-    private void onPrepareRingtonePickerIntent(RingtonePreference ringtonePreference,
-            Intent ringtonePickerIntent) {
-        ringtonePickerIntent.setClass(getContext(),
-                CarSettingActivities.RingtonePickerActivity.class);
-
-        ringtonePickerIntent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE,
-                ringtonePreference.getTitle());
-        ringtonePickerIntent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE,
-                ringtonePreference.getRingtoneType());
-        ringtonePickerIntent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_SILENT,
+    private Fragment createRingtonePickerFragment(RingtonePreference ringtonePreference) {
+        Fragment fragment = new RingtonePickerFragment();
+        Bundle args = fragment.getArguments();
+        if (args == null) {
+            args = new Bundle();
+            fragment.setArguments(args);
+        }
+        args.putCharSequence(RingtoneManager.EXTRA_RINGTONE_TITLE, ringtonePreference.getTitle());
+        args.putInt(RingtoneManager.EXTRA_RINGTONE_TYPE, ringtonePreference.getRingtoneType());
+        args.putBoolean(RingtoneManager.EXTRA_RINGTONE_SHOW_SILENT,
                 ringtonePreference.getShowSilent());
 
         // Allow playback in external activity.
-        ringtonePickerIntent.putExtra(RingtoneManager.EXTRA_RINGTONE_AUDIO_ATTRIBUTES_FLAGS,
+        args.putInt(RingtoneManager.EXTRA_RINGTONE_AUDIO_ATTRIBUTES_FLAGS,
                 AudioAttributes.FLAG_BYPASS_INTERRUPTION_POLICY);
+
+        return fragment;
     }
 }

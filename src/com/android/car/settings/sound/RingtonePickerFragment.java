@@ -22,12 +22,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import java.util.Collections;
 import java.util.List;
@@ -66,15 +69,15 @@ public class RingtonePickerFragment extends SettingsFragment {
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    protected void setupToolbar(@NonNull ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
 
-        getToolbar().setTitle(getArguments().getCharSequence(RingtoneManager.EXTRA_RINGTONE_TITLE));
+        toolbar.setTitle(getArguments().getCharSequence(RingtoneManager.EXTRA_RINGTONE_TITLE));
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         // Logic to scroll to the selected item. This needs to be done in a global layout listener
         // so that it can be triggered after the sound items added dynamically in the
@@ -83,7 +86,7 @@ public class RingtonePickerFragment extends SettingsFragment {
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        // This should only be triggered once per resume.
+                        // This should only be triggered once per onViewCreated.
                         getListView().getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
                         // There are various methods on the PreferenceFragment and RecyclerView

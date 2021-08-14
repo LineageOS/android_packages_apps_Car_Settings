@@ -46,9 +46,9 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.settings.testutils.TestContentProvider;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.car.ui.preference.UxRestrictablePreference;
-import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -80,7 +80,6 @@ public class ExtraSettingsPreferenceControllerTest {
             "content://com.android.car.settings.testutils.TestContentProvider";
 
     private LifecycleOwner mLifecycleOwner;
-    private Lifecycle mLifecycle;
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private PreferenceManager mPreferenceManager;
@@ -98,8 +97,7 @@ public class ExtraSettingsPreferenceControllerTest {
     @Before
     @UiThreadTest
     public void setUp() {
-        mLifecycleOwner = () -> mLifecycle;
-        mLifecycle = new Lifecycle(mLifecycleOwner);
+        mLifecycleOwner = new TestLifecycleOwner();
 
         MockitoAnnotations.initMocks(this);
 

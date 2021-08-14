@@ -36,11 +36,9 @@ import com.android.car.settings.common.rotary.DirectManipulationState;
 import com.android.car.settings.common.rotary.NumberPickerNudgeHandler;
 import com.android.car.settings.common.rotary.NumberPickerRotationHandler;
 import com.android.car.settings.common.rotary.NumberPickerUtils;
-import com.android.car.ui.toolbar.MenuItem;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -52,37 +50,24 @@ public class TimePickerFragment extends BaseFragment {
     private DirectManipulationState mDirectManipulationMode;
     private TimePicker mTimePicker;
     private List<NumberPicker> mNumberPickers;
-    private MenuItem mOkButton;
 
     @Override
-    public List<MenuItem> getToolbarMenuItems() {
-        return Collections.singletonList(mOkButton);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mOkButton = new MenuItem.Builder(getContext())
-                .setTitle(android.R.string.ok)
-                .setOnClickListener(i -> {
-                    Calendar c = Calendar.getInstance();
-                    c.set(Calendar.HOUR_OF_DAY, mTimePicker.getHour());
-                    c.set(Calendar.MINUTE, mTimePicker.getMinute());
-                    c.set(Calendar.SECOND, 0);
-                    c.set(Calendar.MILLISECOND, 0);
-                    long when = Math.max(c.getTimeInMillis(), DatetimeSettingsFragment.MIN_DATE);
-                    if (when / MILLIS_IN_SECOND < Integer.MAX_VALUE) {
-                        TimeDetector timeDetector =
-                                getContext().getSystemService(TimeDetector.class);
-                        ManualTimeSuggestion manualTimeSuggestion =
-                                TimeDetector.createManualTimeSuggestion(when, "Settings: Set time");
-                        timeDetector.suggestManualTime(manualTimeSuggestion);
-                        getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
-                    }
-                    getFragmentHost().goBack();
-                })
-                .build();
+    public void onStop() {
+        super.onStop();
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.HOUR_OF_DAY, mTimePicker.getHour());
+        c.set(Calendar.MINUTE, mTimePicker.getMinute());
+        c.set(Calendar.SECOND, 0);
+        c.set(Calendar.MILLISECOND, 0);
+        long when = Math.max(c.getTimeInMillis(), DatetimeSettingsFragment.MIN_DATE);
+        if (when / MILLIS_IN_SECOND < Integer.MAX_VALUE) {
+            TimeDetector timeDetector =
+                    getContext().getSystemService(TimeDetector.class);
+            ManualTimeSuggestion manualTimeSuggestion =
+                    TimeDetector.createManualTimeSuggestion(when, "Settings: Set time");
+            timeDetector.suggestManualTime(manualTimeSuggestion);
+            getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
+        }
     }
 
     @Override
