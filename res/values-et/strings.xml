@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Funktsioon Asukoht võib teie seadme asukoha tuvastamiseks kasutada selliseid allikaid nagu GPS, WiFi- ja mobiilsidevõrgud ning andurid."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Kasuta mikrofoni"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Mikrofoni lubade haldamine"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Süsteem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Süsteemivärskendused"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Täpsemad"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Uut profiili ei õnnestunud luua"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Kas kustutada see profiil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Kõik selle profiili rakendused ja andmed kustutatakse"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"Profiili ei kustutatud. Taaskäivitage seade ja proovige uuesti."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Profiili vahetamisel või sõiduki taaskäivitamisel see profiil kustutatakse"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Loobu"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Proovi uuesti"</string>

@@ -31,6 +31,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.user.CarUserManager;
 import android.car.user.UserCreationResult;
 import android.car.util.concurrent.AndroidAsyncFuture;
+import android.car.util.concurrent.AndroidFuture;
 import android.content.Context;
 import android.os.UserManager;
 
@@ -45,7 +46,6 @@ import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.internal.infra.AndroidFuture;
 
 import org.junit.Before;
 import org.junit.Test;
