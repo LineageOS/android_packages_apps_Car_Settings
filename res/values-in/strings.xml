@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Lokasi dapat menggunakan sumber informasi seperti GPS, Wi-Fi, jaringan seluler, dan sensor untuk memperkirakan lokasi perangkat Anda."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gunakan mikrofon"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"Kelola izin mikrofon"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Update sistem"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Lanjutan"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"Tidak dapat membuat profil baru"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Hapus profil ini?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Semua aplikasi dan data untuk profil ini akan dihapus"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"Profil tidak dihapus. Anda dapat memulai ulang perangkat dan mencoba lagi."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Profil ini akan dihapus jika Anda menggantinya atau menghidupkan ulang mesin kendaraan."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Tutup"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Coba lagi"</string>

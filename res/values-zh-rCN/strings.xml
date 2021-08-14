@@ -394,8 +394,7 @@
     <string name="location_settings_footer" msgid="296892848338100051">"位置信息服务可能会使用 GPS、WLAN、移动网络和传感器等来源协助推测设备所在的位置。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"麦克风"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麦克风"</string>
-    <!-- no translation found for microphone_manage_permissions (7280905792151988183) -->
-    <skip />
+    <string name="microphone_manage_permissions" msgid="7280905792151988183">"管理麦克风使用权限"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"系统"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"系统更新"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"高级"</string>
@@ -513,8 +512,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"无法创建新的个人资料"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"要删除此个人资料吗？"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"此个人资料的所有应用和数据都将被删除"</string>
-    <!-- no translation found for delete_user_error_title (287249031795906102) -->
-    <skip />
+    <string name="delete_user_error_title" msgid="287249031795906102">"个人资料未删除。您可以重启设备，然后重试。"</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"此个人资料将在您切换个人资料或重新发动汽车时删除。"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"关闭"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"重试"</string>
