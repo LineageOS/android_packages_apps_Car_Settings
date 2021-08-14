@@ -42,6 +42,7 @@ android_library {
         "jsr305",
         "car-ui-lib",
         "car-admin-ui-lib",
+        "car-qc-lib",
     ],
 
     libs: [
@@ -115,6 +116,7 @@ android_app {
         "jsr305",
         "car-ui-lib-testing-support",
         "car-admin-ui-lib",
+        "car-qc-lib",
     ],
 
     // Testing only resources must be applied last so they take precedence.
@@ -175,6 +177,7 @@ android_library {
         "jsr305",
         "car-ui-lib-testing-support",
         "car-admin-ui-lib",
+        "car-qc-lib",
     ],
 
     // Testing only resources must be applied last so they take precedence.
