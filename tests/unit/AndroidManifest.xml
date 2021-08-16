@@ -141,6 +141,11 @@
             android:launchMode="singleTask">
         </activity>
 
+        <activity
+            android:name="com.android.car.settings.bluetooth.TestBluetoothRequestPermissionActivity"
+            android:theme="@style/ActionDialogTheme">
+        </activity>
+
         <receiver
             android:name="com.android.car.settings.enterprise.DefaultDeviceAdminReceiver">
             <meta-data android:name="android.app.device_admin"
