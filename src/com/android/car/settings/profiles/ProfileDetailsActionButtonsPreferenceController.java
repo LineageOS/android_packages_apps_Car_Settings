@@ -63,7 +63,7 @@ public final class ProfileDetailsActionButtonsPreferenceController
             arguments -> {
                 UserInfo profileToMakeAdmin =
                         (UserInfo) arguments.get(ProfilesDialogProvider.KEY_PROFILE_TO_MAKE_ADMIN);
-                android.car.userlib.UserHelper.grantAdminPermissions(getContext(),
+                com.android.car.internal.user.UserHelper.grantAdminPermissions(getContext(),
                         profileToMakeAdmin);
                 getFragmentController().goBack();
             };

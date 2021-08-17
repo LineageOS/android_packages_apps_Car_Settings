@@ -40,6 +40,7 @@ import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.internal.user.UserHelper;
 import com.android.car.settings.common.ActionButtonInfo;
 import com.android.car.settings.common.ActionButtonsPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
@@ -333,7 +334,7 @@ public class ProfileDetailsActionButtonsPreferenceControllerTest {
     @Test
     public void onMakeAdminConfirmed_makeProfileAdmin() {
         mSession = ExtendedMockito.mockitoSession().mockStatic(
-                android.car.userlib.UserHelper.class).startMocking();
+                UserHelper.class).startMocking();
 
         UserInfo userInfo = new UserInfo(/* id= */ 10, TEST_PROFILE_NAME, FLAG_INITIALIZED);
         when(mMockProfileHelper.isCurrentProcessUser(userInfo)).thenReturn(false);
@@ -348,7 +349,7 @@ public class ProfileDetailsActionButtonsPreferenceControllerTest {
         mPreferenceController.mMakeAdminConfirmListener.onConfirm(arguments);
 
         ExtendedMockito.verify(
-                () -> android.car.userlib.UserHelper.grantAdminPermissions(mContext, userInfo));
+                () -> UserHelper.grantAdminPermissions(mContext, userInfo));
     }
 
     @Test
