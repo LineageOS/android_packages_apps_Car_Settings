@@ -23,6 +23,7 @@ import android.car.util.concurrent.AsyncFuture;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.AsyncTask;
+import android.os.UserManager;
 
 import com.android.car.settings.common.Logger;
 
@@ -37,12 +38,14 @@ public class AddNewProfileTask extends AsyncTask<String, Void, UserInfo> {
     private final Context mContext;
     private final CarUserManager mCarUserManager;
     private final AddNewProfileListener mAddNewProfileListener;
+    private final UserManager mUserManager;
 
     public AddNewProfileTask(Context context, CarUserManager carUserManager,
             AddNewProfileListener addNewProfileListener) {
         mContext = context;
         mCarUserManager = carUserManager;
         mAddNewProfileListener = addNewProfileListener;
+        mUserManager = context.getSystemService(UserManager.class);
     }
 
     @Override
@@ -52,7 +55,7 @@ public class AddNewProfileTask extends AsyncTask<String, Void, UserInfo> {
         try {
             UserCreationResult result = future.get();
             if (result.isSuccess()) {
-                UserInfo user = result.getUser();
+                UserInfo user = mUserManager.getUserInfo(result.getUser().getIdentifier());
                 if (user != null) {
                     UserHelper.setDefaultNonAdminRestrictions(mContext, user, /* enable= */ true);
                     UserHelper.assignDefaultIcon(mContext, user);

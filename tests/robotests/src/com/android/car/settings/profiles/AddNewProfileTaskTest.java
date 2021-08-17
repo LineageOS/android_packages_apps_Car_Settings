@@ -119,7 +119,7 @@ public class AddNewProfileTaskTest {
 
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         future.complete(new UserCreationResult(status,
-                user, /* errorMessage= */ null));
+                user.getUserHandle(), /* errorMessage= */ null));
         when(mCarUserManager.createUser(anyString(), anyInt()))
                 .thenReturn(new AndroidAsyncFuture<>(future));
     }
