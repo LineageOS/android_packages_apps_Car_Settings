@@ -852,6 +852,10 @@
     <string name="microphone_toggle_title">Use microphone</string>
     <!-- Title of setting linking to microphone permission management screen [CHAR LIMIT=60] -->
     <string name="microphone_manage_permissions">Manage microphone permissions</string>
+    <!-- Title of Recent Microphone Accesses category [CHAR LIMIT=60] -->
+    <string name="microphone_recently_accessed">Recently accessed</string>
+    <!-- Description when no apps have accessed microphone recently [CHAR LIMIT=60] -->
+    <string name="microphone_no_recent_access">No apps recently accessed microphone</string>
 
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->
