@@ -14,13 +14,16 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="@dimen/icon_size"
-    android:height="@dimen/icon_size"
-    android:viewportHeight="18.0"
-    android:viewportWidth="18.0">
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="@dimen/icon_size"
+        android:height="@dimen/icon_size"
+        android:viewportWidth="24"
+        android:viewportHeight="24">
     <path
         android:fillColor="@color/qc_default_icon_color"
-        android:pathData="M9.01,15.99l8.8,-10.96C17.47,4.77 14.08,2.0 9.0,2.0S0.53,4.7 0.19,5.03l8.8,10.96l0.02,0.0z"/>
+        android:pathData="M12,2.01c-4.75,0-9.03,2.08-12,5.39L12,22L24,7.4C21.03,4.09,16.75,2.01,12,2.01z M12,18.86L2.7,7.54 C5.27,5.28,8.58,4.01,12,4.01s6.73,1.27,9.3,3.53L12,18.86z" />
+    <path
+        android:fillColor="@color/qc_default_icon_color"
+        android:pathData="M16.42,16.63L12,22l-4.42-5.37c0.15-0.74,0.48-1.43,0.95-1.99C9.35,13.64,10.6,13,12,13s2.65,0.64,3.47,1.64 C15.94,15.2,16.27,15.89,16.42,16.63z" />
 </vector>

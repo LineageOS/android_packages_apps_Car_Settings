@@ -61,6 +61,12 @@ public class SettingsQCRegistry {
             .appendPath("mobile_data_tile")
             .build();
 
+    public static final Uri WIFI_ROW_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("wifi_row")
+            .build();
+
     public static final Uri BRIGHTNESS_SLIDER_URI = new Uri.Builder()
             .scheme(ContentResolver.SCHEME_CONTENT)
             .authority(AUTHORITY)
@@ -91,6 +97,7 @@ public class SettingsQCRegistry {
         map.put(WIFI_TILE_URI, WifiTile.class);
         map.put(HOTSPOT_TILE_URI, HotspotTile.class);
         map.put(MOBILE_DATA_TILE_URI, MobileDataTile.class);
+        map.put(WIFI_ROW_URI, WifiRow.class);
         map.put(BRIGHTNESS_SLIDER_URI, BrightnessSlider.class);
         map.put(BRIGHTNESS_SLIDER_WITH_ICON_URI, BrightnessSliderWithIcon.class);
         map.put(ADAPTIVE_BRIGHTNESS_SWITCH_URI, AdaptiveBrightnessSwitch.class);
