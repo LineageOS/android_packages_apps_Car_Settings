@@ -42,6 +42,24 @@ public class SettingsQCRegistry {
             .authority(AUTHORITY)
             .appendPath("paired_bluetooth_devices")
             .build();
+
+    public static final Uri WIFI_TILE_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("wifi_tile")
+            .build();
+
+    public static final Uri HOTSPOT_TILE_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("hotspot_tile")
+            .build();
+
+    public static final Uri MOBILE_DATA_TILE_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("mobile_data_tile")
+            .build();
     // End Uris
 
     @VisibleForTesting
@@ -52,6 +70,9 @@ public class SettingsQCRegistry {
 
         map.put(BLUETOOTH_SWITCH_URI, BluetoothSwitch.class);
         map.put(PAIRED_BLUETOOTH_DEVICES_URI, PairedBluetoothDevices.class);
+        map.put(WIFI_TILE_URI, WifiTile.class);
+        map.put(HOTSPOT_TILE_URI, HotspotTile.class);
+        map.put(MOBILE_DATA_TILE_URI, MobileDataTile.class);
 
         return map;
     }

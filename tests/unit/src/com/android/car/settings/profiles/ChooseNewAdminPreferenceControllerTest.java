@@ -37,6 +37,7 @@ import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.internal.user.UserHelper;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
@@ -84,7 +85,7 @@ public class ChooseNewAdminPreferenceControllerTest {
 
         mSession = ExtendedMockito.mockitoSession()
                 .mockStatic(ProfileHelper.class, withSettings().lenient())
-                .mockStatic(android.car.userlib.UserHelper.class)
+                .mockStatic(UserHelper.class)
                 .startMocking();
         when(ProfileHelper.getInstance(any(Context.class))).thenReturn(mProfileHelper);
 
@@ -134,7 +135,7 @@ public class ChooseNewAdminPreferenceControllerTest {
     public void testAssignNewAdminAndRemoveOldAdmin_grantAdminCalled() {
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        ExtendedMockito.verify(() -> android.car.userlib.UserHelper.grantAdminPermissions(mContext,
+        ExtendedMockito.verify(() -> UserHelper.grantAdminPermissions(mContext,
                 TEST_OTHER_USER));
     }
 
