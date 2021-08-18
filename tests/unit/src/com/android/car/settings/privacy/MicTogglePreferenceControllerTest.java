@@ -32,6 +32,7 @@ import android.hardware.SensorPrivacyManager;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
@@ -40,11 +41,13 @@ import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+@RunWith(AndroidJUnit4.class)
 public class MicTogglePreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private Context mContext = ApplicationProvider.getApplicationContext();
