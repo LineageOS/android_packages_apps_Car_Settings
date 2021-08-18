@@ -31,6 +31,11 @@
         android:key="@string/pk_microphone_recent_accesses_category"
         android:title="@string/microphone_recently_accessed"
         settings:controller="com.android.car.settings.privacy.MicrophoneRecentAccessesPreferenceController">
+        <Preference
+            android:fragment="com.android.car.settings.privacy.MicrophoneRecentAccessViewAllFragment"
+            android:key="@string/pk_microphone_recent_accesses_view_all_entry"
+            android:title="@string/microphone_settings_recent_requests_view_all_title"
+            android:order="998"/>
         <com.android.car.settings.common.DividerPreference
             android:order="999"/>
     </PreferenceCategory>
