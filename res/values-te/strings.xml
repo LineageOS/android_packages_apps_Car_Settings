@@ -87,7 +87,7 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fiని ఆన్ చేస్తోంది…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fiని ఆఫ్ చేస్తోంది…"</string>
-    <string name="loading_wifi_list" msgid="8584901433195876465">"Wi‑Fi జాబితా లోడ్ అవుతోంది"</string>
+    <string name="loading_wifi_list" msgid="8584901433195876465">"Wi‑Fi లిస్ట్‌ లోడ్ అవుతోంది"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi నిలిపివేయబడింది"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"నెట్‌వర్క్‌ను మర్చిపోవడంలో విఫలమైంది"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"నెట్‌వర్క్‌కు కనెక్ట్ చేయడం విఫలమైంది"</string>
@@ -119,15 +119,15 @@
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2.4 GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
     <string name="wifi_network_detail" msgid="9070182553555487360">"నెట్‌వర్క్ వివరాలు"</string>
-    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC చిరునామా"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC అడ్రస్‌"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP అడ్రస్"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"సబ్‌నెట్ మాస్క్"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
-    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 చిరునామాలు"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 అడ్రస్‌లు"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"గేట్‌వే"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi ప్రాధాన్యతలు"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fiని ఆటోమేటిక్‌గా ఆన్ చేయి"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"మీ ఇంటి నెట్‌వర్క్‌ల వంటి సేవ్ చేసిన అధిక నాణ్యత గల నెట్‌వర్క్‌లు అందుబాటులో ఉన్నప్పుడు Wi‑Fi తిరిగి ఆన్ చేయబడుతుంది"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"మీ ఇంటి నెట్‌వర్క్‌ల వంటి సేవ్ చేసిన అధిక క్వాలిటీ గల నెట్‌వర్క్‌లు అందుబాటులో ఉన్నప్పుడు Wi‑Fi తిరిగి ఆన్ చేయబడుతుంది"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"స్థానం ఆఫ్ చేయబడింది కనుక అందుబాటులో లేదు. "<annotation id="link">"స్థానం"</annotation>" ఆన్ చేయండి."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi స్కానింగ్‌ను ఆన్ చేయాలా?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"ఆన్ చేయి"</string>
@@ -160,7 +160,7 @@
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g>తో ఉపయోగించుకునే పరికరం"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"పరికరాలు ఏవీ కనుగొనబడలేదు. పరికరాలు ఆన్‌లో ఉన్నాయని మరియు కనెక్ట్ చేయడానికి అందుబాటులో ఉన్నాయని నిర్ధారించుకోండి."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"మళ్లీ ప్రయత్నించు"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే అభ్యర్థనని రద్దు చేసింది."</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే రిక్వెస్ట్‌ను రద్దు చేసింది."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"అన్నింటినీ చూపు"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"శోధించడం"</string>
@@ -171,7 +171,7 @@
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"పెయిర్ చేయడం కోసం బ్లూటూత్ ఆన్ చేయబడుతుంది"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"పరికరాన్ని డిస్‌కనెక్ట్ చేయాలా?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"మీ వాహనం <xliff:g id="DEVICE_NAME">%1$s</xliff:g> నుండి డిస్‌కనెక్ట్ అవుతుంది."</string>
-    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"వాహనం బ్లూటూత్ చిరునామా: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"వాహనం బ్లూటూత్ అడ్రస్‌: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"పరికర బ్లూటూత్ అడ్రస్: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"వాహనం పేరు"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"ఈ వాహనం పేరు మార్చండి"</string>
@@ -190,7 +190,7 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"ఒక యాప్ మీ పరికర హెడ్ యూనిట్‌ను ఇతర బ్లూటూత్ పరికరాలకు <xliff:g id="TIMEOUT">%1$d</xliff:g> సెకన్ల పాటు కనిపించేలా చేయాలనుకుంటుంది."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> బ్లూటూత్‌ను ఆన్ చేసి, మీ పరికర హెడ్ యూనిట్‌ను <xliff:g id="TIMEOUT">%2$d</xliff:g> సెకన్ల పాటు ఇతర పరికరాలకు కనిపించేలా చేయాలనుకుంటోంది."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"యాప్ బ్లూటూత్‌ను ప్రారంభించి, మీ పరికర హెడ్ యూనిట్‌ను ఇతర పరికరాలకు <xliff:g id="TIMEOUT">%1$d</xliff:g> సెకన్ల పాటు కనిపించేలా చేయాలనుకుంటుంది."</string>
-    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"బ్లూటూత్ జత చేయడానికి అభ్యర్థన"</string>
+    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"బ్లూటూత్ జత చేయడానికి రిక్వెస్ట్‌"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"జత చేసి, కనెక్ట్ చేయి"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"బ్లూటూత్ పెయిరింగ్ కోడ్"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"పిన్‌ అక్షరాలను లేదా చిహ్నాలను కలిగి ఉంది"</string>
@@ -201,7 +201,7 @@
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"మీరు ఈ పాస్‌కీని మరో పరికరంలో కూడా టైప్ చేయాల్సి ఉండవచ్చు."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"తప్పనిసరిగా 16 అంకెలు ఉండాలి"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"సాధారణంగా 0000 లేదా 1234"</string>
-    <string name="bluetooth_notif_title" msgid="8374602799367803335">"జత చేయడానికి అభ్యర్థన"</string>
+    <string name="bluetooth_notif_title" msgid="8374602799367803335">"జత చేయడానికి రిక్వెస్ట్‌"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>తో జత చేయడానికి నొక్కండి."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"బ్లూటూత్ పరికరాన్ని ఎంచుకోండి"</string>
     <string name="language_settings" msgid="2079258598337245546">"భాషలు"</string>
@@ -341,7 +341,7 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"సిస్టమ్ సెట్టింగ్‌లను సవరించడానికి ఈ అనుమతి యాప్‌కు వీలు కల్పిస్తుంది."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"నోటిఫికేషన్ యాక్సెస్"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను అనుమతించాలా?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ప‌రిచ‌యాల పేర్లు, మీరు స్వీకరించిన సందేశాల వంటి వ్యక్తిగత సమాచారంతో సహా అన్ని నోటిఫికేషన్‌లను చదవగలదు. అంతే కాదు ఇది నోటిఫికేషన్‌లను సవరించగలదు లేదా తీసివేయగలదు లేదా అవి కలిగి ఉండే చర్య బటన్‌లను యాక్టివేట్ చేయగలదు.\n\nఇది, అంతరాయం కలిగించవద్దు ఎంపికను ఆన్ చేయగల లేదా ఆఫ్ చేయగల సామర్థ్యాన్ని యాప్‌కు ఇవ్వడంతో పాటు సంబంధిత సెట్టింగ్‌లను కూడా మారుస్తుంది."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ప‌రిచ‌యాల పేర్లు, మీరు స్వీకరించిన మెసేజ్‌ల వంటి వ్యక్తిగత సమాచారంతో సహా అన్ని నోటిఫికేషన్‌లను చదవగలదు. అంతే కాదు ఇది నోటిఫికేషన్‌లను సవరించగలదు లేదా తీసివేయగలదు లేదా అవి కలిగి ఉండే చర్య బటన్‌లను యాక్టివేట్ చేయగలదు.\n\nఇది, అంతరాయం కలిగించవద్దు ఎంపికను ఆన్ చేయగల లేదా ఆఫ్ చేయగల సామర్థ్యాన్ని యాప్‌కు ఇవ్వడంతో పాటు సంబంధిత సెట్టింగ్‌లను కూడా మారుస్తుంది."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"మీరు <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను ఆఫ్ చేస్తే, అంతరాయం కలిగించవద్దు ఎంపిక యాక్సెస్ కూడా ఆఫ్ చేయబడవచ్చు."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ఆఫ్ చేయి"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"రద్దు చేయి"</string>
@@ -353,8 +353,8 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"యాప్‌కు Wi-Fiను ఆన్ లేదా ఆఫ్ చేయడానికి, Wi-Fi నెట్‌వర్క్‌లను స్కాన్ చేసి, కనెక్ట్ చేయడానికి, నెట్‌వర్క్‌లను జోడించడానికి లేదా తీసివేయడానికి, స్థానికం-మాత్రమే హాట్‌స్పాట్‌ను ప్రారంభించడానికి ఈ Wi-Fi కంట్రోలర్ అనుమతిస్తుంది."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"మరిన్ని"</string>
     <string name="location_settings_title" msgid="901334356682423679">"స్థానం"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి స్థాన అభ్యర్థనలు"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి స్థాన అభ్యర్థనలు లేవు"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి స్థాన రిక్వెస్ట్‌లు"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి స్థాన రిక్వెస్ట్‌లు లేవు"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"యాప్‌-స్థాయి అనుమతులు"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"స్థాన సేవలు"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"సిస్టమ్"</string>
@@ -457,7 +457,7 @@
     <string name="confirm_grant_admin" msgid="7852596890218647682">"అవును, నిర్వాహకుడిగా చేయి"</string>
     <string name="create_user_permission_title" msgid="7781550880565935298">"కొత్త వినియోగదారులను సృష్టించడం"</string>
     <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ఫోన్ కాల్స్‌ చేయడం"</string>
-    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"కారు మొబైల్ డేటాతో సందేశం పంపడం"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"కారు మొబైల్ డేటాతో మెసేజ్‌ పంపడం"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"కొత్త యాప్‌లను ఇన్‌స్టాల్ చేయడం"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"యాప్‌లను అన్‌ఇన్‌స్టాల్ చేయడం"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"వినియోగదారుని జోడించు"</string>
@@ -488,7 +488,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"మీరు (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"పేరు"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"సెటప్ చేయలేదు"</string>
-    <string name="edit_user_name_title" msgid="6890782937520262478">"వినియోగదారు పేరుని సవరించండి"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"వినియోగదారు పేరుని ఎడిట్ చేయండి"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"ఫీల్డ్ ఖాళీగా ఉండరాదు."</string>
     <string name="name_input_invalid_error" msgid="3523545780580744273">"నమోదు చేసిన వినియోగదారు పేరు చెల్లదు."</string>
     <string name="users_list_title" msgid="770764290290240909">"వినియోగదారులు"</string>
@@ -518,9 +518,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> యొక్క ఖాతాలు"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాని ఆటోమేటిక్‌గా సమకాలీకరించు"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"డేటాని ఆటోమేటిక్‌గా రిఫ్రెష్ చేసేలా యాప్‌లు అనుమతించబడతాయి"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"స్వీయ-సమకాలీకరణ డేటాను ప్రారంభించాలా?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"స్వీయ-సింక్‌ డేటాను ప్రారంభించాలా?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"వెబ్‌లో మీ ఖాతాలకు మీరు ఏవైనా మార్పులు చేస్తే అవి ఆటోమేటిక్‌గా మీ పరికరానికి కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు ఫోన్‌లో ఏవైనా మార్పులు చేస్తే కూడా ఆటోమేటిక్‌గా వాటిని వెబ్‌కి కాపీ చేస్తాయి. Google ఖాతా ఈ విధంగానే పనిచేస్తుంది."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"స్వీయ-సమకాలీకరణ డేటాను ఆఫ్ చేయాలా?"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"స్వీయ-సింక్‌ డేటాను ఆఫ్ చేయాలా?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ఇది డేటాను ఆదా చేస్తుంది, కానీ మీరు ఇటీవలి సమాచారాన్ని సేకరించడానికి మాన్యువల్‌గా ప్రతి ఖాతాను సమకాలీకరించాల్సి ఉంటుంది. అలాగే మీరు అప్‌డేట్‌లు జరిగినప్పుడు నోటిఫికేషన్‌లను స్వీకరించరు."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ఖాతా సమాచారం"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ఖాతాను జోడించండి"</string>
@@ -528,21 +528,21 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"పరిమిత ప్రొఫైల్‌లలో ఖాతాలను జోడించడం సాధ్యపడదు"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"ఖాతాను తీసివేయి"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ఖాతాను తీసివేయాలా?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"ఈ ఖాతాను తీసివేయడం వలన పరికరం నుండి దానికి సంబంధించిన అన్ని సందేశాలు, పరిచయాలు మరియు ఇతర డేటా తొలగించబడతాయి!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"ఈ ఖాతాను తీసివేయడం వలన పరికరం నుండి దానికి సంబంధించిన అన్ని మెసేజ్‌లు, పరిచయాలు మరియు ఇతర డేటా తొలగించబడతాయి!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"ఖాతాను తీసివేయడం విఫలమైంది."</string>
-    <string name="account_sync_title" msgid="6541844336300236915">"ఖాతా సమకాలీకరణ"</string>
-    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g>లో <xliff:g id="ID_1">%1$d</xliff:g> అంశాలకు సమకాలీకరణ ఆన్‌లో ఉంది"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"అన్ని అంశాలకు సమకాలీకరణ ఆన్‌లో ఉంది"</string>
-    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"అన్ని అంశాలకు సమకాలీకరణ ఆఫ్‌లో ఉంది"</string>
-    <string name="sync_disabled" msgid="393531064334628258">"సమకాలీకరణ ఆఫ్‌లో ఉంది"</string>
-    <string name="sync_error" msgid="6698021343089247914">"సమకాలీకరణ ఎర్రర్"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"ఖాతా సింక్‌"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g>లో <xliff:g id="ID_1">%1$d</xliff:g> అంశాలకు సింక్‌ ఆన్‌లో ఉంది"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"అన్ని అంశాలకు సింక్‌ ఆన్‌లో ఉంది"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"అన్ని అంశాలకు సింక్‌ ఆఫ్‌లో ఉంది"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"సింక్‌ ఆఫ్‌లో ఉంది"</string>
+    <string name="sync_error" msgid="6698021343089247914">"సింక్‌ ఎర్రర్"</string>
     <string name="last_synced" msgid="4745124489150101529">"చివరిగా సమకాలీకరించినది <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"ఇప్పుడు సమకాలీకరిస్తోంది…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"ఇప్పుడే సమకాలీకరించడానికి నొక్కండి<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ఇప్పుడే సమకాలీకరించు"</string>
-    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"సమకాలీకరణను రద్దు చేయి"</string>
-    <string name="sync_is_failing" msgid="5766255460901806206">"సమకాలీకరణ ప్రస్తుతం సమస్యలను ఎదుర్కొంటోంది. ఇది త్వరలో అందుబాటులోకి వస్తుంది."</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"సింక్‌ను రద్దు చేయి"</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"సింక్‌ ప్రస్తుతం సమస్యలను ఎదుర్కొంటోంది. ఇది త్వరలో అందుబాటులోకి వస్తుంది."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"గోప్యత"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"భద్రత"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
