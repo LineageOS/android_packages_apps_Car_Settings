@@ -95,6 +95,11 @@ public class CredentialStorageActivity extends FragmentActivity {
                 .setMessage(R.string.credentials_reset_hint)
                 .setPositiveButton(android.R.string.ok, arguments -> onResetConfirmed())
                 .setNegativeButton(android.R.string.cancel, arguments -> finish())
+                .setDismissListener((arguments, positiveResult) -> {
+                    if (!positiveResult) {
+                        finish();
+                    }
+                })
                 .build();
         dialog.show(getSupportFragmentManager(), DIALOG_TAG);
     }
