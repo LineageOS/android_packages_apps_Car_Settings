@@ -16,14 +16,10 @@
 
 package com.android.car.settings.privacy;
 
-import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
 import android.hardware.SensorPrivacyManager;
-import android.icu.text.RelativeDateTimeFormatter;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.android.car.settings.R;
@@ -32,7 +28,6 @@ import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.applications.RecentAppOpsAccess;
-import com.android.settingslib.utils.StringUtil;
 
 import java.util.HashSet;
 import java.util.List;
@@ -48,7 +43,7 @@ public class MicrophoneRecentAccessesPreferenceController extends
     private final SensorPrivacyManager mSensorPrivacyManager;
     private final SensorPrivacyManager.OnSensorPrivacyChangedListener mListener =
             (sensor, enabled) -> refreshUi();
-    private final Set<Preference> mAddedPreferences = new HashSet<>();
+    private final Set<CarUiPreference> mAddedPreferences = new HashSet<>();
 
     private final RecentAppOpsAccess mRecentMicrophoneAccesses;
     private final int mRecentAppsMaxCount;
@@ -109,20 +104,20 @@ public class MicrophoneRecentAccessesPreferenceController extends
 
     private void updateUi(List<RecentAppOpsAccess.Access> sortedRecentMicrophoneAccesses) {
         // remove any already added preferences
-        for (Preference addedPreference : mAddedPreferences) {
+        for (CarUiPreference addedPreference : mAddedPreferences) {
             getPreference().removePreference(addedPreference);
         }
         mAddedPreferences.clear();
 
         if (sortedRecentMicrophoneAccesses.isEmpty()) {
-            Preference emptyPreference = createNoRecentAccessPreference();
+            CarUiPreference emptyPreference = createNoRecentAccessPreference();
             getPreference().addPreference(emptyPreference);
             mAddedPreferences.add(emptyPreference);
         } else {
             int count = Math.min(sortedRecentMicrophoneAccesses.size(), mRecentAppsMaxCount);
             for (int i = 0; i < count; i++) {
                 RecentAppOpsAccess.Access request = sortedRecentMicrophoneAccesses.get(i);
-                Preference appPreference = createAppPreference(
+                CarUiPreference appPreference = MicrophoneRecentAccessUtil.createAppPreference(
                         getContext(),
                         request);
                 getPreference().addPreference(appPreference);
@@ -131,34 +126,10 @@ public class MicrophoneRecentAccessesPreferenceController extends
         }
     }
 
-    private Preference createNoRecentAccessPreference() {
-        Preference preference = new CarUiPreference(getContext());
+    private CarUiPreference createNoRecentAccessPreference() {
+        CarUiPreference preference = new CarUiPreference(getContext());
         preference.setTitle(R.string.microphone_no_recent_access);
         preference.setSelectable(false);
         return preference;
-    }
-
-    /**
-     * Create a {@link CarUiPreference} for an app with it's last access time and a link to its
-     * microphone permission settings.
-     */
-    private static CarUiPreference createAppPreference(Context prefContext,
-            RecentAppOpsAccess.Access access) {
-        CarUiPreference pref = new CarUiPreference(prefContext);
-        pref.setIcon(access.icon);
-        pref.setTitle(access.label);
-        pref.setSummary(StringUtil.formatRelativeTime(prefContext,
-                System.currentTimeMillis() - access.accessFinishTime, false,
-                RelativeDateTimeFormatter.Style.SHORT));
-        pref.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSION);
-            intent.putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME,
-                    Manifest.permission_group.MICROPHONE);
-            intent.putExtra(Intent.EXTRA_PACKAGE_NAME, access.packageName);
-            intent.putExtra(Intent.EXTRA_USER, access.userHandle);
-            prefContext.startActivity(intent);
-            return true;
-        });
-        return pref;
     }
 }
