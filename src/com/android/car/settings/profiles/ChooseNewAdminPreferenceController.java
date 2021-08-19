@@ -83,7 +83,7 @@ public class ChooseNewAdminPreferenceController extends ProfilesBasePreferenceCo
 
     @VisibleForTesting
     void assignNewAdminAndRemoveOldAdmin(UserInfo profileToMakeAdmin) {
-        UserHelper.grantAdminPermissions(getContext(), profileToMakeAdmin);
+        UserHelper.grantAdminPermissions(getContext(), profileToMakeAdmin.getUserHandle());
         removeOldAdmin();
     }
 

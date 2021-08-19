@@ -64,7 +64,7 @@ public final class ProfileDetailsActionButtonsPreferenceController
                 UserInfo profileToMakeAdmin =
                         (UserInfo) arguments.get(ProfilesDialogProvider.KEY_PROFILE_TO_MAKE_ADMIN);
                 com.android.car.internal.user.UserHelper.grantAdminPermissions(getContext(),
-                        profileToMakeAdmin);
+                        profileToMakeAdmin.getUserHandle());
                 getFragmentController().goBack();
             };
 

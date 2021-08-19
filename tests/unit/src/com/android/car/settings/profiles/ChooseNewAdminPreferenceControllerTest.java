@@ -136,7 +136,7 @@ public class ChooseNewAdminPreferenceControllerTest {
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
         ExtendedMockito.verify(() -> UserHelper.grantAdminPermissions(mContext,
-                TEST_OTHER_USER));
+                TEST_OTHER_USER.getUserHandle()));
     }
 
     @Test

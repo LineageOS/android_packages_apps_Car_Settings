@@ -57,8 +57,9 @@ public class AddNewProfileTask extends AsyncTask<String, Void, UserInfo> {
             if (result.isSuccess()) {
                 UserInfo user = mUserManager.getUserInfo(result.getUser().getIdentifier());
                 if (user != null) {
-                    UserHelper.setDefaultNonAdminRestrictions(mContext, user, /* enable= */ true);
-                    UserHelper.assignDefaultIcon(mContext, user);
+                    UserHelper.setDefaultNonAdminRestrictions(mContext, user.getUserHandle(),
+                            /* enable= */ true);
+                    UserHelper.assignDefaultIcon(mContext, user.getUserHandle());
                 } else {
                     LOG.wtf("Inconsistent state: successful future with null profile - "
                             + result.toString());
