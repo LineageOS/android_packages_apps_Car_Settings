@@ -503,6 +503,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="integer" name="quick_setting_column_count"/>
       <item type="integer" name="recent_apps_days_threshold"/>
       <item type="integer" name="recent_apps_max_count"/>
+      <item type="integer" name="recent_microphone_access_apps_list_count"/>
       <item type="integer" name="recent_notifications_apps_list_count"/>
       <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
@@ -970,6 +971,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="media_volume_title"/>
       <item type="string" name="memory_calculating_size"/>
       <item type="string" name="microphone_manage_permissions"/>
+      <item type="string" name="microphone_no_recent_access"/>
+      <item type="string" name="microphone_recently_accessed"/>
+      <item type="string" name="microphone_settings_recent_requests_title"/>
+      <item type="string" name="microphone_settings_recent_requests_view_all_title"/>
       <item type="string" name="microphone_settings_title"/>
       <item type="string" name="microphone_toggle_title"/>
       <item type="string" name="mobile_network_active_esim"/>
@@ -1403,6 +1408,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="location_recent_requests_fragment"/>
       <item type="xml" name="location_settings_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>
+      <item type="xml" name="microphone_recent_requests_view_all_fragment"/>
       <item type="xml" name="mobile_network_fragment"/>
       <item type="xml" name="mobile_network_list_fragment"/>
       <item type="xml" name="modify_system_settings_fragment"/>

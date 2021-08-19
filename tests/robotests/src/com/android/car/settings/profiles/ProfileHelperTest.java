@@ -527,14 +527,14 @@ public class ProfileHelperTest {
 
     private void mockCreateUser(String name, int flag, int status, UserInfo userInfo) {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
-        future.complete(new UserCreationResult(status, userInfo, null));
+        future.complete(new UserCreationResult(status, userInfo.getUserHandle(), null));
         when(mMockCarUserManager.createUser(name, flag))
                 .thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockCreateGuest(String name, int status, UserInfo userInfo) {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
-        future.complete(new UserCreationResult(status, userInfo, null));
+        future.complete(new UserCreationResult(status, userInfo.getUserHandle(), null));
         when(mMockCarUserManager.createGuest(name)).thenReturn(new AndroidAsyncFuture<>(future));
     }
 
