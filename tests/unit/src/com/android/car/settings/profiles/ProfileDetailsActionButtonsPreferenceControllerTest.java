@@ -349,7 +349,7 @@ public class ProfileDetailsActionButtonsPreferenceControllerTest {
         mPreferenceController.mMakeAdminConfirmListener.onConfirm(arguments);
 
         ExtendedMockito.verify(
-                () -> UserHelper.grantAdminPermissions(mContext, userInfo));
+                () -> UserHelper.grantAdminPermissions(mContext, userInfo.getUserHandle()));
     }
 
     @Test
