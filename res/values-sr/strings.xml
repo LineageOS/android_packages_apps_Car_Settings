@@ -96,6 +96,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Додај мрежу"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Повежи се"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"Повезује се…"</string>
+    <string name="wifi_disconnected" msgid="4485699234859368137">"Није повезано"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"Мрежа није у домету"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Лозинка"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Прикажи лозинку"</string>
@@ -399,6 +400,10 @@
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Користи микрофон"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Управљајте дозволама за микрофон"</string>
+    <string name="microphone_recently_accessed" msgid="2084292372486026607">"Недавно приступано"</string>
+    <string name="microphone_no_recent_access" msgid="6996941857659485282">"Ниједна апликација није недавно приступила микрофону"</string>
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Недавно приступано"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Прикажи све"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања система"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Напредно"</string>
