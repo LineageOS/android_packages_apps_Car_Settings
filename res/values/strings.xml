@@ -850,16 +850,42 @@
     <string name="microphone_settings_title">Microphone</string>
     <!-- Title of setting to toggle microphone [CHAR LIMIT=40] -->
     <string name="microphone_toggle_title">Use microphone</string>
+    <!-- Summary of setting to toggle microphone [CHAR LIMIT=100] -->
+    <string name="microphone_toggle_summary">Allow all apps to access your microphone</string>
     <!-- Title of setting linking to microphone permission management screen [CHAR LIMIT=60] -->
     <string name="microphone_manage_permissions">Manage microphone permissions</string>
     <!-- Title of Recent Microphone Accesses category [CHAR LIMIT=60] -->
     <string name="microphone_recently_accessed">Recently accessed</string>
     <!-- Description when no apps have accessed microphone recently [CHAR LIMIT=60] -->
-    <string name="microphone_no_recent_access">No apps recently accessed microphone</string>
+    <string name="microphone_no_recent_access">No recent apps</string>
+    <!-- Summary for number of apps that have access when microphone is off.  [CHAR LIMIT=100] -->
+    <string name="microphone_app_permission_summary_microphone_off">0 apps have access</string>
+    <!--
+    Summary for Microphone settings when microphone is on, explaining how many apps have microphone
+    permission.
+
+    Please note that the distinction between singular and plural of this sentence only depends on
+    the quantity of "permitted_location_app_count" ("has" vs "have"). The quantity of
+    "total_location_app_count" is almost always greater than 1, so "apps" is always in plural form.
+    [CHAR LIMIT=100]-->
+    <plurals name="microphone_app_permission_summary_microphone_on">
+        <item quantity="one">
+            <xliff:g id="permitted_location_app_count">%1$d</xliff:g>
+            of
+            <xliff:g id="total_location_app_count">%2$d</xliff:g>
+            apps has access</item>
+        <item quantity="other">
+            <xliff:g id="permitted_location_app_count">%1$d</xliff:g>
+            of
+            <xliff:g id="total_location_app_count">%2$d</xliff:g>
+            apps have access</item>
+    </plurals>
     <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
     <string name="microphone_settings_recent_requests_title">Recently accessed</string>
     <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
     <string name="microphone_settings_recent_requests_view_all_title">View all</string>
+    <!-- Microphone settings, loading the number of apps which have microphone permission [CHAR LIMIT=30] -->
+    <string name="microphone_settings_loading_app_permission_stats">Loading\u2026</string>
 
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->

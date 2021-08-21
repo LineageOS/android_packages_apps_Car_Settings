@@ -545,6 +545,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="plurals" name="lockpassword_password_requires_numeric"/>
       <item type="plurals" name="lockpassword_password_requires_symbols"/>
       <item type="plurals" name="lockpassword_password_requires_uppercase"/>
+      <item type="plurals" name="microphone_app_permission_summary_microphone_on"/>
       <item type="plurals" name="mobile_network_summary_count"/>
       <item type="plurals" name="number_of_device_admins"/>
       <item type="plurals" name="runtime_permissions_additional_count"/>
@@ -958,12 +959,15 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="media_volume_summary"/>
       <item type="string" name="media_volume_title"/>
       <item type="string" name="memory_calculating_size"/>
+      <item type="string" name="microphone_app_permission_summary_microphone_off"/>
       <item type="string" name="microphone_manage_permissions"/>
       <item type="string" name="microphone_no_recent_access"/>
       <item type="string" name="microphone_recently_accessed"/>
+      <item type="string" name="microphone_settings_loading_app_permission_stats"/>
       <item type="string" name="microphone_settings_recent_requests_title"/>
       <item type="string" name="microphone_settings_recent_requests_view_all_title"/>
       <item type="string" name="microphone_settings_title"/>
+      <item type="string" name="microphone_toggle_summary"/>
       <item type="string" name="microphone_toggle_title"/>
       <item type="string" name="mobile_network_active_esim"/>
       <item type="string" name="mobile_network_active_sim"/>
