@@ -94,6 +94,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"ජාලය එක් කරන්න"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"සබඳින්න"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"සම්බන්ධ වෙමින්…"</string>
+    <string name="wifi_disconnected" msgid="4485699234859368137">"සම්බන්ධ නැත"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"ජාලය පරාසය තුළ නැත"</string>
     <string name="wifi_password" msgid="5565632142720292397">"මුරපදය"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"මුරපදය පෙන්වන්න"</string>
@@ -395,6 +396,12 @@
     <string name="microphone_settings_title" msgid="7125554350537136922">"මයික්‍රෆෝනය"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"මයික්‍රෆෝනය භාවිත කරන්න"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"මයික්‍රෆෝන අවසර කළමනාකරණය කරන්න"</string>
+    <string name="microphone_recently_accessed" msgid="2084292372486026607">"මෑතකදී පිවිසි"</string>
+    <string name="microphone_no_recent_access" msgid="6996941857659485282">"යෙදුම් කිසිවක් මෑතකදී මයික්‍රෆෝනය වෙත ප්‍රවේශ වූයේ නැත"</string>
+    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <skip />
+    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"පද්ධතිය"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"පද්ධති යාවත්කාලීන"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"උසස්"</string>
