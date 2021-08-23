@@ -32,6 +32,7 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PowerPolicyListener;
 import com.android.car.settings.common.PreferenceController;
@@ -85,6 +86,11 @@ public class LocationStateSwitchPreferenceController extends
     protected boolean handlePreferenceChanged(ClickableWhileDisabledSwitchPreference preference,
             Object newValue) {
         boolean locationEnabled = (Boolean) newValue;
+        if (!locationEnabled) {
+            getFragmentController().showDialog(getConfirmationDialog(),
+                    ConfirmationDialogFragment.TAG);
+            return false;
+        }
         Utils.updateLocationEnabled(
                 mContext,
                 locationEnabled,
@@ -131,5 +137,18 @@ public class LocationStateSwitchPreferenceController extends
     private void enableSwitchPreference(ClickableWhileDisabledSwitchPreference preference,
             boolean enabled) {
         preference.setEnabled(enabled);
+    }
+
+    private ConfirmationDialogFragment getConfirmationDialog() {
+        return new ConfirmationDialogFragment.Builder(getContext())
+                .setMessage(mContext.getString(R.string.location_toggle_off_warning))
+                .setPositiveButton(android.R.string.ok, arguments -> {
+                    Utils.updateLocationEnabled(
+                            mContext,
+                            false,
+                            UserHandle.myUserId(),
+                            Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS);
+                })
+                .build();
     }
 }
