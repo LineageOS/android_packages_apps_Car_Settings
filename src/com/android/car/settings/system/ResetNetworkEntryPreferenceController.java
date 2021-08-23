@@ -26,15 +26,15 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.widget.Toast;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.enterprise.EnterpriseUtils;
 
 /** Controller which determines if network reset should be displayed based on user status. */
-public class ResetNetworkEntryPreferenceController
-        extends PreferenceController<ClickableWhileDisabledPreference> {
+public class ResetNetworkEntryPreferenceController extends PreferenceController<Preference> {
 
     public ResetNetworkEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -42,15 +42,14 @@ public class ResetNetworkEntryPreferenceController
     }
 
     @Override
-    protected Class<ClickableWhileDisabledPreference> getPreferenceType() {
-        return ClickableWhileDisabledPreference.class;
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-
-        getPreference().setDisabledClickListener(p -> {
+        setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> {
             if (hasUserRestrictionByDpm(getContext(), DISALLOW_NETWORK_RESET)) {
                 showActionDisabledByAdminDialog();
             } else {

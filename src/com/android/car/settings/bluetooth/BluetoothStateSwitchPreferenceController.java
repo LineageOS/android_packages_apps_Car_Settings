@@ -32,7 +32,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
+import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PowerPolicyListener;
 import com.android.car.settings.common.PreferenceController;
@@ -44,7 +44,7 @@ import java.util.function.Consumer;
  * Enables/disables bluetooth state via SwitchPreference.
  */
 public class BluetoothStateSwitchPreferenceController extends
-        PreferenceController<ClickableWhileDisabledSwitchPreference> {
+        PreferenceController<ColoredSwitchPreference> {
 
     private final Context mContext;
     private final IntentFilter mIntentFilter = new IntentFilter(
@@ -77,18 +77,18 @@ public class BluetoothStateSwitchPreferenceController extends
     }
 
     @Override
-    protected Class<ClickableWhileDisabledSwitchPreference> getPreferenceType() {
-        return ClickableWhileDisabledSwitchPreference.class;
+    protected Class<ColoredSwitchPreference> getPreferenceType() {
+        return ColoredSwitchPreference.class;
     }
 
     @Override
-    protected void updateState(ClickableWhileDisabledSwitchPreference preference) {
+    protected void updateState(ColoredSwitchPreference preference) {
         updateSwitchPreference(mBluetoothAdapter.getState() == BluetoothAdapter.STATE_ON
                 || mBluetoothAdapter.getState() == BluetoothAdapter.STATE_TURNING_ON);
     }
 
     @Override
-    protected boolean handlePreferenceChanged(ClickableWhileDisabledSwitchPreference preference,
+    protected boolean handlePreferenceChanged(ColoredSwitchPreference preference,
             Object newValue) {
         if (mUpdating) {
             return false;
@@ -183,12 +183,13 @@ public class BluetoothStateSwitchPreferenceController extends
         getPreference().setChecked(enabled);
     }
 
-    private void enableSwitchPreference(ClickableWhileDisabledSwitchPreference preference,
+    private void enableSwitchPreference(ColoredSwitchPreference preference,
             boolean enabled, boolean forPowerPolicy) {
-        Consumer<Preference> listener = !forPowerPolicy ? null : p ->
+        Consumer<Preference> listener = p ->
                 Toast.makeText(getContext(),
                         getContext().getString(R.string.power_component_disabled),
                         Toast.LENGTH_LONG).show();
+        setClickableWhileDisabled(preference, forPowerPolicy, listener);
         preference.setDisabledClickListener(listener);
         preference.setEnabled(enabled);
     }
