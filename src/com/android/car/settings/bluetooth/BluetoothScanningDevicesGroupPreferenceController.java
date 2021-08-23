@@ -47,7 +47,7 @@ public abstract class BluetoothScanningDevicesGroupPreferenceController extends
 
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private final AlwaysDiscoverable mAlwaysDiscoverable;
-    private boolean mIsScanningEnabled = true;
+    private boolean mIsScanningEnabled;
 
     public BluetoothScanningDevicesGroupPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -70,6 +70,12 @@ public abstract class BluetoothScanningDevicesGroupPreferenceController extends
     protected abstract void onDeviceClickedInternal(CachedBluetoothDevice cachedDevice);
 
     @Override
+    protected void onStartInternal() {
+        super.onStartInternal();
+        mIsScanningEnabled = true;
+    }
+
+    @Override
     protected void onStopInternal() {
         super.onStopInternal();
         disableScanning();
@@ -86,6 +92,13 @@ public abstract class BluetoothScanningDevicesGroupPreferenceController extends
         } else {
             disableScanning();
         }
+    }
+
+    protected void reenableScanning() {
+        if (isStarted()) {
+            mIsScanningEnabled = true;
+        }
+        refreshUi();
     }
 
     private boolean shouldEnableScanning() {
@@ -133,6 +146,9 @@ public abstract class BluetoothScanningDevicesGroupPreferenceController extends
     @Override
     public void onDeviceBondStateChanged(CachedBluetoothDevice cachedDevice, int bondState) {
         LOG.d("onDeviceBondStateChanged device: " + cachedDevice + " state: " + bondState);
+        if (bondState == BluetoothDevice.BOND_NONE && isStarted()) {
+            mIsScanningEnabled = true;
+        }
         refreshUi();
     }
 

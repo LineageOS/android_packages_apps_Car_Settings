@@ -66,7 +66,7 @@ public class BluetoothUnbondedDevicesPreferenceController extends
         } else {
             BluetoothUtils.showError(getContext(), cachedDevice.getName(),
                     R.string.bluetooth_pairing_error_message);
-            refreshUi();
+            reenableScanning();
         }
     }
 
