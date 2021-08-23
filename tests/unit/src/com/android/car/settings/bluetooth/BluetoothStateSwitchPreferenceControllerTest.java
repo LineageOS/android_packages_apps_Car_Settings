@@ -32,7 +32,7 @@ import androidx.preference.SwitchPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
+import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
@@ -70,7 +70,7 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mSwitchPreference = new ClickableWhileDisabledSwitchPreference(mContext);
+        mSwitchPreference = new ColoredSwitchPreference(mContext);
         mPreferenceController = new BluetoothStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
