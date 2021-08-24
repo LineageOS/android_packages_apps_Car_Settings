@@ -1681,7 +1681,7 @@
 
 
     <!-- TODO(b/186566325): remove translatable="false" once the string is finalized -->
-    <!-- Remote rquest bugreport --><skip/>
+    <!-- Remote request bugreport --><skip/>
     <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager. [CHAR LIMIT=50] -->
     <string name="share_remote_bugreport_dialog_title" translatable="false">Share bug report?</string>
     <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager. [CHAR LIMIT=NONE] -->
