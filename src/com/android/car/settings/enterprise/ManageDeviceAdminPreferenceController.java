@@ -56,8 +56,7 @@ public final class ManageDeviceAdminPreferenceController
 
     @Override
     protected int getRealAvailabilityStatus() {
-        // TODO(b/185182679): Grayed out and disabled for now. Enable once fully implemented.
-        return mEnabled ? AVAILABLE_FOR_VIEWING : UNSUPPORTED_ON_DEVICE;
+        return mEnabled ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
     private int getNumberOfAdmins() {
