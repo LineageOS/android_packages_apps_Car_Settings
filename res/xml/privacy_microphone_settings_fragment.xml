@@ -23,6 +23,7 @@
     <com.android.car.settings.common.ColoredSwitchPreference
         android:key="@string/pk_microphone_state_switch"
         android:title="@string/microphone_toggle_title"
+        android:summary="@string/microphone_toggle_summary"
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.privacy.MicTogglePreferenceController"
         settings:searchable="false"/>
@@ -41,7 +42,8 @@
     </PreferenceCategory>
     <Preference
         android:key="@string/pk_microphone_manage_permissions"
-        android:title="@string/microphone_manage_permissions">
+        android:title="@string/microphone_manage_permissions"
+        settings:controller="com.android.car.settings.privacy.ManageMicPermissionsPreferenceController">
         <intent android:action="android.intent.action.MANAGE_PERMISSION_APPS">
             <extra android:name="android.intent.extra.PERMISSION_NAME"
                    android:value="android.permission-group.MICROPHONE"/>
