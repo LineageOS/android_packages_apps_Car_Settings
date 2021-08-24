@@ -829,6 +829,12 @@
     <string name="location_settings_title">Location</string>
     <!-- Title of location toggle setting [CHAR LIMIT=40] -->
     <string name="location_toggle_title">Use location</string>
+    <!-- Warning message when users try to toggle location off [CHAR LIMIT=NONE] -->
+    <string name="location_toggle_off_warning">
+        Turning off Location will turn off location access for all apps, Driver assistance features
+        will still have access. Turning off Driver assistance toggle will stop Driver assistance
+        features from using your location.
+    </string>
     <!-- Title of Recent Location Requests setting [CHAR LIMIT=60] -->
     <string name="location_settings_recent_requests_title">Recent Location Requests</string>
     <!-- Message indicating that no apps have requested location recently [CHAR LIMIT=60] -->
