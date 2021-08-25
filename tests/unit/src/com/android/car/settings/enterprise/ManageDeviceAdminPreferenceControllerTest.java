@@ -15,7 +15,7 @@
  */
 package com.android.car.settings.enterprise;
 
-import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
@@ -35,7 +35,7 @@ public final class ManageDeviceAdminPreferenceControllerTest
         extends BasePreferenceControllerTestCase {
 
     private static final UserInfo USER_PROFILE =
-            new UserInfo(/* id= */ 10, /* name= */ "testUser", /* flags= */ 0);
+            new UserInfo(/* id= */ 100, /* name= */ "testUser", /* flags= */ 0);
 
     private Preference mPreference;
 
@@ -108,7 +108,7 @@ public final class ManageDeviceAdminPreferenceControllerTest
     public void testGetAvailabilityStatus_deviceAdminEnabled() {
         ManageDeviceAdminPreferenceController controller = newControllerWithFeatureEnabled();
 
-        assertAvailability(controller.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        assertAvailability(controller.getAvailabilityStatus(), AVAILABLE);
     }
 
     private ManageDeviceAdminPreferenceController newControllerWithFeatureDisabled() {
