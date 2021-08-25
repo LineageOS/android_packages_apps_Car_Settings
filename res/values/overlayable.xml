@@ -924,9 +924,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="location_settings_services_title"/>
       <item type="string" name="location_settings_title"/>
       <item type="string" name="location_state_switch_content_description"/>
+      <item type="string" name="location_toggle_off_warning"/>
       <item type="string" name="location_toggle_title"/>
       <item type="string" name="location_use_location_title"/>
-      <item type="string" name="location_toggle_off_warning"/>
       <item type="string" name="lock_settings_enter_password"/>
       <item type="string" name="lock_settings_enter_pattern"/>
       <item type="string" name="lock_settings_enter_pin"/>
@@ -1049,6 +1049,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="profiles_and_accounts_settings_title"/>
       <item type="string" name="profiles_list_title"/>
       <item type="string" name="progress_scanning"/>
+      <item type="string" name="qc_display_brightness"/>
       <item type="string" name="really_remove_account_message"/>
       <item type="string" name="really_remove_account_title"/>
       <item type="string" name="regulatory_info_text"/>
