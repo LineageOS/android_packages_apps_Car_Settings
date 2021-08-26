@@ -86,6 +86,7 @@ public final class DeviceAdminAddActionPreferenceControllerTest extends
         verifyPreferenceTitleSet(R.string.add_device_admin);
     }
 
+    @ExpectWtf // Should never happen because UI would disable the button
     @Test
     public void testHandlePreferenceClicked_deviceOwner() throws Exception {
         mockDeviceOwner();
@@ -98,6 +99,7 @@ public final class DeviceAdminAddActionPreferenceControllerTest extends
         verifyGoBack();
     }
 
+    @ExpectWtf // Should never happen because UI would disable the button
     @Test
     public void testHandlePreferenceClicked_profileOwner() throws Exception {
         mockProfileOwner();
