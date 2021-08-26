@@ -72,6 +72,12 @@ public class SettingsQCRegistry {
             .authority(AUTHORITY)
             .appendPath("brightness_slider_with_icon")
             .build();
+
+    public static final Uri ADAPTIVE_BRIGHTNESS_SWITCH_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("adaptive_brightness_switch")
+            .build();
     // End Uris
 
     @VisibleForTesting
@@ -87,6 +93,7 @@ public class SettingsQCRegistry {
         map.put(MOBILE_DATA_TILE_URI, MobileDataTile.class);
         map.put(BRIGHTNESS_SLIDER_URI, BrightnessSlider.class);
         map.put(BRIGHTNESS_SLIDER_WITH_ICON_URI, BrightnessSliderWithIcon.class);
+        map.put(ADAPTIVE_BRIGHTNESS_SWITCH_URI, AdaptiveBrightnessSwitch.class);
 
         return map;
     }
