@@ -179,7 +179,7 @@ public class ConfirmationDialogFragmentTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         dialog.dismiss();
         ArgumentCaptor<Bundle> bundle = ArgumentCaptor.forClass(Bundle.class);
-        verify(mDismissListener).onDismiss(bundle.capture());
+        verify(mDismissListener).onDismiss(bundle.capture(), false);
         assertThat(bundle.getValue().getString(TEST_ARG_KEY)).isEqualTo(TEST_ARG_VALUE);
     }
 

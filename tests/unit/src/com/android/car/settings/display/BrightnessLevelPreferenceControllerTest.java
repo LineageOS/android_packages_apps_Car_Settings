@@ -23,6 +23,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.database.ContentObserver;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.UserHandle;
 import android.provider.Settings;
 
@@ -41,11 +44,17 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+
 @RunWith(AndroidJUnit4.class)
 public class BrightnessLevelPreferenceControllerTest {
+    private static final int WAIT_TIME_SEC = 10; // Time to ensure brightness value has been written
+
     private Context mContext;
     private BrightnessLevelPreferenceController mController;
     private SeekBarPreference mSeekBarPreference;
+    private CountDownLatch mCountDownLatch;
     private int mMin;
     private int mMax;
     private int mMid;
@@ -57,6 +66,8 @@ public class BrightnessLevelPreferenceControllerTest {
     public void setUp() {
         LifecycleOwner lifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
+
+        mCountDownLatch = new CountDownLatch(1);
 
         mContext = ApplicationProvider.getApplicationContext();
         mMin = mContext.getResources().getInteger(
@@ -111,26 +122,56 @@ public class BrightnessLevelPreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceChanged_minValue() throws Settings.SettingNotFoundException {
+    public void testHandlePreferenceChanged_minValue()
+            throws Settings.SettingNotFoundException, InterruptedException {
+        ContentObserver contentObserver = registerContentObserver();
         mSeekBarPreference.callChangeListener(0);
+        mCountDownLatch.await(WAIT_TIME_SEC, TimeUnit.SECONDS); // Wait to ensure value is written
         int currentSettingsVal = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, UserHandle.myUserId());
+        unregisterContentObserver(contentObserver);
         assertThat(currentSettingsVal).isEqualTo(mMin);
     }
 
     @Test
-    public void testHandlePreferenceChanged_maxValue() throws Settings.SettingNotFoundException {
+    public void testHandlePreferenceChanged_maxValue()
+            throws Settings.SettingNotFoundException, InterruptedException {
+        ContentObserver contentObserver = registerContentObserver();
         mSeekBarPreference.callChangeListener(GAMMA_SPACE_MAX);
+        mCountDownLatch.await(WAIT_TIME_SEC, TimeUnit.SECONDS); // Wait to ensure value is written
         int currentSettingsVal = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, UserHandle.myUserId());
+        unregisterContentObserver(contentObserver);
         assertThat(currentSettingsVal).isEqualTo(mMax);
     }
 
     @Test
-    public void testHandlePreferenceChanged_midValue() throws Settings.SettingNotFoundException {
+    public void testHandlePreferenceChanged_midValue()
+            throws Settings.SettingNotFoundException, InterruptedException {
+        ContentObserver contentObserver = registerContentObserver();
         mSeekBarPreference.callChangeListener(convertLinearToGamma(mMid, mMin, mMax));
+        mCountDownLatch.await(WAIT_TIME_SEC, TimeUnit.SECONDS); // Wait to ensure value is written
         int currentSettingsVal = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, UserHandle.myUserId());
+        unregisterContentObserver(contentObserver);
         assertThat(currentSettingsVal).isEqualTo(mMid);
+    }
+
+    private ContentObserver registerContentObserver() {
+        ContentObserver contentObserver = new ContentObserver(new Handler(Looper.getMainLooper())) {
+            @Override
+            public void onChange(boolean selfChange) {
+                mCountDownLatch.countDown();
+            }
+        };
+        mContext.getContentResolver().registerContentObserver(
+                Settings.System.getUriFor(Settings.System.SCREEN_BRIGHTNESS), false,
+                contentObserver);
+
+        return contentObserver;
+    }
+
+    private void unregisterContentObserver(ContentObserver contentObserver) {
+        mContext.getContentResolver().unregisterContentObserver(contentObserver);
     }
 }
