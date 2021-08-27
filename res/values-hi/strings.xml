@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ज़्यादा सेटिंग"</string>
     <string name="location_settings_title" msgid="901334356682423679">"जगह की जानकारी"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"जगह की जानकारी का इस्तेमाल करें"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"जगह की जानकारी की सुविधा बंद करने पर, सभी ऐप्लिकेशन के लिए, जगह की जानकारी का ऐक्सेस बंद हो जाएगा. हालांकि, ड्राइवर की सुरक्षा से जुड़ी मदद करने वाली सुविधाएं उसे अब भी ऐक्सेस कर पाएंगी. ड्राइवर की सुरक्षा से जुड़ी मदद करने वाली सुविधाओं को बंद करने पर, ये सुविधाएं आपकी जगह की जानकारी को ऐक्सेस नहीं कर पाएंगी."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ऐप्लिकेशन-लेवल की अनुमतियां"</string>
@@ -395,12 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"जगह की जानकारी देने वाली सेवा, आपके डिवाइस की मौजूदा जगह का पता लगाने के लिए, जीपीएस, वाई-फ़ाई, मोबाइल नेटवर्क, और सेंसर जैसे स्रोतों का इस्तेमाल कर सकती है."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"माइक्रोफ़ोन"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"माइक्रोफ़ोन इस्तेमाल करें"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"माइक्रोफ़ोन की अनुमतियां मैनेज करें"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"हाल ही में, इन ऐप्लिकेशन ने माइक्रोफ़ोन का इस्तेमाल किया"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"हाल ही में, किसी भी ऐप्लिकेशन ने माइक्रोफ़ोन का इस्तेमाल नहीं किया"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"हाल ही में, इन ऐप्लिकेशन ने माइक्रोफ़ोन का इस्तेमाल किया"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"सभी देखें"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
@@ -729,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"कोई प्रोफ़ाइल जोड़ें"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"यह प्रोफ़ाइल मिटाएं"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"प्रोफ़ाइल जोड़ें"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"सूचना और मनोरंजन की सुविधा देने वाले डिवाइस को रीसेट करें"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"आपके सिस्टम को, फ़ैक्ट्री रीसेट करने और पूरे डेटा को हमेशा के लिए मिटाने का अनुरोध मिला है. आप इसे अभी रीसेट कर सकते हैं या यह अगली बार कार के स्टार्ट होने पर रीसेट होगा. इसके बाद, आप नई प्रोफ़ाइल सेट अप कर सकते हैं."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"अभी रीसेट करें"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"बाद में रीसेट करें"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"अगली बार कार के स्टार्ट होने पर, सूचना और मनोरंजन की सुविधा देने वाला डिवाइस रीसेट होगा."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"रीसेट शुरू करने के लिए ज़रूरी है कि कार पार्क हो."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"इस सेटिंग को अभी बदला नहीं जा सकता"</string>
 </resources>
