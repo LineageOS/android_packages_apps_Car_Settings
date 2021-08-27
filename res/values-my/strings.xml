@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"နောက်ထပ်"</string>
     <string name="location_settings_title" msgid="901334356682423679">"တည်နေရာ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"တည်နေရာကို သုံးရန်"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"‘တည်နေရာ’ ကို ပိတ်ခြင်းဖြင့် အက်ပ်အားလုံးအတွက် တည်နေရာသုံးခွင့်ကို ပိတ်လိုက်ပါမည်။ ‘ယာဉ်မောင်းသူ အထောက်အကူ’ ဝန်ဆောင်မှုများကတော့ ဆက်သုံးခွင့်ရနေပါမည်။ ‘ယာဉ်မောင်းသူ အထောက်အကူ’ ခလုတ်ကို ပိတ်ပါက ‘ယာဉ်မောင်းသူ အထောက်အကူ’ ဝန်ဆောင်မှုများက သင့်တည်နေရာကို အသုံးမပြုနိုင်တော့ပါ။"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ မရှိပါ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"အက်ပ်အဆင့် ခွင့်ပြုချက်များ"</string>
@@ -395,13 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"တည်နေရာဝန်ဆောင်မှုက သင့်စက်၏တည်နေရာ ခန့်မှန်းရာတွင် အကူအညီရယူရန် GPS၊ Wi-Fi၊ မိုဘိုင်းကွန်ရက်နှင့် အာရုံခံကိရိယာများကဲ့သို့ ရင်းမြစ်များကို အသုံးပြုနိုင်သည်။"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"မိုက်ခရိုဖုန်း"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"မိုက်ခရိုဖုန်း အသုံးပြုရန်"</string>
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"အက်ပ်အားလုံးကို မိုက်ခရိုဖုန်းသုံးခွင့်ပေးနိုင်သည်"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"မိုက်ခရိုဖုန်း ခွင့်ပြုချက်များကို စီမံခြင်း"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"လတ်တလော သုံးထားသည်များ"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"မည်သည့်အက်ပ်မျှ မိုက်ခရိုဖုန်းကို လတ်တလော သုံးမထားပါ"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
-    <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
-    <skip />
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"လတ်တလောအက်ပ်များ မရှိပါ"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"အက်ပ် 0 ခုတွင် ခွင့်ပြုချက်ရှိသည်"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> အက်ပ် <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> ခုအနက် <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> ခုတွင် ခွင့်ပြုချက်ရှိသည်</item>
+      <item quantity="one"> အက်ပ် <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> ခုအနက် <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> ခုတွင် ခွင့်ပြုချက်ရှိသည်</item>
+    </plurals>
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"လတ်တလော သုံးထားသည်များ"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"အားလုံးကြည့်ရန်"</string>
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"ဖွင့်နေသည်…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"စနစ်"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"စနစ်အပ်ဒိတ်များ"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"အဆင့်မြင့်"</string>

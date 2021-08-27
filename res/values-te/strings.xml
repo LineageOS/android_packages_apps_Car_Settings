@@ -130,7 +130,7 @@
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi ప్రాధాన్యతలు"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fiని ఆటోమేటిక్‌గా ఆన్ చేయి"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"మీ ఇంటి నెట్‌వర్క్‌ల వంటి సేవ్ చేసిన అధిక క్వాలిటీ గల నెట్‌వర్క్‌లు అందుబాటులో ఉన్నప్పుడు Wi‑Fi తిరిగి ఆన్ చేయబడుతుంది"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"స్థానం ఆఫ్ చేయబడింది కనుక అందుబాటులో లేదు. "<annotation id="link">"స్థానం"</annotation>" ఆన్ చేయండి."</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"లొకేషన్ ఆఫ్ చేయబడింది కనుక అందుబాటులో లేదు. "<annotation id="link">"లొకేషన్‌ను"</annotation>" ఆన్ చేయండి."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi స్కానింగ్‌ను ఆన్ చేయాలా?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"ఆన్ చేయి"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi-Fi స్కానింగ్ ఆన్ చేయబడింది"</string>
@@ -233,8 +233,8 @@
     <string name="media_volume_summary" msgid="2961762827637127239">"సంగీతం మరియు వీడియోల కోసం వాల్యూమ్‌ను సెట్ చేయండి"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"అలారం"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"ఫోన్ రింగ్‌టోన్"</string>
-    <string name="notification_ringtone_title" msgid="8661716239594010288">"డిఫాల్ట్ నోటిఫికేషన్ ధ్వని"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"డిఫాల్ట్ అలారం ధ్వని"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"ఆటోమేటిక్ నోటిఫికేషన్ సౌండ్"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"ఆటోమేటిక్ అలారం సౌండ్"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"సేవ్ చేయి"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"అలర్ట్ సౌండ్‌లు"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"రింగ్‌టోన్, నోటిఫికేషన్, అలారం"</string>
@@ -348,11 +348,11 @@
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"మద్దతిచ్చే లింక్‌లను తెరవదు"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g>‌ను తెరువు"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> మరియు ఇతర URLలను తెరుస్తుంది"</string>
-    <string name="app_launch_title" msgid="3442601467010363057">"డిఫాల్ట్‌గా తెరువండి"</string>
-    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"ఇతర డిఫాల్ట్‌లు"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"ఏ డిఫాల్ట్‌లు సెట్ చేయబడలేదు."</string>
-    <string name="auto_launch_enable_text" msgid="7230832269574106901">"మీరు కొన్ని చర్యల కోసం ఈ యాప్‌ను డిఫాల్ట్‌గా ప్రారంభించడానికి ఎంచుకున్నారు."</string>
-    <string name="auto_launch_reset_text" msgid="590439611312092392">"డిఫాల్ట్‌లను తీసివేయి"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"ఆటోమేటిక్‌గా తెరవండి"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"ఇతర ఆటోమేటిక్ సెట్టింగ్‌లు"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"ఏ ఆటోమేటిక్ సెట్టింగ్‌లు సెట్ చేయబడలేదు."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"మీరు కొన్ని చర్యల కోసం ఈ యాప్‌ను ఆటోమేటిక్‌గా ప్రారంభించాలని ఎంచుకున్నారు."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"ఆటోమేటిక్ సెట్టింగ్‌లను క్లియర్ చేయండి"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"మద్దతిచ్చే లింక్‌లను తెరవండి"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"ఈ యాప్‌లో తెరుస్తుంది"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"ప్రతిసారి అడుగు"</string>
@@ -384,24 +384,30 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi కంట్రోల్‌"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"యాప్‌కు Wi-Fiను ఆన్ లేదా ఆఫ్ చేయడానికి, Wi-Fi నెట్‌వర్క్‌లను స్కాన్ చేసి, కనెక్ట్ చేయడానికి, నెట్‌వర్క్‌లను జోడించడానికి లేదా తీసివేయడానికి, స్థానికం-మాత్రమే హాట్‌స్పాట్‌ను ప్రారంభించడానికి ఈ Wi-Fi కంట్రోలర్ అనుమతిస్తుంది."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"మరిన్ని"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"స్థానం"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"లొకేషన్"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"లొకేషన్‌ను ఉపయోగించండి"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి స్థాన రిక్వెస్ట్‌లు"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి స్థాన రిక్వెస్ట్‌లు లేవు"</string>
+    <!-- no translation found for location_toggle_off_warning (7698125556959442911) -->
+    <skip />
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి లొకేషన్ రిక్వెస్ట్‌లు"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి లొకేషన్ రిక్వెస్ట్‌లు లేవు"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"యాప్‌-స్థాయి అనుమతులు"</string>
-    <string name="location_settings_services_title" msgid="1186133632690970468">"స్థాన సేవలు"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"లొకేషన్ సర్వీస్‌లు"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"మీ పరికరం లొకేషన్‌ను అంచనా వేయడంలో సహాయపడటానికి GPS, Wi-Fi, మొబైల్ నెట్‌వర్క్‌లు, సెన్సార్‌ల వంటి సోర్సులను \'లొకేషన్\' ఉపయోగించవచ్చు."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"మైక్రోఫోన్"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"మైక్రోఫోన్‌ను ఉపయోగించండి"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"మైక్రోఫోన్ అనుమతులను మేనేజ్ చేయండి"</string>
-    <!-- no translation found for microphone_recently_accessed (2084292372486026607) -->
+    <string name="microphone_recently_accessed" msgid="2084292372486026607">"ఇటీవల యాక్సెస్ చేసినవి"</string>
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_no_recent_access (6996941857659485282) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
-    <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"ఇటీవల యాక్సెస్ చేసినవి"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"అన్నింటినీ చూడండి"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"సిస్టమ్"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"సిస్టమ్ అప్‌డేట్‌లు"</string>
@@ -465,7 +471,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"సెట్టింగ్‌లను రీసెట్ చేయి"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"నెట్‌వర్క్ సెట్టింగ్‌లు రీసెట్ చేయబడ్డాయి"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"యాప్ ప్రాధాన్యతలను రీసెట్ చేయి"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"ఇది వీటి కోసం అన్ని ప్రాధాన్యతలను రీసెట్ చేస్తుంది:\n\n"<li>"నిలిపివేయబడిన యాప్‌లు"</li>\n<li>"నిలిపివేయబడిన యాప్ నోటిఫికేషన్‌లు"</li>\n<li>"చర్యల కోసం డిఫాల్ట్ యాప్‌లు"</li>\n<li>"యాప్‌ల కోసం నేపథ్య డేటా పరిమితులు"</li>\n<li>"ఏవైనా అనుమతి పరిమితులు"</li>\n\n" మీరు ఏ యాప్‌ డేటాను కోల్పోరు."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"ఇది వీటి కోసం అన్ని ప్రాధాన్యతలను రీసెట్ చేస్తుంది:\n\n"<li>"డిజేబుల్‌ చేయబడిన యాప్‌లు"</li>\n<li>"డిజేబుల్‌ చేయబడిన యాప్ నోటిఫికేషన్‌లు"</li>\n<li>"చర్యల కోసం ఆటోమేటిక్ యాప్‌లు"</li>\n<li>"యాప్‌ల కోసం బ్యాక్‌గ్రౌండ్‌ డేటా పరిమితులు"</li>\n<li>"ఏవైనా అనుమతి పరిమితులు"</li>\n\n" మీరు ఏ యాప్‌ డేటాను కోల్పోరు."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"యాప్‌లను రీసెట్ చేయి"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"యాప్ ప్రాధాన్యతలు రీసెట్ చేయబడ్డాయి"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"డేటా అంతటినీ తొలగించు (ఫ్యాక్టరీ రీసెట్)"</string>

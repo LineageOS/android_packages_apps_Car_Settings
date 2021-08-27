@@ -394,6 +394,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Ещё"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Геолокация"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Использовать данные о местоположении"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"После отключения этого параметра доступ к информации о местоположении будет закрыт для всех приложений. Однако ваши геоданные по-прежнему сможет запрашивать система помощи водителю. Отключите ее, чтобы запретить связанным с ней функциям использовать сведения о местоположении."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последние запросы местоположения"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нет недавних запросов местоположения."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения для приложений"</string>
@@ -402,12 +403,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Для определения местоположения устройства могут использоваться данные GPS, Wi-Fi, мобильных сетей и датчиков."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Использовать микрофон"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Управление разрешениями микрофона"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Недавние запросы на доступ к микрофону"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"В последнее время приложения не получали доступ к микрофону."</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Недавние запросы на доступ к микрофону"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Показать все"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Обновления системы"</string>
