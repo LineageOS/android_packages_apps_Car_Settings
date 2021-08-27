@@ -21,11 +21,11 @@
     android:height="@dimen/icon_size">
   <path
       android:pathData="M8.923,8.9233L4,20L5,21L12,18L19,21L19.9998,20.0002L8.923,8.9233Z"
-      android:fillColor="?attr/iconColor"/>
+      android:fillColor="@color/icon_color_default"/>
   <path
       android:pathData="M17.7443,14.9246L9.7907,6.971L12,2L17.7443,14.9246Z"
-      android:fillColor="?attr/iconColor"/>
+      android:fillColor="@color/icon_color_default"/>
   <path
       android:pathData="M3.41,3L2,4.41L20.38,22.79L21.79,21.38L3.41,3Z"
-      android:fillColor="?attr/iconColor"/>
+      android:fillColor="@color/icon_color_default"/>
 </vector>
