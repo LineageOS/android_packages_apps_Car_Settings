@@ -94,9 +94,8 @@ public class WifiRequestToggleActivity extends FragmentActivity {
     };
 
     @VisibleForTesting
-    final ConfirmationDialogFragment.DismissListener mDismissListener = arguments -> {
-        finish();
-    };
+    final ConfirmationDialogFragment.DismissListener mDismissListener =
+            (arguments, positiveResult) -> finish();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

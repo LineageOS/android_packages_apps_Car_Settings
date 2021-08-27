@@ -77,6 +77,19 @@
         android:directBootAware="true"
         android:supportsRtl="true">
 
+        <activity android:name=".admin.FactoryResetActivity"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:exported="false"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".admin.NewUserDisclaimerActivity"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:exported="false"
+            android:launchMode="singleTask">
+        </activity>
+
         <activity
             android:name=".common.CarSettingActivities$QuickSettingActivity"
             android:launchMode="singleInstance"
