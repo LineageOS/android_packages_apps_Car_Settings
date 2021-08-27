@@ -136,6 +136,11 @@
             android:label="@string/regulatory_labels">
         </activity>
 
+        <activity android:name="com.android.car.settings.admin.NewUserDisclaimerActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask">
+        </activity>
+
         <receiver
             android:name="com.android.car.settings.enterprise.DefaultDeviceAdminReceiver">
             <meta-data android:name="android.app.device_admin"
