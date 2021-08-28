@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"More"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Location"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Use location"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Turning off location will turn off location access for all apps. Driver assistance features will still have access. Turning off the driver assistance toggle will stop driver assistance features from using your location."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent location requests"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No recent location requests"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"App-level permissions"</string>
@@ -395,11 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Location may use sources like GPS, Wi‑Fi, mobile networks and sensors to help estimate your device’s location."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microphone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Use microphone"</string>
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Allow all apps to access your microphone"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Manage microphone permissions"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Recently accessed"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"No apps recently accessed microphone"</string>
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"No recent apps"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 apps have access"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> of <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> apps have access</item>
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> of <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> apps has access</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Recently accessed"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"View all"</string>
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Loading…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"System updates"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Advanced"</string>
@@ -727,5 +735,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Add a profile"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Delete this profile"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Add profile"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Reset the infotainment system"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Your system has received a request to factory reset and erase all data. You can reset it now, or it will reset the next time the car starts. You can then set up a new profile."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Reset now"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Reset later"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"The infotainment system will reset the next time the car starts."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"The car must be parked to start the reset."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"This setting can\'t be changed at the moment"</string>
 </resources>

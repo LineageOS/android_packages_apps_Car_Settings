@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"その他"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置情報"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"位置情報の使用"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"位置情報を OFF にすると、すべてのアプリの位置情報アクセスが OFF になりますが、ドライバー サポート機能は引き続き位置情報にアクセスできます。ドライバー サポートを OFF にすると、ドライバー サポート機能が位置情報を使用できなくなります。"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近の位置情報リクエスト"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近の位置情報リクエストはありません"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"アプリレベルの権限"</string>
@@ -395,12 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"位置情報の特定には、GPS、Wi-Fi、モバイル ネットワーク、センサーなどを使用する場合があります。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"マイク"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"マイクの使用"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"マイクの権限を管理"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"最近アクセスしたもの"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"マイクに最近アクセスしたアプリはありません"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"最近アクセスしたもの"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"すべて表示"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"システム"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"システム アップデート"</string>
@@ -729,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"プロファイルを追加"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"このプロファイルを削除"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"プロファイルを追加"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"インフォテインメント システムのリセット"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"システムが、出荷時の設定にリセットしてすべてのデータを消去するリクエストを受信しました。今すぐリセットできます。すぐにリセットしない場合は、次回車が始動したときに自動的にリセットされます。リセット後、新しいプロファイルを設定できます。"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"今すぐリセット"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"後でリセット"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"インフォテインメント システムは、車の次回始動時にリセットされます。"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"リセットを開始するには、車を駐車してください。"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"現在、この設定は変更できません"</string>
 </resources>

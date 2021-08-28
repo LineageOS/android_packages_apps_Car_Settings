@@ -94,8 +94,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"ନେଟ୍‌ୱର୍କ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"ସଂଯୋଗ"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"ସଂଯୋଗ କରାଯାଉଛି…"</string>
-    <!-- no translation found for wifi_disconnected (4485699234859368137) -->
-    <skip />
+    <string name="wifi_disconnected" msgid="4485699234859368137">"ସଂଯୋଗ ହୋଇନାହିଁ"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"ନେଟୱାର୍କ ରେଞ୍ଜ ମଧ୍ୟରେ ନାହିଁ"</string>
     <string name="wifi_password" msgid="5565632142720292397">"ପାସୱର୍ଡ"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"ପାସୱାର୍ଡ ଦେଖାନ୍ତୁ"</string>
@@ -388,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ଅଧିକ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ୍‌"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"ଲୋକେସନ୍ ବନ୍ଦ କରିବା ଦ୍ୱାରା ସମସ୍ତ ଆପକୁ ଲୋକେସନ୍ ଆକ୍ସେସ୍ ବନ୍ଦ ହୋଇଯିବ, ଡ୍ରାଇଭର୍ ସହାୟତା ଫିଚରକୁ ଏବେ ବି ଆକ୍ସେସ୍ ରହିବ। ଡ୍ରାଇଭର୍ ସହାୟତା ଟୋଗଲ୍ ବନ୍ଦ କରିବା ଦ୍ୱାରା ଡ୍ରାଇଭର୍ ସହାୟତା ଫିଚରଗୁଡ଼ିକ ଆପଣଙ୍କ ଲୋକେସନକୁ ବ୍ୟବହାର କରିବା ବନ୍ଦ କରିବ।"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ବର୍ତ୍ତମାନର ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
@@ -396,14 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"ଆପଣଙ୍କ ଡିଭାଇସର ଲୋକେସନ୍ ଅନୁମାନ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ GPS, ୱାଇ‑ଫାଇ, ମୋବାଇଲ୍ ନେଟୱାର୍କ ଏବଂ ସେନ୍ସରଗୁଡ଼ିକ ଭଳି ସୋର୍ସଗୁଡ଼ିକୁ ଲୋକେସନ୍ ବ୍ୟବହାର କରିପାରେ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ମାଇକ୍ରୋଫୋନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"ମାଇକ୍ରୋଫୋନ୍ ଅନୁମତିଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
-    <!-- no translation found for microphone_recently_accessed (2084292372486026607) -->
+    <string name="microphone_recently_accessed" msgid="2084292372486026607">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ୍ କରାଯାଇଛି"</string>
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_no_recent_access (6996941857659485282) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
-    <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ୍ କରାଯାଇଛି"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"ସବୁ ଦେଖନ୍ତୁ"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"ସିଷ୍ଟମ୍‌"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ସିଷ୍ଟମ୍‌ ଅପ୍‌ଡେଟ୍"</string>
@@ -732,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ଏକ ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ଏହି ପ୍ରୋଫାଇଲକୁ ଡିଲିଟ୍ କରନ୍ତୁ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ରିସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ଆପଣଙ୍କର ସିଷ୍ଟମ୍ ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍ ଏବଂ ସମସ୍ତ ଡାଟା ଖାଲି କରିବାକୁ ଏକ ଅନୁରୋଧ ପ୍ରାପ୍ତ କରିଛି। ଆପଣ ଏବେ ଏହା ରିସେଟ୍ କରିପାରିବେ କିମ୍ବା ପରବର୍ତ୍ତୀ ସମୟରେ କାର୍ ଷ୍ଟାର୍ଟ ହେଲେ ଏହା ରିସେଟ୍ ହେବ। ଆପଣ ତା\'ପରେ ଏକ ନୂଆ ପ୍ରୋଫାଇଲ୍ ସେଟ୍ ଅପ୍ କରିପାରିବେ।"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ଏବେ ରିସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"ପରେ ରିସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"କାର୍ ଷ୍ଟାର୍ଟ ହେଲେ ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ରିସେଟ୍ ହେବ।"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ରିସେଟ୍ ଆରମ୍ଭ କରିବାକୁ କାର୍ ପାର୍କ କରାଯିବା ଆବଶ୍ୟକ।"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ବର୍ତ୍ତମାନ ଏହି ସେଟିଂକୁ ବଦଳାଯାଇପାରିବ ନାହିଁ"</string>
 </resources>

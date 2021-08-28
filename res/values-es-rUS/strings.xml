@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Más"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar ubicación"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Si desactivas la ubicación, se desactivará el acceso a ella para todas las apps, pero no para las funciones de asistencia al conductor. Si desactivas la asistencia al conductor, las funciones de esta tecnología no podrán usar tu ubicación."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hay solicitudes de ubicación recientes"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos en las apps"</string>
@@ -395,11 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"La ubicación puede usar fuentes como GPS, Wi-Fi, redes móviles y sensores para obtener la ubicación estimada del dispositivo."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas las apps accedan al micrófono"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Administrar permisos del micrófono"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Con acceso reciente"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"Ninguna app accedió recientemente al micrófono"</string>
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Ninguna app reciente"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 apps tienen acceso"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> de <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> apps tienen acceso</item>
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> de <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> apps tiene acceso</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Con acceso reciente"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Ver todo"</string>
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Cargando…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizaciones del sistema"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Configuración avanzada"</string>
@@ -727,5 +735,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Agregar un perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Borrar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Agregar perfil"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restablecer el sistema de infoentretenimiento"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"El sistema recibió una solicitud para restablecer la configuración de fábrica y borrar todos los datos. Puedes hacerlo ahora o esperar a que se restablezca la próxima vez que enciendas el vehículo. Tras el restablecimiento, podrás configurar otro perfil."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Restablecer ahora"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Restablecer luego"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Se restablecerá el sistema cuando arranques el auto."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Estaciona el vehículo para el restablecimiento."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"En este momento, no se puede cambiar esta opción de configuración"</string>
 </resources>

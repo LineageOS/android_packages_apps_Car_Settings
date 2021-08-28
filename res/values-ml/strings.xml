@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"കൂടുതൽ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"ലൊക്കേഷൻ ഓഫാക്കുന്നത് എല്ലാ ആപ്പുകൾക്കും ലൊക്കേഷൻ ആക്സസ് ഓഫാക്കും, ഡ്രൈവർ സഹായി ഫീച്ചറുകൾക്ക് തുടർന്നും ആക്സസ് ഉണ്ടായിരിക്കും. ഡ്രൈവർ സഹായി ടോഗിൾ ഓഫാക്കുന്നത് ഡ്രൈവർ സഹായി ഫീച്ചറുകൾ നിങ്ങളുടെ ലൊക്കേഷൻ ഉപയോഗിക്കുന്നത് നിർത്തും."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകൾ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകളൊന്നുമില്ല"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ആപ്പ്-തല അനുമതികൾ"</string>
@@ -395,12 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ ലൊക്കേഷൻ കണക്കാക്കാൻ സഹായിക്കുന്നതിന് GPS, വൈഫൈ, മൊബൈൽ നെറ്റ്‌വർക്കുകൾ, സെൻസറുകൾ പോലുള്ള ഉറവിടങ്ങൾ ലൊക്കേഷൻ ഉപയോഗിച്ചേക്കാം."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"മൈക്രോഫോൺ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"മൈക്രോഫോൺ ഉപയോഗിക്കുക"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"മൈക്രോഫോൺ അനുമതികൾ മാനേജ് ചെയ്യുക"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"അടുത്തിടെ ആപ്പുകളൊന്നും മൈക്രോഫോൺ ആക്‌സസ് ചെയ്‌തില്ല"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"എല്ലാം കാണുക"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"സിസ്റ്റം"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"സി‌സ്‌റ്റം അപ്‌ഡേറ്റുകൾ"</string>
@@ -544,7 +551,7 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"സ്‌റ്റോറേജ്"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"സംഗീതവും ഓഡിയോയും"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"മറ്റ് ആപ്പുകൾ"</string>
-    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
+    <string name="storage_files" msgid="6382081694781340364">"ഫയലുകൾ"</string>
     <string name="storage_system" msgid="1271345630248014010">"സിസ്‌റ്റം"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"സിസ്‌റ്റത്തിൽ Android <xliff:g id="VERSION">%s</xliff:g> പതിപ്പ് റൺ ചെയ്യാൻ ഉപയോഗിച്ച ഫയലുകളും ഉൾപ്പെടുന്നു"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ഓഡിയോ ഫയലുകൾ"</string>
@@ -715,7 +722,7 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ഡിസ്‌മിസ് ചെയ്യുക"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഫീച്ചർ ലഭ്യമല്ല"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ഡ്രൈവ് ചെയ്യുമ്പോൾ പ്രൊഫൈൽ ചേർക്കാനാകില്ല"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"തിരയുക"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant &amp; Voice"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"ഡിജിറ്റൽ അസിസ്‌റ്റന്റ് ആപ്പ്"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"സ്ക്രീനിലെ ടെക്‌സ്‌റ്റ് ഉപയോഗിക്കുക"</string>
@@ -729,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ഒരു പ്രൊഫൈൽ ചേര്‍ക്കുക"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ഈ പ്രൊ‌ഫൈൽ ഇല്ലാതാക്കുക"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"പ്രൊഫൈൽ ചേർക്കുക"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം റീസെറ്റ് ചെയ്യുക"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ഫാക്‌ടറി റീസെറ്റിനും എല്ലാ ഡാറ്റയും മായ്ക്കാനുമുള്ള ഒരു അഭ്യർത്ഥന നിങ്ങളുടെ സിസ്‌റ്റത്തിന് ലഭിച്ചു. നിങ്ങൾക്കിത് ഇപ്പോൾ അല്ലെങ്കിൽ അടുത്ത തവണ കാർ സ്‌റ്റാർട്ട് ചെയ്യുമ്പോൾ റീസെറ്റ് ചെയ്യാം. നിങ്ങൾക്ക് തുടർന്ന് ഒരു പുതിയ പ്രൊഫൈൽ സജ്ജീകരിക്കാം."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ഇപ്പോൾ റീസെറ്റ് ചെയ്യൂ"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"പിന്നീട് റീസെറ്റ് ചെയ്യൂ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"അടുത്ത തവണ കാർ സ്റ്റാർട്ട് ചെയ്യുമ്പോൾ ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്റ്റം റീസെറ്റ് ചെയ്യും."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"റീസെറ്റ് ആരംഭിക്കാൻ കാർ പാർക്ക് ചെയ്‌തിരിക്കണം."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ഈ ക്രമീകരണം ഇപ്പോൾ മാറ്റാനാകില്ല"</string>
 </resources>
