@@ -386,6 +386,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"เพิ่มเติม"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ตำแหน่ง"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ใช้ตำแหน่ง"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"การปิดใช้งานตำแหน่งจำเป็นการปิดการเข้าถึงตำแหน่งสำหรับแอปทั้งหมด แต่จะยังสามารถเข้าถึงฟีเจอร์ตัวช่วยของผู้ขับได้ การปิดตัวสลับตัวช่วยของผู้ขับจะหยุดไม่ให้ฟีเจอร์ตัวช่วยของผู้ขับใช้ตำแหน่งของคุณ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"คำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ไม่มีคำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"สิทธิ์ระดับแอป"</string>
@@ -394,12 +395,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"ตำแหน่งอาจใช้ข้อมูลจากแหล่งที่มาต่างๆ อย่างเช่น GPS, Wi‑Fi, เครือข่ายมือถือ และเซ็นเซอร์ เพื่อช่วยระบุตำแหน่งคร่าวๆ ของอุปกรณ์"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ไมโครโฟน"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ใช้ไมโครโฟน"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"จัดการสิทธิ์สำหรับไมโครโฟน"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"เข้าถึงล่าสุด"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"ไม่มีแอปที่เข้าถึงไมโครโฟนเมื่อเร็วๆ นี้"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"เข้าถึงล่าสุด"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"ดูทั้งหมด"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"ระบบ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"การอัปเดตระบบ"</string>

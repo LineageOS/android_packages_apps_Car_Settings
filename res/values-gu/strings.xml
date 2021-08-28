@@ -261,7 +261,7 @@
     <string name="units_unit_name_kilometer" msgid="4351417123421381297">"કિલોમીટર"</string>
     <string name="units_unit_name_mile" msgid="8337486880403419613">"માઇલ"</string>
     <string name="units_unit_name_celsius" msgid="1642787068882598698">"સેલ્સિયસ"</string>
-    <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"ફેરનહીટ"</string>
+    <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"ફૅરન્હાઇટ"</string>
     <string name="units_unit_name_kelvin" msgid="4043908998904418360">"કેલ્વિન"</string>
     <string name="units_unit_name_milliliter" msgid="2735564290593738653">"મિલીલીટર"</string>
     <string name="units_unit_name_liter" msgid="2682609997247920434">"લીટર"</string>
@@ -386,6 +386,8 @@
     <string name="more_special_access_title" msgid="166115485446645971">"વધુ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"સ્થાન"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"સ્થાનનો ઉપયોગ કરો"</string>
+    <!-- no translation found for location_toggle_off_warning (7698125556959442911) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"સ્થાન માટે તાજેતરની વિનંતીઓ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"સ્થાન માટે તાજેતરમાં કોઈ વિનંતી નથી"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ઍપ લેવલની પરવાનગીઓ"</string>
@@ -394,14 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"સ્થાન સેવામાં તમારા ડિવાઇસનું સ્થાન નક્કી કરવામાં સહાય કરવા માટે GPS, વાઇ-ફાઇ, મોબાઇલ નેટવર્ક અને સેન્સર જેવા સૉર્સનો ઉપયોગ કરવામાં આવી શકે છે."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"માઇક્રોફોન"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"માઇક્રોફોનનો ઉપયોગ કરો"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"માઇક્રોફોનની પરવાનગીઓ મેનેજ કરો"</string>
-    <!-- no translation found for microphone_recently_accessed (2084292372486026607) -->
+    <string name="microphone_recently_accessed" msgid="2084292372486026607">"તાજેતરમાં અ‍ૅક્સેસ કર્યો"</string>
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_no_recent_access (6996941857659485282) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
-    <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"તાજેતરમાં અ‍ૅક્સેસ કર્યો"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"તમામ જુઓ"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"સિસ્ટમ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"સિસ્ટમ અપડેટ"</string>
@@ -545,7 +551,7 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"સ્ટોરેજ"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"મ્યુઝિક અને ઑડિયો"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"અન્ય ઍપ"</string>
-    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
+    <string name="storage_files" msgid="6382081694781340364">"ફાઇલો"</string>
     <string name="storage_system" msgid="1271345630248014010">"સિસ્ટમ"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"સિસ્ટમમાં Androidનું <xliff:g id="VERSION">%s</xliff:g> વર્ઝન ચલાવવા માટે ઉપયોગી ફાઇલોનો સમાવેશ છે"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ઑડિયોની ફાઇલો"</string>
@@ -716,7 +722,7 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"છોડી દો"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ડ્રાઇવિંગ કરતી વખતે આ સુવિધા ઉપલબ્ધ નથી"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ડ્રાઇવ કરતી વખતે પ્રોફાઇલ ઉમેરી શકાતી નથી"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"શોધ"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant અને વૉઇસ"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"ડિજિટલ આસિસ્ટંટ ઍપ"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"સ્ક્રીન પરની ટેક્સ્ટનો ઉપયોગ કરો"</string>
