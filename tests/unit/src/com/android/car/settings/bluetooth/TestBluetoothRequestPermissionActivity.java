@@ -14,16 +14,22 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.qc;
+package com.android.car.settings.bluetooth;
 
-import androidx.test.ext.junit.runners.AndroidJUnit4;
+import android.content.pm.PackageManager;
 
-import org.junit.runner.RunWith;
+public class TestBluetoothRequestPermissionActivity extends BluetoothRequestPermissionActivity {
+    // Fields that need to be mocked in onCreate()
+    public static PackageManager PACKAGE_MANAGER;
+    public static String CALLING_PACKAGE;
 
-@RunWith(AndroidJUnit4.class)
-public class BrightnessSliderTest extends BrightnessSliderTestCase {
     @Override
-    protected BrightnessSlider getBrightnessSlider() {
-        return new BrightnessSlider(getContext());
+    public PackageManager getPackageManager() {
+        return PACKAGE_MANAGER;
+    }
+
+    @Override
+    public String getCallingPackage() {
+        return CALLING_PACKAGE;
     }
 }

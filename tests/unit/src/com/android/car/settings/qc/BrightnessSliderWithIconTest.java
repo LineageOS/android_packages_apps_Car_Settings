@@ -16,14 +16,27 @@
 
 package com.android.car.settings.qc;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.qc.QCRow;
+import com.android.car.settings.R;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class BrightnessSliderTest extends BrightnessSliderTestCase {
+public class BrightnessSliderWithIconTest extends BrightnessSliderTestCase {
     @Override
     protected BrightnessSlider getBrightnessSlider() {
-        return new BrightnessSlider(getContext());
+        return new BrightnessSliderWithIcon(getContext());
+    }
+
+    @Test
+    public void getQCItem_iconSet() {
+        QCRow row = getBrightnessRow();
+        assertThat(row.getStartIcon()).isNotNull();
+        assertThat(row.getStartIcon().getResId()).isEqualTo(R.drawable.ic_qc_brightness);
     }
 }
