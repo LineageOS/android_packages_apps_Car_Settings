@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ច្រើន​ទៀត"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"ការបិទទីតាំងនឹងបិទការចូលប្រើទីតាំងសម្រាប់កម្មវិធីទាំងអស់ មុខងារជំនួយអ្នកបើកបរនឹងនៅតែមានសិទ្ធិចូលប្រើដដែល។ ការបិទប៊ូតុងបិទ/បើកជំនួយអ្នកបើកបរនឹងបញ្ឈប់មុខងារជំនួយអ្នកបើកបរមិនឱ្យប្រើទីតាំងរបស់អ្នក។"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
@@ -395,12 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"គ្រប់គ្រង​ការអនុញ្ញាត​ឱ្យប្រើ​មីក្រូហ្វូន"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"មិនមាន​កម្មវិធីបានចូលប្រើ​មីក្រូហ្វូន​កាលពីថ្មីៗ​នេះទេ"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"មើលទាំងអស់"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"ប្រព័ន្ធ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"បច្ចុប្បន្នភាព​ប្រព័ន្ធ"</string>
@@ -729,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"បញ្ចូល​កម្រងព័ត៌មាន"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"លុប​កម្រងព័ត៌មាននេះ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"បញ្ចូល​កម្រងព័ត៌មាន"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"កំណត់ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្តឡើងវិញ"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ប្រព័ន្ធ​របស់អ្នកបានទទួលសំណើសុំកំណត់​ដូច​ចេញ​ពី​រោងចក្រ​ និងលុបទិន្នន័យទាំងអស់។ អ្នកអាចកំណត់ប្រព័ន្ធឡើងវិញឥឡូវនេះ ឬវានឹងកំណត់ឡើងវិញ នៅពេលរថយន្តចាប់ផ្ដើមលើកក្រោយ។ បន្ទាប់ពីនោះ អ្នកអាចរៀបចំកម្រងព័ត៌មានថ្មីបាន។"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"កំណត់ឡើងវិញឥឡូវនេះ"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"ចាប់ផ្ដើមឡើងវិញពេលក្រោយ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្តនឹងកំណត់ឡើងវិញ នៅពេលរថយន្តចាប់ផ្ដើមលើកក្រោយ។"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ត្រូវតែចតរថយន្ត ដើម្បីចាប់ផ្ដើមការកំណត់ឡើងវិញ។"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"មិនអាចផ្លាស់ប្ដូរ​ការកំណត់នេះ​នៅពេលនេះ​បានទេ"</string>
 </resources>

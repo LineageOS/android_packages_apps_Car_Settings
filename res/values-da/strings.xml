@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Mere"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Placering"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Anvend placering"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Hvis du deaktiverer Placering, deaktiveres placeringsadgang for alle apps. Funktionerne i førerassistance har fortsat adgang. Hvis du deaktiverer førerassistance, kan funktionerne i førerassistance ikke længere benytte din placering."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Seneste placeringsanmodninger"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Der er ingen seneste placeringsanmodninger"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tilladelser på appniveau"</string>
@@ -395,12 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Placering kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds placering."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Brug mikrofonen"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Administrer adgangstilladelser til mikrofonen"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Tilgået for nylig"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"Ingen apps har haft adgang til mikrofonen for nylig"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Tilgået for nylig"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Se alle"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemopdateringer"</string>
@@ -729,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Tilføj en profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Slet denne profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tilføj profil"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Nulstil infotainmentsystemet"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Systemet har modtaget en anmodning om at gendanne fabriksindstillingerne og rydde alle data. Du kan gendanne fabriksindstillingerne nu. Hvis ikke du gør det, gendannes de næste gang, bilen starter. Derefter kan du konfigurere en ny profil."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Nulstil nu"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Nulstil senere"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Infotainmentsystemet nulstilles, næste gang bilen starter."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Nulstillingen kan kun startes, når bilen er parkeret."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Denne indstilling kan ikke ændres lige nu"</string>
 </resources>

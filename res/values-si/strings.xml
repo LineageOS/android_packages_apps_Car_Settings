@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"තව"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ස්ථානය"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ස්ථානය භාවිත කරන්න"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"ස්ථානය ක්‍රියාවිරහිත කිරීම සියලු යෙදුම් සඳහා ස්ථාන ප්‍රවේශය ක්‍රියාවිරහිත කරනු ඇත, රියදුරු සහායක විශේෂාංගවලට තවම ප්‍රවේශය ඇත. රියදුරු සහාය මාරුව ක්‍රියාවිරහිත කිරීම රියදුරු සහාය විශේෂාංග ඔබගේ ස්ථානය භාවිත කිරීම නවත්වනු ඇත."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"මෑත ස්ථාන ඉල්ලීම්"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"මෑත ස්ථාන ඉල්ලීම් නැත"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"යෙදුම්-මට්ටමේ අවසර"</string>
@@ -395,12 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"ස්ථානය ඔබගේ උපාංගයෙහි ස්ථානය තක්සේරු කිරීමට උදවු කිරීමට, GPS, Wi-Fi, ජංගම ජාල සහ සංවේදක වැනි මූලාශ්‍ර භාවිත කළ හැකිය."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"මයික්‍රෆෝනය"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"මයික්‍රෆෝනය භාවිත කරන්න"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"මයික්‍රෆෝන අවසර කළමනාකරණය කරන්න"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"මෑතකදී පිවිසි"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"යෙදුම් කිසිවක් මෑතකදී මයික්‍රෆෝනය වෙත ප්‍රවේශ වූයේ නැත"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"මෑතකදී පිවිසි"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"සියල්ල බලන්න"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"පද්ධතිය"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"පද්ධති යාවත්කාලීන"</string>
@@ -729,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"පැතිකඩක් එක් කරන්න"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"මෙම පැතිකඩ මකන්න"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"පැතිකඩ එක් කරන්න"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"තොරතුරු විනෝදාස්වාද පද්ධතිය යළි සකසන්න"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"කර්මාන්තශාලා යළි සැකසීමට සහ සියලු දත්ත මැකීමට ඔබගේ පද්ධතියට ඉල්ලීමක් ලැබී ඇත. ඔබට දැන් එය යළි සැකසිය හැකිය, නැතහොත් ඊළඟ වතාවේ මෝටර් රථය ආරම්භ වන විට එය යළි සකසනු ඇත. ඔබට අනතුරුව නව පැතිකඩක් පිහිටුවිය හැකිය."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"දැන් යළි සකසන්න"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"පසුව යළි සකසන්න"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"ඊළඟට මෝටර් රථය අරඹන විට තොරතුරු විනෝදාස්වාද පද්ධතිය යළි සැකසේ."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"යළි සැකසීම ඇරඹීමට මෝටර් රථය නවතා තැබිය යුතුය."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"මෙම සැකසීම මේ අවස්ථාවේදී වෙනස් කළ නොහැකිය"</string>
 </resources>

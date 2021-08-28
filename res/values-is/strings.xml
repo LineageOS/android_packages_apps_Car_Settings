@@ -387,6 +387,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Meira"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Staðsetning"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Nota staðsetningu"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Þegar slökkt er á staðsetningu er slökkt á aðgangi allra forrita að staðsetningu, eiginleikar akstursaðstoðar hafa þó áfram aðgang Þegar slökkt er á akstursaðstoð geta eiginleikar akstursaðstoðar ekki notað staðsetninguna þína."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Engar nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Heimildir á forritsstigi"</string>
@@ -395,12 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Staðsetning kann að notast við tækni á borð við GPS, Wi-Fi, farsímakerfi og skynjara til að áætla staðsetningu tækisins."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Hljóðnemi"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Nota hljóðnema"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Stjórna heimildum hljóðnema"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Nýleg notkun"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"Engin forrit hafa notað hljóðnemann nýlega"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Nýlega opnað"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Skoða allt"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Kerfi"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Kerfisuppfærslur"</string>
@@ -729,5 +736,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Bæta við prófíl"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eyða þessum prófíl"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Bæta við prófíl"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Endurstilla upplýsinga- og afþreyingarkerfi"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Kerfið fékk beiðni um að núllstilla og eyða öllum gögnum. Hægt er að endurstilla núna eða endurstilla sjálfkrafa næst þegar bíllinn er ræstur. Þá er hægt að setja upp nýjan prófíl."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Endurstilla núna"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Endurstilla síðar"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Upplýsinga- og afþreyingarkerfið endurstillist næst þegar bíllinn er ræstur."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Bíllinn verður að vera kyrr til að endurstilla."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ekki er hægt að breyta þessari stillingu eins og er"</string>
 </resources>
