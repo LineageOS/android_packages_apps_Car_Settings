@@ -390,6 +390,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Više"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Upotreba lokacije"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Isključivanjem lokacije isključit će se pristup lokaciji za sve aplikacije. Značajke pomoći u vožnji i dalje će imati pristup. Isključivanjem prekidača za pomoć u vožnji značajke pomoći u vožnji više neće koristiti vašu lokaciju."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtjevi za lokaciju"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nema nedavnih zahtjeva za lokaciju"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Dopuštenja na razini aplikacije"</string>
@@ -398,11 +399,19 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Za procjenu lokacije vašeg uređaja mogu se upotrebljavati izvori kao što su GPS, Wi-Fi, mobilne mreže i senzori."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristi mikrofon"</string>
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Svim aplikacijama dopustite pristup mikrofonu"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Upravljanje dopuštenjima za mikrofon"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Nedavno pristupano"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"Nijedna apl. nije pristupila mikrofonu u posljednje vrijeme"</string>
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Nema nedavnih aplikacija"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Nijedna aplikacija nema pristup"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> aplikacija od <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> ima pristup</item>
+      <item quantity="few"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> aplikacije od <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> imaju pristup</item>
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> aplikacija od <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> imaju pristup</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Nedavno pristupano"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Prikaži sve"</string>
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Učitavanje…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sustav"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sustava"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Napredno"</string>

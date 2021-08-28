@@ -386,6 +386,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Լրացուցիչ կարգավորումներ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Օգտագործել տեղորոշումը"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Այս պարամետրը անջատելու դեպքում տեղադրության տվյալների հասանելիությունը կչեղարկվի բոլոր հավելվածների համար։ Սակայն վարորդին օգնության գործառույթները կպահպանեն հասանելիությունը։ Եթե անջատեք «Օգնություն վարորդին» փոխանջատիչը, համապատասխան գործառույթներին այլևս հասանելի չեն լինի ձեր տեղադրության տվյալները։"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Տեղադրության տվյալների վերջին հարցումները"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Վերջերս տեղորոշման տվյալների հարցումներ չեն արվել"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Հավելվածների թույլտվություններ"</string>
@@ -394,12 +395,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Ձեր սարքի տեղադրությունը որոշելու համար տեղորոշման ծառայությունն օգտվում է տարբեր աղբյուրներից (GPS, Wi‑Fi, բջջային ցանցեր և տվիչներ)։"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Խոսափող"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Օգտագործել խոսափողը"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Խոսափողի թույլտվությունների կառավարում"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Վերջերս օգտագործված"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"Ոչ մի հավելված վերջերս չի օգտագործել խոսափողը"</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Վերջերս օգտագործված"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Դիտել բոլորը"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Համակարգ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Համակարգի թարմացումներ"</string>

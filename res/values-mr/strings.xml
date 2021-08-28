@@ -386,6 +386,8 @@
     <string name="more_special_access_title" msgid="166115485446645971">"आणखी"</string>
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"स्थान वापरा"</string>
+    <!-- no translation found for location_toggle_off_warning (7698125556959442911) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"अलीकडील स्थान विनंत्या"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"अलीकडील कोणत्याही स्थान विनंत्या नाहीत"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ॲप पातळी परवानग्या"</string>
@@ -394,14 +396,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"तुमच्या डिव्हाइसच्या स्थानाचा अंदाज घेण्‍यात मदत करण्यासाठी स्थान GPS, वाय-फाय, मोबाइल नेटवर्क आणि सेन्सर यांसारखे स्रोत वापरू शकते."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"मायक्रोफोन"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"मायक्रोफोन वापरा"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"मायक्रोफोन परवानग्या व्यवस्थापित करा"</string>
-    <!-- no translation found for microphone_recently_accessed (2084292372486026607) -->
+    <string name="microphone_recently_accessed" msgid="2084292372486026607">"अलीकडे अ‍ॅक्सेस केला"</string>
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_no_recent_access (6996941857659485282) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
-    <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"अलीकडे अ‍ॅक्सेस केलेला"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"सर्व पहा"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
@@ -545,7 +551,7 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"स्टोरेज"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"संगीत आणि ऑडिओ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"इतर अ‍ॅप्स"</string>
-    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
+    <string name="storage_files" msgid="6382081694781340364">"फाइल"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममध्ये अशा फायलींचा समावेश आहे ज्यांचा वापर Android आवृत्ती <xliff:g id="VERSION">%s</xliff:g> रन करण्यासाठी केला जातो"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फाइल"</string>
@@ -716,7 +722,7 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"डिसमिस करा"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ड्राइव्ह करताना वैशिष्ट्य उपलब्ध नाही"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ड्राइव्ह करत असताना प्रोफाइल जोडू शकत नाही"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"शोधा"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant आणि आवाज"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"डिजिटल असिस्टंट अ‍ॅप"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"स्क्रीनवरील मजकूर वापरा"</string>
