@@ -24,7 +24,6 @@ import static com.android.settingslib.display.BrightnessUtils.convertLinearToGam
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.PowerManager;
 import android.os.UserHandle;
@@ -55,17 +54,7 @@ public class BrightnessSlider extends SettingsQCItem {
     @Override
     QCItem getQCItem() {
         QCList.Builder listBuilder = new QCList.Builder()
-                .addRow(new QCRow.Builder()
-                        .setTitle(getContext().getString(R.string.display_brightness))
-                        .setIcon(Icon.createWithResource(getContext(), R.drawable.ic_qc_brightness))
-                        .addSlider(new QCSlider.Builder()
-                                .setMax(GAMMA_SPACE_MAX)
-                                .setValue(getSeekbarValue())
-                                .setInputAction(getBroadcastIntent())
-                                .build()
-                        )
-                        .build()
-                );
+                .addRow(getBrightnessRowBuilder().build());
 
         return listBuilder.build();
     }
@@ -84,6 +73,17 @@ public class BrightnessSlider extends SettingsQCItem {
         int linear = convertGammaToLinear(value, mMinimumBacklight, mMaximumBacklight);
         Settings.System.putIntForUser(getContext().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, linear, UserHandle.myUserId());
+    }
+
+    protected QCRow.Builder getBrightnessRowBuilder() {
+        return new QCRow.Builder()
+                .setTitle(getContext().getString(R.string.qc_display_brightness))
+                .addSlider(new QCSlider.Builder()
+                        .setMax(GAMMA_SPACE_MAX)
+                        .setValue(getSeekbarValue())
+                        .setInputAction(getBroadcastIntent())
+                        .build()
+                );
     }
 
     private int getSeekbarValue() {
