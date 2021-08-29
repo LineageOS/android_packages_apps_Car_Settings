@@ -391,6 +391,7 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Vairāk"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Atrašanās vieta"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Izmantot atrašanās vietu"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Izslēdzot atrašanās vietas noteikšanu, tiks noņemta atrašanās vietas piekļuves atļauja visām lietotnēm. Autovadītāja palīdzības funkcijām joprojām būs piekļuve. Izslēdzot autovadītāja palīdzības slēdzi, autovadītāja palīdzības funkcijas vairs nevarēs izmantot jūsu atrašanās vietu."</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Neseni atrašanās vietu pieprasījumi"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nav nesenu atrašanās vietu pieprasījumu"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lietotnes līmeņa atļaujas"</string>
@@ -399,12 +400,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Lai noteiktu jūsu ierīces atrašanās vietu, var tikt izmantoti tādi avoti kā GPS, Wi-Fi, mobilie tīkli un sensori."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofons"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Izmantot mikrofonu"</string>
+    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
+    <skip />
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Pārvaldīt mikrofona atļaujas"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Nesen piekļuva"</string>
-    <string name="microphone_no_recent_access" msgid="6996941857659485282">"Neviena lietotne pēdējā laikā nav piekļuvusi mikrofonam."</string>
-    <!-- no translation found for microphone_settings_recent_requests_title (8154796551134761329) -->
+    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
     <skip />
-    <!-- no translation found for microphone_settings_recent_requests_view_all_title (4339820818072842872) -->
+    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
+    <skip />
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Nesen piekļuva"</string>
+    <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Skatīt visus"</string>
+    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
     <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Sistēma"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistēmas atjauninājumi"</string>
@@ -741,5 +748,11 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Pievienot profilu"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Dzēst šo profilu"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pievienot profilu"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Informatīvi izklaidējošās sistēmas atiestatīšana"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Jūsu sistēma saņēma pieprasījumu atiestatīt rūpnīcas datus un dzēst visus datus. Varat veikt atiestatīšanu tūlīt, vai arī sistēma tiks atiestatīta, nākamreiz palaižot automašīnu. Pēc tam varēsiet iestatīt jaunu profilu."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Atiestatīt tūlīt"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Atiestatīt vēlāk"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Informatīvi izklaidējošā sistēma tiks atiestatīta, nākamreiz palaižot automašīnu."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Automašīnai jābūt apturētai, lai sāktu atiestatīšanu."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Šo iestatījumu pašlaik nevar mainīt."</string>
 </resources>
