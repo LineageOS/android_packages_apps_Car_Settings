@@ -36,7 +36,7 @@ public final class DeviceAdminAddActionPreferenceController
     /*
      * 3-state status for button:
      *
-     *  - null: button disabled
+     *  - null: button disabled (for example, because it's PO or DO)
      *  - true: admin active, button deactivates
      *  - false: admin inactive, button activates
      */
