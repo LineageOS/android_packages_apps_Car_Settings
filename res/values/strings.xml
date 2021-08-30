@@ -833,6 +833,21 @@
         will still have access. Turning off Driver assistance toggle will stop Driver assistance
         features from using your location.
     </string>
+    <!-- Title of driver assistance toggle setting [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_toggle_title">Driver assistance</string>
+    <!-- Summary of driver assistance toggle setting [CHAR LIMIT=40]-->
+    <string name="location_driver_assistance_toggle_summary">
+        Unavailable while location is turned on
+    </string>
+    <!-- Warning message when users try to toggle driver assistance off [CHAR LIMIT=NONE] -->
+    <string name="location_driver_assistance_toggle_off_warning">
+        If you turn this off, driver assistance features that rely on location information will be
+        disabled.
+    </string>
+    <!-- Confirm button label for confirmation dialog [CHAR LIMIT=40]-->
+    <string name="driver_assistance_warning_confirm_label">
+        Turn off anyways
+    </string>
     <!-- Title of Recent Location Requests setting [CHAR LIMIT=60] -->
     <string name="location_settings_recent_requests_title">Recent Location Requests</string>
     <!-- Message indicating that no apps have requested location recently [CHAR LIMIT=60] -->
