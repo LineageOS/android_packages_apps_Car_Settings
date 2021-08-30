@@ -15,39 +15,32 @@
  */
 package com.android.car.settings.enterprise;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static com.google.common.truth.Truth.assertThat;
 
-import android.content.pm.IPackageManager;
-import android.os.UserHandle;
+import static java.util.stream.Collectors.toList;
+
+import android.content.Context;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.R;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RunWith(AndroidJUnit4.class)
 public final class DeviceAdminAppsPreferenceControllerTest
         extends BasePreferenceControllerTestCase {
 
-    private static final UserHandle USER_HANDLE = new UserHandle(/* id= */ 100);
-
-    @Mock
-    private IPackageManager mIPackageManager;
-
-    @Mock
-    private PreferenceGroup mPreferenceGroup;
-
     private DeviceAdminAppsPreferenceController mController;
+    private DummyPreferenceGroup mPreferenceGroup;
 
     @Before
     @UiThreadTest
@@ -55,58 +48,66 @@ public final class DeviceAdminAppsPreferenceControllerTest
         setFixtures();
 
         mController = new DeviceAdminAppsPreferenceController(mSpiedContext, mPreferenceKey,
-                mFragmentController, mUxRestrictions, mIPackageManager);
-        mController.setDeviceAdmin(mDefaultDeviceAdminInfo);
-
-        when(mIPackageManager.getReceiverInfo(eq(mDefaultAdmin), anyInt(), anyInt()))
-                .thenReturn(mDefaultActivityInfo);
-        when(mIPackageManager.getReceiverInfo(eq(mFancyAdmin), anyInt(), anyInt()))
-                .thenReturn(mFancyActivityInfo);
+                mFragmentController, mUxRestrictions);
+        mPreferenceGroup = new DummyPreferenceGroup(mSpiedContext);
     }
 
     @Test
-    public void testUpdateState_emptyProfiles() {
-        mockGetUserProfiles();
+    public void testUpdateState_noBroadcastReceivers() {
+        mockQueryBroadcastReceivers();
 
         mController.updateState(mPreferenceGroup);
 
-        verifyPreferenceCount(0);
+        verifyPreferenceTitles(mRealContext.getString(R.string.device_admin_apps_list_empty));
     }
 
     @Test
-    public void testUpdateState_noActiveAdminApps() {
-        mockGetUserProfiles(USER_HANDLE);
-        mockActiveAdmins();
-
-        mController.updateState(mPreferenceGroup);
-
-        verifyPreferenceCount(0);
-    }
-
-    @Test
-    @UiThreadTest
     public void testUpdateState_singleActiveAdminApp() {
-        mockGetUserProfiles(USER_HANDLE);
-        mockActiveAdmins(mDefaultAdmin);
+        mockQueryBroadcastReceivers(mDefaultResolveInfo);
 
         mController.updateState(mPreferenceGroup);
 
-        verifyPreferenceCount(1);
+        verifyPreferenceTitles(mDefaultDeviceAdminInfo.loadLabel(mRealPm));
     }
 
     @Test
-    @UiThreadTest
     public void testUpdateState_multipleActiveAdminApps() {
-        mockGetUserProfiles(USER_HANDLE);
-        mockActiveAdmins(mDefaultAdmin, mFancyAdmin);
+        mockQueryBroadcastReceivers(mDefaultResolveInfo, mFancyResolveInfo);
 
         mController.updateState(mPreferenceGroup);
 
-        verifyPreferenceCount(2);
+        verifyPreferenceTitles(mDefaultDeviceAdminInfo.loadLabel(mRealPm),
+                mFancyDeviceAdminInfo.loadLabel(mRealPm));
     }
 
-    private void verifyPreferenceCount(int preferenceCount) {
-        verify(mPreferenceGroup).removeAll();
-        verify(mPreferenceGroup, times(preferenceCount)).addPreference(any(Preference.class));
+    private void verifyPreferenceTitles(CharSequence... titles) {
+        assertThat(mPreferenceGroup.getPreferences().stream()
+                .map(p -> p.getTitle()).collect(toList())).containsExactly(titles);
+    }
+
+    private static final class DummyPreferenceGroup extends PreferenceGroup {
+
+        private final List<Preference> mList = new ArrayList<>();
+
+        DummyPreferenceGroup(Context context) {
+            super(context, null);
+        }
+
+        @Override public void removeAll() {
+            mList.clear();
+        }
+
+        @Override public boolean addPreference(Preference preference) {
+            mList.add(preference);
+            return true;
+        }
+
+        @Override public int getPreferenceCount() {
+            return mList.size();
+        }
+
+        public List<Preference> getPreferences() {
+            return mList;
+        }
     }
 }

@@ -21,6 +21,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -31,10 +32,10 @@ import android.app.admin.DevicePolicyManager;
 import android.car.test.mocks.AbstractExtendedMockitoTestCase;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.UserInfo;
-import android.os.UserHandle;
+import android.content.pm.ResolveInfo;
 import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
@@ -62,8 +63,8 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
     protected final ComponentName mFancyAdmin =
             new ComponentName(mSpiedContext, FancyDeviceAdminReceiver.class);
 
-    protected ActivityInfo mDefaultActivityInfo;
-    protected ActivityInfo mFancyActivityInfo;
+    protected ResolveInfo mDefaultResolveInfo;
+    protected ResolveInfo mFancyResolveInfo;
     protected DeviceAdminInfo mDefaultDeviceAdminInfo;
     protected DeviceAdminInfo mFancyDeviceAdminInfo;
 
@@ -84,12 +85,17 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
         when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
         when(mSpiedContext.getSystemService(UserManager.class)).thenReturn(mUm);
 
-        mDefaultActivityInfo = mRealPm.getReceiverInfo(mDefaultAdmin,
-                PackageManager.GET_META_DATA);
-        mDefaultDeviceAdminInfo = new DeviceAdminInfo(mRealContext, mDefaultActivityInfo);
+        ActivityInfo defaultActivityInfo =
+                mRealPm.getReceiverInfo(mDefaultAdmin, PackageManager.GET_META_DATA);
+        mDefaultDeviceAdminInfo = new DeviceAdminInfo(mRealContext, defaultActivityInfo);
+        mDefaultResolveInfo = new ResolveInfo();
+        mDefaultResolveInfo.activityInfo = defaultActivityInfo;
 
-        mFancyActivityInfo = mRealPm.getReceiverInfo(mFancyAdmin, PackageManager.GET_META_DATA);
-        mFancyDeviceAdminInfo = new DeviceAdminInfo(mRealContext, mFancyActivityInfo);
+        ActivityInfo fancyActivityInfo =
+                mRealPm.getReceiverInfo(mFancyAdmin, PackageManager.GET_META_DATA);
+        mFancyDeviceAdminInfo = new DeviceAdminInfo(mRealContext, fancyActivityInfo);
+        mFancyResolveInfo = new ResolveInfo();
+        mFancyResolveInfo.activityInfo = fancyActivityInfo;
     }
 
     protected final void mockProfileOwner() {
@@ -117,12 +123,14 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
         when(mDpm.isAdminActive(mDefaultAdmin)).thenReturn(false);
     }
 
-    protected final void mockActiveAdmin(ComponentName admin) {
-        when(mDpm.getActiveAdmins()).thenReturn(Arrays.asList(admin));
+    protected final void mockGetActiveAdmins(ComponentName... componentNames) {
+        when(mDpm.getActiveAdmins()).thenReturn(Arrays.asList(componentNames));
     }
 
-    protected final void mockActiveAdmins(ComponentName... componentNames) {
-        when(mDpm.getActiveAdminsAsUser(anyInt())).thenReturn(Arrays.asList(componentNames));
+    protected final void mockQueryBroadcastReceivers(ResolveInfo... resolveInfoArray) {
+        // Need to use doReturn() instead of when() because mSpiedPm is a spy.
+        doReturn(Arrays.asList(resolveInfoArray))
+                .when(mSpiedPm).queryBroadcastReceivers(any(Intent.class), anyInt());
     }
 
     protected final void mockGetLongSupportMessageForUser(CharSequence message) {
@@ -159,13 +167,5 @@ abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
 
     protected final void mockNonAdminUser() {
         when(mUm.isAdminUser()).thenReturn(false);
-    }
-
-    protected final void mockGetProfiles(UserInfo... userProfiles) {
-        when(mUm.getProfiles(anyInt())).thenReturn(Arrays.asList(userProfiles));
-    }
-
-    protected final void mockGetUserProfiles(UserHandle... userHandles) {
-        when(mUm.getUserProfiles()).thenReturn(Arrays.asList(userHandles));
     }
 }
