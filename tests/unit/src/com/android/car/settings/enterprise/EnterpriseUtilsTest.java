@@ -36,7 +36,7 @@ public final class EnterpriseUtilsTest extends BaseEnterpriseTestCase {
 
     @Test
     public void testGetAdminWithinPackage_found() {
-        mockActiveAdmin(mDefaultAdmin);
+        mockGetActiveAdmins(mDefaultAdmin);
 
         ComponentName admin = getAdminWithinPackage(mSpiedContext, mPackageName);
 

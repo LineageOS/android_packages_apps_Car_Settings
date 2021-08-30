@@ -16,11 +16,9 @@
 package com.android.car.settings.enterprise;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import android.content.ComponentName;
-import android.content.pm.UserInfo;
 
 import androidx.preference.Preference;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -34,27 +32,12 @@ import org.junit.runner.RunWith;
 public final class ManageDeviceAdminPreferenceControllerTest
         extends BasePreferenceControllerTestCase {
 
-    private static final UserInfo USER_PROFILE =
-            new UserInfo(/* id= */ 100, /* name= */ "testUser", /* flags= */ 0);
-
     private Preference mPreference;
-
-    @Test
-    public void testUpdateState_emptyProfiles() {
-        ManageDeviceAdminPreferenceController controller = newControllerWithFeatureEnabled();
-        mockGetProfiles();
-
-        controller.updateState(mPreference);
-
-        assertPreferenceSummary(mPreference,
-                mRealContext.getString(R.string.number_of_device_admins_none));
-    }
 
     @Test
     public void testUpdateState_noActiveAdminApps() {
         ManageDeviceAdminPreferenceController controller = newControllerWithFeatureEnabled();
-        mockGetProfiles(USER_PROFILE);
-        mockActiveAdmins();
+        mockGetActiveAdmins();
 
         controller.updateState(mPreference);
 
@@ -65,8 +48,7 @@ public final class ManageDeviceAdminPreferenceControllerTest
     @Test
     public void testUpdateState_singleActiveAdminApp() {
         ManageDeviceAdminPreferenceController controller = newControllerWithFeatureEnabled();
-        mockGetProfiles(USER_PROFILE);
-        mockActiveAdmins(ComponentName.createRelative("packageName", "className"));
+        mockGetActiveAdmins(ComponentName.createRelative("packageName", "className"));
 
         controller.updateState(mPreference);
 
@@ -78,8 +60,7 @@ public final class ManageDeviceAdminPreferenceControllerTest
     @Test
     public void testUpdateState_multipleActiveAdminApps() {
         ManageDeviceAdminPreferenceController controller = newControllerWithFeatureEnabled();
-        mockGetProfiles(USER_PROFILE);
-        mockActiveAdmins(ComponentName.createRelative("packageName1", "className1"),
+        mockGetActiveAdmins(ComponentName.createRelative("packageName1", "className1"),
                 ComponentName.createRelative("packageName2", "className2"));
 
         controller.updateState(mPreference);
@@ -90,16 +71,8 @@ public final class ManageDeviceAdminPreferenceControllerTest
     }
 
     @Test
-    public void testGetAvailabilityStatus_noDeviceAdmin() {
-        ManageDeviceAdminPreferenceController controller = newControllerWithFeatureDisabled();
-
-        assertAvailability(controller.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
-    }
-
-    @Test
     public void testGetAvailabilityStatus_deviceAdminDisabled() {
         ManageDeviceAdminPreferenceController controller = newControllerWithFeatureDisabled();
-        controller.setDeviceAdmin(mDefaultDeviceAdminInfo);
 
         assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
     }
@@ -119,7 +92,6 @@ public final class ManageDeviceAdminPreferenceControllerTest
     private ManageDeviceAdminPreferenceController newControllerWithFeatureEnabled() {
         mockHasDeviceAdminFeature();
         ManageDeviceAdminPreferenceController controller = newController();
-        controller.setDeviceAdmin(mDefaultDeviceAdminInfo);
         return controller;
     }
 
