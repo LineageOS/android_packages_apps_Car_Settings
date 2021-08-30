@@ -455,14 +455,27 @@ public abstract class PreferenceController<V extends Preference> implements
      * additional driving restrictions.
      */
     protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
-        boolean restrict = false;
-        if (!isUxRestrictionsIgnored(mAlwaysIgnoreUxRestrictions,
+        boolean restrict = shouldApplyUxRestrictions(uxRestrictions);
+
+        restrictPreference(mPreference, restrict);
+    }
+
+    /**
+     * Decides whether or not this {@link PreferenceController} should apply {@code uxRestrictions}
+     * based on the type of restrictions currently present, and the value of the {@code
+     * config_always_ignore_ux_restrictions} and
+     * {@code config_ignore_ux_restrictions} config flags.
+     * <p>
+     * It is not expected that subclasses will override this functionality. If they do, it is
+     * important to respect the config flags being consulted here.
+     *
+     * @return true if {@code uxRestrictions} should be applied and false otherwise.
+     */
+    protected boolean shouldApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
+        return !isUxRestrictionsIgnored(mAlwaysIgnoreUxRestrictions,
                 mPreferencesIgnoringUxRestrictions)
                 && CarUxRestrictionsHelper.isNoSetup(uxRestrictions)
-                && getAvailabilityStatus() != AVAILABLE_FOR_VIEWING) {
-            restrict = true;
-        }
-        restrictPreference(mPreference, restrict);
+                && getAvailabilityStatus() != AVAILABLE_FOR_VIEWING;
     }
 
     /**
