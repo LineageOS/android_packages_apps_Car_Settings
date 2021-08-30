@@ -16,15 +16,12 @@
 package com.android.car.settings.enterprise;
 
 import android.annotation.Nullable;
-import android.annotation.UserIdInt;
 import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
-import android.os.UserHandle;
-import android.os.UserManager;
 
 import com.android.car.settings.common.Logger;
 
@@ -36,7 +33,7 @@ import java.util.List;
 /**
  * Generic helper methods for this package.
  */
-public final class EnterpriseUtils {
+final class EnterpriseUtils {
 
     private static final Logger LOG = new Logger(EnterpriseUtils.class);
 
@@ -77,88 +74,6 @@ public final class EnterpriseUtils {
                     e);
             return null;
         }
-    }
-
-    /**
-     * Checks whether current user has the flag {@link UserManager.FLAG_DEMO}.
-     */
-    public static boolean isDemoUser(Context context) {
-        return UserManager.isDeviceInDemoMode(context)
-                && getUserManager(context).isDemoUser();
-    }
-
-    /**
-     * Checks whether current user has the flag {@link UserManager.FLAG_ADMIN}.
-     */
-    public static boolean isAdminUser(Context context) {
-        return getUserManager(context).isAdminUser();
-    }
-
-    /**
-     * Checks whether the restriction is set on the current user by device owner / profile owners
-     * but not by {@link UserManager}.
-     *
-     * <p>This includes restriction set on device owner but current user has affiliated profile
-     * owner.
-     */
-    public static boolean hasUserRestrictionByDpm(Context context, String restriction) {
-        if (hasUserRestrictionByUm(context, restriction)) {
-            return false;
-        }
-        return getUserManager(context).hasUserRestriction(restriction);
-    }
-
-    /**
-     * Checks whether there are restrictions set via {@link UserManager} which doesn't include
-     * restrictions set by device owner / profile owners.
-     */
-    public static boolean hasUserRestrictionByUm(Context context, String restriction) {
-        return getUserManager(context)
-                .hasBaseUserRestriction(restriction, UserHandle.of(context.getUserId()));
-    }
-
-    /**
-     * Checks whether device owner is set on the device.
-     */
-    public static boolean hasDeviceOwner(Context context) {
-        DevicePolicyManager dpm = getDevicePolicyManager(context);
-        return dpm.isDeviceManaged() && getDeviceOwner(context) != null;
-    }
-
-    /**
-     * Gets device owner user id on the device.
-     */
-    @UserIdInt
-    private static int getDeviceOwnerUserId(Context context) {
-        return getDevicePolicyManager(context).getDeviceOwnerUserId();
-    }
-
-    /**
-     * Gets device owner component on the device.
-     */
-    @Nullable
-    private static ComponentName getDeviceOwner(Context context) {
-        return getDevicePolicyManager(context).getDeviceOwnerComponentOnAnyUser();
-    }
-
-    private static UserManager getUserManager(Context context) {
-        return context.getSystemService(UserManager.class);
-    }
-
-    private static DevicePolicyManager getDevicePolicyManager(Context context) {
-        return context.getSystemService(DevicePolicyManager.class);
-    }
-
-    /**
-     * Gets an {@code ActionDisabledByAdminDialogFragment} for the target restriction to show on
-     * the current user.
-     */
-    public static ActionDisabledByAdminDialogFragment getActionDisabledByAdminDialog(
-            Context context, String restriction) {
-        int adminUser = hasDeviceOwner(context)
-                ? getDeviceOwnerUserId(context)
-                : context.getUserId();
-        return ActionDisabledByAdminDialogFragment.newInstance(restriction, adminUser);
     }
 
     private EnterpriseUtils() {
