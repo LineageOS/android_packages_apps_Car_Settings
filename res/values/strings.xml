@@ -1630,6 +1630,8 @@
     <!-- Device Policy Management --><skip/>
     <!-- Device admin add activity title -->
     <string name="device_admin_add_title" translatable="false">Device admin</string>
+    <!-- Device admin apps list is empty -->
+    <string name="device_admin_apps_list_empty">No infotainment system admin apps</string>
     <!-- Device admin warning message about policies an admin can use -->
     <string name="device_admin_status" translatable="false">This admin app is active and allows
         the app <xliff:g id="app_name">%1$s</xliff:g> to perform the
