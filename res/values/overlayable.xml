@@ -778,6 +778,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="deny"/>
       <item type="string" name="developer_options_settings"/>
       <item type="string" name="device_admin_add_title"/>
+      <item type="string" name="device_admin_apps_list_empty"/>
       <item type="string" name="device_admin_status"/>
       <item type="string" name="device_admin_warning"/>
       <item type="string" name="device_info_not_available"/>
@@ -915,9 +916,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="location_settings_services_title"/>
       <item type="string" name="location_settings_title"/>
       <item type="string" name="location_state_switch_content_description"/>
+      <item type="string" name="location_toggle_off_warning"/>
       <item type="string" name="location_toggle_title"/>
       <item type="string" name="location_use_location_title"/>
-      <item type="string" name="location_toggle_off_warning"/>
       <item type="string" name="lock_settings_enter_password"/>
       <item type="string" name="lock_settings_enter_pattern"/>
       <item type="string" name="lock_settings_enter_pin"/>
