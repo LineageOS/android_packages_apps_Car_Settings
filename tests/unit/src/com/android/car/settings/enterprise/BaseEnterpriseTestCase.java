@@ -28,6 +28,7 @@ import static org.mockito.Mockito.when;
 
 import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
+import android.car.test.mocks.AbstractExtendedMockitoTestCase;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -38,20 +39,14 @@ import android.os.UserManager;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.dx.mockito.inline.extended.ExtendedMockito;
-
-import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoSession;
-import org.mockito.quality.Strictness;
 
 import java.util.Arrays;
 
 @RunWith(AndroidJUnit4.class)
-public class BaseEnterpriseTestCase {
+abstract class BaseEnterpriseTestCase extends AbstractExtendedMockitoTestCase {
 
     protected final Context mRealContext = ApplicationProvider.getApplicationContext();
     protected final Context mSpiedContext = spy(mRealContext);
@@ -70,23 +65,14 @@ public class BaseEnterpriseTestCase {
     protected DeviceAdminInfo mFancyDeviceAdminInfo;
 
     @Mock
-    protected DevicePolicyManager mDpm;
+    private DevicePolicyManager mDpm;
 
     @Mock
-    protected UserManager mUm;
-
-    private MockitoSession mSession;
+    private UserManager mUm;
 
     @Before
     public final void setFixtures() throws Exception {
         // Make sure session was properly initialized
-        MockitoAnnotations.initMocks(this);
-
-        mSession = ExtendedMockito.mockitoSession()
-                .mockStatic(UserManager.class)
-                .strictness(Strictness.LENIENT)
-                .startMocking();
-
         assertWithMessage("mDpm").that(mDpm).isNotNull();
         assertWithMessage("mUm").that(mUm).isNotNull();
 
@@ -94,7 +80,6 @@ public class BaseEnterpriseTestCase {
         when(mSpiedContext.getSystemService(PackageManager.class)).thenReturn(mSpiedPm);
         when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
         when(mSpiedContext.getSystemService(UserManager.class)).thenReturn(mUm);
-        when(UserManager.get(mSpiedContext)).thenReturn(mUm);
 
         ActivityInfo defaultInfo = mRealPm.getReceiverInfo(mDefaultAdmin,
                 PackageManager.GET_META_DATA);
@@ -102,13 +87,6 @@ public class BaseEnterpriseTestCase {
 
         ActivityInfo fancyInfo = mRealPm.getReceiverInfo(mFancyAdmin, PackageManager.GET_META_DATA);
         mFancyDeviceAdminInfo = new DeviceAdminInfo(mRealContext, fancyInfo);
-    }
-
-    @After
-    public void tearDown() {
-        if (mSession != null) {
-            mSession.finishMocking();
-        }
     }
 
     protected final void mockProfileOwner() {
