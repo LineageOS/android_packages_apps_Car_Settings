@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.enterprise;
 
+import static android.car.test.mocks.AbstractExtendedMockitoTestCase.ExpectWtf;
+
 import static com.google.common.truth.Truth.assertWithMessage;
 
 import com.android.car.settings.R;
