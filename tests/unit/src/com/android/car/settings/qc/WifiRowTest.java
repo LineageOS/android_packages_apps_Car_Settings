@@ -34,8 +34,10 @@ import android.net.wifi.WifiManager;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.qc.QCActionItem;
 import com.android.car.qc.QCItem;
-import com.android.car.qc.QCTile;
+import com.android.car.qc.QCList;
+import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
 
 import org.junit.Before;
@@ -45,9 +47,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
-public class WifiTileTest {
+public class WifiRowTest {
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
-    private WifiTile mWifiTile;
+    private WifiRow mWifiRow;
 
     @Mock
     private WifiManager mWifiManager;
@@ -57,35 +59,45 @@ public class WifiTileTest {
         MockitoAnnotations.initMocks(this);
         when(mContext.getSystemService(WifiManager.class)).thenReturn(mWifiManager);
 
-        mWifiTile = new WifiTile(mContext);
+        mWifiRow = new WifiRow(mContext);
     }
 
     @Test
-    public void getQCItem_wifiDisabled_returnsTile() {
+    public void getQCItem_setsTitle() {
         when(mWifiManager.isWifiEnabled()).thenReturn(false);
         when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_DISABLED);
-        QCTile tile = getWifiTile();
-        assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_disabled);
-        assertThat(tile.isChecked()).isFalse();
-        assertThat(tile.getSubtitle()).isEqualTo(mContext.getString(R.string.wifi_disabled));
+        QCRow row = getWifiRow();
+        assertThat(row.getTitle()).isEqualTo(mContext.getString(R.string.wifi_settings));
     }
 
     @Test
-    public void getQCItem_wifiNotConnected_returnsTile() {
+    public void getQCItem_wifiDisabled_returnsRow() {
+        when(mWifiManager.isWifiEnabled()).thenReturn(false);
+        when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_DISABLED);
+        QCRow row = getWifiRow();
+        assertThat(row.getSubtitle()).isEqualTo(mContext.getString(R.string.wifi_disabled));
+        assertThat(row.getStartIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_disabled);
+        QCActionItem actionItem = row.getEndItems().get(0);
+        assertThat(actionItem.isChecked()).isFalse();
+    }
+
+    @Test
+    public void getQCItem_wifiNotConnected_returnsRow() {
         when(mWifiManager.isWifiEnabled()).thenReturn(true);
         when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_ENABLED);
         WifiInfo wifiInfo = mock(WifiInfo.class);
         when(wifiInfo.getSSID()).thenReturn(WifiManager.UNKNOWN_SSID);
         when(wifiInfo.getNetworkId()).thenReturn(-1);
         when(mWifiManager.getConnectionInfo()).thenReturn(wifiInfo);
-        QCTile tile = getWifiTile();
-        assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_disconnected);
-        assertThat(tile.isChecked()).isTrue();
-        assertThat(tile.getSubtitle()).isEqualTo(mContext.getString(R.string.wifi_disconnected));
+        QCRow row = getWifiRow();
+        assertThat(row.getSubtitle()).isEqualTo(mContext.getString(R.string.wifi_disconnected));
+        assertThat(row.getStartIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_disconnected);
+        QCActionItem actionItem = row.getEndItems().get(0);
+        assertThat(actionItem.isChecked()).isTrue();
     }
 
     @Test
-    public void getQCItem_wifiConnected_returnsTile() {
+    public void getQCItem_wifiConnected_returnsRow() {
         String testSSID = "TEST_SSID";
         when(mWifiManager.isWifiEnabled()).thenReturn(true);
         when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_ENABLED);
@@ -95,10 +107,11 @@ public class WifiTileTest {
         when(wifiInfo.getRssi()).thenReturn(-90);
         when(mWifiManager.getConnectionInfo()).thenReturn(wifiInfo);
         when(mWifiManager.calculateSignalLevel(anyInt())).thenReturn(4);
-        QCTile tile = getWifiTile();
-        assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
-        assertThat(tile.isChecked()).isTrue();
-        assertThat(tile.getSubtitle()).isEqualTo(testSSID);
+        QCRow row = getWifiRow();
+        assertThat(row.getSubtitle()).isEqualTo(testSSID);
+        assertThat(row.getStartIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
+        QCActionItem actionItem = row.getEndItems().get(0);
+        assertThat(actionItem.isChecked()).isTrue();
     }
 
     @Test
@@ -107,14 +120,16 @@ public class WifiTileTest {
         when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_DISABLED);
         Intent intent = new Intent();
         intent.putExtra(QC_ACTION_TOGGLE_STATE, true);
-        mWifiTile.onNotifyChange(intent);
+        mWifiRow.onNotifyChange(intent);
         verify(mWifiManager).setWifiEnabled(true);
     }
 
-    private QCTile getWifiTile() {
-        QCItem item = mWifiTile.getQCItem();
+    private QCRow getWifiRow() {
+        QCItem item = mWifiRow.getQCItem();
         assertThat(item).isNotNull();
-        assertThat(item instanceof QCTile).isTrue();
-        return (QCTile) item;
+        assertThat(item instanceof QCList).isTrue();
+        QCList list = (QCList) item;
+        assertThat(list.getRows().size()).isEqualTo(1);
+        return list.getRows().get(0);
     }
 }
