@@ -193,7 +193,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         mockActivityIntent(new Intent()
                 .putExtra(EXTRA_DEVICE_ADMIN_PACKAGE_NAME, mPackageName)
                 .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
-        mockActiveAdmin(mDefaultAdmin);
+        mockGetActiveAdmins(mDefaultAdmin);
 
         mSpiedFragment.onAttach(mSpiedContext, mActivity);
 
