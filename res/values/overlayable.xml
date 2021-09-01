@@ -336,7 +336,13 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_brightness"/>
       <item type="drawable" name="ic_qc_hotspot"/>
       <item type="drawable" name="ic_qc_mobile_data"/>
-      <item type="drawable" name="ic_qc_wifi"/>
+      <item type="drawable" name="ic_qc_wifi_disabled"/>
+      <item type="drawable" name="ic_qc_wifi_disconnected"/>
+      <item type="drawable" name="ic_qc_wifi_level_0"/>
+      <item type="drawable" name="ic_qc_wifi_level_1"/>
+      <item type="drawable" name="ic_qc_wifi_level_2"/>
+      <item type="drawable" name="ic_qc_wifi_level_3"/>
+      <item type="drawable" name="ic_qc_wifi_level_4"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
       <item type="drawable" name="ic_settings_about"/>
@@ -947,6 +953,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="location_toggle_off_warning"/>
       <item type="string" name="location_toggle_title"/>
       <item type="string" name="location_use_location_title"/>
+      <item type="string" name="location_driver_assistance_toggle_off_warning"/>
+      <item type="string" name="location_driver_assistance_toggle_summary"/>
+      <item type="string" name="location_driver_assistance_toggle_title"/>
+      <item type="string" name="driver_assistance_warning_confirm_label"/>
       <item type="string" name="lock_settings_enter_password"/>
       <item type="string" name="lock_settings_enter_pattern"/>
       <item type="string" name="lock_settings_enter_pin"/>
