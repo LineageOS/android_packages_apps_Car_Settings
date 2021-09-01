@@ -19,18 +19,18 @@ package com.android.car.settings.system;
 import static android.os.UserManager.DISALLOW_FACTORY_RESET;
 
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByUm;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.UserHandle;
-import android.os.UserManager;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 
 /**
  * Controller which determines if factory clear (aka "factory reset") should be displayed based on
@@ -39,12 +39,9 @@ import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 public class FactoryResetEntryPreferenceController
         extends PreferenceController<ClickableWhileDisabledPreference> {
 
-    private final UserManager mUserManager;
-
     public FactoryResetEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mUserManager = UserManager.get(context);
     }
 
     @Override
@@ -55,37 +52,35 @@ public class FactoryResetEntryPreferenceController
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-        getPreference().setDisabledClickListener(p ->
+        getPreference().setDisabledClickListener(p -> {
+            if (hasUserRestrictionByDpm(getContext(), DISALLOW_FACTORY_RESET)) {
+                showActionDisabledByAdminDialog();
+            } else {
                 Toast.makeText(getContext(), getContext().getString(R.string.action_unavailable),
-                        Toast.LENGTH_LONG).show());
-    }
-
-    @Override
-    protected boolean handlePreferenceClicked(ClickableWhileDisabledPreference preference) {
-        if (mUserManager.hasUserRestriction(DISALLOW_FACTORY_RESET)) {
-            getFragmentController().showDialog(ActionDisabledByAdminDialogFragment.newInstance(
-                    DISALLOW_FACTORY_RESET, UserHandle.USER_SYSTEM),
-                    DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
-            return true;
-        }
-        return super.handlePreferenceClicked(preference);
+                        Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return shouldDisable() ? AVAILABLE_FOR_VIEWING : AVAILABLE;
-    }
-
-    private boolean shouldDisable() {
-        if (!mUserManager.isAdminUser() && !isDemoUser()) {
-            // Disable for non-admin and non-demo users.
-            return true;
+        if (!isAlwaysAvailableForUser()
+                || hasUserRestrictionByUm(getContext(), DISALLOW_FACTORY_RESET)
+                || hasUserRestrictionByDpm(getContext(), DISALLOW_FACTORY_RESET)) {
+            return AVAILABLE_FOR_VIEWING;
         }
-        UserHandle userHandle = UserHandle.of(getContext().getUserId());
-        return mUserManager.hasBaseUserRestriction(DISALLOW_FACTORY_RESET, userHandle);
+        return AVAILABLE;
     }
 
-    private boolean isDemoUser() {
-        return UserManager.isDeviceInDemoMode(getContext()) && mUserManager.isDemoUser();
+    private boolean isAlwaysAvailableForUser() {
+        return EnterpriseUtils.isAdminUser(getContext())
+                || EnterpriseUtils.isDemoUser(getContext());
+    }
+
+    private void showActionDisabledByAdminDialog() {
+        getFragmentController().showDialog(
+                EnterpriseUtils.getActionDisabledByAdminDialog(getContext(),
+                        DISALLOW_FACTORY_RESET),
+                DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
     }
 }
