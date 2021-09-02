@@ -20,6 +20,7 @@ import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -45,13 +46,14 @@ public abstract class BluetoothScanningDevicesGroupPreferenceController extends
     private static final Logger LOG = new Logger(
             BluetoothScanningDevicesGroupPreferenceController.class);
 
-    private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    protected final BluetoothAdapter mBluetoothAdapter;
     private final AlwaysDiscoverable mAlwaysDiscoverable;
     private boolean mIsScanningEnabled = true;
 
     public BluetoothScanningDevicesGroupPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+        mBluetoothAdapter = getContext().getSystemService(BluetoothManager.class).getAdapter();
         mAlwaysDiscoverable = new AlwaysDiscoverable(context, mBluetoothAdapter);
     }
 
