@@ -387,6 +387,14 @@
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"लोकेसन प्रयोग गरियोस्"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"तपाईंले लोकेसन अफ गर्नुभयो भने कुनै पनि एपले लोकेसन प्रयोग गर्न पाउने छैनन्। तर चालकलाई अझ सुरक्षित पार्ने सुविधाहरूले भने अझै पनि लोकेसन प्रयोग गर्न पाइरहने छन्। तपाईंले चालकलाई अझ सुरक्षित पार्ने सुविधाको टगल अफ गर्नुभयो भने उक्त सुविधाले पनि तपाईंको लोकेसन प्रयोग गर्न छाड्ने छ।"</string>
+    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हालसालैका स्थानसम्बन्धी कुनै पनि अनुरोध छैन"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"एप स्तरीय अनुमति"</string>
@@ -395,19 +403,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"तपाईंको डिभाइसको स्थान अनुमान गर्न लोकेसन सर्भिसले GPS, Wi‑Fi, मोबाइल नेटवर्क र सेन्सरलगायतका स्रोतहरू प्रयोग गर्न सक्छ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"माइक्रोफोन"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"माइक्रोफोन प्रयोग गर्नुहोस्"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"सबै एपहरूलाई तपाईंको माइक्रोफोन प्रयोग गर्न दिनुहोस्"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"माइक्रोफोनसम्बन्धी अनुमतिहरू व्यवस्थापन गर्नुहोस्"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"हालसालै प्रयोग गरेको"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"कुनै नयाँ एपहरू छैनन्"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"० एपलाई माइक्रोफोन प्रयोग गर्ने अनुमति दिइएको छ"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> एपमध्ये <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> लाई माइक्रोफइन प्रयोग गर्ने अनुमति दिइएको छ</item>
+      <item quantity="one"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> एपमध्ये <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> लाई माइक्रोफइन प्रयोग गर्ने अनुमति दिइएको छ</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"हालसालै प्रयोग गरिएको"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"सबै हेर्नुहोस्"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"लोड गरिँदै छ…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"प्रणाली"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"प्रणालीसम्बन्धी अद्यावधिकहरू"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"उन्नत"</string>
@@ -735,5 +742,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"कुनै प्रोफाइल थप्नुहोस्"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"यो प्रोफाइल मेटाउनुहोस्"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"प्रोफाइल थप्नुहोस्"</string>
+    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
+    <skip />
     <string name="power_component_disabled" msgid="7084144472096800457">"यो सेटिङ अहिले नै परिवर्तन गर्न मिल्दैन"</string>
 </resources>

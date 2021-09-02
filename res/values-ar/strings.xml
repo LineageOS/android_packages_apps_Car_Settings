@@ -403,6 +403,14 @@
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"استخدام الموقع الجغرافي"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"سيؤدي إيقاف إذن \"الموقع الجغرافي\" إلى إيقاف الوصول إلى الموقع الجغرافي لجميع التطبيقات، وسيظل بإمكان ميزات مساعدة السائق الوصول إلى الموقع الجغرافي. سيؤدي إيقاف تبديل مساعدة السائق إلى منع ميزات مساعدة السائق من استخدام موقعك الجغرافي."</string>
+    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
@@ -411,19 +419,22 @@
     <string name="location_settings_footer" msgid="296892848338100051">"قد تستخدم ميزة الموقع الجغرافي مصادر مثل نظام تحديد المواقع العالمي (GPS) أو شبكة Wi-Fi أو شبكات الجوّال أو أجهزة الاستشعار للمساعدة في تقدير الموقع الجغرافي لجهازك."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"الميكروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استخدام الميكروفون"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"السماح لجميع التطبيقات باستخدام الميكروفون"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"إدارة أذونات الميكروفون"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الميكروفون"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"لم يحصل أي تطبيق مؤخرًا على إذن لاستخدام الميكروفون."</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"ليس لدى أي تطبيق إذن لاستخدام الميكروفون."</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="zero"> لدى <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> من إجمالي <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> تطبيق إذن لمعرفة الموقع الجغرافي.</item>
+      <item quantity="two"> لدى <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> من إجمالي تطبيقين (<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>) إذن لمعرفة الموقع الجغرافي.</item>
+      <item quantity="few"> لدى <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> من إجمالي <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> تطبيقات إذن لمعرفة الموقع الجغرافي.</item>
+      <item quantity="many"> لدى <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> من إجمالي <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> تطبيقًا إذن لمعرفة الموقع الجغرافي.</item>
+      <item quantity="other"> لدى <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> من إجمالي <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> تطبيق إذن لمعرفة الموقع الجغرافي.</item>
+      <item quantity="one"> لدى <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> من إجمالي تطبيق واحد (<xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g>) إذن لمعرفة الموقع الجغرافي.</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الميكروفون"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"عرض الكل"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"جارٍ التحميل…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"النظام"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"تحديثات النظام"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"الإعدادات المتقدّمة"</string>
@@ -783,5 +794,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"إنشاء ملف شخصي"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"حذف هذا الملف الشخصي"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"إضافة ملف شخصي"</string>
+    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
+    <skip />
     <string name="power_component_disabled" msgid="7084144472096800457">"لا يمكن تغيير هذا الإعداد الآن."</string>
 </resources>
