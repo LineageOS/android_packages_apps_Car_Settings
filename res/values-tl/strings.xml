@@ -388,6 +388,10 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokasyon"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gumamit ng lokasyon"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Kapag na-off ang Lokasyon, mao-off ang access sa lokasyon para sa lahat ng app, magkakaroon pa rin ng access ang mga feature na Tulong sa driver. Kapag na-off ang Tulong sa driver, hindi na gagamitin ng mga feature na Tulong sa driver ang iyong lokasyon."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Tulong sa driver"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Hindi available habang naka-on ang lokasyon"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Kung io-off mo ito, madi-disable ang mga feature ng tulong sa driver na dumedepende sa impormasyon ng lokasyon."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"I-off pa rin"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Mga Kamakailang Kahilingan sa Lokasyon"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Walang kamakailang kahilingan sa lokasyon"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Mga pahintulot sa antas ng app"</string>
@@ -396,19 +400,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Posibleng gumamit ang mga lokasyon ng mga source na gaya ng GPS, Wi‑Fi, mga mobile network, at sensor para tumulong sa pagtantiya ng lokasyon ng iyong device."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikropono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gamitin ang mikropono"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Payagan ang lahat ng app na i-access ang iyong mikropono"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Pamahalaan ang mga pahintulot sa mikropono"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Kamakailang na-access"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Walang kamakailang app"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 app ang may access"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> sa <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> (na) app ang may access</item>
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> sa <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> (na) app ang may access</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Kamakailang na-access"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Tingnan lahat"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Naglo-load…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mga pag-update ng system"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Advanced"</string>
@@ -736,6 +739,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Magdagdag ng profile"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"I-delete ang profile na ito"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Magdagdag ng profile"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Liwanag ng display"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Walang app ng admin ng infotainment system"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"I-reset ang infotainment system"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Nakatanggap ang iyong system ng kahilingang mag-factory reset at magbura ng lahat ng data. Puwede mo itong i-reset ngayon, o magre-reset ito sa susunod na mag-start ang sasakyan. Pagkatapos, makakapag-set up ka ng bagong profile."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"I-reset Ngayon"</string>

@@ -387,7 +387,14 @@
     <string name="more_special_access_title" msgid="166115485446645971">"વધુ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"સ્થાન"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"સ્થાનનો ઉપયોગ કરો"</string>
-    <!-- no translation found for location_toggle_off_warning (7698125556959442911) -->
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"સ્થાનની જાણકારી બંધ કરવાથી બધી ઍપ માટે સ્થાનનો ઍક્સેસ બંધ થઈ જશે, \'ડ્રાઇવર માટે સહાયતા\'ની સુવિધા પાસે હજી પણ ઍક્સેસ રહેશે. \'ડ્રાઇવર માટે સહાયતા\'ની સુવિધાના ટૉગલને બંધ કરવાથી, \'ડ્રાઇવર માટે સહાયતા\'ની સુવિધા તમારા સ્થાનની માહિતીનો ઍક્સેસ કરી શકશે નહીં."</string>
+    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
     <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"સ્થાન માટે તાજેતરની વિનંતીઓ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"સ્થાન માટે તાજેતરમાં કોઈ વિનંતી નથી"</string>
@@ -397,19 +404,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"સ્થાન સેવામાં તમારા ડિવાઇસનું સ્થાન નક્કી કરવામાં સહાય કરવા માટે GPS, વાઇ-ફાઇ, મોબાઇલ નેટવર્ક અને સેન્સર જેવા સૉર્સનો ઉપયોગ કરવામાં આવી શકે છે."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"માઇક્રોફોન"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"માઇક્રોફોનનો ઉપયોગ કરો"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"બધી ઍપને તમારા માઇક્રોફોનના ઍક્સેસની મંજૂરી આપો"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"માઇક્રોફોનની પરવાનગીઓ મેનેજ કરો"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"તાજેતરમાં અ‍ૅક્સેસ કર્યો"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"ઍક્સેસ હોય એવી તાજેતરની કોઈ ઍપ નથી"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"કોઈપણ ઍપ પાસે ઍક્સેસ નથી"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="one"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>માંથી <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> ઍપ પાસે ઍક્સેસ છે</item>
+      <item quantity="other"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>માંથી <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> ઍપ પાસે ઍક્સેસ છે</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"તાજેતરમાં અ‍ૅક્સેસ કર્યો"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"તમામ જુઓ"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"લોડ કરી રહ્યાં છીએ…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"સિસ્ટમ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"સિસ્ટમ અપડેટ"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"વિગતવાર"</string>
@@ -737,6 +743,10 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"પ્રોફાઇલ ઉમેરો"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"આ પ્રોફાઇલ ડિલીટ કરો"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"પ્રોફાઇલ ઉમેરો"</string>
+    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
+    <skip />
+    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
+    <skip />
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"ઇન્ફોટેનમેન્ટ સિસ્ટમ રીસેટ કરો"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"તમારી સિસ્ટમને ફેક્ટરી રીસેટની અને બધો ડેટા કાઢી નાખવાની વિનંતી મળી છે. તમે હમણાં રીસેટ કરી શકો છો અથવા આગલી વખતે જ્યારે કારને ચાલુ કરવામાં આવે ત્યારે તે રીસેટ થશે. ત્યાર પછી તમે નવી પ્રોફાઇલ સેટઅપ કરી શકો છો."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"હમણાં રીસેટ કરો"</string>

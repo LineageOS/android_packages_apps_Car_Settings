@@ -388,6 +388,10 @@
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Користете ја локацијата"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Ако ја исклучите „Локацијата“, ќе се исклучи пристапот до локацијата за сите апликации, но функциите за помош за возачи и понатаму ќе имаат пристап. Ако ја исклучите помошта за возачи, функциите за помош за возачи нема да ја користат вашата локација."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Помош за возачи"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Недостапно додека не се вклучи локација"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ако го исклучите ова, функциите за помош за возачи што зависат од податоците за локација ќе бидат оневозможени."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Сепак исклучи"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последни барања за локација"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема неодамнешни барања за локација"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на ниво на апликација"</string>
@@ -396,19 +400,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Услугата „Локација“ може да користи извори како GPS, Wi‑Fi, мобилни мрежи и сензори за да помогне да се процени локацијата на уредот."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Користи го микрофонот"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Дозволете пристап до микрофонот за сите апликации"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Управувајте со дозволите за микрофон"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Неодамна пристапени"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Нема неодамнешни апликации"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 апликации имаат пристап"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> од <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> апликации имаат пристап</item>
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> од <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> апликации имаат пристап</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Неодамнешни пристапувања"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Прикажи ги сите"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Се вчитува…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања на системот"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Напредни"</string>
@@ -736,6 +739,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Додај профил"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Избриши го профилов"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Додај профил"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Осветленост на екранот"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Нема администраторски апликации за системот за информации и забава"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Ресетирање на системот за информации и забава"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Вашиот систем прими барање за ресетирање на фабрички поставки и за бришење на сите податоци. Може да го ресетирате сега или самиот ќе се ресетира при следното вклучување на автомобилот. Тогаш може да поставите нов профил."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Ресетирај сега"</string>

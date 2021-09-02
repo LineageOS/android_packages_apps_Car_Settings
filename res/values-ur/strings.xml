@@ -388,6 +388,14 @@
     <string name="location_settings_title" msgid="901334356682423679">"مقام"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"مقام استعمال کریں"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"مقام کو آف کرنے سے تمام ایپس کے لیے مقام تک رسائی آف ہو جائے گی، حالانکہ ڈرائیور کی مدد کی خصوصیات کو پھر بھی رسائی حاصل رہے گی۔ ڈرائیور امدادی ٹوگل کو آف کرنے سے ڈرائیور کی مدد کی خصوصیت آپ کے مقام کو استعمال کرنے سے روک دے گی۔"</string>
+    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"مقام کی حالیہ درخواستیں"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"مقام کی کوئی حالیہ درخواست نہیں ہے"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ایپ کی سطح کی اجازتیں"</string>
@@ -396,19 +404,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"آپ کے آلہ کے مقام کا تعین کرنے میں مدد کرنے کے لیے، مقام GPS, Wi‑Fi، موبائل نیٹ ورکس اور سینسرز جیسے وسائل کا استعمال کر سکتا ہے۔"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"مائیکروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"مائیکروفون کا استعمال کریں"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"سبھی ایپس کو اپنے مائیکروفون تک رسائی کی اجازت دیں"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"مائیکروفون کی اجازتوں کا نظم کریں"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"حال ہی میں رسائی حاصل کردہ"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"کوئی حالیہ ایپ نہیں ہے"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 ایپس کو رسائی حاصل ہے"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> میں سے <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> ایپس کو رسائی حاصل ہے</item>
+      <item quantity="one"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> میں سے <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> ایپس کو رسائی حاصل ہے</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"حال ہی میں رسائی حاصل کردہ"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"سبھی دیکھیں"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"لوڈ ہو رہی ہیں…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"سسٹم"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"سسٹم اپ ڈیٹس"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"جدید ترین"</string>
@@ -736,6 +743,10 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ایک پروفائل شامل کریں"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"اس پروفائل کو حذف کریں"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"پروفائل شامل کریں"</string>
+    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
+    <skip />
+    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
+    <skip />
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"معلوماتی انٹرٹینمنٹ سسٹم ری سیٹ کریں"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"آپ کے سسٹم کو فیکٹری ری سیٹ اور سبھی ڈیٹا کو صاف کرنے کی درخواست موصول ہوئی ہے۔ آپ اسے ابھی ری سیٹ کر سکتے ہیں یا اگلی بار کار کے شروع ہونے پر یہ ری سیٹ ہو جائے گا۔ پھر اس کے بعد آپ نئی پروفائل سیٹ اپ کر سکتے ہیں۔"</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"ابھی ری سیٹ کریں"</string>
