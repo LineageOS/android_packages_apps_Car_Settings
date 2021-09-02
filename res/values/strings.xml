@@ -867,6 +867,13 @@
         Location may use sources like GPS, Wi\u2011Fi, mobile networks, and sensors to help estimate
         your device\u2019s location.
     </string>
+    <!-- Title of Driver assistance page [CHAR LIMIT=40]-->
+    <string name="driver_assistance_settings_title">Driver assistance</string>
+    <!--Driver assistance settings footer warning text [CHAR LIMIT=NONE] -->
+    <string name="adas_settings_footer">
+        Location information sent to driver assistance features don’t contain information that
+        identifies you. It’s stored for a maximum of 2 days before being deleted.
+    </string>
 
     <!-- Microphone --><skip/>
     <!-- Title of microphone settings screen [CHAR LIMIT=40] -->
