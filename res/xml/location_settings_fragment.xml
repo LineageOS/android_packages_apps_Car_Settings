@@ -27,6 +27,7 @@
         settings:controller="com.android.car.settings.location.LocationStateSwitchPreferenceController"
         settings:searchable="false"/>
     <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
+        android:fragment="com.android.car.settings.location.AdasLocationFragment"
         android:key="@string/pk_location_driver_assistance_state_switch"
         android:title="@string/location_driver_assistance_toggle_title"
         android:summary="@string/location_driver_assistance_toggle_summary"
