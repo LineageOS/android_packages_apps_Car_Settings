@@ -387,7 +387,11 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Xem thêm"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Dùng thông tin vị trí"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Tắt quyền Vị trí cũng có nghĩa là tắt quyền truy cập thông tin vị trí đối với mọi ứng dụng, tuy nhiên, các tính năng của Công nghệ hỗ trợ dành cho người lái xe vẫn truy cập được thông tin này. Tắt chế độ Công nghệ hỗ trợ dành cho người lái xe cũng có nghĩa là không cho phép các tính năng của Công nghệ hỗ trợ dành cho người lái xe sử dụng thông tin vị trí của bạn."</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Khi tắt quyền Vị trí, mọi ứng dụng đều sẽ mất quyền truy cập thông tin vị trí. Tuy nhiên, các tính năng của Công nghệ hỗ trợ dành cho người lái xe vẫn truy cập được thông tin này. Khi tắt Công nghệ hỗ trợ dành cho người lái xe, các tính năng của Công nghệ hỗ trợ dành cho người lái xe sẽ ngừng sử dụng thông tin vị trí của bạn."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Công nghệ hỗ trợ dành cho người lái xe"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Không dùng được khi bật thông tin vị trí"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Nếu bạn tắt chế độ này, những tính năng hỗ trợ dành cho người lái xe và dựa vào thông tin vị trí sẽ bị tắt."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Vẫn tắt"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Các yêu cầu gần đây về vị trí"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Không có yêu cầu nào gần đây về vị trí"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Quyền cấp ứng dụng"</string>
@@ -396,19 +400,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Dịch vụ vị trí có thể sử dụng những nguồn như GPS, Wi‑Fi, mạng di động và cảm biến để giúp ước tính vị trí của thiết bị."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrô"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Sử dụng micrô"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Cho phép mọi ứng dụng truy cập vào micrô"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Quản lý quyền truy cập vào micrô"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Mới truy cập gần đây"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Không có ứng dụng nào mới truy cập"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 ứng dụng có quyền truy cập"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> ứng dụng có quyền truy cập</item>
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> ứng dụng có quyền truy cập</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Mới truy cập gần đây"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Xem tất cả"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Đang tải…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Hệ thống"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Bản cập nhật hệ thống"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Nâng cao"</string>
@@ -736,6 +739,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Thêm hồ sơ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Xóa hồ sơ này"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Thêm hồ sơ"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Độ sáng của màn hình"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Không có ứng dụng quản trị hệ thống thông tin giải trí nào"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Đặt lại hệ thống thông tin giải trí"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Hệ thống của bạn đã nhận được một yêu cầu đặt lại về trạng thái ban đầu và xóa mọi dữ liệu. Bạn có thể đặt lại ngay hoặc đặt lại vào lần khởi động xe tiếp theo. Sau đó, bạn có thể thiết lập một hồ sơ mới."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Đặt lại ngay"</string>

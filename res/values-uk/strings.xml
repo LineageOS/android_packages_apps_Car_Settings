@@ -396,6 +396,10 @@
     <string name="location_settings_title" msgid="901334356682423679">"Геодані"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Використовувати геодані"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Якщо вимкнути геодані, доступ до них буде вимкнено для всіх додатків. Це не стосується функцій допомоги водію. Якщо вимкнути перемикач \"Допомога водію\", відповідні функції не матимуть доступу до ваших геоданих."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Допомога водію"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Недоступно, доки ввімкнено геодані"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Якщо вимкнути цю опцію, функції допомоги водію, які використовують геодані, будуть деактивовані."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Вимкнути в будь-якому разі"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Останні запити на геодані"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Немає останніх запитів на геодані"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на рівні додатка"</string>
@@ -404,19 +408,20 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Використовувати мікрофон"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Надати всім додаткам доступ до мікрофона"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Керувати доступом до мікрофона"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Нещодавно використовувався"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Жодний додаток не використовував мікрофон нещодавно"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 додатків мають доступ"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> додаток із <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> має доступ</item>
+      <item quantity="few"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> додатки з <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> мають доступ</item>
+      <item quantity="many"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> додатків із <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> мають доступ</item>
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> додатка з <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> має доступ</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Нещодавно використовувався"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Показати всі"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Завантаження…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Оновлення системи"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Додатково"</string>
@@ -760,6 +765,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Додати профіль"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Видалити цей профіль"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Додати профіль"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Яскравість дисплея"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Немає додатків адміністратора інформаційно-розважальної системи"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Скиньте налаштування інформаційно-розважальної системи"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Система отримала запит скинути налаштування та видалити всі дані. Якщо ви не зробите цього зараз, налаштування буде скинуто, коли ви наступного разу заведете авто. Після цього ви зможете налаштувати новий профіль."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Скинути зараз"</string>
