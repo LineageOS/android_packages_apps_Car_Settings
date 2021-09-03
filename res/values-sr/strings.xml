@@ -391,6 +391,10 @@
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Користи локацију"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Ако искључите локацију, искључићете приступ локацији за све апликације, а функције помоћи за возаче ће и даље имати приступ. Ако искључите помоћ за возаче, спречићете функције помоћи за возаче да користе локацију."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Помоћ за возаче"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Није доступно док је локација укључена"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ако искључите ово, функције помоћи за возаче које се ослањају на информације о локацији ће се онемогућити."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Ипак искључи"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема недавних захтева за локацију"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволе на нивоу апликација"</string>
@@ -399,19 +403,19 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Локација може да користи изворе као што су GPS, WiFi, мобилне мреже и сензори да би се лакше одредила локација уређаја."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Користи микрофон"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Дозволите свим апликацијама да приступају микрофону"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Управљајте дозволама за микрофон"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Недавно приступано"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Нема недавних апликација"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 апликација има приступ"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> од укупног броја апликација (<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>) има приступ</item>
+      <item quantity="few"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> од укупног броја апликација (<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>) имају приступ</item>
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> од укупног броја апликација (<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>) има приступ</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Недавно приступано"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Прикажи све"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Учитава се…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања система"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Напредно"</string>
@@ -747,5 +751,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Додај профил"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Избриши овај профил"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Додајте профил"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Нема апликација за администратора система за инфо-забаву"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Тренутно не можете да промените ово подешавање"</string>
 </resources>
