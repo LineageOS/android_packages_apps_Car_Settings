@@ -22,7 +22,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PermissionGroupInfo;
 import android.graphics.drawable.Drawable;
 
-import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
@@ -55,7 +54,7 @@ public class MicPreferenceController
                     PERMISSION_GROUP_MICROPHONE,
                     /* flags= */ 0);
             Drawable icon = groupInfo.loadIcon(mPm);
-            icon.mutate().setTintList(Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
+            icon.mutate().setTintList(getContext().getColorStateList(R.color.icon_color_default));
             getPreference().setIcon(icon);
         } catch (PackageManager.NameNotFoundException e) {
             // fall back to using the CarSettings icon specified in the resource file
