@@ -388,6 +388,10 @@
     <string name="location_settings_title" msgid="901334356682423679">"Ubicació"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Utilitza la ubicació"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Si desactives l\'accés a la ubicació, es desactivarà per a totes les aplicacions, excepte per a les funcions d\'assistència al conductor. Si desactives el commutador d\'assistència al conductor, les funcions d\'aquesta tecnologia deixaran d\'utilitzar la teva ubicació."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Assistència al conductor"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"No disponible amb la ubicació activada"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Si desactives aquesta opció, les funcions d\'assistència al conductor que depenen de la informació d\'ubicació es desactivaran."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Desactiva igualment"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Sol·licituds d\'ubicació recents"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hi ha cap sol·licitud d\'ubicació recent"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos al nivell de l\'aplicació"</string>
@@ -735,6 +739,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Afegeix un perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Suprimeix aquest perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Afegeix un perfil"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Brillantor de la pantalla"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"No hi ha cap aplicació d\'administració del sistema d\'informació i entreteniment"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restableix el sistema d\'informació i entreteniment"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"El teu sistema ha rebut una sol·licitud per restablir les dades de fàbrica i esborrar totes les dades. Pots restablir-lo ara, o es restablirà la pròxima vegada que s\'engegui el cotxe. A continuació, podràs configurar un perfil nou."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Restableix ara"</string>
