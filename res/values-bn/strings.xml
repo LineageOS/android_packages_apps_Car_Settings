@@ -386,7 +386,14 @@
     <string name="more_special_access_title" msgid="166115485446645971">"আরও"</string>
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"লোকেশন ব্যবহার করুন"</string>
-    <!-- no translation found for location_toggle_off_warning (7698125556959442911) -->
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"\'লোকেশন\' বন্ধ করলে, কোনও অ্যাপ আপনার লোকেশন অ্যাক্সেস করতে পারবে না, তবে \'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচার এর পরেও আপনার লোকেশন অ্যাক্সেস করতে পারবে। \'ড্রাইভার অ্যাসিস্ট্যান্স\' টগল করে বন্ধ করলে \'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচার আপনার লোকেশন আর অ্যাক্সেস করতে পারবে না।"</string>
+    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
     <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
@@ -396,19 +403,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"আপনি কোথায় আছেন তা জানতে \'লোকেশন\' সেটিংস আপনার মোবাইলের জিপিএস, ওয়াই-ফাই, মোবাইল নেটওয়ার্ক ও সেন্সর ব্যবহার করতে পারে।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্রোফোন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্রোফোন ব্যবহার করুন"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"সব অ্যাপকে আপনার মাইক্রোফোন ব্যবহার করার অনুমতি দিন"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"মাইক্রোফোনের অনুমতি ম্যানেজ করুন"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"কোনও সাম্প্রতিক অ্যাপ নেই"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"কোনও অ্যাপের অ্যাক্সেস নেই"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="one"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>টি অ্যাপের মধ্যে <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g>টির অ্যাক্সেস আছে</item>
+      <item quantity="other"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>টি অ্যাপের মধ্যে <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g>টির অ্যাক্সেস আছে</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"সবগুলি দেখুন"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"লোড হচ্ছে…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"সিস্টেম"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"সিস্টেম আপডেট"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"উন্নত"</string>
@@ -722,7 +728,7 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"খারিজ করুন"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ড্রাইভ করার সময় এই ফিচার কাজ করবে না"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ড্রাইভ করার সময় প্রোফাইল যোগ করতে পারবেন না"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"সার্চ"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant ও ভয়েস"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"ডিজিটাল অ্যাসিস্ট্যান্ট অ্যাপ"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"স্ক্রিন থেকে টেক্সট ব্যবহার করুন"</string>
@@ -736,5 +742,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"প্রোফাইল যোগ করুন"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"এই প্রোফাইল মুছুন"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"প্রোফাইল যোগ করুন"</string>
+    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
+    <skip />
     <string name="power_component_disabled" msgid="7084144472096800457">"এই সেটিং এই মুহূর্তে পরিবর্তন করা যাবে না"</string>
 </resources>

@@ -387,6 +387,10 @@
     <string name="location_settings_title" msgid="901334356682423679">"Sijainti"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Käytä sijaintia"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Jos laitat sijainnin pois päältä, kaikilta sovelluksilta poistetaan pääsy sijaintiin. Ajoavustinominaisuuksilla on kuitenkin edelleen pääsy siihen. Jos laitat ajoavustimen valitsimen pois päältä, ajoavustinominaisuudet eivät enää käytä sijaintiasi."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Ajoavustin"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Ei käytettävissä kun sijainti on päällä"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Jos laitat tämän pois päältä, sijaintia käyttävät ajoavustinominaisuudet poistetaan käytöstä."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Laita aina pois päältä"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Viimeisimmät sijaintipyynnöt"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ei viimeaikaisia sijaintipyyntöjä"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Sovellustason käyttöoikeudet"</string>
@@ -395,19 +399,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Sijainti voi käyttää esimerkiksi GPS:ää, Wi‑Fi- ja mobiiliverkkoja sekä antureita laitteesi sijainnin arvioimiseen."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Käytä mikrofonia"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Anna kaikille sovelluksille mikrofonin pääsyoikeudet"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Muuta mikrofonilupia"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Käytetty äskettäin"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Ei viimeisimpiä sovelluksia"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Yhdelläkään sovelluksella ei ole pääsyoikeuksia"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> sovelluksella on pääsyoikeudet</item>
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> sovelluksella on pääsyoikeudet</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Käytetty äskettäin"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Katso kaikki"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Ladataan…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Järjestelmä"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Järjestelmäpäivitykset"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Lisäasetukset"</string>
@@ -735,5 +738,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Lisää profiili"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Poista tämä profiili"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Lisää profiili"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Ei infotainment-järjestelmän hallintasovelluksia"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Tätä asetusta ei voi juuri nyt muuttaa"</string>
 </resources>

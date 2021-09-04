@@ -395,6 +395,14 @@
     <string name="location_settings_title" msgid="901334356682423679">"Poloha"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Použiť polohu"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Vypnutím nastavenia Poloha vypnete prístup k polohe všetkým aplikáciám. Prístup funkcií asistencie pre vodiča zostane zachovaný. Vypnutím prepínača asistencie pre vodiča zakážete funkciám asistencie pre vodiča prístup k vašej polohe."</string>
+    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedávne žiadosti o polohu"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Žiadne nedávne žiadosti o polohu"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Povolenia na úrovni aplikácie"</string>
@@ -403,19 +411,20 @@
     <string name="location_settings_footer" msgid="296892848338100051">"Nastavenie Poloha pomáha odhadnúť polohu vášho zariadenia pomocou zdrojov, ako sú GPS, Wi-Fi, mobilné siete a senzory."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofón"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Použiť mikrofón"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Povoliť všetkým aplikáciám prístup k mikrofónu"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Spravovať povolenia mikrofónu"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Nedávno použité"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Žiadne nedávne aplikácie"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Prístup nemajú žiadne aplikácie"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="few"> Prístup majú <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> z <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> aplikácií</item>
+      <item quantity="many"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> of <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> apps have access</item>
+      <item quantity="other"> Prístup má <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> z <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> aplikácií</item>
+      <item quantity="one"> Prístup má <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> z <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> aplikácií</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Nedávno použité"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Zobraziť všetko"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Načítava sa…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Systém"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Aktualizácie systému"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Rozšírené"</string>
@@ -759,5 +768,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Pridať profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Odstrániť tento profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pridanie profilu"</string>
+    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
+    <skip />
     <string name="power_component_disabled" msgid="7084144472096800457">"Toto nastavenie teraz nie je možné zmeniť."</string>
 </resources>
