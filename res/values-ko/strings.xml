@@ -388,6 +388,10 @@
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"위치 사용"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"위치 정보를 사용 중지하면 운전자 지원 기능을 제외한 모든 앱에서 위치 정보에 액세스할 수 없게 됩니다. 운전자 지원 기능을 사용 중지하면 운전자 지원 기능이 더 이상 위치 정보를 사용하지 않습니다."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"운전자 지원"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"위치 정보가 켜진 경우 사용할 수 없음"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"기능을 끄면 위치 정보를 사용하는 운전자 지원 기능이 사용 중지됩니다."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"무시하고 끄기"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"최근 위치 요청"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"최근 위치 요청 없음"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"앱 수준 권한"</string>
@@ -396,19 +400,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"마이크"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"마이크 사용"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"모든 앱이 마이크에 액세스하도록 허용"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"마이크 권한 관리"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"최근 액세스함"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"최근에 사용한 앱 없음"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"앱 0개에 액세스 권한이 있음"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> 앱 <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g>개에 액세스 권한이 있음</item>
+      <item quantity="one"> 앱 <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g>개에 액세스 권한이 있음</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"최근 액세스함"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"모두 보기"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"로드 중…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"시스템"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"고급"</string>
@@ -736,6 +739,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"프로필 추가"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"이 프로필 삭제"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"프로필 추가"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"디스플레이 밝기"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"인포테인먼트 시스템 관리자 앱 없음"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"인포테인먼트 시스템 초기화"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"시스템 초기화 요청이 접수되었으며 모든 데이터가 삭제됩니다. 지금 초기화하지 않으면 다음에 차가 시동이 걸릴 때 초기화됩니다. 이후 새 프로필을 설정할 수 있습니다."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"지금 초기화"</string>

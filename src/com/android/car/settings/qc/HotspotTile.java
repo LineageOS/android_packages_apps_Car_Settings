@@ -22,7 +22,6 @@ import static com.android.car.settings.qc.SettingsQCRegistry.HOTSPOT_TILE_URI;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Icon;
-import android.net.ConnectivityManager;
 import android.net.TetheringManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
@@ -30,7 +29,6 @@ import android.net.wifi.WifiManager;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCTile;
 import com.android.car.settings.R;
-import com.android.internal.util.ConcurrentUtils;
 
 /**
  * QCItem for showing a hotspot toggle.
@@ -54,8 +52,8 @@ public class HotspotTile extends SettingsQCItem {
         QCTile.Builder tileBuilder = new QCTile.Builder()
                 .setSubtitle(getContext().getString(R.string.hotspot_settings_title))
                 .setIcon(actionIcon)
-                .setChecked(isHotspotEnabled())
-                .setEnabled(!isHotspotBusy())
+                .setChecked(HotspotQCUtils.isHotspotEnabled(mWifiManager))
+                .setEnabled(!HotspotQCUtils.isHotspotBusy(mWifiManager))
                 .setAvailable(mIsSupported)
                 .setAction(getBroadcastIntent());
         return tileBuilder.build();
@@ -79,33 +77,15 @@ public class HotspotTile extends SettingsQCItem {
         boolean newState = intent.getBooleanExtra(QC_ACTION_TOGGLE_STATE,
                 !mWifiManager.isWifiApEnabled());
         if (newState) {
-            mTetheringManager.startTethering(ConnectivityManager.TETHERING_WIFI,
-                    ConcurrentUtils.DIRECT_EXECUTOR,
-                    new TetheringManager.StartTetheringCallback() {
-                        @Override
-                        public void onTetheringFailed(final int result) {
-                            getContext().getContentResolver().notifyChange(getUri(), null);
-                        }
-                    });
+            HotspotQCUtils.enableHotspot(mTetheringManager,
+                    HotspotQCUtils.getDefaultStartTetheringCallback(getContext(), getUri()));
         } else {
-            mTetheringManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
+            HotspotQCUtils.disableHotspot(mTetheringManager);
         }
     }
 
     @Override
     Class getBackgroundWorkerClass() {
         return HotspotTileWorker.class;
-    }
-
-    private boolean isHotspotEnabled() {
-        int state = mWifiManager.getWifiApState();
-        return state == WifiManager.WIFI_AP_STATE_ENABLED
-                || state == WifiManager.WIFI_AP_STATE_ENABLING;
-    }
-
-    private boolean isHotspotBusy() {
-        int state = mWifiManager.getWifiApState();
-        return state == WifiManager.WIFI_AP_STATE_ENABLING
-                || state == WifiManager.WIFI_AP_STATE_DISABLING;
     }
 }

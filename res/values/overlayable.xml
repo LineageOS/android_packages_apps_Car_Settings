@@ -92,8 +92,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="bool" name="config_top_level_enable_chevrons"/>
       <item type="bool" name="config_top_level_injection_background_always_use_default"/>
       <item type="bool" name="config_top_level_injection_enable_summaries"/>
-      <item type="color" name="user_disclaimer_action_button_background_color"/>
-      <item type="color" name="user_disclaimer_text_color"/>
       <item type="color" name="bluetooth_bonded_device_background"/>
       <item type="color" name="bluetooth_bonded_device_foreground"/>
       <item type="color" name="bluetooth_bonded_device_icon_color_checked"/>
@@ -140,17 +138,12 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="top_level_system_background"/>
       <item type="color" name="top_level_system_icon"/>
       <item type="color" name="top_level_units_icon"/>
+      <item type="color" name="user_disclaimer_action_button_background_color"/>
       <item type="color" name="user_disclaimer_activity_background"/>
+      <item type="color" name="user_disclaimer_text_color"/>
       <item type="color" name="white_disabled_material"/>
       <item type="dimen" name="action_bar_height"/>
       <item type="dimen" name="action_bar_no_icon_start_margin"/>
-      <item type="dimen" name="user_disclaimer_action_button_corner_radius"/>
-      <item type="dimen" name="user_disclaimer_action_button_height"/>
-      <item type="dimen" name="user_disclaimer_action_button_max_width"/>
-      <item type="dimen" name="user_disclaimer_action_button_min_width"/>
-      <item type="dimen" name="user_disclaimer_action_button_padding_horizontal"/>
-      <item type="dimen" name="user_disclaimer_action_button_text_size"/>
-      <item type="dimen" name="user_disclaimer_action_button_top_margin"/>
       <item type="dimen" name="action_buttons_divider_height"/>
       <item type="dimen" name="action_buttons_icon_margin_end"/>
       <item type="dimen" name="action_buttons_margin_bottom"/>
@@ -271,7 +264,13 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="dimen" name="usage_number_text_size"/>
       <item type="dimen" name="usage_pickers_margin_vertical"/>
       <item type="dimen" name="usage_pickers_text_margin_end"/>
-      <item type="drawable" name="user_disclaimer_action_button_background"/>
+      <item type="dimen" name="user_disclaimer_action_button_corner_radius"/>
+      <item type="dimen" name="user_disclaimer_action_button_height"/>
+      <item type="dimen" name="user_disclaimer_action_button_max_width"/>
+      <item type="dimen" name="user_disclaimer_action_button_min_width"/>
+      <item type="dimen" name="user_disclaimer_action_button_padding_horizontal"/>
+      <item type="dimen" name="user_disclaimer_action_button_text_size"/>
+      <item type="dimen" name="user_disclaimer_action_button_top_margin"/>
       <item type="drawable" name="bluetooth_bonded_device_rotary_background"/>
       <item type="drawable" name="brightness_seekbar_background"/>
       <item type="drawable" name="brightness_seekbar_track"/>
@@ -396,6 +395,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="rectangle_ripple_mask"/>
       <item type="drawable" name="top_level_preference_background"/>
       <item type="drawable" name="top_level_preference_highlight"/>
+      <item type="drawable" name="user_disclaimer_action_button_background"/>
       <item type="drawable" name="wifi_signal"/>
       <item type="id" name="accept_button"/>
       <item type="id" name="alphanumeric_pin"/>
@@ -1356,6 +1356,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_hotspot_password_title"/>
       <item type="string" name="wifi_hotspot_security_none"/>
       <item type="string" name="wifi_hotspot_security_title"/>
+      <item type="string" name="wifi_hotspot_state_off"/>
       <item type="string" name="wifi_hotspot_state_switch_content_description"/>
       <item type="string" name="wifi_hotspot_wpa2_personal"/>
       <item type="string" name="wifi_ip_address"/>
@@ -1392,9 +1393,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="zone_auto"/>
       <item type="string" name="zone_list_menu_sort_alphabetically"/>
       <item type="string" name="zone_list_menu_sort_by_timezone"/>
-      <item type="style" name="UserDisclaimerActionButtonTextStyle"/>
       <item type="style" name="ActionDialogTheme"/>
-      <item type="style" name="UserDisclaimerButtonStyle"/>
       <item type="style" name="CarSettingTheme"/>
       <item type="style" name="CarSettingsPreferenceFragment"/>
       <item type="style" name="CarSettingsPreferenceTheme"/>
@@ -1409,6 +1408,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="style" name="PinPadKey"/>
       <item type="style" name="PreferenceButtonIconAppearance"/>
       <item type="style" name="PreferenceButtonTextAppearance"/>
+      <item type="style" name="UserDisclaimerActionButtonTextStyle"/>
+      <item type="style" name="UserDisclaimerButtonStyle"/>
       <item type="xml" name="about_settings_fragment"/>
       <item type="xml" name="account_details_fragment"/>
       <item type="xml" name="account_sync_details_fragment"/>

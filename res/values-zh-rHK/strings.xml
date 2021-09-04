@@ -387,7 +387,11 @@
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置資訊"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"如果關閉「位置」功能，所有應用程式的位置權限都會關閉，但「駕駛輔助」功能仍可存取位置。如果關閉「駕駛輔助」切換按鈕，「駕駛輔助」功能便會停止使用您的位置。"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"如果關閉「位置」功能，所有應用程式的位置權限都會關閉，但「駕駛輔助」功能仍可存取您的位置。如果將「駕駛輔助」切換為關閉，「駕駛輔助」功能便會停止使用您的位置資訊。"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"駕駛輔助"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"開啟位置時無法使用"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"關閉此功能後，需要依賴位置資料的駕駛輔助功能將會停用。"</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"仍然關閉"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置資訊要求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近沒有位置資訊要求"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
@@ -396,19 +400,18 @@
     <string name="location_settings_footer" msgid="296892848338100051">"定位功能可能會使用 GPS、Wi-Fi、流動網絡和感應器等來源確定裝置的所在位置。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"麥克風"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麥克風"</string>
-    <!-- no translation found for microphone_toggle_summary (2682653449849128626) -->
-    <skip />
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"允許所有應用程式存取您的麥克風"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"管理麥克風權限"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"最近存取"</string>
-    <!-- no translation found for microphone_no_recent_access (6412908936060990649) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_off (6139321726246115550) -->
-    <skip />
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (851024363578868030) -->
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"沒有最近存取過的應用程式"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"沒有應用程式擁有存取權"</string>
+    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
+      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> 個 (共 <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> 個) 應用程式擁有存取權</item>
+      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> 個 (共 <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> 個) 應用程式擁有存取權</item>
+    </plurals>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"最近存取"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"查看全部"</string>
-    <!-- no translation found for microphone_settings_loading_app_permission_stats (4357161201098081615) -->
-    <skip />
+    <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"載入中…"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"系統"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"系統更新"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"進階"</string>
@@ -736,6 +739,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"新增設定檔"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"刪除此設定檔"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"新增設定檔"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"顯示亮度"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"沒有資訊娛樂系統管理員應用程式"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"重設資訊娛樂系統"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"您的系統已收到回復原廠設定並清除所有資料的要求。您可以立即重設，否則系統將在汽車下次啟動時重設。之後，您可以設定新設定檔。"</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"立即重設"</string>
