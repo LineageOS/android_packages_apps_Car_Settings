@@ -204,7 +204,7 @@
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"పిన్‌ అక్షరాలను లేదా చిహ్నాలను కలిగి ఉంది"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"జత చేసే కోడ్‌ను టైప్ చేసి, ఆపై Return లేదా Enter నొక్కండి"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>తో జత చేయాలా?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"మీ పరిచయాలు మరియు కాల్ చరిత్రను యాక్సెస్ చేయడానికి <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ని అనుమతించండి"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"మీ కాంటాక్ట్‌లు మరియు కాల్ హిస్టరీని యాక్సెస్ చేయడానికి <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ని అనుమతించండి"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"మీరు ఈ పిన్‌ను మరో పరికరంలో కూడా టైప్ చేయాల్సి ఉండవచ్చు."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"మీరు ఈ పాస్‌కీని మరో పరికరంలో కూడా టైప్ చేయాల్సి ఉండవచ్చు."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"తప్పనిసరిగా 16 అంకెలు ఉండాలి"</string>
@@ -565,7 +565,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"పరిమిత ప్రొఫైల్‌లలో ఖాతాలను జోడించడం సాధ్యపడదు"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"ఖాతాను తీసివేయి"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ఖాతాను తీసివేయాలా?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"ఈ ఖాతాను తీసివేయడం వలన పరికరం నుండి దానికి సంబంధించిన అన్ని మెసేజ్‌లు, పరిచయాలు మరియు ఇతర డేటా తొలగించబడతాయి!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"ఈ ఖాతాను తీసివేయడం వలన పరికరం నుండి దానికి సంబంధించిన అన్ని మెసేజ్‌లు, కాంటాక్ట్‌లు మరియు ఇతర డేటా తొలగించబడతాయి!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"ఖాతాను తీసివేయడం విఫలమైంది."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"ఖాతా సింక్‌"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g>లో <xliff:g id="ID_1">%1$d</xliff:g> అంశాలకు సింక్‌ ఆన్‌లో ఉంది"</string>
@@ -704,7 +704,7 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"విస్మరించు"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"డ్రైవింగ్ చేస్తున్నప్పుడు ఈ ఫీచర్ అందుబాటులో ఉండదు"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"డ్రైవింగ్ చేస్తున్నప్పుడు, ప్రొఫైల్‌ను జోడించడం సాధ్యం కాదు"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"సెర్చ్ చేయండి"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant &amp; వాయిస్"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"డిజిటల్ అసిస్టెంట్ యాప్"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"స్క్రీన్‌పై ఉన్న టెక్స్ట్‌ను ఉపయోగించండి"</string>
