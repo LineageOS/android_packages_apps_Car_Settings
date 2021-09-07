@@ -20,11 +20,11 @@ import android.content.Context;
 import android.net.Uri;
 
 /**
- * Background worker for the {@link MobileDataTile} QCItem.
+ * Background worker for the {@link MobileDataRow} QCItem.
  */
-public class MobileDataTileWorker extends MobileDataBaseWorker<MobileDataTile> {
+public class MobileDataRowWorker extends MobileDataBaseWorker<MobileDataRow> {
 
-    public MobileDataTileWorker(Context context, Uri uri) {
+    public MobileDataRowWorker(Context context, Uri uri) {
         super(context, uri);
     }
 }
