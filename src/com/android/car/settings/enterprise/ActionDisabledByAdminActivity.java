@@ -20,6 +20,7 @@ import android.app.admin.DevicePolicyManager;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
@@ -28,10 +29,10 @@ import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
  * Shows a dialog explaining that an action is not enabled due to restrictions imposed by an active
  * device administrator.
  */
-//TODO(b/186905050): add unit tests
 public final class ActionDisabledByAdminActivity extends FragmentActivity {
 
-    private static final String FRAGMENT_TAG =
+    @VisibleForTesting
+    static final String FRAGMENT_TAG =
             "ActionDisabledByAdminActivity.ActionDisabledByAdminDialogFragment";
 
     @Override
