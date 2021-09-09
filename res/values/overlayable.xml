@@ -571,6 +571,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="accounts_settings_title"/>
       <item type="string" name="action_not_reversible_message"/>
       <item type="string" name="action_unavailable"/>
+      <item type="string" name="adas_settings_footer"/>
       <item type="string" name="add_a_profile_button_text"/>
       <item type="string" name="add_account_title"/>
       <item type="string" name="add_an_account"/>
@@ -787,10 +788,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="device_status_summary"/>
       <item type="string" name="direct_boot_unaware_dialog_message_car"/>
       <item type="string" name="disable_text"/>
-      <item type="string" name="disabled_by_policy_content_biometric_parental_consent"/>
       <item type="string" name="disabled_by_policy_title"/>
       <item type="string" name="disabled_by_policy_title_adjust_volume"/>
-      <item type="string" name="disabled_by_policy_title_biometric_parental_consent"/>
       <item type="string" name="disabled_by_policy_title_camera"/>
       <item type="string" name="disabled_by_policy_title_financed_device"/>
       <item type="string" name="disabled_by_policy_title_outgoing_calls"/>
@@ -805,6 +804,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_none"/>
       <item type="string" name="domain_urls_summary_one"/>
       <item type="string" name="domain_urls_summary_some"/>
+      <item type="string" name="driver_assistance_settings_title"/>
+      <item type="string" name="driver_assistance_warning_confirm_label"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
@@ -909,6 +910,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="license_title"/>
       <item type="string" name="link_speed"/>
       <item type="string" name="loading_wifi_list"/>
+      <item type="string" name="location_driver_assistance_toggle_off_warning"/>
+      <item type="string" name="location_driver_assistance_toggle_summary"/>
+      <item type="string" name="location_driver_assistance_toggle_title"/>
       <item type="string" name="location_settings_app_permissions_title"/>
       <item type="string" name="location_settings_footer"/>
       <item type="string" name="location_settings_recent_requests_empty_message"/>
@@ -919,12 +923,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="location_toggle_off_warning"/>
       <item type="string" name="location_toggle_title"/>
       <item type="string" name="location_use_location_title"/>
-      <item type="string" name="location_driver_assistance_toggle_off_warning"/>
-      <item type="string" name="location_driver_assistance_toggle_summary"/>
-      <item type="string" name="location_driver_assistance_toggle_title"/>
-      <item type="string" name="driver_assistance_warning_confirm_label"/>
-      <item type="string" name="driver_assistance_settings_title"/>
-      <item type="string" name="adas_settings_footer"/>
       <item type="string" name="lock_settings_enter_password"/>
       <item type="string" name="lock_settings_enter_pattern"/>
       <item type="string" name="lock_settings_enter_pin"/>
