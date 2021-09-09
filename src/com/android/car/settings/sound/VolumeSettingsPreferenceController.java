@@ -122,7 +122,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
                 VolumeSeekBarPreference volumePreference = createVolumeSeekBarPreference(
                         groupId, volumeItem.getUsage(), volumeItem.getIcon(),
                         volumeItem.getMuteIcon(), volumeItem.getTitle());
-                volumePreference.setDisabledClickListener(p -> {
+                setClickableWhileDisabled(volumePreference, /* clickable= */ true, p -> {
                     if (hasUserRestrictionByDpm(getContext(), DISALLOW_ADJUST_VOLUME)) {
                         showActionDisabledByAdminDialog();
                     } else {

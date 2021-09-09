@@ -38,11 +38,11 @@ import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.car.ui.preference.CarUiPreference;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -57,7 +57,7 @@ public class ResetNetworkEntryPreferenceControllerTest {
 
     private final Context mContext = spy(ApplicationProvider.getApplicationContext());
     private final LifecycleOwner mLifecycleOwner = new TestLifecycleOwner();
-    private ClickableWhileDisabledPreference mPreference;
+    private CarUiPreference mPreference;
     private ResetNetworkEntryPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
 
@@ -74,7 +74,7 @@ public class ResetNetworkEntryPreferenceControllerTest {
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
-        mPreference = new ClickableWhileDisabledPreference(mContext);
+        mPreference = new CarUiPreference(mContext);
         mPreferenceController = new ResetNetworkEntryPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
