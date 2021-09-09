@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.system;
+package com.android.car.settings.display;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -32,76 +33,89 @@ import static org.mockito.Mockito.when;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserManager;
+import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.common.ClickableWhileDisabledPreference;
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.common.SeekBarPreference;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
+import org.mockito.quality.Strictness;
 
-/** Unit test for {@link ResetNetworkEntryPreferenceController}. */
 @RunWith(AndroidJUnit4.class)
-public class ResetNetworkEntryPreferenceControllerTest {
-    private static final String TEST_RESTRICTION = android.os.UserManager.DISALLOW_NETWORK_RESET;
+public final class BrightnessLevelPreferenceControllerMockTest {
+    private static final String TEST_RESTRICTION =
+            android.os.UserManager.DISALLOW_CONFIG_BRIGHTNESS;
 
     private final Context mContext = spy(ApplicationProvider.getApplicationContext());
     private final LifecycleOwner mLifecycleOwner = new TestLifecycleOwner();
-    private ClickableWhileDisabledPreference mPreference;
-    private ResetNetworkEntryPreferenceController mPreferenceController;
+
+    private BrightnessLevelPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
+    private SeekBarPreference mPreference;
+    private MockitoSession mSession;
 
     @Mock
     private FragmentController mFragmentController;
     @Mock
     private UserManager mMockUserManager;
+    @Mock
+    private Toast mMockToast;
 
     @Before
+    @UiThreadTest
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
+        mSession = ExtendedMockito.mockitoSession()
+                .initMocks(this)
+                .mockStatic(Toast.class)
+                .strictness(Strictness.LENIENT)
+                .startMocking();
 
         when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
+        when(Toast.makeText(any(), anyString(), anyInt())).thenReturn(mMockToast);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
-        mPreference = new ClickableWhileDisabledPreference(mContext);
-        mPreferenceController = new ResetNetworkEntryPreferenceController(mContext,
+        mPreference = new SeekBarPreference(mContext);
+        mPreferenceController = new BrightnessLevelPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
     }
 
-    @Test
-    public void getAvailabilityStatus_nonAdminUser_disabledForUser() {
-        mockUserIsAdmin(false);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+    @After
+    @UiThreadTest
+    public void tearDown() {
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
-    public void getAvailabilityStatus_adminUser_restrictedByUm_disabledForUser() {
-        mockUserIsAdmin(true);
+    public void testGetAvailabilityStatus_restrictedByUm_disabledForUser() {
         mockUserRestrictionSetByUm(true);
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
+        assertThat(mPreference.isEnabled()).isFalse();
     }
 
     @Test
-    public void getAvailabilityStatus_adminUser_restrictedByDpm_disabledForUser() {
-        mockUserIsAdmin(true);
+    public void testGetAvailabilityStatus_restrictedByDpm_disabledForUser() {
         mockUserRestrictionSetByDpm(true);
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -111,8 +125,7 @@ public class ResetNetworkEntryPreferenceControllerTest {
     }
 
     @Test
-    public void getAvailabilityStatus_adminUser_notRestricted_available() {
-        mockUserIsAdmin(true);
+    public void testGetAvailabilityStatus_notRestricted_available() {
         mockUserRestrictionSetByDpm(false);
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -123,18 +136,24 @@ public class ResetNetworkEntryPreferenceControllerTest {
 
     @Test
     @UiThreadTest
-    public void testDisabledClick_restrictedByDpm_showDialog() {
-        mockUserIsAdmin(true);
-        mockUserRestrictionSetByDpm(true);
-
+    public void testDisabledClick_restrictedByUm_toast() {
+        mockUserRestrictionSetByUm(true);
         mPreferenceController.onCreate(mLifecycleOwner);
+
+        mPreference.performClick();
+
+        assertShowingBlockedToast();
+    }
+
+    @Test
+    @UiThreadTest
+    public void testDisabledClick_restrictedByDpm_dialog() {
+        mockUserRestrictionSetByDpm(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
         mPreference.performClick();
 
         assertShowingDisabledByAdminDialog();
-    }
-
-    private void mockUserIsAdmin(boolean isAdmin) {
-        when(mMockUserManager.isAdminUser()).thenReturn(isAdmin);
     }
 
     private void mockUserRestrictionSetByUm(boolean restricted) {
@@ -145,6 +164,13 @@ public class ResetNetworkEntryPreferenceControllerTest {
     private void mockUserRestrictionSetByDpm(boolean restricted) {
         mockUserRestrictionSetByUm(false);
         when(mMockUserManager.hasUserRestriction(TEST_RESTRICTION)).thenReturn(restricted);
+    }
+
+    private void assertShowingBlockedToast() {
+        String toastText = mContext.getResources().getString(R.string.action_unavailable);
+        ExtendedMockito.verify(
+                () -> Toast.makeText(any(), eq(toastText), anyInt()));
+        verify(mMockToast).show();
     }
 
     private void assertShowingDisabledByAdminDialog() {

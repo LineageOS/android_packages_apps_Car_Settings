@@ -30,6 +30,8 @@ import android.os.Process;
 import android.os.UserHandle;
 import android.util.IconDrawableFactory;
 
+import androidx.annotation.VisibleForTesting;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.ui.AlertDialogBuilder;
@@ -57,7 +59,8 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     private static final String EXTRA_RESTRICTION = TAG + "_restriction";
     private static final String EXTRA_USER_ID = TAG + "_userId";
 
-    private String mRestriction;
+    @VisibleForTesting
+    String mRestriction;
 
     @UserIdInt
     private int mUserId;

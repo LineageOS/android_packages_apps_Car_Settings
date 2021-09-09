@@ -31,7 +31,6 @@ import android.widget.TextView;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
-import com.android.car.ui.preference.CarUiPreference;
 import com.android.car.ui.utils.DirectManipulationHelper;
 
 /**
@@ -42,7 +41,7 @@ import com.android.car.ui.utils.DirectManipulationHelper;
  * seek bar value is changing. This can be set programmatically by using the {@link
  * #setContinuousUpdate() setContinuousUpdate} method.
  */
-public class SeekBarPreference extends CarUiPreference {
+public class SeekBarPreference extends ClickableWhileDisabledPreference {
 
     private int mSeekBarValue;
     private int mMin;
@@ -204,6 +203,8 @@ public class SeekBarPreference extends CarUiPreference {
         view.itemView.setOnKeyListener(mSeekBarKeyListener);
         view.itemView.setOnFocusChangeListener(mSeekBarFocusChangeListener);
         view.itemView.setOnGenericMotionListener(mSeekBarScrollListener);
+        view.itemView.setAllowClickWhenDisabled(true);
+
         mSeekBar = (SeekBar) view.findViewById(R.id.seekbar);
         mSeekBarValueTextView = (TextView) view.findViewById(R.id.seekbar_value);
         if (mShowSeekBarValue) {
