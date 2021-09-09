@@ -16,6 +16,13 @@
   -->
 
 <resources>
+    <!--
+        Default CarSettings icon color.
+        A color resource is used instead of an attribute since certain CarSettings drawables may be
+        used by other applications, which won't load colors specified in theme attributes.
+    -->
+    <color name="icon_color_default">@color/car_ui_text_color_primary</color>
+
     <!-- Top-level icon colors -->
     <color name="top_level_icon_default">@android:color/black</color>
     <color name="top_level_display_icon">@color/top_level_icon_default</color>
