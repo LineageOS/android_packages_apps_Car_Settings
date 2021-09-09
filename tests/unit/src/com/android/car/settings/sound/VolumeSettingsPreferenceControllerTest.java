@@ -17,11 +17,18 @@
 package com.android.car.settings.sound;
 
 import static android.car.media.CarAudioManager.PRIMARY_AUDIO_ZONE;
+import static android.os.UserManager.DISALLOW_ADJUST_VOLUME;
+
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -32,6 +39,8 @@ import android.car.CarNotConnectedException;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.media.CarAudioManager;
 import android.content.Context;
+import android.os.UserManager;
+import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.PreferenceGroup;
@@ -47,13 +56,17 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.common.SeekBarPreference;
+import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
+import org.mockito.quality.Strictness;
 
 @RunWith(AndroidJUnit4.class)
 public class VolumeSettingsPreferenceControllerTest {
@@ -65,11 +78,14 @@ public class VolumeSettingsPreferenceControllerTest {
     private static final int TEST_NEW_VOLUME = 80;
     private static final int TEST_MAX_VOLUME = 100;
 
-    private Context mContext = ApplicationProvider.getApplicationContext();
+    private static final String TEST_RESTRICTION = DISALLOW_ADJUST_VOLUME;
+
+    private final Context mContext = spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
     private PreferenceGroup mPreferenceGroup;
     private VolumeSettingsPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
+    private MockitoSession mSession;
 
     @Mock
     private FragmentController mFragmentController;
@@ -79,16 +95,24 @@ public class VolumeSettingsPreferenceControllerTest {
     private CarAudioManager mCarAudioManager;
     @Mock
     private VolumeSettingsRingtoneManager mRingtoneManager;
+    @Mock
+    private UserManager mMockUserManager;
+    @Mock
+    private Toast mMockToast;
 
     @Before
     @UiThreadTest
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
+        mSession = ExtendedMockito.mockitoSession()
+                .initMocks(this)
+                .mockStatic(Toast.class)
+                .strictness(Strictness.LENIENT)
+                .startMocking();
         when(mCar.getCarManager(Car.AUDIO_SERVICE)).thenReturn(mCarAudioManager);
         when(mCarAudioManager.getVolumeGroupCount()).thenReturn(1);
         when(mCarAudioManager.getUsagesForVolumeGroupId(GROUP_ID)).thenReturn(new int[]{1, 2});
@@ -97,6 +121,9 @@ public class VolumeSettingsPreferenceControllerTest {
         when(mCarAudioManager.getGroupMaxVolume(GROUP_ID)).thenReturn(TEST_MAX_VOLUME);
         when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(false);
 
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
+        when(Toast.makeText(any(), anyString(), anyInt())).thenReturn(mMockToast);
+
         PreferenceManager preferenceManager = new PreferenceManager(mContext);
         PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
@@ -104,6 +131,14 @@ public class VolumeSettingsPreferenceControllerTest {
         mPreferenceController = new TestVolumeSettingsPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions, mCar, mRingtoneManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
+    }
+
+    @After
+    @UiThreadTest
+    public void tearDown() {
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
@@ -216,6 +251,66 @@ public class VolumeSettingsPreferenceControllerTest {
         assertThat(preference.isMuted()).isEqualTo(true);
     }
 
+    @Test
+    public void testGetAvailabilityStatus_restrictedByUm_unavailable() {
+        mockUserRestrictionSetByUm(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_restrictedByDpm_unavailable() {
+        mockUserRestrictionSetByDpm(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unrestricted_available() {
+        mockUserRestrictionSetByDpm(false);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isTrue();
+    }
+
+    @Test
+    @UiThreadTest
+    public void testDisabledClick_restrictedByDpm_showDialog() {
+        mockUserRestrictionSetByDpm(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+
+        preference.performClick();
+
+        assertShowingDisabledByAdminDialog();
+    }
+
+    @Test
+    @UiThreadTest
+    public void testDisabledClick_restrictedByUm_showToast() {
+        mockUserRestrictionSetByUm(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+
+        preference.performClick();
+
+        assertShowingBlockedToast();
+    }
+
     private static class TestVolumeSettingsPreferenceController extends
             VolumeSettingsPreferenceController {
 
@@ -230,5 +325,27 @@ public class VolumeSettingsPreferenceControllerTest {
         public int carVolumeItemsXml() {
             return R.xml.test_car_volume_items;
         }
+    }
+
+    private void mockUserRestrictionSetByUm(boolean restricted) {
+        when(mMockUserManager.hasBaseUserRestriction(eq(TEST_RESTRICTION), any()))
+                .thenReturn(restricted);
+    }
+
+    private void mockUserRestrictionSetByDpm(boolean restricted) {
+        mockUserRestrictionSetByUm(false);
+        when(mMockUserManager.hasUserRestriction(TEST_RESTRICTION)).thenReturn(restricted);
+    }
+
+    private void assertShowingDisabledByAdminDialog() {
+        verify(mFragmentController).showDialog(any(ActionDisabledByAdminDialogFragment.class),
+                eq(DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG));
+    }
+
+    private void assertShowingBlockedToast() {
+        String toastText = mContext.getString(R.string.action_unavailable);
+        ExtendedMockito.verify(
+                () -> Toast.makeText(any(), eq(toastText), anyInt()));
+        verify(mMockToast).show();
     }
 }
