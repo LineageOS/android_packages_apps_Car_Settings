@@ -17,63 +17,14 @@
 package com.android.car.settings.qc;
 
 import android.content.Context;
-import android.database.ContentObserver;
 import android.net.Uri;
-import android.os.Handler;
-import android.os.Looper;
-import android.provider.Settings;
-import android.telephony.SubscriptionManager;
-import android.telephony.TelephonyManager;
-
-import java.io.IOException;
 
 /**
  * Background worker for the {@link MobileDataTile} QCItem.
  */
-public class MobileDataTileWorker extends SettingsQCBackgroundWorker<MobileDataTile> {
-
-    private final int mSubId;
-    private final ContentObserver mMobileDataChangeObserver = new ContentObserver(
-            new Handler(Looper.getMainLooper())) {
-        @Override
-        public void onChange(boolean selfChange) {
-            super.onChange(selfChange);
-            notifyQCItemChange();
-        }
-    };
+public class MobileDataTileWorker extends MobileDataBaseWorker<MobileDataTile> {
 
     public MobileDataTileWorker(Context context, Uri uri) {
         super(context, uri);
-        mSubId = SubscriptionManager.getDefaultDataSubscriptionId();
-    }
-
-    @Override
-    protected void onQCItemSubscribe() {
-        if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
-            getContext().getContentResolver().registerContentObserver(getObservableUri(mSubId),
-                    /* notifyForDescendants= */ false, mMobileDataChangeObserver);
-        }
-    }
-
-    @Override
-    protected void onQCItemUnsubscribe() {
-        if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
-            getContext().getContentResolver().unregisterContentObserver(mMobileDataChangeObserver);
-        }
-    }
-
-    @Override
-    public void close() throws IOException {
-        if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
-            getContext().getContentResolver().unregisterContentObserver(mMobileDataChangeObserver);
-        }
-    }
-
-    private Uri getObservableUri(int subId) {
-        Uri uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA);
-        if (TelephonyManager.from(getContext()).getSimCount() != 1) {
-            uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA + subId);
-        }
-        return uri;
     }
 }
