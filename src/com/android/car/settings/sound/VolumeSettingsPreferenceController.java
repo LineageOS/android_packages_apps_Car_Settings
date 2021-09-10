@@ -42,7 +42,6 @@ import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
@@ -123,7 +122,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
                 VolumeSeekBarPreference volumePreference = createVolumeSeekBarPreference(
                         groupId, volumeItem.getUsage(), volumeItem.getIcon(),
                         volumeItem.getMuteIcon(), volumeItem.getTitle());
-                volumePreference.setDisabledClickListener(p -> {
+                setClickableWhileDisabled(volumePreference, /* clickable= */ true, p -> {
                     if (hasUserRestrictionByDpm(getContext(), DISALLOW_ADJUST_VOLUME)) {
                         showActionDisabledByAdminDialog();
                     } else {
@@ -173,10 +172,10 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
         preference.setTitle(getContext().getString(titleId));
         preference.setUnMutedIcon(getContext().getDrawable(primaryIconResId));
         preference.getUnMutedIcon().setTintList(
-                Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
+                getContext().getColorStateList(R.color.icon_color_default));
         preference.setMutedIcon(getContext().getDrawable(secondaryIconResId));
         preference.getMutedIcon().setTintList(
-                Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
+                getContext().getColorStateList(R.color.icon_color_default));
         try {
             preference.setValue(mCarAudioManager.getGroupVolume(volumeGroupId));
             preference.setMin(mCarAudioManager.getGroupMinVolume(volumeGroupId));
