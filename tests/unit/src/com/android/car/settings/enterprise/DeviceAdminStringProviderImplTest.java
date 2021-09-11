@@ -16,7 +16,9 @@
 
 package com.android.car.settings.enterprise;
 
-import static org.junit.Assert.assertEquals;
+import static com.google.common.truth.Truth.assertThat;
+
+import static org.testng.Assert.expectThrows;
 
 import android.content.Context;
 
@@ -25,90 +27,88 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
 public class DeviceAdminStringProviderImplTest {
-    private DeviceAdminStringProviderImpl mDeviceAdminStringProvider;
-    private Context mContext;
 
-    @Before
-    public void setUp() {
-        mContext = ApplicationProvider.getApplicationContext();
-        mDeviceAdminStringProvider = new DeviceAdminStringProviderImpl(mContext);
-    }
+    private final Context mContext = ApplicationProvider.getApplicationContext();
+    private final DeviceAdminStringProviderImpl mDeviceAdminStringProvider =
+            new DeviceAdminStringProviderImpl(mContext);
 
     @Test
     public void testDefaultDisabledByPolicyTitle() {
-        assertEquals(mDeviceAdminStringProvider.getDefaultDisabledByPolicyTitle(),
-                mContext.getString(R.string.disabled_by_policy_title));
+        assertThat(mDeviceAdminStringProvider.getDefaultDisabledByPolicyTitle())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title));
     }
 
     @Test
     public void testDisallowAdjustVolumeTitle() {
-        assertEquals(mDeviceAdminStringProvider.getDisallowAdjustVolumeTitle(),
-                mContext.getString(R.string.disabled_by_policy_title_adjust_volume));
+        assertThat(mDeviceAdminStringProvider.getDisallowAdjustVolumeTitle())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title_adjust_volume));
     }
 
     @Test
     public void testDisallowOutgoingCallsTitle() {
-        assertEquals(mDeviceAdminStringProvider.getDisallowOutgoingCallsTitle(),
-                mContext.getString(R.string.disabled_by_policy_title_outgoing_calls));
+        assertThat(mDeviceAdminStringProvider.getDisallowOutgoingCallsTitle())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title_outgoing_calls));
     }
 
     @Test
     public void testDisallowSmsTitle() {
-        assertEquals(mDeviceAdminStringProvider.getDisallowSmsTitle(),
-                mContext.getString(R.string.disabled_by_policy_title_sms));
+        assertThat(mDeviceAdminStringProvider.getDisallowSmsTitle())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title_sms));
     }
 
     @Test
     public void testDisableCameraTitle() {
-        assertEquals(mDeviceAdminStringProvider.getDisableCameraTitle(),
-                mContext.getString(R.string.disabled_by_policy_title_camera));
+        assertThat(mDeviceAdminStringProvider.getDisableCameraTitle())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title_camera));
     }
 
     @Test
     public void testDisableScreenCaptureTitle() {
-        assertEquals(mDeviceAdminStringProvider.getDisableScreenCaptureTitle(),
-                mContext.getString(R.string.disabled_by_policy_title_screen_capture));
+        assertThat(mDeviceAdminStringProvider.getDisableScreenCaptureTitle())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title_screen_capture));
     }
 
     @Test
     public void testSuspendPackagesTitle() {
-        assertEquals(mDeviceAdminStringProvider.getSuspendPackagesTitle(),
-                mContext.getString(R.string.disabled_by_policy_title_suspend_packages));
+        assertThat(mDeviceAdminStringProvider.getSuspendPackagesTitle())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title_suspend_packages));
     }
 
     @Test
     public void testDefaultDisabledByPolicyContent() {
-        assertEquals(mDeviceAdminStringProvider.getDefaultDisabledByPolicyContent(),
-                mContext.getString(R.string.default_admin_support_msg));
+        assertThat(mDeviceAdminStringProvider.getDefaultDisabledByPolicyContent())
+                .isEqualTo(mContext.getString(R.string.default_admin_support_msg));
     }
 
     @Test
     public void testLearnMoreHelpPageUrl() {
-        assertEquals(mDeviceAdminStringProvider.getLearnMoreHelpPageUrl(),
-                mContext.getString(R.string.help_url_action_disabled_by_it_admin));
+        assertThat(mDeviceAdminStringProvider.getLearnMoreHelpPageUrl())
+                .isEqualTo(mContext.getString(R.string.help_url_action_disabled_by_it_admin));
     }
 
     @Test
     public void testDisabledByPolicyTitleForFinancedDevice() {
-        assertEquals(mDeviceAdminStringProvider.getDisabledByPolicyTitleForFinancedDevice(),
-                mContext.getString(R.string.disabled_by_policy_title_financed_device));
+        assertThat(mDeviceAdminStringProvider.getDisabledByPolicyTitleForFinancedDevice())
+                .isEqualTo(mContext.getString(R.string.disabled_by_policy_title_financed_device));
     }
 
     @Test
     public void testDisabledBiometricsParentConsentTitle() {
-        assertEquals(mDeviceAdminStringProvider.getDisabledBiometricsParentConsentTitle(),
-                mContext.getString(R.string.disabled_by_policy_title_biometric_parental_consent));
+        UnsupportedOperationException e = expectThrows(UnsupportedOperationException.class,
+                () -> mDeviceAdminStringProvider.getDisabledBiometricsParentConsentTitle());
+        assertThat(e.getMessage()).contains("disabled_by_policy_title_biometric_parental_consent");
     }
 
     @Test
     public void testDisabledBiometricsParentConsentContent() {
-        assertEquals(mDeviceAdminStringProvider.getDisabledBiometricsParentConsentContent(),
-                mContext.getString(R.string.disabled_by_policy_content_biometric_parental_consent));
+        UnsupportedOperationException e = expectThrows(UnsupportedOperationException.class,
+                () -> mDeviceAdminStringProvider.getDisabledBiometricsParentConsentContent());
+        assertThat(e.getMessage())
+                .contains("disabled_by_policy_content_biometric_parental_consent");
     }
 }
