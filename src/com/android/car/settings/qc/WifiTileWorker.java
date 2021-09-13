@@ -18,85 +18,12 @@ package com.android.car.settings.qc;
 
 import android.content.Context;
 import android.net.Uri;
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.os.Looper;
-import android.os.Process;
-
-import androidx.annotation.NonNull;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.LifecycleRegistry;
-
-import com.android.car.settings.wifi.WifiUtil;
-import com.android.wifitrackerlib.WifiPickerTracker;
-
-import java.io.IOException;
 
 /**
  * Background worker for the {@link WifiTile} QCItem.
  */
-public class WifiTileWorker extends SettingsQCBackgroundWorker<WifiTile> implements
-        LifecycleOwner, WifiPickerTracker.WifiPickerTrackerCallback {
-
-    private static final String TAG = "WifiTileWorker";
-
-    private final LifecycleRegistry mLifecycleRegistry;
-    private final WifiPickerTracker mWifiPickerTracker;
-    private final HandlerThread mWorkerThread;
-
+public class WifiTileWorker extends WifiBaseWorker<WifiTile> {
     public WifiTileWorker(Context context, Uri uri) {
         super(context, uri);
-        mLifecycleRegistry = new LifecycleRegistry(/* provider= */ this);
-
-        mWorkerThread = new HandlerThread(TAG
-                + "{" + Integer.toHexString(System.identityHashCode(this)) + "}",
-                Process.THREAD_PRIORITY_BACKGROUND);
-        mWorkerThread.start();
-        mWifiPickerTracker = WifiUtil.createWifiPickerTracker(mLifecycleRegistry, context,
-                new Handler(Looper.getMainLooper()),
-                mWorkerThread.getThreadHandler(), /* listener= */ this);
-
-        mLifecycleRegistry.setCurrentState(Lifecycle.State.CREATED);
-    }
-
-    @Override
-    protected void onQCItemSubscribe() {
-        mLifecycleRegistry.setCurrentState(Lifecycle.State.RESUMED);
-    }
-
-    @Override
-    protected void onQCItemUnsubscribe() {
-        mLifecycleRegistry.setCurrentState(Lifecycle.State.CREATED);
-    }
-
-    @Override
-    public void close() throws IOException {
-        mWorkerThread.quit();
-        mLifecycleRegistry.setCurrentState(Lifecycle.State.DESTROYED);
-    }
-
-    @NonNull
-    @Override
-    public Lifecycle getLifecycle() {
-        return mLifecycleRegistry;
-    }
-
-    @Override
-    public void onWifiStateChanged() {
-        notifyQCItemChange();
-    }
-
-    @Override
-    public void onWifiEntriesChanged() {
-        notifyQCItemChange();
-    }
-
-    @Override
-    public void onNumSavedNetworksChanged() {
-    }
-
-    @Override
-    public void onNumSavedSubscriptionsChanged() {
     }
 }
