@@ -910,6 +910,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".notifications.NotificationAccessConfirmationActivity"
+            android:exported="true"
+            android:taskAffinity="com.android.car.settings.notifications.NotificationAccessConfirmationActivity"
+            android:theme="@style/ActionDialogTheme"
+            />
+
         <activity android:name=".enterprise.ActionDisabledByAdminActivity"
                 android:theme="@style/ActionDialogTheme"
                 android:taskAffinity=".enterprise"
