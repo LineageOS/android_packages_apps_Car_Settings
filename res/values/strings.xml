@@ -43,11 +43,14 @@
     <string name="mobile_network_settings">Mobile network</string>
     <!-- Summary of the 'Mobile network' item on the Network & internet page when there is more than
          one mobile service configured (aka "dual SIM") - it shows a count of SIM/eSIM and tapping
-         it leads to a page showing a list of the mobile service subscriptions. [CHAR LIMIT=40] -->
-    <plurals name="mobile_network_summary_count">
-        <item quantity="one"><xliff:g id="count" example="1">%1$d</xliff:g> SIM</item>
-        <item quantity="other"><xliff:g id="count" example="2">%1$d</xliff:g> SIMs</item>
-    </plurals>
+         it leads to a page showing a list of the mobile service subscriptions. (ICU syntax)
+         [CHAR LIMIT=40] -->
+    <string name="mobile_network_summary_count">
+        {count, plural,
+            =1    {# SIM}
+            other {# SIMs}
+        }
+    </string>
     <!-- Summary for an item in the page listing multiple mobile service subscriptions, indicating
          that service is active and is tied to a physical SIM card [CHAR LIMIT=40] -->
     <string name="mobile_network_active_sim">Active / SIM</string>
@@ -106,11 +109,13 @@
     <string name="cell_data_limit"><xliff:g name="amount" example="1 GB">^1</xliff:g> data limit</string>
     <!-- Format for a summary describing the amount of data before the user is warned or limited [CHAR LIMIT=80] -->
     <string name="cell_data_warning_and_limit"><xliff:g name="amount" example="1 GB">^1</xliff:g> data warning / <xliff:g name="amount" example="2 GB">^2</xliff:g> data limit</string>
-    <!-- Informational text about time left in billing cycle [CHAR LIMIT=40] -->
-    <plurals name="billing_cycle_days_left">
-        <item quantity="one">%d day left</item>
-        <item quantity="other">%d days left</item>
-    </plurals>
+    <!-- Informational text about time left in billing cycle (ICU syntax) [CHAR LIMIT=40] -->
+    <string name="billing_cycle_days_left">
+        {count, plural,
+            =1    {# day left}
+            other {# days left}
+        }
+    </string>
     <!-- Informational text about time left in billing cycle [CHAR LIMIT=40] -->
     <string name="billing_cycle_none_left">No time remaining</string>
     <!-- Informational text about time left in billing cycle [CHAR LIMIT=40] -->
@@ -681,11 +686,13 @@
     <string name="runtime_permissions_summary_no_permissions_requested">No permissions requested</string>
     <!-- Label for showing apps that have not been used for months. [CHAR LIMIT=40]-->
     <string name="unused_apps">Unused apps</string>
-    <!-- Summary of number of apps that have not been used for months. [CHAR LIMIT=40]-->
-    <plurals name="unused_apps_summary">
-        <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> unused app</item>
-        <item quantity="other"><xliff:g id="count" example="10">%d</xliff:g> unused apps</item>
-    </plurals>
+    <!-- Summary of number of apps that have not been used for months. (ICU syntax) [CHAR LIMIT=40]-->
+    <string name="unused_apps_summary">
+        {count, plural,
+            =1    {# unused app}
+            other {# unused apps}
+        }
+    </string>
     <!-- Label of a switch preference that controls whether the system will remove the permissions and free up space when the app has not been used for months [CHAR LIMIT=40]-->
     <string name="unused_apps_switch">Remove permissions and free up space</string>
     <!-- Application's internal storage size preference summary. [CHAR LIMIT=40] -->
@@ -697,11 +704,13 @@
     <!-- Activity title for Appk data usage summary. [CHAR LIMIT=25] -->
     <string name="data_usage_app_summary_title">App data usage</string>
     <string name="computing_size">Computing\u2026</string>
-    <!-- Runtime permissions preference summary.  Number of additional permissions granted. [CHAR LIMIT=40] -->
-    <plurals name="runtime_permissions_additional_count">
-        <item quantity="one"><xliff:g example="1" id="count">%d</xliff:g> additional permission</item>
-        <item quantity="other"><xliff:g example="10" id="count">%d</xliff:g> additional permissions</item>
-    </plurals>
+    <!-- Runtime permissions preference summary.  Number of additional permissions granted. (ICU syntax) [CHAR LIMIT=40] -->
+    <string name="runtime_permissions_additional_count">
+        {count, plural,
+            =1    {# additional permission}
+            other {# additional permissions}
+        }
+    </string>
     <!-- Dialog body explaining that the app just selected by the user will not work after a reboot until after the user enters their credentials, such as a PIN or password. [CHAR LIMIT=NONE] -->
     <string name="direct_boot_unaware_dialog_message_car">Note: After a reboot, this app can\'t start until you unlock your vehicle.</string>
     <!-- Assistant and voice input settings title. This setting goes into the manage assistant settings page. [CHAR LIMIT=40] -->
@@ -895,19 +904,13 @@
     Please note that the distinction between singular and plural of this sentence only depends on
     the quantity of "permitted_location_app_count" ("has" vs "have"). The quantity of
     "total_location_app_count" is almost always greater than 1, so "apps" is always in plural form.
-    [CHAR LIMIT=100]-->
-    <plurals name="microphone_app_permission_summary_microphone_on">
-        <item quantity="one">
-            <xliff:g id="permitted_location_app_count">%1$d</xliff:g>
-            of
-            <xliff:g id="total_location_app_count">%2$d</xliff:g>
-            apps has access</item>
-        <item quantity="other">
-            <xliff:g id="permitted_location_app_count">%1$d</xliff:g>
-            of
-            <xliff:g id="total_location_app_count">%2$d</xliff:g>
-            apps have access</item>
-    </plurals>
+    (ICU syntax) [CHAR LIMIT=100]-->
+    <string name="microphone_app_permission_summary_microphone_on">
+        {count, plural,
+            =1    {# of {total_count} apps has access}
+            other {# of {total_count} apps have access}
+        }
+    </string>
     <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
     <string name="microphone_settings_recent_requests_title">Recently accessed</string>
     <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
@@ -1005,11 +1008,13 @@
     <string name="settings_license_activity_loading">Loading\u2026</string>
 
     <!-- Developer Settings -->
-    <!-- Device Info screen. Countdown for user taps to enable development settings. [CHAR LIMIT=NONE] -->
-    <plurals name="show_dev_countdown">
-        <item quantity="one">You are now <xliff:g id="step_count">%1$d</xliff:g> step away from being a developer.</item>
-        <item quantity="other">You are now <xliff:g id="step_count">%1$d</xliff:g> steps away from being a developer.</item>
-    </plurals>
+    <!-- Device Info screen. Countdown for user taps to enable development settings. (ICU syntax) [CHAR LIMIT=NONE] -->
+    <string name="show_dev_countdown">
+        {count, plural,
+            =1    {You are now # step away from being a developer.}
+            other {You are now # steps away from being a developer.}
+        }
+    </string>
     <!-- Device Info screen. Confirmation that developer settings are enabled. [CHAR LIMIT=NONE] -->
     <string name="show_dev_on">You are now a developer!</string>
     <!-- Device Info screen. Okay we get it, stop pressing, you already have it on. [CHAR LIMIT=NONE] -->
@@ -1171,11 +1176,13 @@
     <string name="user_add_user_message_update">Apps can be updated from any profile for use by all other profiles.</string>
     <!-- Title for the dialog that lets users know that the maximum allowed number of profiles on the device has been reached. [CHAR LIMIT=35]-->
     <string name="user_limit_reached_title">Profile limit reached</string>
-    <!-- Message that tells people what's the maximum number of profiles allowed on the device. [CHAR_LIMIT=NONE]-->
-    <plurals name="user_limit_reached_message">
-        <item quantity="one">Only one profile can be created.</item>
-        <item quantity="other">You can create up to <xliff:g example="3" id="count">%d</xliff:g> profiles.</item>
-    </plurals>
+    <!-- Message that tells people what's the maximum number of profiles allowed on the device. (ICU syntax) [CHAR_LIMIT=NONE]-->
+    <string name="user_limit_reached_message">
+        {count, plural,
+            =1    {Only one profile can be created.}
+            other {You can create up to # profiles.}
+        }
+    </string>
     <!-- Title of the alert dialog to notify that the creation of new profile has failed. [CHAR LIMIT=40] -->
     <string name="add_user_error_title">Couldn\'t create new profile</string>
 
@@ -1491,42 +1498,6 @@
     <!-- Error shown when in PASSWORD doesn't meet requirement. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_invalid_password">Password invalid, must be at least 4 characters.</string>
 
-    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of letters [CHAR LIMIT=NONE] -->
-    <plurals name="lockpassword_password_requires_letters">
-        <item quantity="one">Must contain at least 1 letter</item>
-        <item quantity="other">Must contain at least <xliff:g example="3" id="count">%d</xliff:g> letters</item>
-    </plurals>
-
-    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of lowercase letters [CHAR LIMIT=NONE] -->
-    <plurals name="lockpassword_password_requires_lowercase">
-        <item quantity="one">Must contain at least 1 lowercase letter</item>
-        <item quantity="other">Must contain at least <xliff:g example="3" id="count">%d</xliff:g> lowercase letters</item>
-    </plurals>
-
-    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of uppercase letters [CHAR LIMIT=NONE] -->
-    <plurals name="lockpassword_password_requires_uppercase">
-        <item quantity="one">Must contain at least 1 uppercase letter</item>
-        <item quantity="other">Must contain at least <xliff:g example="3" id="count">%d</xliff:g> uppercase letters</item>
-    </plurals>
-
-    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of numerical digits [CHAR LIMIT=NONE] -->
-    <plurals name="lockpassword_password_requires_numeric">
-        <item quantity="one">Must contain at least 1 numerical digit</item>
-        <item quantity="other">Must contain at least <xliff:g example="3" id="count">%d</xliff:g> numerical digits</item>
-    </plurals>
-
-    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of special symbols [CHAR LIMIT=NONE] -->
-    <plurals name="lockpassword_password_requires_symbols">
-        <item quantity="one">Must contain at least 1 special symbol</item>
-        <item quantity="other">Must contain at least <xliff:g example="3" id="count">%d</xliff:g> special symbols</item>
-    </plurals>
-
-    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of non-letter characters [CHAR LIMIT=NONE] -->
-    <plurals name="lockpassword_password_requires_nonletter">
-        <item quantity="one">Must contain at least 1 non-letter character</item>
-        <item quantity="other">Must contain at least <xliff:g example="3" id="count">%d</xliff:g> non-letter characters</item>
-    </plurals>
-
     <!-- Error shown when in PASSWORD mode and password has been used recently. Please keep this string short! [CHAR LIMIT=NONE] -->
     <string name="lockpassword_password_recently_used">Device admin doesn\'t allow using a recent password</string>
 
@@ -1707,10 +1678,12 @@
     <!-- Title of preference to manage device admin apps, which are used by IT admins to manage devices. [CHAR LIMIT=40] -->
     <string name="manage_device_admin">Vehicle admin apps</string>
     <!-- Summary of preference to manage device admin apps, informing the user how many device admin apps are installed and active -->
-    <plurals name="number_of_device_admins">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> active app</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> active apps</item>
-    </plurals>
+    <string name="number_of_device_admins">
+        {count, plural,
+        =1    {# active app}
+        other {# active apps}
+        }
+    </string>
     <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
     <string name="number_of_device_admins_none">No active apps</string>
     <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined --><skip/>

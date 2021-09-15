@@ -542,20 +542,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
-      <item type="plurals" name="billing_cycle_days_left"/>
-      <item type="plurals" name="lockpassword_password_requires_letters"/>
-      <item type="plurals" name="lockpassword_password_requires_lowercase"/>
-      <item type="plurals" name="lockpassword_password_requires_nonletter"/>
-      <item type="plurals" name="lockpassword_password_requires_numeric"/>
-      <item type="plurals" name="lockpassword_password_requires_symbols"/>
-      <item type="plurals" name="lockpassword_password_requires_uppercase"/>
-      <item type="plurals" name="microphone_app_permission_summary_microphone_on"/>
-      <item type="plurals" name="mobile_network_summary_count"/>
-      <item type="plurals" name="number_of_device_admins"/>
-      <item type="plurals" name="runtime_permissions_additional_count"/>
-      <item type="plurals" name="show_dev_countdown"/>
-      <item type="plurals" name="unused_apps_summary"/>
-      <item type="plurals" name="user_limit_reached_message"/>
       <item type="string" name="about_settings"/>
       <item type="string" name="about_settings_summary"/>
       <item type="string" name="about_summary"/>
@@ -637,6 +623,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="autofill_settings_title"/>
       <item type="string" name="backspace_key"/>
       <item type="string" name="baseband_version"/>
+      <item type="string" name="billing_cycle_days_left"/>
       <item type="string" name="billing_cycle_less_than_one_day_left"/>
       <item type="string" name="billing_cycle_none_left"/>
       <item type="string" name="bluetooth_ask_disablement"/>
@@ -970,6 +957,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="media_volume_title"/>
       <item type="string" name="memory_calculating_size"/>
       <item type="string" name="microphone_app_permission_summary_microphone_off"/>
+      <item type="string" name="microphone_app_permission_summary_microphone_on"/>
       <item type="string" name="microphone_manage_permissions"/>
       <item type="string" name="microphone_no_recent_access"/>
       <item type="string" name="microphone_recently_accessed"/>
@@ -985,6 +973,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="mobile_network_inactive_sim"/>
       <item type="string" name="mobile_network_list_add_more"/>
       <item type="string" name="mobile_network_settings"/>
+      <item type="string" name="mobile_network_summary_count"/>
       <item type="string" name="mobile_network_toggle_summary"/>
       <item type="string" name="mobile_network_toggle_title"/>
       <item type="string" name="model_info"/>
@@ -1025,6 +1014,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="notifications_all_apps"/>
       <item type="string" name="notifications_label"/>
       <item type="string" name="notifications_recently_sent"/>
+      <item type="string" name="number_of_device_admins"/>
       <item type="string" name="number_of_device_admins_none"/>
       <item type="string" name="okay"/>
       <item type="string" name="one"/>
@@ -1084,6 +1074,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="roaming_summary"/>
       <item type="string" name="roaming_title"/>
       <item type="string" name="roaming_warning"/>
+      <item type="string" name="runtime_permissions_additional_count"/>
       <item type="string" name="runtime_permissions_summary_no_permissions_granted"/>
       <item type="string" name="runtime_permissions_summary_no_permissions_requested"/>
       <item type="string" name="safety_and_regulatory_info"/>
@@ -1112,6 +1103,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="share_remote_bugreport_dialog_title"/>
       <item type="string" name="sharing_remote_bugreport_dialog_message"/>
       <item type="string" name="show_dev_already"/>
+      <item type="string" name="show_dev_countdown"/>
       <item type="string" name="show_dev_on"/>
       <item type="string" name="show_password"/>
       <item type="string" name="show_system"/>
@@ -1256,6 +1248,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="units_unit_name_year"/>
       <item type="string" name="units_volume_title"/>
       <item type="string" name="unused_apps"/>
+      <item type="string" name="unused_apps_summary"/>
       <item type="string" name="unused_apps_switch"/>
       <item type="string" name="usage_access_description"/>
       <item type="string" name="usage_access_title"/>
@@ -1269,6 +1262,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="user_cannot_add_accounts_message"/>
       <item type="string" name="user_details_admin_title"/>
       <item type="string" name="user_guest"/>
+      <item type="string" name="user_limit_reached_message"/>
       <item type="string" name="user_limit_reached_title"/>
       <item type="string" name="user_name_label"/>
       <item type="string" name="user_new_user_name"/>
