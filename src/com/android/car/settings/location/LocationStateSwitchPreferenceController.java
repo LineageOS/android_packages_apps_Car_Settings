@@ -31,7 +31,7 @@ import android.widget.Toast;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
+import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PowerPolicyListener;
@@ -42,7 +42,7 @@ import com.android.settingslib.Utils;
  * Enables/disables location state via SwitchPreference.
  */
 public class LocationStateSwitchPreferenceController extends
-        PreferenceController<ClickableWhileDisabledSwitchPreference> {
+        PreferenceController<ColoredSwitchPreference> {
 
     private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
             new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
@@ -73,17 +73,17 @@ public class LocationStateSwitchPreferenceController extends
     }
 
     @Override
-    protected Class<ClickableWhileDisabledSwitchPreference> getPreferenceType() {
-        return ClickableWhileDisabledSwitchPreference.class;
+    protected Class<ColoredSwitchPreference> getPreferenceType() {
+        return ColoredSwitchPreference.class;
     }
 
     @Override
-    protected void updateState(ClickableWhileDisabledSwitchPreference preference) {
+    protected void updateState(ColoredSwitchPreference preference) {
         updateSwitchPreference(preference, mLocationManager.isLocationEnabled());
     }
 
     @Override
-    protected boolean handlePreferenceChanged(ClickableWhileDisabledSwitchPreference preference,
+    protected boolean handlePreferenceChanged(ColoredSwitchPreference preference,
             Object newValue) {
         boolean locationEnabled = (Boolean) newValue;
         if (!locationEnabled) {
@@ -103,7 +103,7 @@ public class LocationStateSwitchPreferenceController extends
     protected void onCreateInternal() {
         getPreference().setContentDescription(
                 getContext().getString(R.string.location_state_switch_content_description));
-        getPreference().setDisabledClickListener(p ->
+        setClickableWhileDisabled(getPreference(), /* clickable= */ true, p ->
                 Toast.makeText(getContext(),
                         getContext().getString(R.string.power_component_disabled),
                         Toast.LENGTH_LONG).show());
@@ -129,12 +129,12 @@ public class LocationStateSwitchPreferenceController extends
         mPowerPolicyListener.release();
     }
 
-    private void updateSwitchPreference(ClickableWhileDisabledSwitchPreference preference,
+    private void updateSwitchPreference(ColoredSwitchPreference preference,
             boolean enabled) {
         preference.setChecked(enabled);
     }
 
-    private void enableSwitchPreference(ClickableWhileDisabledSwitchPreference preference,
+    private void enableSwitchPreference(ColoredSwitchPreference preference,
             boolean enabled) {
         preference.setEnabled(enabled);
     }

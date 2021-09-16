@@ -39,16 +39,17 @@ import android.os.UserManager;
 import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.Preference;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
@@ -65,7 +66,7 @@ import org.mockito.quality.Strictness;
 public class FactoryResetEntryPreferenceControllerTest {
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
-    private ClickableWhileDisabledPreference mPreference;
+    private Preference mPreference;
     private FactoryResetEntryPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
     private MockitoSession mSession;
@@ -95,7 +96,7 @@ public class FactoryResetEntryPreferenceControllerTest {
 
         when(Toast.makeText(any(), anyString(), anyInt())).thenReturn(mMockToast);
 
-        mPreference = new ClickableWhileDisabledPreference(mContext);
+        mPreference = new CarUiPreference(mContext);
         mPreferenceController = new FactoryResetEntryPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
