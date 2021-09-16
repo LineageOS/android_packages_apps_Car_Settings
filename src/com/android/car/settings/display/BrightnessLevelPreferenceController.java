@@ -63,7 +63,7 @@ public class BrightnessLevelPreferenceController extends PreferenceController<Se
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-        getPreference().setDisabledClickListener(p -> {
+        setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> {
             if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_BRIGHTNESS)) {
                 showActionDisabledByAdminDialog();
             } else {

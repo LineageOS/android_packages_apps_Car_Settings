@@ -42,7 +42,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
-import com.android.car.settings.common.ClickableWhileDisabledSwitchPreference;
+import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
@@ -85,7 +85,7 @@ public class LocationStateSwitchPreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mUserHandle = UserHandle.of(UserHandle.myUserId());
 
-        mSwitchPreference = new ClickableWhileDisabledSwitchPreference(mContext);
+        mSwitchPreference = new ColoredSwitchPreference(mContext);
         mPreferenceController = new LocationStateSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);

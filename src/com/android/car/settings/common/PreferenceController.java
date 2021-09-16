@@ -23,12 +23,14 @@ import android.widget.Toast;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.ClickableWhileDisabledPreference;
 import com.android.car.ui.preference.UxRestrictablePreference;
 
 import java.lang.annotation.Retention;
@@ -36,6 +38,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Consumer;
 
 /**
  * Controller which encapsulates the business logic associated with a {@link Preference}. All car
@@ -497,6 +500,32 @@ public abstract class PreferenceController<V extends Preference> implements
             PreferenceGroup preferenceGroup = (PreferenceGroup) preference;
             for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
                 restrictPreference(preferenceGroup.getPreference(i), restrict);
+            }
+        }
+    }
+
+    /**
+     * Updates the clickable while disabled state and action for a preference. This will also
+     * update all child preferences with the same state and action when {@param preference}
+     * is a PreferenceGroup.
+     *
+     * @param preference the preference to update
+     * @param clickable whether or not the preference should be clickable when disabled
+     * @param disabledClickAction the action that should be taken when clicked while disabled
+     */
+    protected void setClickableWhileDisabled(Preference preference, boolean clickable,
+            @Nullable Consumer<Preference> disabledClickAction) {
+        if (preference instanceof ClickableWhileDisabledPreference) {
+            ClickableWhileDisabledPreference pref =
+                    (ClickableWhileDisabledPreference) preference;
+            pref.setClickableWhileDisabled(clickable);
+            pref.setDisabledClickListener(disabledClickAction);
+        }
+        if (preference instanceof PreferenceGroup) {
+            PreferenceGroup preferenceGroup = (PreferenceGroup) preference;
+            for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
+                setClickableWhileDisabled(preferenceGroup.getPreference(i), clickable,
+                        disabledClickAction);
             }
         }
     }
