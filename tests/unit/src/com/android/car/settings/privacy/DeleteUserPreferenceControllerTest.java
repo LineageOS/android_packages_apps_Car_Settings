@@ -32,11 +32,11 @@ import android.content.Context;
 import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.Preference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.profiles.RemoveProfileHandler;
@@ -54,7 +54,7 @@ import org.mockito.MockitoSession;
 public class DeleteUserPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private Context mContext = ApplicationProvider.getApplicationContext();
-    private ClickableWhileDisabledPreference mPreference;
+    private Preference mPreference;
     private DeleteUserPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
 
@@ -71,7 +71,7 @@ public class DeleteUserPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mPreference = new ClickableWhileDisabledPreference(mContext);
+        mPreference = new Preference(mContext);
         mPreferenceController = new DeleteUserPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
                 mRemoveProfileHandler);

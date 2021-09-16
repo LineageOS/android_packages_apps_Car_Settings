@@ -26,8 +26,9 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.widget.Toast;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.ClickableWhileDisabledPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.enterprise.EnterpriseUtils;
@@ -37,7 +38,7 @@ import com.android.car.settings.enterprise.EnterpriseUtils;
  * user status.
  */
 public class FactoryResetEntryPreferenceController
-        extends PreferenceController<ClickableWhileDisabledPreference> {
+        extends PreferenceController<Preference> {
 
     public FactoryResetEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -45,14 +46,14 @@ public class FactoryResetEntryPreferenceController
     }
 
     @Override
-    protected Class<ClickableWhileDisabledPreference> getPreferenceType() {
-        return ClickableWhileDisabledPreference.class;
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-        getPreference().setDisabledClickListener(p -> {
+        setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> {
             if (hasUserRestrictionByDpm(getContext(), DISALLOW_FACTORY_RESET)) {
                 showActionDisabledByAdminDialog();
             } else {
