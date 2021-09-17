@@ -16,14 +16,14 @@
 
 package com.android.car.settings.qc;
 
-import android.content.Context;
-import android.net.Uri;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-/**
- * Background worker for the {@link WifiRow} QCItem.
- */
-public class WifiRowWorker extends WifiBaseWorker<WifiRow> {
-    public WifiRowWorker(Context context, Uri uri) {
-        super(context, uri);
+import org.junit.runner.RunWith;
+
+@RunWith(AndroidJUnit4.class)
+public class WifiRowWorkerTest extends WifiBaseWorkerTestCase<WifiRowWorker> {
+    @Override
+    protected WifiRowWorker getWorker() {
+        return new WifiRowWorker(mContext, SettingsQCRegistry.WIFI_ROW_URI);
     }
 }
