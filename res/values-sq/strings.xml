@@ -387,20 +387,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Vendndodhja"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Përdor vendndodhjen"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Çaktivizimi i \"Vendndodhjes\" do të çaktivizojë qasjen te vendndodhja për të gjitha aplikacionet. Veçoritë e ndihmës për drejtuesin e makinës do të kenë përsëri qasje. Çaktivizimi i butonit të ndihmës për drejtuesin e makinës do t\'i ndalojë veçoritë e ndihmës për drejtuesin e makinës që të mos e përdorin vendndodhjen tënde."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Ndihma për drejtuesin e makinës"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nuk ofrohet me vendndodhjen joaktive"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Nëse e çaktivizon këtë, veçoritë e ndihmës për drejtuesin e makinës që mbështeten në informacionin e vendndodhjes do të çaktivizohen."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Çaktivizo gjithsesi"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Kërkesat e vendndodhjeve të fundit"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nuk ka kërkesa të vendndodhjeve të fundit"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lejet në nivel aplikacioni"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Shërbimet e vendndodhjes"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Përdor vendndodhjen"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Vendndodhja mund të përdorë burime si GPS, Wi‑Fi, rrjetet celulare dhe sensorët për të ndihmuar me vlerësimin e vendndodhjes së pajisjes sate."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Ndihma për drejtuesin e makinës"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Informacioni i vendndodhjes që iu dërgua veçorive të ndihmës për drejtuesin e makinës nuk përmbajnë informacione që të identifikojnë ty. Ai ruhet për maksimumi 2 ditë përpara se të fshihet."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Përdor mikrofonin"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Lejo qasjen në mikrofonin tënd për të gjitha aplikacionet"</string>
@@ -742,7 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Shto një profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Fshije këtë profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Shto profil"</string>
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administratori i sistemit info-argëtues"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nuk ka aplikacione të administratorit për sistemin info-argëtues"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Ky aplikacion i sistemit info-argëtues i administratorit është aktiv dhe lejon që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë funksionet e mëposhtme:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Aktivizimi i këtij aplikacioni të sistemit info-argëtues do të lejojë që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë funksionet e mëposhtme:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Të aktivizohet ky aplikacion?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktivizo këtë aplikacion të sistemit info-argëtues"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Çaktivizo këtë aplikacion të sistemit info-argëtues"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Më shumë detaje"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Menaxheri yt i flotës mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë profil, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin në rrjet dhe informacionin e vendndodhjes së automjetit."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Menaxheri yt i flotës mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë profil, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin në rrjet dhe informacionin e vendndodhjes së pajisjes."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Menaxheri i flotës mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë sistem info-argëtues, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin në rrjet dhe informacionin e vendndodhjes së automjetit."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Menaxheri i flotës mund të ketë qasje te të dhënat e lidhura me këtë sistem info-argëtues, të menaxhojë aplikacionet dhe të ndryshojë cilësimet e këtij automjeti."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bllokuar nga menaxheri yt"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Kontakto menaxherin e flotës dhe ndrysho volumin"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Kontakto menaxherin e flotës dhe përdor SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Kontakto menaxherin e flotës dhe përdor kamerën"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Kontakto menaxherin e flotës dhe bëj pamje ekrani"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Kontakto menaxherin e flotës e përdor aplikacionin"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bllokuar nga ofruesi i blerjes me këste"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Nëse ke pyetje, kontakto menaxherin e flotës"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Aplikacionet e administratorit të mjetit"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacione aktive</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikacion aktiv</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Asnjë aplikacion aktiv"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Cilësimet menaxhohen nga menaxheri yt i flotës"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ky cilësim nuk mund të ndryshohet në këtë moment"</string>
 </resources>

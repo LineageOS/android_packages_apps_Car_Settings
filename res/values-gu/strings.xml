@@ -387,20 +387,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"સ્થાન"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"સ્થાનની જાણકારી બંધ કરવાથી બધી ઍપ માટે સ્થાનનો ઍક્સેસ બંધ થઈ જશે, \'ડ્રાઇવર માટે સહાયતા\'ની સુવિધા પાસે હજી પણ ઍક્સેસ રહેશે. \'ડ્રાઇવર માટે સહાયતા\'ની સુવિધાના ટૉગલને બંધ કરવાથી, \'ડ્રાઇવર માટે સહાયતા\'ની સુવિધા તમારા સ્થાનની માહિતીનો ઍક્સેસ કરી શકશે નહીં."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ડ્રાઇવર માટે સહાયતા"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"સ્થાનની માહિતી ચાલુ હોય ત્યારે ઉપલબ્ધ નથી"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"જો તમે આને બંધ કરશો, તો સ્થાનની માહિતી પર આધારિત ડ્રાઇવર માટે સહાયતાની સુવિધાઓ બંધ કરવામાં આવશે."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"તેમ છતાં બંધ કરો"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"સ્થાન માટે તાજેતરની વિનંતીઓ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"સ્થાન માટે તાજેતરમાં કોઈ વિનંતી નથી"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ઍપ લેવલની પરવાનગીઓ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"જગ્યાની સેવાઓ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"સ્થાન સેવામાં તમારા ડિવાઇસનું સ્થાન નક્કી કરવામાં સહાય કરવા માટે GPS, વાઇ-ફાઇ, મોબાઇલ નેટવર્ક અને સેન્સર જેવા સૉર્સનો ઉપયોગ કરવામાં આવી શકે છે."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ડ્રાઇવર માટે સહાયતા"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"\'ડ્રાઇવર માટે સહાયતા\' સુવિધાઓને મોકલવામાં આવતી સ્થાનની માહિતીમાં તમારી ઓળખ આપતી માહિતી શામેલ નથી. તેને ડિલીટ કરતા પહેલાં વધુમાં વધુ 2 દિવસ સ્ટોર કરવામાં આવે છે."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"માઇક્રોફોન"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"માઇક્રોફોનનો ઉપયોગ કરો"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"બધી ઍપને તમારા માઇક્રોફોનના ઍક્સેસની મંજૂરી આપો"</string>
@@ -742,7 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"પ્રોફાઇલ ઉમેરો"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"આ પ્રોફાઇલ ડિલીટ કરો"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"પ્રોફાઇલ ઉમેરો"</string>
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"કોઈ ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક ઍપ નથી"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક ઍપ સક્રિય છે અને ઍપ <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપે છે:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપને સક્રિય કરવાથી, ઍપ <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપવામાં આવશે:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપ સક્રિય કરીએ?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપ સક્રિય કરો"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપને નિષ્ક્રિય કરો"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"વધુ વિગતો"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"તમારા ફ્લીટ મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનની સ્થાન માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"તમારા ફ્લીટ મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસની સ્થાન માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"ફ્લીટ મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનની સ્થાન માહિતી સહિત આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલી ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"ફ્લીટ મેનેજર આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલા ડેટાને ઍક્સેસ, ઍપને મેનેજ કરી શકશે અને આ વાહનના સેટિંગને બદલી શકશે."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"ફ્લીટ મેનેજરે બ્લૉક કર્યું છે"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"વૉલ્યૂમ બદલવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMSનો ઉપયોગ કરવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"કૅમેરાનો ઉપયોગ કરવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"સ્ક્રીનશૉટ લેવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"આ ઍપનો ઉપયોગ કરવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"તમને ક્રેડિટ પર વેચાણ કરનારે બ્લૉક કર્યું છે"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"જો તમને કોઈ પ્રશ્ન હોય, તો ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"વાહન વ્યવસ્થાપક ઍપ"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> સક્રિય ઍપ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> સક્રિય ઍપ</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"કોઈ સક્રિય ઍપ નથી"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"તમારા ફ્લીટ મેનેજર દ્વારા મેનેજ કરાતા સેટિંગ"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"હમણાં આ સેટિંગમાં ફેરફાર કરી શકાશે નહીં"</string>
 </resources>

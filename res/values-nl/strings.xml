@@ -397,6 +397,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Locatieservices"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Locatie gebruiken"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Voor de schatting van je apparaatlocatie kunnen bronnen worden gebruikt zoals gps, wifi, mobiele netwerken en sensoren."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bestuurdersondersteuning"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Locatie-informatie die naar functies voor bestuurdersondersteuning wordt gestuurd, bevat geen informatie waarmee je kunt worden geïdentificeerd. De informatie wordt maximaal 2 dagen opgeslagen en daarna verwijderd."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfoon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Microfoon gebruiken"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Alle apps toegang tot je microfoon geven"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profiel toevoegen"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Dit profiel verwijderen"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profiel toevoegen"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Beheer van infotainmentsysteem"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Geen systeembeheerdersapps voor infotainmentsysteem"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Deze beheer-app voor het infotainmentsysteem is actief en staat toe dat de app <xliff:g id="APP_NAME">%1$s</xliff:g> de volgende bewerkingen uitvoert:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Als je deze beheer-app voor het infotainmentsysteem activeert, sta je de app <xliff:g id="APP_NAME">%1$s</xliff:g> toe de volgende bewerkingen uit te voeren:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Deze infotainmentsysteem-app activeren?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Deze infotainmentsysteem-app activeren"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Deze infotainmentsysteem-app deactiveren"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Meer informatie"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Je wagenparkbeheerder kan apps en gegevens monitoren en beheren die aan dit profiel zijn gekoppeld, waaronder instellingen, rechten, zakelijke toegang, netwerkactiviteit en locatiegegevens van het voertuig."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Je wagenparkbeheerder kan apps en gegevens monitoren en beheren die aan dit profiel zijn gekoppeld, waaronder instellingen, rechten, zakelijke toegang, netwerkactiviteit en locatiegegevens van het apparaat."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"De wagenparkbeheerder kan apps en gegevens monitoren en beheren die aan dit infotainmentsysteem zijn gekoppeld, waaronder instellingen, rechten, zakelijke toegang, netwerkactiviteit en locatiegegevens van het voertuig."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"De wagenparkbeheerder kan misschien toegang krijgen tot gegevens die aan dit infotainmentsysteem zijn gekoppeld, apps beheren en de instellingen van dit voertuig wijzigen."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Geblokkeerd door je wagenparkbeheerder"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Neem contact op met de wagenparkbeheerder om het volume te wijzigen"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Neem contact op met de wagenparkbeheerder om sms te gebruiken"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Neem contact op met de wagenparkbeheerder om de camera te gebruiken"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Neem contact op met de wagenparkbeheerder om screenshots te maken"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Neem contact op met de wagenparkbeheerder om deze app te gebruiken"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Geblokkeerd door je kredietverstrekker"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Als je vragen hebt, neem je contact op met de wagenparkbeheerder"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Beheer-apps voor voertuig"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> actieve apps</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> actieve app</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Geen actieve apps"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Instellingen beheerd door je wagenparkbeheerder"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Deze instelling kan nu niet worden gewijzigd"</string>
 </resources>

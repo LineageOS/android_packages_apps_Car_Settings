@@ -387,20 +387,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Χρήση τοποθεσίας"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Με την απενεργοποίηση της επιλογής Τοποθεσία, θα απενεργοποιηθεί η πρόσβαση τοποθεσίας για όλες τις εφαρμογές. Οι λειτουργίες υποβοήθησης οδηγού θα εξακολουθήσουν να έχουν πρόσβαση. Η απενεργοποίηση της εναλλαγής Υποβοήθηση οδηγού θα διακόψει τη χρήση της τοποθεσίας σας από τις λειτουργίες υποβοήθησης οδηγού."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Υποβοήθηση οδηγού"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Μη διαθέσιμη με ενεργή τοποθεσία"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι λειτουργίες υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίες θα απενεργοποιηθούν."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Απενεργοποίηση"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Πρόσφατα αιτήματα τοποθεσίας"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Δεν υπάρχουν πρόσφατα αιτήματα τοποθεσίας"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Άδειες επιπέδου εφαρμογής"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Υπηρεσίες τοποθεσίας"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Χρήση τοποθεσίας"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Η τοποθεσία μπορεί να χρησιμοποιεί πηγές όπως GPS, Wi-Fi, δίκτυα κινητής τηλεφωνίας και αισθητήρες για την εκτίμηση της τοποθεσίας της συσκευής σας."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Υποβοήθηση οδηγού"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Οι πληροφορίες τοποθεσίας που αποστέλλονται στις λειτουργίες υποβοήθησης οδηγού δεν περιέχουν πληροφορίες που προσδιορίζουν την ταυτότητά σας. Αποθηκεύονται για έως δύο ημέρες προτού διαγραφούν."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Μικρόφωνο"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Χρήση μικροφώνου"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Επιτρέψτε σε όλες τις εφαρμογές να έχουν πρόσβαση στο μικρόφωνο"</string>
@@ -742,7 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Προσθέστε ένα προφίλ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Διαγραφή αυτού του προφίλ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Προσθήκη προφίλ"</string>
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Διαχειριστής συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Δεν υπάρχουν εφαρμογές διαχειριστή συστήματος ενημέρωσης και ψυχαγωγίας."</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Αυτή η εφαρμογή διαχείρισης συστήματος ενημέρωσης και ψυχαγωγίας είναι ενεργοποιημένη και επιτρέπει στην εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> να εκτελεί τις παρακάτω ενέργειες:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Η ενεργοποίηση της εφαρμογής συστήματος ενημέρωσης και ψυχαγωγίας θα επιτρέψει στην εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> να εκτελεί τις παρακάτω λειτουργίες:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Ενεργ. εφαρμ. συστ. ενημέρ. και ψυχαγ.;"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Ενεργοποίηση αυτής της εφαρμογής συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Απενεργοποιήστε αυτήν την εφαρμογή συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Περισσότερες λεπτομέρειες"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Ο διαχειριστής στόλου σας μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που σχετίζονται με αυτό το προφίλ, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας του οχήματος."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Ο διαχειριστής στόλου σας μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που συσχετίζονται με αυτό το προφίλ, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας της συσκευής."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Ο διαχειριστής στόλου μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που συσχετίζονται με αυτό το σύστημα ενημέρωσης και ψυχαγωγίας, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας του οχήματος."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Ο διαχειριστής στόλου μπορεί να έχει πρόσβαση σε δεδομένα που σχετίζονται με αυτό το σύστημα ενημέρωσης και ψυχαγωγίας, να διαχειρίζεται εφαρμογές και να αλλάζει τις ρυθμίσεις αυτού του οχήματος."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Αποκλ. από τον διαχειρ. στόλου"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Επικοιν. με τον διαχειρ. στόλου για αλλαγή έντασης"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Επικοινων. με τον διαχειρ. στόλου για χρήση SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Επικοιν. με τον διαχ. στόλου για χρήση της κάμερας"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Επικ. με τον διαχ. στόλου για λήψη στιγμ. οθόνης"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Επικοιν. με τον διαχ. στόλου για χρήση της εφαρμ."</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Αποκλείστηκε από τον πωλητή συσκευών με πίστωση"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Εάν έχετε ερωτήσεις, επικοινωνήστε με τον διαχειριστή στόλου"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Εφαρμογές διαχείρισης οχημάτων"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ενεργές εφαρμογές</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ενεργή εφαρμογή</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Δεν υπάρχουν ενεργές εφαρμογές"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Ρυθμίσεις που διαχειρίζεται ο διαχειριστής στόλου"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Δεν είναι δυνατή η αλλαγή της ρύθμισης αυτήν τη στιγμή"</string>
 </resources>

@@ -395,20 +395,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"מיקום"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"שימוש במיקום"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"כיבוי המיקום ישבית את הגישה למיקום בכל האפליקציות. לתכונות של עזרה לנהג עדיין תהיה גישה. כיבוי המתג של עזרה לנהג יפסיק את השימוש במיקום על ידי התכונות של עזרה לנהג."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"עזרה לנהג"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"האפשרות לא זמינה כשהמיקום פועל"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"אם משביתים את האפשרות הזו, תכונות עזרה לנהג שמתבססות על פרטי מיקום יושבתו."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"אני רוצה להשבית בכל זאת"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"בקשות של מיקומים אחרונים"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"אין בקשות של מיקומים אחרונים"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"הרשאות ברמת אפליקציה"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"שירותי מיקום"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"שימוש במיקום"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"תכונת המיקום משתמשת במקורות כמו GPS,‏ Wi‑Fi, רשתות סלולריות וחיישנים כדי לעזור בהערכה של מיקום המכשיר שלך."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"עזרה לנהג"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"פרטי המיקום שנשלחים לתכונות העזרה לנהג לא מכילים פרטים מזהים עליך. הפרטים מאוחסנים ליומיים לכל היותר עד למחיקתם."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"מיקרופון"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"שימוש במיקרופון"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"מתן הרשאת גישה למיקרופון לכל האפליקציות"</string>
@@ -768,7 +766,35 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"להוספת פרופיל"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"מחיקת הפרופיל"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"הוספת פרופיל"</string>
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"המנהל של מערכת המידע והבידור"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"אין אפליקציות למנהלים של מערכת המידע והבידור"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"אפליקציית המנהל של מערכת המידע והבידור פעילה ומאפשרת לאפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> לבצע את הפעולות הבאות:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"הפעלת האפליקציה הזאת של מערכת המידע והבידור תאפשר לאפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> לבצע את הפעולות הבאות:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"להפעיל את אפליקציית המידע והבידור?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"הפעלת האפליקציה הזאת של מערכת המידע והבידור"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"השבתת האפליקציה הזאת של מערכת המידע והבידור"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"פרטים נוספים"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"מנהל הצי של כלי הרכב יכול לפקח על אפליקציות ונתונים המשויכים לפרופיל הזה ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום הרכב."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"מנהל הצי של כלי הרכב יכול לפקח על אפליקציות ונתונים המשויכים לפרופיל הזה ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום המכשיר."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"מנהל הצי של כלי הרכב יכול לפקח על אפליקציות ונתונים המשויכים למערכת הזו של המידע והבידור ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום הרכב."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"ייתכן שמנהל הצי של כלי הרכב יוכל לקבל גישה לנתונים המשויכים למערכת הזו של המידע והבידור, לנהל אפליקציות ולשנות את הגדרות הרכב הזה."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"נחסמה על ידי מנהל הצי"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"צריך לפנות למנהל הצי כדי לשנות את עוצמת הקול"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"צריך לפנות למנהל הצי כדי להשתמש ב-SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"צריך לפנות למנהל הצי כדי להשתמש במצלמה"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"צריך לפנות למנהל הצי כדי לבצע צילומי מסך"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"צריך לפנות למנהל הצי כדי להשתמש באפליקציה הזאת"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"נחסמה על ידי החברה שמוכרת מכשירים באשראי"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"אם יש לך שאלות, עליך לפנות למנהל הצי של כלי הרכב"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"אפליקציות למנהלי מערכות של הרכב"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות פעילות</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות פעילות</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות פעילות</item>
+      <item quantity="one">אפליקציה פעילה אחת (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"אין אפליקציות פעילות"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"הגדרות שמנוהלות על ידי מנהל הצי של כלי הרכב"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"לא ניתן לשנות את ההגדרה הזו כרגע."</string>
 </resources>

@@ -135,7 +135,7 @@
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktibatu"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Aktibatu da Wifi-sareen bilaketa"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Aldatu datu-konexiora automatikoki"</string>
-    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wifi bidez ezin denean, erabili datu-konexioa Internetera konektatzeko. Agian datuen erabilera ordaindu beharko duzu."</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wifi bidez ezin denean, erabili datu-konexioa Internetera konektatzeko. Baliteke zerbait ordaindu behar izatea datuak erabiltzeagatik."</string>
     <string name="learn_more" msgid="8214605928933358604">"Lortu informazio gehiago"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Wifi-gunearen izena"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aktibatzen…"</string>
@@ -397,6 +397,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Erabili kokapena"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Gailuaren kokapena zehazteko, GPSa, wifi-sarea, sare mugikorrak, sentsoreak eta antzeko iturburuak erabiltzen ditu kokapenaren eginbideak."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Gidatzeko laguntza"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Gidatzeko laguntzarekin erlazionatutako eginbideei bidaltzen zaien kokapen-informazioak ez dauka identifikatzen zaituen informaziorik. Gehienez bi egunean gordetzen da. Gero, ezabatu egiten da."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofonoa"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Erabili mikrofonoa"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Eman mikrofonoa atzitzeko baimena aplikazio guztiei"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Gehitu profil bat"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ezabatu profila"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Gehitu profila"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Informazio- eta aisia-sistemaren administratzailea"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Ez dago informazio- eta aisia-sistema administratzeko aplikaziorik"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Informazio- eta aisia-sistemaren administratzailearen aplikazio hau aktibo dago eta eragiketa hauek egiteko baimena ematen dio <xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioari:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Informazio- eta aisia-sistemaren aplikazio hau aktibatzen baduzu, <xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak eragiketa hauek egiteko baimena izango du:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Informazio- eta aisia-sistemaren aplikazioa aktibatu nahi duzu?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktibatu informazio- eta aisia-sistemaren aplikazioa"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Desaktibatu informazio- eta aisia-sistemaren aplikazioa"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Xehetasun gehiago"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Flotaren kudeatzaileak profilarekin erlazionatutako aplikazioak eta datuak gainbegiratu eta kudea ditzake; besteak beste, ezarpenak, baimenak, enpresen sarbide-maila, sareko jarduerak eta ibilgailuaren kokapenari buruzko informazioa."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Flotaren kudeatzaileak profilarekin erlazionatutako aplikazioak eta datuak gainbegiratu eta kudea ditzake; besteak beste, ezarpenak, baimenak, enpresen sarbide-maila, sareko jarduerak eta gailuaren kokapenari buruzko informazioa."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Flotaren kudeatzaileak informazio- eta aisia-sistemarekin erlazionatutako aplikazioak eta datuak gainbegiratu eta kudea ditzake; besteak beste, ezarpenak, baimenak, enpresen sarbide-maila, sareko jarduerak eta ibilgailuaren kokapenari buruzko informazioa."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Baliteke flotaren kudeatzaileak informazio- eta aisia-sistemarekin erlazionatutako datuak atzitu, aplikazioak kudeatu eta ibilgailuaren ezarpenak aldatu ahal izatea."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Flotaren kudeatzaileak blokeatu du"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Jarri harremanetan flotaren kudeatzailearekin bolumena aldatzeko"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Jarri harremanetan flotaren kudeatzailearekin SMSak erabiltzeko"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Jarri harremanetan flotaren kudeatzailearekin kamera erabiltzeko"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Jarri harremanetan flotaren kudeatzailearekin pantaila-argazkiak ateratzeko"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Jarri harremanetan flotaren kudeatzailearekin aplikazioa erabiltzeko"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Kreditu bidezko gailu-hornitzaileak blokeatu du"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Galderarik baduzu, jarri flotaren kudeatzailearekin harremanetan"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Ibilgailu-administratzailearen aplikazioak"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikazio aktibo</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikazio aktibo</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Ez dago aplikaziorik aktibo"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Flotaren kudeatzaileak kudeatutako ezarpenak"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Une honetan ezin da aldatu ezarpena"</string>
 </resources>
