@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди аныктоо"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Түзмөктүн жайгашкан жери GPS, Wi‑Fi, мобилдик тармактар жана сенсорлор аркылуу аныкталат."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Айдоочуга көмөктөш функциялар"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Айдоочуга көмөктөш функцияларга жөнөтүлгөн жайгашкан жер тууралуу маалыматта өздүгүздү аныктаган маалымат камтылбайт. Ал 2 күнгө чейин сакталып, андан кийин өчүрүлөт."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофонду колдонуу"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бардык колдонмолорго микрофонуңузду пайдаланууга уруксат бериңиз"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бул профилди өчүрүү"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль кошуу"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Экрандын жарыктыгы"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Инфозоок тутумунун администратору"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Администратордун (инфозоок тутуму) колдонмолору жок"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Инфозоок тутуму башкарган колдонмо иштетилип, <xliff:g id="APP_NAME">%1$s</xliff:g> төмөнкү аракеттерди аткара алат:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Инфозоок тутуму колдонмосу иштетилгенде, <xliff:g id="APP_NAME">%1$s</xliff:g> төмөнкү аракеттерди аткара алат:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Бул инфозоок тутуму иштетилсинби?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Бул инфозоок тутуму колдонмосун иштетүү"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Бул инфозоок тутуму колдонмосун өчүрүү"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Толук маалымат"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Башкаруучу бул профилге байланыштуу колдонмолор менен дайындарды, анын ичинде жөндөөлөр, уруксаттар, корпоративдик кирүү мүмкүнчүлүгү, Интернеттеги аракеттери жана унаанын жайгашкан жери тууралуу маалыматты көзөмөлдөй алат."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Башкаруучу бул профилге байланыштуу колдонмолор менен дайындарды, анын ичинде жөндөөлөр, уруксаттар, корпоративдик кирүү мүмкүнчүлүгү, Интернеттеги аракеттери жана түзмөктүн жайгашкан жери тууралуу маалыматты көзөмөлдөй алат."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Башкаруучу бул инфозоок тутуму менен байланыштуу колдонмолор менен дайындарды, анын ичинде жөндөөлөр, уруксаттар, корпоративдик кирүү мүмкүнчүлүгү, Интернеттеги аракеттери жана унаанын жайгашкан жери тууралуу маалыматты көзөмөлдөй алат."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Түзмөгүңүздүн башкаруучусу бул инфозоок тутуму менен байланышкан маалыматты көрүп, колдонмолорду башкарып, унаанын жөндөөлөрүн өзгөртө алат."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Башкаруучу бөгөттөдү"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Катуулугун өзгөртүү үчүн башкаруучуга кайрылыңыз"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS\'ти колдонуу үчүн башкаруучуга кайрылыңыз"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Камераны колдонуу үчүн башкаруучуга кайрылыңыз"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Скриншотторду тартуу үчүн башкаруучуга кайрылыңыз"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Колдонмону иштетүү үчүн башкаруучуга кайрылыңыз"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Насыя берүүчү тарабынан бөгөттөлдү"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Эгер суроолоруңуз болсо, башкаруучуга кайрылыңыз"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Унааны башкаруучу колдонмолор"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> жигердүү колдонмо</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> жигердүү колдонмо</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Жигердүү колдонмолор жок"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Жөндөөлөр башкаруучу тарабынан башкарылат"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Инфозоок тутумун баштапкы абалга келтирүү"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Тутум баштапкы абалга кайтаруу жана бардык маалыматты өчүрүү сурамын алды. Аны азыр аткарсаңыз болот же унаа кийинки жолу от алганда тутум башкапкы абалга кайтарылат. Андан кийин жаңы профилди жөндөп алсаңыз болот."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Азыр баштапкы абалга келтирүү"</string>

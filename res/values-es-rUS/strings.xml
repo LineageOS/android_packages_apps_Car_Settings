@@ -388,20 +388,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar ubicación"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Si desactivas la ubicación, se desactivará el acceso a ella para todas las apps, pero no para las funciones de asistencia al conductor. Si desactivas la asistencia al conductor, las funciones de esta tecnología no podrán usar tu ubicación."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Asistencia al conductor"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"No disponible si ubicación está activada"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Si desactivas la asistencia al conductor, se inhabilitarán las funciones que dependen de la información de ubicación."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Desactivar de todos modos"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hay solicitudes de ubicación recientes"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos en las apps"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicios de ubicación"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"La ubicación puede usar fuentes como GPS, Wi-Fi, redes móviles y sensores para obtener la ubicación estimada del dispositivo."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia al conductor"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Los datos de ubicación enviados a las funciones de asistencia al conductor no contienen información que permita identificarte. Se almacenan durante un máximo de 2 días antes de que se los borre."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas las apps accedan al micrófono"</string>
@@ -743,10 +741,35 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Agregar un perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Borrar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Agregar perfil"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Brillo de pantalla"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador del sistema de infoentretenimiento"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"No hay ninguna app de administración del sistema de infoentretenimiento"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Esta app de administración del sistema de infoentretenimiento está activa y permite que la app de <xliff:g id="APP_NAME">%1$s</xliff:g> realice las siguientes operaciones:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Si activas esta app del sistema de infoentretenimiento, la app de <xliff:g id="APP_NAME">%1$s</xliff:g> podrá realizar las siguientes operaciones:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"¿Activar app sist. infoentretenimiento?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Activar esta app del sistema de infoentretenimiento"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Desactivar esta app del sistema de infoentretenimiento"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Más detalles"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"El administrador de la flota puede supervisar y administrar las apps y los datos asociados con este perfil, lo que incluye la configuración, los permisos, el acceso corporativo, la actividad de la red y la información de la ubicación del dispositivo."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"El administrador de la flota puede supervisar y administrar las apps y los datos asociados con este perfil, lo que incluye la configuración, los permisos, el acceso corporativo, la actividad de la red y la información de la ubicación del vehículo."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"El administrador de la flota puede supervisar y administrar las apps y los datos asociados con este sistema de infoentretenimiento, lo que incluye la configuración, los permisos, el acceso corporativo, la actividad de la red y la información de la ubicación del vehículo."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Es posible que el administrador de la flota pueda acceder a los datos asociados con este sistema de infoentretenimiento, administrar las apps y cambiar la configuración del vehículo."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bloqueado por admin. de flota"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Comunícate con admin. de flota para cambiar vol."</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Comunícate con el admin. de flota para usar SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Comunícate con admin. de flota para usar la cámara"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Comunícate con admin. flota para tomar capturas"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Comunícate con el admin. de flota para usar la app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Opción bloqueada por tu proveedor de crédito"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Si tienes alguna pregunta, comunícate con el administrador de la flota"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administración de vehículos"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps activas</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app activa</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"No hay apps activas"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Tu administrador de flota gestiona esta configuración"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restablecer el sistema de infoentretenimiento"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"El sistema recibió una solicitud para restablecer la configuración de fábrica y borrar todos los datos. Puedes hacerlo ahora o esperar a que se restablezca la próxima vez que enciendas el vehículo. Tras el restablecimiento, podrás configurar otro perfil."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Restablecer ahora"</string>

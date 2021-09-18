@@ -351,7 +351,7 @@
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> మరియు ఇతర URLలను తెరుస్తుంది"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"ఆటోమేటిక్‌గా తెరవండి"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"ఇతర ఆటోమేటిక్ సెట్టింగ్‌లు"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"ఏ ఆటోమేటిక్ సెట్టింగ్‌లు సెట్ చేయబడలేదు."</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"ఆటోమేటిక్ సెట్టింగ్‌లేవీ సెట్ చేయలేదు."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"మీరు కొన్ని చర్యల కోసం ఈ యాప్‌ను ఆటోమేటిక్‌గా ప్రారంభించాలని ఎంచుకున్నారు."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"ఆటోమేటిక్ సెట్టింగ్‌లను క్లియర్ చేయండి"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"మద్దతిచ్చే లింక్‌లను తెరవండి"</string>
@@ -388,20 +388,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"లొకేషన్"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"లొకేషన్‌ను ఆఫ్ చేయడం వలన అన్ని యాప్‌లకు సంబంధించిన లొకేషన్ యాక్సెస్ ఆఫ్ చేయబడుతుంది, \'డ్రైవర్ సహాయం\' ఫీచర్‌లు ఇప్పటికీ వాటికి యాక్సెస్‌ను కలిగి ఉంటాయి. \'డ్రైవర్ సహాయం\' టోగుల్‌ను ఆఫ్ చేయడం వలన \'డ్రైవర్ సహాయం\' ఫీచర్‌లు మీ లొకేషన్‌ను ఉపయోగించలేవు."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"డ్రైవర్ సహాయం"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"లొకేషన్ ఆన్‌లో ఉన్నప్పుడు ఫీచర్ పనిచేయదు"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"మీరు దీనిని ఆఫ్ చేస్తే, లొకేషన్ సమాచారంపై ఆధారపడే \'డ్రైవర్ సహాయం\' ఫీచర్‌లు డిజేబుల్ చేయబడతాయి."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"అయినా సరే ఆఫ్ చేయండి"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి లొకేషన్ రిక్వెస్ట్‌లు"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి లొకేషన్ రిక్వెస్ట్‌లు లేవు"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"యాప్‌-స్థాయి అనుమతులు"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"లొకేషన్ సర్వీస్‌లు"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"మీ పరికరం లొకేషన్‌ను అంచనా వేయడంలో సహాయపడటానికి GPS, Wi-Fi, మొబైల్ నెట్‌వర్క్‌లు, సెన్సార్‌ల వంటి సోర్సులను \'లొకేషన్\' ఉపయోగించవచ్చు."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"డ్రైవర్ సహాయం"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"డ్రైవర్ సహాయ ఫీచర్‌లకు పంపిబడిన లొకేషన్ సమాచారంలో మీ గుర్తింపునకు సంబంధించిన సమాచారం ఉండదు. ఇది తొలగించబడడానికి ముందు గరిష్టంగా 2 రోజులు స్టోర్ చేయబడుతుంది."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"మైక్రోఫోన్"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"మైక్రోఫోన్‌ను ఉపయోగించండి"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"మీ మైక్రోఫోన్‌ను యాక్సెస్ చేయడానికి అన్ని యాప్‌లను అనుమతించండి"</string>
@@ -743,10 +741,35 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ఒక ప్రొఫైల్‌ను జోడించు"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ఈ ప్రొఫైల్‌ను తొలగించు"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ప్రొఫైల్‌ను జోడించండి"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="qc_display_brightness" msgid="2939655289816201170">"డిస్‌ప్లే బ్రైట్‌నెస్"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"సమాచారంతో కూడిన వినోదం సిస్టమ్ అడ్మిన్"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"సమాచారంతో కూడిన వినోదం సిస్టమ్ అడ్మిన్ యాప్‌లు ఏవీ లేవు"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ అడ్మిన్ యాప్ యాక్టివ్‌గా ఉంది, అలాగే ఇది ఈ చర్యలను అమలు చేయడానికి <xliff:g id="APP_NAME">%1$s</xliff:g> యాప్‌ను అనుమతిస్తుంది:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను యాక్టివేట్ చేయడం వలన <xliff:g id="APP_NAME">%1$s</xliff:g> యాప్ ఈ కింది చర్యలను చేయగలుగుతుంది:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను యాక్టివేట్ చేయాలా?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను యాక్టివేట్ చేయండి"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను డియాక్టివేట్ చేయండి"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"మరిన్ని వివరాలు"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా వాహన లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను మీ ఫ్లీట్ మేనేజర్ మానిటర్ చేయగలదు, అలాగే మేనేజ్ చేయగలదు."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా పరికర లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను మీ ఫ్లీట్ మేనేజర్ మానిటర్ చేయగలదు, అలాగే మేనేజ్ చేయగలదు."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా వాహన లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను ఫ్లీట్ మేనేజర్ మానిటర్ చేయగలదు, అలాగే మేనేజ్ చేయగలదు."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"ఫ్లీట్ మేనేజర్ ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్‌తో అనుబంధించబడి ఉన్న డేటాను యాక్సెస్ చేయవచ్చు, యాప్‌లను మేనేజ్ చేయవచ్చు అలాగే ఈ వాహన సెట్టింగ్‌లను మార్చవచ్చు."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"ఫ్లీట్ మేనేజర్ బ్లాక్ చేశారు"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"వాల్యూమ్ మార్చడానికి ఫ్లీట్ మేనేజర్‌ను అడగండి"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMSను వాడడానికి ఫ్లీట్ మేనేజర్‌ను సంప్రదించండి"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"కెమెరాను వాడడానికి ఫ్లీట్ మేనేజర్‌ను సంప్రదించండి"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"స్క్రీన్‌షాట్ కోసం ఫ్లీట్ మేనేజర్‌ను సంప్రదించండి"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"ఈ యాప్‌ను వాడడానికి ఫ్లీట్ మేనేజర్‌ను సంప్రదించండి"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"మీ క్రెడిట్ ప్రొవైడర్ ద్వారా బ్లాక్ చేయబడింది"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"మీకు ఏవైనా సందేహాలు ఉంటే, ఫ్లీట్ మేనేజర్‌ను సంప్రదించండి"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"వాహన అడ్మిన్ యాప్‌లు"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> యాక్టివ్‌గా ఉన్న యాప్‌లు</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> యాక్టివ్‌గా ఉన్న యాప్</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"యాప్‌లు ఏవీ యాక్టివ్‌గా లేవు"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"మీ ఫ్లీట్ మేనేజర్ ద్వారా సెట్టింగ్‌లు మేనేజ్ చేయబడతాయి"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను రీసెట్ చేయండి"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"ఫ్యాక్టరీ రీసెట్ చేయడానికి, మొత్తం డేటాను తొలగించడానికి మీ సిస్టమ్ రిక్వెస్ట్‌ను అందుకుంది. మీరు దీన్ని ఇప్పుడే రీసెట్ చేయవచ్చు లేదా తర్వాతి సారి కారు ప్రారంభమైనప్పుడు ఇది రీసెట్ అవుతుంది. అప్పుడు మీరు కొత్త ప్రొఫైల్‌ను సెటప్ చేయవచ్చు."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"ఇప్పుడే రీసెట్ చేయి"</string>

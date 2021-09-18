@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"위치 서비스"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"위치 사용"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"운전자 지원"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"운전자 지원 기능에 전송되는 위치 정보에는 개인 식별 정보가 포함되지 않습니다. 정보는 최대 2일 동안 보관된 후 삭제됩니다."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"마이크"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"마이크 사용"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"모든 앱이 마이크에 액세스하도록 허용"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"이 프로필 삭제"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"프로필 추가"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"디스플레이 밝기"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"인포테인먼트 시스템 관리자"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"인포테인먼트 시스템 관리자 앱 없음"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"인포테인먼트 시스템 관리자 앱이 활성화되어 있으며, <xliff:g id="APP_NAME">%1$s</xliff:g> 앱에서 다음 작업을 처리하도록 허용합니다."</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"인포테인먼트 시스템 앱을 활성화하면 <xliff:g id="APP_NAME">%1$s</xliff:g> 앱에서 다음 작업을 처리할 수 있습니다."</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"인포테인먼트 시스템 앱을 활성화하시겠습니까?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"인포테인먼트 시스템 앱 활성화"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"인포테인먼트 시스템 앱 비활성화"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"세부정보 더보기"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"차량 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"차량 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 기기의 위치 정보가 포함됩니다."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"차량 관리자는 이 인포테인먼트 시스템과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"차량 관리자는 이 인포테인먼트 시스템과 연결된 데이터에 액세스하고 앱을 관리하며 차량 설정을 변경할 수 있습니다."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"차량 관리자가 차단했습니다"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"볼륨을 변경하려면 차량 관리자에게 문의하세요"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS를 사용하려면 차량 관리자에게 문의하세요"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"카메라를 사용하려면 차량 관리자에게 문의하세요"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"스크린샷을 찍으려면 차량 관리자에게 문의하세요"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"이 앱을 사용하려면 차량 관리자에게 문의하세요"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"신용 상품 제공업체에서 차단했습니다"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"궁금한 점이 있으면 차량 관리자에게 문의하세요."</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"차량 관리자 앱"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other">활성 상태의 앱 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">활성 상태의 앱 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"활성 앱 없음"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"차량 관리자가 관리하는 설정"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"인포테인먼트 시스템 초기화"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"시스템 초기화 요청이 접수되었으며 모든 데이터가 삭제됩니다. 지금 초기화하지 않으면 다음에 차가 시동이 걸릴 때 초기화됩니다. 이후 새 프로필을 설정할 수 있습니다."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"지금 초기화"</string>

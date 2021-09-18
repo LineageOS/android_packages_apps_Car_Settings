@@ -388,20 +388,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Localización"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localización"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Ao desactivar a localización, non se poderá acceder a ela desde ningunha aplicación; só as funcións de asistencia para a condución conservarán o acceso. Ao desactivar a asistencia para a condución, as funcións relacionadas con ela deixarán de usar a túa localización."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Asistencia para a condución"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Non dispoñible coa localización activada"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Se desactivas esta opción, deshabilitaranse as funcións de asistencia para a condución que utilizan a información de localización."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Desactivar igualmente"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de localización recentes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Non hai solicitudes de localización recentes"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos para as aplicacións"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizos de localización"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utilizar localización"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Os servizos de localización poden usar fontes como o GPS, a wifi, as redes de telefonía móbil e os sensores para determinar onde está o teu dispositivo."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia para a condución"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Os datos sobre a localización que se envían ás funcións de asistencia para a condución non conteñen información que permita identificarte. Almacénanse durante un máximo de 2 días e despois elimínanse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as aplicacións accedan ao micrófono"</string>
@@ -743,9 +741,53 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Engadir perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Engadir perfil"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Brillo de pantalla"</string>
+    <!-- no translation found for device_admin_add_title (1294399588284546811) -->
     <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Non hai aplicacións de administración do sistema de información e entretemento"</string>
+    <!-- no translation found for device_admin_status (4041772636856135168) -->
+    <skip />
+    <!-- no translation found for device_admin_warning (8997805999333600901) -->
+    <skip />
+    <!-- no translation found for add_device_admin_msg (8188888666879499482) -->
+    <skip />
+    <!-- no translation found for add_device_admin (7674707256074840333) -->
+    <skip />
+    <!-- no translation found for remove_device_admin (3595343390502030723) -->
+    <skip />
+    <!-- no translation found for admin_support_more_info (380785608579390750) -->
+    <skip />
+    <!-- no translation found for admin_profile_owner_message (905509940230549773) -->
+    <skip />
+    <!-- no translation found for admin_profile_owner_user_message (3867350539930925070) -->
+    <skip />
+    <!-- no translation found for admin_device_owner_message (8261844995284196176) -->
+    <skip />
+    <!-- no translation found for admin_financed_message (8530796044340607865) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_title (5651853760118792629) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_title_adjust_volume (947693485036623479) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_title_sms (4353988664398839837) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_title_camera (8008769061266209577) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_title_screen_capture (156845907165179949) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_title_suspend_packages (1249154592881985661) -->
+    <skip />
+    <!-- no translation found for disabled_by_policy_title_financed_device (6005343494788285981) -->
+    <skip />
+    <!-- no translation found for default_admin_support_msg (1611734116715908153) -->
+    <skip />
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <!-- no translation found for manage_device_admin (7087659697154317316) -->
+    <skip />
+    <!-- no translation found for number_of_device_admins (2747756696562689276) -->
+    <!-- no translation found for number_of_device_admins_none (3761015967867157562) -->
+    <skip />
+    <!-- no translation found for work_policy_privacy_settings_summary (5770881048853242635) -->
     <skip />
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restablece o sistema de información e entretemento"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"O sistema recibiu unha solicitude para restablecer a configuración de fábrica e borrar todos os datos. Podes facelo agora ou a próxima vez que se arrinque o coche. Despois, poderás configurar un perfil novo."</string>

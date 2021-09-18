@@ -402,6 +402,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokacija može da koristi izvore kao što su GPS, WiFi, mobilne mreže i senzori da bi se lakše odredila lokacija uređaja."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Pomoć za vozače"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Informacije o lokaciji koje se šalju funkcijama pomoći za vozače ne sadrže informacije koje vas identifikuju. Čuvaju se najviše 2 dana pre nego što se izbrišu."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristi mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>
@@ -753,7 +755,35 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Izbriši ovaj profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Dodajte profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Osvetljenost ekrana"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator sistema za info-zabavu"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nema aplikacija za administratora sistema za info-zabavu"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Ova aplikacija administratora sistema za info-zabavu je aktivna i omogućava aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da obavlja sledeće operacije:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Aktiviranjem ove aplikacije sistema za info-zabavu omogućava se aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da obavlja sledeće operacije:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktiviraćete aplikaciju za info-zabavu?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktiviraj ovu aplikaciju sistema za info-zabavu"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Deaktiviraj ovu aplikaciju sistema za info-zabavu"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Još detalja"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Menadžer grupe može da nadgleda aplikacije i podatke povezane sa ovim profilom, uključujući podešavanja, dozvole, korporativni pristup, mrežnu aktivnost i informacije o lokaciji vozila, kao i da upravlja njima."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Menadžer grupe može da nadgleda aplikacije i podatke povezane sa ovim profilom, uključujući podešavanja, dozvole, korporativni pristup, mrežnu aktivnost i informacije o lokaciji uređaja, kao i da upravlja njima."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Menadžer grupe može da nadgleda aplikacije i podatke povezane sa ovim korisnikom, uključujući podešavanja, dozvole, korporativni pristup, aktivnosti na mreži i informacije o lokaciji uređaja, kao i da upravlja njima."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Menadžer grupe će možda moći da pristupa podacima povezanim sa ovim sistemom za info-zabavu, da upravlja aplikacijama i da menja podešavanja ovog vozila."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Blokira menadžer grupe"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Obratite se menadžeru grupe za promenu jačine zvuka"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Obratite se menadžeru grupe za korišćenje SMS-a"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Obratite se menadžeru grupe za korišćenje kamere"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Obratite se menadžeru grupe za snimke ekrana"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Obratite se menadžeru grupe za korišćenje aplikacije"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokira dobavljač kredita"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ako imate nekih pitanja, obratite se menadžeru grupe"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Aplikacije administratora vozila"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktivna aplikacija</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aktivne aplikacije</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktivnih aplikacija</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nema aktivnih aplikacija"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Podešavanja kojima upravlja menadžer grupe"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Resetujte sistem za info-zabavu"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem je primio zahtev da se resetuje na fabrička podešavanja i obriše sve podatke. Možete da ga resetujete odmah ili će se resetovati kada sledeći put upalite kola. Tada možete da podesite novi profil."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Resetuj"</string>
