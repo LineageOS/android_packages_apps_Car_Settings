@@ -458,12 +458,12 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Қолданба параметрлері бастапқы күйіне қайтарылды."</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Барлық деректерді өшіру (зауыттық параметрлерге қайтару)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ақпарат және ойын-сауық жүйесінен барлық дерек пен профильдерді өшіру"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Көліктің ақпарат және ойын-сауық жүйесіндегі барлық дерек өшіріледі, оның ішінде:\n\n"<li>"Google есептік жазбаңыз;"</li>\n<li>"жүйе және қолданба деректері және параметрлері;"</li>\n<li>"жүктеп алынған қолданбалар."</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Сіз келесі есептік жазбаларға кірдіңіз:"</string>
+    <string name="factory_reset_desc" msgid="1688333312943433244">"Көліктің ақпарат және ойын-сауық жүйесіндегі барлық дерек өшіріледі, оның ішінде:\n\n"<li>"Google аккаунтыңыз;"</li>\n<li>"жүйе және қолданба деректері және параметрлері;"</li>\n<li>"жүктеп алынған қолданбалар."</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Сіз келесі аккаунттарға кірдіңіз:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Бұл көлік үшін басқа профильдер реттелген."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Барлық деректі өшіру"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Барлық дерек өшірілсін бе?"</string>
-    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Осы ақпарат және ойын-сауық жүйесіндегі жеке профиль деректерінің, есептік жазбалардың және жүктеп алынған қолданбалардың барлығы жойылады.\n\nБұл әрекет кері қайтарылмайды."</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Осы ақпарат және ойын-сауық жүйесіндегі жеке профиль деректерінің, аккаунттардың және жүктеп алынған қолданбалардың барлығы жойылады.\n\nБұл әрекет кері қайтарылмайды."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Барлығын өшіру"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Өшірілуде"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Күте тұрыңыз…"</string>
@@ -545,29 +545,29 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Жадты тазалау"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Кэшті тазалау"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Қолданба деректері жойылсын ба?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Бұл қолданбаның барлық деректері (соның ішінде барлық файлдар, параметрлер, есептік жазбалар, дерекқорлар және т.б.) біржола өшіріледі."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Бұл қолданбаның барлық деректері (соның ішінде барлық файлдар, параметрлер, аккаунттар, дерекқорлар және т.б.) біржола өшіріледі."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Қолданба үшін жад тазартылмады."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> қауіпсіз шығарылды."</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> қауіпсіз шығару мүмкін емес."</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"Есептік жазбалар"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Есептік жазба енгізу"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Ешқандай есептік жазба қосылмаған"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> атты пайдаланушының есептік жазбалары"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Аккаунттар"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Аккаунт енгізу"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Ешқандай аккаунт қосылмаған"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> атты пайдаланушының аккаунттары"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Деректерді автоматты түрде синхрондау"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Қолданбалардың деректерді автоматты жаңартуына рұқсат беру"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Автосихрондау қосылсын ба?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Компьютер арқылы есептік жазбаларыңызға енгізілген өзгертулер құрылғыңызға автоматты түрде көшіріледі.\n\nСондай-ақ телефоныңыз арқылы есептік жазбаларға енгізілген кейбір өзгертулер компьютерге көшірілуі мүмкін. Google есептік жазбасы осылай жұмыс істейді."</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Компьютер арқылы аккаунттарыңызға енгізілген өзгертулер құрылғыңызға автоматты түрде көшіріледі.\n\nСондай-ақ телефоныңыз арқылы аккаунттарға енгізілген кейбір өзгертулер компьютерге көшірілуі мүмкін. Google аккаунты осылай жұмыс істейді."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Автосинхрондау өшірілсін бе?"</string>
-    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Трафик үнемделеді, бірақ соңғы ақпаратты жинау үшін әр есептік жазбаны қолмен синхрондау қажет болады. Сондай-ақ жаңартылған нұсқалар шыққанда, хабарландыру жіберілмейді."</string>
-    <string name="account_details_title" msgid="7529571432258448573">"Есептік жазба ақпараты"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"Есептік жазба енгізу"</string>
-    <string name="add_an_account" msgid="1072285034300995091">"Есептік жазба енгізу"</string>
-    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Шектелген профильдер есептік жазбаны енгізе алмайды"</string>
-    <string name="remove_account_title" msgid="8840386525787836381">"Есептік жазбаны өшіру"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"Есептік жазба өшірілсін бе?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Бұл есептік жазба өшірілсе, құрылғыдағы барлық хабарлар, контактілер және басқа деректер қоса жойылады!"</string>
-    <string name="remove_account_error_title" msgid="8368044943174826635">"Есептік жазба өшірілмеді."</string>
-    <string name="account_sync_title" msgid="6541844336300236915">"Есептік жазбаны синхрондау"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Трафик үнемделеді, бірақ соңғы ақпаратты жинау үшін әр аккаунтты қолмен синхрондау қажет болады. Сондай-ақ жаңартылған нұсқалар шыққанда, хабарландыру жіберілмейді."</string>
+    <string name="account_details_title" msgid="7529571432258448573">"Аккаунт ақпараты"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"Аккаунт енгізу"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"Аккаунт енгізу"</string>
+    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Шектелген профильдер аккаунтты енгізе алмайды"</string>
+    <string name="remove_account_title" msgid="8840386525787836381">"Аккаунтты өшіру"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"Аккаунт өшірілсін бе?"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Бұл аккаунт өшірілсе, құрылғыдағы барлық хабарлар, контактілер және басқа деректер қоса жойылады!"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Аккаунт өшірілмеді."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Аккаунтты синхрондау"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g>/<xliff:g id="ID_1">%1$d</xliff:g> элемент үшін синхрондау қосулы"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Барлық элементтер үшін синхрондау қосулы"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Барлық элементтер үшін синхрондау өшірулі"</string>
@@ -588,7 +588,7 @@
     <string name="vehicle_data_title" msgid="935933215161763721">"Ақпарат және ойын-сауық жүйесі деректері"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Осы көлікте сақталған әрекеттер мен ақпаратты басқарыңыз."</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Профильді жою"</string>
-    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Ақпарат және ойын-сауық жүйесінен профильді және есептік жазбаларды өшіру"</string>
+    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Ақпарат және ойын-сауық жүйесінен профильді және аккаунттарды өшіру"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Профиліңізде бұл әрекетті жасай алмайсыз."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Қауіпсіздік"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Экранды құлыптау"</string>
@@ -623,7 +623,7 @@
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Тым көп қате әрекет жасалды. <xliff:g id="NUMBER">%d</xliff:g> секундтан кейін қайталап көріңіз."</string>
     <string name="okay" msgid="4589873324439764349">"Жарайды"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экран құлпы өшірілсін бе?"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Кез келген адам есептік жазбаңызға кіре алатын болады"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Кез келген адам аккаунтыңызға кіре алатын болады"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"Профиль құлпы"</string>
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Құлыпты автоматты түрде ашу параметрін реттеу"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN кодын енгізіңіз"</string>
@@ -699,7 +699,7 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter пернесі"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Деморежимнен шығу"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Деморежимнен шығу"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Демо есептік жазбаңыз жойылады және жүйенің зауыттық деректері қалпына келтіріледі. Профильдің барлық дерегі жоғалады."</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Демо аккаунтыңыз жойылады және жүйенің зауыттық деректері қалпына келтіріледі. Профильдің барлық дерегі жоғалады."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Деморежимнен шығу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЖАБУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Көлік жүргізу кезінде бұл функция жұмыс істемейді."</string>
@@ -713,7 +713,7 @@
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Assistant-тің экран суретін пайдалануына рұқсат ету"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"Жақында жіберілді"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"Барлық қолданба"</string>
-    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Профильдер мен есептік жазбалар"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Профильдер мен аккаунттар"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Басқа профильдерді басқару"</string>
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профиль қосу"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бұл профильді жою"</string>
