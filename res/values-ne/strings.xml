@@ -387,20 +387,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"लोकेसन प्रयोग गरियोस्"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"तपाईंले लोकेसन अफ गर्नुभयो भने कुनै पनि एपले लोकेसन प्रयोग गर्न पाउने छैनन्। तर चालकलाई अझ सुरक्षित पार्ने सुविधाहरूले भने अझै पनि लोकेसन प्रयोग गर्न पाइरहने छन्। तपाईंले चालकलाई अझ सुरक्षित पार्ने सुविधाको टगल अफ गर्नुभयो भने उक्त सुविधाले पनि तपाईंको लोकेसन प्रयोग गर्न छाड्ने छ।"</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"चालकलाई अझ सुरक्षित पार्ने प्रविधि"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"लोकेसन अन भएको बेला यो सुविधा उपलब्ध हुँदैन"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"तपाईंले यो अफ गर्नुभयो भने लोकेसनसम्बन्धी जानकारीमा निर्भर हुने चालकलाई अझ सुरक्षित पार्ने प्रविधिका सुविधाहरू अफ हुने छन्।"</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"जसरी पनि अफ गर्नुहोस्"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हालसालैका स्थानसम्बन्धी कुनै पनि अनुरोध छैन"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"एप स्तरीय अनुमति"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"लोकेसन सर्भिस"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"लोकेसन प्रयोग गरियोस्"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"तपाईंको डिभाइसको स्थान अनुमान गर्न लोकेसन सर्भिसले GPS, Wi‑Fi, मोबाइल नेटवर्क र सेन्सरलगायतका स्रोतहरू प्रयोग गर्न सक्छ।"</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"चालकलाई अझ सुरक्षित पार्ने प्रविधि"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"चालकलाई अझ सुरक्षित पार्ने प्रविधिसँग सम्बन्धित सुविधाअन्तर्गत पठाइएको लोकेसनसम्बन्धी जानकारीमा तपाईंको पहिचान खुलाउने जानकारी समावेश गरिएको हुँदैन। यो सूचना बढीमा २ दिनसम्म राखिन्छ अनि मेटाइन्छ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"माइक्रोफोन"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"माइक्रोफोन प्रयोग गर्नुहोस्"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"सबै एपहरूलाई तपाईंको माइक्रोफोन प्रयोग गर्न दिनुहोस्"</string>
@@ -742,7 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"कुनै प्रोफाइल थप्नुहोस्"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"यो प्रोफाइल मेटाउनुहोस्"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"प्रोफाइल थप्नुहोस्"</string>
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"इन्फोटेनमेन्ट प्रणालीका एड्मिन"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"इन्फोटेनमेन्ट प्रणालीको एड्मिनका कुनै एपहरू छैनन्"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"इन्फोटेनमेन्ट प्रणालीका एड्मिनले चलाउने यो एप सक्रिय छ। यसले <xliff:g id="APP_NAME">%1$s</xliff:g> एपलाई निम्न कार्यहरू गर्न दिन्छ:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"तपाईंले इन्फोटेनमेन्ट प्रणालीको यो एप एक्टिभेट गर्नुभयो भने <xliff:g id="APP_NAME">%1$s</xliff:g> ले निम्न कार्यहरू गर्न सक्ने छ:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"इन्फोटेनमेन्ट प्रणालीको यो एप एक्टिभेट गर्ने हो?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"इन्फोटेनमेन्ट प्रणालीको यो एप एक्टिभेट गर्नुहोस्"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"इन्फोटेनमेन्ट प्रणालीको यो एप डिएक्टिभेट गर्नुहोस्"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"थप विवरणहरू"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"सवारी साधनका प्रबन्धक सम्बन्धित सेटिङ, अनुमति, संस्थागत पहुँच, नेटवर्कसम्बन्धी क्रियाकलाप र सवारी साधनको लोकेसनसम्बन्धी जानकारीसहित यो प्रोफाइलसँग सम्बन्धित एप र डेटाको निरीक्षण तथा व्यवस्थापन गर्न सक्छन्।"</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"सवारी साधनका प्रबन्धक सम्बन्धित सेटिङ, अनुमति, संस्थागत पहुँच, नेटवर्कसम्बन्धी क्रियाकलाप र यो डिभाइसको लोकेसनसम्बन्धी जानकारीसहित यो प्रोफाइलसँग सम्बन्धित एप र डेटाको निरीक्षण तथा व्यवस्थापन गर्न सक्छन्।"</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"सवारी साधनका प्रबन्धक सम्बन्धित सेटिङ, अनुमति, संस्थागत पहुँच, नेटवर्कसम्बन्धी क्रियाकलाप र सवारी साधनको लोकेसनसम्बन्धी जानकारीसहित यो इन्फोटेनमेन्ट प्रणालीसँग सम्बन्धित एप र डेटाको निरीक्षण तथा व्यवस्थापन गर्न सक्छन्।"</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"सवारी साधनका प्रबन्धक यो इन्फोटेनमेन्ट प्रणालीसँग सम्बन्धित डेटा हेर्न तथा प्रयोग गर्न, एपहरू व्यवस्थापन गर्न र यो सवारी साधनका सेटिङ परिवर्तन गर्न सक्छन्।"</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"सवारी साधनका प्रबन्धकले ब्लक गरेका छन्"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"भोल्युम घटबढ गर्न सवारी साधनका प्रबन्धकसँग सम्पर्क गर्नु…"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS पठाउन सवारी साधनका प्रबन्धकसँग सम्पर्क गर्नु…"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"क्यामेरा प्रयोग गर्न सवारी साधनका प्रबन्धकसँग सम्पर्क गर्नु…"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"स्क्रिनसट लिन सवारी साधनका प्रबन्धकसँग सम्पर्क गर्नु…"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"यो एप प्रयोग गर्न सवारी साधनका प्रबन्धकसँग सम्पर्क गर्नु…"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"तपाईंको ऋणदाता कम्पनीले ब्लक गरेको छ"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"तपाईंसँग कुनै प्रश्न छ भने सवारी साधनका प्रबन्धकसँग सम्पर्क गर्नुहोस्"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"सवारी साधनका एड्मिनका लागि बनाइएका एप"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> वटा सक्रिय एप</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> सक्रिय एप</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"कुनै पनि एप सक्रिय छैन"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"सवारी साधनका प्रबन्धकले व्यवस्थापन गर्ने सेटिङ"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"यो सेटिङ अहिले नै परिवर्तन गर्न मिल्दैन"</string>
 </resources>

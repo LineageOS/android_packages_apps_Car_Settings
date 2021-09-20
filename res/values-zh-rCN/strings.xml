@@ -397,6 +397,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置信息服务"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置信息"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"位置信息服务可能会使用 GPS、WLAN、移动网络和传感器等来源协助推测设备所在的位置。"</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"驾驶辅助"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"发送到驾驶辅助功能的位置信息不包含可识别您身份的信息。这些信息最多存储 2 天，然后就会被删除。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"麦克风"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麦克风"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允许所有应用使用麦克风"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"添加个人资料"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"删除此个人资料"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"添加个人资料"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"信息娱乐系统管理"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"没有信息娱乐系统管理应用"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"此信息娱乐系统管理应用已启用，它允许“<xliff:g id="APP_NAME">%1$s</xliff:g>”应用执行以下操作："</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"启用此信息娱乐系统应用将允许“<xliff:g id="APP_NAME">%1$s</xliff:g>”应用执行以下操作："</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"要启用此信息娱乐系统应用吗？"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"启用此信息娱乐系统应用"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"停用此信息娱乐系统应用"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"更多详情"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"您的设备组管理员可以监控和管理与此个人资料相关的应用和数据，其中包括设置、权限、企业权限、网络活动和车辆的位置信息。"</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"您的设备组管理员可以监控和管理与此个人资料相关的应用和数据，其中包括设置、权限、企业权限、网络活动和设备的位置信息。"</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"设备组管理员可以监控和管理与此信息娱乐系统相关的应用和数据，其中包括设置、权限、企业权限、网络活动和车辆的位置信息。"</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"设备组管理员或许能够访问与此信息娱乐系统相关的数据、管理应用以及更改此车辆的设置。"</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"已被设备组管理员禁止"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"若要更改音量，请与设备组管理员联系"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"若要使用短信，请与设备组管理员联系"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"若要使用相机，请与设备组管理员联系"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"若要截取屏幕截图，请与设备组管理员联系"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"若要使用此应用，请与设备组管理员联系"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"已被分期付款提供商屏蔽"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"如有疑问，请与设备组管理员联系"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"车辆管理应用"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 个使用中的应用</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 个使用中的应用</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"没有使用中的应用"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"由设备组管理员管理的设置"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"暂时无法更改此设置"</string>
 </resources>

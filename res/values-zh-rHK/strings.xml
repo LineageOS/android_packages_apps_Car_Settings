@@ -397,6 +397,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"定位服務"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置資訊"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"定位功能可能會使用 GPS、Wi-Fi、流動網絡和感應器等來源確定裝置的所在位置。"</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"駕駛輔助"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"傳送到駕駛輔助功能的位置資料不包含可識別您身分的資料。資料會儲存最多 2 天，然後便會刪除。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"麥克風"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麥克風"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允許所有應用程式存取您的麥克風"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"新增設定檔"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"刪除此設定檔"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"新增設定檔"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"資訊娛樂系統管理員"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"沒有資訊娛樂系統管理員應用程式"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"此資訊娛樂系統管理應用程式已啟用，並允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」應用程式執行以下操作："</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"啟動此資訊娛樂系統應用程式將允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」應用程式執行以下操作："</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"要啟動此資訊娛樂系統應用程式嗎？"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"啟動此資訊娛樂系統應用程式"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"停用此資訊娛樂系統應用程式"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"更多詳情"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"您的車隊管理員可以監控及管理與此設定檔相關的應用程式和資料，包括設定、權限、公司存取權、網絡活動，以及車輛的位置資料。"</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"您的車隊管理員可以監控及管理與此設定檔相關的應用程式和資料，包括設定、權限、公司存取權、網絡活動，以及裝置的位置資料。"</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"車隊管理員可以監控及管理與此資訊娛樂系統相關的應用程式和資料，包括設定、權限、公司存取權、網絡活動，以及車輛的位置資料。"</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"車隊管理員或可存取此資訊娛樂系統的相關資料、管理應用程式並變更車輛設定。"</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"已被您的車隊管理員封鎖"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"請聯絡車隊管理員以變更音量"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"請聯絡車隊管理員以使用短訊"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"請聯絡車隊管理員以使用相機"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"請聯絡車隊管理員以擷取螢幕截圖"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"請聯絡車隊管理員以使用此應用程式"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"已被您的信貸提供者封鎖"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"如有任何問題，請聯絡車隊管理員"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"車輛管理員應用程式"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個使用中的應用程式</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個使用中的應用程式</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"沒有使用中的應用程式"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"由車隊管理員管理的設定"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"目前無法更改此設定"</string>
 </resources>

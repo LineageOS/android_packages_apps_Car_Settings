@@ -405,6 +405,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Служби локації"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Використовувати геодані"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Допомога водію"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Геодані, які отримують функції допомоги водію, не містять інформації, за якою вас можна ідентифікувати. Вони зберігаються щонайбільше 2 дні, а потім видаляються."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Використовувати мікрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Надати всім додаткам доступ до мікрофона"</string>
@@ -764,6 +766,35 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Додати профіль"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Видалити цей профіль"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Додати профіль"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Адміністратор інформаційно-розважальної системи"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Немає додатків адміністратора інформаційно-розважальної системи"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Цей додаток адміністратора інформаційно-розважальної системи активний і дає змогу додатку <xliff:g id="APP_NAME">%1$s</xliff:g> виконувати вказані нижче операції."</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Якщо ви активуєте цей додаток інформаційно-розважальної системи, додаток <xliff:g id="APP_NAME">%1$s</xliff:g> зможе виконувати вказані нижче операції."</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Активувати цей додаток?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Активувати цей додаток інформаційно-розважальної системи"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Деактивувати цей додаток інформаційно-розважальної системи"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Докладніше"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Адміністратор авто може відстежувати додатки й дані, пов’язані з цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження транспортного засобу, а також керувати ними."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Адміністратор авто може відстежувати додатки й дані, пов’язані з цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження пристрою, а також керувати ними."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Адміністратор авто може відстежувати додатки й дані, пов’язані з цією інформаційно-розважальною системою, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження транспортного засобу, а також керувати ними."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Адміністратор авто може мати доступ до даних, пов’язаних з цією інформаційно-розважальною системою, керувати додатками й змінювати налаштування цього транспортного засобу."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Заблоковано адміністратором"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Щоб змінити гучність, зв’яжіться з адміністратором"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Щоб надсилати SMS, зв’яжіться з адміністратором"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Щоб увімкнути камеру, зв’яжіться з адміністратором"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Щоб робити знімки екрана, зв’яжіться з адміністратором"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Щоб увімкнути додаток, зв’яжіться з адміністратором"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Заблоковано кредитором"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Якщо у вас виникли запитання, зв’яжіться з адміністратором авто"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Програми для адміністраторів авто"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> активний додаток</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> активні додатки</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> активних додатків</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> активного додатка</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Немає активних додатків"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Налаштування, якими керує адміністратор авто"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Наразі це налаштування змінити не можна"</string>
 </resources>

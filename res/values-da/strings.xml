@@ -130,7 +130,7 @@
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi-præferencer"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Aktivér Wi-Fi automatisk"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi aktiveres igen ved et netværk af høj kvalitet, f.eks. dit hjemmenetværk"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ikke muligt, da placering er deaktiveret. Aktivér "<annotation id="link">"placering"</annotation>"."</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ikke muligt, da lokation er deaktiveret. Aktivér "<annotation id="link">"lokation"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vil du aktivere Wi‑Fi-scanning?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktivér"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-scanning blev aktiveret"</string>
@@ -384,19 +384,21 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Styring af Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-styring giver en app tilladelse til at aktivere og deaktivere Wi-Fi, søge efter og oprette forbindelse til Wi-Fi-netværk, tilføje og fjerne netværk eller starte et lokalt hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mere"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"Placering"</string>
-    <string name="location_toggle_title" msgid="836779750812064601">"Anvend placering"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Hvis du deaktiverer Placering, deaktiveres placeringsadgang for alle apps. Funktionerne i førerassistance har fortsat adgang. Hvis du deaktiverer førerassistance, kan funktionerne i førerassistance ikke længere benytte din placering."</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Lokation"</string>
+    <string name="location_toggle_title" msgid="836779750812064601">"Anvend lokation"</string>
+    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Hvis du deaktiverer Lokation, deaktiveres lokationsadgang for alle apps. Funktionerne i førerassistance har fortsat adgang. Hvis du deaktiverer førerassistance, kan funktionerne i førerassistance ikke længere benytte din lokation."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Førerassistance"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Utilgængelig, når placering er slået fra"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Hvis du deaktiverer førerassistance, deaktiveres de af tjenestens funktioner, som afhænger af placeringsoplysninger."</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Utilgængelig, når lokation er slået fra"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Hvis du deaktiverer førerassistance, deaktiveres de af tjenestens funktioner, som afhænger af lokationsoplysninger."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Deaktiver alligevel"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Seneste placeringsanmodninger"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Der er ingen seneste placeringsanmodninger"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Seneste lokationsanmodninger"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Der er ingen seneste lokationsanmodninger"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tilladelser på appniveau"</string>
-    <string name="location_settings_services_title" msgid="1186133632690970468">"Placeringstjenester"</string>
-    <string name="location_use_location_title" msgid="117735895374606680">"Brug placering"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Placering kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds placering."</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Lokationstjenester"</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"Brug lokation"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Lokation kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds lokation."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Førerassistance"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Lokationsoplysninger, der sendes til funktionerne i førerassistance, indeholder ingen oplysninger, der identificerer dig. De gemmes i højst 2 dage, før de slettes."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Brug mikrofonen"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Giv alle apps adgang til din mikrofon"</string>
@@ -602,7 +604,7 @@
     <string name="sync_is_failing" msgid="5766255460901806206">"Der er i øjeblikket problemer med synkroniseringen. Den fortsætter om et øjeblik."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatliv"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data i infotainmentsystemet"</string>
-    <string name="privacy_location_summary" msgid="7019817848470566242">"Styr dine apps\' adgang til din placering"</string>
+    <string name="privacy_location_summary" msgid="7019817848470566242">"Styr dine apps\' adgang til din lokation"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Styr dine apps\' adgang til mikrofonen"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Data i infotainmentsystemet"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Tilføj en profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Slet denne profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tilføj profil"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator af infotainmentsystemet"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Der er ingen apps til administration af infotainmentsystemet"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Denne app til administration af infotainmentsystem er aktiv og giver appen <xliff:g id="APP_NAME">%1$s</xliff:g> tilladelse til at udføre følgende handlinger:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Hvis du aktiverer denne app til infotainmentsystem, giver du <xliff:g id="APP_NAME">%1$s</xliff:g> tilladelse til at udføre følgende handlinger:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Vil du aktivere denne app til infotainmentsystem?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktivér denne app til infotainmentsystem"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Deaktiver denne app til infotainmentsystem"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Mere info"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Din administrator kan overvåge og administrere apps og data, som er tilknyttet denne profil, herunder indstillinger, tilladelser, virksomhedsadgang, netværksaktivitet og oplysninger om køretøjets lokation."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Din administrator kan overvåge og administrere apps og data, der er knyttet til denne profil, herunder indstillinger, tilladelser, virksomhedsadgang, netværksaktivitet og oplysninger om enhedens lokation."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Administratoren kan overvåge og administrere apps og data, som er tilknyttet dette infotainmentsystem, herunder indstillinger, tilladelser, virksomhedsadgang, netværksaktivitet og oplysninger om køretøjets lokation."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Administratoren kan muligvis tilgå data, som er tilknyttet dette infotainmentsystem, administrere apps og ændre indstillingerne for køretøjet."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Blokeret af din administrator"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Kontakt administratoren for at ændre lydstyrken"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Kontakt administratoren for at bruge sms"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Kontakt administratoren for at bruge kameraet"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Kontakt administratoren for at tage screenshots"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Kontakt administratoren for at bruge denne app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokeret af dit kreditinstitut"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Kontakt administratoren, hvis du har spørgsmål"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Apps til administration af køretøj"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktiv app</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktive apps</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Ingen aktive apps"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Indstillinger, som angives af administratoren"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Denne indstilling kan ikke ændres lige nu"</string>
 </resources>

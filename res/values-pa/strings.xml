@@ -387,20 +387,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"ਟਿਕਾਣਾ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ਟਿਕਾਣਾ ਵਰਤੋ"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"ਟਿਕਾਣਾ ਬੰਦ ਕਰਨ ਨਾਲ ਸਾਰੀਆਂ ਐਪਾਂ ਲਈ ਟਿਕਾਣਾ ਪਹੁੰਚ ਬੰਦ ਹੋ ਜਾਵੇਗੀ, ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਪਹੁੰਚ ਹਾਲੇ ਵੀ ਬਣੀ ਰਹੇਗੀ। ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਟੌਗਲ ਨੂੰ ਬੰਦ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਲਈ ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਵਿਸ਼ੇਸ਼ਤਾ ਬੰਦ ਹੋ ਜਾਵੇਗੀ।"</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"ਟਿਕਾਣਾ ਚਾਲੂ ਹੋਣ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"ਜੇ ਤੁਸੀਂ ਇਸਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਵਾਲੀਆਂ ਉਹਨਾਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ ਜੋ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ \'ਤੇ ਨਿਰਭਰ ਕਰਦੀਆਂ ਹਨ।"</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"ਫਿਰ ਵੀ ਬੰਦ ਕਰੋ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ਕੋਈ ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ ਨਹੀਂ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ਐਪ-ਪੱਧਰ ਇਜਾਜ਼ਤਾਂ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ਟਿਕਾਣਾ ਵਰਤੋ"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ਟਿਕਾਣਾ ਸੇਵਾ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਦੇ ਟਿਕਾਣੇ ਦਾ ਅੰਦਾਜ਼ਾ ਲਗਾਉਣ ਲਈ GPS, ਵਾਈ-ਫਾਈ, ਮੋਬਾਈਲ ਨੈੱਟਵਰਕਾਂ ਅਤੇ ਸੈਂਸਰਾਂ ਵਰਗੇ ਸਰੋਤਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੀ ਹੈ।"</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਭੇਜੀ ਗਈ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਵਿੱਚ ਅਜਿਹੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਨਹੀਂ ਹੁੰਦੀ ਜਿਸ ਨਾਲ ਤੁਹਾਡੀ ਪਛਾਣ ਹੋ ਸਕੇ। ਇਸਨੂੰ ਵੱਧ ਤੋਂ ਵੱਧ 2 ਦਿਨਾਂ ਲਈ ਸਟੋਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਇਸ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਵਰਤੋ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ਸਾਰੀਆਂ ਐਪਾਂ ਨੂੰ ਆਪਣੇ ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
@@ -742,7 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ਕੋਈ ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ਇਹ ਪ੍ਰੋਫਾਈਲ ਮਿਟਾਓ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ"</string>
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਪ੍ਰਸ਼ਾਸਕ"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਸੰਬੰਧੀ ਕੋਈ ਪ੍ਰਸ਼ਾਸਕ ਐਪ ਨਹੀਂ"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"ਇਹ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਪ੍ਰਸ਼ਾਸਕ ਐਪ ਕਿਰਿਆਸ਼ੀਲ ਹੈ ਅਤੇ <xliff:g id="APP_NAME">%1$s</xliff:g> ਐਪ ਨੂੰ ਅੱਗੇ ਦਿੱਤੀਆਂ ਕਾਰਵਾਈਆਂ ਨੂੰ ਕਰਨ ਲਈ ਇਜਾਜ਼ਤ ਦਿੰਦੀ ਹੈ:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"ਇਸ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਪ੍ਰਸ਼ਾਸਕ ਐਪ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰਨ ਨਾਲ <xliff:g id="APP_NAME">%1$s</xliff:g> ਐਪ ਨੂੰ ਅੱਗੇ ਦਿੱਤੀਆਂ ਕਾਰਵਾਈਆਂ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਮਿਲੇਗੀ:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"ਕੀ ਇਹ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਐਪ ਕਿਰਿਆਸ਼ੀਲ ਕਰੀਏ?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"ਇਸ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਐਪ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"ਇਸ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਐਪ ਨੂੰ ਅਕਿਰਿਆਸ਼ੀਲ ਕਰੋ"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"ਹੋਰ ਵੇਰਵੇ"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"ਤੁਹਾਡਾ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਸੈਟਿੰਗਾਂ, ਇਜਾਜ਼ਤਾਂ, ਕਾਰਪੋਰੇਟ ਪਹੁੰਚ, ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਅਤੇ ਵਾਹਨ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਸਮੇਤ ਇਸ ਪ੍ਰੋਫਾਈਲ ਨਾਲ ਸੰਬੰਧਿਤ ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਉਨ੍ਹਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦਾ ਹੈ।"</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"ਤੁਹਾਡਾ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਸੈਟਿੰਗਾਂ, ਇਜਾਜ਼ਤਾਂ, ਕਾਰਪੋਰੇਟ ਪਹੁੰਚ, ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਅਤੇ ਡੀਵਾਈਸ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਸਮੇਤ ਇਸ ਪ੍ਰੋਫਾਈਲ ਨਾਲ ਸੰਬੰਧਿਤ ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਉਨ੍ਹਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦਾ ਹੈ।"</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਸੈਟਿੰਗਾਂ, ਇਜਾਜ਼ਤਾਂ, ਕਾਰਪੋਰੇਟ ਪਹੁੰਚ, ਨੈੱਟਵਰਕ ਸਰਗਰਮੀ ਅਤੇ ਵਾਹਨ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਸਮੇਤ ਇਸ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਨਾਲ ਸੰਬੰਧਿਤ ਐਪਾਂ ਅਤੇ ਡਾਟੇ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਉਨ੍ਹਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦਾ ਹੈ।"</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਇਸ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਨਾਲ ਸੰਬੰਧਿਤ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕਰ, ਐਪਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਅਤੇ ਇਸ ਵਾਹਨ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਬਦਲ ਸਕਦਾ ਹੈ।"</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਨੇ ਬਲਾਕ ਕੀਤੀ"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ਅਵਾਜ਼ ਬਦਲਣ ਲਈ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ਸਕ੍ਰੀਨਸ਼ਾਟ ਲੈਣ ਲਈ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"ਇਸ ਐਪ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ਤੁਹਾਡੇ ਕ੍ਰੈਡਿਟ ਪ੍ਰਦਾਨਕ ਨੇ ਬਲਾਕ ਕੀਤੀ"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"ਜੇ ਤੁਹਾਡਾ ਕੋਈ ਸਵਾਲ ਹੈ, ਤਾਂ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"ਵਾਹਨ ਪ੍ਰਸ਼ਾਸਕ ਐਪਾਂ"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ਕਿਰਿਆਸ਼ੀਲ ਐਪ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ਕਿਰਿਆਸ਼ੀਲ ਐਪਾਂ</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"ਕੋਈ ਕਿਰਿਆਸ਼ੀਲ ਐਪ ਨਹੀਂ"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"ਤੁਹਾਡੇ ਫਲੀਟ ਪ੍ਰਬੰਧਕ ਵੱਲੋਂ ਪ੍ਰਬੰਧਨ ਕੀਤੀਆਂ ਸੈਟਿੰਗਾਂ"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ਫ਼ਿਲਹਾਲ ਇਹ ਸੈਟਿੰਗ ਬਦਲੀ ਨਹੀਂ ਜਾ ਸਕਦੀ"</string>
 </resources>

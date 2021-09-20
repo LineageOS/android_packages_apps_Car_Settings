@@ -397,6 +397,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"บริการตำแหน่ง"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ใช้ตำแหน่ง"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ตำแหน่งอาจใช้ข้อมูลจากแหล่งที่มาต่างๆ อย่างเช่น GPS, Wi‑Fi, เครือข่ายมือถือ และเซ็นเซอร์ เพื่อช่วยระบุตำแหน่งคร่าวๆ ของอุปกรณ์"</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ตัวช่วยของผู้ขับ"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"ข้อมูลตำแหน่งที่ส่งไปยังฟีเจอร์ตัวช่วยของผู้ขับไม่มีข้อมูลที่ระบุตัวคุณได้ ระบบจะเก็บข้อมูลดังกล่าวไว้นานสูงสุด 2 วันก่อนที่จะลบ"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ไมโครโฟน"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ใช้ไมโครโฟน"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"อนุญาตให้แอปทั้งหมดเข้าถึงไมโครโฟนของคุณ"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"เพิ่มโปรไฟล์"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ลบโปรไฟล์นี้"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"เพิ่มโปรไฟล์"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"ผู้ดูแลระบบสาระบันเทิง"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"ไม่มีแอปดูแลระบบสาระบันเทิง"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"แอปผู้ดูแลระบบสาระบันเทิงนี้ทำงานอยู่และอนุญาตให้แอป <xliff:g id="APP_NAME">%1$s</xliff:g> ดำเนินการต่อไปนี้"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"การเปิดใช้งานแอประบบสาระบันเทิงนี้จะอนุญาตให้แอป <xliff:g id="APP_NAME">%1$s</xliff:g> ดำเนินการต่อไปนี้"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"เปิดใช้งานแอประบบสาระบันเทิงนี้ใช่ไหม"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"เปิดใช้งานแอประบบสาระบันเทิงนี้"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"ปิดใช้งานแอประบบสาระบันเทิงนี้"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"รายละเอียดเพิ่มเติม"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"ผู้จัดการกลุ่มรถยนต์สามารถตรวจสอบและจัดการแอปและข้อมูลที่เชื่อมโยงกับโปรไฟล์นี้ ซึ่งรวมถึงการตั้งค่า สิทธิ์ การเข้าถึงของบริษัท กิจกรรมในเครือข่าย และข้อมูลตำแหน่งของรถยนต์"</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"ผู้จัดการกลุ่มรถยนต์สามารถตรวจสอบและจัดการแอปและข้อมูลที่เชื่อมโยงกับโปรไฟล์นี้ ซึ่งรวมถึงการตั้งค่า สิทธิ์ การเข้าถึงของบริษัท กิจกรรมในเครือข่าย และข้อมูลตำแหน่งของอุปกรณ์"</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"ผู้จัดการกลุ่มรถยนต์สามารถตรวจสอบและจัดการแอปและข้อมูลที่เชื่อมโยงกับระบบสาระบันเทิงนี้ ซึ่งรวมถึงการตั้งค่า สิทธิ์ การเข้าถึงของบริษัท กิจกรรมในเครือข่าย และข้อมูลตำแหน่งของรถยนต์"</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"ผู้จัดการกลุ่มรถยนต์อาจสามารถเข้าถึงข้อมูลที่เชื่อมโยงกับระบบสาระบันเทิงนี้ จัดการแอป และเปลี่ยนการตั้งค่ารถยนต์ได้"</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"ผู้จัดการกลุ่มรถยนต์บล็อกไว้"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ติดต่อผู้จัดการกลุ่มรถยนต์เพื่อเปลี่ยนระดับเสียง"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"ติดต่อผู้จัดการกลุ่มรถยนต์เพื่อใช้ SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ติดต่อผู้จัดการกลุ่มรถยนต์เพื่อใช้กล้อง"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ติดต่อผู้จัดการกลุ่มรถยนต์เพื่อถ่ายภาพหน้าจอ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"ติดต่อผู้จัดการกลุ่มรถยนต์เพื่อใช้แอปนี้"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ผู้ให้บริการเครดิตบล็อกไว้"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"หากมีคำถาม โปรดติดต่อผู้จัดการกลุ่มรถยนต์"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"แอปผู้ดูแลระบบรถยนต์"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other">มี <xliff:g id="COUNT_1">%d</xliff:g> แอปที่ใช้งานอยู่</item>
+      <item quantity="one">มี <xliff:g id="COUNT_0">%d</xliff:g> แอปที่ใช้งานอยู่</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"ไม่มีแอปที่ใช้งานอยู่"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"การตั้งค่าที่ผู้จัดการกลุ่มรถยนต์ดูแล"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"เปลี่ยนแปลงการตั้งค่านี้ไม่ได้ในตอนนี้"</string>
 </resources>

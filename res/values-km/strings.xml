@@ -397,6 +397,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"សេវាកម្ម​ទីតាំង"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ជំនួយ​អ្នកបើកបរ"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"ព័ត៌មានទីតាំង​ដែលបានបញ្ជូន​ទៅមុខងារ​ជំនួយអ្នកបើកបរ​មិនមាន​ព័ត៌មានដែល​សម្គាល់អ្នកទេ។ ព័ត៌មាននោះ​ត្រូវបានរក្សាទុក​យ៉ាងយូរបំផុត 2 ថ្ងៃ មុនពេល​ត្រូវបានលុប។"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​មីក្រូហ្វូន​របស់អ្នក"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"បញ្ចូល​កម្រងព័ត៌មាន"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"លុប​កម្រងព័ត៌មាននេះ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"បញ្ចូល​កម្រងព័ត៌មាន"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"អ្នកគ្រប់គ្រង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្ត"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"គ្មានកម្មវិធី​អ្នកគ្រប់គ្រងប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តទេ"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"កម្មវិធី​អ្នកគ្រប់គ្រងប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តនេះគឺសកម្ម និងអនុញ្ញាតឱ្យកម្មវិធី <xliff:g id="APP_NAME">%1$s</xliff:g> ធ្វើប្រតិបត្តិការ​ខាងក្រោម៖"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"ការបើកដំណើរការ​កម្មវិធីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តនេះ​នឹងអនុញ្ញាតឱ្យកម្មវិធី <xliff:g id="APP_NAME">%1$s</xliff:g> ធ្វើប្រតិបត្តិការ​ខាងក្រោម៖"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"បើកដំណើរការកម្មវិធីប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះឬ?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"បើកដំណើរការ​កម្មវិធីប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"បិទដំណើរការ​កម្មវិធីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តនេះ"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"ព័ត៌មានលម្អិតបន្ថែម"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"អ្នកគ្រប់គ្រងក្រុមយានជំនិះ​របស់អ្នក​អាច​តាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាន​នេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មានអំពី​ទីតាំងរបស់យានជំនិះ​ផងដែរ។"</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"អ្នកគ្រប់គ្រងក្រុមយានជំនិះ​របស់អ្នក​អាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាននេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មានអំពីទីតាំង​របស់ឧបករណ៍​ផងដែរ។"</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"អ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ​អាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើលក្ខណៈក្រុមហ៊ុន សកម្មភាពបណ្ដាញ និងព័ត៌មានអំពីទីតាំងរបស់​យានជំនិះផងដែរ។"</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"អ្នកគ្រប់គ្រងក្រុម​យានជំនិះប្រហែលជា​អាចចូលប្រើទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ គ្រប់គ្រង​កម្មវិធី និងប្ដូរការកំណត់​យានជំនិះនេះ។"</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"បានទប់ស្កាត់ដោយអ្នកគ្រប់គ្រងក្រុមយានជំនិះរបស់អ្នក"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ទាក់ទងអ្នកគ្រប់គ្រងក្រុមយានជំនិះ ដើម្បីប្ដូរកម្រិតសំឡេង"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើសារ SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើកាមេរ៉ា"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីថតរូប​អេក្រង់"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើកម្មវិធីនេះ"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"បានទប់ស្កាត់ដោយក្រុមហ៊ុនផ្ដល់សេវាឥណទានរបស់អ្នក"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"ប្រសិនបើ​អ្នកមានសំណួរ សូមទាក់ទង​អ្នកគ្រប់គ្រងក្រុមយានជំនិះ"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"កម្មវិធីអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other">កម្មវិធីសកម្ម <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">កម្មវិធីសកម្ម <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"មិនមាន​កម្មវិធីសកម្មទេ"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"ការកំណត់​ដែលស្ថិតក្រោមការគ្រប់គ្រង​របស់អ្នកគ្រប់គ្រង​ក្រុមយានជំនិះអ្នក"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"មិនអាចផ្លាស់ប្ដូរ​ការកំណត់នេះ​នៅពេលនេះ​បានទេ"</string>
 </resources>

@@ -387,20 +387,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Staðsetning"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Nota staðsetningu"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Þegar slökkt er á staðsetningu er slökkt á aðgangi allra forrita að staðsetningu, eiginleikar akstursaðstoðar hafa þó áfram aðgang Þegar slökkt er á akstursaðstoð geta eiginleikar akstursaðstoðar ekki notað staðsetninguna þína."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Akstursaðstoð"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Ekki í boði ef kveikt er á staðsetningu"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ef þú slekkur á þessu verða eiginleikar akstursaðstoðar sem reiða sig á staðsetningarupplýsingar óvirkir."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Slökkva samt"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Engar nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Heimildir á forritsstigi"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Staðsetningarþjónusta"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Nota staðsetningu"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Staðsetning kann að notast við tækni á borð við GPS, Wi-Fi, farsímakerfi og skynjara til að áætla staðsetningu tækisins."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Akstursaðstoð"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Staðsetningarupplýsingar sem sendar eru í eiginleika akstursaðstoðar innihalda engar upplýsingar sem auðkenna þig. Upplýsingarnar eru geymdar að hámarki í 2 daga áður en þeim er eytt."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Hljóðnemi"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Nota hljóðnema"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Veita öllum forritum aðgang að hljóðnemanum"</string>
@@ -742,7 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Bæta við prófíl"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eyða þessum prófíl"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Bæta við prófíl"</string>
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Stjórnandi upplýsinga- og afþreyingarkerfis"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Engin stjórnendaforrit fyrir upplýsinga- og afþreyingarkerfi"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Þetta stjórnandaforrit upplýsinga- og afþreyingarkerfis er virkt og gerir forritinu <xliff:g id="APP_NAME">%1$s</xliff:g> kleift að framkvæma eftirfarandi aðgerðir:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Þegar kveikt er á þessu upplýsinga- og afþreyingarkerfisforriti getur forritið <xliff:g id="APP_NAME">%1$s</xliff:g> framkvæmt eftirfarandi aðgerðir:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Virkja þetta upplýsinga- og afþreyingarkerfisforrit?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Virkja þetta upplýsinga- og afþreyingarkerfisforrit"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Slökkva á þessu upplýsinga- og afþreyingarkerfisforriti"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Nánar"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Stjórnandinn getur fylgst með og stjórnað forritum og gögnum sem tengjast þessum prófíl, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum ökutækisins."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Stjórnandinn getur fylgst með og stjórnað forritum og gögnum sem tengjast þessum prófíl, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum tækisins."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Stjórnandinn getur fylgst með og stjórnað forritum og gögnum sem tengjast þessu upplýsinga- og afþreyingarkerfi, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum ökutækisins."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Stjórnandinn getur hugsanlega opnað gögn sem tengjast þessu upplýsinga- og afþreyingarkerfi, stjórnað forritum og breytt stillingum þessa ökutækis."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Útilokað af stjórnanda"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Ræddu við stjórnanda ef þú vilt breyta hljóðstyrk"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Ræddu við stjórnanda til að nota SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Ræddu við stjórnanda til að nota myndavél"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Ræddu við stjórnanda til að taka skjámyndir"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Ræddu við stjórnanda til að nota þetta forrit"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Útilokað af lánveitanda þínum"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ef spurningar vakna skaltu hafa samband við stjórnandann"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Stjórnendaforrit ökutækis"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> virkt forrit</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> virk forrit</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Engin virk forrit"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Stjórnandinn stjórnar stillingunum"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ekki er hægt að breyta þessari stillingu eins og er"</string>
 </resources>

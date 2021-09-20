@@ -397,6 +397,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizi di geolocalizzazione"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usa posizione"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Il servizio di geolocalizzazione potrebbe usare fonti quali GPS, reti mobili, Wi-Fi e sensori per stabilire la posizione approssimativa del dispositivo."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistenza alla guida"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Le informazioni sulla posizione inviate alle funzionalità di assistenza alla guida non includono dati che ti identificano. Vengono memorizzate per un massimo di 2 giorni prima dell\'eliminazione."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usa il microfono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Consenti a tutte le app di accedere al microfono"</string>
@@ -738,6 +740,33 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Aggiungi un profilo"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Elimina questo profilo"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Aggiungi profilo"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Amministratore di sistema di infotainment"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nessuna app di amministrazione del sistema di infotainment"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Questa app per amministratori di sistema di infotainment è attiva e consente all\'app <xliff:g id="APP_NAME">%1$s</xliff:g> di eseguire le seguenti operazioni:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Attivando questa app di sistema di infotainment, l\'app <xliff:g id="APP_NAME">%1$s</xliff:g> potrà eseguire le seguenti operazioni:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Attivare app di sistema di infotainment?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Attiva questa app di sistema di infotainment"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Disattiva quest\'app di sistema di infotainment"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Altri dettagli"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Il tuo gestore del parco risorse può monitorare e gestire le app e i dati associati a questo profilo, inclusi accesso aziendale, impostazioni, autorizzazioni, attività di rete e informazioni sulla posizione del veicolo."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Il tuo gestore del parco risorse può monitorare e gestire le app e i dati associati a questo profilo, inclusi accesso aziendale, impostazioni, autorizzazioni, attività di rete e informazioni sulla posizione del dispositivo."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Il gestore del parco risorse può monitorare e gestire le app e i dati associati a questo sistema di infotainment, inclusi accesso aziendale, impostazioni, autorizzazioni, attività di rete e informazioni sulla posizione del veicolo."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Il gestore del parco risorse potrebbe essere in grado di accedere ai dati associati a questo sistema di infotainment, gestire app e modificare le impostazioni di questo veicolo."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Accesso blocc. da gest. parco risorse"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Contatta gestore parco risorse per reg. il volume"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Contatta gestore parco risorse per usare gli SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Contatta gestore parco risorse per usare fotocamera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Contatta gestore parco risorse per fare screenshot"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Contatta gestore parco risorse per usare quest\'app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Impostazione bloccata dal fornitore di credito"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Se hai domande, contatta il gestore del parco risorse"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"App per amministratori veicolo"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> app attive</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app attiva</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nessuna app attiva"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Impostazioni gestite dal tuo gestore del parco risorse"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Al momento non è possibile modificare questa impostazione"</string>
 </resources>

@@ -401,6 +401,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokacija može koristiti izvore kao što su GPS, WiFi, mobilne mreže i senzori za lakšu procjenu lokacije uređaja."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Pomoć za vozače"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Informacije o lokaciji koje se šalju funkcijama pomoći za vozače ne sadržavaju informacije pomoću kojih vas je moguće identificirati. Pohranjuju se najduže 2 dana prije nego što se izbrišu."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristite mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>
@@ -751,6 +753,34 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Dodaj profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Izbriši ovaj profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Dodaj profil"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator informativno-zabavnog sistema"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nema nijedne administratorske aplikacije informativno-zabavnog sistema"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Aplikacija administratora informativno-zabavnog sistema je aktivna i dozvoljava aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da vrši sljedeće operacije:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Aktiviranjem aplikacije informativno-zabavnog sistema dozvolit će se aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da izvršava sljedeće operacije:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivirati ovu aplikaciju?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktiviraj ovu aplikaciju informativno-zabavnog sistema"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Deaktivirajte ovu aplikaciju informativno-zabavnog sistema"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Više detalja"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Upravitelj flote može nadzirati aplikacije i podatke povezane s ovim profilom te upravljati njima, uključujući postavke, odobrenja, korporativni pristup, aktivnost na mreži i informacije o lokaciji vozila."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Upravitelj flote može nadzirati aplikacije i podatke povezane s ovim profilom te upravljati njima, uključujući postavke, odobrenja, korporativni pristup, aktivnost na mreži i informacije o lokaciji uređaja."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Upravitelj flote može nadzirati aplikacije i podatke povezane s ovim informativno-zabavnim sistemom te upravljati njima, uključujući postavke, odobrenja, korporativni pristup, aktivnost na mreži i informacije o lokaciji vozila."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Upravitelj flote će možda moći pristupati podacima povezanim s ovim informativno-zabavnim sistemom, upravljati aplikacijama i mijenjati postavke ovog vozila."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Blokirao upravitelj flote"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Obratite se upravitelju da mijenjate jačinu zvuka"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Obratite se upravitelju flote da koristite SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Obratite se upravitelju flote da koristite kameru"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Obratite se upravitelju da pravite snimke ekrana"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Obratite se upravitelju flote da koristite aplikaciju"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokirao vaš dobavljač kredita"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ako imate pitanja, kontaktirajte upravitelja flote"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Aplikacije administratora vozila"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktivna aplikacija</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aktivne aplikacije</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktivnih aplikacija</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nema aktivnih aplikacija"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Postavkama upravlja upravitelj flote"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ovu postavku trenutno nije moguće promijeniti"</string>
 </resources>
