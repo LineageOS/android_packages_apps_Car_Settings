@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Serveis d\'ubicació"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utilitza la ubicació"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"La ubicació pot utilitzar fonts com el GPS, la connexió Wi‑Fi, les xarxes mòbils i els sensors per calcular la ubicació del dispositiu."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistència al conductor"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"La informació d\'ubicació enviada a les funcions d\'assistència al conductor no inclou cap dada que t\'identifiqui. S\'emmagatzema durant 2 dies com a màxim abans de suprimir-se."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micròfon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utilitza el micròfon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permet que totes les aplicacions accedeixin al teu micròfon"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Suprimeix aquest perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Afegeix un perfil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillantor de la pantalla"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador del sistema d\'informació i entreteniment"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"No hi ha cap aplicació d\'administració del sistema d\'informació i entreteniment"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Aquesta aplicació d\'administració del sistema d\'informació i entreteniment està activa i permet que l\'aplicació <xliff:g id="APP_NAME">%1$s</xliff:g> faci les operacions següents:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"L\'activació d\'aquesta aplicació del sistema d\'informació i entreteniment permetrà que l\'aplicació <xliff:g id="APP_NAME">%1$s</xliff:g> faci les operacions següents:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Vols activar aquesta aplicació?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Activa aquesta aplicació del sistema d\'informació i entreteniment"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Desactiva aquesta aplicació del sistema d\'informació i entreteniment"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Més detalls"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"El gestor de flota pot supervisar i gestionar les aplicacions i les dades associades a aquest perfil, inclosos els permisos, la configuració, l\'accés corporatiu, l\'activitat de xarxa i la informació d\'ubicació del vehicle."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"El gestor de flota pot supervisar i gestionar les aplicacions i les dades associades a aquest perfil, inclosos els permisos, la configuració, l\'accés corporatiu, l\'activitat de xarxa i la informació d\'ubicació del dispositiu."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"El gestor de flota pot supervisar i gestionar les aplicacions i les dades associades a aquest sistema d\'informació i entreteniment, inclosos els permisos, la configuració, l\'accés corporatiu, l\'activitat de xarxa i la informació d\'ubicació del vehicle."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"És possible que el gestor de flota pugui accedir a les dades associades a aquest sistema d\'informació i entreteniment, gestionar les aplicacions i canviar la configuració d\'aquest vehicle."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bloquejat pel gestor de flota"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Parla amb el gestor de flota per canviar el volum"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Contacta amb el gestor de flota per utilitzar SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Contacta amb el gestor per utilitzar la càmera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Parla amb el gestor per fer captures de pantalla"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Parla amb el gestor de flota per utilitzar l\'app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bloquejat per la teva entitat de crèdit"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Si tens cap dubte, contacta amb el gestor de flota"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Aplicacions d\'administració de vehicles"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacions actives</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicació activa</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"No hi ha cap aplicació activa"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Configuració gestionada pel gestor de flota"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restableix el sistema d\'informació i entreteniment"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"El teu sistema ha rebut una sol·licitud per restablir les dades de fàbrica i esborrar totes les dades. Pots restablir-lo ara, o es restablirà la pròxima vegada que s\'engegui el cotxe. A continuació, podràs configurar un perfil nou."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Restableix ara"</string>

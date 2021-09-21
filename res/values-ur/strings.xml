@@ -388,20 +388,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"مقام"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"مقام استعمال کریں"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"مقام کو آف کرنے سے تمام ایپس کے لیے مقام تک رسائی آف ہو جائے گی، حالانکہ ڈرائیور کی مدد کی خصوصیات کو پھر بھی رسائی حاصل رہے گی۔ ڈرائیور امدادی ٹوگل کو آف کرنے سے ڈرائیور کی مدد کی خصوصیت آپ کے مقام کو استعمال کرنے سے روک دے گی۔"</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ڈرائیور کی مدد"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"مقام کے آن ہونے کے دوران دستیاب نہیں ہے"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"اگر آپ اسے آف کرتے ہیں تو مقام کی معلومات پر مبنی ڈرائیور کی مدد کی خصوصیات غیر فعال ہو جائیں گی۔"</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"بہر حال آف کریں"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"مقام کی حالیہ درخواستیں"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"مقام کی کوئی حالیہ درخواست نہیں ہے"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ایپ کی سطح کی اجازتیں"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"مقام کی سروسز"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"مقام کا استعمال کریں"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"آپ کے آلہ کے مقام کا تعین کرنے میں مدد کرنے کے لیے، مقام GPS, Wi‑Fi، موبائل نیٹ ورکس اور سینسرز جیسے وسائل کا استعمال کر سکتا ہے۔"</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ڈرائیور کی مدد"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"ڈرائیور کی مدد کی خصوصیات کو بھیجی گئی مقام کی معلومات ایسی معلومات پر مشتمل نہیں ہے جو آپ کی شناخت کرتی ہے۔ حذف ہونے سے پہلے یہ زیادہ سے زیادہ 2 دن کیلئے محفوظ ہے۔"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"مائیکروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"مائیکروفون کا استعمال کریں"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"سبھی ایپس کو اپنے مائیکروفون تک رسائی کی اجازت دیں"</string>
@@ -743,10 +741,35 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ایک پروفائل شامل کریں"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"اس پروفائل کو حذف کریں"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"پروفائل شامل کریں"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="qc_display_brightness" msgid="2939655289816201170">"ڈسپلے کی چمک"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"معلوماتی انٹرٹینمنٹ سسٹم کا منتظم"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"کوئی معلوماتی انٹرٹینمنٹ سسٹم منتظم ایپ نہیں"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"یہ معلوماتی انٹرٹینمنٹ سسٹم کا منتظم فعال ہے اور <xliff:g id="APP_NAME">%1$s</xliff:g> ایپ کو درج ذيل اعمال انجام دینے کی اجازت دیتا ہے:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"اس معلوماتی انٹرٹینمنٹ سسٹم کے منتظم کو فعال کرنے سے <xliff:g id="APP_NAME">%1$s</xliff:g> ایپ کو درج ذيل اعمال انجام دینے کی اجازت مل جائے گی:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"معلوماتی انٹرٹینمنٹ سسٹم ایپ فعال کریں؟"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"معلوماتی انٹرٹینمنٹ سسٹم ایپ فعال کریں"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"اس معلوماتی انٹرٹینمنٹ سسٹم ایپ کو غیر فعال کریں"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"مزید تفصیلات"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"آپ کا فلیٹ مینیجر اس پروفائل سے وابستہ ایپس اور ڈیٹا سمیت ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور گاڑی کے مقام کی معلومات کی نگرانی اور ان کا نظم کر سکتا ہے۔"</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"آپ کا فلیٹ مینیجر اس پروفائل سے وابستہ ایپس اور ڈیٹا سمیت ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور آلہ کے مقام کی معلومات کی نگرانی اور ان کا نظم کر سکتا ہے۔"</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"فلیٹ مینیجر اس معلوماتی انٹرٹینمنٹ سسٹم سے وابستہ ایپس اور ڈیٹا سمیت ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور گاڑی کے مقام کی معلومات کی نگرانی اور ان کا نظم کر سکتا ہے۔"</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"فلیٹ مینیجر اس معلوماتی انٹرٹینمنٹ سسٹم کے ساتھ وابستہ ڈیٹا تک رسائی حاصل، ایپس کا نظم اور اس گاڑی کی ترتیبات کو تبدیل کر سکتا ہے۔"</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"آپ کے فلیٹ مینیجر نے مسدود کیا ہے"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"والیوم تبدیل کرنے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS استعمال کرنے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"کیمرا استعمال کرنے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"اسکرین شاٹس لینے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"یہ ایپ استعمال کرنے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"آپ کے کریڈٹ فراہم کنندہ نے مسدود کیا ہے"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"اگر آپ کے پاس سوالات ہیں تو فلیٹ مینیجر سے رابطہ کریں"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"گاڑی کے منتظم کی ایپس"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> فعال ایپس</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> فعال ایپ</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"کوئی فعال ایپ نہیں"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"آپ کے فلیٹ مینیجر نے ترتیبات کا نظم کیا ہے"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"معلوماتی انٹرٹینمنٹ سسٹم ری سیٹ کریں"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"آپ کے سسٹم کو فیکٹری ری سیٹ اور سبھی ڈیٹا کو صاف کرنے کی درخواست موصول ہوئی ہے۔ آپ اسے ابھی ری سیٹ کر سکتے ہیں یا اگلی بار کار کے شروع ہونے پر یہ ری سیٹ ہو جائے گا۔ پھر اس کے بعد آپ نئی پروفائل سیٹ اپ کر سکتے ہیں۔"</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"ابھی ری سیٹ کریں"</string>

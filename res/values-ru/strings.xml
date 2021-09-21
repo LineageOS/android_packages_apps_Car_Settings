@@ -406,6 +406,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Геолокация"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Использовать данные о местоположении"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для определения местоположения устройства могут использоваться данные GPS, Wi-Fi, мобильных сетей и датчиков."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Система помощи водителю"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Сведения о местоположении, которые отправляются системе помощи водителю, не содержат идентифицирующей вас информации. Они хранятся не более двух дней и затем удаляются."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Использовать микрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Разрешить всем приложениям доступ к микрофону"</string>
@@ -766,7 +768,36 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Удалить этот профиль"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Добавить профиль"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркость экрана"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Администратор информационно-развлекательной системы"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Нет приложений администратора информационно-развлекательной системы"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Приложение администратора информационно-развлекательной системы активно и разрешает приложению \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" выполнять следующие действия:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"После того как вы активируете это приложение администратора информационно-развлекательной системы, приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" сможет выполнять следующие действия:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Включить это приложение информационно-развлекательной системы?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Включить это приложение информационно-развлекательной системы"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Отключить это приложение информационно-развлекательной системы"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Дополнительная информация"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Менеджер автопарка может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам для этого профиля, а также связанные с ним данные, например сведения о местоположении автомобиля или действиях в сети."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Менеджер автопарка может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам для этого профиля, а также связанные с ним данные, например сведения о местоположении устройства или действиях в сети."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Менеджер автопарка может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам для этой информационно-развлекательной системы, а также связанные с ней данные, например сведения о местоположении автомобиля или действиях в сети."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"У менеджера автопарка есть доступ к данным, связанным с этой информационно-развлекательной системой, также он может изменять настройки автомобиля и управлять приложениями."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Заблокировано менеджером автопарка"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Чтобы изменить громкость, обратитесь к менеджеру автопарка"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Чтобы отправить SMS, обратитесь к менеджеру автопарка"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Чтобы использовать камеру, обратитесь к менеджеру автопарка"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Чтобы сделать скриншот, обратитесь к менеджеру автопарка"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Чтобы использовать это приложение, обратитесь к менеджеру автопарка"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Заблокировано кредитором"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Если у вас есть вопросы, обратитесь к менеджеру автопарка."</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Приложения для администратора автомобиля"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> активное приложение</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> активных приложения</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> активных приложений</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> активного приложения</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Нет активных приложений"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Настройки, которыми управляет менеджер автопарка"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Сбросьте настройки информационно-развлекательной системы"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Требуется сбросить настройки и удалить все данные системы. Сброс можно выполнить сейчас, или он произойдет автоматически при следующем запуске автомобиля. После этого вы сможете создать новый профиль."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Сбросить сейчас"</string>

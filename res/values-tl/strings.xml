@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Mga Serbisyo ng Lokasyon"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gumamit ng lokasyon"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Posibleng gumamit ang mga lokasyon ng mga source na gaya ng GPS, Wi‑Fi, mga mobile network, at sensor para tumulong sa pagtantiya ng lokasyon ng iyong device."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Tulong sa driver"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Walang impormasyong makakapagtukoy sa iyo sa impormasyon ng lokasyon na ipinapadala sa mga feature ng tulong sa driver. Sino-store ito sa loob ng hindi hihigit sa 2 araw bago i-delete."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikropono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gamitin ang mikropono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Payagan ang lahat ng app na i-access ang iyong mikropono"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"I-delete ang profile na ito"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Magdagdag ng profile"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Liwanag ng display"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Admin ng infotainment system"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Walang app ng admin ng infotainment system"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Aktibo ang infotainment system admin app na ito at pinapayagan ang app na <xliff:g id="APP_NAME">%1$s</xliff:g> na gawin ang mga sumusunod na operation:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Kapag na-activate ang infotainment system app na ito, papayagan nito ang app na <xliff:g id="APP_NAME">%1$s</xliff:g> na gawin ang mga sumusunod na operation:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"I-activate ang infotainment system app na ito?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"I-activate ang infotainment system app na ito"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"I-deactivate ang infotainment system app na ito"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Higit pang detalye"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Masusubaybayan at mapapamahalaan ng iyong fleet manager ang mga app at data na nauugnay sa profile na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng sasakyan."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Masusubaybayan at mapapamahalaan ng iyong fleet manager ang mga app at data na nauugnay sa profile na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng device."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Masusubaybayan at mapapamahalaan ng fleet manager ang mga app at data na nauugnay sa infotainment system na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng sasakyan."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Puwedeng ma-access ng fleet manager ang data na nauugnay sa infotainment system na ito, mapamahalaan ang mga app, at mabago ang mga setting ng sasakyang ito."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Na-block ng fleet manager mo"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Hilingin sa fleet manager na baguhin ang volume"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Hilingin sa fleet manager na gamitin ang SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Hilingin sa fleet manager na magamit ang camera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Hilingin sa fleet manager na kumuha ng screenshot"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Hilingin sa fleet manager na gamitin itong app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Na-block ng iyong credit provider"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Kung may mga tanong ka, makipag-ugnayan sa fleet manager"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Mga app ng admin ng sasakyan"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktibong app</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na aktibong app</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Walang aktibong app"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Pinamamahalaan ng iyong fleet manager ang mga setting"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"I-reset ang infotainment system"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Nakatanggap ang iyong system ng kahilingang mag-factory reset at magbura ng lahat ng data. Puwede mo itong i-reset ngayon, o magre-reset ito sa susunod na mag-start ang sasakyan. Pagkatapos, makakapag-set up ka ng bagong profile."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"I-reset Ngayon"</string>

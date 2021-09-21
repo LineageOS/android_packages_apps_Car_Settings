@@ -396,20 +396,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Poloha"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Použiť polohu"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Vypnutím nastavenia Poloha vypnete prístup k polohe všetkým aplikáciám. Prístup funkcií asistencie pre vodiča zostane zachovaný. Vypnutím prepínača asistencie pre vodiča zakážete funkciám asistencie pre vodiča prístup k vašej polohe."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Asistencia pre vodiča"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nie je pri zapnutej polohe k dispozícii"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ak túto možnosť vypnete, funkcia asistencie pre vodiča, ktorá funguje na základe údajov o polohe, sa deaktivuje."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Áno, vypnúť"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedávne žiadosti o polohu"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Žiadne nedávne žiadosti o polohu"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Povolenia na úrovni aplikácie"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Služby určovania polohy"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Používať polohu"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Nastavenie Poloha pomáha odhadnúť polohu vášho zariadenia pomocou zdrojov, ako sú GPS, Wi-Fi, mobilné siete a senzory."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia pre vodiča"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Informácie o polohe odoslané asistenčným funkciám pre vodiča neobsahujú údaje, ktoré umožňujú zistenie vašej totožnosti. Sú uchovávané maximálne dva dni a potom odstránené."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofón"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Použiť mikrofón"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Povoliť všetkým aplikáciám prístup k mikrofónu"</string>
@@ -769,10 +767,37 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Pridať profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Odstrániť tento profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pridanie profilu"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Jas displeja"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"správca palubného systému"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Žiadne aplikácie na správu palubného systému"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Táto aplikácia správcu palubného systému je aktívna a umožňuje aplikácii <xliff:g id="APP_NAME">%1$s</xliff:g> vykonávať nasledujúce operácie:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Aktiváciou tejto aplikácie palubného systému umožníte aplikácii <xliff:g id="APP_NAME">%1$s</xliff:g> vykonávať nasledujúce operácie:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivovať túto aplik. palubného systému?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktivovať túto aplikáciu palubného systému"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Deaktivovať túto aplikáciu palubného systému"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Ďalšie podrobnosti"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Váš správca vozidiel môže sledovať a spravovať aplikácie a údaje spojené s týmto profilom vrátane nastavení, povolení, podnikového prístupu, aktivity siete a informácií o polohe vozidla."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Váš správca vozidiel môže sledovať a spravovať aplikácie a údaje spojené s týmto profilom vrátane nastavení, povolení, podnikového prístupu, aktivity siete a informácií o polohe zariadenia."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Správa vozidiel môže sledovať a spravovať aplikácie a údaje spojené s týmto palubným systémom vrátane nastavení, povolení, podnikového prístupu, aktivity siete a informácií o polohe vozidla."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Správa vozidiel môže získať prístup k údajom spojeným s týmto palubným systémom, spravovať aplikácie a zmeniť nastavenia tohto vozidla."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Blokované správcom vozidiel"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Ak chcete zmeniť hlasitosť, kont. správcu vozidiel"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Ak chcete používať SMS, kontakt. správcu vozidiel"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Ak chcete používať kameru, kont. správcu vozidiel"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Ak chcete vyt. snímky obraz., kont. správcu vozid."</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Ak chcete použ. túto aplik., kont. správcu vozidiel"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokované vaším poskytovateľom úveru"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ak máte otázky, kontaktujte správcu vozidiel"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Aplikácie správcu vozidiel"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aktívne aplikácie</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> active apps</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktívnych aplikácií</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktívna aplikácia</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Žiadne aktívne aplikácie"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Nastavenia spravuje váš správca vozidiel"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Resetovanie palubného systému"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Váš systém prijal požiadavku na obnovenie výrobných nastavení a vymazanie všetkých údajov. Môžete ho resetovať teraz alebo sa resetuje pri ďalšom naštartovaní auta. Potom budete môcť nastaviť nový profil."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Resetovať"</string>

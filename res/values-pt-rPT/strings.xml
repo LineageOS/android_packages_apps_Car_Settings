@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Serviços de localização"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utilizar localização"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"A localização pode utilizar fontes como o GPS, o Wi‑Fi, as redes móveis e os sensores para ajudar a calcular a localização do seu dispositivo."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistência ao condutor"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"As informações de localização enviadas para as funcionalidades de assistência ao condutor não incluem informações de identificação. São armazenadas durante um período máximo de 2 dias antes de serem eliminadas."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utilizar microfone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as apps acedam ao microfone"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adicionar perfil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brilho do ecrã"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador do sistema de infoentretenimento"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Não existem apps de administrador do sistema de infoentretenimento"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Esta app de administrador do sistema de infoentretenimento está ativa e permite que a app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"A ativação desta app de sistema de infoentretenimento permite que a app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Ativar app de sistema infoentretenimen.?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Ativar esta app de sistema de infoentretenimento"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Desativar esta app de sistema de infoentretenimento"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Mais detalhes"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"O gestor de frota pode monitorizar e gerir as apps e os dados associados a este perfil, incluindo as definições, as autorizações, o acesso empresarial, a atividade da rede e as informações de localização do veículo."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"O gestor de frota pode monitorizar e gerir as apps e os dados associados a este perfil, incluindo as definições, as autorizações, o acesso empresarial, a atividade da rede e as informações de localização do dispositivo."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"O gestor de frota pode monitorizar e gerir as apps e os dados associados a este sistema de infoentretenimento, incluindo as definições, as autorizações, o acesso empresarial, a atividade da rede e as informações de localização do veículo."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"O gestor de frota pode conseguir aceder aos dados associados a este sistema de infoentretenimento, gerir apps e alterar as definições deste veículo."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bloqueada pelo gestor de frota"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Contacte o gestor de frota para alterar o volume"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Contacte o gestor de frota para utilizar SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Contacte o gestor de frota para utilizar a câmara"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Contacte o gestor de frota para capturas de ecrã"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Contacte o gestor de frota para utilizar esta app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bloqueada pelo seu fornecedor de crédito"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Se tiver dúvidas, contacte o seu gestor de frota"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administrador de veículos"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps ativas</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app ativa</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Sem apps ativas"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Definições geridas pelo gestor de frota"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Reponha o sistema de infoentretenimento"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"O sistema recebeu um pedido para efetuar uma reposição de fábrica e apagar todos os dados. Pode repô-lo agora ou este será reposto quando voltar a ligar o carro. Em seguida, pode configurar um novo perfil."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Repor agora"</string>

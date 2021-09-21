@@ -388,20 +388,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Mahali"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Tumia data ya mahali"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Hatua ya kuzima kipengele cha kufikia Mahali itazima uwezo wa programu zote wa kufikia mahali, vipengele vya Usaidizi kwa dereva bado vitakuwa na uwezo wa kufikia. Hatua ya kuzima swichi ya Usaidizi kwa dereva itazuia vipengele vya Usaidizi kwa dereva visitumie maelezo ya mahali ulipo."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Usaidizi kwa dereva"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Haipatikani wakati kipengele cha mahali kimewashwa"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ukizima, vipengele vya usaidizi kwa dereva vinavyotegemea maelezo ya mahali vitazimwa."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Zima tu"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Maombi ya Hivi Karibuni ya Kutambua Eneo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Hamna maombi ya hivi karibuni ya kutambua eneo"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Ruhusa za kiwango cha programu"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Huduma za Mahali"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Tumia data ya mahali"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Huenda huduma za mahali zikatumia vyanzo kama vile GPS, Wi‑Fi, mitandao ya simu na vitambuzi ili kubaini mahali kilipo kifaa chako."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Usaidizi kwa dereva"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Taarifa za mahali zinazotumwa kwenye vipengele vya usaidizi kwa dereva hazina maelezo yanayokutambulisha. Huhifadhiwa kwa muda usiozidi siku mbili kabla ya kufutwa."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Maikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Tumia maikrofoni"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Ruhusu programu zote zifikie maikrofoni yako"</string>
@@ -743,10 +741,35 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Weka wasifu"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Futa wasifu huu"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Weka wasifu"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Ung\'aavu wa skrini"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Msimamizi wa mfumo wa burudani na habari"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Hakuna programu za msimamizi wa mfumo wa burudani na habari"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Mfumo wa burudani na habari unatumika na unaruhusu programu ya <xliff:g id="APP_NAME">%1$s</xliff:g> kutekeleza shughuli zifuatazo:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Hatua ya kuwasha programu hii ya mfumo wa burudani na habari itaruhusu programu ya <xliff:g id="APP_NAME">%1$s</xliff:g> kutekeleza shughuli zifuatazo:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Utawasha programu ya mfumo wa burudani na habari?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Wesha programu hii ya mfumo wa burudani na habari"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Zima programu hii ya mfumo wa burudani na habari"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Maelezo zaidi"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Msimamizi wako wa magari anaweza kufuatilia na kudhibiti programu na data zinazohusiana na wasifu huu, ikiwa ni pamoja na mipangilio, ruhusa, ufikiaji wa shirika, shughuli za mtandao na maelezo ya mahali lilipo gari."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Msimamizi wako wa magari anaweza kufuatilia na kudhibiti programu na data zinazohusiana na wasifu huu, ikiwa ni pamoja na mipangilio, ruhusa, ufikiaji wa shirika, shughuli za mtandao na maelezo ya mahali kilipo kifaa."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Msimamizi wa magari anaweza kufuatilia na kudhibiti programu na data zinazohusiana na mfumo huu wa burudani na habari, ikiwa ni pamoja na mipangilio, ruhusa, ufikiaji wa shirika, shughuli za mtandao na maelezo ya mahali lilipo gari."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Msimamizi wa magari anaweza kufikia data inayohusiana na mfumo wa burudani na habari, kudhibiti programu na kubadilisha mipangilio ya gari hili."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Imezuiwa na msimamizi wa magari"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Wasiliana na msimamizi wa magari ubadilishe kiwango cha sauti"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Wasiliana na msimamizi wa magari ili utumie SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Wasiliana na msimamizi wa magari ili utumie kamera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Wasiliana na msimamizi wa magari upige picha za skrini"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Wasiliana na msimamizi wa magari utumie programu hii"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Imezuiwa na kampuni iliyokuuzia kifaa kwa mkopo"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ikiwa una maswali, wasiliana na msimamizi wa magari"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Programu za wasimamizi wa magari"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other">Programu <xliff:g id="COUNT_1">%d</xliff:g> zinatumika</item>
+      <item quantity="one">Programu <xliff:g id="COUNT_0">%d</xliff:g> inatumika</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Hakuna programu zinatumika"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Mipangilio inayodhibitiwa na msimamizi wako wa magari"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Weka upya mfumo wa habari na burudani"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Mfumo wako umepokea ombi la kurejesha mipangilio iliyotoka nayo kiwandani na kufuta data yote. Unaweza kuuweka upya sasa au utawekwa upya gari litakapowashwa. Kisha unaweza kuweka wasifu mpya."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Weka Upya Sasa"</string>
