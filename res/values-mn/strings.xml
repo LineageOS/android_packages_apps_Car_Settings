@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Байршлын үйлчилгээ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Байршлыг ашиглах"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Байршил нь таны төхөөрөмжийн байршлыг тооцоолоход туслах зорилгоор GPS, Wi-Fi, мобайл сүлжээ болон мэдрэгч зэрэг эх сурвалжийг ашиглаж болзошгүй."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Жолоочийн туслах"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Жолоочийн туслахын онцлог руу илгээсэн байршлын мэдээлэлд таныг таних мэдээлэл агуулдаггүй. Үүнийг устгахаас өмнө хамгийн ихдээ 2 хоног хадгалдаг."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофоныг ашиглах"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бүх аппад таны микрофонд хандахыг зөвшөөрнө үү"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Энэ профайлыг устгах"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профайл нэмэх"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дэлгэцийн гэрэлтүүлэг"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Инфотэйнмент системийн админ"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Инфотэйнмент системийн админ аппууд алга"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Энэ инфотэйнмент системийн админы апп идэвхтэй байгаа бөгөөд <xliff:g id="APP_NAME">%1$s</xliff:g> аппад дараах үйл ажиллагаа хийхийг зөвшөөрдөг:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Энэ инфотэйнмент системийг идэвхжүүлснээр <xliff:g id="APP_NAME">%1$s</xliff:g> аппад дараах үйл ажиллагааг хийхийг зөвшөөрнө:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Энэ инфотэйнмент системийн аппыг идэвхжүүлэх үү?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Энэ инфотэйнмент системийн аппыг идэвхжүүлэх"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Энэ инфотэйнмент системийн аппыг идэвхгүй болгох"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Дэлгэрэнгүй мэдээлэл"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Флот менежер тань тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Флот менежер тань тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, төхөөрөмжийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Флот менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ инфотэйнмент системтэй холбоотой апп болон өгөгдлийг хянаж, удирдах боломжтой."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Флот менежер нь энэ инфотэйнмент системтэй холбоотой өгөгдөлд хандаж, аппыг удирдаж, энэ тээврийн хэрэгслийн тохиргоог өөрчлөх боломжтой байж болзошгүй."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Таны флот менежер блоклосон"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Дууны түвшнийг өөрчлөхийн тулд флот менежертэй холбогдоно уу"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS-г ашиглахын тулд флот менежертэй холбогдоно уу"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Камерыг ашиглахын тулд флот менежертэй холбогдоно уу"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Дэлгэцийн агшныг авахын тулд флот менежертэй холбогдоно уу"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Энэ аппыг ашиглахын тулд флот менежертэй холбогдоно уу"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Таны кредит зээлийн үйлчилгээ үзүүлэгч блоклосон"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Хэрэв танд асуулт байвал флот менежертэй холбогдоно уу"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Тээврийн хэрэгслийн админы апп"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other">Идэвхтэй <xliff:g id="COUNT_1">%d</xliff:g> апп</item>
+      <item quantity="one">Идэвхтэй <xliff:g id="COUNT_0">%d</xliff:g> апп</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Идэвхтэй апп алга"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Таны флот менежерийн удирддаг тохиргоо"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Инфотэйнмент системийг шинэчлэх"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Таны систем үйлдвэрийн тохиргоонд шинэчлэх болон бүх өгөгдлийг устгах хүсэлт хүлээн авсан. Та үүнийг одоо шинэчлэх боломжтой. Эсвэл машиныг дараагийн удаа асаахад үүнийг шинэчилнэ. Та дараа нь шинэ профайл тохируулах боломжтой."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Одоо шинэчлэх"</string>

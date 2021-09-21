@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Sijaintipalvelut"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Käytä sijaintia"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Sijainti voi käyttää esimerkiksi GPS:ää, Wi‑Fi- ja mobiiliverkkoja sekä antureita laitteesi sijainnin arvioimiseen."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Ajoavustin"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Ajoavustinominaisuuksiin lähetetyt sijaintitiedot eivät sisällä tietoja, joista sinut voidaan tunnistaa. Tiedot tallennetaan enintään kahdeksi päiväksi ennen niiden poistamista."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Käytä mikrofonia"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Anna kaikille sovelluksille mikrofonin pääsyoikeudet"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Poista tämä profiili"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Lisää profiili"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Näytön kirkkaus"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Infotainment-järjestelmän valvoja"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Ei infotainment-järjestelmän hallintasovelluksia"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Tämä infotainment-järjestelmä on aktiivinen, ja se on antanut sovellukselle <xliff:g id="APP_NAME">%1$s</xliff:g> oikeuden suorittaa seuraavat toiminnot:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Jos tämä infotainment-järjestelmä aktivoidaan, <xliff:g id="APP_NAME">%1$s</xliff:g> saa oikeuden suorittaa seuraavat toiminnot:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivoi infotainment-järjestelmäsov.?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktivoi infotainment-järjestelmäsovellus"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Poista infotainment-järjestelmä käytöstä"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Lisätietoja"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Laitteiston järjestelmänvalvoja voi hallita tähän profiiliin liittyviä sovelluksia ja tietoja, mukaan lukien asetuksia, käyttöoikeuksia, yrityskäyttöä, verkkotoimintaa ja kulkuneuvon sijaintitietoja."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Laitteiston järjestelmänvalvoja voi hallita tähän profiiliin liittyviä sovelluksia ja tietoja, mukaan lukien asetuksia, käyttöoikeuksia, yrityskäyttöä, verkkotoimintaa ja laitteen sijaintitietoja."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Laitteiston järjestelmänvalvoja voi valvoa ja ylläpitää tähän infotainment-järjestelmään yhdistettyjä sovelluksia ja tietoja, kuten asetuksia, käyttöoikeuksia, yrityskäyttöoikeutta, verkkotoimintaa ja kulkuneuvon sijaintitietoja."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Laitteiston järjestelmänvalvoja voi saada pääsyn tähän infotainment-järjestelmään liittyvään dataan, ylläpitää sovelluksia ja muuttaa kulkuneuvon asetuksia."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Järjestelmänvalvojan estämä"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Valvoja voi auttaa äänenvoimakkuuden muuttamisessa"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Valvoja voi auttaa tekstiviestien käyttämisessä"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Valvoja voi auttaa kameran käyttämisessä"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Valvoja voi auttaa ottamaan kuvakaappauksia"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Valvoja voi auttaa tämän sovelluksen käyttämisessä"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Luoton myöntäjän estämä"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Jos sinulla on kysymyksiä, ota yhteyttä laitteiston järjestelmänvalvojaan"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Kulkuneuvonhallintasovellukset"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktiivista sovellusta</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktiivinen sovellus</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Ei aktiivisia sovelluksia"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Laitteiston järjestelmänvalvojan ylläpitämät asetukset"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Palauta infotainment-järjestelmä"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Järjestelmäsi on saanut pyynnön palauttaa tehdasasetukset ja poistaa kaiken datan. Voit tehdä palautuksen nyt tai odottaa, kunnes auto käynnistetään seuraavan kerran. Sen jälkeen voit luoda uuden profiilin."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Palauta nyt"</string>

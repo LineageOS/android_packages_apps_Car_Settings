@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Perkhidmatan Lokasi"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gunakan lokasi"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokasi mungkin menggunakan sumber seperti GPS, Wi-Fi, rangkaian mudah alih dan penderia untuk menganggarkan lokasi peranti anda."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bantuan pemandu"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Maklumat lokasi yang dihantarkan kepada ciri bantuan pemandu tidak mengandungi maklumat yang mengenal pasti anda. Maklumat disimpan selama maksimum 2 hari sebelum dipadamkan."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gunakan mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Benarkan semua apl mengakses mikrofon anda"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Padamkan profil ini"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tambah profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Kecerahan paparan"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Pentadbir sistem maklumat hibur"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Tiada apl pentadbir sistem maklumat hibur"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Apl pentadbir sistem maklumat hibur ini aktif dan membenarkan apl <xliff:g id="APP_NAME">%1$s</xliff:g> melaksanakan pengendalian yang berikut:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Mengaktifkan apl sistem maklumat hibur ini akan membenarkan apl <xliff:g id="APP_NAME">%1$s</xliff:g> melaksanakan pengendalian yang berikut:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktifkan apl sistem maklumat hibur ini?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktifkan apl sistem maklumat hibur ini"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Nyahaktifkan apl sistem maklumat hibur ini"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Lagi butiran"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Pengurus armada anda boleh memantau dan mengurus apl serta data yang berkaitan dengan profil ini, termasuk tetapan, kebenaran, akses korporat, aktiviti rangkaian dan maklumat lokasi kenderaan."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Pengurus armada anda boleh memantau dan mengurus apl serta data yang berkaitan dengan profil ini, termasuk tetapan, kebenaran, akses korporat, aktiviti rangkaian dan maklumat lokasi peranti."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Pengurus armada boleh memantau dan mengurus apl serta data yang berkaitan dengan sistem maklumat hibur ini, termasuk tetapan, kebenaran, akses korporat, aktiviti rangkaian dan maklumat lokasi kenderaan."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Pengurus armada mungkin dapat mengakses data yang berkaitan dengan sistem maklumat hibur ini, mengurus apl dan menukar tetapan kenderaan ini."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Disekat oleh pengurus armada"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Hubungi pengurus armada untuk menukar jumlah"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Hubungi pengurus armada untuk menggunakan SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Hubungi pengurus armada untuk menggunakan kamera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Hubungi pengurus armada untuk mengambil tangkapan skrin"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Hubungi pengurus armada untuk menggunakan apl ini"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Disekat oleh pembekal kredit anda"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Jika anda ingin mengemukakan pertanyaan, hubungi pengurus armada"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Apl pentadbir kenderaan"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apl aktif</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> apl aktif</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Tiada apl aktif"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Tetapan diuruskan oleh pengurus armada anda"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Tetapkan semula sistem maklumat hibur"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem anda telah menerima permintaan bagi penetapan semula kilang dan pemadaman semua data. Anda boleh menetapkan semula sistem sekarang atau selepas kereta dihidupkan nanti. Kemudian anda boleh menyediakan profil baharu."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Tetapkan Semula Sekarang"</string>

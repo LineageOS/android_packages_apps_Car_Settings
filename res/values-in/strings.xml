@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"Layanan Lokasi"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gunakan lokasi"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokasi dapat menggunakan sumber informasi seperti GPS, Wi-Fi, jaringan seluler, dan sensor untuk memperkirakan lokasi perangkat Anda."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bantuan bagi pengemudi"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Informasi lokasi yang dikirimkan ke fitur bantuan bagi pengemudi tidak berisi informasi yang mengidentifikasi Anda. Informasi tersebut akan disimpan maksimal selama 2 hari sebelum dihapus."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gunakan mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Izinkan semua aplikasi mengakses mikrofon Anda"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Hapus profil ini"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tambahkan profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Kecerahan layar"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Admin sistem infotainmen"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Tidak ada aplikasi admin sistem infotainmen"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Aplikasi admin sistem infotainmen ini aktif dan mengizinkan aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> untuk menjalankan operasi berikut:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Dengan mengaktifkan aplikasi sistem infotainmen ini, aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> akan dapat menjalankan operasi berikut:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktifkan apl sistem infotainmen ini?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktifkan aplikasi sistem infotainmen ini"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Nonaktifkan aplikasi sistem infotainmen ini"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Detail selengkapnya"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Pengelola armada Anda dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi kendaraan."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Pengelola armada Anda dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi perangkat."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Pengelola armada dapat memantau serta mengelola aplikasi dan data yang terkait dengan sistem infotainmen ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi kendaraan."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Pengelola armada mungkin dapat mengakses data yang terkait dengan sistem infotainmen ini, mengelola aplikasi, dan mengubah setelan kendaraan ini."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Diblokir oleh pengelola armada"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Hubungi pengelola armada untuk mengubah volume"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Hubungi pengelola armada untuk menggunakan SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Hubungi pengelola armada untuk menggunakan kamera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Hubungi pengelola armada guna mengambil screenshot"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Hubungi pengelola armada untuk menggunakan apl ini"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Diblokir oleh penyedia kredit"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Jika ada pertanyaan, hubungi pengelola armada"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Aplikasi admin kendaraan"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikasi aktif</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikasi aktif</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Tidak ada aplikasi aktif"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Setelan yang dikelola oleh pengelola armada Anda"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Reset sistem infotainmen"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem Anda telah menerima permintaan reset ke setelan pabrik untuk menghapus semua data. Anda dapat meresetnya sekarang, atau saat mobil dinyalakan lagi. Setelah itu, Anda dapat menyiapkan profil baru."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Reset Sekarang"</string>

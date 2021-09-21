@@ -392,20 +392,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Atrašanās vieta"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Izmantot atrašanās vietu"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Izslēdzot atrašanās vietas noteikšanu, tiks noņemta atrašanās vietas piekļuves atļauja visām lietotnēm. Autovadītāja palīdzības funkcijām joprojām būs piekļuve. Izslēdzot autovadītāja palīdzības slēdzi, autovadītāja palīdzības funkcijas vairs nevarēs izmantot jūsu atrašanās vietu."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Autovadītāja palīdzība"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nepieejama, kad atrašanās vieta ieslēgta"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ja izslēgsiet šo iestatījumu, tiks atspējotas autovadītāja palīdzības funkcijas, kuru pamatā ir atrašanās vietas informācija."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Tik un tā izslēgt"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Neseni atrašanās vietu pieprasījumi"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nav nesenu atrašanās vietu pieprasījumu"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lietotnes līmeņa atļaujas"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Atrašanās vietu pakalpojumi"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Izmantot atrašanās vietu"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lai noteiktu jūsu ierīces atrašanās vietu, var tikt izmantoti tādi avoti kā GPS, Wi-Fi, mobilie tīkli un sensori."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Autovadītāja palīdzība"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Autovadītāja palīdzības funkcijām nosūtītā atrašanās vietas informācija neietver jūs identificējošu informāciju. Tā tiek glabāta ne vairāk kā 2 dienas un pēc tam tiek dzēsta."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofons"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Izmantot mikrofonu"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Atļaut visām lietotnēm piekļūt jūsu mikrofonam"</string>
@@ -756,10 +754,36 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Pievienot profilu"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Dzēst šo profilu"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pievienot profilu"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Displeja spilgtums"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Informatīvi izklaidējošās sistēmas administrators"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nav informatīvi izklaidējošās sistēmas administratora lietotņu"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Šī informatīvi izklaidējošās sistēmas administratora lietotne ir aktīva un ļauj lietotnei <xliff:g id="APP_NAME">%1$s</xliff:g> veikt tālāk norādītās darbības."</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Aktivizējot šo informatīvi izklaidējošās sistēmas lietotni, lietotnei <xliff:g id="APP_NAME">%1$s</xliff:g> tiks atļauts veikt tālāk norādītās darbības."</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Vai aktivizēt šo sistēmas lietotni?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktivizēt šo informatīvi izklaidējošās sistēmas lietotni"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Deaktivizēt šo informatīvi izklaidējošās sistēmas lietotni"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Plašāka informācija"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Jūsu autoparka pārvaldnieks var pārraudzīt un pārvaldīt ar šo profilu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par transportlīdzekļa atrašanās vietu."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Jūsu autoparka pārvaldnieks var pārraudzīt un pārvaldīt ar šo profilu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par ierīces atrašanās vietu."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Autoparka pārvaldnieks var pārraudzīt un pārvaldīt ar šo informatīvi izklaidējošo sistēmu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par transportlīdzekļa atrašanās vietu."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Iespējams, autoparka pārvaldnieks var piekļūt ar šo informatīvi izklaidējošo sistēmu saistītajiem datiem, pārvaldīt lietotnes un mainīt šī transportlīdzekļa iestatījumus."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bloķēja autoparka pārvaldnieks"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Autoparka pārvaldnieks var atļaut mainīt skaļumu"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Autoparka pārvaldnieks var atļaut izmantot īsziņas"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Autoparka pārvaldnieks var atļaut izmantot kameru"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Autoparka pārvaldnieks var atļaut ekrānuzņēmumus"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Autoparka pārvaldnieks var atļaut izmantot lietotni"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bloķēja jūsu kredīta nodrošinātājs"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ja jums rodas jautājumi, sazinieties ar autoparka pārvaldnieku."</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Transportlīdzekļa administratora lietotnes"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> aktīvu lietotņu</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktīva lietotne</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktīvas lietotnes</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nav aktīvu lietotņu"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Iestatījumi, ko pārvalda jūsu autoparka pārvaldnieks"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Informatīvi izklaidējošās sistēmas atiestatīšana"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Jūsu sistēma saņēma pieprasījumu atiestatīt rūpnīcas datus un dzēst visus datus. Varat veikt atiestatīšanu tūlīt, vai arī sistēma tiks atiestatīta, nākamreiz palaižot automašīnu. Pēc tam varēsiet iestatīt jaunu profilu."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Atiestatīt tūlīt"</string>

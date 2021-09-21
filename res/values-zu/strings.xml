@@ -388,20 +388,18 @@
     <string name="location_settings_title" msgid="901334356682423679">"Indawo"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Sebenzisa indawo"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Ukuvala Indawo kufala ukufinyelela kwendawo kuwo wonke ama-app, izakhi zomsizi womshayeli zisazothola ukufinyelela. Ukuvala umsizi womshayeli kuzomisa izakhi zomsizi womshayeli ekusebenziseni indawo."</string>
-    <!-- no translation found for location_driver_assistance_toggle_title (744175288965083436) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_summary (7352402348737333043) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (7530838749228578803) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (3494348104020673066) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Umsizi womshayeli"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Kutholakala uma indawo ivuliwe"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Uma uvala lokhu, izakhi zomsizi womshayeli ezincike kulwazi lendawo zizokhutshazwa."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Vala noma kunjalo"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Izicelo zakamuva zendawo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Azikho izicelo zakamuva zendawo"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Izimvume zeleveli yohlelo lokusebenza"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Amasevisi endawo"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Sebenzisa indawo"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Indawo ingasebenzisa imithombo enjenge-GPS, i-Wi-Fi, inethiwekhi yeselula, nezinzwa ukusiza ekulinganiseleni indawo yedivaysi yakho."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Umsizi womshayeli"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"Ulwazi lendawo oluthunyelwe kwizakhi zosizo lomshayeli alinalo ulwazi olukukhombayo. Kugcinwa izinsuku ezingeqi kwezi-2 ngaphambi kokuthi kusulwe."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Imakrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Sebenzisa imakrofoni"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Vumela wonke ama-app ukuthi afinyelele kumakrofoni yakho"</string>
@@ -743,10 +741,35 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Engeza iphrofayela"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Susa le phrofayela"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Engeza iphrofayela"</string>
-    <!-- no translation found for qc_display_brightness (2939655289816201170) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (2029922702964310266) -->
-    <skip />
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Bonisa ukukhanya"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Umphathi wesistimu ye-infotainment"</string>
+    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Ayikho isistimu ye-infotainment yama-app womphathi"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Le app yomphathi wesistimu ye-infotainment iyasebenza futhi uvumela i-app ye-<xliff:g id="APP_NAME">%1$s</xliff:g> ukwenza imisebenzi elandelayo:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Ukwenza le app yesistimu ye-infotainment ukuthi isebenze kuzovumela i-app ye-<xliff:g id="APP_NAME">%1$s</xliff:g> ukwenza imisebenzi elandelayo:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Yenza le app yesistimu ye-infotainement isebenze?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Yenza le app yesistimu ye-infotainement isebenze"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Yenza le app yesistimu ye-infotainment ukuthi ingasebenzi"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Eminye imininingwane"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"Umphathi wezimoto zakho angakwazi ukuphatha ama-app nedatha ehlobene nale phrofayela, okufaka phakathi amasethingi, izimvume, ukufinyelela kwebhizinisi, umsebenzi wenethiwekhi, nolwazi lwendawo yemoto."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Umphathi wezimoto zakho angakwazi ukugada nokuphatha ama-app nedatha ehlobene nale phrofayela, okufaka phakathi amasethingi, izimvume, ukufinyelela kwebhizinisi, umsebenzi wenethiwekhi, nolwazi lwendawo yedivayisi."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"Umphathi wezimoto angakwazi ukugada nokuphatha ama-app nedatha ehlobene nale sistimu ye-infotainment, okufaka phakathi amasethingi, izimvume, ukufinyelela kwebhizinisi, umsebenzi wenethiwekhi nolwazi lwendawo yemoto."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"Umphathi wezimoto angase akwazi ukufinyelela idatha ehlobene nale sistimu ye-infotainment, aphathe ama-app, futhi ashintshe amasethingi walezi zimoto."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Kuvinjelwe ngumphathi wakho wezimoto"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Xhumana nomphathi wezimoto ukuze ushintshe ivolumu"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Xhumana nomphathi wezimoto ukuze usebenzise i-SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Xhumana nomphathi wezimoto ukuze usebenzise ikhamera"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Xhumana nomphathi wezimoto ukuze uthathe izithombe-skrini"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Xhumana nomphathi wezimoto ukuze usebenzise le app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Kuvinjwe umhlinzeki wakho wekhredithi"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Uma unemibuzo, xhumana nomphathi wezimoto"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"Ama-app womphathi wezimoto"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="one">ama-app asebenzayo angu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">ama-app asebenzayo angu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Awekho ama-app asebenzayo"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Amasethingi aphethwe ngumphathi wakho wezimoto"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Setha kabusha isistimu ye-infotainment"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Isistimu yakho ithole isicelo sokusethwa kabusha njengasekuqaleni nokususa yonke idatha. Ungayisetha kabusha manje, noma izosethwa kabusha ngesikhathi esizayo lapho imoto iqala. Ungabe ususetha iphrofayela entsha."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Setha kabusha Manje"</string>

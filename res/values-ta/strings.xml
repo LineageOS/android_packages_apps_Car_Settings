@@ -398,6 +398,8 @@
     <string name="location_settings_services_title" msgid="1186133632690970468">"இருப்பிடச் சேவைகள்"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"உங்கள் சாதனத்தின் இருப்பிடத்தைக் கணிக்க உதவுவதற்கு GPS, வைஃபை, மொபைல் நெட்வொர்க்குகள், சென்சார்கள் போன்றவற்றை இருப்பிட அமைப்புகள் பயன்படுத்தக்கூடும்."</string>
+    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ஓட்டுநர் உதவி"</string>
+    <string name="adas_settings_footer" msgid="5924887134188457130">"ஓட்டுநர் உதவி அம்சங்களுக்கு அனுப்பப்படும் இருப்பிடம் குறித்த தகவல்களில் உங்களை அடையாளம் காணும் தகவல்கள் இருக்காது. நீக்கப்படுவதற்கு முன் அதிகபட்சமாக 2 நாட்கள் வரை இது சேமிக்கப்பட்டிருக்கும்."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"மைக்ரோஃபோன்"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"மைக்ரோஃபோனைப் பயன்படுத்துதல்"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"மைக்ரோஃபோனை அனைத்து ஆப்ஸும் அணுகுவதற்கு அனுமதிக்கும்"</string>
@@ -740,7 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"இந்தச் சுயவிவரத்தை நீக்கு"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"சுயவிவரத்தைச் சேர்"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"திரையின் ஒளிர்வு"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி ஆப்ஸ் எதுவுமில்லை"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி ஆப்ஸ் இயக்கப்பட்டுள்ளது, பின்வரும் செயல்பாடுகளைச் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை அது அனுமதிக்கிறது:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கினால் பின்வரும் செயல்பாடுகளைச் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை அது அனுமதிக்கும்:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கவா?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கு"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை முடக்கு"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"கூடுதல் விவரங்கள்"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"இந்தச் சுயவிவரத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, வாகனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) ஃப்ளீட் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"இந்தச் சுயவிவரத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, சாதனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) ஃப்ளீட் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, வாகனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) ஃப்ளீட் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"ஃப்ளீட் நிர்வாகியால் இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டத்துடன் தொடர்புடைய தரவை அணுகவும் ஆப்ஸை நிர்வகிக்கவும் இந்த வாகனங்களின் அமைப்புகளை மாற்றவும் முடியும்."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"ஃப்ளீட் நிர்வாகி முடக்கியுள்ளார்"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ஒலியளவை மாற்ற ஃப்ளீட் நிர்வாகியைத் தொடர்புகொள்க"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"மெசேஜை பயன்படுத்த ஃப்ளீட் நிர்வாகியை தொடர்புகொள்க"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"கேமராவை பயன்படுத்த ஃப்ளீட் நிர்வாகியை தொடர்புகொள்க"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ஸ்கிரீன்ஷாட் எடுக்க ஃப்ளீட் நிர்வாகியை தொடர்புகொள்க"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"ஆப்ஸைப் பயன்படுத்த ஃப்ளீட் நிர்வாகியை தொடர்புகொள்க"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"கடன் வழங்குநரால் முடக்கப்பட்டுள்ளது"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"கேள்விகள் இருந்தால் ஃப்ளீட் நிர்வாகியைத் தொடர்புகொள்ளவும்"</string>
+    <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
+    <string name="manage_device_admin" msgid="7087659697154317316">"வாகன நிர்வாகி ஆப்ஸ்"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ் செயலில் உள்ளன</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ் செயலில் உள்ளது</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"ஆப்ஸ் எதுவும் செயலில் இல்லை"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"உங்கள் ஃப்ளீட் நிர்வாகி நிர்வகிக்கும் அமைப்புகள்"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தை மீட்டமையுங்கள்"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"ஆரம்பநிலைக்கு மீட்டமைப்பதற்கும் அனைத்துத் தரவையும் அழிப்பதற்குமான கோரிக்கையை உங்கள் சிஸ்டம் பெற்றுள்ளது. இப்போது மீட்டமைக்கலாம் அல்லது அடுத்தமுறை காரை இயக்கத் தொடங்கும்போது மீட்டமைக்கப்படும். அதன்பிறகு புதிய சுயவிவரத்தை அமைக்கலாம்."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"இப்போதே மீட்டமை"</string>
