@@ -844,6 +844,19 @@
     </string>
     <!-- Title of driver assistance toggle setting [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_toggle_title">Driver assistance</string>
+    <!-- Title of driver assistance text toggle [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_toggle_off_title">Vehicle location is off</string>
+    <!-- Summary of driver assistance text toggle [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_toggle_off_summary">
+        For apps with Driver Assistance features
+    </string>
+    <!-- -Text of driver assistance text toggle [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_action_text">
+        Change
+    </string>
+
+    <string name="driver_assistance_page_description">Apps with this permission have access to this
+         vehicle’s location for Driver Assistance features</string>
     <!-- Summary of driver assistance toggle setting [CHAR LIMIT=40]-->
     <string name="location_driver_assistance_toggle_summary">
         Unavailable while location is turned on
