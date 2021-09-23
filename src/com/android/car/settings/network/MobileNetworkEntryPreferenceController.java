@@ -22,17 +22,18 @@ import android.net.NetworkCapabilities;
 import android.net.NetworkRequest;
 import android.telephony.SubscriptionInfo;
 
-import androidx.preference.Preference;
+import androidx.annotation.CallSuper;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 import com.android.settingslib.utils.StringUtil;
 
 import java.util.List;
 
 /** Controls the preference for accessing mobile network settings. */
-public class MobileNetworkEntryPreferenceController extends
-        MobileNetworkBasePreferenceController<Preference> {
+public class MobileNetworkEntryPreferenceController
+        extends MobileNetworkBasePreferenceController<CarUiTwoActionSwitchPreference> {
 
     public MobileNetworkEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -40,12 +41,21 @@ public class MobileNetworkEntryPreferenceController extends
     }
 
     @Override
-    protected Class<Preference> getPreferenceType() {
-        return Preference.class;
+    protected Class<CarUiTwoActionSwitchPreference> getPreferenceType() {
+        return CarUiTwoActionSwitchPreference.class;
     }
 
     @Override
-    protected void updateState(Preference preference) {
+    protected void onCreateInternal() {
+        super.onCreateInternal();
+        getPreference().setSecondaryActionChecked(mTelephonyManager.isDataEnabled());
+        getPreference().setOnSecondaryActionClickListener(isChecked -> {
+            mTelephonyManager.setDataEnabled(isChecked);
+        });
+    }
+
+    @Override
+    protected void updateState(CarUiTwoActionSwitchPreference preference) {
         List<SubscriptionInfo> totalSubs = SubscriptionUtils.getAvailableSubscriptions(
                 mSubscriptionManager, mTelephonyManager);
 
@@ -65,7 +75,7 @@ public class MobileNetworkEntryPreferenceController extends
     }
 
     @Override
-    protected boolean handlePreferenceClicked(Preference preference) {
+    protected boolean handlePreferenceClicked(CarUiTwoActionSwitchPreference preference) {
         if (mSubIds.isEmpty()) {
             return true;
         }
@@ -85,6 +95,12 @@ public class MobileNetworkEntryPreferenceController extends
                 .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
                 .addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR)
                 .build();
+    }
+
+    @Override
+    @CallSuper
+    public void onSubscriptionsChanged() {
+        getPreference().setSecondaryActionChecked(mTelephonyManager.isDataEnabled());
     }
 
     private CharSequence getSummary() {

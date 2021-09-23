@@ -40,7 +40,6 @@ import com.android.car.settings.applications.specialaccess.SpecialAccessSettings
 import com.android.car.settings.applications.specialaccess.UsageAccessFragment;
 import com.android.car.settings.applications.specialaccess.WifiControlFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
-import com.android.car.settings.datausage.DataUsageFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.inputmethod.KeyboardFragment;
@@ -347,17 +346,6 @@ public class CarSettingActivities {
         @Override
         protected Fragment getInitialFragment() {
             return new MobileNetworkListFragment();
-        }
-    }
-
-    /**
-     * Mobile Data Usage Activity.
-     */
-    public static class DataUsageActivity extends BaseCarSettingsActivity {
-        @Nullable
-        @Override
-        protected Fragment getInitialFragment() {
-            return new DataUsageFragment();
         }
     }
 
