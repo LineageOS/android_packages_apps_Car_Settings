@@ -85,7 +85,8 @@ public class ApplicationDetailsFragment extends SettingsFragment {
                 R.string.pk_application_details_storage)
                 .setAppEntry(mAppEntry).setPackageName(mPackageName);
         use(PrioritizeAppPerformancePreferenceController.class,
-                R.string.pk_application_details_peak_performance).setPackageInfo(mPackageInfo);
+                R.string.pk_application_details_prioritize_app_performance)
+                .setPackageInfo(mPackageInfo);
         use(HibernationSwitchPreferenceController.class,
                 R.string.pk_hibernation_switch)
                 .setPackageName(mPackageName);
