@@ -50,6 +50,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiPreference;
+import com.android.settingslib.utils.StringUtil;
 
 import com.google.android.collect.Lists;
 
@@ -203,8 +204,8 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.getSummary()).isEqualTo(mContext.getResources().getQuantityString(
-                R.plurals.mobile_network_summary_count, 2, 2));
+        assertThat(mPreference.getSummary()).isEqualTo(StringUtil.getIcuPluralsString(mContext, 2,
+                R.string.mobile_network_summary_count));
     }
 
     @Test

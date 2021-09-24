@@ -29,6 +29,7 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.settingslib.utils.StringUtil;
 
 import java.util.List;
 
@@ -120,8 +121,8 @@ public class MobileNetworkEntryPreferenceController extends
         } else if (count == 1) {
             return subs.get(0).getDisplayName();
         } else {
-            return getContext().getResources().getQuantityString(
-                    R.plurals.mobile_network_summary_count, count, count);
+            return StringUtil.getIcuPluralsString(getContext(), count,
+                    R.string.mobile_network_summary_count);
         }
     }
 }

@@ -23,6 +23,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.settingslib.utils.StringUtil;
 
 import java.util.List;
 
@@ -43,8 +44,8 @@ public final class ManageDeviceAdminPreferenceController
         mLogger.d("updateState(): Number of active device admin apps: " + activeAdmins);
         String summary = activeAdmins == 0
                 ? getContext().getString(R.string.number_of_device_admins_none)
-                : getContext().getResources().getQuantityString(R.plurals.number_of_device_admins,
-                        activeAdmins, activeAdmins);
+                : StringUtil.getIcuPluralsString(getContext(), activeAdmins,
+                        R.string.number_of_device_admins);
         preference.setSummary(summary);
     }
 
