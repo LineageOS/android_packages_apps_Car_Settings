@@ -46,6 +46,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.settingslib.utils.StringUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -57,7 +58,9 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
 public class ManageMicPermissionsPreferenceControllerTest {
@@ -129,8 +132,12 @@ public class ManageMicPermissionsPreferenceControllerTest {
         initializePreference();
         setAppsForUser(1, 1, user1PermissionControllerManager);
 
-        assertThat(mPreference.getSummary()).isEqualTo(mContext.getResources().getQuantityString(
-                R.plurals.microphone_app_permission_summary_microphone_on, 1, 1, 1));
+        Map<String, Object> arguments = new HashMap<>();
+        arguments.put("count", 1);
+        arguments.put("total_count", 1);
+
+        assertThat(mPreference.getSummary()).isEqualTo(StringUtil.getIcuPluralsString(mContext,
+                arguments, R.string.microphone_app_permission_summary_microphone_on));
     }
 
     @Test
@@ -143,8 +150,12 @@ public class ManageMicPermissionsPreferenceControllerTest {
         initializePreference();
         setAppsForUser(5, 10, user1PermissionControllerManager);
 
-        assertThat(mPreference.getSummary()).isEqualTo(mContext.getResources().getQuantityString(
-                R.plurals.microphone_app_permission_summary_microphone_on, 5, 5, 10));
+        Map<String, Object> arguments = new HashMap<>();
+        arguments.put("count", 5);
+        arguments.put("total_count", 10);
+
+        assertThat(mPreference.getSummary()).isEqualTo(StringUtil.getIcuPluralsString(mContext,
+                arguments, R.string.microphone_app_permission_summary_microphone_on));
     }
 
     @Test
@@ -164,8 +175,12 @@ public class ManageMicPermissionsPreferenceControllerTest {
 
         setAppsForUser(1, 1, user2PermissionControllerManager);
 
-        assertThat(mPreference.getSummary()).isEqualTo(mContext.getResources().getQuantityString(
-                R.plurals.microphone_app_permission_summary_microphone_on, 3, 3, 5));
+        Map<String, Object> arguments = new HashMap<>();
+        arguments.put("count", 3);
+        arguments.put("total_count", 5);
+
+        assertThat(mPreference.getSummary()).isEqualTo(StringUtil.getIcuPluralsString(mContext,
+                arguments, R.string.microphone_app_permission_summary_microphone_on));
     }
 
     @Test

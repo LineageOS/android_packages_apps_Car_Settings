@@ -24,6 +24,7 @@ import androidx.preference.Preference;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
+import com.android.settingslib.utils.StringUtil;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,8 +54,7 @@ public final class ManageDeviceAdminPreferenceControllerTest
         controller.updateState(mPreference);
 
         assertPreferenceSummary(mPreference,
-                mRealContext.getResources().getQuantityString(
-                        R.plurals.number_of_device_admins, 1, 1));
+                StringUtil.getIcuPluralsString(mRealContext, 1, R.string.number_of_device_admins));
     }
 
     @Test
@@ -66,8 +66,7 @@ public final class ManageDeviceAdminPreferenceControllerTest
         controller.updateState(mPreference);
 
         assertPreferenceSummary(mPreference,
-                mRealContext.getResources().getQuantityString(
-                        R.plurals.number_of_device_admins, 2, 2));
+                StringUtil.getIcuPluralsString(mRealContext, 2, R.string.number_of_device_admins));
     }
 
     @Test
