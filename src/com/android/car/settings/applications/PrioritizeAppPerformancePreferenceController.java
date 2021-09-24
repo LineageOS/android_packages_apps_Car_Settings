@@ -39,8 +39,10 @@ import java.util.Objects;
 /**
  * Controller for preference which enables / disables I/O overuse killing for an application.
  */
-public class PeakPerformancePreferenceController extends PreferenceController<TwoStatePreference> {
-    private static final Logger LOG = new Logger(PeakPerformancePreferenceController.class);
+public class PrioritizeAppPerformancePreferenceController
+        extends PreferenceController<TwoStatePreference> {
+    private static final Logger LOG =
+            new Logger(PrioritizeAppPerformancePreferenceController.class);
 
     @VisibleForTesting
     static final String TURN_OFF_PEAK_PERFORMANCE_DIALOG_TAG =
@@ -55,7 +57,7 @@ public class PeakPerformancePreferenceController extends PreferenceController<Tw
     private UserHandle mUserHandle;
     private int mKillableState;
 
-    public PeakPerformancePreferenceController(Context context, String preferenceKey,
+    public PrioritizeAppPerformancePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);

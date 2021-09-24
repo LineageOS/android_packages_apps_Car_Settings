@@ -44,7 +44,7 @@
         android:key="@string/pk_application_details_peak_performance"
         android:title="@string/peak_performance_label"
         settings:controller=
-            "com.android.car.settings.applications.PeakPerformancePreferenceController"/>
+            "com.android.car.settings.applications.PrioritizeAppPerformancePreferenceController"/>
     <SwitchPreference
         android:key="@string/pk_hibernation_switch"
         android:title="@string/unused_apps_switch"

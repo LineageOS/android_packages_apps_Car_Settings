@@ -16,6 +16,7 @@
 
 package com.android.car.settings.applications;
 
+import static com.android.car.settings.applications.PrioritizeAppPerformancePreferenceController.TURN_OFF_PEAK_PERFORMANCE_DIALOG_TAG;
 import static com.android.dx.mockito.inline.extended.ExtendedMockito.mockitoSession;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -62,7 +63,7 @@ import org.mockito.quality.Strictness;
 import java.util.Collections;
 
 @RunWith(AndroidJUnit4.class)
-public class PeakPerformancePreferenceControllerTest {
+public class PrioritizeAppPerformancePreferenceControllerTest {
     private static final String PKG_NAME = "package.name";
     private static final int UID = Process.myUid();
 
@@ -71,7 +72,7 @@ public class PeakPerformancePreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private CarUxRestrictions mCarUxRestrictions;
     private UserHandle mUserHandle;
-    private PeakPerformancePreferenceController mController;
+    private PrioritizeAppPerformancePreferenceController mController;
     private TwoStatePreference mTwoStatePreference;
 
     @Captor
@@ -100,7 +101,7 @@ public class PeakPerformancePreferenceControllerTest {
 
         mTwoStatePreference = new SwitchPreference(mContext);
 
-        mController = new PeakPerformancePreferenceController(mContext,
+        mController = new PrioritizeAppPerformancePreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mController, mTwoStatePreference);
 
@@ -193,7 +194,7 @@ public class PeakPerformancePreferenceControllerTest {
 
         mTwoStatePreference.callChangeListener(false);
         verify(mFragmentController).showDialog(mDialogFragment.capture(),
-                eq(PeakPerformancePreferenceController.TURN_OFF_PEAK_PERFORMANCE_DIALOG_TAG));
+                eq(TURN_OFF_PEAK_PERFORMANCE_DIALOG_TAG));
 
         mDialogFragment.getValue().getConfirmListener().onConfirm(new Bundle());
 
