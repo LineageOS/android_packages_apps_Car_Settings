@@ -354,6 +354,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_settings_data_usage"/>
       <item type="drawable" name="ic_settings_development"/>
       <item type="drawable" name="ic_settings_gear"/>
+      <item type="drawable" name="ic_settings_location_off"/>
       <item type="drawable" name="ic_settings_night_display"/>
       <item type="drawable" name="ic_settings_wifi"/>
       <item type="drawable" name="ic_settings_wifi_disabled"/>
@@ -821,7 +822,11 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_one"/>
       <item type="string" name="domain_urls_summary_some"/>
       <item type="string" name="driver_assistance_settings_title"/>
+      <item type="string" name="driver_assistance_page_description"/>
+      <item type="string" name="location_driver_assistance_toggle_off_title"/>
+      <item type="string" name="location_driver_assistance_toggle_off_summary"/>
       <item type="string" name="driver_assistance_warning_confirm_label"/>
+      <item type="string" name="location_driver_assistance_action_text"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
