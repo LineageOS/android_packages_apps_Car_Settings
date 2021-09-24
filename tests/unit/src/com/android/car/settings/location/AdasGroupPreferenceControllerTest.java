@@ -16,60 +16,65 @@
 
 package com.android.car.settings.location;
 
-import static org.mockito.Mockito.verify;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
+
+import static com.google.common.truth.Truth.assertThat;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.location.LocationManager;
 
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceControllerTestUtil;
-import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
-import com.android.car.ui.preference.CarUiTwoActionTextPreference;
+import com.android.car.settings.common.LogicalPreferenceGroup;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
-public class AdasLocationSwitchSubMenuPreferenceControllerTest {
-
+public class AdasGroupPreferenceControllerTest {
     private Context mContext = ApplicationProvider.getApplicationContext();
-    private CarUiTwoActionTextPreference mPreference;
-    private AdasLocationSwitchSubMenuPreferenceController mPreferenceController;
+    private LogicalPreferenceGroup mPreference;
     private CarUxRestrictions mCarUxRestrictions;
+    private AdasGroupPreferenceController mController;
+    private LocationManager mLocationManager;
 
     @Mock
     private FragmentController mFragmentController;
 
-    @Rule
-    public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
-            new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
-
     @Before
+    @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mPreference = new CarUiTwoActionTextPreference(mContext);
-        mPreferenceController = new AdasLocationSwitchSubMenuPreferenceController(mContext,
+        mPreference = new LogicalPreferenceGroup(mContext);
+        mController = new AdasGroupPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
-        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+
+        mLocationManager = mContext.getSystemService(LocationManager.class);
     }
 
     @Test
-    public void performSecondaryActionClick_goBack() {
-        mPreferenceController.onCreateInternal();
-        mPreference.performSecondaryActionClick();
+    public void getAvailabilityStatus_driverAssistanceEnabled_unsupportedOnDevice() {
+        mLocationManager.setAdasGnssLocationEnabled(true);
 
-        verify(mFragmentController).goBack();
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_driverAssistanceDisabled_available() {
+        mLocationManager.setAdasGnssLocationEnabled(false);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 }
