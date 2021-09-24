@@ -321,6 +321,8 @@
     <string name="tether_settings_title_all">Hotspot &amp; tethering</string>
     <!-- Settings title to go into the hotspot settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
     <string name="hotspot_settings_title">Hotspot</string>
+    <!-- TODO(b/198456307) finalize off string for hotspot -->
+    <string name="wifi_hotspot_state_off" translatable="false">Off</string>
     <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
     <string name="wifi_hotspot_auto_off_title">Turn off hotspot automatically</string>
     <!-- Summary for the toggle to turn off hotspot automatically [CHAR LIMIT=100]-->
