@@ -24,6 +24,7 @@ import static com.android.car.qc.QCItem.QC_TYPE_ACTION_TOGGLE;
 import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.content.Intent;
@@ -32,7 +33,6 @@ import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserManager;
-import android.provider.Settings;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.VisibleForTesting;
@@ -43,15 +43,17 @@ import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
-import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.BluetoothUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.HidProfile;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 /**
  * QCItem for showing paired bluetooth devices.
@@ -71,43 +73,56 @@ public class PairedBluetoothDevices extends SettingsQCItem {
 
     private final LocalBluetoothManager mBluetoothManager;
     private final UserManager mUserManager;
+    private final int mDeviceLimit;
 
     public PairedBluetoothDevices(Context context) {
         super(context);
         mBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */ null);
         mUserManager = UserManager.get(context);
+        mDeviceLimit = context.getResources().getInteger(
+                R.integer.config_qc_bluetooth_device_limit);
     }
 
     @Override
     QCItem getQCItem() {
         if (!getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
                 || mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)
-                || !BluetoothAdapter.getDefaultAdapter().isEnabled()) {
+                || !BluetoothAdapter.getDefaultAdapter().isEnabled()
+                || mDeviceLimit == 0) {
             return null;
         }
-
-        Intent primaryIntent = new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);
-        primaryIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         Collection<CachedBluetoothDevice> cachedDevices =
                 mBluetoothManager.getCachedDeviceManager().getCachedDevicesCopy();
 
+        //TODO(b/198339129): Use BluetoothDeviceFilter.BONDED_DEVICE_FILTER
+        Set<BluetoothDevice> bondedDevices = mBluetoothManager.getBluetoothAdapter()
+                .getBondedDevices();
+
+        List<CachedBluetoothDevice> filteredDevices = new ArrayList<>();
+        for (CachedBluetoothDevice cachedDevice : cachedDevices) {
+            if (bondedDevices != null && bondedDevices.contains(cachedDevice.getDevice())) {
+                filteredDevices.add(cachedDevice);
+            }
+        }
+        filteredDevices.sort(Comparator.naturalOrder());
+
         QCList.Builder listBuilder = new QCList.Builder();
 
         int i = 0;
-        for (CachedBluetoothDevice cachedDevice : cachedDevices) {
-            if (BluetoothDeviceFilter.BONDED_DEVICE_FILTER.matches(cachedDevice.getDevice())) {
-                listBuilder.addRow(new QCRow.Builder()
-                        .setTitle(cachedDevice.getName())
-                        .setSubtitle(getSubtitle(cachedDevice))
-                        .setIcon(Icon.createWithResource(getContext(), getIconRes(cachedDevice)))
-                        .setPrimaryAction(getActivityIntent(primaryIntent))
-                        .addEndItem(createBluetoothButton(cachedDevice, i++))
-                        .addEndItem(createPhoneButton(cachedDevice, i++))
-                        .addEndItem(createMediaButton(cachedDevice, i++))
-                        .build()
-                );
-            }
+        int deviceLimit = mDeviceLimit >= 0 ? Math.min(mDeviceLimit, filteredDevices.size())
+                : filteredDevices.size();
+        for (int j = 0; j < deviceLimit; j++) {
+            CachedBluetoothDevice cachedDevice = filteredDevices.get(j);
+            listBuilder.addRow(new QCRow.Builder()
+                    .setTitle(cachedDevice.getName())
+                    .setSubtitle(getSubtitle(cachedDevice))
+                    .setIcon(Icon.createWithResource(getContext(), getIconRes(cachedDevice)))
+                    .addEndItem(createBluetoothButton(cachedDevice, i++))
+                    .addEndItem(createPhoneButton(cachedDevice, i++))
+                    .addEndItem(createMediaButton(cachedDevice, i++))
+                    .build()
+            );
         }
 
         return listBuilder.build();

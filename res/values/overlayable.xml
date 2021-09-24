@@ -498,6 +498,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="integer" name="button_max_ems"/>
       <item type="integer" name="clear_content_timeout_ms"/>
       <item type="integer" name="config_networkAvoidBadWifi"/>
+      <item type="integer" name="config_qc_bluetooth_device_limit"/>
       <item type="integer" name="config_top_level_icon_shape"/>
       <item type="integer" name="content_weight"/>
       <item type="integer" name="data_usage_bytes_threshold_ems"/>
