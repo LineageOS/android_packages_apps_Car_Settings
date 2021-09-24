@@ -90,6 +90,24 @@ public class SettingsQCRegistry {
             .authority(AUTHORITY)
             .appendPath("adaptive_brightness_switch")
             .build();
+
+    public static final Uri MEDIA_VOLUME_SLIDER_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("media_volume_slider")
+            .build();
+
+    public static final Uri CALL_VOLUME_SLIDER_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("call_volume_slider")
+            .build();
+
+    public static final Uri NAVIGATION_VOLUME_SLIDER_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("navigation_volume_slider")
+            .build();
     // End Uris
 
     @VisibleForTesting
@@ -108,6 +126,9 @@ public class SettingsQCRegistry {
         map.put(BRIGHTNESS_SLIDER_URI, BrightnessSlider.class);
         map.put(BRIGHTNESS_SLIDER_WITH_ICON_URI, BrightnessSliderWithIcon.class);
         map.put(ADAPTIVE_BRIGHTNESS_SWITCH_URI, AdaptiveBrightnessSwitch.class);
+        map.put(MEDIA_VOLUME_SLIDER_URI, MediaVolumeSlider.class);
+        map.put(CALL_VOLUME_SLIDER_URI, CallVolumeSlider.class);
+        map.put(NAVIGATION_VOLUME_SLIDER_URI, NavigationVolumeSlider.class);
 
         return map;
     }
