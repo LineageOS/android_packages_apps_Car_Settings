@@ -16,6 +16,11 @@
 
 package com.android.car.settings.applications;
 
+import static android.car.watchdog.PackageKillableState.KILLABLE_STATE_NEVER;
+import static android.car.watchdog.PackageKillableState.KILLABLE_STATE_NO;
+import static android.car.watchdog.PackageKillableState.KILLABLE_STATE_YES;
+
+import static com.android.car.settings.applications.PrioritizeAppPerformancePreferenceController.TURN_ON_PRIORITIZE_APP_PERFORMANCE_DIALOG_TAG;
 import static com.android.dx.mockito.inline.extended.ExtendedMockito.mockitoSession;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -34,7 +39,6 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.os.Bundle;
-import android.os.Process;
 import android.os.UserHandle;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -62,16 +66,17 @@ import org.mockito.quality.Strictness;
 import java.util.Collections;
 
 @RunWith(AndroidJUnit4.class)
-public class PeakPerformancePreferenceControllerTest {
-    private static final String PKG_NAME = "package.name";
-    private static final int UID = Process.myUid();
+public class PrioritizeAppPerformancePreferenceControllerTest {
+    private static final String TEST_PKG_NAME = "test.package.name";
+    private static final int TEST_UID = 10012345;
+    private static final int TEST_USER_ID = 100;
+
+    private final Context mContext = ApplicationProvider.getApplicationContext();
 
     private MockitoSession mMockingSession;
-    private final Context mContext = ApplicationProvider.getApplicationContext();
     private LifecycleOwner mLifecycleOwner;
     private CarUxRestrictions mCarUxRestrictions;
-    private UserHandle mUserHandle;
-    private PeakPerformancePreferenceController mController;
+    private PrioritizeAppPerformancePreferenceController mController;
     private TwoStatePreference mTwoStatePreference;
 
     @Captor
@@ -94,14 +99,14 @@ public class PeakPerformancePreferenceControllerTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking();
         mLifecycleOwner = new TestLifecycleOwner();
-        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
-                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
-        mUserHandle = UserHandle.getUserHandleForUid(UID);
 
         mTwoStatePreference = new SwitchPreference(mContext);
 
-        mController = new PeakPerformancePreferenceController(mContext,
-                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        CarUxRestrictions restrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        mController = new PrioritizeAppPerformancePreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, restrictions);
+
         PreferenceControllerTestUtil.assignPreference(mController, mTwoStatePreference);
 
         when(Car.createCar(any(), any(), anyLong(), mCarLifecycleCaptor.capture())).then(
@@ -113,12 +118,10 @@ public class PeakPerformancePreferenceControllerTest {
         when(mMockCar.getCarManager(Car.CAR_WATCHDOG_SERVICE)).thenReturn(mMockManager);
 
         PackageInfo packageInfo = new PackageInfo();
-        packageInfo.packageName = PKG_NAME;
-
-        ApplicationInfo applicationInfo = new ApplicationInfo();
-        applicationInfo.packageName = PKG_NAME;
-        packageInfo.applicationInfo = applicationInfo;
-        packageInfo.applicationInfo.uid = UID;
+        packageInfo.packageName = TEST_PKG_NAME;
+        packageInfo.applicationInfo = new ApplicationInfo();
+        packageInfo.applicationInfo.uid = TEST_UID;
+        packageInfo.applicationInfo.packageName = TEST_PKG_NAME;
         mController.setPackageInfo(packageInfo);
     }
 
@@ -128,24 +131,10 @@ public class PeakPerformancePreferenceControllerTest {
     }
 
     @Test
-    public void onCreate_peakPerformance_withKillableStateYes() {
+    public void onCreate_prioritizeAppPerformance_withKillableStateYes() {
         when(mMockManager.getPackageKillableStatesAsUser(any())).thenReturn(
                 Collections.singletonList(
-                        new PackageKillableState(PKG_NAME, mUserHandle.getIdentifier(),
-                                PackageKillableState.KILLABLE_STATE_YES)));
-
-        mController.onCreate(mLifecycleOwner);
-
-        assertThat(mTwoStatePreference.isChecked()).isTrue();
-        assertThat(mTwoStatePreference.isEnabled()).isTrue();
-    }
-
-    @Test
-    public void onCreate_peakPerformance_withKillableStateNo() {
-        when(mMockManager.getPackageKillableStatesAsUser(any())).thenReturn(
-                Collections.singletonList(
-                        new PackageKillableState(PKG_NAME, mUserHandle.getIdentifier(),
-                                PackageKillableState.KILLABLE_STATE_NO)));
+                        new PackageKillableState(TEST_PKG_NAME, TEST_USER_ID, KILLABLE_STATE_YES)));
 
         mController.onCreate(mLifecycleOwner);
 
@@ -154,11 +143,22 @@ public class PeakPerformancePreferenceControllerTest {
     }
 
     @Test
-    public void onCreate_peakPerformance_withKillableStateNever() {
+    public void onCreate_prioritizeAppPerformance_withKillableStateNo() {
         when(mMockManager.getPackageKillableStatesAsUser(any())).thenReturn(
                 Collections.singletonList(
-                        new PackageKillableState(PKG_NAME, mUserHandle.getIdentifier(),
-                                PackageKillableState.KILLABLE_STATE_NEVER)));
+                        new PackageKillableState(TEST_PKG_NAME, TEST_USER_ID, KILLABLE_STATE_NO)));
+
+        mController.onCreate(mLifecycleOwner);
+
+        assertThat(mTwoStatePreference.isChecked()).isTrue();
+        assertThat(mTwoStatePreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void onCreate_prioritizeAppPerformance_withKillableStateNever() {
+        when(mMockManager.getPackageKillableStatesAsUser(any())).thenReturn(
+                Collections.singletonList(new PackageKillableState(
+                        TEST_PKG_NAME, TEST_USER_ID, KILLABLE_STATE_NEVER)));
 
         mController.onCreate(mLifecycleOwner);
 
@@ -167,38 +167,39 @@ public class PeakPerformancePreferenceControllerTest {
     }
 
     @Test
-    public void callChangeListener_enablingPeakPerformance() {
+    public void callChangeListener_turnOffPrioritizeAppPerformance() {
         when(mMockManager.getPackageKillableStatesAsUser(any())).thenReturn(
                 Collections.singletonList(
-                        new PackageKillableState(PKG_NAME, mUserHandle.getIdentifier(),
-                                PackageKillableState.KILLABLE_STATE_NO)));
+                        new PackageKillableState(TEST_PKG_NAME, TEST_USER_ID, KILLABLE_STATE_NO)));
+        mController.onCreate(mLifecycleOwner);
+        assertThat(mTwoStatePreference.isChecked()).isTrue();
+
+        mTwoStatePreference.callChangeListener(false);
+
+        verify(mMockManager).setKillablePackageAsUser(
+                TEST_PKG_NAME, UserHandle.getUserHandleForUid(TEST_UID), true);
+        assertThat(mTwoStatePreference.isChecked()).isFalse();
+        assertThat(mTwoStatePreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void callChangeListener_turnOnPrioritizeAppPerformance() {
+        when(mMockManager.getPackageKillableStatesAsUser(any())).thenReturn(
+                Collections.singletonList(
+                        new PackageKillableState(TEST_PKG_NAME, TEST_USER_ID, KILLABLE_STATE_YES)));
         mController.onCreate(mLifecycleOwner);
         assertThat(mTwoStatePreference.isChecked()).isFalse();
 
         mTwoStatePreference.callChangeListener(true);
 
-        verify(mMockManager).setKillablePackageAsUser(PKG_NAME, mUserHandle, true);
-        assertThat(mTwoStatePreference.isChecked()).isTrue();
-        assertThat(mTwoStatePreference.isEnabled()).isTrue();
-    }
-
-    @Test
-    public void callChangeListener_disablingPeakPerformance() {
-        when(mMockManager.getPackageKillableStatesAsUser(any())).thenReturn(
-                Collections.singletonList(
-                        new PackageKillableState(PKG_NAME, mUserHandle.getIdentifier(),
-                                PackageKillableState.KILLABLE_STATE_YES)));
-        mController.onCreate(mLifecycleOwner);
-        assertThat(mTwoStatePreference.isChecked()).isTrue();
-
-        mTwoStatePreference.callChangeListener(false);
-        verify(mFragmentController).showDialog(mDialogFragment.capture(),
-                eq(PeakPerformancePreferenceController.TURN_OFF_PEAK_PERFORMANCE_DIALOG_TAG));
+        verify(mFragmentController).showDialog(
+                mDialogFragment.capture(), eq(TURN_ON_PRIORITIZE_APP_PERFORMANCE_DIALOG_TAG));
 
         mDialogFragment.getValue().getConfirmListener().onConfirm(new Bundle());
 
-        verify(mMockManager).setKillablePackageAsUser(PKG_NAME, mUserHandle, false);
-        assertThat(mTwoStatePreference.isChecked()).isFalse();
+        verify(mMockManager).setKillablePackageAsUser(
+                TEST_PKG_NAME, UserHandle.getUserHandleForUid(TEST_UID), false);
+        assertThat(mTwoStatePreference.isChecked()).isTrue();
         assertThat(mTwoStatePreference.isEnabled()).isTrue();
     }
 }
