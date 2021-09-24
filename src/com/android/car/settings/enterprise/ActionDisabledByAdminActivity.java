@@ -29,6 +29,7 @@ import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
  * Shows a dialog explaining that an action is not enabled due to restrictions imposed by an active
  * device administrator.
  */
+// TODO(b/186905050): add unit tests
 public final class ActionDisabledByAdminActivity extends FragmentActivity {
 
     @VisibleForTesting
@@ -42,14 +43,14 @@ public final class ActionDisabledByAdminActivity extends FragmentActivity {
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
 
         String restriction = getRestrictionFromIntent(getIntent());
-        ActionDisabledByAdminDialogFragment.newInstance(restriction, getUserId())
-                .show(getSupportFragmentManager(), FRAGMENT_TAG);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        finish();
+        ActionDisabledByAdminDialogFragment fragment =
+                EnterpriseUtils.getActionDisabledByAdminDialog(this, restriction);
+        fragment.setDismissListener(res -> {
+            if (!isChangingConfigurations()) {
+                finish();
+            }
+        });
+        fragment.show(getSupportFragmentManager(), FRAGMENT_TAG);
     }
 
     private String getRestrictionFromIntent(Intent intent) {
