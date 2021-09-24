@@ -30,6 +30,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="array" name="config_unbonded_device_filter_allowlist"/>
       <item type="array" name="premium_sms_access_values"/>
       <item type="array" name="recent_apps_ignored_packages"/>
+      <item type="array" name="settings_qc_provider_package_allowlist"/>
       <item type="array" name="wifi_ap_band"/>
       <item type="array" name="wifi_ap_band_config_2G_only"/>
       <item type="array" name="wifi_ap_band_config_full"/>
@@ -103,6 +104,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="brightness_thumb_outer_ring_color"/>
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
+      <item type="color" name="icon_color_default"/>
+      <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="toggle_bg"/>
       <item type="color" name="toggle_icon_tint"/>
@@ -317,6 +320,19 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_placeholder"/>
       <item type="drawable" name="ic_profile"/>
       <item type="drawable" name="ic_profile_add"/>
+      <item type="drawable" name="ic_qc_bluetooth"/>
+      <item type="drawable" name="ic_qc_bluetooth_media"/>
+      <item type="drawable" name="ic_qc_bluetooth_phone"/>
+      <item type="drawable" name="ic_qc_brightness"/>
+      <item type="drawable" name="ic_qc_hotspot"/>
+      <item type="drawable" name="ic_qc_mobile_data"/>
+      <item type="drawable" name="ic_qc_wifi_disabled"/>
+      <item type="drawable" name="ic_qc_wifi_disconnected"/>
+      <item type="drawable" name="ic_qc_wifi_level_0"/>
+      <item type="drawable" name="ic_qc_wifi_level_1"/>
+      <item type="drawable" name="ic_qc_wifi_level_2"/>
+      <item type="drawable" name="ic_qc_wifi_level_3"/>
+      <item type="drawable" name="ic_qc_wifi_level_4"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
       <item type="drawable" name="ic_settings_about"/>
@@ -1035,6 +1051,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="profiles_and_accounts_settings_title"/>
       <item type="string" name="profiles_list_title"/>
       <item type="string" name="progress_scanning"/>
+      <item type="string" name="qc_display_brightness"/>
       <item type="string" name="really_remove_account_message"/>
       <item type="string" name="really_remove_account_title"/>
       <item type="string" name="regulatory_info_text"/>
@@ -1296,6 +1313,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_control_title"/>
       <item type="string" name="wifi_details_ipv6_address_header"/>
       <item type="string" name="wifi_disabled"/>
+      <item type="string" name="wifi_disconnected"/>
       <item type="string" name="wifi_dns"/>
       <item type="string" name="wifi_error"/>
       <item type="string" name="wifi_failed_connect_message"/>
@@ -1311,6 +1329,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_hotspot_password_title"/>
       <item type="string" name="wifi_hotspot_security_none"/>
       <item type="string" name="wifi_hotspot_security_title"/>
+      <item type="string" name="wifi_hotspot_state_off"/>
       <item type="string" name="wifi_hotspot_state_switch_content_description"/>
       <item type="string" name="wifi_hotspot_wpa2_personal"/>
       <item type="string" name="wifi_ip_address"/>
