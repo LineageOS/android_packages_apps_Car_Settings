@@ -66,6 +66,12 @@ public class SettingsQCRegistry {
             .authority(AUTHORITY)
             .appendPath("brightness_slider")
             .build();
+
+    public static final Uri BRIGHTNESS_SLIDER_WITH_ICON_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("brightness_slider_with_icon")
+            .build();
     // End Uris
 
     @VisibleForTesting
@@ -80,6 +86,7 @@ public class SettingsQCRegistry {
         map.put(HOTSPOT_TILE_URI, HotspotTile.class);
         map.put(MOBILE_DATA_TILE_URI, MobileDataTile.class);
         map.put(BRIGHTNESS_SLIDER_URI, BrightnessSlider.class);
+        map.put(BRIGHTNESS_SLIDER_WITH_ICON_URI, BrightnessSliderWithIcon.class);
 
         return map;
     }
