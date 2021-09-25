@@ -44,6 +44,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.net.DataUsageController;
+import com.android.settingslib.utils.StringUtil;
 
 import com.google.android.collect.Lists;
 
@@ -202,9 +203,8 @@ public class DataUsageSummaryPreferenceControllerTest {
         mPreferenceController.refreshUi();
 
         assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
-                .isEqualTo(
-                        mContext.getResources().getQuantityString(R.plurals.billing_cycle_days_left,
-                                numDays, numDays));
+                .isEqualTo(StringUtil.getIcuPluralsString(mContext, numDays,
+                        R.string.billing_cycle_days_left));
     }
 
     @Test
