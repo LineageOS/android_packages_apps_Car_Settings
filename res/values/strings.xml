@@ -70,6 +70,10 @@
     <string name="mobile_network_toggle_title">Mobile data</string>
     <!-- Mobile network screen, toggle mobile data summary [CHAR LIMIT=50] -->
     <string name="mobile_network_toggle_summary">Access data using mobile network</string>
+    <!-- Mobile network screen, mobile network toggle title [CHAR LIMIT=30] -->
+    <string name="mobile_network_mobile_network_toggle_title">Mobile network</string>
+    <!-- Mobile network screen, toggle mobile network summary [CHAR LIMIT=50] -->
+    <string name="mobile_network_mobile_network_toggle_summary">Use mobile data</string>
     <!-- Mobile network screen, confirmation dialog to turn off mobile data [CHAR LIMIT=50] -->
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
     <!-- When a SIM preference hasn't been selected yet, this string is displayed as the pref summary until the user chooses a SIM subscription from the preference list. [CHAR LIMIT=50] -->
@@ -145,6 +149,8 @@
     <string name="data_warning_limit_title">Data warning &amp; limit</string>
     <!-- Title of button for application usage cycle preferences [CHAR LIMIT=40] -->
     <string name="app_usage_cycle">App data usage cycle</string>
+    <!-- Title of button for mobile usage cycle preferences [CHAR LIMIT=40] -->
+    <string name="mobile_data_usage">Mobile data usage</string>
     <!-- Label for switch about whether to warn user about usage [CHAR LIMIT=40] -->
     <string name="set_data_warning">Set data warning</string>
     <!-- Label for button to set the amount of data before user is warned about usage [CHAR LIMIT=30] -->
@@ -161,14 +167,26 @@
     <string name="data_usage_warning_editor_title">Set data usage warning</string>
     <!-- Title of dialog for editing data usage limit in bytes. [CHAR LIMIT=48] -->
     <string name="data_usage_limit_editor_title">Set data usage limit</string>
+    <!-- Data warning screen footer describing how data usage is measured. [CHAR LIMIT=NONE] -->
+    <string name="data_usage_settings_footer">Data usage is measured by your device. It may vary from your mobile carrier\u2019s data.</string>
     <!-- Positive button title for data usage bytes threshold picker, confirming that changes should be saved. [CHAR LIMIT=32] -->
     <string name="usage_bytes_threshold_picker_positive_button">Set</string>
     <string-array name="bytes_picker_sizes" translatable="false">
         <item>@*android:string/megabyteShort</item>
         <item>@*android:string/gigabyteShort</item>
     </string-array>
+    <!-- Data warning threshold save button [CHAR LIMIT=48] -->
+    <string name="data_usage_warning_save_title">Save</string>
     <!-- Network & internet settings screen, setting option name to enable OEM network connectivity [CHAR LIMIT=60] -->
     <string name="network_and_internet_oem_network_title">OEM network</string>
+    <!-- Network & internet settings screen, setting option name to enable vehicle internet connectivity [CHAR LIMIT=60] -->
+    <string name="network_and_internet_vehicle_internet_title">Vehicle internet</string>
+    <!-- Warning pop up when disabling OEM network connectivity [CHAR LIMIT=60] -->
+    <string name="network_and_internet_oem_network_dialog_description">Turning off the vehicle internet may prevent some vehicle features or apps from working.\n\nCritical data required to operate your vehicle will continue to be shared with the vehicle manufacturer.</string>
+    <!-- Confirm button label for disabling OEM network connectivity [CHAR LIMIT=40]-->
+    <string name="network_and_internet_oem_network_dialog_confirm_label">Turn off anyway</string>
+    <!-- Network & internet settings screen footer warning text when OEM network is turned of [CHAR LIMIT=NONE] -->
+    <string name="network_and_internet_oem_network_disabled_footer">Vehicle internet is turned off. This may prevent some vehicle features or apps from working. Critical data required to operate your vehicle will continue to be shared with the vehicle manufacturer.</string>
     <!-- Network & internet settings screen, setting option description of how much data has been used from a start date to end date ex. 80MB used Oct 3 - Nov 2 [CHAR LIMIT=100] -->
     <string name="network_and_internet_data_usage_time_range_summary">%1$s used %2$s - %3$s</string>
     <!-- Network & internet settings screen, setting option name to view other wifi networks to connect to [CHAR LIMIT=60] -->
@@ -703,6 +721,28 @@
     <string name="data_usage_summary_title">Data usage</string>
     <!-- Activity title for Appk data usage summary. [CHAR LIMIT=25] -->
     <string name="data_usage_app_summary_title">App data usage</string>
+    <!-- Title for preference that selects data usage date range. [CHAR LIMIT=25] -->
+    <string name="data_usage_usage_history_title">Usage history</string>
+    <!-- Title for preference that lists all apps. [CHAR LIMIT=25] -->
+    <string name="data_usage_all_apps_title">All apps</string>
+    <!-- Activity title for individual App data usage summary. [CHAR LIMIT=25] -->
+    <string name="app_data_usage_title">Data &amp; Wi\u2011Fi usage</string>
+    <!-- Title for preference that selects app data usage date range. [CHAR LIMIT=25] -->
+    <string name="app_data_usage_usage_history_title">Usage history</string>
+    <!-- Title that describes the total amount of data used by an app. [CHAR LIMIT=25] -->
+    <string name="app_data_usage_total_usage">Total usage</string>
+    <!-- Title that describes the amount of data used by an app while in the foreground. [CHAR LIMIT=25] -->
+    <string name="app_data_usage_foreground">Foreground</string>
+    <!-- Title that describes the amount of data used by an app while in the background. [CHAR LIMIT=25] -->
+    <string name="app_data_usage_background">Background</string>
+    <!-- Title of preference toggle that lets the app use mobile data. [CHAR LIMIT=25] -->
+    <string name="app_data_usage_allow_data_title">Allow data</string>
+    <!-- Summary of preference toggle that lets the app use mobile data. [CHAR LIMIT=50] -->
+    <string name="app_data_usage_allow_data_summary">Let this app use mobile data</string>
+    <!-- Title of preference toggle that lets the app use mobile data in the background. [CHAR LIMIT=25] -->
+    <string name="app_data_usage_restrict_data_title">Restrict data</string>
+    <!-- Summary of preference toggle that lets the app use mobile data in the background. [CHAR LIMIT=50] -->
+    <string name="app_data_usage_background_data_summary">Use mobile data only when app is in the foreground</string>
     <string name="computing_size">Computing\u2026</string>
     <!-- Runtime permissions preference summary.  Number of additional permissions granted. (ICU syntax) [CHAR LIMIT=40] -->
     <string name="runtime_permissions_additional_count">
