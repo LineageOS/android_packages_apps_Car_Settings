@@ -129,16 +129,16 @@ public class AdasLocationSwitchPreferenceController extends
     private void updateSwitchPreference(CarUiTwoActionSwitchPreference preference,
             boolean enabled) {
         preference.setSecondaryActionChecked(enabled);
-        preference.setEnabled(!mLocationManager.isLocationEnabled());
+        preference.setSecondaryActionEnabled(!mLocationManager.isLocationEnabled());
     }
 
     private void handlePowerPolicyChange(CarUiTwoActionSwitchPreference preference,
             boolean enabled) {
         if (mLocationManager.isLocationEnabled()) {
-            preference.setEnabled(false);
+            preference.setSecondaryActionEnabled(false);
             return;
         }
-        preference.setEnabled(enabled);
+        preference.setSecondaryActionEnabled(enabled);
     }
 
     /**

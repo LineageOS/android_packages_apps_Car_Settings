@@ -36,15 +36,15 @@ import com.android.internal.annotations.GuardedBy;
 
 import java.util.Objects;
 
-/**
- * Controller for preference which enables / disables I/O overuse killing for an application.
- */
-public class PeakPerformancePreferenceController extends PreferenceController<TwoStatePreference> {
-    private static final Logger LOG = new Logger(PeakPerformancePreferenceController.class);
+/** Controller for preference which turns on / off prioritize app performance setting. */
+public class PrioritizeAppPerformancePreferenceController
+        extends PreferenceController<TwoStatePreference> {
+    private static final Logger LOG =
+            new Logger(PrioritizeAppPerformancePreferenceController.class);
 
     @VisibleForTesting
-    static final String TURN_OFF_PEAK_PERFORMANCE_DIALOG_TAG =
-            "com.android.car.settings.applications.TurnOffPeakPerformanceDialog";
+    static final String TURN_ON_PRIORITIZE_APP_PERFORMANCE_DIALOG_TAG =
+            "com.android.car.settings.applications.TurnOnPrioritizeAppPerformanceDialogTag";
 
     private final Object mLock = new Object();
     @GuardedBy("mLock")
@@ -53,9 +53,13 @@ public class PeakPerformancePreferenceController extends PreferenceController<Tw
     private Car mCar;
     private String mPackageName;
     private UserHandle mUserHandle;
-    private int mKillableState;
 
-    public PeakPerformancePreferenceController(Context context, String preferenceKey,
+    private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
+        setKillableState(false);
+        getPreference().setChecked(true);
+    };
+
+    public PrioritizeAppPerformancePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
@@ -68,16 +72,20 @@ public class PeakPerformancePreferenceController extends PreferenceController<Tw
             mCar = null;
         }
         mCar = Car.createCar(getContext(), null, Car.CAR_WAIT_TIMEOUT_WAIT_FOREVER,
-                (Car car, boolean ready) -> {
+                (car, isReady) -> {
                     synchronized (mLock) {
-                        if (ready) {
-                            mCarWatchdogManager = (CarWatchdogManager) car.getCarManager(
-                                    Car.CAR_WATCHDOG_SERVICE);
-                        } else {
-                            mCarWatchdogManager = null;
-                        }
+                        mCarWatchdogManager = isReady
+                                ? (CarWatchdogManager) car.getCarManager(Car.CAR_WATCHDOG_SERVICE)
+                                : null;
                     }
                 });
+
+        ConfirmationDialogFragment dialogFragment =
+                (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
+                        TURN_ON_PRIORITIZE_APP_PERFORMANCE_DIALOG_TAG);
+        ConfirmationDialogFragment.resetListeners(
+                dialogFragment, mConfirmListener, /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override
@@ -103,50 +111,26 @@ public class PeakPerformancePreferenceController extends PreferenceController<Tw
 
     @Override
     protected void updateState(TwoStatePreference preference) {
-        mKillableState = getKillableState();
-        preference.setSummary(getContext().getString(R.string.peak_performance_summary));
-        preference.setChecked(mKillableState == PackageKillableState.KILLABLE_STATE_YES);
-        preference.setEnabled(mKillableState != PackageKillableState.KILLABLE_STATE_NEVER);
+        int killableState = getKillableState();
+        preference.setChecked(killableState == PackageKillableState.KILLABLE_STATE_NO);
+        preference.setEnabled(killableState != PackageKillableState.KILLABLE_STATE_NEVER);
     }
 
     @Override
     protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
-        if (mKillableState == PackageKillableState.KILLABLE_STATE_NEVER) {
+        boolean isToggledOn = (boolean) newValue;
+        if (isToggledOn) {
+            showConfirmationDialog();
             return false;
         }
-
-        boolean shouldKill = (boolean) newValue;
-
-        // If shouldKill is true, switch toggle going from OFF to ON.
-        if (shouldKill) {
-            setKillableState(true);
-            preference.setChecked(true);
-            mKillableState = PackageKillableState.KILLABLE_STATE_YES;
-        } else {
-            ConfirmationDialogFragment dialogFragment =
-                    new ConfirmationDialogFragment.Builder(getContext())
-                            .setTitle(R.string.peak_performance_dialog_title)
-                            .setMessage(R.string.peak_performance_dialog_text)
-                            .setPositiveButton(R.string.peak_performance_dialog_action_off,
-                                    arguments -> {
-                                        setKillableState(false);
-                                        preference.setChecked(false);
-                                        mKillableState = PackageKillableState.KILLABLE_STATE_NO;
-                                    })
-                            .setNegativeButton(
-                                    R.string.peak_performance_dialog_action_on,
-                                    /* rejectListener= */null)
-                            .build();
-            getFragmentController().showDialog(dialogFragment,
-                    TURN_OFF_PEAK_PERFORMANCE_DIALOG_TAG);
-        }
-        return shouldKill;
+        setKillableState(true);
+        return true;
     }
 
     private int getKillableState() {
         synchronized (mLock) {
-            return Objects.requireNonNull(mCarWatchdogManager).getPackageKillableStatesAsUser(
-                    mUserHandle).stream()
+            return Objects.requireNonNull(mCarWatchdogManager)
+                    .getPackageKillableStatesAsUser(mUserHandle).stream()
                     .filter(pks -> pks.getPackageName().equals(mPackageName))
                     .findFirst().map(PackageKillableState::getKillableState).orElse(-1);
         }
@@ -156,5 +140,19 @@ public class PeakPerformancePreferenceController extends PreferenceController<Tw
         synchronized (mLock) {
             mCarWatchdogManager.setKillablePackageAsUser(mPackageName, mUserHandle, isKillable);
         }
+    }
+
+    private void showConfirmationDialog() {
+        ConfirmationDialogFragment dialogFragment =
+                new ConfirmationDialogFragment.Builder(getContext())
+                        .setTitle(R.string.prioritize_app_performance_dialog_title)
+                        .setMessage(R.string.prioritize_app_performance_dialog_text)
+                        .setPositiveButton(R.string.prioritize_app_performance_dialog_action_on,
+                                mConfirmListener)
+                        .setNegativeButton(R.string.prioritize_app_performance_dialog_action_off,
+                                /* rejectListener= */ null)
+                        .build();
+        getFragmentController().showDialog(
+                dialogFragment, TURN_ON_PRIORITIZE_APP_PERFORMANCE_DIALOG_TAG);
     }
 }

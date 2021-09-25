@@ -18,33 +18,33 @@ package com.android.car.settings.location;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.location.LocationManager;
+
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.ui.preference.CarUiTwoActionTextPreference;
 
 /**
- * The preference on Driver assistance page for enabling or disabling ADAS GNSS bypass.
+ * Controller for displaying {@link AdasLocationSwitchSubMenuPreference} and a preference divider.
  */
-public class AdasLocationSwitchSubMenuPreferenceController extends
-        PreferenceController<CarUiTwoActionTextPreference> {
+public class AdasGroupPreferenceController extends PreferenceController<PreferenceGroup> {
 
-    public AdasLocationSwitchSubMenuPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions) {
+    private final LocationManager mLocationManager;
+
+    public AdasGroupPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+        mLocationManager = context.getSystemService(LocationManager.class);
     }
 
     @Override
-    protected Class<CarUiTwoActionTextPreference> getPreferenceType() {
-        return CarUiTwoActionTextPreference.class;
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
     @Override
-    protected void onCreateInternal() {
-        getPreference().setOnSecondaryActionClickListener(() -> {
-            getFragmentController().goBack();
-        });
+    protected int getAvailabilityStatus() {
+        return mLocationManager.isAdasGnssLocationEnabled() ? UNSUPPORTED_ON_DEVICE : AVAILABLE;
     }
 }

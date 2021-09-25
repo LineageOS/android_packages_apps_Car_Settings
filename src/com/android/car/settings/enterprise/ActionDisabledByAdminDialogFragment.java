@@ -57,15 +57,16 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     private static final Logger LOG = new Logger(TAG);
 
     private static final String EXTRA_RESTRICTION = TAG + "_restriction";
-    private static final String EXTRA_USER_ID = TAG + "_userId";
+    private static final String EXTRA_ADMIN_USER_ID = TAG + "_userId";
 
     @VisibleForTesting
     String mRestriction;
 
     @UserIdInt
-    private int mUserId;
+    private int mAdminUserId;
 
     private ActionDisabledByAdminController mActionDisabledByAdminController;
+    private DismissListener mDismissListener;
 
     /**
      * Gets the dialog for the given user and restriction.
@@ -74,7 +75,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
             @UserIdInt int userId) {
         ActionDisabledByAdminDialogFragment instance = new ActionDisabledByAdminDialogFragment();
         instance.mRestriction = restriction;
-        instance.mUserId = userId;
+        instance.mAdminUserId = userId;
         return instance;
     }
 
@@ -82,7 +83,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             mRestriction = savedInstanceState.getString(EXTRA_RESTRICTION);
-            mUserId = savedInstanceState.getInt(EXTRA_USER_ID);
+            mAdminUserId = savedInstanceState.getInt(EXTRA_ADMIN_USER_ID);
         }
         return initialize(getContext()).create();
     }
@@ -92,16 +93,35 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         super.onSaveInstanceState(outState);
 
         outState.putString(EXTRA_RESTRICTION, mRestriction);
-        outState.putInt(EXTRA_USER_ID, mUserId);
+        outState.putInt(EXTRA_ADMIN_USER_ID, mAdminUserId);
     }
 
     @Override
     protected void onDialogClosed(boolean positiveResult) {
+        if (mDismissListener != null) {
+            mDismissListener.onDismiss(positiveResult);
+            mDismissListener = null;
+        }
+    }
+
+    /** Sets the listeners which listens for the dialog dismissed */
+    public void setDismissListener(DismissListener dismissListener) {
+        mDismissListener = dismissListener;
     }
 
     private AlertDialogBuilder initialize(Context context) {
         EnforcedAdmin enforcedAdmin = RestrictedLockUtilsInternal
-                .checkIfRestrictionEnforced(context, mRestriction, mUserId);
+                .checkIfRestrictionEnforced(/* dpmContext= */ context, mRestriction,
+                        /* targetUserToCheck= */ mAdminUserId);
+        if (enforcedAdmin == null) {
+            // ActionDisabledByAdminDialogFragment may also be created from
+            // ActionDisabledByAdminActivity and Device Admin ComponentName can be retrieved from
+            // Intent.
+            ComponentName admin = (ComponentName) getActivity().getIntent()
+                    .getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
+            enforcedAdmin = new EnforcedAdmin(admin, mRestriction, UserHandle.of(mAdminUserId));
+            LOG.d("EnforcedAdmin created: " + enforcedAdmin);
+        }
 
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
                 .setPositiveButton(R.string.okay, /* listener= */ null);
@@ -111,7 +131,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         mActionDisabledByAdminController.initialize(
                 new ActionDisabledLearnMoreButtonLauncherImpl(builder));
         if (enforcedAdmin != null) {
-            mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, mUserId);
+            mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, mAdminUserId);
             mActionDisabledByAdminController.setupLearnMoreButton(context);
         }
         initializeDialogViews(context, builder, enforcedAdmin,
@@ -216,5 +236,16 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         } catch (PackageManager.NameNotFoundException e) {
             return packageManager.getDefaultActivityIcon();
         }
+    }
+
+    /** Listens to the dismiss action. */
+    public interface DismissListener {
+        /**
+         * Defines the action to take when the dialog is closed.
+         *
+         * @param positiveResult - whether or not the dialog was dismissed because of a positive
+         * button press.
+         */
+        void onDismiss(boolean positiveResult);
     }
 }
