@@ -200,10 +200,12 @@ public class DataUsageSummaryPreferenceController extends
             return getContext().getString(R.string.billing_cycle_none_left);
         } else {
             int daysLeft = (int) (millisLeft / MILLIS_IN_A_DAY);
-            return daysLeft < 1
-                    ? getContext().getString(R.string.billing_cycle_less_than_one_day_left)
-                    : getContext().getResources().getQuantityString(
-                            R.plurals.billing_cycle_days_left, daysLeft, daysLeft);
+            if (daysLeft < 1) {
+                return getContext().getString(R.string.billing_cycle_less_than_one_day_left);
+            } else {
+                return StringUtil.getIcuPluralsString(getContext(), daysLeft,
+                        R.string.billing_cycle_days_left);
+            }
         }
     }
 

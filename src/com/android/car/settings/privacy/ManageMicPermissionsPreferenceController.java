@@ -32,9 +32,12 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.settingslib.utils.StringUtil;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -142,9 +145,11 @@ public class ManageMicPermissionsPreferenceController extends
     }
 
     private void setAppCounts(int numTotal, int numHasAccess) {
-        getPreference().setSummary(getContext().getResources().getQuantityString(
-                R.plurals.microphone_app_permission_summary_microphone_on, numHasAccess,
-                numHasAccess, numTotal));
+        Map<String, Object> arguments = new HashMap<>();
+        arguments.put("count", numHasAccess);
+        arguments.put("total_count", numTotal);
+        getPreference().setSummary(StringUtil.getIcuPluralsString(getContext(), arguments,
+                R.string.microphone_app_permission_summary_microphone_on));
     }
 
 

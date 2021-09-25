@@ -742,53 +742,34 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Engadir perfil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillo de pantalla"</string>
-    <!-- no translation found for device_admin_add_title (1294399588284546811) -->
-    <skip />
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador do sistema de información e entretemento"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Non hai aplicacións de administración do sistema de información e entretemento"</string>
-    <!-- no translation found for device_admin_status (4041772636856135168) -->
-    <skip />
-    <!-- no translation found for device_admin_warning (8997805999333600901) -->
-    <skip />
-    <!-- no translation found for add_device_admin_msg (8188888666879499482) -->
-    <skip />
-    <!-- no translation found for add_device_admin (7674707256074840333) -->
-    <skip />
-    <!-- no translation found for remove_device_admin (3595343390502030723) -->
-    <skip />
-    <!-- no translation found for admin_support_more_info (380785608579390750) -->
-    <skip />
-    <!-- no translation found for admin_profile_owner_message (905509940230549773) -->
-    <skip />
-    <!-- no translation found for admin_profile_owner_user_message (3867350539930925070) -->
-    <skip />
-    <!-- no translation found for admin_device_owner_message (8261844995284196176) -->
-    <skip />
-    <!-- no translation found for admin_financed_message (8530796044340607865) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title (5651853760118792629) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_adjust_volume (947693485036623479) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_sms (4353988664398839837) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_camera (8008769061266209577) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_screen_capture (156845907165179949) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_suspend_packages (1249154592881985661) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_financed_device (6005343494788285981) -->
-    <skip />
-    <!-- no translation found for default_admin_support_msg (1611734116715908153) -->
-    <skip />
+    <string name="device_admin_status" msgid="4041772636856135168">"Esta aplicación de administración do sistema de información e entretemento está activa e permite á aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> levar a cabo as seguintes operacións:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"A activación desta aplicación do sistema de información e entretemento permitirá á aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> levar a cabo as seguintes operacións:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Queres activar esta aplicación?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Activar esta aplicación do sistema de información e entretemento"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Desactivar esta aplicación do sistema de información e entretemento"</string>
+    <string name="admin_support_more_info" msgid="380785608579390750">"Máis detalles"</string>
+    <string name="admin_profile_owner_message" msgid="905509940230549773">"O xestor da frota pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
+    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"O xestor da frota pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do dispositivo)."</string>
+    <string name="admin_device_owner_message" msgid="8261844995284196176">"O xestor da frota pode supervisar e xestionar as aplicacións e os datos asociados a este sistema de información e entretemento (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
+    <string name="admin_financed_message" msgid="8530796044340607865">"É posible que o xestor da frota poida acceder aos datos asociados ao sistema de información e entretemento, xestionar as aplicacións e cambiar a configuración deste vehículo."</string>
+    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bloqueada polo xestor da frota"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Contacta co xestor da frota para axustar o volume"</string>
+    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Contacta co xestor da frota para usar SMS"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Contacta co xestor da frota para usar a cámara"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Contacta co xestor da frota para facer capturas"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Contacta co xestor da frota para usar esta app"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Opción bloqueada pola túa entidade de crédito"</string>
+    <string name="default_admin_support_msg" msgid="1611734116715908153">"Se tes algunha pregunta, contacta co xestor da frota"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
-    <!-- no translation found for manage_device_admin (7087659697154317316) -->
-    <skip />
-    <!-- no translation found for number_of_device_admins (2747756696562689276) -->
-    <!-- no translation found for number_of_device_admins_none (3761015967867157562) -->
-    <skip />
-    <!-- no translation found for work_policy_privacy_settings_summary (5770881048853242635) -->
-    <skip />
+    <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administración do vehículo"</string>
+    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacións activas</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicación activa</item>
+    </plurals>
+    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Non hai aplicacións activas"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Configuración xestionada polo xestor da frota"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restablece o sistema de información e entretemento"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"O sistema recibiu unha solicitude para restablecer a configuración de fábrica e borrar todos os datos. Podes facelo agora ou a próxima vez que se arrinque o coche. Despois, poderás configurar un perfil novo."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Restablecer agora"</string>
