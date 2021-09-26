@@ -27,10 +27,8 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Түнгі режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Желі және интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобильдік желі"</string>
-    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM картасы</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> SIM картасы</item>
-    </plurals>
+    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
+    <skip />
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Іске қосулы/SIM картасы"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Іске қосылмаған/SIM картасы"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Іске қосулы/Жүктеп алынған SIM картасы"</string>
@@ -53,10 +51,8 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"Дерек шығыны туралы ескерту: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Дерек шегі: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Дерек шығыны туралы ескерту: <xliff:g id="ID_1">^1</xliff:g>/Дерек шегі: <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="other">%d күн қалды.</item>
-      <item quantity="one">%d күн қалды.</item>
-    </plurals>
+    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
+    <skip />
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Уақыт бітті."</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"1 күннен аз уақыт қалды."</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_2">^2</xliff:g> бұрын <xliff:g id="ID_1">^1</xliff:g> жаңартты."</string>
@@ -298,10 +294,14 @@
     <string name="force_stop" msgid="2153183697014720520">"Қолмен тоқтату"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Қолмен тоқтатылсын ба?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Қолданбаны қолмен тоқтату оның жұмысына кері әсерін тигізуі мүмкін."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Өнімділікті қорғауды қосу керек пе?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Қосулы қалдырсаңыз, бағдарламалық құрал мен жабдық та жұмыс істемей қалуы мүмкін."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Қосулы қалдыру"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Өшіру"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"Өшіру"</string>
     <string name="enable_text" msgid="1794971777861881238">"Қосу"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Жою"</string>
@@ -311,25 +311,23 @@
     <string name="permissions_label" msgid="2701446753515612685">"Рұқсаттар"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Хабарландырулар"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Жад және кэш"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Барынша өнімді жұмыс істеуді қосу"</string>
+    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"Нұсқа: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ешқандай рұқсат берілмеген"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ешқандай рұқсат сұралмаған"</string>
     <string name="unused_apps" msgid="648471933781010395">"Пайдаланылмайтын қолданбалар"</string>
-    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> пайдаланылмайтын қолданба</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> пайдаланылмайтын қолданба</item>
-    </plurals>
+    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
+    <skip />
     <string name="unused_apps_switch" msgid="4433958286200341563">"Рұқсаттарды өшіру және орын босату"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"Ішкі жад: %s"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Ресурстар шығынын азайту үшін қолданбаны керек кезде жауып қояды."</string>
+    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Деректер трафигі"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Қолданбаның дерек шығыны"</string>
     <string name="computing_size" msgid="5791407621793083965">"Есептелуде…"</string>
-    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> қосымша рұқсат</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> қосымша рұқсат</item>
-    </plurals>
+    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <skip />
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Ескертпе: қайта жүктегеннен кейін, көліктің құлпын ашпайынша, бұл қолданба іске қосылмайды."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Көмекші және дауыспен енгізу"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Көмекші қолданба"</string>
@@ -389,6 +387,14 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Локацияны пайдалану"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Геодеректі өшірсеңіз, барлық қолданба үшін локацияны пайдалану рұқсаты өшіріледі. Алайда жүргізушіге көмектесетін функцияларда рұқсат бола береді. Жүргізушіге көмек функцияларын өшіріп қойсаңыз, олар локацияңызды пайдалана алмайды."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Жүргізушіге көмек"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <skip />
+    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <skip />
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Локация қосылғанда, қолжетімсіз."</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Егер өшірсеңіз, локация мәліметіне сүйеніп жұмыс істейтін жүргізушіге көмек функциялары өшіріледі."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Бәрібір өшіру"</string>
@@ -407,10 +413,8 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Жақында пайдаланылған"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Жақында пайдаланған қолданбалар жоқ."</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Ешбір қолданбаға рұқсат берілмеген."</string>
-    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
-      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> қолданбаға рұқсат берілген.</item>
-      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g>/<xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> қолданбаға рұқсат берілген.</item>
-    </plurals>
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
+    <skip />
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Жақында пайдаланылған"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Барлығын көру"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Жүктелуде…"</string>
@@ -452,10 +456,8 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Үшінші тарап лицензиялары"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Лицензияларды жүктеу барысында ақау орын алды."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Жүктелуде…"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> қадамнан кейін әзірлеуші атанасыз.</item>
-      <item quantity="one"><xliff:g id="STEP_COUNT_0">%1$d</xliff:g> қадамнан кейін әзірлеуші атанасыз.</item>
-    </plurals>
+    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
+    <skip />
     <string name="show_dev_on" msgid="5339077400040834808">"Енді сіз әзірлеушісіз!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Қажет емес, сіз енді әзірлеушісіз."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Әзірлеуші опциялары"</string>
@@ -524,10 +526,8 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Сіз жаңа профиль құрған кезде, пайдаланушы оны өзіне ыңғайлы етіп реттеуі тиіс."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Қолданбаларды кез келген профильден жаңартып, барлық өзге профильде пайдалануға болады."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Профильдер саны шегіне жетті"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
-      <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> профильге дейін жасауға болады.</item>
-      <item quantity="one">Тек бір профиль жасауға болады.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
+    <skip />
     <string name="add_user_error_title" msgid="7589792057846396341">"Жаңа профиль құру мүмкін болмады"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Бұл профильді жою керек пе?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Осы профильдегі барлық қолданбалар мен деректер жойылады."</string>
@@ -675,30 +675,6 @@
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Әкімшіңіз оңай PIN кодтарына тыйым салды. Басқа PIN кодын енгізіп көріңіз."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Жарамсыз таңба болмауы керек"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Құпия сөз жарамсыз, ең кемі 4 таңбадан тұруы керек"</string>
-    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="other">Кемінде <xliff:g id="COUNT">%d</xliff:g> әріп болуы керек</item>
-      <item quantity="one">Кемінде 1 әріп болуы керек</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="other">Кемінде <xliff:g id="COUNT">%d</xliff:g> кіші әріп болуы керек</item>
-      <item quantity="one">Кемінде 1 кіші әріп болуы керек</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="other">Кемінде <xliff:g id="COUNT">%d</xliff:g> бас әріп болуы керек</item>
-      <item quantity="one">Кемінде 1 бас әріп болуы керек</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="other">Кемінде <xliff:g id="COUNT">%d</xliff:g> сан болуы керек</item>
-      <item quantity="one">Кемінде 1 сан болуы керек</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="other">Кемінде <xliff:g id="COUNT">%d</xliff:g> арнайы таңба болуы керек</item>
-      <item quantity="one">Кемінде 1 арнайы таңба болуы керек</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="other">Кемінде <xliff:g id="COUNT">%d</xliff:g> әріптік емес таңба болуы керек</item>
-      <item quantity="one">Кемінде 1 әріптік емес таңба болуы керек</item>
-    </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Құрылғы әкімшісі соңғы құпия сөзді қолдануға рұқсат бермейді"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Құпия сөзді сақтау кезінде қате кетті"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Әкімшіңіз оңай құпия сөздерге тыйым салды. Басқа құпия сөз енгізіп көріңіз."</string>
@@ -764,10 +740,8 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Сұрақтарыңыз болса, автопарк басқарушысына хабарласыңыз"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Көлік әкімшісінің қолданбалары"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> белсенді қолданба</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> белсенді қолданба</item>
-    </plurals>
+    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <skip />
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"Қосулы қолданбалар жоқ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Параметрлерді автопарк басқарушысы басқарады."</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Ақпараттық ойын-сауық жүйесін бастапқы күйге қайтару"</string>
