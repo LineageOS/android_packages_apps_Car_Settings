@@ -27,10 +27,8 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Mode Nuit"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Réseau et Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Réseau cellulaire"</string>
-    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> carte SIM</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> cartes SIM</item>
-    </plurals>
+    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
+    <skip />
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Services actifs/Carte SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Services inactifs/Carte SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Services actifs/Carte SIM téléchargée"</string>
@@ -53,10 +51,8 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"Avertiss. d\'utilisation de données : <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Limite d\'utilisation de données : <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Avertissement d\'utilisation de données : <xliff:g id="ID_1">^1</xliff:g> / Limite d\'utilisation de données : <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="one">%d jour restant</item>
-      <item quantity="other">%d jours restants</item>
-    </plurals>
+    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
+    <skip />
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Aucun temps restant"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Il reste moins d\'un jour"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Mis à jour par <xliff:g id="ID_1">^1</xliff:g> il y a <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -94,6 +90,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Ajouter un réseau"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Associer"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"Connexion en cours…"</string>
+    <string name="wifi_disconnected" msgid="4485699234859368137">"Non connecté"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"Réseau hors de portée"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Mot de passe"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Afficher le mot de passe"</string>
@@ -297,10 +294,14 @@
     <string name="force_stop" msgid="2153183697014720520">"Forcer l\'arrêt"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Voulez-vous forcer l\'arrêt?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"L\'arrêt forcé d\'une application peut provoquer un fonctionnement instable."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Désactiver protection des performances?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Si vous le faites, votre logiciel et votre matériel pourraient ne pas fonctionner aussi bien."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Laisser activé"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Désactiver"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"Désactiver"</string>
     <string name="enable_text" msgid="1794971777861881238">"Activer"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Désinstaller"</string>
@@ -310,25 +311,23 @@
     <string name="permissions_label" msgid="2701446753515612685">"Autorisations"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notifications"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Stockage et mise en cache"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Performances opti."</string>
+    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"Version : %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Aucune autorisation accordée"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Aucune autorisation demandée"</string>
     <string name="unused_apps" msgid="648471933781010395">"Applications non utilisées"</string>
-    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> application non utilisée</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> applications non utilisées</item>
-    </plurals>
+    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
+    <skip />
     <string name="unused_apps_switch" msgid="4433958286200341563">"Retirer autorisations et libérer espace"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s de mémoire de stockage interne"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Fermez appli pour éviter utilisation excessive des ressources"</string>
+    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Utilisation des données"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Util. données applications"</string>
     <string name="computing_size" msgid="5791407621793083965">"Traitement en cours…"</string>
-    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> autorisation supplémentaire</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> autorisations supplémentaires</item>
-    </plurals>
+    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <skip />
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Remarque : Après un redémarrage, vous ne pouvez pas lancer cette application tant que vous n\'avez pas déverrouillé votre véhicule."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistance et entrée vocale"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Application d\'assistance"</string>
@@ -388,6 +387,14 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Utiliser ma position"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"En désactivant l\'autorisation de localisation, celle-ci désactivera l\'accès de toutes les applications à votre position. Les fonctionnalités d\'assistance au conducteur y auront toutefois toujours accès. En désactivant le commutateur d\'assistance au conducteur, les fonctionnalités d\'assistance au conducteur cesseront d\'utiliser votre position."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Assistance au conducteur"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <skip />
+    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <skip />
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Indisponible lorsque le lieu est activé"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Si vous désactivez cette option, les fonctionnalités d\'assistance au conducteur qui dépendent des renseignements de lieu seront désactivées."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Désactiver quand même"</string>
@@ -406,10 +413,8 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Accédé récemment"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Aucune application récente"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Aucune application n\'a accès"</string>
-    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
-      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> application sur <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> a accès</item>
-      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> applications sur <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> ont accès</item>
-    </plurals>
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
+    <skip />
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Accédé récemment"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Tout afficher"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Chargement en cours…"</string>
@@ -451,10 +456,8 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licences tierces"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Problème lors du chargement des licences."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Chargement en cours…"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="one">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étape pour devenir un développeur.</item>
-      <item quantity="other">Plus que <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> étapes pour devenir un développeur.</item>
-    </plurals>
+    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
+    <skip />
     <string name="show_dev_on" msgid="5339077400040834808">"Vous êtes désormais un développeur!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Inutile, vous êtes déjà un développeur."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Options pour concepteurs"</string>
@@ -523,10 +526,8 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Une fois que vous aurez créé un profil, cette personne devra le configurer elle-même."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Les applis peuvent être mises à jour à partir de tout profil pour tous les autres profils."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Nombre maximal de profils atteint"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
-      <item quantity="one">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> profil.</item>
-      <item quantity="other">Vous pouvez créer jusqu\'à <xliff:g id="COUNT">%d</xliff:g> profils.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
+    <skip />
     <string name="add_user_error_title" msgid="7589792057846396341">"Impossible de créer un profil"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Supprimer ce profil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"L\'intégralité des applications et des données de ce profil seront supprimées"</string>
@@ -674,30 +675,6 @@
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Les NIP communs sont bloqués par votre administrateur informatique. Essayez un NIP différent."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Vous ne pouvez pas inclure de caractère non valide."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Le mot de passe doit comprendre au moins quatre caractères"</string>
-    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre</item>
-      <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre minuscule</item>
-      <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres minuscules</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre majuscule</item>
-      <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres majuscules</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> chiffre</item>
-      <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> chiffres</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractère spécial</item>
-      <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractères spéciaux</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractère autre qu\'une lettre</item>
-      <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> caractères autres qu\'une lettre</item>
-    </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'administrateur de l\'appareil ne permet pas l\'utilisation d\'un mot de passe récent"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Erreur lors de l\'enreg. du mot de passe"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Les mots de passe communs sont bloqués par votre administrateur informatique. Essayez un mot de passe différent."</string>
@@ -740,6 +717,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Ajouter un profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Supprimer ce profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Ajouter un profil"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Luminosité de l\'écran"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrateur du système d\'infodivertissement"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Aucune application d\'administration du système d\'infodivertissement"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Cette application d\'administration du système d\'infodivertissement est active et elle permet à l\'application <xliff:g id="APP_NAME">%1$s</xliff:g> d\'effectuer les opérations suivantes :"</string>
@@ -762,10 +740,8 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Si vous avez des questions, communiquez avec le gestionnaire de flotte"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Applis d\'administration du véhicule"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> application active</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> applications actives</item>
-    </plurals>
+    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <skip />
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"Aucune application active"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Les paramètres sont gérés par votre gestionnaire de flotte"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ce paramètre ne peut pas être modifié pour le moment"</string>

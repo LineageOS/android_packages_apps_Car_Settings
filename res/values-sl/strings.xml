@@ -27,12 +27,8 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Nočni način"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Omrežje in internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilno omrežje"</string>
-    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> kartica SIM</item>
-      <item quantity="two"><xliff:g id="COUNT_1">%1$d</xliff:g> kartici SIM</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%1$d</xliff:g> kartice SIM</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> kartic SIM</item>
-    </plurals>
+    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
+    <skip />
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktivno/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Neaktivno/SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktivno/prenesena kartica SIM"</string>
@@ -55,12 +51,8 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"Opozorilo ob prenes. količini podatkov <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Omejitev prenosa podatkov pri <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Opozorilo ob preneseni količini podatkov <xliff:g id="ID_1">^1</xliff:g>/omejitev prenosa podatkov pri <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="one">Še %d dan</item>
-      <item quantity="two">Še %d dneva</item>
-      <item quantity="few">Še %d dni</item>
-      <item quantity="other">Še %d dni</item>
-    </plurals>
+    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
+    <skip />
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Ni preostalega časa"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Še manj kot 1 dan"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Posodobil operater <xliff:g id="ID_1">^1</xliff:g> pred <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -98,6 +90,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Dodaj omrežje"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Poveži"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"Povezovanje …"</string>
+    <string name="wifi_disconnected" msgid="4485699234859368137">"Povezava ni vzpostavljena"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"Omrežje ni v dosegu"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Geslo"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Prikaži geslo"</string>
@@ -301,10 +294,14 @@
     <string name="force_stop" msgid="2153183697014720520">"Prisilna ustavitev"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Želite prisilno ustaviti aplikacijo?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Če prisilno ustavite aplikacijo, morda ne bo pravilno delovala."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Želite izklopiti zaščito zmogljivosti?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Če naredite to, programska oprema in strojna oprema morda ne bosta delovali najbolje."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Pusti vklopljeno"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Izklopi"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"Onemogoči"</string>
     <string name="enable_text" msgid="1794971777861881238">"Omogoči"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Odmesti"</string>
@@ -314,29 +311,23 @@
     <string name="permissions_label" msgid="2701446753515612685">"Dovoljenja"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Obvestila"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Shramba in predpomnilnik"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Zagotovitev največje zmogljivosti"</string>
+    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"Različica: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ni odobrenih dovoljenj"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ni zahtevanih dovoljenj"</string>
     <string name="unused_apps" msgid="648471933781010395">"Neuporabljene aplikacije"</string>
-    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> neuporabljena aplikacija</item>
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> neuporabljeni aplikaciji</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> neuporabljene aplikacije</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> neuporabljenih aplikacij</item>
-    </plurals>
+    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
+    <skip />
     <string name="unused_apps_switch" msgid="4433958286200341563">"Odstrani dovoljenja in sprosti prostor"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s v notranji shrambi"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Po potrebi zaprite aplikacijo v izogib čezmerni rabi sredstev."</string>
+    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Prenes. količina podatkov"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Pren. kol. podat. aplik."</string>
     <string name="computing_size" msgid="5791407621793083965">"Izračunavanje …"</string>
-    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> dodatno dovoljenje</item>
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> dodatni dovoljenji</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> dodatna dovoljenja</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dodatnih dovoljenj</item>
-    </plurals>
+    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <skip />
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Opomba: po vnovičnem zagonu se ta aplikacija ne more zagnati, če ne odklenete vozila."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Pomočnik in glasovni vnos"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aplikacija za pomoč"</string>
@@ -396,6 +387,14 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Uporaba lokacije"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Če izklopite lokacijo, vsem aplikacijam onemogočite dostop do lokacije, funkcije za pomoč vozniku pa bodo še vedno imele dostop. Če izklopite pomoč vozniku, funkcije za pomoč vozniku ne bodo več uporabljale lokacije."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Pomoč vozniku"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <skip />
+    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <skip />
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Ni na voljo, če je vklopljena lokacija"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Če to izklopite, boste onemogočili funkcije za pomoč vozniku, ki delujejo na podlagi podatkov o lokaciji."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Vseeno izklopi"</string>
@@ -414,12 +413,8 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Aplikacije z nedavnim dostopom"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Ni nedavnih aplikacij"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Dostop ima 0 aplikacij"</string>
-    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
-      <item quantity="one"> Dostop ima <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> od toliko aplikacij: <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g></item>
-      <item quantity="two"> Dostop imata <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> od toliko aplikacij: <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g></item>
-      <item quantity="few"> Dostop imajo <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> od toliko aplikacij: <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g></item>
-      <item quantity="other"> Dostop ima <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> od toliko aplikacij: <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g></item>
-    </plurals>
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
+    <skip />
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Nedavno dostopano"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Ogled vseh"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Nalaganje …"</string>
@@ -461,12 +456,8 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licence drugih ponudnikov"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Težava pri nalaganju licenc."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Nalaganje …"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="one"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> korak vas loči od tega, da postanete razvijalec.</item>
-      <item quantity="two"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraka vas ločita od tega, da postanete razvijalec.</item>
-      <item quantity="few"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraki vas ločijo od tega, da postanete razvijalec.</item>
-      <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> korakov vas loči od tega, da postanete razvijalec.</item>
-    </plurals>
+    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
+    <skip />
     <string name="show_dev_on" msgid="5339077400040834808">"Zdaj ste razvijalec."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Ni treba, ker ste že razvijalec."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Možnosti za razvijalce"</string>
@@ -535,12 +526,8 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Ko ustvarite nov profil, si ga mora ta oseba prilagoditi."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Aplikacije je mogoče posodobiti s katerim koli profilom za uporabo v vseh drugih profilih."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Dosežena omejitev števila profilov"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
-      <item quantity="one">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> profil.</item>
-      <item quantity="two">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> profila.</item>
-      <item quantity="few">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> profile.</item>
-      <item quantity="other">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> profilov.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
+    <skip />
     <string name="add_user_error_title" msgid="7589792057846396341">"Novega profila ni bilo mogoče ustvariti."</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Želite izbrisati ta profil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Vse aplikacije in podatki za ta profil bodo izbrisani."</string>
@@ -688,42 +675,6 @@
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Skrbnik za IT je blokiral pogoste kode PIN. Poskusite z drugo kodo PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Ne sme vsebovati neveljavnih znakov."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Geslo je neveljavno, vsebovati mora najmanj 4 znake."</string>
-    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="one">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> črko</item>
-      <item quantity="two">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> črki</item>
-      <item quantity="few">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> črke</item>
-      <item quantity="other">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> črk</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="one">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> malo črko</item>
-      <item quantity="two">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> mali črki</item>
-      <item quantity="few">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> male črke</item>
-      <item quantity="other">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> malih črk</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="one">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> veliko črko</item>
-      <item quantity="two">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> veliki črki</item>
-      <item quantity="few">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> velike črke</item>
-      <item quantity="other">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> velikih črk</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="one">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> števko</item>
-      <item quantity="two">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> števki</item>
-      <item quantity="few">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> števke</item>
-      <item quantity="other">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> števk</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="one">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> posebni znak</item>
-      <item quantity="two">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> posebna znaka</item>
-      <item quantity="few">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> posebne znake</item>
-      <item quantity="other">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> posebnih znakov</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="one">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> znak, ki ni črka</item>
-      <item quantity="two">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> znaka, ki nista črka</item>
-      <item quantity="few">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> znake, ki niso črka</item>
-      <item quantity="other">Vsebovati mora vsaj <xliff:g id="COUNT">%d</xliff:g> znakov, ki niso črka</item>
-    </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Skrbnik naprave ne dovoli uporabe nedavnega gesla."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Napaka pri shranjevanju gesla"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Skrbnik za IT je blokiral pogosta gesla. Poskusite z drugim geslom."</string>
@@ -766,6 +717,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Dodaj profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Izbriši ta profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Dodajanje profila"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Svetlost zaslona"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Skrbnik informativno-razvedrilnega sistema"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Ni skrbniških aplikacij za informativno-razvedrilni sistem"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Ta skrbniška aplikacija za informativno-razvedrilni sistem je aktivna in aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> omogoča izvajanje teh postopkov:"</string>
@@ -788,12 +740,8 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Če imate vprašanja, se obrnite na upravitelja voznega parka."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Skrbniške aplikacije za vozila"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktivna aplikacija</item>
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> aktivni aplikaciji</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aktivne aplikacije</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktivnih aplikacij</item>
-    </plurals>
+    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <skip />
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"Ni aktivnih aplikacij"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Nastavitve upravlja vaš upravitelj voznega parka"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Te nastavitve trenutno ni mogoče spremeniti"</string>

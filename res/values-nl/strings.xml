@@ -27,10 +27,8 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Nachtstand"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netwerk en internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobiel netwerk"</string>
-    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> simkaarten</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> simkaart</item>
-    </plurals>
+    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
+    <skip />
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Actief/simkaart"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inactief/simkaart"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Actief, gedownloade simkaart"</string>
@@ -53,10 +51,8 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> datawaarschuwing"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> datalimiet"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> datawaarschuwing/<xliff:g id="ID_2">^2</xliff:g> datalimiet"</string>
-    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="other">Nog %d dagen</item>
-      <item quantity="one">Nog %d dag</item>
-    </plurals>
+    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
+    <skip />
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Geen tijd resterend"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Minder dan 1 dag over"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_2">^2</xliff:g> geleden geüpdatet door <xliff:g id="ID_1">^1</xliff:g>"</string>
@@ -94,6 +90,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Netwerk toevoegen"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Connect"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"Verbinden…"</string>
+    <string name="wifi_disconnected" msgid="4485699234859368137">"Niet verbonden"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"Netwerk is niet binnen bereik"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Wachtwoord"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Wachtwoord tonen"</string>
@@ -297,10 +294,14 @@
     <string name="force_stop" msgid="2153183697014720520">"Gedwongen stoppen"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Gedwongen stoppen?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Als je een app gedwongen stopt, kan deze onverwacht gedrag vertonen."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Prestatiebescherming uitzetten?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Als je dit doet, werken je software en hardware misschien minder goed."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Aan laten staan"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Uitzetten"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"Uitschakelen"</string>
     <string name="enable_text" msgid="1794971777861881238">"Inschakelen"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Verwijderen"</string>
@@ -310,25 +311,23 @@
     <string name="permissions_label" msgid="2701446753515612685">"Rechten"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Meldingen"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Opslag en cache"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Topprestaties garanderen"</string>
+    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"Versie: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Geen rechten verleend"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Geen rechten aangevraagd"</string>
     <string name="unused_apps" msgid="648471933781010395">"Niet-gebruikte apps"</string>
-    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> niet-gebruikte apps</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> niet-gebruikte app</item>
-    </plurals>
+    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
+    <skip />
     <string name="unused_apps_switch" msgid="4433958286200341563">"Rechten intrekken en ruimte vrijmaken"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s in interne opslag"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Waar nodig de app sluiten om overmatig energiegebruik te voorkomen"</string>
+    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datagebruik"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Gegevensgebruik van app"</string>
     <string name="computing_size" msgid="5791407621793083965">"Berekenen…"</string>
-    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aanvullende rechten</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aanvullend recht</item>
-    </plurals>
+    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <skip />
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Opmerking: Na opnieuw opstarten kan deze app pas worden gestart nadat je je voertuig hebt ontgrendeld."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"De Assistent en spraakinvoer"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"App voor assistentie"</string>
@@ -388,6 +387,14 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Locatie gebruiken"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Als je Locatie uitzet, wordt de locatietoegang ingetrokken voor alle apps. Functies voor bestuurdersondersteuning hebben nog wel toegang. Als je de schakelaar Bestuurdersondersteuning uitzet, gebruiken functies voor bestuurdersondersteuning je locatie niet meer."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Bestuurdersondersteuning"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <skip />
+    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <skip />
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Niet beschikbaar als locatie aanstaat"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Als je dit uitzet, gaan functies voor bestuurdersondersteuning die locatie-informatie nodig hebben ook uit."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Toch uitzetten"</string>
@@ -406,10 +413,8 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Recent gebruikt"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Geen recente apps"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 apps hebben toegang"</string>
-    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
-      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> van <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> apps hebben toegang</item>
-      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> van <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> apps heeft toegang</item>
-    </plurals>
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
+    <skip />
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Recent gebruikt"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Alles bekijken"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Laden…"</string>
@@ -451,10 +456,8 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licenties van derden"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Er is een probleem bij het laden van de licenties."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Laden…"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Je moet nog <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> stappen uitvoeren om ontwikkelaar te worden.</item>
-      <item quantity="one">Je moet nog <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> stap uitvoeren om ontwikkelaar te worden.</item>
-    </plurals>
+    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
+    <skip />
     <string name="show_dev_on" msgid="5339077400040834808">"Je bent nu ontwikkelaar!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Niet nodig, je bent al ontwikkelaar."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Ontwikkelaarsopties"</string>
@@ -523,10 +526,8 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Nadat je een nieuw profiel hebt gemaakt, kan die persoon het zelf personaliseren."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Apps kunnen vanuit elk profiel worden geüpdatet voor gebruik door alle andere profielen."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Maximaal aantal profielen bereikt"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
-      <item quantity="other">Je kunt maximaal <xliff:g id="COUNT">%d</xliff:g> profielen maken.</item>
-      <item quantity="one">Je kunt maar één profiel maken.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
+    <skip />
     <string name="add_user_error_title" msgid="7589792057846396341">"Kan nieuw profiel niet maken"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Dit profiel verwijderen?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Alle apps en gegevens voor dit profiel worden verwijderd"</string>
@@ -674,30 +675,6 @@
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Veelvoorkomende pincodes worden geblokkeerd door je IT-beheerder. Probeer een andere pincode."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Mag geen ongeldig teken bevatten"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Wachtwoord ongeldig. Moet ten minste vier tekens zijn."</string>
-    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> letters bevatten</item>
-      <item quantity="one">Moet ten minste één letter bevatten</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> kleine letters bevatten</item>
-      <item quantity="one">Moet ten minste één kleine letter bevatten</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> hoofdletters bevatten</item>
-      <item quantity="one">Moet ten minste één hoofdletter bevatten</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> cijfers bevatten</item>
-      <item quantity="one">Moet ten minste één cijfer bevatten</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> speciale symbolen bevatten</item>
-      <item quantity="one">Moet ten minste één speciaal symbool bevatten</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> tekens bevatten die geen letters zijn</item>
-      <item quantity="one">Moet ten minste één teken bevatten dat geen letter is</item>
-    </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Apparaatbeheer staat het gebruik van een recent wachtwoord niet toe"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Fout bij wachtwoord opslaan"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Veelvoorkomende wachtwoorden worden geblokkeerd door je IT-beheerder. Probeer een ander wachtwoord."</string>
@@ -740,6 +717,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profiel toevoegen"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Dit profiel verwijderen"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profiel toevoegen"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Helderheid van het scherm"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Beheer van infotainmentsysteem"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Geen systeembeheerdersapps voor infotainmentsysteem"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Deze beheer-app voor het infotainmentsysteem is actief en staat toe dat de app <xliff:g id="APP_NAME">%1$s</xliff:g> de volgende bewerkingen uitvoert:"</string>
@@ -762,10 +740,8 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Als je vragen hebt, neem je contact op met de wagenparkbeheerder"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Beheer-apps voor voertuig"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> actieve apps</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> actieve app</item>
-    </plurals>
+    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <skip />
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"Geen actieve apps"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Instellingen beheerd door je wagenparkbeheerder"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Deze instelling kan nu niet worden gewijzigd"</string>
