@@ -593,6 +593,15 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="all_applications"/>
       <item type="string" name="allow"/>
       <item type="string" name="app_data_usage"/>
+      <item type="string" name="app_data_usage_allow_data_summary"/>
+      <item type="string" name="app_data_usage_allow_data_title"/>
+      <item type="string" name="app_data_usage_background"/>
+      <item type="string" name="app_data_usage_background_data_summary"/>
+      <item type="string" name="app_data_usage_foreground"/>
+      <item type="string" name="app_data_usage_restrict_data_title"/>
+      <item type="string" name="app_data_usage_title"/>
+      <item type="string" name="app_data_usage_total_usage"/>
+      <item type="string" name="app_data_usage_usage_history_title"/>
       <item type="string" name="app_disable_dialog_positive"/>
       <item type="string" name="app_disable_dialog_text"/>
       <item type="string" name="app_launch_domain_links_title"/>
@@ -734,6 +743,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="cycle_reset_day_of_month_picker_subtitle"/>
       <item type="string" name="cycle_reset_day_of_month_picker_title"/>
       <item type="string" name="data_limit"/>
+      <item type="string" name="data_usage_all_apps_title"/>
       <item type="string" name="data_usage_app_restricted"/>
       <item type="string" name="data_usage_app_summary_title"/>
       <item type="string" name="data_usage_auto_sync_off_dialog"/>
@@ -744,9 +754,12 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="data_usage_limit_dialog_title"/>
       <item type="string" name="data_usage_limit_editor_title"/>
       <item type="string" name="data_usage_settings"/>
+      <item type="string" name="data_usage_settings_footer"/>
       <item type="string" name="data_usage_summary_title"/>
       <item type="string" name="data_usage_title"/>
+      <item type="string" name="data_usage_usage_history_title"/>
       <item type="string" name="data_usage_warning_editor_title"/>
+      <item type="string" name="data_usage_warning_save_title"/>
       <item type="string" name="data_used_formatted"/>
       <item type="string" name="data_warning"/>
       <item type="string" name="data_warning_limit_title"/>
@@ -782,8 +795,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="delete_user_error_title"/>
       <item type="string" name="deny"/>
       <item type="string" name="developer_options_settings"/>
+      <item type="string" name="device_admin_activated_apps"/>
       <item type="string" name="device_admin_add_title"/>
       <item type="string" name="device_admin_apps_list_empty"/>
+      <item type="string" name="device_admin_deactivated_apps"/>
       <item type="string" name="device_admin_status"/>
       <item type="string" name="device_admin_warning"/>
       <item type="string" name="device_info_not_available"/>
@@ -808,12 +823,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_none"/>
       <item type="string" name="domain_urls_summary_one"/>
       <item type="string" name="domain_urls_summary_some"/>
-      <item type="string" name="driver_assistance_settings_title"/>
       <item type="string" name="driver_assistance_page_description"/>
-      <item type="string" name="location_driver_assistance_toggle_off_title"/>
-      <item type="string" name="location_driver_assistance_toggle_off_summary"/>
+      <item type="string" name="driver_assistance_settings_title"/>
       <item type="string" name="driver_assistance_warning_confirm_label"/>
-      <item type="string" name="location_driver_assistance_action_text"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
@@ -918,6 +930,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="license_title"/>
       <item type="string" name="link_speed"/>
       <item type="string" name="loading_wifi_list"/>
+      <item type="string" name="location_driver_assistance_action_text"/>
+      <item type="string" name="location_driver_assistance_toggle_off_summary"/>
+      <item type="string" name="location_driver_assistance_toggle_off_title"/>
       <item type="string" name="location_driver_assistance_toggle_off_warning"/>
       <item type="string" name="location_driver_assistance_toggle_summary"/>
       <item type="string" name="location_driver_assistance_toggle_title"/>
@@ -988,11 +1003,14 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="microphone_settings_title"/>
       <item type="string" name="microphone_toggle_summary"/>
       <item type="string" name="microphone_toggle_title"/>
+      <item type="string" name="mobile_data_usage"/>
       <item type="string" name="mobile_network_active_esim"/>
       <item type="string" name="mobile_network_active_sim"/>
       <item type="string" name="mobile_network_inactive_esim"/>
       <item type="string" name="mobile_network_inactive_sim"/>
       <item type="string" name="mobile_network_list_add_more"/>
+      <item type="string" name="mobile_network_mobile_network_toggle_summary"/>
+      <item type="string" name="mobile_network_mobile_network_toggle_title"/>
       <item type="string" name="mobile_network_settings"/>
       <item type="string" name="mobile_network_summary_count"/>
       <item type="string" name="mobile_network_toggle_summary"/>
@@ -1011,7 +1029,11 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="network_and_internet_data_usage_time_range_summary"/>
       <item type="string" name="network_and_internet_join_other_network_title"/>
       <item type="string" name="network_and_internet_network_preferences_title"/>
+      <item type="string" name="network_and_internet_oem_network_dialog_confirm_label"/>
+      <item type="string" name="network_and_internet_oem_network_dialog_description"/>
+      <item type="string" name="network_and_internet_oem_network_disabled_footer"/>
       <item type="string" name="network_and_internet_oem_network_title"/>
+      <item type="string" name="network_and_internet_vehicle_internet_title"/>
       <item type="string" name="network_connection_connect_successful"/>
       <item type="string" name="network_connection_errorstate_dialog_message"/>
       <item type="string" name="network_connection_request_dialog_showall"/>
