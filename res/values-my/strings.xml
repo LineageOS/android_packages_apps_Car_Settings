@@ -27,8 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ညသုံးမုဒ်"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ကွန်ရက်နှင့် အင်တာနက်"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"မိုဘိုင်းကွန်ရက်"</string>
-    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
-    <skip />
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{ဆင်းမ် # ကတ်}other{ဆင်းမ် # ကတ်}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"သုံးနေသော / ဆင်းမ်ကတ်"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"မသုံးသော / ဆင်းမ်ကတ်"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"သုံးနေသော / ဒေါင်းလုဒ်လုပ်ထားသော ဆင်းမ်"</string>
@@ -36,6 +35,10 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ထပ်ထည့်ရန်"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"မိုဘိုင်းဒေတာ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"မိုဘိုင်းကွန်ရက်သုံးပြီး ဒေတာကို ဝင်သုံးခွင့်ပေးပါ"</string>
+    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
+    <skip />
+    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
+    <skip />
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"မိုဘိုင်းဒေတာ ပိတ်လိုသလား။"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ရွေးချယ်မှု လိုအပ်သည်"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"မိုဘိုင်းဒေတာအတွက် <xliff:g id="CARRIER">%1$s</xliff:g> သုံးမလား။"</string>
@@ -51,8 +54,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"ဒေတာသတိပေးချက် <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"ဒေတာကန့်သတ်ချက် <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"ဒေတာသတိပေးချက် <xliff:g id="ID_1">^1</xliff:g> / ဒေတာကန့်သတ်ချက် <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
-    <skip />
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{# ရက်ကျန်သည်}other{# ရက်ကျန်သည်}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"အချိန် မကျန်တော့ပါ"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"၁ ရက်အောက်သာ ကျန်သည်"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_1">^1</xliff:g> က ပြီးခဲ့သော <xliff:g id="ID_2">^2</xliff:g> က အပ်ဒိတ်လုပ်သည်"</string>
@@ -67,6 +69,8 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"သတ်မှတ်ရန်"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ဒေတာသတိပေး/ကန့်သတ်ချက်"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"အက်ပ်ဒေတာ အသုံးပြုမှု စက်ဝန်း"</string>
+    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
+    <skip />
     <string name="set_data_warning" msgid="6628236612886588097">"ဒေတာသတိပေးချက် သတ်မှတ်ရန်"</string>
     <string name="data_warning" msgid="116776633806885370">"ဒေတာသတိပေးချက်"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ဒေတာကန့်သတ်ရန်"</string>
@@ -75,8 +79,20 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"သင်သတ်မှတ်ထားသည့် ကန့်သတ်ချက်ရောက်သည်နှင့် သင့်ယာဉ်၏ ဦးပိုင်းယူနစ်သည် မိုဘိုင်းဒေတာကို ပိတ်သွားပါမည်။\n\nဒေတာသုံးစွဲမှုကို ဦးပိုင်းယူနစ်က တိုင်းတာခြင်းဖြစ်ပြီး ဖုန်းလိုင်းဝန်ဆောင်မှုပေးသူ၏ တွက်ချက်မှုနှင့် ကွာခြားနိုင်သောကြောင့် ကန့်သတ်ချက်မကျော်လွန်အောင် သတ်မှတ်ပါ။"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ဒေတာသုံးစွဲမှု သတိပေးချက် သတ်မှတ်ခြင်း"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ဒေတာသုံးစွဲမှု ကန့်သတ်ချက် သတ်မှတ်ခြင်း"</string>
+    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
+    <skip />
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"သတ်မှတ်ရန်"</string>
+    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
+    <skip />
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM ကွန်ရက်"</string>
+    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
+    <skip />
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s - %3$s တွင် %1$s သုံးထားသည်"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"အခြားကွန်ရက်သို့ ချိတ်ဆက်ရန်"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"ကွန်ရက် သတ်မှတ်ချက်များ"</string>
@@ -152,6 +168,8 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi ဟော့စပေါ့ လိုင်း-"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ဟော့စပေါ့နှင့် မိုဘိုင်းဖုန်းကို မိုဒမ်အဖြစ်သုံးခြင်း"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ဟော့စပေါ့"</string>
+    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
+    <skip />
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ဟော့စပေါ့ကို အလိုအလျောက် ပိတ်ခြင်း"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"မည်သည့် စက်ပစ္စည်းကိုမျှ ချိတ်ဆက်ထားခြင်း မရှိလျှင် Wi‑Fi ဟော့စပေါ့ ပိတ်သွားပါမည်"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> က Wi-Fi ဖွင့်လိုသည်"</string>
@@ -294,14 +312,10 @@
     <string name="force_stop" msgid="2153183697014720520">"ချက်ချင်း ရပ်ရန်"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"မဖြစ်မနေ ရပ်ခိုင်းမလား။"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"အက်ပ်ကို မဖြစ်မနေရပ်ခိုင်းလျှင် ပုံမှန် အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"အက်ပ်စွမ်းဆောင်ရည် ဦးစားပေးကိုဖွင့်မလား။"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"၎င်းကိုဖွင့်ပါက စနစ်မတည်ငြိမ်မှု (သို့) ရေရှည်တွင် စက်ပစ္စည်းအပေါ် သက်ရောက်မှုများ ဖြစ်နိုင်ချေရှိသည်။ ရှေ့ဆက်လိုသလား။"</string>
+    <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Yes"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"မလိုပါ"</string>
     <string name="disable_text" msgid="4358165448648990820">"ပိတ်ရန်"</string>
     <string name="enable_text" msgid="1794971777861881238">"ဖွင့်ရန်"</string>
     <string name="uninstall_text" msgid="277907956072833012">"ဖြုတ်ရန်"</string>
@@ -311,23 +325,41 @@
     <string name="permissions_label" msgid="2701446753515612685">"ခွင့်ပြုချက်များ"</string>
     <string name="notifications_label" msgid="6586089149665170731">"အကြောင်းကြားချက်များ"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"သိုလှောင်ခန်းနှင့် ကက်ရှ်"</string>
-    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
-    <skip />
+    <string name="prioritize_app_performance_label" msgid="7264505023347026606">"အက်ပ်စွမ်းဆောင်ရည်ကို ဦးစားပေးရန်"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ဗားရှင်း− %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ခွင့်ပြုထားသည့် အရာများ မရှိပါ"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"တောင်းဆိုထားသော ခွင့်ပြုချက်များ မရှိပါ"</string>
     <string name="unused_apps" msgid="648471933781010395">"အသုံးမပြုသော အက်ပ်များ"</string>
-    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
-    <skip />
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{အသုံးမပြုသောအက်ပ် # ခု}other{အသုံးမပြုသောအက်ပ် # ခု}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ခွင့်ပြုချက်ဖယ်ရှားပြီး နေရာလွတ်လုပ်ရန်"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"စက်အတွင်းသိမ်းဆည်းရန်နေရာတွင် %s"</string>
-    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
-    <skip />
+    <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"အက်ပ်စွမ်းဆောင်ရည်ကို ဦးစားပေးရန် စနစ်ရင်းမြစ်များကို သုံးနိုင်သည်"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ဒေတာသုံးစွဲမှု"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"အက်ပ်ဒေတာ သုံးစွဲမှု"</string>
-    <string name="computing_size" msgid="5791407621793083965">"တွက်ချက်နေသည်…"</string>
-    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
     <skip />
+    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
+    <skip />
+    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
+    <skip />
+    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
+    <skip />
+    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
+    <skip />
+    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
+    <skip />
+    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
+    <skip />
+    <string name="computing_size" msgid="5791407621793083965">"တွက်ချက်နေသည်…"</string>
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{ထပ်ဆောင်းခွင့်ပြုချက် # ခု}other{ထပ်ဆောင်းခွင့်ပြုချက် # ခု}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"မှတ်ချက်- ပြန်လည်စတင်ပြီးနောက် သင့်ယာဉ်ကို လော့ခ်မဖွင့်မချင်း ဤအက်ပ်ကို အသုံးပြု၍မရပါ။"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"အကူနှင့် အသံဖြင့်စာရိုက်ခြင်း"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"အကူအညီ အက်ပ်"</string>
@@ -388,14 +420,10 @@
     <string name="location_toggle_title" msgid="836779750812064601">"တည်နေရာကို သုံးရန်"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"‘တည်နေရာ’ ကို ပိတ်ခြင်းဖြင့် အက်ပ်အားလုံးအတွက် တည်နေရာသုံးခွင့်ကို ပိတ်လိုက်ပါမည်။ ‘ယာဉ်မောင်းသူ အထောက်အကူ’ ဝန်ဆောင်မှုများကတော့ ဆက်သုံးခွင့်ရနေပါမည်။ ‘ယာဉ်မောင်းသူ အထောက်အကူ’ ခလုတ်ကို ပိတ်ပါက ‘ယာဉ်မောင်းသူ အထောက်အကူ’ ဝန်ဆောင်မှုများက သင့်တည်နေရာကို အသုံးမပြုနိုင်တော့ပါ။"</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ယာဉ်မောင်းသူ အထောက်အကူ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
-    <skip />
-    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ကား၏ တည်နေရာဝန်ဆောင်မှု ပိတ်ထားသည်"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"ယာဉ်မောင်းထောက်ကူဝန်ဆောင်မှု အက်ပ်အတွက်"</string>
+    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ပြောင်းရန်"</string>
+    <string name="driver_assistance_page_description" msgid="7538596481471802494">"ဤခွင့်ပြုချက်ဖြင့် အက်ပ်သည် ‘ယာဉ်မောင်းသူ အထောက်အကူ’ ဝန်ဆောင်မှုအတွက် ကား၏တည်နေရာကို ဝင်ကြည့်နိုင်ပါသည်။"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"တည်နေရာ ဖွင့်ထားစဉ် မရနိုင်ပါ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"၎င်းကိုပိတ်လိုက်ပါက တည်နေရာအချက်အလက်အပေါ် မှီခိုသော ယာဉ်မောင်းသူ အထောက်အကူဝန်ဆောင်မှုများ ပိတ်သွားပါမည်။"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"မည်သို့ဖြစ်စေ ပိတ်ရန်"</string>
@@ -414,8 +442,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"လတ်တလော သုံးထားသည်များ"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"လတ်တလောအက်ပ်များ မရှိပါ"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"အက်ပ် 0 ခုတွင် ခွင့်ပြုချက်ရှိသည်"</string>
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
-    <skip />
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{အက်ပ် {total_count} ခုအနက် # ခုတွင် ခွင့်ပြုချက်ရှိသည်}other{အက်ပ် {total_count} ခုအနက် # ခုတွင် ခွင့်ပြုချက်ရှိသည်}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"လတ်တလော သုံးထားသည်များ"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"အားလုံးကြည့်ရန်"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"ဖွင့်နေသည်…"</string>
@@ -457,8 +484,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ပြင်ပကုမ္ပဏီလိုင်စင်များ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"လိုင်စင်များကို ဖွင့်ရာတွင် ပြသနာရှိနေသည်။"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ဖွင့်နေသည်…"</string>
-    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
-    <skip />
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{သင် ဆော့ဖ်ဝဲအင်ဂျင်နီယာဖြစ်ရန် ယခုအခါ အဆင့် # ဆင့်သာလိုပါသည်။}other{သင် ဆော့ဖ်ဝဲအင်ဂျင်နီယာဖြစ်ရန် ယခုအခါ အဆင့် # ဆင့်သာလိုပါသည်။}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"သင်သည် ယခု ဆော့ဖ်ဝဲအင်ဂျင်နီယာ တစ်ဦး ဖြစ်နေပါပြီ။"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"မလိုပါ၊ သင်က ဆော့ဖ်ဝဲအင်ဂျင်နီယာ ဖြစ်ပြီးသားပါ။"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"တီထွင်သူများရွေးစရာ"</string>
@@ -527,8 +553,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"ပရိုဖိုင်အသစ် ပြုလုပ်ပြီးနောက် ထိုသူသည် ၎င်းကိုယ်တိုင်အတွက် စိတ်ကြိုက်ပြင်ဆင်ရပါမည်။"</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"အခြားပရိုဖိုင်အားလုံးက သုံးရန်အတွက် အက်ပ်များကို နှစ်သက်ရာပရိုဖိုင်မှ အပ်ဒိတ်လုပ်နိုင်သည်။"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"ပရိုဖိုင်ကန့်သတ်ချက် ပြည့်သွားပါပြီ"</string>
-    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
-    <skip />
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{ပရိုဖိုင်တစ်ခုသာ ပြုလုပ်နိုင်သည်။}other{ပရိုဖိုင် # ခုအထိ ပြုလုပ်နိုင်သည်။}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"ပရိုဖိုင်အသစ် ပြုလုပ်၍မရပါ"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"ဤပရိုဖိုင်ကို ဖျက်မလား။"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"ဤပရိုဖိုင်အတွက် အက်ပ်နှင့် ဒေတာအားလုံးကို ဖျက်လိုက်ပါမည်"</string>
@@ -741,8 +766,7 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"မေးစရာများရှိပါက ယာဉ်စုမန်နေဂျာထံ ဆက်သွယ်ပါ"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"ယာဉ်စီမံခန့်ခွဲအက်ပ်များ"</string>
-    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
-    <skip />
+    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{ပွင့်နေသည့်အက်ပ် # ခု}other{ပွင့်နေသည့်အက်ပ် # ခု}}"</string>
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"ပွင့်နေသည့်အက်ပ် မရှိပါ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"သင့်ယာဉ်စုမန်နေဂျာက စီမံထားသည့် ဆက်တင်များ"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ဤဆက်တင်ကို ယခု ပြောင်း၍မရပါ"</string>
