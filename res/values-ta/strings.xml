@@ -27,10 +27,8 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"இரவுப் பயன்முறை"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"நெட்வொர்க் &amp; இணையம்"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"மொபைல் நெட்வொர்க்"</string>
-    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> சிம்கள்</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> சிம்</item>
-    </plurals>
+    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
+    <skip />
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"செயலில் உள்ளது / சிம்"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"செயலில் இல்லை / சிம்"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"செயலில் உள்ளது / பதிவிறக்கிய சிம்"</string>
@@ -53,10 +51,8 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> டேட்டா எச்சரிக்கை"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> டேட்டா வரம்பு"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> டேட்டா எச்சரிக்கை / <xliff:g id="ID_2">^2</xliff:g> டேட்டா வரம்பு"</string>
-    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="other">%d நாட்கள் மீதமுள்ளன</item>
-      <item quantity="one">%d நாள் மீதமுள்ளது</item>
-    </plurals>
+    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
+    <skip />
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"காலம் முடிந்துவிட்டது"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"24 மணிநேரத்திற்கும் குறைவாகவே உள்ளது"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"புதுப்பித்தது: <xliff:g id="ID_1">^1</xliff:g>, <xliff:g id="ID_2">^2</xliff:g> முன்பு"</string>
@@ -298,10 +294,14 @@
     <string name="force_stop" msgid="2153183697014720520">"உடனே நிறுத்து"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"உடனே நிறுத்தவா?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ஆப்ஸை உடனே நிறுத்தினால் சரியாக இயங்காமல் போகக்கூடும்."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"செயல்திறன் பாதுகாப்பு அம்சத்தை முடக்கவா?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"இவ்வாறு செய்தால் மென்பொருளும் சாதன பாகங்களும் சரியாக வேலை செய்யாமல் போகலாம்."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"இயக்கத்திலேயே வை"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"முடக்கு"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"முடக்கு"</string>
     <string name="enable_text" msgid="1794971777861881238">"இயக்கு"</string>
     <string name="uninstall_text" msgid="277907956072833012">"நிறுவல் நீக்கு"</string>
@@ -311,25 +311,23 @@
     <string name="permissions_label" msgid="2701446753515612685">"அனுமதிகள்"</string>
     <string name="notifications_label" msgid="6586089149665170731">"அறிவிப்புகள்"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"சேமிப்பகமும் தற்காலிக சேமிப்பும்"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"அதிக செயல்திறனை உறுதிசெய்தல்"</string>
+    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"பதிப்பு: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"அனுமதிகள் எதையும் கோரவில்லை"</string>
     <string name="unused_apps" msgid="648471933781010395">"பயன்படுத்தாத ஆப்ஸ்"</string>
-    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> பயன்படுத்தாத ஆப்ஸ்</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> பயன்படுத்தாத ஆப்ஸ்</item>
-    </plurals>
+    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
+    <skip />
     <string name="unused_apps_switch" msgid="4433958286200341563">"அனுமதிகளை அகற்றி இடத்தைக் காலியாக்குதல்"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"அகச் சேமிப்பகத்தில் %s"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"தேவைப்பட்டால் சாதன வளங்களின் அதிகப்படியான உபயோகத்தைத் தவிர்க்க ஆப்ஸை மூடும்"</string>
+    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
-    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> கூடுதல் அனுமதிகள்</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> கூடுதல் அனுமதி</item>
-    </plurals>
+    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <skip />
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"கவனத்திற்கு: மறுபடி தொடங்கிய பிறகு நீங்கள் வாகனத்தை அன்லாக் செய்யும் வரை இந்த ஆப்ஸால் செயல்பட இயலாது."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"அசிஸ்டண்ட் &amp; குரல் உள்ளீடு"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"அசிஸ்ட் ஆப்ஸ்"</string>
@@ -389,6 +387,14 @@
     <string name="location_toggle_title" msgid="836779750812064601">"இருப்பிடத்தைப் பயன்படுத்துதல்"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"இருப்பிட அமைப்பை முடக்கினால் எல்லா ஆப்ஸுக்குமான இருப்பிட அணுகல் முடக்கப்படும். ஆனாலும் ஓட்டுநர் உதவி அம்சங்களுக்கு அணுகல் இருக்கும். ஓட்டுநர் உதவி அமைப்பை நிலைமாற்றி முடக்குவது ஓட்டுநர் உதவி அம்சங்களுக்கான இருப்பிட அணுகலை நிறுத்தும்."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ஓட்டுநர் உதவி"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <skip />
+    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <skip />
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"இருப்பிடம் ஆனில் இருந்தால் கிடைக்காது"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"இதை முடக்கினால், இருப்பிடத் தகவல்களைச் சார்ந்துள்ள ஓட்டுநர் உதவி அம்சங்கள் முடக்கப்படும்."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"எப்படியாவது முடக்கு"</string>
@@ -407,10 +413,8 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"சமீபத்தில் அணுகியவை"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"எந்த ஆப்ஸுக்கும் அணுகல் இல்லை"</string>
-    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
-      <item quantity="other"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> ஆப்ஸில் <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> ஆப்ஸ் மைக்ரோஃபோனுக்கான அணுகலைப் பெற்றுள்ளன</item>
-      <item quantity="one"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_1">%2$d</xliff:g> ஆப்ஸில் <xliff:g id="PERMITTED_LOCATION_APP_COUNT_0">%1$d</xliff:g> ஆப்ஸ் மைக்ரோஃபோனுக்கான அணுகலைப் பெற்றுள்ளது</item>
-    </plurals>
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
+    <skip />
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"சமீபத்தில் அணுகியவை"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"அனைத்தையும் காட்டு"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"ஏற்றுகிறது…"</string>
@@ -452,10 +456,8 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"மூன்றாம் தரப்பு உரிமங்கள்"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"உரிமங்களை ஏற்றுவதில் சிக்கல்."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ஏற்றுகிறது…"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">நீங்கள் டெவெலப்பராக இன்னும் <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> படிகள் உள்ளன.</item>
-      <item quantity="one">நீங்கள் டெவெலப்பராக இன்னும் <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> படி உள்ளது.</item>
-    </plurals>
+    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
+    <skip />
     <string name="show_dev_on" msgid="5339077400040834808">"நீங்கள் இப்போது டெவெலப்பராகிவிட்டீர்கள்!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"தேவையில்லை, நீங்கள் ஏற்கனவே ஒரு டெவெலப்பர்."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"டெவெலப்பர் விருப்பங்கள்"</string>
@@ -524,10 +526,8 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"புதிய சுயவிவரத்தை நீங்கள் உருவாக்கிய பிறகு, சம்பந்தப்பட்ட நபரே அதைப் பிரத்தியேகமாக்க வேண்டும்."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"எல்லாச் சுயவிவரங்களும் பயன்படுத்துவதற்காக ஆப்ஸை எந்தச் சுயவிவரத்திலிருந்தும் புதுப்பிக்கலாம்."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"அனுமதிக்கப்பட்ட அதிகபட்சச் சுயவிவரங்களை உருவாக்கிவிட்டீர்கள்"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
-      <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> சுயவிவரங்கள் வரை உருவாக்கலாம்.</item>
-      <item quantity="one">ஒரு சுயவிவரத்தை மட்டுமே உருவாக்கலாம்.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
+    <skip />
     <string name="add_user_error_title" msgid="7589792057846396341">"புதிய சுயவிவரத்தை உருவாக்க முடியவில்லை"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"இந்தச் சுயவிவரத்தை நீக்கவா?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"இந்தச் சுயவிவரத்திற்கான அனைத்து ஆப்ஸும் தரவும் நீக்கப்படும்"</string>
@@ -675,30 +675,6 @@
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"பொதுவான பின்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு பின்னை முயலவும்."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"இதில் தவறான எழுத்து இருக்கக்கூடாது."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"கடவுச்சொல் செல்லாது, குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்."</string>
-    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்துகள் இருக்க வேண்டும்</item>
-      <item quantity="one">குறைந்தது 1 எழுத்து இருக்க வேண்டும்</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> சிற்றெழுத்துகள் இருக்க வேண்டும்</item>
-      <item quantity="one">குறைந்தது 1 சிற்றெழுத்து இருக்க வேண்டும்</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> பேரெழுத்துகள் இருக்க வேண்டும்</item>
-      <item quantity="one">குறைந்தது 1 பேரெழுத்து இருக்க வேண்டும்</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எண் இலக்கங்கள் இருக்க வேண்டும்</item>
-      <item quantity="one">குறைந்தது 1 எண் இலக்கம் இருக்க வேண்டும்</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> சிறப்புக் குறிகள் இருக்க வேண்டும்</item>
-      <item quantity="one">குறைந்தது 1 சிறப்புக் குறி இருக்க வேண்டும்</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="other">குறைந்தது எழுத்து அல்லாத <xliff:g id="COUNT">%d</xliff:g> குறிகள் இருக்க வேண்டும்</item>
-      <item quantity="one">குறைந்தது எழுத்து அல்லாத 1 குறி இருக்க வேண்டும்</item>
-    </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"சாதன நிர்வாகி சமீபத்திய கடவுச்சொல்லைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"கடவுச்சொல்லைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"பொதுவான கடவுச்சொற்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு கடவுச்சொல்லை முயலவும்."</string>
@@ -764,10 +740,8 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"கேள்விகள் இருந்தால் ஃப்ளீட் நிர்வாகியைத் தொடர்புகொள்ளவும்"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"வாகன நிர்வாகி ஆப்ஸ்"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ் செயலில் உள்ளன</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ் செயலில் உள்ளது</item>
-    </plurals>
+    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <skip />
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"ஆப்ஸ் எதுவும் செயலில் இல்லை"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"உங்கள் ஃப்ளீட் நிர்வாகி நிர்வகிக்கும் அமைப்புகள்"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தை மீட்டமையுங்கள்"</string>

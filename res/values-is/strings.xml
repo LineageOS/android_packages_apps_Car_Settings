@@ -27,10 +27,8 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Næturstilling"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netkerfi og internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Farsímakerfi"</string>
-    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-kort</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-kort</item>
-    </plurals>
+    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
+    <skip />
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Virk / SIM-kort"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Óvirk / SIM-kort"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Virk / sótt SIM-kort"</string>
@@ -53,10 +51,8 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> gagnaviðvörun"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> gagnamörk"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> gagnaviðvörun / <xliff:g id="ID_2">^2</xliff:g> gagnamörk"</string>
-    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="one">%d dagur eftir</item>
-      <item quantity="other">%d dagar eftir</item>
-    </plurals>
+    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
+    <skip />
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Enginn tími eftir"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Innan við einn dagur eftir"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Uppfært af <xliff:g id="ID_1">^1</xliff:g> fyrir <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -298,10 +294,14 @@
     <string name="force_stop" msgid="2153183697014720520">"Þvinga lokun"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Þvinga fram lokun?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ef þú þvingar fram lokun forrits gæti það látið illa."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Slökkva á afkastavernd?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Hugbúnaður og vélbúnaður starfar hugsanlega ekki eins vel ef þetta er gert."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Hafa kveikt"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Slökkva"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"Slökkva"</string>
     <string name="enable_text" msgid="1794971777861881238">"Kveikja"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Fjarlægja"</string>
@@ -311,25 +311,23 @@
     <string name="permissions_label" msgid="2701446753515612685">"Heimildir"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Tilkynningar"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Geymslurými og skyndiminni"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Tryggja hámarksafköst"</string>
+    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"Útgáfa: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Engar heimildir veittar"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Engar heimildarbeiðnir"</string>
     <string name="unused_apps" msgid="648471933781010395">"Ónotuð forrit"</string>
-    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ónotað forrit</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ónotuð forrit</item>
-    </plurals>
+    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
+    <skip />
     <string name="unused_apps_switch" msgid="4433958286200341563">"Fjarlægja heimildir og losa um pláss"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s í innbyggðri geymslu"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Loka forriti til að koma í veg fyrir ofnotkun tilfanga þegar þörf krefur"</string>
+    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Gagnanotkun"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Gagnanotkun forrits"</string>
     <string name="computing_size" msgid="5791407621793083965">"Reiknar…"</string>
-    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> viðbótarheimild</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> viðbótarheimildir</item>
-    </plurals>
+    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <skip />
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Athugaðu: Eftir endurræsingu er ekki hægt að ræsa þetta forrit fyrr en þú tekur ökutækið úr lás."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Aðstoð og raddinntak"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aðstoðarforrit"</string>
@@ -389,6 +387,14 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Nota staðsetningu"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Þegar slökkt er á staðsetningu er slökkt á aðgangi allra forrita að staðsetningu, eiginleikar akstursaðstoðar hafa þó áfram aðgang Þegar slökkt er á akstursaðstoð geta eiginleikar akstursaðstoðar ekki notað staðsetninguna þína."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Akstursaðstoð"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <skip />
+    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <skip />
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Ekki í boði ef kveikt er á staðsetningu"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ef þú slekkur á þessu verða eiginleikar akstursaðstoðar sem reiða sig á staðsetningarupplýsingar óvirkir."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Slökkva samt"</string>
@@ -407,10 +413,8 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Nýleg notkun"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Engin nýleg forrit"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 forrit eru með aðgang"</string>
-    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
-      <item quantity="one"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> af <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> forritum er með aðgang</item>
-      <item quantity="other"> <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> af <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> forritum eru með aðgang</item>
-    </plurals>
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
+    <skip />
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Nýlega opnað"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Skoða allt"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Hleður…"</string>
@@ -452,10 +456,8 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Leyfi þriðju aðila"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Vandamál kom upp við að hlaða leyfin."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Hleður…"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="one">Nú ertu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> skrefi frá því að vera þróunaraðili.</item>
-      <item quantity="other">Nú ertu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> skrefum frá því að vera þróunaraðili.</item>
-    </plurals>
+    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
+    <skip />
     <string name="show_dev_on" msgid="5339077400040834808">"Nú ertu þróunaraðili!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Þetta er óþarfi; þú ert nú þegar þróunaraðili."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Forritunarkostir"</string>
@@ -524,10 +526,8 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Þegar þú hefur búið til nýtt snið ætti sá einstaklingur að stilla það fyrir sjálfan sig."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Hægt er að uppfæra forrit úr hvaða prófíl sem er fyrir notkun allra annarra prófíla."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Hámarki prófíla náð"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
-      <item quantity="one">Þú getur búið til allt að <xliff:g id="COUNT">%d</xliff:g> prófíl.</item>
-      <item quantity="other">Þú getur búið til allt að <xliff:g id="COUNT">%d</xliff:g> prófíla.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
+    <skip />
     <string name="add_user_error_title" msgid="7589792057846396341">"Ekki var hægt að búa til nýjan prófíl"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Á að eyða þessum prófíl?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Öllum forritum og gögnum fyrir þennan prófíl verður eytt"</string>
@@ -675,30 +675,6 @@
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Kerfisstjórinn þinn hefur lokað á algeng PIN-númer. Prófaðu annað PIN-númer."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Þetta má ekki innihalda ógildan staf."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Aðgangsorðið er ógilt, það verður að vera minnst fjórir stafir að lengd."</string>
-    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="one">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> staf</item>
-      <item quantity="other">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> stafi</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="one">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> lágstaf</item>
-      <item quantity="other">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> lágstafi</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="one">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> hástaf</item>
-      <item quantity="other">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> hástafi</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="one">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> tölustaf</item>
-      <item quantity="other">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> tölustafi</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="one">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> sérstaf</item>
-      <item quantity="other">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> sérstafi</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="one">Verður að innihalda að minnsta kosti <xliff:g id="COUNT">%d</xliff:g> staftákn sem ekki er bókstafur</item>
-      <item quantity="other">Verður að innihalda að minsta kosti <xliff:g id="COUNT">%d</xliff:g> staftákn sem ekki eru bókstafir</item>
-    </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Tækjastjóri leyfir ekki notkun nýlegs aðgangsorðs"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Villa við að vista aðgangsorð"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Kerfisstjórinn þinn hefur lokað á algeng aðgangsorð. Prófaðu annað aðgangsorð."</string>
@@ -764,10 +740,8 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Ef spurningar vakna skaltu hafa samband við stjórnandann"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Stjórnendaforrit ökutækis"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> virkt forrit</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> virk forrit</item>
-    </plurals>
+    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <skip />
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"Engin virk forrit"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Stjórnandinn stjórnar stillingunum"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Endurstilla upplýsinga- og afþreyingarkerfi"</string>
