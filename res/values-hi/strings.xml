@@ -27,10 +27,8 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"रात वाला मोड"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"नेटवर्क और इंटरनेट"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"मोबाइल नेटवर्क"</string>
-    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
-      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> सिम</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> सिम</item>
-    </plurals>
+    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
+    <skip />
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"चालू / सिम"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"बंद / सिम"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"चालू / डाउनलोड किया गया सिम"</string>
@@ -53,10 +51,8 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> डेटा खर्च की चेतावनी"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> डेटा सीमा"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> डेटा खर्च की चेतावनी / <xliff:g id="ID_2">^2</xliff:g> डेटा की सीमा"</string>
-    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="one">%d दिन बचे हैं</item>
-      <item quantity="other">%d दिन बचे हैं</item>
-    </plurals>
+    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
+    <skip />
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"बिलिंग साइकिल पूरा हो चुका है"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"एक दिन से कम समय बचा है"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_1">^1</xliff:g> ने <xliff:g id="ID_2">^2</xliff:g> पहले अपडेट किया"</string>
@@ -298,10 +294,14 @@
     <string name="force_stop" msgid="2153183697014720520">"ज़बरदस्ती रोकें"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ज़बरदस्ती रोकें?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"अगर आप किसी ऐप्लिकेशन को ज़बरदस्ती रोकते हैं, तो हो सकता है वह ठीक से काम न करे."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"परफ़ॉर्मेंस सुरक्षा बंद करना चाहते हैं?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"अगर आप ऐसा करते हैं, तो हो सकता है कि सॉफ़्टवेयर और हार्डवेयर भी काम न करें."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"चालू रखें"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"बंद करें"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"बंद करें"</string>
     <string name="enable_text" msgid="1794971777861881238">"चालू करें"</string>
     <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करें"</string>
@@ -311,25 +311,23 @@
     <string name="permissions_label" msgid="2701446753515612685">"अनुमतियां"</string>
     <string name="notifications_label" msgid="6586089149665170731">"सूचनाएं"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"मेमोरी और कैश"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"पक्का करें कि परफ़ॉर्मेंस बेहतरीन हो"</string>
+    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
+    <skip />
     <string name="application_version_label" msgid="8556889839783311649">"वर्शन: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"कोई अनुमति नहीं दी गई"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"किसी अनुमति का अनुरोध नहीं किया गया"</string>
     <string name="unused_apps" msgid="648471933781010395">"इस्तेमाल न किए जाने वाले ऐप्लिकेशन"</string>
-    <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="one">इस्तेमाल न किया जाने वाला <xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
-      <item quantity="other">इस्तेमाल न किए जाने वाले <xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
-    </plurals>
+    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
+    <skip />
     <string name="unused_apps_switch" msgid="4433958286200341563">"अनुमतियां हटाएं और स्टोरेज खाली करें"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"डिवाइस की मेमोरी में %s है"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"जब ज़रूरी हो, तो संसाधनों के बहुत ज़्यादा इस्तेमाल से बचने के लिए, ऐप्लिकेशन को बंद करें"</string>
+    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
+    <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटा खर्च"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ऐप्लिकेशन का डेटा खर्च"</string>
     <string name="computing_size" msgid="5791407621793083965">"गिनती की जा रही है…"</string>
-    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
-    </plurals>
+    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <skip />
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"ध्यान दें: डिवाइस को फिर से चालू करने के बाद, यह ऐप्लिकेशन तब तक शुरू नहीं होगा जब तक आप अपनी गाड़ी अनलॉक नहीं करते."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"असिस्ट और बोलकर फ़ोन को निर्देश"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"सहायक ऐप्लिकेशन"</string>
@@ -389,6 +387,14 @@
     <string name="location_toggle_title" msgid="836779750812064601">"जगह की जानकारी का इस्तेमाल करें"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"जगह की जानकारी की सुविधा बंद करने पर, सभी ऐप्लिकेशन के लिए, जगह की जानकारी का ऐक्सेस बंद हो जाएगा. हालांकि, ड्राइवर की सुरक्षा से जुड़ी मदद करने वाली सुविधाएं उसे अब भी ऐक्सेस कर पाएंगी. ड्राइवर की सुरक्षा से जुड़ी मदद करने वाली सुविधाओं को बंद करने पर, ये सुविधाएं आपकी जगह की जानकारी को ऐक्सेस नहीं कर पाएंगी."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ड्राइवर की सुरक्षा से जुड़ी मदद करने वाली सुविधाएं"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <skip />
+    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <skip />
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"जगह की जानकारी चालू होने पर, यह सुविधा काम नहीं करती है"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"अगर आप इसे बंद करेंगे, तो ड्राइवर की सुरक्षा से जुड़ी मदद करने वाली वे सुविधाएं बंद हो जाएंगी जो जगह की जानकारी का इस्तेमाल करती हैं."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"फिर भी बंद करें"</string>
@@ -407,10 +413,8 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"हाल ही में, इन ऐप्लिकेशन ने माइक्रोफ़ोन का इस्तेमाल किया"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"हाल ही में, किसी भी ऐप्लिकेशन ने ऐक्सेस नहीं किया"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"किसी भी ऐप्लिकेशन के पास ऐक्सेस नहीं है"</string>
-    <plurals name="microphone_app_permission_summary_microphone_on" formatted="false" msgid="851024363578868030">
-      <item quantity="one"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> ऐप्लिकेशन में से <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> के पास ऐक्सेस है</item>
-      <item quantity="other"> <xliff:g id="TOTAL_LOCATION_APP_COUNT_3">%2$d</xliff:g> ऐप्लिकेशन में से <xliff:g id="PERMITTED_LOCATION_APP_COUNT_2">%1$d</xliff:g> के पास ऐक्सेस है</item>
-    </plurals>
+    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
+    <skip />
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"हाल ही में, इन ऐप्लिकेशन ने माइक्रोफ़ोन का इस्तेमाल किया"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"सभी देखें"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"लोड हो रहे हैं…"</string>
@@ -452,10 +456,8 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"तीसरे पक्ष के लाइसेंस"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"लाइसेंस लोड करने में कोई समस्‍या है."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"लोड हो रहा है…"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="one">अब आप डेवलपर बनने से <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> कदम दूर हैं.</item>
-      <item quantity="other">अब आप डेवलपर बनने से <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> कदम दूर हैं.</item>
-    </plurals>
+    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
+    <skip />
     <string name="show_dev_on" msgid="5339077400040834808">"अब आप डेवलपर बन गए हैं!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"ज़रूरत नहीं है, आप पहले से ही डेवलपर हैं."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"डेवलपर के लिए सेटिंग और टूल"</string>
@@ -524,10 +526,8 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"नई प्रोफ़ाइल बन जाने के बाद, उपयोगकर्ता को चाहिए कि वह प्रोफ़ाइल को अपनी पसंद के हिसाब से बना ले."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"किसी भी प्रोफ़ाइल से ऐप्लिकेशन अपडेट किए जा सकते हैं, ताकि उनका इस्तेमाल अन्य सभी प्रोफाइलें कर सकें."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"और प्रोफ़ाइलें नहीं जोड़ी जा सकतीं"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
-      <item quantity="one">आप <xliff:g id="COUNT">%d</xliff:g> ही प्रोफ़ाइल बना सकते हैं.</item>
-      <item quantity="other">आप ज़्यादा से ज़्यादा <xliff:g id="COUNT">%d</xliff:g> प्रोफ़ाइलें बना सकते हैं.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
+    <skip />
     <string name="add_user_error_title" msgid="7589792057846396341">"नई प्रोफ़ाइल नहीं बनाई जा सकी"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"क्या आप यह प्रोफ़ाइल मिटाना चाहते हैं?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"इस प्रोफ़ाइल के सभी ऐप्लिकेशन और डेटा को मिटा दिया जाएगा"</string>
@@ -675,30 +675,6 @@
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"आपके आईटी एडमिन ने आम तौर पर इस्तेमाल होने वाले पिन पर रोक लगा दी है. कोई अन्य पिन बनाएं."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"इसमें अमान्य वर्ण नहीं डाला जा सकता."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"यह पासवर्ड अमान्य है, इसमें कम से कम 4 वर्ण होने चाहिए"</string>
-    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="one">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> अक्षर होने चाहिए</item>
-      <item quantity="other">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> अक्षर होने चाहिए</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="one">पासवर्ड में अंग्रेज़ी के कम से कम <xliff:g id="COUNT">%d</xliff:g> छोटे अक्षर होने चाहिए</item>
-      <item quantity="other">पासवर्ड में अंग्रेज़ी के कम से कम <xliff:g id="COUNT">%d</xliff:g> छोटे अक्षर होने चाहिए</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="one">पासवर्ड में अंग्रेज़ी के कम से कम <xliff:g id="COUNT">%d</xliff:g> बड़े अक्षर होने चाहिए</item>
-      <item quantity="other">पासवर्ड में अंग्रेज़ी के कम से कम <xliff:g id="COUNT">%d</xliff:g> बड़े अक्षर होने चाहिए</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="one">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> अंक होने चाहिए</item>
-      <item quantity="other">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> अंक होने चाहिए</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="one">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> खास चिह्न होने चाहिए</item>
-      <item quantity="other">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> खास चिह्न होने चाहिए</item>
-    </plurals>
-    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="one">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> वर्ण ऐसे होने चाहिए जो अक्षर न हों</item>
-      <item quantity="other">पासवर्ड में कम से कम <xliff:g id="COUNT">%d</xliff:g> वर्ण ऐसे होने चाहिए जो अक्षर न हों</item>
-    </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"डिवाइस एडमिन हाल ही के पासवर्ड का इस्तेमाल करने की मंज़ूरी नहीं देता"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सेव करने में गड़बड़ी हुई"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"आपके आईटी एडमिन ने आम तौर पर इस्तेमाल होने वाले पासवर्ड पर रोक लगा दी है. कोई अन्य पासवर्ड बनाएं."</string>
@@ -764,10 +740,8 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"अगर आप कुछ पूछना चाहते हैं, तो फ़्लीट मैनेजर से संपर्क करें"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"वाहन के एडमिन ऐप्लिकेशन"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="2747756696562689276">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन चालू है</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन चालू हैं</item>
-    </plurals>
+    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <skip />
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"कोई ऐप्लिकेशन चालू नहीं है"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"वे सेटिंग जिन्हें आपका फ़्लीट मैनेजर मैनेज करता है"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"सूचना और मनोरंजन की सुविधा देने वाले डिवाइस को रीसेट करें"</string>
