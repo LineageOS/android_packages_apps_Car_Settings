@@ -36,6 +36,10 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"अरू थप्नुहोस्"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क प्रयोग गरी डेटामाथि पहुँच राख्नु…"</string>
+    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
+    <skip />
+    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
+    <skip />
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा निष्क्रिय पार्ने हो?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"चयन गर्न आवश्यक छ"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"मोबाइल डेटाका लागि <xliff:g id="CARRIER">%1$s</xliff:g> प्रयोग गर्ने हो?"</string>
@@ -67,6 +71,8 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"सेट गर्नुहोस्"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटाको खपतसम्बन्धी चेतावनी तथा सीमा"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"एपको डेटा प्रयोगको चक्र"</string>
+    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
+    <skip />
     <string name="set_data_warning" msgid="6628236612886588097">"डेटा खपतको चेतावनी सेट गर्नुहोस्"</string>
     <string name="data_warning" msgid="116776633806885370">"डेटाको खपतसम्बन्धी चेतावनी"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"डेटाको डेटा खपतको सीमा सेट गरियोस्"</string>
@@ -75,8 +81,20 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"तपाईंले सेट गर्नुभएको अधिकतम डेटा प्रयोगको सीमामा पुगेपछि तपाईंको सवारी साधनको मुख्य भागले मोबाइल डेटालाई निष्क्रिय पार्ने छ।\n\nतपाईंको सवारी साधनको मुख्य भागले र तपाईंको सेवा प्रदायकले फरक तरिकाले डेटा प्रयोगको मापन गर्ने हुनाले विवेकपूर्ण तरिकाले यसको सीमा सेट गर्ने कुराबारे विचार गर्नुहोस्।"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"डेटा उपयोगसम्बन्धी चेतावनी सेट गर्नुहोस्"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"डेटा खपतको सीमा तोक्नुहोस्"</string>
+    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
+    <skip />
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"सेट गर्नुहोस्"</string>
+    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
+    <skip />
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM नेटवर्क"</string>
+    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
+    <skip />
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s देखि %3$s सम्म %1$s प्रयोग भएको छ"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"कुनै अर्को नेटवर्कमा कनेक्ट गर्नुहोस्"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"नेटवर्कसम्बन्धी प्राथमिकताहरू"</string>
@@ -152,6 +170,8 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi हटस्पटका लागि कम्तीमा एक ब्यान्ड छनौट गर्नुहोस्:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"हटस्पट तथा टेदरिङ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"हटस्पट"</string>
+    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
+    <skip />
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"स्वतः Wi‑Fi हटस्पट अफ गर्नुहोस्"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कुनै पनि यन्त्र नजोडिँदा Wi‑Fi हटस्पट स्वतः निष्क्रिय हुने छ"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi सक्रिय गर्न चाहन्छ"</string>
@@ -325,6 +345,28 @@
     <skip />
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटाको प्रयोग"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"एपले खपत गरेको डेटा"</string>
+    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
+    <skip />
+    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
+    <skip />
+    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
+    <skip />
+    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
+    <skip />
+    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
+    <skip />
+    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
+    <skip />
+    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
+    <skip />
     <string name="computing_size" msgid="5791407621793083965">"गणना गरिँदै…"</string>
     <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
     <skip />
