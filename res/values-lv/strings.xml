@@ -27,8 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Nakts režīms"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Tīkls un internets"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilais tīkls"</string>
-    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
-    <skip />
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM karte}zero{# SIM karšu}one{# SIM karte}other{# SIM kartes}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktīvs/SIM karte"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Neaktīvs/SIM karte"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktīvs/lejupielādēta SIM karte"</string>
@@ -36,6 +35,10 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Pievienot vēl"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilie dati"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Piekļuve datiem, izmantojot mobilo tīklu"</string>
+    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
+    <skip />
+    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
+    <skip />
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vai izslēgt mobilos datus?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Jāveic atlase"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Vai mobilajiem datiem lietot <xliff:g id="CARRIER">%1$s</xliff:g>?"</string>
@@ -51,8 +54,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"Datu brīdinājums: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Datu ierobežojums: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Datu brīdinājums: <xliff:g id="ID_1">^1</xliff:g>/ datu ierobežojums: <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
-    <skip />
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{Atlikusi vēl # diena}zero{Atlikušas vēl # dienas}one{Atlikusi vēl # diena}other{Atlikušas vēl # dienas}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Laiks beidzies"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Atlikusi mazāk nekā 1 diena"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Atjaunināja <xliff:g id="ID_1">^1</xliff:g> pirms <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -67,6 +69,8 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Iestatīt"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datu brīdinājums un ierobežojums"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Lietotnes datu lietojuma cikls"</string>
+    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
+    <skip />
     <string name="set_data_warning" msgid="6628236612886588097">"Iestatīt datu brīdinājumu"</string>
     <string name="data_warning" msgid="116776633806885370">"Datu brīdinājums"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Iestatīt datu ierobežojumu"</string>
@@ -75,8 +79,20 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Kad transportlīdzekļa sistēmas panelī būs sasniegts jūsu iestatītais ierobežojums, mobilie dati tiks izslēgti.\n\nTā kā datu lietojums tiek noteikts sistēmas panelī un jūsu mobilo sakaru operators var citādi uzskaitīt datu lietojumu, ieteicams iestatīt pārdomātu ierobežojumu."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Datu lietojuma brīdinājuma iestatīšana"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Datu lietojuma ierobežojuma iestatīšana"</string>
+    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
+    <skip />
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Iestatīt"</string>
+    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
+    <skip />
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM tīkls"</string>
+    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
+    <skip />
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Izmantotais apjoms: %1$s (%2$s–%3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Izveidot savienojumu ar citu tīklu"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Tīkla preferences"</string>
@@ -152,6 +168,8 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Izvēlieties vismaz 1 joslu Wi‑Fi tīklājam:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Tīklājs un piesaiste"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Tīklājs"</string>
+    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
+    <skip />
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automātiski izslēgt tīklāju"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi tīklājs tiks izslēgts, ja netiks pievienota neviena ierīce."</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Lietotnē <xliff:g id="REQUESTER">%s</xliff:g> tiek mēģināts ieslēgt Wi-Fi savienojumu"</string>
@@ -294,14 +312,10 @@
     <string name="force_stop" msgid="2153183697014720520">"Veikt piespiedu apturēšanu"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vai veikt piespiedu apturēšanu?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Piespiedu kārtā apturot lietotnes darbību, var rasties šīs lietotnes darbības traucējumi."</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Piešķirt lietotnes veiktspējas prioritāti?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Šī iestatījuma ieslēgšana var izraisīt sistēmas nestabilitāti vai ietekmēt aparatūras veiktspēju ilgtermiņā. Vai vēlaties turpināt?"</string>
+    <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Jā"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nē, paldies"</string>
     <string name="disable_text" msgid="4358165448648990820">"Atspējot"</string>
     <string name="enable_text" msgid="1794971777861881238">"Iespējot"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Atinstalēt"</string>
@@ -311,23 +325,41 @@
     <string name="permissions_label" msgid="2701446753515612685">"Atļaujas"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Paziņojumi"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Krātuve un kešatmiņa"</string>
-    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
-    <skip />
+    <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Lietotnes veiktspējas prioritātes piešķiršana"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versija: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nav piešķirta neviena atļauja."</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nav pieprasīta neviena atļauja."</string>
     <string name="unused_apps" msgid="648471933781010395">"Neizmantotās lietotnes"</string>
-    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
-    <skip />
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# neizmantota lietotne}zero{# neizmantotu lietotņu}one{# neizmantota lietotne}other{# neizmantotas lietotnes}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Noņemt atļaujas un atbrīvot vietu"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s: iekšējā atmiņa"</string>
-    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
-    <skip />
+    <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Tiek izmantoti sistēmas resursi, lai piešķirtu lietotnes veiktspējas prioritāti."</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datu lietojums"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Lietotnes datu lietojums"</string>
-    <string name="computing_size" msgid="5791407621793083965">"Notiek aprēķināšana…"</string>
-    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
     <skip />
+    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
+    <skip />
+    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
+    <skip />
+    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
+    <skip />
+    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
+    <skip />
+    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
+    <skip />
+    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
+    <skip />
+    <string name="computing_size" msgid="5791407621793083965">"Notiek aprēķināšana…"</string>
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# papildu atļauja}zero{# papildu atļauju}one{# papildu atļauja}other{# papildu atļaujas}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Piezīme. Šo lietotni pēc atkārtotas palaišanas varēs startēt tikai tad, kad būs atbloķēts transportlīdzeklis."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asistents un balss ievade"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Palīga lietotne"</string>
@@ -387,14 +419,10 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Izmantot atrašanās vietu"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Izslēdzot atrašanās vietas noteikšanu, tiks noņemta atrašanās vietas piekļuves atļauja visām lietotnēm. Autovadītāja palīdzības funkcijām joprojām būs piekļuve. Izslēdzot autovadītāja palīdzības slēdzi, autovadītāja palīdzības funkcijas vairs nevarēs izmantot jūsu atrašanās vietu."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Autovadītāja palīdzība"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
-    <skip />
-    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Automašīnas atrašanās vieta ir izslēgta"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Ar autovadītāja palīdzības funkcijām"</string>
+    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Mainīt"</string>
+    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Lietotnes, kurām ir šī atļauja, var piekļūt šīs automašīnas atrašanās vietai, lai nodrošinātu autovadītāja palīdzības funkcijas."</string>
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nepieejama, kad atrašanās vieta ieslēgta"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ja izslēgsiet šo iestatījumu, tiks atspējotas autovadītāja palīdzības funkcijas, kuru pamatā ir atrašanās vietas informācija."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Tik un tā izslēgt"</string>
@@ -413,8 +441,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Nesen piekļuva"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Nav nesen izmantotu lietotņu"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 lietotnēm ir piekļuve"</string>
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
-    <skip />
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{# lietotnei no {total_count} ir piekļuve}zero{# lietotnēm no {total_count} ir piekļuve}one{# lietotnei no {total_count} ir piekļuve}other{# lietotnēm no {total_count} ir piekļuve}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Nesen piekļuva"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Skatīt visus"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Notiek ielāde…"</string>
@@ -456,8 +483,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Trešo pušu licences"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ielādējot licences, radās problēma."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Notiek ielāde…"</string>
-    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
-    <skip />
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Pēc # darbības būsiet izstrādātājs.}zero{Pēc # darbībām būsiet izstrādātājs.}one{Pēc # darbības būsiet izstrādātājs.}other{Pēc # darbībām būsiet izstrādātājs.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Tagad jūs esat izstrādātājs!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Nav nepieciešams, ja jau esat izstrādātājs."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opcijas izstrādātājiem"</string>
@@ -526,8 +552,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Kad jūs esat izveidojis jaunu profilu, profila īpašniekam tas patstāvīgi jāpielāgo."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"No jebkura profila var atjaunināt lietotnes, lai izmantotu tās visos pārējos profilos."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Sasniegts profilu ierobežojums"</string>
-    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
-    <skip />
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Var izveidot tikai vienu profilu.}zero{Var izveidot ne vairāk kā # profilus.}one{Var izveidot ne vairāk kā # profilu.}other{Var izveidot ne vairāk kā # profilus.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Nevarēja izveidot jaunu profilu"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Vai dzēst šo profilu?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Tiks dzēstas visas šī profila lietotnes un dati."</string>
@@ -740,8 +765,7 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Ja jums rodas jautājumi, sazinieties ar autoparka pārvaldnieku."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Transportlīdzekļa administratora lietotnes"</string>
-    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
-    <skip />
+    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aktīva lietotne}zero{# aktīvu lietotņu}one{# aktīva lietotne}other{# aktīvas lietotnes}}"</string>
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nav aktīvu lietotņu"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Iestatījumi, ko pārvalda jūsu autoparka pārvaldnieks"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Informatīvi izklaidējošās sistēmas atiestatīšana"</string>
