@@ -808,8 +808,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="delete_user_error_title"/>
       <item type="string" name="deny"/>
       <item type="string" name="developer_options_settings"/>
+      <item type="string" name="device_admin_activated_apps"/>
       <item type="string" name="device_admin_add_title"/>
       <item type="string" name="device_admin_apps_list_empty"/>
+      <item type="string" name="device_admin_deactivated_apps"/>
       <item type="string" name="device_admin_status"/>
       <item type="string" name="device_admin_warning"/>
       <item type="string" name="device_info_not_available"/>
@@ -834,12 +836,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_none"/>
       <item type="string" name="domain_urls_summary_one"/>
       <item type="string" name="domain_urls_summary_some"/>
-      <item type="string" name="driver_assistance_settings_title"/>
       <item type="string" name="driver_assistance_page_description"/>
-      <item type="string" name="location_driver_assistance_toggle_off_title"/>
-      <item type="string" name="location_driver_assistance_toggle_off_summary"/>
+      <item type="string" name="driver_assistance_settings_title"/>
       <item type="string" name="driver_assistance_warning_confirm_label"/>
-      <item type="string" name="location_driver_assistance_action_text"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
@@ -950,6 +949,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="license_title"/>
       <item type="string" name="link_speed"/>
       <item type="string" name="loading_wifi_list"/>
+      <item type="string" name="location_driver_assistance_action_text"/>
+      <item type="string" name="location_driver_assistance_toggle_off_summary"/>
+      <item type="string" name="location_driver_assistance_toggle_off_title"/>
       <item type="string" name="location_driver_assistance_toggle_off_warning"/>
       <item type="string" name="location_driver_assistance_toggle_summary"/>
       <item type="string" name="location_driver_assistance_toggle_title"/>
