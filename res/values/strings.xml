@@ -339,8 +339,8 @@
     <string name="tether_settings_title_all">Hotspot &amp; tethering</string>
     <!-- Settings title to go into the hotspot settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
     <string name="hotspot_settings_title">Hotspot</string>
-    <!-- TODO(b/198456307) finalize off string for hotspot -->
-    <string name="wifi_hotspot_state_off" translatable="false">Off</string>
+    <!-- Subtitle for when Wi-Fi hotspot is toggled off [CHAR LIMIT=45] -->
+    <string name="wifi_hotspot_state_off">Off</string>
     <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
     <string name="wifi_hotspot_auto_off_title">Turn off hotspot automatically</string>
     <!-- Summary for the toggle to turn off hotspot automatically [CHAR LIMIT=100]-->
@@ -1682,6 +1682,10 @@
     <!-- Device Policy Management --><skip/>
     <!-- Device admin add activity title -->
     <string name="device_admin_add_title">Infotainment system admin</string>
+    <!-- Device admin activated apps -->
+    <string name="device_admin_activated_apps">Activated apps</string>
+    <!-- Device admin activated apps -->
+    <string name="device_admin_deactivated_apps">Deactivated apps</string>
     <!-- Device admin apps list is empty -->
     <string name="device_admin_apps_list_empty">No infotainment system admin apps</string>
     <!-- Device admin warning message about policies an admin can use -->
@@ -1741,12 +1745,12 @@
     <!-- Summary of preference to manage device admin apps, informing the user how many device admin apps are installed and active -->
     <string name="number_of_device_admins">
         {count, plural,
-        =1    {# active app}
-        other {# active apps}
+        =1    {# activated app}
+        other {# activated apps}
         }
     </string>
     <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
-    <string name="number_of_device_admins_none">No active apps</string>
+    <string name="number_of_device_admins_none">No activated apps</string>
     <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined --><skip/>
     <!-- Title of setting on privacy settings screen that will show work policy info. [CHAR LIMIT=NONE] -->
     <string name="work_policy_privacy_settings" translatable="false">Your work policy info</string>
