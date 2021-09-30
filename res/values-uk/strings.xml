@@ -27,8 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Нічний режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мережа й Інтернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобільна мережа"</string>
-    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
-    <skip />
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-карта}one{# SIM-карта}few{# SIM-карти}many{# SIM-карт}other{# SIM-карти}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активовано/SIM-карта"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Не активовано/SIM-карта"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активовано/завантажена SIM-карта"</string>
@@ -36,6 +35,10 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Додати ще"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобільне передавання даних"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ до даних через мобільну мережу"</string>
+    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
+    <skip />
+    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
+    <skip />
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Вимкнути мобільне передавання даних?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Виберіть варіант"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Використовувати оператора <xliff:g id="CARRIER">%1$s</xliff:g> для мобільного передавання даних?"</string>
@@ -51,8 +54,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"Застереження про <xliff:g id="ID_1">^1</xliff:g> даних"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Обмеження обсягу даних – <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Застереження про <xliff:g id="ID_1">^1</xliff:g> даних/Обмеження обсягу даних – <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
-    <skip />
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{Залишився # день}one{Залишився # день}few{Залишилося # дні}many{Залишилося # днів}other{Залишилося # дня}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Часу не залишилося"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Залишилося менше 1 дня"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Оновлено оператором <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> тому"</string>
@@ -67,6 +69,8 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Налаштувати"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Застереження та ліміт"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Цикл використання трафіку додатків"</string>
+    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
+    <skip />
     <string name="set_data_warning" msgid="6628236612886588097">"Увімкнути сповіщення про трафік"</string>
     <string name="data_warning" msgid="116776633806885370">"Застереження про трафік"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Налаштуйте обмеження трафіку"</string>
@@ -75,8 +79,20 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Головний пристрій автомобіля вимкне мобільне передавання даних, коли буде досягнуто вказаного обмеження.\n\nОскільки головний пристрій і оператор можуть вимірювати трафік по-різному, радимо встановити занижене обмеження."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Налаштуйте застереження про використання трафіку"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Налаштуйте ліміт використання трафіку"</string>
+    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
+    <skip />
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Налаштувати"</string>
+    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
+    <skip />
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Мережа OEM"</string>
+    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
+    <skip />
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"З %2$s до %3$s було використано %1$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Під\'єднатися до іншої мережі"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Налаштування мережі"</string>
@@ -152,6 +168,8 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Виберіть принаймні один діапазон частот для точки доступу Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступу та модем"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка доступу"</string>
+    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
+    <skip />
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматично вимикати точку доступу"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Якщо немає під’єднаних пристроїв, точка доступу Wi-Fi вимикатиметься"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Додаток <xliff:g id="REQUESTER">%s</xliff:g> хоче ввімкнути Wi-Fi"</string>
@@ -294,14 +312,10 @@
     <string name="force_stop" msgid="2153183697014720520">"Примусово припинити роботу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Примусово припинити роботу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Після примусового припинення роботи додаток може працювати неналежним чином."</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Пріоритезувати продуктивність додатка?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Увімкнення налаштування може спричинити нестабільність системи або вплинути на роботу апаратного забезпечення в довгостроковій перспективі. Продовжити?"</string>
+    <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Так"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Ні, дякую"</string>
     <string name="disable_text" msgid="4358165448648990820">"Вимкнути"</string>
     <string name="enable_text" msgid="1794971777861881238">"Увімкнути"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Видалити"</string>
@@ -311,23 +325,41 @@
     <string name="permissions_label" msgid="2701446753515612685">"Дозволи"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Сповіщення"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Пам\'ять і кеш"</string>
-    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
-    <skip />
+    <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Пріоритезувати продуктивність додатка"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версія: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Дозволи не надано"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Немає запитів на дозволи"</string>
     <string name="unused_apps" msgid="648471933781010395">"Додатки, що не використовуються"</string>
-    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
-    <skip />
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# додаток, що не використовується}one{# додаток, що не використовується}few{# додатки, що не використовуються}many{# додатків, що не використовуються}other{# додатка, що не використовується}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Скасувати дозволи й звільняти місце"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s у внутрішній пам\'яті"</string>
-    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
-    <skip />
+    <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Використовує системні ресурси, щоб пріоритезувати продуктивність додатка"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Використання трафіку"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Використання трафіку"</string>
-    <string name="computing_size" msgid="5791407621793083965">"Обчислення…"</string>
-    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
     <skip />
+    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
+    <skip />
+    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
+    <skip />
+    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
+    <skip />
+    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
+    <skip />
+    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
+    <skip />
+    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
+    <skip />
+    <string name="computing_size" msgid="5791407621793083965">"Обчислення…"</string>
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# додатковий дозвіл}one{# додатковий дозвіл}few{# додаткові дозволи}many{# додаткових дозволів}other{# додаткового дозволу}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Примітка: щоб запустити цей додаток після перезавантаження, спершу потрібно буде розблокувати автомобіль."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Асистент і голосовий ввід"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Помічник"</string>
@@ -387,14 +419,10 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Використовувати геодані"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Якщо вимкнути геодані, доступ до них буде вимкнено для всіх додатків. Це не стосується функцій допомоги водію. Якщо вимкнути перемикач \"Допомога водію\", відповідні функції не матимуть доступу до ваших геоданих."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Допомога водію"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
-    <skip />
-    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геодані транспортного засобу вимкнено"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Для додатків із функціями допомоги водію"</string>
+    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Змінити"</string>
+    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Додатки з цим дозволом мають доступ до геоданих транспортного засобу й використовують їх для функцій допомоги водію"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Недоступно, доки ввімкнено геодані"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Якщо вимкнути цю опцію, функції допомоги водію, які використовують геодані, будуть деактивовані."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Вимкнути в будь-якому разі"</string>
@@ -413,8 +441,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Нещодавно використовувався"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Жодний додаток не використовував мікрофон нещодавно"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 додатків мають доступ"</string>
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
-    <skip />
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{# додаток із {total_count} має доступ}one{# додаток із {total_count} має доступ}few{# додатки з {total_count} мають доступ}many{# додатків із {total_count} мають доступ}other{# додатка з {total_count} має доступ}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Нещодавно використовувався"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Показати всі"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Завантаження…"</string>
@@ -456,8 +483,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Ліцензії сторонніх розробників"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Не вдалося завантажити ліцензії."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Завантаження…"</string>
-    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
-    <skip />
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Залишився лише # крок, щоб стати розробником.}one{Залишився лише # крок, щоб стати розробником.}few{Залишилося лише # кроки, щоб стати розробником.}many{Залишилося лише # кроків, щоб стати розробником.}other{Залишилося лише # кроку, щоб стати розробником.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Тепер ви розробник."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Непотрібно, ви вже розробник."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Параметри розробника"</string>
@@ -526,8 +552,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Коли ви створите новий профіль, цій людині потрібно налаштувати його для себе."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Користувачі всіх профілів можуть оновлювати додатки для інших профілів."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Досягнуто ліміту профілів"</string>
-    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
-    <skip />
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Можна створити лише один профіль.}one{Можна створити не більше ніж # профіль.}few{Можна створити не більше ніж # профілі.}many{Можна створити не більше ніж # профілів.}other{Можна створити не більше ніж # профілю.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Не вдалося створити новий профіль"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Видалити цей профіль?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Усі додатки та дані для цього профілю буде видалено"</string>
@@ -740,8 +765,7 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Якщо у вас виникли запитання, зв’яжіться з адміністратором авто"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Програми для адміністраторів авто"</string>
-    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
-    <skip />
+    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# активний додаток}one{# активний додаток}few{# активні додатки}many{# активних додатків}other{# активного додатка}}"</string>
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"Немає активних додатків"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Налаштування, якими керує адміністратор авто"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Скиньте налаштування інформаційно-розважальної системи"</string>

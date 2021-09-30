@@ -51,6 +51,7 @@ import com.android.car.qc.QCRow;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
+import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 
@@ -65,6 +66,8 @@ import org.mockito.quality.Strictness;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 @RunWith(AndroidJUnit4.class)
 public class PairedBluetoothDevicesTest {
@@ -76,9 +79,12 @@ public class PairedBluetoothDevicesTest {
     private PairedBluetoothDevices mPairedBluetoothDevices;
     private MockitoSession mSession;
     private ArrayList<CachedBluetoothDevice> mCachedDevices = new ArrayList<>();
+    private Set<BluetoothDevice> mBondedDevices = new HashSet<>();
 
     @Mock
     private BluetoothAdapter mBluetoothAdapter;
+    @Mock
+    private LocalBluetoothAdapter mLocalBluetoothAdapter;
     @Mock
     private LocalBluetoothManager mBluetoothManager;
     @Mock
@@ -96,6 +102,8 @@ public class PairedBluetoothDevicesTest {
         when(BluetoothAdapter.getDefaultAdapter()).thenReturn(mBluetoothAdapter);
         when(mBluetoothAdapter.isEnabled()).thenReturn(true);
         when(LocalBluetoothManager.getInstance(any(), any())).thenReturn(mBluetoothManager);
+        when(mBluetoothManager.getBluetoothAdapter()).thenReturn(mLocalBluetoothAdapter);
+        when(mLocalBluetoothAdapter.getBondedDevices()).thenReturn(mBondedDevices);
         when(UserManager.get(any())).thenReturn(mUserManager);
         when(mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)).thenReturn(false);
 
@@ -141,6 +149,20 @@ public class PairedBluetoothDevicesTest {
                 /* phoneEnabled= */ true, /* mediaEnabled= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         assertThat(list.getRows().size()).isEqualTo(2);
+    }
+
+    @Test
+    public void getQCItem_limitsDeviceCount() {
+        addBluetoothDevice("Device1", /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+        addBluetoothDevice("Device2",  /* connected= */ false, /* busy= */ false,
+                /* phoneEnabled= */ false, /* mediaEnabled= */ false);
+        addBluetoothDevice("Device3",  /* connected= */ false, /* busy= */ false,
+                /* phoneEnabled= */ false, /* mediaEnabled= */ false);
+        addBluetoothDevice("Device4",  /* connected= */ false, /* busy= */ false,
+                /* phoneEnabled= */ false, /* mediaEnabled= */ false);
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        assertThat(list.getRows().size()).isEqualTo(3);
     }
 
     @Test
@@ -263,6 +285,7 @@ public class PairedBluetoothDevicesTest {
         when(mediaProfile.isEnabled(any())).thenReturn(mediaEnabled);
         when(cachedDevice.getProfiles()).thenReturn(Arrays.asList(phoneProfile, mediaProfile));
         mCachedDevices.add(cachedDevice);
+        mBondedDevices.add(device);
     }
 
     private LocalBluetoothProfile getProfile(CachedBluetoothDevice device, int profileId) {
