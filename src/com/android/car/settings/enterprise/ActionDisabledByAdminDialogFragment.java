@@ -110,9 +110,10 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     }
 
     private AlertDialogBuilder initialize(Context context) {
-        EnforcedAdmin enforcedAdmin = RestrictedLockUtilsInternal
-                .checkIfRestrictionEnforced(/* dpmContext= */ context, mRestriction,
-                        /* targetUserToCheck= */ mAdminUserId);
+        // Check for current user's enforcedAmin where this dialog will be shown
+        EnforcedAdmin enforcedAdmin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+                /* dpmContext= */ context, mRestriction,
+                /* targetUserToCheck= */ context.getUserId());
         if (enforcedAdmin == null) {
             // ActionDisabledByAdminDialogFragment may also be created from
             // ActionDisabledByAdminActivity and Device Admin ComponentName can be retrieved from
@@ -121,6 +122,12 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
                     .getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
             enforcedAdmin = new EnforcedAdmin(admin, mRestriction, UserHandle.of(mAdminUserId));
             LOG.d("EnforcedAdmin created: " + enforcedAdmin);
+        } else if (enforcedAdmin.component == null && context.getUserId() != mAdminUserId) {
+            // User restriction might be set on primary user which is user 0 as a device-wide
+            // policy.
+            enforcedAdmin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+                    /* dpmContext= */ context, mRestriction,
+                    /* targetUserToCheck= */ mAdminUserId);
         }
 
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
@@ -142,7 +149,6 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     // NOTE: methods below were copied from phone Settings
     // (com.android.settings.enterprise.ActionDisabledByAdminDialogHelper), but adjusted to
     // use a AlertDialogBuilder directly, instead of an Activity hosting a dialog.
-
     private static @UserIdInt int getEnforcementAdminUserId(@Nullable EnforcedAdmin admin) {
         return admin == null || admin.user == null ? UserHandle.USER_NULL
                 : admin.user.getIdentifier();
@@ -180,16 +186,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
 
     private void setAdminSupportIcon(Context context, AlertDialogBuilder builder,
             ComponentName admin, @UserIdInt int userId) {
-        if (isNotCurrentUserOrProfile(context, admin, userId)) {
-            builder.setIcon(context.getDrawable(com.android.internal.R.drawable.ic_info));
-        } else {
-            Drawable badgedIcon = getBadgedIcon(
-                    IconDrawableFactory.newInstance(context),
-                    context.getPackageManager(),
-                    admin.getPackageName(),
-                    userId);
-            builder.setIcon(badgedIcon);
-        }
+        builder.setIcon(R.drawable.ic_lock);
     }
 
     private void setAdminSupportTitle(Context context, AlertDialogBuilder builder,
