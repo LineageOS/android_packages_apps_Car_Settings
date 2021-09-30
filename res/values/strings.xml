@@ -880,39 +880,39 @@
     <string name="location_settings_title">Location</string>
     <!-- Title of location toggle setting [CHAR LIMIT=40] -->
     <string name="location_toggle_title">Use location</string>
+    <!-- Summary of location toggle setting [CHAR LIMIT=40] -->
+    <string name="location_toggle_summary">Allow apps you specify to access your location</string>
     <!-- Warning message when users try to toggle location off [CHAR LIMIT=NONE] -->
     <string name="location_toggle_off_warning">
-        Turning off Location will turn off location access for all apps, Driver assistance features
-        will still have access. Turning off Driver assistance toggle will stop Driver assistance
-        features from using your location.
+        If you turn this off, it will remove location access for all apps. Driver Assistance apps
+        will still have access.
     </string>
     <!-- Title of driver assistance toggle setting [CHAR LIMIT=40] -->
-    <string name="location_driver_assistance_toggle_title">Driver assistance</string>
+    <string name="location_driver_assistance_toggle_title">
+        Use location for Driver Assistance
+    </string>
     <!-- Title of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_toggle_off_title">Vehicle location is off</string>
     <!-- Summary of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_toggle_off_summary">
-        For apps with Driver Assistance features
+        Driver Assistance features cannot access your location
     </string>
     <!-- -Text of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_action_text">
         Change
     </string>
-
-    <string name="driver_assistance_page_description">Apps with this permission have access to this
-         vehicle’s location for Driver Assistance features</string>
     <!-- Summary of driver assistance toggle setting [CHAR LIMIT=40]-->
     <string name="location_driver_assistance_toggle_summary">
-        Unavailable while location is turned on
+        Allow apps that help with driving to access your location
     </string>
     <!-- Warning message when users try to toggle driver assistance off [CHAR LIMIT=NONE] -->
     <string name="location_driver_assistance_toggle_off_warning">
-        If you turn this off, driver assistance features that rely on location information will be
+        If you turn this off, Driver Assistance apps that rely on location information will be
         disabled.
     </string>
     <!-- Confirm button label for confirmation dialog [CHAR LIMIT=40]-->
     <string name="driver_assistance_warning_confirm_label">
-        Turn off anyways
+        Turn off anyway
     </string>
     <!-- Title of Recent Location Requests setting [CHAR LIMIT=60] -->
     <string name="location_settings_recent_requests_title">Recent Location Requests</string>
@@ -935,7 +935,7 @@
     <string name="driver_assistance_settings_title">Driver assistance</string>
     <!--Driver assistance settings footer warning text [CHAR LIMIT=NONE] -->
     <string name="adas_settings_footer">
-        Location information sent to driver assistance features don’t contain information that
+        Location information sent to Driver Assistance features doesn’t contain information that
         identifies you. It’s stored for a maximum of 2 days before being deleted.
     </string>
 
