@@ -23,6 +23,7 @@
     <com.android.car.settings.common.ColoredSwitchPreference
         android:key="@string/pk_location_state_switch"
         android:title="@string/location_toggle_title"
+        android:summary="@string/location_toggle_summary"
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.location.LocationStateSwitchPreferenceController"
         settings:searchable="false"/>
