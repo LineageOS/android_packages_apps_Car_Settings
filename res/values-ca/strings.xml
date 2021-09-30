@@ -27,8 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Mode nocturn"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Xarxa i Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Xarxa mòbil"</string>
-    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
-    <skip />
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# targeta SIM}other{# targetes SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Actiu / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inactiu / SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Actiu / SIM baixada"</string>
@@ -36,6 +35,10 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Afegeix-ne més"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dades mòbils"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accedeix a les dades amb la xarxa mòbil"</string>
+    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
+    <skip />
+    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
+    <skip />
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vols desactivar les dades mòbils?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Has de seleccionar una preferència"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Utilitzar <xliff:g id="CARRIER">%1$s</xliff:g> per a dades mòbils?"</string>
@@ -51,8 +54,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"Advertiment de dades: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Límit de dades: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Advertiment de dades: <xliff:g id="ID_1">^1</xliff:g> / Límit de dades: <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
-    <skip />
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{Queda # dia}other{Queden # dies}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"S\'ha acabat el temps"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Queda menys d\'1 dia"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Actualitzat per <xliff:g id="ID_1">^1</xliff:g> fa <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -67,6 +69,8 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Defineix"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Advertiment i límit de dades"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cicle d\'ús de dades d\'aplicacions"</string>
+    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
+    <skip />
     <string name="set_data_warning" msgid="6628236612886588097">"Defineix un advertiment de dades"</string>
     <string name="data_warning" msgid="116776633806885370">"Advertiment de dades"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Defineix un límit de dades"</string>
@@ -75,8 +79,20 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Es desactivaran les dades mòbils de la unitat principal del vehicle quan s\'arribi al límit que has establert.\n\nCom que la unitat principal mesura l\'ús de dades i és possible que l\'operador de telefonia mòbil en faci un recompte diferent, et recomanem que estableixis un límit prudent."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Estableix un advertiment d\'ús de dades"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Estableix un límit d\'ús de dades"</string>
+    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
+    <skip />
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Estableix"</string>
+    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
+    <skip />
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Xarxa OEM"</string>
+    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
+    <skip />
+    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
+    <skip />
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"S\'han utilitzat %1$s (%2$s - %3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Uneix-me a una altra xarxa"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Preferències de xarxa"</string>
@@ -152,6 +168,8 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Tria almenys una banda per al punt d\'accés Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Punt d\'accés Wi-Fi i compartició de xarxa"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Punt d\'accés Wi‑Fi"</string>
+    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
+    <skip />
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactiva el punt d\'accés Wi‑Fi automàticament"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"El punt d\'accés Wi‑Fi es desactivarà si no hi ha cap dispositiu connectat"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> vol activar la Wi‑Fi"</string>
@@ -294,14 +312,10 @@
     <string name="force_stop" msgid="2153183697014720520">"Força l\'aturada"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vols forçar l\'aturada?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Si forces l\'aturada d\'una aplicació, és possible que no funcioni correctament."</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Activar Prioritza el rendiment de l\'app?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Si actives aquesta opció, pot provocar inestabilitat al sistema o afectar el maquinari a llarg termini. Vols continuar?"</string>
+    <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Sí"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"No, gràcies"</string>
     <string name="disable_text" msgid="4358165448648990820">"Desactiva"</string>
     <string name="enable_text" msgid="1794971777861881238">"Activa"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Desinstal·la"</string>
@@ -311,23 +325,41 @@
     <string name="permissions_label" msgid="2701446753515612685">"Permisos"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificacions"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Emmagatzematge i memòria cau"</string>
-    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
-    <skip />
+    <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Prioritza el rendiment de l\'aplicació"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versió: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"No s\'ha concedit cap permís"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"No s\'ha sol·licitat cap permís"</string>
     <string name="unused_apps" msgid="648471933781010395">"Aplicacions no utilitzades"</string>
-    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
-    <skip />
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# aplicació no utilitzada}other{# aplicacions no utilitzades}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Suprimeix els permisos i allibera espai"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s a l\'emmagatzematge intern"</string>
-    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
-    <skip />
+    <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Utilitza recursos del sistema per prioritzar el rendiment de l\'aplicació"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Ús de dades"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Ús de dades de l\'aplicació"</string>
-    <string name="computing_size" msgid="5791407621793083965">"S\'està calculant…"</string>
-    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
+    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
     <skip />
+    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
+    <skip />
+    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
+    <skip />
+    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
+    <skip />
+    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
+    <skip />
+    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
+    <skip />
+    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
+    <skip />
+    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
+    <skip />
+    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
+    <skip />
+    <string name="computing_size" msgid="5791407621793083965">"S\'està calculant…"</string>
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# permís addicional}other{# permisos addicionals}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Nota: després de reiniciar, l\'aplicació no s\'iniciarà fins que no desbloquegis el vehicle."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistència i entrada de veu"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aplicació d\'assistència"</string>
@@ -387,14 +419,10 @@
     <string name="location_toggle_title" msgid="836779750812064601">"Utilitza la ubicació"</string>
     <string name="location_toggle_off_warning" msgid="7698125556959442911">"Si desactives l\'accés a la ubicació, es desactivarà per a totes les aplicacions, excepte per a les funcions d\'assistència al conductor. Si desactives el commutador d\'assistència al conductor, les funcions d\'aquesta tecnologia deixaran d\'utilitzar la teva ubicació."</string>
     <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Assistència al conductor"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
-    <skip />
-    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"La ubicació del vehicle està desactivada"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Per a apps amb assistència al conductor"</string>
+    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Canvia"</string>
+    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Les aplicacions amb aquest permís tenen accés a la ubicació d\'aquest vehicle per a les funcions d\'assistència al conductor"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"No disponible amb la ubicació activada"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Si desactives aquesta opció, les funcions d\'assistència al conductor que depenen de la informació d\'ubicació es desactivaran."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Desactiva igualment"</string>
@@ -413,8 +441,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"S\'hi ha accedit fa poc"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"No hi ha aplicacions recents"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Cap aplicació no té accés"</string>
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
-    <skip />
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{# de {total_count} aplicacions té accés}other{# de {total_count} aplicacions tenen accés}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"S\'hi ha accedit fa poc"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Mostra-ho tot"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"S\'està carregant…"</string>
@@ -456,8 +483,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Llicències de tercers"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"S\'ha produït un problema en carregar les llicències."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"S\'està carregant…"</string>
-    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
-    <skip />
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Ara ja només et queda # pas per convertir-te en desenvolupador.}other{Ara ja només et queden # passos per convertir-te en desenvolupador.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Ara ja ets desenvolupador!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"No és necessari, ja ets desenvolupador."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opcions per a desenvolupadors"</string>
@@ -526,8 +552,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Un cop hagis creat un perfil per a una altra persona, aquesta persona l\'hauria de personalitzar."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Les apps es poden actualitzar des de qualsevol perfil perquè la resta de perfils puguin utilitzar-les."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"S\'ha assolit el límit de perfils"</string>
-    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
-    <skip />
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Només es pot crear 1 perfil.}other{Pots crear fins a # perfils.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"No s\'ha pogut crear el perfil"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Vols suprimir aquest perfil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Totes les aplicacions i dades d\'aquest perfil se suprimiran"</string>
@@ -740,8 +765,7 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Si tens cap dubte, contacta amb el gestor de flota"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Aplicacions d\'administració de vehicles"</string>
-    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
-    <skip />
+    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aplicació activa}other{# aplicacions actives}}"</string>
     <string name="number_of_device_admins_none" msgid="3761015967867157562">"No hi ha cap aplicació activa"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Configuració gestionada pel gestor de flota"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restableix el sistema d\'informació i entreteniment"</string>
