@@ -1723,9 +1723,8 @@
     <string name="disabled_by_policy_title">Blocked by your fleet manager</string>
     <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_adjust_volume">Contact the fleet manager to change the volume</string>
-    <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined --><skip/>
     <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_outgoing_calls" translatable="false">Contact the fleet manager to make calls</string>
+    <string name="disabled_by_policy_title_outgoing_calls">Contact the fleet manager to make calls</string>
     <!-- Title for dialog displayed to tell user that sending SMS were disabled by an admin [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_sms">Contact the fleet manager to use SMS</string>
     <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=50] -->
@@ -1751,9 +1750,8 @@
     </string>
     <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
     <string name="number_of_device_admins_none">No activated apps</string>
-    <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined --><skip/>
-    <!-- Title of setting on privacy settings screen that will show work policy info. [CHAR LIMIT=NONE] -->
-    <string name="work_policy_privacy_settings" translatable="false">Your work policy info</string>
+    <!-- Title of setting on privacy settings screen that will show vehicle policy info. [CHAR LIMIT=NONE] -->
+    <string name="work_policy_privacy_settings"><xliff:g id="organization_name">%1$s</xliff:g> vehicle policy</string>
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
     <string name="work_policy_privacy_settings_summary">Settings managed by your fleet manager</string>
 
