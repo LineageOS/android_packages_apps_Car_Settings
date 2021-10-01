@@ -200,10 +200,10 @@ public class DataLimitPreferenceControllerTest {
     }
 
     @Test
-    public void onPreferenceClicked_showsPickerDialog() {
+    @UiThreadTest
+    public void onPreferenceClicked_launchesFragment() {
         mLimitPreference.performClick();
 
-        verify(mMockFragmentController).showDialog(any(UsageBytesThresholdPickerDialog.class),
-                eq(UsageBytesThresholdPickerDialog.TAG));
+        verify(mMockFragmentController).launchFragment(any(DataLimitSetThresholdFragment.class));
     }
 }
