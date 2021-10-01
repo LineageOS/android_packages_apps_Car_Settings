@@ -27,8 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"রাতের মোড"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"নেটওয়ার্ক এবং ইন্টারনেট"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"মোবাইল নেটওয়ার্ক"</string>
-    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
-    <skip />
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{#টি সিম কার্ড}one{#টি সিম কার্ড}other{#টি সিম কার্ড}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"অ্যাক্টিভ / সিম"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"অ্যাক্টিভ নয় এমন / সিম"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"অ্যাক্টিভ / ডাউনলোড করা সিম"</string>
@@ -55,8 +54,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> ডেটার বিষয়ে সতর্কতা"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> ডেটার সীমা"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> ডেটার বিষয়ে সতর্কতা / <xliff:g id="ID_2">^2</xliff:g> ডেটার সীমা"</string>
-    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
-    <skip />
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{# দিন বাকি আছে}one{# দিন বাকি আছে}other{# দিন বাকি আছে}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"আর সময় নেই"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"১ দিনের থেকে কম সময় বাকি"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> আগে আপডেট করেছে"</string>
@@ -314,14 +312,10 @@
     <string name="force_stop" msgid="2153183697014720520">"জোর করে বন্ধ করুন"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"জোর করে বন্ধ করবেন?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"আপনি একটি অ্যাপকে জোর করে বন্ধ করলে, তা সঠিক ভাবে কাজ নাও করতে পারে।"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"\'অ্যাপ পারফর্ম্যান্সে অগ্রাধিকার দিন\' বিকল্প চালু করবেন?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"এটা চালু করা হলে সিস্টেম অস্থিতিশীল হওয়ার অথবা হার্ডওয়্যারে দীর্ঘমেয়াদী প্রভাব পড়ার সম্ভাবনা রয়েছে। আপনি কি চালিয়ে যেতে চান?"</string>
+    <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"হ্যাঁ"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"না, থাক"</string>
     <string name="disable_text" msgid="4358165448648990820">"বন্ধ করুন"</string>
     <string name="enable_text" msgid="1794971777861881238">"চালু করুন"</string>
     <string name="uninstall_text" msgid="277907956072833012">"আনইনস্টল করুন"</string>
@@ -331,18 +325,15 @@
     <string name="permissions_label" msgid="2701446753515612685">"অনুমতিগুলি"</string>
     <string name="notifications_label" msgid="6586089149665170731">"বিজ্ঞপ্তি"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"স্টোরেজ ও ক্যাশে"</string>
-    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
-    <skip />
+    <string name="prioritize_app_performance_label" msgid="7264505023347026606">"অ্যাপ পারফর্ম্যান্সে অগ্রাধিকার দেওয়া"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ভার্সন: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"কোনও অনুমতি দেওয়া হয় নি"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"কোনও অনুমতির অনুরোধ জানানো হয়নি"</string>
     <string name="unused_apps" msgid="648471933781010395">"ব্যবহার করা হয়নি এমন অ্যাপ"</string>
-    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
-    <skip />
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{ব্যবহার করা হয়নি এমন #টি অ্যাপ}one{ব্যবহার করা হয়নি এমন #টি অ্যাপ}other{ব্যবহার করা হয়নি এমন #টি অ্যাপ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"অনুমতি সরান এবং স্পেস খালি করুন"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"ইন্টারনাল স্টোরেজে %s রয়েছে"</string>
-    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
-    <skip />
+    <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"অ্যাপ পারফর্ম্যান্সে অগ্রাধিকার দিতে সিস্টেম রিসোর্স ব্যবহার করা হয়"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ডেটা ব্যবহার"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"অ্যাপ ডেটার ব্যবহার"</string>
     <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
@@ -368,8 +359,7 @@
     <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
     <skip />
     <string name="computing_size" msgid="5791407621793083965">"কম্পিউটিং..."</string>
-    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
-    <skip />
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{#টি অতিরিক্ত অনুমতি}one{#টি অতিরিক্ত অনুমতি}other{#টি অতিরিক্ত অনুমতি}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"দ্রষ্টব্য: রিবুট করার পরে, আপনার গাড়ি আনলক না করা পর্যন্ত আপনি এই অ্যাপটিকে চালু করতে পারবেন না।"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"অ্যাসিস্ট্যান্ট এবং ভয়েস ইনপুট"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"সহায়তা অ্যাপ"</string>
@@ -427,19 +417,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"আরও"</string>
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"লোকেশন ব্যবহার করুন"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"\'লোকেশন\' বন্ধ করলে, কোনও অ্যাপ আপনার লোকেশন অ্যাক্সেস করতে পারবে না, তবে \'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচার এর পরেও আপনার লোকেশন অ্যাক্সেস করতে পারবে। \'ড্রাইভার অ্যাসিস্ট্যান্স\' টগল করে বন্ধ করলে \'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচার আপনার লোকেশন আর অ্যাক্সেস করতে পারবে না।"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ড্রাইভার অ্যাসিস্ট্যান্স"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
     <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
     <skip />
-    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
     <skip />
-    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"গাড়ির লোকেশন বন্ধ করা আছে"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
     <skip />
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"লোকেশন চালু থাকলে এই সুবিধা কাজ করে না"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"আপনি এটি বন্ধ করলে, ড্রাইভার অ্যাসিস্ট্যান্স ফিচার বন্ধ হয়ে যাবে, যা লোকেশন সংক্রান্ত তথ্য ব্যবহার করে।"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"তাও বন্ধ করুন"</string>
+    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"পরিবর্তন করুন"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"অ্যাপ-লেবেল অনুমতি"</string>
@@ -447,7 +440,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"লোকেশন ব্যবহার করুন"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"আপনি কোথায় আছেন তা জানতে \'লোকেশন\' সেটিংস আপনার মোবাইলের জিপিএস, ওয়াই-ফাই, মোবাইল নেটওয়ার্ক ও সেন্সর ব্যবহার করতে পারে।"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"\'ড্রাইভার অ্যাসিস্ট্যান্স\'"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"\'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচারে পাঠানো লোকেশন সম্পর্কিত তথ্যে আপনার শনাক্তকরণ সম্পর্কিত কোনও তথ্য অন্তর্ভুক্ত থাকে না। মুছে ফেলার আগে এটি সর্বাধিক ২ দিনের জন্য সেভ করে রাখা হয়।"</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্রোফোন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্রোফোন ব্যবহার করুন"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"সব অ্যাপকে আপনার মাইক্রোফোন ব্যবহার করার অনুমতি দিন"</string>
@@ -455,8 +449,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"কোনও সাম্প্রতিক অ্যাপ নেই"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"কোনও অ্যাপের অ্যাক্সেস নেই"</string>
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
-    <skip />
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{{total_count}টি অ্যাপের মধ্যে #টিতে অ্যাক্সেস আছে}one{{total_count}টি অ্যাপের মধ্যে #টিতে অ্যাক্সেস আছে}other{{total_count}টি অ্যাপের মধ্যে #টিতে অ্যাক্সেস আছে}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"সবগুলি দেখুন"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"লোড হচ্ছে…"</string>
@@ -498,8 +491,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"তৃতীয় পক্ষের লাইসেন্স"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"লাইসেন্সগুলি লোড হতে সমস্যা হয়েছে।"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"লোড করা হচ্ছে…"</string>
-    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
-    <skip />
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{ডেভেলপার হওয়া থেকে আপনি এখন # ধাপ দূরে আছেন।}one{ডেভেলপার হওয়া থেকে আপনি এখন # ধাপ দূরে আছেন।}other{ডেভেলপার হওয়া থেকে আপনি এখন # ধাপ দূরে আছেন।}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"আপনি এখন একজন ডেভেলপার!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"কোনও প্রয়োজন নেই, আপনি ইতিমধ্যেই একজন ডেভেলপার।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ডেভেলপারের জন্য বিকল্প"</string>
@@ -568,8 +560,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"আপনি নতুন প্রোফাইল তৈরি করার পর, সেই ব্যক্তি নিজের জন্য এটি কাস্টমাইজ করতে পারবেন।"</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"অন্যান্য সমস্ত প্রোফাইলের জন্য ব্যবহার করতে অ্যাপগুলি যেকোনও প্রোফাইল থেকে আপডেট করা যেতে পারে।"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"আর কোনও প্রোফাইল তৈরি করা যাবে না"</string>
-    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
-    <skip />
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{শুধুমাত্র একটি প্রোফাইল তৈরি করা যাবে।}one{আপনি সর্বাধিক #টি প্রোফাইল তৈরি করতে পারবেন।}other{আপনি সর্বাধিক #টি প্রোফাইল তৈরি করতে পারবেন।}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"নতুন প্রোফাইল তৈরি করা যায়নি"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"এই প্রোফাইল মুছতে চান?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"এই প্রোফাইলের সব অ্যাপ এবং ডেটা মুছে যাবে"</string>
@@ -761,6 +752,10 @@
     <string name="add_profile_text" msgid="9118410102199116969">"প্রোফাইল যোগ করুন"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ডিসপ্লের উজ্জ্বলতা"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ইনফোটেইনমেন্ট সিস্টেম অ্যাডমিন"</string>
+    <!-- no translation found for device_admin_activated_apps (568075063362271751) -->
+    <skip />
+    <!-- no translation found for device_admin_deactivated_apps (3797263682500122872) -->
+    <skip />
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"ইনফোটেইনমেন্ট সিস্টেমে কোনও অ্যাডমিন অ্যাপ নেই"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাডমিন অ্যাপ চালু আছে এবং নিচের কাজগুলি করতে <xliff:g id="APP_NAME">%1$s</xliff:g> নামের অ্যাপকে অনুমতি দেয়:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করলে <xliff:g id="APP_NAME">%1$s</xliff:g> নামের অ্যাপ নিচের কাজগুলি করতে পারবে:"</string>
@@ -774,6 +769,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"ফ্লিট ম্যানেজার হয়ত এই ইনফোটেইনমেন্ট সিস্টেম সম্পর্কিত ডেটা অ্যাক্সেস করতে, অ্যাপ ম্যানেজ করতে এবং গাড়ির সেটিংস পরিবর্তন করতে পারবেন।"</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"আপনার ফ্লিট ম্যানেজারের মাধ্যমে ব্লক করা হয়েছে"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ভলিউম পরিবর্তন করতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"এসএমএস ব্যবহার করতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ক্যামেরা ব্যবহার করতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"স্ক্রিনশট নিতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
@@ -782,9 +779,12 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"আপনার প্রশ্ন থাকলে, ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"গাড়ির অ্যাডমিন অ্যাপ"</string>
-    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <!-- no translation found for number_of_device_admins (7508826094096451485) -->
     <skip />
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"চালু থাকা কোনও অ্যাপ নেই"</string>
+    <!-- no translation found for number_of_device_admins_none (5547493703413973954) -->
+    <skip />
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"আপনার ফ্লিট ম্যানেজারের মাধ্যমে সেটিংস ম্যানেজ করা হয়েছে"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"ইনফোটেইনমেন্ট সিস্টেম রিসেট করুন"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"আপনার সিস্টেমের জন্য ফ্যাক্টরি রিসেট করা এবং সব ডেটা মুছে ফেলার অনুরোধ করা হয়েছে। আপনি এখনই রিসেট করতে পারবেন বা পরের বার গাড়ি চালু হলে এটি রিসেট হবে। আপনি তারপর নতুন প্রোফাইল সেট আপ করতে পারবেন।"</string>
