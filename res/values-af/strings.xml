@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Voeg nog by"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Kry toegang tot data deur selnetwerk"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Selnetwerk"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Gebruik mobiele data"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Skakel mobiele data af?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Keuse vereis"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Gebruik <xliff:g id="CARRIER">%1$s</xliff:g> vir mobiele data?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Stel"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datawaarskuwing en -limiet"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Programdatagebruiksiklus"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Mobieledatagebruik"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Stel datawaarskuwing"</string>
     <string name="data_warning" msgid="116776633806885370">"Datawaarskuwing"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Stel datalimiet"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Jou voertuig se hoofeenheid sal mobiele data afskakel wanneer dit die limiet wat jy gestel het, bereik het.\n\nOorweeg dit om \'n konserwatiewe limiet te stel omdat die datagebruik deur die hoofeenheid gemeet word terwyl jou diensverskaffer die gebruik dalk anders bereken."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Stel datagebruikwaarskuwing"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Stel datagebruiklimiet"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Datagebruik word deur jou toestel gemeet. Dit kan van jou selfoondiensverskaffer se data verskil."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Stel"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Stoor"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM-netwerk"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Voertuiginternet"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"As jy die voertuiginternet afskakel, kan sommige kenmerke of programme dalk ophou werk.\n\nKritieke data wat nodig is vir jou voertuig om te werk, sal nog met die voertuigvervaardiger gedeel word."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Skakel in elk geval af"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Voertuiginternet is afgeskakel. Dit kan sommige kenmerke of programme dalk verhoed om te werk. Kritieke data wat nodig is om jou voertuig te laat werk, sal steeds met die voertuigvervaardiger gedeel word."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s gebruik tussen %2$s en %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Sluit by ander netwerk aan"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Netwerkvoorkeure"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Kies 1+ band vir warmkol:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Warmkol en verbinding"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Warmkol"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Af"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Skakel warmkol outomaties af"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi-Fi-warmkol sal afskakel as geen toestelle gekoppel is nie"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil Wi-Fi aanskakel"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Gebruik stelselhulpbronne om programwerkverrigting te prioritiseer"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datagebruik"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Programdatagebruik"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Gebruikgeskiedenis"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Alle programme"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Data- en wi-fi-gebruik"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Gebruikgeskiedenis"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Totale gebruik"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Voorgrond"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Agtergrond"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Laat data toe"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Laat dié program toe om mobiele data te gebruik"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Beperk data"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Gebruik mobiele data net as program op voorgrond is"</string>
     <string name="computing_size" msgid="5791407621793083965">"Bereken tans …"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# bykomende toestemming}other{# bykomende toestemmings}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Let wel: Ná \'n herselflaai kan hierdie program nie begin voordat jy jou voertuig ontsluit het nie."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Meer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ligging"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gebruik ligging"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"As jy ligging afskakel, sal liggingtoegang vir alle programme afgeskakel word. Bestuurderbystandkenmerke sal steeds toegang hê. As jy bestuurderbystand afskakel, sal bestuurderbystandkenmerke nie meer jou ligging gebruik nie."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Bestuurderbystand"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Voertuigligging is af"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Vir programme met bestuurderbystandkenmerke"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Verander"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Programme met hierdie toestemming het toegang tot hierdie voertuig se ligging vir bestuurderbystandkenmerke"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nie beskikbaar terwyl ligging aan is nie"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"As jy dit afskakel, sal bestuurderbystandkenmerke wat op ligginginligting staatmaak, gedeaktiveer word."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Skakel nogtans af"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Onlangse liggingversoeke"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Geen onlangse liggingversoeke nie"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Programvlaktoestemmings"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Gebruik ligging"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Ligging kan bronne soos GPS, wi-fi, selnetwerke en sensors gebruik om te help om jou toestel se ligging te skat."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bestuurderbystand"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Ligginginligting wat na bestuurderbystandkenmerke toe gestuur word, bevat nie inligting wat jou identifiseer nie. Dit word op die meeste 2 dae lank geberg voordat dit uitgevee word."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofoon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gebruik mikrofoon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Gee programme toegang tot jou mikrofoon"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Voeg profiel by"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Skermhelderheid"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Inligtingvermaakstelseladmin"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Geaktiveerde programme"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Gedeaktiveerde programme"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Geen inligtingvermaakstelsel-administrasieprogramme nie"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Die inligtingvermaakstelsel se administrasieprogram is aktief en laat die program <xliff:g id="APP_NAME">%1$s</xliff:g> toe om die volgende bewerkings uit te voer:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Die aktivering van hierdie inligtingvermaakstelselprogram sal die program <xliff:g id="APP_NAME">%1$s</xliff:g> toelaat om die volgende bewerkings uit te voer:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Die vlootbestuurder sal dalk toegang kry tot data wat met hierdie inligtingvermaakstelsel geassosieer word, programme bestuur en hierdie voertuig se instellings verander."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Geblokkeer deur jou vlootbestuurder"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Kontak die vlootbestuurder om die volume te verander"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Kontak die vlootbestuurder om SMS te gebruik"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Kontak die vlootbestuurder om kamera te gebruik"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Kontak die vlootbestuurder om skermskote te neem"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Kontak die vlootbestuurder as jy vrae het"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Voertuigadministrasieprogramme"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aktiewe program}other{# aktiewe programme}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Geen aktiewe programme nie"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# geaktiveerde program}other{# geaktiveerde programme}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Geen geaktiveerde programme nie"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Instellings wat deur jou vlootbestuurder bestuur word"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Hierdie instelling kan nie nou onmiddellik verander word nie"</string>
 </resources>

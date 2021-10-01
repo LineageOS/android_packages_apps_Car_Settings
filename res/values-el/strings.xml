@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Προσθήκη περισσότερων"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Δεδομένα κινητής τηλεφωνίας"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Πρόσβαση σε δεδομένα μέσω δικτύου κινητής τηλεφ."</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Δίκτυο κινητής τηλεφωνίας"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Να χρησιμοποιούνται δεδομένα κινητής τηλεφωνίας"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Απενεργοποίηση δεδομένων κινητής τηλεφωνίας;"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Απαιτείται επιλογή"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Χρήση <xliff:g id="CARRIER">%1$s</xliff:g> για δεδoμένα κιν. τηλ.;"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Ορισμός"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Προειδοποίηση και όριο δεδομένων"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Κύκλος χρήσης δεδομένων εφαρμογής"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Χρήση δεδομένων κινητής τηλεφωνίας"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Ορισμός προειδοπ. δεδομένων"</string>
     <string name="data_warning" msgid="116776633806885370">"Προειδοποίηση δεδομένων"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Ορισμός ορίου δεδομένων"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Η κεντρική μονάδα του οχήματός σας θα απενεργοποιήσει τα δεδομένα κινητής τηλεφωνίας μόλις συμπληρωθεί το καθορισμένο όριο.\n\nΕπειδή η χρήση δεδομένων μετράται από την κεντρική μονάδα σας και ενδέχεται η εταιρεία κινητής τηλεφωνίας να την υπολογίζει με διαφορετικό τρόπο, σκεφτείτε το ενδεχόμενο να ορίσετε ένα συντηρητικό όριο."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ορισμός προειδοποίησης χρήσης δεδομένων"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ορισμός ορίου χρήσης δεδομένων"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Η χρήση δεδομένων καταμετράται από τη συσκευή σας. Ενδέχεται να διαφέρει από τα δεδομένα της εταιρείας κινητής τηλεφωνίας σας."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ορισμός"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Αποθήκευση"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Δίκτυο OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Σύνδεση οχήματος στο διαδίκτυο"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Η απενεργ. της σύνδεσης διαδικτ. του οχήματος μπορεί να αποτρέψει τη λειτουργία κάποιων δυνατοτήτων ή εφαρμ. του.\n\nΣημαντικά δεδομένα που απαιτούνται για τη λειτουργία του οχήματος θα συνεχίσουν να κοινοποιούνται στον κατασκευαστή του."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Να απενεργοποιηθεί ούτως ή άλλως"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Η σύνδεση διαδικτύου του οχήματος είναι απενεργοποιημένη. Αυτό μπορεί να αποτρέψει τη λειτουργία ορισμένων δυνατοτήτων ή εφαρμογών. Σημαντικά δεδομένα που απαιτούνται για τη λειτουργία του οχήματος θα συνεχίσουν να κοινοποιούνται στον κατασκευαστή του."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s χρησιμοποιήθηκαν %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Σύνδεση σε άλλο δίκτυο"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Προτιμήσεις δικτύου"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Επιλέξτε τουλ. ένα εύρος για το ΣΠ Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Σημείο πρόσβασης Wi-Fi και σύνδεση"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Σημείο πρόσβασης Wi-Fi"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Ανενεργό"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Αυτόματη απενεργοποίηση σημείου πρόσβασης Wi-Fi"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Το σημείο πρόσβασης Wi‑Fi θα απενεργοποιηθεί εάν δεν υπάρχουν συνδεδεμένες συσκευές"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να ενεργοποιήσει το Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Χρησιμοποιεί τους πόρους του συστήματος δίνοντας προτεραιότητα στην απόδοση των εφαρμογών."</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Χρήση δεδομένων"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Χρήση δεδομένων εφαρμογών"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Ιστορικό χρήσης"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Όλες οι εφαρμογές"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Χρήση δεδομένων και Wi-Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Ιστορικό χρήσης"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Συνολική χρήση"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Προσκήνιο"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Παρασκήνιο"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Να επιτρέπονται τα δεδομ."</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Να επιτρέπεται στην εφαρμ. η χρήση δεδ. κιν. τηλ."</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Περιορισμός δεδομένων"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Δεδ. κιν. τηλ. μόνο με την εφαρμ. στο προσκήνιο"</string>
     <string name="computing_size" msgid="5791407621793083965">"Υπολογισμός…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# επιπλέον άδεια}other{# επιπλέον άδειες}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Σημείωση: Μετά από μια επανεκκίνηση, δεν είναι δυνατή η έναρξη αυτής της εφαρμογής προτού ξεκλειδώσετε το όχημά σας"</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Περισσότερα"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Χρήση τοποθεσίας"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Με την απενεργοποίηση της επιλογής Τοποθεσία, θα απενεργοποιηθεί η πρόσβαση τοποθεσίας για όλες τις εφαρμογές. Οι λειτουργίες υποβοήθησης οδηγού θα εξακολουθήσουν να έχουν πρόσβαση. Η απενεργοποίηση της εναλλαγής Υποβοήθηση οδηγού θα διακόψει τη χρήση της τοποθεσίας σας από τις λειτουργίες υποβοήθησης οδηγού."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Υποβοήθηση οδηγού"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Η τοποθεσία οχήματος είναι ανενεργή"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Για εφαρμογές με λειτουργίες υποβοήθησης οδηγού"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Αλλαγή"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Οι εφαρμογές με αυτήν την άδεια έχουν πρόσβαση στην τοποθεσία αυτού του οχήματος για τις λειτουργίες υποβοήθησης οδηγού."</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Μη διαθέσιμη με ενεργή τοποθεσία"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι λειτουργίες υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίες θα απενεργοποιηθούν."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Απενεργοποίηση"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Πρόσφατα αιτήματα τοποθεσίας"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Δεν υπάρχουν πρόσφατα αιτήματα τοποθεσίας"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Άδειες επιπέδου εφαρμογής"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Χρήση τοποθεσίας"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Η τοποθεσία μπορεί να χρησιμοποιεί πηγές όπως GPS, Wi-Fi, δίκτυα κινητής τηλεφωνίας και αισθητήρες για την εκτίμηση της τοποθεσίας της συσκευής σας."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Υποβοήθηση οδηγού"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Οι πληροφορίες τοποθεσίας που αποστέλλονται στις λειτουργίες υποβοήθησης οδηγού δεν περιέχουν πληροφορίες που προσδιορίζουν την ταυτότητά σας. Αποθηκεύονται για έως δύο ημέρες προτού διαγραφούν."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Μικρόφωνο"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Χρήση μικροφώνου"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Επιτρέψτε σε όλες τις εφαρμογές να έχουν πρόσβαση στο μικρόφωνο"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Προσθήκη προφίλ"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Φωτεινότητα οθόνης"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Διαχειριστής συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Ενεργοποιημένες εφαρμογές"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Απενεργοποιημένες εφαρμογές"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Δεν υπάρχουν εφαρμογές διαχειριστή συστήματος ενημέρωσης και ψυχαγωγίας."</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Αυτή η εφαρμογή διαχείρισης συστήματος ενημέρωσης και ψυχαγωγίας είναι ενεργοποιημένη και επιτρέπει στην εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> να εκτελεί τις παρακάτω ενέργειες:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Η ενεργοποίηση της εφαρμογής συστήματος ενημέρωσης και ψυχαγωγίας θα επιτρέψει στην εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> να εκτελεί τις παρακάτω λειτουργίες:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Ο διαχειριστής στόλου μπορεί να έχει πρόσβαση σε δεδομένα που σχετίζονται με αυτό το σύστημα ενημέρωσης και ψυχαγωγίας, να διαχειρίζεται εφαρμογές και να αλλάζει τις ρυθμίσεις αυτού του οχήματος."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Αποκλ. από τον διαχειρ. στόλου"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Επικοιν. με τον διαχειρ. στόλου για αλλαγή έντασης"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Επικοινων. με τον διαχειρ. στόλου για χρήση SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Επικοιν. με τον διαχ. στόλου για χρήση της κάμερας"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Επικ. με τον διαχ. στόλου για λήψη στιγμ. οθόνης"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Εάν έχετε ερωτήσεις, επικοινωνήστε με τον διαχειριστή στόλου"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Εφαρμογές διαχείρισης οχημάτων"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# ενεργή εφαρμογή}other{# ενεργές εφαρμογές}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Δεν υπάρχουν ενεργές εφαρμογές"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ενεργοποιημένη εφαρμογή}other{# ενεργοποιημένες εφαρμογές}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Δεν υπάρχουν ενεργοποιημένες εφαρμογές."</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Ρυθμίσεις που διαχειρίζεται ο διαχειριστής στόλου"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Δεν είναι δυνατή η αλλαγή της ρύθμισης αυτήν τη στιγμή"</string>
 </resources>
