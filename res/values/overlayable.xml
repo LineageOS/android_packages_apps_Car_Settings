@@ -413,6 +413,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="id" name="current_profile_frame"/>
       <item type="id" name="cycle_reset_day_of_month"/>
       <item type="id" name="data_limit_text"/>
+      <item type="id" name="data_usage_edit_text"/>
       <item type="id" name="date_picker"/>
       <item type="id" name="dismiss_button"/>
       <item type="id" name="down_arrow_container"/>
@@ -529,6 +530,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="confirm_lock_password"/>
       <item type="layout" name="confirm_lock_pattern"/>
       <item type="layout" name="confirm_lock_pin"/>
+      <item type="layout" name="data_usage_edit_text_preference"/>
       <item type="layout" name="data_usage_summary_preference"/>
       <item type="layout" name="date_picker"/>
       <item type="layout" name="delete_preference_widget"/>
@@ -1432,6 +1434,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="choose_lock_type_fragment"/>
       <item type="xml" name="choose_new_admin_fragment"/>
       <item type="xml" name="data_usage_fragment"/>
+      <item type="xml" name="data_usage_set_threshold_fragment"/>
       <item type="xml" name="data_warning_and_limit_fragment"/>
       <item type="xml" name="datetime_settings_fragment"/>
       <item type="xml" name="default_autofill_picker_fragment"/>
