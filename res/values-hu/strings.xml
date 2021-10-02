@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Továbbiak hozzáadása"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiladat"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Adathozzáférés a mobilhálózaton keresztül"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilhálózat"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Mobiladatok használata"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kikapcsolja a mobiladatokat?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Kiválasztás szükséges"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"A(z) <xliff:g id="CARRIER">%1$s</xliff:g> szolgáltatót használja?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Beállítás"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Adatfigyelmeztetés és -korlát"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Alkalmazások adatforgalmi ciklusa"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Mobiladat-forgalom"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Figyelmeztetés beállítása"</string>
     <string name="data_warning" msgid="116776633806885370">"Adatforgalmi figyelmeztetés"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Adatkorlát megadása"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"A jármű fejegysége kikapcsolja a mobiladat-kapcsolatot, amint eléri a beállított korlátot.\n\nMivel az adatforgalmat a fejegység méri, és a szolgáltató mérései ettől eltérhetnek, érdemes lehet szigorúbb korlátot megadnia."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Adathasználati figyelmeztetés beállítása"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Adathasználati korlát beállítása"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Az adathasználatot az eszköz méri. Ez eltérhet a mobilszolgáltató adataitól."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Beállítás"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Mentés"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM-hálózat"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"A jármű internetkapcsolata"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Ha kikapcsolja a jármű internetkapcsolatát, előfordulhat, hogy a jármű bizonyos funkciói vagy alkalmazásai nem működnek.\n\nA jármű üzemeltetéséhez szükséges létfontosságú adatokat továbbra is megosztja a rendszer a gyártóval."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Kikapcsolás mindenképp"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Ki van kapcsolva a jármű internetkapcsolata, ezért előfordulhat, hogy a jármű bizonyos funkciói és alkalmazásai nem működnek. A jármű üzemeltetéséhez szükséges létfontosságú adatokat továbbra is megosztja a rendszer a gyártóval."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s felhasználva (%2$s – %3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Csatlakozás másik hálózathoz"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Hálózati beállítások"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Válasszon sávot a Wi-Fi-hotspotnak:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot és internetmegosztás"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Kikapcsolva"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Wi-Fi-hotspot automatikus kikapcsolása"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"A Wi-Fi-hotspot kikapcsol, ha nincsenek csatlakoztatott eszközök"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"A(z) <xliff:g id="REQUESTER">%s</xliff:g> szeretné bekapcsolni a Wi-Fi-t"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"A rendszer erőforrásait használja az appteljesítmény rangsorolásához"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Adathasználat"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Alkalmazás adathasználata"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Használati előzmények"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Összes alkalmazás"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Adat- és Wi‑Fi-használat"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Használati előzmények"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Használat összesen"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Előtér"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Háttér"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Adatok engedélyezése"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Mobiladat-használat engedélyezése az appnak"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Adatok korlátozása"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Mobiladat-használat csak előtérben lévő appnál"</string>
     <string name="computing_size" msgid="5791407621793083965">"Számítás…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# további engedély}other{# további engedély}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Megjegyzés: Újraindítás után ez az alkalmazás csak a jármű feloldását követően indul el."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Több"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Hely"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Hely használata"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"A helyadatok kikapcsolásával minden alkalmazásnak megszűnik a helyadatokhoz való hozzáférése, kivéve a sofőrtámogatási funkciókat, amelyek továbbra is hozzáférnek a helyadatokhoz. A sofőrtámogatás kikapcsolásával megakadályozza, hogy a funkciói használják a helyadatokat."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Sofőrtámogatás"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"A jármű helyadatai ki vannak kapcsolva"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Sofőrtámogatással rendelkező appokhoz"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Módosítás"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Az ezzel az engedéllyel rendelkező alkalmazások hozzáférhetnek a jármű helyadataihoz a sofőrtámogatási funkcióknál"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Bekapcsolt helyadatokkal nem használható"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ha kikapcsolja ezt a beállítást, letiltja a helyadatokra támaszkodó sofőrtámogató funkciókat is."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Kikapcsolás mindenképpen"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Legutóbbi helylekérdezések"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nincsenek friss helylekérdezések"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Alkalmazásszintű engedélyek"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Helyadatok használata"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Eszköze helyének meghatározásához a Hely szolgáltatás a GPS, a Wi-Fi- és mobilhálózatok, továbbá az érzékelők adatait használhatja fel."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Sofőrtámogatás"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"A sofőrtámogatási funkcióknak küldött helyadatok nem tartalmaznak olyan információkat, amelyek alapján Ön beazonosítható lenne. Legfeljebb két napig tároljuk ezeket az adatokat, mielőtt törlölnénk őket."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofon használata"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Mikrofonhoz való hozzáférés engedélyezése az összes alkalmazás számára"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Profil hozzáadása"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"A kijelző fényereje"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Infotainment-rendszergazda"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivált alkalmazások"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivált alkalmazások"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nem található rendszergazdai infotainmentapp"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Az infotainment-rendszergazdai alkalmazás aktív, és engedélyezi a(z) <xliff:g id="APP_NAME">%1$s</xliff:g> alkalmazás számára a következő műveletek végrehajtását:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Az infotainment-rendszergazdai alkalmazás aktiválása engedélyezi a(z) <xliff:g id="APP_NAME">%1$s</xliff:g> alkalmazás számára a következő műveletek végrehajtását:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"A flottakezelő hozzáférhet az ehhez az infotainmentrendszerhez tartozó adatokhoz, kezelheti az alkalmazásokat, és módosíthatja a jármű beállításait."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Flottakezelő által letiltva"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Hangerő-módosításhoz forduljon a flottakezelőhöz"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS-ezéshez forduljon a flottakezelőhöz"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"A kamera használatához forduljon a flottakezelőhöz"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Képernyőképért forduljon a flottakezelőhöz"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Ha kérdései vannak, forduljon a flottakezelőhöz"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"A jármű rendszergazdai alkalmazásai"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aktív alkalmazás}other{# aktív alkalmazás}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nincsenek aktív alkalmazások"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktivált alkalmazás}other{# aktivált alkalmazás}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nincsenek aktivált alkalmazások"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"A flottakezelő által kezelt beállítások"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ez a beállítás jelenleg nem módosítható"</string>
 </resources>

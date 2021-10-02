@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Shto më shumë"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Të dhënat celulare"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Qasu te të dhënat duke përdorur rrjetin celular"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rrjeti celular"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Përdor të dhënat celulare"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Të çaktivizohen të dhënat celulare?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Kërkohet përzgjedhja"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Të përdoret <xliff:g id="CARRIER">%1$s</xliff:g> për të dhënat celulare?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Cakto"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Paralajmërimi dhe kufiri i të dhënave"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cikli i përd. të të dhënave të apl."</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Përdorimi i të dhënave celulare"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Cakto paralajm. për të dhënat"</string>
     <string name="data_warning" msgid="116776633806885370">"Paralajmërim për të dhënat"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Cakto kufirin e të dhënave"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Njësia kryesore e automjetit tënd do t\'i çaktivizojë të dhënat celulare kur të arrihet kufiri që cakton ti.\n\nMeqenëse përdorimi i të dhënave matet nga njësia kryesore dhe operatori celular mund ta llogarisë ndryshe përdorimin, ki parasysh të vendosësh një kufi të menduar mirë."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Cakto paralajmërimin për përdorimin e të dhënave"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Cakto kufirin e përdorimit të të dhënave"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Përdorimi i të dhënave matet nga pajisja jote. Ai mund të ndryshojë nga të dhënat e operatorit tënd celular."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Cakto"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Kurse"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Rrjeti OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Interneti i automjetit"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Çaktivizimi i internetit të automjetit mund të parandalojë funksionimin e disa veçorive ose aplikacioneve të automjetit.\n\nTë dhënat kritike që kërkohen për përdorimin e automjetit do të vazhdojnë të ndahen me prodhuesin e tij."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Çaktivizo gjithsesi"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Interneti i automjetit është çaktivizuar. Kjo mund të parandalojë funksionimin e disa veçorive ose aplikacioneve të automjetit. Të dhënat kritike që kërkohen për përdorimin e automjetit do të vazhdojnë të ndahen me prodhuesin e tij."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Të përdorura: %1$s në periudhën %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Bashkohu në një rrjet tjetër"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Preferencat e rrjetit"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Zgjidh të paktën një brez për zonën e qasjes për internet për Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Zona e qasjes dhe ndarja e internetit"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Zona e qasjes për internet"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Joaktiv"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Çaktivizo automatikisht zonën e qasjes për internet"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Zona e qasjes për internet e Wi‑Fi do të çaktivizohet nëse nuk është lidhur asnjë pajisje"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> kërkon të aktivizojë Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Përdor burimet e sistemit për t\'i dhënë përparësi performancës së aplikacionit"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Përdorimi i të dhënave"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Përdorimi i të dhënave"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Historiku i përdorimit"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Të gjitha aplikacionet"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Të dhënat dhe Wi-Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Historiku i përdorimit"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Përdorimi në total"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Në plan të parë"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Sfondi"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Lejo të dhënat"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Lejo që aplikacioni të përdorë të dhënat celulare"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Kufizo të dhënat"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Aplikacioni përdor të dhënat vetëm në plan të parë"</string>
     <string name="computing_size" msgid="5791407621793083965">"Po llogarit…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# leje shtesë}other{# leje shtesë}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Shënim: Pas një rinisjeje, ky aplikacion nuk mund të niset derisa të shkyçësh automjetin."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Më shumë"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vendndodhja"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Përdor vendndodhjen"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Çaktivizimi i \"Vendndodhjes\" do të çaktivizojë qasjen te vendndodhja për të gjitha aplikacionet. Veçoritë e ndihmës për drejtuesin e makinës do të kenë përsëri qasje. Çaktivizimi i butonit të ndihmës për drejtuesin e makinës do t\'i ndalojë veçoritë e ndihmës për drejtuesin e makinës që të mos e përdorin vendndodhjen tënde."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Ndihma për drejtuesin e makinës"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Vendndodhja e automjetit është joaktive"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Apps me veçori: \"Ndihma për drejtuesin\""</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Ndrysho"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Aplikacionet me këtë leje kanë qasje në vendndodhjen e automjetit për veçoritë e \"Ndihmës për drejtuesin e makinës\""</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nuk ofrohet me vendndodhjen joaktive"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Nëse e çaktivizon këtë, veçoritë e ndihmës për drejtuesin e makinës që mbështeten në informacionin e vendndodhjes do të çaktivizohen."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Çaktivizo gjithsesi"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Kërkesat e vendndodhjeve të fundit"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nuk ka kërkesa të vendndodhjeve të fundit"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lejet në nivel aplikacioni"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Përdor vendndodhjen"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Vendndodhja mund të përdorë burime si GPS, Wi‑Fi, rrjetet celulare dhe sensorët për të ndihmuar me vlerësimin e vendndodhjes së pajisjes sate."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Ndihma për drejtuesin e makinës"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Informacioni i vendndodhjes që iu dërgua veçorive të ndihmës për drejtuesin e makinës nuk përmbajnë informacione që të identifikojnë ty. Ai ruhet për maksimumi 2 ditë përpara se të fshihet."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Përdor mikrofonin"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Lejo qasjen në mikrofonin tënd për të gjitha aplikacionet"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Shto profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ndriçimi i ekranit"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administratori i sistemit info-argëtues"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Aplikacionet e aktivizuara"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Aplikacionet e çaktivizuara"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nuk ka aplikacione të administratorit për sistemin info-argëtues"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Ky aplikacion i sistemit info-argëtues i administratorit është aktiv dhe lejon që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë funksionet e mëposhtme:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Aktivizimi i këtij aplikacioni të sistemit info-argëtues do të lejojë që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë funksionet e mëposhtme:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Menaxheri i flotës mund të ketë qasje te të dhënat e lidhura me këtë sistem info-argëtues, të menaxhojë aplikacionet dhe të ndryshojë cilësimet e këtij automjeti."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bllokuar nga menaxheri yt"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Kontakto menaxherin e flotës dhe ndrysho volumin"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Kontakto menaxherin e flotës dhe përdor SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Kontakto menaxherin e flotës dhe përdor kamerën"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Kontakto menaxherin e flotës dhe bëj pamje ekrani"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Nëse ke pyetje, kontakto menaxherin e flotës"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Aplikacionet e administratorit të mjetit"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aplikacion aktiv}other{# aplikacione aktive}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Asnjë aplikacion aktiv"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplikacion i aktivizuar}other{# aplikacione të aktivizuara}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nuk ka aplikacion të aktivizuar"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Cilësimet menaxhohen nga menaxheri yt i flotës"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ky cilësim nuk mund të ndryshohet në këtë moment"</string>
 </resources>
