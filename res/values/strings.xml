@@ -1705,39 +1705,38 @@
     <!-- Shown in dialog to allow user to see more information about the device admin [CHAR LIMIT=30] -->
     <string name="admin_support_more_info">More details</string>
     <!-- Shown in admin details page to warn user about policies the admin can set in a work profile. [CHAR LIMIT=NONE] -->
-    <string name="admin_profile_owner_message">Your fleet manager can monitor and manage apps and data
+    <string name="admin_profile_owner_message">The organization manager can monitor and manage apps and data
         associated with this profile, including settings, permissions, corporate access,
         network activity, and the vehicle\'s location information.</string>
     <!-- Shown in admin details page to warn user about policies the admin can set on a user. [CHAR LIMIT=NONE] -->
-    <string name="admin_profile_owner_user_message">Your fleet manager can monitor and manage apps and data
+    <string name="admin_profile_owner_user_message">The organization manager can monitor and manage apps and data
         associated with this profile, including settings, permissions, corporate access,
         network activity, and the device\'s location information.</string>
     <!-- Shown in admin details page to warn user about policies the admin can set on a device. [CHAR LIMIT=NONE] -->
-    <string name="admin_device_owner_message">The fleet manager can monitor and manage apps and data
+    <string name="admin_device_owner_message">The organization manager can monitor and manage apps and data
         associated with this infotainment system, including settings, permissions, corporate access,
         network activity, and the vehicle\'s location information.</string>
     <!-- Shown in admin details page to warn user about policies the admin can set on a financed device. [CHAR LIMIT=NONE] -->
-    <string name="admin_financed_message">The fleet manager may be able to access data
+    <string name="admin_financed_message">The organization manager may be able to access data
         associated with this infotainment system, manage apps, and change this vehicle\’s settings.</string>
     <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30] -->
-    <string name="disabled_by_policy_title">Blocked by your fleet manager</string>
-    <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_adjust_volume">Contact the fleet manager to change the volume</string>
-    <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined --><skip/>
-    <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_outgoing_calls" translatable="false">Contact the fleet manager to make calls</string>
-    <!-- Title for dialog displayed to tell user that sending SMS were disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_sms">Contact the fleet manager to use SMS</string>
-    <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_camera">Contact the fleet manager to use the camera</string>
-    <!-- Title for dialog displayed to tell user that screenshots are disabled by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_screen_capture">Contact the fleet manager to take screenshots</string>
-    <!-- Title for dialog displayed to tell user that the app was suspended by an admin [CHAR LIMIT=50] -->
-    <string name="disabled_by_policy_title_suspend_packages">Contact the fleet manager to use this app</string>
+    <string name="disabled_by_policy_title">Blocked by the organization manager</string>
+    <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_policy_title_adjust_volume">Can’t change volume in this managed vehicle</string>
+    <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_policy_title_outgoing_calls">Can’t make calls in this managed vehicle</string>
+    <!-- Title for dialog displayed to tell user that sending SMS were disabled by an admin [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_policy_title_sms">SMS not allowed in this managed vehicle</string>
+    <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_policy_title_camera">Camera is unavailable in this managed vehicle</string>
+    <!-- Title for dialog displayed to tell user that screenshots are disabled by an admin [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_policy_title_screen_capture">>Can’t take screenshots in this managed vehicle</string>
+    <!-- Title for dialog displayed to tell user that the app was suspended by an admin [CHAR LIMIT=NONE] -->
+    <string name="disabled_by_policy_title_suspend_packages">Can’t open this app in this managed vehicle</string>
     <!-- Dialog title. This dialog lets a user know that a specific setting is blocked by their credit provider. Since the user purchased the device from the credit provider, the credit provider controls what they can access. [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_financed_device">Blocked by your credit provider</string>
-    <!-- Shown when the user tries to change a settings locked by an admin [CHAR LIMIT=200] -->
-    <string name="default_admin_support_msg">If you have questions, contact the fleet manager</string>
+    <!-- Shown when the user tries to change a settings locked by an admin [CHAR LIMIT=NONE] -->
+    <string name="default_admin_support_msg">If you have questions, contact the organization manager</string>
     <!-- url for learning more about IT admin policy disabling -->
     <string name="help_url_action_disabled_by_it_admin"></string>
     <!-- Title of preference to manage device admin apps, which are used by IT admins to manage devices. [CHAR LIMIT=40] -->
@@ -1751,25 +1750,24 @@
     </string>
     <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
     <string name="number_of_device_admins_none">No activated apps</string>
-    <!-- TODO(b/186253868): remove translatable="false" once the real strings have been defined --><skip/>
-    <!-- Title of setting on privacy settings screen that will show work policy info. [CHAR LIMIT=NONE] -->
-    <string name="work_policy_privacy_settings" translatable="false">Your work policy info</string>
+    <!-- Title of setting on privacy settings screen that will show vehicle policy info. [CHAR LIMIT=NONE] -->
+    <string name="work_policy_privacy_settings"><xliff:g id="organization_name">%1$s</xliff:g> vehicle policy</string>
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
-    <string name="work_policy_privacy_settings_summary">Settings managed by your fleet manager</string>
+    <string name="work_policy_privacy_settings_summary">Settings managed by the organization manager</string>
 
     <!-- Remote request bugreport --><skip/>
-    <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager. [CHAR LIMIT=50] -->
-    <string name="share_remote_bugreport_dialog_title" translatable="false">Share bug report?</string>
-    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager. [CHAR LIMIT=NONE] -->
-    <string name="share_remote_bugreport_dialog_message_finished" translatable="false">This vehicle\'s fleet manager requested a bug report to help troubleshoot this device. Apps and data may be shared.</string>
-    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's fleet manager and it's still being taken. [CHAR LIMIT=NONE] -->
-    <string name="share_remote_bugreport_dialog_message" translatable="false">This vehicle\'s fleet manager requested a bug report to help troubleshoot this device. Apps and data may be shared, and your device may temporarily slow down.</string>
-    <!-- Message of a dialog shown to inform that the remote bugreport that was requested remotely by the vehicle\'s fleet manager is still being taken and will be shared when finished. [CHAR LIMIT=NONE]  -->
-    <string name="sharing_remote_bugreport_dialog_message" translatable="false">This bug report is being shared with this vehicle\'s fleet manager. Contact them for more details.</string>
+    <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's organization manager. [CHAR LIMIT=50] -->
+    <string name="share_remote_bugreport_dialog_title">Share bug report?</string>
+    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's organization manager. [CHAR LIMIT=NONE] -->
+    <string name="share_remote_bugreport_dialog_message_finished">This vehicle\'s organization manager requested a bug report to help troubleshoot this device. Apps and data may be shared.</string>
+    <!-- Message of a dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's organization manager and it's still being taken. [CHAR LIMIT=NONE] -->
+    <string name="share_remote_bugreport_dialog_message">This vehicle\'s organization manager requested a bug report to help troubleshoot this device. Apps and data may be shared, and your device may temporarily slow down.</string>
+    <!-- Message of a dialog shown to inform that the remote bugreport that was requested remotely by the vehicle\'s organization manager is still being taken and will be shared when finished. [CHAR LIMIT=NONE]  -->
+    <string name="sharing_remote_bugreport_dialog_message">This bug report is being shared with this vehicle\'s organization manager. Contact them for more details.</string>
     <!-- Acceptance label of dialog shown to ask for user consent for sharing the remote bugreport. [CHAR LIMIT=20] -->
-    <string name="share_remote_bugreport_action" translatable="false">Share</string>
+    <string name="share_remote_bugreport_action">Share</string>
     <!-- Decline label of dialog shown to ask for user consent for sharing the remote bugreport. [CHAR LIMIT=20] -->
-    <string name="decline_remote_bugreport_action" translatable="false">Decline</string>
+    <string name="decline_remote_bugreport_action">Decline</string>
 
     <!-- Power policy --><skip/>
     <!-- Power components which are disabled by the current power policy cannot be toggled in Setting. [CHAR LIMIT=80] -->
