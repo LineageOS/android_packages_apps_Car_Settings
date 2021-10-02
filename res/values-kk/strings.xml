@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Тағы қосу"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобильдік интернет"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Деректерге мобильдік желі арқылы кіру"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобильдік желі"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Мобильдік интернетті пайдалану"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Мобильдік интернет өшірілсін бе?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Таңдаңыз"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Мобильдік интернет үшін <xliff:g id="CARRIER">%1$s</xliff:g> қолданылсын ба?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Орнату"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Дерек ескертуі және шегі"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Қолданбаның дерек шығыны циклі"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Мобильдік интернет трафигі"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Дерек шығыны туралы ескерту"</string>
     <string name="data_warning" msgid="116776633806885370">"Дерек шығыны туралы ескерту"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Дерек шығынын шектеу"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Орнатқан шекке жеткеннен кейін, көліктегі құрылғы мобильдік деректерді өшіреді.\n\nҚұрылғы деректерді пайдалану шегін белгілейтіндіктен және оператор трафикті басқаша есептеуі мүмкін болғандықтан, қатаңырақ шек қойған жөн."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Дерек шығыны туралы ескерту"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Дерек трафигі шегін орнату"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Дерек трафигін құрылғы өлшейді. Бұл – мобильдік оператордың дерегінен басқаша болуы мүмкін."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Орнату"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Сақтау"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Өндіруші желісі"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Көліктегі интернет"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Көліктегі интернетті өшірсеңіз, кейбір функциялар немесе қолданбалар дұрыс жұмыс істемеуі мүмкін.\n\nОның жұмыс істеуіне қажетті маңызды дерек көлік өндірушісіне жіберіледі."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Бәрібір өшіру"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Көліктегі интернет өшірілген. Көліктегі кейбір функциялар немесе қолданбалар дұрыс жұмыс істемеуі мүмкін. Оның жұмыс істеуіне қажетті маңызды дерек көлік өндірушісіне жіберіледі."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s - %3$s аралығында %1$s пайдаланылды."</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Басқа желіге қосылу"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Желі параметрлері"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi хотспоты үшін кемінде бір диапазон таңдаңыз."</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот және тетеринг"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Хотспот"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Өшіру"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Хотспотты автоматты өшіру"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Ешқандай құрылғы жалғанбаса, Wi‑Fi хотспоты өшеді"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi байланысын қосқысы келеді."</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Қолданба өнімділігін басымды ету үшін жүйенің ресурстарын пайдаланады."</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Деректер трафигі"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Қолданбаның дерек шығыны"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Пайдалану тарихы"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Барлық қолданба"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Мобильдік интернет пен Wi‑Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Пайдалану тарихы"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Жалпы пайдалану"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Экрандық режим"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Фондық режим"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Рұқсат беру"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Осы қолданбаға мобильдік интернетті пайдалануға рұқсат беру"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Мобильдік интернетті шектеу"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Мобильдік интернетті қолданбаның экрандық режимінде ғана пайдалану"</string>
     <string name="computing_size" msgid="5791407621793083965">"Есептелуде…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# қосымша рұқсат}other{# қосымша рұқсат}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Ескертпе: қайта жүктегеннен кейін, көліктің құлпын ашпайынша, бұл қолданба іске қосылмайды."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Тағы"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локация"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Локацияны пайдалану"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Геодеректі өшірсеңіз, барлық қолданба үшін локацияны пайдалану рұқсаты өшіріледі. Алайда жүргізушіге көмектесетін функцияларда рұқсат бола береді. Жүргізушіге көмек функцияларын өшіріп қойсаңыз, олар локацияңызды пайдалана алмайды."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Жүргізушіге көмек"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Көліктің локациясы өшірулі"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Жүргізушіге көмек функциялары бар қолданбалар"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өзгерту"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Осындай рұқсаты бар қолданбалар көліктің локациясын пайдаланып, жүргізушіге көмектесетін функцияларды қолдана алады."</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Локация қосылғанда, қолжетімсіз."</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Егер өшірсеңіз, локация мәліметіне сүйеніп жұмыс істейтін жүргізушіге көмек функциялары өшіріледі."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Бәрібір өшіру"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Соңғы орынды анықтау сұраулары"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Орналасқан жерді анықтау сұраулары жақында жасалмаған"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Қолданба деңгейіндегі рұқсаттар"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Локацияны пайдалану"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Құрылғының орналасқан жерін анықтау үшін GPS, Wi-Fi, мобильдік желілер және датчиктер пайдаланылуы мүмкін."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Жүргізушіге көмек функциялары"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Жүргізушіге көмек функцияларына жіберілген локацияңыз туралы ақпаратта жеке басыңызды анықтайтын мәлімет жоқ. Ақпарат ең көбі 2 күн сақталып, кейін жойылады."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофонды пайдалану"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Барлық қолданбаның микрофонды пайдалануына рұқсат беру"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль қосу"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дисплей жарықтығы"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Ақпараттық-сауықтық жүйе әкімшісі"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Қосылған қолданбалар"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Өшірілген қолданбалар"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Ешбір ақпараттық-сауықтық жүйе әкімшісінің қолданбалары жоқ"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Бұл ақпараттық-сауықтық жүйе әкімшісінің қолданбасы жұмыс істеп тұр және <xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасының мына әрекеттерді орындауына мүмкіндік береді:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Осы ақпараттық-сауықтық жүйе қолданбасын белсендірсеңіз, <xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы мына әрекеттерді орындай алады:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Автопарк басқарушысы осы ақпараттық-сауықтық жүйемен байланысты деректі пайдаланады, қолданбаларды басқарады және осы көліктердің параметрлерін өзгертеді."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Автопарк басқарушысы бөгеді"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Көлемді автопарк басқарушысы арқылы өзгерте аласыз"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS-ті автопарк басқарушысы арқылы қолдана аласыз"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Камераны автопарк басқарушысы арқылы қолданасыз"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Скриншотты автопарк басқарушысы арқылы жасайсыз"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Сұрақтарыңыз болса, автопарк басқарушысына хабарласыңыз"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Көлік әкімшісінің қолданбалары"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# қосулы қолданба}other{# қосулы қолданба}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Қосулы қолданбалар жоқ"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# қосылған қолданба}other{# қосылған қолданба}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Қосылған қолданба жоқ"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Параметрлерді автопарк басқарушысы басқарады."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Бұл параметр қазір өзгертілмейді."</string>
 </resources>

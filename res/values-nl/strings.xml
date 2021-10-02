@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Meer toevoegen"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datatoegang via mobiel netwerk"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobiel netwerk"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Mobiele data gebruiken"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobiele data uitschakelen?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Selectie vereist"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"<xliff:g id="CARRIER">%1$s</xliff:g> gebruiken voor mobiele data?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Instellen"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datawaarschuwing- en limiet"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Gebruikscyclus app-data"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Gebruik van mobiele data"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Datawaarschuwing instellen"</string>
     <string name="data_warning" msgid="116776633806885370">"Datawaarschuwing"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Datalimiet instellen"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"De hoofdeenheid van je voertuig schakelt mobiele data uit zodra je de ingestelde limiet bereikt.\n\nAangezien het datagebruik wordt gemeten door de hoofdeenheid, en je provider tot een ander totaal kan komen, kun je het beste een voorzichtige limiet instellen."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Waarschuwing voor datagebruik instellen"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limiet voor datagebruik instellen"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Het datagebruik wordt gemeten door je apparaat. Dit kan verschillen van de data die je mobiele provider meet."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Instellen"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Opslaan"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM-netwerk"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Internet van voertuig"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Als je het internet van het voertuig uitzet, werken sommige voertuigfuncties of -apps misschien niet meer.\n\nBelangrijke gegevens voor de bediening van je voertuig worden nog steeds met de voertuigfabrikant gedeeld."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Toch uitzetten"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Het internet van je voertuig is uitgezet. Hierdoor werken sommige voertuigfuncties of -apps misschien niet meer. Belangrijke gegevens die nodig zijn voor de bediening van je voertuig worden nog steeds met de voertuigfabrikant gedeeld."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s gebruikt in de periode %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Verbinding met ander netwerk maken"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Netwerkvoorkeuren"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Kies minimaal één band voor wifi-hotspot:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot en tethering"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Uit"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitschakelen"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgeschakeld als er geen apparaten verbonden zijn"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi inschakelen"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Gebruikt systeembronnen om de app-prestaties te prioriteren"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datagebruik"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Gegevensgebruik van app"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Gebruiksgeschiedenis"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Alle apps"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Data- en wifi-gebruik"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Gebruiksgeschiedenis"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Totaal gebruik"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Voorgrond"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Achtergrond"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Data toestaan"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Deze app mobiele data laten gebruiken"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Data beperken"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Alleen mobiele data gebruiken bij app op voorgrond"</string>
     <string name="computing_size" msgid="5791407621793083965">"Berekenen…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# aanvullend recht}other{# aanvullende rechten}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Opmerking: Na opnieuw opstarten kan deze app pas worden gestart nadat je je voertuig hebt ontgrendeld."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Meer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Locatie"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Locatie gebruiken"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Als je Locatie uitzet, wordt de locatietoegang ingetrokken voor alle apps. Functies voor bestuurdersondersteuning hebben nog wel toegang. Als je de schakelaar Bestuurdersondersteuning uitzet, gebruiken functies voor bestuurdersondersteuning je locatie niet meer."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Bestuurdersondersteuning"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Voertuiglocatie staat uit"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Voor apps met functies voor bestuurdersondersteuning"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Wijzigen"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Apps met dit recht hebben toegang tot de locatie van dit voertuig voor functies voor bestuurdersondersteuning"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Niet beschikbaar als locatie aanstaat"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Als je dit uitzet, gaan functies voor bestuurdersondersteuning die locatie-informatie nodig hebben ook uit."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Toch uitzetten"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recente locatieverzoeken"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Geen recente locatieverzoeken"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Rechten op app-niveau"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Locatie gebruiken"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Voor de schatting van je apparaatlocatie kunnen bronnen worden gebruikt zoals gps, wifi, mobiele netwerken en sensoren."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bestuurdersondersteuning"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Locatie-informatie die naar functies voor bestuurdersondersteuning wordt gestuurd, bevat geen informatie waarmee je kunt worden geïdentificeerd. De informatie wordt maximaal 2 dagen opgeslagen en daarna verwijderd."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfoon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Microfoon gebruiken"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Alle apps toegang tot je microfoon geven"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Profiel toevoegen"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Helderheid van het scherm"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Beheer van infotainmentsysteem"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Geactiveerde apps"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Gedeactiveerde apps"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Geen systeembeheerdersapps voor infotainmentsysteem"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Deze beheer-app voor het infotainmentsysteem is actief en staat toe dat de app <xliff:g id="APP_NAME">%1$s</xliff:g> de volgende bewerkingen uitvoert:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Als je deze beheer-app voor het infotainmentsysteem activeert, sta je de app <xliff:g id="APP_NAME">%1$s</xliff:g> toe de volgende bewerkingen uit te voeren:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"De wagenparkbeheerder kan misschien toegang krijgen tot gegevens die aan dit infotainmentsysteem zijn gekoppeld, apps beheren en de instellingen van dit voertuig wijzigen."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Geblokkeerd door je wagenparkbeheerder"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Neem contact op met de wagenparkbeheerder om het volume te wijzigen"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Neem contact op met de wagenparkbeheerder om sms te gebruiken"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Neem contact op met de wagenparkbeheerder om de camera te gebruiken"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Neem contact op met de wagenparkbeheerder om screenshots te maken"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Als je vragen hebt, neem je contact op met de wagenparkbeheerder"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Beheer-apps voor voertuig"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# actieve app}other{# actieve apps}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Geen actieve apps"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# geactiveerde app}other{# geactiveerde apps}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Geen geactiveerde apps"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Instellingen beheerd door je wagenparkbeheerder"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Deze instelling kan nu niet worden gewijzigd"</string>
 </resources>

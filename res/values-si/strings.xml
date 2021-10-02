@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"තව එක් කරන්න"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ජංගම දත්ත"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ජංගම ජාලය භාවිතයෙන් දත්තවලට ප්‍රවේශය"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ජංගම ජාලය"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ජංගම දත්ත භාවිත කරන්න"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ජංගම දත්ත ක්‍රියාවිරහිත කරන්න ද?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"තේරීම අවශ්‍යයි"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ජංගම දත්ත සඳහා <xliff:g id="CARRIER">%1$s</xliff:g> භාවිත කරන්න ද?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"සකසන්න"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"දත්ත අනතුරු ඇඟවීම සහ සීමාව"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"යෙදුම් දත්ත භාවිත චක්‍රය"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"ජංගම දත්ත භාවිතය"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"දත්ත අනතුරු ඇඟවීම සකසන්න"</string>
     <string name="data_warning" msgid="116776633806885370">"දත්ත අනතුරු ඇඟවීම"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"දත්ත සීමාව සකසන්න"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ජංගම දත්ත ඔබ සැකසූ සීමාවට ළඟා වූ විට ඔබගේ වාහනයේ ශීර්ෂ ඒකකය එය අක්‍රිය කරයි.\n\nඔබගේ ශීර්ෂ ඒකකයෙන් දත්ත භාවිතය ගණනය කරනු ලබන අතර භාවිතය වෙනස් වීම සඳහා ඔබගේ වාහකයා ගිණුම මධ්‍යස්ථ සීමාවකට සැකසිය හැකි බව සලකන්න."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"දත්ත භාවිතයේ අවවාද සකසන්න"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"දත්ත භාවිත සීමාවක් සකසන්න"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"දත්ත භාවිතය ඔබගේ උපාංගයෙන් මනිනු ලැබේ. එය ඔබගේ ජංගම වාහකයේ දත්ත අනුව වෙනස් විය හැකිය."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"සකසන්න"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"සුරකින්න"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM ජාලය"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"වාහන අන්තර්ජාලය"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"වාහන අන්තර්ජාලය ක්‍රියාවිරහිත කිරීම සමහර වාහන විශේෂාංග හෝ යෙදුම් ක්‍රියා කිරීම වැළැක්විය හැකිය.\n\nඔබේ වාහනය ක්‍රියා කිරීමට අවශ්‍ය තීරණාත්මක දත්ත වාහන නිෂ්පාදකයා සමඟ දිගටම බෙදා ගනු ඇත."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"කෙසේ වෙතත් ක්‍රියාවිරහිත කරන්න"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"වාහන අන්තර්ජාලය ක්‍රියාවිරහිත කර ඇත. මෙය සමහර වාහන විශේෂාංග හෝ යෙදුම් ක්‍රියා කිරීම වළක්වනු ඇත. ඔබේ වාහනය ක්‍රියා කිරීමට අවශ්‍ය තීරණාත්මක දත්ත වාහන නිෂ්පාදකයා සමඟ දිගටම බෙදා ගනු ඇත."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s භාවිත කරන ලදි %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"වෙනත් ජාලයකට එක් වන්න"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"ජාල මනාප"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi හොට්ස්පොට් සඳහා අවම වශයෙන් එක් කලාපයක් තෝරන්න:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"හොට්ස්පොට් සහ ටෙදරින්"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"හොට්ස්පොට්"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ක්‍රියාවිරහිතයි"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"හොට්ස්පොට් ස්වයංක්‍රීයව ක්‍රියාවිරහිත කරන්න"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"උපාග සම්බන්ධ කර නැතිනම් Wi‑Fi හොට්ස්පොට් ක්‍රියාවිරහිත වනු ඇත"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> හට Wi-Fi සක්‍රීය කිරීමට අවශ්‍යයි"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"යෙදුම් කාර්යසාධනය ප්‍රමුඛ කිරීමට පද්ධති සම්පත් භාවිත කරයි"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"දත්ත භාවිතය"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"යෙදුම් දත්ත භාවිතය"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"භාවිතයේ ඉතිහාසය"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"සියලු යෙදුම්"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"දත්ත &amp; Wi‑Fi භාවිතය"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"භාවිතයේ ඉතිහාසය"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"මුළු භාවිතය"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"පෙරබිම"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"පසුබිම"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"දත්තවලට ඉඩ දෙන්න"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"මෙම යෙදුමට ජංගම දත්ත භාවිත කිරීමට ඉඩ දෙන්න"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"දත්ත සිමා කරන්න"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"යෙදුම පෙරබිමින් ඇති විට පමණක් ජංගම දත්ත භාවිත කර."</string>
     <string name="computing_size" msgid="5791407621793083965">"ගණනය කරමින්…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{අතිරේක අවසර #}one{අතිරේක අවසර #}other{අතිරේක අවසර #}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"සටහන: යළි පණ ගැන්වීමකට පසුව, ඔබ ඔබේ වාහනය අගුළු හරින තෙක් මෙම යෙදුම ඇරඹිය නොහැක."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"තව"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ස්ථානය"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ස්ථානය භාවිත කරන්න"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"ස්ථානය ක්‍රියාවිරහිත කිරීම සියලු යෙදුම් සඳහා ස්ථාන ප්‍රවේශය ක්‍රියාවිරහිත කරනු ඇත, රියදුරු සහායක විශේෂාංගවලට තවම ප්‍රවේශය ඇත. රියදුරු සහාය මාරුව ක්‍රියාවිරහිත කිරීම රියදුරු සහාය විශේෂාංග ඔබගේ ස්ථානය භාවිත කිරීම නවත්වනු ඇත."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"රියදුරු සහාය"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"වාහනයේ ස්ථානය ක්‍රියාවිරහිත කර ඇත"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"රියදුරු සහායක විශේෂාංග සහිත යෙදුම් සඳහා"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"වෙනස් කරන්න"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"මෙම අවසරය ඇති යෙදුම්වලට රියදුරු සහායක විශේෂාංග සඳහා මෙම වාහනයේ ස්ථානයට ප්‍රවේශය ඇත"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"ස්ථානය ක්‍රියාත්මක අතරතුර ලබා ගත නොහැකිය"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"ඔබ මෙය ක්‍රියාවිරහිත කළහොත්, ස්ථාන තොරතුරු මත යැපෙන රියදුරු සහාය විශේෂාංග අබල කරනු ඇත."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"කෙසේ වෙතත් ක්‍රියාවිරහිත කරන්න"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"මෑත ස්ථාන ඉල්ලීම්"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"මෑත ස්ථාන ඉල්ලීම් නැත"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"යෙදුම්-මට්ටමේ අවසර"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ස්ථානය භාවිත කරන්න"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ස්ථානය ඔබගේ උපාංගයෙහි ස්ථානය තක්සේරු කිරීමට උදවු කිරීමට, GPS, Wi-Fi, ජංගම ජාල සහ සංවේදක වැනි මූලාශ්‍ර භාවිත කළ හැකිය."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"රියදුරු සහාය"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"රියදුරු සහාය විශේෂාංග වෙත යවන ස්ථාන තොරතුරුවල ඔබව හඳුනා ගන්නා තොරතුරු අඩංගු නොවේ. මැකීමට පෙර එය උපරිම වශයෙන් දින 2ක් ගබඩා කෙරේ."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"මයික්‍රෆෝනය"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"මයික්‍රෆෝනය භාවිත කරන්න"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ඔබගේ මයික්‍රෆෝනයට ප්‍රවේශ වීමට සියලු යෙදුම්වලට ඉඩ දෙන්න"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"පැතිකඩ එක් කරන්න"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"සංදර්ශක දීප්තිය"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"තොරතුරු විනෝදාස්වාද පද්ධති පරිපාලක"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"සක්‍රිය කළ යෙදුම්"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"අක්‍රිය කළ යෙදුම්"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"තොරතුරු විනෝදාස්වාද පද්ධති පරිපාලක යෙදුම් නොමැත"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"මෙම තොරතුරු විනෝදාස්වාද පද්ධති පරිපාලක සක්‍රිය අතර <xliff:g id="APP_NAME">%1$s</xliff:g> යෙදුමට පහත මෙහෙයුම් සිදු කිරීමට ඉඩ දෙයි:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"මෙම තොරතුරු විනෝදාස්වාද පද්ධති යෙදුම සක්‍රිය කිරීම <xliff:g id="APP_NAME">%1$s</xliff:g> යෙදුමට පහත මෙහෙයුම් සිදු කිරීමට ඉඩ දෙනු ඇත:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"මෙම තොරතුරු විනෝදාස්වාද පද්ධතිය හා සම්බන්ධ දත්ත වෙත ප්‍රවේශ වීමට, යෙදුම් කළමනාකරණය කිරීමට සහ මෙම වාහන සැකසීම් වෙනස් කිරීමට වාහන පෙළ කළමනාකරුට හැකි වීමට ඉඩ ඇත."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"ඔබගේ වාහන පෙළ කළමනාකරු විසින් අවහිර කර ඇත"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"හඬ පරිමාව වෙනස් කිරීමට වාහන පෙළ කළමනාකරු අමතන්න"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS භාවිත කිරීමට වාහන පෙළ කළමනාකරු අමතන්න"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"කැමරාව භාවිත කිරීමට වාහන පෙළ කළමනාකරු අමතන්න"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"තිර රූ ගැනීමට වාහන පෙළ කළමනාකරු අමතන්න"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"ඔබට ප්‍රශ්න තිබේ නම්, වාහන පෙළ කළමනාකරු අමතන්න."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"වාහන පරිපාලක යෙදුම්"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{සක්‍රිය යෙදුම් #}one{සක්‍රිය යෙදුම් #}other{සක්‍රිය යෙදුම් #}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"සක්‍රිය යෙදුම් නොමැත"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{සක්‍රිය කළ යෙදුම් #}one{සක්‍රිය කළ යෙදුම් #}other{සක්‍රිය කළ යෙදුම් #}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"සක්‍රිය කළ යෙදුම් නැත"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"ඔබගේ වාහන පෙළ පරිපාලක විසින් කළමනාකරණය කරන සැකසීම්"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"මෙම සැකසීම මේ අවස්ථාවේදී වෙනස් කළ නොහැකිය"</string>
 </resources>

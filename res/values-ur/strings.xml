@@ -27,8 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"نائٹ موڈ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"نیٹ ورک اور انٹرنیٹ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"موبائل نیٹ ورک"</string>
-    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
-    <skip />
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMs}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"فعال / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"غیر فعال / SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"فعال / ڈاؤن لوڈ کردہ SIM"</string>
@@ -36,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"مزید شامل کریں"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"موبائل ڈیٹا"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"موبائل نیٹ ورک کے ذریعے ڈیٹا تک رسائی حاصل کریں"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"موبائل نیٹ ورک"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"موبائل ڈیٹا استعمال کریں"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"موبائل ڈیٹا آف کریں؟"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"انتخاب درکار ہے"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"موبائل ڈیٹا کیلئے <xliff:g id="CARRIER">%1$s</xliff:g> یوز کریں؟"</string>
@@ -55,8 +52,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> ڈیٹا وارننگ"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> ڈیٹا کی حد"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> ڈیٹا وارننگ / <xliff:g id="ID_2">^2</xliff:g> ڈیٹا کی حد"</string>
-    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
-    <skip />
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{# دن باقی ہے}other{# دن باقی ہیں}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"کوئی وقت باقی نہیں ہے"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"1 دن سے کم وقت باقی ہے"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_1">^1</xliff:g> نے <xliff:g id="ID_2">^2</xliff:g> پہلے اپ ڈیٹ کیا"</string>
@@ -71,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"سیٹ کریں"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ڈیٹا وارننگ اور حد"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"ایپ کے ڈیٹا کے استعمال کی سائیکل"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"موبائل ڈیٹا کا استعمال"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ڈیٹا وارننگ سیٹ کریں"</string>
     <string name="data_warning" msgid="116776633806885370">"ڈیٹا وارننگ"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ڈیٹا کی حد سیٹ کریں"</string>
@@ -81,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"آپ کی گاڑی کی ہیڈ یونٹ آپ کی مقرر کردہ حد کو پہنچ جانے پر موبائل ڈیٹا کو آف کر دے گی۔\n\nچونکہ ڈیٹا کے استعمال کی پیمائش ہیڈ یونٹ کے ذریعے کی جاتی ہے اور آپ کا کیریئر استعمال کا حساب مختلف طریقے سے کر سکتا ہے لہذا ایک محتاط حد مقرر کرنے پر غور کریں۔"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ڈیٹا کے استعمال کی وارننگ سیٹ کریں"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ڈیٹا کے استعمال کی حد سیٹ کریں"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"ڈیٹا کے استعمال کی پیمائش آپ کے آلے سے کی جاتی ہے۔ یہ آپ کے موبائل کیریئر کے ڈیٹا سے مختلف ہو سکتی ہے۔"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"سیٹ کریں"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"محفوظ کریں"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM نیٹ ورک"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"گاڑی کا انٹرنیٹ"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"گاڑی کا انٹرنیٹ آف کرنا گاڑی کی کچھ خصوصیات یا ایپس کو کام کرنے سے روک سکتا ہے۔\n\nآپ کی گاڑی کو آپریٹ کرنے کیلئے درکار اہم ڈیٹا کا اشتراک گاڑی کے مینوفیکچرر کے ساتھ جاری رہے گا۔"</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"بہر حال آف کریں"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"گاڑی کا انٹرنیٹ آف ہے۔ یہ گاڑی کی کچھ خصوصیات یا ایپس کو کام کرنے سے روک سکتا ہے۔ آپ کی گاڑی کو آپریٹ کرنے کے لیے درکار اہم ڈیٹا کا اشتراک گاڑی کے مینوفیکچرر کے ساتھ جاری رہے گا۔"</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s - %3$s تک ‎%1$s استعمال کیا گیا"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"دیگر نیٹ ورک میں شامل ہوں"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"نیٹ ورک کی ترجیحات"</string>
@@ -170,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi ہاٹ اسپاٹ کیلئے کم از کم ایک بینڈ چنیں:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ہاٹ اسپاٹ اور ٹیتھرنگ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ہاٹ اسپاٹ"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"آف ہے"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"خودکار طور پر ہاٹ اسپاٹ آف کریں"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"کوئی آلہ منسلک نہ ہونے پر Wi‑Fi ہاٹ اسپاٹ آف ہو جائے گا"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi کو آن کرنا چاہتی ہے"</string>
@@ -314,14 +302,10 @@
     <string name="force_stop" msgid="2153183697014720520">"زبردستی روکیں"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"زبردستی روکیں؟"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"اگر آپ کسی ایپ کو زبردستی روک دیتے ہیں تو یہ غلط برتاؤ کر سکتی ہے۔"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"ایپ کی کارکردگی کو ترجیح دیں کو آن کریں؟"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"اسے آن کرنا ممکنہ سسٹم کے عدم استحکام یا طویل مدتی ہارڈویئر کے اثر کا سبب بن سکتا ہے۔ کیا آپ جاری رکھنا چاہتے ہیں؟"</string>
+    <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ہاں"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"نہیں، شکریہ"</string>
     <string name="disable_text" msgid="4358165448648990820">"غیر فعال کریں"</string>
     <string name="enable_text" msgid="1794971777861881238">"فعال کریں"</string>
     <string name="uninstall_text" msgid="277907956072833012">"اَن انسٹال کریں"</string>
@@ -331,45 +315,30 @@
     <string name="permissions_label" msgid="2701446753515612685">"اجازتیں"</string>
     <string name="notifications_label" msgid="6586089149665170731">"اطلاعات"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"اسٹوریج اور کیش"</string>
-    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
-    <skip />
+    <string name="prioritize_app_performance_label" msgid="7264505023347026606">"ایپ کی کارکردگی کو ترجیح دیں"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ورژن: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"کوئی اجازت نہیں دی گئی"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"کسی اجازت کی درخواست نہیں کی گئی"</string>
     <string name="unused_apps" msgid="648471933781010395">"غیر مستعمل ایپس"</string>
-    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
-    <skip />
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# غیر مستعمل ایپ}other{# غیر مستعمل ایپس}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"اجازتوں کو ہٹائیں اور جگہ خالی کریں"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"داخلی اسٹوریج میں %s"</string>
-    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
-    <skip />
+    <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ایپ کی کارکردگی کو ترجیح دینے کے لیے سسٹم کے وسائل استعمال کرتا ہے"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ڈیٹا کا استعمال"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ایپ ڈیٹا کا استعمال"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"استعمال کی سرگزشت"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"سبھی ایپس"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"ڈیٹا اور Wi-Fi کا استعمال"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"استعمال کی سرگزشت"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"کُل استعمال"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"پیش منظر"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"پس منظر"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"ڈیٹا کی اجازت دیں"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"اس ایپ کو موبائل ڈیٹا استعمال کرنے دیں"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"ڈیٹا کو محدود کریں"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"ایپ صرف پیش منظر میں ڈیٹا استعمال کرتی ہے"</string>
     <string name="computing_size" msgid="5791407621793083965">"حساب کتاب کیا جا رہا ہے…"</string>
-    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
-    <skip />
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# اضافی اجازت}other{# اضافی اجازتیں}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"نوٹ: ریبوٹ کرنے کے بعد یہ ایپ تب تک شروع نہیں ہو سکتی جب تک آپ اپنی گاڑی غیر مقفل نہ کر لیں۔"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"معاون اور صوتی ان پٹ"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"معاون ایپ"</string>
@@ -427,19 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"مزید"</string>
     <string name="location_settings_title" msgid="901334356682423679">"مقام"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"مقام استعمال کریں"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"مقام کو آف کرنے سے تمام ایپس کے لیے مقام تک رسائی آف ہو جائے گی، حالانکہ ڈرائیور کی مدد کی خصوصیات کو پھر بھی رسائی حاصل رہے گی۔ ڈرائیور امدادی ٹوگل کو آف کرنے سے ڈرائیور کی مدد کی خصوصیت آپ کے مقام کو استعمال کرنے سے روک دے گی۔"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ڈرائیور کی مدد"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
     <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
     <skip />
-    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
     <skip />
-    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"گاڑی کا مقام آف ہے"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
     <skip />
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"مقام کے آن ہونے کے دوران دستیاب نہیں ہے"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"اگر آپ اسے آف کرتے ہیں تو مقام کی معلومات پر مبنی ڈرائیور کی مدد کی خصوصیات غیر فعال ہو جائیں گی۔"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"بہر حال آف کریں"</string>
+    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"تبدیل کریں"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"مقام کی حالیہ درخواستیں"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"مقام کی کوئی حالیہ درخواست نہیں ہے"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ایپ کی سطح کی اجازتیں"</string>
@@ -447,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"مقام کا استعمال کریں"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"آپ کے آلہ کے مقام کا تعین کرنے میں مدد کرنے کے لیے، مقام GPS, Wi‑Fi، موبائل نیٹ ورکس اور سینسرز جیسے وسائل کا استعمال کر سکتا ہے۔"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ڈرائیور کی مدد"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"ڈرائیور کی مدد کی خصوصیات کو بھیجی گئی مقام کی معلومات ایسی معلومات پر مشتمل نہیں ہے جو آپ کی شناخت کرتی ہے۔ حذف ہونے سے پہلے یہ زیادہ سے زیادہ 2 دن کیلئے محفوظ ہے۔"</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"مائیکروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"مائیکروفون کا استعمال کریں"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"سبھی ایپس کو اپنے مائیکروفون تک رسائی کی اجازت دیں"</string>
@@ -455,8 +428,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"حال ہی میں رسائی حاصل کردہ"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"کوئی حالیہ ایپ نہیں ہے"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 ایپس کو رسائی حاصل ہے"</string>
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
-    <skip />
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{# میں سے {total_count} ایپس کو رسائی حاصل ہے}other{# میں سے {total_count} ایپس کو رسائی حاصل ہے}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"حال ہی میں رسائی حاصل کردہ"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"سبھی دیکھیں"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"لوڈ ہو رہی ہیں…"</string>
@@ -498,8 +470,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"فریق ثالث کے لائسنسز"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"لائسنسز لوڈ کرنے میں ایک مسئلہ ہے۔"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"لوڈ ہو رہا ہے…"</string>
-    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
-    <skip />
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{اب آپ ڈویلپر بننے سے # قدم دور ہیں۔}other{اب آپ ڈیولپر بننے سے # قدم دور ہیں۔}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"اب آپ ایک ڈویلپر ہیں!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"کوئی ضرورت نہیں ہے، آپ پہلے سے ہی ایک ڈویلپر ہیں۔"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ڈویلپر کے اختیارات"</string>
@@ -568,8 +539,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"آپ کے ایک نئی پروفائل کو منتخب کرنے کے بعد، اس شخص کو اسے خود کے ليے حسب ضرورت بنانا چاہیے۔"</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"کسی بھی پروفائل سے دیگر سبھی پروفائلز کے ذریعے استعمال کے لیے ایپس کو اپ ڈیٹ کیا جا سکتا ہے۔"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"پروفائل کی حد مکمل ہوگئی"</string>
-    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
-    <skip />
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{صرف ایک پروفائل تخلیق کی جا سکتی ہے۔}other{آپ # پروفائلز تک تخلیق کر سکتے ہیں۔}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"نئی پروفائل تخلیق نہیں کی جا سکی"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"اس پروفائل کو حذف کرنا چاہتے ہیں؟"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"اس پروفائل کے متعلق سبھی ایپس اور ڈیٹا کو حذف کردیا جائے گا"</string>
@@ -761,6 +731,10 @@
     <string name="add_profile_text" msgid="9118410102199116969">"پروفائل شامل کریں"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ڈسپلے کی چمک"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"معلوماتی انٹرٹینمنٹ سسٹم کا منتظم"</string>
+    <!-- no translation found for device_admin_activated_apps (568075063362271751) -->
+    <skip />
+    <!-- no translation found for device_admin_deactivated_apps (3797263682500122872) -->
+    <skip />
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"کوئی معلوماتی انٹرٹینمنٹ سسٹم منتظم ایپ نہیں"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"یہ معلوماتی انٹرٹینمنٹ سسٹم کا منتظم فعال ہے اور <xliff:g id="APP_NAME">%1$s</xliff:g> ایپ کو درج ذيل اعمال انجام دینے کی اجازت دیتا ہے:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"اس معلوماتی انٹرٹینمنٹ سسٹم کے منتظم کو فعال کرنے سے <xliff:g id="APP_NAME">%1$s</xliff:g> ایپ کو درج ذيل اعمال انجام دینے کی اجازت مل جائے گی:"</string>
@@ -774,6 +748,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"فلیٹ مینیجر اس معلوماتی انٹرٹینمنٹ سسٹم کے ساتھ وابستہ ڈیٹا تک رسائی حاصل، ایپس کا نظم اور اس گاڑی کی ترتیبات کو تبدیل کر سکتا ہے۔"</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"آپ کے فلیٹ مینیجر نے مسدود کیا ہے"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"والیوم تبدیل کرنے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS استعمال کرنے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"کیمرا استعمال کرنے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"اسکرین شاٹس لینے کیلئے فلیٹ مینیجر سے رابطہ کریں"</string>
@@ -782,9 +758,12 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"اگر آپ کے پاس سوالات ہیں تو فلیٹ مینیجر سے رابطہ کریں"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"گاڑی کے منتظم کی ایپس"</string>
-    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <!-- no translation found for number_of_device_admins (7508826094096451485) -->
     <skip />
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"کوئی فعال ایپ نہیں"</string>
+    <!-- no translation found for number_of_device_admins_none (5547493703413973954) -->
+    <skip />
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"آپ کے فلیٹ مینیجر نے ترتیبات کا نظم کیا ہے"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"اس ترتیب کو ابھی تبدیل نہیں کیا جا سکتا"</string>
 </resources>

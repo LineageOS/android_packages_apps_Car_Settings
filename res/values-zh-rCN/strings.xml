@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"添加更多"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"移动数据"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"通过移动网络访问数据"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"移动网络"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"使用移动流量"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要关闭移动数据网络吗？"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"必须选择"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"要使用<xliff:g id="CARRIER">%1$s</xliff:g>的移动数据吗？"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"设置"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"数据流量警告和上限"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"应用流量用量周期"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"移动流量消耗"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"设置数据流量警告"</string>
     <string name="data_warning" msgid="116776633806885370">"数据流量警告"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"设置数据流量上限"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"当移动数据流量的用量达到您设置的上限时，您汽车的音响主机将关闭移动数据网络。\n\n由于流量用量是由音响主机计算的，而您的运营商对流量用量的计算方式可能有所不同，因此建议您设置一个保守的上限值。"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"设置流量用量警告"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"设置流量使用上限"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"流量消耗是由您的设备测得的，可能与移动运营商的数据不同。"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"设置"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"保存"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"原始设备制造商 (OEM) 网络"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"车辆互联网"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"关闭车辆互联网可能会导致部分车辆功能或应用无法使用。\n\n系统会继续与车辆制造商分享操作车辆所需的关键数据。"</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"仍然关闭"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"车辆互联网已关闭。这可能会导致部分车辆功能或应用无法使用。系统会继续与车辆制造商分享操作车辆所需的关键数据。"</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"已使用 %1$s（%2$s - %3$s）"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"加入其他网络"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"网络偏好设置"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"请为 WLAN 热点至少选择一个频段："</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"热点和网络共享"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"热点"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"已关闭"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自动关闭热点"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"如果未连接任何设备，WLAN 热点将关闭"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>请求开启 WLAN"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"将系统资源用于优先保证应用性能"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"流量使用情况"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"应用的流量使用情况"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"流量消耗记录"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"所有应用"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"流量和 WLAN 的使用情况"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"流量消耗记录"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"流量消耗总量"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"前台"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"后台"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"允许使用流量"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"允许此应用使用移动流量"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"限制使用流量"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"仅当应用在前台时才使用移动流量"</string>
     <string name="computing_size" msgid="5791407621793083965">"正在计算…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{另外还有 # 项权限}other{另外还有 # 项权限}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"注意：重新启动后，您必须将车辆解锁，才能运行此应用。"</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置信息"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"如果您关闭位置信息服务，系统将停用所有应用的位置信息使用权，不过，驾驶辅助功能仍可使用位置信息。如果您关闭驾驶辅助功能，这些功能将无法使用您的位置信息。"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"驾驶辅助"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"车辆位置信息服务已关闭"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"具有驾驶辅助功能的应用"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"更改"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"具有此权限的应用可以获取该车辆的位置信息，以供驾驶辅助功能使用"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"位置信息服务处于开启状态时不可用"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"如果您关闭了此设置，需要使用位置信息的驾驶辅助功能将被停用。"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"仍然关闭"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"应用级权限"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置信息"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"位置信息服务可能会使用 GPS、WLAN、移动网络和传感器等来源协助推测设备所在的位置。"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"驾驶辅助"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"发送到驾驶辅助功能的位置信息不包含可识别您身份的信息。这些信息最多存储 2 天，然后就会被删除。"</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"麦克风"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麦克风"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允许所有应用使用麦克风"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"添加个人资料"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"屏幕亮度"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"信息娱乐系统管理"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"已启用的应用"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"已停用的应用"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"没有信息娱乐系统管理应用"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"此信息娱乐系统管理应用已启用，它允许“<xliff:g id="APP_NAME">%1$s</xliff:g>”应用执行以下操作："</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"启用此信息娱乐系统应用将允许“<xliff:g id="APP_NAME">%1$s</xliff:g>”应用执行以下操作："</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"设备组管理员或许能够访问与此信息娱乐系统相关的数据、管理应用以及更改此车辆的设置。"</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"已被设备组管理员禁止"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"若要更改音量，请与设备组管理员联系"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"若要使用短信，请与设备组管理员联系"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"若要使用相机，请与设备组管理员联系"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"若要截取屏幕截图，请与设备组管理员联系"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"如有疑问，请与设备组管理员联系"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"车辆管理应用"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# 个使用中的应用}other{# 个使用中的应用}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"没有使用中的应用"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# 个已启用的应用}other{# 个已启用的应用}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"没有已启用的应用"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"由设备组管理员管理的设置"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"暂时无法更改此设置"</string>
 </resources>

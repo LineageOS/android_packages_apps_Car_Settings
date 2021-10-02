@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Dodaj još"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilni podaci"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Pristupi podacima putem mobilne mreže"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilna mreža"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Koristi prijenos podataka na mobilnoj mreži"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Isključiti prijenos podataka na mobilnoj mreži?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Potrebno je odabrati"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Koristiti <xliff:g id="CARRIER">%1$s</xliff:g> za mobilne podatke?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Postavi"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Upozorenje na podatke i limit"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Ciklus upotrebe podataka apl."</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Prijenos podataka na mobilnoj mreži"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Postavi upozorenje o podacima"</string>
     <string name="data_warning" msgid="116776633806885370">"Upozorenje na podatke"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Postavi ograničenje za podatke"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Glavna jedinica vozila će isključiti prijenos podataka na mobilnoj mreži nakon što dostigne ograničenje koje ste postavili.\n\nS obzirom na to da glavna jedinica vozila mjeri prijenos podataka te da obračun vašeg operatera može biti drugačiji, uzmite u obzir postavljanje umjerenog ograničenja."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Postavljanje upozorenja o prijenosu podataka"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Postavljanje ograničenja za prijenos podataka"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Vaš uređaj mjeri korištenje podataka. Može se razlikovati od podataka mobilnog operatera."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Postavi"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Sačuvaj"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Mreža za OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Internet vozila"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Ako isključite internet vozila, može se zaustaviti rad određenih funkcija ili aplikacija vozila.\n\nKritični podaci potrebni za rad vašeg vozila će se nastaviti dijeliti s njegovim proizvođačem."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Svejedno isključi"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Internet vozila je isključen. To može spriječiti rad određenih funkcija ili aplikacija vozila. Kritični podaci potrebni za rad vašeg vozila će se nastaviti dijeliti s njegovim proizvođačem."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Iskorišteno %1$s %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Pridružite se drugoj mreži"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Postavke mreže"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Odaberite barem jedan frekvencijski pojas za WiFi pristupnu tačku:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Pristupna tačka i povezivanje putem mobitela"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Pristupna tačka"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Isključeno"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatski isključi pristupnu tačku"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"WiFi pristupna tačka će se isključiti ako nijedan uređaj nije povezan"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> želi uključiti WiFi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Koristi izvore sistema da dodijeli prioritet performansama aplikacije"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Prijenos podataka"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Prijenos podataka za apl."</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Historija korištenja"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Sve aplikacije"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Korištenje: podaci i WiFi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Historija korištenja"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Ukupno je iskorišteno"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Prvi plan"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Pozadina"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Dozvolite podatke"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Dozvolite aplikaciji da koristi mobilne podatke"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Ograničite podatke"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Korištenje podataka samo kada je apl. u 1. planu"</string>
     <string name="computing_size" msgid="5791407621793083965">"Računanje…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# dodatno odobrenje}one{# dodatno odobrenje}few{# dodatna odobrenja}other{# dodatnih odobrenja}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Napomena: Nakon ponovnog pokretanja, ova aplikacija se neće moći pokrenuti dok ne otključate vozilo."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Više"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Koristi lokaciju"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Ako isključite Lokaciju, isključit će se pristup lokaciji za sve aplikacije, a funkcije Pomoći za vozače će i dalje imati pristup. Ako isključite Pomoć za vozače, funkcije Pomoći za vozače će prestati koristiti vašu lokaciju."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Pomoć za vozače"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokacija vozila je isključena"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Za aplikacije s funkcijama pomoći za vozače"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Promijeni"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Aplikacije s ovim odobrenjem imaju pristup lokaciji ovog vozila radi pružanja funkcija pomoći za vozače"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nije dostupno dok je lokacija uključena"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Ako isključite ovu funkciju, onemogućit će se funkcije pomoći za vozače koje se oslanjaju na podatke o lokaciji."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Svejedno isključi"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtjevi za lokaciju"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nema nedavnih zahtjeva za lokaciju"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Odobrenja na nivou aplikacija"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokacija može koristiti izvore kao što su GPS, WiFi, mobilne mreže i senzori za lakšu procjenu lokacije uređaja."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Pomoć za vozače"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Informacije o lokaciji koje se šalju funkcijama pomoći za vozače ne sadržavaju informacije pomoću kojih vas je moguće identificirati. Pohranjuju se najduže 2 dana prije nego što se izbrišu."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristite mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Dodaj profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Osvjetljenje ekrana"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator informativno-zabavnog sistema"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivirane aplikacije"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivirane aplikacije"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nema nijedne administratorske aplikacije informativno-zabavnog sistema"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Aplikacija administratora informativno-zabavnog sistema je aktivna i dozvoljava aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da vrši sljedeće operacije:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Aktiviranjem aplikacije informativno-zabavnog sistema dozvolit će se aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da izvršava sljedeće operacije:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Upravitelj flote će možda moći pristupati podacima povezanim s ovim informativno-zabavnim sistemom, upravljati aplikacijama i mijenjati postavke ovog vozila."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Blokirao upravitelj flote"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Obratite se upravitelju da mijenjate jačinu zvuka"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Obratite se upravitelju flote da koristite SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Obratite se upravitelju flote da koristite kameru"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Obratite se upravitelju da pravite snimke ekrana"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Ako imate pitanja, kontaktirajte upravitelja flote"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Aplikacije administratora vozila"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aktivna aplikacija}one{# aktivna aplikacija}few{# aktivne aplikacije}other{# aktivnih aplikacija}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nema aktivnih aplikacija"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktivirana aplikacija}one{# aktivirana aplikacija}few{# aktivirane aplikacije}other{# aktiviranih aplikacija}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nema aktiviranih aplikacija"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Postavkama upravlja upravitelj flote"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ovu postavku trenutno nije moguće promijeniti"</string>
 </resources>

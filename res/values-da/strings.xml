@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Tilføj flere"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobildata"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Brug data via mobilnetværk"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilnetværk"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Brug mobildata"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vil du deaktivere mobildata?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Du har ikke valgt endnu"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Vil du bruge <xliff:g id="CARRIER">%1$s</xliff:g> til mobildata?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Angiv"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Advarsel om dataforbrug og datagrænse"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cyklus for appdataforbrug"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Mobildataforbrug"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Angiv advarsel om dataforbrug"</string>
     <string name="data_warning" msgid="116776633806885370">"Advarsel om dataforbrug"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Angiv datagrænse"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Dit køretøjs hovedenhed deaktiverer mobildata, når den angivne grænse er nået.\n\nEftersom dataforbruget måles af hovedenheden, og dit mobilselskab muligvis beregner forbrug på en anden måde, kan du overveje at angive en lav grænse."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Angiv en advarsel om dataforbrug"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Angiv en grænse for dataforbrug"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Dataforbruget måles af din enhed. Målingen varierer muligvis fra den måling, dit mobilselskab udfører."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Angiv"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Gem"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM-netværk"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Internetforbindelsen i bilen"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Hvis du deaktiverer internetforbindelsen i bilen, virker visse funktioner og apps muligvis ikke.\n\nKritiske data, som kræves i forbindelse med driften af bilen, deles fortsat med bilproducenten."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Deaktiver alligevel"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Internetforbindelsen i bilen er deaktiveret. Visse funktioner og apps i bilen virker muligvis ikke. Kritiske data, som kræves i forbindelse med driften af bilen, deles fortsat med bilproducenten."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s brugt i perioden %2$s til %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Opret forbindelse til et andet netværk"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Netværkspræferencer"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Vælg mindst ét bånd til Wi‑Fi-hotspottet:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot og netdeling"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Deaktiveret"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Deaktiver hotspot automatisk"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi-hotspot deaktiveres, hvis der ikke er nogen forbundne enheder"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker at aktivere Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Bruger systemressourcer til at prioritere app-ydeevne"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Dataforbrug"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Dataforbrug i apps"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Forbrugshistorik"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Alle apps"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Brug af data og Wi-Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Forbrugshistorik"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Samlet forbrug"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"I forgrunden"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"I baggrunden"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Tillad brug af mobildata"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Giv denne app tilladelse til at bruge mobildata"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Begræns brug af data"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Brug kun mobildata, når appen er i forgrunden"</string>
     <string name="computing_size" msgid="5791407621793083965">"Beregner…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# yderligere tilladelse}one{# yderligere tilladelse}other{# yderligere tilladelser}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Bemærk! Efter en genstart kan denne app ikke starte, før du låser dit køretøj op."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Mere"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokation"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Anvend lokation"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Hvis du deaktiverer Lokation, deaktiveres lokationsadgang for alle apps. Funktionerne i førerassistance har fortsat adgang. Hvis du deaktiverer førerassistance, kan funktionerne i førerassistance ikke længere benytte din lokation."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Førerassistance"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Bilens lokation er deaktiveret"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Til apps med førerassistance"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Skift"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Apps med denne tilladelse har adgang til denne bils lokation, når du bruger funktioner til førerassistance"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Utilgængelig, når lokation er slået fra"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Hvis du deaktiverer førerassistance, deaktiveres de af tjenestens funktioner, som afhænger af lokationsoplysninger."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Deaktiver alligevel"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Seneste lokationsanmodninger"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Der er ingen seneste lokationsanmodninger"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tilladelser på appniveau"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Brug lokation"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokation kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds lokation."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Førerassistance"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Lokationsoplysninger, der sendes til funktionerne i førerassistance, indeholder ingen oplysninger, der identificerer dig. De gemmes i højst 2 dage, før de slettes."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Brug mikrofonen"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Giv alle apps adgang til din mikrofon"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Tilføj profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Skærmens lysstyrke"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator af infotainmentsystemet"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktiverede apps"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktiverede apps"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Der er ingen apps til administration af infotainmentsystemet"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Denne app til administration af infotainmentsystem er aktiv og giver appen <xliff:g id="APP_NAME">%1$s</xliff:g> tilladelse til at udføre følgende handlinger:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Hvis du aktiverer denne app til infotainmentsystem, giver du <xliff:g id="APP_NAME">%1$s</xliff:g> tilladelse til at udføre følgende handlinger:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Administratoren kan muligvis tilgå data, som er tilknyttet dette infotainmentsystem, administrere apps og ændre indstillingerne for køretøjet."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Blokeret af din administrator"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Kontakt administratoren for at ændre lydstyrken"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Kontakt administratoren for at bruge sms"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Kontakt administratoren for at bruge kameraet"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Kontakt administratoren for at tage screenshots"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Kontakt administratoren, hvis du har spørgsmål"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps til administration af køretøj"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aktiv app}one{# aktiv app}other{# aktive apps}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Ingen aktive apps"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktiveret app}one{# aktiveret app}other{# aktiverede apps}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Ingen aktiverede apps"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Indstillinger, som angives af administratoren"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Denne indstilling kan ikke ændres lige nu"</string>
 </resources>
