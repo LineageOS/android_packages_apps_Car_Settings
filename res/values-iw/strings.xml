@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"הוספה"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"חבילת גלישה"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"שימוש בחבילת הגלישה דרך הרשת הסלולרית"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"רשת סלולרית"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"שימוש בחבילת גלישה"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"לכבות את חבילת הגלישה?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"עליך לבחור אפשרות כלשהי"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"להשתמש ב-<xliff:g id="CARRIER">%1$s</xliff:g> בשביל חבילת גלישה?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"הגדרה"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"אזהרות והגבלות של נתונים"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"מחזור שימוש בחבילת הגלישה באפליקציות"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"שימוש בחבילת הגלישה"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"מתי תופיע אזהרת שימוש בנתונים"</string>
     <string name="data_warning" msgid="116776633806885370">"אזהרה לגבי שימוש בנתונים"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"הגדרת מגבלת נתונים"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"כשהיחידה הראשית ברכב תגיע למגבלה שהגדרת, היא תשבית את חבילת הגלישה.\n\nמכיוון שעשויים להיות הבדלים בין השימוש בחבילת הגלישה שנמדד על ידי היחידה הראשית לבין השימוש שנמדד על ידי הספק, מומלץ להגדיר מגבלה סבירה."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"הגדרת אזהרה לגבי שימוש בחבילת הגלישה"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"מגבלה לשימוש בחבילת הגלישה"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"כמות השימוש בחבילת הגלישה נמדדת על ידי המכשיר שלך. ייתכן שהערך הזה יהיה שונה מהערך שנמדד על ידי ספק הסלולר שלך."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"הגדרה"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"שמירה"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"רשת OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"חיבור הרכב לאינטרנט"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"לאחר השבתה של חיבור הרכב לאינטרנט, ייתכן שתכונות או אפליקציות מסוימות של הרכב לא יפעלו.\n\nהמערכת תמשיך לשתף נתונים קריטיים הדרושים להפעלת הרכב עם יצרן הרכב."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"השבתה בכל זאת"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"חיבור הרכב לאינטרנט מושבת. בעקבות זאת, ייתכן שתכונות או אפליקציות מסוימות של הרכב לא יפעלו. המערכת תמשיך לשתף נתונים קריטיים הדרושים להפעלת הרכב עם יצרן הרכב."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"השתמשת ב-%1$s בין %2$s ל-%3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"הצטרפות לרשת אחרת"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"העדפות רשת"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"יש לבחור תדר אחד לפחות לנקודת Wi‑Fi לשיתוף אינטרנט:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"נקודה לשיתוף אינטרנט ושיתוף אינטרנט בין מכשירים"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"נקודת אינטרנט"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"כבויה"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"כיבוי אוטומטי של הנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"נקודת ה-Wi‑Fi לשיתוף אינטרנט תיכבה כשאין אף מכשיר מחובר"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> רוצה להפעיל את ה-Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"שימוש במשאבי המערכת תוך מתן עדיפות לביצועי אפליקציות"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"שימוש בחבילת הגלישה"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"שימוש בחבילת הגלישה באפל\'"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"היסטוריית השימוש"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"כל האפליקציות"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"חבילת גלישה ו-Wi‑Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"היסטוריית השימוש"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"השימוש הכולל"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"בחזית"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"ברקע"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"השימוש בחבילת גלישה מותר"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"מתן הרשאה לאפליקציה הזאת לשימוש בחבילת גלישה"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"הגבלת השימוש בחבילת גלישה"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"השימוש בחבילת גלישה מותר רק כשהאפליקציה פועלת ברקע"</string>
     <string name="computing_size" msgid="5791407621793083965">"מתבצע חישוב…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{הרשאה אחת נוספת}two{# הרשאות נוספות}many{# הרשאות נוספות}other{# הרשאות נוספות}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"הערה: לאחר הפעלה מחדש, ניתן להפעיל את האפליקציה רק לאחר ביטול של נעילת הרכב."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"עוד"</string>
     <string name="location_settings_title" msgid="901334356682423679">"מיקום"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"שימוש במיקום"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"כיבוי המיקום ישבית את הגישה למיקום בכל האפליקציות. לתכונות של עזרה לנהג עדיין תהיה גישה. כיבוי המתג של עזרה לנהג יפסיק את השימוש במיקום על ידי התכונות של עזרה לנהג."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"עזרה לנהג"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"מיקום הרכב כבוי"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"לאפליקציות עם תכונות עזרה לנהג"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"שינוי"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"לאפליקציות עם ההרשאה הזו יש גישה למיקום הרכב הזה לצורך הפעלת תכונות עזרה לנהג"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"האפשרות לא זמינה כשהמיקום פועל"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"אם משביתים את האפשרות הזו, תכונות עזרה לנהג שמתבססות על פרטי מיקום יושבתו."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"אני רוצה להשבית בכל זאת"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"בקשות של מיקומים אחרונים"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"אין בקשות של מיקומים אחרונים"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"הרשאות ברמת אפליקציה"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"שימוש במיקום"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"תכונת המיקום משתמשת במקורות כמו GPS,‏ Wi‑Fi, רשתות סלולריות וחיישנים כדי לעזור בהערכה של מיקום המכשיר שלך."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"עזרה לנהג"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"פרטי המיקום שנשלחים לתכונות העזרה לנהג לא מכילים פרטים מזהים עליך. הפרטים מאוחסנים ליומיים לכל היותר עד למחיקתם."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"מיקרופון"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"שימוש במיקרופון"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"מתן הרשאת גישה למיקרופון לכל האפליקציות"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"הוספת פרופיל"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"בהירות התצוגה"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"המנהל של מערכת המידע והבידור"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"אפליקציות מופעלות"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"אפליקציות מושבתות"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"אין אפליקציות למנהלים של מערכת המידע והבידור"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"אפליקציית המנהל של מערכת המידע והבידור פעילה ומאפשרת לאפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> לבצע את הפעולות הבאות:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"הפעלת האפליקציה הזאת של מערכת המידע והבידור תאפשר לאפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> לבצע את הפעולות הבאות:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"ייתכן שמנהל הצי של כלי הרכב יוכל לקבל גישה לנתונים המשויכים למערכת הזו של המידע והבידור, לנהל אפליקציות ולשנות את הגדרות הרכב הזה."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"נחסמה על ידי מנהל הצי"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"צריך לפנות למנהל הצי כדי לשנות את עוצמת הקול"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"צריך לפנות למנהל הצי כדי להשתמש ב-SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"צריך לפנות למנהל הצי כדי להשתמש במצלמה"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"צריך לפנות למנהל הצי כדי לבצע צילומי מסך"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"אם יש לך שאלות, עליך לפנות למנהל הצי של כלי הרכב"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"אפליקציות למנהלי מערכות של הרכב"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{אפליקציה פעילה אחת}two{# אפליקציות פעילות}many{# אפליקציות פעילות}other{# אפליקציות פעילות}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"אין אפליקציות פעילות"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{אפליקציה אחת מופעלת}two{# אפליקציות מופעלות}many{# אפליקציות מופעלות}other{# אפליקציות מופעלות}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"אין אפליקציות פעילות"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"הגדרות שמנוהלות על ידי מנהל הצי של כלי הרכב"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"איפוס מערכת המידע והבידור"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"המערכת שלך קיבלה בקשה לאיפוס להגדרות המקוריות ולמחיקת כל הנתונים. ניתן לבצע את האיפוס עכשיו, או שהוא יתבצע בהתנעה הבאה של המכונית. לאחר מכן ניתן יהיה להגדיר פרופיל חדש."</string>

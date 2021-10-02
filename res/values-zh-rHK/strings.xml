@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"新增更多"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"流動數據"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"使用流動網絡存取數據"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"流動網絡"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"使用流動數據"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要關閉流動數據嗎？"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"請選取偏好設定"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"是否使用<xliff:g id="CARRIER">%1$s</xliff:g>提供的流動數據服務？"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"設定"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"數據用量警告和上限"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"應用程式數據用量週期"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"流動數據用量"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"設定數據用量警告"</string>
     <string name="data_warning" msgid="116776633806885370">"數據用量警告"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"設定數據上限"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"汽車音響主機在數據用量到達設定的上限後，便會關閉流動數據。\n\n由於數據用量由汽車音響主機計算，而流動網絡供應商的用量計算方式可能不同，因此建議您設定較保守的上限。"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"設定數據用量警告"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"設定數據用量上限"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"數據用量由您的裝置計算，可能與流動網絡供應商的數據有所不同。"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"設定"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"儲存"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"原始設備製造商 (OEM) 網絡"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"汽車互聯網"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"關閉汽車互聯網可能會令部分汽車功能或應用程式無法運作。\n\n系統會繼續與汽車製造商分享操作汽車所需的重要資料。"</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"繼續停用"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"汽車互聯網已關閉。這可能會令部分汽車功能或應用程式無法運作。系統會繼續與汽車製造商分享操作汽車所需的重要資料。"</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s - %3$s 已使用 %1$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"加入其他網絡"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"網絡偏好設定"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"請為 Wi-Fi 熱點至少選擇一個頻段："</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"熱點和網絡共享"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"熱點"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"關閉"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉熱點"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"當沒有連接任何裝置時，Wi‑Fi 熱點就會關閉"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"使用系統資源優先處理應用程式效能"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"數據用量"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"應用程式數據用量"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"用量記錄"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"所有應用程式"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"數據與 Wi-Fi 用量"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"用量記錄"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"總用量"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"前景"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"背景"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"允許使用數據"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"允許此應用程式使用流動數據"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"限制資料"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"只在應用程式在前景時使用流動數據"</string>
     <string name="computing_size" msgid="5791407621793083965">"正在計算…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# 個其他權限}other{# 個其他權限}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"請注意：重新開機後，您必須先將汽車解鎖，才可執行這個應用程式。"</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置資訊"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"如果關閉「位置」功能，所有應用程式的位置權限都會關閉，但「駕駛輔助」功能仍可存取您的位置。如果將「駕駛輔助」切換為關閉，「駕駛輔助」功能便會停止使用您的位置資訊。"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"駕駛輔助"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"車輛位置已關閉"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"備有「駕駛輔助」功能的應用程式"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"變更"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"擁有此權限的應用程式可以存取此車輛的位置以使用「駕駛輔助」功能"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"開啟位置時無法使用"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"關閉此功能後，需要依賴位置資料的駕駛輔助功能將會停用。"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"仍然關閉"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置資訊要求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近沒有位置資訊要求"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置資訊"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"定位功能可能會使用 GPS、Wi-Fi、流動網絡和感應器等來源確定裝置的所在位置。"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"駕駛輔助"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"傳送到駕駛輔助功能的位置資料不包含可識別您身分的資料。資料會儲存最多 2 天，然後便會刪除。"</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"麥克風"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麥克風"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允許所有應用程式存取您的麥克風"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"新增設定檔"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"顯示亮度"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"資訊娛樂系統管理員"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"已啟用的應用程式"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"已停用的應用程式"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"沒有資訊娛樂系統管理員應用程式"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"此資訊娛樂系統管理應用程式已啟用，並允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」應用程式執行以下操作："</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"啟動此資訊娛樂系統應用程式將允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」應用程式執行以下操作："</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"車隊管理員或可存取此資訊娛樂系統的相關資料、管理應用程式並變更車輛設定。"</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"已被您的車隊管理員封鎖"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"請聯絡車隊管理員以變更音量"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"請聯絡車隊管理員以使用短訊"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"請聯絡車隊管理員以使用相機"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"請聯絡車隊管理員以擷取螢幕截圖"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"如有任何問題，請聯絡車隊管理員"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"車輛管理員應用程式"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# 個使用中的應用程式}other{# 個使用中的應用程式}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"沒有使用中的應用程式"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# 個已啟用的應用程式}other{# 已啟用的應用程式}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"沒有已啟用的應用程式"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"由車隊管理員管理的設定"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"重設資訊娛樂系統"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"您的系統已收到回復原廠設定並清除所有資料的要求。您可以立即重設，否則系統將在汽車下次啟動時重設。之後，您可以設定新設定檔。"</string>
