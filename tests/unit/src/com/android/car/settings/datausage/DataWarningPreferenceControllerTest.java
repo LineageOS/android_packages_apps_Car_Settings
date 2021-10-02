@@ -171,10 +171,10 @@ public class DataWarningPreferenceControllerTest {
     }
 
     @Test
-    public void onPreferenceClicked_showsPickerDialog() {
+    @UiThreadTest
+    public void onPreferenceClicked_launchesFragment() {
         mWarningPreference.performClick();
 
-        verify(mMockFragmentController).showDialog(any(UsageBytesThresholdPickerDialog.class),
-                eq(UsageBytesThresholdPickerDialog.TAG));
+        verify(mMockFragmentController).launchFragment(any(DataWarningSetThresholdFragment.class));
     }
 }
