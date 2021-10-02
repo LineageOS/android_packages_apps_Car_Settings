@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ଅଧିକ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ମୋବାଇଲ୍ ଡାଟା"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ମୋବାଇଲ୍ ନେଟ୍‌ୱର୍କକୁ ବ୍ୟବହାରକରି ଡାଟା ଆକ୍ସେସ୍ କରନ୍ତୁ"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ମୋବାଇଲ ନେଟୱାର୍କ"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ମୋବାଇଲ୍‌ ଡାଟା ବନ୍ଦ କରିବେ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ଆବଶ୍ୟକୀୟ ମନୋନୟନ"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ମୋବାଇଲ୍ ଡାଟା ପାଇଁ <xliff:g id="CARRIER">%1$s</xliff:g> ବ୍ୟବହାର କରିନ୍ତୁ?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"ସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ଡାଟା ଚେତାବନୀ ଓ ସୀମା"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"ଆପ୍ ଡାଟା ବ୍ୟବହାର ଚକ୍ର"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ଡାଟା ଚେତାବନୀ ସେଟ୍ କରନ୍ତୁ"</string>
     <string name="data_warning" msgid="116776633806885370">"ଡାଟା ଚେତାବନୀ"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ଡାଟା ସୀମା ସେଟ୍ କରନ୍ତୁ"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ଡାଟାର ବ୍ୟବହାର ଆପଣ ସେଟ୍ କରିଥିବା ସୀମାରେ ପହଞ୍ଚିଗଲେ, ଆପଣଙ୍କ ବାହାନର ହେଡ୍ ୟୁନିଟ୍ ମୋବାଇଲ୍ ଡାଟାକୁ ବନ୍ଦ କରିଦେବ।\n\nଯେହେତୁ ବାହାନର ହେଡ୍ ୟୁନିଟ୍ ଡାଟା ବ୍ୟବହାରର ହିସାବ ରଖିଥାଏ ଏବଂ ଆପଣଙ୍କ ବାହାକ ଦ୍ୱାରା ରଖାଯାଇଥିବା ହିସାବ ସାମାନ୍ୟ ଭିନ୍ନ ହୋଇପାରେ, ତେଣୁ ମୋବାଇଲ୍ ଡାଟାର ବ୍ୟବହାର କମ୍ ହେବ, ଏକ ରକ୍ଷଣଶୀଳ ସୀମା ସେଟିଂ କରନ୍ତୁ।"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ଡାଟା ବ୍ୟବହାର ଚେତାବନୀ ସେଟ୍ କରନ୍ତୁ"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ଡାଟା ବ୍ୟବହାରର ସୀମା ସେଟ୍ କରନ୍ତୁ"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"ଡାଟା ବ୍ୟବହାର ଆପଣଙ୍କ ଡିଭାଇସ ଦ୍ୱାରା ମାପ କରାଯାଏ। ଏହା ଆପଣଙ୍କ ମୋବାଇଲ କ୍ୟାରିଅରର ଡାଟାଠାରୁ ଭିନ୍ନ ହୋଇପାରେ।"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ସେଟ୍ କରନ୍ତୁ"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"ସେଭ କରନ୍ତୁ"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM ନେଟୱାର୍କ"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"ଗାଡ଼ିର ଇଣ୍ଟରନେଟ"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"ଗାଡ଼ିର ଇଣ୍ଟରନେଟ ବନ୍ଦ କରିବା ଗାଡ଼ିର କିଛି ଫିଚର କିମ୍ବା ଆପଗୁଡ଼ିକୁ କାମ କରିବାରୁ ପ୍ରତିରୋଧ କରିପାରେ।\n\nଆପଣଙ୍କ ଗାଡ଼ି ଚଲାଇବା ପାଇଁ ଆବଶ୍ୟକ ହେଉଥିବା ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଡାଟା ଗାଡ଼ିର ନିର୍ମାତାଙ୍କ ସହ ସେୟାର କରାଯିବା ଜାରି ରହିବ।"</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"ଗାଡ଼ିର ଇଣ୍ଟରନେଟକୁ ବନ୍ଦ କରାଯାଇଛି। ଏହା ଗାଡ଼ିର କିଛି ଫିଚର କିମ୍ବା ଆପଗୁଡ଼ିକୁ କାମ କରିବାରୁ ପ୍ରତିରୋଧ କରିପାରେ। ଆପଣଙ୍କ ଗାଡ଼ି ଚଲାଇବା ପାଇଁ ଆବଶ୍ୟକ ହେଉଥିବା ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଡାଟା ଗାଡ଼ିର ନିର୍ମାତାଙ୍କ ସହ ସେୟାର କରାଯିବା ଜାରି ରହିବ।"</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s - %3$s ଭିତରେ %1$s ବ୍ୟବହାର କରାଯାଇଛି"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"ଅନ୍ୟ ନେଟୱାର୍କରେ ଯୋଗ ଦିଅନ୍ତୁ"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"ନେଟୱାର୍କ ପସନ୍ଦଗୁଡ଼ିକ"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ପାଇଁ ଅତିକମ୍‌ରେ ଗୋଟିଏ ବ୍ୟାଣ୍ଡ୍ ବାଛନ୍ତୁ:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ହଟ୍‌ସ୍ପଟ୍ ଏବଂ ଟିଥରିଂ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ହଟସ୍ପଟ୍"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ବନ୍ଦ ଅଛି"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ସ୍ୱଚାଳିତ ଭାବେ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ଯଦି କୌଣସି ଡିଭାଇସ୍ ସଂଯୋଗ ନଥାଏ, ତେବେ ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ ହୋଇଯିବ"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ୱାଇ-ଫାଇ ଚାଲୁ କରିବାକୁ ଚାହୁଁଛନ୍ତି"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ଆପ ପରଫରମାନ୍ସକୁ ପ୍ରାଥମିକତା ଦେବା ପାଇଁ ସିଷ୍ଟମ ରିସୋର୍ସଗୁଡ଼ିକୁ ବ୍ୟବହାର କରେ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ଡାଟାର ବ୍ୟବହାର"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ଆପ୍‌ ଦ୍ୱାରା ଡାଟା ବ୍ୟବହାର"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"ବ୍ୟବହାରର ଇତିହାସ"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"ସବୁ ଆପ"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"ଡାଟା ଏବଂ ୱାଇ-ଫାଇ ବ୍ୟବହାର"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"ବ୍ୟବହାରର ଇତିହାସ"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"ମୋଟ ବ୍ୟବହାର"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"ଫୋରଗ୍ରାଉଣ୍ଡ"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"ପୃଷ୍ଠପଟ"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"ଡାଟା ବ୍ୟବହାର କରିବାକୁ ଦିଅ"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"ଏହି ଆପକୁ ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କରିବାକୁ ଦିଅନ୍ତୁ"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"ଡାଟାକୁ ପ୍ରତିବନ୍ଧିତ କରନ୍ତୁ"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"ଆପ ଫୋରଗ୍ରାଉଣ୍ଡରେ ଥିବା ବେଳେ ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କର"</string>
     <string name="computing_size" msgid="5791407621793083965">"ଗଣୁଛି…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{#ଟି ଅତିରିକ୍ତ ଅନୁମତି}other{#ଟି ଅତିରିକ୍ତ ଅନୁମତି}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"ଟିପ୍ପଣୀ: ରିବୁଟ୍ କରିବା ପରେ, ଯେପର୍ଯ୍ୟନ୍ତ ଆପଣ ଆପଣଙ୍କର ବାହାନକୁ ଅନଲକ୍ ନକରିଛନ୍ତି, ସେପର୍ଯ୍ୟନ୍ତ ଏହି ଆପ୍‌ ଆରମ୍ଭ ହୋଇପାରିବ ନାହିଁ।"</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ଅଧିକ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ୍‌"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"ଲୋକେସନ୍ ବନ୍ଦ କରିବା ଦ୍ୱାରା ସମସ୍ତ ଆପକୁ ଲୋକେସନ୍ ଆକ୍ସେସ୍ ବନ୍ଦ ହୋଇଯିବ, ଡ୍ରାଇଭର୍ ସହାୟତା ଫିଚରକୁ ଏବେ ବି ଆକ୍ସେସ୍ ରହିବ। ଡ୍ରାଇଭର୍ ସହାୟତା ଟୋଗଲ୍ ବନ୍ଦ କରିବା ଦ୍ୱାରା ଡ୍ରାଇଭର୍ ସହାୟତା ଫିଚରଗୁଡ଼ିକ ଆପଣଙ୍କ ଲୋକେସନକୁ ବ୍ୟବହାର କରିବା ବନ୍ଦ କରିବ।"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ଡ୍ରାଇଭର୍ ସହାୟତା"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ଗାଡ଼ିର ଲୋକେସନ ଫିଚର ବନ୍ଦ ଅଛି"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"ଡ୍ରାଇଭର ସହାୟତା ଫିଚର ଥିବା ଆପଗୁଡ଼ିକ ପାଇଁ"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ବଦଳାନ୍ତୁ"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"ଏହି ଅନୁମତି ଥିବା ଆପଗୁଡ଼ିକର ଡ୍ରାଇଭର ସହାୟତା ଫିଚରଗୁଡ଼ିକ ପାଇଁ ଏହି ଗାଡ଼ିର ଲୋକେସନ ସୂଚନାକୁ ଆକ୍ସେସ ଅଛି"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"ଲୋକେସନ୍ ଚାଲୁ ଥିବା ବେଳେ ଉପଲବ୍ଧ ନାହିଁ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ୍ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର୍ ସହାୟତା ଫିଚରଗୁଡ଼ିକ ଅକ୍ଷମ ହୋଇଯିବ।"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"ଯେ କୌଣସି ମତେ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ବର୍ତ୍ତମାନର ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ଆପଣଙ୍କ ଡିଭାଇସର ଲୋକେସନ୍ ଅନୁମାନ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ GPS, ୱାଇ‑ଫାଇ, ମୋବାଇଲ୍ ନେଟୱାର୍କ ଏବଂ ସେନ୍ସରଗୁଡ଼ିକ ଭଳି ସୋର୍ସଗୁଡ଼ିକୁ ଲୋକେସନ୍ ବ୍ୟବହାର କରିପାରେ।"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ଡ୍ରାଇଭର୍ ସହାୟତା"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"ଡ୍ରାଇଭର୍ ସହାୟତା ଫିଚରଗୁଡ଼ିକୁ ପଠାଯାଇଥିବା ଲୋକେସନ୍ ସୂଚନାରେ ଆପଣଙ୍କୁ ଚିହ୍ନଟ କରୁଥିବା ସୂଚନା ଅନ୍ତର୍ଭୁକ୍ତ ନାହିଁ। ଡିଲିଟ୍ କରାଯିବା ପୂର୍ବରୁ ଏହାକୁ ସର୍ବାଧିକ 2 ଦିନ ପାଇଁ ଷ୍ଟୋର୍ କରାଯାଏ।"</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ମାଇକ୍ରୋଫୋନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ଆପଣଙ୍କ ମାଇକ୍ରୋଫୋନକୁ ଆକ୍ସେସ୍ କରିବା ପାଇଁ ସମସ୍ତ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ଡିସପ୍ଲେ ଉଜ୍ଜ୍ୱଳତା"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆଡମିନ୍"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"ସକ୍ରିୟ ଥିବା ଆପଗୁଡ଼ିକ"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ନିଷ୍କ୍ରିୟ ଥିବା ଆପଗୁଡ଼ିକ"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"କୌଣସି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ଆଡମିନ୍ ଆପ୍ ନାହିଁ"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆଡମିନ୍ ଆପଟି ସକ୍ରିୟ ଅଛି ଏବଂ <xliff:g id="APP_NAME">%1$s</xliff:g> ଆପକୁ ନିମ୍ନୋକ୍ତ କାର୍ଯ୍ୟଗୁଡ଼ିକ କରିବାକୁ ଅନୁମତି ଦିଏ:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆପକୁ ସକ୍ରିୟ କରିବା ଫଳରେ ଏହା <xliff:g id="APP_NAME">%1$s</xliff:g> ଆପକୁ ନିମ୍ନୋକ୍ତ କାର୍ଯ୍ୟଗୁଡ଼ିକ କରିବାକୁ ଅନୁମତି ଦେବ:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ସହ ସମ୍ବନ୍ଧିତ ଡାଟାକୁ ଆକ୍ସେସ୍ କରିବା, ଆପଗୁଡ଼ିକୁ ପରିଚାଳନା କରିବା ଏବଂ ଏହି ଗାଡ଼ିର ସେଟିଂସ୍ ବଦଳାଇବାକୁ ଫ୍ଲିଟ୍ ପରିଚାଳକ ସକ୍ଷମ ହୋଇପାରନ୍ତି।"</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"ଆପଣଙ୍କ ଫ୍ଲିଟ ପରିଚାଳକ ବ୍ଲକ କରିଛନ୍ତି"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ଭଲ୍ୟୁମ୍ ବଦଳାଇବାକୁ ଫ୍ଲିଟ୍ ପରିଚାଳକଙ୍କ ସହ ଯୋଗାଯୋଗ କର"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS ବ୍ୟବହାର କରିବାକୁ ଫ୍ଲିଟ ପରିଚାଳକଙ୍କ ସହ ଯୋଗାଯୋଗ କର"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"କ୍ୟାମେରା ବ୍ୟବହାର କରିବାକୁ ଫ୍ଲିଟ ପରିଚାଳକ ସହ ଯୋଗାଯୋଗ କର"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ସ୍କ୍ରିନସଟ୍ ନେବାକୁ ଫ୍ଲିଟ୍ ପରିଚାଳକଙ୍କ ସହ ଯୋଗାଯୋଗ କର"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"ଯଦି ଆପଣଙ୍କର କିଛି ପ୍ରଶ୍ନ ଅଛି, ତେବେ ଫ୍ଲିଟ୍ ପରିଚାଳକଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"ଗାଡ଼ିର ଆଡମିନ୍ ଆପ୍"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{#ଟି ସକ୍ରିୟ ଆପ}other{#ଟି ସକ୍ରିୟ ଆପ}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"କୌଣସି ସକ୍ରିୟ ଆପ୍ ନାହିଁ"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{#ଟି ସକ୍ରିୟ ଥିବା ଆପ}other{#ଟି ସକ୍ରିୟ ଥିବା ଆପ}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"କୌଣସି ସକ୍ରିୟ ଥିବା ଆପ ନାହିଁ"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"ଆପଣଙ୍କ ଫ୍ଲିଟ୍ ପରିଚାଳକଙ୍କ ଦ୍ୱାରା ପରିଚାଳିତ ସେଟିଂସ୍"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ରିସେଟ୍ କରନ୍ତୁ"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"ଆପଣଙ୍କର ସିଷ୍ଟମ୍ ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍ ଏବଂ ସମସ୍ତ ଡାଟା ଖାଲି କରିବାକୁ ଏକ ଅନୁରୋଧ ପ୍ରାପ୍ତ କରିଛି। ଆପଣ ଏବେ ଏହା ରିସେଟ୍ କରିପାରିବେ କିମ୍ବା ପରବର୍ତ୍ତୀ ସମୟରେ କାର୍ ଷ୍ଟାର୍ଟ ହେଲେ ଏହା ରିସେଟ୍ ହେବ। ଆପଣ ତା\'ପରେ ଏକ ନୂଆ ପ୍ରୋଫାଇଲ୍ ସେଟ୍ ଅପ୍ କରିପାରିବେ।"</string>

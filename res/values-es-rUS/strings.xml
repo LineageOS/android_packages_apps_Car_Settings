@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Agregar más"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datos móviles"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a los datos mediante la red móvil"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Red móvil"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Usar datos móviles"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"¿Desactivar los datos móviles?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Debes seleccionar una opción"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"¿Usar <xliff:g id="CARRIER">%1$s</xliff:g> para datos móviles?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Establecer"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Advertencia de límite de datos"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclo de uso de datos de las apps"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Uso de datos móviles"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Config. advertencia de datos"</string>
     <string name="data_warning" msgid="116776633806885370">"Advertencia de datos"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Establecer límite de datos"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"La unidad principal del vehículo desactivará los datos móviles cuando llegue al límite que establezcas.\n\nComo es posible que la unidad principal y tu proveedor midan el uso de datos de manera distinta, te recomendamos establecer un límite prudente."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Establecer advertencia de uso de datos"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Límite del uso de datos"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Tu dispositivo mide el uso de datos. Es posible que varíe según los datos del operador de telefonía celular."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Establecer"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Guardar"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Red del OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Internet del vehículo"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Si desactivas el servicio de Internet del vehículo, es posible que dejen de ejecutarse algunas funciones o apps.\n\nSe seguirán compartiendo con el fabricante los datos críticos necesarios para que el vehículo funcione correctamente."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Desactivar de todos modos"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"El servicio de Internet del vehículo está desactivado. Es posible que dejen de ejecutarse algunas funciones y apps. Se seguirán compartiendo con el fabricante los datos críticos necesarios para que el vehículo funcione correctamente."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Datos usados: %1$s entre el %2$s y el %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Unirse a otra red"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Preferencias de red"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Elige al menos una banda para el hotspot de Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot y conexión mediante dispositivo móvil"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desactivado"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar hotspot automáticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Si no hay dispositivos conectados, se desactivará el hotspot de Wi‑Fi"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quiere activar la conexión Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Usa los recursos del sistema para priorizar el rendimiento de la app"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Uso de datos"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Uso de datos de la app"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Historial de uso"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Todas las apps"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Wi-Fi y datos móviles"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Historial de uso"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Uso total"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Primer plano"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Segundo plano"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Permitir datos móviles"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Permitir que esta app use datos móviles"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Restringir datos"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Usar datos solo si la app está en primer plano"</string>
     <string name="computing_size" msgid="5791407621793083965">"Calculando…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# permiso adicional}other{# permisos adicionales}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Nota: Luego de reiniciar el dispositivo, esta app no podrá iniciarse hasta que desbloquees el vehículo."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Más"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar ubicación"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Si desactivas la ubicación, se desactivará el acceso a ella para todas las apps, pero no para las funciones de asistencia al conductor. Si desactivas la asistencia al conductor, las funciones de esta tecnología no podrán usar tu ubicación."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Asistencia al conductor"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ubicación del vehículo desactivada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Apps que usan asistencia al conductor"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Las apps a las que se les otorgó este permiso pueden acceder a la ubicación del vehículo para usar las funciones de asistencia al conductor"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"No disponible si ubicación está activada"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Si desactivas la asistencia al conductor, se inhabilitarán las funciones que dependen de la información de ubicación."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Desactivar de todos modos"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hay solicitudes de ubicación recientes"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos en las apps"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"La ubicación puede usar fuentes como GPS, Wi-Fi, redes móviles y sensores para obtener la ubicación estimada del dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia al conductor"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Los datos de ubicación enviados a las funciones de asistencia al conductor no contienen información que permita identificarte. Se almacenan durante un máximo de 2 días antes de que se los borre."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas las apps accedan al micrófono"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Agregar perfil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillo de pantalla"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador del sistema de infoentretenimiento"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Apps activadas"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Apps desactivadas"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"No hay ninguna app de administración del sistema de infoentretenimiento"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Esta app de administración del sistema de infoentretenimiento está activa y permite que la app de <xliff:g id="APP_NAME">%1$s</xliff:g> realice las siguientes operaciones:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Si activas esta app del sistema de infoentretenimiento, la app de <xliff:g id="APP_NAME">%1$s</xliff:g> podrá realizar las siguientes operaciones:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Es posible que el administrador de la flota pueda acceder a los datos asociados con este sistema de infoentretenimiento, administrar las apps y cambiar la configuración del vehículo."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bloqueado por admin. de flota"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Comunícate con admin. de flota para cambiar vol."</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Comunícate con el admin. de flota para usar SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Comunícate con admin. de flota para usar la cámara"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Comunícate con admin. flota para tomar capturas"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Si tienes alguna pregunta, comunícate con el administrador de la flota"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administración de vehículos"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# app activa}other{# apps activas}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"No hay apps activas"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# app activada}other{# apps activadas}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Ninguna app activada"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Tu administrador de flota gestiona esta configuración"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restablecer el sistema de infoentretenimiento"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"El sistema recibió una solicitud para restablecer la configuración de fábrica y borrar todos los datos. Puedes hacerlo ahora o esperar a que se restablezca la próxima vez que enciendas el vehículo. Tras el restablecimiento, podrás configurar otro perfil."</string>

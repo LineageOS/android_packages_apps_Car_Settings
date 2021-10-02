@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Добавить"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобильный интернет"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ к Интернету по мобильной сети"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобильная сеть"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Использовать мобильный интернет"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Отключить мобильный Интернет?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Выберите SIM-карту"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Переключиться на оператора \"<xliff:g id="CARRIER">%1$s</xliff:g>\"?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Сохранить"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Предупреждения и лимит"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Период статистики"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Использование мобильного интернета"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Установить предупреждение"</string>
     <string name="data_warning" msgid="116776633806885370">"Предупреждение"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Задать лимит трафика"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"После достижения установленного лимита передача данных по мобильной сети будет отключена.\n\nПри выборе ограничения учитывайте, что статистика оператора может отличаться от статистики головного устройства автомобиля."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Настройка предупреждения"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Лимит трафика"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Объем использованного трафика измеряется на устройстве. Полученные значения могут отличаться от данных вашего оператора мобильной связи."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Сохранить"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Сохранить"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Сеть OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Интернет в автомобиле"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"При отключенном интернете некоторые функции или приложения автомобиля могут не работать.\n\nДанные, которые критически важны для эксплуатации автомобиля, останутся доступны его производителю."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Отключить"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Интернет в автомобиле отключен. Некоторые функции или приложения автомобиля могут не работать. Данные, которые критически важны для эксплуатации автомобиля, останутся доступны его производителю."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Использовано %1$s с %2$s по %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Подключиться к другой сети"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Настройки сетевого подключения"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Диапазон частот для точек доступа Wi-Fi."</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступа и режим модема"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка доступа"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Отключено"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматически выключать точку доступа"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi, если к ней не подключено ни одного устройства"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает включение Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Чтобы приоритизировать производительность приложения, используются системные ресурсы"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Передача данных"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Трафик приложения"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"История использ. трафика"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Все приложения"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Моб. интернет и Wi‑Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"История использ. трафика"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Общий объем трафика"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"В активном режиме"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"В фоновом режиме"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Разрешить моб. интернет"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Разрешить использовать мобильный интернет"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Ограничить трафик"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Использ. моб. интернет только в активном режиме"</string>
     <string name="computing_size" msgid="5791407621793083965">"Вычисление…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# дополнительное разрешение}one{# дополнительное разрешение}few{# дополнительных разрешения}many{# дополнительных разрешений}other{# дополнительного разрешения}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Примечание. После перезагрузки вам потребуется разблокировать экран автомобиля, чтобы запустить это приложение."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Ещё"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Геолокация"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Использовать данные о местоположении"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"После отключения этого параметра доступ к информации о местоположении будет закрыт для всех приложений. Однако ваши геоданные по-прежнему сможет запрашивать система помощи водителю. Отключите ее, чтобы запретить связанным с ней функциям использовать сведения о местоположении."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Система помощи водителю"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геоданные автомобиля не определяются"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Для приложений с системой помощи водителю"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Изменить"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"У таких приложений есть доступ к местоположению автомобиля для оказания помощи водителю."</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Недоступно, пока включена геолокация"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Если вы отключите эту настройку, функции системы помощи водителю, для работы которых необходима информация о местоположении, будут отключены."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Все равно отключить"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последние запросы местоположения"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нет недавних запросов местоположения."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения для приложений"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Использовать данные о местоположении"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для определения местоположения устройства могут использоваться данные GPS, Wi-Fi, мобильных сетей и датчиков."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Система помощи водителю"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Сведения о местоположении, которые отправляются системе помощи водителю, не содержат идентифицирующей вас информации. Они хранятся не более двух дней и затем удаляются."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Использовать микрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Разрешить всем приложениям доступ к микрофону"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Добавить профиль"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркость экрана"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Администратор информационно-развлекательной системы"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Активные приложения"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Отключенные приложения"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Нет приложений администратора информационно-развлекательной системы"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Приложение администратора информационно-развлекательной системы активно и разрешает приложению \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" выполнять следующие действия:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"После того как вы активируете это приложение администратора информационно-развлекательной системы, приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" сможет выполнять следующие действия:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"У менеджера автопарка есть доступ к данным, связанным с этой информационно-развлекательной системой, также он может изменять настройки автомобиля и управлять приложениями."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Заблокировано менеджером автопарка"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Чтобы изменить громкость, обратитесь к менеджеру автопарка"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Чтобы отправить SMS, обратитесь к менеджеру автопарка"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Чтобы использовать камеру, обратитесь к менеджеру автопарка"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Чтобы сделать скриншот, обратитесь к менеджеру автопарка"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Если у вас есть вопросы, обратитесь к менеджеру автопарка."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Приложения для администратора автомобиля"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# активное приложение}one{# активное приложение}few{# активных приложения}many{# активных приложений}other{# активного приложения}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Нет активных приложений"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активное приложение}one{# активное приложение}few{# активных приложения}many{# активных приложений}other{# активного приложения}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Нет активных приложений"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Настройки, которыми управляет менеджер автопарка"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Сбросьте настройки информационно-развлекательной системы"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Требуется сбросить настройки и удалить все данные системы. Сброс можно выполнить сейчас, или он произойдет автоматически при следующем запуске автомобиля. После этого вы сможете создать новый профиль."</string>

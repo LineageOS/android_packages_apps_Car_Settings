@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Tambah lagi"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Data mudah alih"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan rangkaian mudah alih"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rangkaian mudah alih"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Gunakan data mudah alih"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Matikan data mudah alih?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Pilihan diperlukan"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Gunakan data mudah alih <xliff:g id="CARRIER">%1$s</xliff:g>?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Tetapkan"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Amaran data &amp; had"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Kitaran penggunaan data apl"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Penggunaan data mudah alih"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Tetapkan amaran data"</string>
     <string name="data_warning" msgid="116776633806885370">"Amaran data"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Tetapkan had data"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Unit kepala kenderaan anda akan mematikan data mudah alih setelah mencapai had yang anda tetapkan.\n\nMemandangkan penggunaan data diukur oleh unit kepala dan pembawa anda mungkin mengira penggunaan secara berbeza, anda disyorkan supaya menetapkan had yang konservatif."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Tetapkan amaran penggunaan data"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Tetapkan had penggunaan data"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Penggunaan data diukur oleh peranti anda. Penggunaan mungkin berbeza daripada data pembawa mudah alih anda."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Tetapkan"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Simpan"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Rangkaian OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Internet kenderaan"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Tindakan mematikan Internet kenderaan mungkin menghalang sesetengah ciri kenderaan atau apl daripada berfungsi.\n\nData kritikal yang diperlukan untuk mengendalikan kenderaan anda akan terus dikongsikan dengan pengilang kenderaan."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Matikan juga"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Internet kenderaan dimatikan. Keadaan ini mungkin menghalang sesetengah ciri kenderaan atau apl daripada berfungsi. Data kritikal yang diperlukan untuk mengendalikan kenderaan anda akan terus dikongsikan dengan pengilang kenderaan."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s digunakan %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Sertai rangkaian lain"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Pilihan rangkaian"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pilih jalur untuk tempat liputan Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Tempat liputan &amp; penambatan"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Tempat liputan"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Mati"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Matikan tempat liputan secara automatik"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Tempat liputan Wi‑Fi akan dimatikan jika tiada peranti disambungkan"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> mahu menghidupkan Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Gunakan sumber sistem untuk mengutamakan prestasi apl"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Penggunaan data"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Penggunaan data apl"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Sejarah penggunaan"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Semua apl"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Penggunaan data &amp; Wi‑Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Sejarah penggunaan"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Jumlah penggunaan"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Latar depan"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Latar belakang"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Benarkan data"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Benarkan apl ini menggunakan data mudah alih"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Hadkan data"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Gunakan data mudah alih hanya apabila apl berada di latar depan"</string>
     <string name="computing_size" msgid="5791407621793083965">"Mengira…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# kebenaran tambahan}other{# kebenaran tambahan}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Perhatian: Selepas but semula, apl ini tidak dapat dimulakan sehingga anda membuka kunci kenderaan."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Lagi"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gunakan lokasi"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Tindakan mematikan Lokasi akan mematikan akses lokasi untuk semua apl, ciri bantuan Pemandu masih dapat diakses. Tindakan mematikan togol bantuan Pemandu akan menghentikan ciri bantuan Pemandu daripada menggunakan lokasi anda."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Bantuan pemandu"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokasi kenderaan dimatikan"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Untuk apl dengan ciri Bantuan Pemandu"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Tukar"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Apl dengan kebenaran ini mempunyai akses kepada lokasi kenderaan ini untuk ciri Bantuan Pemandu"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Tidak tersedia semasa lokasi dihidupkan"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Jika anda mematikan tetapan ini, ciri bantuan pemandu yang bergantung pada maklumat lokasi akan dilumpuhkan."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Matikan juga"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Permintaan Lokasi Terbaharu"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Tiada permintaan lokasi terbaharu"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Kebenaran tahap apl"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Gunakan lokasi"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokasi mungkin menggunakan sumber seperti GPS, Wi-Fi, rangkaian mudah alih dan penderia untuk menganggarkan lokasi peranti anda."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bantuan pemandu"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Maklumat lokasi yang dihantarkan kepada ciri bantuan pemandu tidak mengandungi maklumat yang mengenal pasti anda. Maklumat disimpan selama maksimum 2 hari sebelum dipadamkan."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gunakan mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Benarkan semua apl mengakses mikrofon anda"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Tambah profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Kecerahan paparan"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Pentadbir sistem maklumat hibur"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Apl yang diaktifkan"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Apl yang dinyahaktifkan"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Tiada apl pentadbir sistem maklumat hibur"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Apl pentadbir sistem maklumat hibur ini aktif dan membenarkan apl <xliff:g id="APP_NAME">%1$s</xliff:g> melaksanakan pengendalian yang berikut:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Mengaktifkan apl sistem maklumat hibur ini akan membenarkan apl <xliff:g id="APP_NAME">%1$s</xliff:g> melaksanakan pengendalian yang berikut:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Pengurus armada mungkin dapat mengakses data yang berkaitan dengan sistem maklumat hibur ini, mengurus apl dan menukar tetapan kenderaan ini."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Disekat oleh pengurus armada"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Hubungi pengurus armada untuk menukar jumlah"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Hubungi pengurus armada untuk menggunakan SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Hubungi pengurus armada untuk menggunakan kamera"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Hubungi pengurus armada untuk mengambil tangkapan skrin"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Jika anda ingin mengemukakan pertanyaan, hubungi pengurus armada"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apl pentadbir kenderaan"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# apl aktif}other{# apl aktif}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Tiada apl aktif"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# apl yang diaktifkan}other{# apl yang diaktifkan}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Tiada apl yang diaktifkan"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Tetapan diuruskan oleh pengurus armada anda"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Tetapkan semula sistem maklumat hibur"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem anda telah menerima permintaan bagi penetapan semula kilang dan pemadaman semua data. Anda boleh menetapkan semula sistem sekarang atau selepas kereta dihidupkan nanti. Kemudian anda boleh menyediakan profil baharu."</string>

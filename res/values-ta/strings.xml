@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"மேலும் சேர்"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"மொபைல் டேட்டா"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"மொபைல் நெட்வொர்க் மூலம் டேட்டாவைப் பயன்படுத்து"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"மொபைல் நெட்வொர்க்"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"மொபைல் டேட்டாவைப் பயன்படுத்தும்"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"மொபைல் டேட்டாவை ஆஃப் செய்யவா?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"தேர்ந்தெடுக்க வேண்டும்"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"டேட்டாவிற்கு <xliff:g id="CARRIER">%1$s</xliff:g>ஐ உபயோகிக்கவா?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"அமை"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"டேட்டா உபயோக எச்சரிக்கை &amp; வரம்பு"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"ஆப்ஸ் டேட்டா உபயோக சுழற்சி"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"மொபைல் டேட்டா பயன்பாடு"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"டேட்டா உபயோக எச்சரிக்கையை அமை"</string>
     <string name="data_warning" msgid="116776633806885370">"டேட்டா உபயோக எச்சரிக்கை"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"டேட்டா வரம்பை அமை"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"நீங்கள் அமைத்துள்ள வரம்பை அடைந்ததும் மொபைல் டேட்டாவைக் கார் சாதனத்தின் முதன்மை யூனிட் மொபைல் டேட்டாவை முடக்கும்.\n\nடேட்டா உபயோகத்தை முதன்மை யூனிட் அளவிட்டாலும் உங்கள் மொபைல் நிறுவனம் வேறுவிதமாக அளவிடலாம். எனவே பாதுகாப்பான அளவில் வரம்பை அமைக்கவும்."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"டேட்டா உபயோக எச்சரிக்கையை அமைத்தல்"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"டேட்டா உபயோக வரம்பை அமைத்தல்"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"டேட்டா பயன்பாடு உங்கள் சாதனத்தால் அளவிடப்படுகிறது. இது உங்கள் மொபைல் நிறுவனத்தின் டேட்டாவிலிருந்து மாறுபடக்கூடும்."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"அமை"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"சேமி"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM நெட்வொர்க்"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"வாகன இணையம்"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"வாகன இணையத்தை முடக்கினால் சில வாகன அம்சங்களோ ஆப்ஸோ இயங்காமல் போகலாம்.\n\nஉங்கள் வாகனத்தை இயக்கத் தேவையான முக்கியத் தரவு வாகன உற்பத்தியாளருடன் தொடர்ந்து பகிரப்படும்."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"பரவாயில்லை, முடக்கு"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"வாகன இணையம் முடக்கப்பட்டுள்ளது. இதனால் சில வாகன அம்சங்களோ ஆப்ஸோ இயங்காமல் போகலாம். உங்கள் வாகனத்தை இயக்கத் தேவையான முக்கியத் தரவு வாகன உற்பத்தியாளருடன் தொடர்ந்து பகிரப்படும்."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s முதல் %3$s வரை பயன்படுத்தப்பட்ட அளவு: %1$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"பிற நெட்வொர்க்கில் இணை"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"நெட்வொர்க் விருப்பத்தேர்வுகள்"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ஒன்றைத் தேர்வுசெய்யவும்:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ஹாட்ஸ்பாட்டும் இணைப்பு முறையும்"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ஹாட்ஸ்பாட்"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ஆஃப்"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"சாதனங்கள் எவையும் இணைக்கப்படவில்லை எனில் வைஃபை ஹாட்ஸ்பாட் ஆஃப் செய்யப்படும்"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"வைஃபையை ஆன் செய்ய <xliff:g id="REQUESTER">%s</xliff:g> ஆப்ஸ் விரும்புகிறது"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ஆப்ஸின் செயல்திறனுக்கு முன்னுரிமையளிக்க சிஸ்டம் ஆதாரங்களைப் பயன்படுத்தும்"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"இதுவரை உபயோகித்த டேட்டா"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"அனைத்து ஆப்ஸும்"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"டேட்டா &amp; வைஃபை பயன்பாடு"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"இதுவரை உபயோகித்த டேட்டா"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"மொத்த டேட்டா பயன்பாடு"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"முன்புலம்"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"பின்புலம்"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"டேட்டாவை அனுமதித்தல்"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"மொபைல் டேட்டாவை உபயோகிக்க இந்த ஆப்ஸை அனுமதிக்கும்"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"டேட்டா கட்டுப்பாடு"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"முன்புலத்தில் மட்டுமே டேட்டாவை ஆப்ஸ் உபயோகிக்கும்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# கூடுதல் அனுமதி}other{# கூடுதல் அனுமதிகள்}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"கவனத்திற்கு: மறுபடி தொடங்கிய பிறகு நீங்கள் வாகனத்தை அன்லாக் செய்யும் வரை இந்த ஆப்ஸால் செயல்பட இயலாது."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"மேலும்"</string>
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"இருப்பிடத்தைப் பயன்படுத்துதல்"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"இருப்பிட அமைப்பை முடக்கினால் எல்லா ஆப்ஸுக்குமான இருப்பிட அணுகல் முடக்கப்படும். ஆனாலும் ஓட்டுநர் உதவி அம்சங்களுக்கு அணுகல் இருக்கும். ஓட்டுநர் உதவி அமைப்பை நிலைமாற்றி முடக்குவது ஓட்டுநர் உதவி அம்சங்களுக்கான இருப்பிட அணுகலை நிறுத்தும்."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ஓட்டுநர் உதவி"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"வாகன இருப்பிடத்தை முடக்குதல்"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"ஓட்டுநர் உதவி அம்சங்கள் கொண்ட ஆப்ஸுக்கு"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"மாற்று"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"ஓட்டுநர் உதவி அம்சங்களை வழங்குவதற்காக, இந்த அனுமதியைக் கொண்டுள்ள ஆப்ஸுக்கு இந்த வாகனத்தின் இருப்பிடத்திற்கான அணுகலும் உள்ளது"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"இருப்பிடம் ஆனில் இருந்தால் கிடைக்காது"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"இதை முடக்கினால், இருப்பிடத் தகவல்களைச் சார்ந்துள்ள ஓட்டுநர் உதவி அம்சங்கள் முடக்கப்படும்."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"எப்படியாவது முடக்கு"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள்"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள் இல்லை"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ஆப்ஸ் நிலை அனுமதிகள்"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"உங்கள் சாதனத்தின் இருப்பிடத்தைக் கணிக்க உதவுவதற்கு GPS, வைஃபை, மொபைல் நெட்வொர்க்குகள், சென்சார்கள் போன்றவற்றை இருப்பிட அமைப்புகள் பயன்படுத்தக்கூடும்."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ஓட்டுநர் உதவி"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"ஓட்டுநர் உதவி அம்சங்களுக்கு அனுப்பப்படும் இருப்பிடம் குறித்த தகவல்களில் உங்களை அடையாளம் காணும் தகவல்கள் இருக்காது. நீக்கப்படுவதற்கு முன் அதிகபட்சமாக 2 நாட்கள் வரை இது சேமிக்கப்பட்டிருக்கும்."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"மைக்ரோஃபோன்"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"மைக்ரோஃபோனைப் பயன்படுத்துதல்"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"மைக்ரோஃபோனை அனைத்து ஆப்ஸும் அணுகுவதற்கு அனுமதிக்கும்"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"சுயவிவரத்தைச் சேர்"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"திரையின் ஒளிர்வு"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"செயல்படுத்தப்பட்ட ஆப்ஸ்"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"முடக்கப்பட்ட ஆப்ஸ்"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி ஆப்ஸ் இயக்கப்பட்டுள்ளது, பின்வரும் செயல்பாடுகளைச் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை அது அனுமதிக்கிறது:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கினால் பின்வரும் செயல்பாடுகளைச் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை அது அனுமதிக்கும்:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"ஃப்ளீட் நிர்வாகியால் இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டத்துடன் தொடர்புடைய தரவை அணுகவும் ஆப்ஸை நிர்வகிக்கவும் இந்த வாகனங்களின் அமைப்புகளை மாற்றவும் முடியும்."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"ஃப்ளீட் நிர்வாகி முடக்கியுள்ளார்"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ஒலியளவை மாற்ற ஃப்ளீட் நிர்வாகியைத் தொடர்புகொள்க"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"மெசேஜை பயன்படுத்த ஃப்ளீட் நிர்வாகியை தொடர்புகொள்க"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"கேமராவை பயன்படுத்த ஃப்ளீட் நிர்வாகியை தொடர்புகொள்க"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ஸ்கிரீன்ஷாட் எடுக்க ஃப்ளீட் நிர்வாகியை தொடர்புகொள்க"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"கேள்விகள் இருந்தால் ஃப்ளீட் நிர்வாகியைத் தொடர்புகொள்ளவும்"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"வாகன நிர்வாகி ஆப்ஸ்"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# ஆப்ஸ் செயலில் உள்ளது}other{# ஆப்ஸ் செயலில் உள்ளன}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"ஆப்ஸ் எதுவும் செயலில் இல்லை"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# செயல்படுத்தப்பட்ட ஆப்ஸ்}other{# செயல்படுத்தப்பட்ட ஆப்ஸ்}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"செயல்படுத்தப்பட்ட ஆப்ஸ் எதுவுமில்லை"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"உங்கள் ஃப்ளீட் நிர்வாகி நிர்வகிக்கும் அமைப்புகள்"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தை மீட்டமையுங்கள்"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"ஆரம்பநிலைக்கு மீட்டமைப்பதற்கும் அனைத்துத் தரவையும் அழிப்பதற்குமான கோரிக்கையை உங்கள் சிஸ்டம் பெற்றுள்ளது. இப்போது மீட்டமைக்கலாம் அல்லது அடுத்தமுறை காரை இயக்கத் தொடங்கும்போது மீட்டமைக்கப்படும். அதன்பிறகு புதிய சுயவிவரத்தை அமைக்கலாம்."</string>

@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Tambahkan lainnya"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Kuota"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan jaringan seluler"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Jaringan seluler"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Gunakan kuota"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Nonaktifkan kuota?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Perlu memilih SIM"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Gunakan <xliff:g id="CARRIER">%1$s</xliff:g> untuk kuota?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Setel"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Peringatan &amp; batas data"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Siklus penggunaan kuota aplikasi"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Penggunaan data seluler"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Setel peringatan kuota"</string>
     <string name="data_warning" msgid="116776633806885370">"Peringatan kuota"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Setel batas kuota"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Head unit kendaraan akan menonaktifkan kuota jika mencapai batas yang disetel.\n\nKarena penggunaan data diukur oleh head unit, dan operator dapat menghitung penggunaan secara berbeda, pertimbangkan untuk menyetel batas yang konservatif."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Setel peringatan penggunaan data"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Setel batas penggunaan data"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Penggunaan data diukur oleh perangkat Anda. Hasilnya mungkin berbeda dengan data operator seluler Anda."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Setel"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Simpan"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Jaringan OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Internet kendaraan"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Menonaktifkan internet kendaraan dapat menyebabkan beberapa aplikasi atau fitur kendaraan berhenti bekerja.\n\nData penting yang diperlukan untuk mengoperasikan kendaraan Anda akan terus dibagikan kepada produsen kendaraan."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Tetap nonaktifkan"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Internet kendaraan dinonaktifkan. Ini dapat menyebabkan beberapa aplikasi atau fitur kendaraan berhenti bekerja. Data penting yang diperlukan untuk mengoperasikan kendaraan Anda akan terus dibagikan kepada produsen kendaraan."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s digunakan antara %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Gabung ke jaringan lain"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Preferensi jaringan"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pilih minimal satu band untuk hotspot Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot &amp; tethering"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Nonaktif"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Otomatis nonaktifkan hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspot Wi-Fi akan dinonaktifkan jika tidak ada perangkat yang terhubung"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ingin mengaktifkan Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Menggunakan resource sistem untuk memprioritaskan performa aplikasi"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Penggunaan data"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Penggunaan kuota aplikasi"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Histori penggunaan"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Semua aplikasi"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Penggunaan Data &amp; Wi‑Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Histori penggunaan"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Total penggunaan"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Latar depan"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Latar belakang"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Izinkan penggunaan data"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Izinkan aplikasi ini menggunakan data seluler"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Batasi data"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Hanya gunakan data seluler saat aplikasi berada di latar depan"</string>
     <string name="computing_size" msgid="5791407621793083965">"Menghitung..."</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# izin tambahan}other{# izin tambahan}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Catatan: Setelah reboot, aplikasi ini tidak dapat dimulai hingga kunci kendaraan dibuka."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Lainnya"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gunakan lokasi"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Menonaktifkan Lokasi akan menonaktifkan akses lokasi untuk semua aplikasi. Namun, fitur Bantuan bagi pengemudi akan tetap memiliki akses. Jika tombol Bantuan bagi pengemudi dinonaktifkan, fitur Bantuan bagi pengemudi tidak akan dapat menggunakan lokasi Anda."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Bantuan bagi pengemudi"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokasi kendaraan nonaktif"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Untuk apl dengan fitur Bantuan bagi Pengemudi"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Ubah"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Aplikasi dengan izin ini dapat mengakses lokasi kendaraan ini untuk fitur Bantuan bagi Pengemudi"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Tidak tersedia saat lokasi diaktifkan"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Jika Anda menonaktifkannya, fitur bantuan bagi pengemudi yang mengandalkan informasi lokasi akan dinonaktifkan."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Tetap nonaktifkan"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Permintaan Lokasi Terbaru"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Tidak ada permintaan lokasi terbaru"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Izin tingkat aplikasi"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Gunakan lokasi"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokasi dapat menggunakan sumber informasi seperti GPS, Wi-Fi, jaringan seluler, dan sensor untuk memperkirakan lokasi perangkat Anda."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bantuan bagi pengemudi"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Informasi lokasi yang dikirimkan ke fitur bantuan bagi pengemudi tidak berisi informasi yang mengidentifikasi Anda. Informasi tersebut akan disimpan maksimal selama 2 hari sebelum dihapus."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gunakan mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Izinkan semua aplikasi mengakses mikrofon Anda"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Tambahkan profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Kecerahan layar"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Admin sistem infotainmen"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Aplikasi yang diaktifkan"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Aplikasi yang dinonaktifkan"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Tidak ada aplikasi admin sistem infotainmen"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Aplikasi admin sistem infotainmen ini aktif dan mengizinkan aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> untuk menjalankan operasi berikut:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Dengan mengaktifkan aplikasi sistem infotainmen ini, aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> akan dapat menjalankan operasi berikut:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Pengelola armada mungkin dapat mengakses data yang terkait dengan sistem infotainmen ini, mengelola aplikasi, dan mengubah setelan kendaraan ini."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Diblokir oleh pengelola armada"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Hubungi pengelola armada untuk mengubah volume"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Hubungi pengelola armada untuk menggunakan SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Hubungi pengelola armada untuk menggunakan kamera"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Hubungi pengelola armada guna mengambil screenshot"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Jika ada pertanyaan, hubungi pengelola armada"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Aplikasi admin kendaraan"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aplikasi aktif}other{# aplikasi aktif}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Tidak ada aplikasi aktif"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplikasi yang diaktifkan}other{# aplikasi yang diaktifkan}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Tidak ada aplikasi yang diaktifkan"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Setelan yang dikelola oleh pengelola armada Anda"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Reset sistem infotainmen"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem Anda telah menerima permintaan reset ke setelan pabrik untuk menghapus semua data. Anda dapat meresetnya sekarang, atau saat mobil dinyalakan lagi. Setelah itu, Anda dapat menyiapkan profil baru."</string>

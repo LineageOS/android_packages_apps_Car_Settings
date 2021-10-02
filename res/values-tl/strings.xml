@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Magdagdag pa"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobile data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"I-access ang data gamit ang mobile network"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobile network"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Gumamit ng mobile data"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"I-off ang mobile data?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Kinakailangang pumili"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Gamitin ang <xliff:g id="CARRIER">%1$s</xliff:g> sa mobile data?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Itakda"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Babala at limitasyon sa data"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cycle ng paggamit ng data ng app"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Paggamit ng mobile data"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Magtakda ng babala sa data"</string>
     <string name="data_warning" msgid="116776633806885370">"Babala sa data"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Itakda ang limitasyon sa data"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Io-off ng head unit ng iyong sasakyan ang mobile data sa oras na maabot nito ang itinakda mong limitasyon.\n\nDahil sinusukat ng head unit ang paggamit ng data, at maaaring mag-iba ang pagkalkula ng carrier mo sa paggamit, pag-isipang magtakda ng mababang limitasyon."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Itakda ang babala sa paggamit ng data"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Itakda ang limitasyon sa paggamit ng data"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Sinusukat ng iyong device ang paggamit ng data. Posible itong mag-iba-iba sa data ng iyong mobile carrier."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Itakda"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"I-save"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM network"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Internet sa sasakyan"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Sa pag-off ng internet sa saksakyan, baka hindi gumana ang ilang feature o app ng sasakyan.\n\nIbabahagi pa rin sa manufacturer nito ang kritikal na data na kailangan para mapagana ang sasakyan."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"I-off pa rin"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Na-off ang internet sa sasakyan. Posibleng mapigilan nitong gumana ang ilang feature o app ng sasakyan. Patuloy na ibabahagi sa manufacturer ng sasakyan ang kritikal na data na kinakailangan para mapagana ang iyong sasakyan."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s ang nagamit %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Sumali sa ibang network"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Mga kagustuhan sa network"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pumili ng kahit isang band para sa Wi‑Fi hotspot:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot at pag-tether"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Naka-off"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Awtomatikong i-off ang hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Mao-off ang Wi‑Fi hotspot kung walang nakakonektang device"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Gustong i-on ng <xliff:g id="REQUESTER">%s</xliff:g> ang Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Ginagamit ang mga resource ng system para gawing priyoridad ang performance ng app"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Paggamit ng data"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Paggamit ng data ng app"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"History ng paggamit"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Lahat ng app"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Paggamit ng data at Wi‑Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"History ng paggamit"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Kabuuang paggamit"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Foreground"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Background"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Payagan ang data"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Hayaan ang app na ito na gumamit ng mobile data"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Paghigpitan ang data"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Gumamit lang ng data kapag nasa foreground ang app"</string>
     <string name="computing_size" msgid="5791407621793083965">"Kinakalkula…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# karagdagang pahintulot}one{# karagdagang pahintulot}other{# na karagdagang pahintulot}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Tandaan: Pagkatapos ng pag-reboot, hindi makakapagsimula ang app na ito hangga\'t hindi mo ina-unlock ang iyong sasakyan."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Higit pa"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasyon"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gumamit ng lokasyon"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Kapag na-off ang Lokasyon, mao-off ang access sa lokasyon para sa lahat ng app, magkakaroon pa rin ng access ang mga feature na Tulong sa driver. Kapag na-off ang Tulong sa driver, hindi na gagamitin ng mga feature na Tulong sa driver ang iyong lokasyon."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Tulong sa driver"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Naka-off ang lokasyon ng sasakyan"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Para sa app na may feature ng Tulong sa Driver"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Baguhin"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Ang mga app na may ganitong pahintulot ay may access sa lokasyon ng sasakyang ito para sa mga feature ng Tulong sa Driver"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Hindi available habang naka-on ang lokasyon"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Kung io-off mo ito, madi-disable ang mga feature ng tulong sa driver na dumedepende sa impormasyon ng lokasyon."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"I-off pa rin"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Mga Kamakailang Kahilingan sa Lokasyon"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Walang kamakailang kahilingan sa lokasyon"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Mga pahintulot sa antas ng app"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Gumamit ng lokasyon"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Posibleng gumamit ang mga lokasyon ng mga source na gaya ng GPS, Wi‑Fi, mga mobile network, at sensor para tumulong sa pagtantiya ng lokasyon ng iyong device."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Tulong sa driver"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Walang impormasyong makakapagtukoy sa iyo sa impormasyon ng lokasyon na ipinapadala sa mga feature ng tulong sa driver. Sino-store ito sa loob ng hindi hihigit sa 2 araw bago i-delete."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikropono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gamitin ang mikropono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Payagan ang lahat ng app na i-access ang iyong mikropono"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Magdagdag ng profile"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Liwanag ng display"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Admin ng infotainment system"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Mga na-activate na app"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Mga na-deactivate na app"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Walang app ng admin ng infotainment system"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Aktibo ang infotainment system admin app na ito at pinapayagan ang app na <xliff:g id="APP_NAME">%1$s</xliff:g> na gawin ang mga sumusunod na operation:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Kapag na-activate ang infotainment system app na ito, papayagan nito ang app na <xliff:g id="APP_NAME">%1$s</xliff:g> na gawin ang mga sumusunod na operation:"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Puwedeng ma-access ng fleet manager ang data na nauugnay sa infotainment system na ito, mapamahalaan ang mga app, at mabago ang mga setting ng sasakyang ito."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Na-block ng fleet manager mo"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Hilingin sa fleet manager na baguhin ang volume"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Hilingin sa fleet manager na gamitin ang SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Hilingin sa fleet manager na magamit ang camera"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Hilingin sa fleet manager na kumuha ng screenshot"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Kung may mga tanong ka, makipag-ugnayan sa fleet manager"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Mga app ng admin ng sasakyan"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aktibong app}one{# aktibong app}other{# na aktibong app}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Walang aktibong app"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# na-activate na app}one{# na-activate na app}other{# na na-activate na app}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Walang na-activate na app"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Pinamamahalaan ng iyong fleet manager ang mga setting"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"I-reset ang infotainment system"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Nakatanggap ang iyong system ng kahilingang mag-factory reset at magbura ng lahat ng data. Puwede mo itong i-reset ngayon, o magre-reset ito sa susunod na mag-start ang sasakyan. Pagkatapos, makakapag-set up ka ng bagong profile."</string>
