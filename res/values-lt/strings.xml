@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Pridėti daugiau"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiliojo ryšio duomenys"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Prieiga prie duomenų naud. mobiliojo ryšio tinklą"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobiliojo ryšio tinklas"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Naudoti mobiliojo ryšio duomenis"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Išjungti mobiliojo ryšio duomenis?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Būtina pasirinkti"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Naudoti „<xliff:g id="CARRIER">%1$s</xliff:g>“ mob. ryšio duomen.?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Nustatyti"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Įspėjimas dėl duomenų ir apribojimas"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Programų duomenų naudojimo ciklas"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"Mobiliojo ryšio duomenų naudojimas"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Nustatyti įspėjimą dėl duomenų"</string>
     <string name="data_warning" msgid="116776633806885370">"Įspėjimas dėl duomenų"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Nust. duomenų apribojimą"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Pasiekus nustatytą apribojimą pagrindiniame transporto priemonės įtaise bus išjungti mobiliojo ryšio duomenys.\n\nKadangi sunaudoti duomenys skaičiuojami pagal pagrindinį transporto priemonės įtaisą ir operatorius gali apskaičiuoti kitaip, apsvarstykite galimybę nustatyti mažesnį apribojimą."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Nustatyti duomenų naudojimo įspėjimą"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Nustatyti duomenų naudojimo apribojimą"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"Duomenų naudojimas matuojamas pagal įrenginį. Jis gali skirtis nuo mobiliojo ryšio operatoriaus duomenų."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Nustatyti"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Išsaugoti"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OĮG tinklas"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Transporto priemonės internetas"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Išjungus transporto priemonės internetą kai kurios jos funkcijos ar programos gali neveikti.\n\nPagrindiniai duomenys, reikalingi, kad transporto priemonė veiktų, toliau bus bendrinami su jos gamintoju."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Vis tiek išjungti"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Transporto priemonės internetas išjungtas. Dėl to kai kurios transporto priemonės funkcijos ar programos gali neveikti. Pagrindiniai duomenys, reikalingi, kad transporto priemonė veiktų, toliau bus bendrinami su jos gamintoju."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Naudojama: %1$s (%2$s–%3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Prisijungti prie kito tinklo"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Tinklo nuostatos"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pasir. bent 1 „Wi‑Fi“ vieš. int. prieig. tšk. dažn. juostą:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Vieš. intern. prieig. tašk. ir įreng. kaip modemo naud."</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Viešosios interneto prieigos taškas"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Išjungta"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Išjungti viešosios interneto prieigos tašką autom."</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"„Wi‑Fi“ viešosios interneto prieigos taškas bus išjungtas, jei nebus prijungta jokių įrenginių"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> nori įjungti „Wi-Fi“"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Naudojami sistemos ištekliai, kad būtų galima suteikti prioritetą programos našumui"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Duomenų naudojimas"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Progr. duomenų naudojimas"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Naudojimo istorija"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Visos programos"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Duomenų ir „Wi-Fi“ naud."</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Naudojimo istorija"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Bendras naudojimas"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Priekinis planas"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Fonas"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Duomenų leidimas"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Leisti programai naudoti mobiliojo ryšio duomenis"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Duomenų apribojimas"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Mob. ryš. duom. naudoti tik pr. esant priek. plane"</string>
     <string name="computing_size" msgid="5791407621793083965">"Skaičiuojama…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# papildomas leidimas}one{# papildomas leidimas}few{# papildomi leidimai}many{# papildomo leidimo}other{# papildomų leidimų}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Pastaba: paleidus iš naujo nebus galima paleisti programos, kol neatrakinsite transporto priemonės."</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Daugiau"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vietovė"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Naudoti vietovę"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"Išjungus vietovę, bus išjungta visų programų prieiga prie vietovės duomenų. Pagalbos vairuotojui funkcijos vis tiek turės prieigą. Išjungus pagalbos vairuotojui perjungimo parinktį, bus sustabdyta pagalbos vairuotojui funkcijų galimybė naudoti vietovės duomenis."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"Pagalba vairuotojui"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Transporto vietovė išjungta"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"Programos su pagalbos vairuotojui funkc."</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Keisti"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"Programos, kurioms suteiktas šis leidimas, turi prieigą prie šios transporto priemonės vietovės, kad veiktų pagalbos vairuotojui funkcijos"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"Nepas., kol įjungta vietovės parinktis"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"Jei šį nustatymą išjungsite, pagalbos vairuotojui funkcijos, kurioms reikalinga vietovės informacija, bus išjungtos."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"Vis tiek išjungti"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Pastarosios vietovės užklausos"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nėra jokių pastarųjų vietovių užklausų"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Programos lygio leidimai"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Naudoti vietovę"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Vietovės paslauga gali naudoti įvairius šaltinius, pvz., GPS, „Wi-Fi“, mobiliojo ryšio tinklus ir jutiklius, kad nustatytų jūsų įrenginio vietovę."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Pagalba vairuotojui"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"Vietovės informacijoje, išsiųstoje pagalbos vairuotojui funkcijoms, nebus jus identifikuojančios informacijos. Prieš ištrinant ji saugoma daugiausia dvi dienas."</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofonas"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Naudoti mikrofoną"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Leisti programoms pasiekti mikrofoną"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Pridėti profilį"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ekrano šviesumas"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informacinės pramoginės sistemos administratorius"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"Suaktyvintos programos"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Išaktyvintos programos"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nėra informacinės pramoginės sistemos administravimo programų"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Ši informacinės pramoginės sistemos administravimo programa yra aktyvi ir programai „<xliff:g id="APP_NAME">%1$s</xliff:g>“ leidžiama vykdyti toliau nurodytas operacijas."</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Suaktyvinus šią informacinės pramoginės sistemos programą programai „<xliff:g id="APP_NAME">%1$s</xliff:g>“ bus leidžiama vykdyti toliau nurodytas operacijas."</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"Parko valdytojas gali pasiekti duomenis, susietus su šia informacine pramogine sistema, tvarkyti programas ir keisti šios transporto priemonės nustatymus."</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"Užblokavo parko valdytojas"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Garsumas keičiamas susisiekus su parko valdytoju"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS naudojami susisiekus su parko valdytoju"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Vaizdo kamera naudojama susisiekus su parko valdytoju"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Ekrano kopijos kuriamos susisiekus su parko valdytoju"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"Jei turite klausimų, susisiekite su parko valdytoju"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Transporto priemonių administravimo programos"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{# aktyvi programa}one{# aktyvi programa}few{# aktyvios programos}many{# aktyvios programos}other{# aktyvių programų}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"Nėra jokių aktyvių programų"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# suaktyvinta programa}one{# suaktyvinta programa}few{# suaktyvintos programos}many{# suaktyvintos programos}other{# suaktyvintų programų}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nėra jokių suaktyvintų programų"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Parko valdytojo tvarkomi nustatymai"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Informacinės pramoginės sistemos nustatymas iš naujo"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Jūsų sistema gavo užklausą atkurti gamyklinius nustatymus ir ištrinti visus duomenis. Galite iš naujo nustatyti dabar arba tada, kai automobilis bus užvestas kitą kartą. Tada galėsite nustatyti naują profilį."</string>

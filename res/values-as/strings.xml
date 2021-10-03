@@ -27,8 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"নৈশ ম\'ড"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"নেটৱৰ্ক আৰু ইণ্টাৰনেট"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ম’বাইল নেটৱৰ্ক"</string>
-    <!-- no translation found for mobile_network_summary_count (760865625847664029) -->
-    <skip />
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# খন ছিম}one{# খন ছিম}other{# খন ছিম}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"সক্রিয় / ছিম"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"নিষ্ক্ৰিয় / ছিম"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"সক্ৰিয় / ডাউনল’ড কৰা ছিম"</string>
@@ -36,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"অধিক যোগ কৰক"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ম’বাইল ডেটা"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ম’বাইল নেটৱৰ্ক ব্যৱহাৰ কৰি ডেটা এক্সেছ কৰক"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ম’বাইলৰ নেটৱৰ্ক"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ম’বাইল ডেটা ব্যৱহাৰ কৰক"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ম’বাইল ডেটা অফ কৰিবনে?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"বাছনি কৰা প্ৰয়োজন"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ডেটাৰ বাবে <xliff:g id="CARRIER">%1$s</xliff:g> ব্যৱহাৰ কৰিবনে?"</string>
@@ -55,8 +52,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"ডেটাৰ ব্যৱহাৰ সম্পৰ্কীয় সকীয়নি <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"ডেটাৰ সীমা <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"ডেটাৰ ব্যৱহাৰ সম্পৰ্কীয় সকীয়নি <xliff:g id="ID_1">^1</xliff:g> / ডেটাৰ সীমা <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <!-- no translation found for billing_cycle_days_left (1810100330204239102) -->
-    <skip />
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{# দিন বাকী আছে}one{# দিন বাকী আছে}other{# দিন বাকী আছে}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"সময় শেষ হ’ল"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"১দিনতকৈও কম সময় বাকী আছে"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_1">^1</xliff:g>এ <xliff:g id="ID_2">^2</xliff:g> আগত আপডে’ট কৰিছে"</string>
@@ -71,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"ছেট কৰক"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ডেটা ব্যৱহাৰৰ সকীয়নি আৰু সীমা"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"এপে ব্যৱহাৰ কৰা ডেটাৰ চক্ৰ"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"ম’বাইল ডেটাৰ ব্যৱহাৰ"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ডেটা ব্যৱহাৰৰ সকীয়নি ছেট কৰক"</string>
     <string name="data_warning" msgid="116776633806885370">"ডেটা সকীয়নি"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ডেটাৰ সীমা ছেট কৰক"</string>
@@ -81,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"আপুনি ছেট কৰা সীমাত উপনীত হোৱাৰ লগে লগে আপোনাৰ বাহনৰ হে’ড ইউনিটে ম’বাইল ডেটা অফ কৰি দিব।\n\nযিহেতু ডেটাৰ ব্যৱহাৰ আপোনাৰ হে’ড ইউনিটে গণনা কৰে যিটো আপোনাৰ বাহকৰ গণনাৰ সৈতে একে নহ’বও পাৰে, গতিকে এক ৰক্ষণশীল সীমা বন্ধাৰ কথা বিবেচনা কৰক।"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ডেটা ব্যৱহাৰৰ সতৰ্কবাণী ছেট কৰক"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ডেটা ব্যৱহাৰৰ সীমা ছেট কৰক"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"ডেটাৰ ব্যৱহাৰ আপোনাৰ ডিভাইচৰ দ্বাৰা জোখা হয়। ই আপোনাৰ ম’বাইলৰ বাহকৰ ডেটাতকৈ পৃথক হ’ব পাৰে।"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ছেট কৰক"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"ছেভ কৰক"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM নেটৱৰ্ক"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"বাহনৰ ইণ্টাৰনেট"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"বাহনখনৰ ইণ্টাৰনেট অফ কৰা কাৰ্যই বাহনৰ কিছুমান সুবিধা অথবা এপ্‌সমূহক কাম কৰাত বাধা দিব পাৰে।\n\n আপোনাৰ বাহনখন চলাবলৈ আৱশ্যক হোৱা গুৰুত্বপূৰ্ণ ডেটা বাহন নিৰ্মাতাৰ সৈতে শ্বেয়াৰ কৰাটো অব্যাহত থাকিব।"</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"যি হ’লেও অফ কৰক"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"বাহনৰ ইণ্টাৰনেট অফ হৈ আছে। এই কাৰ্যই বাহনৰ কিছুমান সুবিধা অথবা এপ্‌সমূহক কাম কৰাত বাধা দিব পাৰে। আপোনাৰ বাহনখন চলাবলৈ আৱশ্যক হোৱা গুৰুত্বপূৰ্ণ ডেটা বাহন নিৰ্মাতাৰ সৈতে শ্বেয়াৰ কৰাটো অব্যাহত থাকিব।"</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s ব্যৱহাৰ কৰা হৈছে %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"অন্য নেটৱৰ্কৰ সৈতে সংযোগ কৰক"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"নেটৱৰ্কৰ অগ্ৰাধিকাৰ"</string>
@@ -170,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ৱাই-ফাই হটস্পটৰ বাবে কমেও এটা বেণ্ড বাছনি কৰক:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"হ’টস্পট আৰু টেডাৰিং"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"হটস্পট"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"অফ আছে"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"স্বয়ংক্ৰিয়ভাৱে হটস্পট অফ কৰক"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"যদি কোনো ডিভাইচ সংযোগ হৈ নাথাকে, তেন্তে ৱাই-ফাই হটস্পট অফ হ’ব"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>এ ৱাই-ফাই অন কৰিব বিচাৰে"</string>
@@ -314,14 +302,10 @@
     <string name="force_stop" msgid="2153183697014720520">"বলেৰে ৰখাওক"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"বলেৰে বন্ধ কৰিবনে?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"আপুনি কোনো এপ্‌ বলেৰে বন্ধ কৰিবলৈ চেষ্টা কৰিলে ই অস্বাভাৱিক আচৰণ কৰিব পাৰে।"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (2561577032540073080) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (572525689800110355) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_on (3556735049873419163) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_action_off (2813324718753199319) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"এপৰ কাৰ্যদক্ষতাক অগ্ৰাধিকাৰ দিয়াটো অন কৰিবনে?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"এইটো অন কৰাটোৱে ছিষ্টেমত সমস্যাৰ সৃষ্টি কৰা অথবা দীঘলীয়া সময়ৰ বাবে হাৰ্ডৱেৰত প্ৰভাৱ পেলোৱাৰ সম্ভাৱনা থাকে। আপুনি অব্যাহত ৰাখিব বিচাৰেনে?"</string>
+    <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"হয়"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"নালাগে, ধন্যবাদ"</string>
     <string name="disable_text" msgid="4358165448648990820">"অক্ষম কৰক"</string>
     <string name="enable_text" msgid="1794971777861881238">"সক্ষম কৰক"</string>
     <string name="uninstall_text" msgid="277907956072833012">"আনইনষ্টল কৰক"</string>
@@ -331,45 +315,30 @@
     <string name="permissions_label" msgid="2701446753515612685">"অনুমতি"</string>
     <string name="notifications_label" msgid="6586089149665170731">"জাননী"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ষ্ট’ৰেজ আৰু কেশ্ব"</string>
-    <!-- no translation found for prioritize_app_performance_label (7264505023347026606) -->
-    <skip />
+    <string name="prioritize_app_performance_label" msgid="7264505023347026606">"এপৰ কাৰ্যদক্ষতাক অগ্ৰাধিকাৰ দিয়ক"</string>
     <string name="application_version_label" msgid="8556889839783311649">"সংস্কৰণ: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"কোনো অনুমতি দিয়া হোৱা নাই"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"অনুমতি বিচৰা হোৱা নাই"</string>
     <string name="unused_apps" msgid="648471933781010395">"অব্যৱহৃত এপ্‌"</string>
-    <!-- no translation found for unused_apps_summary (8257304516038923072) -->
-    <skip />
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# টা অব্যৱহৃত এপ্}one{# টা অব্যৱহৃত এপ্}other{# টা অব্যৱহৃত এপ্}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"অনুমতি আঁতৰাওক আৰু ঠাই খালী কৰক"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s অভ্যন্তৰীণ ষ্ট’ৰেজত আছে"</string>
-    <!-- no translation found for prioritize_app_performance_summary (1081874788185691418) -->
-    <skip />
+    <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"এপৰ কাৰ্যদক্ষতাক অগ্ৰাধিকাৰ দিবলৈ ছিষ্টেমৰ সম্পদসমূহ ব্যৱহাৰ কৰে"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ডেটাৰ ব্যৱহাৰ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"এপ্ ডেটাৰ ব্যৱহাৰ"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"ব্যৱহাৰৰ ইতিহাস"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"আটাইবোৰ এপ্‌"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"ডেটা আৰু ৱাই-ফাইৰ ব্যৱহাৰ"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"ব্যৱহাৰৰ ইতিহাস"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"মুঠ ব্যৱহাৰ"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"অগ্ৰভাগ"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"নেপথ্য ডেটা ব্যৱহাৰ"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"ডেটাৰ অনুমতি দিয়ক"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"এই এপ্‌টোক ম’বাইল ডেটা ব্যৱহাৰ কৰিবলৈ দিয়ক"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"ডেটা সীমিত কৰক"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"এপ্‌টো অগ্ৰভাগত থাকিলেহে ম’বাইল ডেটা ব্যৱহাৰ কৰক"</string>
     <string name="computing_size" msgid="5791407621793083965">"গণনা কৰি থকা হৈছে…"</string>
-    <!-- no translation found for runtime_permissions_additional_count (3920383880473283764) -->
-    <skip />
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# টা অতিৰিক্ত অনুমতি}one{# টা অতিৰিক্ত অনুমতি}other{# টা অতিৰিক্ত অনুমতি}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"টোকা: ৰিবুট কৰাৰ পিছত আপুনি নিজৰ বাহনখন আনলক নকৰালৈকে এই এপ্‌টো ষ্টাৰ্ট হ’ব নোৱাৰে।"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"সহায় আৰু ধ্বনি ইনপুট"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"সহায়ক এপ্"</string>
@@ -427,19 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"অধিক"</string>
     <string name="location_settings_title" msgid="901334356682423679">"অৱস্থান"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"অৱস্থান ব্যৱহাৰ কৰক"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"অৱস্থান অফ কৰাটোৱে আটাইবোৰ এপৰ বাবে অৱস্থানৰ এক্সেছ অফ কৰিব, চালকৰ সহায়ক সুবিধাসমূহৰ তথাপি এক্সেছ থাকিব। চালকৰ সহায়ক সুবিধাসমূহ ট’গল কৰাটো অফ কৰাটোৱে চালকৰ সহায়ক সুবিধাসমূহে আপোনাৰ অৱস্থান ব্যৱহাৰ কৰাটো বন্ধ কৰিব।"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"চালক সাহায্য"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_title (2218532550578204718) -->
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
     <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (8939286529924614912) -->
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
     <skip />
-    <!-- no translation found for location_driver_assistance_action_text (1887309495010247883) -->
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
     <skip />
-    <!-- no translation found for driver_assistance_page_description (7538596481471802494) -->
+    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"বাহনখনৰ অৱস্থান অফ আছে"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
     <skip />
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"অৱস্থানটো অন কৰি থোৱা অৱস্থাত উপলব্ধ নহয়"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"আপুনি যদি এইটো অফ কৰে, অৱস্থানৰ তথ্যখিনিৰ ওপৰত নির্ভৰশীল চালকৰ সাহায্য সুবিধাসমূহ অক্ষম কৰা হ\'ব।"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"তথাপি অফ কৰক"</string>
+    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"সলনি কৰক"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"শেহতীয়া অৱস্থানৰ অনুৰোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"শেহতীয়াকৈ কোনো এপে অৱস্থানৰ অনুৰোধ প্ৰেৰণ কৰা নাই"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"এপ্‌-স্তৰৰ অনুমতি"</string>
@@ -447,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"অৱস্থান ব্যৱহাৰ কৰক"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"অৱস্থান সেৱাই আপোনাৰ ডিভাইচৰ অৱস্থান অনুমান কৰাত সহায় কৰিবলৈ জিপিএছ, ৱাই-ফাই, ম’বাইল নেটৱৰ্ক আৰু ছেন্সৰৰ দৰে উৎসসমূহ ব্যৱহাৰ কৰিব পাৰে।"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"চালক সাহায্য"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"চালক সাহায্য সুবিধাসমূহলৈ পঠিওৱা অৱস্থানৰ তথ্যত আপোনাক চিনাক্ত কৰা কোনো তথ্য নাথাকে। মচাৰ পূর্বে ইয়াক সর্বাধিক ২ দিনৰ বাবে ষ্ট\'ৰ কৰা হয়।"</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্ৰ’ফ’ন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্র’ফ’ন ব্যৱহাৰ কৰক"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"আটাইবোৰ এপক আপোনাৰ মাইক্ৰ’ফ’ন এক্সেছ কৰিবলৈ দিয়ক"</string>
@@ -455,8 +428,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"কোনো শেহতীয়া এপ্‌ নাই"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"০ টা এপৰ এক্সেছ আছে"</string>
-    <!-- no translation found for microphone_app_permission_summary_microphone_on (7870834777359783838) -->
-    <skip />
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}one{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}other{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"আটাইবোৰ চাওক"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"ল’ড কৰি থকা হৈছে…"</string>
@@ -498,8 +470,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"তৃতীয় পক্ষৰ অনুজ্ঞাপত্ৰ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"অনুজ্ঞাপত্ৰসমূহ ল\'ড কৰাত সমস্যা।"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ল’ড হৈ আছে…"</string>
-    <!-- no translation found for show_dev_countdown (7416958516942072383) -->
-    <skip />
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{আপুনি এতিয়া এগৰাকী বিকাশকৰ্তা হোৱাৰ পৰা # টা পদক্ষেপ দূৰত আছে।}one{আপুনি এতিয়া এগৰাকী বিকাশকৰ্তা হোৱাৰ পৰা # টা পদক্ষেপ দূৰত আছে।}other{আপুনি এতিয়া এগৰাকী বিকাশকৰ্তা হোৱাৰ পৰা # টা পদক্ষেপ দূৰত আছে।}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"আপুনি এতিয়া এজন বিকাশকৰ্তা!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"কোনো প্ৰয়োজন নাই, আপুনি ইতিমধ্যে এজন বিকাশকৰ্তা।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"বিকাশকৰ্তাৰ বিকল্পসমূহ"</string>
@@ -568,8 +539,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"আপুনি এটা নতুন প্ৰ\'ফাইল সৃষ্টি কৰাৰ পাছত, সেই ব্যক্তিগৰাকীয়ে এইটোক নিজৰ বাবে কাষ্টমাইজ কৰিব লাগে।"</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"অন্য আটাইবোৰ প্ৰ\'ফাইলে ব্যৱহাৰ কৰিবলৈ যিকোনো প্ৰ\'ফাইলৰ পৰা এপ্‌ আপডে’ট কৰিব পৰা যায়।"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"প্ৰ’ফাইলৰ সীমাত উপনীত হৈছে"</string>
-    <!-- no translation found for user_limit_reached_message (2773441357248819721) -->
-    <skip />
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{কেৱল এটা প্ৰ’ফাইল সৃষ্টি কৰিব পাৰি।}one{আপুনি # টা পৰ্যন্ত প্ৰ’ফাইল সৃষ্টি কৰিব পাৰে।}other{আপুনি # টা পৰ্যন্ত প্ৰ’ফাইল সৃষ্টি কৰিব পাৰে।}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"নতুন প্ৰ\'ফাইল সৃষ্টি কৰিব পৰা নগ’ল"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"এই প্ৰ’ফাইলটো মচিবনে?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"এই প্ৰ’ফাইলটোৰ আটাইবোৰ এপ্‌ আৰু ডেটা মচা হ’ব"</string>
@@ -761,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"প্ৰ’ফাইল যোগ দিয়ক"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ডিছপ্লে\'ৰ উজ্জ্বলতা"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ইনফ’টেইনমেণ্ট ছিষ্টেমৰ প্ৰশাসক"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"সক্ৰিয় কৰা এপ্"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"নিষ্ক্ৰিয় কৰা এপ্"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"কোনো ইনফ’টেইনমেণ্ট ছিষ্টেম প্ৰশাসকৰ এপ্ নাই"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ প্ৰশাসক এপ্‌টো সক্ৰিয় হৈ আছে আৰু এইটোৱে <xliff:g id="APP_NAME">%1$s</xliff:g> এপ্‌টোক নিম্নলিখিত কাৰ্যকলাপসমূহ কৰিবলৈ দিয়ে:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"এই ইনফ’টেইনমেণ্ট ছিষ্টেম এপ্‌টো সক্ৰিয় কৰিলে <xliff:g id="APP_NAME">%1$s</xliff:g> এপ্‌টোক নিম্নলিখিত কাৰ্যকলাপসমূহ কৰিবলৈ দিয়ে:"</string>
@@ -774,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"ফ্লীট পৰিচালকে হয়তো এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ সৈতে জড়িত হৈ থকা ডেটা এক্সেছ কৰিব, এপ্‌ পৰিচালনা কৰিব আৰু এই বাহনখনৰ ছেটিং সলনি কৰিব পাৰিব।"</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"আপোনাৰ ফ্লীট পৰিচালকে অৱৰোধ কৰিছে"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ভলিউম সলনি কৰিবলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"এছএমএছ ব্যৱহাৰ কৰিবলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"কেমেৰা ব্যৱহাৰ কৰিবলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"স্ক্ৰীনশ্বট ল’বলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
@@ -782,9 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"আপোনাৰ কিবা প্ৰশ্ন থাকিলে ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"বাহনৰ প্ৰশাসক এপ্‌"</string>
-    <!-- no translation found for number_of_device_admins (8095566471921754481) -->
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# টা সক্ৰিয় কৰা এপ্}one{# টা সক্ৰিয় কৰা এপ্}other{# টা সক্ৰিয় কৰা এপ্}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"কোনো সক্ৰিয় এপ্ নাই"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
     <skip />
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"কোনো সক্ৰিয় এপ্‌ নাই"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"আপোনাৰ ফ্লীট পৰিচালকে পৰিচালনা কৰা ছেটিং"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"ইনফ’টেইনমেণ্ট ছিষ্টেমটো ৰিছেট কৰক"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"আপোনাৰ ছিষ্টেমটোৱে ফেক্টৰী ৰিছেট কৰিবলৈ আৰু আটাইবোৰ ডেটা মচিবলৈ এটা অনুৰোধ পাইছে। আপুনি এইটো এতিয়াই ৰিছেট কৰিব পাৰে অথবা পৰৱৰ্তী সময়ত গাড়ীখন ষ্টাৰ্ট হ\'লে এইটো ৰিছেট কৰা হ\'ব। আপুনি তেতিয়া এটা নতুন প্ৰ\'ফাইল ছেট আপ কৰিব পাৰে।"</string>

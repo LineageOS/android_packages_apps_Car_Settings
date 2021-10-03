@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"បញ្ចូល​បន្ថែម​​ទៀត"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ទិន្នន័យ​ទូរសព្ទចល័ត"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"បណ្ដាញទូរសព្ទចល័ត"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ប្រើ​ទិន្នន័យ​ទូរសព្ទ​ចល័ត"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"បិទទិន្នន័យ​ទូរសព្ទចល័ត?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"តម្រូវឱ្យមាន​ការជ្រើសរើស"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ប្រើ <xliff:g id="CARRIER">%1$s</xliff:g> សម្រាប់​ទិន្នន័យទូរសព្ទចល័ត?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"កំណត់"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"កំហិត និង​ការព្រមាន​អំពីការប្រើទិន្នន័យ"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"វដ្ត​នៃការ​ប្រើ​ទិន្នន័យ​កម្មវិធី"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"ការប្រើ​ទិន្នន័យ​ទូរសព្ទចល័ត"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"កំណត់ការព្រមានពីការប្រើទិន្នន័យ"</string>
     <string name="data_warning" msgid="116776633806885370">"ការព្រមានពីការប្រើទិន្នន័យ"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"កំណត់កម្រិត​ទិន្នន័យ"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​អ្នក​នឹង​បិទ​ទិន្នន័យ​ទូរសព្ទចល័ត ​នៅ​ពេល​ដែល​វា​ប្រើប្រាស់​ទិន្នន័យ​​ដល់កម្រិតដែល​អ្នក​បាន​កំណត់។\n\nដោយសារ​​ការ​ប្រើ​ប្រាស់​ទិន្នន័យ​ត្រូវ​បាន​វាស់​ស្ទង់ដោយឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​ ​ហើយក្រុមហ៊ុនបម្រើសេវាទូរសព្ទ​របស់​អ្នកអាចគណនាលើការប្រើប្រាស់​ខុសពីនោះ សូមពិចារណា​កំណត់កម្រិតប្រើប្រាស់​ទិន្នន័យ​ទាប។"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"កំណត់​ការ​ព្រមានពី​ការ​ប្រើ​ទិន្នន័យ"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"កំណត់​ដែន​កំណត់​ប្រើទិន្នន័យ"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"ការប្រើទិន្នន័យ​ត្រូវបានវាស់​ដោយ​ឧបករណ៍​របស់អ្នក។ វាអាចខុសគ្នា​ពីទិន្នន័យរបស់ក្រុមហ៊ុន​សេវាទូរសព្ទចល័ត​អ្នក។"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"កំណត់"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"រក្សាទុក"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"បណ្ដាញ OEM"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"អ៊ីនធឺណិតរបស់យានជំនិះ"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"ការបិទអ៊ីនធឺណិតរបស់យានជំនិះអាចរារាំងមុខងារ ឬកម្មវិធីរបស់យានជំនិះមួយចំនួនមិនឱ្យដំណើរការ។\n\nទិន្នន័យចាំបាច់ដែលតម្រូវឱ្យដំណើការយានជំនិះរបស់អ្នកនឹងបន្តចែករំលែកជាមួយក្រុមហ៊ុនផលិតយានជំនិះ។"</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"មិនអីទេ បិទចុះ"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"អ៊ីនធឺណិតរបស់យានជំនិះ​ត្រូវបានបិទ។ ការធ្វើបែបនេះ​អាចរារាំង​មុខងារ ឬកម្មវិធី​របស់យានជំនិះ​មួយចំនួន​មិនឱ្យដំណើរការ។ ទិន្នន័យចាំបាច់ដែលតម្រូវឱ្យដំណើការយានជំនិះរបស់អ្នកនឹងបន្តចែករំលែកជាមួយក្រុមហ៊ុនផលិតយានជំនិះ។"</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"បានប្រើ %1$s នៅថ្ងៃទី %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"ចូលរួម​បណ្តាញ​ផ្សេងទៀត"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"ចំណូលចិត្ត​បណ្តាញ"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"សូម​ជ្រើសរើស​កម្រិតបញ្ជូន​យ៉ាង​ហោចណាស់​មួយសម្រាប់​ហតស្ប៉ត Wi‑Fi៖"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ហតស្ប៉ត និង​ការភ្ជាប់"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ហតស្ប៉ត"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"បិទ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"បិទ​ហតស្ប៉ត​ដោយ​ស្វ័យប្រវត្តិ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ហតស៉្បត Wi-Fi នឹង​បិទ ​ប្រសិនបើ​​ឧបករណ៍​មិនត្រូវបានភ្ជាប់"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បើក Wi-Fi"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ប្រើធនធានប្រព័ន្ធ ដើម្បីកំណត់អាទិភាពប្រតិបត្តិការ​កម្មវិធី"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ការ​ប្រើ​ទិន្នន័យ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ការប្រើទិន្នន័យកម្មវិធី"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"ប្រវត្តិប្រើ"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"កម្មវិធី​ទាំងអស់"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"ការប្រើទិន្នន័យ និង Wi-Fi"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"ប្រវត្តិប្រើ"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"ការប្រើសរុប"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"ផ្ទៃខាងមុខ"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"ផ្ទៃខាងក្រោយ"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"អនុញ្ញាតឱ្យប្រើ​ទិន្នន័យ"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"អនុញ្ញាតឱ្យ​កម្មវិធីនេះ​ប្រើ​ទិន្នន័យទូរសព្ទចល័ត"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"ដាក់កំហិតទិន្នន័យ"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"ប្រើទិន្នន័យទូរសព្ទចល័ត តែនៅពេលកម្មវិធីស្ថិតនៅផ្ទៃខាងមុខប៉ុណ្ណោះ"</string>
     <string name="computing_size" msgid="5791407621793083965">"កំពុង​គណនា…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{ការអនុញ្ញាត​បន្ថែម #}other{ការអនុញ្ញាត​បន្ថែម #}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"ចំណាំ៖ បន្ទាប់ពី​ចាប់ផ្ដើមឡើងវិញហើយ កម្មវិធី​នេះ​មិនអាច​ចាប់ផ្ដើម​បានទេ រហូតទាល់តែ​អ្នក​ដោះសោ​យានជំនិះ​របស់អ្នក។"</string>
@@ -417,15 +396,22 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ច្រើន​ទៀត"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
-    <string name="location_toggle_off_warning" msgid="7698125556959442911">"ការបិទទីតាំងនឹងបិទការចូលប្រើទីតាំងសម្រាប់កម្មវិធីទាំងអស់ មុខងារជំនួយអ្នកបើកបរនឹងនៅតែមានសិទ្ធិចូលប្រើដដែល។ ការបិទប៊ូតុងបិទ/បើកជំនួយអ្នកបើកបរនឹងបញ្ឈប់មុខងារជំនួយអ្នកបើកបរមិនឱ្យប្រើទីតាំងរបស់អ្នក។"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="744175288965083436">"ជំនួយ​អ្នកបើកបរ"</string>
+    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
+    <skip />
+    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ទីតាំងយានជំនិះត្រូវបានបិទ"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="8939286529924614912">"សម្រាប់កម្មវិធីដែលមានមុខងារជំនួយអ្នកបើកបរ"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ផ្លាស់​ប្ដូរ"</string>
-    <string name="driver_assistance_page_description" msgid="7538596481471802494">"កម្មវិធីដែលមានការអនុញ្ញាតនេះមានសិទ្ធិចូលប្រើទីតាំងរបស់យានជំនិះនេះសម្រាប់មុខងារជំនួយអ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="7352402348737333043">"មិនអាច​ប្រើបានទេ នៅពេល​បើកទីតាំង"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="7530838749228578803">"ប្រសិនបើអ្នក​បិទមុខងារនេះ មុខងារជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ។"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="3494348104020673066">"មិនអីទេ បិទចុះ"</string>
+    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
+    <skip />
+    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
+    <skip />
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
@@ -433,7 +419,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ជំនួយ​អ្នកបើកបរ"</string>
-    <string name="adas_settings_footer" msgid="5924887134188457130">"ព័ត៌មានទីតាំង​ដែលបានបញ្ជូន​ទៅមុខងារ​ជំនួយអ្នកបើកបរ​មិនមាន​ព័ត៌មានដែល​សម្គាល់អ្នកទេ។ ព័ត៌មាននោះ​ត្រូវបានរក្សាទុក​យ៉ាងយូរបំផុត 2 ថ្ងៃ មុនពេល​ត្រូវបានលុប។"</string>
+    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​មីក្រូហ្វូន​របស់អ្នក"</string>
@@ -744,6 +731,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"បញ្ចូល​កម្រងព័ត៌មាន"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ពន្លឺ​ផ្ទាំងអេក្រង់"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"អ្នកគ្រប់គ្រង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្ត"</string>
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"កម្មវិធីដែល​បានបើកដំណើរការ"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"កម្មវិធីដែល​បានបិទដំណើរការ"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"គ្មានកម្មវិធី​អ្នកគ្រប់គ្រងប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តទេ"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"កម្មវិធី​អ្នកគ្រប់គ្រងប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តនេះគឺសកម្ម និងអនុញ្ញាតឱ្យកម្មវិធី <xliff:g id="APP_NAME">%1$s</xliff:g> ធ្វើប្រតិបត្តិការ​ខាងក្រោម៖"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"ការបើកដំណើរការ​កម្មវិធីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តនេះ​នឹងអនុញ្ញាតឱ្យកម្មវិធី <xliff:g id="APP_NAME">%1$s</xliff:g> ធ្វើប្រតិបត្តិការ​ខាងក្រោម៖"</string>
@@ -757,6 +746,8 @@
     <string name="admin_financed_message" msgid="8530796044340607865">"អ្នកគ្រប់គ្រងក្រុម​យានជំនិះប្រហែលជា​អាចចូលប្រើទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ គ្រប់គ្រង​កម្មវិធី និងប្ដូរការកំណត់​យានជំនិះនេះ។"</string>
     <string name="disabled_by_policy_title" msgid="5651853760118792629">"បានទប់ស្កាត់ដោយអ្នកគ្រប់គ្រងក្រុមយានជំនិះរបស់អ្នក"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ទាក់ទងអ្នកគ្រប់គ្រងក្រុមយានជំនិះ ដើម្បីប្ដូរកម្រិតសំឡេង"</string>
+    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <skip />
     <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើសារ SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើកាមេរ៉ា"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីថតរូប​អេក្រង់"</string>
@@ -765,8 +756,10 @@
     <string name="default_admin_support_msg" msgid="1611734116715908153">"ប្រសិនបើ​អ្នកមានសំណួរ សូមទាក់ទង​អ្នកគ្រប់គ្រងក្រុមយានជំនិះ"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"កម្មវិធីអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ"</string>
-    <string name="number_of_device_admins" msgid="8095566471921754481">"{count,plural, =1{កម្មវិធីសកម្ម #}other{កម្មវិធីសកម្ម #}}"</string>
-    <string name="number_of_device_admins_none" msgid="3761015967867157562">"មិនមាន​កម្មវិធីសកម្មទេ"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{កម្មវិធីដែល​បានបើកដំណើរការ #}other{កម្មវិធីដែល​បានបើកដំណើរការ #}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"គ្មានកម្មវិធីដែល​បានបើកដំណើរការទេ"</string>
+    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"ការកំណត់​ដែលស្ថិតក្រោមការគ្រប់គ្រង​របស់អ្នកគ្រប់គ្រង​ក្រុមយានជំនិះអ្នក"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"កំណត់ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្តឡើងវិញ"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"ប្រព័ន្ធ​របស់អ្នកបានទទួលសំណើសុំកំណត់​ដូច​ចេញ​ពី​រោងចក្រ​ និងលុបទិន្នន័យទាំងអស់។ អ្នកអាចកំណត់ប្រព័ន្ធឡើងវិញឥឡូវនេះ ឬវានឹងកំណត់ឡើងវិញ នៅពេលរថយន្តចាប់ផ្ដើមលើកក្រោយ។ បន្ទាប់ពីនោះ អ្នកអាចរៀបចំកម្រងព័ត៌មានថ្មីបាន។"</string>
