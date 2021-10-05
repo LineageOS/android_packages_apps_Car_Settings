@@ -20,6 +20,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -91,12 +92,10 @@ public class MobileDataTogglePreferenceControllerTest {
         mLifecycleOwner = new TestLifecycleOwner();
 
         mSession = ExtendedMockito.mockitoSession()
-                .mockStatic(TelephonyManager.class, withSettings().lenient())
                 .mockStatic(SubscriptionManager.class, withSettings().lenient())
                 .startMocking();
 
-        ExtendedMockito.when(TelephonyManager.from(mContext)).thenReturn(mMockTelephonyManager);
-        when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mMockTelephonyManager);
+        doReturn(mMockTelephonyManager).when(mContext).getSystemService(TelephonyManager.class);
         when(mMockTelephonyManager.createForSubscriptionId(SUB_ID))
                 .thenReturn(mMockTelephonyManager);
         when(mMockTelephonyManager.getSimCount()).thenReturn(1);
