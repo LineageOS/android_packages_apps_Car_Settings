@@ -181,7 +181,7 @@
     <string name="network_and_internet_oem_network_title">OEM network</string>
     <!-- Network & internet settings screen, setting option name to enable vehicle internet connectivity [CHAR LIMIT=60] -->
     <string name="network_and_internet_vehicle_internet_title">Vehicle internet</string>
-    <!-- Warning pop up when disabling OEM network connectivity [CHAR LIMIT=60] -->
+    <!-- Warning pop up when disabling OEM network connectivity [CHAR LIMIT=NONE] -->
     <string name="network_and_internet_oem_network_dialog_description">Turning off the vehicle internet may prevent some vehicle features or apps from working.\n\nCritical data required to operate your vehicle will continue to be shared with the vehicle manufacturer.</string>
     <!-- Confirm button label for disabling OEM network connectivity [CHAR LIMIT=40]-->
     <string name="network_and_internet_oem_network_dialog_confirm_label">Turn off anyway</string>
