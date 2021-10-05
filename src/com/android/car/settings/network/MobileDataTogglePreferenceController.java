@@ -93,7 +93,8 @@ public class MobileDataTogglePreferenceController extends
     /** Sets the subscription id to be controlled by this controller. */
     public void setSubId(int subId) {
         mSubId = subId;
-        mTelephonyManager = TelephonyManager.from(getContext()).createForSubscriptionId(mSubId);
+        mTelephonyManager = getContext().getSystemService(
+                TelephonyManager.class).createForSubscriptionId(mSubId);
     }
 
     @Override
@@ -178,7 +179,7 @@ public class MobileDataTogglePreferenceController extends
 
     private Uri getObservableUri(int subId) {
         Uri uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA);
-        if (TelephonyManager.from(getContext()).getSimCount() != 1) {
+        if (getContext().getSystemService(TelephonyManager.class).getSimCount() != 1) {
             uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA + subId);
         }
         return uri;
