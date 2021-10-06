@@ -21,6 +21,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
+import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
+
 /**
  * When other applications request to have a wifi connection, framework will bring up this activity
  * to let user select which wifi ap wanna to connect. This activity is just a door for framework
@@ -31,6 +33,7 @@ public class NetworkRequestDialogActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
 
         NetworkRequestDialogFragment fragment = NetworkRequestDialogFragment.newInstance();
         fragment.show(getSupportFragmentManager(),

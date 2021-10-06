@@ -26,4 +26,14 @@ public class ResourceTestUtils {
         return context.getResources().getString(context.getResources().getIdentifier(
                 name, /* type= */ "string", context.getPackageName()));
     }
+
+    /**
+     * Retrieve a formatted resource string from the current package based on a name identifier,
+     * substituting the format arguments as defined in {@link java.util.Formatter} and
+     * {@link java.lang.String#format}.
+     */
+    public static String getString(Context context, String name, Object... formatArgs) {
+        return context.getResources().getString(context.getResources().getIdentifier(
+                name, /* type= */ "string", context.getPackageName()), formatArgs);
+    }
 }

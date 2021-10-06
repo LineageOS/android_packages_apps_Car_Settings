@@ -21,6 +21,7 @@ import static android.app.Activity.RESULT_OK;
 import static com.android.car.settings.applications.ApplicationsUtils.isKeepEnabledPackage;
 import static com.android.car.settings.applications.ApplicationsUtils.isProfileOrDeviceOwner;
 import static com.android.car.settings.common.ActionButtonsPreference.ActionButtons;
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -52,11 +53,13 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.users.UserHelper;
+import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
+import com.android.car.settings.profiles.ProfileHelper;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -83,25 +86,33 @@ public class ApplicationActionButtonsPreferenceController extends
     private static final Logger LOG = new Logger(
             ApplicationActionButtonsPreferenceController.class);
 
+    private static final List<String> FORCE_STOP_RESTRICTIONS =
+            Arrays.asList(UserManager.DISALLOW_APPS_CONTROL);
+    private static final List<String> UNINSTALL_RESTRICTIONS =
+            Arrays.asList(UserManager.DISALLOW_UNINSTALL_APPS, UserManager.DISALLOW_APPS_CONTROL);
+
     @VisibleForTesting
     static final String DISABLE_CONFIRM_DIALOG_TAG =
             "com.android.car.settings.applications.DisableConfirmDialog";
     @VisibleForTesting
     static final String FORCE_STOP_CONFIRM_DIALOG_TAG =
             "com.android.car.settings.applications.ForceStopConfirmDialog";
+
     @VisibleForTesting
     static final int UNINSTALL_REQUEST_CODE = 10;
 
     private DevicePolicyManager mDpm;
     private PackageManager mPm;
     private UserManager mUserManager;
-    private UserHelper mUserHelper;
+    private ProfileHelper mProfileHelper;
     private ApplicationsState.Session mSession;
 
     private ApplicationsState.AppEntry mAppEntry;
     private ApplicationsState mApplicationsState;
     private String mPackageName;
     private PackageInfo mPackageInfo;
+
+    private String mRestriction;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mForceStopConfirmListener =
@@ -117,6 +128,7 @@ public class ApplicationActionButtonsPreferenceController extends
             };
 
     private final View.OnClickListener mForceStopClickListener = i -> {
+        if (ignoreActionBecauseItsDisabledByAdmin(FORCE_STOP_RESTRICTIONS)) return;
         ConfirmationDialogFragment dialogFragment =
                 new ConfirmationDialogFragment.Builder(getContext())
                         .setTitle(R.string.force_stop_dialog_title)
@@ -167,6 +179,7 @@ public class ApplicationActionButtonsPreferenceController extends
     };
 
     private final View.OnClickListener mUninstallClickListener = i -> {
+        if (ignoreActionBecauseItsDisabledByAdmin(UNINSTALL_RESTRICTIONS)) return;
         Uri packageUri = Uri.parse("package:" + mPackageName);
         Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
         uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
@@ -216,7 +229,7 @@ public class ApplicationActionButtonsPreferenceController extends
         mDpm = context.getSystemService(DevicePolicyManager.class);
         mPm = context.getPackageManager();
         mUserManager = UserManager.get(context);
-        mUserHelper = UserHelper.getInstance(context);
+        mProfileHelper = ProfileHelper.getInstance(context);
     }
 
     @Override
@@ -340,8 +353,19 @@ public class ApplicationActionButtonsPreferenceController extends
     }
 
     private void updateForceStopButtonInner(boolean enabled) {
-        getPreference().getButton(ActionButtons.BUTTON2).setEnabled(
-                enabled && !mUserManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL));
+        if (enabled) {
+            Boolean shouldDisable = shouldDisableButtonBecauseOfUserRestriction("Force Stop",
+                    UserManager.DISALLOW_APPS_CONTROL);
+            if (shouldDisable != null) {
+                if (shouldDisable) {
+                    enabled = false;
+                } else {
+                    mRestriction = UserManager.DISALLOW_APPS_CONTROL;
+                }
+            }
+        }
+
+        getPreference().getButton(ActionButtons.BUTTON2).setEnabled(enabled);
     }
 
     private void updateUninstallButtonInner(boolean isAppEnabled) {
@@ -387,10 +411,10 @@ public class ApplicationActionButtonsPreferenceController extends
             return true;
         }
 
-        // We don't allow uninstalling profile/device owner on any user because if it's a system
+        // We don't allow uninstalling profile/device owner on any profile because if it's a system
         // app, "uninstall" is actually "downgrade to the system version + disable", and
-        // "downgrade" will clear data on all users.
-        if (isProfileOrDeviceOwner(mPackageName, mDpm, mUserHelper)) {
+        // "downgrade" will clear data on all profiles.
+        if (isProfileOrDeviceOwner(mPackageName, mDpm, mProfileHelper)) {
             LOG.d("Uninstall disabled because package is profile or device owner");
             return true;
         }
@@ -400,17 +424,44 @@ public class ApplicationActionButtonsPreferenceController extends
             return true;
         }
 
-        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
-            LOG.d("Uninstall disabled because user has DISALLOW_APPS_CONTROL restriction");
-            return true;
-        }
+        Boolean shouldDisable = shouldDisableButtonBecauseOfUserRestriction("Uninstall",
+                UserManager.DISALLOW_APPS_CONTROL);
+        if (shouldDisable != null) return shouldDisable;
 
-        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_UNINSTALL_APPS)) {
-            LOG.d("Uninstall disabled because user has DISALLOW_UNINSTALL_APPS restriction");
-            return true;
-        }
+        shouldDisable = shouldDisableButtonBecauseOfUserRestriction("Uninstall",
+                UserManager.DISALLOW_UNINSTALL_APPS);
+        if (shouldDisable != null) return shouldDisable;
 
         return false;
+    }
+
+    /**
+     * Checks whether a button should be disabled because the user has the given restriction
+     * (and whether the restriction was was set by a device admin).
+     *
+     * @param button action name (for logging purposes)
+     * @param restriction user restriction
+     *
+     * @return {@code null} if the user doesn't have the restriction, {@value Boolean#TRUE} if it
+     * should be disabled because of {@link UserManager} restrictions, or {@value Boolean#FALSE} if
+     * should not be disabled because of {@link DevicePolicyManager} restrictions (in which case
+     * {@link #mRestriction} is updated with the restriction).
+     */
+    @Nullable
+    private Boolean shouldDisableButtonBecauseOfUserRestriction(String button, String restriction) {
+        if (!mUserManager.hasUserRestriction(restriction)) return null;
+
+        UserHandle user = UserHandle.getUserHandleForUid(mAppEntry.info.uid);
+
+        if (mUserManager.hasBaseUserRestriction(restriction, user)) {
+            LOG.d(button + " disabled because " + user + " has " + restriction + " restriction");
+            return Boolean.TRUE;
+        }
+
+        LOG.d(button + " NOT disabled because " + user + " has " + restriction + " restriction but "
+                + "it was set by a device admin (it will show a dialog explaining that instead)");
+        mRestriction = restriction;
+        return Boolean.FALSE;
     }
 
     /**
@@ -492,5 +543,14 @@ public class ApplicationActionButtonsPreferenceController extends
                 LOG.e("Uninstall failed with result " + resultCode);
             }
         }
+    }
+
+    private boolean ignoreActionBecauseItsDisabledByAdmin(List<String> restrictions) {
+        if (mRestriction == null || !restrictions.contains(mRestriction)) return false;
+
+        LOG.d("Ignoring action because of " + mRestriction);
+        getFragmentController().showDialog(ActionDisabledByAdminDialogFragment.newInstance(
+                mRestriction, UserHandle.myUserId()), DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
+        return true;
     }
 }

@@ -17,13 +17,14 @@
 package com.android.car.settings.common;
 
 import static com.android.settingslib.drawer.CategoryKey.CATEGORY_DEVICE;
-import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
-import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_KEY_ORDER;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_KEYHINT;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE_URI;
+
+import static java.lang.String.CASE_INSENSITIVE_ORDER;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -39,29 +40,38 @@ import android.text.TextUtils;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
-import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.ui.preference.CarUiPreference;
+import com.android.settingslib.drawer.TileUtils;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Loads Activity with TileUtils.EXTRA_SETTINGS_ACTION.
  */
 // TODO: investigate using SettingsLib Tiles.
 public class ExtraSettingsLoader {
+    static final String META_DATA_PREFERENCE_IS_TOP_LEVEL = "injectedTopLevelPreference";
     private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
     private final Context mContext;
+    private final Set<String> mTopLevelCategories;
+    private final boolean mIsTopLevelSummariesEnabled;
     private Map<Preference, Bundle> mPreferenceBundleMap;
     private PackageManager mPm;
 
     public ExtraSettingsLoader(Context context) {
         mContext = context;
         mPm = context.getPackageManager();
-        mPreferenceBundleMap = new HashMap<>();
+        mPreferenceBundleMap = new LinkedHashMap<>();
+        mTopLevelCategories = Set.of(mContext.getResources().getStringArray(
+                R.array.config_top_level_injection_categories));
+        mIsTopLevelSummariesEnabled = mContext.getResources().getBoolean(
+                R.bool.config_top_level_injection_enable_summaries);
     }
 
     @VisibleForTesting
@@ -75,18 +85,49 @@ public class ExtraSettingsLoader {
      * resolving activities and a category with the key "com.android.settings.category" and one of
      * the values in {@link com.android.settingslib.drawer.CategoryKey}.
      *
+     * {@link com.android.settingslib.drawer.TileUtils#EXTRA_SETTINGS_ACTION} is automatically added
+     * for backwards compatibility. Please make sure to use
+     * {@link com.android.settingslib.drawer.TileUtils#IA_SETTINGS_ACTION} instead.
+     *
      * @param intent intent specifying the extra settings category to load
      */
     public Map<Preference, Bundle> loadPreferences(Intent intent) {
+        intent.setAction(TileUtils.IA_SETTINGS_ACTION);
         List<ResolveInfo> results = mPm.queryIntentActivitiesAsUser(intent,
                 PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
 
-        String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
-        for (ResolveInfo resolved : results) {
-            if (!resolved.system) {
-                // Do not allow any app to be added to settings, only system ones.
-                continue;
+        intent.setAction(TileUtils.EXTRA_SETTINGS_ACTION);
+        List<ResolveInfo> extra_settings_results = mPm.queryIntentActivitiesAsUser(intent,
+                PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
+        for (ResolveInfo extra_settings_resolveInfo : extra_settings_results) {
+            if (!results.contains(extra_settings_resolveInfo)) {
+                results.add(extra_settings_resolveInfo);
             }
+        }
+
+        String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
+
+        // Filter to only include valid results and then sort the results
+        // Filter criteria: must be a system application and must have metaData
+        // Sort criteria: sort results based on [order, package within order]
+        results = results.stream()
+                .filter(r -> r.system && r.activityInfo != null && r.activityInfo.metaData != null)
+                .sorted((r1, r2) -> {
+                    // First sort by order
+                    int orderCompare = r2.activityInfo.metaData.getInt(META_DATA_KEY_ORDER)
+                            - r1.activityInfo.metaData.getInt(META_DATA_KEY_ORDER);
+                    if (orderCompare != 0) {
+                        return orderCompare;
+                    }
+
+                    // Then sort by package name
+                    String package1 = r1.activityInfo.packageName;
+                    String package2 = r2.activityInfo.packageName;
+                    return CASE_INSENSITIVE_ORDER.compare(package1, package2);
+                })
+                .collect(Collectors.toList());
+
+        for (ResolveInfo resolved : results) {
             String key = null;
             String title = null;
             String summary = null;
@@ -118,26 +159,31 @@ public class ExtraSettingsLoader {
             } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
                 LOG.d("Couldn't find info", e);
             }
-            Drawable icon = null;
-            if (metaData.containsKey(META_DATA_PREFERENCE_ICON)) {
-                int iconRes = metaData.getInt(META_DATA_PREFERENCE_ICON);
-                icon = ExtraSettingsUtil.loadDrawableFromPackage(mContext,
-                        activityInfo.packageName, iconRes);
-            } else if (!metaData.containsKey(META_DATA_PREFERENCE_ICON_URI)) {
-                icon = mContext.getDrawable(R.drawable.ic_settings_gear);
-                LOG.d("use default icon.");
-            }
             Intent extraSettingIntent =
                     new Intent().setClassName(activityInfo.packageName, activityInfo.name);
             if (category == null) {
                 // If category is not specified or not supported, default to device.
                 category = CATEGORY_DEVICE;
             }
+            boolean isTopLevel = mTopLevelCategories.contains(category);
+            metaData.putBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL, isTopLevel);
+            Drawable icon = ExtraSettingsUtil.createIcon(mContext, metaData,
+                    activityInfo.packageName);
 
             if (!TextUtils.equals(extraCategory, category)) {
                 continue;
             }
-            CarUiPreference preference = new CarUiPreference(mContext);
+            CarUiPreference preference;
+            if (isTopLevel) {
+                preference = new TopLevelPreference(mContext);
+                if (!mIsTopLevelSummariesEnabled) {
+                    // remove summary data
+                    summary = null;
+                    metaData.remove(META_DATA_PREFERENCE_SUMMARY_URI);
+                }
+            } else {
+                preference = new CarUiPreference(mContext);
+            }
             preference.setTitle(title);
             preference.setSummary(summary);
             if (key != null) {
@@ -145,10 +191,6 @@ public class ExtraSettingsLoader {
             }
             if (icon != null) {
                 preference.setIcon(icon);
-                if (ExtraSettingsUtil.isIconTintable(metaData)) {
-                    preference.getIcon().setTintList(
-                            Themes.getAttrColorStateList(mContext, R.attr.iconColor));
-                }
             }
             preference.setIntent(extraSettingIntent);
             mPreferenceBundleMap.put(preference, metaData);

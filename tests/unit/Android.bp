@@ -19,6 +19,7 @@ android_test {
     static_libs: [
         "CarSettingsForUnitTesting",
         "android.car",
+        "android.car.test.utils",
         "androidx.test.core",
         "androidx.test.rules",
         "androidx.test.ext.junit",
@@ -33,5 +34,5 @@ android_test {
 
     aaptflags: ["--extra-packages com.android.car.settings"],
 
-    instrumentation_for: "CarSettingsForTesting",
+    test_suites: ["device-tests"]
 }
