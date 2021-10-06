@@ -41,6 +41,7 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 
 import org.junit.After;
 import org.junit.Before;
@@ -88,6 +89,7 @@ public class BaseEnterpriseTestCase {
 
         mSession = ExtendedMockito.mockitoSession()
                 .mockStatic(UserManager.class)
+                .mockStatic(RestrictedLockUtilsInternal.class)
                 .strictness(Strictness.LENIENT)
                 .startMocking();
 
@@ -189,5 +191,10 @@ public class BaseEnterpriseTestCase {
 
     protected final void mockNonAdminUser() {
         when(mUm.isAdminUser()).thenReturn(false);
+    }
+
+    protected final void mockNullEnforcedAdmin(String restriction, int userId) {
+        when(RestrictedLockUtilsInternal
+                .checkIfRestrictionEnforced(mSpiedContext, restriction, userId)).thenReturn(null);
     }
 }
