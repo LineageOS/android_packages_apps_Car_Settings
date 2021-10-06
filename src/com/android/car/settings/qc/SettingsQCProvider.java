@@ -73,6 +73,11 @@ public class SettingsQCProvider extends BaseQCProvider {
     }
 
     @Override
+    public void onDestroy(Uri uri) {
+        ThreadUtils.postOnMainThread(() -> SettingsQCBackgroundWorker.shutdown(uri));
+    }
+
+    @Override
     public void shutdown() {
         ThreadUtils.postOnMainThread(SettingsQCBackgroundWorker::shutdown);
     }
