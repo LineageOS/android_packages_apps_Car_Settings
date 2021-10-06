@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.android.dx.mockito.inline.extended.ExtendedMockito.doReturn;
+
 import static com.google.common.truth.Truth.assertWithMessage;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -46,7 +48,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.MockitoSession;
 import org.mockito.quality.Strictness;
 
@@ -83,10 +84,12 @@ public class BaseEnterpriseTestCase {
 
     @Before
     public final void setFixtures() throws Exception {
-        // Make sure session was properly initialized
-        MockitoAnnotations.initMocks(this);
-
+        if (mSession != null) {
+            throw new IllegalStateException("Already set session - subclasses should NOT explicitly"
+                    + " call setFixtures()");
+        }
         mSession = ExtendedMockito.mockitoSession()
+                .initMocks(this)
                 .mockStatic(UserManager.class)
                 .strictness(Strictness.LENIENT)
                 .startMocking();
@@ -98,7 +101,7 @@ public class BaseEnterpriseTestCase {
         when(mSpiedContext.getSystemService(PackageManager.class)).thenReturn(mSpiedPm);
         when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
         when(mSpiedContext.getSystemService(UserManager.class)).thenReturn(mUm);
-        when(UserManager.get(mSpiedContext)).thenReturn(mUm);
+        doReturn(mUm).when(() -> UserManager.get(any()));
 
         ActivityInfo defaultActivityInfo =
                 mRealPm.getReceiverInfo(mDefaultAdmin, PackageManager.GET_META_DATA);
@@ -117,6 +120,7 @@ public class BaseEnterpriseTestCase {
     public void tearDown() {
         if (mSession != null) {
             mSession.finishMocking();
+            mSession = null;
         }
     }
 
