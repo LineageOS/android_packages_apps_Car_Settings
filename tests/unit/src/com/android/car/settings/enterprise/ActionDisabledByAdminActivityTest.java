@@ -22,11 +22,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.app.AlertDialog;
 import android.app.admin.DevicePolicyManager;
-import android.content.Context;
 import android.content.Intent;
 
 import androidx.fragment.app.FragmentManager;
-import androidx.test.core.app.ApplicationProvider;
 import androidx.test.rule.ActivityTestRule;
 
 import org.junit.Before;
@@ -38,7 +36,6 @@ public class ActionDisabledByAdminActivityTest extends BaseEnterpriseTestCase {
 
     private static final String RESTRICTION_STRING = "RESTRICTION_STRING";
 
-    private Context mContext = ApplicationProvider.getApplicationContext();
     private FragmentManager mFragmentManager;
     private ActionDisabledByAdminDialogFragment mFragment;
 
@@ -49,6 +46,8 @@ public class ActionDisabledByAdminActivityTest extends BaseEnterpriseTestCase {
     @Before
     public void setUp() throws Throwable {
         MockitoAnnotations.initMocks(this);
+        mockNullEnforcedAdmin(RESTRICTION_STRING, 0);
+        mockNullEnforcedAdmin(RESTRICTION_STRING, mRealContext.getUserId());
     }
 
     @Test
@@ -76,7 +75,7 @@ public class ActionDisabledByAdminActivityTest extends BaseEnterpriseTestCase {
     }
 
     private Intent getIntent(boolean hasRestrictionFlag) {
-        Intent intent = new Intent(mContext, ActionDisabledByAdminActivity.class);
+        Intent intent = new Intent(mSpiedContext, ActionDisabledByAdminActivity.class);
         if (hasRestrictionFlag) {
             intent.putExtra(DevicePolicyManager.EXTRA_RESTRICTION, RESTRICTION_STRING);
         }
