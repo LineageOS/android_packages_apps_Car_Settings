@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Más"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar ubicación"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"Permitir acceso a la ubicación de algunas apps"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Si la desactivas, se retirará el acceso a la ubicación de todas las aplicaciones. Las aplicaciones de asistencia en la conducción seguirán teniendo acceso a ella."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Ubicación en Asistencia en la conducción"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ubicación de vehículo desactivada"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Asistencia en la conducción no puede acceder a tu ubicación"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir acceso a la ubicación de las apps de asistencia en la conducción"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si la desactivas, se inhabilitarán las aplicaciones de asistencia en la conducción que usan información de la ubicación."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactivar de todas formas"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ninguna solicitud de ubicación reciente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos de las aplicaciones"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Se pueden utilizar distintas fuentes, como el GPS, sensores y redes Wi‑Fi y móviles, para determinar la ubicación de este dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia en la conducción"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"La información de la ubicación enviada a las funciones de asistencia en la conducción no contiene datos que te identifiquen. Se ha almacenado durante un máximo de 2 días antes de eliminarse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permite que todas las aplicaciones accedan al micrófono"</string>
@@ -740,26 +732,30 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Activar esta aplicación del sistema de infoentretenimiento"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desactivar esta aplicación del sistema de infoentretenimiento"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Más detalles"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"El administrador de vehículos puede monitorizar y gestionar aplicaciones y datos asociados a este perfil, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del vehículo."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"El administrador de vehículos puede monitorizar y gestionar aplicaciones y datos asociados a este perfil, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del dispositivo."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"El administrador de vehículos puede monitorizar y gestionar aplicaciones y datos asociados a este sistema de infoentretenimiento, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del vehículo."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"Es posible que el administrador de vehículos pueda acceder a datos asociados a este sistema de infoentretenimiento, gestionar aplicaciones y editar ajustes de este vehículo."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Bloqueado por tu administrador"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Habla con el administrador para ajustar el volumen"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
-    <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Habla con el administrador para usar SMS"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Habla con el administrador para usar la cámara"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Habla con el administrador para hacer capturas"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Habla con el administrador para usar esta app"</string>
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"El administrador de la organización puede monitorizar y gestionar aplicaciones y datos asociados a este perfil, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del vehículo."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"El administrador de la organización puede monitorizar y gestionar aplicaciones y datos asociados a este perfil, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del dispositivo."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"El administrador de la organización puede monitorizar y gestionar aplicaciones y datos asociados a este sistema de infoentretenimiento, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del vehículo."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"Es posible que el administrador de la organización pueda acceder a datos asociados a este sistema de infoentretenimiento, gestionar aplicaciones y editar ajustes de este vehículo."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Bloqueado por el administrador"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"No se puede cambiar el volumen de este vehículo gestionado"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"No se pueden hacer llamadas en este vehículo gestionado"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"No se puede enviar SMS en este vehículo gestionado"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"La cámara no está disponible en este vehículo gestionado"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5433878479740389540">"&gt;No se pueden hacer capturas de pantalla en este vehículo gestionado"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"No se puede abrir esta aplicación en este vehículo gestionado"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bloqueado por tu entidad de crédito"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"Si tienes alguna pregunta, ponte en contacto con tu administrador de vehículos"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"Si tienes alguna pregunta, ponte en contacto con el administrador de la organización"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps para administradores de vehículos"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplicación activada}other{# aplicaciones activadas}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"No hay ninguna aplicación activada"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Ajustes gestionados por tu administrador de vehículos"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política del vehículo <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Ajustes gestionados por el administrador de la organización"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"¿Compartir informe de errores?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos, y que el dispositivo funcione más lento de forma temporal."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Este informe de errores se comparte con el administrador de la organización de este vehículo. Ponte en contacto con él para obtener más información."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Compartir"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Rechazar"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"No se puede modificar este ajuste en estos momentos"</string>
 </resources>

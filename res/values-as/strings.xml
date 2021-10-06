@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"অধিক"</string>
     <string name="location_settings_title" msgid="901334356682423679">"অৱস্থান"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"অৱস্থান ব্যৱহাৰ কৰক"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"আপুনি উল্লেখ কৰা এপ্‌সমূহক আপোনাৰ অৱস্থান এক্সেছ কৰিবলৈ দিয়ে"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"আপুনি যদি এইটো অফ কৰে, তেন্তে ই আটাইবোৰ এপৰ বাবে অৱস্থানৰ এক্সেছ আঁতৰাব। চালক সাহায্য এপ্‌সমূহৰ তথাপি এক্সেছ থাকিব।"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"চালক সাহায্য সুবিধাৰ বাবে অৱস্থানৰ তথ্য ব্যৱহাৰ কৰক"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"বাহনখনৰ অৱস্থান অফ আছে"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"চালক সাহায্য সুবিধাসমূহে আপোনাৰ অৱস্থান এক্সেছ কৰিব নোৱাৰে"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"সলনি কৰক"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"গাড়ী চলোৱাত সহায় কৰা এপক আপোনাৰ অৱস্থানৰ তথ্য এক্সেছ কৰিবলৈ দিয়ক"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"আপুনি যদি এইটো অফ কৰে, তেন্তে অৱস্থানৰ তথ্যৰ ওপৰত নিৰ্ভৰশীল চালকৰ সাহায্য এপ্‌সমূহ অক্ষম কৰা হ’ব।"</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"তথাপি অফ কৰক"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"শেহতীয়া অৱস্থানৰ অনুৰোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"শেহতীয়াকৈ কোনো এপে অৱস্থানৰ অনুৰোধ প্ৰেৰণ কৰা নাই"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"এপ্‌-স্তৰৰ অনুমতি"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"অৱস্থান ব্যৱহাৰ কৰক"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"অৱস্থান সেৱাই আপোনাৰ ডিভাইচৰ অৱস্থান অনুমান কৰাত সহায় কৰিবলৈ জিপিএছ, ৱাই-ফাই, ম’বাইল নেটৱৰ্ক আৰু ছেন্সৰৰ দৰে উৎসসমূহ ব্যৱহাৰ কৰিব পাৰে।"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"চালক সাহায্য"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"চালক সাহায্য সুবিধাসমূহলৈ পঠিওৱা অৱস্থানৰ তথ্যত আপোনাক চিনাক্ত কৰা কোনো তথ্য নাথাকে। মচাৰ পূৰ্বে ইয়াক সৰ্বাধিক ২ দিনৰ বাবে ষ্ট’ৰ কৰা হয়।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্ৰ’ফ’ন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্র’ফ’ন ব্যৱহাৰ কৰক"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"আটাইবোৰ এপক আপোনাৰ মাইক্ৰ’ফ’ন এক্সেছ কৰিবলৈ দিয়ক"</string>
@@ -740,26 +732,30 @@
     <string name="add_device_admin" msgid="7674707256074840333">"এই ইনফ’টেইনমেণ্ট ছিষ্টেম এপ্‌টো সক্ৰিয় কৰক"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"এই ইনফ’টেইনমেণ্ট ছিষ্টেম এপ্‌টো নিষ্ক্ৰিয় কৰক"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"অধিক সবিশেষ"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"ফ্লীট পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু বাহনখনৰ অৱস্থানৰ তথ্যক সামৰি, এই প্ৰ’ফাইলৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"ফ্লীট পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু ডিভাইচৰ অৱস্থানৰ তথ্যক সামৰি, এই প্ৰ’ফাইলৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"ফ্লীট পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু বাহনখনৰ অৱস্থানৰ তথ্যক সামৰি, এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"ফ্লীট পৰিচালকে হয়তো এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ সৈতে জড়িত হৈ থকা ডেটা এক্সেছ কৰিব, এপ্‌ পৰিচালনা কৰিব আৰু এই বাহনখনৰ ছেটিং সলনি কৰিব পাৰিব।"</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"আপোনাৰ ফ্লীট পৰিচালকে অৱৰোধ কৰিছে"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ভলিউম সলনি কৰিবলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
-    <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"এছএমএছ ব্যৱহাৰ কৰিবলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"কেমেৰা ব্যৱহাৰ কৰিবলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"স্ক্ৰীনশ্বট ল’বলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"এপ্‌টো ব্যৱহাৰ কৰিবলৈ ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"প্ৰতিষ্ঠানটোৰ পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু বাহনখনৰ অৱস্থানৰ তথ্যক সামৰি, এই প্ৰ’ফাইলৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"প্ৰতিষ্ঠানটোৰ পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু ডিভাইচৰ অৱস্থানৰ তথ্যক সামৰি, এই প্ৰ’ফাইলৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"প্ৰতিষ্ঠানটোৰ পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু বাহনখনৰ অৱস্থানৰ তথ্যক সামৰি, এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"প্ৰতিষ্ঠানটোৰ পৰিচালকে হয়তো এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ সৈতে জড়িত হৈ থকা ডেটা এক্সেছ কৰিব, এপ্‌ পৰিচালনা কৰিব আৰু এই বাহনখনৰ ছেটিং সলনি কৰিব পাৰিব।"</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"প্ৰতিষ্ঠানটোৰ পৰিচালকে অৱৰোধ কৰিছে"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"এই পৰিচালিত বাহনখনত ভলিউম সলনি কৰিব নোৱাৰি"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"এই পৰিচালিত বাহনখনত কল কৰিব নোৱাৰি"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"এই পৰিচালিত বাহনখনত এছএমএছৰ অনুমতি নাই"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"এই পৰিচালিত বাহনখনত কেমেৰা উপলব্ধ নহয়"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5433878479740389540">"&gt;এই পৰিচালিত বাহনখনত স্ক্ৰীনশ্বট ল\'ব নোৱাৰি"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"এই পৰিচালিত বাহনখনত এই এপ্‌টো খুলিব নোৱাৰি"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"আপোনাৰ ঋণ প্ৰদানকাৰীয়ে অৱৰোধ কৰিছে"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"আপোনাৰ কিবা প্ৰশ্ন থাকিলে ফ্লীট পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"আপোনাৰ কিবা প্ৰশ্ন থাকিলে প্ৰতিষ্ঠানটোৰ পৰিচালকৰ সৈতে যোগাযোগ কৰক"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"বাহনৰ প্ৰশাসক এপ্‌"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# টা সক্ৰিয় কৰা এপ্}one{# টা সক্ৰিয় কৰা এপ্}other{# টা সক্ৰিয় কৰা এপ্}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"কোনো সক্ৰিয় এপ্ নাই"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"আপোনাৰ ফ্লীট পৰিচালকে পৰিচালনা কৰা ছেটিং"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>ৰ বাহনৰ নীতি"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"প্ৰতিষ্ঠানটোৰ পৰিচালকে পৰিচালনা কৰা ছেটিং"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"বাগ সম্পর্কীয় অভিযোগ শ্বেয়াৰ কৰিবনে?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"এই বাহনখনৰ প্ৰতিষ্ঠানৰ প্ৰশাসকে এই ডিভাইচটোৰ সমস্যা সমাধান কৰাত সহায় কৰিবলৈ এটা বাগ সম্পর্কীয় অভিযোগৰ বাবে অনুৰোধ জনাইছে। এপ্ আৰু ডেটা শ্বেয়াৰ কৰা হ\'ব পাৰে।"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"এই বাহনখনৰ প্ৰতিষ্ঠানৰ প্ৰশাসকে এই ডিভাইচটোৰ সমস্যা সমাধান কৰাত সহায় কৰিবলৈ এটা বাগ সম্পর্কীয় অভিযোগৰ বাবে অনুৰোধ জনাইছে। এপ্ আৰু ডেটা শ্বেয়াৰ কৰা হ\'ব পাৰে আৰু আপোনাৰ ডিভাইচটো সাময়িকভাৱে লেহেমীয়া হ\'ব পাৰে।"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"এই বাগ সম্পর্কীয় অভিযোগটো এই বাহনখনৰ প্ৰতিষ্ঠানৰ প্ৰশাসকৰ সৈতে শ্বেয়াৰ কৰা হৈছে। অধিক সবিশেষৰ বাবে তেওঁলোকৰ সৈতে যোগাযোগ কৰক।"</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"শ্বেয়াৰ কৰক"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"প্ৰত্যাখ্যান কৰক"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"এই ছেটিংটো এই মুহূৰ্তত সলনি কৰিব নোৱাৰি"</string>
 </resources>
