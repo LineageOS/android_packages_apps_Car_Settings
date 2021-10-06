@@ -122,6 +122,18 @@ public abstract class SettingsQCBackgroundWorker<E extends SettingsQCItem> imple
         LIVE_WORKERS.clear();
     }
 
+    static void shutdown(Uri uri) {
+        SettingsQCBackgroundWorker worker = LIVE_WORKERS.get(uri);
+        if (worker != null) {
+            try {
+                worker.close();
+            } catch (IOException e) {
+                LOG.w("Shutting down worker failed", e);
+            }
+            LIVE_WORKERS.remove(uri);
+        }
+    }
+
     /**
      * Called when the QCItem is subscribed to. This is the place to register callbacks or
      * initialize scan tasks.
