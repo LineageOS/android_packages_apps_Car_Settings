@@ -23,7 +23,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -127,12 +126,12 @@ public class BaseEnterpriseTestCase {
     }
 
     protected final void mockProfileOwner() {
-        mockActiveAdmin();
+        mockActiveAdmin(mDefaultAdmin);
         when(mDpm.getProfileOwner()).thenReturn(mDefaultAdmin);
     }
 
     protected final void mockDeviceOwner() {
-        mockActiveAdmin();
+        mockActiveAdmin(mDefaultAdmin);
         when(mDpm.getDeviceOwnerComponentOnCallingUser()).thenReturn(mDefaultAdmin);
         when(mDpm.getDeviceOwnerComponentOnAnyUser()).thenReturn(mDefaultAdmin);
     }
@@ -143,12 +142,12 @@ public class BaseEnterpriseTestCase {
                 .thenReturn(DevicePolicyManager.DEVICE_OWNER_TYPE_FINANCED);
     }
 
-    protected final void mockActiveAdmin() {
-        when(mDpm.isAdminActive(mDefaultAdmin)).thenReturn(true);
+    protected final void mockActiveAdmin(ComponentName componentName) {
+        when(mDpm.isAdminActive(componentName)).thenReturn(true);
     }
 
-    protected final void mockInactiveAdmin() {
-        when(mDpm.isAdminActive(mDefaultAdmin)).thenReturn(false);
+    protected final void mockInactiveAdmin(ComponentName componentName) {
+        when(mDpm.isAdminActive(componentName)).thenReturn(false);
     }
 
     protected final void mockGetActiveAdmins(ComponentName... componentNames) {
