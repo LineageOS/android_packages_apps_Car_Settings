@@ -181,7 +181,7 @@
     <string name="network_and_internet_oem_network_title">OEM network</string>
     <!-- Network & internet settings screen, setting option name to enable vehicle internet connectivity [CHAR LIMIT=60] -->
     <string name="network_and_internet_vehicle_internet_title">Vehicle internet</string>
-    <!-- Warning pop up when disabling OEM network connectivity [CHAR LIMIT=60] -->
+    <!-- Warning pop up when disabling OEM network connectivity [CHAR LIMIT=NONE] -->
     <string name="network_and_internet_oem_network_dialog_description">Turning off the vehicle internet may prevent some vehicle features or apps from working.\n\nCritical data required to operate your vehicle will continue to be shared with the vehicle manufacturer.</string>
     <!-- Confirm button label for disabling OEM network connectivity [CHAR LIMIT=40]-->
     <string name="network_and_internet_oem_network_dialog_confirm_label">Turn off anyway</string>
@@ -1730,7 +1730,7 @@
     <!-- Title for dialog displayed to tell user that the camera was disabled by an admin [CHAR LIMIT=NONE] -->
     <string name="disabled_by_policy_title_camera">Camera is unavailable in this managed vehicle</string>
     <!-- Title for dialog displayed to tell user that screenshots are disabled by an admin [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_policy_title_screen_capture">>Can’t take screenshots in this managed vehicle</string>
+    <string name="disabled_by_policy_title_screen_capture">Can’t take screenshots in this managed vehicle</string>
     <!-- Title for dialog displayed to tell user that the app was suspended by an admin [CHAR LIMIT=NONE] -->
     <string name="disabled_by_policy_title_suspend_packages">Can’t open this app in this managed vehicle</string>
     <!-- Dialog title. This dialog lets a user know that a specific setting is blocked by their credit provider. Since the user purchased the device from the credit provider, the credit provider controls what they can access. [CHAR LIMIT=50] -->

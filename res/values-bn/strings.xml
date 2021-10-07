@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"আরও যোগ করুন"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"মোবাইল ডেটা"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"মোবাইল নেটওয়ার্ক ব্যবহার করে ডেটা অ্যাক্সেস করুন"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"মোবাইল নেটওয়ার্ক"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"মোবাইল ডেটা ব্যবহার করুন"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"মোবাইল ডেটা বন্ধ করবেন?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"বেছে নিতে হবে"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"মোবাইল ডেটার জন্য <xliff:g id="CARRIER">%1$s</xliff:g> ব্যবহার করবেন?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"সেট করুন"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ডেটা সম্পর্কিত সতর্কতা ও সীমা"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"অ্যাপের ডেটা ব্যবহারের চক্র"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"মোবাইল ডেটার ব্যবহার"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ডেটা সতর্কতা সেট করুন"</string>
     <string name="data_warning" msgid="116776633806885370">"ডেটা সম্পর্কিত সতর্কতা"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ডেটার সীমা সেট করুন"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ডেটার ব্যবহার আপনার সেট করা সীমায় পৌঁছলে আপনার গাড়ির হেড ইউনিট মোবাইল ডেটা বন্ধ করে দেবে।.\n\nযেহেতু আপনার গাড়ির হেড ইউনিট আপনার ডেটা ব্যবহারের হিসাব রাখে এবং আপনার পরিষেবা প্রদানকারীর রাখা হিসাব কিছুটা আলাদা হলেও হতে পারে, তাই যাতে কম মোবাইল ডেটা খরচ হোক এমনভাবে সীমা সেট করার কথা ভাবতে পারেন।"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ডেটা ব্যবহারের সতর্কতা সেট করুন"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ডেটা ব্যবহারের সীমা সেট করুন"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"আপনার ডিভাইস ডেটার ব্যবহার হিসেব করে। এর সাথে আপনার মোবাইল পরিষেবা প্রদানকারীর ডেটার পার্থক্য হতে পারে।"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"সেট করুন"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"সেভ করুন"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM নেটওয়ার্ক"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"গাড়ির ইন্টারনেট"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"গাড়ির ইন্টারনেট বন্ধ করে দিলে, গাড়ির কয়েকটি ফিচার অথবা অ্যাপ কাজ নাও করতে পারে।\n\nআপনার গাড়ি অপারেট করা জন্য প্রয়োজনীয় জটিল ডেটা, আপনার গাড়ি প্রস্তুতকারীর সাথে শেয়ার করা হবে।"</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"যাইহোক বন্ধ করুন"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"গাড়ির ইন্টারনেট বন্ধ করা আছে। এর ফলে গাড়ির কয়েকটি ফিচার অথবা অ্যাপ কাজ নাও করতে পারে। আপনার গাড়ি অপারেট করা জন্য প্রয়োজনীয় জটিল ডেটা, আপনার গাড়ি প্রস্তুতকারীর সাথে শেয়ার করা হবে।"</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s - %3$s-এর মধ্যে %1$s ব্যবহার করা হয়েছে"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"অন্যান্য নেটওয়ার্কে যোগ করুন"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"নেটওয়ার্ক সংক্রান্ত পছন্দ"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ওয়াই-ফাই হটস্পটের জন্য অন্তত একটি ব্যান্ড বেছে নিন:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"হটস্পট ও টিথারিং"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"হটস্পট"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"বন্ধ করা আছে"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"নিজে থেকে হটস্পট বন্ধ করুন"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"কোনও ডিভাইস কানেক্ট করা না থাকলে ওয়াই-ফাই হটস্পট বন্ধ হয়ে যাবে"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ওয়াই-ফাই বন্ধ করতে চান"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"অ্যাপ পারফর্ম্যান্সে অগ্রাধিকার দিতে সিস্টেম রিসোর্স ব্যবহার করা হয়"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ডেটা ব্যবহার"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"অ্যাপ ডেটার ব্যবহার"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"ব্যবহারের ইতিহাস"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"সব অ্যাপ"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"ডেটা ও ওয়াই-ফাই ব্যবহার"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"ব্যবহারের ইতিহাস"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"মোট ব্যবহার"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"ফোরগ্রাউন্ড"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"ব্যাকগ্রাউন্ড"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"ডেটা ব্যবহারের অনুমতি দিন"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"এই অ্যাপকে মোবাইল ডেটা ব্যবহার করতে দিন"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"ডেটার ব্যবহার সীমিত করুন"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"অ্যাপ ফোরগ্রাউন্ডে থাকলে তবেই মোবাইল ডেটা ব্যবহার করুন"</string>
     <string name="computing_size" msgid="5791407621793083965">"কম্পিউটিং..."</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{#টি অতিরিক্ত অনুমতি}one{#টি অতিরিক্ত অনুমতি}other{#টি অতিরিক্ত অনুমতি}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"দ্রষ্টব্য: রিবুট করার পরে, আপনার গাড়ি আনলক না করা পর্যন্ত আপনি এই অ্যাপটিকে চালু করতে পারবেন না।"</string>
@@ -417,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"আরও"</string>
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"লোকেশন ব্যবহার করুন"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"আপনার নির্দিষ্ট করা অ্যাপকে লোকেশন অ্যাক্সেস করার অনুমতি দিন"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"এটি বন্ধ করে দিলে, কোনও অ্যাপই লোকেশন অ্যাক্সেস করতে পারবে না। ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ এখনও অ্যাক্সেস করতে পারবে।"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"\'ড্রাইভার অ্যাসিস্ট্যান্স\'-এর জন্য লোকেশন ব্যবহার করুন"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"গাড়ির লোকেশন বন্ধ করা আছে"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"\'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচার আপনার লোকেশন অ্যাক্সেস করতে পারে না"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"পরিবর্তন করুন"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"এমন অ্যাপে অনুমতি দিন যা লোকেশন অ্যাক্সেস করে আপনাকে গাড়ি চালানোয় সাহায্য করে"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"আপনি এটি বন্ধ করলে, লোকেশন সংক্রান্ত তথ্যের উপরে নির্ভর করে থাকা সব ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ বন্ধ হয়ে যাবে।"</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"যাইহোক বন্ধ করুন"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"অ্যাপ-লেবেল অনুমতি"</string>
@@ -440,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"লোকেশন ব্যবহার করুন"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"আপনি কোথায় আছেন তা জানতে \'লোকেশন\' সেটিংস আপনার মোবাইলের জিপিএস, ওয়াই-ফাই, মোবাইল নেটওয়ার্ক ও সেন্সর ব্যবহার করতে পারে।"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"\'ড্রাইভার অ্যাসিস্ট্যান্স\'"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"\'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচারে পাঠানো লোকেশন সম্পর্কিত তথ্যে এমন কোনও তথ্য থাকে না, যা দিয়ে আপনাকে শনাক্ত করা যায়। সর্বাধিক ২ দিন সেভ থাকার পরে এটি মুছে যায়।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্রোফোন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্রোফোন ব্যবহার করুন"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"সব অ্যাপকে আপনার মাইক্রোফোন ব্যবহার করার অনুমতি দিন"</string>
@@ -752,10 +723,8 @@
     <string name="add_profile_text" msgid="9118410102199116969">"প্রোফাইল যোগ করুন"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ডিসপ্লের উজ্জ্বলতা"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ইনফোটেইনমেন্ট সিস্টেম অ্যাডমিন"</string>
-    <!-- no translation found for device_admin_activated_apps (568075063362271751) -->
-    <skip />
-    <!-- no translation found for device_admin_deactivated_apps (3797263682500122872) -->
-    <skip />
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"যেসব অ্যাপ চালু আছে"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"যেসব অ্যাপ চালু নেই"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"ইনফোটেইনমেন্ট সিস্টেমে কোনও অ্যাডমিন অ্যাপ নেই"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাডমিন অ্যাপ চালু আছে এবং নিচের কাজগুলি করতে <xliff:g id="APP_NAME">%1$s</xliff:g> নামের অ্যাপকে অনুমতি দেয়:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করলে <xliff:g id="APP_NAME">%1$s</xliff:g> নামের অ্যাপ নিচের কাজগুলি করতে পারবে:"</string>
@@ -763,28 +732,30 @@
     <string name="add_device_admin" msgid="7674707256074840333">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করুন"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ বন্ধ করুন"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"আরও বিবরণ দেখুন"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"ফ্লিট ম্যানেজার এই প্রোফাইল সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং গাড়ির লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"ফ্লিট ম্যানেজার এই প্রোফাইল সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং ডিভাইসের লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"ফ্লিট ম্যানেজার এই ইনফোটেইনমেন্ট সিস্টেম সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং গাড়ির লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"ফ্লিট ম্যানেজার হয়ত এই ইনফোটেইনমেন্ট সিস্টেম সম্পর্কিত ডেটা অ্যাক্সেস করতে, অ্যাপ ম্যানেজ করতে এবং গাড়ির সেটিংস পরিবর্তন করতে পারবেন।"</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"আপনার ফ্লিট ম্যানেজারের মাধ্যমে ব্লক করা হয়েছে"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ভলিউম পরিবর্তন করতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
-    <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"এসএমএস ব্যবহার করতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ক্যামেরা ব্যবহার করতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"স্ক্রিনশট নিতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"এই অ্যাপ ব্যবহার করতে ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"প্রতিষ্ঠানের ম্যানেজার এই প্রোফাইল সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং গাড়ির লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"প্রতিষ্ঠানের ম্যানেজার এই প্রোফাইল সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং ডিভাইসের লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"প্রতিষ্ঠানের ম্যানেজার এই ইনফোটেইনমেন্ট সিস্টেম সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং গাড়ির লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"প্রতিষ্ঠানের ম্যানেজার হয়ত এই ইনফোটেইনমেন্ট সিস্টেম সম্পর্কিত ডেটা অ্যাক্সেস করতে, অ্যাপ ম্যানেজ করতে এবং গাড়ির সেটিংস পরিবর্তন করতে পারবেন।"</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"প্রতিষ্ঠানের ম্যানেজার ব্লক করেছেন"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"এই ম্যানেজ করা গাড়িতে ভলিউম পরিবর্তন করা যাবে না"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"এই ম্যানেজ করা গাড়িতে কল করার সুবিধা পাওয়া যাবে না"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"এই ম্যানেজ করা গাড়িতে এসএমএস করার অনুমতি নেই"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"এই ম্যানেজ করা গাড়িতে ক্যামেরার সুবিধা পাওয়া যাবে না"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5433878479740389540">"&gt;এই ম্যানেজ করা গাড়িতে স্ক্রিনশট নেওয়া যাবে না"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"এই ম্যানেজ করা গাড়িতে এই অ্যাপ খোলা যাবে না"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ক্রেডিট প্রদানকারীর মাধ্যমে ব্লক করা হয়েছে"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"আপনার প্রশ্ন থাকলে, ফ্লিট ম্যানেজারের সাথে যোগাযোগ করুন"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"আপনার প্রশ্ন থাকলে, প্রতিষ্ঠানের ম্যানেজারের সাথে যোগাযোগ করুন"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"গাড়ির অ্যাডমিন অ্যাপ"</string>
-    <!-- no translation found for number_of_device_admins (7508826094096451485) -->
-    <skip />
-    <!-- no translation found for number_of_device_admins_none (5547493703413973954) -->
-    <skip />
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"আপনার ফ্লিট ম্যানেজারের মাধ্যমে সেটিংস ম্যানেজ করা হয়েছে"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{#টি অ্যাপ যা চালু আছে}one{#টি অ্যাপ যা চালু আছে}other{#টি অ্যাপ যা চালু আছে}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"কোনও অ্যাপ চালু নেই"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-এর গাড়ি সংক্রান্ত নীতি"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"প্রতিষ্ঠানের ম্যানেজার সেটিংস ম্যানেজ করেন"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ত্রুটির রিপোর্ট শেয়ার করতে চান?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"এই ডিভাইসের সমস্যা সমাধান করতে সাহায্য করার জন্য এই গাড়ির প্রতিষ্ঠানের ম্যানেজার ত্রুটির রিপোর্ট চেয়েছেন। অ্যাপ ও ডেটা শেয়ার করা হতে পারে।"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"এই ডিভাইসের সমস্যা সমাধান করতে সাহায্য করার জন্য এই গাড়ির প্রতিষ্ঠানের ম্যানেজার ত্রুটির রিপোর্ট চেয়েছেন। অ্যাপ ও ডেটা শেয়ার করা হতে পারে ও ডিভাইসটি সাময়িকভাবে ধীরে কাজ করতে পারে।"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"এই ত্রুটির রিপোর্ট এই গাড়ির প্রতিষ্ঠানের ম্যানেজারের সাথে শেয়ার করা হচ্ছে। আরও বিবরণের জন্য তাদের সাথে যোগাযোগ করুন।"</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"শেয়ার করুন"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"বাতিল করুন"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"এই সেটিং এই মুহূর্তে পরিবর্তন করা যাবে না"</string>
 </resources>

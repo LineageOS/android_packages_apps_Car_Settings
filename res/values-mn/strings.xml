@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Бусад"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Байршил"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Байршлыг ашиглах"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"Заасан аппууддаа таны байршилд хандахыг зөвшөөрнө"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Хэрэв та үүнийг унтраавал энэ нь бүх аппын байршилд хандах эрхийг хасна. Жолоочийн туслах аппууд хандах эрхтэй хэвээр байна."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Жолоочийн туслахын байршлыг ашиглах"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Тээврийн хэрэгслийн байршил унтраалттай"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Жолоочийн туслах онцлогууд таны байршилд хандах боломжгүй"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өөрчлөх"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Жолоодлогод тусалдаг аппуудыг байршилдаа хандахыг зөвшөөрнө"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Хэрэв та үүнийг унтраавал байршлын мэдээлэлд тулгуурладаг Жолоочийн туслах аппуудыг идэвхгүй болгоно."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Ямартай ч унтраах"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Саяхны байршлын хүсэлтүүд"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Саяхны байршлын хүсэлт алга"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Аппын түвшний зөвшөөрөл"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Байршлыг ашиглах"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Байршил нь таны төхөөрөмжийн байршлыг тооцоолоход туслах зорилгоор GPS, Wi-Fi, мобайл сүлжээ болон мэдрэгч зэрэг эх сурвалжийг ашиглаж болзошгүй."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Жолоочийн туслах"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"Жолоочийн туслах онцлогууд руу илгээсэн байршлын мэдээлэлд таныг тодорхойлох мэдээлэл агуулдаггүй. Үүнийг устгахаас өмнө хамгийн ихдээ 2 хоног хадгалдаг."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофоныг ашиглах"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бүх аппад таны микрофонд хандахыг зөвшөөрнө үү"</string>
@@ -740,26 +732,30 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Энэ инфотэйнмент системийн аппыг идэвхжүүлэх"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Энэ инфотэйнмент системийн аппыг идэвхгүй болгох"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Дэлгэрэнгүй мэдээлэл"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"Флот менежер тань тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Флот менежер тань тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, төхөөрөмжийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"Флот менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ инфотэйнмент системтэй холбоотой апп болон өгөгдлийг хянаж, удирдах боломжтой."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"Флот менежер нь энэ инфотэйнмент системтэй холбоотой өгөгдөлд хандаж, аппыг удирдаж, энэ тээврийн хэрэгслийн тохиргоог өөрчлөх боломжтой байж болзошгүй."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Таны флот менежер блоклосон"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Дууны түвшнийг өөрчлөхийн тулд флот менежертэй холбогдоно уу"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
-    <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS-г ашиглахын тулд флот менежертэй холбогдоно уу"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Камерыг ашиглахын тулд флот менежертэй холбогдоно уу"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Дэлгэцийн агшныг авахын тулд флот менежертэй холбогдоно уу"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Энэ аппыг ашиглахын тулд флот менежертэй холбогдоно уу"</string>
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"Байгууллагын менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Байгууллагын менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, төхөөрөмжийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"Байгууллагын менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ инфотэйнмент системтэй холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"Байгууллагын менежер нь энэ инфотэйнмент системтэй холбоотой өгөгдөлд хандах, аппыг удирдах болон энэ тээврийн хэрэгслийн тохиргоог өөрчлөх боломжтой байж болзошгүй."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Байгууллагын менежер блоклосон"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Энэ удирдлагатай тээврийн хэрэгслийн дууны түвшинг өөрчлөх боломжгүй"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Энэ удирдлагатай тээврийн хэрэгсэлд дуудлага хийх боломжгүй"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Энэ удирдлагатай тээврийн хэрэгсэлд мессеж бичихийг зөвшөөрдөггүй"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Энэ удирдлагатай тээврийн хэрэгсэлд камер ажиллах боломжгүй"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="5433878479740389540">"&gt;Энэ удирдлагатай тээврийн хэрэгсэлд дэлгэцийн агшин авах боломжгүй"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Энэ удирдлагатай тээврийн хэрэгсэлд энэ аппыг нээх боломжгүй"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Таны кредит зээлийн үйлчилгээ үзүүлэгч блоклосон"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"Хэрэв танд асуулт байвал флот менежертэй холбогдоно уу"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"Хэрэв танд асуулт байвал байгууллагын менежертэй холбогдоно уу"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Тээврийн хэрэгслийн админы апп"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# аппыг идэвхжүүлсэн}other{# аппыг идэвхжүүлсэн}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Идэвхжүүлсэн аппууд алга"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Таны флот менежерийн удирддаг тохиргоо"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-н тээврийн хэрэгслийн бодлого"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Байгууллагын менежерийн удирддаг тохиргоо"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Алдааны мэдээг хуваалцах уу?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Энэ тээврийн хэрэгслийн байгууллагын менежер энэ төхөөрөмжийн асуудлыг шийдэхэд туслахын тулд алдааны мэдээ хүссэн байна. Апп болон өгөгдлийг хуваалцаж болзошгүй."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Энэ тээврийн хэрэгслийн байгууллагын менежер энэ төхөөрөмжийн асуудлыг шийдэхэд туслахын тулд алдааны мэдээ хүссэн байна. Апп болон өгөгдлийг хуваалцаж болзошгүй бөгөөд таны төхөөрөмж түр зуур удааширч болзошгүй."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Энэ алдааны мэдээг энэ тээврийн хэрэгслийн байгууллагын менежертэй хуваалцаж байна. Дэлгэрэнгүй мэдээлэл авахын тулд тэдэнтэй холбогдоно уу."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Хуваалцах"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Татгалзах"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Энэ тохиргоог яг одоо өөрчлөх боломжгүй байна"</string>
 </resources>
