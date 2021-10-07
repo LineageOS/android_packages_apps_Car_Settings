@@ -181,7 +181,7 @@
     <string name="network_and_internet_oem_network_title">OEM network</string>
     <!-- Network & internet settings screen, setting option name to enable vehicle internet connectivity [CHAR LIMIT=60] -->
     <string name="network_and_internet_vehicle_internet_title">Vehicle internet</string>
-    <!-- Warning pop up when disabling OEM network connectivity [CHAR LIMIT=60] -->
+    <!-- Warning pop up when disabling OEM network connectivity [CHAR LIMIT=NONE] -->
     <string name="network_and_internet_oem_network_dialog_description">Turning off the vehicle internet may prevent some vehicle features or apps from working.\n\nCritical data required to operate your vehicle will continue to be shared with the vehicle manufacturer.</string>
     <!-- Confirm button label for disabling OEM network connectivity [CHAR LIMIT=40]-->
     <string name="network_and_internet_oem_network_dialog_confirm_label">Turn off anyway</string>
@@ -1702,8 +1702,6 @@
     <string name="add_device_admin">Activate this infotainment system app</string>
     <!-- Label for button to remove the active device admin app [CHAR LIMIT=NONE] -->
     <string name="remove_device_admin">Deactivate this infotainment system app</string>
-<!-- Shown in dialog to allow user to see more information about the device admin [CHAR LIMIT=NONE] -->
-    <string name="admin_support_more_info">More details</string>
     <!-- Shown in admin details page to warn user about policies the admin can set in a work profile. [CHAR LIMIT=NONE] -->
     <string name="admin_profile_owner_message">The organization manager can monitor and manage apps and data
         associated with this profile, including settings, permissions, corporate access,
