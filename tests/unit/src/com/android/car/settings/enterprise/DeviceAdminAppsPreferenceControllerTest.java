@@ -45,8 +45,6 @@ public final class DeviceAdminAppsPreferenceControllerTest
     @Before
     @UiThreadTest
     public void setUp() throws Exception {
-        setFixtures();
-
         mController = new DeviceAdminAppsPreferenceController(mSpiedContext, mPreferenceKey,
                 mFragmentController, mUxRestrictions);
         mPreferenceGroup = new DummyPreferenceGroup(mSpiedContext);
