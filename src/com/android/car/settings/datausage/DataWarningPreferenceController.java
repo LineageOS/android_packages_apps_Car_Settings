@@ -61,6 +61,12 @@ public class DataWarningPreferenceController extends
     }
 
     @Override
+    public void onStartInternal() {
+        super.onStartInternal();
+        getNetworkPolicyEditor().read();
+    }
+
+    @Override
     protected void updateState(PreferenceGroup preference) {
         long warningBytes = getNetworkPolicyEditor().getPolicyWarningBytes(getNetworkTemplate());
         if (warningBytes == WARNING_DISABLED) {
