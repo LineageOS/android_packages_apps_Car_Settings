@@ -46,7 +46,6 @@
         <com.android.car.settings.common.DividerPreference/>
         <com.android.car.settings.common.ColoredSwitchPreference
             android:key="@string/pk_wifi_entry_state_switch"
-            style="@style/ColoredSwitchPreferenceStyle"
             android:title="@string/wifi_settings"
             settings:controller="com.android.car.settings.wifi.WifiStateSwitchPreferenceController"
             settings:searchable="false"/>
