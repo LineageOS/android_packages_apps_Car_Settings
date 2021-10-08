@@ -18,35 +18,30 @@ package com.android.car.settings.network;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.net.NetworkCapabilities;
+import android.net.NetworkRequest;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
-import android.telephony.TelephonyManager;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceController;
 
 import java.util.List;
 
 /** Business logic to populate the list of available mobile networks. */
 public class MobileNetworkListPreferenceController extends
-        PreferenceController<PreferenceGroup> implements
-        SubscriptionsChangeListener.SubscriptionsChangeAction {
+        MobileNetworkBasePreferenceController<PreferenceGroup> {
 
-    private final SubscriptionsChangeListener mSubscriptionsChangeListener;
     private final SubscriptionManager mSubscriptionManager;
-    private final TelephonyManager mTelephonyManager;
 
     public MobileNetworkListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
 
-        mSubscriptionsChangeListener = new SubscriptionsChangeListener(context, /* action= */ this);
         mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
-        mTelephonyManager = context.getSystemService(TelephonyManager.class);
     }
 
     @Override
@@ -55,29 +50,25 @@ public class MobileNetworkListPreferenceController extends
     }
 
     @Override
-    protected void onStartInternal() {
-        mSubscriptionsChangeListener.start();
-    }
-
-    @Override
-    protected void onStopInternal() {
-        mSubscriptionsChangeListener.stop();
-    }
-
-    @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
         preferenceGroup.removeAll();
 
-        List<SubscriptionInfo> subscriptions = SubscriptionUtils.getAvailableSubscriptions(
-                mSubscriptionManager, mTelephonyManager);
-        for (SubscriptionInfo info : subscriptions) {
-            preferenceGroup.addPreference(createPreference(info));
+        List<SubscriptionInfo> totalSubs = SubscriptionUtils
+                .getAvailableSubscriptions(mSubscriptionManager, mTelephonyManager);
+
+        for (SubscriptionInfo info : totalSubs) {
+            if (mSubIds.contains(info.getSubscriptionId())) {
+                preferenceGroup.addPreference(createPreference(info));
+            }
         }
     }
 
     @Override
-    public void onSubscriptionsChanged() {
-        refreshUi();
+    protected NetworkRequest getNetworkRequest() {
+        return new NetworkRequest.Builder()
+                .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                .addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR)
+                .build();
     }
 
     private Preference createPreference(SubscriptionInfo info) {
