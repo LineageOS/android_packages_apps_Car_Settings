@@ -25,15 +25,15 @@ import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 
-/** Screen used to pick the data usage warning threshold bytes. */
-public class DataWarningSetThresholdFragment extends DataUsageSetThresholdBaseFragment {
+/** Screen used to pick the data usage limit threshold bytes. */
+public class DataLimitSetThresholdFragment extends DataUsageSetThresholdBaseFragment {
 
     /**
-     * Creates a new instance of {@link DataWarningSetThresholdFragment} with the given template. If
+     * Creates a new instance of {@link DataLimitSetThresholdFragment} with the given template. If
      * the template is {@code null}, the fragment will use the default data network template.
      */
-    public static DataWarningSetThresholdFragment newInstance(@Nullable NetworkTemplate template) {
-        DataWarningSetThresholdFragment fragment = new DataWarningSetThresholdFragment();
+    public static DataLimitSetThresholdFragment newInstance(@Nullable NetworkTemplate template) {
+        DataLimitSetThresholdFragment fragment = new DataLimitSetThresholdFragment();
         Bundle args = new Bundle();
         args.putParcelable(NetworkPolicyManager.EXTRA_NETWORK_TEMPLATE, template);
         fragment.setArguments(args);
@@ -42,17 +42,17 @@ public class DataWarningSetThresholdFragment extends DataUsageSetThresholdBaseFr
 
     @Override
     void onSave(long threshold) {
-        mPolicyEditor.setPolicyWarningBytes(mNetworkTemplate, threshold);
+        mPolicyEditor.setPolicyLimitBytes(mNetworkTemplate, threshold);
     }
 
     @Override
     @StringRes
     protected int getTitleResId() {
-        return R.string.data_usage_warning_editor_title;
+        return R.string.data_usage_limit_editor_title;
     }
 
     @Override
     protected long getInitialBytes() {
-        return mPolicyEditor.getPolicyWarningBytes(mNetworkTemplate);
+        return mPolicyEditor.getPolicyLimitBytes(mNetworkTemplate);
     }
 }

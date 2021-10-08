@@ -26,7 +26,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.withSettings;
 
@@ -35,6 +34,7 @@ import android.net.NetworkPolicyManager;
 import android.net.NetworkTemplate;
 import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.fragment.app.FragmentManager;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
@@ -60,6 +60,7 @@ import org.mockito.MockitoSession;
 public class DataUsageSetThresholdBaseFragmentTest {
 
     private static final int SUB_ID = 11;
+    private static final int TITLE_RES_ID = R.string.settings_label; // placeholder string
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private DataUsageSetThresholdBaseFragment mFragment;
@@ -98,19 +99,15 @@ public class DataUsageSetThresholdBaseFragmentTest {
         when(DataUsageUtils.getDefaultSubscriptionId(any())).thenReturn(SUB_ID);
         when(DataUsageUtils.getMobileNetworkTemplate(any(), eq(SUB_ID)))
                 .thenReturn(mMockNetworkTemplate);
-        when(mMockNetworkPolicyEditor.getPolicyWarningBytes(mMockNetworkTemplate))
-                .thenReturn(MIB_IN_BYTES);
-        setUpFragment(/* useTemplate= */ false);
+        setUpFragment(/* useTemplate= */ false, /* initialBytes= */ MIB_IN_BYTES);
 
-        verify(mMockNetworkPolicyEditor).getPolicyWarningBytes(mMockNetworkTemplate);
+        assertThat(mFragment.mNetworkTemplate).isEqualTo(mMockNetworkTemplate);
     }
 
     @Test
     @UiThreadTest
     public void onActivityCreated_saveButtonSet() throws Throwable {
-        when(mMockNetworkPolicyEditor.getPolicyWarningBytes(mMockNetworkTemplate))
-                .thenReturn(MIB_IN_BYTES);
-        setUpFragment(/* useTemplate= */ true);
+        setUpFragment(/* useTemplate= */ true, /* initialBytes= */ MIB_IN_BYTES);
 
         ToolbarController toolbar = mActivity.getToolbar();
         assertThat(toolbar.getMenuItems().get(0).getTitle().toString()).isEqualTo(
@@ -119,10 +116,17 @@ public class DataUsageSetThresholdBaseFragmentTest {
 
     @Test
     @UiThreadTest
+    public void onActivityCreated_titleSet() throws Throwable {
+        setUpFragment(/* useTemplate= */ true, /* initialBytes= */ MIB_IN_BYTES);
+
+        ToolbarController toolbar = mActivity.getToolbar();
+        assertThat(toolbar.getTitle().toString()).isEqualTo(mContext.getString(TITLE_RES_ID));
+    }
+
+    @Test
+    @UiThreadTest
     public void onActivityCreated_belowGbThreshold_mbSet() throws Throwable {
-        when(mMockNetworkPolicyEditor.getPolicyWarningBytes(mMockNetworkTemplate))
-                .thenReturn(MIB_IN_BYTES);
-        setUpFragment(/* useTemplate= */ true);
+        setUpFragment(/* useTemplate= */ true, /* initialBytes= */ MIB_IN_BYTES);
 
         assertThat(mFragment.mDataWarningUnitsPreferenceController.isGbSelected()).isFalse();
     }
@@ -130,9 +134,8 @@ public class DataUsageSetThresholdBaseFragmentTest {
     @Test
     @UiThreadTest
     public void onActivityCreated_aboveGbThreshold_gbSet() throws Throwable {
-        when(mMockNetworkPolicyEditor.getPolicyWarningBytes(mMockNetworkTemplate))
-                .thenReturn((long) (MB_GB_SUFFIX_THRESHOLD * GIB_IN_BYTES * 2));
-        setUpFragment(/* useTemplate= */ true);
+        setUpFragment(/* useTemplate= */ true,
+                /* initialBytes= */ (long) (MB_GB_SUFFIX_THRESHOLD * GIB_IN_BYTES * 2));
 
         assertThat(mFragment.mDataWarningUnitsPreferenceController.isGbSelected()).isTrue();
     }
@@ -140,9 +143,7 @@ public class DataUsageSetThresholdBaseFragmentTest {
     @Test
     @UiThreadTest
     public void onActivityCreated_saveButtonClicked_goesBack() throws Throwable {
-        when(mMockNetworkPolicyEditor.getPolicyWarningBytes(mMockNetworkTemplate))
-                .thenReturn(MIB_IN_BYTES);
-        setUpFragment(/* useTemplate= */ true);
+        setUpFragment(/* useTemplate= */ true, /* initialBytes= */ MIB_IN_BYTES);
 
         doReturn(MIB_IN_BYTES).when(mFragment).getCurrentThreshold();
 
@@ -151,10 +152,11 @@ public class DataUsageSetThresholdBaseFragmentTest {
         assertThat(mActivity.getOnBackPressedFlag()).isTrue();
     }
 
-    private void setUpFragment(boolean useTemplate) throws Throwable {
+    private void setUpFragment(boolean useTemplate, long initialBytes) throws Throwable {
         String dataUsageSetThresholdFragmentTag = "data_usage_set_threshold_fragment";
         TestDataUsageSetThresholdBaseFragment fragment = new
                 TestDataUsageSetThresholdBaseFragment();
+        fragment.mInitialBytes = initialBytes;
         Bundle args = new Bundle();
         args.putParcelable(NetworkPolicyManager.EXTRA_NETWORK_TEMPLATE, useTemplate
                 ? mMockNetworkTemplate : null);
@@ -172,8 +174,20 @@ public class DataUsageSetThresholdBaseFragmentTest {
 
     public static class TestDataUsageSetThresholdBaseFragment extends
             DataUsageSetThresholdBaseFragment {
+        public long mInitialBytes;
 
         @Override
         protected void onSave(long threshold) {}
+
+        @Override
+        @StringRes
+        protected int getTitleResId() {
+            return TITLE_RES_ID;
+        }
+
+        @Override
+        protected long getInitialBytes() {
+            return mInitialBytes;
+        }
     }
 }

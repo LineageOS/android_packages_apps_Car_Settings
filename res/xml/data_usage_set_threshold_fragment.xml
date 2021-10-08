@@ -18,7 +18,6 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/data_usage_warning_editor_title"
     android:key="@string/psk_data_usage_set_threshold">
     <com.android.car.settings.datausage.DataUsageEditTextPreference
         android:key="@string/pk_data_usage_edit_text"
