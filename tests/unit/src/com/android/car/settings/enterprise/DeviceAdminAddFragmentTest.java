@@ -37,6 +37,7 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.XmlResourceParser;
 
 import androidx.fragment.app.FragmentActivity;
@@ -48,6 +49,8 @@ import com.android.car.ui.toolbar.ToolbarController;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
+
+import java.util.Arrays;
 
 public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
 
@@ -167,15 +170,51 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
     }
 
     @Test
-    public void testAttach_adminExtra_ok() {
+    public void testAttach_adminExtra_ok_active() {
         mockActivityIntent(new Intent()
                 .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
                 .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockActiveAdmin();
 
         mSpiedFragment.onAttach(mSpiedContext, mActivity);
 
         verifyActivityNeverFinished();
         verifyControllersUsed();
+    }
+
+    @Test
+    public void testAttach_adminExtra_ok_inactiveButValid() {
+        mockActivityIntent(new Intent()
+                .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockInactiveAdmin();
+
+        // TODO(b/202342351): use a custom matcher for
+        // DeviceAdminReceiver.ACTION_DEVICE_ADMIN_ENABLED instead of any()
+        doReturn(Arrays.asList(mDefaultResolveInfo))
+                .when(mSpiedPm).queryBroadcastReceivers(
+                        any(), eq(PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS));
+
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verifyActivityNeverFinished();
+        verifyControllersUsed();
+    }
+
+    // TODO(b/202342351): add similar test for when new DeviceAdminInfo(context, ri) throws an
+    // exception (for example, when metadata is invalid).
+    @Test
+    public void testAttach_adminExtra_adminFoundButInvalid() {
+        mockActivityIntent(new Intent()
+                .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockInactiveAdmin();
+        // Don't need to mock pm
+
+        mRealFragment.onAttach(mSpiedContext, mActivity);
+
+        verifyActivityFinished();
+        verifyControllersNeverUsed();
     }
 
     @Test
