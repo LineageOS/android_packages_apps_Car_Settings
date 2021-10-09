@@ -17,36 +17,24 @@
 package com.android.car.settings.enterprise;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.ComponentName;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.text.TextUtils;
-
-import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 
 /**
- * Controller for the header preference the device admin details screen.
+ * Displays a list of activated device admin apps.
  */
-public final class DeviceAdminAddHeaderPreferenceController
-        extends BaseDeviceAdminAddPreferenceController<Preference> {
+public final class DeviceAdminActivatedAppsPreferenceController
+        extends DeviceAdminAppsPreferenceController {
 
-    public DeviceAdminAddHeaderPreferenceController(Context context, String preferenceKey,
+    public DeviceAdminActivatedAppsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    protected void updateState(Preference preference) {
-        CharSequence name = mDeviceAdminInfo.loadLabel(mPm);
-        Drawable icon = mDeviceAdminInfo.loadIcon(mPm);
-        CharSequence description = getDescription(mDeviceAdminInfo);
-
-        mLogger.d("updateState: name=" + name  + ", description=" + description);
-        preference.setTitle(name);
-        preference.setIcon(icon);
-        if (!TextUtils.isEmpty(description)) {
-            preference.setSummary(description);
-        }
+    protected boolean isIncluded(ComponentName componentName) {
+        return isActivated(componentName);
     }
 }
