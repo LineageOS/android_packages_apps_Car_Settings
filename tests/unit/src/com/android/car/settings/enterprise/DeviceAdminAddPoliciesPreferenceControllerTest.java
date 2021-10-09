@@ -38,8 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
-        BaseDeviceAdminAddPreferenceControllerTestCase
-                <DeviceAdminAddPoliciesPreferenceController> {
+        BasePreferenceControllerTestCase {
 
     private static final String TAG = DeviceAdminAddPoliciesPreferenceControllerTest.class
             .getSimpleName();
