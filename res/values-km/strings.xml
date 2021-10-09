@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ច្រើន​ទៀត"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"អនុញ្ញាតឱ្យកម្មវិធីដែលអ្នកបញ្ជាក់ចូលប្រើទីតាំងរបស់អ្នក"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ កម្មវិធី​ជំនួយអ្នកបើកបរនឹង​នៅតែមានសិទ្ធិចូលប្រើដដែល។"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ប្រើទីតាំងសម្រាប់​មុខងារជំនួយ​អ្នកបើកបរ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ទីតាំងយានជំនិះត្រូវបានបិទ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"មុខងារជំនួយអ្នកបើកបរមិនអាចចូលប្រើទីតាំងរបស់អ្នកបានទេ"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ផ្លាស់​ប្ដូរ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"អនុញ្ញាតឱ្យកម្មវិធីដែលផ្ដល់ជំនួយពាក់ព័ន្ធនឹងការបើកបរចូលប្រើទីតាំងរបស់អ្នក"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ។"</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"មិនអីទេ បិទចុះ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ជំនួយ​អ្នកបើកបរ"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"ព័ត៌មានទីតាំង​ដែលបានបញ្ជូន​ទៅមុខងារ​ជំនួយអ្នកបើកបរ​មិនមាន​ព័ត៌មានដែល​សម្គាល់អ្នកទេ។ ព័ត៌មាននោះ​ត្រូវបានរក្សាទុក​យ៉ាងយូរបំផុត 2 ថ្ងៃ មុនពេល​ត្រូវបានលុប។"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​មីក្រូហ្វូន​របស់អ្នក"</string>
@@ -739,27 +731,32 @@
     <string name="add_device_admin_msg" msgid="8188888666879499482">"បើកដំណើរការកម្មវិធីប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះឬ?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"បើកដំណើរការ​កម្មវិធីប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"បិទដំណើរការ​កម្មវិធីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តនេះ"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"អ្នកគ្រប់គ្រងក្រុមយានជំនិះ​របស់អ្នក​អាច​តាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាន​នេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មានអំពី​ទីតាំងរបស់យានជំនិះ​ផងដែរ។"</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"អ្នកគ្រប់គ្រងក្រុមយានជំនិះ​របស់អ្នក​អាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាននេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មានអំពីទីតាំង​របស់ឧបករណ៍​ផងដែរ។"</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"អ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ​អាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើលក្ខណៈក្រុមហ៊ុន សកម្មភាពបណ្ដាញ និងព័ត៌មានអំពីទីតាំងរបស់​យានជំនិះផងដែរ។"</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"អ្នកគ្រប់គ្រងក្រុម​យានជំនិះប្រហែលជា​អាចចូលប្រើទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ គ្រប់គ្រង​កម្មវិធី និងប្ដូរការកំណត់​យានជំនិះនេះ។"</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"បានទប់ស្កាត់ដោយអ្នកគ្រប់គ្រងក្រុមយានជំនិះរបស់អ្នក"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ទាក់ទងអ្នកគ្រប់គ្រងក្រុមយានជំនិះ ដើម្បីប្ដូរកម្រិតសំឡេង"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"អ្នកគ្រប់គ្រងស្ថាប័ន​របស់អ្នក​អាច​តាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាន​នេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មាន​ទីតាំងរបស់យានជំនិះ​ផងដែរ។"</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"អ្នកគ្រប់គ្រងស្ថាប័ន​របស់អ្នក​អាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាននេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មានទីតាំង​របស់ឧបករណ៍​ផងដែរ។"</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"អ្នកគ្រប់គ្រង​ស្ថាប័នអាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើលក្ខណៈក្រុមហ៊ុន សកម្មភាពបណ្ដាញ និងព័ត៌មានទីតាំងរបស់​យានជំនិះផងដែរ។"</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"អ្នកគ្រប់គ្រងស្ថាប័នប្រហែលជា​អាចចូលប្រើទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ គ្រប់គ្រង​កម្មវិធី និងប្ដូរការកំណត់​យានជំនិះនេះ។"</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"បានទប់ស្កាត់ដោយអ្នកគ្រប់គ្រងស្ថាប័ន"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"មិនអាចប្ដូរកម្រិតសំឡេងនៅក្នុងយានជំនិះដែលស្ថិតក្រោមការគ្រប់គ្រងនេះបានទេ"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"មិនអាចធ្វើការហៅទូរសព្ទនៅក្នុងយានជំនិះដែលស្ថិតក្រោមការគ្រប់គ្រងនេះបានទេ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"មិនអនុញ្ញាត SMS នៅក្នុងយានជំនិះដែលស្ថិតក្រោមការគ្រប់គ្រងនេះទេ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"មិនអាចប្រើកាមេរ៉ានៅក្នុងយានជំនិះដែលស្ថិតក្រោមការគ្រប់គ្រងនេះបានទេ"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើសារ SMS"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើកាមេរ៉ា"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីថតរូប​អេក្រង់"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"ទាក់ទងអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ ដើម្បីប្រើកម្មវិធីនេះ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"មិនអាចបើកកម្មវិធីនេះនៅក្នុងយានជំនិះដែលស្ថិតក្រោមការគ្រប់គ្រងនេះបានទេ"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"បានទប់ស្កាត់ដោយក្រុមហ៊ុនផ្ដល់សេវាឥណទានរបស់អ្នក"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"ប្រសិនបើ​អ្នកមានសំណួរ សូមទាក់ទង​អ្នកគ្រប់គ្រងក្រុមយានជំនិះ"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"ប្រសិនបើ​អ្នកមានសំណួរ សូមទាក់ទង​អ្នកគ្រប់គ្រងស្ថាប័ន"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"កម្មវិធីអ្នកគ្រប់គ្រង​ក្រុមយានជំនិះ"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{កម្មវិធីដែល​បានបើកដំណើរការ #}other{កម្មវិធីដែល​បានបើកដំណើរការ #}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"គ្មានកម្មវិធីដែល​បានបើកដំណើរការទេ"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"ការកំណត់​ដែលស្ថិតក្រោមការគ្រប់គ្រង​របស់អ្នកគ្រប់គ្រង​ក្រុមយានជំនិះអ្នក"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"គោលការណ៍​យានជំនិះ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ការកំណត់ដែលស្ថិតក្រោមការគ្រប់គ្រងរបស់អ្នក​គ្រប់គ្រងស្ថាប័ន"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ចែករំលែក​របាយការណ៍អំពី​បញ្ហាឬ?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក។"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក ហើយឧបករណ៍របស់អ្នកអាចនឹងដំណើរការយឺតជាបណ្តោះអាសន្ន។"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"របាយការណ៍អំពីបញ្ហានេះកំពុងត្រូវបានចែករំលែកជាមួយអ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះ។ សូមទាក់ទងគាត់ ដើម្បីទទួលបានព័ត៌មានលម្អិតបន្ថែម។"</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"ចែករំលែក"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"បដិសេធ"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"កំណត់ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្តឡើងវិញ"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"ប្រព័ន្ធ​របស់អ្នកបានទទួលសំណើសុំកំណត់​ដូច​ចេញ​ពី​រោងចក្រ​ និងលុបទិន្នន័យទាំងអស់។ អ្នកអាចកំណត់ប្រព័ន្ធឡើងវិញឥឡូវនេះ ឬវានឹងកំណត់ឡើងវិញ នៅពេលរថយន្តចាប់ផ្ដើមលើកក្រោយ។ បន្ទាប់ពីនោះ អ្នកអាចរៀបចំកម្រងព័ត៌មានថ្មីបាន។"</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"កំណត់ឡើងវិញឥឡូវនេះ"</string>

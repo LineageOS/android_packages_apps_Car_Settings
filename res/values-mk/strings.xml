@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Повеќе"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Користете ја локацијата"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"Дозволете апликациите што ќе ги нагласите да пристапуваат до локацијата"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Ако го исклучите ова, ќе се отстрани пристапот до локацијата за сите апликации. Апликациите за помош за возачи и понатаму ќе имаат пристап."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Користете локација за помош за возачи"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Локацијата на возилото е исклучена"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Функциите за помош за возачи не можат да пристапуваат до локацијата"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Измени"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Дозволи апликациите што помагаат со возењето да пристапуваат до локацијата"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ако го исклучите ова, функциите за помош за возачи што зависат од податоците за локација ќе бидат оневозможени."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Сепак исклучи"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последни барања за локација"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема неодамнешни барања за локација"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на ниво на апликација"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Користи ја локацијата"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Услугата „Локација“ може да користи извори како GPS, Wi‑Fi, мобилни мрежи и сензори за да помогне да се процени локацијата на уредот."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Помош за возачи"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"Податоците за локацијата што се испраќаат до функциите за помош за возачи не содржат податоци што ве идентификуваат. Се чуваат најмногу 2 дена додека да се избришат."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Користи го микрофонот"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Дозволете пристап до микрофонот за сите апликации"</string>
@@ -739,27 +731,32 @@
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Активирај апл. на сис. за инф. и забава?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Активирајте ја апликацијава на системот за информации и забава"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Деактивирајте ја апликацијава на системот за информации и забава"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"Вашиот управник на возен парк може да ги следи и да управува со апликациите и податоците поврзани со профилов, заедно со поставките, дозволите, корпоративниот пристап, мрежната активност и податоците за локацијата на возилото."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Вашиот управник на возен парк може да ги следи и да управува со апликациите и податоците поврзани со профилов, заедно со поставките, дозволите, корпоративниот пристап, мрежната активност и податоците за локацијата на уредот."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"Управникот на возен парк може да ги следи и да управува со апликациите и податоците поврзани со системов за информации и забава, заедно со поставките, дозволите, корпоративниот пристап, мрежната активност и податоците за локацијата на возилото."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"Управникот на возен парк можеби ќе може да пристапува до податоците поврзани со системов за информации и забава, да управува со апликациите и да ги менува поставките за возилово."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Блокирано од упр. на воз. парк"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Побарајте управ. на воз. парк да ја смени јачината"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"Управникот на организацијата може да ги следи и да управува со апликациите и податоците поврзани со профилов, заедно со поставките, дозволите, корпоративниот пристап, мрежната активност и податоците за локацијата на возилото."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Управникот на организацијата може да ги следи и да управува со апликациите и податоците поврзани со профилов, заедно со поставките, дозволите, корпоративниот пристап, мрежната активност и податоците за локацијата на уредот."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"Управникот на организацијата може да ги следи и да управува со апликациите и податоците поврзани со системов за информации и забава, заедно со поставките, дозволите, корпоративниот пристап, мрежната активност и податоците за локацијата на возилото."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"Управникот на организацијата можеби ќе може да пристапува до податоците поврзани со системов за информации и забава, да управува со апликациите и да ги менува поставките за возилово."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Блокирано од управникот на организацијата"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Не може да се промени јачината на звукот во управуваново возило"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Не може да се упатуваат повици во управуваново возило"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Испраќањето SMS не е дозволено во управуваново возило"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Камерата не е достапна во управуваново возило"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Прашајте го управн. на возен парк за користење SMS"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Прашајте го упр. на воз. парк за користење камера"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Прашајте го упр. на воз. парк за слики од екранот"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Прашајте го управн. на возен парк за апликацијава"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Не може да се отвори апликацијава во управуваново возило"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Блокирано од давателот на кредит"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ако имате прашања, контактирајте со управникот на возен парк"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"Ако имате прашања, контактирајте со управникот на организацијата"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Апликации за администратор на возило"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активирана апликација}one{# активирана апликација}other{# активирани апликации}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Нема активирани апликации"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Со поставките управува вашиот управник на возен парк"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила за возило на <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Со поставките управува управникот на организацијата"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Да се сподели извештајот за грешки?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Управникот на организацијата на возилово побара извештај за грешки за да ви помогне да ги решите проблемите на уредов. Можно е да се споделат апликации и податоци."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Управникот на организацијата на возилово побара извештај за грешки за да ви помогне да ги решите проблемите на уредов. Можно е да се споделат апликации и податоци, а уредот привремено да биде побавен."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Извештајот за грешки е споделен со управникот на организацијата на возилово. За повеќе детали, контактирајте со него."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Сподели"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Одбиј"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Ресетирање на системот за информации и забава"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Вашиот систем прими барање за ресетирање на фабрички поставки и за бришење на сите податоци. Може да го ресетирате сега или самиот ќе се ресетира при следното вклучување на автомобилот. Тогаш може да поставите нов профил."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Ресетирај сега"</string>
