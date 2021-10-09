@@ -16,13 +16,16 @@
 
 package com.android.car.settings.enterprise;
 
+import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.UserManager;
 
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
@@ -68,5 +71,16 @@ abstract class BaseEnterprisePreferenceController<P extends Preference>
     final boolean isProfileOrDeviceOwner(ComponentName admin) {
         return admin.equals(mDpm.getProfileOwner())
                 || admin.equals(mDpm.getDeviceOwnerComponentOnCallingUser());
+    }
+
+    @Nullable
+    protected final CharSequence getDescription(DeviceAdminInfo deviceAdminInfo) {
+        try {
+            return deviceAdminInfo.loadDescription(mPm);
+        } catch (Resources.NotFoundException e) {
+            mLogger.v("No description for "
+                    + deviceAdminInfo.getComponent().flattenToShortString());
+        }
+        return null;
     }
 }

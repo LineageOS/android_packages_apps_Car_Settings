@@ -70,7 +70,7 @@ public final class DeviceAdminAddActionPreferenceControllerTest extends
 
     @Test
     public void testUpdateStatus_activeAdmin() throws Exception {
-        mockActiveAdmin();
+        mockActiveAdmin(mDefaultAdmin);
 
         mController.updateState(mPreference);
 
@@ -80,7 +80,7 @@ public final class DeviceAdminAddActionPreferenceControllerTest extends
 
     @Test
     public void testUpdateStatus_inactiveAdmin() throws Exception {
-        mockInactiveAdmin();
+        mockInactiveAdmin(mDefaultAdmin);
 
         mController.updateState(mPreference);
 
@@ -116,7 +116,7 @@ public final class DeviceAdminAddActionPreferenceControllerTest extends
 
     @Test
     public void testHandlePreferenceClicked_activeAdmin() throws Exception {
-        mockActiveAdmin();
+        mockActiveAdmin(mDefaultAdmin);
         mController.setIsActive();
 
         handlePreferenceClicked();
@@ -128,7 +128,7 @@ public final class DeviceAdminAddActionPreferenceControllerTest extends
 
     @Test
     public void testHandlePreferenceClicked_inactiveAdmin() throws Exception {
-        mockInactiveAdmin();
+        mockInactiveAdmin(mDefaultAdmin);
         mController.setIsActive();
 
         handlePreferenceClicked();
