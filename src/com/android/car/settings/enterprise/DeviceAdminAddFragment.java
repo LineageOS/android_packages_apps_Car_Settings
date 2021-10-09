@@ -21,10 +21,14 @@ import static com.android.car.settings.enterprise.EnterpriseUtils.getDeviceAdmin
 
 import android.app.Activity;
 import android.app.admin.DeviceAdminInfo;
+import android.app.admin.DeviceAdminReceiver;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -33,6 +37,8 @@ import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.ToolbarController;
+
+import java.util.List;
 
 /**
  * A screen that shows details about a device administrator.
@@ -84,8 +90,20 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 activity.finish();
                 return;
             }
+        } else {
+            // When activating, make sure the given component name is actually a valid device admin.
+            // No need to check this when deactivating, because it is safe to deactivate an active
+            // invalid device admin.
+            if (!isValidAdmin(context, admin)) {
+                LOG.w("Request to add invalid device admin: " + admin);
+                activity.finish();
+                return;
+            }
         }
 
+        // TODO(b/202342351): both this method and isValidAdmin() call PM to get the ActivityInfo;
+        // they should be refactored so it's called just onces; similarly, isValidAdmin()
+        // also create a DeviceAdminInfo
         DeviceAdminInfo deviceAdminInfo = getDeviceAdminInfo(context, admin);
         LOG.d("Admin: " + admin + " DeviceAdminInfo: " + deviceAdminInfo);
 
@@ -137,5 +155,46 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
     @Override
     protected <T extends PreferenceController> T use(Class<T> clazz, int preferenceKeyResId) {
         return super.use(clazz, preferenceKeyResId);
+    }
+
+    private boolean isValidAdmin(Context context, ComponentName who) {
+        PackageManager pm = context.getPackageManager();
+        ActivityInfo ai;
+        try {
+            ai = pm.getReceiverInfo(who, PackageManager.GET_META_DATA);
+        } catch (PackageManager.NameNotFoundException e) {
+            LOG.w("Unable to retrieve device policy " + who, e);
+            return false;
+        }
+
+        DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
+        if (dpm.isAdminActive(who)) {
+            return true;
+        }
+        List<ResolveInfo> avail = pm.queryBroadcastReceivers(
+                new Intent(DeviceAdminReceiver.ACTION_DEVICE_ADMIN_ENABLED),
+                PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS);
+        int count = avail == null ? 0 : avail.size();
+        boolean found = false;
+        for (int i = 0; i < count; i++) {
+            ResolveInfo ri = avail.get(i);
+            if (ai.packageName.equals(ri.activityInfo.packageName)
+                    && ai.name.equals(ri.activityInfo.name)) {
+                try {
+                    // We didn't retrieve the meta data for all possible matches, so
+                    // need to use the activity info of this specific one that was retrieved.
+                    ri.activityInfo = ai;
+                    new DeviceAdminInfo(context, ri);
+                    found = true;
+                } catch (Exception e) {
+                    LOG.w("Bad " + ri.activityInfo, e);
+                }
+                break;
+            }
+        }
+        if (!found) {
+            LOG.d("didn't find enabled admin receiver for " + who.flattenToShortString());
+        }
+        return found;
     }
 }
