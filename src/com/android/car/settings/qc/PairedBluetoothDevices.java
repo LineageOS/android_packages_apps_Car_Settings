@@ -244,18 +244,22 @@ public class PairedBluetoothDevices extends SettingsQCItem {
     }
 
     private QCActionItem createPhoneButton(CachedBluetoothDevice device, int requestCode) {
-        BluetoothProfileToggleState phoneState = geBluetoothProfileToggleState(device,
+        BluetoothProfileToggleState phoneState = getBluetoothProfileToggleState(device,
                 BluetoothProfile.HEADSET_CLIENT);
+        int iconRes = phoneState.mIsAvailable ? R.drawable.ic_qc_bluetooth_phone
+                : R.drawable.ic_qc_bluetooth_phone_unavailable;
         return createBluetoothDeviceToggle(device, requestCode, PHONE_BUTTON,
-                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth_phone),
+                Icon.createWithResource(getContext(), iconRes),
                 phoneState.mIsAvailable, phoneState.mIsEnabled, phoneState.mIsChecked);
     }
 
     private QCActionItem createMediaButton(CachedBluetoothDevice device, int requestCode) {
-        BluetoothProfileToggleState mediaState = geBluetoothProfileToggleState(device,
+        BluetoothProfileToggleState mediaState = getBluetoothProfileToggleState(device,
                 BluetoothProfile.A2DP_SINK);
+        int iconRes = mediaState.mIsAvailable ? R.drawable.ic_qc_bluetooth_media
+                : R.drawable.ic_qc_bluetooth_media_unavailable;
         return createBluetoothDeviceToggle(device, requestCode, MEDIA_BUTTON,
-                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth_media),
+                Icon.createWithResource(getContext(), iconRes),
                 mediaState.mIsAvailable, mediaState.mIsEnabled, mediaState.mIsChecked);
     }
 
@@ -284,7 +288,7 @@ public class PairedBluetoothDevices extends SettingsQCItem {
         return null;
     }
 
-    private BluetoothProfileToggleState geBluetoothProfileToggleState(CachedBluetoothDevice device,
+    private BluetoothProfileToggleState getBluetoothProfileToggleState(CachedBluetoothDevice device,
             int profileId) {
         LocalBluetoothProfile profile = getProfile(device, profileId);
         if (!device.isConnected() || profile == null) {

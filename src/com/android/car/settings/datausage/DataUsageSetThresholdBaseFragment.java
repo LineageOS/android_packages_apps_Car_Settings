@@ -19,9 +19,11 @@ package com.android.car.settings.datausage;
 import android.content.Context;
 import android.net.NetworkPolicyManager;
 import android.net.NetworkTemplate;
+import android.os.Bundle;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
+import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 
@@ -51,8 +53,9 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
     DataUsageEditTextPreferenceController mDataUsageEditTextPreferenceController;
     @VisibleForTesting
     NetworkPolicyEditor mPolicyEditor;
+    @VisibleForTesting
+    NetworkTemplate mNetworkTemplate;
 
-    protected NetworkTemplate mNetworkTemplate;
     private MenuItem mSaveButton;
     private TelephonyManager mTelephonyManager;
     private SubscriptionManager mSubscriptionManager;
@@ -74,6 +77,9 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
 
         if (mPolicyEditor == null) {
             mPolicyEditor = new NetworkPolicyEditor(NetworkPolicyManager.from(context));
+
+            // Loads the current policies to the policy editor cache.
+            mPolicyEditor.read();
         }
         mNetworkTemplate = getArguments().getParcelable(
                 NetworkPolicyManager.EXTRA_NETWORK_TEMPLATE);
@@ -97,7 +103,7 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
         mDataWarningUnitsPreferenceController = use(DataUsageUnitPreferenceController.class,
                 R.string.pk_data_usage_radio_group);
 
-        long currentWarningBytes = mPolicyEditor.getPolicyWarningBytes(mNetworkTemplate);
+        long currentWarningBytes = getInitialBytes();
         String bytesText;
         if (currentWarningBytes > MB_GB_SUFFIX_THRESHOLD * GIB_IN_BYTES) {
             mDataWarningUnitsPreferenceController.setDefaultSelection(/* isGb= */ true);
@@ -108,6 +114,13 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
         }
 
         mDataUsageEditTextPreferenceController.setDefaultText(bytesText);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getPreferenceScreen().setTitle(getTitleResId());
     }
 
     @VisibleForTesting
@@ -125,7 +138,7 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
 
         long bytes = (long) (Float.parseFloat(bytesString)
                 * (mDataWarningUnitsPreferenceController.isGbSelected()
-                ? MIB_IN_BYTES : GIB_IN_BYTES));
+                ? GIB_IN_BYTES : MIB_IN_BYTES));
 
         // To fix the overflow problem.
         return Math.min(MAX_DATA_LIMIT_BYTES, bytes);
@@ -143,4 +156,11 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
      */
     @VisibleForTesting
     abstract void onSave(long threshold);
+
+    /** Returns the screen title res id */
+    @StringRes
+    protected abstract int getTitleResId();
+
+    /** Returns the initial bytes to be displayed */
+    protected abstract long getInitialBytes();
 }
