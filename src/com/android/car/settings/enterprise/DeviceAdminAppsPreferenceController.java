@@ -26,6 +26,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 import androidx.preference.Preference;
@@ -34,7 +35,6 @@ import androidx.preference.PreferenceGroup;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.ui.preference.CarUiPreference;
-import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -42,12 +42,11 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Displays a list of device admin apps and provides toggles to allow the user to grant/revoke
- * permission.
+ * Displays a list of device admin apps.
  * <p>Before changing the value of a permission, the user is directed to a confirmation
  * screen with more detailed information about the risks and potential effects.
  */
-public final class DeviceAdminAppsPreferenceController
+public abstract class DeviceAdminAppsPreferenceController
         extends BaseEnterprisePreferenceController<PreferenceGroup> {
 
     public DeviceAdminAppsPreferenceController(Context context, String preferenceKey,
@@ -72,7 +71,8 @@ public final class DeviceAdminAppsPreferenceController
             DeviceAdminInfo deviceAdminInfo = createDeviceAdminInfo(resolveInfo.activityInfo);
             // Add only visible ones (note: active admins are added regardless of visibility)
             if (deviceAdminInfo != null && deviceAdminInfo.isVisible()) {
-                if (!deviceAdminInfo.getActivityInfo().applicationInfo.isInternal()) {
+                if (!isIncluded(deviceAdminInfo.getComponent())
+                        || !deviceAdminInfo.getActivityInfo().applicationInfo.isInternal()) {
                     continue;
                 }
                 preferenceGroup.addPreference(createPreference(deviceAdminInfo));
@@ -84,6 +84,12 @@ public final class DeviceAdminAppsPreferenceController
         }
     }
 
+    protected abstract boolean isIncluded(ComponentName componentName);
+
+    protected boolean isActivated(ComponentName componentName) {
+        return mDpm.isAdminActive(componentName);
+    }
+
     private Preference createEmptyListPreference() {
         CarUiPreference preference = new CarUiPreference(getContext());
         preference.setTitle(R.string.device_admin_apps_list_empty);
@@ -93,26 +99,23 @@ public final class DeviceAdminAppsPreferenceController
     }
 
     private Preference createPreference(DeviceAdminInfo deviceAdminInfo) {
-        CarUiTwoActionSwitchPreference preference =
-                new CarUiTwoActionSwitchPreference(getContext());
+        CarUiPreference preference = new CarUiPreference(getContext());
         preference.setTitle(deviceAdminInfo.loadLabel(mPm));
         preference.setIcon(deviceAdminInfo.loadIcon(mPm));
+        CharSequence description = getDescription(deviceAdminInfo);
+        if (!TextUtils.isEmpty(description)) {
+            preference.setSummary(deviceAdminInfo.loadDescription(mPm));
+        }
         preference.setKey(deviceAdminInfo.getPackageName());
         ComponentName componentName = deviceAdminInfo.getComponent();
         preference.setEnabled(isEnabled(componentName));
         preference.setOnPreferenceClickListener(p -> launchDetailScreen(componentName));
-        preference.setSecondaryActionChecked(isActive(componentName));
-        preference.setOnSecondaryActionClickListener(v -> launchDetailScreen(componentName));
 
         return preference;
     }
 
     private boolean isEnabled(ComponentName componentName) {
         return !mDpm.isRemovingAdmin(componentName, getContext().getUserId());
-    }
-
-    private boolean isActive(ComponentName componentName) {
-        return mDpm.isAdminActive(componentName);
     }
 
     private boolean launchDetailScreen(ComponentName componentName) {

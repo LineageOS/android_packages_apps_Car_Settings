@@ -15,18 +15,26 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 
 import static org.mockito.Mockito.verify;
 
+import static java.util.stream.Collectors.toList;
+
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.Context;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
 import org.mockito.Mock;
+
+import java.util.ArrayList;
+import java.util.List;
 
 abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
 
@@ -70,5 +78,37 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
 
     protected final void verifyGoBack() {
         verify(mFragmentController).goBack();
+    }
+
+    protected void verifyPreferenceTitles(DummyPreferenceGroup preferenceGroup,
+            CharSequence... titles) {
+        assertThat(preferenceGroup.getPreferences().stream()
+                .map(p -> p.getTitle()).collect(toList())).containsExactly(titles);
+    }
+
+    static final class DummyPreferenceGroup extends PreferenceGroup {
+
+        private final List<Preference> mList = new ArrayList<>();
+
+        DummyPreferenceGroup(Context context) {
+            super(context, null);
+        }
+
+        @Override public void removeAll() {
+            mList.clear();
+        }
+
+        @Override public boolean addPreference(Preference preference) {
+            mList.add(preference);
+            return true;
+        }
+
+        @Override public int getPreferenceCount() {
+            return mList.size();
+        }
+
+        public List<Preference> getPreferences() {
+            return mList;
+        }
     }
 }
