@@ -35,7 +35,7 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
 
     @Test
     public void testUpdateState_adminInactive() {
-        mockInactiveAdmin();
+        mockInactiveAdmin(mDefaultAdmin);
 
         mController.updateState(mPreference);
 
@@ -45,7 +45,7 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
 
     @Test
     public void testUpdateState_adminActive() {
-        mockActiveAdmin();
+        mockActiveAdmin(mDefaultAdmin);
 
         mController.updateState(mPreference);
 

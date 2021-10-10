@@ -20,7 +20,13 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/manage_device_admin"
     android:key="@string/psk_device_admin_apps">
-    <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_device_admin_apps"
-        settings:controller="com.android.car.settings.enterprise.DeviceAdminAppsPreferenceController"/>
+    <PreferenceCategory
+        android:key="@string/pk_device_admin_activated_apps"
+        android:title="@string/device_admin_activated_apps"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminActivatedAppsPreferenceController"/>
+    <com.android.car.settings.common.DividerPreference/>
+    <PreferenceCategory
+        android:key="@string/pk_device_admin_deactivated_apps"
+        android:title="@string/device_admin_deactivated_apps"
+        settings:controller="com.android.car.settings.enterprise.DeviceAdminDeactivatedAppsPreferenceController"/>
 </PreferenceScreen>
