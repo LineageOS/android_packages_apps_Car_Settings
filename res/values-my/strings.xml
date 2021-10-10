@@ -742,7 +742,8 @@
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် ဖုန်းဆက်၍မရနိုင်ပါ"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် SMS စာတိုစနစ်ကို ခွင့်ပြုမထားပါ"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် ကင်မရာကို အသုံးပြု၍မရနိုင်ပါ"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="5433878479740389540">"&gt;ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် ဖန်သားပြင်ဓာတ်ပုံများ ရိုက်၍မရနိုင်ပါ"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
+    <skip />
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် ဤအက်ပ်ကို ဖွင့်၍မရနိုင်ပါ"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"သင်၏ ခရက်ဒစ်ဝန်ဆောင်မှုပေးသူက ပိတ်ထားသည်"</string>
     <string name="default_admin_support_msg" msgid="6916978034310038418">"မေးစရာများရှိပါက အဖွဲ့အစည်းမန်နေဂျာထံ ဆက်သွယ်ပါ"</string>
@@ -753,9 +754,9 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ယာဉ်မူဝါဒ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"အဖွဲ့အစည်းမန်နေဂျာက စီမံသော ဆက်တင်များ"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ချွတ်ယွင်းမှု အစီရင်ခံစာကို မျှဝေမလား။"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ဤယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာသည် ၎င်းစက်ကို ပြဿနာ ရှာဖွေဖြေရှင်းရာတွင် ကူညီရန် ချွတ်ယွင်းမှု အစီရင်ခံစာကို တောင်းဆိုခဲ့သည်။ အက်ပ်များနှင့် ဒေတာများကို မျှဝေနိုင်ပါသည်။"</string>
-    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ဤယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာသည် ၎င်းစက်ကို ပြဿနာ ရှာဖွေဖြေရှင်းရာတွင် ကူညီရန် ချွတ်ယွင်းမှု အစီရင်ခံစာကို တောင်းဆိုခဲ့သည်။ အက်ပ်များနှင့် ဒေတာများကို မျှဝေနိုင်၍ သင့်စက်သည် ယာယီ နှေးကွေးသွားနိုင်ပါသည်။"</string>
-    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ဤချွတ်ယွင်းမှု အစီရင်ခံစာကို ၎င်းယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာက မျှဝေပါမည်။ နောက်ထပ် အသေးစိတ်သိလိုပါက ၎င်းတို့ထံ ဆက်သွယ်ပါ။"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ဤယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာသည် ၎င်းစက်ကို ပြဿနာ ရှာဖွေဖြေရှင်းရာတွင် ကူညီရန် ချွတ်ယွင်းမှု အစီရင်ခံစာကို တောင်းဆိုထားသည်။ အက်ပ်များနှင့် ဒေတာများကို မျှဝေနိုင်ပါသည်။"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ဤယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာသည် ၎င်းစက်ကို ပြဿနာ ရှာဖွေဖြေရှင်းရာတွင် ကူညီရန် ချွတ်ယွင်းမှု အစီရင်ခံစာကို တောင်းဆိုထားသည်။ အက်ပ်များနှင့် ဒေတာများကို မျှဝေနိုင်၍ သင့်စက်သည် ယာယီ နှေးကွေးသွားနိုင်ပါသည်။"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ဤချွတ်ယွင်းမှု အစီရင်ခံစာကို ၎င်းယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာက မျှဝေနေပါသည်။ နောက်ထပ် အသေးစိတ်သိလိုပါက ၎င်းတို့ထံ ဆက်သွယ်ပါ။"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"မျှဝေရန်"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"ငြင်းပယ်ရန်"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ဤဆက်တင်ကို ယခု ပြောင်း၍မရပါ"</string>

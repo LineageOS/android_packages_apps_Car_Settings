@@ -732,49 +732,31 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Activar esta aplicación do sistema de información e entretemento"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desactivar esta aplicación do sistema de información e entretemento"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Máis detalles"</string>
-    <!-- no translation found for admin_profile_owner_message (8361351256802954556) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do dispositivo)."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este sistema de información e entretemento (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"É posible que o xestor da organización poida acceder aos datos asociados ao sistema de información e entretemento, xestionar as aplicacións e cambiar a configuración deste vehículo."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Bloqueado polo xestor da organización"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Non se pode cambiar o volume neste vehículo xestionado"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Non se poden realizar chamadas neste vehículo xestionado"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Non se poden enviar SMS neste vehículo xestionado"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"A cámara non está dispoñible neste vehículo xestionado"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <!-- no translation found for admin_profile_owner_user_message (366072696508275753) -->
-    <skip />
-    <!-- no translation found for admin_device_owner_message (896530502350904835) -->
-    <skip />
-    <!-- no translation found for admin_financed_message (7357397436233684082) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title (2286662897538395033) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_adjust_volume (7002865820552702232) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (158752542663419500) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_sms (3044491214572494290) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_camera (8929782627587059121) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_screen_capture (5433878479740389540) -->
-    <skip />
-    <!-- no translation found for disabled_by_policy_title_suspend_packages (7505332012990359725) -->
-    <skip />
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Non se pode abrir esta aplicación neste vehículo xestionado"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Opción bloqueada pola túa entidade de crédito"</string>
-    <!-- no translation found for default_admin_support_msg (6916978034310038418) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"Se tes algunha pregunta, contacta co xestor da organización"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administración do vehículo"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplicación activada}other{# aplicacións activadas}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Non hai ningunha aplicación activada"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política do vehículo de <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <!-- no translation found for work_policy_privacy_settings_summary (5321618399949880194) -->
-    <skip />
-    <!-- no translation found for share_remote_bugreport_dialog_title (7268540014481283490) -->
-    <skip />
-    <!-- no translation found for share_remote_bugreport_dialog_message_finished (2976131666427197841) -->
-    <skip />
-    <!-- no translation found for share_remote_bugreport_dialog_message (7884771062689597395) -->
-    <skip />
-    <!-- no translation found for sharing_remote_bugreport_dialog_message (7018120538510110940) -->
-    <skip />
-    <!-- no translation found for share_remote_bugreport_action (5364819432179581532) -->
-    <skip />
-    <!-- no translation found for decline_remote_bugreport_action (7287544934032744334) -->
-    <skip />
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Configuración xestionada polo xestor da organización"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Queres compartir o informe de erros?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"O xestor da organización do vehículo solicitou un informe de erros para axudar a solucionar os problemas deste dispositivo. Pódense compartir aplicacións e datos."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"O xestor da organización do vehículo solicitou un informe de erros para axudar a solucionar os problemas deste dispositivo. Pódense compartir aplicacións e datos e, ademais, é posible que se reduza a velocidade do dispositivo temporalmente."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Este informe de erros estase compartindo co xestor da organización do vehículo. Contacta co xestor para obter máis información."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Compartir"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Rexeitar"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Non se pode cambiar esta opción de configuración neste momento"</string>
 </resources>
