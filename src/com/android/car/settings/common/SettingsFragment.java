@@ -207,11 +207,10 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     }
 
     @Override
-    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+    public CarUiRecyclerView onCreateCarUiRecyclerView(LayoutInflater inflater, ViewGroup parent,
             Bundle savedInstanceState) {
         inflater.inflate(R.layout.settings_recyclerview_default, parent, /* attachToRoot= */ true);
-        return ((CarUiRecyclerView) parent.requireViewById(R.id.settings_recycler_view))
-                .getRecyclerView();
+        return parent.findViewById(R.id.settings_recycler_view);
     }
 
     @Override
