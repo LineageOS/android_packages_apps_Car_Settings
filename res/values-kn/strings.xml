@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ಇನ್ನಷ್ಟು ಸೇರಿಸಿ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ಮೊಬೈಲ್ ಡೇಟಾ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಿ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ಮೊಬೈಲ್ ಡೇಟಾ ಆಫ್ ಮಾಡಬೇಕೆ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ಆಯ್ಕೆ ಅಗತ್ಯವಿದೆ"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ಮೊಬೈಲ್ ಡೇಟಾಗಾಗಿ <xliff:g id="CARRIER">%1$s</xliff:g> ಬಳಸುವುದೇ?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"ಹೊಂದಿಸಿ"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ಡೇಟಾ ಎಚ್ಚರಿಕೆ ಮತ್ತು ಮಿತಿ"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"ಆ್ಯಪ್‌ ಡೇಟಾ ಬಳಕೆ ಆವರ್ತನೆ"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"ಮೊಬೈಲ್ ಡೇಟಾ ಬಳಕೆ"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ಡೇಟಾ ಎಚ್ಚರಿಕೆಯನ್ನು ಸೆಟ್ ಮಾಡಿ"</string>
     <string name="data_warning" msgid="116776633806885370">"ಡೇಟಾ ಎಚ್ಚರಿಕೆ"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ಡೇಟಾ ಮಿತಿ ಹೊಂದಿಸಿ"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ನೀವು ಹೊಂದಿಸಿರುವ ಮಿತಿಯನ್ನು ತಲುಪಿದಾಗ ನಿಮ್ಮ ವಾಹನದ ಹೆಡ್ ಯೂನಿಟ್ ಒಮ್ಮೆ ನಿಮ್ಮ ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಆಫ್ ಮಾಡುತ್ತದೆ.\n\n ಡೇಟಾ ಬಳಕೆಯನ್ನು ಹೆಡ್ ಯೂನಿಟ್ ಮೂಲಕ ಅಳೆಯಲಾಗುವ ಕಾರಣ ಮತ್ತು ನಿಮ್ಮ ವಾಹಕವು ಬಳಕೆಯನ್ನು ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಪರಿಗಣಿಸಬಹುದಾದ ಕಾರಣ, ಸುರಕ್ಷಿತ ಮಿತಿಯನ್ನು ಹೊಂದಿಸುವುದು ಸೂಕ್ತ."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ಡೇಟಾ ಬಳಕೆ ಎಚ್ಚರಿಕೆಯನ್ನು ಸೆಟ್ ಮಾಡಿ"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ಡೇಟಾ ಬಳಕೆ ಮಿತಿಯನ್ನು ಹೊಂದಿಸಿ"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"ಡೇಟಾ ಬಳಕೆಯನ್ನು ನಿಮ್ಮ ಸಾಧನದ ಮೂಲಕ ಅಳೆಯಲಾಗುತ್ತದೆ. ಇದು ನಿಮ್ಮ ಮೊಬೈಲ್ ಕ್ಯಾರಿಯರ್‌ನ ಡೇಟಾದಿಂದ ಬದಲಾಗಿರಬಹುದು."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ಹೊಂದಿಸಿ"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"ಉಳಿಸಿ"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM ನೆಟ್‌ವರ್ಕ್"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"ವಾಹನದ ಇಂಟರ್ನೆಟ್"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"ವಾಹನದ ಇಂಟರ್ನೆಟ್ ಆಫ್ ಮಾಡುವುದರಿಂದ ಇದು ಕೆಲವು ವಾಹನದ ಫೀಚರ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ತಡೆಯಬಹುದು.\n\nನಿಮ್ಮ ವಾಹನವನ್ನು ನಿರ್ವಹಿಸಲು ಅಗತ್ಯವಿರುವ ನಿರ್ಣಾಯಕ ಡೇಟಾವನ್ನು ವಾಹನ ತಯಾರಕರ ಜೊತೆ ಹಂಚಿಕೊಳ್ಳುವುದನ್ನು ಮುಂದುವರಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"ಹೇಗಿದ್ದರೂ ಆಫ್ ಮಾಡಿ"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"ವಾಹನದ ಇಂಟರ್ನೆಟ್ ಅನ್ನು ಆಫ್ ಮಾಡಲಾಗಿದೆ. ಇದು ಕೆಲವು ವಾಹನದ ಫೀಚರ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ತಡೆಯಬಹುದು. ನಿಮ್ಮ ವಾಹನವನ್ನು ನಿರ್ವಹಿಸಲು ಅಗತ್ಯವಿರುವ ನಿರ್ಣಾಯಕ ಡೇಟಾವನ್ನು ವಾಹನ ತಯಾರಕರ ಜೊತೆ ಹಂಚಿಕೊಳ್ಳುವುದನ್ನು ಮುಂದುವರಿಸಲಾಗುತ್ತದೆ."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s - %3$s ಅವಧಿಯಲ್ಲಿ %1$s ಬಳಸಲಾಗಿದೆ"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"ಇತರ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸೇರಿಕೊಳ್ಳಿ"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"ನೆಟ್‌ವರ್ಕ್ ಆದ್ಯತೆಗಳು"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗೆ ಬ್ಯಾಂಡ್ ಆರಿಸಿ:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ಹಾಟ್‌ಸ್ಪಾಟ್ &amp; ಟೆಥರಿಂಗ್"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ಹಾಟ್‌ಸ್ಪಾಟ್"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ಆಫ್ ಮಾಡಿ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹಾಟ್‌ಸ್ಪಾಟ್ ಅನ್ನು ಆಫ್ ಮಾಡಿ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ಯಾವುದೇ ಸಾಧನಗಳು ಸಂಪರ್ಕಗೊಳ್ಳದೇ ಇರುವಾಗ ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್ ಆಫ್ ಆಗುತ್ತದೆ"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ಗಾಗಿ ವೈ-ಫೈ ಆನ್ ಮಾಡಬೇಕು"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ಆ್ಯಪ್‌ನ ಕಾರ್ಯಕ್ಷಮತೆಗೆ ಆದ್ಯತೆ ನೀಡಲು ಸಿಸ್ಟಂ ಮಾಹಿತಿಯ ಮೂಲಗಳನ್ನು ಬಳಸುತ್ತದೆ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ಡೇಟಾ ಬಳಕೆ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ಆ್ಯಪ್‍ ಡೇಟಾ ಬಳಕೆ"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"ಬಳಕೆಯ ಇತಿಹಾಸ"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳು"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"ಡೇಟಾ ಮತ್ತು ವೈ-ಫೈ ಬಳಕೆ"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"ಬಳಕೆಯ ಇತಿಹಾಸ"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"ಒಟ್ಟು ಬಳಕೆ"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"ಮುನ್ನೆಲೆ"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"ಹಿನ್ನೆಲೆ"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"ಡೇಟಾವನ್ನು ಬಳಸಲು ಅನುಮತಿಸಿ"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"ಈ ಆ್ಯಪ್ ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಲು ಅನುಮತಿಸಿ"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"ಡೇಟಾವನ್ನು ನಿರ್ಬಂಧಿಸಿ"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"ಆ್ಯಪ್ ಮುನ್ನೆಲೆಯಲ್ಲಿದ್ದಾಗ ಮಾತ್ರ ಮೊಬೈಲ್ ಡೇಟಾ ಬಳಸಿ"</string>
     <string name="computing_size" msgid="5791407621793083965">"ಗಣನೆ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# ಹೆಚ್ಚುವರಿ ಅನುಮತಿ}one{# ಹೆಚ್ಚುವರಿ ಅನುಮತಿಗಳು}other{# ಹೆಚ್ಚುವರಿ ಅನುಮತಿಗಳು}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"ಗಮನಿಸಿ: ರೀಬೂಟ್‌ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ನೀವು ಅನ್‌ಲಾಕ್ ಮಾಡುವ ತನಕ ಈ ಆ್ಯಪ್‌ ಪ್ರಾರಂಭಗೊಳ್ಳುವುದಿಲ್ಲ"</string>
@@ -417,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ಇನ್ನಷ್ಟು"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ಸ್ಥಳ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ಸ್ಥಳ ಬಳಸಿ"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಇದು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯಮಾಡುವ ಫೀಚರ್‌ಗಳು ಈಗಲೂ ಪ್ರವೇಶವನ್ನು ಹೊಂದಿರುತ್ತವೆ."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಫೀಚರ್‌ಗಾಗಿ ಡ್ರೈವರ್ ಅವರ ಸ್ಥಳವನ್ನು ಬಳಸಿ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ವಾಹನದ ಸ್ಥಳ ಆಫ್ ಆಗಿದೆ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳು ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ಬದಲಾಯಿಸಿ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸುವಲ್ಲಿ ಡ್ರೈವಿಂಗ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಸ್ಥಳ ಮಾಹಿತಿಯ ಮೇಲೆ ಅವಲಂಬಿತವಾದ ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ಹೇಗಿದ್ದರೂ ಆಫ್ ಮಾಡಿ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ಯಾವುದೇ ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು ಇಲ್ಲ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ಆ್ಯಪ್‌ ಹಂತದ ಅನುಮತಿಗಳು"</string>
@@ -440,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ಸ್ಥಳವನ್ನು ಬಳಸಿ"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ಸ್ಥಳವು ನಿಮ್ಮ ಸಾಧನದ ಸ್ಥಳವನ್ನು ಅಂದಾಜು ಮಾಡಲು ಸಹಾಯ ಮಾಡುವುದಕ್ಕಾಗಿ GPS, ವೈಫೈ, ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳು ಮತ್ತು ಸೆನ್ಸರ್‌ಗಳಂತಹ ಮೂಲಗಳನ್ನು ಬಳಸಬಹುದು."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳಿಗೆ ಕಳುಹಿಸಲಾಗುವ ಸ್ಥಳದ ಮಾಹಿತಿಯು ನಿಮ್ಮನ್ನು ಗುರುತಿಸುವಂತಹ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಿರುವುದಿಲ್ಲ. ಅಳಿಸುವ ಮೊದಲು ಅದನ್ನು ಗರಿಷ್ಠ 2 ದಿನಗಳವರೆಗೆ ಸಂಗ್ರಹಿಸಿಡಲಾಗುತ್ತದೆ."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ಮೈಕ್ರೋಫೋನ್"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ಮೈಕ್ರೋಫೋನ್ ಅನ್ನು ಬಳಸಿ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ನಿಮ್ಮ ಮೈಕ್ರೊಫೋನ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
@@ -752,39 +723,40 @@
     <string name="add_profile_text" msgid="9118410102199116969">"ಪ್ರೊಫೈಲ್ ಅನ್ನು ಸೇರಿಸಿ"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ಡಿಸ್‌ಪ್ಲೇ ಪ್ರಖರತೆ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ನಿರ್ವಾಹಕರು"</string>
-    <!-- no translation found for device_admin_activated_apps (568075063362271751) -->
-    <skip />
-    <!-- no translation found for device_admin_deactivated_apps (3797263682500122872) -->
-    <skip />
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ನಿಷ್ಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"ಯಾವುದೇ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ನಿರ್ವಾಹಕ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ನಿರ್ವಾಹಕ ಆ್ಯಪ್ ಸಕ್ರಿಯವಾಗಿದೆ ಮತ್ತು ಈ ಕೆಳಗಿನ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು <xliff:g id="APP_NAME">%1$s</xliff:g> ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುತ್ತದೆ:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ಈ ಕೆಳಗಿನ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ಮಾಡಲು <xliff:g id="APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಲಾಗುತ್ತದೆ:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಸಕ್ರಿಯಗೊಳಿಸುವುದೇ?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"ನಿಮ್ಮ ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಬಳಕೆದಾರರಿಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"ನಿಮ್ಮ ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಪ್ರೊಫೈಲ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ವಾಹನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರು ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು, ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಮತ್ತು ಈ ವಾಹನ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಬಹುದು."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರಿಂದ ನಿರ್ಬಂಧ"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"ವಾಲ್ಯೂಮ್ ಬದಲಿಸಲು ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಬಳಕೆದಾರರಿಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಪ್ರೊಫೈಲ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ವಾಹನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು, ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಮತ್ತು ಈ ವಾಹನ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಬಹುದು."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರಿಂದ ನಿರ್ಬಂಧ"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ ವಾಲ್ಯೂಮ್ ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ ಕರೆಗಳನ್ನು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ SMS ಅನ್ನು ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ ಕ್ಯಾಮರಾ ಲಭ್ಯವಿಲ್ಲ"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS ಬಳಸಲು ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"ಕ್ಯಾಮರಾ ಬಳಸಲು ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ತೆಗೆಯಲು ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕ ಸಂಪರ್ಕಿಸಿ"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"ಈ ಆ್ಯಪ್ ಬಳಸಲು ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ ಈ ಆ್ಯಪ್ ಅನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ನಿಮ್ಮ ಕ್ರೆಡಿಟ್ ಒದಗಿಸುವವರಿಂದ ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"ನಿಮಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳಿದ್ದರೆ, ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"ನಿಮಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳಿದ್ದರೆ, ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"ವಾಹನ ನಿರ್ವಹಣಾ ಆ್ಯಪ್‍ಗಳು"</string>
-    <!-- no translation found for number_of_device_admins (7508826094096451485) -->
-    <skip />
-    <!-- no translation found for number_of_device_admins_none (5547493703413973954) -->
-    <skip />
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"ನಿಮ್ಮ ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರಿಂದ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗಿದೆ"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್}one{# ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು}other{# ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"ಯಾವುದೇ ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ವಾಹನ ನೀತಿ"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರಿಂದ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗಿದೆ"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ಬಗ್ ವರದಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳುವುದೇ?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಸಾಧನದ ಸಮಸ್ಯೆ ನಿವಾರಿಸಲು ಸಹಾಯ ಮಾಡಲು ಬಗ್ ವರದಿಯನ್ನು ವಿನಂತಿಸಿದ್ದಾರೆ. ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಸಾಧನದ ಸಮಸ್ಯೆ ನಿವಾರಿಸಲು ಸಹಾಯ ಮಾಡಲು ಬಗ್ ವರದಿಯನ್ನು ವಿನಂತಿಸಿದ್ದಾರೆ. ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು ಹಾಗೂ ನಿಮ್ಮ ಸಾಧನವು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಧಾನಗೊಳ್ಳಬಹುದು."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ಈ ಬಗ್ ವರದಿಯನ್ನು ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರ ಜೊತೆಗೆ ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ. ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗಾಗಿ ಅವರನ್ನು ಸಂಪರ್ಕಿಸಿ."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"ಹಂಚಿಕೊಳ್ಳಿ"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"ನಿರಾಕರಿಸಿ"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಅನ್ನು ರೀಸೆಟ್ ಮಾಡಿ"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"ಫ್ಯಾಕ್ಟರಿ ರೀಸೆಟ್ ಮಾಡಲು ಮತ್ತು ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಲು ನಿಮ್ಮ ಸಿಸ್ಟಂ ವಿನಂತಿಯನ್ನು ಸ್ವೀಕರಿಸಿದೆ. ನೀವು ಅದನ್ನು ಈಗಲೇ ರೀಸೆಟ್ ಮಾಡಬಹುದು ಅಥವಾ ಮುಂದಿನ ಬಾರಿ ಕಾರ್ ಆರಂಭವಾದಾಗ ಅದನ್ನು ರೀಸೆಟ್ ಮಾಡಲಾಗುತ್ತದೆ. ನಂತರ ನೀವು ಹೊಸ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಸೆಟಪ್ ಮಾಡಬಹುದು."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"ಈಗಲೇ ರೀಸೆಟ್ ಮಾಡಿ"</string>
