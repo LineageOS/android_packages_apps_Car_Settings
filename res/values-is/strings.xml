@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Meira"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Staðsetning"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Nota staðsetningu"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"Veita tilgreindum forritum aðgang að staðsetningu"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Lokað verður fyrir aðgang allra forrita að staðsetningu ef þú slekkur á þessu. Forrit akstursaðstoðar fá áfram aðgang."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Nota staðsetningu við akstursaðstoð"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Slökkt á staðsetningu ökutækis"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Akstursaðstoð fær ekki aðgang að staðsetningu"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Breyta"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Veita akstursaðstoðarforritum aðgang að staðsetningu"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ef þú slekkur á þessu verða þau forrit akstursaðstoðar sem reiða sig á staðsetningarupplýsingar óvirk."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Slökkva samt"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Engar nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Heimildir á forritsstigi"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Nota staðsetningu"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Staðsetning kann að notast við tækni á borð við GPS, Wi-Fi, farsímakerfi og skynjara til að áætla staðsetningu tækisins."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Akstursaðstoð"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"Staðsetningarupplýsingar sem sendar eru í eiginleika akstursaðstoðar innihalda engar upplýsingar sem auðkenna þig. Upplýsingarnar eru geymdar að hámarki í 2 daga áður en þeim er eytt."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Hljóðnemi"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Nota hljóðnema"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Veita öllum forritum aðgang að hljóðnemanum"</string>
@@ -739,27 +731,32 @@
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Virkja þetta upplýsinga- og afþreyingarkerfisforrit?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Virkja þetta upplýsinga- og afþreyingarkerfisforrit"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Slökkva á þessu upplýsinga- og afþreyingarkerfisforriti"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"Stjórnandinn getur fylgst með og stjórnað forritum og gögnum sem tengjast þessum prófíl, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum ökutækisins."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"Stjórnandinn getur fylgst með og stjórnað forritum og gögnum sem tengjast þessum prófíl, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum tækisins."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"Stjórnandinn getur fylgst með og stjórnað forritum og gögnum sem tengjast þessu upplýsinga- og afþreyingarkerfi, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum ökutækisins."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"Stjórnandinn getur hugsanlega opnað gögn sem tengjast þessu upplýsinga- og afþreyingarkerfi, stjórnað forritum og breytt stillingum þessa ökutækis."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"Útilokað af stjórnanda"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"Ræddu við stjórnanda ef þú vilt breyta hljóðstyrk"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"Stjórnandi fyrirtækisins getur fylgst með og stjórnað forritum og gögnum sem tengjast þessum prófíl, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum ökutækisins."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Stjórnandi fyrirtækisins getur fylgst með og stjórnað forritum og gögnum sem tengjast þessum prófíl, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum tækisins."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"Stjórnandi fyrirtækisins getur fylgst með og stjórnað forritum og gögnum sem tengjast þessu upplýsinga- og afþreyingarkerfi, þ.m.t. stillingum, heimildum, fyrirtækjaaðgangi, netnotkun og staðsetningarupplýsingum ökutækisins."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"Stjórnandi fyrirtækisins getur hugsanlega opnað gögn sem tengjast þessu upplýsinga- og afþreyingarkerfi, stjórnað forritum og breytt stillingum þessa ökutækis."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Lokað af stjórnanda fyrirtækis"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Ekki er hægt að breyta hljóðstyrk í þessu stýrða ökutæki"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Ekki er hægt að hringja símtöl í þessu stýrða ökutæki"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"SMS eru ekki leyfð þessu stýrða ökutæki"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Myndavél er ekki tiltæk í þessu stýrða ökutæki"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"Ræddu við stjórnanda til að nota SMS"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"Ræddu við stjórnanda til að nota myndavél"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"Ræddu við stjórnanda til að taka skjámyndir"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"Ræddu við stjórnanda til að nota þetta forrit"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Ekki er hægt að opna þetta forrit í þessu stýrða ökutæki"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Útilokað af lánveitanda þínum"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"Ef spurningar vakna skaltu hafa samband við stjórnandann"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"Ef spurningar vakna skaltu hafa samband við stjórnanda fyrirtækisins"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Stjórnendaforrit ökutækis"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# virkt forrit}one{# virkt forrit}other{# virk forrit}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Engin virk forrit"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"Stjórnandinn stjórnar stillingunum"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Ökutækjaregla <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Stjórnandi fyrirtækis stjórnar stillingum"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Deila villutilkynningu?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Stjórnandi fyrirtækisins sem stjórnar þessu ökutæki bað um villutilkynningu til að aðstoða við úrræðaleit í þessu tæki. Forritum og gögnum verður hugsanlega deilt."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Stjórnandi fyrirtækisins sem stjórnar þessu ökutæki bað um villutilkynningu til að aðstoða við úrræðaleit í þessu tæki. Forritum og gögnum verður hugsanlega deilt og mögulegt er að þetta hægi tímabundið á tækinu."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Þessari villutilkynningu er deilt með stjórnanda fyrirtækisins sem stjórnar þessu ökutæki. Hafðu samband við viðkomandi til að fá frekari upplýsingar."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Deila"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Hafna"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Endurstilla upplýsinga- og afþreyingarkerfi"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Kerfið fékk beiðni um að núllstilla og eyða öllum gögnum. Hægt er að endurstilla núna eða endurstilla sjálfkrafa næst þegar bíllinn er ræstur. Þá er hægt að setja upp nýjan prófíl."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Endurstilla núna"</string>

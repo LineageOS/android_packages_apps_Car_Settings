@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"المزيد"</string>
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"استخدام الموقع الجغرافي"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"السماح للتطبيقات التي تحددها بالوصول إلى موقعك الجغرافي"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"إذا أوقفت هذا الإعداد، سيؤدي ذلك إلى إزالة إمكانية وصول كل التطبيقات إلى الموقع الجغرافي. وسيظل بإمكان تطبيقات \"مساعدة السائق\" الوصول إلى الموقع الجغرافي."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"استخدام الموقع الجغرافي لميزات \"مساعدة السائق\""</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ميزة الموقع الجغرافي للسيارة غير مفعَّلة"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"يتعذّر على ميزات \"مساعدة السائق\" الوصول إلى موقعك الجغرافي."</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"تغيير"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"السماح للتطبيقات التي تساعدك على القيادة بالوصول إلى موقعك الجغرافي"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"إذا أوقفت ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"إيقاف على أي حال"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"استخدام الموقع الجغرافي"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"قد تستخدم ميزة الموقع الجغرافي مصادر مثل نظام تحديد المواقع العالمي (GPS) أو شبكة Wi-Fi أو شبكات الجوّال أو أجهزة الاستشعار للمساعدة في تقدير الموقع الجغرافي لجهازك."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"مساعدة السائق"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"لا تحتوي معلومات الموقع الجغرافي التي تم إرسالها إلى ميزات \"مساعدة السائق\" على أي معلومات تحدِّد هويتك. وسيتم تخزين تلك المعلومات لمدة يومين كحد أقصى قبل حذفها."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"الميكروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استخدام الميكروفون"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"السماح لجميع التطبيقات باستخدام الميكروفون"</string>
@@ -739,27 +731,32 @@
     <string name="add_device_admin_msg" msgid="8188888666879499482">"هل تريد تفعيل تطبيق \"نظام الترفيه والمعلومات\" هذا؟"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"تفعيل تطبيق \"نظام الترفيه والمعلومات\" هذا"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"إيقاف تطبيق \"نظام الترفيه والمعلومات\" هذا"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"يمكن لمدير الأسطول مراقبة وإدارة التطبيقات والبيانات المرتبطة بهذا الملف الشخصي، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للمركبة."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"يمكن لمدير الأسطول مراقبة وإدارة التطبيقات والبيانات المرتبطة بهذا الملف الشخصي، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للجهاز."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"يمكن لمدير الأسطول مراقبة وإدارة التطبيقات والبيانات المرتبطة بـ \"نظام الترفيه والمعلومات\" هذا، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للمركبة."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"قد يتمكّن مدير الأسطول من الوصول إلى البيانات المرتبطة بـ \"نظام الترفيه والمعلومات\" هذا وإدارة التطبيقات وتغيير إعدادات هذه المركبة."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"حظر مدير الأسطول هذا الإعداد"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"يُرجى التواصل مع مدير الأسطول لتغيير مستوى الصوت"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"يمكن لمدير مؤسستك مراقبة التطبيقات والبيانات المرتبطة بهذا الملف الشخصي وإدارتها، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للمركبة."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"يمكن لمدير مؤسستك مراقبة التطبيقات والبيانات المرتبطة بهذا الملف الشخصي وإدارتها، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للجهاز."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"يمكن لمدير المؤسسة مراقبة التطبيقات والبيانات المرتبطة بنظام الترفيه والمعلومات هذا وإدارتها، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للمركبة."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"قد يتمكّن مدير المؤسسة من الوصول إلى البيانات المرتبطة بنظام الترفيه والمعلومات هذا وإدارة التطبيقات وتغيير إعدادات المركبات."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"حظر مدير المؤسسة هذه الإعدادات"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"لا يمكن تغيير مستوى الصوت في هذه المركبة المُدارة"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"لا يمكن إجراء المكالمات في هذه المركبة المُدارة"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"الرسائل القصيرة غير مسموح بها في هذه المركبة المُدارة"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"لا تتوفر الكاميرا في هذه المركبة المُدارة"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"يُرجى التواصل مع مدير الأسطول لاستخدام رسائل SMS"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"يُرجى التواصل مع مدير الأسطول لاستخدام الكاميرا"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"يُرجى التواصل مع مدير الأسطول لالتقاط لقطات الشاشة"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"يُرجى التواصل مع مدير الأسطول لاستخدام هذا التطبيق"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"لا يمكن فتح هذا التطبيق في هذه المركبة المُدارة"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"حظرت شركة بيع الأجهزة بالائتمان هذا الإعداد"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"إذا كان لديك أي أسئلة، يُرجى التواصل مع مدير الأسطول."</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"إذا كان لديك أي أسئلة، يُرجى التواصل مع مدير المؤسسة."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"تطبيقات مشرف المركبة"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{تطبيق واحد مفعّل}zero{# تطبيق مفعّل}two{تطبيقان مفعّلان}few{# تطبيقات مفعّلة}many{# تطبيقًا مفعّلاً}other{# تطبيق مفعّل}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"ما مِن تطبيقات مفعّلة"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"الإعدادات التي يديرها مدير الأسطول"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"سياسة المركبات السارية لدى <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"الإعدادات التي يديرها مدير المؤسسة"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"هل تريد مشاركة تقرير الخطأ؟"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. وقد تتم مشاركة التطبيقات والبيانات."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. قد تتم مشاركة التطبيقات والبيانات، وقد يعمل جهازك ببطء مؤقتًا."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"تتم مشاركة تقرير الخطأ هذا مع مدير المؤسسة التابعة لها هذه المركبة. للحصول على مزيد من التفاصيل، يمكنك التواصل مع مدير المؤسسة."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"مشاركة"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"رفض"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"إعادة ضبط \"نظام الترفيه والمعلومات\""</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"تلقّى النظام طلبًا لإعادة الضبط على الإعدادات الأصلية ومحو كل البيانات. يمكنك إعادة ضبط النظام الآن أو ستتم إعادة ضبطه عند تشغيل السيارة لاحقًا. وبعد إعادة الضبط، يمكنك إعداد ملف شخصي جديد."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"إعادة الضبط الآن"</string>

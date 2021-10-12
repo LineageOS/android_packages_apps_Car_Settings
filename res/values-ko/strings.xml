@@ -396,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"더보기"</string>
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"위치 사용"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"지정한 앱이 내 위치에 액세스하도록 허용합니다."</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"이 기능을 끄면 모든 앱의 위치 액세스 권한이 삭제됩니다. 운전자 지원 앱은 계속 내 위치에 액세스할 수 있습니다."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"운전자 지원에서 위치 사용"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"자동차 위치 사용 중지됨"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"운전자 지원 기능이 내 위치에 액세스할 수 없습니다"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"변경"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"운전 지원 앱이 내 위치에 액세스하도록 허용합니다."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"기능을 끄면 위치 정보를 사용하는 운전자 지원 앱이 사용 중지됩니다."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"무시하고 사용 중지"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"최근 위치 요청"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"최근 위치 요청 없음"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"앱 수준 권한"</string>
@@ -419,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"위치 사용"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"운전자 지원"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"운전자 지원 기능에 전송되는 위치 정보에는 개인 식별 정보가 포함되지 않습니다. 정보는 최대 2일 동안 보관된 후 삭제됩니다."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"마이크"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"마이크 사용"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"모든 앱이 마이크에 액세스하도록 허용"</string>
@@ -739,27 +731,32 @@
     <string name="add_device_admin_msg" msgid="8188888666879499482">"인포테인먼트 시스템 앱을 활성화하시겠습니까?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"인포테인먼트 시스템 앱 활성화"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"인포테인먼트 시스템 앱 비활성화"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"차량 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"차량 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 기기의 위치 정보가 포함됩니다."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"차량 관리자는 이 인포테인먼트 시스템과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"차량 관리자는 이 인포테인먼트 시스템과 연결된 데이터에 액세스하고 앱을 관리하며 차량 설정을 변경할 수 있습니다."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"차량 관리자가 차단했습니다"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"볼륨을 변경하려면 차량 관리자에게 문의하세요"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"조직 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"조직 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 기기의 위치 정보가 포함됩니다."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"조직 관리자는 이 인포테인먼트 시스템과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"조직 관리자는 이 인포테인먼트 시스템과 연결된 데이터에 액세스하고 앱을 관리하며 차량 설정을 변경할 수 있습니다."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"조직 관리자가 차단함"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"관리되는 차량의 볼륨을 변경할 수 없음"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"관리되는 차량에서 전화를 걸 수 없음"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"관리되는 차량에서 SMS를 사용할 수 없음"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"관리되는 차량의 카메라를 사용할 수 없음"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMS를 사용하려면 차량 관리자에게 문의하세요"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"카메라를 사용하려면 차량 관리자에게 문의하세요"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"스크린샷을 찍으려면 차량 관리자에게 문의하세요"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"이 앱을 사용하려면 차량 관리자에게 문의하세요"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"관리되는 차량에서 앱을 열 수 없음"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"신용 상품 제공업체에서 차단했습니다"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"궁금한 점이 있으면 차량 관리자에게 문의하세요."</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"궁금한 점이 있으면 조직 관리자에게 문의하세요."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"차량 관리자 앱"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{활성화된 앱 #개}other{활성화된 앱 #개}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"활성화된 앱 없음"</string>
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"차량 관리자가 관리하는 설정"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> 차량 정책"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"조직 관리자가 관리하는 설정"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"버그 신고를 공유하시겠습니까?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있습니다."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있으며 기기 속도가 일시적으로 느려질 수 있습니다."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"버그 신고는 차량의 조직 관리자와 공유됩니다. 자세한 내용은 관리자에게 문의하세요."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"공유"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"거부"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"인포테인먼트 시스템 초기화"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"시스템 초기화 요청이 접수되었으며 모든 데이터가 삭제됩니다. 지금 초기화하지 않으면 다음에 차가 시동이 걸릴 때 초기화됩니다. 이후 새 프로필을 설정할 수 있습니다."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"지금 초기화"</string>

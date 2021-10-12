@@ -35,10 +35,8 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"વધુ ઉમેરો"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"મોબાઇલ ડેટા"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"મોબાઇલ નેટવર્કનો ઉપયોગ કરીને ડેટા ઍક્સેસ કરો"</string>
-    <!-- no translation found for mobile_network_mobile_network_toggle_title (3087288149339116597) -->
-    <skip />
-    <!-- no translation found for mobile_network_mobile_network_toggle_summary (1679917666306941420) -->
-    <skip />
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"મોબાઇલ નેટવર્ક"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"મોબાઇલ ડેટાનો ઉપયોગ કરો"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"મોબાઇલ ડેટા બંધ કરીએ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"પસંદગી કરવી જરૂરી છે"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"મોબાઇલ ડેટા માટે <xliff:g id="CARRIER">%1$s</xliff:g>નો ઉપયોગ કરીએ?"</string>
@@ -69,8 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"સેટ કરો"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ડેટા સંબંધી ચેતવણી અને મર્યાદા"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"ઍપ ડેટા વપરાશનું ચક્ર"</string>
-    <!-- no translation found for mobile_data_usage (8171519864391091861) -->
-    <skip />
+    <string name="mobile_data_usage" msgid="8171519864391091861">"મોબાઇલ ડેટાનો વપરાશ"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ડેટા વિશેની ચેતવણી સેટ કરો"</string>
     <string name="data_warning" msgid="116776633806885370">"ડેટા વિશે ચેતવણી"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ડેટાની મર્યાદા સેટ કરો"</string>
@@ -79,20 +76,14 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"તમે સેટ કરેલી મર્યાદાએ, તમારા વાહનનું હેડ એકમ મોબાઇલનો ડેટા બંધ કરી દેશે.\n\nવાહનના હેડ એકમ અને તમારા કૅરિઅર દ્વારા થતી ડેટા વપરાશની ગણતરીમાં ફરક હોઈ શકવાને કારણે માફકસરની મર્યાદા સેટ કરવાનું વિચારો."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ડેટા વપરાશની ચેતવણી સેટ કરો"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ડેટા વપરાશની મર્યાદા સેટ કરો"</string>
-    <!-- no translation found for data_usage_settings_footer (681881387909678237) -->
-    <skip />
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"તમારા ડિવાઇસ દ્વારા ડેટા વપરાશ માપવામાં આવે છે. તે તમારા મોબાઇલ ઑપરેટરના ડેટા કરતાં અલગ હોઈ શકે છે."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"સેટ કરો"</string>
-    <!-- no translation found for data_usage_warning_save_title (2900544287239037695) -->
-    <skip />
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"સાચવો"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM નેટવર્ક"</string>
-    <!-- no translation found for network_and_internet_vehicle_internet_title (2518848595673002736) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_description (4469178879867702066) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_dialog_confirm_label (2630033932472996255) -->
-    <skip />
-    <!-- no translation found for network_and_internet_oem_network_disabled_footer (3529208167627034245) -->
-    <skip />
+    <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"વાહનનું ઇન્ટરનેટ"</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"વાહનનું ઇન્ટરનેટ બંધ કરવાથી તેની અમુક સુવિધાઓ અથવા ઍપ કાર્ય કરતી અટકી શકે છે.\n\nતમારું વાહન ઑપરેટ કરવા માટે જરૂરી મહત્ત્વપૂર્ણ ડેટા, વાહન નિર્માતા સાથે સતત શેર કરવામાં આવતો રહેશે."</string>
+    <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"કોઈપણ રીતે બંધ કરો"</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"વાહનનું ઇન્ટરનેટ બંધ કરવામાં આવ્યું છે. આને કારણે વાહનની અમુક સુવિધાઓ અથવા ઍપ કાર્ય કરતી અટકી શકે છે. તમારું વાહન ઑપરેટ કરવા માટે જરૂરી મહત્ત્વપૂર્ણ ડેટા, વાહન નિર્માતા સાથે સતત શેર કરવામાં આવતો રહેશે."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$sનો વપરાશ થયો %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"અન્ય નેટવર્કમાં જોડાઓ"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"નેટવર્કની પસંદગીઓ"</string>
@@ -168,8 +159,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"વાઇ-ફાઇ હૉટસ્પૉટ માટે ઓછામાં ઓછું એક બૅન્ડ પસંદ કરો:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"હૉટસ્પૉટ અને ઇન્ટરનેટ શેર કરવાની સુવિધા"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"હૉટસ્પૉટ"</string>
-    <!-- no translation found for wifi_hotspot_state_off (6096709579204322798) -->
-    <skip />
+    <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"બંધ છે"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"હૉટસ્પૉટ ઑટોમૅટિક રીતે બંધ કરો"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"જો કોઈ ડિવાઇસ કનેક્ટ કરેલું ન હોય, તો વાઇ-ફાઇ હૉટસ્પૉટ બંધ થઈ જશે"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>, વાઇ-ફાઇ ચાલુ કરવા માગે છે"</string>
@@ -336,28 +326,17 @@
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ઍપના પર્ફોર્મન્સને પ્રાધાન્ય આપવા સિસ્ટમના સંસાધનોનો ઉપયોગ કરો"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ડેટા વપરાશ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ઍપ ડેટા વપરાશ"</string>
-    <!-- no translation found for data_usage_usage_history_title (2386346082501471648) -->
-    <skip />
-    <!-- no translation found for data_usage_all_apps_title (5956991037518761599) -->
-    <skip />
-    <!-- no translation found for app_data_usage_title (6991057296054761322) -->
-    <skip />
-    <!-- no translation found for app_data_usage_usage_history_title (5861801915345874959) -->
-    <skip />
-    <!-- no translation found for app_data_usage_total_usage (6166480544992906281) -->
-    <skip />
-    <!-- no translation found for app_data_usage_foreground (76513424438149709) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background (6972054078770685280) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_title (2713343973040466293) -->
-    <skip />
-    <!-- no translation found for app_data_usage_allow_data_summary (7431118326573403774) -->
-    <skip />
-    <!-- no translation found for app_data_usage_restrict_data_title (7080736007645963633) -->
-    <skip />
-    <!-- no translation found for app_data_usage_background_data_summary (4445472217737386826) -->
-    <skip />
+    <string name="data_usage_usage_history_title" msgid="2386346082501471648">"વપરાશનો ઇતિહાસ"</string>
+    <string name="data_usage_all_apps_title" msgid="5956991037518761599">"બધી ઍપ"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"ડેટા અને વાઇ-ફાઇનો વપરાશ"</string>
+    <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"વપરાશનો ઇતિહાસ"</string>
+    <string name="app_data_usage_total_usage" msgid="6166480544992906281">"કુલ વપરાશ"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"ફૉરગ્રાઉન્ડ"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"બૅકગ્રાઉન્ડ"</string>
+    <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"ડેટા વપરાશની મંજૂરી આપો"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"આ ઍપને મોબાઇલ ડેટાનો ઉપયોગ કરવા દો"</string>
+    <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"ડેટા વપરાશ મર્યાદિત કરો"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"ઍપ ફૉરગ્રાઉન્ડમાં હોય ત્યારે જ મોબાઇલ ડેટા વાપરો"</string>
     <string name="computing_size" msgid="5791407621793083965">"ગણતરી કરી રહ્યાં છીએ…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{વધારાની # પરવાનગી}one{વધારાની # પરવાનગી}other{વધારાની # પરવાનગી}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"નોંધ: રીબૂટ કર્યાં પછી, જ્યાં સુધી તમે તમારું વાહન અનલૉક નહીં કરો ત્યાં સુધી આ ઍપ શરૂ થઈ શકશે નહીં."</string>
@@ -417,22 +396,15 @@
     <string name="more_special_access_title" msgid="166115485446645971">"વધુ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"સ્થાન"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"સ્થાનનો ઉપયોગ કરો"</string>
-    <!-- no translation found for location_toggle_summary (7977868708102299495) -->
-    <skip />
-    <!-- no translation found for location_toggle_off_warning (8396854289251143748) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (9201622805420459957) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="7977868708102299495">"તમે ઉલ્લેખ કરો તે ઍપને તમારું સ્થાન ઍક્સેસ કરવાની મંજૂરી આપો"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"જો તમે આને બંધ કરશો, તો તે બધી ઍપ માટે સ્થાનનો ઍક્સેસ કાઢી નાખશે. ડ્રાઇવર માટે સહાયતા ઍપ પાસે હજી પણ ઍક્સેસ રહેશે."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ડ્રાઇવર માટે સહાયતા માટે સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"વાહનના સ્થાનની સુવિધા બંધ છે"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (4593257453422707898) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"ડ્રાઇવર માટે સહાયતા સુવિધાઓ તમારા સ્થાનને ઍક્સેસ કરી શકતી નથી"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"બદલો"</string>
-    <!-- no translation found for location_driver_assistance_toggle_summary (2732591196508054649) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (8097738968253492982) -->
-    <skip />
-    <!-- no translation found for driver_assistance_warning_confirm_label (2873799611160864931) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ડ્રાઇવિંગ માટે સહાય કરતી ઍપને તમારું સ્થાન ઍક્સેસ કરવાની મંજૂરી આપો"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"જો તમે આને બંધ કરશો, તો સ્થાનની માહિતી પર આધારિત ડ્રાઇવર માટે સહાયતાની સુવિધાઓ બંધ કરવામાં આવશે."</string>
+    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"કોઈપણ રીતે બંધ કરો"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"સ્થાન માટે તાજેતરની વિનંતીઓ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"સ્થાન માટે તાજેતરમાં કોઈ વિનંતી નથી"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ઍપ લેવલની પરવાનગીઓ"</string>
@@ -440,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"સ્થાન સેવામાં તમારા ડિવાઇસનું સ્થાન નક્કી કરવામાં સહાય કરવા માટે GPS, વાઇ-ફાઇ, મોબાઇલ નેટવર્ક અને સેન્સર જેવા સૉર્સનો ઉપયોગ કરવામાં આવી શકે છે."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ડ્રાઇવર માટે સહાયતા"</string>
-    <!-- no translation found for adas_settings_footer (7882070515956528976) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="7882070515956528976">"\'ડ્રાઇવર માટે સહાયતા\' સુવિધાઓને મોકલવામાં આવતી સ્થાનની માહિતીમાં તમારી ઓળખ આપતી માહિતી શામેલ નથી. તેને ડિલીટ કરતા પહેલાં વધુમાં વધુ 2 દિવસ સ્ટોર કરવામાં આવે છે."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"માઇક્રોફોન"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"માઇક્રોફોનનો ઉપયોગ કરો"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"બધી ઍપને તમારા માઇક્રોફોનના ઍક્સેસની મંજૂરી આપો"</string>
@@ -752,39 +723,40 @@
     <string name="add_profile_text" msgid="9118410102199116969">"પ્રોફાઇલ ઉમેરો"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ડિસ્પ્લે બ્રાઇટનેસ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક"</string>
-    <!-- no translation found for device_admin_activated_apps (568075063362271751) -->
-    <skip />
-    <!-- no translation found for device_admin_deactivated_apps (3797263682500122872) -->
-    <skip />
+    <string name="device_admin_activated_apps" msgid="568075063362271751">"સક્રિય ઍપ"</string>
+    <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"નિષ્ક્રિય કરેલી ઍપ"</string>
     <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"કોઈ ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક ઍપ નથી"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક ઍપ સક્રિય છે અને ઍપ <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપે છે:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપને સક્રિય કરવાથી, ઍપ <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપવામાં આવશે:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપ સક્રિય કરીએ?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપ સક્રિય કરો"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપને નિષ્ક્રિય કરો"</string>
-    <string name="admin_profile_owner_message" msgid="905509940230549773">"તમારા ફ્લીટ મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનની સ્થાન માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
-    <string name="admin_profile_owner_user_message" msgid="3867350539930925070">"તમારા ફ્લીટ મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસની સ્થાન માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
-    <string name="admin_device_owner_message" msgid="8261844995284196176">"ફ્લીટ મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનની સ્થાન માહિતી સહિત આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલી ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
-    <string name="admin_financed_message" msgid="8530796044340607865">"ફ્લીટ મેનેજર આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલા ડેટાને ઍક્સેસ, ઍપને મેનેજ કરી શકશે અને આ વાહનના સેટિંગને બદલી શકશે."</string>
-    <string name="disabled_by_policy_title" msgid="5651853760118792629">"ફ્લીટ મેનેજરે બ્લૉક કર્યું છે"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="947693485036623479">"વૉલ્યૂમ બદલવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
-    <!-- no translation found for disabled_by_policy_title_outgoing_calls (2241478131660447002) -->
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનના સ્થાનની માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસના સ્થાનની માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનના સ્થાનની માહિતી સહિત આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"સંસ્થાના મેનેજર આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલા ડેટાને ઍક્સેસ, ઍપને મેનેજ કરી શકશે અને આ વાહનના સેટિંગને બદલી શકશે."</string>
+    <string name="disabled_by_policy_title" msgid="2286662897538395033">"સંસ્થાના મેનેજરે બ્લૉક કરેલું"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"મેનેજ કરવામાં આવેલા આ વાહનમાં વૉલ્યૂમ બદલી શકાતું નથી"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"મેનેજ કરવામાં આવેલા આ વાહનમાં કૉલ કરી શકાતા નથી"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"મેનેજ કરવામાં આવેલા આ વાહનમાં SMSની મંજૂરી નથી"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"મેનેજ કરવામાં આવેલા આ વાહનમાં કૅમેરા ઉપલબ્ધ નથી"</string>
+    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
     <skip />
-    <string name="disabled_by_policy_title_sms" msgid="4353988664398839837">"SMSનો ઉપયોગ કરવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8008769061266209577">"કૅમેરાનો ઉપયોગ કરવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="156845907165179949">"સ્ક્રીનશૉટ લેવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="1249154592881985661">"આ ઍપનો ઉપયોગ કરવા માટે ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"મેનેજ કરવામાં આવેલા આ વાહનમાં આ ઍપ ખોલી શકાતી નથી"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"તમને ક્રેડિટ પર વેચાણ કરનારે બ્લૉક કર્યું છે"</string>
-    <string name="default_admin_support_msg" msgid="1611734116715908153">"જો તમને કોઈ પ્રશ્ન હોય, તો ફ્લીટ મેનેજરનો સંપર્ક કરો"</string>
+    <string name="default_admin_support_msg" msgid="6916978034310038418">"જો તમને કોઈ પ્રશ્ન હોય, તો સંસ્થાના મેનેજરનો સંપર્ક કરો"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"વાહન વ્યવસ્થાપક ઍપ"</string>
-    <!-- no translation found for number_of_device_admins (7508826094096451485) -->
-    <skip />
-    <!-- no translation found for number_of_device_admins_none (5547493703413973954) -->
-    <skip />
-    <!-- no translation found for work_policy_privacy_settings (5263835989260149968) -->
-    <skip />
-    <string name="work_policy_privacy_settings_summary" msgid="5770881048853242635">"તમારા ફ્લીટ મેનેજર દ્વારા મેનેજ કરાતા સેટિંગ"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# સક્રિય ઍપ}one{# સક્રિય ઍપ}other{# સક્રિય ઍપ}}"</string>
+    <string name="number_of_device_admins_none" msgid="5547493703413973954">"કોઈ સક્રિય ઍપ નથી"</string>
+    <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>ની વાહનની પૉલિસી"</string>
+    <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"સંસ્થાના મેનેજર દ્વારા મેનેજ કરાતા સેટિંગ"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"બગ રિપોર્ટ શેર કરીએ?"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે અને તમારું ડિવાઇસ હંગામી રીતે ધીમું થઈ શકે છે."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"આ બગ રિપોર્ટ આ વાહનની સંસ્થાના મેનેજર સાથે શેર કરવામાં આવી શકે છે. વધુ વિગતો માટે તેમનો સંપર્ક કરો."</string>
+    <string name="share_remote_bugreport_action" msgid="5364819432179581532">"શેર કરો"</string>
+    <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"નકારો"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"ઇન્ફોટેનમેન્ટ સિસ્ટમ રીસેટ કરો"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"તમારી સિસ્ટમને ફેક્ટરી રીસેટની અને બધો ડેટા કાઢી નાખવાની વિનંતી મળી છે. તમે હમણાં રીસેટ કરી શકો છો અથવા આગલી વખતે જ્યારે કારને ચાલુ કરવામાં આવે ત્યારે તે રીસેટ થશે. ત્યાર પછી તમે નવી પ્રોફાઇલ સેટઅપ કરી શકો છો."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"હમણાં રીસેટ કરો"</string>

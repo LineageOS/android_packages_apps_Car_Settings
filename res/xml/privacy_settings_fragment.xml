@@ -21,12 +21,14 @@
     android:title="@string/privacy_settings_title"
     android:key="@string/psk_privacy_settings">
 
+    <!--  NOTE: must be multi-line as it uses the app label, whose size is undefined -->
     <Preference
         android:key="@string/pk_privacy_work_policy"
         android:title="@string/work_policy_privacy_settings"
         android:summary="@string/work_policy_privacy_settings_summary"
         android:icon="@drawable/ic_corp_icon"
-        settings:controller="com.android.car.settings.enterprise.WorkPolicyInfoPreferenceController">
+        settings:controller="com.android.car.settings.enterprise.WorkPolicyInfoPreferenceController"
+        settings:singleLineTitle="false">
     </Preference>
 
     <Preference

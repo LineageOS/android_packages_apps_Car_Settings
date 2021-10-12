@@ -174,7 +174,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         mockActivityIntent(new Intent()
                 .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
                 .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
-        mockActiveAdmin();
+        mockActiveAdmin(mDefaultAdmin);
 
         mSpiedFragment.onAttach(mSpiedContext, mActivity);
 
@@ -187,7 +187,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         mockActivityIntent(new Intent()
                 .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
                 .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
-        mockInactiveAdmin();
+        mockInactiveAdmin(mDefaultAdmin);
 
         // TODO(b/202342351): use a custom matcher for
         // DeviceAdminReceiver.ACTION_DEVICE_ADMIN_ENABLED instead of any()
@@ -208,7 +208,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         mockActivityIntent(new Intent()
                 .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
                 .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
-        mockInactiveAdmin();
+        mockInactiveAdmin(mDefaultAdmin);
         // Don't need to mock pm
 
         mRealFragment.onAttach(mSpiedContext, mActivity);
