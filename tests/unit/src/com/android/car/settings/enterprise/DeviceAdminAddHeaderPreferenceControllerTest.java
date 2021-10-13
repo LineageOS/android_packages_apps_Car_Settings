@@ -15,14 +15,23 @@
  */
 package com.android.car.settings.enterprise;
 
+import androidx.preference.TwoStatePreference;
+
+import com.android.car.settings.common.PreferenceController;
+
+import static org.mockito.Mockito.verify;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 
 public final class DeviceAdminAddHeaderPreferenceControllerTest extends
-        BaseDeviceAdminAddPreferenceControllerTestCase
-                <DeviceAdminAddHeaderPreferenceController> {
+        BasePreferenceControllerTestCase {
 
     private DeviceAdminAddHeaderPreferenceController mController;
+
+    @Mock
+    private TwoStatePreference mPreference;
 
     @Before
     public void setController() {
@@ -32,22 +41,102 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
     }
 
     @Test
-    public void testUpdateState_adminWithNoProperties() throws Exception {
-        mController.updateState(mPreference);
-
-        verifyPreferenceTitleSet(DefaultDeviceAdminReceiver.class.getName());
-        verifyPreferenceSummaryNeverSet();
-        verifyPreferenceIconSet();
+    public void testGetAvailabilityStatus_admin() throws Exception {
+        assertAvailability(mController.getAvailabilityStatus(),
+                PreferenceController.AVAILABLE);
     }
 
     @Test
-    public void testUpdateState_adminWithAllProperties() throws Exception {
-        mController.setDeviceAdmin(mFancyDeviceAdminInfo);
+    public void testGetAvailabilityStatus_noAdmin() throws Exception {
+        DeviceAdminAddHeaderPreferenceController controller =
+                new DeviceAdminAddHeaderPreferenceController(mSpiedContext, mPreferenceKey,
+                        mFragmentController, mUxRestrictions);
+
+        assertAvailability(controller.getAvailabilityStatus(),
+                PreferenceController.CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    public void testUpdateState_activeAdminWithNoProperties() throws Exception {
+        mockActiveAdmin(mDefaultAdmin);
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet("LordOfTheSevenReceiverKingdoms");
-        verifyPreferenceSummarySet("One Receiver to Rule them All");
-        verifyPreferenceIconSet();
+        verifyPreferenceSetChecked(mPreference, true);
+        verifyPreferenceEnabled(mPreference);
+        verifyPreferenceTitleSet(mPreference, mDefaultDeviceAdminInfo.loadLabel(mRealPm));
+        verifyPreferenceSummaryNeverSet(mPreference);
+        verifyPreferenceIconSet(mPreference);
+    }
+
+    @Test
+    public void testUpdateState_activeAdminWithAllProperties() throws Exception {
+        mController.setDeviceAdmin(mFancyDeviceAdminInfo);
+        mockActiveAdmin(mFancyAdmin);
+
+        mController.updateState(mPreference);
+
+        verifyPreferenceSetChecked(mPreference, true);
+        verifyPreferenceEnabled(mPreference);
+        verifyPreferenceTitleSet(mPreference, mFancyDeviceAdminInfo.loadLabel(mRealPm));
+        verifyPreferenceSummarySet(mPreference, mFancyDeviceAdminInfo.loadDescription(mRealPm));
+        verifyPreferenceIconSet(mPreference);
+    }
+
+    @Test
+    public void testUpdateStatus_inactiveAdmin() throws Exception {
+        mockInactiveAdmin(mDefaultAdmin);
+
+        mController.updateState(mPreference);
+
+        verifyPreferenceSetChecked(mPreference, false);
+        verifyPreferenceEnabled(mPreference);
+        verifyPreferenceTitleSet(mPreference, mDefaultDeviceAdminInfo.loadLabel(mRealPm));
+    }
+
+    @Test
+    public void testUpdateStatus_deviceOwner() throws Exception {
+        mockDeviceOwner();
+
+        mController.updateState(mPreference);
+
+        verifyPreferenceSetChecked(mPreference, true);
+        verifyPreferenceDisabled(mPreference);
+        verifyPreferenceTitleSet(mPreference, mDefaultDeviceAdminInfo.loadLabel(mRealPm));
+    }
+
+    @Test
+    public void testUpdateStatus_profileOwner() throws Exception {
+        mockProfileOwner();
+
+        mController.updateState(mPreference);
+
+        verifyPreferenceSetChecked(mPreference, true);
+        verifyPreferenceDisabled(mPreference);
+        verifyPreferenceTitleSet(mPreference, mDefaultDeviceAdminInfo.loadLabel(mRealPm));
+    }
+
+    @Test
+    public void testHandlePreferenceChanged_activateAdmin() {
+        mockInactiveAdmin(mDefaultAdmin);
+
+        mController.handlePreferenceChanged(mPreference, true);
+
+        verifyAdminNeverDeactivated();
+        verifyAdminActivated();
+    }
+
+    @Test
+    public void testHandlePreferenceChanged_deactivateAdmin() {
+        mockActiveAdmin(mDefaultAdmin);
+
+        mController.handlePreferenceChanged(mPreference, false);
+
+        verifyAdminNeverActivated();
+        verifyAdminDeactivated();
+    }
+
+    private void verifyPreferenceSetChecked(TwoStatePreference preference, boolean isChecked) {
+        verify(preference).setChecked(isChecked);
     }
 }

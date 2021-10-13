@@ -15,14 +15,19 @@
  */
 package com.android.car.settings.enterprise;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.PreferenceController;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 
 public final class DeviceAdminAddExplanationPreferenceControllerTest extends
-        BaseDeviceAdminAddPreferenceControllerTestCase
-                <DeviceAdminAddExplanationPreferenceController> {
+        BasePreferenceControllerTestCase {
+
+    @Mock
+    private Preference mPreference;
 
     private DeviceAdminAddExplanationPreferenceController mController;
 
@@ -105,8 +110,8 @@ public final class DeviceAdminAddExplanationPreferenceControllerTest extends
 
         mController.updateState(mPreference);
 
-        verifyPreferenceTitleSet("To conquer the universe");
-        verifyPreferenceSummaryNeverSet();
-        verifyPreferenceIconNeverSet();
+        verifyPreferenceTitleSet(mPreference, "To conquer the universe");
+        verifyPreferenceSummaryNeverSet(mPreference);
+        verifyPreferenceIconNeverSet(mPreference);
     }
 }
