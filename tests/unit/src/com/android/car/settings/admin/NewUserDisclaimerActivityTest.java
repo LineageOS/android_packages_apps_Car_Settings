@@ -27,7 +27,6 @@ import android.car.Car;
 import android.car.admin.CarDevicePolicyManager;
 import android.car.test.mocks.AbstractExtendedMockitoTestCase;
 import android.car.test.mocks.AndroidMockitoHelper;
-import android.os.UserHandle;
 import android.util.Log;
 import android.widget.Button;
 
@@ -74,8 +73,8 @@ public final class NewUserDisclaimerActivityTest extends AbstractExtendedMockito
         Log.v(TAG, "setFixtures(): launching activitiy");
         mActivity = mActivityRule.launchActivity(/* intent= */ null);
 
-        // It's called onResume()
-        verify(mCarDevicePolicyManager).setUserDisclaimerShown(UserHandle.of(0));
+        // It's called onResume() to show on current user
+        verify(mCarDevicePolicyManager).setUserDisclaimerShown(mActivity.getUser());
     }
 
     @Test
@@ -87,7 +86,7 @@ public final class NewUserDisclaimerActivityTest extends AbstractExtendedMockito
             button.performClick();
         });
 
-        verify(mCarDevicePolicyManager).setUserDisclaimerAcknowledged(UserHandle.of(0));
+        verify(mCarDevicePolicyManager).setUserDisclaimerAcknowledged(mActivity.getUser());
         assertWithMessage("activity is finishing").that(mActivity.isFinishing()).isTrue();
     }
 }
