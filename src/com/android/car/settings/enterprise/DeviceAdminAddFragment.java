@@ -29,8 +29,10 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.text.TextUtils;
 
 import androidx.annotation.VisibleForTesting;
+import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
@@ -46,6 +48,8 @@ import java.util.List;
 public final class DeviceAdminAddFragment extends SettingsFragment {
 
     private static final Logger LOG = new Logger(DeviceAdminAddFragment.class);
+
+    private CharSequence mAppName;
 
     @Override
     protected int getPreferenceScreenResId() {
@@ -113,6 +117,7 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
             activity.finish();
             return;
         }
+        mAppName = deviceAdminInfo.loadLabel(context.getPackageManager());
 
         use(DeviceAdminAddHeaderPreferenceController.class,
                 R.string.pk_device_admin_add_header).setDeviceAdmin(deviceAdminInfo);
@@ -127,10 +132,21 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 R.string.pk_device_admin_add_policies).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddSupportPreferenceController.class,
                 R.string.pk_device_admin_add_support).setDeviceAdmin(deviceAdminInfo);
-        use(DeviceAdminAddActionPreferenceController.class,
-                R.string.pk_device_admin_add_action).setDeviceAdmin(deviceAdminInfo);
-        use(DeviceAdminAddCancelPreferenceController.class,
-                R.string.pk_device_admin_add_cancel).setDeviceAdmin(deviceAdminInfo);
+    }
+
+    @Override
+    public void setPreferenceScreen(PreferenceScreen preferenceScreen) {
+        super.setPreferenceScreen(preferenceScreen);
+
+        // Split for testing, to avoid calling super.setPreferenceScreen() in tests.
+        setPreferenceScreenTitle(preferenceScreen);
+    }
+
+    @VisibleForTesting
+    void setPreferenceScreenTitle(PreferenceScreen preferenceScreen) {
+        if (!TextUtils.isEmpty(mAppName)) {
+            preferenceScreen.setTitle(mAppName);
+        }
     }
 
     @Override

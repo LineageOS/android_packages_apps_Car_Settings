@@ -41,6 +41,7 @@ import android.content.pm.PackageManager;
 import android.content.res.XmlResourceParser;
 
 import androidx.fragment.app.FragmentActivity;
+import androidx.preference.PreferenceScreen;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.car.settings.R;
@@ -68,6 +69,9 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
     private FragmentActivity mActivity;
 
     @Mock
+    private PreferenceScreen mPreferenceScreen;
+
+    @Mock
     private DeviceAdminAddHeaderPreferenceController mHeaderController;
     @Mock
     private DeviceAdminAddExplanationPreferenceController mExplanationController;
@@ -77,10 +81,6 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
     private DeviceAdminAddWarningPreferenceController mWarningController;
     @Mock
     private DeviceAdminAddPoliciesPreferenceController mPoliciesController;
-    @Mock
-    private DeviceAdminAddCancelPreferenceController mCancelController;
-    @Mock
-    private DeviceAdminAddActionPreferenceController mActionController;
 
     @Before
     public void createFragments() throws Exception {
@@ -101,10 +101,6 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
                 .use(eq(DeviceAdminAddWarningPreferenceController.class), anyInt());
         doReturn(mPoliciesController).when(mSpiedFragment)
                 .use(eq(DeviceAdminAddPoliciesPreferenceController.class), anyInt());
-        doReturn(mCancelController).when(mSpiedFragment)
-                .use(eq(DeviceAdminAddCancelPreferenceController.class), anyInt());
-        doReturn(mActionController).when(mSpiedFragment)
-                .use(eq(DeviceAdminAddActionPreferenceController.class), anyInt());
     }
 
     @Test
@@ -240,6 +236,19 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         verifyControllersUsed();
     }
 
+    @Test
+    public void testSetPreferenceScreenTitle() {
+        mockActivityIntent(new Intent()
+                .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockActiveAdmin(mDefaultAdmin);
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        mSpiedFragment.setPreferenceScreenTitle(mPreferenceScreen);
+
+        verify(mPreferenceScreen).setTitle((mDefaultDeviceAdminInfo.loadLabel(mRealPm)));
+    }
+
     private void mockActivityIntent(Intent intent) {
         when(mActivity.getIntent()).thenReturn(intent);
     }
@@ -277,14 +286,6 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         verify(mSpiedFragment).use(DeviceAdminAddPoliciesPreferenceController.class,
                 R.string.pk_device_admin_add_policies);
         verifySetDeviceAdmin(mPoliciesController);
-
-        verify(mSpiedFragment).use(DeviceAdminAddActionPreferenceController.class,
-                R.string.pk_device_admin_add_action);
-        verifySetDeviceAdmin(mActionController);
-
-        verify(mSpiedFragment).use(DeviceAdminAddCancelPreferenceController.class,
-                R.string.pk_device_admin_add_cancel);
-        verifySetDeviceAdmin(mCancelController);
     }
 
     private void verifySetDeviceAdmin(BaseDeviceAdminAddPreferenceController<?> controller) {
