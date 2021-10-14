@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Le gestionnaire de l\'organisation peut contrôler et gérer les applis et les données associées à ce profil, y compris les paramètres, les autorisations, l\'accès aux contenus de l\'entreprise, l\'activité réseau et les informations de localisation de l\'appareil."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Le gestionnaire de l\'organisation peut contrôler et gérer les applis et les données associées au système d\'infoloisirs, y compris les paramètres, les autorisations, l\'accès aux contenus de l\'entreprise, l\'activité réseau et les informations de localisation du véhicule."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Il est possible que le gestionnaire de l\'organisation puisse accéder aux données associées au système d\'infoloisirs, gérer les applis et modifier les paramètres de ce véhicule."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Bloqué par le gestionnaire de l\'organisation"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Impossible de modifier le volume dans ce véhicule géré"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Impossible de passer des appels dans ce véhicule géré"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"SMS non autorisés dans ce véhicule géré"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Caméra indisponible dans ce véhicule géré"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Impossible de prendre des captures d\'écran dans ce véhicule géré"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Impossible d\'ouvrir cette appli dans ce véhicule géré"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bloqué par votre société de crédit"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Pour toute question, contactez le gestionnaire de l\'organisation"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Applis d\'administration de véhicules"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# appli activée}one{# appli activée}other{# applis activées}}"</string>
