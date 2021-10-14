@@ -17,11 +17,12 @@
 package com.android.car.settings.enterprise;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.ComponentName;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 
-import androidx.preference.Preference;
+import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.FragmentController;
 
@@ -29,7 +30,7 @@ import com.android.car.settings.common.FragmentController;
  * Controller for the header preference the device admin details screen.
  */
 public final class DeviceAdminAddHeaderPreferenceController
-        extends BaseDeviceAdminAddPreferenceController<Preference> {
+        extends BaseDeviceAdminAddPreferenceController<TwoStatePreference> {
 
     public DeviceAdminAddHeaderPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -37,7 +38,12 @@ public final class DeviceAdminAddHeaderPreferenceController
     }
 
     @Override
-    protected void updateState(Preference preference) {
+    protected Class<TwoStatePreference> getPreferenceType() {
+        return TwoStatePreference.class;
+    }
+
+    @Override
+    protected void updateState(TwoStatePreference preference) {
         CharSequence name = mDeviceAdminInfo.loadLabel(mPm);
         Drawable icon = mDeviceAdminInfo.loadIcon(mPm);
         CharSequence description = getDescription(mDeviceAdminInfo);
@@ -48,5 +54,35 @@ public final class DeviceAdminAddHeaderPreferenceController
         if (!TextUtils.isEmpty(description)) {
             preference.setSummary(description);
         }
+
+        ComponentName componentName = mDeviceAdminInfo.getComponent();
+        preference.setChecked(isActive(componentName));
+        if (isProfileOrDeviceOwner(componentName)) {
+            // TODO(b/170332519): once work profiles are supported, they could be removed
+            mLogger.d("updateState(): " + ComponentName.flattenToShortString(componentName)
+                    + " is PO or DO");
+            preference.setEnabled(false);
+        } else {
+            preference.setEnabled(true);
+        }
+    }
+
+    @Override
+    protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
+        boolean activated = (boolean) newValue;
+        ComponentName admin = mDeviceAdminInfo.getComponent();
+        if (activated) {
+            mLogger.i("Activating " + ComponentName.flattenToShortString(admin));
+            // TODO(b/192372143): support refreshing
+            mDpm.setActiveAdmin(admin, /* refreshing= */ false);
+        } else {
+            mLogger.i("Deactivating " + ComponentName.flattenToShortString(admin));
+            mDpm.removeActiveAdmin(admin);
+        }
+        return true;
+    }
+
+    private boolean isActive(ComponentName componentName) {
+        return mDpm.isAdminActive(componentName);
     }
 }

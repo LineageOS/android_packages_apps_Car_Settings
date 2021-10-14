@@ -18,6 +18,9 @@ package com.android.car.settings.enterprise;
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.notNull;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
 import static java.util.stream.Collectors.toList;
@@ -44,8 +47,6 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
                     .build();
     @Mock
     protected FragmentController mFragmentController;
-    @Mock
-    protected Preference mPreference;
 
     protected static final String availabilityToString(int value) {
         switch (value) {
@@ -76,14 +77,40 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
                 .isEqualTo(summary);
     }
 
-    protected final void verifyGoBack() {
-        verify(mFragmentController).goBack();
-    }
-
     protected void verifyPreferenceTitles(DummyPreferenceGroup preferenceGroup,
             CharSequence... titles) {
         assertThat(preferenceGroup.getPreferences().stream()
                 .map(p -> p.getTitle()).collect(toList())).containsExactly(titles);
+    }
+
+    protected static final void verifyPreferenceTitleSet(Preference preference,
+            CharSequence title) {
+        verify(preference).setTitle(title);
+    }
+
+    protected static final void verifyPreferenceSummarySet(Preference preference,
+            CharSequence title) {
+        verify(preference).setSummary(title);
+    }
+
+    protected static final void verifyPreferenceSummaryNeverSet(Preference preference) {
+        verify(preference, never()).setSummary(any());
+    }
+
+    protected static final void verifyPreferenceIconSet(Preference preference) {
+        verify(preference).setIcon(notNull());
+    }
+
+    protected static final void verifyPreferenceIconNeverSet(Preference preference) {
+        verify(preference, never()).setIcon(notNull());
+    }
+
+    protected static final void verifyPreferenceDisabled(Preference preference) {
+        verify(preference).setEnabled(false);
+    }
+
+    protected static final void verifyPreferenceEnabled(Preference preference) {
+        verify(preference).setEnabled(true);
     }
 
     static final class DummyPreferenceGroup extends PreferenceGroup {
