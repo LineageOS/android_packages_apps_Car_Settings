@@ -1718,7 +1718,7 @@
     <string name="admin_financed_message">The organization manager may be able to access data
         associated with this infotainment system, manage apps, and change this vehicle\’s settings.</string>
     <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=NONE] -->
-    <string name="disabled_by_policy_title">Blocked by the organization manager</string>
+    <string name="disabled_by_policy_title">That’s unavailable</string>
     <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=NONE] -->
     <string name="disabled_by_policy_title_adjust_volume">Can’t change volume in this managed vehicle</string>
     <!-- Title for dialog displayed to tell user that outgoing calls were disabled by an admin [CHAR LIMIT=NONE] -->
@@ -1734,7 +1734,7 @@
     <!-- Dialog title. This dialog lets a user know that a specific setting is blocked by their credit provider. Since the user purchased the device from the credit provider, the credit provider controls what they can access. [CHAR LIMIT=50] -->
     <string name="disabled_by_policy_title_financed_device">Blocked by your credit provider</string>
     <!-- Shown when the user tries to change a settings locked by an admin [CHAR LIMIT=NONE] -->
-    <string name="default_admin_support_msg">If you have questions, contact the organization manager</string>
+    <string name="default_admin_support_msg">Access to some features is limited by the organization.\n\nIf you have questions, contact the organization manager.</string>
     <!-- url for learning more about IT admin policy disabling -->
     <string name="help_url_action_disabled_by_it_admin"></string>
     <!-- Title of preference to manage device admin apps, which are used by IT admins to manage devices. [CHAR LIMIT=40] -->
