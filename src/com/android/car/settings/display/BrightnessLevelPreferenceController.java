@@ -27,6 +27,10 @@ import static com.android.settingslib.display.BrightnessUtils.convertLinearToGam
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.database.ContentObserver;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.PowerManager;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -43,8 +47,18 @@ import com.android.car.settings.enterprise.EnterpriseUtils;
 public class BrightnessLevelPreferenceController extends PreferenceController<SeekBarPreference> {
 
     private static final Logger LOG = new Logger(BrightnessLevelPreferenceController.class);
+    private static final Uri BRIGHTNESS_URI = Settings.System.getUriFor(
+            Settings.System.SCREEN_BRIGHTNESS);
     private final int mMaximumBacklight;
     private final int mMinimumBacklight;
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
+
+    private final ContentObserver mBrightnessObserver = new ContentObserver(mHandler) {
+        @Override
+        public void onChange(boolean selfChange) {
+            refreshUi();
+        }
+    };
 
     public BrightnessLevelPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -72,6 +86,19 @@ public class BrightnessLevelPreferenceController extends PreferenceController<Se
                         Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    protected void onStartInternal() {
+        super.onStartInternal();
+        getContext().getContentResolver().registerContentObserver(BRIGHTNESS_URI,
+                /* notifyForDescendants= */ false, mBrightnessObserver);
+    }
+
+    @Override
+    protected void onStopInternal() {
+        super.onStopInternal();
+        getContext().getContentResolver().unregisterContentObserver(mBrightnessObserver);
     }
 
     @Override
