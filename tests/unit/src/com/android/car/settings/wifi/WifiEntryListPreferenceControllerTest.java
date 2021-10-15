@@ -269,7 +269,10 @@ public class WifiEntryListPreferenceControllerTest {
         Set<String> prefsThatIgnore = new HashSet<>();
         prefsThatIgnore.add("unknown key");
 
-        prefController.setUxRestrictionsIgnoredConfig(true, prefsThatIgnore);
+        prefController.setUxRestrictionsIgnoredConfig(false, prefsThatIgnore);
+        CarUxRestrictions noSetupRestrictions = new CarUxRestrictions.Builder(
+                true, CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, 0).build();
+        mPreferenceController.onUxRestrictionsChanged(noSetupRestrictions);
 
         List<WifiEntry> result = prefController.fetchWifiEntries();
 

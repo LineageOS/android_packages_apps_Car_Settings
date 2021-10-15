@@ -71,7 +71,8 @@ import org.mockito.quality.Strictness;
 @RunWith(AndroidJUnit4.class)
 public class VolumeSettingsPreferenceControllerTest {
 
-    private static final int ZONE_ID = 1;
+    private static final int ZONE_ID = PRIMARY_AUDIO_ZONE;
+    private static final int INVALID_ZONE_ID = 1;
     private static final int GROUP_ID = 0;
     private static final int TEST_MIN_VOLUME = 0;
     private static final int TEST_VOLUME = 40;
@@ -226,6 +227,20 @@ public class VolumeSettingsPreferenceControllerTest {
     }
 
     @Test
+    public void onGroupVolumeChanged_invalidZoneId_doesNotUpdateVolumeSeekbar() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
+        when(mCarAudioManager.getGroupVolume(GROUP_ID)).thenReturn(TEST_NEW_VOLUME);
+        mPreferenceController.mVolumeChangeCallback.onGroupVolumeChanged(INVALID_ZONE_ID,
+                GROUP_ID, /* flags= */ 0);
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+
+        SeekBarPreference preference =
+                (SeekBarPreference) spy(mPreferenceGroup.getPreference(0));
+        verify(preference, never()).setValue(any(Integer.class));
+    }
+
+    @Test
     public void onGroupMuteChanged_sameValue_doesNotUpdateIsMuted() {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.refreshUi();
@@ -249,6 +264,20 @@ public class VolumeSettingsPreferenceControllerTest {
         VolumeSeekBarPreference preference =
                 (VolumeSeekBarPreference) mPreferenceGroup.getPreference(0);
         assertThat(preference.isMuted()).isEqualTo(true);
+    }
+
+    @Test
+    public void onGroupMuteChanged_invalidZoneId_doesNotUpdateMutedState() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.refreshUi();
+        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(true);
+        mPreferenceController.mVolumeChangeCallback.onGroupMuteChanged(ZONE_ID,
+                GROUP_ID, /* flags= */ 0);
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+
+        VolumeSeekBarPreference preference =
+                (VolumeSeekBarPreference) spy(mPreferenceGroup.getPreference(0));
+        verify(preference, never()).setIsMuted(any(Boolean.class));
     }
 
     @Test
