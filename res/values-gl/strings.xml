@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do dispositivo)."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este sistema de información e entretemento (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"É posible que o xestor da organización poida acceder aos datos asociados ao sistema de información e entretemento, xestionar as aplicacións e cambiar a configuración deste vehículo."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Bloqueado polo xestor da organización"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Non se pode cambiar o volume neste vehículo xestionado"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Non se poden realizar chamadas neste vehículo xestionado"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Non se poden enviar SMS neste vehículo xestionado"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"A cámara non está dispoñible neste vehículo xestionado"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Neste vehículo xestionado non se poden facer capturas de pantalla"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Non se pode abrir esta aplicación neste vehículo xestionado"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Opción bloqueada pola túa entidade de crédito"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Se tes algunha pregunta, contacta co xestor da organización"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administración do vehículo"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplicación activada}other{# aplicacións activadas}}"</string>
