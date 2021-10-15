@@ -44,6 +44,7 @@
         </intent>
     </com.android.car.settings.common.LogicalPreferenceGroup>
     <Preference
+        android:icon="@drawable/ic_storage_apps"
         android:key="manage_device_admin"
         android:title="@string/manage_device_admin"
         android:summary="@string/empty_placeholder"
