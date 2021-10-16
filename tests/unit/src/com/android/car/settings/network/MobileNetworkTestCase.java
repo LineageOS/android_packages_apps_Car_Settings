@@ -64,9 +64,9 @@ public class MobileNetworkTestCase {
     @Mock
     protected TelephonyNetworkSpecifier mTelephonyNetworkSpecifier;
     @Mock
-    private ConnectivityManager mConnectivityManager;
+    protected TelephonyManager mTelephonyManager;
     @Mock
-    private TelephonyManager mTelephonyManager;
+    private ConnectivityManager mConnectivityManager;
 
     @Before
     public void setUp() {
@@ -90,10 +90,9 @@ public class MobileNetworkTestCase {
         when(mConnectivityManager.getAllNetworks()).thenReturn(new Network[]{mNetwork});
         when(mNetworkCapabilities.getNetworkSpecifier()).thenReturn(mTelephonyNetworkSpecifier);
         when(mTelephonyNetworkSpecifier.getSubscriptionId()).thenReturn(TEST_SUBSCRIPTION_ID);
-        when(mTelephonyManager.createForSubscriptionId(anyInt()))
-                .thenReturn(mTelephonyManager);
-        when(mTelephonyManager.getNetworkOperatorName())
-                .thenReturn(TEST_DISPLAY_NAME);
+        when(mTelephonyManager.createForSubscriptionId(anyInt())).thenReturn(mTelephonyManager);
+        when(mTelephonyManager.getNetworkOperatorName()).thenReturn(TEST_DISPLAY_NAME);
+        when(mTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_PRESENT);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();

@@ -429,7 +429,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="id" name="checkbox"/>
       <item type="id" name="current_profile_frame"/>
       <item type="id" name="cycle_reset_day_of_month"/>
-      <item type="id" name="data_limit_text"/>
       <item type="id" name="data_usage_edit_text"/>
       <item type="id" name="date_picker"/>
       <item type="id" name="dismiss_button"/>
@@ -491,7 +490,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="id" name="quick_settings_brightness_seekbar"/>
       <item type="id" name="quick_settings_list"/>
       <item type="id" name="regulatory_info"/>
-      <item type="id" name="remaining_billing_cycle_time_text"/>
       <item type="id" name="restricted_message"/>
       <item type="id" name="ringtone_picker_selected_id"/>
       <item type="id" name="settings_car_ui_focus_area"/>
@@ -499,11 +497,13 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="id" name="settings_focus_parking_view"/>
       <item type="id" name="settings_recycler_view"/>
       <item type="id" name="subtitle_text"/>
+      <item type="id" name="summary"/>
       <item type="id" name="switch_widget"/>
       <item type="id" name="text"/>
       <item type="id" name="tile_icon"/>
       <item type="id" name="tile_text"/>
       <item type="id" name="time_picker"/>
+      <item type="id" name="title"/>
       <item type="id" name="title_text"/>
       <item type="id" name="toolbar_menu_item_0"/>
       <item type="id" name="toolbar_menu_item_1"/>
@@ -572,6 +572,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="settings_preference_fragment"/>
       <item type="layout" name="settings_recyclerview_default"/>
       <item type="layout" name="suggestion_preference"/>
+      <item type="layout" name="summary_preference"/>
       <item type="layout" name="summary_preference_widget"/>
       <item type="layout" name="switch_widget"/>
       <item type="layout" name="tile"/>
@@ -902,7 +903,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="hk_BluetoothDevicePickerActivity"/>
       <item type="string" name="hk_BluetoothSettingsActivity"/>
       <item type="string" name="hk_ChooseAccountActivity"/>
-      <item type="string" name="hk_DataUsageActivity"/>
       <item type="string" name="hk_DataWarningAndLimitActivity"/>
       <item type="string" name="hk_DatetimeSettingsActivity"/>
       <item type="string" name="hk_DefaultAutofillPickerActivity"/>
@@ -1445,6 +1445,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="adas_location_fragment"/>
       <item type="xml" name="add_wifi_fragment"/>
       <item type="xml" name="app_data_usage_fragment"/>
+      <item type="xml" name="app_specific_data_usage_fragment"/>
       <item type="xml" name="app_storage_settings_details_fragment"/>
       <item type="xml" name="application_details_fragment"/>
       <item type="xml" name="application_launch_settings_fragment"/>
@@ -1460,7 +1461,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="choose_account_fragment"/>
       <item type="xml" name="choose_lock_type_fragment"/>
       <item type="xml" name="choose_new_admin_fragment"/>
-      <item type="xml" name="data_usage_fragment"/>
       <item type="xml" name="data_usage_set_threshold_fragment"/>
       <item type="xml" name="data_warning_and_limit_fragment"/>
       <item type="xml" name="datetime_settings_fragment"/>

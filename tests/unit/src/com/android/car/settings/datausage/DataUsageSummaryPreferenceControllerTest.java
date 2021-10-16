@@ -24,6 +24,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -43,16 +44,18 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 import com.android.settingslib.net.DataUsageController;
-import com.android.settingslib.utils.StringUtil;
 
 import com.google.android.collect.Lists;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
 
 import java.time.Period;
 import java.time.ZonedDateTime;
@@ -62,12 +65,14 @@ import java.util.concurrent.TimeUnit;
 public class DataUsageSummaryPreferenceControllerTest {
 
     private static final CharSequence TEST_CARRIER_NAME = "TEST_CARRIER_NAME";
+    private static final int SUB_ID = 1;
 
-    private Context mContext = ApplicationProvider.getApplicationContext();
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
     private CarUxRestrictions mCarUxRestrictions;
     private DataUsageSummaryPreference mDataUsageSummaryPreference;
     private DataUsageSummaryPreferenceController mPreferenceController;
+    private MockitoSession mSession;
 
     @Mock
     private FragmentController mMockFragmentController;
@@ -83,21 +88,35 @@ public class DataUsageSummaryPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
 
+        mSession = ExtendedMockito.mockitoSession()
+                .spyStatic(TelephonyManager.class)
+                .startMocking();
+
+        ExtendedMockito.when(TelephonyManager.from(mContext)).thenReturn(mMockTelephonyManager);
+        when(mMockTelephonyManager.createForSubscriptionId(SUB_ID))
+                .thenReturn(mMockTelephonyManager);
+
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mPreferenceController = new DataUsageSummaryPreferenceController(mContext,
                 /* preferenceKey= */ "key", mMockFragmentController,
-                mCarUxRestrictions, mMockSubscriptionManager, mMockTelephonyManager,
-                mMockDataUsageController);
+                mCarUxRestrictions, mMockSubscriptionManager, mMockDataUsageController);
         mDataUsageSummaryPreference = new DataUsageSummaryPreference(mContext);
+        mPreferenceController.setFields(SUB_ID);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController,
                 mDataUsageSummaryPreference);
 
         SubscriptionInfo info = mock(SubscriptionInfo.class);
-        when(info.getSubscriptionId()).thenReturn(1);
-        when(mMockSubscriptionManager.getDefaultDataSubscriptionInfo()).thenReturn(info);
+        when(mMockSubscriptionManager.getActiveSubscriptionInfo(SUB_ID)).thenReturn(info);
 
         when(mMockTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_LOADED);
+    }
+
+    @After
+    public void tearDown() {
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
@@ -124,115 +143,6 @@ public class DataUsageSummaryPreferenceControllerTest {
         String usedValueString = Formatter.formatBytes(mContext.getResources(), info.usageLevel,
                 Formatter.FLAG_CALCULATE_ROUNDED | Formatter.FLAG_IEC_UNITS).value;
         assertThat(mDataUsageSummaryPreference.getTitle().toString()).contains(usedValueString);
-    }
-
-    @Test
-    public void refreshUi_noLimits_doesntSetDataLimitText() {
-        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
-        info.usageLevel = 10000;
-        info.limitLevel = -1;
-        info.warningLevel = -1;
-        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.refreshUi();
-
-        assertThat(mDataUsageSummaryPreference.getDataLimitText()).isNull();
-    }
-
-    @Test
-    public void refreshUi_hasLimit_setsDataLimitText() {
-        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
-        info.usageLevel = 10000;
-        info.limitLevel = 100000;
-        info.warningLevel = -1;
-        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.refreshUi();
-
-        assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
-                TextUtils.expandTemplate(mContext.getText(R.string.cell_data_limit),
-                        DataUsageUtils.bytesToIecUnits(mContext, info.limitLevel)).toString());
-    }
-
-    @Test
-    public void refreshUi_hasWarning_setsDataLimitText() {
-        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
-        info.usageLevel = 10000;
-        info.limitLevel = -1;
-        info.warningLevel = 50000;
-        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.refreshUi();
-
-        assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
-                TextUtils.expandTemplate(mContext.getText(R.string.cell_data_warning),
-                        DataUsageUtils.bytesToIecUnits(mContext, info.warningLevel)).toString());
-    }
-
-    @Test
-    public void refreshUi_hasWarningAndLimit_setsDataLimitText() {
-        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
-        info.usageLevel = 10000;
-        info.limitLevel = 100000;
-        info.warningLevel = 50000;
-        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.refreshUi();
-
-        assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
-                TextUtils.expandTemplate(mContext.getText(R.string.cell_data_warning_and_limit),
-                        DataUsageUtils.bytesToIecUnits(mContext, info.warningLevel),
-                        DataUsageUtils.bytesToIecUnits(mContext, info.limitLevel)).toString());
-    }
-
-    @Test
-    public void refreshUi_endTimeIsGreaterThanOneDay_setsBillingCycleText() {
-        int numDays = 20;
-        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
-        // Add an extra hour to account for the difference in time when the test calls
-        // System.currentTimeMillis() vs when the code calls it.
-        info.cycleEnd = System.currentTimeMillis() + TimeUnit.DAYS.toMillis(numDays)
-                + TimeUnit.HOURS.toMillis(1);
-        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.refreshUi();
-
-        assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
-                .isEqualTo(StringUtil.getIcuPluralsString(mContext, numDays,
-                        R.string.billing_cycle_days_left));
-    }
-
-    @Test
-    public void refreshUi_endTimeIsLessThanOneDay_setsBillingCycleText() {
-        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
-        info.cycleEnd = System.currentTimeMillis() + TimeUnit.HOURS.toMillis(22);
-        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.refreshUi();
-
-        assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
-                .isEqualTo(
-                        mContext.getString(R.string.billing_cycle_less_than_one_day_left));
-    }
-
-    @Test
-    public void refreshUi_endTimeIsNow_setsBillingCycleText() {
-        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
-        info.cycleEnd = System.currentTimeMillis();
-        when(mMockDataUsageController.getDataUsageInfo(any())).thenReturn(info);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.refreshUi();
-
-        assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
-                .isEqualTo(
-                        mContext.getString(R.string.billing_cycle_none_left));
     }
 
     @Test
@@ -350,7 +260,7 @@ public class DataUsageSummaryPreferenceControllerTest {
                 /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", /* mnc= */ "",
                 /* countryIso= */ "", /* isEmbedded= */ false,
                 /* accessRules= */ null, /* cardString= */ "");
-        when(mMockSubscriptionManager.getDefaultDataSubscriptionInfo()).thenReturn(subInfo);
+        when(mMockSubscriptionManager.getActiveSubscriptionInfo(SUB_ID)).thenReturn(subInfo);
     }
 
     private void setSubscriptionPlan(long usageBytes, long snapshotMillis) {
