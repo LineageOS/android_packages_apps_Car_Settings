@@ -27,7 +27,7 @@
         android:icon="@drawable/ic_wifi_tethering"
         settings:controller="com.android.car.settings.wifi.WifiTetherPreferenceController"
         settings:searchable="false"/>
-    <Preference
+    <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
         android:icon="@drawable/ic_settings_cellular"
         android:key="@string/pk_mobile_network_settings_entry"
         android:title="@string/mobile_network_settings"
@@ -38,13 +38,6 @@
         android:key="@string/pk_oem_network_settings_entry"
         android:title="@string/network_and_internet_vehicle_internet_title"
         settings:controller="com.android.car.settings.network.OemNetworkPreferenceController"
-        settings:searchable="false"/>
-    <Preference
-        android:fragment="com.android.car.settings.datausage.DataUsageFragment"
-        android:icon="@drawable/ic_settings_data_usage"
-        android:key="@string/pk_data_usage_settings_entry"
-        android:title="@string/data_usage_settings"
-        settings:controller="com.android.car.settings.datausage.DataUsageEntryPreferenceController"
         settings:searchable="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_wifi_entry_group"

@@ -94,7 +94,8 @@ public abstract class MobileNetworkBasePreferenceController<T extends Preference
 
     @Override
     protected int getAvailabilityStatus() {
-        if (!NetworkUtils.hasMobileNetwork(mConnectivityManager)) {
+        // TODO(b/202455477): to change back to NetworkUtils.hasMobileNetwork() after it's updated.
+        if (!NetworkUtils.hasSim(mTelephonyManager)) {
             return UNSUPPORTED_ON_DEVICE;
         }
 
