@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Die organisasiebestuurder kan programme en data wat met hierdie profiel geassosieer word, insluitend instellings, toestemmings, korporatiewe toegang, netwerkaktiwiteit en die toestel se ligginginligting, monitor en bestuur."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Die organisasiebestuurder kan programme en data wat met hierdie inligtingvermaakstelsel geassosieer word, insluitend instellings, toestemmings, korporatiewe toegang, netwerkaktiwiteit en die voertuig se ligginginligting, monitor en bestuur."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Die organisasiebestuurder sal dalk toegang kan kry tot data wat met hierdie inligtingvermaakstelsel geassosieer word, programme kan bestuur en hierdie voertuig se instellings kan verander."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Geblokkeer deur organisasiebestuurder"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Kan nie volume in hierdie bestuurde voertuig verander nie"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Kan nie oproepe in hierdie bestuurde voertuig maak nie"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Mag nie SMS\'e in hierdie bestuurde voertuig stuur nie"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Kamera is nie in hierdie bestuurde voertuig beskikbaar nie"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Kan nie skermskote in hierdie bestuurde voertuig neem nie"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Kan nie hierdie program in hierdie bestuurde voertuig oopmaak nie"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Geblokkeer deur jou kredietverskaffer"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Kontak die organisasiebestuurder as jy vrae het"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Voertuigadministrasieprogramme"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# geaktiveerde program}other{# geaktiveerde programme}}"</string>

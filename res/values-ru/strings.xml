@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Менеджер организации может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам для этого профиля, а также связанные с ним данные, например сведения о местоположении устройства или действиях в сети."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Менеджер организации может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам для этой информационно-развлекательной системы, а также связанные с ней данные, например сведения о местоположении автомобиля или действиях в сети."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"У менеджера организации есть доступ к данным, связанным с этой информационно-развлекательной системой, а также он может изменять настройки автомобиля и управлять приложениями."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Заблок. менеджером организации"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"В этом автомобиле нельзя изменять громкость"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"В этом автомобиле нельзя звонить"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"В этом автомобиле нельзя отправлять SMS"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Камера в этом автомобиле недоступна"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"В этом автомобиле нельзя делать скриншоты"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Приложение недоступно в этом автомобиле"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Заблокировано кредитором"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Если у вас есть вопросы, обратитесь к менеджеру организации."</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Приложения для администратора автомобиля"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активное приложение}one{# активное приложение}few{# активных приложения}many{# активных приложений}other{# активного приложения}}"</string>

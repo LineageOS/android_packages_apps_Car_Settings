@@ -20,6 +20,11 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/manage_device_admin"
     android:key="@string/psk_device_admin_apps">
+    <Preference
+        android:key="@string/pk_device_admin_apps_description"
+        android:summary="@string/device_admin_apps_description"
+        android:selectable="false"/>
+    <com.android.car.settings.common.DividerPreference/>
     <PreferenceCategory
         android:key="@string/pk_device_admin_activated_apps"
         android:title="@string/device_admin_activated_apps"

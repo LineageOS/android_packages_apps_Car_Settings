@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που συσχετίζονται με αυτό το προφίλ, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας της συσκευής."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που σχετίζονται με αυτό το σύστημα ενημέρωσης και ψυχαγωγίας, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας του οχήματος."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Ο διαχειριστής οργανισμού μπορεί να έχει πρόσβαση σε δεδομένα που σχετίζονται με αυτό το σύστημα ενημέρωσης και ψυχαγωγίας, να διαχειρίζεται εφαρμογές και να αλλάζει τις ρυθμίσεις αυτού του οχήματος."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Αποκλείστ. από διαχείρ. οργαν."</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Δεν είναι δυνατή η αλλαγή της έντασης του ήχου σε αυτό το διαχειριζόμενο όχημα"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Δεν είναι δυνατή η πραγματοποίηση κλήσεων σε αυτό το διαχειριζόμενο όχημα"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Δεν επιτρέπονται τα SMS σε αυτό το διαχειριζόμενο όχημα"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Η κάμερα δεν είναι διαθέσιμη σε αυτό το διαχειριζόμενο όχημα"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Δεν είναι δυνατή η λήψη στιγμιότυπων οθόνης σε αυτό το διαχειριζόμενο όχημα"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Δεν είναι δυνατό το άνοιγμα της εφαρμογής σε αυτό το διαχειριζόμενο όχημα"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Αποκλείστηκε από τον πωλητή συσκευών με πίστωση"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Εάν έχετε ερωτήσεις, επικοινωνήστε με τον διαχειριστή οργανισμού"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Εφαρμογές διαχείρισης οχημάτων"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ενεργοποιημένη εφαρμογή}other{# ενεργοποιημένες εφαρμογές}}"</string>
