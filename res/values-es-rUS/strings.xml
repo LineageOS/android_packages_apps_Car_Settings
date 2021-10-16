@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"El administrador de la organización puede supervisar y administrar las apps y los datos asociados con este perfil, lo que incluye la configuración, los permisos, el acceso corporativo, la actividad de la red y la información de la ubicación del vehículo."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"El administrador de la organización puede supervisar y administrar las apps y los datos asociados con este sistema de infoentretenimiento, lo que incluye la configuración, los permisos, el acceso corporativo, la actividad de la red y la información de la ubicación del vehículo."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Es posible que el administrador de la organización pueda acceder a los datos asociados con este sistema de infoentretenimiento, administrar las apps y cambiar la configuración del vehículo."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Bloqueado por admin. de org."</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"No se puede cambiar el volumen en este vehículo administrado"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"No se puede realizar llamadas en este vehículo administrado"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"No se permiten SMS en este vehículo administrado"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"La cámara no está disponible en este vehículo administrado"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"No se pueden tomar capturas de pantalla en este vehículo administrado"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"No se puede abrir esta app en este vehículo administrado"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Opción bloqueada por tu proveedor de crédito"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Si tienes alguna pregunta, comunícate con el administrador de la organización"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administración de vehículos"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# app activada}other{# apps activadas}}"</string>

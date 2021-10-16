@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organizacijos valdytojas gali stebėti ir tvarkyti su šiuo profiliu susietas programas bei duomenis, įskaitant nustatymus, leidimus, prieigą prie įmonės duomenų, tinklo veiklą ir įrenginio vietovės informaciją."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organizacijos valdytojas gali stebėti ir tvarkyti su šia informacine pramogine sistema susietas programas ir duomenis, įskaitant nustatymus, leidimus, prieigą prie įmonės duomenų, tinklo veiklą ir transporto priemonės vietovės informaciją."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Organizacijos valdytojas gali pasiekti duomenis, susietus su šia informacine pramogine sistema, tvarkyti programas ir keisti šios transporto priemonės nustatymus."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Užblokavo organizacijos valdytojas"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Šioje valdomoje transporto priemonėje garsumo pakeisti negalima"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Šioje valdomoje transporto priemonėje skambinti negalima"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Šioje valdomoje transporto priemonėje SMS pranešimai neleidžiami"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Šioje valdomoje transporto priemonėje kamera nepasiekiama"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Šioje valdomoje transporto priemonėje daryti ekrano kopijų negalima"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Šioje valdomoje transporto priemonėje šios programos atidaryti negalima"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Užblokavo kredito teikėjas"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Jei turite klausimų, susisiekite su organizacijos valdytoju"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Transporto priemonių administravimo programos"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# suaktyvinta programa}one{# suaktyvinta programa}few{# suaktyvintos programos}many{# suaktyvintos programos}other{# suaktyvintų programų}}"</string>

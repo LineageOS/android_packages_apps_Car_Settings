@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"सङ्गठनका प्रबन्धक सम्बन्धित सेटिङ, अनुमति, संस्थागत पहुँच, नेटवर्कसम्बन्धी क्रियाकलाप र यो डिभाइसको लोकेसनसम्बन्धी जानकारीसहित यो प्रोफाइलसँग सम्बन्धित एप र डेटाको निरीक्षण तथा व्यवस्थापन गर्न सक्छन्।"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"सङ्गठनका प्रबन्धक सम्बन्धित सेटिङ, अनुमति, संस्थागत पहुँच, नेटवर्कसम्बन्धी क्रियाकलाप र सवारी साधनको लोकेसनसम्बन्धी जानकारीसहित यो इन्फोटेनमेन्ट प्रणालीसँग सम्बन्धित एप र डेटाको निरीक्षण तथा व्यवस्थापन गर्न सक्छन्।"</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"सङ्गठनका प्रबन्धक यो इन्फोटेनमेन्ट प्रणालीसँग सम्बन्धित डेटा हेर्न तथा प्रयोग गर्न, एपहरू व्यवस्थापन गर्न र यो सवारी साधनका सेटिङ परिवर्तन गर्न सक्छन्।"</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"सङ्गठनका प्रबन्धकले ब्लक गरेका छन्"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"व्यवस्थापन गरिएको यो सवारी साधनमा भोल्युम घटबढ गर्न सकिँदैन"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"व्यवस्थापन गरिएको यो सवारी साधनबाट कल गर्न मिल्दैन"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"व्यवस्थापन गरिएको यो सवारी साधनबाट SMS पठाउन मिल्दैन"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"व्यवस्थापन गरिएको यो सवारी साधनमा क्यामेरा उपलब्ध छैन"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"व्यवस्थापन गरिएको यो सवारी साधनमा स्क्रिनसट लिन मिल्दैन"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"व्यवस्थापन गरिएको यो सवारी साधनमा यो एप खोल्न मिल्दैन"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"तपाईंको ऋणदाता कम्पनीले ब्लक गरेको छ"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"तपाईंसँग कुनै प्रश्न छ भने सङ्गठनका प्रबन्धकसँग सम्पर्क गर्नुहोस्"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"सवारी साधनका एड्मिनका लागि बनाइएका एप"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# एक्टिभेट गरिएको एप}other{# वटा एक्टिभेट गरिएका एप}}"</string>

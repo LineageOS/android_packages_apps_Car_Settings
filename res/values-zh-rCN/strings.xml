@@ -735,16 +735,17 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"组织管理员可以监控和管理与此个人资料相关联的应用和数据，其中包括设置、权限、企业权限、网络活动以及设备的位置信息。"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"组织管理员可以监控和管理与此信息娱乐系统相关联的应用和数据，其中包括设置、权限、企业权限、网络活动以及车辆的位置信息。"</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"组织管理员或许能够访问与此信息娱乐系统相关联的数据、管理应用以及更改此车辆的设置。"</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"已被组织管理员禁止"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"无法在此受管理车辆中更改音量"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"无法在此受管理车辆中进行通话"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"无法在此受管理车辆中收发短信"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"无法在此受管理车辆中使用摄像头"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"无法在此受管理车辆中截取屏幕截图"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"无法在此受管理车辆中打开这款应用"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"已被分期付款提供商屏蔽"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"如有问题，请与组织管理员联系"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"车辆管理应用"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# 个已启用的应用}other{# 个已启用的应用}}"</string>
