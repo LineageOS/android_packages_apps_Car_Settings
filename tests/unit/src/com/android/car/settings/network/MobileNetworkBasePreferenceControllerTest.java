@@ -26,10 +26,10 @@ import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.NetworkCapabilities;
 import android.net.NetworkRequest;
 import android.os.UserManager;
 import android.telephony.SubscriptionInfo;
+import android.telephony.TelephonyManager;
 
 import androidx.preference.Preference;
 import androidx.test.annotation.UiThreadTest;
@@ -64,9 +64,8 @@ public class MobileNetworkBasePreferenceControllerTest extends MobileNetworkTest
     }
 
     @Test
-    public void getAvailabilityStatus_noMobileNetwork_unsupported() {
-        when(mNetworkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)).thenReturn(
-                false);
+    public void getAvailabilityStatus_noSim_unsupported() {
+        when(mTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_ABSENT);
 
         assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }

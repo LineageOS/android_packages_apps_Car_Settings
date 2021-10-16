@@ -59,53 +59,6 @@ public class DataUsageSummaryPreferenceTest {
     }
 
     @Test
-    public void onBindViewHolder_noDataUsageText_isGone() {
-        mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
-
-        assertThat(getDataUsageText().getVisibility()).isEqualTo(View.GONE);
-    }
-
-    @Test
-    public void onBindViewHolder_hasDataUsageText_isVisible() {
-        mDataUsageSummaryPreference.setDataLimitText(TEST_LABEL);
-        mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
-
-        assertThat(getDataUsageText().getVisibility()).isEqualTo(View.VISIBLE);
-    }
-
-    @Test
-    public void onBindViewHolder_hasDataUsageText_setsText() {
-        mDataUsageSummaryPreference.setDataLimitText(TEST_LABEL);
-        mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
-
-        assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(TEST_LABEL);
-    }
-
-    @Test
-    public void onBindViewHolder_noRemainingBillingCycleText_isGone() {
-        mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
-
-        assertThat(getRemainingBillingCycleText().getVisibility()).isEqualTo(View.GONE);
-    }
-
-    @Test
-    public void onBindViewHolder_hasRemainingBillingCycleText_isVisible() {
-        mDataUsageSummaryPreference.setRemainingBillingCycleText(TEST_LABEL);
-        mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
-
-        assertThat(getRemainingBillingCycleText().getVisibility()).isEqualTo(View.VISIBLE);
-    }
-
-    @Test
-    public void onBindViewHolder_hasRemainingBillingCycleText_setsText() {
-        mDataUsageSummaryPreference.setRemainingBillingCycleText(TEST_LABEL);
-        mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
-
-        assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString()).isEqualTo(
-                TEST_LABEL);
-    }
-
-    @Test
     public void onBindViewHolder_noCarrierInfoText_isGone() {
         mDataUsageSummaryPreference.onBindViewHolder(mViewHolder);
 
@@ -156,14 +109,6 @@ public class DataUsageSummaryPreferenceTest {
 
         Intent intent = captor.getValue();
         assertThat(intent.getAction()).isEqualTo(TEST_INTENT.getAction());
-    }
-
-    private TextView getDataUsageText() {
-        return (TextView) mViewHolder.findViewById(R.id.data_limit_text);
-    }
-
-    private TextView getRemainingBillingCycleText() {
-        return (TextView) mViewHolder.findViewById(R.id.remaining_billing_cycle_time_text);
     }
 
     private TextView getCarrierInfoText() {
