@@ -109,7 +109,7 @@ public class RoamingPreferenceControllerTest {
         mPreference = new SwitchPreference(mContext);
         mPreferenceController = new RoamingPreferenceController(mContext,
                 "key", mMockFragmentController, mCarUxRestrictions);
-        mPreferenceController.setSubId(SUB_ID);
+        mPreferenceController.setFields(SUB_ID);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -153,7 +153,7 @@ public class RoamingPreferenceControllerTest {
     public void refreshUi_invalidSubId_isDisabled() {
         when(mMockTelephonyManager.createForSubscriptionId(
                 SubscriptionManager.INVALID_SUBSCRIPTION_ID)).thenReturn(mMockTelephonyManager);
-        mPreferenceController.setSubId(SubscriptionManager.INVALID_SUBSCRIPTION_ID);
+        mPreferenceController.setFields(SubscriptionManager.INVALID_SUBSCRIPTION_ID);
         mPreferenceController.onStart(mLifecycleOwner);
         mPreferenceController.refreshUi();
 

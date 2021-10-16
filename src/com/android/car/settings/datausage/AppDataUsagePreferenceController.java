@@ -23,6 +23,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.net.NetworkStats;
+import android.net.NetworkTemplate;
 import android.os.UserHandle;
 import android.util.SparseArray;
 
@@ -55,6 +56,7 @@ public class AppDataUsagePreferenceController extends
         PreferenceController<PreferenceGroup> implements AppsNetworkStatsManager.Callback {
 
     private final UidDetailProvider mUidDetailProvider;
+    private NetworkTemplate mNetworkTemplate;
 
     public AppDataUsagePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -94,6 +96,11 @@ public class AppDataUsagePreferenceController extends
 
         updateRestrictedState(restrictedUids, knownItems, items, profiles);
         sortAndAddPreferences(items, largest);
+    }
+
+    /** Sets the {@link NetworkTemplate}  */
+    public void setNetworkTemplate(NetworkTemplate networkTemplate) {
+        mNetworkTemplate = networkTemplate;
     }
 
     private long aggregateDataUsage(SparseArray<AppItem> knownItems, List<AppItem> items,
@@ -189,6 +196,7 @@ public class AppDataUsagePreferenceController extends
     }
 
     private void sortAndAddPreferences(List<AppItem> items, long largest) {
+        getPreference().removeAll();
         Collections.sort(items);
         for (int i = 0; i < items.size(); i++) {
             int percentTotal = largest != 0 ? (int) (items.get(i).total * 100 / largest) : 0;
@@ -244,10 +252,14 @@ public class AppDataUsagePreferenceController extends
             mDetail = provider.getUidDetail(item.key, /* blocking= */ false);
             if (mDetail != null) {
                 setAppInfo();
+                setOnClickListener();
             } else {
                 ThreadUtils.postOnBackgroundThread(() -> {
                     mDetail = provider.getUidDetail(mItem.key, /* blocking= */ true);
-                    ThreadUtils.postOnMainThread(() -> setAppInfo());
+                    ThreadUtils.postOnMainThread(() -> {
+                        setAppInfo();
+                        setOnClickListener();
+                    });
                 });
             }
         }
@@ -260,6 +272,16 @@ public class AppDataUsagePreferenceController extends
             } else {
                 setIcon(null);
                 setTitle(null);
+            }
+        }
+
+        private void setOnClickListener() {
+            if (mDetail != null && mNetworkTemplate != null) {
+                setOnPreferenceClickListener(p -> {
+                    getFragmentController().launchFragment(
+                            AppSpecificDataUsageFragment.getInstance(mItem, mNetworkTemplate));
+                    return true;
+                });
             }
         }
     }
