@@ -26,13 +26,12 @@ import static org.mockito.Mockito.when;
 import android.telephony.SubscriptionInfo;
 
 import androidx.fragment.app.Fragment;
-import androidx.preference.Preference;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
-import com.android.car.ui.preference.CarUiPreference;
+import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 import com.android.settingslib.utils.StringUtil;
 
 import com.google.android.collect.Lists;
@@ -47,14 +46,14 @@ import java.util.List;
 @RunWith(AndroidJUnit4.class)
 public class MobileNetworkEntryPreferenceControllerTest extends MobileNetworkTestCase {
 
-    private Preference mPreference;
+    private CarUiTwoActionSwitchPreference mPreference;
     private MobileNetworkEntryPreferenceController mPreferenceController;
 
     @Before
     @UiThreadTest
     public void setUp() {
         super.setUp();
-        mPreference = new CarUiPreference(mContext);
+        mPreference = new CarUiTwoActionSwitchPreference(mContext);
         mPreferenceController = new MobileNetworkEntryPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);

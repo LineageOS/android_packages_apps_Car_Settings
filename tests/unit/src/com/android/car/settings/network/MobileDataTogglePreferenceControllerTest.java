@@ -20,7 +20,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -93,9 +92,11 @@ public class MobileDataTogglePreferenceControllerTest {
 
         mSession = ExtendedMockito.mockitoSession()
                 .mockStatic(SubscriptionManager.class, withSettings().lenient())
+                .mockStatic(TelephonyManager.class, withSettings().lenient())
                 .startMocking();
 
-        doReturn(mMockTelephonyManager).when(mContext).getSystemService(TelephonyManager.class);
+        ExtendedMockito.when(TelephonyManager.from(mContext)).thenReturn(mMockTelephonyManager);
+        when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mMockTelephonyManager);
         when(mMockTelephonyManager.createForSubscriptionId(SUB_ID))
                 .thenReturn(mMockTelephonyManager);
         when(mMockTelephonyManager.getSimCount()).thenReturn(1);
@@ -111,7 +112,7 @@ public class MobileDataTogglePreferenceControllerTest {
         mPreferenceController = new MobileDataTogglePreferenceController(mContext,
                 "key", mMockFragmentController, mCarUxRestrictions,
                 mMockSubscriptionManager);
-        mPreferenceController.setSubId(SUB_ID);
+        mPreferenceController.setFields(SUB_ID);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -323,6 +324,8 @@ public class MobileDataTogglePreferenceControllerTest {
         int otherSubId = SUB_ID + 1;
         mPreference.setChecked(false);
         when(mMockTelephonyManager.getSimCount()).thenReturn(2);
+        when(mMockTelephonyManager.createForSubscriptionId(otherSubId))
+                .thenReturn(mMockTelephonyManager);
         ExtendedMockito.when(SubscriptionManager.getDefaultDataSubscriptionId())
                 .thenReturn(otherSubId);
         when(mMockSubscriptionManager.isActiveSubscriptionId(otherSubId)).thenReturn(true);
@@ -349,6 +352,8 @@ public class MobileDataTogglePreferenceControllerTest {
         int otherSubId = SUB_ID + 1;
         mPreference.setChecked(false);
         when(mMockTelephonyManager.getSimCount()).thenReturn(2);
+        when(mMockTelephonyManager.createForSubscriptionId(otherSubId))
+                .thenReturn(mMockTelephonyManager);
         ExtendedMockito.when(SubscriptionManager.getDefaultDataSubscriptionId())
                 .thenReturn(otherSubId);
         when(mMockSubscriptionManager.isActiveSubscriptionId(otherSubId)).thenReturn(true);
