@@ -1678,6 +1678,10 @@
     <!-- Quick Controls --><skip/>
     <!-- Brightness quick control, control name to change display brightness [CHAR LIMIT=40] -->
     <string name="qc_display_brightness">Display brightness</string>
+    <!-- Informational text to be shown when bluetooth devices can't be shown in quick controls because bluetooth is off [CHAR LIMIT=75] -->
+    <string name="qc_bluetooth_off_devices_info">To see your devices, turn on Bluetooth</string>
+    <!-- Informational text to be shown when bluetooth devices can't be shown in quick controls because no devices are paired [CHAR LIMIT=75] -->
+    <string name="qc_bluetooth_on_no_devices_info">To pair a device, open Bluetooth settings</string>
 
     <!-- Device Policy Management --><skip/>
     <!-- Device admin add activity title -->
