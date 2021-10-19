@@ -274,6 +274,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="circle_ripple_bg"/>
       <item type="drawable" name="color_progress_bar"/>
       <item type="drawable" name="ic_add"/>
+      <item type="drawable" name="ic_apps"/>
       <item type="drawable" name="ic_arrow_back"/>
       <item type="drawable" name="ic_arrow_drop_down"/>
       <item type="drawable" name="ic_arrow_forward"/>
@@ -947,8 +948,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="location_settings_title"/>
       <item type="string" name="location_state_switch_content_description"/>
       <item type="string" name="location_toggle_off_warning"/>
-      <item type="string" name="location_toggle_title"/>
       <item type="string" name="location_toggle_summary"/>
+      <item type="string" name="location_toggle_title"/>
       <item type="string" name="location_use_location_title"/>
       <item type="string" name="lock_settings_enter_password"/>
       <item type="string" name="lock_settings_enter_pattern"/>
