@@ -55,7 +55,7 @@ public class MobileDataTile extends SettingsQCItem {
         if (TextUtils.isEmpty(subtitle)) {
             subtitle = getContext().getString(R.string.mobile_network_toggle_title);
         }
-        Icon icon = Icon.createWithResource(getContext(), R.drawable.ic_qc_mobile_data);
+        Icon icon = MobileNetworkQCUtils.getMobileNetworkSignalIcon(getContext());
 
         return new QCTile.Builder()
                 .setIcon(icon)
