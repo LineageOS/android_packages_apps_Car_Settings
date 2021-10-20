@@ -23,14 +23,20 @@ import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_O
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.withSettings;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.net.Uri;
 import android.os.UserManager;
+import android.provider.Settings;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -46,16 +52,19 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 import com.android.settingslib.utils.StringUtil;
 
 import com.google.android.collect.Lists;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
 
 import java.util.List;
 
@@ -63,12 +72,14 @@ import java.util.List;
 public class MobileNetworkEntryPreferenceControllerTest {
 
     private static final String TEST_NETWORK_NAME = "test network name";
+    private static final int SUB_ID = 1;
 
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
     private CarUiTwoActionSwitchPreference mPreference;
     private MobileNetworkEntryPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
+    private MockitoSession mSession;
 
     @Mock
     private FragmentController mFragmentController;
@@ -78,6 +89,8 @@ public class MobileNetworkEntryPreferenceControllerTest {
     private SubscriptionManager mSubscriptionManager;
     @Mock
     private TelephonyManager mTelephonyManager;
+    @Mock
+    private ContentResolver mMockContentResolver;
 
     @Before
     @UiThreadTest
@@ -85,12 +98,22 @@ public class MobileNetworkEntryPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
 
+        mSession = ExtendedMockito.mockitoSession()
+                .mockStatic(SubscriptionManager.class, withSettings().lenient())
+                .startMocking();
+
         // Setup to always make preference available.
         when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mUserManager);
         when(mContext.getSystemService(SubscriptionManager.class)).thenReturn(mSubscriptionManager);
-        when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mTelephonyManager);
+        // Because of the static mock of SubscriptionManager, Mockito thinks .from() is supposed to
+        // return SubscriptionManager instead of TelephonyManager
+        doReturn(mTelephonyManager).when(mContext).getSystemService(TelephonyManager.class);
+        when(mContext.getContentResolver()).thenReturn(mMockContentResolver);
+        ExtendedMockito.when(SubscriptionManager.getDefaultDataSubscriptionId())
+                .thenReturn(SUB_ID);
 
         when(mTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_PRESENT);
+        when(mTelephonyManager.getSimCount()).thenReturn(1);
 
         when(mUserManager.isAdminUser()).thenReturn(true);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS))
@@ -103,6 +126,14 @@ public class MobileNetworkEntryPreferenceControllerTest {
         mPreferenceController = new MobileNetworkEntryPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+    }
+
+    @After
+    @UiThreadTest
+    public void tearDown() {
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
@@ -130,6 +161,31 @@ public class MobileNetworkEntryPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_hasMobileNetwork_isAdmin_noRestriction_available() {
         assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void onStart_singleSim_registersObserver() {
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        Uri uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA);
+        verify(mMockContentResolver).registerContentObserver(eq(uri), eq(false), any());
+    }
+
+    @Test
+    public void onStart_multiSim_registersObserver() {
+        when(mTelephonyManager.getSimCount()).thenReturn(2);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        Uri uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA + SUB_ID);
+        verify(mMockContentResolver).registerContentObserver(eq(uri), eq(false), any());
+    }
+
+    @Test
+    public void onStop_singleSim_unregistersObserver() {
+        mPreferenceController.onStart(mLifecycleOwner);
+        mPreferenceController.onStop(mLifecycleOwner);
+
+        verify(mMockContentResolver).unregisterContentObserver(any());
     }
 
     @Test
