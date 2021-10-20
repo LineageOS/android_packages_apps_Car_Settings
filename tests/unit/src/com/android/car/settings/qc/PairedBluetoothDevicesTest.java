@@ -48,6 +48,7 @@ import com.android.car.qc.QCActionItem;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
+import com.android.car.settings.R;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
@@ -129,16 +130,26 @@ public class PairedBluetoothDevicesTest {
     }
 
     @Test
-    public void getQCItem_bluetoothDisabled_returnsNull() {
+    public void getQCItem_bluetoothDisabled_returnsBluetoothDisabledMessage() {
         when(mBluetoothAdapter.isEnabled()).thenReturn(false);
         QCItem item = mPairedBluetoothDevices.getQCItem();
-        assertThat(item).isNull();
+        assertThat(item).isNotNull();
+        QCList list = (QCList) item;
+        assertThat(list.getRows().size()).isEqualTo(1);
+        QCRow row = list.getRows().get(0);
+        assertThat(row.getTitle()).isEqualTo(
+                mContext.getString(R.string.qc_bluetooth_off_devices_info));
+        assertThat(row.getStartIcon()).isNotNull();
     }
 
     @Test
-    public void getQCItem_noDevices_emptyList() {
+    public void getQCItem_noDevices_returnsPairMessage() {
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
-        assertThat(list.getRows().size()).isEqualTo(0);
+        assertThat(list.getRows().size()).isEqualTo(1);
+        QCRow row = list.getRows().get(0);
+        assertThat(row.getTitle()).isEqualTo(
+                mContext.getString(R.string.qc_bluetooth_on_no_devices_info));
+        assertThat(row.getStartIcon()).isNotNull();
     }
 
     @Test
