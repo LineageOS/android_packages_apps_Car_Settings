@@ -41,6 +41,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.profiles.RemoveProfileHandler;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.Before;
@@ -71,7 +72,7 @@ public class DeleteUserPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mPreference = new Preference(mContext);
+        mPreference = new CarUiPreference(mContext);
         mPreferenceController = new DeleteUserPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions,
                 mRemoveProfileHandler);
