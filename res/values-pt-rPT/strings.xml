@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adicionar perfil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brilho do ecrã"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver os seus dispositivos, ative o Bluetooth"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para sincronizar um dispositivo, abra as definições de Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador do sistema de infoentretenimento"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Apps ativadas"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Apps desativadas"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Não existem apps de administrador do sistema de infoentretenimento"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"As apps com esta autorização têm acesso aos dados deste veículo"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Nenhuma app de administrador do veículo"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Esta app de administrador do sistema de infoentretenimento está ativa e permite que a app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"A ativação desta app de sistema de infoentretenimento permite que a app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Ativar app de sistema infoentretenimen.?"</string>
@@ -735,8 +738,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"O gestor da organização pode monitorizar e gerir as apps e os dados associados a este perfil, incluindo as definições, as autorizações, o acesso empresarial, a atividade da rede e as informações de localização do dispositivo."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"O gestor da organização pode monitorizar e gerir as apps e os dados associados a este sistema de infoentretenimento, incluindo as definições, as autorizações, o acesso empresarial, a atividade da rede e as informações de localização do veículo."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"O gestor da organização pode conseguir aceder aos dados associados a este sistema de infoentretenimento, gerir apps e alterar as definições deste veículo."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Está indisponível"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Não é possível alterar o volume neste veículo gerido"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Não é possível efetuar chamadas neste veículo gerido"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Os SMS não são permitidos neste veículo gerido"</string>
@@ -744,8 +746,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Não é possível fazer capturas de ecrã neste veículo gerido"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Não é possível abrir esta app neste veículo gerido"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bloqueada pelo seu fornecedor de crédito"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"O acesso a algumas funcionalidades está limitado pela organização.\n\nSe tiver dúvidas, contacte o gestor da mesma."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administrador de veículos"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# app ativada}other{# apps ativadas}}"</string>

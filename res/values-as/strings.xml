@@ -439,7 +439,7 @@
     <string name="device_info_not_available" msgid="2095601973977376655">"উপলব্ধ নহয়"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"স্থিতি"</string>
     <string name="device_status" msgid="267298179806290920">"স্থিতি"</string>
-    <string name="device_status_summary" product="tablet" msgid="600543254608862075">"বেটাৰিৰ অৱস্থা, নেটৱৰ্ক আৰু অন্যান্য তথ্য"</string>
+    <string name="device_status_summary" product="tablet" msgid="600543254608862075">"বেটাৰীৰ স্থিতি, নেটৱৰ্ক আৰু অন্যান্য তথ্য"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"ফ\'ন নম্বৰ, বেতাঁৰ সংকেত ইত্যাদি"</string>
     <string name="about_settings" msgid="4329457966672592345">"ইয়াৰ বিষয়ে"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"এই প্ৰ’ফাইলটো মচক"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"প্ৰ’ফাইল যোগ দিয়ক"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ডিছপ্লে\'ৰ উজ্জ্বলতা"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"আপোনাৰ ডিভাইচসমূহ চাবলৈ ব্লুটুথ অন কৰক"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"কোনো ডিভাইচ পেয়াৰ কৰিবলৈ ব্লুটুথ ছেটিং খোলক"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ইনফ’টেইনমেণ্ট ছিষ্টেমৰ প্ৰশাসক"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"সক্ৰিয় কৰা এপ্"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"নিষ্ক্ৰিয় কৰা এপ্"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"কোনো ইনফ’টেইনমেণ্ট ছিষ্টেম প্ৰশাসকৰ এপ্ নাই"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"এই অনুমতিটো থকা এপৰ ওচৰত এই বাহনখনৰ ডেটা এক্সেছ আছে"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"কোনো প্ৰশাসকৰ এপ্ নাই"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ প্ৰশাসক এপ্‌টো সক্ৰিয় হৈ আছে আৰু এইটোৱে <xliff:g id="APP_NAME">%1$s</xliff:g> এপ্‌টোক নিম্নলিখিত কাৰ্যকলাপসমূহ কৰিবলৈ দিয়ে:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"এই ইনফ’টেইনমেণ্ট ছিষ্টেম এপ্‌টো সক্ৰিয় কৰিলে <xliff:g id="APP_NAME">%1$s</xliff:g> এপ্‌টোক নিম্নলিখিত কাৰ্যকলাপসমূহ কৰিবলৈ দিয়ে:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"এই ইনফ’টেইনমেণ্ট ছিষ্টেম এপ্‌ সক্ৰিয় কৰিবনে?"</string>
@@ -735,8 +738,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"প্ৰতিষ্ঠানটোৰ পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু ডিভাইচৰ অৱস্থানৰ তথ্যক সামৰি, এই প্ৰ’ফাইলৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"প্ৰতিষ্ঠানটোৰ পৰিচালকে ছেটিং, অনুমতি, কৰ্পৰে’ট এক্সেছ, নেটৱৰ্কৰ কাৰ্যকলাপ আৰু বাহনখনৰ অৱস্থানৰ তথ্যক সামৰি, এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ সৈতে জড়িত এপ্‌ আৰু ডেটা নিৰীক্ষণ আৰু পৰিচালনা কৰিব পাৰে।"</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"প্ৰতিষ্ঠানটোৰ পৰিচালকে হয়তো এই ইনফ’টেইনমেণ্ট ছিষ্টেমৰ সৈতে জড়িত হৈ থকা ডেটা এক্সেছ কৰিব, এপ্‌ পৰিচালনা কৰিব আৰু এই বাহনখনৰ ছেটিং সলনি কৰিব পাৰিব।"</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"এইটো উপলব্ধ নহয়"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"এই পৰিচালিত বাহনখনত ভলিউম সলনি কৰিব নোৱাৰি"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"এই পৰিচালিত বাহনখনত কল কৰিব নোৱাৰি"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"এই পৰিচালিত বাহনখনত এছএমএছৰ অনুমতি নাই"</string>
@@ -744,8 +746,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"এই পৰিচালিত বাহনখনত স্ক্ৰীনশ্বট ল’ব নোৱাৰি"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"এই পৰিচালিত বাহনখনত এই এপ্‌টো খুলিব নোৱাৰি"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"আপোনাৰ ঋণ প্ৰদানকাৰীয়ে অৱৰোধ কৰিছে"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"প্ৰতিষ্ঠানটোৱে কিছুমান সুবিধাৰ এক্সেছ সীমিত কৰিছে।\n\nযদি আপোনাৰ কিবা প্ৰশ্ন আছে, প্ৰতিষ্ঠানৰ পৰিচালকগৰাকীৰ সৈতে যোগাযোগ কৰক।"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"বাহনৰ প্ৰশাসক এপ্‌"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# টা সক্ৰিয় কৰা এপ্}one{# টা সক্ৰিয় কৰা এপ্}other{# টা সক্ৰিয় কৰা এপ্}}"</string>
