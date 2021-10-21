@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"આ પ્રોફાઇલ ડિલીટ કરો"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"પ્રોફાઇલ ઉમેરો"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ડિસ્પ્લે બ્રાઇટનેસ"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"તમારા ડિવાઇસ જોવા માટે, બ્લૂટૂથ ચાલુ કરો"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ડિવાઇસનું જોડાણ કરવા માટે, બ્લૂટૂથ સેટિંગ ખોલો"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"સક્રિય ઍપ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"નિષ્ક્રિય કરેલી ઍપ"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"કોઈ ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક ઍપ નથી"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"આ પરવાનગી ધરાવતી ઍપ પાસે આ વાહનના ડેટાનો ઍક્સેસ હોય છે"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"વ્યવસ્થાપક માટે વાહન સંબંધિત કોઈ ઍપ નથી"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક ઍપ સક્રિય છે અને ઍપ <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપે છે:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપને સક્રિય કરવાથી, ઍપ <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપવામાં આવશે:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપ સક્રિય કરીએ?"</string>
@@ -736,7 +739,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસના સ્થાનની માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનના સ્થાનની માહિતી સહિત આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"સંસ્થાના મેનેજર આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલા ડેટાને ઍક્સેસ, ઍપને મેનેજ કરી શકશે અને આ વાહનના સેટિંગને બદલી શકશે."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"સંસ્થાના મેનેજરે બ્લૉક કરેલું"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"તે અનુપલબ્ધ છે"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"મેનેજ કરવામાં આવેલા આ વાહનમાં વૉલ્યૂમ બદલી શકાતું નથી"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"મેનેજ કરવામાં આવેલા આ વાહનમાં કૉલ કરી શકાતા નથી"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"મેનેજ કરવામાં આવેલા આ વાહનમાં SMSની મંજૂરી નથી"</string>
@@ -744,7 +747,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"મેનેજ કરવામાં આવેલા આ વાહનમાં સ્ક્રીનશૉટ લઈ શકતા નથી"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"મેનેજ કરવામાં આવેલા આ વાહનમાં આ ઍપ ખોલી શકાતી નથી"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"તમને ક્રેડિટ પર વેચાણ કરનારે બ્લૉક કર્યું છે"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"જો તમને કોઈ પ્રશ્ન હોય, તો સંસ્થાના મેનેજરનો સંપર્ક કરો"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"સંસ્થા દ્વારા કેટલીક સુવિધાઓનો ઍક્સેસ મર્યાદિત કરવામાં આવ્યો છે.\n\nજો તમને પ્રશ્નો હોય, તો સંસ્થાના મેનેજરનો સંપર્ક કરો."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"વાહન વ્યવસ્થાપક ઍપ"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# સક્રિય ઍપ}one{# સક્રિય ઍપ}other{# સક્રિય ઍપ}}"</string>

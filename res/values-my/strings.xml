@@ -723,10 +723,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ဤပရိုဖိုင်ကို ဖျက်ရန်"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ပရိုဖိုင် ထည့်ရန်"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"မျက်နှာပြင် တောက်ပမှု"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"သင့်စက်များကို တွေ့နိုင်ရန် ဘလူးတုသ်ဖွင့်ပါ"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"စက်နှင့်တွဲချိတ်ရန် ဘလူးတုသ် ဆက်တင်များကို ဖွင့်ပါ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ် စီမံခန့်ခွဲသူ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ဖွင့်ထားသောအက်ပ်များ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ပိတ်ထားသောအက်ပ်များ"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ် စီမံရေးအက်ပ်များ မရှိပါ"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"ဤခွင့်ပြုချက်ရထားသည့် အက်ပ်များက ဤယာဉ်၏ဒေတာကို သုံးခွင့်ရှိသည်"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"ယာဉ်ဆိုင်ရာ စီမံရေးအက်ပ် မရှိပါ"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"ဤသတင်းနှင့်ဖျော်ဖြေရေး စနစ် စီမံခန့်ခွဲအက်ပ်ကို ဖွင့်ထားပြီး ၎င်းသည် အောက်ပါတို့ဆောင်ရွက်ရန် <xliff:g id="APP_NAME">%1$s</xliff:g> အက်ပ်ကို ခွင့်ပြုသည်-"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"ဤသတင်းနှင့်ဖျော်ဖြေရေး အက်ပ် ဖွင့်ခြင်းက <xliff:g id="APP_NAME">%1$s</xliff:g> အက်ပ်ကို အောက်ပါတို့ဆောင်ရွက်ရန် ခွင့်ပြုလိမ့်မည်-"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ် အက်ပ် ဖွင့်မလား။"</string>
@@ -737,7 +740,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"အဖွဲ့အစည်းမန်နေဂျာသည် ဆက်တင်များ၊ ခွင့်ပြုချက်များ၊ ပူးပေါင်းသုံးစွဲခွင့်များ၊ ကွန်ရက်လုပ်ဆောင်ချက်နှင့် စက်ပစ္စည်း၏ တည်နေရာ အချက်အလက်များအပါအဝင် ဤပရိုဖိုင်နှင့် ဆက်စပ်နေသည့် အက်ပ်နှင့် ဒေတာများကို စောင့်ကြည့်စီမံနိုင်ပါသည်။"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"အဖွဲ့အစည်းမန်နေဂျာသည် ဆက်တင်များ၊ ခွင့်ပြုချက်များ၊ ပူးပေါင်းသုံးစွဲခွင့်များ၊ ကွန်ရက်လုပ်ဆောင်ချက်နှင့် ယာဉ်၏ တည်နေရာ အချက်အလက်များအပါအဝင် ဤသတင်းနှင့်ဖျော်ဖြေရေး စနစ်နှင့် ဆက်စပ်နေသည့် အက်ပ်နှင့် ဒေတာများကို စောင့်ကြည့်စီမံနိုင်ပါသည်။"</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"အဖွဲ့အစည်းမန်နေဂျာသည် ဤသတင်းနှင့်ဖျော်ဖြေရေး စနစ်နှင့် ဆက်စပ်နေသည့် ဒေတာကို သုံးခြင်း၊ အက်ပ်များကို စီမံခြင်းနှင့် ယာဉ်ဆက်တင်များ ပြောင်းလဲခြင်းတို့ကို ပြုလုပ်နိုင်သည်။"</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"အဖွဲ့အစည်းမန်နေဂျာက ပိတ်ထားသည်"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"၎င်းကို မရနိုင်ပါ"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် အသံအတိုးအကျယ်ကို ပြောင်း၍မရနိုင်ပါ"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် ဖုန်းဆက်၍မရနိုင်ပါ"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် SMS စာတိုစနစ်ကို ခွင့်ပြုမထားပါ"</string>
@@ -745,7 +748,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် ဖန်သားပြင်ဓာတ်ပုံ မရိုက်နိုင်ပါ"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"ဤစီမံခန့်ခွဲထားသော ယာဉ်တွင် ဤအက်ပ်ကို ဖွင့်၍မရနိုင်ပါ"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"သင်၏ ခရက်ဒစ်ဝန်ဆောင်မှုပေးသူက ပိတ်ထားသည်"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"မေးစရာများရှိပါက အဖွဲ့အစည်းမန်နေဂျာထံ ဆက်သွယ်ပါ"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"အချို့ဝန်ဆောင်မှုများ သုံးခွင့်ကို အဖွဲ့အစည်းက ကန့်သတ်ထားသည်။\n\nမေးမြန်းလိုပါက အဖွဲ့အစည်းမန်နေဂျာထံ ဆက်သွယ်ပါ။"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"ယာဉ်စီမံခန့်ခွဲအက်ပ်များ"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{ဖွင့်ထားသောအက်ပ် # ခု}other{ဖွင့်ထားသောအက်ပ် # ခု}}"</string>
