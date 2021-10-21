@@ -115,7 +115,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
                 new Intent(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED));
 
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
     }
 
     @Test
@@ -141,7 +141,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
                 new Intent(LocationManager.MODE_CHANGED_ACTION));
 
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
     }
 
     @Test
@@ -151,7 +151,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mSwitchPreference.performSecondaryActionClick();
 
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
         verify(mLocationManager).setAdasGnssLocationEnabled(true);
         verify(mFragmentController, never())
@@ -165,7 +165,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mSwitchPreference.performSecondaryActionClick();
 
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
         assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
         verify(mLocationManager, never()).setLocationEnabledForUser(anyBoolean(), any());
         verify(mFragmentController)
@@ -208,7 +208,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ true);
 
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
     }
 
     @Test
@@ -219,7 +219,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ false);
 
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
     }
 
     @Test
@@ -230,7 +230,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ true);
 
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
     }
 
     @Test
@@ -263,7 +263,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
     private void initializePreference(boolean checked, boolean enabled) {
         when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(checked);
         mSwitchPreference.setSecondaryActionChecked(checked);
-        mSwitchPreference.setEnabled(enabled);
+        mSwitchPreference.setSecondaryActionEnabled(enabled);
     }
 
     private AlertDialog showDialog(ConfirmationDialogFragment dialog) throws Throwable {
