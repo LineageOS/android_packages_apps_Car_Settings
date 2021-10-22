@@ -722,10 +722,15 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Bu profili sil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profil ekle"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ekran parlaklığı"</string>
+    <!-- no translation found for qc_bluetooth_off_devices_info (8420985279976892700) -->
+    <skip />
+    <!-- no translation found for qc_bluetooth_on_no_devices_info (7573736950041887300) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"Bilgi-eğlence sistemi yöneticisi"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Etkin uygulamalar"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Devre dışı uygulamalar"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Bilgi-eğlence sistemi yönetici uygulaması yok"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Bu izne sahip uygulamalar bu aracın verilerine erişebilir"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Araç yönetici uygulaması yok"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Bu bilgi-eğlence sistemi yönetim uygulaması etkin durumda olup <xliff:g id="APP_NAME">%1$s</xliff:g> uygulamasının aşağıdaki işlemleri gerçekleştirmesine izin veriyor:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Bu bilgi-eğlence sistemi uygulamasının etkinleştirilmesi, <xliff:g id="APP_NAME">%1$s</xliff:g> uygulamasının şu işlemleri gerçekleştirmesine izin verir:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Bilgi-eğlence sistemi uygulaması etkinleştirilsin mi?"</string>
@@ -735,8 +740,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Kuruluş yöneticisi; ayarlar, izinler, kurumsal erişim, ağ etkinliği ve cihazın konum bilgileri de dahil olmak üzere bu profille ilişkilendirilen uygulamaları ve verileri izleyip yönetebilir."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Kuruluş yöneticisi; ayarlar, izinler, kurumsal erişim, ağ etkinliği ve aracın konum bilgileri de dahil olmak üzere bu bilgi-eğlence sistemiyle ilişkilendirilen uygulamaları ve verileri izleyip yönetebilir."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Kuruluş yöneticisi bu bilgi-eğlence sistemiyle ilişkilendirilmiş verilere erişebilir, uygulamaları yönetebilir ve bu aracın ayarlarını değiştirebilir."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Bu özellik kullanılamıyor"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Bu yönetilen araçta ses seviyesi değiştirilemiyor"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Bu yönetilen araçta arama yapılamıyor"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Bu yönetilen araçta SMS\'e izin verilmiyor"</string>
@@ -744,8 +748,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Bu yönetilen araçta ekran görüntüsü alınamıyor"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Bu yönetilen araçta bu uygulama açılamıyor"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Sözleşmeli cihaz sağlayıcız tarafından engellendi"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Bazı özelliklere erişim kuruluş tarafından sınırlandırılmış.\n\nSorularınız olursa kuruluş yöneticisiyle iletişime geçin."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Araç yönetimi uygulamaları"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# etkin uygulama}other{# etkin uygulama}}"</string>

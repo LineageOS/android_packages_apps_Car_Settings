@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"இந்தச் சுயவிவரத்தை நீக்கு"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"சுயவிவரத்தைச் சேர்"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"திரையின் ஒளிர்வு"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"உங்கள் சாதனங்களைக் காண புளூடூத்தை ஆன் செய்யுங்கள்"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"சாதனத்துடன் இணைக்க புளூடூத் அமைப்புகளைத் திறங்கள்"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"செயல்படுத்தப்பட்ட ஆப்ஸ்"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"முடக்கப்பட்ட ஆப்ஸ்"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி ஆப்ஸ் எதுவுமில்லை"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"இந்த அனுமதியைக் கொண்டுள்ள ஆப்ஸுக்கு இந்த வாகனத்தின் தரவுக்கான அணுகல் உள்ளது"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"வாகன நிர்வாகி ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி ஆப்ஸ் இயக்கப்பட்டுள்ளது, பின்வரும் செயல்பாடுகளைச் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை அது அனுமதிக்கிறது:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கினால் பின்வரும் செயல்பாடுகளைச் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை அது அனுமதிக்கும்:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கவா?"</string>
@@ -735,8 +738,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"இந்தச் சுயவிவரத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, சாதனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) நிறுவனத்தின் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, வாகனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) நிறுவனத்தின் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"நிறுவனத்தின் நிர்வாகியால் இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டத்துடன் தொடர்புடைய தரவை அணுகவும் ஆப்ஸை நிர்வகிக்கவும் இந்த வாகனங்களின் அமைப்புகளை மாற்றவும் முடியும்."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"அணுக முடியவில்லை"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"நிர்வகிக்கப்படும் இந்த வாகனத்தில் ஒலியளவை மாற்ற முடியாது"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"நிர்வகிக்கப்படும் இந்த வாகனத்தில் அழைப்புகளைச் செய்ய முடியாது"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"நிர்வகிக்கப்படும் இந்த வாகனத்தில் மெசேஜ் அனுப்ப முடியாது"</string>
@@ -744,8 +746,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"நிர்வகிக்கப்படும் இந்த வாகனத்தில் ஸ்கிரீன்ஷாட்கள் எடுக்க முடியாது"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"நிர்வகிக்கப்படும் இந்த வாகனத்தில் இந்த ஆப்ஸைத் திறக்க முடியாது"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"கடன் வழங்குநரால் முடக்கப்பட்டுள்ளது"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"சில அம்சங்களுக்கான அணுகலானது நிறுவனத்தால் வரம்பிடப்பட்டுள்ளது.\n\nஉங்களுக்குக் கேள்விகள் இருந்தால் நிறுவனத்தின் நிர்வாகியைத் தொடர்புகொள்ளவும்."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"வாகன நிர்வாகி ஆப்ஸ்"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# செயல்படுத்தப்பட்ட ஆப்ஸ்}other{# செயல்படுத்தப்பட்ட ஆப்ஸ்}}"</string>

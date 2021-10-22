@@ -722,10 +722,15 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Xóa hồ sơ này"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Thêm hồ sơ"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Độ sáng của màn hình"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Để xem các thiết bị của bạn, hãy bật Bluetooth"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Để ghép nối thiết bị, hãy mở phần cài đặt Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Quản trị hệ thống thông tin giải trí"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Ứng dụng đã kích hoạt"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Ứng dụng đã hủy kích hoạt"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Không có ứng dụng quản trị hệ thống thông tin giải trí nào"</string>
+    <!-- no translation found for device_admin_apps_description (1371935499168453457) -->
+    <skip />
+    <!-- no translation found for device_admin_apps_list_empty (7634804595645191123) -->
+    <skip />
     <string name="device_admin_status" msgid="4041772636856135168">"Ứng dụng quản trị hệ thống thông tin giải trí này đang hoạt động và cho phép ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> thực hiện những thao tác sau:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Khi bạn kích hoạt ứng dụng hệ thống thông tin giải trí này, ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> sẽ thực hiện được những thao tác sau:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Kích hoạt hệ thống thông tin giải trí này?"</string>

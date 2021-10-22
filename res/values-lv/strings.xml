@@ -722,10 +722,15 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Dzēst šo profilu"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pievienot profilu"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Displeja spilgtums"</string>
+    <!-- no translation found for qc_bluetooth_off_devices_info (8420985279976892700) -->
+    <skip />
+    <!-- no translation found for qc_bluetooth_on_no_devices_info (7573736950041887300) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informatīvi izklaidējošās sistēmas administrators"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivizētās lietotnes"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivizētās lietotnes"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nav informatīvi izklaidējošās sistēmas administratora lietotņu"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Lietotnes, kurām ir šī atļauja, var piekļūt šī transportlīdzekļa datiem."</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Nav transportlīdzekļa administratora lietotņu"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Šī informatīvi izklaidējošās sistēmas administratora lietotne ir aktīva un ļauj lietotnei <xliff:g id="APP_NAME">%1$s</xliff:g> veikt tālāk norādītās darbības."</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Aktivizējot šo informatīvi izklaidējošās sistēmas lietotni, lietotnei <xliff:g id="APP_NAME">%1$s</xliff:g> tiks atļauts veikt tālāk norādītās darbības."</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Vai aktivizēt šo sistēmas lietotni?"</string>
@@ -735,8 +740,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organizācijas pārvaldnieks var pārraudzīt un pārvaldīt ar šo profilu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par ierīces atrašanās vietu."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organizācijas pārvaldnieks var pārraudzīt un pārvaldīt ar šo informatīvi izklaidējošo sistēmu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par transportlīdzekļa atrašanās vietu."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Iespējams, organizācijas pārvaldnieks var piekļūt ar šo informatīvi izklaidējošo sistēmu saistītajiem datiem, pārvaldīt lietotnes un mainīt šī transportlīdzekļa iestatījumus."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Nav pieejams"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Nevar mainīt skaļumu šajā pārvaldītajā transportlīdzeklī"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Nevar veikt zvanus šajā pārvaldītajā transportlīdzeklī"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Nav atļauts sūtīt īsziņas šajā pārvaldītajā transportlīdzeklī"</string>
@@ -744,8 +748,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Nevar izveidot ekrānuzņēmumus šajā pārvaldītajā transportlīdzeklī"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Nevar atvērt šo lietotni šajā pārvaldītajā transportlīdzeklī"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Bloķēja jūsu kredīta nodrošinātājs"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Organizācija ir ierobežojusi piekļuvi noteiktām funkcijām.\n\nJa jums ir kādi jautājumi, sazinieties ar organizācijas pārvaldnieku."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Transportlīdzekļa administratora lietotnes"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktivizēta lietotne}zero{# aktivizētu lietotņu}one{# aktivizēta lietotne}other{# aktivizētas lietotnes}}"</string>
