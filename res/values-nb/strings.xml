@@ -722,10 +722,15 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Slett denne profilen"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Legg til en profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Lysstyrken på skjermen"</string>
+    <!-- no translation found for qc_bluetooth_off_devices_info (8420985279976892700) -->
+    <skip />
+    <!-- no translation found for qc_bluetooth_on_no_devices_info (7573736950041887300) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"Infotainmentsystem-admin"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktiverte apper"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktiverte apper"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Ingen admin-apper for infotainment-systemer"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Apper med denne tillatelsen har tilgang til dette kjøretøyets data"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Ingen admin-apper for kjøretøyet"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Denne admin-appen for infotainment-systemet er aktiv og tillater appen <xliff:g id="APP_NAME">%1$s</xliff:g> å utføre følgende operasjoner:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Hvis du aktiverer denne infotainment-systemappen, tillates appen <xliff:g id="APP_NAME">%1$s</xliff:g> å utføre følgende operasjoner:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivere denne infotainment-systemappen?"</string>
@@ -736,7 +741,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organisasjonsadministratoren kan overvåke og administrere apper og data tilknyttet denne profilen, inkludert innstillinger, tillatelser, bedriftstilgang, nettverksaktivitet og enhetens posisjonsinformasjon."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organisasjonsadministratoren kan overvåke og administrere apper og data tilknyttet dette infotainment-systemet, inkludert innstillinger, tillatelser, bedriftstilgang, nettverksaktivitet og kjøretøyets posisjonsinformasjon."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Organisasjonsadministratoren kan få tilgang til data tilknyttet dette infotainment-systemet, administrere apper og endre dette kjøretøyets innstillinger."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Blokkert av administratoren"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Den er utilgjengelig"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Kan ikke endre volumet i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Kan ikke starte anrop i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"SMS er ikke tillatt i dette administrerte kjøretøyet"</string>
@@ -744,7 +749,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Kan ikke ta skjermdumper i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Kan ikke åpne denne appen i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokkert av kredittleverandøren din"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Hvis du har spørsmål, kan du kontakte organisasjonsadministratoren."</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Tilgang til enkelte funksjoner er begrenset av organisasjonen.\n\nHvis du har spørsmål, kan du kontakte organisasjonsadministratoren."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Admin-apper for kjøretøy"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktivert app}other{# aktiverte apper}}"</string>

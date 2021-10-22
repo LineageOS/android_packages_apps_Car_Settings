@@ -722,10 +722,15 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Xóa hồ sơ này"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Thêm hồ sơ"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Độ sáng của màn hình"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Để xem các thiết bị của bạn, hãy bật Bluetooth"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Để ghép nối thiết bị, hãy mở phần cài đặt Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Quản trị hệ thống thông tin giải trí"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Ứng dụng đã kích hoạt"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Ứng dụng đã hủy kích hoạt"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Không có ứng dụng quản trị hệ thống thông tin giải trí nào"</string>
+    <!-- no translation found for device_admin_apps_description (1371935499168453457) -->
+    <skip />
+    <!-- no translation found for device_admin_apps_list_empty (7634804595645191123) -->
+    <skip />
     <string name="device_admin_status" msgid="4041772636856135168">"Ứng dụng quản trị hệ thống thông tin giải trí này đang hoạt động và cho phép ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> thực hiện những thao tác sau:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Khi bạn kích hoạt ứng dụng hệ thống thông tin giải trí này, ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> sẽ thực hiện được những thao tác sau:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Kích hoạt hệ thống thông tin giải trí này?"</string>
@@ -736,7 +741,8 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hồ sơ này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hệ thống thông tin giải trí này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Người quản lý của tổ chức có thể truy cập vào dữ liệu liên kết với hệ thống thông tin giải trí này, quản lý ứng dụng và thay đổi chế độ cài đặt của xe này."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Người quản lý của tổ chức đã chặn"</string>
+    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
+    <skip />
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Không thể thay đổi âm lượng trên xe được quản lý này"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Không thể gọi điện trên xe được quản lý này"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Không được dùng SMS trên xe được quản lý này"</string>
@@ -744,7 +750,8 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Không thể chụp ảnh màn hình trên thiết bị được quản lý này"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Không thể mở ứng dụng này trên xe được quản lý"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Tổ chức tín dụng của bạn đã chặn"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Nếu bạn có thắc mắc, hãy liên hệ với người quản lý của tổ chức"</string>
+    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
+    <skip />
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Ứng dụng quản trị xe"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ứng dụng đã kích hoạt}other{# ứng dụng đã hủy kích hoạt}}"</string>

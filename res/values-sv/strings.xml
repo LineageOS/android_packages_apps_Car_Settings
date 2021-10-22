@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Radera den här profilen"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Lägg till profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Skärmens ljusstyrka"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktivera Bluetooth för att visa enheterna"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Öppna Bluetooth-inställningarna för att koppla en enhet"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Infotainmentsystemets administratör"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktiverade appar"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Inaktiverade appar"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Inget adminappar för infotainmentsystem"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Appar med den här behörigheten har åtkomst till det här fordonets data"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Inga administratörsappar för fordon"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Administratörsappen för infotainmentsystemet är aktiverad och tillåter att appen <xliff:g id="APP_NAME">%1$s</xliff:g> utför följande åtgärder:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Om du aktiverar den här administratörsappen för infotainmentsystemet kan appen <xliff:g id="APP_NAME">%1$s</xliff:g> utföra följande åtgärder:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivera appen för infotainmentsystemet?"</string>
@@ -736,7 +739,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till den här profilen, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och enhetens platsuppgifter."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till det här infotainmentsystemet, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och fordonets platsuppgifter."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Organisationsansvarig kanske kan komma åt data kopplad till det här infotainmentsystemet, hantera appar och ändra fordonets inställningar."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Blockeras av organisationsansvarig"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Inställningen är inte tillgänglig"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Det går inte att ändra volymen i detta hanterade fordon"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Det går inte att ringa i detta hanterade fordon"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Sms tillåts inte i detta hanterade fordon"</string>
@@ -744,7 +747,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Det går inte att ta skärmbilder i detta hanterade fordon"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Det går inte att öppna appen i detta hanterade fordon"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blockeras av långivaren"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Kontakta organisationsansvarig om du har frågor"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Åtkomsten till vissa funktioner begränsas av organisationen.\n\nKontakta organisationsansvarig om du har frågor."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Administratörsappar för fordon"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktiverad app}other{# aktiverade appar}}"</string>
