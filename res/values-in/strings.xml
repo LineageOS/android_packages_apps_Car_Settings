@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Hapus profil ini"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tambahkan profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Kecerahan layar"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Untuk melihat perangkat Anda, aktifkan Bluetooth"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Untuk menyambungkan perangkat, buka setelan Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Admin sistem infotainmen"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aplikasi yang diaktifkan"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Aplikasi yang dinonaktifkan"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Tidak ada aplikasi admin sistem infotainmen"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Aplikasi yang memiliki izin ini dapat mengakses data kendaraan ini"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Tidak ada aplikasi admin kendaraan"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Aplikasi admin sistem infotainmen ini aktif dan mengizinkan aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> untuk menjalankan operasi berikut:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Dengan mengaktifkan aplikasi sistem infotainmen ini, aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> akan dapat menjalankan operasi berikut:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktifkan apl sistem infotainmen ini?"</string>
@@ -735,8 +738,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Pengelola organisasi Anda dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi perangkat."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Pengelola organisasi dapat memantau serta mengelola aplikasi dan data yang terkait dengan sistem infotainmen ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi kendaraan."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Pengelola organisasi mungkin dapat mengakses data yang terkait dengan sistem infotainmen ini, mengelola aplikasi, dan mengubah setelan kendaraan ini."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Pilihan ini tidak tersedia"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Tidak dapat mengubah volume di kendaraan terkelola ini"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Tidak dapat melakukan panggilan di kendaraan terkelola ini"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"SMS tidak diizinkan di kendaraan terkelola ini"</string>
@@ -744,8 +746,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Tidak dapat mengambil screenshot di kendaraan terkelola ini"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Tidak dapat membuka aplikasi ini di kendaraan terkelola ini"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Diblokir oleh penyedia kredit"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Akses ke beberapa fitur dibatasi oleh organisasi.\n\nJika ada pertanyaan, hubungi pengelola organisasi."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Aplikasi admin kendaraan"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplikasi yang diaktifkan}other{# aplikasi yang diaktifkan}}"</string>

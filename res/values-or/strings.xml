@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ଏହି ପ୍ରୋଫାଇଲକୁ ଡିଲିଟ୍ କରନ୍ତୁ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ଡିସପ୍ଲେ ଉଜ୍ଜ୍ୱଳତା"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ଆପଣଙ୍କ ଡିଭାଇସଗୁଡ଼ିକୁ ଦେଖିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ଚାଲୁ କରନ୍ତୁ"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ଏକ ଡିଭାଇସକୁ ପେୟାର କରିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ସେଟିଂସ ଖୋଲନ୍ତୁ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆଡମିନ୍"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ସକ୍ରିୟ ଥିବା ଆପଗୁଡ଼ିକ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ନିଷ୍କ୍ରିୟ ଥିବା ଆପଗୁଡ଼ିକ"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"କୌଣସି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ଆଡମିନ୍ ଆପ୍ ନାହିଁ"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"ଏହି ଅନୁମତି ଥିବା ଆପଗୁଡ଼ିକର ଏହି ଗାଡ଼ିର ଡାଟାକୁ ଆକ୍ସେସ ଅଛି"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"ଗାଡ଼ିର କୌଣସି ଆଡମିନ ଆପ ନାହିଁ"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆଡମିନ୍ ଆପଟି ସକ୍ରିୟ ଅଛି ଏବଂ <xliff:g id="APP_NAME">%1$s</xliff:g> ଆପକୁ ନିମ୍ନୋକ୍ତ କାର୍ଯ୍ୟଗୁଡ଼ିକ କରିବାକୁ ଅନୁମତି ଦିଏ:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆପକୁ ସକ୍ରିୟ କରିବା ଫଳରେ ଏହା <xliff:g id="APP_NAME">%1$s</xliff:g> ଆପକୁ ନିମ୍ନୋକ୍ତ କାର୍ଯ୍ୟଗୁଡ଼ିକ କରିବାକୁ ଅନୁମତି ଦେବ:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆପ ସକ୍ରିୟ କରିବେ?"</string>
@@ -735,8 +738,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ସେଟିଂସ, ଅନୁମତି, କର୍ପୋରେଟ ଆକ୍ସେସ, ନେଟୱାର୍କ କାର୍ଯ୍ୟକଳାପ ଏବଂ ଡିଭାଇସର ଲୋକେସନ ସୂଚନା ସମେତ ଏହି ପ୍ରୋଫାଇଲ ସହ ସମ୍ବନ୍ଧିତ ଥିବା ଆପ ଓ ଡାଟାକୁ ସଂସ୍ଥା ପରିଚାଳକ ମନିଟର ଓ ପରିଚାଳନା କରିପାରିବେ।"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"ସେଟିଂସ, ଅନୁମତି, କର୍ପୋରେଟ ଆକ୍ସେସ, ନେଟୱାର୍କ ସମ୍ବନ୍ଧିତ କାର୍ଯ୍ୟକଳାପ ଓ ଗାଡ଼ିର ଲୋକେସନ ସୂଚନା ସମେତ ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ସହ ସମ୍ବନ୍ଧିତ ଥିବା ଆପ ଓ ଡାଟାକୁ ସଂସ୍ଥା ପରିଚାଳକ ମନିଟର ଏବଂ ପରିଚାଳନା କରିପାରିବେ।"</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ସହ ସମ୍ବନ୍ଧିତ ଡାଟାକୁ ଆକ୍ସେସ କରିବା, ଆପଗୁଡ଼ିକୁ ପରିଚାଳନା କରିବା ଏବଂ ଏହି ଗାଡ଼ିର ସେଟିଂସ ପରିବର୍ତ୍ତନ କରିବାକୁ ସଂସ୍ଥା ପରିଚାଳକ ସକ୍ଷମ ହୋଇପାରନ୍ତି।"</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"ତାହା ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"ଏହି ପରିଚାଳିତ ଗାଡ଼ିରେ ଭଲ୍ୟୁମ ପରିବର୍ତ୍ତନ କରାଯାଇପାରିବ ନାହିଁ"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"ଏହି ପରିଚାଳିତ ଗାଡ଼ିରେ କଲ କରାଯାଇପାରିବ ନାହିଁ"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"ଏହି ପରିଚାଳିତ ଗାଡ଼ିରେ SMS ପଠାଇବାର ଅନୁମତି ନାହିଁ"</string>
@@ -744,8 +746,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"ଏହି ପରିଚାଳିତ ଗାଡ଼ିରେ ସ୍କ୍ରିନସଟଗୁଡ଼ିକ ନିଆଯାଇପାରିବ ନାହିଁ"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"ଏହି ପରିଚାଳିତ ଗାଡ଼ିରେ ଏହି ଆପ ଖୋଲାଯାଇପାରିବ ନାହିଁ"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ଆପଣଙ୍କ କ୍ରେଡିଟ ପ୍ରଦାନକାରୀଙ୍କ ଦ୍ୱାରା ବ୍ଲକ୍ କରାଯାଇଛି"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"ସଂସ୍ଥା ଦ୍ୱାରା କିଛି ଫିଚରକୁ ଆକ୍ସେସ ସୀମିତ କରାଯାଇଛି।\n\nଯଦି ଆପଣଙ୍କର କିଛି ପ୍ରଶ୍ନ ଅଛି, ତେବେ ସଂସ୍ଥାର ପରିଚାଳକଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ।"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"ଗାଡ଼ିର ଆଡମିନ୍ ଆପ୍"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{#ଟି ସକ୍ରିୟ ଥିବା ଆପ}other{#ଟି ସକ୍ରିୟ ଥିବା ଆପ}}"</string>
