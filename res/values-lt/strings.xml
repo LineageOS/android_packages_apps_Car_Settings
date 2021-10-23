@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ištrinti šį profilį"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pridėti profilį"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ekrano šviesumas"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Norėdami matyti savo įrenginius, įjunkite „Bluetooth“"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Norėdami susieti įrenginį, atidarykite „Bluetooth“ nustatymus"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informacinės pramoginės sistemos administratorius"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Suaktyvintos programos"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Išaktyvintos programos"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nėra informacinės pramoginės sistemos administravimo programų"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Programos, kurioms suteiktas šis leidimas, turi prieigą prie šios transporto priemonės duomenų"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Nėra jokių transporto priemonės administravimo programų"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Ši informacinės pramoginės sistemos administravimo programa yra aktyvi ir programai „<xliff:g id="APP_NAME">%1$s</xliff:g>“ leidžiama vykdyti toliau nurodytas operacijas."</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Suaktyvinus šią informacinės pramoginės sistemos programą programai „<xliff:g id="APP_NAME">%1$s</xliff:g>“ bus leidžiama vykdyti toliau nurodytas operacijas."</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Suaktyvinti šią informacinės pramoginės sistemos programą?"</string>
@@ -736,7 +739,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organizacijos valdytojas gali stebėti ir tvarkyti su šiuo profiliu susietas programas bei duomenis, įskaitant nustatymus, leidimus, prieigą prie įmonės duomenų, tinklo veiklą ir įrenginio vietovės informaciją."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organizacijos valdytojas gali stebėti ir tvarkyti su šia informacine pramogine sistema susietas programas ir duomenis, įskaitant nustatymus, leidimus, prieigą prie įmonės duomenų, tinklo veiklą ir transporto priemonės vietovės informaciją."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Organizacijos valdytojas gali pasiekti duomenis, susietus su šia informacine pramogine sistema, tvarkyti programas ir keisti šios transporto priemonės nustatymus."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Užblokavo organizacijos valdytojas"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Tai nepasiekiama"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Šioje valdomoje transporto priemonėje garsumo pakeisti negalima"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Šioje valdomoje transporto priemonėje skambinti negalima"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Šioje valdomoje transporto priemonėje SMS pranešimai neleidžiami"</string>
@@ -744,7 +747,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Šioje valdomoje transporto priemonėje daryti ekrano kopijų negalima"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Šioje valdomoje transporto priemonėje šios programos atidaryti negalima"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Užblokavo kredito teikėjas"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Jei turite klausimų, susisiekite su organizacijos valdytoju"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Prieigą prie kai kurių funkcijų apribojo organizacija.\n\nJei kyla klausimų, susisiekite organizacijos valdytoju."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Transporto priemonių administravimo programos"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# suaktyvinta programa}one{# suaktyvinta programa}few{# suaktyvintos programos}many{# suaktyvintos programos}other{# suaktyvintų programų}}"</string>

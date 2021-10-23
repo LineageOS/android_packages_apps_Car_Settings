@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Izbriši ovaj profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Dodaj profil"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Osvjetljenje ekrana"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Da biste vidjeli svoje uređaje, uključite Bluetooth"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Da biste uparili uređaj, otvorite postavke Bluetootha"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator informativno-zabavnog sistema"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivirane aplikacije"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivirane aplikacije"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Nema nijedne administratorske aplikacije informativno-zabavnog sistema"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Aplikacije s ovim odobrenjem imaju pristup podacima ovog vozila"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Nema aplikacija administratora vozila"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Aplikacija administratora informativno-zabavnog sistema je aktivna i dozvoljava aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da vrši sljedeće operacije:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Aktiviranjem aplikacije informativno-zabavnog sistema dozvolit će se aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da izvršava sljedeće operacije:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivirati ovu aplikaciju?"</string>
@@ -736,7 +739,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Upravitelj organizacije može nadzirati aplikacije i podatke povezane s ovim profilom te upravljati njima, uključujući postavke, odobrenja, korporativni pristup, aktivnost na mreži i informacije o lokaciji uređaja."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Upravitelj organizacije može nadzirati aplikacije i podatke povezane s ovim informativno-zabavnim sistemom te upravljati njima, uključujući postavke, odobrenja, korporativni pristup, aktivnost na mreži i informacije o lokaciji vozila."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Upravitelj organizacije će možda moći pristupati podacima povezanim s ovim informativno-zabavnim sistemom, upravljati aplikacijama i mijenjati postavke ovog vozila."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Blokirao upravitelj organizacije"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"To nije dostupno"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Nije moguće promijeniti jačinu zvuka u ovom vozilu kojim se upravlja"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Nije moguće upućivati pozive u ovom vozilu kojim se upravlja"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"SMS poruke nisu dozvoljene u ovom vozilu kojim se upravlja"</string>
@@ -744,7 +747,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Nije moguće praviti snimke ekrana u ovom vozilu kojim se upravlja"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Nije moguće otvoriti ovu aplikaciju u ovom vozilu kojim se upravlja"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokirao vaš dobavljač kredita"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Ako imate pitanja, kontaktirajte upravitelja organizacije"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Vaša organizacija je ograničila pristup nekim funkcijama.\n\nAko imate pitanja, kontaktirajte upravitelja organizacije."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Aplikacije administratora vozila"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktivirana aplikacija}one{# aktivirana aplikacija}few{# aktivirane aplikacije}other{# aktiviranih aplikacija}}"</string>

@@ -722,10 +722,15 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Видалити цей профіль"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Додати профіль"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яскравість дисплея"</string>
+    <!-- no translation found for qc_bluetooth_off_devices_info (8420985279976892700) -->
+    <skip />
+    <!-- no translation found for qc_bluetooth_on_no_devices_info (7573736950041887300) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"Адміністратор інформаційно-розважальної системи"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Активовані додатки"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Деактивовані додатки"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Немає додатків адміністратора інформаційно-розважальної системи"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Додатки з цим дозволом мають доступ до даних транспортного засобу"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Немає додатків адміністратора транспортного засобу"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Цей додаток адміністратора інформаційно-розважальної системи активний і дає змогу додатку <xliff:g id="APP_NAME">%1$s</xliff:g> виконувати вказані нижче операції."</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Якщо ви активуєте цей додаток інформаційно-розважальної системи, додаток <xliff:g id="APP_NAME">%1$s</xliff:g> зможе виконувати вказані нижче операції."</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Активувати цей додаток?"</string>
@@ -736,7 +741,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Адміністратор організації може відстежувати додатки й дані, пов’язані з цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження пристрою, а також керувати ними."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Адміністратор організації може відстежувати додатки й дані, пов’язані з цією інформаційно-розважальною системою, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження транспортного засобу, а також керувати ними."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Адміністратор організації може мати доступ до даних, пов’язаних з цією інформаційно-розважальною системою, керувати додатками й змінювати налаштування цього транспортного засобу."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"Заблоковано адміністратором"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Немає доступу"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Не вдається змінити гучність у цьому керованому транспортному засобі"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Не вдається здійснювати виклики в цьому керованому транспортному засобі"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Заборонено надсилати SMS у цьому керованому транспортному засобі"</string>
@@ -744,7 +749,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"У цьому керованому транспортному засобі не можна робити знімки екрана"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Не вдається відкрити додаток у цьому керованому транспортному засобі"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Заблоковано кредитором"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"Якщо у вас виникли запитання, зв’яжіться з адміністратором організації"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Доступ до деяких функцій обмежує організація.\n\nЯкщо у вас є запитання, зв’яжіться з її керівником."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Програми для адміністраторів авто"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активований додаток}one{# активований додаток}few{# активовані додатки}many{# активованих додатків}other{# активованого додатка}}"</string>

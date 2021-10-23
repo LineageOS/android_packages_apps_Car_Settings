@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ಈ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಅಳಿಸಿ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ಪ್ರೊಫೈಲ್ ಅನ್ನು ಸೇರಿಸಿ"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ಡಿಸ್‌ಪ್ಲೇ ಪ್ರಖರತೆ"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ನಿಮ್ಮ ಸಾಧನಗಳನ್ನು ನೋಡಲು, ಬ್ಲೂಟೂತ್ ಆನ್ ಮಾಡಿ"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ಸಾಧನವನ್ನು ಜೋಡಿಸಲು, ಬ್ಲೂಟೂತ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ನಿರ್ವಾಹಕರು"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ನಿಷ್ಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"ಯಾವುದೇ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ನಿರ್ವಾಹಕ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"ಈ ಅನುಮತಿಯನ್ನು ಹೊಂದಿರುವ ಆ್ಯಪ್‌ಗಳು ಈ ವಾಹನದ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಬಹುದು"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"ಯಾವುದೇ ವಾಹನ ನಿರ್ವಾಹಕ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ನಿರ್ವಾಹಕ ಆ್ಯಪ್ ಸಕ್ರಿಯವಾಗಿದೆ ಮತ್ತು ಈ ಕೆಳಗಿನ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು <xliff:g id="APP_NAME">%1$s</xliff:g> ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುತ್ತದೆ:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ಈ ಕೆಳಗಿನ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ಮಾಡಲು <xliff:g id="APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಲಾಗುತ್ತದೆ:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಸಕ್ರಿಯಗೊಳಿಸುವುದೇ?"</string>
@@ -736,7 +739,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಪ್ರೊಫೈಲ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ವಾಹನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು, ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಮತ್ತು ಈ ವಾಹನ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಬಹುದು."</string>
-    <string name="disabled_by_policy_title" msgid="2286662897538395033">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರಿಂದ ನಿರ್ಬಂಧ"</string>
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"ಅದು ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ ವಾಲ್ಯೂಮ್ ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ ಕರೆಗಳನ್ನು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ SMS ಅನ್ನು ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
@@ -744,7 +747,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"ನಿರ್ವಹಿಸಿದ ಈ ವಾಹನದಲ್ಲಿ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಅನ್ನು ತೆಗೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"ಈ ನಿರ್ವಹಿಸಿದ ವಾಹನದಲ್ಲಿ ಈ ಆ್ಯಪ್ ಅನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ನಿಮ್ಮ ಕ್ರೆಡಿಟ್ ಒದಗಿಸುವವರಿಂದ ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ"</string>
-    <string name="default_admin_support_msg" msgid="6916978034310038418">"ನಿಮಗೆ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳಿದ್ದರೆ, ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳಿಗೆ ಪ್ರವೇಶವನ್ನು ಸಂಸ್ಥೆಯು ನಿರ್ಬಂಧಿಸಿದೆ.\n\nನೀವು ಪ್ರಶ್ನೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"ವಾಹನ ನಿರ್ವಹಣಾ ಆ್ಯಪ್‍ಗಳು"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್}one{# ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು}other{# ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು}}"</string>
