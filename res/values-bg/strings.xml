@@ -722,10 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Изтриване на този потр. профил"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Добавяне на потребителски профил"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркост на екрана"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"За да видите устройствата си, включете Bluetooth"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"За да сдвоите устройство, отворете настройките за Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Администратор на основното устройство"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Активирани приложения"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Деактивирани приложения"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Няма администраторски приложения на основното устройство"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Приложенията с това разрешение имат достъп до данните на превозното средство"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Няма администраторски приложения на превозното средство"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Това приложение за администриране на основното устройство е активно и разрешава на <xliff:g id="APP_NAME">%1$s</xliff:g> да изпълнява следните действия:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Активирането на това приложение за основното устройство ще разреши на <xliff:g id="APP_NAME">%1$s</xliff:g> да изпълнява следните действия:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Да се активира ли това приложение за основното у-во?"</string>
@@ -735,18 +738,15 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Администраторът на организацията може да наблюдава и управлява приложенията и данните, свързани с този потребителски профил, включително настройките, разрешенията, корпоративния достъп, мрежовата активност и информацията за местоположението на устройството."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Администраторът на организацията може да наблюдава и управлява приложенията и данните, свързани с това основно устройство, включително настройките, разрешенията, корпоративния достъп, мрежовата активност и информацията за местоположението на превозното средство."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Администраторът на организацията може да има достъп до свързаните с основното устройство данни, да управлява приложенията и да променя настройките на това превозно средство."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Това не е налице"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Силата на звука в това управлявано превозно средство не може да се променя"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Не може да се извършват обаждания в това управлявано превозно средство"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Изпращането на SMS съобщения не е разрешено в това управлявано превозно средство"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Камерата не е налице в това управлявано превозно средство"</string>
-    <!-- no translation found for disabled_by_policy_title_screen_capture (4059715943558852466) -->
-    <skip />
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"В това управлявано превозно средство не могат да се правят екранни снимки"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Това приложение не може да бъде отворено в това управлявано превозно средство"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Блокирано от кредитодателя"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Достъпът до някои функции е ограничен от организацията.\n\nАко имате въпроси, свържете се с мениджъра ѝ."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Приложения за администриране"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активирано приложение}other{# активирани приложения}}"</string>

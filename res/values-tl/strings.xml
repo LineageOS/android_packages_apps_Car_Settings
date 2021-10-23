@@ -722,10 +722,15 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"I-delete ang profile na ito"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Magdagdag ng profile"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Liwanag ng display"</string>
+    <!-- no translation found for qc_bluetooth_off_devices_info (8420985279976892700) -->
+    <skip />
+    <!-- no translation found for qc_bluetooth_on_no_devices_info (7573736950041887300) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"Admin ng infotainment system"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Mga na-activate na app"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Mga na-deactivate na app"</string>
-    <string name="device_admin_apps_list_empty" msgid="2029922702964310266">"Walang app ng admin ng infotainment system"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Ang mga app na may ganitong pahintulot ay may access sa data ng sasakyang ito"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Walang app ng admin ng sasakyan"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Aktibo ang infotainment system admin app na ito at pinapayagan ang app na <xliff:g id="APP_NAME">%1$s</xliff:g> na gawin ang mga sumusunod na operation:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Kapag na-activate ang infotainment system app na ito, papayagan nito ang app na <xliff:g id="APP_NAME">%1$s</xliff:g> na gawin ang mga sumusunod na operation:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"I-activate ang infotainment system app na ito?"</string>
@@ -735,8 +740,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Masusubaybayan at mapapamahalaan ng manager ng organisasyon ang mga app at data na nauugnay sa profile na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng device."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Masusubaybayan at mapapamahalaan ng manager ng organisasyon ang mga app at data na nauugnay sa infotainment system na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng sasakyan."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Posibleng magawa ng manager ng organisasyon na i-access ang data na nauugnay sa infotainment system na ito, pamahalaan ang mga app, at baguhin ang mga setting ng sasakyang ito."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"Hindi iyan available"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Hindi puwedeng baguhin ang volume sa pinapamahalaang sasakyang ito"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Hindi puwedeng tumawag sa pinapamahalaang sasakyang ito"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Hindi pinapayagan ang SMS sa pinapamahalaang sasakyang ito"</string>
@@ -744,8 +748,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Hindi puwedeng kumuha ng mga screenshot sa pinapamahalaang sasakyang ito"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Hindi puwedeng buksan ang app na ito sa pinapamahalaang sasakyang ito"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Na-block ng iyong credit provider"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"Nililimitahan ng organisasyon ang access sa ilang feature.\n\nKung mayroon kang mga tanong, makipag-ugnayan sa manager ng organisasyon."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Mga app ng admin ng sasakyan"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# na-activate na app}one{# na-activate na app}other{# na na-activate na app}}"</string>
