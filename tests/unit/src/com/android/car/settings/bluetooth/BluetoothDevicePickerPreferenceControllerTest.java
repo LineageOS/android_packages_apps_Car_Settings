@@ -20,15 +20,16 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assume.assumeTrue;
 import static org.mockito.Mockito.inOrder;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.withSettings;
 import static org.testng.Assert.assertThrows;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothDevicePicker;
+import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothUuid;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
@@ -67,6 +68,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.MockitoSession;
+import org.mockito.quality.Strictness;
 
 import java.util.Arrays;
 
@@ -129,12 +131,14 @@ public class BluetoothDevicePickerPreferenceControllerTest {
         when(mUnbondedCachedDevice.compareTo(mBondedCachedDevice)).thenReturn(1);
 
         mSession = ExtendedMockito.mockitoSession()
-                .mockStatic(BluetoothUtils.class, withSettings().lenient())
-                .spyStatic(BluetoothAdapter.class)
+                .mockStatic(BluetoothUtils.class)
+                .strictness(Strictness.LENIENT)
                 .startMocking();
         when(BluetoothUtils.getLocalBtManager(mContext)).thenReturn(mLocalBluetoothManager);
-        mSpyBluetoothAdapter = spy(BluetoothAdapter.getDefaultAdapter());
-        when(BluetoothAdapter.getDefaultAdapter()).thenReturn(mSpyBluetoothAdapter);
+        mSpyBluetoothAdapter = spy(mContext.getSystemService(BluetoothManager.class).getAdapter());
+        BluetoothManager bluetoothManager = mock(BluetoothManager.class);
+        when(bluetoothManager.getAdapter()).thenReturn(mSpyBluetoothAdapter);
+        when(mContext.getSystemService(BluetoothManager.class)).thenReturn(bluetoothManager);
 
         mPreferenceController = new TestBluetoothDevicePickerPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController,
