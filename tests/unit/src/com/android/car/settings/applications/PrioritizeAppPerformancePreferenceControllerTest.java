@@ -174,7 +174,7 @@ public class PrioritizeAppPerformancePreferenceControllerTest {
         mController.onCreate(mLifecycleOwner);
         assertThat(mTwoStatePreference.isChecked()).isTrue();
 
-        mTwoStatePreference.callChangeListener(false);
+        mTwoStatePreference.performClick();
 
         verify(mMockManager).setKillablePackageAsUser(
                 TEST_PKG_NAME, UserHandle.getUserHandleForUid(TEST_UID), true);

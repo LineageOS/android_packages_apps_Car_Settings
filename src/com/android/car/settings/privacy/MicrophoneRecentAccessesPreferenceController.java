@@ -102,6 +102,10 @@ public class MicrophoneRecentAccessesPreferenceController extends
         return mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false);
     }
 
+    private boolean hasAtLeastOneRecentAppAccess() {
+        return !mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ true).isEmpty();
+    }
+
     private void updateUi(List<RecentAppOpsAccess.Access> sortedRecentMicrophoneAccesses) {
         // remove any already added preferences
         for (CarUiPreference addedPreference : mAddedPreferences) {
@@ -124,12 +128,25 @@ public class MicrophoneRecentAccessesPreferenceController extends
                 mAddedPreferences.add(appPreference);
             }
         }
+
+        if (hasAtLeastOneRecentAppAccess()) {
+            CarUiPreference viewAllPreference = createViewAllPreference();
+            getPreference().addPreference(viewAllPreference);
+            mAddedPreferences.add(viewAllPreference);
+        }
     }
 
     private CarUiPreference createNoRecentAccessPreference() {
         CarUiPreference preference = new CarUiPreference(getContext());
         preference.setTitle(R.string.microphone_no_recent_access);
         preference.setSelectable(false);
+        return preference;
+    }
+
+    private CarUiPreference createViewAllPreference() {
+        CarUiPreference preference = new CarUiPreference(getContext());
+        preference.setTitle(R.string.microphone_settings_recent_requests_view_all_title);
+        preference.setIcon(R.drawable.ic_apps);
         return preference;
     }
 }

@@ -59,7 +59,7 @@ public class MobileDataRow extends SettingsQCItem {
         if (TextUtils.isEmpty(subtitle)) {
             subtitle = null;
         }
-        Icon icon = Icon.createWithResource(getContext(), R.drawable.ic_qc_mobile_data);
+        Icon icon = MobileNetworkQCUtils.getMobileNetworkSignalIcon(getContext());
 
         QCActionItem dataToggle = new QCActionItem.Builder(QC_TYPE_ACTION_SWITCH)
                 .setChecked(mDataUsageController.isMobileDataEnabled())

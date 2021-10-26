@@ -87,9 +87,19 @@ public class PairedBluetoothDevices extends SettingsQCItem {
     QCItem getQCItem() {
         if (!getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
                 || mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)
-                || !BluetoothAdapter.getDefaultAdapter().isEnabled()
                 || mDeviceLimit == 0) {
             return null;
+        }
+
+        QCList.Builder listBuilder = new QCList.Builder();
+
+        if (!BluetoothAdapter.getDefaultAdapter().isEnabled()) {
+            listBuilder.addRow(new QCRow.Builder()
+                    .setIcon(Icon.createWithResource(getContext(),
+                            R.drawable.ic_settings_bluetooth_disabled))
+                    .setTitle(getContext().getString(R.string.qc_bluetooth_off_devices_info))
+                    .build());
+            return listBuilder.build();
         }
 
         Collection<CachedBluetoothDevice> cachedDevices =
@@ -107,7 +117,14 @@ public class PairedBluetoothDevices extends SettingsQCItem {
         }
         filteredDevices.sort(Comparator.naturalOrder());
 
-        QCList.Builder listBuilder = new QCList.Builder();
+        if (filteredDevices.isEmpty()) {
+            listBuilder.addRow(new QCRow.Builder()
+                    .setIcon(Icon.createWithResource(getContext(),
+                            R.drawable.ic_settings_bluetooth))
+                    .setTitle(getContext().getString(R.string.qc_bluetooth_on_no_devices_info))
+                    .build());
+            return listBuilder.build();
+        }
 
         int i = 0;
         int deviceLimit = mDeviceLimit >= 0 ? Math.min(mDeviceLimit, filteredDevices.size())

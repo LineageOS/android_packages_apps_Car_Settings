@@ -170,7 +170,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         if (isNotCurrentUserOrProfile(context, admin, userId)) {
             admin = null;
         }
-        setAdminSupportIcon(context, builder, admin, userId);
+        // NOTE: not showing icon
         setAdminSupportTitle(context, builder, mRestriction);
 
         if (enforcedAdmin != null) {
@@ -182,11 +182,6 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
             @UserIdInt int userId) {
         return !RestrictedLockUtilsInternal.isAdminInCurrentUserOrProfile(context, admin)
                 || !RestrictedLockUtils.isCurrentUserOrProfile(context, userId);
-    }
-
-    private void setAdminSupportIcon(Context context, AlertDialogBuilder builder,
-            ComponentName admin, @UserIdInt int userId) {
-        builder.setIcon(R.drawable.ic_blocked_by_admin);
     }
 
     private void setAdminSupportTitle(Context context, AlertDialogBuilder builder,
