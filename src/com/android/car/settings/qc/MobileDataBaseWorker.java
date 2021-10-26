@@ -39,6 +39,8 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
     private final TelephonyManager mTelephonyManager;
     private final int mSubId;
     private final SignalStrengthsListener mSignalStrengthsListener;
+    private boolean mCallbacksRegistered;
+
     private final ContentObserver mMobileDataChangeObserver = new ContentObserver(
             new Handler(Looper.getMainLooper())) {
         @Override
@@ -57,26 +59,34 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
 
     @Override
     protected void onQCItemSubscribe() {
-        if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+        if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID && !mCallbacksRegistered) {
             mTelephonyManager.registerTelephonyCallback(getContext().getMainExecutor(),
                     mSignalStrengthsListener);
             getContext().getContentResolver().registerContentObserver(getObservableUri(mSubId),
                     /* notifyForDescendants= */ false, mMobileDataChangeObserver);
+            mCallbacksRegistered = true;
         }
     }
 
     @Override
     protected void onQCItemUnsubscribe() {
         if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
-            mTelephonyManager.unregisterTelephonyCallback(mSignalStrengthsListener);
-            getContext().getContentResolver().unregisterContentObserver(mMobileDataChangeObserver);
+            unregisterCallbacks();
         }
     }
 
     @Override
     public void close() throws IOException {
         if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+            unregisterCallbacks();
+        }
+    }
+
+    private void unregisterCallbacks() {
+        if (mCallbacksRegistered) {
+            mTelephonyManager.unregisterTelephonyCallback(mSignalStrengthsListener);
             getContext().getContentResolver().unregisterContentObserver(mMobileDataChangeObserver);
+            mCallbacksRegistered = false;
         }
     }
 
