@@ -18,7 +18,12 @@ package com.android.car.settings.network;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.database.ContentObserver;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.UserManager;
+import android.provider.Settings;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -42,6 +47,15 @@ public class MobileNetworkEntryPreferenceController extends
     private final SubscriptionsChangeListener mChangeListener;
     private final SubscriptionManager mSubscriptionManager;
     private final TelephonyManager mTelephonyManager;
+    private final int mSubscriptionId;
+    private final ContentObserver mMobileDataChangeObserver = new ContentObserver(
+            new Handler(Looper.getMainLooper())) {
+        @Override
+        public void onChange(boolean selfChange) {
+            super.onChange(selfChange);
+            refreshUi();
+        }
+    };
 
     public MobileNetworkEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -50,6 +64,7 @@ public class MobileNetworkEntryPreferenceController extends
         mChangeListener = new SubscriptionsChangeListener(context, /* action= */ this);
         mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
         mTelephonyManager = context.getSystemService(TelephonyManager.class);
+        mSubscriptionId = SubscriptionManager.getDefaultDataSubscriptionId();
     }
 
     @Override
@@ -60,7 +75,6 @@ public class MobileNetworkEntryPreferenceController extends
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-        getPreference().setSecondaryActionChecked(mTelephonyManager.isDataEnabled());
         getPreference().setOnSecondaryActionClickListener(isChecked -> {
             mTelephonyManager.setDataEnabled(isChecked);
         });
@@ -72,16 +86,24 @@ public class MobileNetworkEntryPreferenceController extends
                 mSubscriptionManager, mTelephonyManager);
         preference.setEnabled(!subs.isEmpty());
         preference.setSummary(getSummary(subs));
+        getPreference().setSecondaryActionChecked(mTelephonyManager.isDataEnabled());
     }
 
     @Override
     protected void onStartInternal() {
         mChangeListener.start();
+        if (mSubscriptionId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+            getContext().getContentResolver().registerContentObserver(getObservableUri(
+                    mSubscriptionId), /* notifyForDescendants= */ false, mMobileDataChangeObserver);
+        }
     }
 
     @Override
     protected void onStopInternal() {
         mChangeListener.stop();
+        if (mSubscriptionId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+            getContext().getContentResolver().unregisterContentObserver(mMobileDataChangeObserver);
+        }
     }
 
     @Override
@@ -119,7 +141,7 @@ public class MobileNetworkEntryPreferenceController extends
     @Override
     @CallSuper
     public void onSubscriptionsChanged() {
-        getPreference().setSecondaryActionChecked(mTelephonyManager.isDataEnabled());
+        refreshUi();
     }
 
     private CharSequence getSummary(List<SubscriptionInfo> subs) {
@@ -132,5 +154,13 @@ public class MobileNetworkEntryPreferenceController extends
             return StringUtil.getIcuPluralsString(getContext(), count,
                     R.string.mobile_network_summary_count);
         }
+    }
+
+    private Uri getObservableUri(int subId) {
+        Uri uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA);
+        if (mTelephonyManager.getSimCount() != 1) {
+            uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA + subId);
+        }
+        return uri;
     }
 }
