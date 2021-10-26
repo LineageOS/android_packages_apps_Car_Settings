@@ -106,6 +106,7 @@ public final class NotificationAccessConfirmationActivityTest {
         AndroidMockitoHelper.syncRunOnUiThread(mActivity, () -> {
             getConfirmationDialog().getButton(DialogInterface.BUTTON_POSITIVE).performClick();
         });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
         // Not asserting DESTROYED state as mActivityScenario.getState() returns STARTED state for
         // some unknown reason.
@@ -137,6 +138,7 @@ public final class NotificationAccessConfirmationActivityTest {
         AndroidMockitoHelper.syncRunOnUiThread(mActivity, () -> {
             getConfirmationDialog().getButton(DialogInterface.BUTTON_NEGATIVE).performClick();
         });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
         // Not asserting DESTROYED state as mActivityScenario.getState() returns STARTED state for
         // some unknown reason.

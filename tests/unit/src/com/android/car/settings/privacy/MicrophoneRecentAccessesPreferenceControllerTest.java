@@ -146,6 +146,34 @@ public class MicrophoneRecentAccessesPreferenceControllerTest {
     }
 
     @Test
+    public void refreshUi_noRecentRequests_exceptForSomeRecentSystemAppRequests_showsViewAll() {
+        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
+                .thenReturn(Collections.emptyList());
+        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ true))
+                .thenReturn(Collections.singletonList(mock(RecentAppOpsAccess.Access.class)));
+        mPreferenceController.refreshUi();
+
+        // includes preference for "View all"
+        assertThat(mPreference.getPreferenceCount()).isEqualTo(2);
+        assertThat(mPreference.getPreference(1).getTitle()).isEqualTo(
+                mContext.getString(R.string.microphone_settings_recent_requests_view_all_title));
+    }
+
+    @Test
+    public void refreshUi_noRecentRequests_includingNoSystemAppRequests_doesNotShowViewAll() {
+        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
+                .thenReturn(Collections.emptyList());
+        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ true))
+                .thenReturn(Collections.emptyList());
+        mPreferenceController.refreshUi();
+
+        // no preference for "View all"
+        assertThat(mPreference.getPreferenceCount()).isEqualTo(1);
+        assertThat(mPreference.getPreference(0).getTitle()).isEqualTo(
+                mContext.getString(R.string.microphone_no_recent_access));
+    }
+
+    @Test
     public void refreshUi_someRecentRequests_displaysAppInformation() {
         String fakeLabel = "Test app 1";
         RecentAppOpsAccess.Access fakeAccess = new RecentAppOpsAccess.Access("com.test",

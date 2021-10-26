@@ -16,21 +16,35 @@
 
 package com.android.car.settings.network;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.car.drivingstate.CarUxRestrictions;
+import android.content.Context;
+import android.os.UserManager;
 import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
+import android.telephony.TelephonyManager;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.test.annotation.UiThreadTest;
+import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 import com.android.settingslib.utils.StringUtil;
 
@@ -40,19 +54,51 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
 @RunWith(AndroidJUnit4.class)
-public class MobileNetworkEntryPreferenceControllerTest extends MobileNetworkTestCase {
+public class MobileNetworkEntryPreferenceControllerTest {
 
+    private static final String TEST_NETWORK_NAME = "test network name";
+
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+    private LifecycleOwner mLifecycleOwner;
     private CarUiTwoActionSwitchPreference mPreference;
     private MobileNetworkEntryPreferenceController mPreferenceController;
+    private CarUxRestrictions mCarUxRestrictions;
+
+    @Mock
+    private FragmentController mFragmentController;
+    @Mock
+    private UserManager mUserManager;
+    @Mock
+    private SubscriptionManager mSubscriptionManager;
+    @Mock
+    private TelephonyManager mTelephonyManager;
 
     @Before
     @UiThreadTest
     public void setUp() {
-        super.setUp();
+        MockitoAnnotations.initMocks(this);
+        mLifecycleOwner = new TestLifecycleOwner();
+
+        // Setup to always make preference available.
+        when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mUserManager);
+        when(mContext.getSystemService(SubscriptionManager.class)).thenReturn(mSubscriptionManager);
+        when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mTelephonyManager);
+
+        when(mTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_PRESENT);
+
+        when(mUserManager.isAdminUser()).thenReturn(true);
+        when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS))
+                .thenReturn(false);
+
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
         mPreference = new CarUiTwoActionSwitchPreference(mContext);
         mPreferenceController = new MobileNetworkEntryPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
@@ -60,7 +106,34 @@ public class MobileNetworkEntryPreferenceControllerTest extends MobileNetworkTes
     }
 
     @Test
-    public void onCreate_noSims_disabled() {
+    public void getAvailabilityStatus_noSim_unsupported() {
+        when(mTelephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_ABSENT);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_notAdmin_disabledForUser() {
+        when(mUserManager.isAdminUser()).thenReturn(false);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_hasRestriction_disabledForUser() {
+        when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS))
+                .thenReturn(true);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_hasMobileNetwork_isAdmin_noRestriction_available() {
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void onCreate_noSubscriptions_disabled() {
         mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isEnabled()).isFalse();
@@ -68,55 +141,37 @@ public class MobileNetworkEntryPreferenceControllerTest extends MobileNetworkTes
 
     @Test
     public void onCreate_oneSim_enabled() {
-        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ TEST_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 1, TEST_DISPLAY_NAME);
+        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
         List<SubscriptionInfo> selectable = Lists.newArrayList(info);
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
         mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isEnabled()).isTrue();
     }
 
-
-    @Test
-    public void onCreate_oneOemSim_hidden() {
-        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ TEST_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 1, TEST_DISPLAY_NAME);
-        List<SubscriptionInfo> selectable = Lists.newArrayList(info);
-        when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        assertThat(mPreference.isVisible()).isFalse();
-    }
-
     @Test
     public void onCreate_oneSim_summaryIsDisplayName() {
-        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ TEST_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 1, TEST_DISPLAY_NAME);
+        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
         List<SubscriptionInfo> selectable = Lists.newArrayList(info);
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.getSummary()).isEqualTo(TEST_DISPLAY_NAME);
+        assertThat(mPreference.getSummary()).isEqualTo(TEST_NETWORK_NAME);
     }
 
     @Test
     public void onCreate_multiSim_enabled() {
-        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ TEST_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 1, TEST_DISPLAY_NAME);
-        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ TEST_OTHER_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 2, TEST_DISPLAY_NAME);
+        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ 2,
+                /* simSlotIndex= */ 2, TEST_NETWORK_NAME);
         List<SubscriptionInfo> selectable = Lists.newArrayList(info1, info2);
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
-        when(mTelephonyNetworkSpecifier.getSubscriptionId()).thenReturn(TEST_OTHER_SUBSCRIPTION_ID);
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
         mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.isEnabled()).isTrue();
@@ -124,16 +179,13 @@ public class MobileNetworkEntryPreferenceControllerTest extends MobileNetworkTes
 
     @Test
     public void onCreate_multiSim_summaryShowsCount() {
-        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ TEST_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 1, TEST_DISPLAY_NAME);
-        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ TEST_OTHER_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 2, TEST_DISPLAY_NAME);
+        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ 2,
+                /* simSlotIndex= */ 2, TEST_NETWORK_NAME);
         List<SubscriptionInfo> selectable = Lists.newArrayList(info1, info2);
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
-        when(mTelephonyNetworkSpecifier.getSubscriptionId()).thenReturn(TEST_OTHER_SUBSCRIPTION_ID);
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
         mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreference.getSummary()).isEqualTo(StringUtil.getIcuPluralsString(mContext, 2,
@@ -153,12 +205,12 @@ public class MobileNetworkEntryPreferenceControllerTest extends MobileNetworkTes
     @Test
     @UiThreadTest
     public void performClick_oneSim_startsMobileNetworkFragment() {
-        SubscriptionInfo info = createSubscriptionInfo(TEST_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 1, TEST_DISPLAY_NAME);
+        int subId = 1;
+        SubscriptionInfo info = createSubscriptionInfo(subId, /* simSlotIndex= */ 1,
+                TEST_NETWORK_NAME);
         List<SubscriptionInfo> selectable = Lists.newArrayList(info);
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreference.performClick();
 
@@ -167,25 +219,34 @@ public class MobileNetworkEntryPreferenceControllerTest extends MobileNetworkTes
         verify(mFragmentController).launchFragment(captor.capture());
 
         assertThat(captor.getValue().getArguments().getInt(MobileNetworkFragment.ARG_NETWORK_SUB_ID,
-                -1)).isEqualTo(TEST_SUBSCRIPTION_ID);
+                -1)).isEqualTo(subId);
     }
 
     @Test
     @UiThreadTest
     public void performClick_multiSim_startsMobileNetworkListFragment() {
-        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ TEST_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 1, TEST_DISPLAY_NAME);
-        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ TEST_OTHER_SUBSCRIPTION_ID,
-                /* simSlotIndex= */ 2, TEST_DISPLAY_NAME);
+        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ 2,
+                /* simSlotIndex= */ 2, TEST_NETWORK_NAME);
         List<SubscriptionInfo> selectable = Lists.newArrayList(info1, info2);
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
-        when(mTelephonyNetworkSpecifier.getSubscriptionId()).thenReturn(TEST_OTHER_SUBSCRIPTION_ID);
-        mPreferenceController.mNetworkCallback.onAvailable(mNetwork);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreference.performClick();
 
-        verify(mFragmentController).launchFragment(any(MobileNetworkListFragment.class));
+        verify(mFragmentController).launchFragment(
+                any(MobileNetworkListFragment.class));
+    }
+
+    private SubscriptionInfo createSubscriptionInfo(int subId, int simSlotIndex,
+            String displayName) {
+        SubscriptionInfo subInfo = new SubscriptionInfo(subId, /* iccId= */ "",
+                simSlotIndex, displayName, /* carrierName= */ "",
+                /* nameSource= */ 0, /* iconTint= */ 0, /* number= */ "",
+                /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", "mncString",
+                /* countryIso= */ "", /* isEmbedded= */ false,
+                /* accessRules= */ null, /* cardString= */ "");
+        return subInfo;
     }
 }

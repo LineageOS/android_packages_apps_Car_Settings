@@ -22,7 +22,9 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
+import android.telephony.SignalStrength;
 import android.telephony.SubscriptionManager;
+import android.telephony.TelephonyCallback;
 import android.telephony.TelephonyManager;
 
 import java.io.IOException;
@@ -34,7 +36,9 @@ import java.io.IOException;
 public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
         extends SettingsQCBackgroundWorker<E> {
 
+    private final TelephonyManager mTelephonyManager;
     private final int mSubId;
+    private final SignalStrengthsListener mSignalStrengthsListener;
     private final ContentObserver mMobileDataChangeObserver = new ContentObserver(
             new Handler(Looper.getMainLooper())) {
         @Override
@@ -46,12 +50,16 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
 
     protected MobileDataBaseWorker(Context context, Uri uri) {
         super(context, uri);
+        mTelephonyManager = context.getSystemService(TelephonyManager.class);
         mSubId = SubscriptionManager.getDefaultDataSubscriptionId();
+        mSignalStrengthsListener = new SignalStrengthsListener();
     }
 
     @Override
     protected void onQCItemSubscribe() {
         if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+            mTelephonyManager.registerTelephonyCallback(getContext().getMainExecutor(),
+                    mSignalStrengthsListener);
             getContext().getContentResolver().registerContentObserver(getObservableUri(mSubId),
                     /* notifyForDescendants= */ false, mMobileDataChangeObserver);
         }
@@ -60,6 +68,7 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
     @Override
     protected void onQCItemUnsubscribe() {
         if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+            mTelephonyManager.unregisterTelephonyCallback(mSignalStrengthsListener);
             getContext().getContentResolver().unregisterContentObserver(mMobileDataChangeObserver);
         }
     }
@@ -77,5 +86,14 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
             uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA + subId);
         }
         return uri;
+    }
+
+    private class SignalStrengthsListener extends TelephonyCallback
+            implements TelephonyCallback.SignalStrengthsListener {
+
+        @Override
+        public void onSignalStrengthsChanged(SignalStrength signalStrength) {
+            notifyQCItemChange();
+        }
     }
 }

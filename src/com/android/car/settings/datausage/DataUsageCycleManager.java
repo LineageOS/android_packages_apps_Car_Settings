@@ -20,6 +20,7 @@ import android.net.NetworkTemplate;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
@@ -45,7 +46,8 @@ public class DataUsageCycleManager {
         void onDataLoaded(List<NetworkCycleChartData> networkCycleChartData);
     }
 
-    private static final int NETWORK_CYCLE_LOADER_ID = 11;
+    @VisibleForTesting
+    static final int NETWORK_CYCLE_LOADER_ID = 11;
 
     private final Context mContext;
     private final NetworkTemplate mNetworkTemplate;
