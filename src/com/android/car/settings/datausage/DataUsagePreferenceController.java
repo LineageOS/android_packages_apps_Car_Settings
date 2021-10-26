@@ -59,7 +59,7 @@ public class DataUsagePreferenceController extends
     }
 
     @Override
-    protected void onCreateInternal() {
+    protected void updateState(Preference preference) {
         DataUsageController.DataUsageInfo info = mDataUsageController.getDataUsageInfo(
                 getNetworkTemplate());
         getPreference().setSummary(String.format(STRING_FORMAT, getUsageText(info),
