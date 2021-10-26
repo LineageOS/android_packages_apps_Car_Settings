@@ -34,6 +34,7 @@ public class HotspotTileWorker extends SettingsQCBackgroundWorker<HotspotTile> {
     private final WifiManager mWifiManager;
     private final TetheringManager mTetheringManager;
     private final Handler mHandler;
+    private boolean mCallbacksRegistered;
 
     private final TetheringManager.TetheringEventCallback mTetheringEventCallback =
             new TetheringManager.TetheringEventCallback() {
@@ -62,20 +63,29 @@ public class HotspotTileWorker extends SettingsQCBackgroundWorker<HotspotTile> {
 
     @Override
     protected void onQCItemSubscribe() {
-        mTetheringManager.registerTetheringEventCallback(
-                new HandlerExecutor(mHandler), mTetheringEventCallback);
-        mWifiManager.registerSoftApCallback(getContext().getMainExecutor(), mSoftApCallback);
+        if (!mCallbacksRegistered) {
+            mTetheringManager.registerTetheringEventCallback(
+                    new HandlerExecutor(mHandler), mTetheringEventCallback);
+            mWifiManager.registerSoftApCallback(getContext().getMainExecutor(), mSoftApCallback);
+            mCallbacksRegistered = true;
+        }
     }
 
     @Override
     protected void onQCItemUnsubscribe() {
-        mWifiManager.unregisterSoftApCallback(mSoftApCallback);
-        mTetheringManager.unregisterTetheringEventCallback(mTetheringEventCallback);
+        unregisterCallbacks();
     }
 
     @Override
     public void close() throws IOException {
-        mWifiManager.unregisterSoftApCallback(mSoftApCallback);
-        mTetheringManager.unregisterTetheringEventCallback(mTetheringEventCallback);
+        unregisterCallbacks();
+    }
+
+    private void unregisterCallbacks() {
+        if (mCallbacksRegistered) {
+            mWifiManager.unregisterSoftApCallback(mSoftApCallback);
+            mTetheringManager.unregisterTetheringEventCallback(mTetheringEventCallback);
+            mCallbacksRegistered = false;
+        }
     }
 }
