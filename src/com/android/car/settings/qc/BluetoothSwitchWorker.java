@@ -30,6 +30,7 @@ import java.io.IOException;
  */
 public class BluetoothSwitchWorker extends SettingsQCBackgroundWorker<BluetoothSwitch> {
 
+    private boolean mReceiverRegistered;
     private final IntentFilter mIntentFilter = new IntentFilter(
             BluetoothAdapter.ACTION_STATE_CHANGED);
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -45,16 +46,26 @@ public class BluetoothSwitchWorker extends SettingsQCBackgroundWorker<BluetoothS
 
     @Override
     protected void onQCItemSubscribe() {
-        getContext().registerReceiver(mReceiver, mIntentFilter);
+        if (!mReceiverRegistered) {
+            getContext().registerReceiver(mReceiver, mIntentFilter);
+            mReceiverRegistered = true;
+        }
     }
 
     @Override
     protected void onQCItemUnsubscribe() {
-        getContext().unregisterReceiver(mReceiver);
+        unregisterBluetoothReceiver();
     }
 
     @Override
     public void close() throws IOException {
-        getContext().unregisterReceiver(mReceiver);
+        unregisterBluetoothReceiver();
+    }
+
+    private void unregisterBluetoothReceiver() {
+        if (mReceiverRegistered) {
+            getContext().unregisterReceiver(mReceiver);
+            mReceiverRegistered = false;
+        }
     }
 }
