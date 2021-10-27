@@ -104,11 +104,11 @@
     <dimen name="profile_switcher_vertical_spacing_between_name_and_avatar">
         @*android:dimen/car_padding_4
     </dimen>
-    <dimen name="profile_switcher_current_profile_circle_width">126dp</dimen>
+    <dimen name="profile_switcher_current_profile_circle_width">150dp</dimen>
     <dimen name="profile_switcher_current_profile_circle_stroke_width">7dp</dimen>
     <dimen name="profile_switcher_margin_bottom">@*android:dimen/car_padding_4</dimen>
     <dimen name="profile_switcher_managed_badge_size">@*android:dimen/car_large_avatar_badge_size</dimen>
-    <dimen name="profile_switcher_managed_badge_margin">1dp</dimen>
+    <dimen name="profile_switcher_managed_badge_margin">3dp</dimen>
 
     <!-- Preferences -->
     <dimen name="two_action_preference_divider_width">1dp</dimen>
