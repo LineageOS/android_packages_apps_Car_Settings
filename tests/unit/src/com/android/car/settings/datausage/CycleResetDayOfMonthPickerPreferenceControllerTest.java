@@ -18,30 +18,31 @@ package com.android.car.settings.datausage;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.NetworkTemplate;
+import android.text.BidiFormatter;
+import android.text.TextDirectionHeuristics;
+import android.text.format.Time;
 
 import androidx.lifecycle.LifecycleOwner;
-import androidx.preference.Preference;
+import androidx.preference.ListPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
-import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.NetworkPolicyEditor;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -50,12 +51,13 @@ import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
 public class CycleResetDayOfMonthPickerPreferenceControllerTest {
+    private static int STARTING_VALUE = 15;
 
     private Context mContext = ApplicationProvider.getApplicationContext();
     private LifecycleOwner mLifecycleOwner;
     private CarUxRestrictions mCarUxRestrictions;
     private CycleResetDayOfMonthPickerPreferenceController mPreferenceController;
-    private Preference mPreference;
+    private ListPreference mPreference;
 
     @Mock
     private FragmentController mMockFragmentController;
@@ -63,9 +65,6 @@ public class CycleResetDayOfMonthPickerPreferenceControllerTest {
     private NetworkPolicyEditor mMockPolicyEditor;
     @Mock
     private NetworkTemplate mMockNetworkTemplate;
-    @Rule
-    public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
-            new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
 
     @Before
     public void setUp() {
@@ -77,32 +76,40 @@ public class CycleResetDayOfMonthPickerPreferenceControllerTest {
         mPreferenceController = new CycleResetDayOfMonthPickerPreferenceController(mContext,
                 /* preferenceKey= */ "key", mMockFragmentController,
                 mCarUxRestrictions);
-        mPreference = new CarUiPreference(mContext);
+        mPreference = new ListPreference(mContext);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         mPreferenceController.setNetworkPolicyEditor(mMockPolicyEditor);
         mPreferenceController.setNetworkTemplate(mMockNetworkTemplate);
+        when(mMockPolicyEditor.getPolicyCycleDay(mMockNetworkTemplate)).thenReturn(STARTING_VALUE);
         mPreferenceController.onCreate(mLifecycleOwner);
     }
 
     @Test
-    public void performClick_startsDialogWithStartingValue() throws Throwable {
-        int startingValue = 15;
-        when(mMockPolicyEditor.getPolicyCycleDay(mMockNetworkTemplate)).thenReturn(startingValue);
-        mPreferenceController.refreshUi();
-        mPreference.performClick();
+    public void onCreate_createEntries() {
+        CharSequence[] entries = mPreference.getEntries();
 
-        ArgumentCaptor<UsageCycleResetDayOfMonthPickerDialog> dialogCaptor =
-                ArgumentCaptor.forClass(UsageCycleResetDayOfMonthPickerDialog.class);
-        verify(mMockFragmentController).showDialog(
-                dialogCaptor.capture(), anyString());
+        assertThat(entries[0]).isEqualTo(
+                String.valueOf(CycleResetDayOfMonthPickerPreferenceController.MIN_DAY));
+        assertThat(entries[entries.length - 1]).isEqualTo(
+                String.valueOf(CycleResetDayOfMonthPickerPreferenceController.MAX_DAY));
+    }
 
-        UsageCycleResetDayOfMonthPickerDialog dialog = dialogCaptor.getValue();
+    @Test
+    public void onCreate_setsSummary() {
+        String prefix = mContext.getString(R.string.cycle_reset_day_of_month_picker_subtitle);
+        assertThat(mPreference.getSummary()).isEqualTo(BidiFormatter.getInstance().unicodeWrap(
+                prefix + " " + STARTING_VALUE,
+                TextDirectionHeuristics.LOCALE));
+    }
 
-        // Dialog was never started because FragmentController is mocked.
-        mActivityTestRule.runOnUiThread(() -> {
-            dialog.show(mActivityTestRule.getActivity().getSupportFragmentManager(), null);
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-        assertThat(dialog.getSelectedDayOfMonth()).isEqualTo(startingValue);
+    @Test
+    public void onPreferenceChanged_setsCycleDay() {
+        int newValue = STARTING_VALUE + 1;
+        mPreferenceController.handlePreferenceChanged(mPreference, String.valueOf(newValue));
+
+        ArgumentCaptor<Integer> captor = ArgumentCaptor.forClass(Integer.class);
+        verify(mMockPolicyEditor).setPolicyCycleDay(
+                eq(mMockNetworkTemplate), captor.capture(), eq(new Time().timezone));
+        assertThat(captor.getValue()).isEqualTo(newValue);
     }
 }
