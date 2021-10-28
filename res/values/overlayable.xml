@@ -893,6 +893,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="hide_system"/>
       <item type="string" name="hide_system_apps"/>
       <item type="string" name="hk_AboutSettingsActivity"/>
+      <item type="string" name="hk_AccessibilitySettingsActivity"/>
       <item type="string" name="hk_AddWifiActivity"/>
       <item type="string" name="hk_ApplicationsDetailsActivity"/>
       <item type="string" name="hk_ApplicationsSettingsActivity"/>
@@ -1439,6 +1440,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="style" name="PreferenceButtonIconAppearance"/>
       <item type="style" name="PreferenceButtonTextAppearance"/>
       <item type="xml" name="about_settings_fragment"/>
+      <item type="xml" name="accessibility_settings_fragment"/>
       <item type="xml" name="account_details_fragment"/>
       <item type="xml" name="account_sync_details_fragment"/>
       <item type="xml" name="adas_location_fragment"/>
