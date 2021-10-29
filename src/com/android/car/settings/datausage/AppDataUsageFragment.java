@@ -102,7 +102,8 @@ public class AppDataUsageFragment extends SettingsFragment implements
                 R.string.pk_data_usage_usage_history));
         use(DataUsageCyclePreferenceController.class,
                 R.string.pk_data_usage_usage_history)
-                .setDataCyclePickedListener(this);
+                .setDataCyclePickedListener(this)
+                .setDataUsageInfo(mDataUsageController.getDataUsageInfo(mNetworkTemplate));
 
         long usage = mDataUsageController.getDataUsageInfo(mNetworkTemplate).usageLevel;
         mAppDataUsageTotalPreferenceController =
