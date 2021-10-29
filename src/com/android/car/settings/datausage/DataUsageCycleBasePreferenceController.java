@@ -24,6 +24,7 @@ import androidx.preference.ListPreference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.settingslib.net.DataUsageController;
 import com.android.settingslib.net.NetworkCycleData;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public abstract class DataUsageCycleBasePreferenceController<T extends NetworkCy
     private boolean mIsLoaded = false;
     private DataCyclePickedListener<T> mDataCyclePickedListener;
     private Map<CharSequence, T> mDataUsages = new HashMap<>();
+    private DataUsageController.DataUsageInfo mDataUsageInfo;
 
     /** A listener that is called when a data cycle is selected.
      *
@@ -65,7 +67,14 @@ public abstract class DataUsageCycleBasePreferenceController<T extends NetworkCy
     @Override
     @CallSuper
     protected void updateState(ListPreference preference) {
-        getPreference().setSummary(getPreference().getEntry());
+        CharSequence entry = getPreference().getEntry();
+        if (entry != null) {
+            preference.setEnabled(true);
+            getPreference().setSummary(entry);
+        } else {
+            preference.setEnabled(false);
+            getPreference().setSummary(mDataUsageInfo.period);
+        }
         String cycle = getPreference().getValue();
         if (mIsLoaded) {
             mDataCyclePickedListener.onDataCyclePicked(cycle, mDataUsages);
@@ -75,15 +84,22 @@ public abstract class DataUsageCycleBasePreferenceController<T extends NetworkCy
     @Override
     @CallSuper
     protected void checkInitialized() {
-        if (mDataCyclePickedListener == null) {
-            throw new IllegalStateException(
-                    "DataCyclePickedListener should be set before calling this function.");
+        if (mDataCyclePickedListener == null || mDataUsageInfo == null) {
+            throw new IllegalStateException("DataCyclePickedListener and DataUsageInfo should be "
+                    + "set before calling this function.");
         }
     }
 
     /** Set DataCyclePickedListener */
-    public void setDataCyclePickedListener(DataCyclePickedListener<T> listener) {
+    public DataUsageCycleBasePreferenceController<T> setDataCyclePickedListener(
+            DataCyclePickedListener<T> listener) {
         mDataCyclePickedListener = listener;
+        return this;
+    }
+
+    /** Set DataUsageInfo */
+    public void setDataUsageInfo(DataUsageController.DataUsageInfo dataUsageInfo) {
+        mDataUsageInfo = dataUsageInfo;
     }
 
     /** Called to parse loaded data */
