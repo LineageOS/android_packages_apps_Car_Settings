@@ -17,16 +17,12 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:title="@string/accessibility_settings_title"
-                  android:key="@string/psk_accessibility_settings">
-    <PreferenceCategory
-        android:key="@string/pk_captions_settings_header"
-        android:title="@string/accessibility_settings_captions_title">
-        <Preference
-            android:fragment="com.android.car.settings.accessibility.CaptionsSettingsFragment"
-            android:key="@string/psk_captions_settings"
-            android:title="@string/captions_settings_title"
-            settings:controller="com.android.car.settings.accessibility.CaptionSettingsPreferenceController"/>
-    </PreferenceCategory>
-
+                  android:title="@string/captions_settings_title"
+                  android:key="@string/psk_captions_settings">
+    <com.android.car.settings.common.ColoredSwitchPreference
+        android:key="@string/pk_show_captions_switch"
+        android:title="@string/show_captions_toggle_title"
+        style="@style/ColoredSwitchPreferenceStyle"
+        settings:controller="com.android.car.settings.accessibility.ShowCaptionsSwitchPreferenceController"
+        settings:searchable="false"/>
 </PreferenceScreen>
