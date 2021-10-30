@@ -96,10 +96,6 @@
             android:finishOnTaskLaunch="true"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
-            <intent-filter android:priority="1">
-                <action android:name="android.settings.NIGHT_DISPLAY_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
             <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
