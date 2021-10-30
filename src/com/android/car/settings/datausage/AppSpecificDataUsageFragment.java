@@ -31,6 +31,7 @@ import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.common.UpdateSummaryPreferenceController;
 import com.android.settingslib.AppItem;
+import com.android.settingslib.net.DataUsageController;
 import com.android.settingslib.net.NetworkCycleDataForUid;
 import com.android.settingslib.net.UidDetail;
 import com.android.settingslib.net.UidDetailProvider;
@@ -95,9 +96,11 @@ public class AppSpecificDataUsageFragment extends SettingsFragment implements
                 .setTitle(uidDetail.label.toString())
                 .setIcon(uidDetail.icon);
 
+        DataUsageController dataUsageController = new DataUsageController(context);
         use(AppSpecificDataUsageCyclePreferenceController.class,
                 R.string.pk_app_specific_usage_cycle)
-                .setDataCyclePickedListener(this);
+                .setDataCyclePickedListener(this)
+                .setDataUsageInfo(dataUsageController.getDataUsageInfo(networkTemplate));
     }
 
     @Override
@@ -110,6 +113,8 @@ public class AppSpecificDataUsageFragment extends SettingsFragment implements
 
     @Override
     public void onDataCyclePicked(String cycle, Map<CharSequence, NetworkCycleDataForUid> usages) {
+        // TODO: (b/203824535) Default to generic "Calculating..." string after string freeze when
+        //  not yet loaded.
         NetworkCycleDataForUid cycleData = usages.get(cycle);
         use(UpdateSummaryPreferenceController.class,
                 R.string.pk_app_specific_usage_total)
