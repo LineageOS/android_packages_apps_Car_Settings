@@ -125,7 +125,7 @@
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"۲٫۴ گیگاهرتز"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"۵ گیگاهرتز"</string>
     <string name="wifi_network_detail" msgid="9070182553555487360">"جزئیات شبکه"</string>
-    <string name="wifi_mac_address" msgid="1466178247802349180">"نشانی MAC"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"نشانی واد"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"نشانی IP"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"پوشش زیرشبکه"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
@@ -722,10 +722,8 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"حذف کردن این نمایه"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"افزودن نمایه"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"روشنایی نمایشگر"</string>
-    <!-- no translation found for qc_bluetooth_off_devices_info (8420985279976892700) -->
-    <skip />
-    <!-- no translation found for qc_bluetooth_on_no_devices_info (7573736950041887300) -->
-    <skip />
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"برای دیدن دستگاه‌ها، بلوتوث را روشن کنید"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"برای مرتبط کردن دستگاه، تنظیمات بلوتوث را باز کنید"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"سرپرست سیستم اطلاعات-سرگرمی"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"برنامه‌های فعال"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"برنامه‌های غیرفعال"</string>
