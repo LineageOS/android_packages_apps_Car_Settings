@@ -88,7 +88,7 @@
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Verbinding met ander netwerk maken"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Netwerkvoorkeuren"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wifi"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Wifi inschakelen…"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"Wifi aanzetten…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wifi uitschakelen…"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Wifi-lijst laden…"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wifi uitgeschakeld"</string>
@@ -132,17 +132,17 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6-adressen"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Gateway"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wifi-voorkeuren"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Wifi automatisch inschakelen"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Wifi automatisch aanzetten"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wifi schakelt in bij opgeslagen kwaliteitsnetwerken, zoals je thuisnetwerk"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Niet beschikbaar: locatie uitgeschakeld. Schakel "<annotation id="link">"locatie"</annotation>" in."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wifi-scannen inschakelen?"</string>
-    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Inschakelen"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wifi-scannen aanzetten?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aanzetten"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-scannen ingeschakeld"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatisch overschakelen naar mobiele data"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Mobiele data gebruiken wanneer er geen internettoegang via wifi is. Er kunnen kosten voor datagebruik in rekening worden gebracht."</string>
     <string name="learn_more" msgid="8214605928933358604">"Meer informatie"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Naam hotspot"</string>
-    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> inschakelen..."</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aanzetten..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andere apparaten kunnen verbinding maken met <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Wachtwoord hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Beveiliging"</string>
@@ -162,7 +162,7 @@
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Uit"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitschakelen"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgeschakeld als er geen apparaten verbonden zijn"</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi inschakelen"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi aanzetten"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitschakelen"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Apparaat om te gebruiken met <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
@@ -188,16 +188,16 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Beschikbare apparaten"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profielen"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
-    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetooth inschakelen…"</string>
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetooth aanzetten…"</string>
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetooth uitschakelen…"</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth inschakelen"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth aanzetten"</string>
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth uitschakelen"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Een app wil Bluetooth inschakelen"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Een app wil Bluetooth aanzetten"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Een app wil Bluetooth uitschakelen"</string>
     <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil je hoofdunit <xliff:g id="TIMEOUT">%2$d</xliff:g> seconden zichtbaar maken voor andere Bluetooth-apparaten."</string>
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Een app wil je hoofdunit <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar maken voor andere Bluetooth-apparaten."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth inschakelen en je hoofdunit <xliff:g id="TIMEOUT">%2$d</xliff:g> seconden zichtbaar maken voor andere apparaten."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Een app wil Bluetooth inschakelen en je hoofdunit <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar maken voor andere apparaten."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth aanzetten en je hoofdunit <xliff:g id="TIMEOUT">%2$d</xliff:g> seconden zichtbaar maken voor andere apparaten."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Een app wil Bluetooth aanzetten en je hoofdunit <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar maken voor andere apparaten."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Zichtbaar als %1$s voor andere apparaten"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Mijn apparaten"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Eerder verbonden"</string>
@@ -307,7 +307,7 @@
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ja"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nee, bedankt"</string>
     <string name="disable_text" msgid="4358165448648990820">"Uitschakelen"</string>
-    <string name="enable_text" msgid="1794971777861881238">"Inschakelen"</string>
+    <string name="enable_text" msgid="1794971777861881238">"Aanzetten"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Verwijderen"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Als je deze app uitschakelt, werken Android en andere apps mogelijk niet meer zoals bedoeld."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App uitschakelen"</string>
@@ -582,7 +582,7 @@
     <string name="account_list_title" msgid="7631588514613843065">"Accounts voor <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Gegevens automatisch synchroniseren"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Apps automatisch gegevens laten vernieuwen"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Auto-synchronisatie inschakelen?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Auto-synchronisatie aanzetten?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Wijzigingen die je op internet aanbrengt in je accounts, worden automatisch naar je apparaat gekopieerd.\n\nBij sommige accounts worden mogelijk ook de wijzigingen die je op de telefoon aanbrengt, naar internet gekopieerd. Dit geldt bijvoorbeeld voor Google-accounts."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Auto-synchr. uitschakelen?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Hiermee bespaar je data. Je moet elk account echter handmatig synchroniseren om recente informatie te verzamelen. Je ontvangt geen meldingen wanneer er updates plaatsvinden."</string>
@@ -766,4 +766,44 @@
     <string name="factory_reset_later_text" msgid="6371031843489938419">"Het infotainmentsysteem wordt gereset als de auto weer wordt gestart."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"Parkeer de auto om de reset te starten."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Deze instelling kan nu niet worden gewijzigd"</string>
+    <!-- no translation found for accessibility_settings_title (2615042088419230347) -->
+    <skip />
+    <!-- no translation found for accessibility_settings_captions_title (4635141293524800795) -->
+    <skip />
+    <!-- no translation found for captions_settings_title (5738067618097295831) -->
+    <skip />
+    <!-- no translation found for captions_settings_off (7568096968016015626) -->
+    <skip />
+    <!-- no translation found for captions_settings_on (5374984113566914978) -->
+    <skip />
+    <!-- no translation found for screen_reader_settings_title (4012734340987826872) -->
+    <skip />
+    <!-- no translation found for show_captions_toggle_title (710582308974826311) -->
+    <skip />
+    <!-- no translation found for captions_text_size_title (1960814652560877963) -->
+    <skip />
+    <!-- no translation found for captions_settings_style_header (944591388386054372) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_very_small (7476485317028306502) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_small (1481895299805450566) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_default (2227802573224038267) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_large (5198207220911360512) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_very_large (949511539689307969) -->
+    <skip />
+    <!-- no translation found for captions_text_style_title (8547777957403577760) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_by_app (7014882290456996444) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_white_on_black (5758084000323596070) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_black_on_white (3906140601916221220) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_yellow_on_black (4681565950104511943) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_yellow_on_blue (5072521958156112239) -->
+    <skip />
 </resources>
