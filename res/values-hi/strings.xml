@@ -350,7 +350,7 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"अपने आप भरने की सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कोई नहीं"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चुना हुआ ऐप्लिकेशन"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant आपके सिस्टम पर इस्तेमाल किए जा रहे ऐप्लिकेशन की जानकारी पढ़ सकेगी. इसमें आपकी स्क्रीन पर दिखाई देने वाली या ऐप्लिकेशन में से ऐक्सेस करने लायक जानकारी शामिल होगी."</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"असिस्टेंट आपके सिस्टम पर इस्तेमाल किए जा रहे ऐप्लिकेशन की जानकारी पढ़ सकेगी. इसमें आपकी स्क्रीन पर दिखाई देने वाली या ऐप्लिकेशन में से ऐक्सेस करने लायक जानकारी शामिल होगी."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;पक्का कर लें कि आप इस ऐप्लिकेशन पर भरोसा करते हैं&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; आपकी स्क्रीन पर मौजूद चीज़ों का इस्तेमाल करता है ताकि ऑटोमैटिक भरी जाने वाली जानकारी तय कर सके."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा जोड़ें"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"खुलने वाले लिंक"</string>
@@ -727,10 +727,8 @@
     <string name="device_admin_add_title" msgid="1294399588284546811">"सूचना और मनोरंजन की सुविधा देने वाले डिवाइस का एडमिन"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"वे ऐप्लिकेशन जो चालू हैं"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"वे ऐप्लिकेशन जो चालू नहीं हैं"</string>
-    <!-- no translation found for device_admin_apps_description (1371935499168453457) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (7634804595645191123) -->
-    <skip />
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"जिन ऐप्लिकेशन को यह अनुमति मिली है वे वाहन के डेटा को ऐक्सेस कर सकते हैं"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"वाहन का कोई एडमिन ऐप्लिकेशन नहीं है"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"सूचना और मनोरंजन की सुविधा देने वाले इस डिवाइस का एडमिन ऐप्लिकेशन चालू है और <xliff:g id="APP_NAME">%1$s</xliff:g> ऐप्लिकेशन को ये काम करने देता है:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"सूचना और मनोरंजन की सुविधा देने वाले इस डिवाइस के ऐप्लिकेशन को चालू करने से, <xliff:g id="APP_NAME">%1$s</xliff:g> ऐप्लिकेशन को ये काम करने की अनुमति मिल जाएगी:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"क्या आप सूचना और मनोरंजन की सुविधा देने वाले इस डिवाइस का ऐप्लिकेशन चालू करना चाहते हैं?"</string>
@@ -740,8 +738,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ऑर्गनाइज़ेशन मैनेजर, इस प्रोफ़ाइल से जुड़े ऐप्लिकेशन और डेटा को मॉनिटर और मैनेज कर सकता है. इसमें सेटिंग, अनुमतियां, कॉर्पोरेट ऐक्सेस, नेटवर्क गतिविधि, और डिवाइस की जगह की जानकारी शामिल है."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"ऑर्गनाइज़ेशन मैनेजर, सूचना और मनोरंजन की सुविधा देने वाले इस डिवाइस के ऐप्लिकेशन और डेटा को मॉनिटर और मैनेज कर सकता है. इसमें सेटिंग, अनुमतियां, कॉर्पोरेट ऐक्सेस, नेटवर्क गतिविधि, और गाड़ी की जगह की जानकारी शामिल है."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"ऑर्गनाइज़ेशन मैनेजर, सूचना और मनोरंजन की सुविधा देने वाले इस डिवाइस के डेटा को ऐक्सेस कर सकता है, ऐप्लिकेशन मैनेज कर सकता है, और इस गाड़ी की सेटिंग में बदलाव कर सकता है."</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"यह उपलब्ध नहीं है"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"मैनेज की गई इस गाड़ी में, वॉल्यूम को नहीं बदला जा सकता"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"मैनेज की गई इस गाड़ी में, कॉल नहीं किया जा सकता"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"मैनेज की गई इस गाड़ी में, एसएमएस की अनुमति नहीं है"</string>
@@ -749,8 +746,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"मैनेज की गई इस गाड़ी में, स्क्रीनशॉट नहीं लिया जा सकता"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"मैनेज की गई इस गाड़ी में, इस ऐप्लिकेशन को नहीं खोला जा सकता"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"क्रेडिट सेवा देने वाली कंपनी ने ब्लॉक किया है"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"कुछ सुविधाओं के ऐक्सेस को संगठन ने सीमित कर दिया है.\n\nअगर इस बारे में कुछ पूछना है, तो संगठन के मैनेजर से संपर्क करें."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"वाहन के एडमिन ऐप्लिकेशन"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ऐप्लिकेशन जो चालू है}one{# ऐप्लिकेशन जो चालू है}other{# ऐप्लिकेशन जो चालू हैं}}"</string>
@@ -770,4 +766,44 @@
     <string name="factory_reset_later_text" msgid="6371031843489938419">"अगली बार कार के स्टार्ट होने पर, सूचना और मनोरंजन की सुविधा देने वाला डिवाइस रीसेट होगा."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"रीसेट शुरू करने के लिए ज़रूरी है कि कार पार्क हो."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"इस सेटिंग को अभी बदला नहीं जा सकता"</string>
+    <!-- no translation found for accessibility_settings_title (2615042088419230347) -->
+    <skip />
+    <!-- no translation found for accessibility_settings_captions_title (4635141293524800795) -->
+    <skip />
+    <!-- no translation found for captions_settings_title (5738067618097295831) -->
+    <skip />
+    <!-- no translation found for captions_settings_off (7568096968016015626) -->
+    <skip />
+    <!-- no translation found for captions_settings_on (5374984113566914978) -->
+    <skip />
+    <!-- no translation found for screen_reader_settings_title (4012734340987826872) -->
+    <skip />
+    <!-- no translation found for show_captions_toggle_title (710582308974826311) -->
+    <skip />
+    <!-- no translation found for captions_text_size_title (1960814652560877963) -->
+    <skip />
+    <!-- no translation found for captions_settings_style_header (944591388386054372) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_very_small (7476485317028306502) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_small (1481895299805450566) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_default (2227802573224038267) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_large (5198207220911360512) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_very_large (949511539689307969) -->
+    <skip />
+    <!-- no translation found for captions_text_style_title (8547777957403577760) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_by_app (7014882290456996444) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_white_on_black (5758084000323596070) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_black_on_white (3906140601916221220) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_yellow_on_black (4681565950104511943) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_yellow_on_blue (5072521958156112239) -->
+    <skip />
 </resources>

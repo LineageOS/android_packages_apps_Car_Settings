@@ -722,17 +722,13 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"এই প্রোফাইল মুছুন"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"প্রোফাইল যোগ করুন"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ডিসপ্লের উজ্জ্বলতা"</string>
-    <!-- no translation found for qc_bluetooth_off_devices_info (8420985279976892700) -->
-    <skip />
-    <!-- no translation found for qc_bluetooth_on_no_devices_info (7573736950041887300) -->
-    <skip />
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"আপনার ডিভাইস দেখার জন্য, ব্লুটুথ চালু করুন"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ডিভাইস পেয়ার করার জন্য, ব্লুটুথ সেটিংস খুলুন"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ইনফোটেইনমেন্ট সিস্টেম অ্যাডমিন"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"যেসব অ্যাপ চালু আছে"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"যেসব অ্যাপ চালু নেই"</string>
-    <!-- no translation found for device_admin_apps_description (1371935499168453457) -->
-    <skip />
-    <!-- no translation found for device_admin_apps_list_empty (7634804595645191123) -->
-    <skip />
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"যেসব অ্যাপের এই অনুমতি আছে, সেগুলি এই গাড়ির ডেটা অ্যাক্সেস করতে পারবে"</string>
+    <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"গাড়ির কোনও অ্যাডমিন অ্যাপ নেই"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাডমিন অ্যাপ চালু আছে এবং নিচের কাজগুলি করতে <xliff:g id="APP_NAME">%1$s</xliff:g> নামের অ্যাপকে অনুমতি দেয়:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করলে <xliff:g id="APP_NAME">%1$s</xliff:g> নামের অ্যাপ নিচের কাজগুলি করতে পারবে:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করবেন?"</string>
@@ -742,8 +738,7 @@
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"প্রতিষ্ঠানের ম্যানেজার এই প্রোফাইল সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং ডিভাইসের লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"প্রতিষ্ঠানের ম্যানেজার এই ইনফোটেইনমেন্ট সিস্টেম সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং গাড়ির লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"প্রতিষ্ঠানের ম্যানেজার হয়ত এই ইনফোটেইনমেন্ট সিস্টেম সম্পর্কিত ডেটা অ্যাক্সেস করতে, অ্যাপ ম্যানেজ করতে এবং গাড়ির সেটিংস পরিবর্তন করতে পারবেন।"</string>
-    <!-- no translation found for disabled_by_policy_title (1121694702115232518) -->
-    <skip />
+    <string name="disabled_by_policy_title" msgid="1121694702115232518">"এটি উপলভ্য নেই"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"এই ম্যানেজ করা গাড়িতে ভলিউম পরিবর্তন করা যাবে না"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"এই ম্যানেজ করা গাড়িতে কল করার সুবিধা পাওয়া যাবে না"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"এই ম্যানেজ করা গাড়িতে এসএমএস করার অনুমতি নেই"</string>
@@ -751,8 +746,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"এই ম্যানেজ করা গাড়িতে স্ক্রিনশট নেওয়া যাবে না"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"এই ম্যানেজ করা গাড়িতে এই অ্যাপ খোলা যাবে না"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ক্রেডিট প্রদানকারীর মাধ্যমে ব্লক করা হয়েছে"</string>
-    <!-- no translation found for default_admin_support_msg (2986598061733013282) -->
-    <skip />
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"কিছু ফিচারের অ্যাক্সেস সংস্থার তরফে সীমিত করে দেওয়া হয়েছে।\n\nআপনার কোনও প্রশ্ন থাকলে সংস্থার ম্যানেজারের সাথে যোগাযোগ করুন।"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"গাড়ির অ্যাডমিন অ্যাপ"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{#টি অ্যাপ যা চালু আছে}one{#টি অ্যাপ যা চালু আছে}other{#টি অ্যাপ যা চালু আছে}}"</string>
@@ -772,4 +766,44 @@
     <string name="factory_reset_later_text" msgid="6371031843489938419">"ইনফোটেইনমেন্ট সিস্টেম পরের বার গাড়ি চালু হলে রিসেট হবে।"</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"রিসেট শুরু করতে গাড়িকে পার্কিং অবস্থায় থাকতে হবে।"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"এই সেটিং এই মুহূর্তে পরিবর্তন করা যাবে না"</string>
+    <!-- no translation found for accessibility_settings_title (2615042088419230347) -->
+    <skip />
+    <!-- no translation found for accessibility_settings_captions_title (4635141293524800795) -->
+    <skip />
+    <!-- no translation found for captions_settings_title (5738067618097295831) -->
+    <skip />
+    <!-- no translation found for captions_settings_off (7568096968016015626) -->
+    <skip />
+    <!-- no translation found for captions_settings_on (5374984113566914978) -->
+    <skip />
+    <!-- no translation found for screen_reader_settings_title (4012734340987826872) -->
+    <skip />
+    <!-- no translation found for show_captions_toggle_title (710582308974826311) -->
+    <skip />
+    <!-- no translation found for captions_text_size_title (1960814652560877963) -->
+    <skip />
+    <!-- no translation found for captions_settings_style_header (944591388386054372) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_very_small (7476485317028306502) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_small (1481895299805450566) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_default (2227802573224038267) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_large (5198207220911360512) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_size_very_large (949511539689307969) -->
+    <skip />
+    <!-- no translation found for captions_text_style_title (8547777957403577760) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_by_app (7014882290456996444) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_white_on_black (5758084000323596070) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_black_on_white (3906140601916221220) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_yellow_on_black (4681565950104511943) -->
+    <skip />
+    <!-- no translation found for captions_settings_text_style_yellow_on_blue (5072521958156112239) -->
+    <skip />
 </resources>
