@@ -109,6 +109,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="toggle_bg"/>
       <item type="color" name="toggle_icon_tint"/>
+      <item type="color" name="top_level_accessibility_background"/>
+      <item type="color" name="top_level_accessibility_icon"/>
       <item type="color" name="top_level_applications_background"/>
       <item type="color" name="top_level_applications_icon"/>
       <item type="color" name="top_level_assistant_and_voice_background"/>
@@ -372,6 +374,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_sync_cancel"/>
       <item type="drawable" name="ic_sync_problem"/>
       <item type="drawable" name="ic_system_update"/>
+      <item type="drawable" name="ic_top_level_accessibility"/>
       <item type="drawable" name="ic_top_level_applications"/>
       <item type="drawable" name="ic_top_level_assistant_and_voice"/>
       <item type="drawable" name="ic_top_level_bluetooth"/>
@@ -386,6 +389,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_top_level_system"/>
       <item type="drawable" name="ic_translate"/>
       <item type="drawable" name="ic_units"/>
+      <item type="drawable" name="ic_video_settings"/>
       <item type="drawable" name="ic_warning"/>
       <item type="drawable" name="ic_wifi_signal_0"/>
       <item type="drawable" name="ic_wifi_signal_1"/>
