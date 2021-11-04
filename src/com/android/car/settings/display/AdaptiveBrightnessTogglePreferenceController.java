@@ -18,6 +18,10 @@ package com.android.car.settings.display;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.database.ContentObserver;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 
 import androidx.preference.TwoStatePreference;
@@ -30,6 +34,16 @@ import com.android.car.settings.common.PreferenceController;
 public class AdaptiveBrightnessTogglePreferenceController extends
         PreferenceController<TwoStatePreference> {
 
+    private static final Uri ADAPTIVE_BRIGHTNESS_URI = Settings.System.getUriFor(
+            Settings.System.SCREEN_BRIGHTNESS_MODE);
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
+    private final ContentObserver mAdaptiveBrightnessObserver = new ContentObserver(mHandler) {
+        @Override
+        public void onChange(boolean selfChange) {
+            refreshUi();
+        }
+    };
+
     public AdaptiveBrightnessTogglePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
@@ -38,6 +52,19 @@ public class AdaptiveBrightnessTogglePreferenceController extends
     @Override
     protected Class<TwoStatePreference> getPreferenceType() {
         return TwoStatePreference.class;
+    }
+
+    @Override
+    protected void onStartInternal() {
+        super.onStartInternal();
+        getContext().getContentResolver().registerContentObserver(ADAPTIVE_BRIGHTNESS_URI,
+                /* notifyForDescendants= */ false, mAdaptiveBrightnessObserver);
+    }
+
+    @Override
+    protected void onStopInternal() {
+        super.onStopInternal();
+        getContext().getContentResolver().unregisterContentObserver(mAdaptiveBrightnessObserver);
     }
 
     @Override
