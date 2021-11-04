@@ -18,8 +18,16 @@ package com.android.car.settings.display;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.database.ContentObserver;
 import android.provider.Settings;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -42,6 +50,7 @@ import org.mockito.MockitoAnnotations;
 public class AdaptiveBrightnessTogglePreferenceControllerTest {
 
     private Context mContext;
+    private LifecycleOwner mLifecycleOwner;
     private AdaptiveBrightnessTogglePreferenceController mPreferenceController;
     private TwoStatePreference mTwoStatePreference;
 
@@ -50,10 +59,10 @@ public class AdaptiveBrightnessTogglePreferenceControllerTest {
 
     @Before
     public void setUp() {
-        LifecycleOwner lifecycleOwner = new TestLifecycleOwner();
+        mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
 
-        mContext = ApplicationProvider.getApplicationContext();
+        mContext = spy(ApplicationProvider.getApplicationContext());
         mTwoStatePreference = new SwitchPreference(mContext);
 
         CarUxRestrictions carUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
@@ -62,7 +71,26 @@ public class AdaptiveBrightnessTogglePreferenceControllerTest {
                 /* preferenceKey= */ "key", mFragmentController, carUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mTwoStatePreference);
 
-        mPreferenceController.onCreate(lifecycleOwner);
+        mPreferenceController.onCreate(mLifecycleOwner);
+    }
+
+    @Test
+    public void onStart_registersContentObserver() {
+        ContentResolver resolver = spy(mContext.getContentResolver());
+        when(mContext.getContentResolver()).thenReturn(resolver);
+        mPreferenceController.onStart(mLifecycleOwner);
+        verify(resolver).registerContentObserver(
+                eq(Settings.System.getUriFor(Settings.System.SCREEN_BRIGHTNESS_MODE)), eq(false),
+                any(ContentObserver.class));
+    }
+
+    @Test
+    public void onStop_unregistersContentObserver() {
+        ContentResolver resolver = spy(mContext.getContentResolver());
+        when(mContext.getContentResolver()).thenReturn(resolver);
+        mPreferenceController.onStart(mLifecycleOwner);
+        mPreferenceController.onStop(mLifecycleOwner);
+        verify(resolver).unregisterContentObserver(any(ContentObserver.class));
     }
 
     @Test
