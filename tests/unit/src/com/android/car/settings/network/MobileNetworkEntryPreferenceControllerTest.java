@@ -46,6 +46,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
@@ -293,6 +294,40 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         verify(mFragmentController).launchFragment(
                 any(MobileNetworkListFragment.class));
+    }
+
+    @Test
+    public void performToggle_disabled_setsDataEnabled() {
+        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info);
+        when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
+
+        when(mTelephonyManager.isDataEnabled()).thenReturn(false);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        assertThat(mPreference.isSecondaryActionChecked()).isFalse();
+
+        mPreference.performSecondaryActionClick();
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+
+        verify(mTelephonyManager).setDataEnabled(true);
+    }
+
+    @Test
+    public void performToggle_enabled_setsDataDisabled() {
+        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info);
+        when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
+
+        when(mTelephonyManager.isDataEnabled()).thenReturn(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        assertThat(mPreference.isSecondaryActionChecked()).isTrue();
+
+        mPreference.performSecondaryActionClick();
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+
+        verify(mTelephonyManager).setDataEnabled(false);
     }
 
     private SubscriptionInfo createSubscriptionInfo(int subId, int simSlotIndex,

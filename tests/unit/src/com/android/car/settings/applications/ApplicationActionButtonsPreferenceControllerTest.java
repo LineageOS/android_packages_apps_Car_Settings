@@ -66,6 +66,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
+import com.android.car.settings.enterprise.DeviceAdminAddActivity;
 import com.android.car.settings.testutils.ResourceTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.ApplicationsState;
@@ -248,7 +249,7 @@ public class ApplicationActionButtonsPreferenceControllerTest {
     }
 
     @Test
-    public void onCreate_packageHasActiveAdmins_disablesUninstallButton() {
+    public void onCreate_packageHasActiveAdmins_doesNotDisableUninstallButton() {
         setupAndAssignPreference();
         setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
 
@@ -256,7 +257,7 @@ public class ApplicationActionButtonsPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(getUninstallButton().isEnabled()).isFalse();
+        assertThat(getUninstallButton().isEnabled()).isTrue();
     }
 
     @Test
@@ -625,6 +626,29 @@ public class ApplicationActionButtonsPreferenceControllerTest {
 
         verify(mMockPm).setApplicationEnabledSetting(PACKAGE_NAME,
                 PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, /* flags= */ 0);
+    }
+
+    @Test
+    public void uninstallClicked_packageHasActiveAdmins_startsDeviceAdminAddActivity() {
+        setupAndAssignPreference();
+        setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
+        when(mMockDpm.packageHasActiveAdmins(PACKAGE_NAME)).thenReturn(true);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        getUninstallButton().getOnClickListener().onClick(/* view= */ null);
+
+        ArgumentCaptor<Intent> intentArgumentCaptor = ArgumentCaptor.forClass(
+                Intent.class);
+
+        verify(mFragmentController).startActivityForResult(intentArgumentCaptor.capture(),
+                eq(0), isNull());
+
+        Intent intent = intentArgumentCaptor.getValue();
+        assertThat(intent.getComponent().getClassName())
+                .isEqualTo(DeviceAdminAddActivity.class.getName());
+        assertThat(intent.getStringExtra(DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME))
+                .isEqualTo(PACKAGE_NAME);
     }
 
     @Test
