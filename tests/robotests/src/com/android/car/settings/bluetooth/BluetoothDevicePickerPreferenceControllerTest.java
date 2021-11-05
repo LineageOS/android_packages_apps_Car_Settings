@@ -28,14 +28,17 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothDevicePicker;
 import android.bluetooth.BluetoothUuid;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.os.IBinder;
 import android.os.ParcelUuid;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
@@ -64,6 +67,9 @@ import java.util.Arrays;
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
 public class BluetoothDevicePickerPreferenceControllerTest {
+    private static final String ALLOWED_LAUNCH_PKG = "com.android.car.settings.tests.robotests";
+    private static final String DEFAULT_LAUNCH_PKG = "test.package";
+    private static final String DEFAULT_LAUNCH_CLASS = "TestClass";
 
     @Mock
     private CachedBluetoothDevice mUnbondedCachedDevice;
@@ -78,7 +84,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     private CachedBluetoothDeviceManager mSaveRealCachedDeviceManager;
     private LocalBluetoothManager mLocalBluetoothManager;
     private PreferenceGroup mPreferenceGroup;
-    private PreferenceControllerTestHelper<BluetoothDevicePickerPreferenceController>
+    private PreferenceControllerTestHelper<TestBluetoothDevicePickerPreferenceController>
             mControllerHelper;
 
     @Before
@@ -112,7 +118,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
 
         mPreferenceGroup = new LogicalPreferenceGroup(context);
         mControllerHelper = new PreferenceControllerTestHelper<>(context,
-                BluetoothDevicePickerPreferenceController.class);
+                TestBluetoothDevicePickerPreferenceController.class);
     }
 
     @After
@@ -133,7 +139,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
         // Setup device to pass the filter.
         when(mBondedDevice.getUuids()).thenReturn(new ParcelUuid[]{BluetoothUuid.A2DP_SINK});
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ false,
-                BluetoothDevicePicker.FILTER_TYPE_AUDIO, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_AUDIO, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
 
@@ -145,8 +151,8 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     }
 
     @Test
-    public void onDeviceClicked_bondedDevice_sendsPickedIntent() {
-        ComponentName component = new ComponentName("test.package", "TestClass");
+    public void onDeviceClicked_callingPackageEqualToLaunchPackage_setsClassName() {
+        ComponentName component = new ComponentName(ALLOWED_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
                 BluetoothDevicePicker.FILTER_TYPE_ALL, component.getPackageName(),
                 component.getClassName());
@@ -168,9 +174,32 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     }
 
     @Test
+    public void onDeviceClicked_callingPackageNotEqualToLaunchPackage_doesNotSetClassName() {
+        ComponentName component = new ComponentName(DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
+        Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
+                BluetoothDevicePicker.FILTER_TYPE_ALL, component.getPackageName(),
+                component.getClassName());
+        mControllerHelper.getController().setLaunchIntent(launchIntent);
+        mControllerHelper.setPreference(mPreferenceGroup);
+        mControllerHelper.markState(Lifecycle.State.STARTED);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+
+        devicePreference.performClick();
+
+        assertThat(ShadowApplication.getInstance().getBroadcastIntents()).hasSize(1);
+        Intent pickedIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
+        assertThat(pickedIntent.getAction()).isEqualTo(
+                BluetoothDevicePicker.ACTION_DEVICE_SELECTED);
+        assertThat(pickedIntent.getComponent()).isNull();
+        assertThat((BluetoothDevice) pickedIntent.getParcelableExtra(
+                BluetoothDevice.EXTRA_DEVICE)).isEqualTo(mBondedDevice);
+    }
+
+    @Test
     public void onDeviceClicked_bondedDevice_goesBack() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
-                BluetoothDevicePicker.FILTER_TYPE_ALL, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -185,7 +214,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     @Test
     public void onDeviceClicked_unbondedDevice_doesNotNeedAuth_sendsPickedIntent() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ false,
-                BluetoothDevicePicker.FILTER_TYPE_ALL, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -202,7 +231,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     @Test
     public void onDeviceClicked_unbondedDevice_needsAuth_startsPairing() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
-                BluetoothDevicePicker.FILTER_TYPE_ALL, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -217,7 +246,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     @Test
     public void onDeviceClicked_unbondedDevice_needsAuth_pairingStartFails_resumesScanning() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
-                BluetoothDevicePicker.FILTER_TYPE_ALL, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -234,7 +263,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     @Test
     public void onDeviceBondStateChanged_selectedDeviceBonded_sendsPickedIntent() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
-                BluetoothDevicePicker.FILTER_TYPE_ALL, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -255,7 +284,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     @Test
     public void onDeviceBondStateChanged_selectedDeviceBonded_goesBack() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
-                BluetoothDevicePicker.FILTER_TYPE_ALL, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -274,7 +303,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     @Test
     public void onDestroy_noDeviceSelected_sendsNullPickedIntent() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
-                BluetoothDevicePicker.FILTER_TYPE_ALL, "test.package", "TestClass");
+                BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PKG, DEFAULT_LAUNCH_CLASS);
         mControllerHelper.getController().setLaunchIntent(launchIntent);
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -300,5 +329,20 @@ public class BluetoothDevicePickerPreferenceControllerTest {
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {
         return (ShadowBluetoothAdapter) Shadow.extract(BluetoothAdapter.getDefaultAdapter());
+    }
+
+    private static class TestBluetoothDevicePickerPreferenceController
+            extends BluetoothDevicePickerPreferenceController {
+
+        TestBluetoothDevicePickerPreferenceController(Context context, String preferenceKey,
+                FragmentController fragmentController,
+                CarUxRestrictions uxRestrictions) {
+            super(context, preferenceKey, fragmentController, uxRestrictions);
+        }
+
+        @Override
+        String getCallingAppPackageName(IBinder activityToken) {
+            return ALLOWED_LAUNCH_PKG;
+        }
     }
 }
