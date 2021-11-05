@@ -15,6 +15,7 @@
  */
 package com.android.car.settings.enterprise;
 
+import static android.app.admin.DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN;
 import static android.app.admin.DevicePolicyManager.EXTRA_ADD_EXPLANATION;
 import static android.app.admin.DevicePolicyManager.EXTRA_DEVICE_ADMIN;
 import static android.car.test.mocks.AndroidMockitoHelper.syncCallOnMainThread;
@@ -33,6 +34,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -45,10 +47,13 @@ import androidx.preference.PreferenceScreen;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.car.settings.R;
+import com.android.car.settings.enterprise.DeviceAdminAddHeaderPreferenceController.ActivationListener;
 import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.Mock;
 
 import java.util.Arrays;
@@ -82,12 +87,16 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
     @Mock
     private DeviceAdminAddPoliciesPreferenceController mPoliciesController;
 
+    @Captor
+    private ArgumentCaptor<ActivationListener> mActivationListenerCaptor;
+
     @Before
     public void createFragments() throws Exception {
         mRealFragment = syncCallOnMainThread(() -> new DeviceAdminAddFragment());
         mSpiedFragment = spy(mRealFragment);
 
         when(mExplanationController.setDeviceAdmin(any())).thenReturn(mExplanationController);
+        when(mHeaderController.setDeviceAdmin(any())).thenReturn(mHeaderController);
 
         // Note: Must use doReturn (instead of when..doReturn() below because it's a spy
         doReturn(mActivity).when(mSpiedFragment).requireActivity();
@@ -108,7 +117,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         int resId = mRealFragment.getPreferenceScreenResId();
 
         XmlResourceParser parser = mRealContext.getResources().getXml(resId);
-        assertWithMessage("xml with id%s", resId).that(parser).isNotNull();
+        assertWithMessage("xml with id %s", resId).that(parser).isNotNull();
     }
 
     @Test
@@ -179,17 +188,56 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
     }
 
     @Test
+    public void testAttach_addDeviceAdminAction_active() {
+        mockActivityIntent(new Intent(ACTION_ADD_DEVICE_ADMIN)
+                .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockActiveAdmin(mDefaultAdmin);
+
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verityActivityResultSet(Activity.RESULT_OK);
+        verifyActivityFinished();
+        verifyControllersNeverUsed();
+    }
+
+    @Test
+    public void testAttach_addDeviceAdminAction_inactive_userActivates() {
+        ActivationListener listener = attachActivityForResultTesting(ACTION_ADD_DEVICE_ADMIN);
+
+        listener.onChanged(true);
+
+        verityActivityResultSet(Activity.RESULT_OK);
+        verifyActivityNeverFinished();
+    }
+
+    @Test
+    public void testAttach_addDeviceAdminAction_inactive_userDeactivates() {
+        ActivationListener listener = attachActivityForResultTesting(ACTION_ADD_DEVICE_ADMIN);
+
+        listener.onChanged(false);
+
+        verityActivityResultSet(Activity.RESULT_CANCELED);
+        verifyActivityNeverFinished();
+    }
+
+    @Test
+    public void testAttach_inactive_notDeviceAdminAction() {
+        ActivationListener listener = attachActivityForResultTesting("ACTION_JACKSON");
+
+        listener.onChanged(true); // value doesn't matter
+
+        verityActivityResultNeverSet();
+        verifyActivityNeverFinished();
+    }
+
+    @Test
     public void testAttach_adminExtra_ok_inactiveButValid() {
         mockActivityIntent(new Intent()
                 .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
                 .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
         mockInactiveAdmin(mDefaultAdmin);
-
-        // TODO(b/202342351): use a custom matcher for
-        // DeviceAdminReceiver.ACTION_DEVICE_ADMIN_ENABLED instead of any()
-        doReturn(Arrays.asList(mDefaultResolveInfo))
-                .when(mSpiedPm).queryBroadcastReceivers(
-                        any(), eq(PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS));
+        mockValidAdmin();
 
         mSpiedFragment.onAttach(mSpiedContext, mActivity);
 
@@ -249,8 +297,26 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         verify(mPreferenceScreen).setTitle((mDefaultDeviceAdminInfo.loadLabel(mRealPm)));
     }
 
+    private ActivationListener attachActivityForResultTesting(String action) {
+        mockValidAdmin();
+        mockActivityIntent(new Intent(action)
+                .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin));
+
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verify(mHeaderController).setActivationListener(mActivationListenerCaptor.capture());
+        return mActivationListenerCaptor.getValue();
+    }
+
     private void mockActivityIntent(Intent intent) {
         when(mActivity.getIntent()).thenReturn(intent);
+    }
+
+    private void mockValidAdmin() {
+        // TODO(b/202342351): use a custom matcher for
+        // DeviceAdminReceiver.ACTION_DEVICE_ADMIN_ENABLED instead of any()
+        doReturn(Arrays.asList(mDefaultResolveInfo)).when(mSpiedPm).queryBroadcastReceivers(any(),
+                eq(PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS));
     }
 
     private void verifyActivityFinished() {
@@ -261,6 +327,14 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         verify(mActivity, never()).finish();
     }
 
+    private void verityActivityResultSet(int result) {
+        verify(mActivity).setResult(result);
+    }
+
+    private void verityActivityResultNeverSet() {
+        verify(mActivity, never()).setResult(anyInt());
+    }
+
     private void verifyControllersNeverUsed() {
         verify(mSpiedFragment, never()).use(any(), anyInt());
     }
@@ -269,6 +343,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         verify(mSpiedFragment).use(DeviceAdminAddHeaderPreferenceController.class,
                 R.string.pk_device_admin_add_header);
         verifySetDeviceAdmin(mHeaderController);
+        verify(mHeaderController).setActivationListener(any());
 
         verify(mSpiedFragment).use(DeviceAdminAddExplanationPreferenceController.class,
                 R.string.pk_device_admin_add_explanation);
