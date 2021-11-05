@@ -21,12 +21,16 @@ import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 
 import com.android.car.settings.common.Logger;
+import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -39,6 +43,9 @@ import java.util.List;
 public final class EnterpriseUtils {
 
     private static final Logger LOG = new Logger(EnterpriseUtils.class);
+    // TODO: ideally, we should not create a special user restriction other than what are
+    // defined in UserManager.
+    public static final String DISABLED_INPUT_METHOD = "disabled-input-method";
 
     /**
      * Gets the active admin for the given package.
@@ -155,10 +162,102 @@ public final class EnterpriseUtils {
      */
     public static ActionDisabledByAdminDialogFragment getActionDisabledByAdminDialog(
             Context context, String restriction) {
+        return getActionDisabledByAdminDialog(context, restriction, /* restrictedPackage= */ null);
+    }
+
+    /**
+     * Gets an {@code ActionDisabledByAdminDialogFragment} when the input method is restricted for
+     * the current user.
+     */
+    public static ActionDisabledByAdminDialogFragment getInputMethodDisabledByAdminDialog(
+            Context context, String restriction) {
+        return getActionDisabledByAdminDialog(context, restriction, /* restrictedPackage= */ null);
+    }
+
+    /**
+     * Gets an {@code ActionDisabledByAdminDialogFragment} for the target restriction to show on
+     * the current user with additional restricted package information.
+     */
+    public static ActionDisabledByAdminDialogFragment getActionDisabledByAdminDialog(
+            Context context, String restriction, @Nullable String restrictedPackage) {
         int adminUser = hasDeviceOwner(context)
                 ? getDeviceOwnerUserId(context)
                 : context.getUserId();
-        return ActionDisabledByAdminDialogFragment.newInstance(restriction, adminUser);
+        return ActionDisabledByAdminDialogFragment
+                .newInstance(restriction, restrictedPackage, adminUser);
+    }
+
+    /**
+     * Gets enforced admin information from Intent that started the
+     * {@code ActionDisabledByAdminDialogActivity}.
+     */
+    public static EnforcedAdmin getEnforcedAdminFromIntent(Context context, Intent intent) {
+        EnforcedAdmin admin = new EnforcedAdmin(null, context.getUser());
+        if (intent == null) {
+            return admin;
+        }
+        admin.component = intent.getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
+        int userId = intent.getIntExtra(Intent.EXTRA_USER_ID, context.getUserId());
+
+        Bundle adminDetails = null;
+        if (admin.component == null) {
+            DevicePolicyManager devicePolicyManager = getDevicePolicyManager(context);
+            admin.component = adminDetails.getParcelable(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
+        }
+
+        if (intent.hasExtra(Intent.EXTRA_USER)) {
+            admin.user = intent.getParcelableExtra(Intent.EXTRA_USER);
+        } else {
+            if (adminDetails != null) {
+                userId = adminDetails.getInt(Intent.EXTRA_USER_ID, UserHandle.myUserId());
+            }
+            if (userId == UserHandle.USER_NULL) {
+                admin.user = null;
+            } else {
+                admin.user = UserHandle.of(userId);
+            }
+        }
+        return admin;
+    }
+
+    /**
+     * Gets {@code RestrictedLockUtils.EnforcedAdmin} for the device policy that affects
+     * current user.
+     *
+     * @param context for current user
+     * @param adminUser which can be either profile owner on current user or device owner on
+     *        headless system user
+     * @param restriction which can be user restriction or restriction policy defined
+     *        in this class
+     * @param restrictedPackage is the target package that restriction policy is set
+     * @return {@code RestrictedLockUtils.EnforcedAdmin}
+     */
+    public static EnforcedAdmin getEnforcedAdmin(Context context, @UserIdInt int adminUser,
+            String restriction, String restrictedPackage) {
+        EnforcedAdmin admin = null;
+        if (hasUserRestrictionByDpm(context, restriction)) {
+            admin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+                    context, restriction, context.getUserId());
+            LOG.v("getEnforcedAdmin(): " + adminUser + " restriction: " + restriction
+                    + " restrictedPackage: " + restrictedPackage);
+
+            if (admin.component == null && context.getUserId() != adminUser) {
+                // User restriction might be set on primary user which is user 0 as a device-wide
+                // policy.
+                admin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+                        context, restriction, adminUser);
+            }
+        } else if (restriction == DISABLED_INPUT_METHOD) {
+            if (restrictedPackage == null) {
+                LOG.e("getEnforcedAdmin() for " + DISABLED_INPUT_METHOD
+                        + " fails since restrictedPackage is null");
+                return admin;
+            }
+            admin = RestrictedLockUtilsInternal.checkIfInputMethodDisallowed(
+                    context, restrictedPackage, context.getUserId());
+        }
+        LOG.v("getEnforcedAdmin():" + admin);
+        return admin;
     }
 
     private EnterpriseUtils() {
