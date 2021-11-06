@@ -212,7 +212,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_disallowedByOrganization_noPreferencesShown() {
+    public void refreshUi_disallowedByOrganization_preferenceShownDisabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(
                 mPermittedList);
         List<InputMethodInfo> infos = createInputMethodInfoList(DISALLOWED_PACKAGE_NAME,
@@ -225,7 +225,13 @@ public class KeyboardManagementPreferenceControllerTest {
 
         mPreferenceController.refreshUi();
 
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(infos.size());
+
+        for (int i = 0; i < mPreferenceGroup.getPreferenceCount(); i++) {
+            SwitchPreference pref = (SwitchPreference) mPreferenceGroup.getPreference(i);
+            assertThat(pref.isVisible()).isTrue();
+            assertThat(pref.isEnabled()).isTrue();
+        }
     }
 
     @Test

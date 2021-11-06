@@ -22,6 +22,7 @@ import android.app.Dialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
@@ -57,10 +58,12 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     private static final Logger LOG = new Logger(TAG);
 
     private static final String EXTRA_RESTRICTION = TAG + "_restriction";
+    private static final String EXTRA_RESTRICTED_PKG = TAG + "_pkg";
     private static final String EXTRA_ADMIN_USER_ID = TAG + "_userId";
 
     @VisibleForTesting
     String mRestriction;
+    String mRestrictedPackage;
 
     @UserIdInt
     private int mAdminUserId;
@@ -73,8 +76,17 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
      */
     public static ActionDisabledByAdminDialogFragment newInstance(String restriction,
             @UserIdInt int userId) {
+        return newInstance(restriction, null, userId);
+    }
+
+    /**
+     * Gets the dialog for the given user and restriction.
+     */
+    public static ActionDisabledByAdminDialogFragment newInstance(String restriction,
+            @Nullable String restrictedPackage, @UserIdInt int userId) {
         ActionDisabledByAdminDialogFragment instance = new ActionDisabledByAdminDialogFragment();
         instance.mRestriction = restriction;
+        instance.mRestrictedPackage = restrictedPackage;
         instance.mAdminUserId = userId;
         return instance;
     }
@@ -83,6 +95,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             mRestriction = savedInstanceState.getString(EXTRA_RESTRICTION);
+            mRestrictedPackage = savedInstanceState.getString(EXTRA_RESTRICTED_PKG);
             mAdminUserId = savedInstanceState.getInt(EXTRA_ADMIN_USER_ID);
         }
         return initialize(getContext()).create();
@@ -93,6 +106,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         super.onSaveInstanceState(outState);
 
         outState.putString(EXTRA_RESTRICTION, mRestriction);
+        outState.putString(EXTRA_RESTRICTED_PKG, mRestrictedPackage);
         outState.putInt(EXTRA_ADMIN_USER_ID, mAdminUserId);
     }
 
@@ -110,25 +124,14 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     }
 
     private AlertDialogBuilder initialize(Context context) {
-        // Check for current user's enforcedAmin where this dialog will be shown
-        EnforcedAdmin enforcedAdmin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
-                /* dpmContext= */ context, mRestriction,
-                /* targetUserToCheck= */ context.getUserId());
-        if (enforcedAdmin == null) {
-            // ActionDisabledByAdminDialogFragment may also be created from
-            // ActionDisabledByAdminActivity and Device Admin ComponentName can be retrieved from
-            // Intent.
-            ComponentName admin = (ComponentName) getActivity().getIntent()
-                    .getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN);
-            enforcedAdmin = new EnforcedAdmin(admin, mRestriction, UserHandle.of(mAdminUserId));
-            LOG.d("EnforcedAdmin created: " + enforcedAdmin);
-        } else if (enforcedAdmin.component == null && context.getUserId() != mAdminUserId) {
-            // User restriction might be set on primary user which is user 0 as a device-wide
-            // policy.
-            enforcedAdmin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
-                    /* dpmContext= */ context, mRestriction,
-                    /* targetUserToCheck= */ mAdminUserId);
-        }
+        Intent intent = getActivity().getIntent();
+        boolean hasValidIntent = intent != null
+                && intent.getParcelableExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN) != null;
+        EnforcedAdmin enforcedAdmin = hasValidIntent
+                    ? EnterpriseUtils.getEnforcedAdminFromIntent(context, intent)
+                    : EnterpriseUtils.getEnforcedAdmin(context, mAdminUserId,
+                            mRestriction, mRestrictedPackage);
+        LOG.i("hasValidIntent: " + hasValidIntent + " enforcedAdmin: " + enforcedAdmin);
 
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
                 .setPositiveButton(R.string.okay, /* listener= */ null);

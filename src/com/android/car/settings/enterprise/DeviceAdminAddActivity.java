@@ -25,7 +25,7 @@ import com.android.car.settings.common.BaseCarSettingsActivity;
  */
 public final class DeviceAdminAddActivity extends BaseCarSettingsActivity {
 
-    static final String EXTRA_DEVICE_ADMIN_PACKAGE_NAME =
+    public static final String EXTRA_DEVICE_ADMIN_PACKAGE_NAME =
             "android.app.extra.DEVICE_ADMIN_PACKAGE_NAME";
 
     static final String EXTRA_CALLED_FROM_SUPPORT_DIALOG =
