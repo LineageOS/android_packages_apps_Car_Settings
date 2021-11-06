@@ -27,6 +27,8 @@ import android.text.TextUtils;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
+import com.android.car.settings.accessibility.AccessibilitySettingsFragment;
+import com.android.car.settings.accessibility.CaptionsSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
@@ -581,6 +583,28 @@ public class CarSettingActivities {
         @Override
         protected Fragment getInitialFragment() {
             return new TextToSpeechOutputFragment();
+        }
+    }
+
+    /**
+     * Accessibility Activity.
+     */
+    public static class AccessibilityActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new AccessibilitySettingsFragment();
+        }
+    }
+
+    /**
+     * Captions Activity.
+     */
+    public static class CaptionsActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new CaptionsSettingsFragment();
         }
     }
 

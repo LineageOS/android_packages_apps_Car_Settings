@@ -109,6 +109,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="toggle_bg"/>
       <item type="color" name="toggle_icon_tint"/>
+      <item type="color" name="top_level_accessibility_background"/>
+      <item type="color" name="top_level_accessibility_icon"/>
       <item type="color" name="top_level_applications_background"/>
       <item type="color" name="top_level_applications_icon"/>
       <item type="color" name="top_level_assistant_and_voice_background"/>
@@ -372,6 +374,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_sync_cancel"/>
       <item type="drawable" name="ic_sync_problem"/>
       <item type="drawable" name="ic_system_update"/>
+      <item type="drawable" name="ic_top_level_accessibility"/>
       <item type="drawable" name="ic_top_level_applications"/>
       <item type="drawable" name="ic_top_level_assistant_and_voice"/>
       <item type="drawable" name="ic_top_level_bluetooth"/>
@@ -386,6 +389,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_top_level_system"/>
       <item type="drawable" name="ic_translate"/>
       <item type="drawable" name="ic_units"/>
+      <item type="drawable" name="ic_video_settings"/>
       <item type="drawable" name="ic_warning"/>
       <item type="drawable" name="ic_wifi_signal_0"/>
       <item type="drawable" name="ic_wifi_signal_1"/>
@@ -914,6 +918,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="hide_system"/>
       <item type="string" name="hide_system_apps"/>
       <item type="string" name="hk_AboutSettingsActivity"/>
+      <item type="string" name="hk_AccessibilitySettingsActivity"/>
       <item type="string" name="hk_AddWifiActivity"/>
       <item type="string" name="hk_ApplicationsDetailsActivity"/>
       <item type="string" name="hk_ApplicationsSettingsActivity"/>
@@ -921,6 +926,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="hk_AssistantAndVoiceSettingsActivity"/>
       <item type="string" name="hk_BluetoothDevicePickerActivity"/>
       <item type="string" name="hk_BluetoothSettingsActivity"/>
+      <item type="string" name="hk_CaptionsSettingsActivity"/>
       <item type="string" name="hk_ChooseAccountActivity"/>
       <item type="string" name="hk_DataWarningAndLimitActivity"/>
       <item type="string" name="hk_DatetimeSettingsActivity"/>
@@ -1463,6 +1469,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="style" name="UserDisclaimerActionButtonTextStyle"/>
       <item type="style" name="UserDisclaimerButtonStyle"/>
       <item type="xml" name="about_settings_fragment"/>
+      <item type="xml" name="accessibility_settings_fragment"/>
       <item type="xml" name="account_details_fragment"/>
       <item type="xml" name="account_sync_details_fragment"/>
       <item type="xml" name="adas_location_fragment"/>
@@ -1479,6 +1486,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="bluetooth_device_picker_fragment"/>
       <item type="xml" name="bluetooth_pairing_selection_fragment"/>
       <item type="xml" name="bluetooth_settings_fragment"/>
+      <item type="xml" name="captions_settings_fragment"/>
       <item type="xml" name="car_volume_items"/>
       <item type="xml" name="child_locale_picker_fragment"/>
       <item type="xml" name="choose_account_fragment"/>
