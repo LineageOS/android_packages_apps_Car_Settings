@@ -16,6 +16,7 @@
 
 package com.android.car.settings.enterprise;
 
+import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
@@ -32,9 +33,16 @@ import com.android.car.settings.common.FragmentController;
 public final class DeviceAdminAddHeaderPreferenceController
         extends BaseDeviceAdminAddPreferenceController<TwoStatePreference> {
 
+    private @Nullable ActivationListener mActivationListener;
+
     public DeviceAdminAddHeaderPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    DeviceAdminAddHeaderPreferenceController setActivationListener(ActivationListener listener) {
+        mActivationListener = listener;
+        return this;
     }
 
     @Override
@@ -79,10 +87,17 @@ public final class DeviceAdminAddHeaderPreferenceController
             mLogger.i("Deactivating " + ComponentName.flattenToShortString(admin));
             mDpm.removeActiveAdmin(admin);
         }
+        if (mActivationListener != null) {
+            mActivationListener.onChanged(activated);
+        }
         return true;
     }
 
     private boolean isActive(ComponentName componentName) {
         return mDpm.isAdminActive(componentName);
+    }
+
+    interface ActivationListener {
+        void onChanged(boolean active);
     }
 }

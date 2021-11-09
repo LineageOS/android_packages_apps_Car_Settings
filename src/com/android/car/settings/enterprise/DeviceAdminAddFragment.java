@@ -95,11 +95,19 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 return;
             }
         } else {
+            if (isActionAddDeviceAdminActivity(activity)) {
+                if (isActiveAdmin(context, admin)) {
+                    activity.setResult(Activity.RESULT_OK);
+                    activity.finish();
+                    return;
+                }
+            }
+
             // When activating, make sure the given component name is actually a valid device admin.
             // No need to check this when deactivating, because it is safe to deactivate an active
             // invalid device admin.
             if (!isValidAdmin(context, admin)) {
-                LOG.w("Request to add invalid device admin: " + admin);
+                LOG.w("Request to add invalid device admin: " + admin.flattenToShortString());
                 activity.finish();
                 return;
             }
@@ -119,8 +127,10 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
         }
         mAppName = deviceAdminInfo.loadLabel(context.getPackageManager());
 
-        use(DeviceAdminAddHeaderPreferenceController.class,
-                R.string.pk_device_admin_add_header).setDeviceAdmin(deviceAdminInfo);
+        ((DeviceAdminAddHeaderPreferenceController) use(
+                DeviceAdminAddHeaderPreferenceController.class,
+                R.string.pk_device_admin_add_header).setDeviceAdmin(deviceAdminInfo))
+                        .setActivationListener((value) -> onActivation(value));
         ((DeviceAdminAddExplanationPreferenceController) use(
                 DeviceAdminAddExplanationPreferenceController.class,
                 R.string.pk_device_admin_add_explanation).setDeviceAdmin(deviceAdminInfo))
@@ -132,6 +142,17 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 R.string.pk_device_admin_add_policies).setDeviceAdmin(deviceAdminInfo);
         use(DeviceAdminAddSupportPreferenceController.class,
                 R.string.pk_device_admin_add_support).setDeviceAdmin(deviceAdminInfo);
+    }
+
+    private void onActivation(boolean value) {
+        Activity activity = requireActivity();
+        if (!isActionAddDeviceAdminActivity(activity)) {
+            return;
+        }
+
+        int result = value ? Activity.RESULT_OK : Activity.RESULT_CANCELED;
+        LOG.d("Setting " + activity + " result to " + result);
+        activity.setResult(result);
     }
 
     @Override
@@ -159,11 +180,15 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
     @VisibleForTesting
     void setToolbarTitle(ToolbarController toolbar) {
-        Intent intent = requireActivity().getIntent();
-        String action = intent == null ? null : intent.getAction();
-        if (DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN.equals(action)) {
+        if (isActionAddDeviceAdminActivity(requireActivity())) {
             toolbar.setTitle(R.string.add_device_admin_msg);
         }
+    }
+
+    private boolean isActionAddDeviceAdminActivity(Activity activity) {
+        Intent intent = activity.getIntent();
+        String action = intent == null ? null : intent.getAction();
+        return DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN.equals(action);
     }
 
     // Must override so it can be spied (it's the exact same signature and modifier access, but it
@@ -183,8 +208,7 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
             return false;
         }
 
-        DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
-        if (dpm.isAdminActive(who)) {
+        if (isActiveAdmin(context, who)) {
             return true;
         }
         List<ResolveInfo> avail = pm.queryBroadcastReceivers(
@@ -213,4 +237,10 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
         }
         return found;
     }
+
+    private boolean isActiveAdmin(Context context, ComponentName who) {
+        DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
+        return dpm.isAdminActive(who);
+    }
+
 }
