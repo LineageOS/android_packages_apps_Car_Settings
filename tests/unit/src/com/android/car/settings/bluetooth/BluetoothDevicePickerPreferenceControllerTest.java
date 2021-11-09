@@ -58,7 +58,6 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -277,7 +276,6 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     }
 
     @Test
-    @Ignore("b/197256867")
     public void onDeviceClicked_unbondedDevice_needsAuth_pairingStartFails_resumesScanning() {
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ true,
                 BluetoothDevicePicker.FILTER_TYPE_ALL, DEFAULT_LAUNCH_PACKAGE,
