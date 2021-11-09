@@ -17,9 +17,12 @@ package com.android.car.settings.enterprise;
 
 import androidx.preference.TwoStatePreference;
 
-import com.android.car.settings.common.PreferenceController;
-
+import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+
+import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.enterprise.DeviceAdminAddHeaderPreferenceController.ActivationListener;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,6 +35,9 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
 
     @Mock
     private TwoStatePreference mPreference;
+
+    @Mock
+    private ActivationListener mActivationListener;
 
     @Before
     public void setController() {
@@ -117,26 +123,60 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
     }
 
     @Test
-    public void testHandlePreferenceChanged_activateAdmin() {
+    public void testHandlePreferenceChanged_activateAdmin_withoutListener() {
         mockInactiveAdmin(mDefaultAdmin);
 
         mController.handlePreferenceChanged(mPreference, true);
 
         verifyAdminNeverDeactivated();
         verifyAdminActivated();
+        verifyActivationListenerNotCalled();
     }
 
     @Test
-    public void testHandlePreferenceChanged_deactivateAdmin() {
+    public void testHandlePreferenceChanged_activateAdmin_withListener() {
+        mockInactiveAdmin(mDefaultAdmin);
+        mController.setActivationListener(mActivationListener);
+
+        mController.handlePreferenceChanged(mPreference, true);
+
+        verifyAdminNeverDeactivated();
+        verifyAdminActivated();
+        verifyActivationListenerCalled(true);
+    }
+
+    @Test
+    public void testHandlePreferenceChanged_deactivateAdmin_withoutListener() {
         mockActiveAdmin(mDefaultAdmin);
 
         mController.handlePreferenceChanged(mPreference, false);
 
         verifyAdminNeverActivated();
         verifyAdminDeactivated();
+        verifyActivationListenerNotCalled();
+    }
+
+    @Test
+    public void testHandlePreferenceChanged_deactivateAdmin_withListener() {
+        mockActiveAdmin(mDefaultAdmin);
+        mController.setActivationListener(mActivationListener);
+
+        mController.handlePreferenceChanged(mPreference, false);
+
+        verifyAdminNeverActivated();
+        verifyAdminDeactivated();
+        verifyActivationListenerCalled(false);
     }
 
     private void verifyPreferenceSetChecked(TwoStatePreference preference, boolean isChecked) {
         verify(preference).setChecked(isChecked);
+    }
+
+    private void verifyActivationListenerNotCalled() {
+        verify(mActivationListener, never()).onChanged(anyBoolean());
+    }
+
+    private void verifyActivationListenerCalled(boolean active) {
+        verify(mActivationListener).onChanged(active);
     }
 }
