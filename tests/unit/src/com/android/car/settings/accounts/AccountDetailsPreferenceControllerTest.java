@@ -166,8 +166,7 @@ public class AccountDetailsPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreference.performSecondaryActionClick();
 
-        verify(mFragmentController).showDialog(any(ConfirmationDialogFragment.class),
-                eq(ConfirmationDialogFragment.TAG));
+        assertShowingDisabledByAdminDialog();
     }
 
     private void assertShowingDisabledByAdminDialog() {
