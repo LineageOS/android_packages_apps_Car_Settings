@@ -91,6 +91,8 @@ public class ApplicationActionButtonsPreferenceController extends
             Arrays.asList(UserManager.DISALLOW_APPS_CONTROL);
     private static final List<String> UNINSTALL_RESTRICTIONS =
             Arrays.asList(UserManager.DISALLOW_UNINSTALL_APPS, UserManager.DISALLOW_APPS_CONTROL);
+    private static final List<String> DISABLE_RESTRICTIONS =
+            Arrays.asList(UserManager.DISALLOW_APPS_CONTROL);
 
     @VisibleForTesting
     static final String DISABLE_CONFIRM_DIALOG_TAG =
@@ -152,17 +154,14 @@ public class ApplicationActionButtonsPreferenceController extends
     };
 
     @VisibleForTesting
-    final ConfirmationDialogFragment.ConfirmListener mDisableConfirmListener =
-            new ConfirmationDialogFragment.ConfirmListener() {
-                @Override
-                public void onConfirm(@Nullable Bundle arguments) {
-                    mPm.setApplicationEnabledSetting(mPackageName,
-                            PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER, /* flags= */ 0);
-                    updateUninstallButtonInner(false);
-                }
-            };
+    final ConfirmationDialogFragment.ConfirmListener mDisableConfirmListener = i -> {
+        mPm.setApplicationEnabledSetting(mPackageName,
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER, /* flags= */ 0);
+        updateUninstallButtonInner(false);
+    };
 
     private final View.OnClickListener mDisableClickListener = i -> {
+        if (ignoreActionBecauseItsDisabledByAdmin(DISABLE_RESTRICTIONS)) return;
         ConfirmationDialogFragment dialogFragment =
                 new ConfirmationDialogFragment.Builder(getContext())
                         .setMessage(getContext().getString(R.string.app_disable_dialog_text))
