@@ -18,6 +18,10 @@ package com.android.car.settings.bluetooth;
 
 import static android.car.hardware.power.PowerComponent.BLUETOOTH;
 import static android.os.UserManager.DISALLOW_BLUETOOTH;
+import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
+
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
 
 import android.bluetooth.BluetoothAdapter;
 import android.car.drivingstate.CarUxRestrictions;
@@ -29,16 +33,14 @@ import android.os.UserManager;
 import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PowerPolicyListener;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
-
-import java.util.function.Consumer;
 
 /**
  * Enables/disables bluetooth state via SwitchPreference.
@@ -56,10 +58,11 @@ public class BluetoothStateSwitchPreferenceController extends
             handleStateChanged(state);
         }
     };
-    private BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private LocalBluetoothManager mLocalBluetoothManager;
     private UserManager mUserManager;
     private boolean mUpdating = false;
+    private boolean mIsPowerOn = true;
 
     @VisibleForTesting
     final PowerPolicyListener mPowerPolicyListener;
@@ -71,8 +74,9 @@ public class BluetoothStateSwitchPreferenceController extends
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mContext = context;
         mPowerPolicyListener = new PowerPolicyListener(context, BLUETOOTH,
-                isOn -> {
-                    enableSwitchPreference(getPreference(), isOn, /* forPowerPolicy= */ true);
+                isPowerOn -> {
+                    mIsPowerOn = isPowerOn;
+                    enableSwitchPreference(getPreference(), /* enabled= */ mIsPowerOn);
                 });
     }
 
@@ -93,7 +97,7 @@ public class BluetoothStateSwitchPreferenceController extends
         if (mUpdating) {
             return false;
         }
-        enableSwitchPreference(preference, /* enabled= */ false, /* forPowerPolicy= */ false);
+        enableSwitchPreference(preference, /* enabled= */ false);
         boolean bluetoothEnabled = (Boolean) newValue;
         if (bluetoothEnabled) {
             mBluetoothAdapter.enable();
@@ -110,8 +114,36 @@ public class BluetoothStateSwitchPreferenceController extends
         if (mLocalBluetoothManager == null) {
             getFragmentController().goBack();
         }
-        getPreference().setContentDescription(
+        ColoredSwitchPreference preference = getPreference();
+        preference.setContentDescription(
                 mContext.getString(R.string.bluetooth_state_switch_content_description));
+        preference.setClickableWhileDisabled(true);
+        preference.setDisabledClickListener(p -> {
+            // This is logic when clicking while disabled:
+            // 1. If power is off, then show a toast with the related error message;
+            // 2. If restricted by DPM, show a dialog message with the related restriction message;
+            // 3. Do nothing otherwise.
+            if (!mIsPowerOn) {
+                Toast.makeText(getContext(),
+                        getContext().getString(R.string.power_component_disabled),
+                        Toast.LENGTH_LONG).show();
+            } else if (getAvailabilityStatus() == AVAILABLE_FOR_VIEWING) {
+                showActionDisabledByAdminDialog();
+            }
+        });
+    }
+
+    @Override
+    protected int getAvailabilityStatus() {
+        return hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_BLUETOOTH)
+                ? AVAILABLE_FOR_VIEWING : AVAILABLE;
+    }
+
+    private void showActionDisabledByAdminDialog() {
+        getFragmentController().showDialog(
+                EnterpriseUtils.getActionDisabledByAdminDialog(getContext(),
+                        DISALLOW_CONFIG_BLUETOOTH),
+                DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
     }
 
     @Override
@@ -148,24 +180,20 @@ public class BluetoothStateSwitchPreferenceController extends
         mUpdating = true;
         switch (state) {
             case BluetoothAdapter.STATE_TURNING_ON:
-                enableSwitchPreference(getPreference(), /* enabled= */ false,
-                        /* forPowerPolicy= */ false);
+                enableSwitchPreference(getPreference(), /* enabled= */ false);
                 updateSwitchPreference(true);
                 break;
             case BluetoothAdapter.STATE_ON:
-                enableSwitchPreference(getPreference(), !isUserRestricted(),
-                        /* forPowerPolicy= */ false);
+                enableSwitchPreference(getPreference(), /* enabled= */ !isUserRestricted());
                 updateSwitchPreference(true);
                 break;
             case BluetoothAdapter.STATE_TURNING_OFF:
-                enableSwitchPreference(getPreference(), /* enabled= */ false,
-                        /* forPowerPolicy= */ false);
+                enableSwitchPreference(getPreference(), /* enabled= */ false);
                 updateSwitchPreference(false);
                 break;
             case BluetoothAdapter.STATE_OFF:
             default:
-                enableSwitchPreference(getPreference(), !isUserRestricted(),
-                        /* forPowerPolicy= */ false);
+                enableSwitchPreference(getPreference(), /* enabled= */ !isUserRestricted());
                 updateSwitchPreference(false);
         }
         mUpdating = false;
@@ -183,14 +211,7 @@ public class BluetoothStateSwitchPreferenceController extends
         getPreference().setChecked(enabled);
     }
 
-    private void enableSwitchPreference(ColoredSwitchPreference preference,
-            boolean enabled, boolean forPowerPolicy) {
-        Consumer<Preference> listener = p ->
-                Toast.makeText(getContext(),
-                        getContext().getString(R.string.power_component_disabled),
-                        Toast.LENGTH_LONG).show();
-        setClickableWhileDisabled(preference, forPowerPolicy, listener);
-        preference.setDisabledClickListener(listener);
-        preference.setEnabled(enabled);
+    private void enableSwitchPreference(ColoredSwitchPreference preference, boolean enabled) {
+        preference.setEnabled(enabled && getAvailabilityStatus() == AVAILABLE);
     }
 }
