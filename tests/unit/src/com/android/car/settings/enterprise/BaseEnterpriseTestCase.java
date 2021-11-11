@@ -132,8 +132,18 @@ public class BaseEnterpriseTestCase {
 
     protected final void mockDeviceOwner() {
         mockActiveAdmin(mDefaultAdmin);
+        when(mDpm.isDeviceManaged()).thenReturn(true);
         when(mDpm.getDeviceOwnerComponentOnCallingUser()).thenReturn(mDefaultAdmin);
         when(mDpm.getDeviceOwnerComponentOnAnyUser()).thenReturn(mDefaultAdmin);
+    }
+
+    protected final void mockNoDeviceOwner() {
+        when(mDpm.getDeviceOwnerComponentOnCallingUser()).thenReturn(null);
+        when(mDpm.getDeviceOwnerComponentOnAnyUser()).thenReturn(null);
+    }
+
+    protected final void mockOrganisationName(String orgName) {
+        when(mDpm.getDeviceOwnerOrganizationName()).thenReturn(orgName);
     }
 
     protected final void mockFinancialDevice() {
