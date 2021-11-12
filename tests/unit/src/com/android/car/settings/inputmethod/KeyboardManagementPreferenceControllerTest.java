@@ -138,6 +138,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_permitAllInputMethods_preferenceCountIs4() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(ALLOWED_PACKAGE_NAME,
@@ -154,6 +155,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_multiplteAllowedImeByOrganization_allPreferencesVisible() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(
                 mPermittedList);
@@ -173,6 +175,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_multipleEnabledInputMethods_allPreferencesEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(
                 mPermittedList);
@@ -192,6 +195,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_multipleEnabledInputMethods_allPreferencesChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(
                 mPermittedList);
@@ -212,6 +216,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_disallowedByOrganization_preferenceShownDisabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(
                 mPermittedList);
@@ -235,6 +240,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_skipVoiceTyping() {
         List<InputMethodInfo> infos =
                 createInputMethodInfoList(InputMethodUtil.GOOGLE_VOICE_TYPING);
@@ -246,6 +252,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_verifyPreferenceIcon() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(ALLOWED_PACKAGE_NAME,
@@ -264,6 +271,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_verifyPreferenceTitle() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(ALLOWED_PACKAGE_NAME,
@@ -282,6 +290,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_verifyPreferenceSummary() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(ALLOWED_PACKAGE_NAME,
@@ -300,6 +309,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_oneInputMethod_noneEnabled_oneInputMethodPreferenceInView() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -313,6 +323,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_oneInputMethod_noneEnabled_preferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -326,6 +337,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_oneInputMethod_noneEnabled_preferenceNotChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -340,6 +352,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void refreshUi_oneInputMethod_defaultable_notChecked_preferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -353,6 +366,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_securityDialogShown() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -370,6 +384,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showSecurityDialog_positive_noOtherPreferenceAdded() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -395,6 +410,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showSecurityDialog_positive_preferenceChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -419,6 +435,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showSecurityDialog_positive_preferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -442,6 +459,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showSecurityDialog_positive_inputMethodEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -466,6 +484,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showSecurityDialog_negative_noOtherPreferenceAdded() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -491,6 +510,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showSecurityDialog_negative_preferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -514,6 +534,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showSecurityDialog_negative_inputMethodDisabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -538,6 +559,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_directBootWarningShown() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -565,6 +587,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_positive_noOtherPreferenceAdded() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -599,6 +622,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_positive_preferenceChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -632,6 +656,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_positive_preferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -664,6 +689,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_positive_inputMethodEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -697,6 +723,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_negative_noOtherPreferenceAdded() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -732,6 +759,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_negative_preferenceNotChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -766,6 +794,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_negative_preferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -798,6 +827,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_showDirectBootDialog_negative_inputMethodDisabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -831,6 +861,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_noOtherPreferenceAdded() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -848,6 +879,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_preferenceNotChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -864,6 +896,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_preferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -880,6 +913,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_inputMethodDisabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -896,6 +930,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_twoDefaultable_notClickDefaultablePreferenceDisabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -915,6 +950,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_twoDefaultable_clickedDefaultablePreferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -934,6 +970,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_twoDefaultable_nonDefaultablePreferenceEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -953,6 +990,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_twoDefaultable_clickedDefaultablePreferenceNotChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -972,6 +1010,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_twoDefaultable_notClickedDefaultablePreferenceChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -991,6 +1030,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleFalse_twoDefaultable_nonDefaultablePreferenceChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -1010,6 +1050,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_twoDefaultable_allPreferencesEnabled() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
@@ -1041,6 +1082,7 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void performClick_toggleTrue_twoDefaultable_allPreferencesChecked() {
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(
