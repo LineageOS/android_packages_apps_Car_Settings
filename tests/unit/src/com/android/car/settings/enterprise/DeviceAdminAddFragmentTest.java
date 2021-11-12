@@ -15,6 +15,13 @@
  */
 package com.android.car.settings.enterprise;
 
+import static android.app.admin.DeviceAdminInfo.USES_ENCRYPTED_STORAGE;
+import static android.app.admin.DeviceAdminInfo.USES_POLICY_EXPIRE_PASSWORD;
+import static android.app.admin.DeviceAdminInfo.USES_POLICY_FORCE_LOCK;
+import static android.app.admin.DeviceAdminInfo.USES_POLICY_LIMIT_PASSWORD;
+import static android.app.admin.DeviceAdminInfo.USES_POLICY_RESET_PASSWORD;
+import static android.app.admin.DeviceAdminInfo.USES_POLICY_WATCH_LOGIN;
+import static android.app.admin.DeviceAdminInfo.USES_POLICY_WIPE_DATA;
 import static android.app.admin.DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN;
 import static android.app.admin.DevicePolicyManager.EXTRA_ADD_EXPLANATION;
 import static android.app.admin.DevicePolicyManager.EXTRA_DEVICE_ADMIN;
@@ -184,7 +191,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         mSpiedFragment.onAttach(mSpiedContext, mActivity);
 
         verifyActivityNeverFinished();
-        verifyControllersUsed();
+        verifyControllersUsed(mDefaultAdmin);
     }
 
     @Test
@@ -199,6 +206,55 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         verityActivityResultSet(Activity.RESULT_OK);
         verifyActivityFinished();
         verifyControllersNeverUsed();
+    }
+
+    @Test
+    public void testAttach_addDeviceAdminAction_active_removing() {
+        mockActivityIntent(new Intent(ACTION_ADD_DEVICE_ADMIN)
+                .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockActiveAdmin(mDefaultAdmin);
+        mockRemovingAdmin(mDefaultAdmin, mSpiedContext.getUserId());
+
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verityActivityResultNeverSet();
+        verifyActivityFinished();
+        verifyControllersNeverUsed();
+    }
+
+    @Test
+    public void testAttach_addDeviceAdminAction_active_noRefreshing() {
+        mockActivityIntent(new Intent(ACTION_ADD_DEVICE_ADMIN)
+                .putExtra(EXTRA_DEVICE_ADMIN, mFancyAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockActiveAdmin(mFancyAdmin);
+        // Grant all policies that mFancyAdmin has.
+        mockGrantedPolicies(mFancyAdmin, USES_POLICY_LIMIT_PASSWORD, USES_POLICY_WATCH_LOGIN,
+                USES_POLICY_RESET_PASSWORD, USES_POLICY_FORCE_LOCK, USES_POLICY_WIPE_DATA,
+                USES_POLICY_EXPIRE_PASSWORD, USES_ENCRYPTED_STORAGE);
+
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verityActivityResultSet(Activity.RESULT_OK);
+        verifyActivityFinished();
+        verifyControllersNeverUsed();
+    }
+
+    @Test
+    public void testAttach_addDeviceAdminAction_active_refreshing() {
+        mockActivityIntent(new Intent(ACTION_ADD_DEVICE_ADMIN)
+                .putExtra(EXTRA_DEVICE_ADMIN, mFancyAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockActiveAdmin(mFancyAdmin);
+        // Grant all policies that mFancyAdmin has besides USES_ENCRYPTED_STORAGE.
+        mockGrantedPolicies(mFancyAdmin, USES_POLICY_LIMIT_PASSWORD, USES_POLICY_WATCH_LOGIN,
+                USES_POLICY_RESET_PASSWORD, USES_POLICY_FORCE_LOCK, USES_POLICY_WIPE_DATA,
+                USES_POLICY_EXPIRE_PASSWORD);
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verifyActivityNeverFinished();
+        verifyControllersUsed(mFancyAdmin);
     }
 
     @Test
@@ -242,7 +298,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         mSpiedFragment.onAttach(mSpiedContext, mActivity);
 
         verifyActivityNeverFinished();
-        verifyControllersUsed();
+        verifyControllersUsed(mDefaultAdmin);
     }
 
     // TODO(b/202342351): add similar test for when new DeviceAdminInfo(context, ri) throws an
@@ -281,7 +337,7 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         mSpiedFragment.onAttach(mSpiedContext, mActivity);
 
         verifyActivityNeverFinished();
-        verifyControllersUsed();
+        verifyControllersUsed(mDefaultAdmin);
     }
 
     @Test
@@ -339,31 +395,32 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
         verify(mSpiedFragment, never()).use(any(), anyInt());
     }
 
-    private void verifyControllersUsed() {
+    private void verifyControllersUsed(ComponentName admin) {
         verify(mSpiedFragment).use(DeviceAdminAddHeaderPreferenceController.class,
                 R.string.pk_device_admin_add_header);
-        verifySetDeviceAdmin(mHeaderController);
+        verifySetDeviceAdmin(mHeaderController, admin);
         verify(mHeaderController).setActivationListener(any());
 
         verify(mSpiedFragment).use(DeviceAdminAddExplanationPreferenceController.class,
                 R.string.pk_device_admin_add_explanation);
-        verifySetDeviceAdmin(mExplanationController);
+        verifySetDeviceAdmin(mExplanationController, admin);
         verify(mExplanationController).setExplanation(EXPLANATION);
 
         verify(mSpiedFragment).use(DeviceAdminAddSupportPreferenceController.class,
                 R.string.pk_device_admin_add_support);
-        verifySetDeviceAdmin(mSupportController);
+        verifySetDeviceAdmin(mSupportController, admin);
 
         verify(mSpiedFragment).use(DeviceAdminAddWarningPreferenceController.class,
                 R.string.pk_device_admin_add_warning);
-        verifySetDeviceAdmin(mWarningController);
+        verifySetDeviceAdmin(mWarningController, admin);
 
         verify(mSpiedFragment).use(DeviceAdminAddPoliciesPreferenceController.class,
                 R.string.pk_device_admin_add_policies);
-        verifySetDeviceAdmin(mPoliciesController);
+        verifySetDeviceAdmin(mPoliciesController, admin);
     }
 
-    private void verifySetDeviceAdmin(BaseDeviceAdminAddPreferenceController<?> controller) {
-        verify(controller).setDeviceAdmin(argThat(info->info.getComponent().equals(mDefaultAdmin)));
+    private void verifySetDeviceAdmin(BaseDeviceAdminAddPreferenceController<?> controller,
+            ComponentName admin) {
+        verify(controller).setDeviceAdmin(argThat(info->info.getComponent().equals(admin)));
     }
 }
