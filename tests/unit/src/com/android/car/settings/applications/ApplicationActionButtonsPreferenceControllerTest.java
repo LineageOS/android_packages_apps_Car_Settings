@@ -30,6 +30,7 @@ import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -616,6 +617,23 @@ public class ApplicationActionButtonsPreferenceControllerTest {
     }
 
     @Test
+    public void disableClicked_showsDisabledByDeviceAdminDialog() {
+        mockDisabledByDevicePolicyManagerRestriction(UserManager.DISALLOW_APPS_CONTROL);
+
+        setupAndAssignPreference();
+        setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ true);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        getDisableButton().getOnClickListener().onClick(/* view= */ null);
+
+        verify(mFragmentController).showDialog(any(ActionDisabledByAdminDialogFragment.class),
+                eq(DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG));
+        verify(mMockPm, never()).setApplicationEnabledSetting(PACKAGE_NAME,
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER, /* flags= */ 0);
+    }
+
+    @Test
     public void enableClicked_enablesPackage() {
         setupAndAssignPreference();
         setApplicationInfo(/* stopped= */ false, /* enabled= */ false, /* system= */ true);
@@ -625,6 +643,23 @@ public class ApplicationActionButtonsPreferenceControllerTest {
         getDisableButton().getOnClickListener().onClick(/* view= */ null);
 
         verify(mMockPm).setApplicationEnabledSetting(PACKAGE_NAME,
+                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, /* flags= */ 0);
+    }
+
+    @Test
+    public void enableClicked_showsDisabledByDeviceAdminDialog() {
+        mockDisabledByDevicePolicyManagerRestriction(UserManager.DISALLOW_APPS_CONTROL);
+
+        setupAndAssignPreference();
+        setApplicationInfo(/* stopped= */ false, /* enabled= */ false, /* system= */ true);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        getDisableButton().getOnClickListener().onClick(/* view= */ null);
+
+        verify(mFragmentController).showDialog(any(ActionDisabledByAdminDialogFragment.class),
+                eq(DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG));
+        verify(mMockPm, never()).setApplicationEnabledSetting(PACKAGE_NAME,
                 PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, /* flags= */ 0);
     }
 
