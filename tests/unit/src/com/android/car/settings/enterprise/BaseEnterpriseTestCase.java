@@ -164,6 +164,16 @@ public class BaseEnterpriseTestCase {
         when(mDpm.getLongSupportMessageForUser(eq(mDefaultAdmin), anyInt())).thenReturn(message);
     }
 
+    protected final void mockRemovingAdmin(ComponentName admin, int userId) {
+        when(mDpm.isRemovingAdmin(admin, userId)).thenReturn(true);
+    }
+
+    protected final void mockGrantedPolicies(ComponentName admin, int ... policies) {
+        for (int policy: policies) {
+            when(mDpm.hasGrantedPolicy(admin, policy)).thenReturn(true);
+        }
+    }
+
     protected final void mockHasDeviceAdminFeature() {
         when(mSpiedPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN)).thenReturn(true);
     }

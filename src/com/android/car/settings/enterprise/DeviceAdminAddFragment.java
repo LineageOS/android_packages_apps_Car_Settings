@@ -16,6 +16,8 @@
 
 package com.android.car.settings.enterprise;
 
+import static android.os.Process.myUserHandle;
+
 import static com.android.car.settings.enterprise.EnterpriseUtils.getAdminWithinPackage;
 import static com.android.car.settings.enterprise.EnterpriseUtils.getDeviceAdminInfo;
 
@@ -40,6 +42,7 @@ import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.ToolbarController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -49,6 +52,7 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
     private static final Logger LOG = new Logger(DeviceAdminAddFragment.class);
 
+    private DevicePolicyManager mDpm;
     private CharSequence mAppName;
 
     @Override
@@ -66,6 +70,7 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
     @VisibleForTesting
     void onAttach(Context context, Activity activity) {
+        mDpm = context.getSystemService(DevicePolicyManager.class);
         Intent intent = activity.getIntent();
         if (intent == null) {
             LOG.e("no intent on " + activity);
@@ -95,14 +100,6 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 return;
             }
         } else {
-            if (isActionAddDeviceAdminActivity(activity)) {
-                if (isActiveAdmin(context, admin)) {
-                    activity.setResult(Activity.RESULT_OK);
-                    activity.finish();
-                    return;
-                }
-            }
-
             // When activating, make sure the given component name is actually a valid device admin.
             // No need to check this when deactivating, because it is safe to deactivate an active
             // invalid device admin.
@@ -125,6 +122,38 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
             activity.finish();
             return;
         }
+
+        // This admin already exists, and we have two options at this point:
+        // 1. If new policy bits are set, show the user the new list.
+        // 2. If nothing has changed, simply return "OK" immediately.
+        if (isActionAddDeviceAdminActivity(activity)) {
+            boolean refreshing = false;
+            if (mDpm.isAdminActive(admin)) {
+                if (mDpm.isRemovingAdmin(admin, myUserHandle().getIdentifier())) {
+                    LOG.w("Requested admin is already being removed: " + admin);
+                    activity.finish();
+                    return;
+                }
+                ArrayList<DeviceAdminInfo.PolicyInfo> policies = deviceAdminInfo.getUsedPolicies();
+                for (int i = 0, size = policies.size(); i < size; i++) {
+                    DeviceAdminInfo.PolicyInfo pi = policies.get(i);
+                    if (!mDpm.hasGrantedPolicy(admin, pi.ident)) {
+                        refreshing = true;
+                        break;
+                    }
+                }
+                LOG.i("Try to add device admin for " + admin + ", refreshing=" + refreshing);
+                if (!refreshing) {
+                    // Nothing changed (or policies were removed) - return immediately
+                    activity.setResult(Activity.RESULT_OK);
+                    activity.finish();
+                    return;
+                }
+                // Update the active admin with the refreshed policies.
+                mDpm.setActiveAdmin(admin, refreshing);
+            }
+        }
+
         mAppName = deviceAdminInfo.loadLabel(context.getPackageManager());
 
         ((DeviceAdminAddHeaderPreferenceController) use(
@@ -208,7 +237,7 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
             return false;
         }
 
-        if (isActiveAdmin(context, who)) {
+        if (mDpm.isAdminActive(who)) {
             return true;
         }
         List<ResolveInfo> avail = pm.queryBroadcastReceivers(
@@ -237,10 +266,4 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
         }
         return found;
     }
-
-    private boolean isActiveAdmin(Context context, ComponentName who) {
-        DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
-        return dpm.isAdminActive(who);
-    }
-
 }
