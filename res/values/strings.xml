@@ -895,7 +895,7 @@
     <string name="location_driver_assistance_toggle_off_title">Vehicle location is off</string>
     <!-- Summary of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_toggle_off_summary">
-        Driver Assistance features cannot access your location
+        Driver Assistance apps cannot access your location
     </string>
     <!-- -Text of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_action_text">
@@ -935,7 +935,7 @@
     <string name="driver_assistance_settings_title">Driver assistance</string>
     <!--Driver assistance settings footer warning text [CHAR LIMIT=NONE] -->
     <string name="adas_settings_footer">
-        Location information sent to Driver Assistance features doesn’t contain information that
+        Location information sent to Driver Assistance apps doesn’t contain information that
         identifies you. It’s stored for a maximum of 2 days before being deleted.
     </string>
 
@@ -1781,4 +1781,45 @@
     <!-- Power components which are disabled by the current power policy cannot be toggled in Setting. [CHAR LIMIT=80] -->
     <string name="power_component_disabled">This setting can\'t be changed right now</string>
 
+    <!-- Accessibility --><skip/>
+    <!-- Settings title to go into the accessibility section of car settings. [CHAR LIMIT=30] -->
+    <string name="accessibility_settings_title">Accessibility</string>
+    <!-- Header for the section of the accessibility settings that lets the user customize their closed captions settings. [CHAR LIMIT=30] -->
+    <string name="accessibility_settings_captions_title">Captions</string>
+    <!-- Settings title for the closed captions section of car settings. [CHAR LIMIT=40] -->
+    <string name="captions_settings_title">Caption preferences</string>
+    <!-- Subtitle for the closed caption settings item when closed captions are turned off [CHAR LIMIT=30] -->
+    <string name="captions_settings_off">Off</string>
+    <!-- Subtitle for the closed caption settings item when closed captions are turned on [CHAR LIMIT=30] -->
+    <string name="captions_settings_on">On</string>
+    <!-- Settings title to go into the screen reader settings section of car settings. [CHAR LIMIT=30] -->
+    <string name="screen_reader_settings_title">Screen reader</string>
+    <!-- Title for toggle to enable closed captions by default. [CHAR LIMIT=30] -->
+    <string name="show_captions_toggle_title">Show captions</string>
+    <!-- Settings title to select what the closed captions text size is. [CHAR LIMIT=30] -->
+    <string name="captions_text_size_title">Text size</string>
+    <!-- Header for the section of the caption settings that lets the user customize the size and style of their closed captions. [CHAR LIMIT=40] -->
+    <string name="captions_settings_style_header">Caption size and style</string>
+    <!-- Settings option for very small closed captions text size. [CHAR LIMIT=30] -->
+    <string name="captions_settings_text_size_very_small">Very small</string>
+    <!-- Settings option for small closed captions text size. [CHAR LIMIT=30] -->
+    <string name="captions_settings_text_size_small">Small</string>
+    <!-- Settings option for default closed captions text size. [CHAR LIMIT=30] -->
+    <string name="captions_settings_text_size_default">Default</string>
+    <!-- Settings option for large closed captions text size. [CHAR LIMIT=30] -->
+    <string name="captions_settings_text_size_large">Large</string>
+    <!-- Settings option for very large closed captions text size. [CHAR LIMIT=30] -->
+    <string name="captions_settings_text_size_very_large">Very large</string>
+    <!-- Settings title to select the closed captions text styling (text color, background color, etc). [CHAR LIMIT=30] -->
+    <string name="captions_text_style_title">Caption style</string>
+    <!-- Settings option for closed captions text style to default to styling of the app playing the video. [CHAR LIMIT=40] -->
+    <string name="captions_settings_text_style_by_app">Set by app</string>
+    <!-- Settings option for closed captions text style to be white text on black background [CHAR LIMIT=40] -->
+    <string name="captions_settings_text_style_white_on_black">White on black</string>
+    <!-- Settings option for closed captions text style to be black text on white background [CHAR LIMIT=40] -->
+    <string name="captions_settings_text_style_black_on_white">Black on white</string>
+    <!-- Settings option for closed captions text style to be yellow text on black background [CHAR LIMIT=40] -->
+    <string name="captions_settings_text_style_yellow_on_black">Yellow on black</string>
+    <!-- Settings option for closed captions text style to be yellow text on blue background [CHAR LIMIT=40] -->
+    <string name="captions_settings_text_style_yellow_on_blue">Yellow on blue</string>
 </resources>
