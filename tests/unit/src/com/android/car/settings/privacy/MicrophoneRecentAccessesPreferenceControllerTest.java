@@ -160,6 +160,19 @@ public class MicrophoneRecentAccessesPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
+    public void refreshUi_clickViewAll_launchesFragment() {
+        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ true))
+                .thenReturn(Collections.singletonList(mock(RecentAppOpsAccess.Access.class)));
+        mPreferenceController.refreshUi();
+
+        // click on the "View all" preference
+        mPreference.getPreference(1).performClick();
+        verify(mFragmentController)
+                .launchFragment(any(MicrophoneRecentAccessViewAllFragment.class));
+    }
+
+    @Test
     public void refreshUi_noRecentRequests_includingNoSystemAppRequests_doesNotShowViewAll() {
         when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
                 .thenReturn(Collections.emptyList());
