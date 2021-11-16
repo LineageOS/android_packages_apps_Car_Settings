@@ -16,6 +16,11 @@
 
 package com.android.car.settings.location;
 
+import static android.os.UserManager.DISALLOW_CONFIG_LOCATION;
+import static android.os.UserManager.DISALLOW_SHARE_LOCATION;
+
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assert.assertTrue;
@@ -36,6 +41,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
+import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.test.core.app.ApplicationProvider;
@@ -46,7 +52,9 @@ import androidx.test.rule.ActivityTestRule;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
+import com.android.car.settings.testutils.EnterpriseTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 
@@ -74,6 +82,9 @@ public class AdasLocationSwitchPreferenceControllerTest {
     @Mock
     private LocationManager mLocationManager;
 
+    @Mock
+    private UserManager mUserManager;
+
     @Rule
     public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
             new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
@@ -84,6 +95,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -231,6 +243,62 @@ public class AdasLocationSwitchPreferenceControllerTest {
                 .handlePolicyChange(/* isOn= */ true);
 
         assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
+    }
+
+    @Test
+    public void adasLocationOnAndEnabled_disallowConfigLocation_switchStaysChecked() {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_CONFIG_LOCATION,
+                /* restricted= */true);
+        when(mLocationManager.isLocationEnabled()).thenReturn(false);
+
+        initializePreference(/* checked= */ true, /* enabled= */ false);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
+        assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
+    }
+    @Test
+    public void adasLocationOnAndEnabled_disallowShareLocation_setsSwitchUnchecked() {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_SHARE_LOCATION,
+                /* restricted= */true);
+        when(mLocationManager.isLocationEnabled()).thenReturn(false);
+
+        initializePreference(/* checked= */ true, /* enabled= */ false);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
+        assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
+    }
+
+    @Test
+    public void disallowConfigLocation_switchTapped_showsDialog() {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_CONFIG_LOCATION,
+                /* restricted= */true);
+        when(mLocationManager.isLocationEnabled()).thenReturn(false);
+        initializePreference(/* checked= */ true, /* enabled= */ false);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        mSwitchPreference.performClick();
+
+        assertShowingDisabledByAdminDialog();
+    }
+
+    @Test
+    public void disallowShareLocation_switchTapped_showsDialog() {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_SHARE_LOCATION,
+                /* restricted= */true);
+        when(mLocationManager.isLocationEnabled()).thenReturn(false);
+        initializePreference(/* checked= */ true, /* enabled= */ false);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        mSwitchPreference.performClick();
+
+        assertShowingDisabledByAdminDialog();
+    }
+
+    private void assertShowingDisabledByAdminDialog() {
+        verify(mFragmentController).showDialog(any(ActionDisabledByAdminDialogFragment.class),
+                eq(DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG));
     }
 
     @Test
