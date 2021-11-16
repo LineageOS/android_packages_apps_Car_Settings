@@ -214,8 +214,17 @@ public class ProfileHelper {
         }
     }
 
-    private boolean switchProfile(@UserIdInt int userId) {
+    /**
+     * Switches to the given profile.
+     */
+    // TODO(b/186905050, b/205185521): add unit / robo test
+    public boolean switchProfile(@UserIdInt int userId) {
+        Log.i(TAG, "Switching to profile / user " + userId);
+
         UserSwitchResult result = getResult("switch", mCarUserManager.switchUser(userId));
+        if (Log.isLoggable(TAG, Log.DEBUG)) {
+            Log.d(TAG, "Result: " + result);
+        }
         return result != null && result.isSuccess();
     }
 
