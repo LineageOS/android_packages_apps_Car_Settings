@@ -147,6 +147,10 @@ public class MicrophoneRecentAccessesPreferenceController extends
         CarUiPreference preference = new CarUiPreference(getContext());
         preference.setTitle(R.string.microphone_settings_recent_requests_view_all_title);
         preference.setIcon(R.drawable.ic_apps);
+        preference.setOnPreferenceClickListener(p -> {
+            getFragmentController().launchFragment(new MicrophoneRecentAccessViewAllFragment());
+            return true;
+        });
         return preference;
     }
 }
