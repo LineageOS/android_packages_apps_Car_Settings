@@ -32,8 +32,20 @@ final class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFea
     }
 
     @Override
+    public Date getLastSecurityLogRetrievalTime() {
+        long timestamp = mDpm.getLastSecurityLogRetrievalTime();
+        return timestamp < 0 ? null : new Date(timestamp);
+    }
+
+    @Override
     public Date getLastBugReportRequestTime() {
         long timestamp = mDpm.getLastBugReportRequestTime();
+        return timestamp < 0 ? null : new Date(timestamp);
+    }
+
+    @Override
+    public Date getLastNetworkLogRetrievalTime() {
+        long timestamp = mDpm.getLastNetworkLogRetrievalTime();
         return timestamp < 0 ? null : new Date(timestamp);
     }
 }

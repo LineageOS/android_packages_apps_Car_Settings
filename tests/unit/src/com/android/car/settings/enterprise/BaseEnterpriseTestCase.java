@@ -221,7 +221,15 @@ public class BaseEnterpriseTestCase {
                 .checkIfRestrictionEnforced(mSpiedContext, restriction, userId)).thenReturn(null);
     }
 
-    protected final void mockLastBugreportTime(long time) {
+    protected final void mockGetLastBugreportTime(long time) {
         when(mDpm.getLastBugReportRequestTime()).thenReturn(time);
+    }
+
+    protected void mockGetLastNetworkLogRetrievalTime(long time) {
+        when(mDpm.getLastNetworkLogRetrievalTime()).thenReturn(time);
+    }
+
+    protected void mockGetLastSecurityLogRetrievalTime(long time) {
+        when(mDpm.getLastSecurityLogRetrievalTime()).thenReturn(time);
     }
 }

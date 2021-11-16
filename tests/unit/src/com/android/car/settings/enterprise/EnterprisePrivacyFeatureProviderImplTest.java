@@ -33,7 +33,7 @@ public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpri
 
     @Test
     public void testGetLastBugReportRequestTime_none() {
-        mockLastBugreportTime(-1);
+        mockGetLastBugreportTime(-1);
 
         assertWithMessage("getLastBugReportRequestTime()")
                 .that(mProvider.getLastBugReportRequestTime()).isNull();
@@ -42,10 +42,49 @@ public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpri
     @Test
     public void testGetLastBugReportRequestTime_ok() {
         long now = System.currentTimeMillis();
-        mockLastBugreportTime(now);
+        mockGetLastBugreportTime(now);
 
         Date last = mProvider.getLastBugReportRequestTime();
         assertWithMessage("getLastBugReportRequestTime()").that(last).isNotNull();
-        assertWithMessage("getLastBugReportRequestTime() time").that(last.getTime()).isEqualTo(now);
+        assertWithMessage("getLastBugReportRequestTime().getTime()").that(last.getTime())
+                .isEqualTo(now);
+    }
+
+    @Test
+    public void testGetLastNetworkLogRetrievalTime_none() {
+        mockGetLastNetworkLogRetrievalTime(-1);
+
+        assertWithMessage("getLastNetworkLogRetrievalTime()")
+                .that(mProvider.getLastNetworkLogRetrievalTime()).isNull();
+    }
+
+    @Test
+    public void testGetLastNetworkLogRetrievalTime_ok() {
+        long now = System.currentTimeMillis();
+        mockGetLastNetworkLogRetrievalTime(now);
+
+        Date last = mProvider.getLastNetworkLogRetrievalTime();
+        assertWithMessage("getLastNetworkLogRetrievalTime()").that(last).isNotNull();
+        assertWithMessage("getLastNetworkLogRetrievalTime().getTime()").that(last.getTime())
+                .isEqualTo(now);
+    }
+
+    @Test
+    public void testGetLastSecurityLogRetrievalTime_none() {
+        mockGetLastSecurityLogRetrievalTime(-1);
+
+        assertWithMessage("getLastSecurityLogRetrievalTime()")
+                .that(mProvider.getLastSecurityLogRetrievalTime()).isNull();
+    }
+
+    @Test
+    public void testGetLastSecurityLogRetrievalTime_ok() {
+        long now = System.currentTimeMillis();
+        mockGetLastSecurityLogRetrievalTime(now);
+
+        Date last = mProvider.getLastSecurityLogRetrievalTime();
+        assertWithMessage("getLastSecurityLogRetrievalTime()").that(last).isNotNull();
+        assertWithMessage("getLastSecurityLogRetrievalTime().getTime()").that(last.getTime())
+                .isEqualTo(now);
     }
 }

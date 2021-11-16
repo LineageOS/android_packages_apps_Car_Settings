@@ -22,29 +22,19 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 
-import java.util.Date;
-
 /**
-* Controller to show whether the device owner obtained network logs.
-*/
-public final class NetworkLogsPreferenceController
-        extends BaseAdminActionReporterPreferenceController<Preference> {
+ * Base class for controllers in the Enterprise Privacy / Managed Device Info screen.
+ */
+abstract class BaseEnterprisePrivacyPreferenceController<P extends Preference>
+        extends BaseEnterprisePreferenceController<P> {
 
-    public NetworkLogsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+    protected final EnterprisePrivacyFeatureProvider mEnterprisePrivacyFeatureProvider;
+
+    protected BaseEnterprisePrivacyPreferenceController(Context context,
+            String preferenceKey, FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-    }
 
-    @Override
-    protected Date getAdminActionTimestamp() {
-        return mEnterprisePrivacyFeatureProvider.getLastNetworkLogRetrievalTime();
-    }
-
-    @Override
-    protected boolean isEnabled() {
-        // TODO(b/207147813): on phone it checks provider.isNetworkLoggingEnabled() 1st, but that
-        // method is always returning false because of the current user / device owner mismatcher -
-        // we might need to fix it on DevicePolicyManagerService
-        return getAdminActionTimestamp() != null;
+        mEnterprisePrivacyFeatureProvider = new EnterprisePrivacyFeatureProviderImpl(mDpm);
     }
 }
