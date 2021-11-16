@@ -154,4 +154,10 @@
         Set to -1 for unlimited.
      -->
     <integer name="config_qc_bluetooth_device_limit">3</integer>
+
+    <!--
+         The value here should be the component name of the system default screen reader if one
+         exists. If it is left blank then no screen reader will show up in settings.
+    -->
+    <string name="config_default_screen_reader" translatable="false"></string>
 </resources>
