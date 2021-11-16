@@ -22,23 +22,22 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 
+import java.util.Date;
+
 /**
 * Controller to show whether the device owner took bugreports.
 */
 public final class BugReportsPreferenceController
-        extends BaseEnterprisePreferenceController<Preference> {
+        extends BaseAdminActionReporterPreferenceController<Preference> {
 
     public BugReportsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
+    // TODO(b/206155845, b/186905050): add unit tests
     @Override
-    protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) return superStatus;
-
-        // TODO(b/206155845): implement / add unit test
-        return AVAILABLE;
+    protected Date getAdminActionTimestamp() {
+        return mEnterprisePrivacyFeatureProvider.getLastBugReportRequestTime();
     }
 }
