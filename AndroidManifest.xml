@@ -907,6 +907,17 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".enterprise.EnterprisePrivacySettingsActivity"
+            android:exported="true">
+            <meta-data android:name="com.android.car.settings.SINGLE_PANE" android:value="true"/>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.settings.ENTERPRISE_PRIVACY_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".notifications.NotificationAccessConfirmationActivity"
             android:exported="true"
             android:taskAffinity="com.android.car.settings.notifications.NotificationAccessConfirmationActivity"
