@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Bunu deaktiv etsəniz, bütün tətbiqlər üçün məkana giriş silinəcək. Sürücü Yardımı tətbiqlərinin hələ də girişi olacaq."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Sürücü Yardımı üçün məkan istifadə edin"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Avtomobilin məkanı deaktivdir"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Sürücü Yardımı funksiyaları məkanınıza giriş edə bilmir"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Dəyişin"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Sürməyə kömək edən tətbiqlərin məkanınıza girişinə icazə verin"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Bunu deaktiv etsəniz, məkan məlumatlarına əsaslanan Sürücü Yardımı tətbiqləri deaktiv ediləcək."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Məkandan istifadə edin"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Məkan GPS, Wi‑Fi, mobil şəbəkə və sensor kimi mənbələrdən cihazınızın məkanını təyin etmək üçün istifadə edə bilər."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Sürücü yardımı"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"Sürücü Yardımı funksiyalarına göndərilən məkan məlumatları sizi tanıdan məlumatları ehtiva etmir. Silinməzdən əvvəl maksimum 2 gün saxlanılır."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofondan istifadə edin"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Bütün tətbiqlərin mikrofonunuza girişinə icazə verin"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Sxem kilidini necə çəkməli"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Modeli saxlamaqla bağlı problem var"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Həddindən çox yanlış cəhdlər. <xliff:g id="NUMBER">%d</xliff:g> saniyəyə yenidən cəhd edin."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ekran kilidi ləğv edilsin?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu, hər kəsə hesabınıza daxil olmaq imkanı verəcək"</string>
@@ -753,6 +757,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Aktiv edilmiş tətbiq yoxdur"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> avtomobil siyasəti"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Ayarlar təşkilat meneceri tərəfindən idarə edilir"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Baq hesabatı paylaşılsın?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Bu avtomobilin təşkilat meneceri bu cihazda nasazlıqların aşkarlanması üçün baq hesabatı sorğusu göndərdi. Tətbiqlər və data paylaşıla bilər."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Bu avtomobilin təşkilat meneceri bu cihazda nasazlıqların aşkarlanması üçün baq hesabatı sorğusu göndərdi. Tətbiqlər və data paylaşıla və cihazınızın surəti müvəqqəti azala bilər."</string>
@@ -786,4 +794,22 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Ağ üstündə qara"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Qara üstündə sarı"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Mavi üstündə sarı"</string>
+    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
+    <skip />
+    <!-- no translation found for talkback_title (6529000326454628289) -->
+    <skip />
+    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
+    <skip />
+    <!-- no translation found for talkback_settings_on (796292072895957042) -->
+    <skip />
+    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
+    <skip />
+    <!-- no translation found for talkback_options_title (7366357383004455638) -->
+    <skip />
+    <!-- no translation found for talkback_settings_title (631275474070654027) -->
+    <skip />
+    <!-- no translation found for about_talkback_title (6048639389606001298) -->
+    <skip />
+    <!-- no translation found for about_talkback_description (5438077447169311605) -->
+    <skip />
 </resources>
