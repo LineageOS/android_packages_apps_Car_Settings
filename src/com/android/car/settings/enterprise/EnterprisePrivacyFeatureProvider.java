@@ -46,4 +46,11 @@ public interface EnterprisePrivacyFeatureProvider {
      */
     @Nullable
     Date getLastNetworkLogRetrievalTime();
+
+    /**
+     * Returns the label of the current user's input method if that input method was set by a Device
+     * Owner or Profile Owner in that user. Otherwise, returns {@code null}.
+     */
+    @Nullable
+    String getImeLabelIfOwnerSet();
 }

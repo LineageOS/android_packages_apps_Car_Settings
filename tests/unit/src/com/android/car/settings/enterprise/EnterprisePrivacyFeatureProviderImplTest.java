@@ -17,18 +17,36 @@ package com.android.car.settings.enterprise;
 
 import static com.google.common.truth.Truth.assertWithMessage;
 
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.when;
+
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.os.UserHandle;
+import android.provider.Settings;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 
 import java.util.Date;
 
 public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpriseTestCase {
 
+    private static final String IME_PACKAGE_NAME = "acme.keyboards";
+    private static final String IME_PACKAGE_LABEL = "ACME Keyboards";
+
+    private static final UserHandle MY_USER_ID = UserHandle.of(UserHandle.myUserId());
+
     private EnterprisePrivacyFeatureProviderImpl mProvider;
+
+    @Mock
+    private ApplicationInfo mApplicationInfo;
 
     @Before
     public void setProvider() {
-        mProvider = new EnterprisePrivacyFeatureProviderImpl(mDpm);
+        mProvider = new EnterprisePrivacyFeatureProviderImpl(mSpiedContext, mDpm, mSpiedPm);
     }
 
     @Test
@@ -86,5 +104,68 @@ public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpri
         assertWithMessage("getLastSecurityLogRetrievalTime()").that(last).isNotNull();
         assertWithMessage("getLastSecurityLogRetrievalTime().getTime()").that(last.getTime())
                 .isEqualTo(now);
+    }
+
+    @Test
+    public void testGetImeLabelIfOwnerSet_notSet() {
+        mockIsCurrentInputMethodSetByOwner(false);
+
+        assertWithMessage("getImeLabelIfOwnerSet()").that(mProvider.getImeLabelIfOwnerSet())
+                .isNull();
+    }
+
+    @Test
+    public void testGetImeLabelIfOwnerSet_nullString() {
+        mockIsCurrentInputMethodSetByOwner(true);
+        mockDefaultInputMehtodSettings(null);
+
+        assertWithMessage("getImeLabelIfOwnerSet()").that(mProvider.getImeLabelIfOwnerSet())
+                .isNull();
+    }
+
+    @Test
+    public void testGetImeLabelIfOwnerSet_emptyString() {
+        mockIsCurrentInputMethodSetByOwner(true);
+        mockDefaultInputMehtodSettings("");
+
+        assertWithMessage("getImeLabelIfOwnerSet()").that(mProvider.getImeLabelIfOwnerSet())
+                .isNull();
+    }
+
+    @Test
+    public void testGetImeLabelIfOwnerSet_nonexistentPackage() throws Exception {
+        mockIsCurrentInputMethodSetByOwner(true);
+        mockDefaultInputMehtodSettings(IME_PACKAGE_NAME);
+        mockGetApplicationInfoNotFound(IME_PACKAGE_NAME);
+
+        assertWithMessage("getImeLabelIfOwnerSet()").that(mProvider.getImeLabelIfOwnerSet())
+                .isNull();
+    }
+
+    @Test
+    public void testGetImeLabelIfOwnerSet_existentPackage() throws Exception {
+        mockIsCurrentInputMethodSetByOwner(true);
+        mockDefaultInputMehtodSettings(IME_PACKAGE_NAME);
+        mockGetApplicationInfoLabel(IME_PACKAGE_NAME, IME_PACKAGE_LABEL);
+
+        assertWithMessage("getImeLabelIfOwnerSet()").that(mProvider.getImeLabelIfOwnerSet())
+                .isEqualTo(IME_PACKAGE_LABEL);
+    }
+
+    private void mockDefaultInputMehtodSettings(String value) {
+        Settings.Secure.putString(mRealContext.getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD, value);
+    }
+
+    private void mockGetApplicationInfoNotFound(String packageName) throws Exception {
+        doThrow(new PackageManager.NameNotFoundException("D'OH!")).when(mSpiedPm)
+                .getApplicationInfoAsUser(packageName, /* flags= */ 0, MY_USER_ID);
+    }
+
+    private void mockGetApplicationInfoLabel(String packageName, CharSequence label)
+            throws Exception {
+        doReturn(mApplicationInfo).when(mSpiedPm).getApplicationInfoAsUser(packageName,
+                /* flags= */ 0, MY_USER_ID);
+        when(mApplicationInfo.loadLabel(mSpiedPm)).thenReturn(label);
     }
 }

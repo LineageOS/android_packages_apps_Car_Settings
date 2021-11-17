@@ -225,11 +225,15 @@ public class BaseEnterpriseTestCase {
         when(mDpm.getLastBugReportRequestTime()).thenReturn(time);
     }
 
-    protected void mockGetLastNetworkLogRetrievalTime(long time) {
+    protected final void mockGetLastNetworkLogRetrievalTime(long time) {
         when(mDpm.getLastNetworkLogRetrievalTime()).thenReturn(time);
     }
 
-    protected void mockGetLastSecurityLogRetrievalTime(long time) {
+    protected final void mockGetLastSecurityLogRetrievalTime(long time) {
         when(mDpm.getLastSecurityLogRetrievalTime()).thenReturn(time);
+    }
+
+    protected final void mockIsCurrentInputMethodSetByOwner(boolean value) {
+        when(mDpm.isCurrentInputMethodSetByOwner()).thenReturn(value);
     }
 }

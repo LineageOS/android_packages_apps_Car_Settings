@@ -35,6 +35,15 @@ abstract class BaseEnterprisePrivacyPreferenceController<P extends Preference>
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
 
-        mEnterprisePrivacyFeatureProvider = new EnterprisePrivacyFeatureProviderImpl(mDpm);
+        mEnterprisePrivacyFeatureProvider =
+                new EnterprisePrivacyFeatureProviderImpl(context, mDpm, mPm);
+    }
+
+    protected BaseEnterprisePrivacyPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            EnterprisePrivacyFeatureProvider provider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+
+        mEnterprisePrivacyFeatureProvider = provider;
     }
 }
