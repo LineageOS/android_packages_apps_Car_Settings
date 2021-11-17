@@ -1762,6 +1762,8 @@
     <string name="work_policy_privacy_settings"><xliff:g id="organization_name">%1$s</xliff:g> vehicle policy</string>
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
     <string name="work_policy_privacy_settings_summary">Settings managed by the organization manager</string>
+    <!-- Footer to show help link content description. [CHAR LIMIT=NONE] -->
+    <string name="footer_learn_more_content_description">Learn more about <xliff:g id="service" example="Select to Speak">%1$s</xliff:g></string>
 
     <!-- Enterprise Privacy --> <skip />
     <!-- TODO(b/206022572, b/203004258): remove translatable="false" once the proper strings have been defined -->
