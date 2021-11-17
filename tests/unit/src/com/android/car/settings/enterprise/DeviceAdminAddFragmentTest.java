@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.enterprise;
 
+import static android.app.Activity.RESULT_CANCELED;
+import static android.app.Activity.RESULT_OK;
 import static android.app.admin.DeviceAdminInfo.USES_ENCRYPTED_STORAGE;
 import static android.app.admin.DeviceAdminInfo.USES_POLICY_EXPIRE_PASSWORD;
 import static android.app.admin.DeviceAdminInfo.USES_POLICY_FORCE_LOCK;
@@ -28,13 +30,16 @@ import static android.app.admin.DevicePolicyManager.EXTRA_DEVICE_ADMIN;
 import static android.car.test.mocks.AndroidMockitoHelper.syncCallOnMainThread;
 
 import static com.android.car.settings.enterprise.DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME;
+import static com.android.car.settings.enterprise.DeviceAdminAddFragment.UNINSTALL_DEVICE_ADMIN_REQUEST_CODE;
 
+import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
@@ -55,6 +60,7 @@ import androidx.test.core.app.ApplicationProvider;
 
 import com.android.car.settings.R;
 import com.android.car.settings.enterprise.DeviceAdminAddHeaderPreferenceController.ActivationListener;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.Before;
@@ -338,6 +344,115 @@ public final class DeviceAdminAddFragmentTest extends BaseEnterpriseTestCase {
 
         verifyActivityNeverFinished();
         verifyControllersUsed(mDefaultAdmin);
+    }
+
+    @Test
+    public void testAttach_adminExtra_doesNotShowUninstallButton() {
+        mockActivityIntent(new Intent()
+                .putExtra(EXTRA_DEVICE_ADMIN, mDefaultAdmin)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockValidAdmin();
+
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verify(mSpiedFragment).setUninstallButton(any(Context.class), eq(false));
+    }
+
+    @Test
+    public void testAttach_packageExtra_showsUninstallButton() {
+        mockActivityIntent(new Intent()
+                .putExtra(EXTRA_DEVICE_ADMIN_PACKAGE_NAME, mPackageName)
+                .putExtra(EXTRA_ADD_EXPLANATION, EXPLANATION));
+        mockGetActiveAdmins(mDefaultAdmin);
+
+        mSpiedFragment.onAttach(mSpiedContext, mActivity);
+
+        verify(mSpiedFragment).setUninstallButton(any(Context.class), eq(true));
+    }
+
+    @Test
+    public void testSetUninstallButton_showButtonFalse() {
+        mRealFragment.setUninstallButton(mRealContext, false);
+
+        MenuItem button = mRealFragment.getToolbarMenuItems().get(0);
+        assertThat(button).isNotNull();
+        assertThat(button.getTitle().toString())
+                .isEqualTo(mRealContext.getString(R.string.deactivate_and_uninstall_device_admin));
+        assertThat(button.isEnabled()).isFalse();
+        assertThat(button.isVisible()).isFalse();
+    }
+
+    @Test
+    public void testSetUninstallButton_showButtonTrue() {
+        mRealFragment.setUninstallButton(mRealContext, true);
+
+        MenuItem button = mRealFragment.getToolbarMenuItems().get(0);
+        assertThat(button).isNotNull();
+        assertThat(button.getTitle().toString())
+                .isEqualTo(mRealContext.getString(R.string.deactivate_and_uninstall_device_admin));
+        assertThat(button.isEnabled()).isTrue();
+        assertThat(button.isVisible()).isTrue();
+    }
+
+    @Test
+    public void testUninstallOnClickListener_activeAdmin() {
+        mSpiedFragment.setDevicePolicyManager(mDpm);
+        mSpiedFragment.setPackageToUninstall(mPackageName, mDefaultAdmin);
+        mSpiedFragment.setUninstallButton(mSpiedContext, true);
+        mockActiveAdmin(mDefaultAdmin);
+        doNothing().when(mSpiedFragment).startActivityForResult(any(Intent.class), anyInt());
+
+        mSpiedFragment.getToolbarMenuItems().get(0).getOnClickListener().onClick(/* item= */ null);
+
+        ArgumentCaptor<Intent> intentArgumentCaptor = ArgumentCaptor.forClass(
+                Intent.class);
+        verify(mSpiedFragment).startActivityForResult(intentArgumentCaptor.capture(),
+                eq(UNINSTALL_DEVICE_ADMIN_REQUEST_CODE));
+
+        Intent intent = intentArgumentCaptor.getValue();
+        assertThat(intent.getAction()).isEqualTo(Intent.ACTION_UNINSTALL_PACKAGE);
+        assertThat(intent.getData().toString()).isEqualTo("package:" + mPackageName);
+        assertThat(intent.getBooleanExtra(Intent.EXTRA_RETURN_RESULT, false)).isTrue();
+        verify(mDpm).removeActiveAdmin(mDefaultAdmin);
+    }
+
+    @Test
+    public void testUninstallOnClickListener_inactiveAdmin() {
+        mSpiedFragment.setDevicePolicyManager(mDpm);
+        mSpiedFragment.setPackageToUninstall(mPackageName, mDefaultAdmin);
+        mSpiedFragment.setUninstallButton(mSpiedContext, true);
+        mockInactiveAdmin(mDefaultAdmin);
+        doNothing().when(mSpiedFragment).startActivityForResult(any(Intent.class), anyInt());
+
+        mSpiedFragment.getToolbarMenuItems().get(0).getOnClickListener().onClick(/* item= */ null);
+
+        ArgumentCaptor<Intent> intentArgumentCaptor = ArgumentCaptor.forClass(
+                Intent.class);
+        verify(mSpiedFragment).startActivityForResult(intentArgumentCaptor.capture(),
+                eq(UNINSTALL_DEVICE_ADMIN_REQUEST_CODE));
+
+        Intent intent = intentArgumentCaptor.getValue();
+        assertThat(intent.getAction()).isEqualTo(Intent.ACTION_UNINSTALL_PACKAGE);
+        assertThat(intent.getData().toString()).isEqualTo("package:" + mPackageName);
+        assertThat(intent.getBooleanExtra(Intent.EXTRA_RETURN_RESULT, false)).isTrue();
+        verify(mDpm, never()).removeActiveAdmin(mDefaultAdmin);
+    }
+
+    @Test
+    public void testOnActivityResult_resultOk() {
+        mSpiedFragment.onActivityResult(UNINSTALL_DEVICE_ADMIN_REQUEST_CODE, RESULT_OK, null);
+
+        verify(mActivity).setResult(RESULT_OK);
+        verify(mActivity).finish();
+    }
+
+    @Test
+    public void testOnActivityResult_resultNotOk() {
+        mSpiedFragment.onActivityResult(UNINSTALL_DEVICE_ADMIN_REQUEST_CODE, RESULT_CANCELED,
+                null);
+
+        verify(mActivity, never()).setResult(anyInt());
+        verify(mActivity, never()).finish();
     }
 
     @Test
