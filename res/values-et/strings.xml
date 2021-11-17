@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Kui selle välja lülitate, eemaldatakse juurdepääs asukohale kõigi rakenduste jaoks. Juhiabirakendustel on siiski juurdepääs."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Juhiabifunkts. puhul asukoha kasutamine"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Sõiduki asukoht on välja lülitatud"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Juhiabifunktsioonid ei pääse teie asukohale juurde"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Muuda"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Anna juhiabirakendustele juurdepääs minu asukohale"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Kui selle välja lülitate, keelatakse juhiabifunktsioonid, mis kasutavad asukohateavet."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Asukoha kasutamine"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Funktsioon Asukoht võib teie seadme asukoha tuvastamiseks kasutada selliseid allikaid nagu GPS, WiFi- ja mobiilsidevõrgud ning andurid."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Juhiabifunktsioonid"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"Juhiabifunktsioonidele saadetav asukohateave ei sisalda teid tuvastavat teavet. See talletatakse maksimaalselt kaheks päevaks, pärast mida see kustutatakse."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Kasuta mikrofoni"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Andke kõigile rakendustele juurdepääs oma mikrofonile"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kuidas joonistada avamismustrit?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Viga mustri salvestamisel"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Liiga palju valesid katseid. Proovige uuesti <xliff:g id="NUMBER">%d</xliff:g> sekundi pärast."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Kas eemaldada ekraanilukk?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"See lubab igaühel teie kontole juurde pääseda"</string>
@@ -754,6 +758,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Aktiveeritud rakendusi pole"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Organisatsiooni <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> sõiduki kasutamise eeskirjad"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Seadeid haldab organisatsiooni haldur"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Kas jagada veaaruannet?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Selle sõiduki organisatsiooni haldur taotles veaaruannet, mis aitaks seadmes vigu otsida. Rakendusi ja andmeid võidakse jagada."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Selle sõiduki organisatsiooni haldur taotles veaaruannet, mis aitaks seadmes vigu otsida. Rakendusi ja andmeid võidakse jagada ning see võib ajutiselt teie seadet aeglustada."</string>
@@ -761,4 +769,24 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Jaga"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Keeldu"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Seda seadet ei saa praegu muuta"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"Juurdepääsetavus"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Subtiitrid"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"Subtiitrite eelistused"</string>
+    <string name="captions_settings_off" msgid="7568096968016015626">"Väljas"</string>
+    <string name="captions_settings_on" msgid="5374984113566914978">"Sees"</string>
+    <string name="screen_reader_settings_title" msgid="4012734340987826872">"Ekraanilugeja"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"Kuva subtiitrid"</string>
+    <string name="captions_text_size_title" msgid="1960814652560877963">"Teksti suurus"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"Subtiitrite suurus ja stiil"</string>
+    <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Väga väike"</string>
+    <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Väike"</string>
+    <string name="captions_settings_text_size_default" msgid="2227802573224038267">"Vaikeseade"</string>
+    <string name="captions_settings_text_size_large" msgid="5198207220911360512">"Suur"</string>
+    <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Väga suur"</string>
+    <string name="captions_text_style_title" msgid="8547777957403577760">"Subtiitri stiil"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Rakenduse määratud"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Valge mustal"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Must valgel"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Kollane mustal"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Kollane sinisel"</string>
 </resources>
