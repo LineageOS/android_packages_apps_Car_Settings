@@ -100,9 +100,9 @@
     <string name="wifi_no_network_name" msgid="6819604337231313594">"దయచేసి నెట్‌వర్క్‌ పేరును నమోదు చేయండి"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"నెట్‌వర్క్ పేరు"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSIDని ఎంటర్ చేయండి"</string>
-    <string name="wifi_security" msgid="158358046038876532">"భద్రత"</string>
+    <string name="wifi_security" msgid="158358046038876532">"సెక్యూరిటీ"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"సిగ్నల్ సామర్థ్యం"</string>
-    <string name="wifi_status" msgid="5688013206066543952">"స్థితి"</string>
+    <string name="wifi_status" msgid="5688013206066543952">"స్టేటస్‌"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"లింక్ వేగం"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"తరచుదనం"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP అడ్రస్"</string>
@@ -141,7 +141,7 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ను ఆన్ చేస్తోంది..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ఇతర పరికరాలు <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>కు కనెక్ట్ కావచ్చు"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"హాట్‌స్పాట్ పాస్‌వర్డ్‌"</string>
-    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"భద్రత"</string>
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"సెక్యూరిటీ"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-వ్యక్తిగతం"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ఏమీ లేవు"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP బ్యాండ్"</string>
@@ -396,7 +396,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"అధునాతనం"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"పరిచయం, చట్టపరమైన సమాచారం, రీసెట్, మరిన్ని"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android వెర్షన్"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Android భద్రతా ప్యాచ్ స్థాయి"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Android సెక్యూరిటీ ప్యాచ్ స్థాయి"</string>
     <string name="hardware_info" msgid="3973165746261507658">"మోడల్ &amp; హార్డ్‌వేర్"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"మోడల్: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"బేస్‌బ్యాండ్ వెర్షన్"</string>
@@ -404,13 +404,13 @@
     <string name="build_number" msgid="3997326631001009102">"బిల్డ్ నంబర్"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"బ్లూటూత్ అడ్రస్"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"అందుబాటులో లేదు"</string>
-    <string name="device_status_activity_title" msgid="4083567497305368200">"స్థితి"</string>
-    <string name="device_status" msgid="267298179806290920">"స్థితి"</string>
-    <string name="device_status_summary" product="tablet" msgid="600543254608862075">"బ్యాటరీ, నెట్‌వర్క్ యొక్క స్థితి మరియు ఇతర సమాచారం"</string>
+    <string name="device_status_activity_title" msgid="4083567497305368200">"స్టేటస్‌"</string>
+    <string name="device_status" msgid="267298179806290920">"స్టేటస్‌"</string>
+    <string name="device_status_summary" product="tablet" msgid="600543254608862075">"బ్యాటరీ, నెట్‌వర్క్ యొక్క స్టేటస్‌ మరియు ఇతర సమాచారం"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"ఫోన్ నంబర్, సిగ్నల్ మొ."</string>
     <string name="about_settings" msgid="4329457966672592345">"పరిచయం"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
-    <string name="about_settings_summary" msgid="7975072809083281401">"చట్టపరమైన సమాచారం, స్థితి, సాఫ్ట్‌వేర్ వెర్షన్‌ని చూడండి"</string>
+    <string name="about_settings_summary" msgid="7975072809083281401">"చట్టపరమైన సమాచారం, స్టేటస్‌, సాఫ్ట్‌వేర్ వెర్షన్‌ని చూడండి"</string>
     <string name="legal_information" msgid="1838443759229784762">"చట్టబద్ధమైన సమాచారం"</string>
     <string name="contributors_title" msgid="7698463793409916113">"సహకారులు"</string>
     <string name="manual" msgid="4819839169843240804">"మాన్యువల్"</string>
@@ -590,7 +590,7 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"మీ ప్రొఫైల్‌ను తొలగించండి"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మీ ప్రొఫైల్, ఖాతాలను ఫ్యాక్టరీ రీసెట్ చేయండి"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ఈ చర్య మీ ప్రొఫైల్ కోసం అందుబాటులో లేదు"</string>
-    <string name="security_settings_title" msgid="6955331714774709746">"భద్రత"</string>
+    <string name="security_settings_title" msgid="6955331714774709746">"సెక్యూరిటీ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ఏదీ కాదు"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"ఆకృతి"</string>
@@ -608,7 +608,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"మీ పిన్ ఎంచుకోండి"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"మీ పాస్‌వర్డ్‌ను ఎంచుకోండి"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ప్రస్తుత స్క్రీన్ లాక్"</string>
-    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"భద్రత కోసం, ఆకృతిని సెట్ చేయండి"</string>
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"సెక్యూరిటీ కోసం, ఆకృతిని సెట్ చేయండి"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయి"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"రద్దు చేయి"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"మీ కొత్త అన్‌లాక్ ఆకృతి"</string>
@@ -628,7 +628,7 @@
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"ఆటోమేటిక్‌గా అన్‌లాక్ చేయడాన్ని సెటప్ చేయండి"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"మీ పిన్‌ని నమోదు చేయండి"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"మీ పాస్‌వర్డ్‌ను నమోదు చేయండి"</string>
-    <string name="choose_lock_pin_message" msgid="2963792070267774417">"భద్రత కోసం, పిన్‌ను సెట్ చేయండి"</string>
+    <string name="choose_lock_pin_message" msgid="2963792070267774417">"సెక్యూరిటీ కోసం, పిన్‌ను సెట్ చేయండి"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"మీ పిన్‌ను మళ్లీ నమోదు చేయండి"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"పిన్ తప్పనిసరిగా కనీసం 4 అంకెలు ఉండాలి"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"పిన్ చెల్లదు, కనీసం 4 అంకెలు ఉండాలి."</string>
@@ -636,7 +636,7 @@
     <string name="error_saving_lockpin" msgid="9011960139736000393">"పిన్‌ని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"పిన్ తప్పు"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"పాస్‌వర్డ్ తప్పు"</string>
-    <string name="choose_lock_password_message" msgid="6124341145027370784">"భద్రత కోసం, పాస్‌వర్డ్‌ను సెట్ చేయండి"</string>
+    <string name="choose_lock_password_message" msgid="6124341145027370784">"సెక్యూరిటీ కోసం, పాస్‌వర్డ్‌ను సెట్ చేయండి"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"మీ పాస్‌వర్డ్‌ను మళ్లీ నమోదు చేయండి"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"పాస్‌‌వర్డ్‌లు సరిపోలలేదు"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"తీసివేయి"</string>
