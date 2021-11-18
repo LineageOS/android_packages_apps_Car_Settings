@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Si la desactivas, se retirará el acceso a la ubicación de todas las aplicaciones. Las aplicaciones de asistencia en la conducción seguirán teniendo acceso a ella."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Ubicación en Asistencia en la conducción"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ubicación de vehículo desactivada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Asistencia en la conducción no puede acceder a tu ubicación"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir acceso a la ubicación de las apps de asistencia en la conducción"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si la desactivas, se inhabilitarán las aplicaciones de asistencia en la conducción que usan información de la ubicación."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Se pueden utilizar distintas fuentes, como el GPS, sensores y redes Wi‑Fi y móviles, para determinar la ubicación de este dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia en la conducción"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"La información de la ubicación enviada a las funciones de asistencia en la conducción no contiene datos que te identifiquen. Se ha almacenado durante un máximo de 2 días antes de eliminarse."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permite que todas las aplicaciones accedan al micrófono"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cómo crear un patrón de desbloqueo"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"No se ha podido guardar el patrón"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Demasiados intentos fallidos. Vuelve a intentarlo dentro de <xliff:g id="NUMBER">%d</xliff:g> segundos."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"Aceptar"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"¿Quitar bloqueo de pantalla?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Cualquier usuario podrá acceder a tu cuenta"</string>
@@ -754,6 +758,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"No hay ninguna aplicación activada"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política del vehículo <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Ajustes gestionados por el administrador de la organización"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"¿Compartir informe de errores?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos, y que el dispositivo funcione más lento de forma temporal."</string>
@@ -761,4 +769,24 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Compartir"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Rechazar"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"No se puede modificar este ajuste en estos momentos"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"Accesibilidad"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Subtítulos"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"Preferencias de subtítulos"</string>
+    <string name="captions_settings_off" msgid="7568096968016015626">"Desactivado"</string>
+    <string name="captions_settings_on" msgid="5374984113566914978">"Activado"</string>
+    <string name="screen_reader_settings_title" msgid="4012734340987826872">"Lector de pantalla"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"Mostrar subtítulos"</string>
+    <string name="captions_text_size_title" msgid="1960814652560877963">"Tamaño del texto"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"Tamaño y estilo de los subtítulos"</string>
+    <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Muy pequeño"</string>
+    <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Pequeño"</string>
+    <string name="captions_settings_text_size_default" msgid="2227802573224038267">"Predeterminado"</string>
+    <string name="captions_settings_text_size_large" msgid="5198207220911360512">"Grande"</string>
+    <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Muy grande"</string>
+    <string name="captions_text_style_title" msgid="8547777957403577760">"Estilo de los subtítulos"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Definido por la aplicación"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Blanco sobre negro"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Negro sobre blanco"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Amarillo sobre negro"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Amarillo sobre azul"</string>
 </resources>

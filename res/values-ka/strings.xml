@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"თუ ამას გამორთავთ, მდებარეობის წვდომა ყველა აპისთვის ამოიშლება. მძღოლის დახმარების აპები კვლავ შეძლებს წვდომას."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"მდებ. გამოიყენება მძღოლის დახმარებისთვის"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"მანქანის მდებარეობა გამორთულია"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"მძღ. დახმ. არ აქვს წვდომა თქვენს მდებ."</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"შეცვლა"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"დაუშვით მდებ. წვდომაში დამხმარე აპები"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"თუ ამას გამორთავთ, მძღოლის დახმარების აპები, რომლებიც მდებარეობის ინფორმაციას ეყრდნობა, გაითიშება."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"მდებარეობის გამოყენება"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"მდებარეობის სერვისმა შესაძლოა გამოიყენოს ისეთი წყაროები, როგორიცაა GPS, Wi-Fi, მობილური ქსელები და სენსორები, რათა ხელი შეუწყოს თქვენი მოწყობილობის მდებარეობის დადგენას."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"მძღოლის დახმარება"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"ინფორმაცია მდებარეობის შესახებ, რომელიც მძღოლის დახმარების ფუნქციებთან ზიარდება, არ შეიცავს ინფორმაციას, რომლითაც შესაძლებელი იქნება თქვენი ამოცნობა. ის წაშლამდე მაქსიმუმ 2 დღე ინახება."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"მიკროფონი"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"მიკროფონის გამოყენება"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"თქვენს მიკროფონზე წვდომის დაშვება ყველა აპისთვის"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"როგორ დახაზოთ განბლოკვის გრაფიკული გასაღები"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ნიმუშის შენახვისას მოხდა შეცდომა"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"დაფიქსირდა მეტისმეტად ბევრი არასწორი მცდელობა. ცადეთ ხელახლა <xliff:g id="NUMBER">%d</xliff:g> წამში."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"კარგი"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"გაუქმდეს ეკრანის დაბლოკვა?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ეს ქმედება ხელმისაწვდომს გახდის თქვენს ანგარიშს ყველასთვის"</string>
@@ -754,6 +758,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"აქტიური აპები არ არის"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-ის სატრანსპორტო საშუალებების წესები"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ორგანიზაციის მენეჯერის მიერ მართული პარამეტრები"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"გსურთ ხარვეზის შესახებ ანგარიშის გაზიარება?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ამ მოწყობილობის პრობლემების აღმოფხვრაში დასახმარებლად, სატრანსპორტო საშუალების ორგანიზაციის მენეჯერმა ხარვეზის ანგარიში მოითხოვა. აპები და მონაცემები შეიძლება გაზიარდეს."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ამ მოწყობილობის პრობლემების აღმოფხვრაში დასახმარებლად, სატრანსპორტო საშუალების ორგანიზაციის მენეჯერმა ხარვეზის ანგარიში მოითხოვა. ამ დროს შეიძლება გაზიარდეს აპები და მონაცემები, ხოლო თქვენი მოწყობილობა დროებით შენელდეს."</string>
@@ -761,4 +769,24 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"გაზიარება"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"უარყოფა"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ამ პარამეტრის შეცვლა ახლა შეუძლებელია"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"მარტივი წვდომა"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"სუბტიტრები"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"სუბტიტრების პარამეტრები"</string>
+    <string name="captions_settings_off" msgid="7568096968016015626">"გამორთულია"</string>
+    <string name="captions_settings_on" msgid="5374984113566914978">"ჩართულია"</string>
+    <string name="screen_reader_settings_title" msgid="4012734340987826872">"ეკრანის წამკითხველი"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"სუბტიტრების ჩვენება"</string>
+    <string name="captions_text_size_title" msgid="1960814652560877963">"ტექსტის ზომა"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"სუბტიტრების ზომა და სტილი"</string>
+    <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"ძალიან პატარა"</string>
+    <string name="captions_settings_text_size_small" msgid="1481895299805450566">"პატარა"</string>
+    <string name="captions_settings_text_size_default" msgid="2227802573224038267">"ნაგულისხმევი"</string>
+    <string name="captions_settings_text_size_large" msgid="5198207220911360512">"დიდი"</string>
+    <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"ძალიან დიდი"</string>
+    <string name="captions_text_style_title" msgid="8547777957403577760">"სუბტიტრების სტილი"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"დაყენება აპით"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"თეთრით შავზე"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"შავით თეთრზე"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ყვითლით შავზე"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"ყვითლით ლურჯზე"</string>
 </resources>

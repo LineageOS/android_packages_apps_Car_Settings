@@ -346,7 +346,7 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Omogućava aplikaciji za pomoć da pristupa sadržaju na ekranu kao tekstu"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Korištenje snimke ekrana"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Omogućava aplikaciji za pomoć da pristupa slici ekrana"</string>
-    <string name="voice_input_settings_title" msgid="3238707827815647526">"Govorni unos"</string>
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Glasovni unos"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Usluga automatskog popunjavanja"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nema"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Odabrano"</string>
@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Ako isključite ovu funkciju, uklonit će se pristup lokaciji za sve aplikacije. Aplikacije pomoći za vozače će i dalje imati pristup."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Koristi lokaciju za pomoć za vozače"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokacija vozila je isključena"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Funkcije pomoći za vozače ne mogu pristupiti lokaciji"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Promijeni"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Dozvolite aplikacijama za vožnju da pristupe lokaciji"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ako isključite ovu funkciju, onemogućit će se aplikacije pomoći za vozače koje se oslanjaju na podatke o lokaciji."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokacija može koristiti izvore kao što su GPS, WiFi, mobilne mreže i senzori za lakšu procjenu lokacije uređaja."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Pomoć za vozače"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"Informacije o lokaciji koje se šalju funkcijama pomoći za vozače ne sadržavaju informacije pomoću kojih vas je moguće identificirati. Pohranjuju se najduže 2 dana prije nego što se izbrišu."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristite mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kako nacrtati uzorak za otključavanje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Greška prilikom pohrane uzorka"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Previše pogrešnih pokušaja. Pokušajte ponovo za <xliff:g id="NUMBER">%d</xliff:g> s."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"UREDU"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ukloniti zaključavanje ekrana?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Svi će imati pristup vašem računu"</string>
@@ -754,6 +758,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nema aktiviranih aplikacija"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Pravila o vozilima organizacije <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Postavkama upravlja upravitelj organizacije"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Podijeliti izvještaj o grešci?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Upravitelj organizacije za ovo vozilo je zatražio izvještaj o grešci radi lakšeg rješavanja problema ovog uređaja. To može uzrokovati dijeljenje aplikacija i podataka."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Upravitelj organizacije za ovo vozilo je zatražio izvještaj o grešci radi lakšeg rješavanja problema ovog uređaja. To može uzrokovati dijeljenje aplikacija i podataka te privremeno usporiti vaš uređaj."</string>
@@ -761,4 +769,24 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Dijeli"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Odbij"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ovu postavku trenutno nije moguće promijeniti"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"Pristupačnost"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Titlovi"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"Postavke titlova"</string>
+    <string name="captions_settings_off" msgid="7568096968016015626">"Isključeno"</string>
+    <string name="captions_settings_on" msgid="5374984113566914978">"Uključeno"</string>
+    <string name="screen_reader_settings_title" msgid="4012734340987826872">"Čitač ekrana"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"Prikaži titlove"</string>
+    <string name="captions_text_size_title" msgid="1960814652560877963">"Veličina teksta"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"Veličina i stil titlova"</string>
+    <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Veoma malo"</string>
+    <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Malo"</string>
+    <string name="captions_settings_text_size_default" msgid="2227802573224038267">"Zadano"</string>
+    <string name="captions_settings_text_size_large" msgid="5198207220911360512">"Veliko"</string>
+    <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Veoma veliko"</string>
+    <string name="captions_text_style_title" msgid="8547777957403577760">"Stil titlova"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Postavila aplikacija"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Bijelo na crnoj podlozi"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Crno na bijeloj podlozi"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Žuto na crnoj podlozi"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Žuto na plavoj podlozi"</string>
 </resources>

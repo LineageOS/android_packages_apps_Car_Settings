@@ -104,9 +104,9 @@
     <string name="wifi_no_network_name" msgid="6819604337231313594">"దయచేసి నెట్‌వర్క్‌ పేరును నమోదు చేయండి"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"నెట్‌వర్క్ పేరు"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSIDని ఎంటర్ చేయండి"</string>
-    <string name="wifi_security" msgid="158358046038876532">"భద్రత"</string>
+    <string name="wifi_security" msgid="158358046038876532">"సెక్యూరిటీ"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"సిగ్నల్ సామర్థ్యం"</string>
-    <string name="wifi_status" msgid="5688013206066543952">"స్థితి"</string>
+    <string name="wifi_status" msgid="5688013206066543952">"స్టేటస్‌"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"లింక్ వేగం"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"తరచుదనం"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP అడ్రస్"</string>
@@ -145,7 +145,7 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ను ఆన్ చేస్తోంది..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ఇతర పరికరాలు <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>కు కనెక్ట్ కావచ్చు"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"హాట్‌స్పాట్ పాస్‌వర్డ్‌"</string>
-    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"భద్రత"</string>
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"సెక్యూరిటీ"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-వ్యక్తిగతం"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ఏమీ లేవు"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP బ్యాండ్"</string>
@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"మీరు దీనిని ఆఫ్ చేస్తే, అది అన్ని యాప్‌ల కోసం లొకేషన్ యాక్సెస్‌ను తీసివేస్తుంది. \'డ్రైవర్ సహాయం\' యాప్‌లు ఇప్పటికీ యాక్సెస్‌ను కలిగి ఉంటాయి."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"డ్రైవర్ సహాయం కోసం లొకేషన్ ఉపయోగించండి"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"వాహన లొకేషన్ ఆఫ్ చేయబడింది"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"\'డ్రైవర్ సహాయం\' ఫీచర్‌లు మీ లొకేషన్‌ను యాక్సెస్ చేయలేవు"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"మార్చండి"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"డ్రైవింగ్‌లో సహాయపడే యాప్‌లను మీ లొకేషన్‌ను యాక్సెస్ చేయడానికి అనుమతించండి"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"మీరు దీనిని ఆఫ్ చేస్తే, లొకేషన్ సమాచారంపై ఆధారపడే \'డ్రైవర్ సహాయం\' యాప్‌లు డిజేబుల్ చేయబడతాయి."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"మీ పరికరం లొకేషన్‌ను అంచనా వేయడంలో సహాయపడటానికి GPS, Wi-Fi, మొబైల్ నెట్‌వర్క్‌లు, సెన్సార్‌ల వంటి సోర్సులను \'లొకేషన్\' ఉపయోగించవచ్చు."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"డ్రైవర్ సహాయం"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"\'డ్రైవర్ సహాయం\' ఫీచర్‌లకు పంపిబడిన లొకేషన్ సమాచారంలో మీ గుర్తింపునకు సంబంధించిన సమాచారం ఉండదు. ఇది తొలగించబడడానికి ముందు గరిష్టంగా 2 రోజులు స్టోర్ చేయబడుతుంది."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"మైక్రోఫోన్"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"మైక్రోఫోన్‌ను ఉపయోగించండి"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"మీ మైక్రోఫోన్‌ను యాక్సెస్ చేయడానికి అన్ని యాప్‌లను అనుమతించండి"</string>
@@ -429,7 +431,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"అధునాతనం"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"పరిచయం, చట్టపరమైన సమాచారం, రీసెట్, మరిన్ని"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android వెర్షన్"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Android భద్రతా ప్యాచ్ స్థాయి"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Android సెక్యూరిటీ ప్యాచ్ స్థాయి"</string>
     <string name="hardware_info" msgid="3973165746261507658">"మోడల్ &amp; హార్డ్‌వేర్"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"మోడల్: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"బేస్‌బ్యాండ్ వెర్షన్"</string>
@@ -437,13 +439,13 @@
     <string name="build_number" msgid="3997326631001009102">"బిల్డ్ నంబర్"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"బ్లూటూత్ అడ్రస్"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"అందుబాటులో లేదు"</string>
-    <string name="device_status_activity_title" msgid="4083567497305368200">"స్థితి"</string>
-    <string name="device_status" msgid="267298179806290920">"స్థితి"</string>
-    <string name="device_status_summary" product="tablet" msgid="600543254608862075">"బ్యాటరీ, నెట్‌వర్క్ యొక్క స్థితి మరియు ఇతర సమాచారం"</string>
+    <string name="device_status_activity_title" msgid="4083567497305368200">"స్టేటస్‌"</string>
+    <string name="device_status" msgid="267298179806290920">"స్టేటస్‌"</string>
+    <string name="device_status_summary" product="tablet" msgid="600543254608862075">"బ్యాటరీ, నెట్‌వర్క్ యొక్క స్టేటస్‌ మరియు ఇతర సమాచారం"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"ఫోన్ నంబర్, సిగ్నల్ మొ."</string>
     <string name="about_settings" msgid="4329457966672592345">"పరిచయం"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
-    <string name="about_settings_summary" msgid="7975072809083281401">"చట్టపరమైన సమాచారం, స్థితి, సాఫ్ట్‌వేర్ వెర్షన్‌ని చూడండి"</string>
+    <string name="about_settings_summary" msgid="7975072809083281401">"చట్టపరమైన సమాచారం, స్టేటస్‌, సాఫ్ట్‌వేర్ వెర్షన్‌ని చూడండి"</string>
     <string name="legal_information" msgid="1838443759229784762">"చట్టబద్ధమైన సమాచారం"</string>
     <string name="contributors_title" msgid="7698463793409916113">"సహకారులు"</string>
     <string name="manual" msgid="4819839169843240804">"మాన్యువల్"</string>
@@ -617,7 +619,7 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"మీ ప్రొఫైల్‌ను తొలగించండి"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మీ ప్రొఫైల్, ఖాతాలను ఫ్యాక్టరీ రీసెట్ చేయండి"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ఈ చర్య మీ ప్రొఫైల్ కోసం అందుబాటులో లేదు"</string>
-    <string name="security_settings_title" msgid="6955331714774709746">"భద్రత"</string>
+    <string name="security_settings_title" msgid="6955331714774709746">"సెక్యూరిటీ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ఏదీ కాదు"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"ఆకృతి"</string>
@@ -635,7 +637,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"మీ పిన్ ఎంచుకోండి"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"మీ పాస్‌వర్డ్‌ను ఎంచుకోండి"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ప్రస్తుత స్క్రీన్ లాక్"</string>
-    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"భద్రత కోసం, ఆకృతిని సెట్ చేయండి"</string>
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"సెక్యూరిటీ కోసం, ఆకృతిని సెట్ చేయండి"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయి"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"రద్దు చేయి"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"మీ కొత్త అన్‌లాక్ ఆకృతి"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"అన్‌లాక్ నమూనాను ఎలా గీయాలి"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ఆకృతిని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"చాలా ఎక్కువ తప్పు ప్రయత్నాలు చేశారు. <xliff:g id="NUMBER">%d</xliff:g> సెకన్లలో మళ్లీ ట్రై చేయండి."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"సరే"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"స్క్రీన్ లాక్‌ను తీసివేయాలా?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ఎవరైనా మీ ఖాతాను యాక్సెస్ చేయడానికి ఇది అనుమతిస్తుంది"</string>
@@ -655,7 +659,7 @@
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"ఆటోమేటిక్‌గా అన్‌లాక్ చేయడాన్ని సెటప్ చేయండి"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"మీ పిన్‌ని నమోదు చేయండి"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"మీ పాస్‌వర్డ్‌ను నమోదు చేయండి"</string>
-    <string name="choose_lock_pin_message" msgid="2963792070267774417">"భద్రత కోసం, పిన్‌ను సెట్ చేయండి"</string>
+    <string name="choose_lock_pin_message" msgid="2963792070267774417">"సెక్యూరిటీ కోసం, పిన్‌ను సెట్ చేయండి"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"మీ పిన్‌ను మళ్లీ నమోదు చేయండి"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"పిన్ తప్పనిసరిగా కనీసం 4 అంకెలు ఉండాలి"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"పిన్ చెల్లదు, కనీసం 4 అంకెలు ఉండాలి."</string>
@@ -663,7 +667,7 @@
     <string name="error_saving_lockpin" msgid="9011960139736000393">"పిన్‌ని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"పిన్ తప్పు"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"పాస్‌వర్డ్ తప్పు"</string>
-    <string name="choose_lock_password_message" msgid="6124341145027370784">"భద్రత కోసం, పాస్‌వర్డ్‌ను సెట్ చేయండి"</string>
+    <string name="choose_lock_password_message" msgid="6124341145027370784">"సెక్యూరిటీ కోసం, పాస్‌వర్డ్‌ను సెట్ చేయండి"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"మీ పాస్‌వర్డ్‌ను మళ్లీ నమోదు చేయండి"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"పాస్‌‌వర్డ్‌లు సరిపోలలేదు"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"తీసివేయి"</string>
@@ -754,6 +758,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"యాక్టివేట్ చేయబడిన యాప్‌లు ఏవీ లేవు"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> వాహన పాలసీ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"సంస్థ మేనేజర్ ద్వారా సెట్టింగ్‌లు మేనేజ్ చేయబడతాయి"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"బగ్ రిపోర్ట్‌ను షేర్ చేయాలా?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ఈ వాహన సంస్థ మేనేజర్, ఈ పరికర సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు, ఇంకా డేటా షేర్ చేయబడవచ్చు."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ఈ వాహన సంస్థ మేనేజర్, ఈ పరికర సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు, ఇంకా డేటా షేర్ చేయబడవచ్చు, మీ పరికరం పనితీరు తాత్కాలికంగా నెమ్మదించవచ్చు."</string>
@@ -761,4 +769,24 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"షేర్ చేయండి"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"తిరస్కరించండి"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ఈ సెట్టింగ్‌ను ఇప్పుడే మార్చడం సాధ్యం కాదు"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"యాక్సెసిబిలిటీ"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"క్యాప్షన్‌లు"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"క్యాప్షన్ ప్రాధాన్యతలు"</string>
+    <string name="captions_settings_off" msgid="7568096968016015626">"ఆఫ్‌లో ఉంది"</string>
+    <string name="captions_settings_on" msgid="5374984113566914978">"ఆన్‌లో ఉంది"</string>
+    <string name="screen_reader_settings_title" msgid="4012734340987826872">"స్క్రీన్ రీడర్"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"క్యాప్షన్‌లను చూడండి"</string>
+    <string name="captions_text_size_title" msgid="1960814652560877963">"టెక్స్ట్ సైజ్"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"క్యాప్షన్ సైజ్, స్టయిల్"</string>
+    <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"చాలా చిన్నది"</string>
+    <string name="captions_settings_text_size_small" msgid="1481895299805450566">"చిన్నది"</string>
+    <string name="captions_settings_text_size_default" msgid="2227802573224038267">"ఆటోమేటిక్ సెట్టింగ్"</string>
+    <string name="captions_settings_text_size_large" msgid="5198207220911360512">"పెద్దది"</string>
+    <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"చాలా పెద్దది"</string>
+    <string name="captions_text_style_title" msgid="8547777957403577760">"క్యాప్షన్ స్టయిల్"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"యాప్ ప్రకారం సెట్ చేయండి"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"నలుపు బ్యాక్‌గ్రౌండ్‌లో తెలుపు టెక్స్ట్"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"తెలుపు బ్యాక్‌గ్రౌండ్‌లో నలుపు టెక్స్ట్"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"నలుపు బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"నీలం బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
 </resources>

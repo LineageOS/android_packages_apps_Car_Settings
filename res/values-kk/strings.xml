@@ -264,7 +264,7 @@
     <string name="units_unit_name_millimeter" msgid="318832924604375755">"Миллиметр"</string>
     <string name="units_unit_name_meter" msgid="4778344873095502130">"Метр"</string>
     <string name="units_unit_name_kilometer" msgid="4351417123421381297">"Километр"</string>
-    <string name="units_unit_name_mile" msgid="8337486880403419613">"Миля"</string>
+    <string name="units_unit_name_mile" msgid="8337486880403419613">"Миль"</string>
     <string name="units_unit_name_celsius" msgid="1642787068882598698">"Цельсий"</string>
     <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"Фаренгейт"</string>
     <string name="units_unit_name_kelvin" msgid="4043908998904418360">"Кельвин"</string>
@@ -283,14 +283,14 @@
     <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"Ампер-сағат"</string>
     <string name="units_unit_name_kilowatt_hour" msgid="4282251431283475831">"Киловатт-сағат"</string>
     <string name="units_unit_name_psi" msgid="9199487304284041266">"Фунт/дюйм²"</string>
-    <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"Миля/сағат"</string>
+    <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"Миль/сағат"</string>
     <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"Километр/сағат"</string>
     <string name="units_unit_name_bar" msgid="4051903414466411804">"Бар"</string>
     <string name="units_unit_name_degrees" msgid="47944625323398947">"Дәреже"</string>
-    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"Киловатт/жүз миля"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"Киловатт/жүз миль"</string>
     <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"Киловатт/жүз километр"</string>
-    <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"Миля/галлон (АҚШ)"</string>
-    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Миля/галлон (Ұлыбритания)"</string>
+    <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"Миль/галлон (АҚШ)"</string>
+    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Миль/галлон (Ұлыбритания)"</string>
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Километр/метр"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Литр/жүз километр"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Қолданбалар мен хабарландырулар"</string>
@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Мұны өшірсеңіз, барлық қолданбаның локацияны қолдану рұқсаты жойылады. Жүргізушіге көмек қолданбалары локацияны одан әрі қолдана алады."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Жүргізушіге көмек функциясы үшін локацияны қолдану"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Көліктің локациясы өшірулі"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Жүргізушіге көмек функциялары локацияңызды қолдана алмайды."</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өзгерту"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Жүргізуге көмектесетін қолданбалардың локацияңызды қолдануына рұқсат ету"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Мұны өшірсеңіз, локация мәліметіне сүйенетін жүргізушіге көмек қолданбалары өшіріледі."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Локацияны пайдалану"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Құрылғының орналасқан жерін анықтау үшін GPS, Wi-Fi, мобильдік желілер және датчиктер пайдаланылуы мүмкін."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Жүргізушіге көмек функциялары"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"Жүргізушіге көмек функцияларына жіберілген локацияңыз туралы ақпаратта жеке басыңызды анықтайтын мәлімет жоқ. Ақпарат ең көбі 2 күн сақталып, кейін жойылады."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофонды пайдалану"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Барлық қолданбаның микрофонды пайдалануына рұқсат беру"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Құлыпты ашу өрнегін сызу"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Өрнекті сақтау кезінде қате кетті"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Тым көп қате әрекет жасалды. <xliff:g id="NUMBER">%d</xliff:g> секундтан кейін қайталап көріңіз."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"Жарайды"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экран құлпы өшірілсін бе?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Кез келген адам аккаунтыңызға кіре алатын болады"</string>
@@ -754,6 +758,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Қосылған қолданба жоқ"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> көлік саясаты"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Параметрлерді ұйым басқарушысы басқарады."</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Қате туралы есеп бөлісілсін бе?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Бұл көлік ұйымының басқарушысы осы құрылғының ақауларын жоюға көмектесу үшін қате туралы есепті сұрады. Қолданбалар мен дерек бөлісілуі мүмкін."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Бұл көлік ұйымының басқарушысы осы құрылғының ақауларын жоюға көмектесу үшін қате туралы есепті сұрады. Қолданбалар мен дерек бөлісілуі, құрылғыңыз уақытша баяулауы мүмкін."</string>
@@ -761,4 +769,24 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Бөлісу"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Қабылдамау"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Бұл параметр қазір өзгертілмейді."</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"Арнайы мүмкіндіктер"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Субтитр"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"Субтитр параметрлері"</string>
+    <string name="captions_settings_off" msgid="7568096968016015626">"Өшірулі"</string>
+    <string name="captions_settings_on" msgid="5374984113566914978">"Қосулы"</string>
+    <string name="screen_reader_settings_title" msgid="4012734340987826872">"Экранды оқу құралы"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"Субтитрді көрсету"</string>
+    <string name="captions_text_size_title" msgid="1960814652560877963">"Мәтін өлшемі"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"Субтитр өлшемі мен стилі"</string>
+    <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Өте кіші"</string>
+    <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Кішi"</string>
+    <string name="captions_settings_text_size_default" msgid="2227802573224038267">"Әдепкі"</string>
+    <string name="captions_settings_text_size_large" msgid="5198207220911360512">"Үлкен"</string>
+    <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Өте үлкен"</string>
+    <string name="captions_text_style_title" msgid="8547777957403577760">"Субтитр стилі"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Орнатушы қолданба"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Қарадағы ақ"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Ақтағы қара"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Қарадағы сары"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Көктегі сары"</string>
 </resources>
