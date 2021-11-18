@@ -208,12 +208,12 @@ public class BaseEnterpriseTestCase {
         verify(mDpm, never()).removeActiveAdmin(any());
     }
 
-    protected final void mockAdminUser() {
-        when(mUm.isAdminUser()).thenReturn(true);
+    protected final void mockSystemUser() {
+        when(mUm.isSystemUser()).thenReturn(true);
     }
 
-    protected final void mockNonAdminUser() {
-        when(mUm.isAdminUser()).thenReturn(false);
+    protected final void mockNonSystemUser() {
+        when(mUm.isSystemUser()).thenReturn(false);
     }
 
     protected final void mockNullEnforcedAdmin(String restriction, int userId) {
