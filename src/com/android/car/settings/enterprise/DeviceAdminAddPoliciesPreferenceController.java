@@ -53,11 +53,11 @@ public final class DeviceAdminAddPoliciesPreferenceController
 
     private CharSequence getPolicyText() {
         Context context = getContext();
-        boolean isAdminUser = mUm.isAdminUser();
+        boolean isSystemUser = mUm.isSystemUser();
         StringBuilder result = new StringBuilder();
 
         for (DeviceAdminInfo.PolicyInfo pi : mDeviceAdminInfo.getUsedPolicies()) {
-            int labelId = isAdminUser ? pi.label : pi.labelForSecondaryUsers;
+            int labelId = isSystemUser ? pi.label : pi.labelForSecondaryUsers;
             CharSequence label = context.getText(labelId);
             mLogger.v("Adding policy: " + label);
             result.append("<li>&nbsp;").append(label).append("</li>");
