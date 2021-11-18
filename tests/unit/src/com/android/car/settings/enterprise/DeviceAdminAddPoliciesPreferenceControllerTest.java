@@ -94,21 +94,21 @@ public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
     }
 
     @Test
-    public void testUpdateState_adminUser() throws Exception {
-        updateStateTest(/* isAdmin= */ true);
+    public void testUpdateState_systemUser() throws Exception {
+        updateStateTest(/* isSystemUser= */ true);
     }
 
     @Test
-    public void testUpdateState_nonAdminUser() throws Exception {
-        updateStateTest(/* isAdmin= */ false);
+    public void testUpdateState_nonSystemUser() throws Exception {
+        updateStateTest(/* isSystemUser= */ false);
     }
 
-    private void updateStateTest(boolean isAdmin) {
+    private void updateStateTest(boolean isSystemUser) {
         // Arrange
-        if (isAdmin) {
-            mockAdminUser();
+        if (isSystemUser) {
+            mockSystemUser();
         } else {
-            mockNonAdminUser();
+            mockNonSystemUser();
         }
         ArrayList<PolicyInfo> usedPolicies = mFancyDeviceAdminInfo.getUsedPolicies();
         Log.d(TAG, "Admin policies: " + usedPolicies);
@@ -122,7 +122,7 @@ public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
         Log.d(TAG, "Preference title: " + mTitleCaptor.getValue());
         for (PolicyInfo policy : usedPolicies) {
             CharSequence itemTitle = mRealContext
-                    .getText(isAdmin ? policy.label : policy.labelForSecondaryUsers);
+                    .getText(isSystemUser ? policy.label : policy.labelForSecondaryUsers);
             assertWithMessage("policy item title")
                     .that(mTitleCaptor.getValue().toString()).contains(itemTitle);
         }
