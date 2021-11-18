@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"หากคุณปิดการตั้งค่านี้ ระบบจะลบสิทธิ์เข้าถึงตำแหน่งของทุกแอป แต่แอปตัวช่วยของผู้ขับจะยังเข้าถึงตำแหน่งได้"</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ใช้ตำแหน่งสำหรับตัวช่วยของผู้ขับ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ตำแหน่งของรถยนต์ปิดอยู่"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"ฟีเจอร์ตัวช่วยผู้ขับเข้าถึงตำแหน่งไม่ได้"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"เปลี่ยน"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"อนุญาตให้แอปตัวช่วยขับรถเข้าถึงตำแหน่ง"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"หากคุณปิดการตั้งค่านี้ ระบบจะปิดใช้แอปตัวช่วยของผู้ขับที่ใช้ข้อมูลตำแหน่ง"</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ใช้ตำแหน่ง"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ตำแหน่งอาจใช้ข้อมูลจากแหล่งที่มาต่างๆ อย่างเช่น GPS, Wi‑Fi, เครือข่ายมือถือ และเซ็นเซอร์ เพื่อช่วยระบุตำแหน่งคร่าวๆ ของอุปกรณ์"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ตัวช่วยของผู้ขับ"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"ข้อมูลตำแหน่งที่ส่งไปยังฟีเจอร์ตัวช่วยของผู้ขับไม่มีข้อมูลที่ระบุตัวคุณได้ ระบบจะเก็บข้อมูลดังกล่าวไว้นานสูงสุด 2 วันก่อนที่จะลบ"</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"ไมโครโฟน"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ใช้ไมโครโฟน"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"อนุญาตให้แอปทั้งหมดเข้าถึงไมโครโฟนของคุณ"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"วิธีวาดรูปแบบการปลดล็อก"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"เกิดข้อผิดพลาดในการบันทึกรูปแบบ"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ดำเนินการไม่ถูกต้องหลายครั้งเกินไป ลองอีกครั้งใน <xliff:g id="NUMBER">%d</xliff:g> วินาที"</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"ตกลง"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"นำการล็อกหน้าจอออกไหม"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"การดำเนินการนี้จะทำให้ทุกคนเข้าถึงบัญชีของคุณได้"</string>
@@ -753,6 +757,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"ไม่มีแอปที่เปิดใช้งาน"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"นโยบายเกี่ยวกับรถยนต์ของ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"การตั้งค่าที่ผู้จัดการองค์กรดูแล"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"แชร์รายงานข้อบกพร่องไหม"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ผู้จัดการองค์กรของรถยนต์คันนี้ได้ขอรายงานข้อบกพร่องเพื่อช่วยแก้ปัญหาอุปกรณ์ อาจมีการแชร์แอปและข้อมูล"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ผู้จัดการองค์กรของรถยนต์คันนี้ได้ขอรายงานข้อบกพร่องเพื่อช่วยแก้ปัญหาอุปกรณ์ อาจมีการแชร์แอปและข้อมูล ซึ่งอาจทำให้อุปกรณ์ทำงานช้าลงชั่วคราว"</string>
@@ -786,4 +794,22 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"สีดำบนพื้นสีขาว"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"สีเหลืองบนพื้นสีดำ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"สีเหลืองบนพื้นสีน้ำเงิน"</string>
+    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
+    <skip />
+    <!-- no translation found for talkback_title (6529000326454628289) -->
+    <skip />
+    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
+    <skip />
+    <!-- no translation found for talkback_settings_on (796292072895957042) -->
+    <skip />
+    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
+    <skip />
+    <!-- no translation found for talkback_options_title (7366357383004455638) -->
+    <skip />
+    <!-- no translation found for talkback_settings_title (631275474070654027) -->
+    <skip />
+    <!-- no translation found for about_talkback_title (6048639389606001298) -->
+    <skip />
+    <!-- no translation found for about_talkback_description (5438077447169311605) -->
+    <skip />
 </resources>
