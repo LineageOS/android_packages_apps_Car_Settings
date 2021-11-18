@@ -17,25 +17,22 @@ package com.android.car.settings.enterprise;
 
 import static com.google.common.truth.Truth.assertWithMessage;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 import android.app.admin.DeviceAdminInfo.PolicyInfo;
 import android.util.Log;
 
-import androidx.preference.PreferenceGroup;
+import androidx.preference.Preference;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.ui.preference.CarUiPreference;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.Mock;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
         BasePreferenceControllerTestCase {
@@ -46,7 +43,9 @@ public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
     private DeviceAdminAddPoliciesPreferenceController mController;
 
     @Mock
-    private PreferenceGroup mPreferenceGroup;
+    private Preference mPreference;
+    @Captor
+    private ArgumentCaptor<CharSequence> mTitleCaptor;
 
     @Before
     public void setController() {
@@ -58,7 +57,7 @@ public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
     @Test
     public void testGetPreferenceType() throws Exception {
         assertWithMessage("preference type").that(mController.getPreferenceType())
-                .isEqualTo(PreferenceGroup.class);
+                .isEqualTo(Preference.class);
     }
 
     @Test
@@ -114,42 +113,18 @@ public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
         ArrayList<PolicyInfo> usedPolicies = mFancyDeviceAdminInfo.getUsedPolicies();
         Log.d(TAG, "Admin policies: " + usedPolicies);
         mController.setDeviceAdmin(mFancyDeviceAdminInfo);
-        List<CarUiPreference> addedPreferences = new ArrayList<>();
-        when(mPreferenceGroup.addPreference(any())).thenAnswer(call -> {
-            Log.d(TAG, "Mocking " + call);
-            addedPreferences.add((CarUiPreference) call.getArguments()[0]);
-            return true;
-        });
 
         // Act
-        mController.updateState(mPreferenceGroup);
-        Log.d(TAG, "Added preferences: " + addedPreferences);
+        mController.updateState(mPreference);
 
         // Assert
-
-        verify(mPreferenceGroup).removeAll();
-
-        int maxPoliciesShown = mRealContext.getResources()
-                .getInteger(R.integer.max_device_policies_shown);
-        Log.d(TAG, "R.integer.max_device_policies_shown: " + maxPoliciesShown);
-        verify(mPreferenceGroup).setInitialExpandedChildrenCount(maxPoliciesShown);
-
-        int expectedSize = usedPolicies.size();
-        assertWithMessage("added preferences").that(addedPreferences).hasSize(expectedSize);
-
-        for (int i = 0; i < expectedSize; i++) {
-            CarUiPreference preference = addedPreferences.get(i);
-            PolicyInfo policy = usedPolicies.get(i);
-            CharSequence expectedTitle = mRealContext
+        verify(mPreference).setTitle(mTitleCaptor.capture());
+        Log.d(TAG, "Preference title: " + mTitleCaptor.getValue());
+        for (PolicyInfo policy : usedPolicies) {
+            CharSequence itemTitle = mRealContext
                     .getText(isAdmin ? policy.label : policy.labelForSecondaryUsers);
-            assertWithMessage("title for policy at index %s", i)
-                    .that(preference.getTitle().toString())
-                    .isEqualTo(expectedTitle);
-            CharSequence expectedSummary = mRealContext
-                    .getText(isAdmin ? policy.description : policy.descriptionForSecondaryUsers);
-            assertWithMessage("summary for policy at index %s", i)
-                    .that(preference.getSummary().toString())
-                    .isEqualTo(expectedSummary);
+            assertWithMessage("policy item title")
+                    .that(mTitleCaptor.getValue().toString()).contains(itemTitle);
         }
     }
 }
