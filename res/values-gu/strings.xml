@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"જો તમે આને બંધ કરશો, તો તે બધી ઍપ માટે સ્થાનનો ઍક્સેસ કાઢી નાખશે. ડ્રાઇવર માટે સહાયતા ઍપ પાસે હજી પણ ઍક્સેસ રહેશે."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ડ્રાઇવર માટે સહાયતા માટે સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"વાહનના સ્થાનની સુવિધા બંધ છે"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"ડ્રાઇવર માટે સહાયતા સુવિધાઓ તમારા સ્થાનને ઍક્સેસ કરી શકતી નથી"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"બદલો"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ડ્રાઇવિંગ માટે સહાય કરતી ઍપને તમારું સ્થાન ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"જો તમે આને બંધ કરશો, તો સ્થાનની માહિતી પર આધારિત ડ્રાઇવર માટે સહાયતાની સુવિધાઓ બંધ કરવામાં આવશે."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"સ્થાન સેવામાં તમારા ડિવાઇસનું સ્થાન નક્કી કરવામાં સહાય કરવા માટે GPS, વાઇ-ફાઇ, મોબાઇલ નેટવર્ક અને સેન્સર જેવા સૉર્સનો ઉપયોગ કરવામાં આવી શકે છે."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ડ્રાઇવર માટે સહાયતા"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"\'ડ્રાઇવર માટે સહાયતા\' સુવિધાઓને મોકલવામાં આવતી સ્થાનની માહિતીમાં તમારી ઓળખ આપતી માહિતી શામેલ નથી. તેને ડિલીટ કરતા પહેલાં વધુમાં વધુ 2 દિવસ સ્ટોર કરવામાં આવે છે."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"માઇક્રોફોન"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"માઇક્રોફોનનો ઉપયોગ કરો"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"બધી ઍપને તમારા માઇક્રોફોનના ઍક્સેસની મંજૂરી આપો"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"એક અનલૉક પૅટર્ન કેવી રીતે દોરવી"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"પૅટર્ન સાચવવામાં ભૂલ"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"વધુ પડતા અયોગ્ય પ્રયાસો. <xliff:g id="NUMBER">%d</xliff:g> સેકન્ડમાં ફરી પ્રયાસ કરો."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"ઓકે"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"સ્ક્રીન લૉક કાઢી નાખીએ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"આ ક્રિયા તમારા એકાઉન્ટને ઍક્સેસ કરવાની મંજૂરી કોઈને પણ આપશે"</string>
@@ -753,6 +757,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"કોઈ સક્રિય ઍપ નથી"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>ની વાહનની પૉલિસી"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"સંસ્થાના મેનેજર દ્વારા મેનેજ કરાતા સેટિંગ"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"બગ રિપોર્ટ શેર કરીએ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે અને તમારું ડિવાઇસ હંગામી રીતે ધીમું થઈ શકે છે."</string>
@@ -786,4 +794,22 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"સફેદ પર કાળી ટેક્સ્ટ"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"કાળા પર પીળી ટેક્સ્ટ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"વાદળી પર પીળી ટેક્સ્ટ"</string>
+    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
+    <skip />
+    <!-- no translation found for talkback_title (6529000326454628289) -->
+    <skip />
+    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
+    <skip />
+    <!-- no translation found for talkback_settings_on (796292072895957042) -->
+    <skip />
+    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
+    <skip />
+    <!-- no translation found for talkback_options_title (7366357383004455638) -->
+    <skip />
+    <!-- no translation found for talkback_settings_title (631275474070654027) -->
+    <skip />
+    <!-- no translation found for about_talkback_title (6048639389606001298) -->
+    <skip />
+    <!-- no translation found for about_talkback_description (5438077447169311605) -->
+    <skip />
 </resources>
