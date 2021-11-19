@@ -17,15 +17,19 @@
 package com.android.car.settings.enterprise;
 
 import android.annotation.Nullable;
+import android.app.AppOpsManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.Binder;
+import android.os.IBinder;
 import android.text.TextUtils;
 
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
  * Controller for the header preference the device admin details screen.
@@ -33,11 +37,15 @@ import com.android.car.settings.common.FragmentController;
 public final class DeviceAdminAddHeaderPreferenceController
         extends BaseDeviceAdminAddPreferenceController<TwoStatePreference> {
 
+    private AppOpsManager mAppOps;
+    private final IBinder mToken = new Binder();
     private @Nullable ActivationListener mActivationListener;
 
     public DeviceAdminAddHeaderPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+
+        mAppOps = context.getSystemService(AppOpsManager.class);
     }
 
     DeviceAdminAddHeaderPreferenceController setActivationListener(ActivationListener listener) {
@@ -48,6 +56,40 @@ public final class DeviceAdminAddHeaderPreferenceController
     @Override
     protected Class<TwoStatePreference> getPreferenceType() {
         return TwoStatePreference.class;
+    }
+
+    @Override
+    protected void onResumeInternal() {
+        super.onResumeInternal();
+
+        // Split as a separate method for easier testing.
+        onResumeInternal((TwoStatePreference) getPreference());
+    }
+
+    @VisibleForTesting
+    void onResumeInternal(TwoStatePreference preference) {
+        setCurrentStatus(preference);
+
+        // As long as we are running, don't let anyone overlay stuff on top of the screen.
+        mAppOps.setUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW, true, mToken);
+        mAppOps.setUserRestriction(AppOpsManager.OP_TOAST_WINDOW, true, mToken);
+    }
+
+    @Override
+    protected void onPauseInternal() {
+        super.onPauseInternal();
+
+        // Split as a separate method for easier testing.
+        onPauseInternal((TwoStatePreference) getPreference());
+    }
+
+    @VisibleForTesting
+    void onPauseInternal(TwoStatePreference preference) {
+        // Disable the toggle button when paused, to prevent tapjacking.
+        preference.setEnabled(false);
+
+        mAppOps.setUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW, false, mToken);
+        mAppOps.setUserRestriction(AppOpsManager.OP_TOAST_WINDOW, false, mToken);
     }
 
     @Override
@@ -63,16 +105,7 @@ public final class DeviceAdminAddHeaderPreferenceController
             preference.setSummary(description);
         }
 
-        ComponentName componentName = mDeviceAdminInfo.getComponent();
-        preference.setChecked(isActive(componentName));
-        if (isProfileOrDeviceOwner(componentName)) {
-            // TODO(b/170332519): once work profiles are supported, they could be removed
-            mLogger.d("updateState(): " + ComponentName.flattenToShortString(componentName)
-                    + " is PO or DO");
-            preference.setEnabled(false);
-        } else {
-            preference.setEnabled(true);
-        }
+        setCurrentStatus(preference);
     }
 
     @Override
@@ -91,6 +124,20 @@ public final class DeviceAdminAddHeaderPreferenceController
             mActivationListener.onChanged(activated);
         }
         return true;
+    }
+
+    /** Sets the checked status and enabled status according to the device admin */
+    private void setCurrentStatus(TwoStatePreference preference) {
+        ComponentName componentName = mDeviceAdminInfo.getComponent();
+        preference.setChecked(isActive(componentName));
+        if (isProfileOrDeviceOwner(componentName)) {
+            // TODO(b/170332519): once work profiles are supported, they could be removed
+            mLogger.d("updateState(): " + ComponentName.flattenToShortString(componentName)
+                    + " is PO or DO");
+            preference.setEnabled(false);
+        } else {
+            preference.setEnabled(true);
+        }
     }
 
     private boolean isActive(ComponentName componentName) {
