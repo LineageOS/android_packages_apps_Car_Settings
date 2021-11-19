@@ -46,10 +46,13 @@ abstract class BaseAdminActionReporterPreferenceController<P extends Preference>
     @Override
     public void updateState(Preference preference) {
         Date timestamp = getAdminActionTimestamp();
-        preference.setSummary(timestamp == null
-                ? getContext().getString(R.string.enterprise_privacy_none)
-                : DateUtils.formatDateTime(getContext(), timestamp.getTime(),
+
+        if (timestamp == null) {
+            preference.setSummary(R.string.enterprise_privacy_none);
+        } else {
+            preference.setSummary(DateUtils.formatDateTime(getContext(), timestamp.getTime(),
                         DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE));
+        }
     }
 
     @Nullable
