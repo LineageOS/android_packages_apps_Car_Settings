@@ -25,6 +25,10 @@ import com.android.car.settings.common.BaseCarSettingsActivity;
  */
 public final class DeviceAdminAddActivity extends BaseCarSettingsActivity {
 
+    /**
+     * Optional key to map to the package name of the Device Admin.
+     * <p>Currently only used when uninstalling an active device admin.
+     */
     public static final String EXTRA_DEVICE_ADMIN_PACKAGE_NAME =
             "android.app.extra.DEVICE_ADMIN_PACKAGE_NAME";
 

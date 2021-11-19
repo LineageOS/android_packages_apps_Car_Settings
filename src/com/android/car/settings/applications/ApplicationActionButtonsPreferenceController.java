@@ -104,6 +104,9 @@ public class ApplicationActionButtonsPreferenceController extends
     @VisibleForTesting
     static final int UNINSTALL_REQUEST_CODE = 10;
 
+    @VisibleForTesting
+    static final int UNINSTALL_DEVICE_ADMIN_REQUEST_CODE = 11;
+
     private DevicePolicyManager mDpm;
     private PackageManager mPm;
     private UserManager mUserManager;
@@ -173,6 +176,7 @@ public class ApplicationActionButtonsPreferenceController extends
     };
 
     private final View.OnClickListener mEnableClickListener = i -> {
+        if (ignoreActionBecauseItsDisabledByAdmin(DISABLE_RESTRICTIONS)) return;
         mPm.setApplicationEnabledSetting(mPackageName,
                 PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, /* flags= */ 0);
         updateUninstallButtonInner(true);
@@ -187,7 +191,7 @@ public class ApplicationActionButtonsPreferenceController extends
             Intent deviceAdminIntent = new Intent(getContext(), DeviceAdminAddActivity.class)
                     .putExtra(DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME, mPackageName);
             getFragmentController().startActivityForResult(deviceAdminIntent,
-                    /* requestCode= */ 0, /* callback= */ null);
+                    UNINSTALL_DEVICE_ADMIN_REQUEST_CODE, /* callback= */ this);
         } else {
             Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
             uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
@@ -540,7 +544,8 @@ public class ApplicationActionButtonsPreferenceController extends
 
     @Override
     public void processActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == UNINSTALL_REQUEST_CODE) {
+        if (requestCode == UNINSTALL_REQUEST_CODE
+                || requestCode == UNINSTALL_DEVICE_ADMIN_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
                 getFragmentController().goBack();
             } else {

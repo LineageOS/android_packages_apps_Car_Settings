@@ -18,6 +18,7 @@ package com.android.car.settings.applications;
 
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.DISABLE_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.FORCE_STOP_CONFIRM_DIALOG_TAG;
+import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.UNINSTALL_DEVICE_ADMIN_REQUEST_CODE;
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.UNINSTALL_REQUEST_CODE;
 import static com.android.car.settings.common.ActionButtonsPreference.ActionButtons;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
@@ -677,7 +678,8 @@ public class ApplicationActionButtonsPreferenceControllerTest {
                 Intent.class);
 
         verify(mFragmentController).startActivityForResult(intentArgumentCaptor.capture(),
-                eq(0), isNull());
+                eq(UNINSTALL_DEVICE_ADMIN_REQUEST_CODE),
+                any(ApplicationActionButtonsPreferenceController.class));
 
         Intent intent = intentArgumentCaptor.getValue();
         assertThat(intent.getComponent().getClassName())
@@ -739,6 +741,18 @@ public class ApplicationActionButtonsPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.processActivityResult(UNINSTALL_REQUEST_CODE,
+                Activity.RESULT_OK, /* data= */ null);
+
+        verify(mFragmentController).goBack();
+    }
+
+    @Test
+    public void processActivityResult_uninstallDeviceAdmin_resultOk_goesBack() {
+        setupAndAssignPreference();
+        setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.processActivityResult(UNINSTALL_DEVICE_ADMIN_REQUEST_CODE,
                 Activity.RESULT_OK, /* data= */ null);
 
         verify(mFragmentController).goBack();
