@@ -220,4 +220,8 @@ public class BaseEnterpriseTestCase {
         when(RestrictedLockUtilsInternal
                 .checkIfRestrictionEnforced(mSpiedContext, restriction, userId)).thenReturn(null);
     }
+
+    protected final void mockLastBugreportTime(long time) {
+        when(mDpm.getLastBugReportRequestTime()).thenReturn(time);
+    }
 }

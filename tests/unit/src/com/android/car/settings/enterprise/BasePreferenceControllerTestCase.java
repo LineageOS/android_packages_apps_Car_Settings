@@ -88,9 +88,17 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
         verify(preference).setTitle(title);
     }
 
+    protected static final void verifyPreferenceTitleNeverSet(Preference preference) {
+        verify(preference, never()).setTitle(any());
+    }
+
     protected static final void verifyPreferenceSummarySet(Preference preference,
-            CharSequence title) {
-        verify(preference).setSummary(title);
+            CharSequence summary) {
+        verify(preference).setSummary(summary);
+    }
+
+    protected static final void verifyPreferenceSummarySet(Preference preference, int resId) {
+        verify(preference).setSummary(resId);
     }
 
     protected static final void verifyPreferenceSummaryNeverSet(Preference preference) {
