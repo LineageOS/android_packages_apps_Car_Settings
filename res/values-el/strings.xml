@@ -400,7 +400,8 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Αν απενεργοποιήσετε αυτήν τη επιλογή, θα καταργηθεί η πρόσβαση στην τοποθεσία για όλες τις εφαρμογές. Οι εφαρμογές υποβοήθησης οδηγού θα εξακολουθήσουν να έχουν πρόσβαση."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Χρήση τοποθεσίας για υποβοήθηση οδηγού"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Η τοποθεσία οχήματος είναι ανενεργή"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="4593257453422707898">"Οι λειτουργίες υποβοήθησης οδηγού δεν έχουν πρόσβαση στην τοποθεσία σας."</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Αλλαγή"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Να επιτρέπεται στις εφαρμογές υποβοήθησης οδήγησης η πρόσβαση στην τοποθεσία σας."</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν."</string>
@@ -412,7 +413,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Χρήση τοποθεσίας"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Η τοποθεσία μπορεί να χρησιμοποιεί πηγές όπως GPS, Wi-Fi, δίκτυα κινητής τηλεφωνίας και αισθητήρες για την εκτίμηση της τοποθεσίας της συσκευής σας."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Υποβοήθηση οδηγού"</string>
-    <string name="adas_settings_footer" msgid="7882070515956528976">"Οι πληροφορίες τοποθεσίας που αποστέλλονται στις λειτουργίες υποβοήθησης οδηγού δεν περιέχουν πληροφορίες που προσδιορίζουν την ταυτότητά σας. Αποθηκεύονται για έως δύο ημέρες προτού διαγραφούν."</string>
+    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Μικρόφωνο"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Χρήση μικροφώνου"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Επιτρέψτε σε όλες τις εφαρμογές να έχουν πρόσβαση στο μικρόφωνο"</string>
@@ -648,6 +650,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Τρόπος σχεδίασης μοτίβου ξεκλειδώματος"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Σφάλμα κατά την αποθήκευση του μοτίβου"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Πάρα πολλές αποτυχημένες προσπάθειες. Δοκιμάστε ξανά σε <xliff:g id="NUMBER">%d</xliff:g> δευτερόλεπτα."</string>
+    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
+    <skip />
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Κατάργηση κλειδώματος οθόνης;"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Έτσι όλοι οι χρήστες θα έχουν πρόσβαση στον λογαριασμό σας"</string>
@@ -753,6 +757,10 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Δεν υπάρχουν ενεργοποιημένες εφαρμογές."</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Πολιτική οχημάτων του οργανισμού <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Η διαχείριση των ρυθμίσεων πραγματοποιείται από τον διαχειριστή οργανισμού"</string>
+    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
+    <skip />
+    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
+    <skip />
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Να κοινοποιηθεί η αναφορά σφάλματος;"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Ο διαχειριστής οργανισμού του οχήματος ζήτησε μια αναφορά σφάλματος για να συμβάλει στην αντιμετώπιση του προβλήματος αυτής της συσκευής. Ενδέχεται να κοινοποιηθούν οι εφαρμογές και τα δεδομένα."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Ο διαχειριστής οργανισμού του οχήματος ζήτησε μια αναφορά σφάλματος για να συμβάλει στην αντιμετώπιση του προβλήματος αυτής της συσκευής. Ενδέχεται να κοινοποιηθούν οι εφαρμογές και τα δεδομένα και να επιβραδυνθεί προσωρινά η λειτουργία της συσκευής σας."</string>
@@ -786,4 +794,22 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Μαύρο σε λευκό"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Κίτρινο σε μαύρο"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Κίτρινο σε μπλε"</string>
+    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
+    <skip />
+    <!-- no translation found for talkback_title (6529000326454628289) -->
+    <skip />
+    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
+    <skip />
+    <!-- no translation found for talkback_settings_on (796292072895957042) -->
+    <skip />
+    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
+    <skip />
+    <!-- no translation found for talkback_options_title (7366357383004455638) -->
+    <skip />
+    <!-- no translation found for talkback_settings_title (631275474070654027) -->
+    <skip />
+    <!-- no translation found for about_talkback_title (6048639389606001298) -->
+    <skip />
+    <!-- no translation found for about_talkback_description (5438077447169311605) -->
+    <skip />
 </resources>
