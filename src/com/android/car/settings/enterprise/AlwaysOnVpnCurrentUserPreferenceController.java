@@ -17,20 +17,26 @@ package com.android.car.settings.enterprise;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.net.VpnManager;
+import android.os.UserHandle;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 
 /**
 * Controller to show whether the device owner set an always-on VPN for the user.
 */
-public final class AlwaysOnCurrentUserPreferenceController
+public final class AlwaysOnVpnCurrentUserPreferenceController
         extends BaseEnterprisePreferenceController<Preference> {
+    private final VpnManager mVpnManager;
 
-    public AlwaysOnCurrentUserPreferenceController(Context context, String preferenceKey,
+    public AlwaysOnVpnCurrentUserPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+
+        mVpnManager = context.getSystemService(VpnManager.class);
     }
 
     @Override
@@ -38,7 +44,16 @@ public final class AlwaysOnCurrentUserPreferenceController
         int superStatus = super.getAvailabilityStatus();
         if (superStatus != AVAILABLE) return superStatus;
 
-        // TODO(b/206155695): implement / add unit test
-        return DISABLED_FOR_PROFILE;
+        return mVpnManager.getAlwaysOnVpnPackageForUser(UserHandle.myUserId()) != null
+                ? AVAILABLE : DISABLED_FOR_PROFILE;
     }
+
+    @Override
+    protected void updateState(Preference preference) {
+        super.updateState(preference);
+        preference.setTitle(isInCompMode()
+                ? R.string.enterprise_privacy_always_on_vpn_personal
+                : R.string.enterprise_privacy_always_on_vpn_device);
+    }
+
 }
