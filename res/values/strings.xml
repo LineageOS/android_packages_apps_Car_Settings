@@ -1708,6 +1708,8 @@
     <string name="add_device_admin_msg">Activate this infotainment system app?</string>
     <!-- Label for button to set the active device admin [CHAR_LIMIT=NONE] -->
     <string name="add_device_admin">Activate this infotainment system app</string>
+    <!-- Label for button to deactivate and uninstall the active device admin app [CHAR LIMIT=NONE] -->
+    <string name="deactivate_and_uninstall_device_admin">Deactivate &amp; uninstall</string>
     <!-- Label for button to remove the active device admin app [CHAR LIMIT=NONE] -->
     <string name="remove_device_admin">Deactivate this infotainment system app</string>
     <!-- Shown in admin details page to warn user about policies the admin can set in a work profile. [CHAR LIMIT=NONE] -->
