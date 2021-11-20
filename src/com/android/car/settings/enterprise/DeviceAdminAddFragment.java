@@ -16,6 +16,7 @@
 
 package com.android.car.settings.enterprise;
 
+import static android.app.Activity.RESULT_OK;
 import static android.os.Process.myUserHandle;
 
 import static com.android.car.settings.enterprise.EnterpriseUtils.getAdminWithinPackage;
@@ -31,6 +32,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.text.TextUtils;
 
 import androidx.annotation.VisibleForTesting;
@@ -40,9 +42,11 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.ToolbarController;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -52,12 +56,29 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
     private static final Logger LOG = new Logger(DeviceAdminAddFragment.class);
 
-    private DevicePolicyManager mDpm;
+    @VisibleForTesting
+    static final int UNINSTALL_DEVICE_ADMIN_REQUEST_CODE = 12;
+
     private CharSequence mAppName;
+    private DevicePolicyManager mDpm;
+    private String mPackageToUninstall;
+    private ComponentName mAdminComponentToUninstall;
+    private boolean mIsActive;
+    private MenuItem mUninstallButton;
+
+    @VisibleForTesting
+    void setDevicePolicyManager(DevicePolicyManager dpm) {
+        mDpm = dpm;
+    }
 
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.device_admin_add;
+    }
+
+    @Override
+    public List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mUninstallButton);
     }
 
     @Override
@@ -70,7 +91,7 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
     @VisibleForTesting
     void onAttach(Context context, Activity activity) {
-        mDpm = context.getSystemService(DevicePolicyManager.class);
+        setDevicePolicyManager(context.getSystemService(DevicePolicyManager.class));
         Intent intent = activity.getIntent();
         if (intent == null) {
             LOG.e("no intent on " + activity);
@@ -99,6 +120,10 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
                 activity.finish();
                 return;
             }
+            // DeviceAdminAddActivity.EXTRA_DEVICE_ADMIN_PACKAGE_NAME is set only when DeviceAdmin
+            // is called via Apps -> Uninstall for an active device admin. Set the package name to
+            // uninstall, which will enable and show the "Deactivate & uninstall" button.
+            setPackageToUninstall(adminPackage, admin);
         } else {
             // When activating, make sure the given component name is actually a valid device admin.
             // No need to check this when deactivating, because it is safe to deactivate an active
@@ -156,6 +181,10 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
 
         mAppName = deviceAdminInfo.loadLabel(context.getPackageManager());
 
+        boolean showUninstallButton =
+                (mPackageToUninstall != null) && (mAdminComponentToUninstall != null);
+        setUninstallButton(context, showUninstallButton);
+
         ((DeviceAdminAddHeaderPreferenceController) use(
                 DeviceAdminAddHeaderPreferenceController.class,
                 R.string.pk_device_admin_add_header).setDeviceAdmin(deviceAdminInfo))
@@ -182,6 +211,57 @@ public final class DeviceAdminAddFragment extends SettingsFragment {
         int result = value ? Activity.RESULT_OK : Activity.RESULT_CANCELED;
         LOG.d("Setting " + activity + " result to " + result);
         activity.setResult(result);
+    }
+
+    @VisibleForTesting
+    void setPackageToUninstall(String packageName, ComponentName componentName) {
+        mPackageToUninstall = packageName;
+        mAdminComponentToUninstall = componentName;
+    }
+
+    @VisibleForTesting
+    void setUninstallButton(Context context, boolean showButton) {
+        mUninstallButton = new MenuItem.Builder(context)
+                .setTitle(R.string.deactivate_and_uninstall_device_admin)
+                .setEnabled(showButton)
+                .setVisible(showButton)
+                .setOnClickListener(i -> startUninstall())
+                .build();
+    }
+
+    @VisibleForTesting
+    void startUninstall() {
+        mIsActive = mDpm.isAdminActive(mAdminComponentToUninstall);
+        if (mIsActive) {
+            LOG.i("Deactivating device admin: " + mAdminComponentToUninstall);
+            mDpm.removeActiveAdmin(mAdminComponentToUninstall);
+        }
+        LOG.i("Uninstalling package: " + mPackageToUninstall);
+        Uri packageUri = Uri.parse("package:" + mPackageToUninstall);
+        Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
+        uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+        startActivityForResult(uninstallIntent, UNINSTALL_DEVICE_ADMIN_REQUEST_CODE);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Call super method to handle callback.
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != UNINSTALL_DEVICE_ADMIN_REQUEST_CODE) {
+            return;
+        }
+        if (resultCode == RESULT_OK) {
+            Activity activity = requireActivity();
+            // On successful uninstalling, sets the results and finish the activity.
+            activity.setResult(RESULT_OK);
+            activity.finish();
+        } else {
+            if (mIsActive) {
+                // Set active admin back when uninstalling was failed/canceled.
+                mDpm.setActiveAdmin(mAdminComponentToUninstall, /* refreshing= */ false);
+            }
+            LOG.e("Uninstall failed with result " + resultCode);
+        }
     }
 
     @Override

@@ -35,7 +35,6 @@ public final class BugReportsPreferenceController
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
-    // TODO(b/206155845, b/186905050): add unit tests
     @Override
     protected Date getAdminActionTimestamp() {
         return mEnterprisePrivacyFeatureProvider.getLastBugReportRequestTime();
