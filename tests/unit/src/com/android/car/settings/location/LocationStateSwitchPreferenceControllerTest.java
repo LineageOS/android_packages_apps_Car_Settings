@@ -16,6 +16,11 @@
 
 package com.android.car.settings.location;
 
+import static android.os.UserManager.DISALLOW_CONFIG_LOCATION;
+import static android.os.UserManager.DISALLOW_SHARE_LOCATION;
+
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -34,6 +39,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
 import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
@@ -46,7 +52,9 @@ import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
+import com.android.car.settings.testutils.EnterpriseTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
@@ -70,6 +78,9 @@ public class LocationStateSwitchPreferenceControllerTest {
     private FragmentController mFragmentController;
     @Mock
     private LocationManager mLocationManager;
+    @Mock
+    private UserManager mUserManager;
+
     @Rule
     public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
             new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
@@ -80,6 +91,7 @@ public class LocationStateSwitchPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -184,6 +196,7 @@ public class LocationStateSwitchPreferenceControllerTest {
     @Test
     public void onPolicyChanged_enabled_setsSwitchEnabled() {
         initializePreference(/* checked= */ false, /* enabled= */ false);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ true);
@@ -194,6 +207,7 @@ public class LocationStateSwitchPreferenceControllerTest {
     @Test
     public void onPolicyChanged_disabled_setsSwitchDisabled() {
         initializePreference(/* checked= */ false, /* enabled= */ true);
+        mPreferenceController.onCreate(mLifecycleOwner);
 
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ false);
@@ -201,8 +215,83 @@ public class LocationStateSwitchPreferenceControllerTest {
         assertThat(mSwitchPreference.isEnabled()).isFalse();
     }
 
+    @Test
+    public void locationOn_disallowConfigLocation_interactionDisabled() {
+        verifyLocationStateWithRestriction(/* locationOnByDefault= */true,
+                DISALLOW_CONFIG_LOCATION, /* expectedLocationToBeOn= */ true);
+    }
+
+    @Test
+    public void locationOff_disallowConfigLocation_interactionDisabled() {
+        verifyLocationStateWithRestriction(/* locationOnByDefault= */false,
+                DISALLOW_CONFIG_LOCATION, /* expectedLocationToBeOn= */ false);
+    }
+
+    @Test
+    public void locationOn_disallowShareLocation_interactionDisabled_locationTurnedOff() {
+        verifyLocationStateWithRestriction(/* locationOnByDefault= */true,
+                DISALLOW_SHARE_LOCATION, /* expectedLocationToBeOn= */ false);
+    }
+
+    @Test
+    public void locationOff_disallowShareLocation_interactionDisabled_locationRemainsOff() {
+        verifyLocationStateWithRestriction(/* locationOnByDefault= */false,
+                DISALLOW_SHARE_LOCATION, /* expectedLocationToBeOn= */ false);
+    }
+
+    public void verifyLocationStateWithRestriction(boolean locationOnByDefault, String restriction,
+            boolean expectedLocationToBeOn) {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  restriction,
+                /* restricted= */true);
+        initializePreference(/* checked= */ locationOnByDefault, /* enabled= */ true);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+        if (expectedLocationToBeOn) {
+            assertThat(mSwitchPreference.isChecked()).isTrue();
+        } else {
+            assertThat(mSwitchPreference.isChecked()).isFalse();
+        }
+    }
+
+    @Test
+    public void disallowConfigLocation_onInteraction_showsDialog() {
+        initializePreference(/* checked= */ true, /* enabled= */ true);
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_CONFIG_LOCATION,
+                /* restricted= */true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
+
+        mSwitchPreference.performClick();
+
+        assertShowingDisabledByAdminDialog();
+    }
+
+    @Test
+    public void disallowShareLocation_onInteraction_showsDialog() {
+        initializePreference(/* checked= */ true, /* enabled= */ true);
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_SHARE_LOCATION,
+                /* restricted= */true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
+
+        mSwitchPreference.performClick();
+
+        assertShowingDisabledByAdminDialog();
+    }
+
+    private void assertShowingDisabledByAdminDialog() {
+        verify(mFragmentController).showDialog(any(ActionDisabledByAdminDialogFragment.class),
+                eq(DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG));
+    }
+
     private void initializePreference(boolean checked, boolean enabled) {
-        when(mLocationManager.isLocationEnabled()).thenReturn(enabled);
+        when(mLocationManager.isLocationEnabled()).thenReturn(checked);
         mSwitchPreference.setChecked(checked);
         mSwitchPreference.setEnabled(enabled);
     }
