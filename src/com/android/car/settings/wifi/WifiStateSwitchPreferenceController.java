@@ -29,30 +29,28 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PowerPolicyListener;
-import com.android.car.settings.common.PreferenceController;
 
 /**
- * Enables/disables Wifi state via SwitchPreference.
+ * Enables/disables Wifi state via ColoredSwitchPreference.
  */
 public class WifiStateSwitchPreferenceController extends
-        PreferenceController<ColoredSwitchPreference>
-        implements CarWifiManager.Listener {
-
-    private final CarWifiManager mCarWifiManager;
+        WifiBasePreferenceController<ColoredSwitchPreference> {
 
     @VisibleForTesting
     final PowerPolicyListener mPowerPolicyListener;
+
+    private boolean mIsPowerPolicyOn = true;
+    private boolean mIsWifiEnabled;
 
     public WifiStateSwitchPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mPowerPolicyListener = new PowerPolicyListener(context, WIFI,
-                isOn -> {
-                    enableSwitchPreference(getPreference(), isOn);
-                });
-        mCarWifiManager = new CarWifiManager(context,
-                getFragmentController().getSettingsLifecycle());
+        mPowerPolicyListener = new PowerPolicyListener(context, WIFI, isOn -> {
+            // refresh power state
+            mIsPowerPolicyOn = isOn;
+            refreshUi();
+        });
     }
 
     @Override
@@ -62,41 +60,44 @@ public class WifiStateSwitchPreferenceController extends
 
     @Override
     protected void updateState(ColoredSwitchPreference preference) {
-        updateSwitchPreference(preference, mCarWifiManager.isWifiEnabled());
+        updateSwitchPreference();
     }
 
     @Override
     protected boolean handlePreferenceChanged(ColoredSwitchPreference preference,
             Object newValue) {
         boolean wifiEnabled = (Boolean) newValue;
-        mCarWifiManager.setWifiEnabled(wifiEnabled);
+        getCarWifiManager().setWifiEnabled(wifiEnabled);
         return true;
     }
 
     @Override
     protected void onCreateInternal() {
+        super.onCreateInternal();
         getPreference().setContentDescription(
                 getContext().getString(R.string.wifi_state_switch_content_description));
-        setClickableWhileDisabled(getPreference(), /* clickable= */ true, p ->
+        setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> {
+            if (mIsPowerPolicyOn) {
+                // ActionDisabledByAdminDialog will be shown if DISALLOW_CONFIG_WIFI
+                // is set by a device admin; otherwise, a default Toast will be shown
+                WifiUtil.runClickableWhileDisabled(getContext(), getFragmentController());
+            } else {
                 Toast.makeText(getContext(),
                         getContext().getString(R.string.power_component_disabled),
-                        Toast.LENGTH_LONG).show());
+                        Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
     protected void onStartInternal() {
-        mCarWifiManager.addListener(this);
-        onWifiStateChanged(mCarWifiManager.getWifiState());
+        super.onStartInternal();
+        onWifiStateChanged(getCarWifiManager().getWifiState());
     }
 
     @Override
     protected void onResumeInternal() {
         mPowerPolicyListener.handleCurrentPolicy();
-    }
-
-    @Override
-    protected void onStopInternal() {
-        mCarWifiManager.removeListener(this);
     }
 
     @Override
@@ -111,17 +112,20 @@ public class WifiStateSwitchPreferenceController extends
 
     @Override
     public void onWifiStateChanged(int state) {
-        updateSwitchPreference(getPreference(), state == WifiManager.WIFI_STATE_ENABLED
+        mIsWifiEnabled = (state == WifiManager.WIFI_STATE_ENABLED
                 || state == WifiManager.WIFI_STATE_ENABLING);
+        refreshUi();
     }
 
-    private void updateSwitchPreference(ColoredSwitchPreference preference,
-            boolean enabled) {
-        preference.setChecked(enabled);
+    private void updateSwitchPreference() {
+        getPreference().setChecked(mIsWifiEnabled);
     }
 
-    private void enableSwitchPreference(ColoredSwitchPreference preference,
-            boolean enabled) {
-        preference.setEnabled(enabled);
+    @Override
+    public int getAvailabilityStatus() {
+        if (mIsPowerPolicyOn) {
+            return WifiUtil.getAvailabilityStatus(getContext());
+        }
+        return AVAILABLE_FOR_VIEWING;
     }
 }
