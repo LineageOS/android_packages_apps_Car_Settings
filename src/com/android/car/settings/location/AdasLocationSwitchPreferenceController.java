@@ -17,6 +17,11 @@
 package com.android.car.settings.location;
 
 import static android.car.hardware.power.PowerComponent.LOCATION;
+import static android.os.UserManager.DISALLOW_CONFIG_LOCATION;
+import static android.os.UserManager.DISALLOW_SHARE_LOCATION;
+
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
@@ -32,6 +37,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PowerPolicyListener;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 
 /**
@@ -85,6 +91,14 @@ public class AdasLocationSwitchPreferenceController extends
         return CarUiTwoActionSwitchPreference.class;
     }
 
+    @Override
+    protected int getAvailabilityStatus() {
+        if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_LOCATION)
+                || hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION)) {
+            return AVAILABLE_FOR_VIEWING;
+        }
+        return AVAILABLE;
+    }
 
     @Override
     protected void updateState(CarUiTwoActionSwitchPreference preference) {
@@ -100,6 +114,16 @@ public class AdasLocationSwitchPreferenceController extends
                 refreshUi();
             } else {
                 mLocationManager.setAdasGnssLocationEnabled(true);
+            }
+        });
+        setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> {
+            if (hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION)) {
+                showActionDisabledByAdminDialog(DISALLOW_SHARE_LOCATION);
+                return;
+            }
+            if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_LOCATION)) {
+                showActionDisabledByAdminDialog(DISALLOW_CONFIG_LOCATION);
+                return;
             }
         });
     }
@@ -128,13 +152,20 @@ public class AdasLocationSwitchPreferenceController extends
 
     private void updateSwitchPreference(CarUiTwoActionSwitchPreference preference,
             boolean enabled) {
-        preference.setSecondaryActionChecked(enabled);
-        preference.setSecondaryActionEnabled(!mLocationManager.isLocationEnabled());
+        if (enabled && hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION)) {
+            preference.setSecondaryActionChecked(false);
+            preference.setSecondaryActionEnabled(false);
+        } else {
+            preference.setSecondaryActionChecked(enabled);
+            preference.setSecondaryActionEnabled(!mLocationManager.isLocationEnabled());
+        }
     }
 
     private void handlePowerPolicyChange(CarUiTwoActionSwitchPreference preference,
             boolean enabled) {
-        if (mLocationManager.isLocationEnabled()) {
+        if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_LOCATION)
+                || hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION)
+                ||  mLocationManager.isLocationEnabled()) {
             preference.setSecondaryActionEnabled(false);
             return;
         }
@@ -157,5 +188,12 @@ public class AdasLocationSwitchPreferenceController extends
                 .setPositiveButton(android.R.string.cancel,
                         /* rejectListener= */ null)
                 .build();
+    }
+
+    private void showActionDisabledByAdminDialog(String restrictionType) {
+        getFragmentController().showDialog(
+                EnterpriseUtils.getActionDisabledByAdminDialog(getContext(),
+                        restrictionType),
+                DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
     }
 }
