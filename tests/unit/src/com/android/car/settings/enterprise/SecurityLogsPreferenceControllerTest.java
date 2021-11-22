@@ -25,22 +25,22 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-public final class BugReportsPreferenceControllerTest extends BasePreferenceControllerTestCase {
+public final class SecurityLogsPreferenceControllerTest extends BasePreferenceControllerTestCase {
 
-    private BugReportsPreferenceController mController;
+    private SecurityLogsPreferenceController mController;
 
     @Mock
     private Preference mPreference;
 
     @Before
     public void setUp() throws Exception {
-        mController = new BugReportsPreferenceController(mSpiedContext, mPreferenceKey,
+        mController = new SecurityLogsPreferenceController(mSpiedContext, mPreferenceKey,
                 mFragmentController, mUxRestrictions);
     }
 
     @Test
-    public void testUpdateState_noBugreport() {
-        mockGetLastBugreportTime(-1);
+    public void testUpdateState_noLogs() {
+        mockGetLastSecurityLogRetrievalTime(-1);
 
         mController.updateState(mPreference);
 
@@ -50,9 +50,9 @@ public final class BugReportsPreferenceControllerTest extends BasePreferenceCont
     }
 
     @Test
-    public void testUpdateState_withBugreport() {
+    public void testUpdateState_withLogs() {
         long now = System.currentTimeMillis();
-        mockGetLastBugreportTime(now);
+        mockGetLastSecurityLogRetrievalTime(now);
 
         mController.updateState(mPreference);
 
