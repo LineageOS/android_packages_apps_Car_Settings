@@ -131,6 +131,7 @@ public class BaseEnterpriseTestCase {
     }
 
     protected final void mockDeviceOwner() {
+        when(mDpm.isDeviceManaged()).thenReturn(true);
         mockActiveAdmin(mDefaultAdmin);
         when(mDpm.isDeviceManaged()).thenReturn(true);
         when(mDpm.getDeviceOwnerComponentOnCallingUser()).thenReturn(mDefaultAdmin);
@@ -142,7 +143,11 @@ public class BaseEnterpriseTestCase {
         when(mDpm.getDeviceOwnerComponentOnAnyUser()).thenReturn(null);
     }
 
-    protected final void mockOrganisationName(String orgName) {
+    protected final void mockNotManaged() {
+        when(mDpm.isDeviceManaged()).thenReturn(false);
+    }
+
+    protected final void mockOrganizationName(String orgName) {
         when(mDpm.getDeviceOwnerOrganizationName()).thenReturn(orgName);
     }
 
@@ -192,22 +197,6 @@ public class BaseEnterpriseTestCase {
         when(mSpiedPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN)).thenReturn(false);
     }
 
-    protected final void verifyAdminActivated() {
-        verify(mDpm).setActiveAdmin(eq(mDefaultAdmin), anyBoolean());
-    }
-
-    protected final void verifyAdminNeverActivated() {
-        verify(mDpm, never()).setActiveAdmin(any(), anyBoolean());
-    }
-
-    protected final void verifyAdminDeactivated() {
-        verify(mDpm).removeActiveAdmin(mDefaultAdmin);
-    }
-
-    protected final void verifyAdminNeverDeactivated() {
-        verify(mDpm, never()).removeActiveAdmin(any());
-    }
-
     protected final void mockSystemUser() {
         when(mUm.isSystemUser()).thenReturn(true);
     }
@@ -235,5 +224,21 @@ public class BaseEnterpriseTestCase {
 
     protected final void mockIsCurrentInputMethodSetByOwner(boolean value) {
         when(mDpm.isCurrentInputMethodSetByOwner()).thenReturn(value);
+    }
+
+    protected final void verifyAdminActivated() {
+        verify(mDpm).setActiveAdmin(eq(mDefaultAdmin), anyBoolean());
+    }
+
+    protected final void verifyAdminNeverActivated() {
+        verify(mDpm, never()).setActiveAdmin(any(), anyBoolean());
+    }
+
+    protected final void verifyAdminDeactivated() {
+        verify(mDpm).removeActiveAdmin(mDefaultAdmin);
+    }
+
+    protected final void verifyAdminNeverDeactivated() {
+        verify(mDpm, never()).removeActiveAdmin(any());
     }
 }

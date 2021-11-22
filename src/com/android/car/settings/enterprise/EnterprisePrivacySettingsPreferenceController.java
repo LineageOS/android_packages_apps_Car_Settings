@@ -29,21 +29,12 @@ import com.android.car.settings.common.FragmentController;
  * <p><b>NOTE: </b>phone provides different screens for financed devices, which we don't quite
  * support yet (see {@code PrivacySettingsPreferenceFactory}
  */
-//TODO(b/186905050, b/206022572) - add unit tests
 public final class EnterprisePrivacySettingsPreferenceController
         extends BaseEnterprisePreferenceController<Preference> {
 
     public EnterprisePrivacySettingsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-    }
-
-    @Override
-    protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) return superStatus;
-
-        return EnterpriseUtils.hasDeviceOwner(getContext()) ? AVAILABLE : DISABLED_FOR_PROFILE;
     }
 
     @Override
