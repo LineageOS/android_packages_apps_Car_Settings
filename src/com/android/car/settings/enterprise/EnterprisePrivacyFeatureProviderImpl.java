@@ -16,6 +16,10 @@
 package com.android.car.settings.enterprise;
 
 import android.app.admin.DevicePolicyManager;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.UserHandle;
+import android.provider.Settings;
 
 import java.util.Date;
 
@@ -25,15 +29,52 @@ import java.util.Date;
  */
 final class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFeatureProvider {
 
-    private final DevicePolicyManager mDpm;
+    private static final int MY_USER_ID = UserHandle.myUserId();
 
-    EnterprisePrivacyFeatureProviderImpl(DevicePolicyManager dpm) {
+    private final Context mContext;
+    private final DevicePolicyManager mDpm;
+    private final PackageManager mPm;
+
+    EnterprisePrivacyFeatureProviderImpl(Context context, DevicePolicyManager dpm,
+            PackageManager pm) {
+        mContext = context;
         mDpm = dpm;
+        mPm = pm;
+    }
+
+    @Override
+    public Date getLastSecurityLogRetrievalTime() {
+        long timestamp = mDpm.getLastSecurityLogRetrievalTime();
+        return timestamp < 0 ? null : new Date(timestamp);
     }
 
     @Override
     public Date getLastBugReportRequestTime() {
         long timestamp = mDpm.getLastBugReportRequestTime();
         return timestamp < 0 ? null : new Date(timestamp);
+    }
+
+    @Override
+    public Date getLastNetworkLogRetrievalTime() {
+        long timestamp = mDpm.getLastNetworkLogRetrievalTime();
+        return timestamp < 0 ? null : new Date(timestamp);
+    }
+
+    @Override
+    public String getImeLabelIfOwnerSet() {
+        if (!mDpm.isCurrentInputMethodSetByOwner()) {
+            return null;
+        }
+        String packageName = Settings.Secure.getStringForUser(mContext.getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD, MY_USER_ID);
+        if (packageName == null) {
+            return null;
+        }
+        try {
+            return mPm.getApplicationInfoAsUser(packageName, /* flags= */ 0, MY_USER_ID)
+                    .loadLabel(mPm).toString();
+        } catch (PackageManager.NameNotFoundException e) {
+            return null;
+        }
     }
 }
