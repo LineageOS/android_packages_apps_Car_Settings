@@ -68,10 +68,10 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
     }
 
     @Test
-    public void testOrganisationNameAbsent_genericDisclosure() {
+    public void testOrganizationNameAbsent_genericDisclosure() {
         mockHasDeviceAdminFeature();
         mockDeviceOwner();
-        mockOrganisationName(null);
+        mockOrganizationName(null);
 
         mEnterpriseDisclosurePreferenceController.updateState(mPreference);
 
@@ -81,10 +81,10 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
     }
 
     @Test
-    public void testOrganisationNamePresent_specificDisclosure() {
+    public void testOrganizationNamePresent_specificDisclosure() {
         mockHasDeviceAdminFeature();
         mockDeviceOwner();
-        mockOrganisationName(ORG_NAME);
+        mockOrganizationName(ORG_NAME);
 
         mEnterpriseDisclosurePreferenceController.updateState(mPreference);
 

@@ -20,27 +20,31 @@ import android.content.Context;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 
-/**
- * Controller for privacy information about the device owner.
- *
- * <p><b>NOTE: </b>phone provides different screens for financed devices, which we don't quite
- * support yet (see {@code PrivacySettingsPreferenceFactory}
- */
-public final class EnterprisePrivacySettingsPreferenceController
-        extends BaseEnterprisePreferenceController<Preference> {
+import java.util.Date;
 
-    public EnterprisePrivacySettingsPreferenceController(Context context, String preferenceKey,
+/**
+* Controller to show whether the device owner obtained securitylogs.
+*/
+public final class SecurityLogsPreferenceController
+        extends BaseAdminActionReporterPreferenceController<Preference> {
+
+    public SecurityLogsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    protected void updateState(Preference preference) {
-        // NOTE: phone displays different messages when the device owner org name is known, but on
-        // automotive we're always showing the generic name
-        preference.setSummary(R.string.enterprise_privacy_settings_summary_generic);
+    protected Date getAdminActionTimestamp() {
+        return mEnterprisePrivacyFeatureProvider.getLastSecurityLogRetrievalTime();
+    }
+
+    @Override
+    protected boolean isEnabled() {
+        // TODO(b/207147813): on phone it checks provider.isSecurityLoggingEnabled() 1st, but that
+        // method is always returning false because of the current user / device owner mismatcher -
+        // we might need to fix it on DevicePolicyManagerService
+        return getAdminActionTimestamp() != null;
     }
 }
