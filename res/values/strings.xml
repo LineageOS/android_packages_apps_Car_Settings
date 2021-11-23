@@ -1830,8 +1830,11 @@
         <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> CA certificate</item>
         <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> CA certificates</item>
     </plurals>
-
-
+    <!-- Summary indicating the number of mistyped passwords after which the device or work profile wipes itself. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe">
+        <item quantity="one" translatable="false"><xliff:g id="count">%d</xliff:g> attempt</item>
+        <item quantity="other" translatable="false"><xliff:g id="count">%d</xliff:g> attempts</item>
+    </plurals>
     <!-- Remote request bugreport --><skip/>
     <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's organization manager. [CHAR LIMIT=50] -->
     <string name="share_remote_bugreport_dialog_title">Share bug report?</string>
