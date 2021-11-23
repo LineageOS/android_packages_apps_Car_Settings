@@ -54,7 +54,7 @@ import org.mockito.quality.Strictness;
 import java.util.Arrays;
 
 @RunWith(AndroidJUnit4.class)
-public class BaseEnterpriseTestCase {
+public abstract class BaseEnterpriseTestCase {
 
     protected final Context mRealContext = ApplicationProvider.getApplicationContext();
     protected final Context mSpiedContext = spy(mRealContext);
