@@ -25,24 +25,24 @@ import com.android.car.settings.common.FragmentController;
 import java.util.Date;
 
 /**
-* Controller to show whether the device owner obtained network logs.
+* Controller to show whether the device owner obtained securitylogs.
 */
-public final class NetworkLogsPreferenceController
+public final class SecurityLogsPreferenceController
         extends BaseAdminActionReporterPreferenceController<Preference> {
 
-    public NetworkLogsPreferenceController(Context context, String preferenceKey,
+    public SecurityLogsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
     protected Date getAdminActionTimestamp() {
-        return mEnterprisePrivacyFeatureProvider.getLastNetworkLogRetrievalTime();
+        return mEnterprisePrivacyFeatureProvider.getLastSecurityLogRetrievalTime();
     }
 
     @Override
     protected boolean isEnabled() {
-        // TODO(b/207147813): on phone it checks provider.isNetworkLoggingEnabled() 1st, but that
+        // TODO(b/207147813): on phone it checks provider.isSecurityLoggingEnabled() 1st, but that
         // method is always returning false because of the current user / device owner mismatcher -
         // we might need to fix it on DevicePolicyManagerService
         return getAdminActionTimestamp() != null;

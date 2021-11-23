@@ -27,9 +27,30 @@ import java.util.Date;
 public interface EnterprisePrivacyFeatureProvider {
 
     /**
+     * Returns the time at which the Device Owner last retrieved security logs, or {@code null} if
+     * logs were never retrieved by the Device Owner on this device.
+     */
+    @Nullable
+    Date getLastSecurityLogRetrievalTime();
+
+    /**
      * Returns the time at which the Device Owner last requested a bug report, or {@code null} if no
      * bug report was ever requested by the Device Owner on this device.
      */
     @Nullable
     Date getLastBugReportRequestTime();
+
+    /**
+     * Returns the time at which the Device Owner last retrieved network logs, or {@code null} if
+     * logs were never retrieved by the Device Owner on this device.
+     */
+    @Nullable
+    Date getLastNetworkLogRetrievalTime();
+
+    /**
+     * Returns the label of the current user's input method if that input method was set by a Device
+     * Owner or Profile Owner in that user. Otherwise, returns {@code null}.
+     */
+    @Nullable
+    String getImeLabelIfOwnerSet();
 }

@@ -18,19 +18,35 @@ package com.android.car.settings.enterprise;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 
 /**
 * Controller to show whether the device owner changed the keyboard for the user.
 */
 public final class ImePreferenceController
-        extends BaseEnterprisePreferenceController<Preference> {
+        extends BaseEnterprisePrivacyPreferenceController<Preference> {
 
     public ImePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @VisibleForTesting
+    ImePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            EnterprisePrivacyFeatureProvider provider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, provider);
+    }
+
+    @Override
+    public void updateState(Preference preference) {
+        preference.setSummary(getContext().getResources().getString(
+                R.string.enterprise_privacy_input_method_name,
+                mEnterprisePrivacyFeatureProvider.getImeLabelIfOwnerSet()));
     }
 
     @Override
@@ -38,7 +54,8 @@ public final class ImePreferenceController
         int superStatus = super.getAvailabilityStatus();
         if (superStatus != AVAILABLE) return superStatus;
 
-        //TODO(b/206156033): implement / add unit test
-        return DISABLED_FOR_PROFILE;
+        return mEnterprisePrivacyFeatureProvider.getImeLabelIfOwnerSet() != null
+                ? AVAILABLE
+                : CONDITIONALLY_UNAVAILABLE;
     }
 }

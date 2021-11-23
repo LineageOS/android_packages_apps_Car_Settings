@@ -31,16 +31,12 @@ import java.util.Date;
  * Base class for controllers that shows the last time the device owner executed an action.
  */
 abstract class BaseAdminActionReporterPreferenceController<P extends Preference>
-        extends BaseEnterprisePreferenceController<P> {
-
-    protected final EnterprisePrivacyFeatureProvider mEnterprisePrivacyFeatureProvider;
+        extends BaseEnterprisePrivacyPreferenceController<P> {
 
     protected BaseAdminActionReporterPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-
-        mEnterprisePrivacyFeatureProvider = new EnterprisePrivacyFeatureProviderImpl(mDpm);
     }
 
     @Override
@@ -55,6 +51,16 @@ abstract class BaseAdminActionReporterPreferenceController<P extends Preference>
         }
     }
 
+    @Override
+    protected int getAvailabilityStatus() {
+        int superStatus = super.getAvailabilityStatus();
+        if (superStatus != AVAILABLE) return superStatus;
+
+        return isEnabled() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    }
+
     @Nullable
     protected abstract Date getAdminActionTimestamp();
+
+    protected abstract boolean isEnabled();
 }

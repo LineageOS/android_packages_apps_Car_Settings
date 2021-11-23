@@ -39,4 +39,9 @@ public final class BugReportsPreferenceController
     protected Date getAdminActionTimestamp() {
         return mEnterprisePrivacyFeatureProvider.getLastBugReportRequestTime();
     }
+
+    @Override
+    protected boolean isEnabled() {
+        return true;
+    }
 }
