@@ -53,6 +53,7 @@
                     android:title="@string/enterprise_privacy_bug_reports"
                     android:selectable="false"/>
         <Preference android:key="@string/pk_enterprise_privacy_security_logs"
+                    settings:controller="com.android.car.settings.enterprise.SecurityLogsPreferenceController"
                     android:order="260"
                     android:title="@string/enterprise_privacy_security_logs"
                     android:selectable="false"/>

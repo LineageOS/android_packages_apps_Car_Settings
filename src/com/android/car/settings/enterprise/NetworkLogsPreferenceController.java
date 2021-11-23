@@ -22,11 +22,13 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 
+import java.util.Date;
+
 /**
 * Controller to show whether the device owner obtained network logs.
 */
 public final class NetworkLogsPreferenceController
-        extends BaseEnterprisePreferenceController<Preference> {
+        extends BaseAdminActionReporterPreferenceController<Preference> {
 
     public NetworkLogsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -34,11 +36,15 @@ public final class NetworkLogsPreferenceController
     }
 
     @Override
-    protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) return superStatus;
+    protected Date getAdminActionTimestamp() {
+        return mEnterprisePrivacyFeatureProvider.getLastNetworkLogRetrievalTime();
+    }
 
-        //TODO(b/206155858): implement / add unit test
-        return AVAILABLE;
+    @Override
+    protected boolean isEnabled() {
+        // TODO(b/207147813): on phone it checks provider.isNetworkLoggingEnabled() 1st, but that
+        // method is always returning false because of the current user / device owner mismatcher -
+        // we might need to fix it on DevicePolicyManagerService
+        return getAdminActionTimestamp() != null;
     }
 }

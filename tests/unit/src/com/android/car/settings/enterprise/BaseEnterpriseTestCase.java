@@ -131,6 +131,7 @@ public class BaseEnterpriseTestCase {
     }
 
     protected final void mockDeviceOwner() {
+        when(mDpm.isDeviceManaged()).thenReturn(true);
         mockActiveAdmin(mDefaultAdmin);
         when(mDpm.isDeviceManaged()).thenReturn(true);
         when(mDpm.getDeviceOwnerComponentOnCallingUser()).thenReturn(mDefaultAdmin);
@@ -142,7 +143,11 @@ public class BaseEnterpriseTestCase {
         when(mDpm.getDeviceOwnerComponentOnAnyUser()).thenReturn(null);
     }
 
-    protected final void mockOrganisationName(String orgName) {
+    protected final void mockNotManaged() {
+        when(mDpm.isDeviceManaged()).thenReturn(false);
+    }
+
+    protected final void mockOrganizationName(String orgName) {
         when(mDpm.getDeviceOwnerOrganizationName()).thenReturn(orgName);
     }
 
@@ -192,6 +197,35 @@ public class BaseEnterpriseTestCase {
         when(mSpiedPm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN)).thenReturn(false);
     }
 
+    protected final void mockSystemUser() {
+        when(mUm.isSystemUser()).thenReturn(true);
+    }
+
+    protected final void mockNonSystemUser() {
+        when(mUm.isSystemUser()).thenReturn(false);
+    }
+
+    protected final void mockNullEnforcedAdmin(String restriction, int userId) {
+        when(RestrictedLockUtilsInternal
+                .checkIfRestrictionEnforced(mSpiedContext, restriction, userId)).thenReturn(null);
+    }
+
+    protected final void mockGetLastBugreportTime(long time) {
+        when(mDpm.getLastBugReportRequestTime()).thenReturn(time);
+    }
+
+    protected final void mockGetLastNetworkLogRetrievalTime(long time) {
+        when(mDpm.getLastNetworkLogRetrievalTime()).thenReturn(time);
+    }
+
+    protected final void mockGetLastSecurityLogRetrievalTime(long time) {
+        when(mDpm.getLastSecurityLogRetrievalTime()).thenReturn(time);
+    }
+
+    protected final void mockIsCurrentInputMethodSetByOwner(boolean value) {
+        when(mDpm.isCurrentInputMethodSetByOwner()).thenReturn(value);
+    }
+
     protected final void verifyAdminActivated() {
         verify(mDpm).setActiveAdmin(eq(mDefaultAdmin), anyBoolean());
     }
@@ -206,22 +240,5 @@ public class BaseEnterpriseTestCase {
 
     protected final void verifyAdminNeverDeactivated() {
         verify(mDpm, never()).removeActiveAdmin(any());
-    }
-
-    protected final void mockSystemUser() {
-        when(mUm.isSystemUser()).thenReturn(true);
-    }
-
-    protected final void mockNonSystemUser() {
-        when(mUm.isSystemUser()).thenReturn(false);
-    }
-
-    protected final void mockNullEnforcedAdmin(String restriction, int userId) {
-        when(RestrictedLockUtilsInternal
-                .checkIfRestrictionEnforced(mSpiedContext, restriction, userId)).thenReturn(null);
-    }
-
-    protected final void mockLastBugreportTime(long time) {
-        when(mDpm.getLastBugReportRequestTime()).thenReturn(time);
     }
 }
