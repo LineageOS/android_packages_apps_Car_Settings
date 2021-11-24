@@ -30,6 +30,14 @@
         settings:controller="com.android.car.settings.privacy.MicPreferenceController"/>
 
     <Preference
+        android:fragment="com.android.car.settings.privacy.CameraSettingsFragment"
+        android:key="@string/pk_mute_camera_switch"
+        android:title="@string/mute_camera_title"
+        android:summary="@string/mute_camera_summary"
+        android:icon="@drawable/privacy_camera"
+        settings:controller="com.android.car.settings.privacy.CameraPreferenceController"/>
+
+    <Preference
         android:fragment="com.android.car.settings.location.LocationSettingsFragment"
         android:key="@string/pk_location_settings_entry"
         android:title="@string/location_settings_title"
