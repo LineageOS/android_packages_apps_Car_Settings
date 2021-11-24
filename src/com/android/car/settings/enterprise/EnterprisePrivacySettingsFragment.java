@@ -16,15 +16,39 @@
 
 package com.android.car.settings.enterprise;
 
+import android.app.Activity;
+import android.content.Context;
+
+import androidx.annotation.VisibleForTesting;
+
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
 
 /** Displays privacy information about the device owner.*/
-// TODO(b/186905050, b/206022572) - add unit tests
 public final class EnterprisePrivacySettingsFragment extends SettingsFragment {
+
+    private final Logger mLogger = new Logger(getClass());
 
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.enterprise_privacy_settings_fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        // Split in 2 as it would be hard to mock requireActivity();
+        onAttach(context, requireActivity());
+    }
+
+    @VisibleForTesting
+    void onAttach(Context context, Activity activity) {
+        if (!EnterpriseUtils.hasDeviceOwner(context)) {
+            mLogger.d("finishing " + activity + " because there is no device owner");
+            activity.finish();
+            return;
+        }
     }
 }
