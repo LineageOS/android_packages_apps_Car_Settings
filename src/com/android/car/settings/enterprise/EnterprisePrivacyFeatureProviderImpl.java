@@ -21,6 +21,8 @@ import android.content.pm.PackageManager;
 import android.os.UserHandle;
 import android.provider.Settings;
 
+import com.android.car.settings.common.Logger;
+
 import java.util.Date;
 
 /**
@@ -31,6 +33,7 @@ final class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFea
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
+    private final Logger mLogger = new Logger(getClass());
     private final Context mContext;
     private final DevicePolicyManager mDpm;
     private final PackageManager mPm;
@@ -74,6 +77,7 @@ final class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFea
             return mPm.getApplicationInfoAsUser(packageName, /* flags= */ 0, MY_USER_ID)
                     .loadLabel(mPm).toString();
         } catch (PackageManager.NameNotFoundException e) {
+            mLogger.w("Could not get label for " + packageName + " and user " + MY_USER_ID, e);
             return null;
         }
     }
