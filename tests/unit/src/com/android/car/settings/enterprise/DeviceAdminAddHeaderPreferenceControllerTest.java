@@ -15,11 +15,13 @@
  */
 package com.android.car.settings.enterprise;
 
-import androidx.preference.TwoStatePreference;
-
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+
+import android.app.AppOpsManager;
+
+import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.enterprise.DeviceAdminAddHeaderPreferenceController.ActivationListener;
@@ -60,6 +62,55 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
 
         assertAvailability(controller.getAvailabilityStatus(),
                 PreferenceController.CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    public void testOnResumeInternal_inactiveAdmin() throws Exception {
+        mockInactiveAdmin(mDefaultAdmin);
+
+        mController.onResumeInternal(mPreference);
+
+        verifyPreferenceSetChecked(mPreference, false);
+        verifyPreferenceEnabled(mPreference);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
+                /* restricted= */ true);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ true);
+    }
+
+    @Test
+    public void testOnResumeInternal_activeAdmin() throws Exception {
+        mockActiveAdmin(mDefaultAdmin);
+
+        mController.onResumeInternal(mPreference);
+
+        verifyPreferenceSetChecked(mPreference, true);
+        verifyPreferenceEnabled(mPreference);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
+                /* restricted= */ true);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ true);
+    }
+
+    @Test
+    public void testOnResumeInternal_deviceOwner() throws Exception {
+        mockDeviceOwner();
+
+        mController.onResumeInternal(mPreference);
+
+        verifyPreferenceSetChecked(mPreference, true);
+        verifyPreferenceDisabled(mPreference);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
+                /* restricted= */ true);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ true);
+    }
+
+    @Test
+    public void testOnPauseInternal() throws Exception {
+        mController.onPauseInternal(mPreference);
+
+        verifyPreferenceDisabled(mPreference);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
+                /* restricted= */ false);
+        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ false);
     }
 
     @Test
