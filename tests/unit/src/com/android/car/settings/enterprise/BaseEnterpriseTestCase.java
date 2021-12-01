@@ -37,6 +37,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.pm.UserInfo;
 import android.os.IBinder;
 import android.os.UserManager;
 
@@ -218,6 +219,13 @@ public abstract class BaseEnterpriseTestCase {
 
     protected final void mockGetLastBugreportTime(long time) {
         when(mDpm.getLastBugReportRequestTime()).thenReturn(time);
+    }
+
+    protected final void mockCompMode() {
+        mockDeviceOwner();
+        UserInfo userInfo = new UserInfo(10, "UserAbc", null, 0,
+                UserManager.USER_TYPE_PROFILE_MANAGED);
+        when(mUm.getProfiles(anyInt())).thenReturn(Arrays.asList(userInfo));
     }
 
     protected final void mockGetLastNetworkLogRetrievalTime(long time) {
