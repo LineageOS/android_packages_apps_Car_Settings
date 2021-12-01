@@ -166,6 +166,8 @@ public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpri
             throws Exception {
         doReturn(mApplicationInfo).when(mSpiedPm).getApplicationInfoAsUser(packageName,
                 /* flags= */ 0, MY_USER_ID);
+        doReturn(mApplicationInfo).when(mSpiedPm).getApplicationInfoAsUser(packageName,
+                /* flags= */ 0, MY_USER_ID.getIdentifier());
         when(mApplicationInfo.loadLabel(mSpiedPm)).thenReturn(label);
     }
 }
