@@ -24,6 +24,7 @@ import static org.mockito.Mockito.when;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settingslib.enterprise.EnterprisePrivacyFeatureProvider;
 
 import org.junit.Before;
 import org.junit.Test;

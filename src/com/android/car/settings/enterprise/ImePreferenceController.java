@@ -23,6 +23,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settingslib.enterprise.EnterprisePrivacyFeatureProvider;
 
 /**
 * Controller to show whether the device owner changed the keyboard for the user.

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.car.settings.enterprise;
+package com.android.car.settingslib.enterprise;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
@@ -27,10 +27,11 @@ import com.android.car.settings.common.Logger;
 import java.util.Date;
 
 /**
- * TODO(b/190867059): copied from phone (but stripped what's not used), should be moved to
+ * TODO(b/208511815): copied from phone (but stripped what's not used), should be moved to
  * SettingsLib
  */
-final class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFeatureProvider {
+public final class EnterprisePrivacyFeatureProviderImpl
+        implements EnterprisePrivacyFeatureProvider {
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -39,7 +40,7 @@ final class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFea
     private final DevicePolicyManager mDpm;
     private final PackageManager mPm;
 
-    EnterprisePrivacyFeatureProviderImpl(Context context, DevicePolicyManager dpm,
+    public EnterprisePrivacyFeatureProviderImpl(Context context, DevicePolicyManager dpm,
             PackageManager pm) {
         mContext = context;
         mDpm = dpm;

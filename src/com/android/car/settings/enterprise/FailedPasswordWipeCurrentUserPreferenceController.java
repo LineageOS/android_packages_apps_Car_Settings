@@ -23,6 +23,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settingslib.enterprise.EnterprisePrivacyFeatureProvider;
 
 /**
 * Controller to show how many times the user can fail the password before being wiped out
