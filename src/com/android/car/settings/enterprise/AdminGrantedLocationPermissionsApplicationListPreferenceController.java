@@ -13,32 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.enterprise;
 
+import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import com.android.car.settings.applications.SyncApplicationFeatureProvider;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.internal.annotations.VisibleForTesting;
 
 /**
- * Controller to show apps that were granted camera permission by the device owner.
+ * PreferenceController that builds a dynamic list of applications that were granted the location
+ * permissions by the device admin.
  */
-public final class AdminGrantedCameraPermissionPreferenceController
-        extends BaseAdminGrantedPermissionsPreferenceController {
+public class AdminGrantedLocationPermissionsApplicationListPreferenceController
+        extends BaseAdminGrantedPermissionsApplicationListPreferenceController {
 
-    public AdminGrantedCameraPermissionPreferenceController(Context context,
+    public AdminGrantedLocationPermissionsApplicationListPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
-        this(context, preferenceKey, fragmentController, uxRestrictions, /* syncProvider= */ null);
+        this(context, preferenceKey, fragmentController, uxRestrictions, /* provider= */ null);
     }
 
     @VisibleForTesting
-    AdminGrantedCameraPermissionPreferenceController(Context context,
+    AdminGrantedLocationPermissionsApplicationListPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, SyncApplicationFeatureProvider syncProvider) {
-        super(context, preferenceKey, fragmentController, uxRestrictions, syncProvider,
-                EnterpriseUtils.CAMERA_PERMISSIONS);
+            CarUxRestrictions uxRestrictions, @Nullable ApplicationFeatureProvider provider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, provider,
+                EnterpriseUtils.LOCATION_PERMISSIONS);
     }
 }
