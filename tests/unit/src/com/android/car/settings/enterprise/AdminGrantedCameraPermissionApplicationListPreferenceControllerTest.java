@@ -15,20 +15,20 @@
  */
 package com.android.car.settings.enterprise;
 
-import com.android.car.settings.applications.SyncApplicationFeatureProvider;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 
-public final class AdminGrantedCameraPermissionPreferenceControllerTest extends
-        BaseAdminGrantedPermissionsPreferenceControllerTestCase
-        <AdminGrantedCameraPermissionPreferenceController> {
+public final class AdminGrantedCameraPermissionApplicationListPreferenceControllerTest extends
+        BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase
+        <AdminGrantedCameraPermissionApplicationListPreferenceController> {
 
-    public AdminGrantedCameraPermissionPreferenceControllerTest() {
+    public AdminGrantedCameraPermissionApplicationListPreferenceControllerTest() {
         super(EnterpriseUtils.CAMERA_PERMISSIONS);
     }
 
     @Override
-    protected AdminGrantedCameraPermissionPreferenceController newController(
-            SyncApplicationFeatureProvider provider) {
-        return new AdminGrantedCameraPermissionPreferenceController(mSpiedContext, mPreferenceKey,
-                mFragmentController, mUxRestrictions, provider);
+    protected AdminGrantedCameraPermissionApplicationListPreferenceController newController(
+            ApplicationFeatureProvider provider) {
+        return new AdminGrantedCameraPermissionApplicationListPreferenceController(mSpiedContext,
+                mPreferenceKey, mFragmentController, mUxRestrictions, provider);
     }
 }

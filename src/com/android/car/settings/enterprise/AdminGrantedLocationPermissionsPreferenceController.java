@@ -15,7 +15,6 @@
  */
 package com.android.car.settings.enterprise;
 
-import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -29,7 +28,6 @@ import com.android.internal.annotations.VisibleForTesting;
 public final class AdminGrantedLocationPermissionsPreferenceController
         extends BaseAdminGrantedPermissionsPreferenceController {
 
-
     public AdminGrantedLocationPermissionsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
@@ -41,7 +39,6 @@ public final class AdminGrantedLocationPermissionsPreferenceController
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions, SyncApplicationFeatureProvider syncProvider) {
         super(context, preferenceKey, fragmentController, uxRestrictions, syncProvider,
-                Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION);
+                EnterpriseUtils.LOCATION_PERMISSIONS);
     }
 }
