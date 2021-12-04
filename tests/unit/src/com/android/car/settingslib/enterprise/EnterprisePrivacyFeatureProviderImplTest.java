@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.car.settings.enterprise;
+package com.android.car.settingslib.enterprise;
 
 import static com.google.common.truth.Truth.assertWithMessage;
 
@@ -25,12 +25,15 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.provider.Settings;
 
+import com.android.car.settings.enterprise.BaseEnterpriseTestCase;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
 import java.util.Date;
 
+// TODO(b/208511815): move to SettingsLib
 public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpriseTestCase {
 
     private static final String IME_PACKAGE_NAME = "acme.keyboards";
