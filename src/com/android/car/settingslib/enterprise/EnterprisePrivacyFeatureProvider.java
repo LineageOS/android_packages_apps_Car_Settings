@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.enterprise;
+package com.android.car.settingslib.enterprise;
 
 import android.annotation.Nullable;
 
 import java.util.Date;
 
 /**
- * TODO(b/190867059): copied from phone (but stripped what's not used), should be moved to
+ * TODO(b/208511815): copied from phone (but stripped what's not used), should be moved to
  * SettingsLib
  */
 public interface EnterprisePrivacyFeatureProvider {
