@@ -135,6 +135,11 @@
         com.android.settings.intelligence
     </string>
 
+    <!-- Package Installer package name -->
+    <string name="config_package_installer_package_name" translatable="false">
+        com.android.packageinstaller
+    </string>
+
     <!--
         Maximum number of devices to show for paired bluetooth device quick control.
         Set to -1 for unlimited.
