@@ -19,20 +19,27 @@ import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import androidx.preference.Preference;
-
+import com.android.car.settings.applications.SyncApplicationFeatureProvider;
 import com.android.car.settings.common.FragmentController;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
  * Controller to show apps that were granted camera permission by the device owner.
  */
 public final class AdminGrantedCameraPermissionPreferenceController
-        extends BaseAdminGrantedPermissionsPreferenceController<Preference> {
+        extends BaseAdminGrantedPermissionsPreferenceController {
 
     public AdminGrantedCameraPermissionPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions,
+        this(context, preferenceKey, fragmentController, uxRestrictions, /* syncProvider= */ null);
+    }
+
+    @VisibleForTesting
+    AdminGrantedCameraPermissionPreferenceController(Context context,
+            String preferenceKey, FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions, SyncApplicationFeatureProvider syncProvider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, syncProvider,
                 Manifest.permission.CAMERA);
     }
 }
