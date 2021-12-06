@@ -15,7 +15,7 @@
  */
 package com.android.car.settings.enterprise;
 
-import com.android.car.settings.applications.SyncApplicationFeatureProvider;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 
 public final class AdminGrantedMicrophonePermissionPreferenceControllerTest
         extends BaseAdminGrantedPermissionsPreferenceControllerTestCase
@@ -27,7 +27,7 @@ public final class AdminGrantedMicrophonePermissionPreferenceControllerTest
 
     @Override
     protected AdminGrantedMicrophonePermissionPreferenceController newController(
-            SyncApplicationFeatureProvider provider) {
+            ApplicationFeatureProvider provider) {
         return new AdminGrantedMicrophonePermissionPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions, provider);
     }

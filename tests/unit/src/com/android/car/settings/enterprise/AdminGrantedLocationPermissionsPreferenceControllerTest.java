@@ -15,7 +15,7 @@
  */
 package com.android.car.settings.enterprise;
 
-import com.android.car.settings.applications.SyncApplicationFeatureProvider;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 
 public final class AdminGrantedLocationPermissionsPreferenceControllerTest
         extends BaseAdminGrantedPermissionsPreferenceControllerTestCase
@@ -27,7 +27,7 @@ public final class AdminGrantedLocationPermissionsPreferenceControllerTest
 
     @Override
     protected AdminGrantedLocationPermissionsPreferenceController newController(
-            SyncApplicationFeatureProvider provider) {
+            ApplicationFeatureProvider provider) {
         return new AdminGrantedLocationPermissionsPreferenceController(mSpiedContext,
                 mPreferenceKey, mFragmentController, mUxRestrictions, provider);
     }
