@@ -22,18 +22,16 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.TetheringManager;
 import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiManager;
+import android.os.UserManager;
 
-import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.qc.QCActionItem;
@@ -50,11 +48,10 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
-public class HotspotRowTest {
+public class HotspotRowTest extends BaseSettingsQCItemTestCase {
     private static final String TEST_SSID = "TEST_SSID";
     private static final String TEST_PASSWORD = "TEST_PASSWORD";
 
-    private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private HotspotRow mHotspotRow;
 
     @Mock
@@ -117,6 +114,24 @@ public class HotspotRowTest {
                 connectedDevices));
         QCActionItem actionItem = row.getEndItems().get(0);
         assertThat(actionItem.isChecked()).isTrue();
+    }
+
+    @Test
+    public void getQCItem_hasBaseUmRestriction_switchDisabled() {
+        setBaseUserRestriction(UserManager.DISALLOW_CONFIG_TETHERING, /* restricted= */ true);
+        QCRow row = getHotspotRow();
+        QCActionItem actionItem = row.getEndItems().get(0);
+        assertThat(actionItem.isEnabled()).isFalse();
+        assertThat(actionItem.isClickableWhileDisabled()).isFalse();
+    }
+
+    @Test
+    public void getQCItem_hasUmRestriction_switchClickableWhileDisabled() {
+        setUserRestriction(UserManager.DISALLOW_CONFIG_TETHERING, /* restricted= */ true);
+        QCRow row = getHotspotRow();
+        QCActionItem actionItem = row.getEndItems().get(0);
+        assertThat(actionItem.isEnabled()).isFalse();
+        assertThat(actionItem.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
