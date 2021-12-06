@@ -46,6 +46,7 @@ public final class AlwaysOnVpnCurrentUserPreferenceControllerTest extends
     @Before
     public void setUp() {
         when(mSpiedContext.getSystemService(VpnManager.class)).thenReturn(mVpnManager);
+        mockHasDeviceAdminFeature();
         mPreference = new Preference(mSpiedContext);
         mAlwaysOnVpnCurrentUserPreferenceController =
                 new AlwaysOnVpnCurrentUserPreferenceController(
