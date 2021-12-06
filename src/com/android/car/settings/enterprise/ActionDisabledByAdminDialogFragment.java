@@ -131,15 +131,18 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
                     ? EnterpriseUtils.getEnforcedAdminFromIntent(context, intent)
                     : EnterpriseUtils.getEnforcedAdmin(context, mAdminUserId,
                             mRestriction, mRestrictedPackage);
-        LOG.i("hasValidIntent: " + hasValidIntent + " enforcedAdmin: " + enforcedAdmin);
+        LOG.i("hasValidIntent: " + hasValidIntent + " enforcedAdmin: " + enforcedAdmin
+                + " mAdminUserId: " + mAdminUserId);
 
         AlertDialogBuilder builder = new AlertDialogBuilder(context)
                 .setPositiveButton(R.string.okay, /* listener= */ null);
         mActionDisabledByAdminController = ActionDisabledByAdminControllerFactory
                 .createInstance(context, mRestriction, new DeviceAdminStringProviderImpl(context),
                         context.getUser());
+        // Learn more button should launch admin policy information on the current user
         mActionDisabledByAdminController.initialize(
-                new ActionDisabledLearnMoreButtonLauncherImpl(builder));
+                new ActionDisabledLearnMoreButtonLauncherImpl(builder,
+                        /* preferredUser= */ context.getUser()));
         if (enforcedAdmin != null) {
             mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, mAdminUserId);
             mActionDisabledByAdminController.setupLearnMoreButton(context);
@@ -170,7 +173,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
             mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, userId);
         }
 
-        if (isNotCurrentUserOrProfile(context, admin, userId)) {
+        if (isNotValidEnforcedAdmin(context, enforcedAdmin)) {
             admin = null;
         }
         // NOTE: not showing icon
@@ -181,10 +184,31 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         }
     }
 
+    private boolean isNotValidEnforcedAdmin(Context context, EnforcedAdmin enforcedAdmin) {
+        if (enforcedAdmin == null) {
+            LOG.w("isNotValidEnforcedAdmin(): enforcedAdmin is null");
+            return true;
+        }
+        ComponentName admin = enforcedAdmin.component;
+        int userId = getEnforcementAdminUserId(enforcedAdmin);
+        if (isNotCurrentUserOrProfile(context, admin, userId)
+                && isNotDeviceOwner(context, admin, userId)) {
+            LOG.w("isNotValidEnforcedAdmin(): is not current user or profile/device owner");
+            return true;
+        }
+        return false;
+    }
+
     private boolean isNotCurrentUserOrProfile(Context context, ComponentName admin,
             @UserIdInt int userId) {
         return !RestrictedLockUtilsInternal.isAdminInCurrentUserOrProfile(context, admin)
                 || !RestrictedLockUtils.isCurrentUserOrProfile(context, userId);
+    }
+
+    private boolean isNotDeviceOwner(Context context, ComponentName admin,
+            @UserIdInt int userId) {
+        EnforcedAdmin deviceOwner = RestrictedLockUtilsInternal.getDeviceOwner(context);
+        return !((deviceOwner.component).equals(admin) && userId == UserHandle.USER_SYSTEM);
     }
 
     private void setAdminSupportTitle(Context context, AlertDialogBuilder builder,
@@ -199,9 +223,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
             return;
         }
         CharSequence supportMessage = null;
-        if (!RestrictedLockUtilsInternal.isAdminInCurrentUserOrProfile(context,
-                enforcedAdmin.component) || !RestrictedLockUtils.isCurrentUserOrProfile(
-                        context, getEnforcementAdminUserId(enforcedAdmin))) {
+        if (isNotValidEnforcedAdmin(context, enforcedAdmin)) {
             enforcedAdmin.component = null;
         } else {
             if (enforcedAdmin.user == null) {
