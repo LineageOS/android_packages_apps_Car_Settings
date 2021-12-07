@@ -19,20 +19,28 @@ import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import androidx.preference.Preference;
-
+import com.android.car.settings.applications.SyncApplicationFeatureProvider;
 import com.android.car.settings.common.FragmentController;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
 * Controller to show apps that were granted location permissions by the device owner.
 */
 public final class AdminGrantedLocationPermissionsPreferenceController
-        extends BaseAdminGrantedPermissionsPreferenceController<Preference> {
+        extends BaseAdminGrantedPermissionsPreferenceController {
+
 
     public AdminGrantedLocationPermissionsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions,
+        this(context, preferenceKey, fragmentController, uxRestrictions, /* syncProvider= */ null);
+    }
+
+    @VisibleForTesting
+    AdminGrantedLocationPermissionsPreferenceController(Context context,
+            String preferenceKey, FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions, SyncApplicationFeatureProvider syncProvider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, syncProvider,
                 Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION);
     }
