@@ -363,7 +363,7 @@
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"सर्व %1$d ॲप्स पहा"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"परवानगी व्यवस्थापक"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"तुमच्या डेटाचा अ‍ॅप अ‍ॅक्सेस नियंत्रित करा"</string>
-    <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant आणि आणखी बरेच काहीसाठी"</string>
+    <string name="apps_default_apps_summary" msgid="2017792579839972926">"असिस्टंट आणि आणखी बऱ्याच गोष्टींसाठी"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"सिस्टम आणि इतर सेटिंग्जसाठी"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अ‍ॅप अ‍ॅक्सेस"</string>
     <string name="show_system" msgid="4401355756969485287">"सिस्टम दाखवा"</string>
@@ -533,7 +533,7 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"स्टोरेज"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"संगीत आणि ऑडिओ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"इतर अ‍ॅप्स"</string>
-    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
+    <string name="storage_files" msgid="6382081694781340364">"फाइल"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममध्ये अशा फायलींचा समावेश आहे ज्यांचा वापर Android आवृत्ती <xliff:g id="VERSION">%s</xliff:g> रन करण्यासाठी केला जातो"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फाइल"</string>
@@ -649,7 +649,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> अंकांपेक्षा कमी असणे आवश्यक आहे"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"केवळ ०-९ अंक असणे आवश्यक आहे."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"डिव्हाइस प्रशासक अलीकडील पिन वापरण्याची अनुमती देत नाही"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"तुमच्या IT ॲडमिनने सामान्यत: वापरले जाणारे पिन ब्लॉक केले आहेत. दुसरा पिन वापरून पाहा."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"तुमच्या IT ॲडमिनने सामान्यत: वापरले जाणारे पिन ब्लॉक केले आहेत. दुसरा पिन वापरून पहा."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"यामध्ये चुकीच्‍या वर्णांचा समावेश असू शकत नाही."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"पासवर्ड चुकीचा आहे, किमान 4 वर्ण असणे आवश्यक आहे."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +678,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"डिव्हाइस प्रशासक अलीकडील पासवर्ड वापरण्याची अनुमती देत नाही"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सेव्ह करताना एरर आली"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"तुमच्या IT ॲडमिनने सामान्यत: वापरले जाणारे पासवर्ड ब्लॉक केले आहेत. दुसरा पासवर्ड वापरून पाहा."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"तुमच्या IT ॲडमिनने सामान्यत: वापरले जाणारे पासवर्ड ब्लॉक केले आहेत. दुसरा पासवर्ड वापरून पहा."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"अंकांच्या चढत्या, उतरत्या किंवा पुनरावृत्त क्रमाला अनुमती नाही."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक पर्याय"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिवसांपूर्वी"</string>
@@ -704,8 +704,8 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"डिसमिस करा"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ड्राइव्ह करताना वैशिष्ट्य उपलब्ध नाही"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ड्राइव्ह करत असताना प्रोफाइल जोडू शकत नाही"</string>
-    <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
-    <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant आणि आवाज"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"शोधा"</string>
+    <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"असिस्टंट आणि आवाज"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"डिजिटल असिस्टंट अ‍ॅप"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"स्क्रीनवरील मजकूर वापरा"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"असिस्टंटला स्क्रीनवरील गोष्टी अ‍ॅक्सेस करण्याची अनुमती द्या"</string>
