@@ -100,7 +100,7 @@
             settings:showChevron="false"/>
         <Preference android:key="@string/pk_enterprise_privacy_failed_password_wipe_current_user"
                     settings:controller="com.android.car.settings.enterprise.FailedPasswordWipeCurrentUserPreferenceController"
-                    android:title="@string/enterprise_privacy_failed_password_wipe_device"
+                    android:title="@string/enterprise_privacy_failed_password_wipe_current_user"
                     android:selectable="false"/>
     </PreferenceCategory>
     <com.android.car.settings.common.DividerPreference/>
