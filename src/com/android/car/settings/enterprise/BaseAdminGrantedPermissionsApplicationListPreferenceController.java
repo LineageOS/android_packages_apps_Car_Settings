@@ -24,8 +24,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.enterprise.CallbackTranslator.AppsListCallbackTranslator;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
-import com.android.car.settingslib.applications.ApplicationFeatureProvider.ListOfAppsCallback;
 import com.android.car.settingslib.applications.UserAppInfo;
 import com.android.settingslib.widget.AppPreference;
 
@@ -36,7 +36,7 @@ import java.util.List;
  * admin.
  */
 abstract class BaseAdminGrantedPermissionsApplicationListPreferenceController
-        extends BaseApplicationListPreferenceController {
+        extends BaseApplicationsListPreferenceController {
 
     private final String[] mPermissions;
 
@@ -50,14 +50,15 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceController
     }
 
     @Override
-    protected void lazyLoad(ListOfAppsCallback callback) {
+    protected void lazyLoad(AppsListCallbackTranslator callbackHolder) {
         mLogger.d("Calling listAppsWithAdminGrantedPermissions()");
-        mApplicationFeatureProvider.listAppsWithAdminGrantedPermissions(mPermissions, callback);
+        mApplicationFeatureProvider.listAppsWithAdminGrantedPermissions(mPermissions,
+                callbackHolder);
     }
 
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
-        List<UserAppInfo> apps = getApps();
+        List<UserAppInfo> apps = getResult();
         mLogger.d("Updating state with " + apps.size() + " apps");
         preferenceGroup.removeAll();
 
