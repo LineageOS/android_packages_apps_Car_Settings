@@ -100,7 +100,7 @@ public abstract class BaseEnterpriseTestCase {
         }
         mSession = ExtendedMockito.mockitoSession()
                 .initMocks(this)
-                .mockStatic(UserManager.class)
+                .spyStatic(UserManager.class)
                 .mockStatic(RestrictedLockUtilsInternal.class)
                 .strictness(Strictness.LENIENT)
                 .startMocking();
