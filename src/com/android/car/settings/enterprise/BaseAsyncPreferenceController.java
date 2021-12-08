@@ -22,26 +22,23 @@ import android.content.Context;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settingslib.applications.ApplicationFeatureProvider;
+import com.android.car.settings.enterprise.CallbackTranslator.Callback;
 
 /**
- * Base class for controllers that shows a number of apps in the Enterprise Privacy /
- * Managed Device Info screen.
- *
- * <p>The counter is calculated asynchronously.
+ * Base class for async controllers.
  */
-abstract class BaseEnterprisePrivacyAppsCounterPreferenceController<P extends Preference>
-        extends BaseEnterprisePrivacyPreferenceController<P> {
+abstract class BaseAsyncPreferenceController<P extends Preference, R,
+        T extends CallbackTranslator<R>> extends BaseEnterprisePrivacyPreferenceController<P> {
 
-    private int mCount;
+    private R mResult;
 
     @Nullable
-    private ApplicationFeatureProvider.NumberOfAppsCallback mCallback;
+    private T mCallbackTranslator;
 
     @Nullable
     private Integer mAvailabilityStatus;
 
-    protected BaseEnterprisePrivacyAppsCounterPreferenceController(Context context,
+    protected BaseAsyncPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
@@ -50,13 +47,25 @@ abstract class BaseEnterprisePrivacyAppsCounterPreferenceController<P extends Pr
     /**
      * Calls the method that will lazy-load the counter.
      */
-    protected abstract void lazyLoad(ApplicationFeatureProvider.NumberOfAppsCallback callback);
+    protected abstract void lazyLoad(T callbackHolder);
 
     /**
-     * Gets the count returned by the callback.
+     * Creates a translator between this class Callback and {@code SettingsLib}.
+     * @param callback
+     * @return
      */
-    protected int getCount() {
-        return mCount;
+    protected abstract T newCallbackTranslator(Callback<R> callback);
+
+    /**
+     * Checks if the result of the callback should make the controller available.
+     */
+    protected abstract boolean isAvailable(R result);
+
+    /**
+     * Gets the result returned by the callback.
+     */
+    protected R getResult() {
+        return mResult;
     }
 
     @Override
@@ -73,12 +82,12 @@ abstract class BaseEnterprisePrivacyAppsCounterPreferenceController<P extends Pr
             return superStatus;
         }
 
-        if (mCallback != null) {
+        if (mCallbackTranslator != null) {
             mLogger.d("getAvailabilityStatus(): already waiting for callback...");
         } else {
             mLogger.d("getAvailabilityStatus(): lazy-loading number of apps");
-            mCallback = (result) -> onLazyLoaded(result);
-            lazyLoad(mCallback);
+            mCallbackTranslator = newCallbackTranslator((result) -> onLazyLoaded(result));
+            lazyLoad(mCallbackTranslator);
         }
 
         // Calculating the number of apps can takes a bit of time, so we always return
@@ -87,18 +96,16 @@ abstract class BaseEnterprisePrivacyAppsCounterPreferenceController<P extends Pr
         return CONDITIONALLY_UNAVAILABLE;
     }
 
-    private void onLazyLoaded(Integer count) {
-        mCount = count;
-        mAvailabilityStatus = (count != null && count > 0)
+    private void onLazyLoaded(R result) {
+        mResult = result;
+        boolean available = isAvailable(result);
+        mAvailabilityStatus = available
                 ? AVAILABLE
                 : DISABLED_FOR_PROFILE;
-        mLogger.d("onLazyLoaded(): count=" + count + ", status=" + mAvailabilityStatus);
+        mLogger.d("onLazyLoaded(): result=" + result + ", available=" + available);
 
-        if (count <= 0) {
-            // No need to update anything
-            return;
+        if (available)  {
+            refreshUi();
         }
-
-        refreshUi();
     }
 }
