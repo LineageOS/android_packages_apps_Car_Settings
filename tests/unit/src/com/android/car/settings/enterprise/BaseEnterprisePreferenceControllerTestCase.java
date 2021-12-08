@@ -40,7 +40,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 abstract class BaseEnterprisePreferenceControllerTestCase extends BaseEnterpriseTestCase {
-
     protected final String mPreferenceKey = "Da Key";
     protected final CarUxRestrictions mUxRestrictions = new CarUxRestrictions.Builder(
             /* reqOpt= */ true, CarUxRestrictions.UX_RESTRICTIONS_FULLY_RESTRICTED, /* time= */ 0)
