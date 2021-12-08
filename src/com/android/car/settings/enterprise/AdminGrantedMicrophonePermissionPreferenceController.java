@@ -15,7 +15,6 @@
  */
 package com.android.car.settings.enterprise;
 
-import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -40,6 +39,6 @@ public final class AdminGrantedMicrophonePermissionPreferenceController
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions, SyncApplicationFeatureProvider syncProvider) {
         super(context, preferenceKey, fragmentController, uxRestrictions, syncProvider,
-                Manifest.permission.RECORD_AUDIO);
+                EnterpriseUtils.MICROPHONE_PERMISSIONS);
     }
 }

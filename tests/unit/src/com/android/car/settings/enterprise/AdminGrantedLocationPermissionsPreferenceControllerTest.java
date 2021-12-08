@@ -15,8 +15,6 @@
  */
 package com.android.car.settings.enterprise;
 
-import android.Manifest;
-
 import com.android.car.settings.applications.SyncApplicationFeatureProvider;
 
 public final class AdminGrantedLocationPermissionsPreferenceControllerTest
@@ -24,7 +22,7 @@ public final class AdminGrantedLocationPermissionsPreferenceControllerTest
         <AdminGrantedLocationPermissionsPreferenceController> {
 
     public AdminGrantedLocationPermissionsPreferenceControllerTest() {
-        super(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION);
+        super(EnterpriseUtils.LOCATION_PERMISSIONS);
     }
 
     @Override
