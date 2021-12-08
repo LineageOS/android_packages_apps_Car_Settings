@@ -60,7 +60,7 @@ public class WifiPasswordDialog extends CarUiDialogFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mDialogTitle = mWifiEntry.getSsid();
+        mDialogTitle = mWifiEntry.getTitle();
         mDialogLayoutRes = R.layout.preference_dialog_password_edittext;
         mPositiveButtonText = getContext().getString(R.string.okay);
         mNegativeButtonText = getContext().getString(R.string.cancel);
