@@ -74,6 +74,8 @@
     <string name="mobile_network_mobile_network_toggle_title">Mobile network</string>
     <!-- Mobile network screen, toggle mobile network summary [CHAR LIMIT=50] -->
     <string name="mobile_network_mobile_network_toggle_summary">Use mobile data</string>
+    <!-- Subtitle for when mobile network is toggled off [CHAR LIMIT=45] -->
+    <string name="mobile_network_state_off">Off</string>
     <!-- Mobile network screen, confirmation dialog to turn off mobile data [CHAR LIMIT=50] -->
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
     <!-- When a SIM preference hasn't been selected yet, this string is displayed as the pref summary until the user chooses a SIM subscription from the preference list. [CHAR LIMIT=50] -->

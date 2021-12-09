@@ -25,8 +25,6 @@ import android.content.Intent;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.UserManager;
-import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -53,9 +51,9 @@ public class MobileDataTile extends SettingsQCItem {
         if (!mDataUsageController.isMobileDataSupported()) {
             return null;
         }
-        TelephonyManager manager = getContext().getSystemService(TelephonyManager.class);
-        String subtitle = manager.getNetworkOperatorName();
-        if (TextUtils.isEmpty(subtitle)) {
+        boolean dataEnabled = mDataUsageController.isMobileDataEnabled();
+        String subtitle = MobileNetworkQCUtils.getMobileNetworkSummary(getContext(), dataEnabled);
+        if (subtitle == null) {
             subtitle = getContext().getString(R.string.mobile_network_toggle_title);
         }
         Icon icon = MobileNetworkQCUtils.getMobileNetworkSignalIcon(getContext());
@@ -68,7 +66,7 @@ public class MobileDataTile extends SettingsQCItem {
 
         return new QCTile.Builder()
                 .setIcon(icon)
-                .setChecked(mDataUsageController.isMobileDataEnabled())
+                .setChecked(dataEnabled)
                 .setAction(getBroadcastIntent())
                 .setSubtitle(subtitle)
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions)
