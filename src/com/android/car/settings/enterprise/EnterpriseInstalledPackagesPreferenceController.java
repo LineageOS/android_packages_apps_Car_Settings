@@ -26,7 +26,7 @@ import com.android.car.settings.common.FragmentController;
 * Controller to show which apps were installed by the device owner.
 */
 public final class EnterpriseInstalledPackagesPreferenceController
-        extends BaseEnterprisePreferenceController<Preference> {
+        extends BaseEnterprisePrivacyPreferenceController<Preference> {
 
     public EnterpriseInstalledPackagesPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -35,9 +35,6 @@ public final class EnterpriseInstalledPackagesPreferenceController
 
     @Override
     protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) return superStatus;
-
         // TODO(b/206155370): implement / add unit test
         return DISABLED_FOR_PROFILE;
     }

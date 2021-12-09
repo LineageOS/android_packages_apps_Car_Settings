@@ -31,7 +31,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
 public final class ManageDeviceAdminPreferenceControllerTest
-        extends BasePreferenceControllerTestCase {
+        extends BaseEnterprisePreferenceControllerTestCase {
 
     private Preference mPreference;
 
