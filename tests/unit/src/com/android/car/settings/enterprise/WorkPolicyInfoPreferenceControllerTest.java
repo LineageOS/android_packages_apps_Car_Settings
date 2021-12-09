@@ -44,7 +44,8 @@ import org.mockito.Mock;
 
 import java.util.Arrays;
 
-public final class WorkPolicyInfoPreferenceControllerTest extends BasePreferenceControllerTestCase {
+public final class WorkPolicyInfoPreferenceControllerTest
+        extends BaseEnterprisePreferenceControllerTestCase {
 
     @Mock
     private ResolveInfo mResolveInfo;

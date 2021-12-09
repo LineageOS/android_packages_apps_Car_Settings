@@ -38,9 +38,6 @@ public final class GlobalHttpProxyPreferenceController
 
     @Override
     protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) return superStatus;
-
         return mConnectivityManager.getGlobalProxy() != null ? AVAILABLE : DISABLED_FOR_PROFILE;
     }
 }

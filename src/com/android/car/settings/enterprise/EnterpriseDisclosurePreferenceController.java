@@ -40,10 +40,6 @@ public final class EnterpriseDisclosurePreferenceController extends
 
     @Override
     protected int getAvailabilityStatus() {
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) {
-            return superStatus;
-        }
         return EnterpriseUtils.hasDeviceOwner(getContext()) ? AVAILABLE : DISABLED_FOR_PROFILE;
     }
 

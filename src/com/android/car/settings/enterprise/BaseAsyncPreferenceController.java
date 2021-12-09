@@ -23,6 +23,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.enterprise.CallbackTranslator.Callback;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 
 /**
  * Base class for async controllers.
@@ -40,8 +41,10 @@ abstract class BaseAsyncPreferenceController<P extends Preference, R,
 
     protected BaseAsyncPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
+            CarUxRestrictions uxRestrictions,
+            @Nullable ApplicationFeatureProvider applicationFeatureProvider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions,
+                /* enterprisePrivacyFeatureProvider= */ null, applicationFeatureProvider);
     }
 
     /**
@@ -74,12 +77,6 @@ abstract class BaseAsyncPreferenceController<P extends Preference, R,
             // Already calculated
             mLogger.d("getAvailabilityStatus(): returning cached result " + mAvailabilityStatus);
             return mAvailabilityStatus;
-        }
-
-        int superStatus = super.getAvailabilityStatus();
-        if (superStatus != AVAILABLE) {
-            mLogger.d("getAvailabilityStatus(): returning superclass status " + superStatus);
-            return superStatus;
         }
 
         if (mCallbackTranslator != null) {

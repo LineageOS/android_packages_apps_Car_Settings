@@ -36,7 +36,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 public final class AlwaysOnVpnCurrentUserPreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePrivacyPreferenceControllerTestCase {
     private AlwaysOnVpnCurrentUserPreferenceController mAlwaysOnVpnCurrentUserPreferenceController;
     private Preference mPreference;
 
