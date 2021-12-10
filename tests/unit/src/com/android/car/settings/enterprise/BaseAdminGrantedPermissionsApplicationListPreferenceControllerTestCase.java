@@ -42,7 +42,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.test.annotation.UiThreadTest;
 
-import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.enterprise.BaseEnterprisePreferenceControllerTestCase.DummyPreferenceGroup;
 import com.android.car.settings.testutils.TextDrawable;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
@@ -86,7 +85,6 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     public void setExtraFixtures() {
         mSpiedController = spy(newController(mApplicationFeatureProvider));
         mPreferenceGroup = new DummyPreferenceGroup(mSpiedContext);
-        PreferenceControllerTestUtil.assignPreference(mSpiedController, mPreferenceGroup);
     }
 
     protected abstract C newController(ApplicationFeatureProvider provider);
