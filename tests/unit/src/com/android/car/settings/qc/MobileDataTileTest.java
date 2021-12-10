@@ -104,6 +104,16 @@ public class MobileDataTileTest extends BaseSettingsQCItemTestCase {
     }
 
     @Test
+    public void getQCItem_dataDisabled_setsSubtitle() {
+        when(mDataUsageController.isMobileDataSupported()).thenReturn(true);
+        when(mTelephonyManager.getNetworkOperatorName()).thenReturn(TEST_NETWORK_NAME);
+        when(mDataUsageController.isMobileDataEnabled()).thenReturn(false);
+        QCTile tile = getTile();
+        assertThat(tile.getSubtitle()).isEqualTo(
+                mContext.getString(R.string.mobile_network_state_off));
+    }
+
+    @Test
     public void getQCItem_hasBaseUmRestriction_tileDisabled() {
         when(mDataUsageController.isMobileDataSupported()).thenReturn(true);
         when(mTelephonyManager.getNetworkOperatorName()).thenReturn(TEST_NETWORK_NAME);

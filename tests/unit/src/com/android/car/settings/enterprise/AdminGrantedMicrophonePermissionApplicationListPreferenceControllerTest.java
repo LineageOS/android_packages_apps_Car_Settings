@@ -17,18 +17,18 @@ package com.android.car.settings.enterprise;
 
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 
-public final class AdminGrantedCameraPermissionPreferenceControllerTest extends
-        BaseAdminGrantedPermissionsPreferenceControllerTestCase
-        <AdminGrantedCameraPermissionPreferenceController> {
+public final class AdminGrantedMicrophonePermissionApplicationListPreferenceControllerTest extends
+        BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase
+        <AdminGrantedMicrophonePermissionApplicationListPreferenceController> {
 
-    public AdminGrantedCameraPermissionPreferenceControllerTest() {
-        super(EnterpriseUtils.CAMERA_PERMISSIONS);
+    public AdminGrantedMicrophonePermissionApplicationListPreferenceControllerTest() {
+        super(EnterpriseUtils.MICROPHONE_PERMISSIONS);
     }
 
     @Override
-    protected AdminGrantedCameraPermissionPreferenceController newController(
+    protected AdminGrantedMicrophonePermissionApplicationListPreferenceController newController(
             ApplicationFeatureProvider provider) {
-        return new AdminGrantedCameraPermissionPreferenceController(mSpiedContext, mPreferenceKey,
-                mFragmentController, mUxRestrictions, provider);
+        return new AdminGrantedMicrophonePermissionApplicationListPreferenceController(
+                mSpiedContext, mPreferenceKey, mFragmentController, mUxRestrictions, provider);
     }
 }

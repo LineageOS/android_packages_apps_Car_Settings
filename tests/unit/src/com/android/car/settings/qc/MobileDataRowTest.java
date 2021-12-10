@@ -34,6 +34,7 @@ import com.android.car.qc.QCActionItem;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
+import com.android.car.settings.R;
 import com.android.settingslib.net.DataUsageController;
 
 import org.junit.Before;
@@ -101,6 +102,16 @@ public class MobileDataRowTest extends BaseSettingsQCItemTestCase {
         when(mDataUsageController.isMobileDataEnabled()).thenReturn(true);
         QCRow row = getRow();
         assertThat(row.getSubtitle()).isEqualTo(TEST_NETWORK_NAME);
+    }
+
+    @Test
+    public void getQCItem_dataDisabled_setsSubtitle() {
+        when(mDataUsageController.isMobileDataSupported()).thenReturn(true);
+        when(mTelephonyManager.getNetworkOperatorName()).thenReturn(TEST_NETWORK_NAME);
+        when(mDataUsageController.isMobileDataEnabled()).thenReturn(false);
+        QCRow row = getRow();
+        assertThat(row.getSubtitle()).isEqualTo(
+                mContext.getString(R.string.mobile_network_state_off));
     }
 
     @Test
