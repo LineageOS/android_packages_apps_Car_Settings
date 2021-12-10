@@ -16,8 +16,6 @@
 package com.android.car.settings.enterprise;
 
 import android.annotation.Nullable;
-import android.app.AppGlobals;
-import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -27,7 +25,6 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.enterprise.CallbackTranslator.AppsListCallbackTranslator;
 import com.android.car.settings.enterprise.CallbackTranslator.Callback;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
-import com.android.car.settingslib.applications.ApplicationFeatureProviderImpl;
 import com.android.car.settingslib.applications.UserAppInfo;
 
 import java.util.List;
@@ -39,18 +36,11 @@ abstract class BaseApplicationsListPreferenceController extends
         BaseAsyncPreferenceController<PreferenceGroup, List<UserAppInfo>,
         AppsListCallbackTranslator> {
 
-    protected final ApplicationFeatureProvider mApplicationFeatureProvider;
-
     protected BaseApplicationsListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
-            @Nullable ApplicationFeatureProvider provider) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
-
-        // provider is only non-null on test cases
-        mApplicationFeatureProvider = provider != null ? provider
-                : new ApplicationFeatureProviderImpl(context,
-                        context.getPackageManager(), AppGlobals.getPackageManager(),
-                        context.getSystemService(DevicePolicyManager.class));
+            @Nullable ApplicationFeatureProvider applicationFeatureProvider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions,
+                applicationFeatureProvider);
     }
 
     @Override

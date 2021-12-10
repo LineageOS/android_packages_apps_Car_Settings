@@ -15,6 +15,7 @@
  */
 package com.android.car.settings.enterprise;
 
+import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -23,6 +24,7 @@ import androidx.preference.Preference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.enterprise.CallbackTranslator.AppsCounterCallbackTranslator;
 import com.android.car.settings.enterprise.CallbackTranslator.Callback;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 
 /**
  * Base class for controllers that shows a number of apps in the Enterprise Privacy /
@@ -35,8 +37,10 @@ abstract class BaseApplicationsCounterPreferenceController<P extends Preference>
 
     protected BaseApplicationsCounterPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
+            CarUxRestrictions uxRestrictions,
+            @Nullable ApplicationFeatureProvider applicationFeatureProvider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions,
+                applicationFeatureProvider);
     }
 
     @Override

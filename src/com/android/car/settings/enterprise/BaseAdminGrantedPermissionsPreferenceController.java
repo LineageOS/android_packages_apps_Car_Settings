@@ -16,7 +16,6 @@
 package com.android.car.settings.enterprise;
 
 import android.annotation.Nullable;
-import android.app.AppGlobals;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -26,7 +25,6 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.enterprise.CallbackTranslator.AppsCounterCallbackTranslator;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
-import com.android.car.settingslib.applications.ApplicationFeatureProviderImpl;
 
 /**
  * Base class for controllers that show the number of apps that were granted permissions by the
@@ -37,18 +35,12 @@ abstract class BaseAdminGrantedPermissionsPreferenceController
 
     private final String[] mPermissions;
 
-    private final ApplicationFeatureProvider mApplicationFeatureProvider;
-
     BaseAdminGrantedPermissionsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
             @Nullable ApplicationFeatureProvider provider,
             String... permissions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
+        super(context, preferenceKey, fragmentController, uxRestrictions, provider);
 
-        // provider is only non-null in test cases
-        mApplicationFeatureProvider = provider != null ? provider :
-                new ApplicationFeatureProviderImpl(context, mPm, AppGlobals.getPackageManager(),
-                        mDpm);
         mPermissions = permissions;
     }
 
