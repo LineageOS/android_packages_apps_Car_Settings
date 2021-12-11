@@ -16,7 +16,6 @@
 package com.android.car.settings.enterprise;
 
 import android.annotation.Nullable;
-import android.app.AppGlobals;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -24,43 +23,36 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.enterprise.CallbackTranslator.AppsCounterCallbackTranslator;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
-import com.android.car.settingslib.applications.ApplicationFeatureProvider.NumberOfAppsCallback;
-import com.android.car.settingslib.applications.ApplicationFeatureProviderImpl;
 
 /**
  * Base class for controllers that show the number of apps that were granted permissions by the
  * admin.
  */
 abstract class BaseAdminGrantedPermissionsPreferenceController
-        extends BaseEnterprisePrivacyAppsCounterPreferenceController<Preference> {
+        extends BaseApplicationsCounterPreferenceController<Preference> {
 
     private final String[] mPermissions;
-
-    private final ApplicationFeatureProvider mApplicationFeatureProvider;
 
     BaseAdminGrantedPermissionsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
             @Nullable ApplicationFeatureProvider provider,
             String... permissions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
+        super(context, preferenceKey, fragmentController, uxRestrictions, provider);
 
-        // provider is only non-null in test cases
-        mApplicationFeatureProvider = provider != null ? provider :
-                new ApplicationFeatureProviderImpl(context, mPm, AppGlobals.getPackageManager(),
-                        mDpm);
         mPermissions = permissions;
     }
 
     @Override
-    protected void lazyLoad(NumberOfAppsCallback callback) {
+    protected void lazyLoad(AppsCounterCallbackTranslator callbackTranslator) {
         mApplicationFeatureProvider.calculateNumberOfAppsWithAdminGrantedPermissions(mPermissions,
-                /* async= */ true, callback);
+                /* async= */ true, callbackTranslator);
     }
 
     @Override
     protected void updateState(Preference p) {
-        int count = getCount();
+        int count = getResult();
         p.setSummary(getContext().getResources().getQuantityString(
                 R.plurals.enterprise_privacy_number_packages_lower_bound, count, count));
     }

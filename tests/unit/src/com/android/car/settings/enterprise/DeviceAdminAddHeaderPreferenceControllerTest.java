@@ -31,7 +31,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 public final class DeviceAdminAddHeaderPreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePreferenceControllerTestCase {
 
     private DeviceAdminAddHeaderPreferenceController mController;
 

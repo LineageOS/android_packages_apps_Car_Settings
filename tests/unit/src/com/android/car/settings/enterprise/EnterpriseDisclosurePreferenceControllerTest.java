@@ -16,9 +16,7 @@
 
 package com.android.car.settings.enterprise;
 
-
 import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
-import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -31,7 +29,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public final class EnterpriseDisclosurePreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePrivacyPreferenceControllerTestCase {
     private static final String ORG_NAME = "My Org";
 
     private EnterpriseDisclosurePreferenceController mEnterpriseDisclosurePreferenceController;
@@ -47,19 +45,6 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
         mockHasDeviceAdminFeature();
         mEnterpriseDisclosurePreferenceController = new EnterpriseDisclosurePreferenceController(
                 mSpiedContext, mPreferenceKey, mFragmentController, mCarUxRestrictions);
-    }
-
-    @Test
-    public void testDeviceAdminFeatureMissing_noDisclosure() {
-        mockNoDeviceAdminFeature();
-
-        // Feature is checked in constructor, so we need to recreate preference controller
-        EnterpriseDisclosurePreferenceController controller =
-                new EnterpriseDisclosurePreferenceController(mSpiedContext, mPreferenceKey,
-                        mFragmentController, mCarUxRestrictions);
-        controller.updateState(mPreference);
-
-        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
