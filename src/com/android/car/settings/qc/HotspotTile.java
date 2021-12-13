@@ -32,6 +32,7 @@ import com.android.car.qc.QCItem;
 import com.android.car.qc.QCTile;
 import com.android.car.settings.R;
 import com.android.car.settings.enterprise.EnterpriseUtils;
+import com.android.car.settings.wifi.WifiTetherUtil;
 
 /**
  * QCItem for showing a hotspot toggle.
@@ -90,10 +91,10 @@ public class HotspotTile extends SettingsQCItem {
         boolean newState = intent.getBooleanExtra(QC_ACTION_TOGGLE_STATE,
                 !mWifiManager.isWifiApEnabled());
         if (newState) {
-            HotspotQCUtils.enableHotspot(mTetheringManager,
+            WifiTetherUtil.startTethering(mTetheringManager,
                     HotspotQCUtils.getDefaultStartTetheringCallback(getContext(), getUri()));
         } else {
-            HotspotQCUtils.disableHotspot(mTetheringManager);
+            WifiTetherUtil.stopTethering(mTetheringManager);
         }
     }
 
