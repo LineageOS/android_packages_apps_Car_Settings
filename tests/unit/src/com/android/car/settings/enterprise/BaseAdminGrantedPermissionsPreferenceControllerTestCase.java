@@ -33,7 +33,6 @@ import android.util.Log;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider.NumberOfAppsCallback;
 import com.android.internal.util.Preconditions;
@@ -66,8 +65,6 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
     @Before
     public void setController() {
         mSpiedController = spy(newController(mApplicationFeatureProvider));
-
-        PreferenceControllerTestUtil.assignPreference(mSpiedController, mPreference);
     }
 
     protected abstract C newController(ApplicationFeatureProvider provider);
