@@ -130,7 +130,7 @@
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi-præferencer"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Aktivér Wi-Fi automatisk"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi aktiveres igen ved et netværk af høj kvalitet, f.eks. dit hjemmenetværk"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ikke muligt, da placering er deaktiveret. Aktivér "<annotation id="link">"placering"</annotation>"."</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ikke muligt, da lokation er deaktiveret. Aktivér "<annotation id="link">"lokation"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vil du aktivere Wi‑Fi-scanning?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktivér"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-scanning blev aktiveret"</string>
@@ -384,13 +384,13 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Styring af Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-styring giver en app tilladelse til at aktivere og deaktivere Wi-Fi, søge efter og oprette forbindelse til Wi-Fi-netværk, tilføje og fjerne netværk eller starte et lokalt hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mere"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"Placering"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Seneste placeringsanmodninger"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Der er ingen seneste placeringsanmodninger"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Lokation"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Seneste lokationsanmodninger"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Der er ingen seneste lokationsanmodninger"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tilladelser på appniveau"</string>
-    <string name="location_settings_services_title" msgid="1186133632690970468">"Placeringstjenester"</string>
-    <string name="location_use_location_title" msgid="117735895374606680">"Brug placering"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Placering kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds placering."</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Lokationstjenester"</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"Brug lokation"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Lokation kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds lokation."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemopdateringer"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avanceret"</string>
@@ -582,7 +582,7 @@
     <string name="sync_is_failing" msgid="5766255460901806206">"Der er i øjeblikket problemer med synkroniseringen. Den fortsætter om et øjeblik."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatliv"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data i infotainmentsystemet"</string>
-    <string name="privacy_location_summary" msgid="7019817848470566242">"Styr dine apps\' adgang til din placering"</string>
+    <string name="privacy_location_summary" msgid="7019817848470566242">"Styr dine apps\' adgang til din lokation"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Styr dine apps\' adgang til mikrofonen"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Data i infotainmentsystemet"</string>
