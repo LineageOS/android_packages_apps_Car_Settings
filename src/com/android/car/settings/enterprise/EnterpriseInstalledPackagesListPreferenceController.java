@@ -23,29 +23,31 @@ import android.content.Context;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.enterprise.CallbackTranslator.AppsListCallbackTranslator;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
- * Base class for controllers that show the list of apps that were granted permissions by the
- * admin.
+ * PreferenceController that builds a dynamic list of applications that were installed by the device
+ * owner.
  */
-abstract class BaseAdminGrantedPermissionsApplicationListPreferenceController
+public final class EnterpriseInstalledPackagesListPreferenceController
         extends BaseApplicationsListPreferenceController {
 
-    private final String[] mPermissions;
-
-    BaseAdminGrantedPermissionsApplicationListPreferenceController(Context context,
+    public EnterpriseInstalledPackagesListPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, @Nullable ApplicationFeatureProvider provider,
-            String[] permissions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions, provider);
+            CarUxRestrictions uxRestrictions) {
+        this(context, preferenceKey, fragmentController, uxRestrictions, /* provider= */ null);
+    }
 
-        mPermissions = permissions;
+    @VisibleForTesting
+    EnterpriseInstalledPackagesListPreferenceController(Context context,
+            String preferenceKey, FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions, @Nullable ApplicationFeatureProvider provider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, provider);
     }
 
     @Override
     protected void lazyLoad(AppsListCallbackTranslator callbackHolder) {
-        mLogger.d("Calling listAppsWithAdminGrantedPermissions()");
-        mApplicationFeatureProvider.listAppsWithAdminGrantedPermissions(mPermissions,
-                callbackHolder);
+        mLogger.d("Calling listPolicyInstalledApps()");
+        mApplicationFeatureProvider.listPolicyInstalledApps(callbackHolder);
     }
 }

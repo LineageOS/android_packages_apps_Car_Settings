@@ -1562,6 +1562,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="enterprise_privacy_granted_camera_permission_apps_fragment"/>
       <item type="xml" name="enterprise_privacy_granted_location_permissions_apps_fragment"/>
       <item type="xml" name="enterprise_privacy_granted_microphone_permission_apps_fragment"/>
+      <item type="xml" name="enterprise_privacy_installed_packages_fragment"/>
       <item type="xml" name="enterprise_privacy_settings_fragment"/>
       <item type="xml" name="enterprise_set_default_apps_settings"/>
       <item type="xml" name="factory_reset_confirm_fragment"/>
