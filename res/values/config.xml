@@ -86,14 +86,14 @@
 
         If empty, all ringtones will default to the default ringtone uri.
     -->
-    <string-array name="config_ringtone_uri_map_value">
+    <string-array name="config_ringtone_uri_map_value" translatable="false">
         <item>content://settings/system/notification_sound</item>
         <item>content://settings/system/alarm_alert</item>
     </string-array>
     <!-- Whether all preferences should always ignore UX Restrictions -->
     <bool name="config_always_ignore_ux_restrictions">false</bool>
     <!-- Array of Preference Keys that ignore UX Restrictions -->
-    <string-array name="config_ignore_ux_restrictions">
+    <string-array name="config_ignore_ux_restrictions" translatable="false">
         <item>@string/pk_display_settings_entry</item>
         <item>@string/pk_brightness_level</item>
         <item>@string/pk_sound_settings_entry</item>
