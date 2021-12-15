@@ -20,13 +20,15 @@ import android.widget.FrameLayout;
 
 import androidx.preference.Preference;
 
+import com.android.car.ui.preference.CarUiPreference;
+
 import java.util.function.Consumer;
 
 /**
  * Class representing an action item for an {@link MultiActionPreference}
  */
 public abstract class BaseActionItem {
-    protected Preference mPreference;
+    protected CarUiPreference mPreference;
     protected boolean mIsPreferenceRestricted = false;
     protected Consumer<Preference> mRestrictedOnClickListener;
 
@@ -73,7 +75,7 @@ public abstract class BaseActionItem {
     }
 
     BaseActionItem setPreference(Preference preference) {
-        mPreference = preference;
+        mPreference = (CarUiPreference) preference;
         return this;
     }
 
