@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Nëse e çaktivizon këtë, kjo do të heqë qasjen te vendndodhja për të gjitha aplikacionet. Aplikacionet e \"Ndihmës për drejtuesin e makinës\" do të kenë ende qasje."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Vendndodhja për \"Ndihmën për drejtuesin\""</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Vendndodhja e automjetit është joaktive"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Aplikacionet e \"Ndihmës për drejtuesin e makinës\" nuk kanë qasje te vendndodhja"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Ndrysho"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Lejo aplikacionet për drejtimin të kenë qasje te vendndodhja"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Nëse e çaktivizon këtë, aplikacionet e \"Ndihmës për drejtuesin e makinës\" që mbështeten në informacionin e vendndodhjes do të çaktivizohen."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Përdor vendndodhjen"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Vendndodhja mund të përdorë burime si GPS, Wi‑Fi, rrjetet celulare dhe sensorët për të ndihmuar me vlerësimin e vendndodhjes së pajisjes sate."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Ndihma për drejtuesin e makinës"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Informacioni i vendndodhjes që iu dërgua aplikacioneve të \"Ndihmës për drejtuesin e makinës\" nuk përmban informacione që të identifikojnë ty. Ai ruhet për maksimumi 2 ditë përpara se të fshihet."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Përdor mikrofonin"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Lejo qasjen në mikrofonin tënd për të gjitha aplikacionet"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Si të vizatosh një motiv shkyçjeje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Gabim gjatë ruajtjes së motivit"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Shumë tentativa të pasakta. Provo sërish brenda <xliff:g id="NUMBER">%d</xliff:g> sekondash."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Motivi me rrotullim nuk mbështetet; përdor prekjen"</string>
     <string name="okay" msgid="4589873324439764349">"Në rregull"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Të hiqet kyçja e ekranit?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Kjo do të lejojë këdo që të ketë qasje në llogarinë tënde"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Aktivizimi i këtij aplikacioni të sistemit info-argëtues do të lejojë që aplikacioni <xliff:g id="APP_NAME">%1$s</xliff:g> të kryejë funksionet e mëposhtme:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Të aktivizohet ky aplikacion?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktivizo këtë aplikacion të sistemit info-argëtues"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Çaktivizo dhe çinstalo"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Çaktivizo këtë aplikacion të sistemit info-argëtues"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Më shumë detaje"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Menaxheri i organizatës mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë profil, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin në rrjet dhe informacionin e vendndodhjes së automjetit."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nuk ka aplikacion të aktivizuar"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politika e automjeteve e <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Cilësimet menaxhohen nga menaxheri i organizatës"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Mëso më shumë për \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Të ndahet raporti i defektit në kod?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Menaxheri i organizatës i automjetit kërkoi një raport të defektit në kod për të ndihmuar në zgjidhjen e problemeve të kësaj pajisjeje. Aplikacionet dhe të dhënat mund të ndahen."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Menaxheri i organizatës i automjetit kërkoi një raport të defektit në kod për të ndihmuar në zgjidhjen e problemeve të kësaj pajisjeje. Aplikacionet dhe të dhënat mund të ndahen dhe pajisja jote mund të ngadalësohet përkohësisht."</string>

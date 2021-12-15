@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Se você desativar essa configuração, o acesso ao local será removido de todos os apps. Os apps de assistência ao motorista manterão o acesso."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Usar local para assistência ao motorista"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"A localização do veículo está desativada"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Apps de assist. ao motorista sem acesso ao local"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Alterar"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir acesso à localização a apps de assistência ao motorista"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Se você desativar essa configuração, os apps de assistência ao motorista que precisam de informações de localização serão desativados."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Usar local"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"A localização pode usar fontes como GPS, Wi-Fi, redes móveis e sensores para ajudar a estimar o local do dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistência ao motorista"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"As informações de localização enviadas aos apps de assistência ao motorista não contêm dados que identifiquem você. Elas são armazenadas por no máximo dois dias antes de serem excluídas."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar o microfone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todos os apps acessem seu microfone"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como desenhar um padrão de desbloqueio"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erro ao salvar o padrão"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Excesso de tentativas incorretas. Tente novamente em <xliff:g id="NUMBER">%d</xliff:g> segundos."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Sem seletor giratório: use o toque"</string>
     <string name="okay" msgid="4589873324439764349">"Ok"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Remover bloqueio de tela?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Qualquer pessoa poderá acessar sua conta"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"A ativação deste app de sistema de infoentretenimento permitirá que o app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Ativar app de sist. infoentretenimento?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Ativar este app de sistema de infoentretenimento"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Desativar e desinstalar"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desativar este app de sistema de infoentretenimento"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Mais detalhes"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"O administrador da organização pode monitorar e gerenciar apps e dados associados a este perfil, incluindo configurações, permissões, acesso corporativo, atividade de rede e informações de local do veículo."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nenhum app ativado"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política de veículos da <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Configurações gerenciadas pelo administrador da organização"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Saiba mais sobre o serviço <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Compartilhar relatório de bug?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"O administrador da organização deste veículo solicitou um relatório de bug para ajudar a resolver problemas no dispositivo. É possível que apps e dados sejam compartilhados."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"O administrador da organização deste veículo solicitou um relatório de bug para ajudar a resolver problemas no dispositivo. É possível que apps e dados sejam compartilhados, o que pode deixar seu dispositivo temporariamente mais lento."</string>

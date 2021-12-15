@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Si vous désactivez ce paramètre, l\'accès de toutes les applications à votre position sera retiré. Les applications ayant la fonctionnalité d\'assistance au conducteur auront toutefois toujours accès."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Utiliser la position pour l\'assistance au conducteur"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"La position du véhicule est désactivée"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Applis d\'assist. au conducteur ne peuvent accéder à votre position"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Modifier"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Autoriser les applis d\'aide à la conduite à accéder à votre position"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si vous désactivez cette option, les fonctionnalités d\'assistance au conducteur qui dépendent des renseignements de lieu seront désactivées."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Utiliser ma position"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Les services de localisation peuvent utiliser des sources comme le GPS, le Wi-Fi, les réseaux cellulaires et les capteurs pour estimer la position de votre appareil."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistance au conducteur"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Les données de localisation envoyées aux applications d\'assistance au conducteur ne contiennent aucune information permettant de déterminer votre identité. Elles sont stockées un maximum de deux jours, puis elles sont supprimées."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microphone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utiliser le microphone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Autoriser toutes les applications à accéder à votre microphone"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Comment dessiner un schéma de déverr."</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erreur lors de l\'enregistrement du schéma"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Trop de tentatives incorrectes. Réessayez dans <xliff:g id="NUMBER">%d</xliff:g> secondes."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Schéma ne prend pas en charge la rotation, utilisez le toucher"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Suppr. le verrouill. de l\'écran?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Cela permettra à quiconque d\'accéder à votre compte"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"L\'activation de cette application d\'administration du système d\'infodivertissement permettra à <xliff:g id="APP_NAME">%1$s</xliff:g> d\'effectuer les opérations suivantes :"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Activer l\'appli d\'infodivertissement?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Activer cette application du système d\'infodivertissement"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Désactiver et désinstaller"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Désactiver cette application de système d\'infodivertissement"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Plus de détails"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Le gestionnaire de l\'organisation peut surveiller et gérer les applications ainsi que les données associées à ce profil, y compris les paramètres, les autorisations, l\'accès aux contenus de l\'entreprise, l\'activité réseau et les données de localisation du véhicule."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Aucune application activée"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politique des véhicules de <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Les paramètres sont gérés par le gestionnaire de l\'organisation"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"En savoir plus sur : <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Partager le rapport de bogue?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Le gestionnaire de l\'organisation de ce véhicule a demandé un rapport de bogue pour aider à dépanner cet appareil. Les applications et les données peuvent être partagées."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Le gestionnaire de l\'organisation de ce véhicule a demandé un rapport de bogue pour aider à dépanner cet appareil. Les applications et les données peuvent être partagées. Cela pourrait temporairement ralentir votre appareil."</string>

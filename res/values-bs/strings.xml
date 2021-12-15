@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Ako isključite ovu funkciju, uklonit će se pristup lokaciji za sve aplikacije. Aplikacije pomoći za vozače će i dalje imati pristup."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Koristi lokaciju za pomoć za vozače"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokacija vozila je isključena"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Aplik. pomoći za vozače ne mogu pristupiti lokaciji"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Promijeni"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Dozvolite aplikacijama za vožnju da pristupe lokaciji"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ako isključite ovu funkciju, onemogućit će se aplikacije pomoći za vozače koje se oslanjaju na podatke o lokaciji."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokacija može koristiti izvore kao što su GPS, WiFi, mobilne mreže i senzori za lakšu procjenu lokacije uređaja."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Pomoć za vozače"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Informacije o lokaciji koje se šalju aplikacijama pomoći za vozače ne sadržavaju informacije pomoću kojih vas je moguće identificirati. Pohranjuju se najduže 2 dana prije nego što se izbrišu."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristite mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kako nacrtati uzorak za otključavanje"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Greška prilikom pohrane uzorka"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Previše pogrešnih pokušaja. Pokušajte ponovo za <xliff:g id="NUMBER">%d</xliff:g> s."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Obrazac ne podržava brojčanik. Koristite dodir"</string>
     <string name="okay" msgid="4589873324439764349">"UREDU"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ukloniti zaključavanje ekrana?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Svi će imati pristup vašem računu"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Aktiviranjem aplikacije informativno-zabavnog sistema dozvolit će se aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da izvršava sljedeće operacije:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivirati ovu aplikaciju?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktiviraj ovu aplikaciju informativno-zabavnog sistema"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Deaktiviraj i deinstaliraj"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Deaktivirajte ovu aplikaciju informativno-zabavnog sistema"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Više detalja"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Upravitelj organizacije može nadzirati aplikacije i podatke povezane s ovim profilom te upravljati njima, uključujući postavke, odobrenja, korporativni pristup, aktivnost na mreži i informacije o lokaciji vozila."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nema aktiviranih aplikacija"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Pravila o vozilima organizacije <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Postavkama upravlja upravitelj organizacije"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Saznajte više o usluzi <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Podijeliti izvještaj o grešci?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Upravitelj organizacije za ovo vozilo je zatražio izvještaj o grešci radi lakšeg rješavanja problema ovog uređaja. To može uzrokovati dijeljenje aplikacija i podataka."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Upravitelj organizacije za ovo vozilo je zatražio izvještaj o grešci radi lakšeg rješavanja problema ovog uređaja. To može uzrokovati dijeljenje aplikacija i podataka te privremeno usporiti vaš uređaj."</string>

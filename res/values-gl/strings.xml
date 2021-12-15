@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Se desactivas esta opción, quitarase o permiso de localización en todas as aplicacións. As aplicacións de asistencia para a condución conservarán o acceso."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Usar localización para a condución"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Localización do vehículo desactivada"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"As apps de asistencia non acceden á localización"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permite que as apps de condución accedan á localización"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Se desactivas esta opción, deshabilitaranse as funcións de asistencia para a condución que utilizan a información de localización."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Utilizar localización"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Os servizos de localización poden usar fontes como o GPS, a wifi, as redes de telefonía móbil e os sensores para determinar onde está o teu dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia para a condución"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Os datos sobre a localización que se envían ás aplicacións de asistencia para a condución non conteñen información que permita identificarte. Almacénanse durante un máximo de 2 días e despois elimínanse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as aplicacións accedan ao micrófono"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como debuxar un padrón de desbloqueo"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erro ao gardar o padrón"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Realizáronse demasiados intentos incorrectos. Téntao de novo en <xliff:g id="NUMBER">%d</xliff:g> segundos."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"O padrón non é compatible co manexo xiratorio; usa un táctil"</string>
     <string name="okay" msgid="4589873324439764349">"Aceptar"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Eliminar bloqueo de pantalla?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Desta forma calquera poderá acceder á túa conta"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"A activación desta aplicación do sistema de información e entretemento permitirá á aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> levar a cabo as seguintes operacións:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Queres activar esta aplicación?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Activar esta aplicación do sistema de información e entretemento"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Desactivar e desinstalar"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desactivar esta aplicación do sistema de información e entretemento"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Máis detalles"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Non hai ningunha aplicación activada"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política do vehículo de <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Configuración xestionada polo xestor da organización"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Máis información sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Queres compartir o informe de erros?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"O xestor da organización do vehículo solicitou un informe de erros para axudar a solucionar os problemas deste dispositivo. Pódense compartir aplicacións e datos."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"O xestor da organización do vehículo solicitou un informe de erros para axudar a solucionar os problemas deste dispositivo. Pódense compartir aplicacións e datos e, ademais, é posible que se reduza a velocidade do dispositivo temporalmente."</string>

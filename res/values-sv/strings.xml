@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Om du stänger av detta tas platsåtkomst bort för alla appar. Förarassistansappar får fortsatt åtkomst."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Använd plats för förarassistans"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Fordonets plats är av"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Förarassistantsappar kommer inte åt din plats"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Ändra"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Tillåt att appar för förarassistans kommer åt din plats"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Om du stänger av detta inaktiveras funktioner för förarassistans som behöver platsinformation."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Använd plats"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"I Platstjänster används källor som GPS, wifi, mobilnätverk och sensorer för att beräkna enhetens plats."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Förarassistans"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Platsinformation som skickas till förarassistansappar innehåller inga uppgifter som identifierar dig. Informationen sparas i högst två dagar och tas sedan bort."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Använda mikrofonen"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Ge alla appar åtkomst till mikrofonen"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Så här ritar du ett grafiskt lösenord"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Grafiskt lösenord kunde inte sparas"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"För många felaktiga försök. Försök igen om <xliff:g id="NUMBER">%d</xliff:g> sekunder."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Vridreglage stöds inte. Du måste trycka lösenordet"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Vill du ta bort skärmlåset?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Om du tar bort skärmlåset kan alla få åtkomst till kontot"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Om du aktiverar den här administratörsappen för infotainmentsystemet kan appen <xliff:g id="APP_NAME">%1$s</xliff:g> utföra följande åtgärder:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivera appen för infotainmentsystemet?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktivera den här appen för infotainmentsystemet"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Inaktivera och installera"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Inaktivera appen för infotainmentsystemet"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Mer information"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till den här profilen, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och fordonets platsuppgifter."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Inga aktiverade appar"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Fordonspolicy för <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Inställningar som hanteras av organisationsansvarig"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Läs mer om <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Vill du dela felrapporten?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Organisationsansvarig för fordonet har bett om en felrapport som hjälp vid felsökningen av den här enheten. Appar och data kan komma att delas."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Organisationsansvarig för fordonet har bett om en felrapport som hjälp vid felsökningen av den här enheten. Appar och data kan komma att delas. Detta kan tillfälligt göra enheten långsammare."</string>

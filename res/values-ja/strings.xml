@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"この設定を OFF にすると、すべてのアプリで位置情報へのアクセス権限が削除されます。ドライバー サポート アプリのアクセス権限は保持されます。"</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"位置情報をドライバー サポートで使用する"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"車の位置情報はオフです"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"ドライバー サポート アプリが位置情報にアクセスできません"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"変更"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"運転をサポートするアプリに位置情報へのアクセスを許可します"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"この設定を OFF にすると、位置情報を使用するドライバー サポート アプリは無効になります。"</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"位置情報を使用"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"位置情報の特定には、GPS、Wi-Fi、モバイル ネットワーク、センサーなどを使用する場合があります。"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ドライバー サポート"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"ドライバー サポート アプリに送信された位置情報に、ユーザーを識別する情報は含まれていません。この情報は最大 2 日間保存されてから削除されます。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"マイク"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"マイクの使用"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"すべてのアプリにマイクへのアクセスを許可します"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ロック解除パターンの描き方"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"パターンの保存中にエラーが発生しました"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"間違えた回数が上限を超えました。<xliff:g id="NUMBER">%d</xliff:g> 秒後にもう一度お試しください。"</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"パターンは回転に対応してません。タップしてください"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"画面ロックを解除しますか？"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"解除すると、誰でもアカウントにアクセスできるようになります"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"このインフォテインメント システム管理アプリを有効にすると、アプリ（<xliff:g id="APP_NAME">%1$s</xliff:g>）に次の操作を許可することになります:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"インフォテインメント システム アプリを有効にしますか？"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"このインフォテインメント システム アプリを有効にする"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"無効にしてアンインストール"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"このインフォテインメント システム アプリを無効にする"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"詳細"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"組織の管理者は、設定、権限、コーポレート アクセス、ネットワーク アクティビティ、車両の位置情報など、このプロファイルに関連付けられたアプリやデータの監視、管理を行えます。"</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"有効なアプリはありません"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> の車両に関するポリシー"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"設定は組織の管理者によって管理されています"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"「<xliff:g id="SERVICE">%1$s</xliff:g>」の詳細"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"バグレポートを共有しますか？"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"この車両の組織の管理者から、このデバイスのトラブルシューティングに役立てるためのバグレポートを共有するようリクエストがありました。アプリやデータが共有される場合があります。"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"この車両の組織の管理者から、このデバイスのトラブルシューティングに役立てるためのバグレポートを共有するようリクエストがありました。アプリやデータが共有され、デバイスの動作が一時的に遅くなる場合があります。"</string>
