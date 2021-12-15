@@ -38,7 +38,7 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Meer toevoegen"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datatoegang via mobiel netwerk"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobiele data uitschakelen?"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobiele data uitzetten?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Selectie vereist"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"<xliff:g id="CARRIER">%1$s</xliff:g> gebruiken voor mobiele data?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Je gebruikt <xliff:g id="CARRIER2_0">%2$s</xliff:g> voor mobiele data. Als je overschakelt naar <xliff:g id="CARRIER1">%1$s</xliff:g>, wordt <xliff:g id="CARRIER2_1">%2$s</xliff:g> niet meer gebruikt voor mobiele data."</string>
@@ -86,7 +86,7 @@
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Netwerkvoorkeuren"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wifi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wifi aanzetten…"</string>
-    <string name="wifi_stopping" msgid="3534173972547890148">"Wifi uitschakelen…"</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"Wifi uitzetten…"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Wifi-lijst laden…"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wifi uitgeschakeld"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Vergeten van netwerk is mislukt"</string>
@@ -155,13 +155,13 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Kies minimaal één band voor wifi-hotspot:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot en tethering"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitschakelen"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitzetten"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgeschakeld als er geen apparaten verbonden zijn"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi aanzetten"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitschakelen"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitzetten"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Apparaat om te gebruiken met <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
-    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Geen apparaten gevonden. Zorg dat apparaten zijn ingeschakeld en beschikbaar zijn voor verbinding."</string>
+    <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Geen apparaten gevonden. Zorg dat apparaten aanstaan en beschikbaar zijn voor verbinding."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Opnieuw proberen"</string>
     <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Er is een probleem opgetreden. De app heeft het verzoek om een apparaat te kiezen geannuleerd."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Verbinding gemaakt"</string>
@@ -184,11 +184,11 @@
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profielen"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetooth aanzetten…"</string>
-    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetooth uitschakelen…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetooth uitzetten…"</string>
     <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth aanzetten"</string>
-    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth uitschakelen"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth uitzetten"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Een app wil Bluetooth aanzetten"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Een app wil Bluetooth uitschakelen"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Een app wil Bluetooth uitzetten"</string>
     <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil je hoofdunit <xliff:g id="TIMEOUT">%2$d</xliff:g> seconden zichtbaar maken voor andere Bluetooth-apparaten."</string>
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Een app wil je hoofdunit <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar maken voor andere Bluetooth-apparaten."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth aanzetten en je hoofdunit <xliff:g id="TIMEOUT">%2$d</xliff:g> seconden zichtbaar maken voor andere apparaten."</string>
@@ -289,7 +289,7 @@
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilometers per liter"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Liters per honderd kilometer"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps en meldingen"</string>
-    <string name="all_applications" msgid="7798210477486822168">"Alle apps weergeven"</string>
+    <string name="all_applications" msgid="7798210477486822168">"Alle apps tonen"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standaard-apps"</string>
     <string name="app_permissions" msgid="32799922508313948">"App-rechten"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"App-toegang tot je gegevens beheren"</string>
@@ -301,11 +301,11 @@
     <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Als je dit doet, werken je software en hardware misschien minder goed."</string>
     <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Aan laten staan"</string>
     <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Uitzetten"</string>
-    <string name="disable_text" msgid="4358165448648990820">"Uitschakelen"</string>
+    <string name="disable_text" msgid="4358165448648990820">"Uitzetten"</string>
     <string name="enable_text" msgid="1794971777861881238">"Aanzetten"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Verwijderen"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Als je deze app uitschakelt, werken Android en andere apps mogelijk niet meer zoals bedoeld."</string>
-    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App uitschakelen"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App uitzetten"</string>
     <string name="not_installed" msgid="4163454337822508007">"Niet geïnstalleerd voor dit profiel"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Rechten"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Meldingen"</string>
@@ -366,16 +366,16 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Voor de Assistent en meer"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Voor systeem- en andere instellingen"</string>
     <string name="special_access" msgid="5730278220917123811">"Speciale app-toegang"</string>
-    <string name="show_system" msgid="4401355756969485287">"Systeemprocessen weergeven"</string>
+    <string name="show_system" msgid="4401355756969485287">"Systeemprocessen tonen"</string>
     <string name="hide_system" msgid="8845453295584638040">"Systeemprocessen verbergen"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Systeem-apps verbergen"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Systeeminstellingen aanpassen"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Met deze rechten kan een app de systeeminstellingen aanpassen."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Toegang tot meldingen"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Toegang tot meldingen toestaan voor <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan alle meldingen lezen, waaronder persoonlijke informatie zoals contactnamen en de tekst van berichten die je ontvangt. De app kan deze meldingen ook sluiten of actieknoppen activeren die ermee samenhangen. \n\nHierdoor kan de app ook \'Niet storen\' in- of uitschakelen en gerelateerde instellingen wijzigen."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan alle meldingen lezen, waaronder persoonlijke informatie zoals contactnamen en de tekst van berichten die je ontvangt. De app kan deze meldingen ook sluiten of actieknoppen activeren die ermee samenhangen. \n\nHierdoor kan de app ook \'Niet storen\' aan- of uitzetten en gerelateerde instellingen wijzigen."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Als je toegang tot meldingen uitschakelt voor <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan toegang tot \'Niet storen\' ook worden uitgeschakeld."</string>
-    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Uitschakelen"</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Uitzetten"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuleren"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium sms-toegang"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium sms\'jes kunnen je geld kosten en worden toegevoegd aan de facturen van je provider. Als je rechten aan een app verleent, kun je premium sms\'jes verzenden met die app."</string>
@@ -557,7 +557,7 @@
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Apps automatisch gegevens laten vernieuwen"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Auto-synchronisatie aanzetten?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Wijzigingen die je op internet aanbrengt in je accounts, worden automatisch naar je apparaat gekopieerd.\n\nBij sommige accounts worden mogelijk ook de wijzigingen die je op de telefoon aanbrengt, naar internet gekopieerd. Dit geldt bijvoorbeeld voor Google-accounts."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Auto-synchr. uitschakelen?"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Auto-synchr. uitzetten?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Hiermee bespaar je data. Je moet elk account echter handmatig synchroniseren om recente informatie te verzamelen. Je ontvangt geen meldingen wanneer er updates plaatsvinden."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Accountgegevens"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Account toevoegen"</string>
@@ -568,8 +568,8 @@
     <string name="really_remove_account_message" msgid="4296769280849579900">"Als dit account wordt verwijderd, worden ook alle bijbehorende berichten, contacten en andere gegevens van het apparaat verwijderd."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Kan account niet verwijderen."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Accountsynchronisatie"</string>
-    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Synchronisatie is ingeschakeld voor <xliff:g id="ID_1">%1$d</xliff:g> van de <xliff:g id="ID_2">%2$d</xliff:g> items"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synchronisatie is ingeschakeld voor alle items"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Synchronisatie staat aan voor <xliff:g id="ID_1">%1$d</xliff:g> van de <xliff:g id="ID_2">%2$d</xliff:g> items"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synchronisatie staat aan voor alle items"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Synchronisatie is uitgeschakeld voor alle items"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Synchroniseren uitgeschakeld"</string>
     <string name="sync_error" msgid="6698021343089247914">"Fout bij synchroniseren"</string>
