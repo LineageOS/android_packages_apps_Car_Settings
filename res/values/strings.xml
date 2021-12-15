@@ -1136,7 +1136,7 @@
     <!-- Button summary to factory data reset the entire device.  Factory reset will delete all data from the vehicle. [CHAR LIMIT=NONE]-->
     <string name="factory_reset_summary">Erase all data and profiles from the infotainment system</string>
     <!-- Message on screen after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s infotainment system, including:\n\n<li>Your Google Account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
+    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s infotainment system, including:\n\n<li>Your accounts and profiles</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
     <!-- The list of current accounts follows this text. [CHAR LIMIT=NONE] -->
     <string name="factory_reset_accounts">You are currently signed into the following accounts:</string>
     <!-- Message on screen if other profiles are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
@@ -1354,11 +1354,11 @@
     <!-- Switch summary to enable auto sync account [CHAR LIMIT=60] -->
     <string name="account_auto_sync_summary">Let apps refresh data automatically</string>
     <!--  Title of dialog shown when user enables global auto sync [CHAR LIMIT=50] -->
-    <string name="data_usage_auto_sync_on_dialog_title">Turn auto-sync data on?</string>
+    <string name="data_usage_auto_sync_on_dialog_title">Allow automatic data syncing?</string>
     <!--  Body of dialog shown when user enables global auto sync [CHAR LIMIT=NONE] -->
-    <string name="data_usage_auto_sync_on_dialog">Any changes you make to your accounts on the web will be automatically copied to your device.\n\nSome accounts may also automatically copy any changes you make on the phone to the web. A Google Account works this way.</string>
+    <string name="data_usage_auto_sync_on_dialog">Any changes you make to your accounts on the web will be automatically copied to your vehicle.\n\nSome accounts may also automatically copy any changes you make on the vehicle to the web.</string>
     <!--  Title of dialog shown when user disables global auto sync [CHAR LIMIT=50] -->
-    <string name="data_usage_auto_sync_off_dialog_title">Turn auto-sync data off?</string>
+    <string name="data_usage_auto_sync_off_dialog_title">Disallow automatic data syncing?</string>
     <!--  Body of dialog shown when user disables global auto sync [CHAR LIMIT=NONE] -->
     <string name="data_usage_auto_sync_off_dialog">This will conserve data, but you\u2019ll need to sync each account manually to collect recent information. And you won\u2019t receive notifications when updates occur.</string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
@@ -1605,6 +1605,8 @@
     <string name="cancel">Cancel</string>
     <!-- Generic dialog allow button. [CHAR_LIMIT=20] -->
     <string name="allow">Allow</string>
+    <!-- Generic dialog don't allow button. [CHAR_LIMIT=20] -->
+    <string name="do_not_allow">Don\u2019t allow</string>
     <!-- Generic dialog deny button. [CHAR_LIMIT=20] -->
     <string name="deny">Deny</string>
 
