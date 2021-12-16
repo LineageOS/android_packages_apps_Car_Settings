@@ -15,9 +15,18 @@
  */
 package com.android.car.settings.enterprise;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+
+import android.content.Intent;
+
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
+import com.android.car.settingslib.enterprise.EnterpriseDefaultApps;
 import com.android.car.settingslib.enterprise.EnterprisePrivacyFeatureProvider;
 
+import org.mockito.ArgumentMatcher;
 import org.mockito.Mock;
 
 /**
@@ -31,4 +40,26 @@ abstract class BaseEnterprisePrivacyPreferenceControllerTestCase
 
     @Mock
     protected EnterprisePrivacyFeatureProvider mEnterprisePrivacyFeatureProvider;
+
+    protected void verifyFindPersistentPreferredActivitiesCalledOnce() {
+        verify(mApplicationFeatureProvider, times(EnterpriseDefaultApps.values().length))
+                .findPersistentPreferredActivities(anyInt(), any());
+    }
+
+    protected ArgumentMatcher<Intent[]> matchesIntents(Intent[] intents) {
+        return (Intent[] actualIntents) -> {
+            if (actualIntents == null) {
+                return false;
+            }
+            if (actualIntents.length != intents.length) {
+                return false;
+            }
+            for (int i = 0; i < intents.length; i++) {
+                if (!intents[i].filterEquals(actualIntents[i])) {
+                    return false;
+                }
+            }
+            return true;
+        };
+    }
 }

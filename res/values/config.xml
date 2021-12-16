@@ -96,11 +96,20 @@
     <string-array name="config_ignore_ux_restrictions" translatable="false">
         <item>@string/pk_display_settings_entry</item>
         <item>@string/pk_brightness_level</item>
+        <item>@string/pk_adaptive_brightness_switch</item>
         <item>@string/pk_sound_settings_entry</item>
         <item>@string/pk_volume_settings</item>
         <item>@string/pk_network_and_internet_entry</item>
+        <item>@string/pk_wifi_tether_settings_entry</item>
+        <item>@string/pk_wifi_tether_state_switch</item>
+        <item>@string/pk_mobile_network_settings_entry</item>
+        <item>@string/pk_mobile_data_toggle</item>
+        <item>@string/pk_wifi_entry_group</item>
+        <item>@string/pk_wifi_entry_state_switch</item>
         <item>@string/pk_wifi_settings_entry</item>
+        <item>@string/pk_wifi_state_switch</item>
         <item>@string/pk_bluetooth_settings_entry</item>
+        <item>@string/pk_bluetooth_state_switch</item>
         <item>@string/pk_bluetooth_paired_devices</item>
     </string-array>
 

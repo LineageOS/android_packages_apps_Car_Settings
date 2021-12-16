@@ -69,6 +69,8 @@
                     android:key="@string/pk_enterprise_privacy_number_camera_access_packages"
                     android:title="@string/enterprise_privacy_camera_access"/>
         <Preference
+                    android:fragment="com.android.car.settings.enterprise.EnterpriseSetDefaultAppsListFragment"
+                    android:icon="@drawable/ic_apps"
                     settings:controller="com.android.car.settings.enterprise.EnterpriseSetDefaultAppsPreferenceController"
                     android:key="@string/pk_enterprise_privacy_number_enterprise_set_default_apps"
                     android:title="@string/enterprise_privacy_enterprise_set_default_apps"/>
