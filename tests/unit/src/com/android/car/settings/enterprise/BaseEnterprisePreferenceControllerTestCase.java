@@ -145,6 +145,10 @@ abstract class BaseEnterprisePreferenceControllerTestCase extends BaseEnterprise
             return mList.size();
         }
 
+        @Override public Preference getPreference(int index) {
+            return mList.get(index);
+        }
+
         public List<Preference> getPreferences() {
             return mList;
         }
