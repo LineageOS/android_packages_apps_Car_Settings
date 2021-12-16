@@ -588,8 +588,12 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
+      <item type="plurals" name="default_camera_app_title"/>
+      <item type="plurals" name="default_email_app_title"/>
+      <item type="plurals" name="default_phone_app_title"/>
       <item type="plurals" name="enterprise_privacy_number_ca_certs"/>
       <item type="plurals" name="enterprise_privacy_number_failed_password_wipe"/>
+      <item type="plurals" name="enterprise_privacy_number_packages"/>
       <item type="plurals" name="enterprise_privacy_number_packages_lower_bound"/>
       <item type="string" name="about_settings"/>
       <item type="string" name="about_settings_summary"/>
@@ -649,6 +653,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="app_link_open_ask"/>
       <item type="string" name="app_link_open_never"/>
       <item type="string" name="app_list_preference_none"/>
+      <item type="string" name="app_names_concatenation_template_2"/>
+      <item type="string" name="app_names_concatenation_template_3"/>
       <item type="string" name="app_permissions"/>
       <item type="string" name="app_permissions_summary"/>
       <item type="string" name="app_usage_cycle"/>
@@ -833,6 +839,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="default_admin_support_msg"/>
       <item type="string" name="default_app_selected_app"/>
       <item type="string" name="default_applications"/>
+      <item type="string" name="default_browser_title"/>
+      <item type="string" name="default_calendar_app_title"/>
+      <item type="string" name="default_contacts_app_title"/>
+      <item type="string" name="default_map_app_title"/>
       <item type="string" name="default_network_name_summary"/>
       <item type="string" name="default_password_summary"/>
       <item type="string" name="default_search_query"/>
@@ -874,6 +884,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="display_brightness"/>
       <item type="string" name="display_night_mode_summary"/>
       <item type="string" name="display_settings"/>
+      <item type="string" name="do_not_allow"/>
       <item type="string" name="domain_url_section_title"/>
       <item type="string" name="domain_urls_summary_none"/>
       <item type="string" name="domain_urls_summary_one"/>
@@ -1552,6 +1563,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="enterprise_privacy_granted_location_permissions_apps_fragment"/>
       <item type="xml" name="enterprise_privacy_granted_microphone_permission_apps_fragment"/>
       <item type="xml" name="enterprise_privacy_settings_fragment"/>
+      <item type="xml" name="enterprise_set_default_apps_settings"/>
       <item type="xml" name="factory_reset_confirm_fragment"/>
       <item type="xml" name="factory_reset_fragment"/>
       <item type="xml" name="file_paths"/>
