@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Aukera hau desaktibatuz gero, kokapena atzitzeko baimena kenduko zaie aplikazio guztiei. Alabaina, gidatzeko laguntzarekin erlazionatutako aplikazioek kokapena atzitzen jarraitu ahalko dute."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Gidatzeko laguntza abian denean, erabili kokapena"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ibilgailuaren kokapena desaktibatuta dago"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Gidatzeko laguntzarekin erlazionatutako aplikazioek ezin dute atzitu kokapena"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Aldatu"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Eman kokapena atzitzeko baimena gidatzeko laguntza ematen duten aplikazioei"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Aukera hau desaktibatuz gero, kokapenari buruzko informazioa erabiltzen duten gidatzeko laguntzarekin erlazionatutako aplikazioak desgaituko dira."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Erabili kokapena"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Gailuaren kokapena zehazteko, GPSa, wifi-sarea, sare mugikorrak, sentsoreak eta antzeko iturburuak erabiltzen ditu kokapenaren eginbideak."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Gidatzeko laguntza"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Gidatzeko laguntzarekin erlazionatutako aplikazioei bidaltzen zaien kokapen-informazioak ez dauka identifikatzen zaituen informaziorik. Gehienez bi egunean gordetzen da. Gero, ezabatu egiten da."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofonoa"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Erabili mikrofonoa"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Eman mikrofonoa atzitzeko baimena aplikazio guztiei"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Desblokeatzeko eredu bat nola marraztu"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Errore bat gertatu da eredua gordetzean"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Saiakera oker gehiegi egin dituzu. Saiatu berriro <xliff:g id="NUMBER">%d</xliff:g> segundo barru."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Ezin da erabili biratze bidezko idazketa; erabili ukipen-keinuak"</string>
     <string name="okay" msgid="4589873324439764349">"Ados"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Pantailaren blokeoa kendu?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Edonork atzitu ahalko du zure kontua"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Informazio- eta aisia-sistemaren aplikazio hau aktibatzen baduzu, <xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak eragiketa hauek egiteko baimena izango du:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Informazio- eta aisia-sistemaren aplikazioa aktibatu nahi duzu?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktibatu informazio- eta aisia-sistemaren aplikazioa"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Desaktibatu eta desinstalatu"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desaktibatu informazio- eta aisia-sistemaren aplikazioa"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Xehetasun gehiago"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Erakundearen kudeatzaileak profilarekin erlazionatutako aplikazioak eta datuak gainbegiratu eta kudea ditzake; besteak beste, ezarpenak, baimenak, enpresen sarbide-maila, sareko jarduerak eta ibilgailuaren kokapenari buruzko informazioa."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Ez dago aplikaziorik aktibatuta"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> markako ibilgailuen gidalerroak"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Erakundearen kudeatzaileak kudeatutako ezarpenak"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Lortu informazio gehiago <xliff:g id="SERVICE">%1$s</xliff:g> eginbideari buruz"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Akatsen txostena partekatu nahi duzu?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Ibilgailuaren erakundearen kudeatzaileak akatsen txosten bat eskatu du gailuko arazoa konpontzeko. Baliteke aplikazioak eta datuak partekatzea."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Ibilgailuaren erakundearen kudeatzaileak akatsen txosten bat eskatu du gailuko arazoa konpontzeko. Baliteke aplikazioak eta datuak partekatzea, eta gailua motelago ibiltzea aldi batez."</string>

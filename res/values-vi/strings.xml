@@ -218,7 +218,7 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Nhấn để ghép nối với <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Chọn thiết bị Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Ngôn ngữ"</string>
-    <string name="languages_and_input_settings" msgid="3672322610529408248">"Ngôn ngữ và phương thức nhập"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Ngôn ngữ và nhập liệu"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Đề xuất"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Tất cả ngôn ngữ"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Bàn phím"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Thao tác tắt tính năng này sẽ xóa quyền truy cập thông tin vị trí của mọi ứng dụng. Ứng dụng sử dụng công nghệ hỗ trợ dành cho người lái xe sẽ vẫn có quyền truy cập."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Dùng vị trí để hỗ trợ người lái xe"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Thông tin vị trí của xe đang tắt"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Ứng dụng Hỗ trợ người lái xe không truy cập được vị trí của bạn"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Thay đổi"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Cho phép ứng dụng hỗ trợ lái xe truy cập vị trí"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Nếu bạn tắt chế độ này, những ứng dụng hỗ trợ dành cho người lái xe dựa vào thông tin vị trí sẽ bị tắt."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Sử dụng vị trí"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Dịch vụ vị trí có thể sử dụng những nguồn như GPS, Wi‑Fi, mạng di động và cảm biến để giúp ước tính vị trí của thiết bị."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Công nghệ hỗ trợ dành cho người lái xe"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Thông tin vị trí gửi tới ứng dụng Hỗ trợ người lái xe là loại thông tin không nhận dạng được bạn. Thông tin này được lưu trữ trong tối đa 2 ngày trước khi bị xóa"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrô"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Sử dụng micrô"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Cho phép mọi ứng dụng truy cập vào micrô"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cách vẽ hình mở khóa"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Lỗi khi lưu mẫu"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Bạn đã nhập sai quá nhiều lần. Hãy thử lại sau <xliff:g id="NUMBER">%d</xliff:g> giây."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Không hỗ trợ xoay trong hình mở khoá, hãy chạm"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Xóa phương thức khóa màn hình?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Thao tác này sẽ cho phép bất cứ ai cũng có thể truy cập vào tài khoản của bạn"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Khi bạn kích hoạt ứng dụng hệ thống thông tin giải trí này, ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> sẽ thực hiện được những thao tác sau:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Kích hoạt hệ thống thông tin giải trí này?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Kích hoạt ứng dụng hệ thống thông tin giải trí này"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Hủy kích hoạt và gỡ cài đặt"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Hủy kích hoạt ứng dụng hệ thống thông tin giải trí này"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Thông tin khác"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hồ sơ này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Chưa kích hoạt ứng dụng nào"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Chính sách đối với xe của <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Chế độ cài đặt này được quản lý bởi người quản lý của tổ chức"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Tìm hiểu thêm về <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Chia sẻ báo cáo lỗi?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Người quản lý của tổ chức của xe này đã yêu cầu cấp một báo cáo lỗi để giúp khắc phục sự cố trên thiết bị này. Ứng dụng và dữ liệu có thể sẽ được chia sẻ."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Người quản lý của tổ chức của xe này đã yêu cầu cấp một báo cáo lỗi để giúp khắc phục sự cố trên thiết bị này. Ứng dụng và dữ liệu có thể được chia sẻ và thiết bị của bạn có thể sẽ tạm thời bị chậm."</string>

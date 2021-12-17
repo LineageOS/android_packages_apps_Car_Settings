@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Хэрэв та үүнийг унтраавал энэ нь бүх аппын байршилд хандах эрхийг хасна. Жолоочийн туслах аппууд хандах эрхтэй хэвээр байна."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Жолоочийн туслахын байршлыг ашиглах"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Тээврийн хэрэгслийн байршил унтраалттай"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Жолоочийн туслах апп таны байршилд хандах боломжгүй"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өөрчлөх"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Жолоодлогод тусалдаг аппуудыг байршилдаа хандахыг зөвшөөрнө"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Хэрэв та үүнийг унтраавал байршлын мэдээлэлд тулгуурладаг Жолоочийн туслах аппуудыг идэвхгүй болгоно."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Байршлыг ашиглах"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Байршил нь таны төхөөрөмжийн байршлыг тооцоолоход туслах зорилгоор GPS, Wi-Fi, мобайл сүлжээ болон мэдрэгч зэрэг эх сурвалжийг ашиглаж болзошгүй."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Жолоочийн туслах"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Жолоочийн туслах апп руу илгээсэн байршлын мэдээлэлд таныг тодорхойлох мэдээлэл агуулдаггүй. Үүнийг устгахаас өмнө хамгийн ихдээ 2 хоног хадгалдаг."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофоныг ашиглах"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бүх аппад таны микрофонд хандахыг зөвшөөрнө үү"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Түгжээг тайлах хээг хэрхэн зурах вэ?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Загварыг хадгалахад алдаа гарлаа"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Хэт олон удаа буруу оруулсан байна. <xliff:g id="NUMBER">%d</xliff:g> секундын дараа дахин оролдоно уу."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Хээ нь эргүүлэхийг дэмждэггүй тул мэдрэгчийг ашиглана уу"</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Дэлгэцийн түгжээг хасах уу?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ингэснээр хүн бүхэн таны бүртгэлд хандах боломжтой болно"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Энэ инфотэйнмент системийг идэвхжүүлснээр <xliff:g id="APP_NAME">%1$s</xliff:g> аппад дараах үйл ажиллагааг хийхийг зөвшөөрнө:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Энэ инфотэйнмент системийн аппыг идэвхжүүлэх үү?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Энэ инфотэйнмент системийн аппыг идэвхжүүлэх"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Идэвхгүй болгох, устгах"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Энэ инфотэйнмент системийн аппыг идэвхгүй болгох"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"Дэлгэрэнгүй мэдээлэл"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Байгууллагын менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Идэвхжүүлсэн аппууд алга"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-н тээврийн хэрэгслийн бодлого"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Байгууллагын менежерийн удирддаг тохиргоо"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g>-н талаар нэмэлт мэдээлэл авах"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Алдааны мэдээг хуваалцах уу?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Энэ тээврийн хэрэгслийн байгууллагын менежер энэ төхөөрөмжийн асуудлыг шийдэхэд туслахын тулд алдааны мэдээ хүссэн байна. Апп болон өгөгдлийг хуваалцаж болзошгүй."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Энэ тээврийн хэрэгслийн байгууллагын менежер энэ төхөөрөмжийн асуудлыг шийдэхэд туслахын тулд алдааны мэдээ хүссэн байна. Апп болон өгөгдлийг хуваалцаж болзошгүй бөгөөд таны төхөөрөмж түр зуур удааширч болзошгүй."</string>

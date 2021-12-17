@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"এটি বন্ধ করে দিলে, কোনও অ্যাপই লোকেশন অ্যাক্সেস করতে পারবে না। ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ এখনও অ্যাক্সেস করতে পারবে।"</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"\'ড্রাইভার অ্যাসিস্ট্যান্স\'-এর জন্য লোকেশন ব্যবহার করুন"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"গাড়ির লোকেশন বন্ধ করা আছে"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"\'ড্রাইভার অ্যাসিস্ট্যান্স\' থাকা অ্যাপের লোকেশনে অ্যাক্সেস নেই"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"পরিবর্তন করুন"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"এমন অ্যাপে অনুমতি দিন যা লোকেশন অ্যাক্সেস করে আপনাকে গাড়ি চালানোয় সাহায্য করে"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"আপনি এটি বন্ধ করলে, লোকেশন সংক্রান্ত তথ্যের উপরে নির্ভর করে থাকা সব ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ বন্ধ হয়ে যাবে।"</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"লোকেশন ব্যবহার করুন"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"আপনি কোথায় আছেন তা জানতে \'লোকেশন\' সেটিংস আপনার মোবাইলের জিপিএস, ওয়াই-ফাই, মোবাইল নেটওয়ার্ক ও সেন্সর ব্যবহার করতে পারে।"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"\'ড্রাইভার অ্যাসিস্ট্যান্স\'"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"\'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচার থাকা অ্যাপে পাঠানো লোকেশন সম্পর্কিত তথ্যে এমন কোনও তথ্য থাকে না, যা দিয়ে আপনাকে শনাক্ত করা যায়। সর্বাধিক ২ দিন সেভ থাকার পরে এটি মুছে যায়।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্রোফোন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্রোফোন ব্যবহার করুন"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"সব অ্যাপকে আপনার মাইক্রোফোন ব্যবহার করার অনুমতি দিন"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"কীভাবে একটি আনলক প্যাটার্ন আঁকবেন"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"প্যাটার্ন সেভ করার সময় সমস্যা"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"অনেকবার ভুল প্রচেষ্টা করা হয়েছে। <xliff:g id="NUMBER">%d</xliff:g> সেকেন্ডের মধ্যে আবার চেষ্টা করুন।"</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"প্যাটার্নে রোটারি কাজ করে না, টাচ ব্যবহার করুন"</string>
     <string name="okay" msgid="4589873324439764349">"ঠিক আছে"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"স্ক্রিন লক সরিয়ে দেবেন?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"এর ফলে যেকেউ আপনার অ্যাকাউন্ট অ্যাক্সেস করতে পারবেন"</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করলে <xliff:g id="APP_NAME">%1$s</xliff:g> নামের অ্যাপ নিচের কাজগুলি করতে পারবে:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করবেন?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ চালু করুন"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"বন্ধ ও আনইনস্টল করুন"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"এই ইনফোটেইনমেন্ট সিস্টেম অ্যাপ বন্ধ করুন"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"আরও বিবরণ দেখুন"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"প্রতিষ্ঠানের ম্যানেজার এই প্রোফাইল সম্পর্কিত অ্যাপ ও ডেটা নজর রাখতে এবং ম্যানেজ করতে পারবেন। এর মধ্যে সেটিংস, অনুমতি, কর্পোরেট অ্যাক্সেস, নেটওয়ার্ক অ্যাক্টিভিটি এবং গাড়ির লোকেশন সম্পর্কিত তথ্য অন্তর্ভুক্ত।"</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"কোনও অ্যাপ চালু নেই"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-এর গাড়ি সংক্রান্ত নীতি"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"প্রতিষ্ঠানের ম্যানেজার সেটিংস ম্যানেজ করেন"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> সম্পর্কে আরও জানুন"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ত্রুটির রিপোর্ট শেয়ার করতে চান?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"এই ডিভাইসের সমস্যা সমাধান করতে সাহায্য করার জন্য এই গাড়ির প্রতিষ্ঠানের ম্যানেজার ত্রুটির রিপোর্ট চেয়েছেন। অ্যাপ ও ডেটা শেয়ার করা হতে পারে।"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"এই ডিভাইসের সমস্যা সমাধান করতে সাহায্য করার জন্য এই গাড়ির প্রতিষ্ঠানের ম্যানেজার ত্রুটির রিপোর্ট চেয়েছেন। অ্যাপ ও ডেটা শেয়ার করা হতে পারে ও ডিভাইসটি সাময়িকভাবে ধীরে কাজ করতে পারে।"</string>

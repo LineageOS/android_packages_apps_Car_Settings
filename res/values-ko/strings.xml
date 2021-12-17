@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"이 기능을 끄면 모든 앱의 위치 액세스 권한이 삭제됩니다. 운전자 지원 앱은 계속 내 위치에 액세스할 수 있습니다."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"운전자 지원에서 위치 사용"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"자동차 위치 사용 중지됨"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"운전자 지원 앱이 내 위치 정보에 액세스할 수 없음"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"변경"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"운전 지원 앱이 내 위치에 액세스하도록 허용합니다."</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"기능을 끄면 위치 정보를 사용하는 운전자 지원 앱이 사용 중지됩니다."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"위치 사용"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"운전자 지원"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"운전자 지원 앱에 전송되는 위치 정보에는 개인 식별 정보가 포함되지 않습니다. 정보는 최대 2일 동안 보관된 후 삭제됩니다."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"마이크"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"마이크 사용"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"모든 앱이 마이크에 액세스하도록 허용"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"잠금해제 패턴을 그리는 방법"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"패턴 저장 중 오류 발생"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"잘못 시도한 횟수가 너무 많습니다. <xliff:g id="NUMBER">%d</xliff:g>초 후에 다시 시도해 주세요."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"패턴에는 로터리 입력이 지원되지 않습니다. 터치를 사용하세요."</string>
     <string name="okay" msgid="4589873324439764349">"확인"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"화면 잠금을 삭제하시겠습니까?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"화면 잠금을 삭제하면 누구나 계정에 액세스할 수 있습니다."</string>
@@ -737,6 +734,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"인포테인먼트 시스템 앱을 활성화하면 <xliff:g id="APP_NAME">%1$s</xliff:g> 앱에서 다음 작업을 처리할 수 있습니다."</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"인포테인먼트 시스템 앱을 활성화하시겠습니까?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"인포테인먼트 시스템 앱 활성화"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"비활성화 및 제거"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"인포테인먼트 시스템 앱 비활성화"</string>
     <string name="admin_support_more_info" msgid="380785608579390750">"세부정보 더보기"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"조직 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
@@ -758,10 +756,7 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"활성화된 앱 없음"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> 차량 정책"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"조직 관리자가 관리하는 설정"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> 자세히 알아보기"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"버그 신고를 공유하시겠습니까?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있습니다."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있으며 기기 속도가 일시적으로 느려질 수 있습니다."</string>
