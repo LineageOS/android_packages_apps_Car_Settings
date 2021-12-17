@@ -35,36 +35,26 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
-        <C extends BaseAdminGrantedPermissionsPreferenceController> extends
+public class EnterpriseInstalledPackagesPreferenceControllerTest extends
         BaseEnterprisePrivacyPreferenceControllerTestCase {
 
-    private static final String TAG = BaseAdminGrantedPermissionsPreferenceControllerTestCase.class
+    private static final String TAG = EnterpriseInstalledPackagesPreferenceControllerTest.class
             .getSimpleName();
 
     // Must be a spy to verify refreshUi() is called
-    private C mSpiedController;
-
-    protected final String[] mPermissions;
+    private EnterpriseInstalledPackagesPreferenceController mSpiedController;
 
     @Mock
     private Preference mPreference;
-
-    BaseAdminGrantedPermissionsPreferenceControllerTestCase(String... permissions) {
-        mPermissions = permissions;
-    }
 
     @Before
     public void setController() {
         mSpiedController = spy(newController(mApplicationFeatureProvider));
     }
 
-    protected abstract C newController(ApplicationFeatureProvider provider);
-
     @Test
-    public void testGetAvailabilityStatus_noPermissionsGranted() {
-        NumberOfAppsCallbackHolder callbackHolder =
-                mockCalculateNumberOfAppsWithAdminGrantedPermissions();
+    public void testGetAvailabilityStatus_noInstalledApps() {
+        NumberOfAppsCallbackHolder callbackHolder = mockCalculateNumberOfPolicyInstalledApps();
 
         // Assert initial state
         assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
@@ -78,16 +68,15 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
     }
 
     @Test
-    public void testGetAvailabilityStatus_permissionsGranted() {
+    public void testGetAvailabilityStatus_withInstalledApps() {
         expectUiRefreshed(mSpiedController);
-        NumberOfAppsCallbackHolder callbackHolder =
-                mockCalculateNumberOfAppsWithAdminGrantedPermissions();
+        NumberOfAppsCallbackHolder callbackHolder = mockCalculateNumberOfPolicyInstalledApps();
 
         // Assert initial state
         assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
 
         // Unblock async call
-        callbackHolder.release(42);
+        callbackHolder.release(3);
 
         // Assert post-callback result
         assertAvailability(mSpiedController.getAvailabilityStatus(), AVAILABLE);
@@ -97,28 +86,33 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
     @Test
     public void testUpdateState() {
         expectUiRefreshed(mSpiedController);
-        NumberOfAppsCallbackHolder callbackHolder =
-                mockCalculateNumberOfAppsWithAdminGrantedPermissions();
+        NumberOfAppsCallbackHolder callbackHolder = mockCalculateNumberOfPolicyInstalledApps();
         mSpiedController.getAvailabilityStatus();
-        callbackHolder.release(42);
+        callbackHolder.release(3);
         assertUiRefreshed(mSpiedController);
 
         mSpiedController.updateState(mPreference);
 
-        assertPreferenceStateSet(mPreference, 42);
+        assertPreferenceStateSet(mPreference, 3);
     }
 
-    private NumberOfAppsCallbackHolder mockCalculateNumberOfAppsWithAdminGrantedPermissions() {
+    private EnterpriseInstalledPackagesPreferenceController newController(
+            ApplicationFeatureProvider provider) {
+        return new EnterpriseInstalledPackagesPreferenceController(mSpiedContext,
+                mPreferenceKey, mFragmentController, mUxRestrictions, provider);
+    }
+
+    private NumberOfAppsCallbackHolder mockCalculateNumberOfPolicyInstalledApps() {
         NumberOfAppsCallbackHolder callbackHolder = new NumberOfAppsCallbackHolder();
 
         doAnswer((inv) -> {
             Log.d(TAG, "answering to " + inv);
-            NumberOfAppsCallback callback = (NumberOfAppsCallback) inv.getArguments()[2];
+            NumberOfAppsCallback callback = (NumberOfAppsCallback) inv.getArguments()[1];
             callbackHolder.setCallback(callback);
             return null;
         }).when(mApplicationFeatureProvider)
-                .calculateNumberOfAppsWithAdminGrantedPermissions(eq(mPermissions),
-                        /* sync= */ eq(true), any());
+                .calculateNumberOfPolicyInstalledApps(/* async= */ eq(true), any());
+
         return callbackHolder;
     }
 }
