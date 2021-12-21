@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accesați datele folosind rețeaua mobilă"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rețea mobilă"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Folosiți datele mobile"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Dezactivată"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Dezactivați datele mobile?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Selectați o opțiune"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Folosiți <xliff:g id="CARRIER">%1$s</xliff:g> pentru date mobile?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Dacă dezactivați opțiunea, permisiunea de acces la locație va fi eliminată pentru toate aplicațiile. Aplicațiile de asistență pentru șofer vor avea în continuare acces."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Folosiți locația pentru asistență oferită șoferului"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Locația vehiculului este dezactivată"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Aplicațiile de asistență pentru șofer nu vă pot accesa locația"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Schimbați"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permiteți accesul la locație aplicațiilor de asistență pentru șofer"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Dacă dezactivați opțiunea, aplicațiile de asistență pentru șofer care se bazează pe informațiile despre locație vor fi dezactivate."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Folosiți locația"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Locația poate folosi surse precum GPS, Wi-Fi, rețele mobile și senzori pentru a ajuta la estimarea locației dispozitivului."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistență pentru șofer"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Informațiile despre locație trimise aplicațiilor de asistență pentru șofer nu conțin date care vă identifică. Acestea sunt stocate timp de maximum două zile înainte de a fi șterse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Folosiți microfonul"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permiteți accesul tuturor aplicațiilor la microfon"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferințele pentru aplicații au fost resetate"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Ștergeți datele (setări din fabrică)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ștergeți toate datele și profilurile de pe sistemul de infotainment"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Astfel, vor fi șterse toate datele de pe sistemul de infotainment al vehiculului, între care:\n\n"<li>"Contul dvs. Google,"</li>\n<li>"datele și setările de sistem și de aplicație,"</li>\n<li>"aplicațiile descărcate."</li>"."</string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"V-ați conectat la următoarele conturi:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Alte profiluri au fost configurate pentru acest vehicul."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Ștergeți toate datele"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"Conturi pentru <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizare automată a datelor"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permiteți aplicațiilor să actualizeze date automat"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Activați sincronizarea datelor?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Ceea ce modificați în conturi pe web se va reflecta automat și pe dispozitiv.\n\nUnele conturi pot să copieze automat pe web toate modificările de pe telefon. Așa funcționează un Cont Google."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Opriți sincronizarea automată?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Această acțiune va economisi date, dar va trebui să sincronizați fiecare cont manual pentru a colecta informațiile recente. În plus, nu veți primi notificări atunci când apar actualizări."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informații despre cont"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Adăugați un cont"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Desenarea unui model pentru deblocare"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Eroare la salvarea modelului"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Prea multe încercări incorecte. Încercați din nou peste <xliff:g id="NUMBER">%d</xliff:g> secunde."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Modelul nu acceptă accesul prin rotire. Folosiți atingerea."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Eliminați blocarea ecranului?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Acțiunea va permite oricui să vă acceseze contul"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"Eliminați"</string>
     <string name="cancel" msgid="750286395700355455">"Anulați"</string>
     <string name="allow" msgid="7519431342750394402">"Permiteți"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"Refuzați"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tasta Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tasta Enter"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Activând această aplicație pentru sistemul de infotainment, veți permite aplicației <xliff:g id="APP_NAME">%1$s</xliff:g> să realizeze următoarele operațiuni:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Activați aplicația pentru sistemul de infotainment?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Activați această aplicație pentru sistemul de infotainment"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Dezactivați și dezinstalați"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Dezactivați aplicația pentru sistemul de infotainment"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Administratorul organizației poate să monitorizeze și să gestioneze aplicațiile și datele asociate acestui profil, inclusiv setările, permisiunile, accesul la nivelul companiei, activitatea în rețea și informațiile despre locația vehiculului."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Administratorul organizației poate să monitorizeze și să gestioneze aplicațiile și datele asociate acestui profil, inclusiv setările, permisiunile, accesul la nivelul companiei, activitatea în rețea și informațiile despre locația dispozitivului."</string>
@@ -757,10 +762,21 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nicio aplicație activată"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politica <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> privind vehiculele"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Setări gestionate de administratorul organizației"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Aflați mai multe despre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="few">Minimum <xliff:g id="COUNT_1">%d</xliff:g> aplicații</item>
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> de aplicații</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> aplicație</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> încercări</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de încercări</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> încercare</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Trimiteți raportul de eroare?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Administratorul organizației care deține vehiculul a solicitat un raport de eroare pentru a remedia problemele acestui dispozitiv. Este posibil să se permită accesul la aplicații și date."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Administratorul organizației care deține vehiculul a solicitat un raport de eroare pentru a remedia problemele acestui dispozitiv. Este posibil să se permită accesul la aplicații și date, iar funcționarea dispozitivului poate fi încetinită temporar."</string>
@@ -794,22 +810,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Negru pe alb"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Galben pe negru"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Galben pe albastru"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Cititor de ecran"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Dezactivat"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Rostește elementele de pe ecran"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Folosiți TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Opțiuni"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Setări"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Despre TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"Funcția TalkBack nu este disponibilă când vehiculul este în mișcare.\n\nCând funcția TalkBack este activată, oferă feedback rostit, astfel încât să puteți folosi dispozitivul fără a privi ecranul. Funcția TalkBack este destinată situațiilor sau utilizatorilor cu dificultăți în a vedea ecranul."</string>
 </resources>

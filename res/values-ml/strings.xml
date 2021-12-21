@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"മൊബൈൽ നെറ്റ്‌വർക്ക് ഉപയോഗിച്ച് ഡാറ്റ ആക്‌സസ് ചെയ്യുക"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"മൊബൈൽ നെറ്റ്‌വർക്ക്"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കുക"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ഓഫാണ്"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"മൊബൈൽ ഡാറ്റ ഓഫാക്കണോ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"തിരഞ്ഞെടുക്കേണ്ടത് ആവശ്യമാണ്"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"മൊബൈൽ ഡാറ്റയ്‌ക്ക് <xliff:g id="CARRIER">%1$s</xliff:g> വേണോ?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"ഇത് ഓഫാക്കിയാൽ എല്ലാ ആപ്പുകൾക്കുമുള്ള ലൊക്കേഷൻ ആക്‌സസ് നീക്കം ചെയ്യപ്പെടും. ഡ്രൈവർ സഹായി ആപ്പുകൾക്ക് തുടർന്നും ആക്‌സസ് ഉണ്ടായിരിക്കും."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ഡ്രൈവർ സഹായിക്ക് ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"വാഹന ലൊക്കേഷൻ ഓഫാണ്"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"ഡ്രൈവർ സഹായി ആപ്പുകൾക്ക് ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാനാകില്ല"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"മാറ്റുക"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ഡ്രെെവിംഗിന് സഹായിക്കുന്ന ആപ്പുകളെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കൂ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ ലൊക്കേഷൻ കണക്കാക്കാൻ സഹായിക്കുന്നതിന് GPS, വൈഫൈ, മൊബൈൽ നെറ്റ്‌വർക്കുകൾ, സെൻസറുകൾ പോലുള്ള ഉറവിടങ്ങൾ ലൊക്കേഷൻ ഉപയോഗിച്ചേക്കാം."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ഡ്രൈവർ സഹായി"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"ഡ്രൈവർ സഹായി ആപ്പുകളിലേക്ക് അയച്ച ലൊക്കേഷൻ വിവരങ്ങളിൽ നിങ്ങളെ തിരിച്ചറിയാൻ സഹായിക്കുന്ന വിവരങ്ങളില്ല. ഇത് ഇല്ലാതാക്കുന്നതിന് മുമ്പ് പരമാവധി 2 ദിവസത്തേക്ക് സംഭരിക്കും."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"മൈക്രോഫോൺ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"മൈക്രോഫോൺ ഉപയോഗിക്കുക"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"നിങ്ങളുടെ മൈക്രോഫോൺ ആക്‌സസ് ചെയ്യാൻ എല്ലാ ആപ്പുകളെയും അനുവദിക്കുക"</string>
@@ -490,7 +489,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ആപ്പ് മുൻഗണനകൾ പുനഃസജ്ജീകരിച്ചു"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"എല്ലാ ഡാറ്റയും മായ്ക്കൂ (ഫാക്‌ടറി റീസെറ്റ്)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ഇൻഫോറ്റേയിൻമെന്റ് സി‌സ്‌റ്റത്തിൽ നിന്ന് എല്ലാ ഡാറ്റയും പ്രൊഫൈലുകളും മായ്‌ക്കുക"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ഇനിപ്പറയുന്നവ ഉൾപ്പെടെ നിങ്ങളുടെ വാഹനത്തിന്റെ ഇൻഫോറ്റേയിൻമെന്റ് സി‌സ്റ്റത്തിൽ നിന്നുള്ള എല്ലാ ഡാറ്റയും ഇത് മായ്‌ക്കും:\n\n"<li>"നിങ്ങളുടെ Google അക്കൗണ്ട്"</li>\n<li>"സിസ്‌റ്റത്തിന്റെയും ആപ്പിന്റെയും ഡാറ്റയും ക്രമീകരണവും"</li>\n<li>"ഡൗൺലോഡ് ചെയ്‌ത ആപ്പുകൾ"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ഇനിപ്പറയുന്നവ ഉൾപ്പെടെ നിങ്ങളുടെ വാഹനത്തിന്റെ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്റ്റത്തിൽ നിന്നുള്ള എല്ലാ ഡാറ്റയും ഇത് മായ്ക്കും:\n\n"<li>"നിങ്ങളുടെ അക്കൗണ്ടുകളും പ്രൊഫൈലുകളും"</li>\n<li>"സിസ്റ്റം, ആപ്പ് ഡാറ്റയും ക്രമീകരണവും"</li>\n<li>"ഡൗൺലോഡ് ചെയ്ത ആപ്പുകൾ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"നിലവിൽ നിങ്ങൾ ഇനിപ്പറയുന്ന അക്കൗണ്ടുകളിലേക്ക് സൈൻ ഇൻ ചെയ്‌തിരിക്കുന്നു:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ഈ വാഹനത്തിന് മറ്റ് പ്രൊഫെെലുകൾ സജ്ജീകരിച്ചിട്ടുണ്ട്."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"എല്ലാ ഡാറ്റയും മായ്ക്കുക"</string>
@@ -584,9 +583,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> എന്നയാളുടെ അക്കൗണ്ടുകൾ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ഡാറ്റ സ്വയമേവ സമന്വയിപ്പിക്കുക"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ഡാറ്റ സ്വയമേവ പുതുക്കിയെടുക്കാൻ ആപ്പുകളെ അനുവദിക്കുക"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ഡാറ്റാ സ്വയം സമന്വയം ഓണാക്കണോ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"വെബിൽ നിങ്ങളുടെ അക്കൗണ്ടുകളിൽ വരുത്തുന്ന മാറ്റങ്ങളെല്ലാം ഉപകരണത്തിലേക്ക് സ്വയമേവ പകർത്തും.\n\nഫോണിൽ വരുത്തുന്ന മാറ്റങ്ങളെല്ലാം ചില അക്കൗണ്ടുകൾ സ്വയമേവ വെബ്ബിലേക്കും പകർത്തിയേക്കാം. ഇങ്ങനെയാണ് Google അക്കൗണ്ട് പ്രവർത്തിക്കുന്നത്."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ഡാറ്റാ സ്വയം സമന്വയം ഓഫാക്കണോ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"സ്വയമേവയുള്ള ഡാറ്റാ സമന്വയം അനുവദിക്കണോ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"വെബിൽ നിങ്ങൾ വരുത്തുന്ന ഏതൊരു മാറ്റവും നിങ്ങളുടെ വാഹനത്തിലേക്ക് സ്വയമേവ പകർത്തും.\n\nവാഹനത്തിൽ നിങ്ങൾ വരുത്തുന്ന മാറ്റങ്ങളെല്ലാം ചില അക്കൗണ്ടുകൾ സ്വയമേവ വെബിലേക്കും പകർത്തിയേക്കാം."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"സ്വയമേവയുള്ള ഡാറ്റാ സമന്വയം അനുവദിക്കാതിരിക്കണോ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ഇത് ഡാറ്റ ലാഭിക്കും, എന്നാൽ അടുത്തിടെയുള്ള വിവരം ശേഖരിക്കാൻ, നിങ്ങൾ ഓരോ അക്കൗണ്ടും നേരിട്ട് സമന്വയിപ്പിക്കേണ്ടിവരും. അപ്‌ഡേറ്റുകൾ നടക്കുമ്പോൾ അറിയിപ്പുകൾ ലഭിക്കുകയുമില്ല."</string>
     <string name="account_details_title" msgid="7529571432258448573">"അക്കൗണ്ട് വിവരങ്ങൾ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"അക്കൗണ്ട് ചേർക്കുക"</string>
@@ -650,8 +649,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ഒരു അൺലോക്ക് പാറ്റേൺ വരയ്‌ക്കേണ്ടതെങ്ങനെ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"പാറ്റേൺ സംരക്ഷിക്കുന്നതിൽ പിശക്"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"നിരവധി തെറ്റായ ശ്രമങ്ങൾ. <xliff:g id="NUMBER">%d</xliff:g> സെക്കൻഡിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുക."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"റോട്ടറിക്ക് പാറ്റേണിന്റെ പിന്തുണയില്ല, ടച്ച് ഉപയോഗിക്കൂ"</string>
     <string name="okay" msgid="4589873324439764349">"ശരി"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"സ്‌ക്രീൻ ലോക്ക് നീക്കം ചെയ്യണോ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ഇത് നിങ്ങളുടെ അക്കൗണ്ട് ആർക്കും ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കും"</string>
@@ -701,6 +699,7 @@
     <string name="remove_button" msgid="6664656962868194178">"നീക്കം ചെയ്യുക"</string>
     <string name="cancel" msgid="750286395700355455">"റദ്ദാക്കുക"</string>
     <string name="allow" msgid="7519431342750394402">"അനുവദിക്കുക"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"അനുവദിക്കരുത്"</string>
     <string name="deny" msgid="340512788979930804">"നിരസിക്കുക"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace കീ"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter കീ"</string>
@@ -737,6 +736,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം അഡ്മിനെ സജീവമാക്കുന്നത്, ഇനിപ്പറയുന്ന പ്രവർത്തനങ്ങൾ നിർവ്വഹിക്കാൻ <xliff:g id="APP_NAME">%1$s</xliff:g> ആപ്പിനെ അനുവദിക്കുന്നു:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്റ്റം ആപ്പ് സജീവമാക്കണോ?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം ആപ്പ് സജീവമാക്കുക"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"നിഷ്ക്രിയമാക്കുക, അൺഇൻസ്റ്റാൾ ചെയ്യുക"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം ആപ്പ് നിഷ്ക്രിയമാക്കുക"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"ക്രമീകരണവും അനുമതികളും കോർപ്പറേറ്റ് ആക്‌സസും നെറ്റ്‌വർക്ക് ആക്‌റ്റിവിറ്റിയും വാഹനത്തിന്റെ ലൊക്കേഷൻ വിവരങ്ങളും ഉൾപ്പെടെ, ഈ പ്രൊഫൈലുമായി ബന്ധപ്പെട്ട ആപ്പുകളും ഡാറ്റയും നിരീക്ഷിക്കാനും മാനേജ് ചെയ്യാനും നിങ്ങളുടെ സ്ഥാപനത്തിന്റെ മാനേജർക്ക് കഴിയും."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ക്രമീകരണവും അനുമതികളും കോർപ്പറേറ്റ് ആക്‌സസും നെറ്റ്‌വർക്ക് ആക്‌റ്റിവിറ്റിയും ഉപകരണത്തിന്റെ ലൊക്കേഷൻ വിവരങ്ങളും ഉൾപ്പെടെ, ഈ പ്രൊഫൈലുമായി ബന്ധപ്പെട്ട ആപ്പുകളും ഡാറ്റയും നിരീക്ഷിക്കാനും മാനേജ് ചെയ്യാനും നിങ്ങളുടെ സ്ഥാപനത്തിന്റെ മാനേജർക്ക് കഴിയും."</string>
@@ -757,10 +757,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"സജീവമാക്കിയ ആപ്പുകളൊന്നുമില്ല"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> വാഹന നയം"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"സ്ഥാപനത്തിന്റെ മാനേജർ മാനേജ് ചെയ്യുന്ന ക്രമീകരണം"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> എന്നതിനെക്കുറിച്ച് കൂടുതലറിയുക"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">കുറഞ്ഞത് <xliff:g id="COUNT_1">%d</xliff:g> ആപ്പുകൾ</item>
+      <item quantity="one">കുറഞ്ഞത് <xliff:g id="COUNT_0">%d</xliff:g> ആപ്പ്</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ആപ്പുകൾ</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ആപ്പ്</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ശ്രമങ്ങൾ</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ശ്രമം</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">ക്യാമറാ ആപ്പുകൾ</item>
+      <item quantity="one">ക്യാമറാ ആപ്പ്</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">ഇമെയിൽ ക്ലയന്റ് ആപ്പുകൾ</item>
+      <item quantity="one">ഇമെയിൽ ക്ലയന്റ് ആപ്പ്</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ഫോൺ ആപ്പുകൾ</item>
+      <item quantity="one">ഫോൺ ആപ്പ്</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ബഗ് റിപ്പോർട്ട് പങ്കിടണോ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ഈ ഉപകരണത്തിലെ പ്രശ്നം പരിഹരിക്കാൻ സഹായിക്കുന്നതിന് ഈ വാഹനവുമായി ബന്ധപ്പെട്ട സ്ഥാപനത്തിന്റെ മാനേജർ ഒരു ബഗ് റിപ്പോർട്ട് അഭ്യർത്ഥിച്ചു. ആപ്പുകളും ഡാറ്റയും പങ്കിട്ടേക്കാം."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ഈ ഉപകരണത്തിലെ പ്രശ്നം പരിഹരിക്കാൻ സഹായിക്കുന്നതിന് ഈ വാഹനവുമായി ബന്ധപ്പെട്ട സ്ഥാപനത്തിന്റെ മാനേജർ ഒരു ബഗ് റിപ്പോർട്ട് അഭ്യർത്ഥിച്ചു. ആപ്പുകളും ഡാറ്റയും പങ്കിട്ടേക്കാം, നിങ്ങളുടെ ഉപകരണത്തെ ഇത് താൽക്കാലികമായി മന്ദഗതിയിലാക്കിയേക്കാം."</string>
@@ -794,22 +815,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"വെള്ളയിൽ കറുപ്പ്"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"കറുപ്പിൽ മഞ്ഞ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"നീലയിൽ മഞ്ഞ"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"സ്ക്രീൻ റീഡർ"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"ഓഫാണ്"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"സ്‌ക്രീനിലുള്ളവ വായിക്കുക"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack ഉപയോഗിക്കുക"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"ഓപ്ഷനുകൾ"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"ക്രമീകരണം"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack-നെ കുറിച്ച്"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"വാഹനം ഓടുമ്പോൾ TalkBack ലഭ്യമാകില്ല.\n\nTalkBack ഓണായിരിക്കുമ്പോൾ, സ്ക്രീനിൽ നോക്കാതെ നിങ്ങളുടെ ഉപകരണം ഉപയോഗിക്കുന്നതിന് ഇത് സംഭാഷണ ഫീഡ്‌ബാക്ക് നൽകുന്നു. സ്‌ക്രീൻ കാണാൻ ബുദ്ധിമുട്ട് നേരിടുന്ന സാഹചര്യങ്ങൾക്കോ ആളുകൾക്കോ വേണ്ടി ഉള്ളതാണ് TalkBack."</string>
 </resources>

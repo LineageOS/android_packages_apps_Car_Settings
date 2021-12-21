@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Adathozzáférés a mobilhálózaton keresztül"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilhálózat"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Mobiladatok használata"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Ki"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kikapcsolja a mobiladatokat?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Kiválasztás szükséges"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"A(z) <xliff:g id="CARRIER">%1$s</xliff:g> szolgáltatót használja?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"A beállítás kikapcsolásával megszünteti a helyadatokhoz való hozzáférést is az összes alkalmazás esetében. A sofőrtámogató alkalmazások hozzáférése viszont megmarad."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Sofőrtámogatás helyadatokkal"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"A jármű helyadatai ki vannak kapcsolva"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"A sofőrtámogatás nem látja a helyadatait"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Módosítás"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"A vezetést segítő alkalmazások hozzáférhetnek a helyadatokhoz"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ha kikapcsolja ezt a beállítást, letiltja a helyadatokra támaszkodó sofőrtámogató alkalmazásokat is."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Helyadatok használata"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Eszköze helyének meghatározásához a Hely szolgáltatás a GPS, a Wi-Fi- és mobilhálózatok, továbbá az érzékelők adatait használhatja fel."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Sofőrtámogatás"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"A sofőrtámogatási alkalmazásoknak küldött helyadatok nem tartalmaznak olyan információt, amely alapján Ön azonosítható lenne. Legfeljebb két napig tároljuk ezeket az adatokat, mielőtt törölnénk őket."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofon használata"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Mikrofonhoz való hozzáférés engedélyezése az összes alkalmazás számára"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Az alkalmazásbeállítások vissza lettek állítva"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Összes adat törlése"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Minden adat és profil törlése az infotainmentrendszerről"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Ez minden adatot töröl a jármű infotainmentrendszeréből, beleértve a következőket:\n\n"<li>"Az Ön Google-fiókja"</li>\n<li>"A rendszer- és alkalmazásadatok, illetve -beállítások"</li>\n<li>"A letöltött alkalmazások"</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Jelenleg a következő fiókokba van bejelentkezve:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Be lettek állítva más profilok ennél a járműnél."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Minden adat törlése"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> fiókjai"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Adatok automatikus szinkronizálása"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Az adatok automatikus frissítésének engedélyezése"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Bekapcsolja a szinkronizálást?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Az interneten végrehajtott fiókmódosítások automatikusan megjelennek az eszközén is.\n\nEgyes fiókok esetében ez fordítva is igaz. A Google-fiók így működik."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Kikapcsolja a szinkronizálást?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ez mérsékli az adathasználatot, de minden egyes fiókot manuálisan kell majd szinkronizálnia a legfrissebb információk begyűjtéséhez. Emellett a frissítésekről sem kap értesítéseket."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Fiókadatok"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Fiók hozzáadása"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Hogyan kell feloldási mintát rajzolni?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hiba történt a minta mentése során"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Túl sok helytelen próbálkozás. Próbálja újra <xliff:g id="NUMBER">%d</xliff:g> másodperc múlva."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"A tekerőgomb nem támogatott; érintsen"</string>
     <string name="okay" msgid="4589873324439764349">"Rendben"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Eltávolítja a képernyőzárat?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ezzel bárki hozzáférhet majd az Ön fiókjához"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"Eltávolítás"</string>
     <string name="cancel" msgid="750286395700355455">"Mégse"</string>
     <string name="allow" msgid="7519431342750394402">"Engedélyezés"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"Tiltás"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace billentyű"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter billentyű"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Az infotainment-rendszergazdai alkalmazás aktiválása engedélyezi a(z) <xliff:g id="APP_NAME">%1$s</xliff:g> alkalmazás számára a következő műveletek végrehajtását:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktiválja az infotainmentrendszer-appot?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Az infotainmentrendszer-app aktiválása"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Kikapcsolás és eltávolítás"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Az infotainmentrendszer-alkalmazás deaktiválása"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"A szervezetkezelő figyelheti és kezelheti az ezzel a profillal társított alkalmazásokat és adatokat, beleértve a beállításokat, az engedélyeket, a vállalati hozzáférést, a hálózati tevékenységeket és a jármű helyadatait is."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"A szervezetkezelő figyelheti és kezelheti az ezzel a profillal társított alkalmazásokat és adatokat, beleértve a beállításokat, az engedélyeket, a vállalati hozzáférést, a hálózati tevékenységeket és az eszköz helyadatait is."</string>
@@ -757,10 +762,19 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nincsenek aktivált alkalmazások"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"A(z) <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> járművekre vonatkozó irányelvei"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"A szervezetkezelő által kezelt beállítások"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"További információ erről: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Legalább <xliff:g id="COUNT_1">%d</xliff:g> alkalmazás</item>
+      <item quantity="one">Legalább <xliff:g id="COUNT_0">%d</xliff:g> alkalmazás</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> próbálkozás</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> próbálkozás</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Megosztja a hibajelentést?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"A jármű szervezetkezelője hibajelentést kért az eszközzel kapcsolatos probléma megoldása érdekében. Előfordulhat, hogy a rendszer megoszt alkalmazásokat és adatokat."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"A jármű szervezetkezelője hibajelentést kért az eszközzel kapcsolatos probléma megoldása érdekében. Előfordulhat, hogy a rendszer megoszt alkalmazásokat és adatokat, továbbá eszköze átmenetileg lelassulhat."</string>
@@ -794,22 +808,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Fehér alapon fekete"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Fekete alapon sárga"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Kék alapon sárga"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Képernyőolvasó"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Ki"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"A képernyő elemeinek felolvasása"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"A TalkBack használata"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Beállítások"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Beállítások"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"A TalkBack funkcióról"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"A TalkBack nem áll rendelkezésre, miközben a jármű mozgásban van.\n\nAmikor a TalkBack be van kapcsolva, hangos visszajelzést ad, így Ön anélkül használhatja eszközét, hogy ránézne a képernyőjére. A TalkBack eszközt olyan helyzetekre terveztük, amikor a felhasználók nem látják jól a képernyőt."</string>
 </resources>
