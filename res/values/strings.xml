@@ -300,6 +300,8 @@
     <string name="wifi_cellular_fallback_summary">Use mobile data when Wi\u2011Fi has no internet access. Data usage charges may apply.</string>
     <!-- Content description for the wifi state switch. [CHAR LIMIT=NONE] -->
     <string name="wifi_state_switch_content_description" translatable="false">Wi\u2011Fi toggle switch</string>
+    <!-- Subtitle for Wi-Fi state switch on the Network & internet page [CHAR LIMIT=45] -->
+    <string name="wifi_network_state_switch_subtitle">Find and connect to Wi\u2011Fi networks</string>
     <!-- url for the wifi scanning required dialog help page -->
     <string name="help_uri_wifi_scanning_required" translatable="false"></string>
     <!-- Button label to allow the user to view additional information [CHAR LIMIT=NONE] -->
