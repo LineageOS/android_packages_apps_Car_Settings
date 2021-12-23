@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"เข้าถึงอินเทอร์เน็ตโดยใช้เครือข่ายมือถือ"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"เครือข่ายมือถือ"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ใช้อินเทอร์เน็ตมือถือ"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ปิด"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ปิดเน็ตมือถือใช่ไหม"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ต้องเลือก"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ใช้อินเทอร์เน็ตมือถือของ <xliff:g id="CARRIER">%1$s</xliff:g> ไหม"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"หากคุณปิดการตั้งค่านี้ ระบบจะลบสิทธิ์เข้าถึงตำแหน่งของทุกแอป แต่แอปตัวช่วยของผู้ขับจะยังเข้าถึงตำแหน่งได้"</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ใช้ตำแหน่งสำหรับตัวช่วยของผู้ขับ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ตำแหน่งของรถยนต์ปิดอยู่"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"แอปตัวช่วยของผู้ขับเข้าถึงตำแหน่งไม่ได้"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"เปลี่ยน"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"อนุญาตให้แอปตัวช่วยขับรถเข้าถึงตำแหน่ง"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"หากคุณปิดการตั้งค่านี้ ระบบจะปิดใช้แอปตัวช่วยของผู้ขับที่ใช้ข้อมูลตำแหน่ง"</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ใช้ตำแหน่ง"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ตำแหน่งอาจใช้ข้อมูลจากแหล่งที่มาต่างๆ อย่างเช่น GPS, Wi‑Fi, เครือข่ายมือถือ และเซ็นเซอร์ เพื่อช่วยระบุตำแหน่งคร่าวๆ ของอุปกรณ์"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ตัวช่วยของผู้ขับ"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"ข้อมูลตำแหน่งที่ส่งไปยังแอปตัวช่วยของผู้ขับไม่มีข้อมูลที่ระบุตัวคุณได้ ระบบจะเก็บข้อมูลดังกล่าวไว้นานสูงสุด 2 วันก่อนที่จะลบ"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ไมโครโฟน"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ใช้ไมโครโฟน"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"อนุญาตให้แอปทั้งหมดเข้าถึงไมโครโฟนของคุณ"</string>
@@ -490,7 +489,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"รีเซ็ตค่ากำหนดของแอปแล้ว"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ลบข้อมูลทั้งหมด (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ลบข้อมูลและโปรไฟล์ทั้งหมดออกจากระบบสาระบันเทิง"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"การดำเนินการนี้จะลบข้อมูลทั้งหมดออกจากระบบสาระบันเทิงของรถยนต์ ซึ่งได้แก่\n\n"<li>"บัญชี Google"</li>\n<li>"ข้อมูลและการตั้งค่าของระบบและแอป"</li>\n<li>"แอปที่ดาวน์โหลดไว้"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"การดำเนินการนี้จะลบข้อมูลทั้งหมดออกจากระบบสาระบันเทิงของรถยนต์ ซึ่งได้แก่\n\n"<li>"บัญชีและโปรไฟล์ของคุณ"</li>\n<li>"ข้อมูลและการตั้งค่าของระบบและแอป"</li>\n<li>"แอปที่ดาวน์โหลดไว้"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"คุณลงชื่อเข้าใช้บัญชีต่อไปนี้อยู่ในขณะนี้:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"มีการตั้งค่าโปรไฟล์อื่นสำหรับรถยนต์คันนี้แล้ว"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ลบข้อมูลทั้งหมด"</string>
@@ -584,9 +583,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"บัญชีของ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ซิงค์ข้อมูลอัตโนมัติ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ให้แอปรีเฟรชข้อมูลอัตโนมัติ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"เปิดซิงค์ข้อมูลอัตโนมัติหรือไม่"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"การเปลี่ยนแปลงที่คุณทำต่อบัญชีในเว็บจะคัดลอกไปยังอุปกรณ์ของคุณโดยอัตโนมัติ\n\nบัญชีบางบัญชีอาจคัดลอกการเปลี่ยนแปลงที่คุณทำในโทรศัพท์ไปยังเว็บโดยอัตโนมัติด้วยเช่นกัน บัญชี Google ทำงานในลักษณะนี้"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ปิดซิงค์ข้อมูลอัตโนมัติหรือไม่"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"อนุญาตการซิงค์ข้อมูลอัตโนมัติใช่ไหม"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"การเปลี่ยนแปลงที่คุณทำต่อบัญชีในเว็บจะคัดลอกไปยังรถยนต์ของคุณโดยอัตโนมัติ\n\nบางบัญชีอาจคัดลอกการเปลี่ยนแปลงที่คุณทำในรถยนต์ไปยังเว็บโดยอัตโนมัติด้วยเช่นกัน"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ไม่อนุญาตการซิงค์ข้อมูลอัตโนมัติใช่ไหม"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ตัวเลือกนี้จะช่วยประหยัดอินเทอร์เน็ต แต่คุณจะต้องซิงค์แต่ละบัญชีด้วยตนเองเพื่อรวบรวมข้อมูลล่าสุด และคุณจะไม่ได้รับการแจ้งเตือนเมื่อมีการอัปเดต"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ข้อมูลบัญชี"</string>
     <string name="add_account_title" msgid="5988746086885210040">"เพิ่มบัญชี"</string>
@@ -650,8 +649,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"วิธีวาดรูปแบบการปลดล็อก"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"เกิดข้อผิดพลาดในการบันทึกรูปแบบ"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ดำเนินการไม่ถูกต้องหลายครั้งเกินไป ลองอีกครั้งใน <xliff:g id="NUMBER">%d</xliff:g> วินาที"</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"รูปแบบไม่รองรับปุ่มหมุน โปรดใช้หน้าจอสัมผัส"</string>
     <string name="okay" msgid="4589873324439764349">"ตกลง"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"นำการล็อกหน้าจอออกไหม"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"การดำเนินการนี้จะทำให้ทุกคนเข้าถึงบัญชีของคุณได้"</string>
@@ -701,6 +699,7 @@
     <string name="remove_button" msgid="6664656962868194178">"นำออก"</string>
     <string name="cancel" msgid="750286395700355455">"ยกเลิก"</string>
     <string name="allow" msgid="7519431342750394402">"อนุญาต"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"ไม่อนุญาต"</string>
     <string name="deny" msgid="340512788979930804">"ปฏิเสธ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"ปุ่มลบถอยหลัง"</string>
     <string name="enter_key" msgid="2121394305541579468">"ปุ่ม Enter"</string>
@@ -737,6 +736,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"การเปิดใช้งานแอประบบสาระบันเทิงนี้จะอนุญาตให้แอป <xliff:g id="APP_NAME">%1$s</xliff:g> ดำเนินการต่อไปนี้"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"เปิดใช้งานแอประบบสาระบันเทิงนี้ใช่ไหม"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"เปิดใช้งานแอประบบสาระบันเทิงนี้"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"ปิดใช้งานและถอนการติดตั้ง"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ปิดใช้งานแอประบบสาระบันเทิงนี้"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"ผู้จัดการองค์กรสามารถตรวจสอบและจัดการแอปและข้อมูลที่เชื่อมโยงกับโปรไฟล์นี้ ซึ่งรวมถึงการตั้งค่า สิทธิ์ การเข้าถึงของบริษัท กิจกรรมในเครือข่าย และข้อมูลตำแหน่งของรถยนต์"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ผู้จัดการองค์กรสามารถตรวจสอบและจัดการแอปและข้อมูลที่เชื่อมโยงกับโปรไฟล์นี้ ซึ่งรวมถึงการตั้งค่า สิทธิ์ การเข้าถึงของบริษัท กิจกรรมในเครือข่าย และข้อมูลตำแหน่งของอุปกรณ์"</string>
@@ -757,10 +757,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"ไม่มีแอปที่เปิดใช้งาน"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"นโยบายเกี่ยวกับรถยนต์ของ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"การตั้งค่าที่ผู้จัดการองค์กรดูแล"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ดูข้อมูลเพิ่มเติมเกี่ยวกับ<xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">อย่างน้อย <xliff:g id="COUNT_1">%d</xliff:g> แอป</item>
+      <item quantity="one">อย่างน้อย <xliff:g id="COUNT_0">%d</xliff:g> แอป</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> แอป</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> แอป</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other">พยายาม <xliff:g id="COUNT_1">%d</xliff:g> ครั้ง</item>
+      <item quantity="one">พยายาม <xliff:g id="COUNT_0">%d</xliff:g> ครั้ง</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">แอปกล้องถ่ายรูป</item>
+      <item quantity="one">แอปกล้องถ่ายรูป</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">แอปโปรแกรมรับส่งอีเมล</item>
+      <item quantity="one">แอปโปรแกรมรับส่งอีเมล</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">แอปโทรศัพท์</item>
+      <item quantity="one">แอปโทรศัพท์</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"แชร์รายงานข้อบกพร่องไหม"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ผู้จัดการองค์กรของรถยนต์คันนี้ได้ขอรายงานข้อบกพร่องเพื่อช่วยแก้ปัญหาอุปกรณ์ อาจมีการแชร์แอปและข้อมูล"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ผู้จัดการองค์กรของรถยนต์คันนี้ได้ขอรายงานข้อบกพร่องเพื่อช่วยแก้ปัญหาอุปกรณ์ อาจมีการแชร์แอปและข้อมูล ซึ่งอาจทำให้อุปกรณ์ทำงานช้าลงชั่วคราว"</string>
@@ -794,22 +815,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"สีดำบนพื้นสีขาว"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"สีเหลืองบนพื้นสีดำ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"สีเหลืองบนพื้นสีน้ำเงิน"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"โปรแกรมอ่านหน้าจอ"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"ปิด"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"พูดรายการในหน้าจอ"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"ใช้ TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"ตัวเลือก"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"การตั้งค่า"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"เกี่ยวกับ TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack ไม่พร้อมใช้งานขณะที่รถยนต์กำลังเคลื่อนไหว\n\nTalkBack จะอธิบายและอ่านออกเสียงเมื่อเปิดอยู่ เพื่อให้คุณใช้อุปกรณ์ได้โดยไม่ต้องมองหน้าจอ TalkBack มีไว้สำหรับสถานการณ์หรือบุคคลที่มีปัญหาในการมองเห็นหน้าจอ"</string>
 </resources>

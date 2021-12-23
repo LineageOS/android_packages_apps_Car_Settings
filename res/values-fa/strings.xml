@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"دسترسی به داده‌ها با استفاده از شبکه تلفن همراه"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"شبکه تلفن همراه"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"استفاده از داده تلفن همراه"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"خاموش"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"داده تلفن همراه خاموش شود؟"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"انتخاب ضروری است"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"استفاده از <xliff:g id="CARRIER">%1$s</xliff:g> برای داده همراه؟"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"اگر این ویژگی را خاموش کنید، دسترسی به مکان را برای همه برنامه حذف خواهد کرد. برنامه‌های «دستیار راننده» همچنان دسترسی خواهند داشت."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"استفاده از مکان برای «دستیار راننده»"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"مکان خودرو خاموش است"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"برنامه‌های «دستیار راننده» نمی‌توانند به مکانتان دسترسی پیدا کنند"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"تغییر"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"به برنامه‌های یاری‌رسان رانندگی اجازه دسترسی به مکان داده می‌شود"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"اگر این تنظیم را خاموش کنید، برنامه‌های «دستیار راننده» که بر اطلاعات مکان متکی‌اند غیرفعال خواهد شد."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"استفاده از مکان"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"«مکان» ممکن است برای تخمین مکان دستگاهتان از منابعی مانند GPS،‏ Wi-Fi، شبکه تلفن همراه و حسگرها استفاده کند."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"دستیار راننده"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"اطلاعات مکان ارسال‌شده به برنامه‌های «دستیار راننده» حاوی اطلاعات شناساننده هویت شما نیستند. این اطلاعات حداکثر ۲ روز ذخیره می‌مانند و بعداز آن حذف می‌شوند."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"میکروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استفاده از میکروفون"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"همه برنامه‌ها مجاز می‌شوند به میکروفون دسترسی داشته باشند"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تنظیمات برگزیده برنامه بازنشانی شده است"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"پاک‌سازی داده‌ها (بازنشانی کارخانه‌ای)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"پاک کردن همه داده‌ها و نمایه‌های سیستم اطلاعات-سرگرمی"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"با این کار، همه داده‌های سیستم اطلاعات-سرگرمی خودرو پاک می‌شود، ازجمله:\n\n"<li>"حساب Google شما"</li>\n<li>"تنظیمات و داده‌های برنامه و سیستم"</li>\n<li>"برنامه‌های بارگیری‌شده"</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"درحال‌حاضر به سیستم حساب های زیر وارد شده‌اید:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"نمایه‌های دیگری برای این خودرو راه‌اندازی شده است."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"پاک کردن تمام داده‌ها"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"حساب‌های <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"همگام‌سازی خودکار داده‌ها"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"اجازه دادن به برنامه‌ها برای بازخوانی خودکار داده‌ها"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"همگام‌سازی خودکار داده روشن شود؟"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"هر تغییری که در حساب‌هایتان در وب بدهید، به‌طور خودکار در دستگاهتان کپی می‌شود.\n\nبرخی حساب‌ها هم ممکن است به‌طور خودکار هر تغییری را که در تلفنتان می‌دهید در وب کپی کنند. حساب Google به‌این‌صورت کار می‌کند."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"همگام‌سازی خودکار داده خاموش شود؟"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"با این کار از داده‌ها محافظت می‌شود، اما برای جمع‌آوری اطلاعات اخیر باید همه حساب‌ها را به‌طور دستی همگام‌سازی کنید. درصورت به‌روزرسانی نیز اعلان دریافت نمی‌کنید."</string>
     <string name="account_details_title" msgid="7529571432258448573">"اطلاعات حساب"</string>
     <string name="add_account_title" msgid="5988746086885210040">"افزودن حساب"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"نحوه ترسیم الگوی بازگشایی قفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"خطای ذخیره الگو"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تلاش‌های نادرست زیادی انجام شده است. <xliff:g id="NUMBER">%d</xliff:g> ثانیه دیگر دوباره امتحان کنید."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"الگو از چرخش پشتیبانی نمی‌کند، لطفاً از لمس کردن استفاده کنید"</string>
     <string name="okay" msgid="4589873324439764349">"تأیید"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"قفل صفحه برداشته شود؟"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"این کار به همه افراد اجازه می‌دهد به حسابتان دسترسی پیدا کنند"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"حذف"</string>
     <string name="cancel" msgid="750286395700355455">"لغو"</string>
     <string name="allow" msgid="7519431342750394402">"مجاز"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"رد کردن"</string>
     <string name="backspace_key" msgid="1545590866688979099">"کلید پس‌بر"</string>
     <string name="enter_key" msgid="2121394305541579468">"کلید را وارد کنید"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"فعال کردن این برنامه سیستم اطلاعات-سرگرمی به برنامه <xliff:g id="APP_NAME">%1$s</xliff:g> اجازه می‌دهد عملکردهای زیر را انجام دهد:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"برنامه سیستم اطلاعات-سرگرمی فعال شود؟"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"فعال کردن این برنامه سیستم اطلاعات-سرگرمی"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"غیرفعال کردن و حذف کردن نصب"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"غیرفعال کردن این برنامه سیستم اطلاعات-سرگرمی"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"مدیر سازمان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه، ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه، و اطلاعات مکان خودرو نظارت داشته باشد و آن‌ها را مدیریت کند."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"مدیر سازمان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه، ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه، و اطلاعات مکان دستگاه نظارت داشته باشد و آن‌ها را مدیریت کند."</string>
@@ -757,10 +762,19 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"برنامه فعالی وجود ندارد"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"خط‌مشی وسیله نقلیه <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"تنظیمات تحت‌کنترل مدیر سازمان"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"درباره <xliff:g id="SERVICE">%1$s</xliff:g> بیشتر بدانید"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
+      <item quantity="other">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"گزارش اشکال به‌اشتراک گذاشته شود؟"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"مدیر سازمان این خودرو برای کمک به عیب‌یابی این دستگاه، گزارش اشکال درخواست کرده است. ممکن است برنامه‌ها و داده‌ها هم‌رسانی شود."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"مدیر سازمان این خودرو برای کمک به عیب‌یابی این دستگاه، گزارش اشکال درخواست کرده است. ممکن است برنامه‌ها و داده‌ها هم‌رسانی شود و سرعت دستگاهتان موقتاً کاهش یابد."</string>
@@ -794,22 +808,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"سیاه در سفید"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"زرد در سیاه"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"زرد در آبی"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"صفحه‌خوان"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"خاموش"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"موارد روی صفحه بلند خوانده شود"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"استفاده از TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"گزینه‌ها"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"تنظیمات"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"درباره TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack زمانی‌که خودرو درحال حرکت است دردسترس نیست.\n\nوقتی TalkBack روشن باشد، بازخورد گفتاری ارائه می‌دهد تا بتوانید بدون نگاه کردن به صفحه‌نمایش از دستگاهتان استفاده کنید. TalkBack برای افرادی که اختلال بینایی دارند یا مواقعی که دیدن صفحه‌نمایش مشکل است درنظر گرفته شده است."</string>
 </resources>

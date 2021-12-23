@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ к Интернету по мобильной сети"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобильная сеть"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Использовать мобильный интернет"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Отключено"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Отключить мобильный Интернет?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Выберите SIM-карту"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Переключиться на оператора \"<xliff:g id="CARRIER">%1$s</xliff:g>\"?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Если вы отключите эту настройку, данные о местоположении будут недоступны всем приложениям, кроме системы помощи водителю."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Геолокация для системы помощи водителю"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геоданные автомобиля не определяются"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Нет доступа к данным о местоположении"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Изменить"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Открыть доступ к данным о местоположении"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Если вы отключите эту настройку, приложения для помощи водителю, которым необходимы данные о местоположении, работать не будут."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Использовать данные о местоположении"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для определения местоположения устройства могут использоваться данные GPS, Wi-Fi, мобильных сетей и датчиков."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Система помощи водителю"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Данные о местоположении, которые отправляются системе помощи водителю, не содержат идентифицирующей вас информации. Они хранятся не более двух дней и затем удаляются."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Использовать микрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Разрешить всем приложениям доступ к микрофону"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Настройки приложений сброшены."</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Стереть все данные (заводские настройки)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Удалить все данные и профили из информационно-развлекательной системы"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Будут удалены все данные из информационно-развлекательной системы автомобиля, в том числе:\n\n"<li>"ваш аккаунт Google;"</li>\n<li>"данные и настройки системы и приложений;"</li>\n<li>"скачанные приложения."</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Вы вошли в следующие аккаунты:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"На этом автомобиле уже настроены другие профили."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Удалить все данные"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"Аккаунты пользователя <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Автосинхронизация данных"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Данные приложений будут обновляться автоматически"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Включить автосинхронизацию?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Все изменения в аккаунтах на компьютере будут автоматически копироваться на устройство.\n\nВ некоторых случаях также может выполняться обратная синхронизация (например, для аккаунта Google)."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Отключить автосинхронизацию?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Расход трафика будет ниже, но для получения новых данных вам придется синхронизировать аккаунты вручную. Уведомления о наличии обновлений будут отключены."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Информация об аккаунте"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Добавьте аккаунт"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Как начертить графический ключ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Не удалось сохранить графический ключ"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Слишком много неудачных попыток разблокировки. Повторите через <xliff:g id="NUMBER">%d</xliff:g> сек."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Граф. ключ невозможно ввести вращением."</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Отключить блокировку экрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Доступ к вашему аккаунту сможет получить кто угодно."</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"Удалить"</string>
     <string name="cancel" msgid="750286395700355455">"Отмена"</string>
     <string name="allow" msgid="7519431342750394402">"Разрешить"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"Отклонить"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Клавиша Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Клавиша Ввод"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"После того как вы активируете это приложение администратора информационно-развлекательной системы, приложение \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" сможет выполнять следующие действия:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Включить это приложение информационно-развлекательной системы?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Включить это приложение информационно-развлекательной системы"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Отключить и удалить"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Отключить это приложение информационно-развлекательной системы"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Менеджер организации может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам для этого профиля, а также связанные с ним данные, например сведения о местоположении автомобиля или действиях в сети."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Менеджер организации может контролировать настройки, приложения, разрешения и параметры доступа к корпоративным ресурсам для этого профиля, а также связанные с ним данные, например сведения о местоположении устройства или действиях в сети."</string>
@@ -757,10 +762,23 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Нет активных приложений"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила организации \"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>\" в отношении автотранспорта"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Настройки, которыми управляет менеджер организации"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Подробнее о сервисе \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложение</item>
+      <item quantity="few">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+      <item quantity="many">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложений</item>
+      <item quantity="other">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> попытка</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> попытки</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> попыток</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> попытки</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Поделиться отчетом об ошибке?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Менеджер организации, которой принадлежит этот автомобиль, запросил отчет об ошибке. Это поможет ему устранить неполадку. Кроме того, менеджер может получить доступ к приложениям и данным."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Менеджер организации, которой принадлежит этот автомобиль, запросил отчет об ошибке. Это поможет ему устранить неполадку. Менеджер может получить доступ к приложениям и данным. Кроме того, возможно временное снижение скорости работы устройства."</string>
@@ -794,22 +812,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Черный на белом"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Желтый на черном"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Желтый на синем"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Программа чтения с экрана"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Отключено"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Озвучивать элементы на экране"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Использовать TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Параметры"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Настройки"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"О функции TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"Функция TalkBack недоступна во время движения автомобиля.\n\nЕсли вы включите TalkBack, текст на экране будет озвучиваться. Это позволит пользоваться устройством, не глядя на его дисплей. Функция TalkBack предназначена для людей с нарушениями зрения, но также может пригодиться всем остальным, если информацию на экране трудно рассмотреть."</string>
 </resources>

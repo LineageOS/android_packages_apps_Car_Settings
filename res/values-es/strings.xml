@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a datos con la red móvil"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Red móvil"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Usar datos móviles"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Desactivada"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"¿Desactivar los datos móviles?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Debes seleccionar una opción"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"¿Usar <xliff:g id="CARRIER">%1$s</xliff:g> para los datos móviles?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Si la desactivas, se retirará el acceso a la ubicación de todas las aplicaciones. Las aplicaciones de asistencia en la conducción seguirán teniendo acceso a ella."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Ubicación en Asistencia en la conducción"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ubicación de vehículo desactivada"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Las apps de asistencia en la conducción no pueden acceder a tu ubicación"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir acceso a la ubicación de las apps de asistencia en la conducción"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si la desactivas, se inhabilitarán las aplicaciones de asistencia en la conducción que usan información de la ubicación."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Se pueden utilizar distintas fuentes, como el GPS, sensores y redes Wi‑Fi y móviles, para determinar la ubicación de este dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia en la conducción"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"La información de la ubicación enviada a las aplicaciones de asistencia en la conducción no contiene datos que te identifiquen. Se ha almacenado durante un máximo de 2 días antes de eliminarse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permite que todas las aplicaciones accedan al micrófono"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se han restablecido las preferencias de las aplicaciones"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Volver al estado de fábrica (borrar todo)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Borrar todos los datos y perfiles del sistema de infoentretenimiento"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Se borrarán todos los datos del sistema de infoentretenimiento de tu vehículo, como:\n\n"<li>"Tu cuenta de Google"</li>\n<li>"Los ajustes y datos de aplicaciones y del sistema"</li>\n<li>"Las aplicaciones descargadas"</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Has iniciado sesión en estas cuentas:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Se han configurado otros perfiles en este vehículo."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Borrar todos los datos"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"Cuentas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar datos automáticamente"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permite que las aplicaciones actualicen los datos automáticamente"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"¿Activar sincronización autom.?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Los cambios que hagas en tus cuentas en la Web se reflejarán automáticamente en el dispositivo.\n\nAlgunas cuentas como, por ejemplo, las cuentas de Google, también reflejarán en la Web los cambios que hagas en el teléfono. A continuación, puedes ver cómo funciona  una cuenta de Google."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"¿Desactivar sincronización aut.?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Esto te permitirá ahorrar datos, pero tendrás que sincronizar cada cuenta de forma manual para obtener información reciente y no recibirás notificaciones cuando haya actualizaciones."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Información de la cuenta"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Añadir cuenta"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cómo crear un patrón de desbloqueo"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"No se ha podido guardar el patrón"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Demasiados intentos fallidos. Vuelve a intentarlo dentro de <xliff:g id="NUMBER">%d</xliff:g> segundos."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"No puede usarse patrón de rotación; usa uno táctil"</string>
     <string name="okay" msgid="4589873324439764349">"Aceptar"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"¿Quitar bloqueo de pantalla?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Cualquier usuario podrá acceder a tu cuenta"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"Quitar"</string>
     <string name="cancel" msgid="750286395700355455">"Cancelar"</string>
     <string name="allow" msgid="7519431342750394402">"Permitir"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"Denegar"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tecla de retroceso"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tecla Intro"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Activar esta aplicación del sistema de infoentretenimiento permitirá que la aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> haga lo siguiente:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"¿Activar esta app de infoentretenimiento?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Activar esta aplicación del sistema de infoentretenimiento"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Desactivar y desinstalar"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desactivar esta aplicación del sistema de infoentretenimiento"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"El administrador de la organización puede monitorizar y gestionar aplicaciones y datos asociados a este perfil, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del vehículo."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"El administrador de la organización puede monitorizar y gestionar aplicaciones y datos asociados a este perfil, como ajustes, permisos, acceso corporativo, actividad en la red e información sobre la ubicación del dispositivo."</string>
@@ -757,10 +762,19 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"No hay ninguna aplicación activada"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política del vehículo <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Ajustes gestionados por el administrador de la organización"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Más información sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Al menos <xliff:g id="COUNT_1">%d</xliff:g> aplicaciones</item>
+      <item quantity="one">Al menos <xliff:g id="COUNT_0">%d</xliff:g> aplicación</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> intentos</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> intento</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"¿Compartir informe de errores?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos, y que el dispositivo funcione más lento de forma temporal."</string>
@@ -794,22 +808,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Negro sobre blanco"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Amarillo sobre negro"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Amarillo sobre azul"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Lector de pantalla"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Desactivado"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Decir elementos que están en la pantalla"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Usar TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Opciones"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Ajustes"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Información sobre TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack no está disponible mientras el vehículo está en movimiento.\n\nCuando TalkBack está activado, emite mensajes de voz para que puedas usar tu dispositivo sin mirar su pantalla. TalkBack está pensado para situaciones en las que no se puede mirar la pantalla y para personas a quienes les cuesta verla."</string>
 </resources>
