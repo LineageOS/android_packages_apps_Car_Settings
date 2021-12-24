@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ да даных па мабільнай сетцы"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мабільная сетка"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Выкарыстоўваць мабільную перадачу даных"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Выключана"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Адключыць мабільную перадачу даных?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Трэба выбраць"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Выкарыстоўваць <xliff:g id="CARRIER">%1$s</xliff:g> для трафіка?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Калі выключыць гэту наладу, доступ да геаданых будзе выдалены для ўсіх праграм, але не для праграм падтрымкі вадзіцеля."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Выкарыстоўваць геаданыя для падтрымкі вадзіцеля"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геалакацыя аўтамабіля выключана"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Праграмы дапамогі вадзіцелю не маюць доступу да геаданых"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Змяніць"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Даць доступ да геаданых праграмам падтрымкі вадзіцеля"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Калі выключыць гэту наладу, праграмы падтрымкі вадзіцеля, для работы якіх патрабуецца інфармацыя аб месцазнаходжанні, будуць выключаны."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Выкарыстоўваць геалакацыю"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для вызначэння месцазнаходжання прылады могуць выкарыстоўвацца даныя GPS, Wi-Fi, мабільных сетак і датчыкаў."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Падтрымка вадзіцеля"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Звесткі пра месцазнаходжанне, якія адпраўляюцца праграмам дапамогі вадзіцелю, не змяшчаюць інфармацыі, па якой вас можна ідэнтыфікаваць. Яны захоўваюцца не больш за 2 дні, пасля чаго выдаляюцца."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрафон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Выкарыстоўваць мікрафон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Даць усім праграмам доступ да мікрафона"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Налады праграм скінуты"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Сцерці даныя (скід да заводскіх налад)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Выдаліць усе даныя і профілі з інфармацыйна-забаўляльнай сістэмы"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"З інфармацыйна-забаўляльнай сістэмы аўтамабіля будуць выдалены ўсе даныя, у тым ліку:\n\n"<li>"ваш Уліковы запіс Google;"</li>\n<li>"налады і даныя сістэмы і праграм;"</li>\n<li>"спампаваныя праграмы."</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"У дадзены момант вы ўвайшлі ў наступныя ўліковыя запісы:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"На гэтым аўтамабілі наладжаны іншыя профілі."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Сцерці ўсе даныя"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"Уліковыя запісы карыстальніка <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Аўтаматычна сінхранізаваць даныя"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Дазволіць праграмам абнаўляць даныя аўтаматычна"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Уключыць аўтасінхранізацыю?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Усе змяненні, унесеныя ва ўліковы запіс у інтэрнэце, аўтаматычна капіруюцца ў памяць прылады.\n\nДля некаторых уліковых запісаў усе змены, зробленыя ў тэлефоне, могуць таксама аўтаматычна капіравацца ў інтэрнэт. Уліковы запіс Google працуе такім чынам."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Адключыць аўтасінхранізацыю?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Гэта дапаможа ашчаджаць трафік. Але, каб мець свежую інфармацыю, вам давядзецца сінхранізаваць кожны ўліковы запіс уручную. І вы не будзеце атрымліваць апавяшчэнні пра абнаўленні."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Даныя аб уліковым запісе"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Дадаць уліковы запіс"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Як нарысаваць узор разблакіроўкі"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Памылка захавання ўзору разблакіроўкі"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Занадта шмат няўдалых спроб. Паспрабуйце яшчэ раз праз <xliff:g id="NUMBER">%d</xliff:g> с."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Паваротны рэгулятар не падтрымліваецца, выкарыстайце сэнсарны ўвод"</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Зняць блакіроўку экрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Доступ да вашага ўліковага запісу зможа атрымаць любы чалавек"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"Выдаліць"</string>
     <string name="cancel" msgid="750286395700355455">"Скасаваць"</string>
     <string name="allow" msgid="7519431342750394402">"Дазволіць"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"Адмовіць"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Клавіша Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Клавіша Enter"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Актывацыя гэтай праграмы інфармацыйна-забаўляльнай сістэмы дазволіць праграме \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" выконваць наступныя дзеянні:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Актываваць гэту праграму?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Актываваць гэту праграму інфармацыйна-забаўляльнай сістэмы"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Дэактываваць і выдаліць"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Адключыць гэту праграму інфармацыйна-забаўляльнай сістэмы"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Менеджар арганізацыі можа адсочваць праграмы і даныя, звязаныя з гэтым профілем (у тым ліку налады, дазволы, параметры карпаратыўнага доступу, дзеянні ў сетцы і месцазнаходжанне аўтамабіля), і кіраваць імі."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Менеджар арганізацыі можа адсочваць праграмы і даныя, звязаныя з гэтым профілем (у тым ліку налады, дазволы, параметры карпаратыўнага доступу, дзеянні ў сетцы і месцазнаходжанне прылады), і кіраваць імі."</string>
@@ -757,10 +762,23 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Няма актываваных праграм"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Палітыка кампаніі \"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>\" адносна транспартных сродкаў"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Налады, якімі кіруе менеджар арганізацыі"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Даведацца больш пра сэрвіс \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграма</item>
+      <item quantity="few">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
+      <item quantity="many">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграм</item>
+      <item quantity="other">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> спроба</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> спробы</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> спроб</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> спробы</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Абагуліць справаздачу пра памылку?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Менеджар арганізацыі, якой належыць гэты аўтамабіль, запытаў справаздачу пра памылку, каб выкарыстаць яе для пошуку і выпраўлення непаладак. Ён можа атрымаць доступ да праграм і даных."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Менеджар арганізацыі, якой належыць гэты аўтамабіль, запытаў справаздачу пра памылку, каб выкарыстаць яе для пошуку і выпраўлення непаладак. Ён можа атрымаць доступ да праграм і даных, а хуткасць работы прылады можа часова знізіцца."</string>
@@ -794,22 +812,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Чорны тэкст на белым фоне"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Жоўты тэкст на чорным фоне"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Жоўты тэкст на сінім фоне"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Праграма чытання з экрана"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Выключана"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Прагаварыць элементы на экране"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Выкарыстоўваць TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Параметры"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Налады"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Інфармацыя пра TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"Функцыя TalkBack недаступная падчас руху аўтамабіля.\n\nКалі гэта функцыя ўключана, яна забяспечвае галасавую зваротную сувязь, з дапамогай якой можна карыстацца прыладай, не гледзячы на экран. Функцыя TalkBack прызначана для людзей з парушэннямі зроку ці сітуацый, калі экран складана разглядзець."</string>
 </resources>

@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"మొబైల్ నెట్‌వర్క్‌ను ఉపయోగించి డేటాను యాక్సెస్ చేయండి"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"మొబైల్ నెట్‌వర్క్"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"మొబైల్ డేటాను ఉపయోగించండి"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ఆఫ్‌లో ఉంది"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"మొబైల్ డేటాని ఆఫ్ చేయాలా?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ఎంపిక అవసరం"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"మొబైల్ డేటా కోసం <xliff:g id="CARRIER">%1$s</xliff:g> ఉపయోగించాలా?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"మీరు దీనిని ఆఫ్ చేస్తే, అది అన్ని యాప్‌ల కోసం లొకేషన్ యాక్సెస్‌ను తీసివేస్తుంది. \'డ్రైవర్ సహాయం\' యాప్‌లు ఇప్పటికీ యాక్సెస్‌ను కలిగి ఉంటాయి."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"డ్రైవర్ సహాయం కోసం లొకేషన్ ఉపయోగించండి"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"వాహన లొకేషన్ ఆఫ్ చేయబడింది"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"\'డ్రైవర్ సహాయం\'కు లొకేషన్ యాక్సెస్ లేదు"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"మార్చండి"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"డ్రైవింగ్‌లో సహాయపడే యాప్‌లను మీ లొకేషన్‌ను యాక్సెస్ చేయడానికి అనుమతించండి"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"మీరు దీనిని ఆఫ్ చేస్తే, లొకేషన్ సమాచారంపై ఆధారపడే \'డ్రైవర్ సహాయం\' యాప్‌లు డిజేబుల్ చేయబడతాయి."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"మీ పరికరం లొకేషన్‌ను అంచనా వేయడంలో సహాయపడటానికి GPS, Wi-Fi, మొబైల్ నెట్‌వర్క్‌లు, సెన్సార్‌ల వంటి సోర్సులను \'లొకేషన్\' ఉపయోగించవచ్చు."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"డ్రైవర్ సహాయం"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"\'డ్రైవర్ సహాయం\' యాప్‌లకు పంపిబడిన లొకేషన్ సమాచారంలో మీ గుర్తింపునకు సంబంధించిన సమాచారం ఉండదు. ఇది తొలగించబడటానికి ముందు గరిష్టంగా 2 రోజులు స్టోర్ చేయబడుతుంది."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"మైక్రోఫోన్"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"మైక్రోఫోన్‌ను ఉపయోగించండి"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"మీ మైక్రోఫోన్‌ను యాక్సెస్ చేయడానికి అన్ని యాప్‌లను అనుమతించండి"</string>
@@ -490,7 +489,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"యాప్ ప్రాధాన్యతలు రీసెట్ చేయబడ్డాయి"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"డేటా అంతటినీ తొలగించు (ఫ్యాక్టరీ రీసెట్)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మొత్తం డేటా, ప్రొఫైల్‌లను ఫ్యాక్టరీ రీసెట్ చేస్తుంది"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"వీటితో సహా ఇది మీ వాహన సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మొత్తం డేటాను ఫ్యాక్టరీ రీసెట్ చేస్తుంది:\n\n"<li>"మీ Google ఖాతా"</li>\n<li>"సిస్టమ్, యాప్ డేటా, సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేసిన యాప్‌లు"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ఇది మీ వెహికల్ సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి వీటితో సహా మొత్తం డేటాను తొలగిస్తుంది:\n\n"<li>"మీ ఖాతాలు, ప్రొఫైల్‌లు"</li>\n<li>"సిస్టమ్ ఇంకా యాప్ డేటా, సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేయబడిన యాప్‌లు"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"మీరు ప్రస్తుతం కింది ఖాతాలకు సైన్ ఇన్ చేశారు:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ఈ వాహనం కోసం ఇతర ప్రొఫైల్‌లు సెటప్ చేయబడ్డాయి."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"మొత్తం డేటాను తొలగించండి"</string>
@@ -584,9 +583,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> యొక్క ఖాతాలు"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాని ఆటోమేటిక్‌గా సమకాలీకరించు"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"డేటాని ఆటోమేటిక్‌గా రిఫ్రెష్ చేసేలా యాప్‌లు అనుమతించబడతాయి"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"స్వీయ-సింక్‌ డేటాను ప్రారంభించాలా?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"వెబ్‌లో మీ ఖాతాలకు మీరు ఏవైనా మార్పులు చేస్తే అవి ఆటోమేటిక్‌గా మీ పరికరానికి కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు ఫోన్‌లో ఏవైనా మార్పులు చేస్తే కూడా ఆటోమేటిక్‌గా వాటిని వెబ్‌కి కాపీ చేస్తాయి. Google ఖాతా ఈ విధంగానే పనిచేస్తుంది."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"స్వీయ-సింక్‌ డేటాను ఆఫ్ చేయాలా?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించాలా?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"మీరు వెబ్‌లో మీ ఖాతాలకు చేసే ఏవైనా మార్పులు, మీ వెహికల్‌కు ఆటోమేటిక్‌గా కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు వెహికల్‌లో చేసే ఏవైనా మార్పులను వెబ్‌కు కూడా ఆటోమేటిక్‌గా కాపీ చేయవచ్చు."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించవద్దా?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ఇది డేటాను ఆదా చేస్తుంది, కానీ మీరు ఇటీవలి సమాచారాన్ని సేకరించడానికి మాన్యువల్‌గా ప్రతి ఖాతాను సమకాలీకరించాల్సి ఉంటుంది. అలాగే మీరు అప్‌డేట్‌లు జరిగినప్పుడు నోటిఫికేషన్‌లను స్వీకరించరు."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ఖాతా సమాచారం"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ఖాతాను జోడించండి"</string>
@@ -650,8 +649,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"అన్‌లాక్ నమూనాను ఎలా గీయాలి"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ఆకృతిని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"చాలా ఎక్కువ తప్పు ప్రయత్నాలు చేశారు. <xliff:g id="NUMBER">%d</xliff:g> సెకన్లలో మళ్లీ ట్రై చేయండి."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"ఆకృతి రోటరీకి సపోర్ట్ చేయదు, \'తాకండి\'"</string>
     <string name="okay" msgid="4589873324439764349">"సరే"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"స్క్రీన్ లాక్‌ను తీసివేయాలా?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ఎవరైనా మీ ఖాతాను యాక్సెస్ చేయడానికి ఇది అనుమతిస్తుంది"</string>
@@ -701,6 +699,7 @@
     <string name="remove_button" msgid="6664656962868194178">"తీసివేయి"</string>
     <string name="cancel" msgid="750286395700355455">"రద్దు చేయి"</string>
     <string name="allow" msgid="7519431342750394402">"అనుమతించు"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"అనుమతించవద్దు"</string>
     <string name="deny" msgid="340512788979930804">"తిరస్కరించు"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace కీ"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter కీ"</string>
@@ -737,6 +736,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను యాక్టివేట్ చేయడం వలన <xliff:g id="APP_NAME">%1$s</xliff:g> యాప్ ఈ కింది చర్యలను చేయగలుగుతుంది:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను యాక్టివేట్ చేయాలా?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను యాక్టివేట్ చేయండి"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"డీయాక్టివేట్ చేసి, అన్ఇన్‌స్టాల్ చేయండి"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను డియాక్టివేట్ చేయండి"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా వాహన లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను సంస్థ మేనేజర్ మానిటర్ చేయగలరు, అలాగే మేనేజ్ చేయగలరు."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా పరికర లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను సంస్థ మేనేజర్ మానిటర్ చేయగలరు, అలాగే మేనేజ్ చేయగలరు."</string>
@@ -757,10 +757,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"యాక్టివేట్ చేయబడిన యాప్‌లు ఏవీ లేవు"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> వాహన పాలసీ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"సంస్థ మేనేజర్ ద్వారా సెట్టింగ్‌లు మేనేజ్ చేయబడతాయి"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> గురించి మరింత తెలుసుకోండి"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">కనీసం <xliff:g id="COUNT_1">%d</xliff:g> యాప్‌లు</item>
+      <item quantity="one">కనీసం <xliff:g id="COUNT_0">%d</xliff:g> యాప్</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> యాప్‌లు</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> యాప్</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ప్రయత్నాలు</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ప్రయత్నం</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">కెమెరా యాప్‌లు</item>
+      <item quantity="one">కెమెరా యాప్</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">ఈమెయిల్ క్లయింట్ యాప్‌లు</item>
+      <item quantity="one">ఈమెయిల్ క్లయింట్ యాప్</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ఫోన్ యాప్‌లు</item>
+      <item quantity="one">ఫోన్ యాప్</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"బగ్ రిపోర్ట్‌ను షేర్ చేయాలా?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ఈ వాహన సంస్థ మేనేజర్, ఈ పరికర సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు, ఇంకా డేటా షేర్ చేయబడవచ్చు."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ఈ వాహన సంస్థ మేనేజర్, ఈ పరికర సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు, ఇంకా డేటా షేర్ చేయబడవచ్చు, మీ పరికరం పనితీరు తాత్కాలికంగా నెమ్మదించవచ్చు."</string>
@@ -794,22 +815,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"తెలుపు బ్యాక్‌గ్రౌండ్‌లో నలుపు టెక్స్ట్"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"నలుపు బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"నీలం బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"స్క్రీన్ రీడర్"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"ఆఫ్‌లో ఉంది"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"స్క్రీన్‌పై ఐటెమ్‌లను చదివి వినిపించు"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBackను ఉపయోగించండి"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"ఆప్షన్‌లు"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"సెట్టింగ్‌లు"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack పరిచయం"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"వాహనం చలనంలో ఉన్నప్పుడు TalkBack అందుబాటులో ఉండదు.\n\nTalkBack ఆన్‌లో ఉన్నప్పుడు, అది మాటల ప్రతిస్పందనను అందిస్తుంది, తద్వారా మీరు స్క్రీన్‌ను చూడాల్సిన అవసరం లేకుండానే మీ డివైజ్‌ను ఉపయోగించవచ్చు. TalkBack అనేది స్క్రీన్‌ను చూడటానికి కష్టపడే వ్యక్తులు లేదా పరిస్థితుల కోసం ఉద్దేశించినది."</string>
 </resources>

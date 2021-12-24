@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Finyelela kudatha usebenzisa inethiwekhi yeselula"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Inethiwekhi yeselula"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Sebenzisa idatha yeselula"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Valiwe"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vala idatha yeselula?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Ukukhetha kuyadingeka"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Sebenzisa i-<xliff:g id="CARRIER">%1$s</xliff:g> yedatha yeselula?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Uma uvala lokhu, kuzosusa ukufinyelela kwendawo yakho kuwo wonke ama-app. Ama-app we-Driver Assistance asazoba nokufinyelela."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Sebenzisa indawo mayelana ne-Driver Assistance"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Indawo yemoto ivaliwe"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Ama-app we-Driver Assistance awakwazi ukufinyelela indawo yakho"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Shintsha"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Vumela ama-app asiza ngokushayela ukuba afinyelele indawo yakho"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Uma uvala lokhu, ama-app we-Driver Assistance ancike kulwazi lendawo azokhutshazwa."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Sebenzisa indawo"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Indawo ingasebenzisa imithombo enjenge-GPS, i-Wi-Fi, inethiwekhi yeselula, nezinzwa ukusiza ekulinganiseleni indawo yedivaysi yakho."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Umsizi womshayeli"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Ulwazi lendawo oluthunyelwe kuma-app we-Driver Assistant alinalo ulwazi olukukhombayo. Kugcinwa izinsuku ezingeqi kwezi-2 ngaphambi kokuthi kusulwe."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Imakrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Sebenzisa imakrofoni"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Vumela wonke ama-app ukuthi afinyelele kumakrofoni yakho"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Izintandokazi zohlelo lokusebenza zisethwe kabusha"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Sula yonke idatha (ukusethwa kabusha njengasekuqaleni)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Sula yonke idatha namaphrofayela kusuka kusistimu ye-infotainment"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Lokhu kuzosusa yonke idatha kusukela kusistimu ye-infotainment yakho, efaka:\n\n"<li>"I-Akhawunti yakho ye-Google"</li>\n<li>"Isistimu nedatha yohlelo lokusebenza nezilungiselelo"</li>\n<li>"Ama-app adawunilodiwe"</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Manje ungene ngemvume kuma-akhawunti alandelayo:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Amanye amaphrofayela asethelwe le moto."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Sula yonke idatha"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"Ama-akhawunti e-<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Vumelanisa ngokuzenzakalelayo idatha"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Vumela izinhlelo zokusebenza ziqalise kabusha idatha"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Vula ukuvumelanisa idatha?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Noma yiziphi izinguquko ozenzayo kuma-akhawunti wakho kuwebhu kuzokopishelwa ngokuzenzakalela kufoni yakho.\n\nAmanye ama-akhawunti angahle akopishe ngokuzenzakalelayo noma yiziphi izinguquko ozenzayo kufoni kuya kuwebhu. I-Akhawunti ye-Google isebenza ngale ndlela."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Vala ukuvumelanisa idatha?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Lokhu kuzosebenzisa idatha, kodwa uzodinga ukuvumelanisa i-akhawunti ngayinye ukuze uqoqe ulwazi lwakamuva. Futhi ngeke uthole izaziso uma izibuyekezo zivela."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Ulwazi lwe-akhawunti"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Engeza i-akhawunti"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Udweba kanjani phathini yokuvula"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Iphutha ukulondoloza iphethini"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Imizamo eminingi engalungile. Zama futhi kumasekhondi angu-<xliff:g id="NUMBER">%d</xliff:g>."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Iphethini ayisekeli i-rotary, sicela usebenzise ukuthinta"</string>
     <string name="okay" msgid="4589873324439764349">"KULUNGILE"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Susa isikrini sokukhiya?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Lokhu kuzovumela wonke umuntu ukufinyelela i-akhawunti yakho"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"Susa"</string>
     <string name="cancel" msgid="750286395700355455">"Khansela"</string>
     <string name="allow" msgid="7519431342750394402">"Vumela"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"Phika"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Ukhiye we-backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Ukhiye we-enter"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Ukwenza le app yesistimu ye-infotainment ukuthi isebenze kuzovumela i-app ye-<xliff:g id="APP_NAME">%1$s</xliff:g> ukwenza imisebenzi elandelayo:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Yenza le app yesistimu ye-infotainement isebenze?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Yenza le app yesistimu ye-infotainement isebenze"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Yekisa futhi ukhiphe"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Yenza le app yesistimu ye-infotainment ukuthi ingasebenzi"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Umphathi wenhlangano angakwazi ukuphatha ama-app nedatha ehlobene nale phrofayela, okufaka phakathi amasethingi, izimvume, ukufinyelela kwebhizinisi, umsebenzi wenethiwekhi, nolwazi lwendawo yemoto."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Umphathi wenhlangano angakwazi ukugada nokuphatha ama-app nedatha ehlobene nale phrofayela, okufaka phakathi amasethingi, izimvume, ukufinyelela kwebhizinisi, umsebenzi wenethiwekhi, nolwazi lwendawo yedivayisi."</string>
@@ -757,10 +762,19 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Awekho ama-app enziwe asebenza"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"inqubomgomo yemoto ye-<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Amasethingi aphethwe ngumphathi wale nhlangano"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Funda kabanzi nge-<xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Ubuncane bama-app obungu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">Ubuncane bama-app obungu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one">imizamo engu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">imizamo engu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Yabelana ngombiko wesiphazamisi?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Umphathi wenhlangano yale moto ucele umbiko wesiphazamisi ukusiza ukuxazulula inkinga kule divayisi. Ama-app nedatha kungabelwana."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Umphathi wenhlangano yale moto ucele umbiko wesiphazamisi ukusiza ukuxazulula inkinga kule divayisi. Ama-app nedatha kungabelwana, futhi idivayisi yakho ingahle yehle kancane."</string>
@@ -794,22 +808,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Okumnyama kokumhlophe"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Okuliphuzi kokumnyama"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Okuliphuzi kokuluhlaza okwesibhakabhaka"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Isifundi sesikrini"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"I-TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Valiwe"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Khuluma izinto kusikrini"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Sebenzisa i-TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Izinketho"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Amasethingi"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Mayelana ne-TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"I-TalkBack ayitholakali lapho imoto ihamba.\n\nUma i-TalkBack ivuliwe, inikeza impendulo ekhulunywayo ukuze ukwazi ukusebenzisa idivayisi yakho ngaphandle kokubheka isikrini. I-TalkBack ihloselwe izimo noma abantu abanobunzima bokubona isikrini."</string>
 </resources>

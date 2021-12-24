@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‎‎‎‏‎‏‏‎‏‏‎‎‏‏‏‎‏‎‎‎‎‏‏‎‎‎‏‏‏‏‎‎‏‏‎‏‏‎‏‎‏‏‎‎‎‎‎‎‏‎‏‏‏‏‏‏‏‎‎‎Access data using mobile network‎‏‎‎‏‎"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‎‏‏‎‏‏‎‎‎‎‏‎‎‎‎‎‎‎‎‏‏‎‏‏‎‏‏‏‏‎‏‎‎‏‎‏‎‎‎‎‏‏‎‎‏‎‏‎‎‎‎‏‏‎‏‎‏‎Mobile network‎‏‎‎‏‎"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‏‏‎‏‎‏‎‎‎‎‎‏‎‎‎‏‎‎‎‎‏‏‎‏‏‏‏‎‎‎‏‎‎‎‎‎‏‎‎‎‎‎‏‏‏‎‎‎‎‏‏‏‏‎‏‏‎‎‎Use mobile data‎‏‎‎‏‎"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‏‎‏‎‎‎‏‏‎‎‎‎‏‎‎‏‏‏‏‏‎‏‎‏‏‎‎‎‎‏‎‏‏‎‎‏‏‏‏‏‎‎‏‏‏‏‎‏‎‎‎‎‎‎‎‏‎‎‎Off‎‏‎‎‏‎"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‏‎‏‏‏‏‎‎‎‎‏‎‎‏‎‏‏‏‏‏‎‏‎‎‏‏‎‏‏‎‏‏‏‏‎‏‏‏‎‏‏‏‏‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎Turn off mobile data?‎‏‎‎‏‎"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‏‏‎‎‏‎‏‏‎‎‏‎‏‏‎‏‏‏‎‎‎‎‎‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‎‎‏‏‏‎‏‏‎‏‏‏‏‏‎‎‎‎Selection required‎‏‎‎‏‎"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‎‎‏‎‏‎‏‎‎‏‏‏‏‎‎‎‎‏‎‏‏‎‎‏‎‎‏‎‏‏‎‎‎‎‎‏‏‏‏‎‏‏‏‏‏‏‏‎‏‎‎‎‎‎‏‎‏‏‎Use ‎‏‎‎‏‏‎<xliff:g id="CARRIER">%1$s</xliff:g>‎‏‎‎‏‏‏‎ for mobile data?‎‏‎‎‏‎"</string>
@@ -488,7 +489,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‎‎‎‏‏‎‏‏‏‎‎‏‏‎‏‎‏‏‏‏‎‏‏‎‎‎‎‎‏‏‏‎‎‎‏‎‏‎‏‏‎‎‏‎‏‎‏‏‎‏‏‏‎‏‏‎‏‏‎‎App preferences have been reset‎‏‎‎‏‎"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‏‏‏‎‎‎‏‏‎‏‎‎‏‎‏‏‏‏‏‎‎‎‎‎‎‎‎‏‏‎‎‏‎‏‎‏‎‎‏‏‏‏‏‎‏‏‎‎‎‎‏‎‎‎‏‎‎‎Erase all data (factory reset)‎‏‎‎‏‎"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‏‏‏‎‏‏‏‎‎‏‏‏‎‏‎‎‏‏‏‏‎‎‎‎‏‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‏‎‏‎‎‎‏‏‏‏‏‎‎‎‏‏‏‎Erase all data and profiles from the infotainment system‎‏‎‎‏‎"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‏‏‎‏‏‎‏‏‏‎‎‎‏‎‏‎‏‎‎‎‏‏‎‎‏‏‏‏‏‏‎‏‎‎‎‏‏‏‎‎‏‏‏‎‏‎‎‏‏‎‎‎‎‏‏‏‎‎‎This will erase all data from your vehicle’s infotainment system, including:‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎"<li>"‎‏‎‎‏‏‏‎Your Google Account‎‏‎‎‏‏‎"</li>"‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎"<li>"‎‏‎‎‏‏‏‎System and app data and settings‎‏‎‎‏‏‎"</li>"‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎"<li>"‎‏‎‎‏‏‏‎Downloaded apps‎‏‎‎‏‏‎"</li>"‎‏‎‎‏‏‏‎‎‏‎‎‏‎"</string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‏‏‎‎‏‏‏‏‏‏‏‎‏‎‏‎‎‎‎‏‏‎‎‏‏‏‏‎‏‏‎‏‎‏‏‏‎‏‏‏‎‎‏‏‎‎‎‎‎‎‎‎‏‎‏‎‎‏‎‎This will erase all data from your vehicle’s infotainment system, including:‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎"<li>"‎‏‎‎‏‏‏‎Your accounts and profiles‎‏‎‎‏‏‎"</li>"‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎"<li>"‎‏‎‎‏‏‏‎System and app data and settings‎‏‎‎‏‏‎"</li>"‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎"<li>"‎‏‎‎‏‏‏‎Downloaded apps‎‏‎‎‏‏‎"</li>"‎‏‎‎‏‏‏‎‎‏‎‎‏‎"</string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‏‎‎‏‎‏‎‏‎‎‏‎‎‎‎‏‎‎‏‎‏‎‎‏‏‏‏‎‏‏‏‏‏‎‎‎‏‎‎‏‎‎‎‏‏‎‎‎‏‎‏‎‎‏‎‎‎‎‏‎You are currently signed into the following accounts:‎‏‎‎‏‎"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‎‏‎‏‏‏‎‏‏‎‎‎‏‏‎‏‎‎‏‎‎‏‏‎‏‏‏‏‏‎‎‎‎‎‎‏‏‏‎‎‎‎‏‎‎‏‏‏‏‏‏‏‎‎‏‎‏‎‎Other profiles have been set up for this vehicle.‎‏‎‎‏‎"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‏‎‎‎‏‏‏‎‎‏‏‏‏‎‎‏‎‏‏‎‎‎‎‏‎‎‎‏‏‏‏‎‏‏‏‎‎‎‎‎‎‎‏‎‏‎‏‎‏‏‏‎‏‎‎‎‎‎‎‎Erase all data‎‏‎‎‏‎"</string>
@@ -582,9 +583,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‎‏‏‏‏‎‏‎‎‎‏‏‎‏‏‎‎‏‎‏‎‏‎‎‎‏‏‏‏‏‎‏‎‏‏‎‎‎‎‎‏‎‎‏‎‏‎‏‎‎‎‏‏‏‏‎‎‏‎Accounts for ‎‏‎‎‏‏‎<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>‎‏‎‎‏‏‏‎‎‏‎‎‏‎"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‏‎‎‏‏‏‏‎‎‏‎‏‎‎‏‎‏‏‎‏‏‏‎‎‏‎‏‏‎‏‏‎‏‎‏‎‎‏‎‏‏‏‎‎‎‏‏‏‏‎‎‏‏‎‎‏‎‎‎‎Automatically sync data‎‏‎‎‏‎"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‎‎‏‎‏‎‎‏‎‎‏‎‎‎‎‏‎‏‏‎‏‎‏‎‏‎‏‏‏‏‎‏‏‎‏‎‎‎‎‎‏‎‎‏‏‎‎‎‏‏‎‎‎‎‎‎‎‎‎Let apps refresh data automatically‎‏‎‎‏‎"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‏‏‏‎‏‎‎‏‎‏‏‏‏‏‎‎‎‎‎‎‏‎‏‏‏‏‏‏‎‎‎‏‎‎‏‏‎‎‏‏‏‏‏‎‎‏‎‎‏‏‎‎‏‎‎‎‎‏‎Turn auto-sync data on?‎‏‎‎‏‎"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‏‏‎‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‏‎‎‎‏‎‏‎‏‎‏‎‎‏‏‎‎‎‏‎‏‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‎‏‏‎‎‎Any changes you make to your accounts on the web will be automatically copied to your device.‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎Some accounts may also automatically copy any changes you make on the phone to the web. A Google Account works this way.‎‏‎‎‏‎"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‎‏‎‎‏‎‎‏‏‎‏‏‏‏‏‏‏‎‏‎‎‎‏‏‏‏‎‎‎‏‏‎‏‎‎‎‎‎‎‏‏‎‏‎‏‎‏‎‎‏‏‎‏‎‏‎‎‎‎Turn auto-sync data off?‎‏‎‎‏‎"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‏‏‏‏‏‏‏‎‎‏‎‎‎‏‏‏‏‎‎‎‎‎‎‏‎‎‏‏‎‏‎‎‎‎‏‏‏‏‏‎‎‎‎‏‎‎‎‏‏‎‎‎‏‏‎‏‎‎‎Allow automatic data syncing?‎‏‎‎‏‎"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‎‎‎‏‎‎‎‎‎‏‏‏‎‎‎‏‎‎‏‏‏‎‎‎‎‏‎‎‎‏‏‎‏‎‏‏‏‎‎‏‏‏‎‎‎‎‏‎‏‏‏‎‏‎‎‏‏‎‏‎Any changes you make to your accounts on the web will be automatically copied to your vehicle.‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎Some accounts may also automatically copy any changes you make on the vehicle to the web.‎‏‎‎‏‎"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‎‎‏‎‏‏‏‏‏‎‏‏‎‏‎‎‏‏‏‏‏‏‎‏‏‎‏‏‎‎‏‎‏‏‏‏‏‏‏‏‏‏‏‏‎‏‎‎‏‏‏‏‏‏‎‎‏‏‎Disallow automatic data syncing?‎‏‎‎‏‎"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‎‏‏‏‏‏‎‏‎‎‏‏‎‎‎‏‏‏‎‏‎‏‏‎‏‎‎‎‏‎‏‎‏‎‏‏‏‏‎‏‏‎‎‎‎‏‏‎‏‎‎‎‎‏‎‎‏‏‎This will conserve data, but you’ll need to sync each account manually to collect recent information. And you won’t receive notifications when updates occur.‎‏‎‎‏‎"</string>
     <string name="account_details_title" msgid="7529571432258448573">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‎‏‏‎‏‎‎‏‎‏‎‏‎‎‏‏‎‎‎‎‎‎‏‎‏‎‏‏‎‎‎‏‏‎‏‎‏‏‎‎‏‎‏‏‏‏‎‏‎Account info‎‏‎‎‏‎"</string>
     <string name="add_account_title" msgid="5988746086885210040">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‏‏‎‎‎‏‏‏‎‎‎‏‎‎‏‏‎‎‏‏‎‏‎‏‏‎‎‎‎‏‎‏‏‎‏‏‎‎‏‏‎‏‏‎‏‏‎‏‏‏‏‎‏‏‏‎‎‎‎Add account‎‏‎‎‏‎"</string>
@@ -698,6 +699,7 @@
     <string name="remove_button" msgid="6664656962868194178">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‎‎‎‏‏‏‏‏‎‏‏‎‎‏‏‏‏‎‎‎‏‏‎‎‏‎‎‏‏‎‎‏‎‏‏‎‎‏‎‏‏‏‏‎‏‎‏‎‏‏‏‎‎‎‎‎‏‎‎Remove‎‏‎‎‏‎"</string>
     <string name="cancel" msgid="750286395700355455">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‎‎‏‏‎‏‎‎‏‏‎‎‎‏‏‎‏‏‎‎‎‎‎‎‎‎‏‏‎‏‏‏‏‏‎‎‎‎‏‏‏‎‎‏‎‎‎‎‏‎‏‏‏‏‏‏‏‎Cancel‎‏‎‎‏‎"</string>
     <string name="allow" msgid="7519431342750394402">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‎‎‎‏‎‏‏‎‏‎‎‏‏‎‎‎‏‎‏‏‏‏‎‏‏‏‎‏‏‏‎‎‎‏‏‎‎‏‎‎‏‏‎‏‏‎‏‎‎‎‎‎‏‎‎‎‏‎‎Allow‎‏‎‎‏‎"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‏‏‏‎‏‎‎‎‎‎‎‏‏‎‏‎‏‏‎‏‏‎‏‏‏‎‏‎‎‎‏‏‏‏‎‏‏‎‎‎‎‎‏‏‎‎‏‎‏‎‎‎‎‎‏‎‏‎Don’t allow‎‏‎‎‏‎"</string>
     <string name="deny" msgid="340512788979930804">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‎‎‏‎‏‏‏‎‎‏‏‎‏‏‏‏‏‎‏‎‎‏‎‎‏‏‏‏‎‏‎‏‎‎‏‎‏‎‎‎‎‎‎‏‎‏‎‏‏‎‏‎‏‏‎‏‎‎‎Deny‎‏‎‎‏‎"</string>
     <string name="backspace_key" msgid="1545590866688979099">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‏‎‏‏‏‎‎‏‏‎‎‎‎‏‎‏‎‏‎‏‏‎‏‎‎‎‏‎‏‎‎‎‏‎‎‎‏‎‏‎‏‏‎‏‏‎‎‎‎‏‎‎‏‏‎‏‏‎Backspace key‎‏‎‎‏‎"</string>
     <string name="enter_key" msgid="2121394305541579468">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‎‏‎‏‏‏‎‎‎‎‏‎‏‏‎‏‎‎‏‏‏‎‎‎‎‏‏‎‎‏‏‎‏‎‎‏‎‏‎‏‏‏‏‎‏‎‎‎‏‎‏‏‎‎‏‏‎‎‎Enter key‎‏‎‎‏‎"</string>
@@ -734,6 +736,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‏‎‎‏‏‎‏‏‏‏‎‏‎‏‎‎‎‎‎‏‏‏‎‎‎‏‎‎‏‎‎‏‏‎‎‎‎‏‎‏‎‎‎‎‏‏‎‏‏‏‎‏‎‎‎‎‏‎‏‎Activating this infotainment system app will allow the app ‎‏‎‎‏‏‎<xliff:g id="APP_NAME">%1$s</xliff:g>‎‏‎‎‏‏‏‎ to perform the following operations:‎‏‎‎‏‎"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‎‎‏‏‎‏‎‎‏‎‎‏‏‎‎‎‏‏‎‏‏‎‏‏‎‏‏‎‎‎‏‏‏‏‎‏‎‎‏‎‎‏‏‎‎‎‏‏‏‎‎‏‏‎‏‏‎‏‎‎Activate this infotainment system app?‎‏‎‎‏‎"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‏‎‏‎‎‎‎‎‏‎‎‎‎‎‏‎‎‏‏‎‎‏‎‏‏‎‎‏‎‎‏‎‎‏‎‏‏‏‎‏‎‎‎‎‏‎‏‎‎‏‎‎‎‎‏‏‎‏‎Activate this infotainment system app‎‏‎‎‏‎"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‎‎‎‏‎‎‎‏‏‎‏‏‎‏‎‏‏‎‏‎‎‏‎‏‎‏‏‎‎‏‏‏‏‎‎‏‏‏‎‎‏‎‏‎‎‏‏‎‏‏‏‏‎‏‎‎‎‎‎Deactivate &amp; uninstall‎‏‎‎‏‎"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‎‏‏‏‏‎‎‏‎‏‎‎‏‏‏‎‎‏‏‏‎‎‎‎‏‏‏‏‎‎‎‏‎‎‎‏‏‎‏‏‎‎‎‎‎‎‏‏‎‏‏‎‎‎‎‎‏‏‎Deactivate this infotainment system app‎‏‎‎‏‎"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‎‎‎‎‎‏‎‎‏‎‏‏‏‏‏‎‎‏‎‏‎‏‎‏‎‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‏‏‎‎‎‏‏‎‏‎‎‏‏‏‏‎‎‎The organization manager can monitor and manage apps and data associated with this profile, including settings, permissions, corporate access, network activity, and the vehicle\'s location information.‎‏‎‎‏‎"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‎‏‎‎‎‏‎‏‎‎‏‎‎‎‏‏‎‏‎‎‏‎‏‏‎‏‏‎‎‎‏‏‎‏‎‏‎‏‏‎‎‎‎‏‎‏‏‏‎‎‎‎‏‎‏‎‎‏‎The organization manager can monitor and manage apps and data associated with this profile, including settings, permissions, corporate access, network activity, and the device\'s location information.‎‏‎‎‏‎"</string>
@@ -754,10 +757,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‏‎‎‏‏‏‏‏‏‎‎‏‎‏‎‏‎‎‎‎‎‏‎‎‎‎‏‏‎‏‎‎‎‎‏‏‎‏‏‎‏‎‎‏‏‎‎‎‎‏‏‏‏‎‎‎‎‏‎‎No activated apps‎‏‎‎‏‎"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‎‎‏‎‎‎‎‏‏‎‎‏‏‏‎‎‏‏‎‏‏‏‏‎‎‎‏‎‏‏‏‎‏‏‏‏‏‎‎‎‏‎‎‏‎‏‎‎‏‎‎‏‏‎‏‎‎‎‎‎‎‏‎‎‏‏‎<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>‎‏‎‎‏‏‏‎ vehicle policy‎‏‎‎‏‎"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‎‎‏‏‏‎‏‏‎‏‎‎‎‏‎‏‏‏‏‏‎‏‏‏‏‎‏‎‏‎‏‎‏‏‏‎‎‏‏‎‎‎‏‏‏‏‏‏‎‏‏‏‎‎‎‎‎‏‎‎Settings managed by the organization manager‎‏‎‎‏‎"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‏‏‏‎‎‎‏‎‏‏‏‎‎‏‎‏‎‏‏‏‎‏‎‎‎‏‎‎‏‏‏‏‎‏‎‎‏‏‏‏‏‎‎‏‏‎‎‎‎‏‎‎‎‎‏‏‏‎‎Learn more about ‎‏‎‎‏‏‎<xliff:g id="SERVICE">%1$s</xliff:g>‎‏‎‎‏‏‏‎‎‏‎‎‏‎"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‏‎‏‎‎‏‏‎‎‏‎‎‏‏‏‏‎‎‎‎‏‎‎‏‏‎‎‎‎‏‎‎‎‏‏‏‏‎‏‏‏‎‏‏‎‎‏‏‎‏‎‎‎‎‎‎‎‎‎Minimum ‎‏‎‎‏‏‎<xliff:g id="COUNT_1">%d</xliff:g>‎‏‎‎‏‏‏‎ apps‎‏‎‎‏‎</item>
+      <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‏‎‏‎‎‏‏‎‎‏‎‎‏‏‏‏‎‎‎‎‏‎‎‏‏‎‎‎‎‏‎‎‎‏‏‏‏‎‏‏‏‎‏‏‎‎‏‏‎‏‎‎‎‎‎‎‎‎‎Minimum ‎‏‎‎‏‏‎<xliff:g id="COUNT_0">%d</xliff:g>‎‏‎‎‏‏‏‎ app‎‏‎‎‏‎</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‎‎‎‏‏‏‏‏‏‏‎‎‏‏‏‎‎‏‏‎‏‏‎‏‏‎‎‎‎‎‎‏‎‎‎‎‏‎‏‎‎‎‏‎‏‎‏‏‎‎‏‎‎‏‏‎‏‎‎‎‏‎‎‏‏‎<xliff:g id="COUNT_1">%d</xliff:g>‎‏‎‎‏‏‏‎ apps‎‏‎‎‏‎</item>
+      <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‎‎‎‏‏‏‏‏‏‏‎‎‏‏‏‎‎‏‏‎‏‏‎‏‏‎‎‎‎‎‎‏‎‎‎‎‏‎‏‎‎‎‏‎‏‎‏‏‎‎‏‎‎‏‏‎‏‎‎‎‏‎‎‏‏‎<xliff:g id="COUNT_0">%d</xliff:g>‎‏‎‎‏‏‏‎ app‎‏‎‎‏‎</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‏‎‎‎‏‎‏‏‏‏‏‏‏‏‏‎‎‎‎‏‎‎‎‎‎‎‏‎‎‎‏‎‏‏‏‎‏‏‏‏‎‏‏‎‎‏‏‏‏‎‏‏‎‎‏‎‎‎‎‎‏‎‎‏‏‎<xliff:g id="COUNT_1">%d</xliff:g>‎‏‎‎‏‏‏‎ attempts‎‏‎‎‏‎</item>
+      <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‏‎‎‎‏‎‏‏‏‏‏‏‏‏‏‎‎‎‎‏‎‎‎‎‎‎‏‎‎‎‏‎‏‏‏‎‏‏‏‏‎‏‏‎‎‏‏‏‏‎‏‏‎‎‏‎‎‎‎‎‏‎‎‏‏‎<xliff:g id="COUNT_0">%d</xliff:g>‎‏‎‎‏‏‏‎ attempt‎‏‎‎‏‎</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‏‎‎‏‏‎‎‎‏‏‏‎‎‎‎‏‏‏‎‎‏‏‏‏‏‎‏‎‏‎‏‏‏‏‎‏‏‎‎‎‏‏‎‏‎‏‏‎‎‎‏‎‏‎‏‏‏‏‎‎Camera apps‎‏‎‎‏‎</item>
+      <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‏‎‎‏‏‎‎‎‏‏‏‎‎‎‎‏‏‏‎‎‏‏‏‏‏‎‏‎‏‎‏‏‏‏‎‏‏‎‎‎‏‏‎‏‎‏‏‎‎‎‏‎‏‎‏‏‏‏‎‎Camera app‎‏‎‎‏‎</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‎‎‏‏‎‏‏‏‎‎‎‎‏‎‏‏‎‎‎‏‏‎‎‎‏‎‏‏‏‎‎‏‎‏‎‎‏‎‏‎‏‏‏‎‏‏‏‏‎‏‎‏‏‏‎Email client apps‎‏‎‎‏‎</item>
+      <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‎‎‏‏‎‏‏‏‎‎‎‎‏‎‏‏‎‎‎‏‏‎‎‎‏‎‏‏‏‎‎‏‎‏‎‎‏‎‏‎‏‏‏‎‏‏‏‏‎‏‎‏‏‏‎Email client app‎‏‎‎‏‎</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‎‏‏‎‎‎‎‎‎‏‎‏‎‎‏‏‎‏‎‎‎‏‏‎‎‎‏‎‏‏‏‎‎‎‏‏‏‏‎‏‎‎‏‎‏‎‏‏‎‎‎‎‏‏‎‎‏‏‎‎Phone apps‎‏‎‎‏‎</item>
+      <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‎‏‏‎‎‎‎‎‎‏‎‏‎‎‏‏‎‏‎‎‎‏‏‎‎‎‏‎‏‏‏‎‎‎‏‏‏‏‎‏‎‎‏‎‏‎‏‏‎‎‎‎‏‏‎‎‏‏‎‎Phone app‎‏‎‎‏‎</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‏‎‎‏‏‎‏‏‏‏‏‎‎‎‎‏‎‏‎‏‎‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‏‏‏‎‏‎‎‏‏‎‎‏‏‎‏‎‎‎‏‎‎Share bug report?‎‏‎‎‏‎"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‎‏‎‏‎‎‏‏‎‏‎‏‎‏‎‏‏‏‏‏‏‏‏‎‏‏‎‏‏‏‏‏‏‎‎‎‏‎‏‏‏‏‎‎‏‏‏‎‎‏‏‎‎‏‎‎‎‏‎This vehicle\'s organization manager requested a bug report to help troubleshoot this device. Apps and data may be shared.‎‏‎‎‏‎"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‎‏‎‏‏‎‏‏‎‎‎‏‎‏‎‏‎‏‏‎‎‎‎‎‎‏‏‎‎‏‎‏‏‎‏‏‏‎‎‏‎‎‏‎‎‎‎‏‏‏‏‏‎‏‎‎‏‏‎This vehicle\'s organization manager requested a bug report to help troubleshoot this device. Apps and data may be shared, and your device may temporarily slow down.‎‏‎‎‏‎"</string>
@@ -791,22 +815,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‎‎‎‏‏‎‏‎‏‎‏‏‎‎‏‏‎‎‎‏‎‏‏‏‎‏‎‎‎‏‎‏‏‏‏‏‏‎‎‏‎‎‏‏‎‎‏‏‏‎‎‏‎‎‏‎‎‎Black on white‎‏‎‎‏‎"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‎‎‎‏‏‏‏‏‎‎‎‎‏‎‎‎‎‏‏‎‏‏‎‏‏‎‏‎‏‏‏‏‎‎‎‏‎‎‎‏‎‏‏‎‎‏‎‎‏‎‏‏‏‎‎‎‏‏‏‎Yellow on black‎‏‎‎‏‎"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‏‎‎‏‏‎‎‏‎‏‎‎‏‏‎‏‏‏‏‏‎‏‏‎‎‎‎‏‏‏‎‏‏‏‎‏‎‎‎‎‏‏‏‎‎‏‎‎‎‏‎‏‏‎‏‏‏‏‎Yellow on blue‎‏‎‎‏‎"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‏‎‏‏‏‏‎‏‎‏‏‏‏‏‎‏‏‏‏‏‏‎‏‏‎‏‏‏‏‎‏‎‏‎‎‎‏‏‎‎‏‏‏‎‎‏‎‏‎‎‎‎‎‎‎‏‎‎‎Screen reader‎‏‎‎‏‎"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‎‏‎‎‏‏‎‏‏‏‎‏‎‏‎‏‏‎‎‏‏‎‏‎‎‎‏‏‎‏‏‎‎‏‎‏‏‏‏‎‎‏‏‎‎‏‏‏‏‏‏‎‎‎‎‎‏‎TalkBack‎‏‎‎‏‎"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‎‏‎‏‎‎‎‏‎‎‏‎‏‏‎‎‏‏‎‏‏‏‏‏‏‎‎‎‎‏‎‎‎‏‎‏‏‏‎‎‏‏‏‎‎‏‎‏‎‏‏‎‎‎‏‏‎‎Off‎‏‎‎‏‎"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‏‎‎‎‎‏‏‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‎‏‏‏‏‎‏‏‏‏‎‎‏‏‎‏‏‎‎‎‏‎‎‏‎‎‎‎‎‏‏‎‎‏‎‎Speak items on screen‎‏‎‎‏‎"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‎‎‎‎‎‎‏‎‎‎‏‏‎‏‏‏‎‏‏‏‎‎‏‎‎‏‏‏‏‏‎‎‏‎‏‎‎‏‏‏‏‎‎‏‎‎‎‏‏‏‏‎‏‏‎‏‏‎Use TalkBack‎‏‎‎‏‎"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‏‏‎‎‎‏‏‏‎‏‎‏‎‎‎‏‏‏‏‎‎‎‎‎‎‏‎‏‏‎‏‏‏‏‎‏‎‎‎‏‏‏‎‏‎‎‎‎‎‏‎‏‏‎‏‎‏‏‎‎Options‎‏‎‎‏‎"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‎‎‏‏‎‎‎‎‏‎‏‎‏‏‏‏‎‏‏‎‏‏‎‎‏‎‏‏‏‏‎‎‏‏‎‏‏‎‎‏‎‏‏‏‎‎‏‏‎‎‎‏‎‎‏‎‏‏‎Settings‎‏‎‎‏‎"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‏‏‏‏‏‏‎‎‎‏‎‎‎‏‎‏‎‏‎‏‏‏‏‎‏‎‎‏‎‎‏‏‏‏‏‏‏‎‎‏‏‎‏‎‏‏‏‎‏‎‏‎‎‏‎‎‏‎‎About TalkBack‎‏‎‎‏‎"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‎‏‏‎‏‏‏‎‏‏‏‏‏‏‎‏‏‏‎‏‎‏‎‎‎‎‎‎‏‎‎‎‎‏‏‏‎‎‏‎‏‏‏‎‎‎‎‎‎‏‏‎‏‏‏‎‏‎‏‎TalkBack is not available while the vehicle is in motion.‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎When TalkBack is on, it provides spoken feedback so that you can use your device without looking at the screen. TalkBack is intended for situations or people who have difficulty seeing the screen.‎‏‎‎‏‎"</string>
 </resources>
