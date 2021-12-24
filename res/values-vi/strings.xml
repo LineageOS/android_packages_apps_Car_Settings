@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Sử dụng dữ liệu qua mạng di động"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mạng di động"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Dùng dữ liệu di động"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Tắt"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Tắt dữ liệu di động?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Cần phải lựa chọn"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Sử dụng <xliff:g id="CARRIER">%1$s</xliff:g> cho dữ liệu di động?"</string>
@@ -218,7 +219,7 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Nhấn để ghép nối với <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Chọn thiết bị Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Ngôn ngữ"</string>
-    <string name="languages_and_input_settings" msgid="3672322610529408248">"Ngôn ngữ và phương thức nhập"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Ngôn ngữ và nhập liệu"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Đề xuất"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Tất cả ngôn ngữ"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Bàn phím"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Thao tác tắt tính năng này sẽ xóa quyền truy cập thông tin vị trí của mọi ứng dụng. Ứng dụng sử dụng công nghệ hỗ trợ dành cho người lái xe sẽ vẫn có quyền truy cập."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Dùng vị trí để hỗ trợ người lái xe"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Thông tin vị trí của xe đang tắt"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Ứng dụng Hỗ trợ người lái xe không truy cập được vị trí của bạn"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Thay đổi"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Cho phép ứng dụng hỗ trợ lái xe truy cập vị trí"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Nếu bạn tắt chế độ này, những ứng dụng hỗ trợ dành cho người lái xe dựa vào thông tin vị trí sẽ bị tắt."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Sử dụng vị trí"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Dịch vụ vị trí có thể sử dụng những nguồn như GPS, Wi‑Fi, mạng di động và cảm biến để giúp ước tính vị trí của thiết bị."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Công nghệ hỗ trợ dành cho người lái xe"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Thông tin vị trí gửi tới ứng dụng Hỗ trợ người lái xe là loại thông tin không nhận dạng được bạn. Thông tin này được lưu trữ trong tối đa 2 ngày trước khi bị xóa"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrô"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Sử dụng micrô"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Cho phép mọi ứng dụng truy cập vào micrô"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Đã đặt lại tùy chọn ứng dụng"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Xóa mọi dữ liệu (đặt lại về trạng thái ban đầu)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Xóa toàn bộ dữ liệu và hồ sơ khỏi hệ thống thông tin giải trí này"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Thao tác này sẽ xóa toàn bộ dữ liệu trong hệ thống giải trí trên xe của bạn, bao gồm:\n\n"<li>"Tài khoản Google"</li>\n<li>"Dữ liệu hệ thống, dữ liệu ứng dụng và các chế độ cài đặt"</li>\n<li>"Ứng dụng đã tải xuống"</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Bạn hiện đã đăng nhập vào các tài khoản sau đây:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Đã có hồ sơ khác được thiết lập cho xe này."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Xóa toàn bộ dữ liệu"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"Tài khoản cho <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Tự động đồng bộ hóa dữ liệu"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Cho phép ứng dụng tự động làm mới dữ liệu"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Bật tự động đồng bộ hóa dữ liệu?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Mọi thay đổi bạn thực hiện đối với các tài khoản trên web sẽ được tự động sao chép vào thiết bị.\n\nMột số tài khoản cũng có thể tự động sao chép mọi thay đổi bạn thực hiện trên điện thoại lên web. Đây là cách hoạt động của Tài khoản Google."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Tắt tự động đồng bộ hóa dữ liệu?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Việc này sẽ bảo toàn dữ liệu, tuy nhiên, bạn cần phải đồng bộ hóa từng tài khoản theo cách thủ công để thu thập thông tin gần đây. Đồng thời, bạn sẽ không nhận được thông báo khi quá trình cập nhật diễn ra."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Thông tin tài khoản"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Thêm tài khoản"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cách vẽ hình mở khóa"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Lỗi khi lưu mẫu"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Bạn đã nhập sai quá nhiều lần. Hãy thử lại sau <xliff:g id="NUMBER">%d</xliff:g> giây."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Không hỗ trợ xoay trong hình mở khoá, hãy chạm"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Xóa phương thức khóa màn hình?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Thao tác này sẽ cho phép bất cứ ai cũng có thể truy cập vào tài khoản của bạn"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"Xóa"</string>
     <string name="cancel" msgid="750286395700355455">"Hủy"</string>
     <string name="allow" msgid="7519431342750394402">"Cho phép"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"Từ chối"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Phím xóa lùi (Backspace)"</string>
     <string name="enter_key" msgid="2121394305541579468">"Phím Enter"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Khi bạn kích hoạt ứng dụng hệ thống thông tin giải trí này, ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> sẽ thực hiện được những thao tác sau:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Kích hoạt hệ thống thông tin giải trí này?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Kích hoạt ứng dụng hệ thống thông tin giải trí này"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Hủy kích hoạt và gỡ cài đặt"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Hủy kích hoạt ứng dụng hệ thống thông tin giải trí này"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hồ sơ này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hồ sơ này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
@@ -757,10 +762,19 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Chưa kích hoạt ứng dụng nào"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Chính sách đối với xe của <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Chế độ cài đặt này được quản lý bởi người quản lý của tổ chức"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Tìm hiểu thêm về <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Tối thiểu <xliff:g id="COUNT_1">%d</xliff:g> ứng dụng</item>
+      <item quantity="one">Tối thiểu <xliff:g id="COUNT_0">%d</xliff:g> ứng dụng</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> lần thử</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> lần thử</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Chia sẻ báo cáo lỗi?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Người quản lý của tổ chức của xe này đã yêu cầu cấp một báo cáo lỗi để giúp khắc phục sự cố trên thiết bị này. Ứng dụng và dữ liệu có thể sẽ được chia sẻ."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Người quản lý của tổ chức của xe này đã yêu cầu cấp một báo cáo lỗi để giúp khắc phục sự cố trên thiết bị này. Ứng dụng và dữ liệu có thể được chia sẻ và thiết bị của bạn có thể sẽ tạm thời bị chậm."</string>
@@ -794,22 +808,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Chữ đen trên nền trắng"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Chữ vàng trên nền đen"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Chữ vàng trên nền xanh dương"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Trình đọc màn hình"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Tắt"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Nói các mục trên màn hình"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Sử dụng TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Tùy chọn"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Cài đặt"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Giới thiệu về TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack không hoạt động khi xe đang di chuyển.\n\nKhi đang bật, TalkBack đưa ra phản hồi bằng giọng nói để bạn có thể dùng thiết bị mà không cần nhìn vào màn hình. TalkBack là dành cho những tình huống hoặc người gặp khó khăn khi nhìn màn hình."</string>
 </resources>

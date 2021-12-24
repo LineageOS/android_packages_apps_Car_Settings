@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಿ"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ಆಫ್"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ಮೊಬೈಲ್ ಡೇಟಾ ಆಫ್ ಮಾಡಬೇಕೆ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ಆಯ್ಕೆ ಅಗತ್ಯವಿದೆ"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ಮೊಬೈಲ್ ಡೇಟಾಗಾಗಿ <xliff:g id="CARRIER">%1$s</xliff:g> ಬಳಸುವುದೇ?"</string>
@@ -400,8 +401,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಇದು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯಮಾಡುವ ಫೀಚರ್‌ಗಳು ಈಗಲೂ ಪ್ರವೇಶವನ್ನು ಹೊಂದಿರುತ್ತವೆ."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಫೀಚರ್‌ಗಾಗಿ ಡ್ರೈವರ್ ಅವರ ಸ್ಥಳವನ್ನು ಬಳಸಿ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ವಾಹನದ ಸ್ಥಳ ಆಫ್ ಆಗಿದೆ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳು ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ಬದಲಾಯಿಸಿ"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸುವಲ್ಲಿ ಡ್ರೈವಿಂಗ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಸ್ಥಳ ಮಾಹಿತಿಯ ಮೇಲೆ ಅವಲಂಬಿತವಾದ ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತದೆ."</string>
@@ -413,8 +413,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ಸ್ಥಳವನ್ನು ಬಳಸಿ"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ಸ್ಥಳವು ನಿಮ್ಮ ಸಾಧನದ ಸ್ಥಳವನ್ನು ಅಂದಾಜು ಮಾಡಲು ಸಹಾಯ ಮಾಡುವುದಕ್ಕಾಗಿ GPS, ವೈಫೈ, ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳು ಮತ್ತು ಸೆನ್ಸರ್‌ಗಳಂತಹ ಮೂಲಗಳನ್ನು ಬಳಸಬಹುದು."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳಿಗೆ ಕಳುಹಿಸಲಾಗುವ ಸ್ಥಳದ ಮಾಹಿತಿಯು ನಿಮ್ಮನ್ನು ಗುರುತಿಸುವಂತಹ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಿರುವುದಿಲ್ಲ. ಅಳಿಸುವ ಮೊದಲು ಅದನ್ನು ಗರಿಷ್ಠ 2 ದಿನಗಳವರೆಗೆ ಸಂಗ್ರಹಿಸಿಡಲಾಗುತ್ತದೆ."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ಮೈಕ್ರೋಫೋನ್"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ಮೈಕ್ರೋಫೋನ್ ಅನ್ನು ಬಳಸಿ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ನಿಮ್ಮ ಮೈಕ್ರೊಫೋನ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
@@ -490,7 +489,8 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಆ್ಯಪ್‍ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ರಿಸೆಟ್)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನ ಎಲ್ಲಾ ಡೇಟಾ ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸುತ್ತದೆ"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ಇದರಿಂದಾಗಿ ಈ ಕೆಳಗಿನವೂ ಸೇರಿದಂತೆ, ನಿಮ್ಮ ವಾಹನದ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ:\n\n"<li>"ನಿಮ್ಮ Google ಖಾತೆ"</li>\n<li>"ಸಿಸ್ಟಂ ಮತ್ತು ಆ್ಯಪ್ ಡೇಟಾ ಹಾಗೂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</li>\n<li>"ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಆ್ಯಪ್‌ಗಳು"</li></string>
+    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
+    <skip />
     <string name="factory_reset_accounts" msgid="5523956654938834209">"ನೀವು ಪ್ರಸ್ತುತವಾಗಿ ಕೆಳಗಿನ ಖಾತೆಗಳಿಗೆ ಸೈನ್ ಇನ್ ಆಗಿರುವಿರಿ:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ಈ ವಾಹನಕ್ಕಾಗಿ ಇತರ ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಸೆಟಪ್ ಮಾಡಲಾಗಿದೆ."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಿ"</string>
@@ -584,9 +584,12 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ಅವರಿಗಾಗಿ ಖಾತೆಗಳು"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ಡೇಟಾವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಿಂಕ್ ಮಾಡಿ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ಆ್ಯಪ್‌ಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಡೇಟಾವನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲು ಬಿಡಿ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆನ್‌‌ಮಾಡುವುದೇ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ವೆಬ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಗಳಿಗೆ ಮಾಡಲಾದ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಮ್ಮ ಸಾಧನಕ್ಕೆ ನಕಲಿಸಲಾಗುತ್ತದೆ. \n\nಫೋನ್‌ನಲ್ಲಿ ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಕೆಲವು ಖಾತೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ವೆಬ್‌ಗೆ ನಕಲಿಸುತ್ತವೆ. Google ಖಾತೆ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ರೀತಿ ಇದು."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆಫ್‌ ಮಾಡುವುದೇ?"</string>
+    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
+    <skip />
+    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
+    <skip />
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ಇದು ಡೇಟಾ ಪೋಲಾಗದಂತೆ ತಡೆಯುತ್ತದೆ, ಆದರೆ ಇತ್ತೀಚಿನ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ನೀವು ಪ್ರತಿ ಖಾತೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಿಂಕ್‌ ಮಾಡಬೇಕಾಗುತ್ತದೆ. ಮತ್ತು ಅಪ್‌ಡೇಟ್‌ಗಳ ಸಂದರ್ಭದಲ್ಲಿ ನೀವು ಅಧಿಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ಖಾತೆಯ ಮಾಹಿತಿ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ಖಾತೆ ಸೇರಿಸಿ"</string>
@@ -650,8 +653,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ಅನ್‌ಲಾಕ್ ನಮೂನೆಯನ್ನು ರಚಿಸುವುದು ಹೇಗೆ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ಪ್ಯಾಟರ್ನ್‌ ಉಳಿಸುವಲ್ಲಿ ದೋಷ"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ಹಲವಾರು ತಪ್ಪು ಪ್ರಯತ್ನಗಳು. ಪುನಃ <xliff:g id="NUMBER">%d</xliff:g> ಸೆಕೆಂಡ್‌ಗಳ ನಂತರ ಪ್ರಯತ್ನಿಸಿ."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"ಪ್ಯಾಟರ್ನ್ ರೋಟರಿಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ, ಸ್ಪರ್ಶಿಸಿ"</string>
     <string name="okay" msgid="4589873324439764349">"ಸರಿ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ತೆಗೆದುಹಾಕಿ"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ಇದು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಯಾರು ಬೇಕಾದರೂ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸುತ್ತದೆ"</string>
@@ -701,6 +703,8 @@
     <string name="remove_button" msgid="6664656962868194178">"ತೆಗೆದುಹಾಕಿ"</string>
     <string name="cancel" msgid="750286395700355455">"ರದ್ದುಮಾಡಿ"</string>
     <string name="allow" msgid="7519431342750394402">"ಅನುಮತಿಸಿ"</string>
+    <!-- no translation found for do_not_allow (3157082400084747525) -->
+    <skip />
     <string name="deny" msgid="340512788979930804">"ನಿರಾಕರಿಸಿ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace ಕೀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ಕೀಲಿಯನ್ನು ನಮೂದಿಸಿ"</string>
@@ -737,6 +741,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ಈ ಕೆಳಗಿನ ಕಾರ್ಯಾಚರಣೆಗಳನ್ನು ಮಾಡಲು <xliff:g id="APP_NAME">%1$s</xliff:g> ಗೆ ಅನುಮತಿಸಲಾಗುತ್ತದೆ:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಸಕ್ರಿಯಗೊಳಿಸುವುದೇ?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಬಳಕೆದಾರರಿಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಪ್ರೊಫೈಲ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
@@ -757,10 +762,19 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"ಯಾವುದೇ ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ವಾಹನ ನೀತಿ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರಿಂದ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗಿದೆ"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">ಕನಿಷ್ಠ <xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
+      <item quantity="other">ಕನಿಷ್ಠ <xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
+    </plurals>
+    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಪ್ರಯತ್ನಗಳು</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಪ್ರಯತ್ನಗಳು</item>
+    </plurals>
+    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
+    <!-- no translation found for default_email_app_title (7786093487229942743) -->
+    <!-- no translation found for default_phone_app_title (72790081146542182) -->
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ಬಗ್ ವರದಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳುವುದೇ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಸಾಧನದ ಸಮಸ್ಯೆ ನಿವಾರಿಸಲು ಸಹಾಯ ಮಾಡಲು ಬಗ್ ವರದಿಯನ್ನು ವಿನಂತಿಸಿದ್ದಾರೆ. ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಸಾಧನದ ಸಮಸ್ಯೆ ನಿವಾರಿಸಲು ಸಹಾಯ ಮಾಡಲು ಬಗ್ ವರದಿಯನ್ನು ವಿನಂತಿಸಿದ್ದಾರೆ. ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು ಹಾಗೂ ನಿಮ್ಮ ಸಾಧನವು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಧಾನಗೊಳ್ಳಬಹುದು."</string>
@@ -794,22 +808,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"ಬಿಳಿಯ ಮೇಲೆ ಕಪ್ಪು"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ಕಪ್ಪಿನ ಮೇಲೆ ಹಳದಿ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"ನೀಲಿಯ ಮೇಲೆ ಹಳದಿ"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"ಸ್ಕ್ರೀನ್ ರೀಡರ್"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"ಆಫ್ ಆಗಿದೆ"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"ಸ್ಕ್ರೀನ್ ಮೇಲಿನ ಐಟಂಗಳನ್ನು ಓದಿ ಹೇಳಿ"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack ಅನ್ನು ಬಳಸಿ"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"ಆಯ್ಕೆಗಳು"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack ಕುರಿತು"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"ವಾಹನವು ಚಲಾವಣೆಯಲ್ಲಿರುವಾಗ TalkBack ಲಭ್ಯವಿರುವುದಿಲ್ಲ.\n\nTalkBack ಆನ್ ಆಗಿದ್ದಾಗ, ಅದು ಮಾತಿನ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನೀಡುತ್ತದೆ, ಇದರಿಂದಾಗಿ ನೀವು ಸ್ಕ್ರೀನ್ ಅನ್ನು ನೋಡದೆಯೇ ನಿಮ್ಮ ಸಾಧನವನ್ನು ಬಳಸಬಹುದು. TalkBack ಎನ್ನುವುದು ಸ್ಕ್ರೀನ್ ಅನ್ನು ನೋಡಲು ಕಷ್ಟವೆನಿಸುವ ಸಂದರ್ಭಗಳು ಅಥವಾ ವ್ಯಕ್ತಿಗಳನ್ನು ಉದ್ದೇಶಿಸಿ ರೂಪುಗೊಳಿಸಲಾಗಿದೆ."</string>
 </resources>
