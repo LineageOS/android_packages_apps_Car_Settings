@@ -84,7 +84,6 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     private PreferenceGroup mPreferenceGroup;
     private BluetoothDevicePickerPreferenceController mPreferenceController;
     private MockitoSession mSession;
-    private BluetoothAdapter mSpyBluetoothAdapter;
 
     @Mock
     private LocalBluetoothManager mLocalBluetoothManager;
@@ -102,6 +101,8 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     private BluetoothDevice mBondedDevice;
     @Mock
     private CachedBluetoothDeviceManager mCachedDeviceManager;
+    @Mock
+    private BluetoothAdapter mMockBluetoothAdapter;
 
     @Before
     @UiThreadTest
@@ -135,9 +136,8 @@ public class BluetoothDevicePickerPreferenceControllerTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking();
         when(BluetoothUtils.getLocalBtManager(mContext)).thenReturn(mLocalBluetoothManager);
-        mSpyBluetoothAdapter = spy(mContext.getSystemService(BluetoothManager.class).getAdapter());
         BluetoothManager bluetoothManager = mock(BluetoothManager.class);
-        when(bluetoothManager.getAdapter()).thenReturn(mSpyBluetoothAdapter);
+        when(bluetoothManager.getAdapter()).thenReturn(mMockBluetoothAdapter);
         when(mContext.getSystemService(BluetoothManager.class)).thenReturn(bluetoothManager);
 
         mPreferenceController = new TestBluetoothDevicePickerPreferenceController(mContext,
@@ -295,16 +295,16 @@ public class BluetoothDevicePickerPreferenceControllerTest {
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
-        verify(mSpyBluetoothAdapter).startDiscovery();
+        verify(mMockBluetoothAdapter).startDiscovery();
         BluetoothDevicePreference devicePreference =
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(1);
         when(mUnbondedCachedDevice.startPairing()).thenReturn(false);
 
-        Mockito.clearInvocations(mSpyBluetoothAdapter);
+        Mockito.clearInvocations(mMockBluetoothAdapter);
         devicePreference.performClick();
-        InOrder inOrder = inOrder(mSpyBluetoothAdapter);
-        inOrder.verify(mSpyBluetoothAdapter).setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
-        inOrder.verify(mSpyBluetoothAdapter).startDiscovery();
+        InOrder inOrder = inOrder(mMockBluetoothAdapter);
+        inOrder.verify(mMockBluetoothAdapter).setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
+        inOrder.verify(mMockBluetoothAdapter).startDiscovery();
     }
 
     @Test
