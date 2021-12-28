@@ -25,7 +25,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.bluetooth.BluetoothClass;
-import android.bluetooth.BluetoothProfile;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -39,7 +38,6 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.BluetoothTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.settingslib.bluetooth.BluetoothUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
 
@@ -109,13 +107,14 @@ public class BluetoothDeviceNamePreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_notConnected_setsDisconnectedAsSummary() {
+    public void refreshUi_notConnectedsetsCarConnectionSummaryAsSummary() {
+        String summary = "summary";
         when(mCachedDevice.isConnected()).thenReturn(false);
+        when(mCachedDevice.getCarConnectionSummary()).thenReturn(summary);
 
         mPreferenceController.refreshUi();
 
-        assertThat(mPreference.getSummary()).isEqualTo(mContext.getString(BluetoothUtils
-                .getConnectionStateSummary(BluetoothProfile.STATE_DISCONNECTED)));
+        assertThat(mPreference.getSummary()).isEqualTo(summary);
     }
 
     @Test
