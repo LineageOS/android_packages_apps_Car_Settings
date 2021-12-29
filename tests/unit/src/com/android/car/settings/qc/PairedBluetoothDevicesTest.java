@@ -28,6 +28,7 @@ import static com.android.car.settings.qc.PairedBluetoothDevices.PHONE_BUTTON;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -284,7 +285,7 @@ public class PairedBluetoothDevicesTest {
         when(cachedDevice.getAddress()).thenReturn(DEFAULT_ADDRESS);
         when(cachedDevice.isConnected()).thenReturn(connected);
         when(cachedDevice.isBusy()).thenReturn(busy);
-        when(cachedDevice.getCarConnectionSummary()).thenReturn(DEFAULT_SUMMARY);
+        when(cachedDevice.getCarConnectionSummary(anyBoolean())).thenReturn(DEFAULT_SUMMARY);
         BluetoothClass btClass = mock(BluetoothClass.class);
         when(cachedDevice.getBtClass()).thenReturn(btClass);
         when(btClass.getMajorDeviceClass()).thenReturn(BluetoothClass.Device.Major.PHONE);
