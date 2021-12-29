@@ -25,7 +25,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.car.drivingstate.CarUxRestrictions;
 
 import com.android.car.admin.ui.R;
-import com.android.settingslib.widget.FooterPreference;
+import com.android.car.settings.common.CarFooterPreference;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -36,13 +36,13 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
 
     private EnterpriseDisclosurePreferenceController mEnterpriseDisclosurePreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
-    private FooterPreference mPreference;
+    private CarFooterPreference mPreference;
 
     @Before
     public void setUp() {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
-        mPreference = new FooterPreference(mSpiedContext);
+        mPreference = new CarFooterPreference(mSpiedContext);
 
         mockHasDeviceAdminFeature();
         mEnterpriseDisclosurePreferenceController = new EnterpriseDisclosurePreferenceController(
