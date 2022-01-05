@@ -19,23 +19,19 @@ package com.android.car.settings.datausage;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.usage.NetworkStats;
+import android.app.usage.NetworkStatsManager;
 import android.content.Context;
-import android.net.INetworkStatsService;
-import android.net.INetworkStatsSession;
 import android.net.NetworkPolicyManager;
-import android.net.NetworkStats;
 import android.os.Bundle;
 
 import androidx.loader.app.LoaderManager;
 
-import com.android.car.settings.testutils.ShadowINetworkStatsServiceStub;
-import com.android.car.settings.testutils.ShadowNetworkPolicyManager;
-
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -45,11 +41,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 /** Unit test for {@link AppsNetworkStatsManager}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowINetworkStatsServiceStub.class, ShadowNetworkPolicyManager.class})
 public class AppsNetworkStatsManagerTest {
 
     private Context mContext;
@@ -69,10 +63,7 @@ public class AppsNetworkStatsManagerTest {
     private LoaderManager mLoaderManager;
 
     @Mock
-    private INetworkStatsService mINetworkStatsService;
-
-    @Mock
-    private INetworkStatsSession mINetworkStatsSession;
+    private NetworkStatsManager mNetworkStatsManager;
 
     @Mock
     private NetworkPolicyManager mNetworkPolicyManager;
@@ -82,23 +73,14 @@ public class AppsNetworkStatsManagerTest {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
 
-        when(mINetworkStatsService.openSession()).thenReturn(mINetworkStatsSession);
-        ShadowINetworkStatsServiceStub.setINetworkStatsSession(mINetworkStatsService);
-
         when(mNetworkPolicyManager.getUidsWithPolicy(anyInt())).thenReturn(new int[0]);
-        ShadowNetworkPolicyManager.setNetworkPolicyManager(mNetworkPolicyManager);
 
-        mAppsNetworkStatsManager = new AppsNetworkStatsManager(mContext);
+        mAppsNetworkStatsManager = new AppsNetworkStatsManager(
+                mContext, mNetworkPolicyManager, mNetworkStatsManager);
         mAppsNetworkStatsManager.startLoading(mLoaderManager, Bundle.EMPTY);
 
         verify(mLoaderManager).restartLoader(eq(1), eq(Bundle.EMPTY),
                 mCallbacksArgumentCaptor.capture());
-    }
-
-    @After
-    public void tearDown() {
-        ShadowINetworkStatsServiceStub.reset();
-        ShadowNetworkPolicyManager.reset();
     }
 
     @Test
@@ -106,7 +88,7 @@ public class AppsNetworkStatsManagerTest {
         mAppsNetworkStatsManager.registerListener(mCallback1);
         mAppsNetworkStatsManager.registerListener(mCallback2);
 
-        NetworkStats networkStats = new NetworkStats(0, 0);
+        NetworkStats networkStats = mock(NetworkStats.class);
 
         mCallbacksArgumentCaptor.getValue().onLoadFinished(null, networkStats);
 
@@ -120,7 +102,7 @@ public class AppsNetworkStatsManagerTest {
         mAppsNetworkStatsManager.registerListener(mCallback2);
         mAppsNetworkStatsManager.unregisterListener(mCallback2);
 
-        NetworkStats networkStats = new NetworkStats(0, 0);
+        NetworkStats networkStats = mock(NetworkStats.class);
 
         mCallbacksArgumentCaptor.getValue().onLoadFinished(null, networkStats);
 
@@ -134,9 +116,7 @@ public class AppsNetworkStatsManagerTest {
         mAppsNetworkStatsManager.registerListener(mCallback2);
         mAppsNetworkStatsManager.unregisterListener(mCallback2);
 
-        NetworkStats networkStats = new NetworkStats(0, 0);
-
-        verify(mCallback1, never()).onDataLoaded(eq(networkStats), any());
-        verify(mCallback2, never()).onDataLoaded(eq(networkStats), any());
+        verify(mCallback1, never()).onDataLoaded(any(), any());
+        verify(mCallback2, never()).onDataLoaded(any(), any());
     }
 }
