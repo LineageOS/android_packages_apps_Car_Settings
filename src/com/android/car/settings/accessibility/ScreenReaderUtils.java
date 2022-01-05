@@ -83,6 +83,26 @@ public class ScreenReaderUtils {
     }
 
     /**
+     * Returns the settings activity ComponentName of the system default screen reader if the screen
+     * reader is installed and a settings activity exists. Returns {@code null} otherwise.
+     */
+    @Nullable
+    static ComponentName getScreenReaderSettingsActivity(Context context) {
+        AccessibilityServiceInfo serviceInfo = getScreenReaderServiceInfo(context);
+        if (serviceInfo == null) {
+            return null;
+        }
+
+        String settingsActivity = serviceInfo.getSettingsActivityName();
+        if (settingsActivity == null || settingsActivity.isEmpty()) {
+            return null;
+        }
+
+        return new ComponentName(getScreenReaderComponentName(context).getPackageName(),
+                settingsActivity);
+    }
+
+    /**
      * Sets the screen reader enabled state. This should only be called if the screen reader is
      * installed.
      */
