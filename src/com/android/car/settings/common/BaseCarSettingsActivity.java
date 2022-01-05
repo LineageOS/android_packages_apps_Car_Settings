@@ -117,7 +117,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                     // Attempting to shift focus to the SettingsFocusParkingView without a layout
                     // listener is not allowed, since it can cause undermined focus behavior
                     // in these rare edge cases.
-                    newFocus.clearFocus();
+                    requestTopLevelMenuFocus();
                 }
 
                 // This will maintain focus in the content pane if a view goes from
@@ -434,6 +434,25 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         } else {
             observer.removeOnGlobalFocusChangeListener(mFocusChangeListener);
         }
+    }
+
+    private void requestTopLevelMenuFocus() {
+        if (mIsSinglePane) {
+            return;
+        }
+        Fragment topLevelMenu = getSupportFragmentManager().findFragmentById(R.id.top_level_menu);
+        if (topLevelMenu == null) {
+            return;
+        }
+        View fragmentView = topLevelMenu.getView();
+        if (fragmentView == null) {
+            return;
+        }
+        View focusArea = fragmentView.findViewById(R.id.settings_car_ui_focus_area);
+        if (focusArea == null) {
+            return;
+        }
+        focusArea.performAccessibilityAction(ACTION_FOCUS, /* arguments= */ null);
     }
 
     private void requestContentPaneFocus() {
