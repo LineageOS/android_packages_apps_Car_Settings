@@ -32,6 +32,7 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.settings.R;
 import com.android.internal.util.CollectionUtils;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
@@ -51,7 +52,8 @@ public final class DataUsageUtils {
             int subscriptionId) {
         NetworkTemplate mobileAll = NetworkTemplate.buildTemplateMobileAll(
                 telephonyManager.getSubscriberId(subscriptionId));
-        return NetworkTemplate.normalize(mobileAll, telephonyManager.getMergedSubscriberIds());
+        return NetworkTemplate.normalize(mobileAll,
+                Arrays.<String[]>asList(telephonyManager.getMergedSubscriberIds()));
     }
 
     /**
