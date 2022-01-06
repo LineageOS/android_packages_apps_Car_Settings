@@ -43,7 +43,7 @@
         android:summary="@string/app_permissions_summary"
         android:icon="@drawable/privacy_app_permissions"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
-        <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
+        <intent android:action="android.permission.action.REVIEW_PERMISSION_DECISIONS"/>
     </Preference>
 
     <Preference
