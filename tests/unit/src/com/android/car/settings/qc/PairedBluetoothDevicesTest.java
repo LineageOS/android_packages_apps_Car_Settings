@@ -38,11 +38,9 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
-import android.content.Context;
 import android.content.Intent;
 import android.os.UserManager;
 
-import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.qc.QCActionItem;
@@ -72,12 +70,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 @RunWith(AndroidJUnit4.class)
-public class PairedBluetoothDevicesTest {
+public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     private static final String DEFAULT_NAME = "DEFAULT_NAME";
     private static final String DEFAULT_SUMMARY = "DEFAULT_SUMMARY";
     private static final String DEFAULT_ADDRESS = "F6:8F:AC:E8:32:50";
 
-    private Context mContext = ApplicationProvider.getApplicationContext();
     private PairedBluetoothDevices mPairedBluetoothDevices;
     private MockitoSession mSession;
     private ArrayList<CachedBluetoothDevice> mCachedDevices = new ArrayList<>();
@@ -232,6 +229,40 @@ public class PairedBluetoothDevicesTest {
         assertThat(btToggle.isEnabled()).isFalse();
         assertThat(phoneToggle.isEnabled()).isFalse();
         assertThat(mediaToggle.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void getQCItem_hasBaseUmRestriction_togglesDisabled() {
+        setBaseUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
+        addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        QCRow row = list.getRows().get(0);
+        QCActionItem btToggle = row.getEndItems().get(0);
+        QCActionItem phoneToggle = row.getEndItems().get(1);
+        QCActionItem mediaToggle = row.getEndItems().get(2);
+        assertThat(btToggle.isEnabled()).isTrue();
+        assertThat(phoneToggle.isEnabled()).isFalse();
+        assertThat(phoneToggle.isClickableWhileDisabled()).isFalse();
+        assertThat(mediaToggle.isEnabled()).isFalse();
+        assertThat(mediaToggle.isClickableWhileDisabled()).isFalse();
+    }
+
+    @Test
+    public void getQCItem_hasUmRestriction_togglesClickableWhileDisabled() {
+        setUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
+        addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        QCRow row = list.getRows().get(0);
+        QCActionItem btToggle = row.getEndItems().get(0);
+        QCActionItem phoneToggle = row.getEndItems().get(1);
+        QCActionItem mediaToggle = row.getEndItems().get(2);
+        assertThat(btToggle.isEnabled()).isTrue();
+        assertThat(phoneToggle.isEnabled()).isFalse();
+        assertThat(phoneToggle.isClickableWhileDisabled()).isTrue();
+        assertThat(mediaToggle.isEnabled()).isFalse();
+        assertThat(mediaToggle.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
