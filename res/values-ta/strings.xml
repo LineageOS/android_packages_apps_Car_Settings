@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"வைஃபை ஸ்கேனிங் ஆன் செய்யப்பட்டது"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"தானாகவே மொபைல் டேட்டாவிற்கு மாறு"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"வைஃபையில் இணைய அணுகல் இல்லாதபோது மொபைல் டேட்டாவைப் பயன்படுத்தும். டேட்டா உபயோகத்திற்குக் கட்டணம் விதிக்கப்படலாம்."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"வைஃபை நெட்வொர்க்குகளைக் கண்டறிந்து இணைக்கும்"</string>
     <string name="learn_more" msgid="8214605928933358604">"மேலும் அறிக"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ஹாட்ஸ்பாட் பெயர்"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ஆன் ஆகிறது..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ஆப்ஸ் விருப்பத்தேர்வுகள் மீட்டமைக்கப்பட்டன"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"அனைத்தையும் அழி (ஆரம்பநிலைக்கு மீட்டமை)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள எல்லாத் தரவையும் சுயவிவரங்களையும் அழித்துவிடும்"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"இது உங்கள் வாகனத்தின் இன்ஃபோடெயின்மென்ட் சிஸ்டத்திலிருந்து அனைத்துத் தரவையும் அழித்துவிடும். இந்தத் தரவில் அடங்குபவை:\n\n"<li>"உங்கள் கணக்குகளும் சுயவிவரங்களும்"</li>\n<li>"சிஸ்டம் மற்றும் ஆப்ஸின் தரவும் அமைப்புகளும்"</li>\n<li>"பதிவிறக்கப்பட்ட ஆப்ஸ்"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"பின்வரும் கணக்குகளில் உள்நுழைந்துள்ளீர்கள்:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"இந்த வாகனத்திற்கான பிற சுயவிவரங்கள் அமைக்கப்பட்டன."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"எல்லாத் தரவையும் அழி"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> இன் கணக்குகள்"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"தானாகத் தரவை ஒத்திசை"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"தானாகத் தரவை ரெஃப்ரெஷ் செய்ய ஆப்ஸை அனுமதிக்கும்"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"தானியங்கு தரவு ஒத்திசைவை அனுமதிக்கவா?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"இணையத்தில் உங்கள் கணக்குகளில் ஏதேனும் மாற்றங்களைச் செய்தால் அவை தானாகவே உங்கள் வாகனத்திற்கு நகலெடுக்கப்படும்.\n\nவாகனத்தில் நீங்கள் செய்யும் மாற்றங்களையும் சில கணக்குகள் தானாகவே இணையத்திற்கு நகலெடுக்கக்கூடும்."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"தானியங்கு தரவு ஒத்திசைவை அனுமதிக்க வேண்டாமா?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"இவ்வாறு செய்வது தரவைச் சேமிக்கும், ஆனால் சமீபத்திய தகவலைச் சேகரிக்க ஒவ்வொரு கணக்கையும் நீங்களே நேரடியாக ஒத்திசைக்க வேண்டும். புதுப்பிக்கப்படும்போது அறிவிப்புகளைப் பெறமாட்டீர்கள்."</string>
     <string name="account_details_title" msgid="7529571432258448573">"கணக்குத் தகவல்"</string>
     <string name="add_account_title" msgid="5988746086885210040">"கணக்கைச் சேர்க்கவும்"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"அகற்று"</string>
     <string name="cancel" msgid="750286395700355455">"ரத்துசெய்"</string>
     <string name="allow" msgid="7519431342750394402">"அனுமதி"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"அனுமதிக்க வேண்டாம்"</string>
     <string name="deny" msgid="340512788979930804">"நிராகரி"</string>
     <string name="backspace_key" msgid="1545590866688979099">"பேக்ஸ்பேஸ் விசை"</string>
     <string name="enter_key" msgid="2121394305541579468">"என்டர் விசை"</string>
@@ -767,14 +763,26 @@
       <item quantity="other">குறைந்தது <xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
       <item quantity="one">குறைந்தது <xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> முயற்சிகள்</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> முயற்சி</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">கேமரா ஆப்ஸ்</item>
+      <item quantity="one">கேமரா ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">மின்னஞ்சல் கிளையன்ட் ஆப்ஸ்</item>
+      <item quantity="one">மின்னஞ்சல் கிளையன்ட் ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ஃபோன் ஆப்ஸ்</item>
+      <item quantity="one">ஃபோன் ஆப்ஸ்</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"பிழை அறிக்கையைப் பகிரவா?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"இந்தச் சாதனத்தைப் பிழையறிந்து திருத்துவதற்கு உதவ இந்த வாகன நிறுவனத்தின் நிர்வாகி, பிழை அறிக்கையைக் கோரியுள்ளார். ஆப்ஸும் தரவும் பகிரப்படக்கூடும்."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"இந்தச் சாதனத்தைப் பிழையறிந்து திருத்துவதற்கு உதவ இந்த வாகன நிறுவனத்தின் நிர்வாகி, பிழை அறிக்கையைக் கோரியுள்ளார். ஆப்ஸும் தரவும் பகிரப்படக்கூடும். மேலும் உங்கள் சாதனத்தின் வேகம் தற்காலிகமாகக் குறையக்கூடும்."</string>

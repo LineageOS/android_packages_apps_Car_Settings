@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi ස්කෑන් කිරීම ක්‍රියාත්මකයි"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ජංගම දත්ත වෙත ස්වයංක්‍රීයව මාරු වන්න"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi හට අන්තර්ජාල ප්‍රවේශය නැති විට ජංගම දත්ත භාවිතා කරන්න. දත්ත භාවිතයේ ගාස්තු අදාළ විය හැකිය."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi-Fi ජාල සොයා ගෙන සම්බන්ධ වන්න"</string>
     <string name="learn_more" msgid="8214605928933358604">"තව දැන ගන්න"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"හොට්ස්පොට් නම"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ක්‍රියාත්මක කරමින්..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"යෙදුම් මනාප යළි පිහිටුවා ඇත"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"සියලු දත්ත මකන්න (කර්මාන්තශාලා සැකසීම)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"සියලු දත්ත සහ පැතිකඩවල් තොරතුරු විනෝදාස්වාද පද්ධතියෙන් මකන්න"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"මෙය මේවා ඇතුළුව, ඔබ‍ගේ වාහනයේ විනෝදාස්වාද පද්ධතියෙන් සියලු දත්ත මකනු ඇත:\n\n"<li>"ඔබගේ ගිණුම් සහ පැතිකඩවල්"</li>\n<li>"පද්ධති සහ යෙදුම් දත්ත සහ සැකසීම්"</li>\n<li>"බාගත් යෙදුම්"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"ඔබ දැනට පහත ගිණුම් වෙත පුරා සිටියි:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"මෙම වාහනය සඳහා වෙනත් පැතිකඩ පිහිටුවා ඇත."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"සියලු දත්ත මකන්න"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> සඳහා ගිණුම්"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ස්වයංක්‍රීයව දත්ත සමමුහූර්ත කරන්න"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"යෙදුම් වෙත දත්ත ස්වයංක්‍රීයව නැවුම් කිරීමට ඉඩ දෙන්න"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ස්වයංක්‍රීය දත්ත සමමුහුර්ත කිරීම ඉඩ දෙන්නද?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"වෙබයෙහි ඔබගේ ගිණුම්වලට ඔබ සිදු කරන ඕනෑම වෙනස් කිරීමක් ස්වයංක්‍රියව ඔබගේ වාහනයට පිටපත් කරනු ඇත.\n\nසමහර ගිණුම් ඔබ වාහනයේ සිදු කරන ඕනෑම වෙනස් කිරීමක් ස්වයංක්‍රියව වෙබයට පිටපත් කිරීමටද ඉඩ ඇත."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ස්වයංක්‍රීය දත්ත සමමුහුර්ත කිරීම ඉඩ නොදෙන්නද?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"මෙමඟින් දත්ත භාවිතය ඉතිරි කරන, නමුත් මෑත තොරතුරු එකතු කිරීමට සෑම ගිණුමක්ම ඔබ හස්තීයව සමමුහූර්ත  කළ යුතු වෙයි. තවද යාවත්කාලීන සිදුවන විට ඔබට දැනුම්දීම් නොලැබෙයි."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ගිණුම් තතු"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ගිණුම එක් කරන්න"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"ඉවත් කරන්න"</string>
     <string name="cancel" msgid="750286395700355455">"අවලංගු කරන්න"</string>
     <string name="allow" msgid="7519431342750394402">"ඉඩ දෙන්න"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"ඉඩ නොදෙන්න"</string>
     <string name="deny" msgid="340512788979930804">"ප්‍රතික්ෂේප කරන්න"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace යතුර"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter යතුර"</string>
@@ -767,14 +763,26 @@
       <item quantity="one">අඩුම වශයෙන් යෙදුම් <xliff:g id="COUNT_1">%d</xliff:g></item>
       <item quantity="other">අඩුම වශයෙන් යෙදුම් <xliff:g id="COUNT_1">%d</xliff:g></item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one">යෙදුම් <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">යෙදුම් <xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one">උත්සාහයන් <xliff:g id="COUNT_1">%d</xliff:g></item>
       <item quantity="other">උත්සාහයන් <xliff:g id="COUNT_1">%d</xliff:g></item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">කැමරා යෙදුම්</item>
+      <item quantity="other">කැමරා යෙදුම්</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">ඉ-තැපැල් සේවාලාභී යෙදුම</item>
+      <item quantity="other">ඉ-තැපැල් සේවාලාභී යෙදුම</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">දුරකථන යෙදුම්</item>
+      <item quantity="other">දුරකථන යෙදුම්</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"දෝෂ වාර්තාව බෙදා ගන්නද?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"මෙම උපාංගය දෝෂාවේක්ෂණය සඳහා උදවු කිරීමට ඔබගේ වාහනයේ සංවිධාන කළමනාකරු දෝෂ වාර්තාවක් ඉල්ලා ඇත. යෙදුම් සහ දත්ත බෙදා ගත හැකිය."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"මෙම උපාංගය දෝෂාවේක්ෂණය සඳහා උදවු කිරීමට ඔබගේ වාහනයේ සංවිධාන කළමනාකරු දෝෂ වාර්තාවක් ඉල්ලා ඇත. යෙදුම් සහ දත්ත බෙදා ගත හැකි අතර, ඔබගේ උපාංගය තාවකාලිකව මන්දගාමී විය හැකිය."</string>

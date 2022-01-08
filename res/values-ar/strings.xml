@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"تم تفعيل البحث عن شبكات Wi‑Fi."</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"التبديل إلى بيانات الجوال تلقائيًا"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"يمكنك استخدام بيانات الجوّال إذا تعذّر الدخول إلى الإنترنت عبر شبكة Wi‑Fi، وقد يتم فرض رسوم على استخدام البيانات."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"البحث عن شبكات Wi‑Fi والاتصال بها"</string>
     <string name="learn_more" msgid="8214605928933358604">"مزيد من المعلومات"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"اسم نقطة الاتصال"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"جارٍ تفعيل <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تمت إعادة ضبط الإعدادات المفضّلة للتطبيقات"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"محو جميع البيانات (إعادة الضبط على الإعدادات الأصلية)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"محو جميع البيانات والملفات الشخصية من \"نظام الترفيه والمعلومات\"."</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"سيؤدي هذا الإجراء إلى محو جميع البيانات من \"نظام الترفيه والمعلومات\" لمركبتك، بما في ذلك:\n\n"<li>"حساباتك وملفاتك الشخصية"</li>\n<li>"البيانات والإعدادات المتوفّرة على النظام والتطبيقات"</li>\n<li>"التطبيقات التي تم تنزيلها"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"الحسابات المسجَّل الدخول إليها حاليًا:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"تم إعداد ملفات شخصية أخرى لهذه السيارة."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"محو جميع البيانات"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"حسابات <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"مزامنة البيانات تلقائيًا"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"السماح للتطبيقات بتحديث البيانات تلقائيًا"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"هل تريد السماح بمزامنة البيانات التلقائية؟"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"أي تغييرات تجريها على حساباتك على الويب سيتم نسخها إلى مركبتك تلقائيًا.\n\nوقد تنسخ بعض الحسابات أيضًا أي تغييرات تجريها على المركبة إلى الويب تلقائيًا."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"هل تريد عدم السماح بمزامنة البيانات التلقائية؟"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"سيؤدي ذلك إلى الحفاظ على البيانات، ولكن ستحتاج إلى مزامنة كل حساب يدويًا لجمع المعلومات الحديثة. ولن تتلقى إشعارات عند إتمام التحديثات."</string>
     <string name="account_details_title" msgid="7529571432258448573">"معلومات الحساب"</string>
     <string name="add_account_title" msgid="5988746086885210040">"إضافة حساب"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"إزالة"</string>
     <string name="cancel" msgid="750286395700355455">"إلغاء"</string>
     <string name="allow" msgid="7519431342750394402">"سماح"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"عدم السماح"</string>
     <string name="deny" msgid="340512788979930804">"رفض"</string>
     <string name="backspace_key" msgid="1545590866688979099">"مفتاح Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"مفتاح Enter"</string>
@@ -771,7 +767,14 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق كحد أدنى</item>
       <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>) كحد أدنى</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="two">تطبيقان (<xliff:g id="COUNT_1">%d</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="zero">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
       <item quantity="two">لديك محاولتان (<xliff:g id="COUNT_1">%d</xliff:g>).</item>
@@ -780,9 +783,30 @@
       <item quantity="other">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
       <item quantity="one">لديك محاولة واحدة (<xliff:g id="COUNT_0">%d</xliff:g>).</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="zero">تطبيق الكاميرا</item>
+      <item quantity="two">تطبيقا الكاميرا</item>
+      <item quantity="few">تطبيقات الكاميرا</item>
+      <item quantity="many">تطبيقات الكاميرا</item>
+      <item quantity="other">تطبيقات الكاميرا</item>
+      <item quantity="one">تطبيق الكاميرا</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="zero">تطبيق بريد إلكتروني</item>
+      <item quantity="two">تطبيقا البريد الإلكتروني</item>
+      <item quantity="few">تطبيقات البريد الإلكتروني</item>
+      <item quantity="many">تطبيقات البريد الإلكتروني</item>
+      <item quantity="other">تطبيقات البريد الإلكتروني</item>
+      <item quantity="one">تطبيق البريد الإلكتروني</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="zero">تطبيق الهاتف</item>
+      <item quantity="two">تطبيقا الهاتف</item>
+      <item quantity="few">تطبيقات الهاتف</item>
+      <item quantity="many">تطبيقات الهاتف</item>
+      <item quantity="other">تطبيقات الهاتف</item>
+      <item quantity="one">تطبيق الهاتف</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"هل تريد مشاركة تقرير الخطأ؟"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. وقد تتم مشاركة التطبيقات والبيانات."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. قد تتم مشاركة التطبيقات والبيانات، وقد يعمل جهازك ببطء مؤقتًا."</string>

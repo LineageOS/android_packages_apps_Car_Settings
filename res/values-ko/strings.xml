@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi 검색 사용 설정됨"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"모바일 데이터로 자동 전환"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi 인터넷 액세스가 끊기면 모바일 데이터를 사용합니다. 데이터 사용 요금이 부과될 수 있습니다."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi‑Fi 네트워크 찾기 및 연결"</string>
     <string name="learn_more" msgid="8214605928933358604">"자세히 알아보기"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"핫스팟 이름"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> 켜는 중..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"앱 환경설정이 초기화되었습니다."</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"모든 데이터 삭제(초기화)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"인포테인먼트 시스템에서 모든 데이터와 프로필 삭제"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"초기화하면 차량의 인포테인먼트 시스템에서 다음을 포함한 모든 데이터가 삭제됩니다.\n\n"<li>"계정 및 프로필"</li>\n<li>"시스템과 앱 데이터 및 설정"</li>\n<li>"다운로드한 앱"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"현재 로그인한 계정:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"차량에 다른 프로필이 설정되어 있습니다."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"모든 데이터 삭제"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>님의 계정"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"자동으로 데이터 동기화"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"앱에서 데이터를 자동으로 새로고침하도록 허용"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"데이터 자동 동기화를 허용하시겠습니까?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"웹에서 적용한 계정 관련 변경사항은 모두 차량에 자동으로 복사됩니다.\n\n일부 계정은 차량에서 적용한 변경사항을 모두 온라인 계정에 자동으로 복사할 수도 있습니다."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"데이터 자동 동기화를 허용하지 않으시겠습니까?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"이 경우 데이터 사용량이 절약되지만, 최근 정보를 수집하려면 각 계정을 직접 동기화해야 합니다. 또한 업데이트가 발생해도 알림을 받지 못합니다."</string>
     <string name="account_details_title" msgid="7529571432258448573">"계정 정보"</string>
     <string name="add_account_title" msgid="5988746086885210040">"계정 추가"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"삭제"</string>
     <string name="cancel" msgid="750286395700355455">"취소"</string>
     <string name="allow" msgid="7519431342750394402">"허용"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"허용 안함"</string>
     <string name="deny" msgid="340512788979930804">"거부"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace 키"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter 키"</string>
@@ -767,14 +763,26 @@
       <item quantity="other">앱 최소 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
       <item quantity="one">앱 최소 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other">앱 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">앱 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>회 시도</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>회 시도</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">카메라 앱</item>
+      <item quantity="one">카메라 앱</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">이메일 클라이언트 앱</item>
+      <item quantity="one">이메일 클라이언트 앱</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">전화 앱</item>
+      <item quantity="one">전화 앱</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"버그 신고를 공유하시겠습니까?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있습니다."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있으며 기기 속도가 일시적으로 느려질 수 있습니다."</string>

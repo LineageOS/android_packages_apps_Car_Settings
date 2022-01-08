@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Căutarea de rețele Wi-Fi este activată"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Comutați automat la date mobile"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Folosiți datele mobile atunci când rețeaua Wi-Fi nu are acces la internet. Este posibil să se aplice taxe pentru utilizarea datelor."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Găsiți rețele Wi-Fi și conectați-vă"</string>
     <string name="learn_more" msgid="8214605928933358604">"Aflați mai multe"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nume hotspot"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Se activează <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferințele pentru aplicații au fost resetate"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Ștergeți datele (setări din fabrică)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ștergeți toate datele și profilurile de pe sistemul de infotainment"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Astfel, vor fi șterse toate datele din sistemul de infotainment al vehiculului, între care:\n\n"<li>"conturile și profilurile dvs.;"</li>\n<li>"datele și setările de sistem și de aplicație;"</li>\n<li>"aplicațiile descărcate."</li>"."</string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"V-ați conectat la următoarele conturi:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Alte profiluri au fost configurate pentru acest vehicul."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Ștergeți toate datele"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Conturi pentru <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizare automată a datelor"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permiteți aplicațiilor să actualizeze date automat"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Permiteți sincronizarea automată a datelor?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Modificările conturilor dvs. pe web vor fi copiate automat pe vehicul.\n\nUnele conturi pot și să copieze automat pe web toate modificările pe care le efectuați pe vehicul."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Interziceți sincronizarea automată a datelor?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Această acțiune va economisi date, dar va trebui să sincronizați fiecare cont manual pentru a colecta informațiile recente. În plus, nu veți primi notificări atunci când apar actualizări."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informații despre cont"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Adăugați un cont"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Eliminați"</string>
     <string name="cancel" msgid="750286395700355455">"Anulați"</string>
     <string name="allow" msgid="7519431342750394402">"Permiteți"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"Nu permiteți"</string>
     <string name="deny" msgid="340512788979930804">"Refuzați"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tasta Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tasta Enter"</string>
@@ -768,15 +764,31 @@
       <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> de aplicații</item>
       <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> aplicație</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aplicații</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de aplicații</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicație</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> încercări</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de încercări</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> încercare</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="few">Aplicațiile Cameră foto</item>
+      <item quantity="other">Aplicațiile Cameră foto</item>
+      <item quantity="one">Aplicația Cameră foto</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="few">Aplicațiile Client de e-mail</item>
+      <item quantity="other">Aplicațiile Client de e-mail</item>
+      <item quantity="one">Aplicația Client de e-mail</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="few">Aplicațiile Telefon</item>
+      <item quantity="other">Aplicațiile Telefon</item>
+      <item quantity="one">Aplicația Telefon</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Trimiteți raportul de eroare?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Administratorul organizației care deține vehiculul a solicitat un raport de eroare pentru a remedia problemele acestui dispozitiv. Este posibil să se permită accesul la aplicații și date."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Administratorul organizației care deține vehiculul a solicitat un raport de eroare pentru a remedia problemele acestui dispozitiv. Este posibil să se permită accesul la aplicații și date, iar funcționarea dispozitivului poate fi încetinită temporar."</string>

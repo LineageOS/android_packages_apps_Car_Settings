@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Skeniranje WiFi mreže je isključeno"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatsko prebacivanje na prijenos podataka na mobilnoj mreži"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Korištenje prijenosa podataka na mobilnoj mreži kada WiFi mreža nema pristup internetu. Mogu nastati troškovi prijenosa podataka."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Pronađite WiFi mreže i povežite se s njima"</string>
     <string name="learn_more" msgid="8214605928933358604">"Saznajte više"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Naziv pristupne tačke"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Uključivanje <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -489,7 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Postavke aplikacije su vraćene na zadano"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Izbriši sve (vrati na fabričke postavke)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Brisanje svih podataka i profila s informativno-zabavnog sistema"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"Time će se izbrisati svi podaci iz sustava za informiranje i zabavu vašeg vozila uključujući sljedeće:\n\n"<li>"vaše račune i profile"</li>\n<li>"podatke i postavke sustava i aplikacija"</li>\n<li>"preuzete aplikacije."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Ovim će se potpuno izbrisati svi podaci iz informativno-zabavnog sistema vašeg vozila, uključujući:\n\n"<li>"vaše račune i profile"</li>\n<li>"podatke i postavke sistema i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni na sljedećim računima:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Drugi profili su postavljeni za ovo vozilo."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Potpuno izbriši sve podatke"</string>
@@ -583,9 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Računi za korisnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatsko sinhroniziranje podataka"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Omogućava aplikacijama automatsko osvježavanje podataka"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Dopustiti automatsko sinkroniziranje podataka?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Sve promjene koje napravite na svojim računima na webu automatski će se kopirati u vaše vozilo.\n\nNeki računi također mogu automatski kopirati na web sve promjene koje napravite u vozilu."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Onemogućiti automatsko sinkroniziranje podataka?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Dozvoliti automatsku sinhronizaciju podataka?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Sve promjene na računu koje izvršite na webu će se automatski kopirati na vaše vozilo.\n\nNeki računi također mogu automatski kopirati na web svaku promjenu koju izvršite na vozilu."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Ne dozvoliti automatsku sinhronizaciju podataka?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ovim će se uštedjeti na prijenosu podataka, ali ćete morati ručno sinhronizirati svaki račun da prikupite najnovije informacije. Također, nećete primati obavještenja kada se izvrše ažuriranja."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Podaci o računu"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Dodaj račun"</string>
@@ -699,7 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Ukloni"</string>
     <string name="cancel" msgid="750286395700355455">"Otkaži"</string>
     <string name="allow" msgid="7519431342750394402">"Dozvoli"</string>
-    <string name="do_not_allow" msgid="3157082400084747525">"Nemoj dopustiti"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Nemoj dozvoliti"</string>
     <string name="deny" msgid="340512788979930804">"Odbij"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tipka Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tipka Enter"</string>
@@ -774,19 +775,19 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pokušaja</item>
     </plurals>
     <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
-      <item quantity="one">Aplikacije kamere</item>
-      <item quantity="few">Aplikacije kamere</item>
-      <item quantity="other">Aplikacije kamere</item>
+      <item quantity="one">Aplikacije za kameru</item>
+      <item quantity="few">Aplikacije za kameru</item>
+      <item quantity="other">Aplikacije za kameru</item>
     </plurals>
     <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
-      <item quantity="one">Aplikacije klijenta e-pošte</item>
-      <item quantity="few">Aplikacije klijenta e-pošte</item>
-      <item quantity="other">Aplikacije klijenta e-pošte</item>
+      <item quantity="one">Aplikacije klijenta za e-poštu</item>
+      <item quantity="few">Aplikacije klijenta za e-poštu</item>
+      <item quantity="other">Aplikacije klijenta za e-poštu</item>
     </plurals>
     <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
-      <item quantity="one">Aplikacije telefona</item>
-      <item quantity="few">Aplikacije telefona</item>
-      <item quantity="other">Aplikacije telefona</item>
+      <item quantity="one">Aplikacije za telefon</item>
+      <item quantity="few">Aplikacije za telefon</item>
+      <item quantity="other">Aplikacije za telefon</item>
     </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Podijeliti izvještaj o grešci?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Upravitelj organizacije za ovo vozilo je zatražio izvještaj o grešci radi lakšeg rješavanja problema ovog uređaja. To može uzrokovati dijeljenje aplikacija i podataka."</string>
