@@ -51,7 +51,7 @@
     <string name="data_usage_title" msgid="2923515974389203812">"Kuota utama"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> digunakan"</string>
     <string name="cell_data_warning" msgid="8997739664336571149">"Peringatan penggunaan kuota <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_limit" msgid="6862164869877993009">"Batas kuota <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Batas data <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Peringatan penggunaan kuota <xliff:g id="ID_1">^1</xliff:g>/Batas kuota <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="other">%d hari lagi</item>
@@ -73,8 +73,8 @@
     <string name="app_usage_cycle" msgid="8445927080245880296">"Siklus penggunaan kuota aplikasi"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Setel peringatan kuota"</string>
     <string name="data_warning" msgid="116776633806885370">"Peringatan kuota"</string>
-    <string name="set_data_limit" msgid="7136539812414500084">"Setel batas kuota"</string>
-    <string name="data_limit" msgid="227338836292511425">"Batas kuota"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Setel batas data"</string>
+    <string name="data_limit" msgid="227338836292511425">"Batas data"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Membatasi penggunaan data"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Head unit kendaraan akan menonaktifkan kuota jika mencapai batas yang disetel.\n\nKarena penggunaan data diukur oleh head unit, dan operator dapat menghitung penggunaan secara berbeda, pertimbangkan untuk menyetel batas yang konservatif."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Setel peringatan penggunaan data"</string>

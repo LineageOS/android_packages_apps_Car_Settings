@@ -163,7 +163,7 @@
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> aplikazioarekin erabili behar den gailua"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Ez da aurkitu gailurik. Ziurtatu gailuak piztuta daudela eta konekta daitezkeela."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Saiatu berriro"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Arazoren bat izan da. Aplikazioak bertan behera utzi du gailu bat aukeratzeko eskaera."</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Arazo bat izan da. Aplikazioak bertan behera utzi du gailu bat aukeratzeko eskaera."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Konektatu da"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Erakutsi guztiak"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Bilatzen"</string>
@@ -427,7 +427,7 @@
     <string name="hardware_revision" msgid="5713759927934872874">"Hardware-bertsioa"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Hirugarrenen lizentziak"</string>
-    <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Arazo bat gertatu da lizentziak kargatzean."</string>
+    <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Arazo bat izan da lizentziak kargatzean."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Kargatzen…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
       <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> urrats falta zaizkizu garatzaile izateko.</item>
