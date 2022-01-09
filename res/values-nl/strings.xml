@@ -161,7 +161,7 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Uit"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitzetten"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgeschakeld als er geen apparaten verbonden zijn"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgezet als er geen apparaten verbonden zijn"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi aanzetten"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitzetten"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
@@ -309,7 +309,7 @@
     <string name="disable_text" msgid="4358165448648990820">"Uitzetten"</string>
     <string name="enable_text" msgid="1794971777861881238">"Aanzetten"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Verwijderen"</string>
-    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Als je deze app uitschakelt, werken Android en andere apps mogelijk niet meer zoals bedoeld."</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Als je deze app uitzet, werken Android en andere apps mogelijk niet meer zoals bedoeld."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App uitzetten"</string>
     <string name="not_installed" msgid="4163454337822508007">"Niet geïnstalleerd voor dit profiel"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Rechten"</string>
@@ -384,7 +384,7 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Toegang tot meldingen"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Toegang tot meldingen toestaan voor <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan alle meldingen lezen, waaronder persoonlijke informatie zoals contactnamen en de tekst van berichten die je ontvangt. De app kan deze meldingen ook sluiten of actieknoppen activeren die ermee samenhangen. \n\nHierdoor kan de app ook \'Niet storen\' aan- of uitzetten en gerelateerde instellingen wijzigen."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Als je toegang tot meldingen uitschakelt voor <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan toegang tot \'Niet storen\' ook worden uitgezet."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Als je toegang tot meldingen uitzet voor <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan toegang tot \'Niet storen\' ook worden uitgezet."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Uitzetten"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuleren"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium sms-toegang"</string>
