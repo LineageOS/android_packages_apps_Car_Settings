@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Kablosuz tarama açıldı"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mobil veriye otomatik olarak geç"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Kablosuz internet erişimi yoksa mobil veri kullan. Veri kullanımı ücretleri uygulanabilir."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Kablosuz ağları bulup bağlanın"</string>
     <string name="learn_more" msgid="8214605928933358604">"Daha fazla bilgi"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Hotspot adı"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> etkinleştiriliyor..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Uygulama tercihleri sıfırlandı"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Tüm verileri sil (sıfırla)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Bilgi-eğlence sistemindeki tüm verileri ve profilleri sil"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Bu işlem, aracınızın bilgi-eğlence sisteminden şunlar dahil tüm verileri siler:\n\n"<li>"Hesaplarınız ve profilleriniz"</li>\n<li>"Sistem ve uygulama verileri ile ayarları"</li>\n<li>"İndirilen uygulamalar"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Şu anda oturum açmış olduğunuz hesaplar:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Bu araç için ayarlanmış başka profiller var."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Tüm verileri sil"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> kullanıcı hesapları"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Verileri otomatik olarak senkronize et"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Uygulamaların verileri otomatik olarak yenilemesine izin ver"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Otomatik veri senkronizasyonuna izin verilsin mi?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Hesaplarınızda web üzerinden yaptığınız tüm değişiklikler aracınıza otomatik olarak kopyalanacaktır.\n\nBazı hesaplar araçta yaptığınız değişiklikleri de web\'e otomatik olarak kopyalayabilir."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Otomatik veri senkronizasyonu engellensin mi?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Bu işlem verileri korur ancak son bilgileri almak için her bir hesabı manuel olarak senkronize etmeniz gerekecektir. Güncelleme olduğunda bildirim de almazsınız."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hesap bilgileri"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hesap ekle"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Kaldır"</string>
     <string name="cancel" msgid="750286395700355455">"İptal et"</string>
     <string name="allow" msgid="7519431342750394402">"İzin ver"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"İzin verme"</string>
     <string name="deny" msgid="340512788979930804">"Reddet"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Geri tuşu"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter tuşu"</string>
@@ -767,14 +763,26 @@
       <item quantity="other">En az <xliff:g id="COUNT_1">%d</xliff:g> uygulama</item>
       <item quantity="one">En az <xliff:g id="COUNT_0">%d</xliff:g> uygulama</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> uygulama</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> uygulama</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> deneme</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> deneme</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Kamera uygulaması</item>
+      <item quantity="one">Kamera uygulaması</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">E-posta istemci uygulaması</item>
+      <item quantity="one">E-posta istemci uygulaması</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefon uygulaması</item>
+      <item quantity="one">Telefon uygulaması</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Hata raporu paylaşılsın mı?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Aracın kuruluş yöneticisi, bu cihazda sorun gidermeye yardımcı olması için hata raporu istedi. Uygulamalar ve veriler paylaşılabilir."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Aracın kuruluş yöneticisi, bu cihazda sorun gidermeye yardımcı olması için hata raporu istedi. Uygulamalar ve veriler paylaşılabilir. Bu durum, cihazınızı geçici olarak yavaşlatabilir."</string>

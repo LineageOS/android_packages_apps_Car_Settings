@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi ቅኝት በርቷል"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"በራስ-ሰር ወደ የተንቀሳቃሽ ስልክ ውሂብ ቀይር"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"የWi-Fi በይነመረብ መዳረሻ በማይኖርበት ጊዜ የተንቀሳቃሽ ስልክ ውሂብ ይጠቀሙ። የውሂብ ክፍያዎች ሊከፈልባቸው ይችላል።"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"የWi‑Fi አውታረ መረቦችን ያግኙ እና ከእነሱ ጋር ይገናኙ"</string>
     <string name="learn_more" msgid="8214605928933358604">"የበለጠ ለመረዳት"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"የመገናኛ ነጥብ ስም"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ን በማብራት ላይ..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"የመተግበሪያ ምርጫዎች ዳግም ተቀናብረዋል"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ሁሉንም ውሂብ ደምስስ (የፋብሪካ ዳግም ማስጀመር)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ሁሉንም ውሂብ እና መገለጫዎች ከኢንፎቴይንመንት ስርዓት ይደምስሱ"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ይህ የሚከተሉትን ጨምሮ ሁሉንም ውሂብ ከኢንፎቴይንመንት ስርዓትዎ ይደመስሰዋል፦\n\n"<li>"የእርስዎ መለያዎች እና መገለጫዎች"</li>\n<li>"የስርዓት እና የመተግበሪያ ውሂብ እና ቅንብሮች"</li>\n<li>"የወረዱ መተግበሪያዎች"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"እርስዎ በአሁን ጊዜ የሚከተለው መለያዎች ውስጥ ገብተዋል፦"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ሌሎች መገለጫዎች ለዚህ ተሽከርካሪ ተዋቅረዋል።"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ሁሉንም ውሂብ ደምስስ"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"የ<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> መለያዎች"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ውሂብን በራስ-ሰር አስምር"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"መተግበሪያዎች ውሂብን በራስ-ሰር ያድሱ"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ራስ-ሰር የውሂብ ስምረት ይፈቀድ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ድር ላይ በተሽከርካሪዎ ላይ የሚያደርጓቸው ማናቸውም ለውጦች በራስ-ሰር ወደ ተሽከርካሪዎ ይቀዳሉ።\n\nአንዳንድ መለያዎች እንዲሁም በተሽከርካሪው ላይ የሚያደርጓቸውን ማናቸውም ለውጦች ወደ ድሩ ሊቀዱት ይችላሉ።"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ራስ-ሰር የውሂብ ስምረት አይፈቀድ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ይህ ውሂብን ይቆጥባል፣ ነገር ግን የቅርብ ጊዜውን መረጃ ለመሰብሰብ እያንዳንዱን መለያ ራስዎ ማሳመር ይኖርብዎታል። እና ዝማኔዎች ሲከሰቱ ማሳወቂያዎች አይደርሰዎትም።"</string>
     <string name="account_details_title" msgid="7529571432258448573">"የመለያ መረጃ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"መለያ ያክሉ"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"አስወግድ"</string>
     <string name="cancel" msgid="750286395700355455">"ይቅር"</string>
     <string name="allow" msgid="7519431342750394402">"ፍቀድ"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"አትፍቀድ"</string>
     <string name="deny" msgid="340512788979930804">"ከልክል"</string>
     <string name="backspace_key" msgid="1545590866688979099">"የBackspace ቁልፍ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ቁልፍ አስገባ"</string>
@@ -767,14 +763,26 @@
       <item quantity="one">ዝቅተኛ <xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
       <item quantity="other">ዝቅተኛ <xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ሙከራዎች</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ሙከራዎች</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">የካሜራ መተግበሪያዎች</item>
+      <item quantity="other">የካሜራ መተግበሪያዎች</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">የኢሜይል ደንበኛ መተግበሪያዎች</item>
+      <item quantity="other">የኢሜይል ደንበኛ መተግበሪያዎች</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">የስልክ መተግበሪያዎች</item>
+      <item quantity="other">የስልክ መተግበሪያዎች</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"የሳንካ ሪፖርት ይጋራ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"የዚህ ተሽከርካሪ ድርጅት አስተዳዳሪ ለዚህ መሣሪያ መላ ለመፈለግ ለማገዝ የሳንካ ሪፖርት ጠይቋል። መተግበሪያዎች እና ውሂብ ሊጋሩ ይችላሉ።"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"የዚህ ተሽከርካሪ ድርጅት አስተዳዳሪ ለዚህ መሣሪያ መላ ለመፈለግ ለማገዝ የሳንካ ሪፖርት ጠይቋል። መተግበሪያዎች እና ውሂብ ሊጋሩ ይችላሉ፣ እምዲሁም ይሄ መሣሪያዎን ለጊዜው ሊያዘገየው ይችላል።"</string>

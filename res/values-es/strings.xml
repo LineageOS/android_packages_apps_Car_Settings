@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Se ha activado la búsqueda de redes Wi‑Fi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Cambiar a datos móviles automáticamente"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Utiliza la conexión de datos móviles cuando no haya acceso a Internet a través de la red Wi‑Fi. Podrían aplicarse cargos por el uso de datos."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Buscar y conectarse a redes Wi-Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Más información"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nombre del punto de acceso"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Activando <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se han restablecido las preferencias de las aplicaciones"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Volver al estado de fábrica (borrar todo)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Borrar todos los datos y perfiles del sistema de infoentretenimiento"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Se borrarán todos los datos del sistema de infoentretenimiento de tu vehículo, incluidos los siguientes:\n\n"<li>"Tus cuentas y perfiles"</li>\n<li>"Los ajustes y los datos de aplicaciones y del sistema"</li>\n<li>"Las aplicaciones descargadas"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Has iniciado sesión en estas cuentas:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Se han configurado otros perfiles en este vehículo."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Borrar todos los datos"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Cuentas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar datos automáticamente"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permite que las aplicaciones actualicen los datos automáticamente"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"¿Permitir sincronización de datos automática?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Los cambios que hagas en tus cuentas en la Web se reflejarán automáticamente en tu vehículo.\n\nAlgunas cuentas también reflejarán en la Web automáticamente los cambios que hagas en el vehículo."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"¿Impedir la sincronización de datos automática?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Esto te permitirá ahorrar datos, pero tendrás que sincronizar cada cuenta de forma manual para obtener información reciente y no recibirás notificaciones cuando haya actualizaciones."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Información de la cuenta"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Añadir cuenta"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Quitar"</string>
     <string name="cancel" msgid="750286395700355455">"Cancelar"</string>
     <string name="allow" msgid="7519431342750394402">"Permitir"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"No permitir"</string>
     <string name="deny" msgid="340512788979930804">"Denegar"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tecla de retroceso"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tecla Intro"</string>
@@ -767,14 +763,26 @@
       <item quantity="other">Al menos <xliff:g id="COUNT_1">%d</xliff:g> aplicaciones</item>
       <item quantity="one">Al menos <xliff:g id="COUNT_0">%d</xliff:g> aplicación</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicaciones</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicación</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> intentos</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> intento</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Aplicaciones de cámara</item>
+      <item quantity="one">Aplicación de cámara</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Aplicaciones de cliente de correo</item>
+      <item quantity="one">Aplicación de cliente de correo</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Aplicaciones de teléfono</item>
+      <item quantity="one">Aplicación de teléfono</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"¿Compartir informe de errores?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos, y que el dispositivo funcione más lento de forma temporal."</string>

@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"បានបើក​ការស្កេន Wi‑Fi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ប្តូរទៅ​ទិន្នន័យទូរសព្ទ​ចល័តដោយស្វ័យ​ប្រវត្តិ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ប្រើទិន្នន័យ​ទូរសព្ទចល័ត​ នៅពេល​ដែល Wi‑Fi មិនមាន​ការភ្ជាប់អ៊ីនធឺណិត។ អាច​នឹង​គិតថ្លៃលើការ​ប្រើទិន្នន័យ។"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"ស្វែងរក និងភ្ជាប់បណ្ដាញ Wi‑Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"ស្វែងយល់បន្ថែម"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ឈ្មោះ​ហតស្ប៉ត"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"កំពុងបើក <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"បាន​កំណត់​ចំណូល​ចិត្ត​កម្មវិធីឡើង​វិញ​ហើយ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"លុបទិន្នន័យទាំងអស់ (កំណត់ដូចចេញពីរោងចក្រ)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"លុបទិន្នន័យ និង​កម្រងព័ត៌មាន​ទាំងអស់​ពីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្ត"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ការធ្វើបែបនេះនឹងលុបទិន្នន័យទាំងអស់ចេញពីប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនៃយានជំនិះរបស់អ្នក ដែលរួមមាន៖\n\n"<li>"គណនី និងកម្រងព័ត៌មានរបស់អ្នក"</li>\n<li>"ការកំណត់ និងទិន្នន័យកម្មវិធីនិងប្រព័ន្ធ"</li>\n<li>"កម្មវិធីដែលបានទាញយក"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"បច្ចុប្បន្ន​ អ្នក​បាន​ចូល​គណនី​ដូច​ខាង​ក្រោម៖"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"កម្រងព័ត៌មានផ្សេងទៀតត្រូវបានរៀបចំសម្រាប់យានជំនិះនេះ។"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"លុប​ទិន្នន័យ​ទាំង​អស់"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"គណនី​សម្រាប់ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ធ្វើ​សមកាលកម្ម​ទិន្នន័យ​ដោយស្វ័យប្រវត្តិ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"អនុញ្ញាតឱ្យ​កម្មវិធី​ផ្ទុកទិន្នន័យ​ឡើងវិញ​ដោយស្វ័យប្រវត្តិ"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"អនុញ្ញាតឱ្យធ្វើសមកាលកម្មទិន្នន័យស្វ័យប្រវត្តិឬ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"រាល់ការផ្លាស់ប្ដូរដែលអ្នកធ្វើចំពោះគណនីរបស់អ្នកនៅលើបណ្ដាញនឹងត្រូវបានចម្លងដោយស្វ័យប្រវត្តិទៅយានជំនិះរបស់អ្នក។\n\nគណនីមួយចំនួនក៏អាចចម្លងរាល់ការផ្លាស់ប្ដូរដែលអ្នកធ្វើចំពោះយានជំនិះ ទៅបណ្ដាញបានផងដែរ។"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"មិនអនុញ្ញាតឱ្យធ្វើសមកាលកម្មទិន្នន័យស្វ័យប្រវត្តិឬ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ការធ្វើបែបនេះ​នឹងរក្សាទិន្នន័យ ប៉ុន្តែអ្នក​នឹងត្រូវធ្វើសមកាលកម្ម​គណនីនីមួយៗ​ដោយផ្ទាល់ ដើម្បីប្រមូលព័ត៌មានថ្មីៗ។ ហើយអ្នកនឹង​មិនទទួលបាន​ការជូនដំណឹងទេ នៅពេលមានការធ្វើ​បច្ចុប្បន្នភាព។"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ព័ត៌មាន​​អំពី​​គណនី"</string>
     <string name="add_account_title" msgid="5988746086885210040">"បញ្ចូលគណនី"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"លុប"</string>
     <string name="cancel" msgid="750286395700355455">"បោះបង់"</string>
     <string name="allow" msgid="7519431342750394402">"អនុញ្ញាត"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"មិនអនុញ្ញាត"</string>
     <string name="deny" msgid="340512788979930804">"បដិសេធ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"គ្រាប់​ចុច​លុប"</string>
     <string name="enter_key" msgid="2121394305541579468">"គ្រាប់​ចុច​បញ្ចូល"</string>
@@ -767,14 +763,26 @@
       <item quantity="other">មានកម្មវិធី​អប្បបរមាចំនួន <xliff:g id="COUNT_1">%d</xliff:g></item>
       <item quantity="one">មានកម្មវិធី​អប្បបរមាចំនួន <xliff:g id="COUNT_0">%d</xliff:g></item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other">កម្មវិធី <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">កម្មវិធី <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other">ព្យាយាមបញ្ចូល <xliff:g id="COUNT_1">%d</xliff:g> ដង</item>
       <item quantity="one">ព្យាយាមបញ្ចូល <xliff:g id="COUNT_0">%d</xliff:g> ដង</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">កម្មវិធី​កាមេរ៉ា</item>
+      <item quantity="one">កម្មវិធី​កាមេរ៉ា</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">កម្មវិធី​ផ្ញើអ៊ីមែល</item>
+      <item quantity="one">កម្មវិធី​ផ្ញើអ៊ីមែល</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">កម្មវិធី​ទូរសព្ទ</item>
+      <item quantity="one">កម្មវិធី​ទូរសព្ទ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ចែករំលែក​របាយការណ៍អំពី​បញ្ហាឬ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក។"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក ហើយឧបករណ៍របស់អ្នកអាចនឹងដំណើរការយឺតជាបណ្តោះអាសន្ន។"</string>

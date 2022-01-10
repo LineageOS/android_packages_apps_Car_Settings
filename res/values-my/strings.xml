@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi ရှာဖွေမှု ဖွင့်ထားသည်"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"မိုဘိုင်းဒေတာစနစ်သို့ အလိုအလျောက် ပြောင်းပါ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi တွင် အင်တာနက် ချိတ်ဆက်မှု မရှိသည့်အခါ မိုဘိုင်းဒေတာကို အသုံးပြုပါ။ ဒေတာသုံးစွဲခများ ကျသင့်နိုင်ပါသည်။"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi-Fi ကွန်ရက်များကို ရှာဖွေချိတ်ဆက်ရန်"</string>
     <string name="learn_more" msgid="8214605928933358604">"ပိုမိုလေ့လာရန်"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ဟော့စပေါ့အမည်"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ဖွင့်နေသည်..."</string>
@@ -490,8 +491,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"အက်ပ်သတ်မှတ်ချက်များ ပြင်ဆင်သတ်မှတ်ပြီးပါပြီ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ဒေတာအားလုံးဖျက်ခြင်း (စက်ရုံထုတ်ဆက်တင် သတ်မှတ်ရန်)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်မှ ဒေတာနှင့် ပရိုဖိုင်အားလုံးကို ဖျက်မည်"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"၎င်းသည် သင့်ယာဉ်၏ သတင်းနှင့်ဖျော်ဖြေရေး စနစ်မှ ဒေတာအားလုံးအပြင် အောက်ပါတို့ကိုလည်း ဖျက်ပါမည်-\n\n"<li>"သင်၏အကောင့်နှင့် ပရိုဖိုင်များ"</li>\n<li>"စနစ်ဒေတာ၊ အက်ပ်ဒေတာနှင့် ဆက်တင်များ"</li>\n<li>"ဒေါင်းလုဒ်လုပ်ထားသော အက်ပ်များ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"သင်သည် လက်ရှိတွင် အောက်ပါအကောင့်များသို့ လက်မှတ်ထိုးဝင်ထားသည် -"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"အခြားပရိုဖိုင်များကို ဤကားအတွက် စနစ်ထည့်သွင်းထားသည်။"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ဒေတာအားလုံး ဖျက်ရန်"</string>
@@ -585,12 +585,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> အတွက် အကောင့်များ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ဒေတာ အော်တိုစင့်ခ်လုပ်ရန်"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ဒေတာများကို အလိုအလျောက်ပြန်လည်စတင်ရန် အက်ပ်များကိုခွင့်ပြုပါ"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"အလိုအလျောက်ဒေတာစင့်ခ်လုပ်ခွင့် ပေးမလား။"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ဝဘ်ပေါ်၌ သင်၏အကောင့်များတွင် ပြုလုပ်သော အပြောင်းအလဲမှန်သမျှကို သင့်ယာဉ်သို့ အလိုအလျောက်မိတ္တူကူးပါမည်။\n\nအချို့အကောင့်များသည် ယာဉ်ပေါ်၌ သင်ပြုလုပ်သော အပြောင်းအလဲမှန်သမျှကိုလည်း ဝဘ်ပေါ်သို့ အလိုအလျောက်မိတ္တူကူးနိုင်သည်။"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"အလိုအလျောက်ဒေတာစင့်ခ်လုပ်ခွင့် ပိတ်မလား။"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"၎င်းသည် ဒေတာများကို ကာကွယ်ထားမည်ဖြစ်သော်လည်း မကြာသေးခင်က အချက်အလက်များကို စုဆောင်းရန် အကောင့်တစ်ခုစီကို ကိုယ်တိုင်စင့်ခ်လုပ်ရပါမည်။ အပ်ဒိတ်ပြုလုပ်နေစဉ် အကြောင်းကြားချက်များ လက်ခံ၍မရပါ။"</string>
     <string name="account_details_title" msgid="7529571432258448573">"အကောင့်အချက်အလက်"</string>
     <string name="add_account_title" msgid="5988746086885210040">"အကောင့်ထည့်ရန်"</string>
@@ -704,8 +701,7 @@
     <string name="remove_button" msgid="6664656962868194178">"ဖယ်ရှားရန်"</string>
     <string name="cancel" msgid="750286395700355455">"မလုပ်တော့"</string>
     <string name="allow" msgid="7519431342750394402">"ခွင့်ပြုရန်"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"ခွင့်မပြုရန်"</string>
     <string name="deny" msgid="340512788979930804">"ငြင်းပယ်ရန်"</string>
     <string name="backspace_key" msgid="1545590866688979099">"ပြန်ဖျက် ခလုတ်"</string>
     <string name="enter_key" msgid="2121394305541579468">"အတည်ပြု ခလုတ်"</string>
@@ -768,14 +764,26 @@
       <item quantity="other">အနည်းဆုံး အက်ပ် <xliff:g id="COUNT_1">%d</xliff:g> ခု</item>
       <item quantity="one">အနည်းဆုံး အက်ပ် <xliff:g id="COUNT_0">%d</xliff:g> ခု</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other">အက်ပ် <xliff:g id="COUNT_1">%d</xliff:g> ခု</item>
+      <item quantity="one">အက်ပ် <xliff:g id="COUNT_0">%d</xliff:g> ခု</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other">ကြိုးပမ်းမှု <xliff:g id="COUNT_1">%d</xliff:g> ခု</item>
       <item quantity="one">ကြိုးပမ်းမှု <xliff:g id="COUNT_0">%d</xliff:g> ခု</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">ကင်မရာအက်ပ်များ</item>
+      <item quantity="one">ကင်မရာအက်ပ်</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">အီးမေးလ်ကလိုင်းယင့်အက်ပ်များ</item>
+      <item quantity="one">အီးမေးလ်ကလိုင်းယင့်အက်ပ်</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ဖုန်းအက်ပ်များ</item>
+      <item quantity="one">ဖုန်းအက်ပ်</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ချွတ်ယွင်းမှု အစီရင်ခံစာကို မျှဝေမလား။"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ဤယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာသည် ၎င်းစက်ကို ပြဿနာ ရှာဖွေဖြေရှင်းရာတွင် ကူညီရန် ချွတ်ယွင်းမှု အစီရင်ခံစာကို တောင်းဆိုထားသည်။ အက်ပ်များနှင့် ဒေတာများကို မျှဝေနိုင်ပါသည်။"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ဤယာဉ်၏ အဖွဲ့အစည်းမန်နေဂျာသည် ၎င်းစက်ကို ပြဿနာ ရှာဖွေဖြေရှင်းရာတွင် ကူညီရန် ချွတ်ယွင်းမှု အစီရင်ခံစာကို တောင်းဆိုထားသည်။ အက်ပ်များနှင့် ဒေတာများကို မျှဝေနိုင်၍ သင့်စက်သည် ယာယီ နှေးကွေးသွားနိုင်ပါသည်။"</string>
