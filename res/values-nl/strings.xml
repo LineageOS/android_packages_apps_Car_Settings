@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-scannen ingeschakeld"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatisch overschakelen naar mobiele data"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Mobiele data gebruiken wanneer er geen internettoegang via wifi is. Er kunnen kosten voor datagebruik in rekening worden gebracht."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Zoek en maak verbinding met wifi-netwerken"</string>
     <string name="learn_more" msgid="8214605928933358604">"Meer informatie"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Naam hotspot"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aanzetten..."</string>
@@ -162,7 +163,7 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Uit"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitzetten"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgeschakeld als er geen apparaten verbonden zijn"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgezet als er geen apparaten verbonden zijn"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi aanzetten"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitzetten"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
@@ -310,7 +311,7 @@
     <string name="disable_text" msgid="4358165448648990820">"Uitzetten"</string>
     <string name="enable_text" msgid="1794971777861881238">"Aanzetten"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Verwijderen"</string>
-    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Als je deze app uitschakelt, werken Android en andere apps mogelijk niet meer zoals bedoeld."</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Als je deze app uitzet, werken Android en andere apps mogelijk niet meer zoals bedoeld."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App uitzetten"</string>
     <string name="not_installed" msgid="4163454337822508007">"Niet geïnstalleerd voor dit profiel"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Rechten"</string>
@@ -385,7 +386,7 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Toegang tot meldingen"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Toegang tot meldingen toestaan voor <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan alle meldingen lezen, waaronder persoonlijke informatie zoals contactnamen en de tekst van berichten die je ontvangt. De app kan deze meldingen ook sluiten of actieknoppen activeren die ermee samenhangen. \n\nHierdoor kan de app ook \'Niet storen\' aan- of uitzetten en gerelateerde instellingen wijzigen."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Als je toegang tot meldingen uitschakelt voor <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan toegang tot \'Niet storen\' ook worden uitgezet."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Als je toegang tot meldingen uitzet voor <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan toegang tot \'Niet storen\' ook worden uitgezet."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Uitzetten"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuleren"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium sms-toegang"</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-voorkeuren zijn gereset"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Alle gegevens wissen (fabrieksreset)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Alle gegevens en profielen van het infotainmentsysteem wissen"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Hiermee worden alle gegevens van het infotainmentsysteem van je voertuig gewist, waaronder:\n\n"<li>"Je accounts en profielen"</li>\n<li>"Systeem- en app-gegevens en -instellingen"</li>\n<li>"Gedownloade apps"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Je bent momenteel ingelogd op de volgende accounts:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Er zijn andere profielen ingesteld voor dit voertuig."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Alle gegevens wissen"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Accounts voor <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Gegevens automatisch synchroniseren"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Apps automatisch gegevens laten vernieuwen"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Automatische gegevenssynchronisatie toestaan?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Wijzigingen die je op internet aanbrengt in je accounts, worden automatisch naar je voertuig gekopieerd.\n\nBij sommige accounts worden mogelijk ook de wijzigingen die via je voertuig aanbrengt, naar internet gekopieerd."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Automatische gegevenssynchronisatie niet toestaan?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Hiermee bespaar je data. Je moet elk account echter handmatig synchroniseren om recente informatie te verzamelen. Je ontvangt geen meldingen wanneer er updates plaatsvinden."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Accountgegevens"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Account toevoegen"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Verwijderen"</string>
     <string name="cancel" msgid="750286395700355455">"Annuleren"</string>
     <string name="allow" msgid="7519431342750394402">"Toestaan"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"Niet toestaan"</string>
     <string name="deny" msgid="340512788979930804">"Weigeren"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace-toets"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter-toets"</string>
@@ -767,14 +763,26 @@
       <item quantity="other">Minimaal <xliff:g id="COUNT_1">%d</xliff:g> apps</item>
       <item quantity="one">Minimaal <xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pogingen</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> poging</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Camera-apps</item>
+      <item quantity="one">Camera-app</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">E-mailclient-apps</item>
+      <item quantity="one">E-mailclient-app</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefoon-apps</item>
+      <item quantity="one">Telefoon-app</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Bugrapport delen?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"De organisatiebeheerder van dit voertuig heeft een bugrapport aangevraagd om problemen met dit apparaat op te lossen. Apps en gegevens kunnen worden gedeeld."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"De organisatiebeheerder van dit voertuig heeft een bugrapport aangevraagd om problemen met dit apparaat op te lossen. Apps en gegevens kunnen worden gedeeld. Dit kan je apparaat tijdelijk vertragen."</string>

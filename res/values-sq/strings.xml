@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Skanimi i Wi‑Fi është aktivizuar"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Kalo automatikisht te të dhënat celulare"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Përdor të dhënat celulare kur Wi-Fi nuk ka qasje në internet. Mund të zbatohen tarifa për të dhënat."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Gjej dhe lidhu me rrjetet Wi-Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Mëso më shumë"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Emri i zonës së qasjes për internet"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> po aktivizohet..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferencat e aplikacioneve janë rivendosur"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Spastro të gjitha të dhënat (rivendosja e fabrikës)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Spastro të gjitha të dhënat dhe profilet nga ky sistem info-argëtues"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Kjo do të fshijë të gjitha të dhënat nga sistemi info-argëtues i automjetit, duke përfshirë:\n\n"<li>"Llogaritë dhe profilet e tua"</li>\n<li>"Të dhënat dhe cilësimet e sistemit dhe të aplikacioneve"</li>\n<li>"Aplikacionet e shkarkuara"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Je i identifikuar aktualisht në llogaritë e mëposhtme:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Për këtë automjet janë konfiguruar profile të tjera."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Spastro të gjitha të dhënat"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Llogaritë për <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizo automatikisht të dhënat"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Lejo që aplikacionet t\'i rifreskojnë automatikisht të dhënat"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Të lejohet sinkronizimi automatik i të dhënave?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Çdo ndryshim që bën në llogaritë e tua në ueb do të kopjohen automatikisht në automjetin tënd.\n\nDisa llogari mund edhe të kopjojnë automatikisht në ueb çdo ndryshim që ti bën në automjet."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Të ndalohet sinkronizimi automatik i të dhënave?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Kjo do të kursejë të dhënat, por për të mbledhur informacionet më të fundit, do të të duhet të sinkronizosh në mënyrë manuale çdo llogari. Dhe nuk do të marrësh njoftime kur të ndodhin përditësimet."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informacionet e llogarisë"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Shto llogari"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Hiq"</string>
     <string name="cancel" msgid="750286395700355455">"Anulo"</string>
     <string name="allow" msgid="7519431342750394402">"Lejo"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"Mos lejo"</string>
     <string name="deny" msgid="340512788979930804">"Refuzo"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tasti \"Kthim prapa\""</string>
     <string name="enter_key" msgid="2121394305541579468">"Tasti \"Hyrje\""</string>
@@ -767,14 +763,26 @@
       <item quantity="other">Minimumi <xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
       <item quantity="one">Minimumi <xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> përpjekje</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> përpjekje</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Aplikacionet e kamerës</item>
+      <item quantity="one">Aplikacioni i kamerës</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Aplikacionet e klientit të email-it</item>
+      <item quantity="one">Aplikacioni i klientit të email-it</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Aplikacionet e telefonit</item>
+      <item quantity="one">Aplikacioni i telefonit</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Të ndahet raporti i defektit në kod?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Menaxheri i organizatës i automjetit kërkoi një raport të defektit në kod për të ndihmuar në zgjidhjen e problemeve të kësaj pajisjeje. Aplikacionet dhe të dhënat mund të ndahen."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Menaxheri i organizatës i automjetit kërkoi një raport të defektit në kod për të ndihmuar në zgjidhjen e problemeve të kësaj pajisjeje. Aplikacionet dhe të dhënat mund të ndahen dhe pajisja jote mund të ngadalësohet përkohësisht."</string>
