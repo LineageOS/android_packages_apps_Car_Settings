@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Ενεργοποιήθηκε η σάρωση Wi‑Fi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Αυτόματη εναλλαγή σε δεδομένα κινητής τηλεφωνίας"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Χρησιμοποιήστε δεδομένα κινητής τηλεφωνίας όταν το Wi‑Fi δεν έχει πρόσβαση στο διαδίκτυο. Μπορεί να ισχύουν χρεώσεις χρήσης δεδομένων."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Εύρεση και σύνδεση σε δίκτυα Wi‑Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Μάθετε περισσότερα"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Όνομα ΣΠ Wi-Fi"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Ενεργοποίηση <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Έγινε επαναφορά των προτιμήσεων των εφαρμογών"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Διαγραφή δεδομένων (επαναφ. εργ. ρυθ.)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Διαγραφή όλων των δεδομένων και προφίλ του συστήματος ενημέρωσης και ψυχαγωγίας"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από το σύστημα ενημέρωσης και ψυχαγωγίας του οχήματος, συμπεριλαμβανομένων των εξής:\n\n"<li>"Του λογαριασμού και των προφίλ σας"</li>\n<li>"Των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"Των εφαρμογών που έχετε κατεβάσει"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Αυτήν τη στιγμή είστε συνδεδεμένοι στους παρακάτω λογαριασμούς:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Έχουν ρυθμιστεί άλλα προφίλ για αυτό το όχημα."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Διαγραφή όλων των δεδομένων"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Λογαριασμοί για <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Αυτόματος συγχρονισμός δεδομένων"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Επιτρέπει στις εφαρμογές να ανανεώνουν δεδομένα αυτόματα"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Αποδοχή αυτόματου συγχρονισμού δεδομένων;"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Θα γίνεται αυτόματη αντιγραφή τυχόν αλλαγών που πραγματοποιείτε στους λογαριασμούς σας στον ιστό στο όχημά σας.\n\nΣε ορισμένους λογαριασμούς ενδέχεται να γίνεται επίσης αυτόματη αντιγραφή τυχόν αλλαγών που πραγματοποιείτε στο όχημά σας στον ιστό."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Απαγόρευση αυτόματου συγχρονισμού δεδομένων;"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Με αυτόν τον τρόπο θα εξοικονομήσετε δεδομένα, αλλά θα πρέπει να συγχρονίσετε κάθε λογαριασμό με μη αυτόματο τρόπο για να συλλέξετε πρόσφατες πληροφορίες. Δεν θα λαμβάνετε ειδοποιήσεις κατά τη διάρκεια των ενημερώσεων."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Πληροφορίες λογαριασμού"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Προσθήκη λογαριασμού"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Κατάργηση"</string>
     <string name="cancel" msgid="750286395700355455">"Ακύρωση"</string>
     <string name="allow" msgid="7519431342750394402">"Να επιτρέπεται"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"Να μην επιτρέπεται"</string>
     <string name="deny" msgid="340512788979930804">"Να μην επιτρέπεται"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Πλήκτρο Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Πλήκτρο Enter"</string>
@@ -767,14 +763,26 @@
       <item quantity="other">Τουλάχιστον σε <xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
       <item quantity="one">Τουλάχιστον σε <xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> προσπάθειες</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> προσπάθεια</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Εφαρμογές κάμερας</item>
+      <item quantity="one">Εφαρμογή κάμερας</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Εφαρμογές πελάτες ηλεκτρονικού ταχυδρομείου</item>
+      <item quantity="one">Εφαρμογή πελάτης ηλεκτρονικού ταχυδρομείου</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Εφαρμογές τηλεφώνου</item>
+      <item quantity="one">Εφαρμογή τηλεφώνου</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Να κοινοποιηθεί η αναφορά σφάλματος;"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Ο διαχειριστής οργανισμού του οχήματος ζήτησε μια αναφορά σφάλματος για να συμβάλει στην αντιμετώπιση του προβλήματος αυτής της συσκευής. Ενδέχεται να κοινοποιηθούν οι εφαρμογές και τα δεδομένα."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Ο διαχειριστής οργανισμού του οχήματος ζήτησε μια αναφορά σφάλματος για να συμβάλει στην αντιμετώπιση του προβλήματος αυτής της συσκευής. Ενδέχεται να κοινοποιηθούν οι εφαρμογές και τα δεδομένα και να επιβραδυνθεί προσωρινά η λειτουργία της συσκευής σας."</string>

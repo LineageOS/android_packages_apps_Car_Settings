@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Ukuskena kwe-Wi-Fi kuvuliwe"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Shintshela kudatha yeselula ngokuzenzakalela"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Sebenzisa idatha yeselula uma i-Wi-Fi ingenakho ukufinyelela kwe-inthanethi. Ukusetshenziswa kwedatha kungasebenza."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Funa futhi uxhume kumanethiwekhi we-Wi‑Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Funda kabanzi"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Igama le-Hotspot"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Ivula i-<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Izintandokazi zohlelo lokusebenza zisethwe kabusha"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Sula yonke idatha (ukusethwa kabusha njengasekuqaleni)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Sula yonke idatha namaphrofayela kusuka kusistimu ye-infotainment"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Lokhu kuzosula yonke idatha kusistimu ye-infotainment yemoto yakho, okuhlanganisa:\n\n"<li>"Ama-akhawunti akho namaphrofayela"</li>\n<li>"Isistimu nedatha ye-app namasethingi"</li>\n<li>"Ama-app adawunilodiwe"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Manje ungene ngemvume kuma-akhawunti alandelayo:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Amanye amaphrofayela asethelwe le moto."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Sula yonke idatha"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Ama-akhawunti e-<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Vumelanisa ngokuzenzakalelayo idatha"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Vumela izinhlelo zokusebenza ziqalise kabusha idatha"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Vumela ukuvumelanisa idatha okuzenzakalelayo?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Noma yiziphi izinguquko ozenzayo kuma-akhawunti wakho kuwebhu kuzokopishelwa ngokuzenzakalelayo emotweni yakho.\n\nAmanye ama-akhawunti angakopisha ngokuzenzakalelayo noma yiziphi izinguquko ozenzayo emotweni ziye kuwebhu."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Ungavumeli ukuvumelanisa idatha okuzenzakalelayo?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Lokhu kuzosebenzisa idatha, kodwa uzodinga ukuvumelanisa i-akhawunti ngayinye ukuze uqoqe ulwazi lwakamuva. Futhi ngeke uthole izaziso uma izibuyekezo zivela."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Ulwazi lwe-akhawunti"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Engeza i-akhawunti"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Susa"</string>
     <string name="cancel" msgid="750286395700355455">"Khansela"</string>
     <string name="allow" msgid="7519431342750394402">"Vumela"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"Ungavumeli"</string>
     <string name="deny" msgid="340512788979930804">"Phika"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Ukhiye we-backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Ukhiye we-enter"</string>
@@ -767,14 +763,26 @@
       <item quantity="one">Ubuncane bama-app obungu-<xliff:g id="COUNT_1">%d</xliff:g></item>
       <item quantity="other">Ubuncane bama-app obungu-<xliff:g id="COUNT_1">%d</xliff:g></item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one">ama-app <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">ama-app <xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one">imizamo engu-<xliff:g id="COUNT_1">%d</xliff:g></item>
       <item quantity="other">imizamo engu-<xliff:g id="COUNT_1">%d</xliff:g></item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Ama-app wekhamera</item>
+      <item quantity="other">Ama-app wekhamera</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">Ama-app weklayenti ye-imeyili</item>
+      <item quantity="other">Ama-app weklayenti ye-imeyili</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">Ama-app wefoni</item>
+      <item quantity="other">Ama-app wefoni</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Yabelana ngombiko wesiphazamisi?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Umphathi wenhlangano yale moto ucele umbiko wesiphazamisi ukusiza ukuxazulula inkinga kule divayisi. Ama-app nedatha kungabelwana."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Umphathi wenhlangano yale moto ucele umbiko wesiphazamisi ukusiza ukuxazulula inkinga kule divayisi. Ama-app nedatha kungabelwana, futhi idivayisi yakho ingahle yehle kancane."</string>

@@ -141,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"વાઇ-ફાઇ માટે સ્કૅનિંગ ચાલુ કરી છે"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"મોબાઇલ ડેટા પર ઑટોમૅટિક રીતે સ્વિચ કરો"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"જ્યારે વાઇ-ફાઇ પાસે ઇન્ટરનેટનો ઍક્સેસ ન હોય, ત્યારે મોબાઇલ ડેટાનો ઉપયોગ કરો. ડેટા વપરાશ શુલ્ક લાગુ થઈ શકે છે."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"વાઇ-ફાઇ નેટવર્ક શોધીને તેની સાથે કનેક્ટ કરો"</string>
     <string name="learn_more" msgid="8214605928933358604">"વધુ જાણો"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"હૉટસ્પૉટનું નામ"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ચાલુ કરી રહ્યાં છીએ..."</string>
@@ -489,8 +490,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ઍપ પસંદગીઓ રીસેટ કરવામાં આવી છે"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"બધો ડેટા કાઢી નાખો (ફેક્ટરી રીસેટ)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"તમામ ડેટા અને પ્રોફાઇલ ઇન્ફોટેનમેન્ટ સિસ્ટમમાંથી કાઢી નાખો"</string>
-    <!-- no translation found for factory_reset_desc (2774024747279286354) -->
-    <skip />
+    <string name="factory_reset_desc" msgid="2774024747279286354">"આમ કરવાથી, તમારા વાહનની ઇન્ફોટેનમેન્ટ સિસ્ટમમાંથી નીચે જણાવેલા સહિતનો, બધો ડેટા કાઢી નાખવામાં આવશે:\n\n"<li>"તમારું એકાઉન્ટ અને પ્રોફાઇલ"</li>\n<li>"સિસ્ટમ અને ઍપનો ડેટા અને સેટિંગ"</li>\n<li>"ડાઉનલોડ કરેલી ઍપ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"હાલમાં તમે નીચે જણાવેલા બધા એકાઉન્ટમાં સાઇન ઇન થયા છો:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"આ વાહન માટે અન્ય પ્રોફાઇલ સેટઅપ કરવામાં આવી છે."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"બધો ડેટા કાઢી નાખો"</string>
@@ -584,12 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> માટેના એકાઉન્ટ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ડેટાને ઑટોમૅટિક રીતે સિંક કરો"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ઍપને ઑટોમૅટિક રીતે ડેટાને રિફ્રેશ કરવા દો"</string>
-    <!-- no translation found for data_usage_auto_sync_on_dialog_title (8068513213445588532) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_on_dialog (8683935973719807821) -->
-    <skip />
-    <!-- no translation found for data_usage_auto_sync_off_dialog_title (6683011954002351091) -->
-    <skip />
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ઑટોમૅટિક રીતે ડેટા સિંક કરવાની મંજૂરી આપીએ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"તમે વેબ પર તમારા એકાઉન્ટમાં કરશો તે કોઈપણ ફેરફારને ઑટોમૅટિક રીતે તમારા વાહન પર કૉપિ કરાશે.\n\nકેટલાક એકાઉન્ટ તમે વાહન પર કરશો તે ફેરફારોની પણ વેબ પર ઑટોમૅટિક રીતે કૉપિ કરશે."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ઑટોમૅટિક રીતે ડેટા સિંક કરવાનું નામંજૂર કરીએ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"આમ કરવું તે ડેટા બચાવશે, પરંતુ તાજેતરની માહિતી એકત્રિત કરવા માટે તમને દરેક એકાઉન્ટને મેન્યુઅલી સિંક કરવાની જરૂર પડશે. અને જ્યારે અપડેટ આવશે ત્યારે તમને નોટિફિકેશન પ્રાપ્ત થશે નહીં."</string>
     <string name="account_details_title" msgid="7529571432258448573">"એકાઉન્ટની માહિતી"</string>
     <string name="add_account_title" msgid="5988746086885210040">"એકાઉન્ટ ઉમેરો"</string>
@@ -703,8 +700,7 @@
     <string name="remove_button" msgid="6664656962868194178">"કાઢી નાખો"</string>
     <string name="cancel" msgid="750286395700355455">"રદ કરો"</string>
     <string name="allow" msgid="7519431342750394402">"મંજૂરી આપો"</string>
-    <!-- no translation found for do_not_allow (3157082400084747525) -->
-    <skip />
+    <string name="do_not_allow" msgid="3157082400084747525">"મંજૂરી આપશો નહીં"</string>
     <string name="deny" msgid="340512788979930804">"નકારો"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace કી"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter કી"</string>
@@ -767,14 +763,26 @@
       <item quantity="one">ન્યૂનતમ <xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
       <item quantity="other">ન્યૂનતમ <xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
     </plurals>
-    <!-- no translation found for enterprise_privacy_number_packages (1765193032869129370) -->
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
+    </plurals>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> પ્રયાસ</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> પ્રયાસ</item>
     </plurals>
-    <!-- no translation found for default_camera_app_title (2650102837354606942) -->
-    <!-- no translation found for default_email_app_title (7786093487229942743) -->
-    <!-- no translation found for default_phone_app_title (72790081146542182) -->
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">કૅમેરા ઍપ</item>
+      <item quantity="other">કૅમેરા ઍપ</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">ઇમેઇલ ક્લાયન્ટ ઍપ</item>
+      <item quantity="other">ઇમેઇલ ક્લાયન્ટ ઍપ</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">ફોન ઍપ</item>
+      <item quantity="other">ફોન ઍપ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"બગ રિપોર્ટ શેર કરીએ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે અને તમારું ડિવાઇસ હંગામી રીતે ધીમું થઈ શકે છે."</string>
