@@ -93,7 +93,8 @@ public final class SubscriptionUtils {
     }
 
     private static boolean isInactiveInsertedPSim(UiccSlotInfo slotInfo) {
-        return slotInfo != null && !slotInfo.getIsEuicc() && !slotInfo.getIsActive()
-                && slotInfo.getCardStateInfo() == CARD_STATE_INFO_PRESENT;
+        return slotInfo != null && !slotInfo.getIsEuicc()
+                && slotInfo.getCardStateInfo() == CARD_STATE_INFO_PRESENT
+                && slotInfo.getPorts().stream().anyMatch(portInfo -> !portInfo.isActive());
     }
 }
