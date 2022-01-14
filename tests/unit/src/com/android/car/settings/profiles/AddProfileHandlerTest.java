@@ -122,7 +122,7 @@ public class AddProfileHandlerTest {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         UserHandle newUserHandle = UserHandle.of(1001);
         future.complete(new UserCreationResult(UserCreationResult.STATUS_SUCCESSFUL,
-                newUserHandle, /* errorMessage= */ null));
+                newUserHandle));
         when(mUserManager.getUserInfo(anyInt())).thenReturn(null);
         when(mCarUserManager.createUser(anyString(), anyInt()))
                 .thenReturn(new AndroidAsyncFuture<>(future));
