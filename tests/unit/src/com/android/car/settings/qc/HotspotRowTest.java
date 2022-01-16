@@ -40,6 +40,7 @@ import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
 import com.android.internal.util.ConcurrentUtils;
+import com.android.settingslib.wifi.WifiUtils;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -109,9 +110,8 @@ public class HotspotRowTest extends BaseSettingsQCItemTestCase {
         when(mWifiManager.getWifiApState()).thenReturn(WifiManager.WIFI_AP_STATE_ENABLED);
         mHotspotRow.setConnectedDevicesCount(connectedDevices);
         QCRow row = getHotspotRow();
-        assertThat(row.getSubtitle()).isEqualTo(mContext.getResources().getQuantityString(
-                R.plurals.wifi_tether_connected_summary, connectedDevices,
-                connectedDevices));
+        assertThat(row.getSubtitle()).isEqualTo(
+                WifiUtils.getWifiTetherSummaryForConnectedDevices(mContext, connectedDevices));
         QCActionItem actionItem = row.getEndItems().get(0);
         assertThat(actionItem.isChecked()).isTrue();
     }
