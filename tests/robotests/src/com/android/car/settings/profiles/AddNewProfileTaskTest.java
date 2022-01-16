@@ -118,8 +118,7 @@ public class AddNewProfileTaskTest {
         when(mContext.getResources()).thenReturn(mResources);
 
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
-        future.complete(new UserCreationResult(status,
-                user.getUserHandle(), /* errorMessage= */ null));
+        future.complete(new UserCreationResult(status, user.getUserHandle()));
         when(mCarUserManager.createUser(anyString(), anyInt()))
                 .thenReturn(new AndroidAsyncFuture<>(future));
     }
