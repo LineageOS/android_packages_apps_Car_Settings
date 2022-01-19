@@ -42,6 +42,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
+import com.android.settingslib.wifi.WifiUtils;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -173,9 +174,8 @@ public class WifiTetherPreferenceControllerTest {
         mController.onStart(mLifecycleOwner);
         setTetheringSupported(true);
 
-        assertThat(mPreference.getSummary()).isEqualTo(mContext.getResources()
-                .getQuantityString(R.plurals.wifi_tether_connected_summary, connectedClients,
-                connectedClients));
+        assertThat(mPreference.getSummary()).isEqualTo(
+                WifiUtils.getWifiTetherSummaryForConnectedDevices(mContext, connectedClients));
     }
 
     private void setTetheringSupported(boolean supported) {
