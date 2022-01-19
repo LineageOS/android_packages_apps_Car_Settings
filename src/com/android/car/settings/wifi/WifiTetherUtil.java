@@ -24,6 +24,7 @@ import android.text.TextUtils;
 
 import com.android.car.settings.R;
 import com.android.internal.util.ConcurrentUtils;
+import com.android.settingslib.wifi.WifiUtils;
 
 /**
  * Collection of helper methods for Wi-Fi tethering.
@@ -61,9 +62,7 @@ public class WifiTetherUtil {
             return context.getString(R.string.wifi_hotspot_state_off);
         }
         if (connectedDevices > 0) {
-            return context.getResources().getQuantityString(
-                    R.plurals.wifi_tether_connected_summary, connectedDevices,
-                    connectedDevices);
+            return WifiUtils.getWifiTetherSummaryForConnectedDevices(context, connectedDevices);
         }
         String subtitle = softApConfig.getSsid();
         if (TextUtils.isEmpty(subtitle)) {
