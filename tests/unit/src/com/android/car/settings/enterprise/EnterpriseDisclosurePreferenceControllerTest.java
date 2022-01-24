@@ -17,6 +17,7 @@
 package com.android.car.settings.enterprise;
 
 
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -42,6 +43,8 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mPreference = new FooterPreference(mSpiedContext);
+
+        mockHasDeviceAdminFeature();
         mEnterpriseDisclosurePreferenceController = new EnterpriseDisclosurePreferenceController(
                 mSpiedContext, mPreferenceKey, mFragmentController, mCarUxRestrictions);
     }
@@ -50,26 +53,27 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
     public void testDeviceAdminFeatureMissing_noDisclosure() {
         mockNoDeviceAdminFeature();
 
-        mEnterpriseDisclosurePreferenceController.updateState(mPreference);
+        // Feature is checked in constructor, so we need to recreate preference controller
+        EnterpriseDisclosurePreferenceController controller =
+                new EnterpriseDisclosurePreferenceController(mSpiedContext, mPreferenceKey,
+                        mFragmentController, mCarUxRestrictions);
+        controller.updateState(mPreference);
 
-        assertAvailability(mEnterpriseDisclosurePreferenceController.getAvailabilityStatus(),
-                UNSUPPORTED_ON_DEVICE);
+        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
     public void testNoDeviceOwnerComponent_noDisclosure() {
-        mockHasDeviceAdminFeature();
         mockNoDeviceOwner();
 
         mEnterpriseDisclosurePreferenceController.updateState(mPreference);
 
         assertAvailability(mEnterpriseDisclosurePreferenceController.getAvailabilityStatus(),
-                UNSUPPORTED_ON_DEVICE);
+                DISABLED_FOR_PROFILE);
     }
 
     @Test
     public void testOrganizationNameAbsent_genericDisclosure() {
-        mockHasDeviceAdminFeature();
         mockDeviceOwner();
         mockOrganizationName(null);
 
@@ -82,7 +86,6 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
 
     @Test
     public void testOrganizationNamePresent_specificDisclosure() {
-        mockHasDeviceAdminFeature();
         mockDeviceOwner();
         mockOrganizationName(ORG_NAME);
 
