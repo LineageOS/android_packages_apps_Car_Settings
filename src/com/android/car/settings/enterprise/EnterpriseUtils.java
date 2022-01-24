@@ -125,6 +125,14 @@ public final class EnterpriseUtils {
     }
 
     /**
+     * Checks whether the device is managed.
+     */
+    public static boolean isDeviceManaged(Context context) {
+        DevicePolicyManager dpm = getDevicePolicyManager(context);
+        return dpm.isDeviceManaged();
+    }
+
+    /**
      * Checks whether device owner is set on the device.
      */
     public static boolean hasDeviceOwner(Context context) {
