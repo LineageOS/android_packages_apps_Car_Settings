@@ -1779,14 +1779,14 @@
     <string name="enterprise_privacy_exposure_category" translatable="false">Types of information your organization can see</string>
     <!-- Title for the 'Changes made by your organization’s admin' preference category. [CHAR LIMIT=60] -->
     <string name="enterprise_privacy_exposure_changes_category" translatable="false">Changes made by your organization\'s admin</string>
+    <!-- Description for the information that organization can see on managed device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_exposure_desc" translatable="false">
+        <li>Data associated with your work account, such as email and calendar</li>\n
+        <li>List of apps on your device</li>\n
+        <li>Amount of time and data spent in each app</li>
+    </string>
     <!-- Title for the 'Your access to this device' preference category. [CHAR LIMIT=60] -->
     <string name="enterprise_privacy_device_access_category" translatable="false">Your access to this device</string>
-    <!-- Label explaining that the admin can see data associated with their work account. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_enterprise_data" translatable="false">Data associated with your work account, such as email and calendar</string>
-    <!-- Label explaining that the admin can see apps installed on the device. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_installed_packages" translatable="false">List of apps on your device</string>
-    <!-- Label explaining that the admin can see app usage statistics. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_usage_stats" translatable="false">Amount of time and data spent in each app</string>
     <!-- Label explaining that the admin can retrieve network logs on the device. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_network_logs" translatable="false">Most recent network traffic log</string>
     <!-- Label explaining that the admin can request bug reports on the device. [CHAR LIMIT=NONE] -->
@@ -1815,10 +1815,11 @@
     <string name="enterprise_privacy_global_http_proxy" translatable="false">Global HTTP proxy set</string>
     <!-- Label explaining that the admin installed trusted CA certificates in personal profile. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_ca_certs_personal" translatable="false">Trusted credentials in your personal profile</string>
-    <!-- Label explaining that the admin can lock the device and change the user's password. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_lock_device" translatable="false">Admin can lock the device and reset password</string>
-    <!-- Label explaining that the admin can wipe the device remotely. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_wipe_device" translatable="false">Admin can delete all device data</string>
+    <!-- Description for device access on managed device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_device_access_desc" translatable="false">
+        <li>Admin can lock the device and reset password</li>\n
+        <li>Admin can delete all device data</li>
+    </string>
     <!-- Label explaining that the admin configured the device to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_failed_password_wipe_device" translatable="false">Failed password attempts before deleting all device data</string>
     <!-- Label explaining that the admin configured the current user to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
