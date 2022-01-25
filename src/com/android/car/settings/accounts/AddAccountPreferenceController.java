@@ -19,6 +19,7 @@ package com.android.car.settings.accounts;
 import static android.os.UserManager.DISALLOW_MODIFY_ACCOUNTS;
 
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByUm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.isDeviceManaged;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
@@ -86,7 +87,9 @@ public class AddAccountPreferenceController extends PreferenceController<Prefere
 
         Set<String> authorizedAccountTypes = helper.getAuthorizedAccountTypes();
 
-        if (authorizedAccountTypes.size() == 1) {
+        // Skip the choose account screen if there is only one account type and the device is not
+        // managed by a device owner.
+        if (authorizedAccountTypes.size() == 1 && !isDeviceManaged(getContext())) {
             String accountType = authorizedAccountTypes.iterator().next();
             getContext().startActivity(
                     AddAccountActivity.createAddAccountActivityIntent(getContext(), accountType));

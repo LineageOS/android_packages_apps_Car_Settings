@@ -30,6 +30,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
@@ -77,6 +78,8 @@ public class AddAccountPreferenceControllerTest {
     private AccountTypesHelper mMockAccountTypesHelper;
     @Mock
     private UserManager mMockUserManager;
+    @Mock
+    private DevicePolicyManager mMockDpm;
 
     @Before
     public void setUp() {
@@ -93,6 +96,7 @@ public class AddAccountPreferenceControllerTest {
         PreferenceControllerTestUtil.assignPreference(mController, mPreference);
 
         when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
+        when(mContext.getSystemService(DevicePolicyManager.class)).thenReturn(mMockDpm);
         doNothing().when(mContext).startActivity(any());
     }
 
@@ -157,7 +161,7 @@ public class AddAccountPreferenceControllerTest {
     }
 
     @Test
-    public void clickAddAccountButton_shouldNotOpenChooseAccountFragmentWhenOneType() {
+    public void clickAddAccountButton_shouldNotOpenChooseAccountFragmentWhenOneTypeAndUnmanaged() {
         when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         Set<String> accountSet = new HashSet<>();
         accountSet.add("TEST_ACCOUNT_TYPE_1");
@@ -173,6 +177,21 @@ public class AddAccountPreferenceControllerTest {
         Intent intent = intentArgumentCaptor.getValue();
         assertThat(intent.getComponent().getClassName()).isEqualTo(
                 AddAccountActivity.class.getName());
+    }
+
+    @Test
+    @UiThreadTest
+    public void clickAddAccountButton_shouldOpenChooseAccountFragmentWhenOneTypeAndManaged() {
+        when(mMockDpm.isDeviceManaged()).thenReturn(true);
+        when(mMockProfileHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
+        Set<String> accountSet = new HashSet<>();
+        accountSet.add("TEST_ACCOUNT_TYPE_1");
+        when(mMockAccountTypesHelper.getAuthorizedAccountTypes()).thenReturn(accountSet);
+
+        mController.onCreate(mLifecycleOwner);
+        mPreference.performClick();
+
+        verify(mFragmentController).launchFragment(any(ChooseAccountFragment.class));
     }
 
     @Test

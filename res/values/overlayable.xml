@@ -292,6 +292,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_brightness_knob"/>
       <item type="drawable" name="ic_brightness_knob_stretched"/>
       <item type="drawable" name="ic_brightness_knob_with_focus"/>
+      <item type="drawable" name="ic_bugreport"/>
       <item type="drawable" name="ic_car"/>
       <item type="drawable" name="ic_cellular_data"/>
       <item type="drawable" name="ic_check"/>
@@ -750,6 +751,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="condition_night_display_title"/>
       <item type="string" name="config_dev_options_module"/>
       <item type="string" name="config_homepage_fragment_class"/>
+      <item type="string" name="config_package_installer_package_name"/>
       <item type="string" name="config_settingsintelligence_package_name"/>
       <item type="string" name="confirm_grant_admin"/>
       <item type="string" name="confirm_mobile_data_disable"/>
@@ -867,28 +869,25 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="enterprise_privacy_ca_certs_personal"/>
       <item type="string" name="enterprise_privacy_camera_access"/>
       <item type="string" name="enterprise_privacy_device_access_category"/>
-      <item type="string" name="enterprise_privacy_enterprise_data"/>
+      <item type="string" name="enterprise_privacy_device_access_desc"/>
       <item type="string" name="enterprise_privacy_enterprise_installed_packages"/>
       <item type="string" name="enterprise_privacy_enterprise_set_default_apps"/>
       <item type="string" name="enterprise_privacy_exposure_category"/>
       <item type="string" name="enterprise_privacy_exposure_changes_category"/>
+      <item type="string" name="enterprise_privacy_exposure_desc"/>
       <item type="string" name="enterprise_privacy_failed_password_wipe_current_user"/>
       <item type="string" name="enterprise_privacy_failed_password_wipe_device"/>
       <item type="string" name="enterprise_privacy_global_http_proxy"/>
       <item type="string" name="enterprise_privacy_header"/>
       <item type="string" name="enterprise_privacy_input_method"/>
       <item type="string" name="enterprise_privacy_input_method_name"/>
-      <item type="string" name="enterprise_privacy_installed_packages"/>
       <item type="string" name="enterprise_privacy_location_access"/>
-      <item type="string" name="enterprise_privacy_lock_device"/>
       <item type="string" name="enterprise_privacy_microphone_access"/>
       <item type="string" name="enterprise_privacy_network_logs"/>
       <item type="string" name="enterprise_privacy_none"/>
       <item type="string" name="enterprise_privacy_security_logs"/>
       <item type="string" name="enterprise_privacy_settings"/>
       <item type="string" name="enterprise_privacy_settings_summary_generic"/>
-      <item type="string" name="enterprise_privacy_usage_stats"/>
-      <item type="string" name="enterprise_privacy_wipe_device"/>
       <item type="string" name="error_saving_lockpattern"/>
       <item type="string" name="error_saving_lockpin"/>
       <item type="string" name="error_saving_password"/>
