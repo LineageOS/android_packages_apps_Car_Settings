@@ -572,6 +572,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
+      <item type="plurals" name="enterprise_privacy_number_ca_certs"/>
       <item type="string" name="about_settings"/>
       <item type="string" name="about_settings_summary"/>
       <item type="string" name="about_summary"/>
@@ -865,7 +866,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="enable_text"/>
       <item type="string" name="enter_key"/>
       <item type="string" name="enterprise_privacy_always_on_vpn_device"/>
+      <item type="string" name="enterprise_privacy_always_on_vpn_personal"/>
       <item type="string" name="enterprise_privacy_bug_reports"/>
+      <item type="string" name="enterprise_privacy_ca_certs_device"/>
       <item type="string" name="enterprise_privacy_ca_certs_personal"/>
       <item type="string" name="enterprise_privacy_camera_access"/>
       <item type="string" name="enterprise_privacy_device_access_category"/>
