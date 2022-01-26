@@ -16,8 +16,8 @@
 
 package com.android.car.settings.datausage;
 
-import static android.net.TrafficStats.UID_REMOVED;
-import static android.net.TrafficStats.UID_TETHERING;
+import static android.app.usage.NetworkStats.Bucket.UID_REMOVED;
+import static android.app.usage.NetworkStats.Bucket.UID_TETHERING;
 
 import android.annotation.NonNull;
 import android.app.usage.NetworkStats;
