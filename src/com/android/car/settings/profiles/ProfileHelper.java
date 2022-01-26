@@ -229,6 +229,20 @@ public class ProfileHelper {
     }
 
     /**
+     * Logs out the given profile (which must have been switched to by a device admin).
+     */
+    // TODO(b/186905050, b/214336184): add unit / robo test
+    public boolean logoutProfile() {
+        Log.i(TAG, "Logging out current profile");
+
+        UserSwitchResult result = getResult("logout", mCarUserManager.logoutUser());
+        if (Log.isLoggable(TAG, Log.DEBUG)) {
+            Log.d(TAG, "Result: " + result);
+        }
+        return result != null && result.isSuccess();
+    }
+
+    /**
      * Returns the {@link StringRes} that corresponds to a {@link RemoveProfileResult} result code.
      */
     @StringRes
