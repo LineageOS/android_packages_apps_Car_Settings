@@ -1824,6 +1824,16 @@
     <string name="enterprise_privacy_failed_password_wipe_device" translatable="false">Failed password attempts before deleting all device data</string>
     <!-- Label explaining that the admin configured the current user to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_failed_password_wipe_current_user" translatable="false">Failed password attempts before deleting  profile data</string>
+    <!-- Label explaining that an always-on VPN was set by the admin in the personal profile. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_always_on_vpn_personal" translatable="false">Always-on VPN turned on in your personal profile</string>
+    <!-- Label explaining that the admin installed trusted CA certificates for the entire device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_ca_certs_device" translatable="false">Trusted credentials</string>
+    <!-- Summary indicating the number of trusted CA certificates installed by the admin. The number shown is a minimum as there may be additional CA certificates we do not know about. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_ca_certs" translatable="false">
+        <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> CA certificate</item>
+        <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> CA certificates</item>
+    </plurals>
+
 
     <!-- Remote request bugreport --><skip/>
     <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's organization manager. [CHAR LIMIT=50] -->
