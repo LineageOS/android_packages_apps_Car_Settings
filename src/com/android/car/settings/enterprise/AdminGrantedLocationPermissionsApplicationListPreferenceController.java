@@ -13,8 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.enterprise;
 
+import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -23,21 +25,22 @@ import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.internal.annotations.VisibleForTesting;
 
 /**
-* Controller to show apps that were granted location permissions by the device owner.
-*/
-public final class AdminGrantedLocationPermissionsPreferenceController
-        extends BaseAdminGrantedPermissionsPreferenceController {
+ * PreferenceController that builds a dynamic list of applications that were granted the location
+ * permissions by the device admin.
+ */
+public class AdminGrantedLocationPermissionsApplicationListPreferenceController
+        extends BaseAdminGrantedPermissionsApplicationListPreferenceController {
 
-    public AdminGrantedLocationPermissionsPreferenceController(Context context,
+    public AdminGrantedLocationPermissionsApplicationListPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         this(context, preferenceKey, fragmentController, uxRestrictions, /* provider= */ null);
     }
 
     @VisibleForTesting
-    AdminGrantedLocationPermissionsPreferenceController(Context context,
+    AdminGrantedLocationPermissionsApplicationListPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, ApplicationFeatureProvider provider) {
+            CarUxRestrictions uxRestrictions, @Nullable ApplicationFeatureProvider provider) {
         super(context, preferenceKey, fragmentController, uxRestrictions, provider,
                 EnterpriseUtils.LOCATION_PERMISSIONS);
     }

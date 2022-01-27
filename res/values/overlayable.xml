@@ -869,6 +869,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="enter_key"/>
       <item type="string" name="enterprise_privacy_always_on_vpn_device"/>
       <item type="string" name="enterprise_privacy_always_on_vpn_personal"/>
+      <item type="string" name="enterprise_privacy_apps_count_estimation_info"/>
       <item type="string" name="enterprise_privacy_bug_reports"/>
       <item type="string" name="enterprise_privacy_ca_certs_device"/>
       <item type="string" name="enterprise_privacy_ca_certs_personal"/>
@@ -886,6 +887,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="enterprise_privacy_header"/>
       <item type="string" name="enterprise_privacy_input_method"/>
       <item type="string" name="enterprise_privacy_input_method_name"/>
+      <item type="string" name="enterprise_privacy_installed_packages"/>
       <item type="string" name="enterprise_privacy_location_access"/>
       <item type="string" name="enterprise_privacy_microphone_access"/>
       <item type="string" name="enterprise_privacy_network_logs"/>
@@ -1511,6 +1513,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="device_admin_add"/>
       <item type="xml" name="device_admin_apps_fragment"/>
       <item type="xml" name="display_settings_fragment"/>
+      <item type="xml" name="enterprise_privacy_granted_camera_permission_apps_fragment"/>
+      <item type="xml" name="enterprise_privacy_granted_location_permissions_apps_fragment"/>
+      <item type="xml" name="enterprise_privacy_granted_microphone_permission_apps_fragment"/>
       <item type="xml" name="enterprise_privacy_settings_fragment"/>
       <item type="xml" name="factory_reset_confirm_fragment"/>
       <item type="xml" name="factory_reset_fragment"/>

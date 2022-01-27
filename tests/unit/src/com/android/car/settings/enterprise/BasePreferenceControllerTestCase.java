@@ -83,6 +83,10 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
                 .map(p -> p.getTitle()).collect(toList())).containsExactly(titles);
     }
 
+    protected static final void verifyPreferenceVisibleSet(Preference preference, boolean visible) {
+        verify(preference).setVisible(visible);
+    }
+
     protected static final void verifyPreferenceTitleSet(Preference preference,
             CharSequence title) {
         verify(preference).setTitle(title);
