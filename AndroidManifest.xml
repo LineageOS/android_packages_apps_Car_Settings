@@ -669,6 +669,7 @@
 
         <activity
             android:name=".bluetooth.BluetoothPairingDialog"
+            android:permission="android.permission.BLUETOOTH_PRIVILEGED"
             android:excludeFromRecents="true"
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:taskAffinity="car.settings.bluetooth"
