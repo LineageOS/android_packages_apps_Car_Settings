@@ -23,7 +23,6 @@ import static org.mockito.Mockito.when;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.os.UserHandle;
 import android.provider.Settings;
 
 import org.junit.Before;
@@ -36,8 +35,6 @@ public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpri
 
     private static final String IME_PACKAGE_NAME = "acme.keyboards";
     private static final String IME_PACKAGE_LABEL = "ACME Keyboards";
-
-    private static final UserHandle MY_USER_ID = UserHandle.of(UserHandle.myUserId());
 
     private EnterprisePrivacyFeatureProviderImpl mProvider;
 
@@ -150,6 +147,39 @@ public final class EnterprisePrivacyFeatureProviderImplTest extends BaseEnterpri
 
         assertWithMessage("getImeLabelIfOwnerSet()").that(mProvider.getImeLabelIfOwnerSet())
                 .isEqualTo(IME_PACKAGE_LABEL);
+    }
+
+    @Test
+    public void testGetMaximumFailedPasswordsBeforeWipeInCurrentUser_notOwner() {
+        mockNoDeviceOwner();
+        mockNoProfileOwnerAsUser();
+        mockGetMaximumFailedPasswordsForWipe(MY_USER_ID.getIdentifier(), 42);
+
+        assertWithMessage("getMaximumFailedPasswordsBeforeWipeInCurrentUser()")
+                .that(mProvider.getMaximumFailedPasswordsBeforeWipeInCurrentUser())
+                .isEqualTo(0);
+    }
+
+    @Test
+    public void testGetMaximumFailedPasswordsBeforeWipeInCurrentUser_deviceOwner() {
+        mockDeviceOwner();
+        mockNoProfileOwnerAsUser();
+        mockGetMaximumFailedPasswordsForWipe(MY_USER_ID.getIdentifier(), 42);
+
+        assertWithMessage("getMaximumFailedPasswordsBeforeWipeInCurrentUser()")
+                .that(mProvider.getMaximumFailedPasswordsBeforeWipeInCurrentUser())
+                .isEqualTo(42);
+    }
+
+    @Test
+    public void testGetMaximumFailedPasswordsBeforeWipeInCurrentUser_profileOwner() {
+        mockNoDeviceOwner();
+        mockProfileOwnerAsUser();
+        mockGetMaximumFailedPasswordsForWipe(MY_USER_ID.getIdentifier(), 42);
+
+        assertWithMessage("getMaximumFailedPasswordsBeforeWipeInCurrentUser()")
+                .that(mProvider.getMaximumFailedPasswordsBeforeWipeInCurrentUser())
+                .isEqualTo(42);
     }
 
     private void mockDefaultInputMehtodSettings(String value) {
