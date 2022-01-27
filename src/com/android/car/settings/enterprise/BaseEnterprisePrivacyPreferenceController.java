@@ -21,6 +21,8 @@ import android.content.Context;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settingslib.enterprise.EnterprisePrivacyFeatureProvider;
+import com.android.car.settingslib.enterprise.EnterprisePrivacyFeatureProviderImpl;
 
 /**
  * Base class for controllers in the Enterprise Privacy / Managed Device Info screen.
