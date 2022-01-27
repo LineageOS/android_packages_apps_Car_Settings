@@ -20,7 +20,6 @@ import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.UserManager;
 
 import androidx.preference.Preference;
 
@@ -74,9 +73,9 @@ public abstract class BluetoothDevicePreferenceController<V extends Preference> 
     @Override
     protected int getAvailabilityStatus() {
         int availabilityStatus = super.getAvailabilityStatus();
-        if (availabilityStatus == AVAILABLE) {
-            return getUserManager().hasUserRestriction(DISALLOW_CONFIG_BLUETOOTH)
-                    ? DISABLED_FOR_PROFILE : AVAILABLE;
+        if (availabilityStatus == AVAILABLE
+                && getUserManager().hasUserRestriction(DISALLOW_CONFIG_BLUETOOTH)) {
+            return BluetoothUtils.getAvailabilityStatusRestricted(getContext());
         }
         return availabilityStatus;
     }
