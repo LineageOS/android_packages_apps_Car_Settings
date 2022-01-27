@@ -30,7 +30,8 @@ import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.car.settingslib.applications.ApplicationFeatureProviderImpl;
 
 /**
- * Base class for controller that show apps that were granted permissions by the device owner.
+ * Base class for controllers that show the number of apps that were granted permissions by the
+ * admin.
  */
 abstract class BaseAdminGrantedPermissionsPreferenceController
         extends BaseEnterprisePrivacyPreferenceController<Preference> {
@@ -50,7 +51,7 @@ abstract class BaseAdminGrantedPermissionsPreferenceController
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions,
             @Nullable SyncApplicationFeatureProvider syncProvider,
-            String... permissions) {
+            String[] permissions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
 
         mApplicationFeatureProvider = new ApplicationFeatureProviderImpl(context, mPm,
@@ -60,7 +61,6 @@ abstract class BaseAdminGrantedPermissionsPreferenceController
                 : new SyncApplicationFeatureProviderImpl(mApplicationFeatureProvider);
         mPermissions = permissions;
     }
-
 
     @Override
     public void updateState(Preference preference) {
