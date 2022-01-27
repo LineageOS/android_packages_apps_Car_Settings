@@ -15,26 +15,58 @@
  */
 package com.android.car.settings.enterprise;
 
+import android.annotation.Nullable;
+import android.app.AppGlobals;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
+import com.android.car.settings.applications.SyncApplicationFeatureProvider;
+import com.android.car.settings.applications.SyncApplicationFeatureProviderImpl;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
+import com.android.car.settingslib.applications.ApplicationFeatureProviderImpl;
 
 /**
  * Base class for controller that show apps that were granted permissions by the device owner.
  */
-abstract class BaseAdminGrantedPermissionsPreferenceController<P extends Preference>
-        extends BaseEnterprisePreferenceController<P> {
+abstract class BaseAdminGrantedPermissionsPreferenceController
+        extends BaseEnterprisePrivacyPreferenceController<Preference> {
 
+    private final ApplicationFeatureProvider mApplicationFeatureProvider;
+    private final SyncApplicationFeatureProvider mSyncApplicationFeatureProvider;
     private final String[] mPermissions;
+
+    /**
+     * Cached, lazy-loaded count of number of apps - it 's called just once as it's expensive and
+     * CarSettings calls updateState() / getAvailabilityStatus() multiple times.
+     */
+    @Nullable
+    private Integer mCount;
 
     BaseAdminGrantedPermissionsPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, String... permissions) {
+            CarUxRestrictions uxRestrictions,
+            @Nullable SyncApplicationFeatureProvider syncProvider,
+            String... permissions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+
+        mApplicationFeatureProvider = new ApplicationFeatureProviderImpl(context, mPm,
+                AppGlobals.getPackageManager(), mDpm);
+        // syncProvider is only passed as argument on unit tests
+        mSyncApplicationFeatureProvider = syncProvider != null ? syncProvider
+                : new SyncApplicationFeatureProviderImpl(mApplicationFeatureProvider);
         mPermissions = permissions;
+    }
+
+
+    @Override
+    public void updateState(Preference preference) {
+        int count = getCount();
+        preference.setSummary(getContext().getResources().getQuantityString(
+                R.plurals.enterprise_privacy_number_packages_lower_bound, count, count));
     }
 
     @Override
@@ -42,7 +74,16 @@ abstract class BaseAdminGrantedPermissionsPreferenceController<P extends Prefere
         int superStatus = super.getAvailabilityStatus();
         if (superStatus != AVAILABLE) return superStatus;
 
-        // TODO(b/206155448): implement / add unit test
-        return DISABLED_FOR_PROFILE;
+        return getCount() > 0 ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    }
+
+    private int getCount() {
+        if (mCount == null) {
+            mLogger.d("initializing mCount");
+            mCount = mSyncApplicationFeatureProvider
+                    .getNumberOfAppsWithAdminGrantedPermissions(mPermissions);
+            mLogger.d("mCount = " + mCount);
+        }
+        return mCount;
     }
 }
