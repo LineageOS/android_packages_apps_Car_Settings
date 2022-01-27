@@ -18,8 +18,8 @@ package com.android.car.settings.enterprise;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import com.android.car.settings.applications.SyncApplicationFeatureProvider;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.internal.annotations.VisibleForTesting;
 
 /**
@@ -31,14 +31,14 @@ public final class AdminGrantedMicrophonePermissionPreferenceController
     public AdminGrantedMicrophonePermissionPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
-        this(context, preferenceKey, fragmentController, uxRestrictions, /* syncProvider= */ null);
+        this(context, preferenceKey, fragmentController, uxRestrictions, /* provider= */ null);
     }
 
     @VisibleForTesting
     AdminGrantedMicrophonePermissionPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions, SyncApplicationFeatureProvider syncProvider) {
-        super(context, preferenceKey, fragmentController, uxRestrictions, syncProvider,
+            CarUxRestrictions uxRestrictions, ApplicationFeatureProvider provider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, provider,
                 EnterpriseUtils.MICROPHONE_PERMISSIONS);
     }
 }
