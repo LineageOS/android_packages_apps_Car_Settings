@@ -380,7 +380,7 @@
     <string name="hide_system" msgid="8845453295584638040">"సిస్టమ్‌ను దాచు"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"సిస్టమ్ యాప్‌లను దాచు"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"సిస్టమ్ సెట్టింగ్‌ల సవరణ"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"సిస్టమ్ సెట్టింగ్‌లను సవరించడానికి ఈ అనుమతి యాప్‌కు వీలు కల్పిస్తుంది."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"సిస్టమ్ సెట్టింగ్‌లను ఎడిట్ చేయడానికి ఈ అనుమతి యాప్‌కు వీలు కల్పిస్తుంది."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"నోటిఫికేషన్ యాక్సెస్"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను అనుమతించాలా?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ప‌రిచ‌యాల పేర్లు, మీరు స్వీకరించిన మెసేజ్‌ల వంటి వ్యక్తిగత సమాచారంతో సహా అన్ని నోటిఫికేషన్‌లను చదవగలదు. అంతే కాదు ఇది నోటిఫికేషన్‌లను సవరించగలదు లేదా తీసివేయగలదు లేదా అవి కలిగి ఉండే చర్య బటన్‌లను యాక్టివేట్ చేయగలదు.\n\nఇది, అంతరాయం కలిగించవద్దు ఎంపికను ఆన్ చేయగల లేదా ఆఫ్ చేయగల సామర్థ్యాన్ని యాప్‌కు ఇవ్వడంతో పాటు సంబంధిత సెట్టింగ్‌లను కూడా మారుస్తుంది."</string>
@@ -601,8 +601,8 @@
     <string name="sync_disabled" msgid="393531064334628258">"సింక్‌ ఆఫ్‌లో ఉంది"</string>
     <string name="sync_error" msgid="6698021343089247914">"సింక్‌ ఎర్రర్"</string>
     <string name="last_synced" msgid="4745124489150101529">"చివరిగా సమకాలీకరించినది <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
-    <string name="sync_in_progress" msgid="1237573373537382416">"ఇప్పుడు సమకాలీకరిస్తోంది…"</string>
-    <string name="sync_one_time_sync" msgid="491707183321353107">"ఇప్పుడే సమకాలీకరించడానికి నొక్కండి<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_in_progress" msgid="1237573373537382416">"ఇప్పుడు సింక్ చేస్తోంది…"</string>
+    <string name="sync_one_time_sync" msgid="491707183321353107">"ఇప్పుడే సింక్ చేయడానికి నొక్కండి<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ఇప్పుడే సమకాలీకరించు"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"సింక్‌ను రద్దు చేయి"</string>
