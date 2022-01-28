@@ -61,6 +61,9 @@ public class BluetoothDeviceProfilesPreferenceController extends
                 profilePref = new BluetoothDeviceProfilePreference(getContext(), profile,
                         getCachedDevice());
                 profilePref.setOnPreferenceChangeListener(mProfileChangeListener);
+                setClickableWhileDisabled(profilePref, /* clickable= */ true, p ->
+                        BluetoothUtils.onClickWhileDisabled(getContext(),
+                                getFragmentController()));
                 preferenceGroup.addPreference(profilePref);
             }
         }
