@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.car.settings.enterprise;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
@@ -23,13 +22,9 @@ import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_
 import static com.google.common.truth.Truth.assertWithMessage;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.spy;
 
-import android.content.pm.UserInfo;
-import android.graphics.drawable.Drawable;
-import android.util.ArrayMap;
 import android.util.Log;
 
 import androidx.preference.PreferenceGroup;
@@ -41,30 +36,16 @@ import com.android.car.settingslib.applications.ApplicationFeatureProvider.ListO
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Map;
+public class EnterpriseInstalledPackagesListPreferenceControllerTest extends
+        BaseEnterprisePrivacyPreferenceControllerTestCase {
 
-abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase
-        <C extends BaseAdminGrantedPermissionsApplicationListPreferenceController>
-        extends BaseEnterprisePrivacyPreferenceControllerTestCase {
-
-    private static final String TAG =
-            BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase.class
-                    .getSimpleName();
-
-    private static final UserInfo DEFAULT_USER_INFO = new UserInfo(42, "Groot", /* flags= */ 0);
-
-    private static final Map<CharSequence, Drawable> ICONS_BY_LABEL = new ArrayMap<>();
+    private static final String TAG = EnterpriseInstalledPackagesListPreferenceControllerTest.class
+            .getSimpleName();
 
     // Must be a spy to verify refreshUi() is called
-    private C mSpiedController;
-
-    protected final String[] mPermissions;
+    private EnterpriseInstalledPackagesListPreferenceController mSpiedController;
 
     private DummyPreferenceGroup mPreferenceGroup;
-
-    BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase(String... permissions) {
-        mPermissions = permissions;
-    }
 
     @Before
     @UiThreadTest // Needed to instantiate DummyPreferenceGroup
@@ -73,8 +54,6 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
         mPreferenceGroup = new DummyPreferenceGroup(mSpiedContext);
     }
 
-    protected abstract C newController(ApplicationFeatureProvider provider);
-
     @Test
     public void testGetPreferenceType() {
         assertWithMessage("preference type").that(mSpiedController.getPreferenceType())
@@ -82,8 +61,8 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     }
 
     @Test
-    public void testGetAvailabilityStatus_noPermissionsGranted() {
-        ListOfAppsCallbackHolder callbackHolder = mockListAppsWithAdminGrantedPermissions();
+    public void testGetAvailabilityStatus_noInstalledApps() {
+        ListOfAppsCallbackHolder callbackHolder = mockListPolicyInstalledApps();
 
         // Assert initial state
         assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
@@ -97,9 +76,9 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     }
 
     @Test
-    public void testGetAvailabilityStatus_permissionsGranted() {
+    public void testGetAvailabilityStatus_withInstalledApps() {
         expectUiRefreshed(mSpiedController);
-        ListOfAppsCallbackHolder callbackHolder = mockListAppsWithAdminGrantedPermissions();
+        ListOfAppsCallbackHolder callbackHolder = mockListPolicyInstalledApps();
 
         // Assert initial state
         assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
@@ -115,7 +94,7 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     @Test
     public void testUpdateState() {
         expectUiRefreshed(mSpiedController);
-        ListOfAppsCallbackHolder callbackHolder = mockListAppsWithAdminGrantedPermissions();
+        ListOfAppsCallbackHolder callbackHolder = mockListPolicyInstalledApps();
         mSpiedController.getAvailabilityStatus();
         callbackHolder.release(newUserAppInfo("foo"), newUserAppInfo("bar"));
         assertUiRefreshed(mSpiedController);
@@ -125,16 +104,21 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
         assertPreferenceGroupStateSet(mPreferenceGroup, "foo", "bar");
     }
 
-    private ListOfAppsCallbackHolder mockListAppsWithAdminGrantedPermissions() {
+    private EnterpriseInstalledPackagesListPreferenceController newController(
+            ApplicationFeatureProvider provider) {
+        return new EnterpriseInstalledPackagesListPreferenceController(mSpiedContext,
+                mPreferenceKey, mFragmentController, mUxRestrictions, provider);
+    }
+
+    private ListOfAppsCallbackHolder mockListPolicyInstalledApps() {
         ListOfAppsCallbackHolder callbackHolder = new ListOfAppsCallbackHolder();
 
         doAnswer((inv) -> {
             Log.d(TAG, "answering to " + inv);
-            ListOfAppsCallback callback = (ListOfAppsCallback) inv.getArguments()[1];
+            ListOfAppsCallback callback = (ListOfAppsCallback) inv.getArguments()[0];
             callbackHolder.setCallback(callback);
             return null;
-        }).when(mApplicationFeatureProvider)
-            .listAppsWithAdminGrantedPermissions(eq(mPermissions), any());
+        }).when(mApplicationFeatureProvider).listPolicyInstalledApps(any());
         return callbackHolder;
     }
 }
