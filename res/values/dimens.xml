@@ -96,6 +96,8 @@
     <dimen name="pin_pad_key_margin">12dp</dimen>
     <dimen name="confirm_pattern_dimension">350dp</dimen>
     <dimen name="confirm_lock_message_vertical_spacing">@*android:dimen/car_padding_2</dimen>
+    <dimen name="lock_hint_padding">24dp</dimen>
+    <dimen name="lock_hint_min_height">110dp</dimen>
 
     <!-- Profile Switcher -->
     <dimen name="profile_switcher_image_avatar_size">96dp</dimen>
