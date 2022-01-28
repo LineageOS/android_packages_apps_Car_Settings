@@ -1532,15 +1532,6 @@
     <string name="lockpassword_confirm_label">Confirm</string>
     <!-- Hints for Choose Lock Password Screen [CHAR_LIMIT=73] -->
     <string name="choose_lock_password_hints">Must be at least 4 characters</string>
-    <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=40] -->
-    <string name="lockpassword_password_too_short">Must be at least <xliff:g example="3" id="count">%d</xliff:g> characters</string>
-    <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=44] -->
-    <string name="lockpassword_pin_too_short">PIN must be at least <xliff:g example="3" id="count">%d</xliff:g> digits</string>
-
-    <!-- Error shown in popup when password is too long [CHAR LIMIT=42] -->
-    <string name="lockpassword_password_too_long">Must be fewer than <xliff:g example="17" id="number">%d</xliff:g> characters</string>
-    <!-- Error shown in popup when PIN is too long [CHAR LIMIT=42] -->
-    <string name="lockpassword_pin_too_long">Must be fewer than <xliff:g example="17" id="number">%d</xliff:g> digits</string>
 
     <!-- Error shown when in PIN mode and user enters a non-digit. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=40] -->
     <string name="lockpassword_pin_contains_non_digits">Must contain only digits 0-9.</string>
@@ -1566,8 +1557,105 @@
     <!-- Error shown when a user is choosing a PASSWORD for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PASSWORD that's less common and more complicated. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_password_denylisted_by_admin">Common passwords are blocked by your IT admin. Try a different password.</string>
 
+    <!-- Error shown when in PASSWORD mode and password is all digits [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_alpha">Must contain at least one letter</string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain any digits [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_digit">Must contain at least one digit</string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain any symbols [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_symbol">Must contain at least one symbol</string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of letters [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_letters">
+        {count, plural,
+        =1    {Must contain at least # letter}
+        other {Must contain at least # letters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of lowercase letters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_lowercase">
+        {count, plural,
+        =1    {Must contain at least # lowercase letter}
+        other {Must contain at least # lowercase letters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of uppercase letters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_uppercase">
+        {count, plural,
+        =1    {Must contain at least # uppercase letter}
+        other {Must contain at least # uppercase letters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of numerical digits [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_numeric">
+        {count, plural,
+        =1    {Must contain at least # numerical digit}
+        other {Must contain at least # numerical digits}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of special symbols [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_symbols">
+        {count, plural,
+        =1    {Must contain at least # special symbol}
+        other {Must contain at least # special symbols}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of non-letter characters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_nonletter">
+        {count, plural,
+        =1    {Must contain at least # non-letter character}
+        other {Must contain at least # non-letter characters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of non-numerical characters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_nonnumerical">
+        {count, plural,
+        =1    {Must contain at least # non-numerical character}
+        other {Must contain at least # non-numerical characters}
+        }
+    </string>
+
+    <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=60]-->
+    <string name="lockpassword_password_too_short">
+        {count, plural,
+        =1    {Must contain at least # character}
+        other {Must contain at least # characters}
+        }
+    </string>
+
+    <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=60] -->
+    <string name="lockpassword_pin_too_short">
+        {count, plural,
+        =1    {Must contain at least # digit}
+        other {Must contain at least # digits}
+        }
+    </string>
+
+    <!-- Error shown in popup when password is too long [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_too_long">
+        {count, plural,
+        =1    {Must be fewer than # character}
+        other {Must be fewer than # characters}
+        }
+    </string>
+
+    <!-- Error shown in popup when PIN is too long [CHAR LIMIT=60] -->
+    <string name="lockpassword_pin_too_long">
+        {count, plural,
+        =1    {Must be fewer than # digit}
+        other {Must be fewer than # digits}
+        }
+    </string>
+
     <!-- [CHAR_LIMIT=NONE] Error shown when the user tries to set an ascending or descending sequence of digits. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=NONE] -->
-    <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence of digits isn\'t allowed.</string>
+    <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence of digits isn\'t allowed</string>
 
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
     <string name="setup_lock_settings_options_button_label">Screen lock options</string>
