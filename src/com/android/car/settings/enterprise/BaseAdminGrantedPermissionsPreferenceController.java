@@ -24,8 +24,8 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.enterprise.CallbackTranslator.AppsCounterCallbackTranslator;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
-import com.android.car.settingslib.applications.ApplicationFeatureProvider.NumberOfAppsCallback;
 import com.android.car.settingslib.applications.ApplicationFeatureProviderImpl;
 
 /**
@@ -33,7 +33,7 @@ import com.android.car.settingslib.applications.ApplicationFeatureProviderImpl;
  * admin.
  */
 abstract class BaseAdminGrantedPermissionsPreferenceController
-        extends BaseEnterprisePrivacyAppsCounterPreferenceController<Preference> {
+        extends BaseApplicationsCounterPreferenceController<Preference> {
 
     private final String[] mPermissions;
 
@@ -53,14 +53,14 @@ abstract class BaseAdminGrantedPermissionsPreferenceController
     }
 
     @Override
-    protected void lazyLoad(NumberOfAppsCallback callback) {
+    protected void lazyLoad(AppsCounterCallbackTranslator callbackTranslator) {
         mApplicationFeatureProvider.calculateNumberOfAppsWithAdminGrantedPermissions(mPermissions,
-                /* async= */ true, callback);
+                /* async= */ true, callbackTranslator);
     }
 
     @Override
     protected void updateState(Preference p) {
-        int count = getCount();
+        int count = getResult();
         p.setSummary(getContext().getResources().getQuantityString(
                 R.plurals.enterprise_privacy_number_packages_lower_bound, count, count));
     }
