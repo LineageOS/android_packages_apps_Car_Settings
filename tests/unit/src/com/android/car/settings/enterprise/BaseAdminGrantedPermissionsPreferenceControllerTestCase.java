@@ -18,7 +18,6 @@ package com.android.car.settings.enterprise;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
-import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -47,7 +46,7 @@ import java.util.Objects;
 
 abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
         <C extends BaseAdminGrantedPermissionsPreferenceController> extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePrivacyPreferenceControllerTestCase {
 
     private static final String TAG = BaseAdminGrantedPermissionsPreferenceControllerTestCase.class
             .getSimpleName();
@@ -60,31 +59,18 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
     @Mock
     private Preference mPreference;
 
-    @Mock
-    protected ApplicationFeatureProvider mProvider;
-
     BaseAdminGrantedPermissionsPreferenceControllerTestCase(String... permissions) {
         mPermissions = permissions;
     }
 
     @Before
     public void setController() {
-        mSpiedController = spy(newController(mProvider));
+        mSpiedController = spy(newController(mApplicationFeatureProvider));
 
         PreferenceControllerTestUtil.assignPreference(mSpiedController, mPreference);
     }
 
     protected abstract C newController(ApplicationFeatureProvider provider);
-
-    @Test
-    public void testGetAvailabilityStatus_noFeature() {
-        mockNoDeviceAdminFeature();
-        // Cannot use mSpiedController because it check for feature on constructor
-        C controller = newController(mProvider);
-
-        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
-        assertUiNotRefreshed();
-    }
 
     @Test
     public void testGetAvailabilityStatus_noPermissionsGranted() {
@@ -138,8 +124,9 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
             NumberOfAppsCallback callback = (NumberOfAppsCallback) inv.getArguments()[2];
             callbackHolder.setCallback(callback);
             return null;
-        }).when(mProvider).calculateNumberOfAppsWithAdminGrantedPermissions(eq(mPermissions),
-                /* sync= */ eq(true), any());
+        }).when(mApplicationFeatureProvider)
+                .calculateNumberOfAppsWithAdminGrantedPermissions(eq(mPermissions),
+                        /* sync= */ eq(true), any());
         return callbackHolder;
     }
 

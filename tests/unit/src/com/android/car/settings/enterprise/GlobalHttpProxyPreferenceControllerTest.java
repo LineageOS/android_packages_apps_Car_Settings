@@ -30,7 +30,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 public final class GlobalHttpProxyPreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePrivacyPreferenceControllerTestCase {
     private GlobalHttpProxyPreferenceController mGlobalHttpProxyPreferenceController;
 
     @Mock

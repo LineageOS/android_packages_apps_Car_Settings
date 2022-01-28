@@ -39,8 +39,9 @@ public final class FailedPasswordWipeCurrentUserPreferenceController
     @VisibleForTesting
     FailedPasswordWipeCurrentUserPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
-            EnterprisePrivacyFeatureProvider provider) {
-        super(context, preferenceKey, fragmentController, uxRestrictions, provider);
+            EnterprisePrivacyFeatureProvider enterprisePrivacyFeatureProvider) {
+        super(context, preferenceKey, fragmentController, uxRestrictions,
+                enterprisePrivacyFeatureProvider, /* applicationFeatureProvider= */ null);
     }
 
     @Override

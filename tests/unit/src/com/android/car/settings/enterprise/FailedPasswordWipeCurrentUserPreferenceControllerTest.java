@@ -21,19 +21,15 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settingslib.enterprise.EnterprisePrivacyFeatureProvider;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
 public final class FailedPasswordWipeCurrentUserPreferenceControllerTest
-        extends BasePreferenceControllerTestCase {
+        extends BaseEnterprisePrivacyPreferenceControllerTestCase {
 
     private FailedPasswordWipeCurrentUserPreferenceController mController;
-
-    @Mock
-    private EnterprisePrivacyFeatureProvider mProvider;
 
     @Mock
     private Preference mPreference;
@@ -41,7 +37,8 @@ public final class FailedPasswordWipeCurrentUserPreferenceControllerTest
     @Before
     public void setUp() throws Exception {
         mController = new FailedPasswordWipeCurrentUserPreferenceController(mSpiedContext,
-                mPreferenceKey, mFragmentController, mUxRestrictions, mProvider);
+                mPreferenceKey, mFragmentController, mUxRestrictions,
+                mEnterprisePrivacyFeatureProvider);
     }
 
     @Test
@@ -73,6 +70,7 @@ public final class FailedPasswordWipeCurrentUserPreferenceControllerTest
     }
 
     private void mockGetMaximumFailedPasswordsForWipe(int max) {
-        when(mProvider.getMaximumFailedPasswordsBeforeWipeInCurrentUser()).thenReturn(max);
+        when(mEnterprisePrivacyFeatureProvider.getMaximumFailedPasswordsBeforeWipeInCurrentUser())
+                .thenReturn(max);
     }
 }

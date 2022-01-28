@@ -19,7 +19,6 @@ package com.android.car.settings.enterprise;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
-import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertWithMessage;
 
@@ -44,7 +43,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.test.annotation.UiThreadTest;
 
 import com.android.car.settings.common.PreferenceControllerTestUtil;
-import com.android.car.settings.enterprise.BasePreferenceControllerTestCase.DummyPreferenceGroup;
+import com.android.car.settings.enterprise.BaseEnterprisePreferenceControllerTestCase.DummyPreferenceGroup;
 import com.android.car.settings.testutils.TextDrawable;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider.ListOfAppsCallback;
@@ -53,7 +52,6 @@ import com.android.internal.util.Preconditions;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
 
 import java.util.Arrays;
 import java.util.List;
@@ -62,7 +60,7 @@ import java.util.Objects;
 
 abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase
         <C extends BaseAdminGrantedPermissionsApplicationListPreferenceController>
-        extends BasePreferenceControllerTestCase {
+        extends BaseEnterprisePrivacyPreferenceControllerTestCase {
 
     private static final String TAG =
             BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase.class
@@ -79,9 +77,6 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
 
     private DummyPreferenceGroup mPreferenceGroup;
 
-    @Mock
-    protected ApplicationFeatureProvider mProvider;
-
     BaseAdminGrantedPermissionsApplicationListPreferenceControllerTestCase(String... permissions) {
         mPermissions = permissions;
     }
@@ -89,7 +84,7 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     @Before
     @UiThreadTest // Needed to instantiate DummyPreferenceGroup
     public void setExtraFixtures() {
-        mSpiedController = spy(newController(mProvider));
+        mSpiedController = spy(newController(mApplicationFeatureProvider));
         mPreferenceGroup = new DummyPreferenceGroup(mSpiedContext);
         PreferenceControllerTestUtil.assignPreference(mSpiedController, mPreferenceGroup);
     }
@@ -100,16 +95,6 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     public void testGetPreferenceType() {
         assertWithMessage("preference type").that(mSpiedController.getPreferenceType())
                 .isEqualTo(PreferenceGroup.class);
-    }
-
-    @Test
-    public void testGetAvailabilityStatus_noFeature() {
-        mockNoDeviceAdminFeature();
-        // Cannot use mController because it check for feature on constructor
-        C controller = newController(mProvider);
-
-        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
-        assertUiNotRefreshed();
     }
 
     @Test
@@ -164,7 +149,8 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
             ListOfAppsCallback callback = (ListOfAppsCallback) inv.getArguments()[1];
             callbackHolder.setCallback(callback);
             return null;
-        }).when(mProvider).listAppsWithAdminGrantedPermissions(eq(mPermissions), any());
+        }).when(mApplicationFeatureProvider)
+            .listAppsWithAdminGrantedPermissions(eq(mPermissions), any());
         return callbackHolder;
     }
 
