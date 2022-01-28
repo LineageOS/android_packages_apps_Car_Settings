@@ -26,8 +26,8 @@ import java.util.Objects;
  * Simple class for bringing together information about application and user for which it was
  * installed.
  */
-// TODO(b/208511815): copied from Settings "as-is"; ideally should be move to SettingsLib, but if
-// not, we should copy the unit tests as well.
+// TODO(b/208511815): copied from Settings mostly "as-is"; ideally should be move to SettingsLib,
+// but if not, we should copy the unit tests as well.
 public final class UserAppInfo {
     public final UserInfo userInfo;
     public final ApplicationInfo appInfo;
@@ -56,5 +56,12 @@ public final class UserAppInfo {
     @Override
     public int hashCode() {
         return Objects.hash(userInfo.id, appInfo.packageName);
+    }
+
+    // TODO(b/208511815): added in this class
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "[user=" + userInfo.id + ", pkg=" + appInfo.packageName
+                + "]";
     }
 }
