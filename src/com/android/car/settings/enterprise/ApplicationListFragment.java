@@ -77,4 +77,14 @@ public abstract class ApplicationListFragment extends SettingsFragment {
             return R.xml.enterprise_privacy_granted_microphone_permission_apps_fragment;
         }
     }
+
+    /**
+     * Fragment for application list installed by enterprise.
+     */
+    public static class EnterpriseInstalledPackages extends ApplicationListFragment {
+        @Override
+        protected int getPreferenceScreenResId() {
+            return R.xml.enterprise_privacy_installed_packages_fragment;
+        }
+    }
 }
