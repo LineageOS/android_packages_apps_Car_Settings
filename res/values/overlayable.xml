@@ -572,7 +572,13 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
+      <item type="plurals" name="default_camera_app_title"/>
+      <item type="plurals" name="default_email_app_title"/>
+      <item type="plurals" name="default_phone_app_title"/>
       <item type="plurals" name="enterprise_privacy_number_ca_certs"/>
+      <item type="plurals" name="enterprise_privacy_number_failed_password_wipe"/>
+      <item type="plurals" name="enterprise_privacy_number_packages"/>
+      <item type="plurals" name="enterprise_privacy_number_packages_lower_bound"/>
       <item type="string" name="about_settings"/>
       <item type="string" name="about_settings_summary"/>
       <item type="string" name="about_summary"/>
@@ -629,6 +635,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="app_link_open_ask"/>
       <item type="string" name="app_link_open_never"/>
       <item type="string" name="app_list_preference_none"/>
+      <item type="string" name="app_names_concatenation_template_2"/>
+      <item type="string" name="app_names_concatenation_template_3"/>
       <item type="string" name="app_permissions"/>
       <item type="string" name="app_permissions_summary"/>
       <item type="string" name="app_usage_cycle"/>
@@ -813,6 +821,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="default_admin_support_msg"/>
       <item type="string" name="default_app_selected_app"/>
       <item type="string" name="default_applications"/>
+      <item type="string" name="default_browser_title"/>
+      <item type="string" name="default_calendar_app_title"/>
+      <item type="string" name="default_contacts_app_title"/>
+      <item type="string" name="default_map_app_title"/>
       <item type="string" name="default_network_name_summary"/>
       <item type="string" name="default_password_summary"/>
       <item type="string" name="default_search_query"/>
@@ -867,6 +879,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="enter_key"/>
       <item type="string" name="enterprise_privacy_always_on_vpn_device"/>
       <item type="string" name="enterprise_privacy_always_on_vpn_personal"/>
+      <item type="string" name="enterprise_privacy_apps_count_estimation_info"/>
       <item type="string" name="enterprise_privacy_bug_reports"/>
       <item type="string" name="enterprise_privacy_ca_certs_device"/>
       <item type="string" name="enterprise_privacy_ca_certs_personal"/>
@@ -884,6 +897,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="enterprise_privacy_header"/>
       <item type="string" name="enterprise_privacy_input_method"/>
       <item type="string" name="enterprise_privacy_input_method_name"/>
+      <item type="string" name="enterprise_privacy_installed_packages"/>
       <item type="string" name="enterprise_privacy_location_access"/>
       <item type="string" name="enterprise_privacy_microphone_access"/>
       <item type="string" name="enterprise_privacy_network_logs"/>
@@ -1509,7 +1523,12 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="device_admin_add"/>
       <item type="xml" name="device_admin_apps_fragment"/>
       <item type="xml" name="display_settings_fragment"/>
+      <item type="xml" name="enterprise_privacy_granted_camera_permission_apps_fragment"/>
+      <item type="xml" name="enterprise_privacy_granted_location_permissions_apps_fragment"/>
+      <item type="xml" name="enterprise_privacy_granted_microphone_permission_apps_fragment"/>
+      <item type="xml" name="enterprise_privacy_installed_packages_fragment"/>
       <item type="xml" name="enterprise_privacy_settings_fragment"/>
+      <item type="xml" name="enterprise_set_default_apps_settings"/>
       <item type="xml" name="factory_reset_confirm_fragment"/>
       <item type="xml" name="factory_reset_fragment"/>
       <item type="xml" name="file_paths"/>

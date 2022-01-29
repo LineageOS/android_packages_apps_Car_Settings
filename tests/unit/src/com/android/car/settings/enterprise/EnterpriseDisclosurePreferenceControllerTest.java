@@ -16,50 +16,35 @@
 
 package com.android.car.settings.enterprise;
 
-
 import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
-import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import android.car.drivingstate.CarUxRestrictions;
 
 import com.android.car.admin.ui.R;
-import com.android.settingslib.widget.FooterPreference;
+import com.android.car.settings.common.CarFooterPreference;
 
 import org.junit.Before;
 import org.junit.Test;
 
 public final class EnterpriseDisclosurePreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePrivacyPreferenceControllerTestCase {
     private static final String ORG_NAME = "My Org";
 
     private EnterpriseDisclosurePreferenceController mEnterpriseDisclosurePreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
-    private FooterPreference mPreference;
+    private CarFooterPreference mPreference;
 
     @Before
     public void setUp() {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
-        mPreference = new FooterPreference(mSpiedContext);
+        mPreference = new CarFooterPreference(mSpiedContext);
 
         mockHasDeviceAdminFeature();
         mEnterpriseDisclosurePreferenceController = new EnterpriseDisclosurePreferenceController(
                 mSpiedContext, mPreferenceKey, mFragmentController, mCarUxRestrictions);
-    }
-
-    @Test
-    public void testDeviceAdminFeatureMissing_noDisclosure() {
-        mockNoDeviceAdminFeature();
-
-        // Feature is checked in constructor, so we need to recreate preference controller
-        EnterpriseDisclosurePreferenceController controller =
-                new EnterpriseDisclosurePreferenceController(mSpiedContext, mPreferenceKey,
-                        mFragmentController, mCarUxRestrictions);
-        controller.updateState(mPreference);
-
-        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
     }
 
     @Test

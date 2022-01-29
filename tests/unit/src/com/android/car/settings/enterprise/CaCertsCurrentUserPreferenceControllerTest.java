@@ -40,7 +40,7 @@ import org.mockito.Mock;
 import java.util.Collections;
 
 public final class CaCertsCurrentUserPreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePrivacyPreferenceControllerTestCase {
     private CaCertsCurrentUserPreferenceController mCaCertsCurrentUserPreferenceController;
     private Preference mPreference;
 

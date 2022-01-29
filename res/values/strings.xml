@@ -1787,6 +1787,20 @@
     </string>
     <!-- Title for the 'Your access to this device' preference category. [CHAR LIMIT=60] -->
     <string name="enterprise_privacy_device_access_category" translatable="false">Your access to this device</string>
+    <!-- Label explaining that the admin can see apps installed on the device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_installed_packages" translatable="false">List of apps on your device</string>
+    <!-- Label explaining that the number of apps is an estimation. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_apps_count_estimation_info" translatable="false">Number of apps is estimated. It may not include apps installed outside of the Play Store.</string>
+    <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. The number shown is a minimum as there may be additional apps we do not know about. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_packages_lower_bound">
+        <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> app</item>
+        <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> apps</item>
+    </plurals>
+    <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_packages">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> app</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> apps</item>
+    </plurals>
     <!-- Label explaining that the admin can retrieve network logs on the device. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_network_logs" translatable="false">Most recent network traffic log</string>
     <!-- Label explaining that the admin can request bug reports on the device. [CHAR LIMIT=NONE] -->
@@ -1833,7 +1847,39 @@
         <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> CA certificate</item>
         <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> CA certificates</item>
     </plurals>
-
+    <!-- Summary indicating the number of mistyped passwords after which the device or work profile wipes itself. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_failed_password_wipe">
+        <item quantity="one" translatable="false"><xliff:g id="count">%d</xliff:g> attempt</item>
+        <item quantity="other" translatable="false"><xliff:g id="count">%d</xliff:g> attempts</item>
+    </plurals>
+    <!-- Strings for displaying which applications were set as default for specific actions. -->
+    <!-- Title for the apps that have been set as default handlers of camera-related intents. [CHAR LIMIT=30] -->
+    <plurals name="default_camera_app_title">
+        <item quantity="one" translatable="false">Camera app</item>
+        <item quantity="other" translatable="false">Camera apps</item>
+    </plurals>
+    <!-- Title for the app that has been set as default handler of calendar-related intents. [CHAR LIMIT=30] -->
+    <string name="default_calendar_app_title" translatable="false">Calendar app</string>
+    <!-- Title for the app that has been set as default handler of contacts-related intents. [CHAR LIMIT=30] -->
+    <string name="default_contacts_app_title" translatable="false">Contacts app</string>
+    <!-- Title for the apps that have been set as default handlers of new email intents. [CHAR LIMIT=30] -->
+    <plurals name="default_email_app_title">
+        <item quantity="one" translatable="false">Email client app</item>
+        <item quantity="other" translatable="false">Email client apps</item>
+    </plurals>
+    <!-- Title for the app that has been set as default handler of geo-related intents. [CHAR LIMIT=30] -->
+    <string name="default_map_app_title" translatable="false">Map app</string>
+    <!-- Title for the apps that have been set as default handlers of call-related intents. [CHAR LIMIT=30] -->
+    <plurals name="default_phone_app_title">
+        <item quantity="one" translatable="false">Phone app</item>
+        <item quantity="other" translatable="false">Phone apps</item>
+    </plurals>
+    <!-- Title for Default Browser settings [CHAR LIMIT=30] -->
+    <string name="default_browser_title" translatable="false">Browser app</string>
+    <!-- Template for concatenating two app names -->
+    <string name="app_names_concatenation_template_2" translatable="false"><xliff:g id="first_app_name">%1$s</xliff:g>, <xliff:g id="second_app_name">%2$s</xliff:g></string>
+    <!-- Template for concatenating three app names -->
+    <string name="app_names_concatenation_template_3" translatable="false"><xliff:g id="first_app_name">%1$s</xliff:g>, <xliff:g id="second_app_name">%2$s</xliff:g>, <xliff:g id="third_app_name">%3$s</xliff:g></string>
 
     <!-- Remote request bugreport --><skip/>
     <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's organization manager. [CHAR LIMIT=50] -->

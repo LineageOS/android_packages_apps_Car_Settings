@@ -50,22 +50,29 @@
     <PreferenceCategory android:title="@string/enterprise_privacy_exposure_changes_category"
                         android:key="@string/psk_enterprise_privacy_exposure_changes_category">
         <Preference
+                    android:fragment="com.android.car.settings.enterprise.ApplicationListFragment$EnterpriseInstalledPackages"
                     settings:controller="com.android.car.settings.enterprise.EnterpriseInstalledPackagesPreferenceController"
                     android:key="@string/pk_enterprise_privacy_number_enterprise_installed_packages"
+                    android:icon="@drawable/ic_apps"
                     android:title="@string/enterprise_privacy_enterprise_installed_packages"/>
         <Preference
+                    android:fragment="com.android.car.settings.enterprise.ApplicationListFragment$AdminGrantedLocationPermissions"
                     settings:controller="com.android.car.settings.enterprise.AdminGrantedLocationPermissionsPreferenceController"
                     android:key="@string/pk_enterprise_privacy_number_location_access_packages"
                     android:title="@string/enterprise_privacy_location_access"/>
         <Preference
+                    android:fragment="com.android.car.settings.enterprise.ApplicationListFragment$AdminGrantedMicrophonePermission"
                     settings:controller="com.android.car.settings.enterprise.AdminGrantedMicrophonePermissionPreferenceController"
                     android:key="@string/pk_enterprise_privacy_number_microphone_access_packages"
                     android:title="@string/enterprise_privacy_microphone_access"/>
         <Preference
+                    android:fragment="com.android.car.settings.enterprise.ApplicationListFragment$AdminGrantedCameraPermission"
                     settings:controller="com.android.car.settings.enterprise.AdminGrantedCameraPermissionPreferenceController"
                     android:key="@string/pk_enterprise_privacy_number_camera_access_packages"
                     android:title="@string/enterprise_privacy_camera_access"/>
         <Preference
+                    android:fragment="com.android.car.settings.enterprise.EnterpriseSetDefaultAppsListFragment"
+                    android:icon="@drawable/ic_apps"
                     settings:controller="com.android.car.settings.enterprise.EnterpriseSetDefaultAppsPreferenceController"
                     android:key="@string/pk_enterprise_privacy_number_enterprise_set_default_apps"
                     android:title="@string/enterprise_privacy_enterprise_set_default_apps"/>
