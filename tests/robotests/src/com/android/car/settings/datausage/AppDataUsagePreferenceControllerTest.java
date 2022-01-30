@@ -16,7 +16,7 @@
 
 package com.android.car.settings.datausage;
 
-import static android.net.TrafficStats.UID_TETHERING;
+import static android.app.usage.NetworkStats.Bucket.UID_TETHERING;
 
 import static com.google.common.truth.Truth.assertThat;
 

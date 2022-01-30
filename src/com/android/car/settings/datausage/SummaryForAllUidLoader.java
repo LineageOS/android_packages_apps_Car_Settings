@@ -71,8 +71,10 @@ public class SummaryForAllUidLoader extends AsyncTaskLoader<NetworkStats> {
         long end = mArgs.getLong(KEY_END);
 
         try {
+            String subscriberId = template.getSubscriberIds().isEmpty() ? null
+                    : template.getSubscriberIds().iterator().next();
             return mNetworkStatsManager.querySummary(
-                    ConnectivityManager.TYPE_MOBILE, template.getSubscriberId(), start, end);
+                    ConnectivityManager.TYPE_MOBILE, subscriberId, start, end);
         } catch (RemoteException e) {
             return null;
         }
