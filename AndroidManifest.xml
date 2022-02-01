@@ -232,6 +232,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.settings.NOTIFICATION_SETTINGS" />
+                <action android:name="android.settings.ALL_APPS_NOTIFICATION_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
