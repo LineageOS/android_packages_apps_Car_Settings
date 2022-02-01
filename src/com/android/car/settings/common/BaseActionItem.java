@@ -29,7 +29,7 @@ import java.util.function.Consumer;
  */
 public abstract class BaseActionItem {
     protected CarUiPreference mPreference;
-    protected boolean mIsPreferenceRestricted = false;
+    protected boolean mIsRestricted = false;
     protected Consumer<Preference> mRestrictedOnClickListener;
 
     private boolean mIsEnabled = true;
@@ -74,17 +74,29 @@ public abstract class BaseActionItem {
         }
     }
 
-    BaseActionItem setPreference(Preference preference) {
+    /**
+     * Sets the preference associated with the action item.
+     */
+    public BaseActionItem setPreference(Preference preference) {
         mPreference = (CarUiPreference) preference;
         return this;
     }
 
-    BaseActionItem setPreferenceRestricted(boolean isPreferenceRestricted) {
-        mIsPreferenceRestricted = isPreferenceRestricted;
+    /**
+     * Set action item as restricted. Made public so restricted status can be independent of the
+     * preference.
+     */
+    public BaseActionItem setRestricted(boolean isRestricted) {
+        mIsRestricted = isRestricted;
         return this;
     }
 
-    BaseActionItem setRestrictedOnClickListener(Consumer<Preference> restrictedOnClickListener) {
+    /**
+     * Set the Consumer that should run when the action item is clicked while disabled and
+     * restricted.
+     */
+    public BaseActionItem setRestrictedOnClickListener(
+            Consumer<Preference> restrictedOnClickListener) {
         mRestrictedOnClickListener = restrictedOnClickListener;
         return this;
     }
