@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Copyright (C) 2021 The Android Open Source Project
+<!-- Copyright (C) 2022 The Android Open Source Project
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -207,6 +207,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="dimen" name="entity_header_inner_margin"/>
       <item type="dimen" name="entity_header_margin_bottom"/>
       <item type="dimen" name="icon_size"/>
+      <item type="dimen" name="lock_hint_min_height"/>
+      <item type="dimen" name="lock_hint_padding"/>
       <item type="dimen" name="multi_action_preference_item_container_padding"/>
       <item type="dimen" name="multi_action_preference_item_divider_margin_end"/>
       <item type="dimen" name="multi_action_preference_toggle_button_margin"/>
@@ -1034,6 +1036,16 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="lockpassword_invalid_password"/>
       <item type="string" name="lockpassword_password_denylisted_by_admin"/>
       <item type="string" name="lockpassword_password_recently_used"/>
+      <item type="string" name="lockpassword_password_requires_alpha"/>
+      <item type="string" name="lockpassword_password_requires_digit"/>
+      <item type="string" name="lockpassword_password_requires_letters"/>
+      <item type="string" name="lockpassword_password_requires_lowercase"/>
+      <item type="string" name="lockpassword_password_requires_nonletter"/>
+      <item type="string" name="lockpassword_password_requires_nonnumerical"/>
+      <item type="string" name="lockpassword_password_requires_numeric"/>
+      <item type="string" name="lockpassword_password_requires_symbol"/>
+      <item type="string" name="lockpassword_password_requires_symbols"/>
+      <item type="string" name="lockpassword_password_requires_uppercase"/>
       <item type="string" name="lockpassword_password_too_long"/>
       <item type="string" name="lockpassword_password_too_short"/>
       <item type="string" name="lockpassword_pin_contains_non_digits"/>
