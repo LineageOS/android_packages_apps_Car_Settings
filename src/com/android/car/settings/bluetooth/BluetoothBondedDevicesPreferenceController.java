@@ -67,7 +67,6 @@ import java.util.Set;
  * when there is {@link UserManager.DISALLOW_CONFIG_BLUETOOTH} restriction. However, individual
  * profile's toggle switch will be disabled - when clicked, shows action disabled by admin dialog.
  */
-// TODO(b/215784744) show Toast when UX restriction is set
 public class BluetoothBondedDevicesPreferenceController extends
         BluetoothDevicesGroupPreferenceController implements
         BluetoothDevicePreference.UpdateToggleButtonListener {
@@ -220,14 +219,10 @@ public class BluetoothBondedDevicesPreferenceController extends
             updatePhoneActionItemAvailability(preference, /* isAvailable= */ true);
             boolean phoneEnabled = phoneProfile.isEnabled(cachedDevice.getDevice());
 
-            if (hasDisallowConfigRestriction()) {
-                phoneItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
-                        .onClickWhileDisabled(getContext(), getFragmentController()));
-                preference.onActionItemChange(phoneItem);
-            } else {
-                phoneItem.setOnClickListener(isChecked ->
-                        finalPhoneProfile.setEnabled(cachedDevice.getDevice(), isChecked));
-            }
+            phoneItem.setOnClickListener(isChecked ->
+                    finalPhoneProfile.setEnabled(cachedDevice.getDevice(), isChecked));
+            phoneItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
+                    .onClickWhileDisabled(getContext(), getFragmentController()));
             phoneItem.setChecked(phoneEnabled);
         }
 
@@ -239,14 +234,11 @@ public class BluetoothBondedDevicesPreferenceController extends
             ToggleButtonActionItem mediaItem = preference.getActionItem(MEDIA_BUTTON);
             updateMediaActionItemAvailability(preference, /* isAvailable= */ true);
             boolean mediaEnabled = mediaProfile.isEnabled(cachedDevice.getDevice());
-            if (hasDisallowConfigRestriction()) {
-                mediaItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
-                        .onClickWhileDisabled(getContext(), getFragmentController()));
-                preference.onActionItemChange(mediaItem);
-            } else {
-                mediaItem.setOnClickListener(isChecked ->
+
+            mediaItem.setOnClickListener(isChecked ->
                     finalMediaProfile.setEnabled(cachedDevice.getDevice(), isChecked));
-            }
+            mediaItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
+                    .onClickWhileDisabled(getContext(), getFragmentController()));
             mediaItem.setChecked(mediaEnabled);
         }
     }
@@ -268,6 +260,7 @@ public class BluetoothBondedDevicesPreferenceController extends
             phoneItem.setEnabled(isAvailable && !hasDisallowConfigRestriction());
             phoneItem.setDrawable(getContext(), isAvailable
                     ? R.drawable.ic_bluetooth_phone : R.drawable.ic_bluetooth_phone_unavailable);
+            phoneItem.setRestricted(!isAvailable);
         });
     }
 
@@ -279,6 +272,7 @@ public class BluetoothBondedDevicesPreferenceController extends
             mediaItem.setEnabled(isAvailable && !hasDisallowConfigRestriction());
             mediaItem.setDrawable(getContext(), isAvailable
                     ? R.drawable.ic_bluetooth_media : R.drawable.ic_bluetooth_media_unavailable);
+            mediaItem.setRestricted(!isAvailable);
         });
     }
 
