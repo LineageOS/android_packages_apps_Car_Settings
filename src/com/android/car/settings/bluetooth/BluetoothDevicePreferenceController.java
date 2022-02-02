@@ -20,11 +20,14 @@ import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.os.UserManager;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
+import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 /**
  * Encapsulates common functionality for all {@link BluetoothPreferenceController} instances
@@ -44,6 +47,14 @@ public abstract class BluetoothDevicePreferenceController<V extends Preference> 
     public BluetoothDevicePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @VisibleForTesting
+    BluetoothDevicePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            LocalBluetoothManager localBluetoothManager, UserManager userManager) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, localBluetoothManager,
+                userManager);
     }
 
     /**
