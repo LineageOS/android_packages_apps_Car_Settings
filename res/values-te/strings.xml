@@ -181,7 +181,7 @@
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"పరికరం పేరు మార్చండి"</string>
     <string name="bluetooth_rename_button" msgid="2397892174725986383">"పేరు మార్చు"</string>
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"అందుబాటులో ఉన్న పరికరాలు"</string>
-    <string name="bluetooth_profiles" msgid="5580372290862835951">"ప్రొఫైల్‌లు"</string>
+    <string name="bluetooth_profiles" msgid="5580372290862835951">"ప్రొఫైళ్లు"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"బ్లూటూత్ ఆన్ అవుతోంది…"</string>
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"బ్లూటూత్ ఆఫ్ అవుతోంది…"</string>
@@ -460,7 +460,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మొత్తం డేటా, ప్రొఫైల్‌లను ఫ్యాక్టరీ రీసెట్ చేస్తుంది"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"వీటితో సహా ఇది మీ వాహన సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మొత్తం డేటాను ఫ్యాక్టరీ రీసెట్ చేస్తుంది:\n\n"<li>"మీ Google ఖాతా"</li>\n<li>"సిస్టమ్, యాప్ డేటా, సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేసిన యాప్‌లు"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"మీరు ప్రస్తుతం కింది ఖాతాలకు సైన్ ఇన్ చేశారు:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ఈ వాహనం కోసం ఇతర ప్రొఫైల్‌లు సెటప్ చేయబడ్డాయి."</string>
+    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ఈ వాహనం కోసం ఇతర ప్రొఫైళ్లు సెటప్ చేయబడ్డాయి."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"మొత్తం డేటాను తొలగించండి"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"మొత్తం డేటాను తొలగించాలా?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"ఇది ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మీ మొత్తం వ్యక్తిగత ప్రొఫైల్ డేటాను, ఖాతాలను, అలాగే డౌన్‌లోడ్ చేసిన యాప్‌లను ఫ్యాక్టరీ రీసెట్ చేస్తుంది.\n\nమీరు ఈ చర్యను తిరిగి రద్దు చేయలేరు."</string>
@@ -487,7 +487,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"నిర్వాహకుడిగా సైన్ ఇన్ చేశారు"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"అడ్మిన్ అనుమతులను మంజూరు చేయాలా?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"నిర్వాహకుడిగా చేయి"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"ఇతర అడ్మిన్‌ల ప్రొఫైల్‌లతో సహా, అడ్మిన్ ఇతర ప్రొఫైల్‌లను తొలగించగలరు, సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను ఫ్యాక్టరీ రీసెట్ చేయగలరు."</string>
+    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"ఇతర అడ్మిన్‌ల ప్రొఫైళ్లతో సహా, అడ్మిన్ ఇతర ప్రొఫైళ్లను తొలగించగలరు, సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను ఫ్యాక్టరీ రీసెట్ చేయగలరు."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"ఈ చర్యను రద్దు చేయలేరు."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"అవును, నిర్వాహకుడిగా చేయి"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"కొత్త ప్రొఫైల్‌లను క్రియేట్ చేయండి"</string>
@@ -499,7 +499,7 @@
     <string name="user_new_user_name" msgid="906698527658609819">"కొత్త ప్రొఫైల్"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"కొత్త ప్రొఫైల్‌ను జోడించాలా?"</string>
     <string name="user_add_user_message_setup" msgid="812616230454605159">"మీరు కొత్త ప్రొఫైల్‌ను క్రియేట్ చేసిన తర్వాత, ఆ వ్యక్తి దాన్ని వారి కోసం అనుకూలంగా మార్చుకోవాలి."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"అన్ని ఇతర ప్రొఫైల్‌ల ఉపయోగం కోసం యాప్‌లను ఏదైనా ఇతర ప్రొఫైల్ నుండి అప్‌డేట్ చేయవచ్చు."</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"అన్ని ఇతర ప్రొఫైళ్ల ఉపయోగం కోసం యాప్‌లను ఏదైనా ఇతర ప్రొఫైల్ నుండి అప్‌డేట్ చేయవచ్చు."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"ప్రొఫైల్ పరిమితిని చేరుకున్నారు"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="other">మీరు <xliff:g id="COUNT">%d</xliff:g> ప్రొఫైల్‌ల వరకు క్రియేట్ చేయగలరు.</item>
@@ -509,7 +509,7 @@
     <string name="delete_user_dialog_title" msgid="575517556232943687">"ఈ ప్రొఫైల్‌ను తొలగించాలా?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"ఈ ప్రొఫైల్‌లోని మొత్తం యాప్‌లు, డేటా తొలగించబడతాయి"</string>
     <string name="delete_user_error_title" msgid="6422249596301690254">"ప్రొఫైల్‌ను తొలగించడం సాధ్యపడలేదు."</string>
-    <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"మీరు ప్రొఫైల్‌లను మార్చినప్పుడు లేదా వాహనాన్ని రీస్టార్ట్ చేసినప్పుడు ఈ ప్రొఫైల్ తొలగించబడుతుంది."</string>
+    <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"మీరు ప్రొఫైళ్లను మార్చినప్పుడు లేదా వాహనాన్ని రీస్టార్ట్ చేసినప్పుడు ఈ ప్రొఫైల్ తొలగించబడుతుంది."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"విస్మరించు"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"మళ్లీ ప్రయత్నించు"</string>
     <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"చివరి యూజర్ ప్రొఫైల్‌ను తొలగించాలా?"</string>
@@ -528,7 +528,7 @@
     <string name="name_input_blank_error" msgid="2088850865880984123">"ఫీల్డ్ ఖాళీగా ఉండరాదు."</string>
     <string name="name_input_invalid_error" msgid="4355625213535164704">"ఎంటర్ చేసిన ప్రొఫైల్ పేరు చెల్లదు."</string>
     <string name="users_list_title" msgid="770764290290240909">"వినియోగదారులు"</string>
-    <string name="profiles_list_title" msgid="1443396686780460221">"ప్రొఫైల్‌లు"</string>
+    <string name="profiles_list_title" msgid="1443396686780460221">"ప్రొఫైళ్లు"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s కి అనుమతులు మంజూరు చేయబడ్డాయి"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"స్టోరేజ్"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"సంగీతం &amp; ఆడియో"</string>
@@ -562,7 +562,7 @@
     <string name="account_details_title" msgid="7529571432258448573">"ఖాతా సమాచారం"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ఖాతాను జోడించండి"</string>
     <string name="add_an_account" msgid="1072285034300995091">"ఖాతాను జోడించండి"</string>
-    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"పరిమిత ప్రొఫైల్‌లలో ఖాతాలను జోడించడం సాధ్యపడదు"</string>
+    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"పరిమిత ప్రొఫైళ్లలో ఖాతాలను జోడించడం సాధ్యపడదు"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"ఖాతాను తీసివేయి"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ఖాతాను తీసివేయాలా?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ఈ ఖాతాను తీసివేయడం వలన పరికరం నుండి దానికి సంబంధించిన అన్ని మెసేజ్‌లు, కాంటాక్ట్‌లు మరియు ఇతర డేటా తొలగించబడతాయి!"</string>
@@ -713,7 +713,7 @@
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"స్క్రీన్ ఇమేజ్‌ను యాక్సెస్ చేయడానికి అసిస్టెంట్‌ను అనుమతించండి"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"ఇటీవల పంపినవి"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"అన్ని యాప్‌లు"</string>
-    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"ప్రొఫైల్‌లు &amp; ఖాతాలు"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"ప్రొఫైళ్లు &amp; ఖాతాలు"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"ఇతర ప్రొఫైల్‌లను మేనేజ్ చేయండి"</string>
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ఒక ప్రొఫైల్‌ను జోడించు"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ఈ ప్రొఫైల్‌ను తొలగించు"</string>
