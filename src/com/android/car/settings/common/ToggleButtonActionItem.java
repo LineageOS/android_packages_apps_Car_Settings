@@ -64,7 +64,6 @@ public final class ToggleButtonActionItem extends BaseActionItem {
         toggleButton.setAllowClickWhenDisabled(true);
         toggleButton.setOnCheckedChangeListener((view, isChecked) -> {
             onClick();
-            // TODO(b/215784744) remove after the restricted button is set properly
             toggleButton.setChecked(mIsChecked);
         });
     }
@@ -166,15 +165,13 @@ public final class ToggleButtonActionItem extends BaseActionItem {
      * Executes when ToggleButton is clicked.
      */
     public void onClick() {
-        if (isEnabled()) {
-            if (mIsPreferenceRestricted && mPreference != null
-                    && mRestrictedOnClickListener != null) {
-                mRestrictedOnClickListener.accept(mPreference);
-            } else if (!mIsPreferenceRestricted && mOnClickListener != null) {
-                mIsChecked = !mIsChecked;
-                mOnClickListener.accept(mIsChecked);
-            }
-        } else if (mOnClickWhileDisabledListener != null) {
+        if (mIsRestricted && mPreference != null
+                && mRestrictedOnClickListener != null) {
+            mRestrictedOnClickListener.accept(mPreference);
+        } else if (isEnabled() && !mIsRestricted && mOnClickListener != null) {
+            mIsChecked = !mIsChecked;
+            mOnClickListener.accept(mIsChecked);
+        } else if (!isEnabled() && mOnClickWhileDisabledListener != null) {
             mOnClickWhileDisabledListener.accept(mPreference);
         }
     }
