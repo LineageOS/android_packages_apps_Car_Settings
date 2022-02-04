@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"បោះបង់"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"បញ្ជាក់"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ត្រូវ​មាន​យ៉ាងហោចណាស់ 4 តួ"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ត្រូវ​​មាន​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> តួ"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"កូដ PIN ​ត្រូវ​មានយ៉ាងតិច <xliff:g id="COUNT">%d</xliff:g> ខ្ទង់"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ត្រូវមានតិចជាង <xliff:g id="NUMBER">%d</xliff:g> តួ"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ត្រូវមានលេខតិចជាង <xliff:g id="NUMBER">%d</xliff:g> ខ្ទង់"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ត្រូវមាន​លេខពី 0-9 តែ​ប៉ុណ្ណោះ។"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​កូដ PIN ​ទើបប្រើ​ហើយ​ទេ"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"កូដ PIN លក្ខណៈ​សាមញ្ញ​ត្រូវ​បាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រងផ្នែក​ព័ត៌មាន​វិទ្យា​របស់អ្នក។ សូមសាកល្បង​ប្រើ​កូដ PIN ផ្សេង​ពីនេះ។"</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​ពាក្យ​សម្ងាត់​​ដែលទើបប្រើ​ហើយ​ទេ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"មាន​បញ្ហា​ក្នុងការ​រក្សាទុក​ពាក្យ​សម្ងាត់"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ពាក្យសម្ងាត់​លក្ខណៈ​សាមញ្ញ​ត្រូវបាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រង​ផ្នែកព័ត៌មាន​វិទ្យា​របស់អ្នក។ សូមសាកល្បង​ប្រើ​ពាក្យសម្ងាត់​ផ្សេងពីនេះ។"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់​ឡើង ចុះ ឬ​ដដែលៗ​ទេ។"</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់ឡើង ចុះ ឬដដែលៗទេ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ជម្រើស​ការចាក់សោអេក្រង់"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\nថ្ងៃ <xliff:g id="DATE">%2$s</xliff:g>៖ <xliff:g id="NUM_DAYS">%3$s</xliff:g> ថ្ងៃមុន"</string>
     <string name="credentials_reset" msgid="873900550885788639">"សម្អាត​ព័ត៌មានផ្ទៀងផ្ទាត់"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"គោលការណ៍​យានជំនិះ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ការកំណត់ដែលស្ថិតក្រោមការគ្រប់គ្រងរបស់អ្នក​គ្រប់គ្រងស្ថាប័ន"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ស្វែងយល់បន្ថែមអំពី <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">មានកម្មវិធី​អប្បបរមាចំនួន <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">មានកម្មវិធី​អប្បបរមាចំនួន <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other">កម្មវិធី <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">កម្មវិធី <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other">ព្យាយាមបញ្ចូល <xliff:g id="COUNT_1">%d</xliff:g> ដង</item>
+      <item quantity="one">ព្យាយាមបញ្ចូល <xliff:g id="COUNT_0">%d</xliff:g> ដង</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">កម្មវិធី​កាមេរ៉ា</item>
+      <item quantity="one">កម្មវិធី​កាមេរ៉ា</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">កម្មវិធី​ផ្ញើអ៊ីមែល</item>
+      <item quantity="one">កម្មវិធី​ផ្ញើអ៊ីមែល</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">កម្មវិធី​ទូរសព្ទ</item>
+      <item quantity="one">កម្មវិធី​ទូរសព្ទ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ចែករំលែក​របាយការណ៍អំពី​បញ្ហាឬ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក។"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក ហើយឧបករណ៍របស់អ្នកអាចនឹងដំណើរការយឺតជាបណ្តោះអាសន្ន។"</string>

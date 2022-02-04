@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ரத்துசெய்"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"உறுதிப்படுத்து"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்து இருக்க வேண்டும்"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> இலக்கங்கள் இருக்க வேண்டும்"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>எழுத்தை விட குறைவாக இருக்கவேண்டும்"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> இலக்கங்களை விட குறைவாக இருக்க வேண்டும்"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0-9 இலக்கங்கள் மட்டுமே இருக்க வேண்டும்."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"சாதன நிர்வாகி சமீபத்திய பின்னைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"பொதுவான பின்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு பின்னை முயலவும்."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"சாதன நிர்வாகி சமீபத்திய கடவுச்சொல்லைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"கடவுச்சொல்லைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"பொதுவான கடவுச்சொற்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு கடவுச்சொல்லை முயலவும்."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைத் தொடர்ந்து பயன்படுத்துவது அனுமதிக்கப்படாது."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைப் பயன்படுத்துவது அனுமதிக்கப்படவில்லை"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
     <string name="credentials_reset" msgid="873900550885788639">"அனுமதிச் சான்றுகளை அழி"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> வாகனக் கொள்கை"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"உங்கள் நிறுவனத்தின் நிர்வாகி நிர்வகிக்கும் அமைப்புகள்"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> குறித்து மேலும் அறிக"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">குறைந்தது <xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
+      <item quantity="one">குறைந்தது <xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> முயற்சிகள்</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> முயற்சி</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">கேமரா ஆப்ஸ்</item>
+      <item quantity="one">கேமரா ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">மின்னஞ்சல் கிளையன்ட் ஆப்ஸ்</item>
+      <item quantity="one">மின்னஞ்சல் கிளையன்ட் ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ஃபோன் ஆப்ஸ்</item>
+      <item quantity="one">ஃபோன் ஆப்ஸ்</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"பிழை அறிக்கையைப் பகிரவா?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"இந்தச் சாதனத்தைப் பிழையறிந்து திருத்துவதற்கு உதவ இந்த வாகன நிறுவனத்தின் நிர்வாகி, பிழை அறிக்கையைக் கோரியுள்ளார். ஆப்ஸும் தரவும் பகிரப்படக்கூடும்."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"இந்தச் சாதனத்தைப் பிழையறிந்து திருத்துவதற்கு உதவ இந்த வாகன நிறுவனத்தின் நிர்வாகி, பிழை அறிக்கையைக் கோரியுள்ளார். ஆப்ஸும் தரவும் பகிரப்படக்கூடும். மேலும் உங்கள் சாதனத்தின் வேகம் தற்காலிகமாகக் குறையக்கூடும்."</string>

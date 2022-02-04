@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"إلغاء"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تأكيد"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"يجب أن تتكوَّن كلمة المرور من 4 أحرف على الأقل."</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"يجب أن تحتوي على <xliff:g id="COUNT">%d</xliff:g> حرف على الأقل."</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"يجب أن يحتوي PIN على <xliff:g id="COUNT">%d</xliff:g> رقم على الأقل."</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"يجب ألا تزيد كلمة المرور عن <xliff:g id="NUMBER">%d</xliff:g> حرف."</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"يجب ألا يزيد رقم التعريف الشخصي عن <xliff:g id="NUMBER">%d</xliff:g> رقم."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"يجب أن يحتوي رقم التعريف الشخصي على أرقام من ۰ إلى ٩ فقط."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"لا يسمح مشرف الجهاز باستخدام رقم تعريف شخصي تم استخدامه مؤخرًا."</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"حظرَ مشرف تكنولوجيا المعلومات استخدام أرقام التعريف الشخصية الشائعة. جرِّب استخدام رقم تعريف شخصي مختلف."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"لا يسمح مشرف الجهاز باستخدام كلمة مرور تم استخدامها مؤخرًا."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"حدث خطأ أثناء حفظ كلمة المرور."</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"حظرَ مشرف تكنولوجيا المعلومات استخدام كلمات المرور الشائعة. جرِّب استخدام كلمة مرور مختلفة."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"لا يُسمح باستخدام الترتيب التصاعدي أو التنازلي أو المكرر للأرقام."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"غير مسموح باستخدام الترتيب التصاعدي أو التنازلي أو المكرر للأرقام."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"خيارات قفل الشاشة"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : قبل <xliff:g id="NUM_DAYS">%3$s</xliff:g> يوم"</string>
     <string name="credentials_reset" msgid="873900550885788639">"محو بيانات الاعتماد"</string>
@@ -757,6 +781,54 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"سياسة المركبات السارية لدى <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"الإعدادات التي يديرها مدير المؤسسة"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"مزيد من المعلومات عن <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق كحد أدنى</item>
+      <item quantity="two">تطبيقان (<xliff:g id="COUNT_1">%d</xliff:g>) كحد أدنى</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات كحد أدنى</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا كحد أدنى</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق كحد أدنى</item>
+      <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>) كحد أدنى</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="two">تطبيقان (<xliff:g id="COUNT_1">%d</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="zero">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="two">لديك محاولتان (<xliff:g id="COUNT_1">%d</xliff:g>).</item>
+      <item quantity="few">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولات.</item>
+      <item quantity="many">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="other">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="one">لديك محاولة واحدة (<xliff:g id="COUNT_0">%d</xliff:g>).</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="zero">تطبيق الكاميرا</item>
+      <item quantity="two">تطبيقا الكاميرا</item>
+      <item quantity="few">تطبيقات الكاميرا</item>
+      <item quantity="many">تطبيقات الكاميرا</item>
+      <item quantity="other">تطبيقات الكاميرا</item>
+      <item quantity="one">تطبيق الكاميرا</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="zero">تطبيق بريد إلكتروني</item>
+      <item quantity="two">تطبيقا البريد الإلكتروني</item>
+      <item quantity="few">تطبيقات البريد الإلكتروني</item>
+      <item quantity="many">تطبيقات البريد الإلكتروني</item>
+      <item quantity="other">تطبيقات البريد الإلكتروني</item>
+      <item quantity="one">تطبيق البريد الإلكتروني</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="zero">تطبيق الهاتف</item>
+      <item quantity="two">تطبيقا الهاتف</item>
+      <item quantity="few">تطبيقات الهاتف</item>
+      <item quantity="many">تطبيقات الهاتف</item>
+      <item quantity="other">تطبيقات الهاتف</item>
+      <item quantity="one">تطبيق الهاتف</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"هل تريد مشاركة تقرير الخطأ؟"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. وقد تتم مشاركة التطبيقات والبيانات."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. قد تتم مشاركة التطبيقات والبيانات، وقد يعمل جهازك ببطء مؤقتًا."</string>

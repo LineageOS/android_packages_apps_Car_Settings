@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Отмена"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Подтвердить"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Не менее 4 символов"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Пароль должен быть не короче <xliff:g id="COUNT">%d</xliff:g> симв."</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-код должен содержать не менее <xliff:g id="COUNT">%d</xliff:g> цифр"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Пароль должен быть короче <xliff:g id="NUMBER">%d</xliff:g> симв."</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN-код должен содержать менее <xliff:g id="NUMBER">%d</xliff:g> цифр"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN-код должен содержать только цифры."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Использовать недавний PIN-код запрещено"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Системный администратор заблокировал простые PIN-коды. Выберите более сложную комбинацию."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Использовать недавний пароль запрещено"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не удалось сохранить пароль"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Системный администратор заблокировал простые пароли. Выберите более сложную комбинацию."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Нельзя использовать последовательности из идущих подряд или повторяющихся цифр."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Нельзя использовать последовательности из идущих подряд или повторяющихся цифр"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Варианты блокировки экрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> (<xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. назад)"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Очистить учетные данные"</string>
@@ -757,6 +781,42 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила организации \"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>\" в отношении автотранспорта"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Настройки, которыми управляет менеджер организации"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Подробнее о сервисе \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложение</item>
+      <item quantity="few">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+      <item quantity="many">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложений</item>
+      <item quantity="other">Как минимум <xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> приложение</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> приложений</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> приложения</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> попытка</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> попытки</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> попыток</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> попытки</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Приложения камеры</item>
+      <item quantity="few">Приложения камеры</item>
+      <item quantity="many">Приложения камеры</item>
+      <item quantity="other">Приложения камеры</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">Почтовые клиенты</item>
+      <item quantity="few">Почтовые клиенты</item>
+      <item quantity="many">Почтовые клиенты</item>
+      <item quantity="other">Почтовые клиенты</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">Приложения для звонков</item>
+      <item quantity="few">Приложения для звонков</item>
+      <item quantity="many">Приложения для звонков</item>
+      <item quantity="other">Приложения для звонков</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Поделиться отчетом об ошибке?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Менеджер организации, которой принадлежит этот автомобиль, запросил отчет об ошибке. Это поможет ему устранить неполадку. Кроме того, менеджер может получить доступ к приложениям и данным."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Менеджер организации, которой принадлежит этот автомобиль, запросил отчет об ошибке. Это поможет ему устранить неполадку. Менеджер может получить доступ к приложениям и данным. Кроме того, возможно временное снижение скорости работы устройства."</string>

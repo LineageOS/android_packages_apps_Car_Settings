@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ರದ್ದುಮಾಡಿ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ದೃಢೀಕರಿಸಿ"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ಕನಿಷ್ಠ 4 ಅಕ್ಷರಗಳು ಇರಬೇಕು"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ಕನಿಷ್ಠ <xliff:g id="COUNT">%d</xliff:g> ಅಕ್ಷರಗಳನ್ನು ಹೊಂದಿರಬೇಕು"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"ಪಿನ್ ಕನಿಷ್ಠ <xliff:g id="COUNT">%d</xliff:g> ಅಂಕಿಗಳನ್ನು ಹೊಂದಿರಬೇಕು"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> ಗಿಂತ ಕಡಿಮೆ ಅಕ್ಷರಗಳನ್ನು ಹೊಂದಿರಬೇಕು"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> ಗಿಂತ ಕಡಿಮೆ ಅಂಕಿಗಳನ್ನು ಹೊಂದಿರಬೇಕು"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ಕೇವಲ 0-9 ಅಂಕಿಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿರಬೇಕು."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ಇತ್ತೀಚಿನ ಪಿನ್ ಬಳಸಲು ಸಾಧನದ ನಿರ್ವಾಹಕರು ಅನುಮತಿಸುವುದಿಲ್ಲ"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"ನಿಮ್ಮ IT ನಿರ್ವಾಹಕರು ಒಂದೇ ರೀತಿಯ ಪಿನ್‌ಗಳನ್ನು ನಿರ್ಬಂಧಿಸಿದ್ದಾರೆ. ಬೇರೆಯ ಪಿನ್ ಪ್ರಯತ್ನಿಸಿ."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ಇತ್ತೀಚಿನ ಪಾಸ್‌ವರ್ಡ್ ಬಳಸಲು ಸಾಧನದ ನಿರ್ವಾಹಕರು ಅನುಮತಿಸುವುದಿಲ್ಲ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"ಪಾಸ್‌ವರ್ಡ್‌ ಉಳಿಸುವಲ್ಲಿ ದೋಷ"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ನಿಮ್ಮ IT ನಿರ್ವಾಹಕರು ಒಂದೇ ರೀತಿಯ ಪಾಸ್‌ವರ್ಡ್‌ಗಳನ್ನು ನಿರ್ಬಂಧಿಸಿದ್ದಾರೆ. ಬೇರೆಯ ಪಾಸ್‌ವರ್ಡ್ ಪ್ರಯತ್ನಿಸಿ."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ಅಂಕಿಗಳ ಆರೋಹಣ, ಅವರೋಹಣ ಅಥವಾ ಪುನರಾವರ್ತಿತ ಅನುಕ್ರಮವನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ಅಂಕಿಗಳ ಆರೋಹಣ, ಅವರೋಹಣ ಅಥವಾ ಪುನರಾವರ್ತಿತ ಅನುಕ್ರಮವನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ದಿನಗಳ ಹಿಂದೆ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ರುಜುವಾತುಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ವಾಹನ ನೀತಿ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರಿಂದ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗಿದೆ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">ಕನಿಷ್ಠ <xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
+      <item quantity="other">ಕನಿಷ್ಠ <xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಪ್ರಯತ್ನಗಳು</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಪ್ರಯತ್ನಗಳು</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">ಕ್ಯಾಮರಾ ಆ್ಯಪ್‌ಗಳು</item>
+      <item quantity="other">ಕ್ಯಾಮರಾ ಆ್ಯಪ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">ಇಮೇಲ್ ಕ್ಲೈಂಟ್ ಆ್ಯಪ್‌ಗಳು</item>
+      <item quantity="other">ಇಮೇಲ್ ಕ್ಲೈಂಟ್ ಆ್ಯಪ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">ಫೋನ್ ಆ್ಯಪ್‌ಗಳು</item>
+      <item quantity="other">ಫೋನ್ ಆ್ಯಪ್‌ಗಳು</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ಬಗ್ ವರದಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳುವುದೇ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಸಾಧನದ ಸಮಸ್ಯೆ ನಿವಾರಿಸಲು ಸಹಾಯ ಮಾಡಲು ಬಗ್ ವರದಿಯನ್ನು ವಿನಂತಿಸಿದ್ದಾರೆ. ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಈ ಸಾಧನದ ಸಮಸ್ಯೆ ನಿವಾರಿಸಲು ಸಹಾಯ ಮಾಡಲು ಬಗ್ ವರದಿಯನ್ನು ವಿನಂತಿಸಿದ್ದಾರೆ. ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು ಹಾಗೂ ನಿಮ್ಮ ಸಾಧನವು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಧಾನಗೊಳ್ಳಬಹುದು."</string>

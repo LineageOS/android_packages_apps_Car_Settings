@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"বাতিল করুন"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"নিশ্চিত করুন"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"কমপক্ষে ৪টি অক্ষর থাকা আবশ্যক"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"কমপক্ষে <xliff:g id="COUNT">%d</xliff:g>টি অক্ষর থাকতে হবে"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"পিন কমপক্ষে <xliff:g id="COUNT">%d</xliff:g>টি সংখ্যার হতে হবে"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>টি অক্ষরের থেকে কম হওয়া আবশ্যক"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>টি সংখ্যার চেয়ে কম হতে হবে"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"শুধুমাত্র ০-৯ এর মতো সংখ্যা থাকতে পারে।"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ডিভাইস অ্যাডমিন একটি সাম্প্রতিক পিন ব্যবহার করতে দেয় না"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"আপনার আইটি অ্যাডমিন একই ধরনের পিন ব্লক করে দেয়। অন্য একটি পিন ব্যবহার করে চেষ্টা করুন।"</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ডিভাইস অ্যাডমিন একটি সাম্প্রতিক পাসওয়ার্ড ব্যবহার করতে দেয় না"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"পাসওয়ার্ড সেভ করার সময় সমস্যা"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"আপনার আইটি অ্যাডমিন একই ধরনের পাসওয়ার্ড ব্লক করে দেয়। অন্য একটি পাসওয়ার্ড ব্যবহার করে চেষ্টা করুন।"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ছোট থেকে বড়, বড় থেকে ছোট সংখ্যা অথবা নির্দিষ্ট কয়েকটি সংখ্যা বার বার লেখা যাবে না।"</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"সংখ্যাগুলি ছোট থেকে বড় ক্রমে, বড় থেকে ছোট ক্রমে বা একই সংখ্যাকে বার বার লেখা যাবে না"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্রিন লকের বিকল্প"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> দিন আগে"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ক্রেডেনশিয়াল মুছে ফেলুন"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-এর গাড়ি সংক্রান্ত নীতি"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"প্রতিষ্ঠানের ম্যানেজার সেটিংস ম্যানেজ করেন"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> সম্পর্কে আরও জানুন"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">কমপক্ষে <xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
+      <item quantity="other">কমপক্ষে <xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> বার চেষ্টা করা হয়েছে</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> বার চেষ্টা করা হয়েছে</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Camera অ্যাপ</item>
+      <item quantity="other">Camera অ্যাপ</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">ইমেল ক্লায়েন্ট অ্যাপ</item>
+      <item quantity="other">ইমেল ক্লায়েন্ট অ্যাপ</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">ফোন অ্যাপ</item>
+      <item quantity="other">ফোন অ্যাপ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ত্রুটির রিপোর্ট শেয়ার করতে চান?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"এই ডিভাইসের সমস্যা সমাধান করতে সাহায্য করার জন্য এই গাড়ির প্রতিষ্ঠানের ম্যানেজার ত্রুটির রিপোর্ট চেয়েছেন। অ্যাপ ও ডেটা শেয়ার করা হতে পারে।"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"এই ডিভাইসের সমস্যা সমাধান করতে সাহায্য করার জন্য এই গাড়ির প্রতিষ্ঠানের ম্যানেজার ত্রুটির রিপোর্ট চেয়েছেন। অ্যাপ ও ডেটা শেয়ার করা হতে পারে ও ডিভাইসটি সাময়িকভাবে ধীরে কাজ করতে পারে।"</string>

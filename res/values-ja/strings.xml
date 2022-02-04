@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"キャンセル"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"確認"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"4 文字以上で入力してください"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"<xliff:g id="COUNT">%d</xliff:g> 文字以上にしてください"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN は <xliff:g id="COUNT">%d</xliff:g> 桁以上で作成してください"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> 文字未満にしてください"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> 桁未満にしてください"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"使用できるのは 0～9 の数字のみです。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"デバイス管理により、最近使用した PIN は使用できません"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"一般的な PIN は IT 管理者によってブロックされています。別の PIN をお試しください。"</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"デバイス管理により、最近使用したパスワードは使用できません"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"パスワードの保存中にエラーが発生しました"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"一般的なパスワードは IT 管理者によってブロックされています。別のパスワードをお試しください。"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません。"</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"画面ロックの方法"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> 日前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"認証情報の消去"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> の車両に関するポリシー"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"設定は組織の管理者によって管理されています"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"「<xliff:g id="SERVICE">%1$s</xliff:g>」の詳細"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">アプリ <xliff:g id="COUNT_1">%d</xliff:g> 個以上</item>
+      <item quantity="one">アプリ <xliff:g id="COUNT_0">%d</xliff:g> 個以上</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個のアプリ</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個のアプリ</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other">入力回数: <xliff:g id="COUNT_1">%d</xliff:g> 回</item>
+      <item quantity="one">入力回数: <xliff:g id="COUNT_0">%d</xliff:g> 回</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">カメラアプリ</item>
+      <item quantity="one">カメラアプリ</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">メール クライアント アプリ</item>
+      <item quantity="one">メール クライアント アプリ</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">電話アプリ</item>
+      <item quantity="one">電話アプリ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"バグレポートを共有しますか？"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"この車両の組織の管理者から、このデバイスのトラブルシューティングに役立てるためのバグレポートを共有するようリクエストがありました。アプリやデータが共有される場合があります。"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"この車両の組織の管理者から、このデバイスのトラブルシューティングに役立てるためのバグレポートを共有するようリクエストがありました。アプリやデータが共有され、デバイスの動作が一時的に遅くなる場合があります。"</string>

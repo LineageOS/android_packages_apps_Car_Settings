@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"取消"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"確認"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"必須包含至少 4 個字元"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"必需有至少 <xliff:g id="COUNT">%d</xliff:g> 個字元"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN 必需有至少 <xliff:g id="COUNT">%d</xliff:g> 個數字"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"必需少於 <xliff:g id="NUMBER">%d</xliff:g> 個字元"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"必需少於 <xliff:g id="NUMBER">%d</xliff:g> 個數字"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"只可包含數字 0-9。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"裝置管理員不允許使用最近用過的 PIN"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"您的 IT 管理員已禁止使用常用的 PIN，請嘗試輸入另一個 PIN。"</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"裝置管理員不允許使用最近用過的密碼"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"儲存密碼時發生錯誤"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"您的 IT 管理員已禁止使用常用的密碼，請嘗試輸入另一組密碼。"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不可使用依遞增或遞減順序排列或重複的連續數字。"</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允許使用依遞增或遞減順序排列或是重複的一串數字"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除憑證"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> 車輛政策"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"由機構管理員管理的設定"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"進一步瞭解「<xliff:g id="SERVICE">%1$s</xliff:g>」"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">最少 <xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
+      <item quantity="one">最少 <xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 次嘗試</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 次嘗試</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">相機應用程式</item>
+      <item quantity="one">相機應用程式</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">電子郵件用戶端應用程式</item>
+      <item quantity="one">電子郵件用戶端應用程式</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">手機應用程式</item>
+      <item quantity="one">手機應用程式</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"要分享錯誤報告嗎？"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"此車輛的機構管理員要求您提供錯誤報告，以協助解決此裝置的問題。報告可能包含應用程式和相關資料。"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"此車輛的機構管理員要求您提供錯誤報告，以協助解決此裝置的問題。報告可能包含應用程式和相關資料，裝置的運作速度也可能暫時減慢。"</string>

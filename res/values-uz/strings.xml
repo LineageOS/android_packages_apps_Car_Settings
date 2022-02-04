@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Bekor qilish"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Tasdiqlash"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Kamida 4 ta belgi kiriting"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Kamida <xliff:g id="COUNT">%d</xliff:g> ta belgi bo‘lishi kerak"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kod kamida <xliff:g id="COUNT">%d</xliff:g> raqamli bo‘lsin"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Parol maksimum <xliff:g id="NUMBER">%d</xliff:g> ta belgili bo‘lsin"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN kod maksimum <xliff:g id="NUMBER">%d</xliff:g> ta raqamli bo‘lsin"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN kod faqat 0-9 raqamlaridan iborat bo‘lishi lozim."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Qurilma administratori oxirgi PIN koddan yana foydalanishga ruxsat bermaydi"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Oddiy PIN kodlar AT admini tomonidan bloklangan. Murakkabroq PIN kod tanlang."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Qurilma administratori yaqinda foydalanilgan paroldan yana foydalanishga ruxsat bermaydi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Parol saqlanmadi"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Oddiy parollar AT admini tomonidan bloklangan. Murakkabroq parol tanlang."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Oshib boruvchi, kamayib boruvchi yoki qaytarilgan ketma-ket raqamlarga ruxsat berilmaydi."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Oshib boruvchi, kamayib boruvchi yoki qaytarilgan ketma-ket raqamlarga ruxsat berilmaydi"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekran qulfi parametrlari"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> kun oldin"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hisobga oid axborotni tozalash"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> tashkilotining avtomobildan foydalanish qoidalari"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Sozlamalar tashkilot menejeri tomonidan boshqariladi"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> haqida batafsil"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Kamida <xliff:g id="COUNT_1">%d</xliff:g> ta ilova</item>
+      <item quantity="one">Kamida <xliff:g id="COUNT_0">%d</xliff:g> ta ilova</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta ilova</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta ilova</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta urinish</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta urinish</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Kamera uchun ilovalar</item>
+      <item quantity="one">Kamera uchun ilova</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Email uchun ilovalar</item>
+      <item quantity="one">Email uchun ilova</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefon uchun ilovalar</item>
+      <item quantity="one">Telefon uchun ilova</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Xatoliklar hisoboti yuborilsinmi?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Transport vositasi tashkilot menejeri bu qurilma nosozliklarini tuzatish uchun xatoliklar hisobotini soʻramoqda. Ilova va maʼlumotlardan foydalanilishi mumkin."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Transport vositasi tashkilot menejeri bu qurilma nosozliklarini tuzatish uchun xatoliklar hisobotini soʻramoqda. Ilova va maʼlumotlardan foydalanilishi va bu vaqtincha qurilmangizni sekinlashtirishi ham mumkin."</string>

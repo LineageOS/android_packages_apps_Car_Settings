@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Anuluj"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potwierdź"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Musisz użyć co najmniej czterech znaków"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Minimalna liczba znaków to <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Minimalna liczba cyfr w kodzie PIN to <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Musi mieć mniej znaków niż <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Musi mieć mniej cyfr niż <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Może zawierać tylko cyfry od 0 do 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator urządzenia nie zezwala na ustawianie niedawno używanego kodu PIN"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Popularne kody PIN zostały zablokowane przez administratora. Użyj innego kodu PIN."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administrator urządzenia nie zezwala na ustawianie niedawno używanego hasła"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Błąd podczas zapisywania hasła"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Popularne hasła zostały zablokowane przez administratora. Użyj innego hasła."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Ciąg cyfr rosnących, malejących lub powtarzających się jest niedozwolony."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Ciąg cyfr rosnących, malejących lub powtarzających się jest niedozwolony"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcje blokady ekranu"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> dni temu"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Wyczyść dane o certyfikatach"</string>
@@ -757,6 +781,42 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Zasady dotyczące pojazdów w organizacji <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Ustawienia zarządzane przez menedżera organizacji"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Więcej informacji: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="few">Co najmniej <xliff:g id="COUNT_1">%d</xliff:g> aplikacje</item>
+      <item quantity="many">Co najmniej <xliff:g id="COUNT_1">%d</xliff:g> aplikacji</item>
+      <item quantity="other">Co najmniej <xliff:g id="COUNT_1">%d</xliff:g> aplikacji</item>
+      <item quantity="one">Co najmniej <xliff:g id="COUNT_0">%d</xliff:g> aplikacja</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aplikacje</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> aplikacji</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacji</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikacja</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> próby</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> prób</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> próby</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> próba</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="few">Aplikacje aparatu</item>
+      <item quantity="many">Aplikacje aparatu</item>
+      <item quantity="other">Aplikacje aparatu</item>
+      <item quantity="one">Aplikacja aparatu</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="few">Klienty poczty e-mail</item>
+      <item quantity="many">Klienty poczty e-mail</item>
+      <item quantity="other">Klienty poczty e-mail</item>
+      <item quantity="one">Klient poczty e-mail</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="few">Aplikacje telefonu</item>
+      <item quantity="many">Aplikacje telefonu</item>
+      <item quantity="other">Aplikacje telefonu</item>
+      <item quantity="one">Aplikacja telefonu</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Udostępnić raport o błędzie?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Menedżer organizacji zarządzającej tym pojazdem poprosił o raport o błędzie, który pomoże w rozwiązaniu problemów z tym urządzeniem. Raport może zawierać informacje o aplikacjach i inne dane."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Menedżer organizacji zarządzającej tym pojazdem poprosił o raport o błędzie, który pomoże w rozwiązaniu problemów z tym urządzeniem. Raport może zawierać informacje o aplikacjach i inne dane, a urządzenie może przez chwilę działać wolniej."</string>
