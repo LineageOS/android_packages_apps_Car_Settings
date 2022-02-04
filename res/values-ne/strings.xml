@@ -385,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"यस अनुमतिले एपलाई प्रणालीको सेटिङ परिमार्जन गर्न दिन्छ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचनामाथिको पहुँच"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> लाई सूचनामाथि पहुँच राख्ने अनुमति दिने हो?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सम्पर्क सूचीका व्यक्तीको नाम र तपाईंले प्राप्त गर्ने सन्देशहरूका पाठ जस्ता व्यक्तिगत जानकारीलगायतका सबै सूचनाहरू पढ्न सक्ने छ। यसले सूचनाहरू खारेज गर्न वा तिनीहरूमा रहेका कारबाहीसम्बन्धी बटनहरू ट्रिगर गर्न पनि सक्ने छ। \n\nयसले एपलाई बाधा नपुऱ्याउनुहोस् मोड अन र अफ गर्ने र सम्बन्धित सेटिङ परिवर्तन गर्ने क्षमता पनि प्रदान गर्ने छ।"</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"तपाईंले <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> का सूचनामाथिको पहुँच निष्क्रिय पार्नुभएका खण्डमा बाधा नपुऱ्याउनुहोस् नामक मोडमाथिको पहुँच पनि निष्क्रिय पारिन सक्छ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"निष्क्रिय पार्नुहोस्"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द गर्नुहोस्"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रिमियम SMS सुविधामाथिको पहुँच"</string>
@@ -673,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"रद्द गर्नुहोस्"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"पुष्टि गर्नुहोस्"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"कम्तीमा ४ वर्णको हुनु पर्छ"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"कम्तीमा <xliff:g id="COUNT">%d</xliff:g> वटा वर्ण हुनै पर्छ"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN कम्तीमा <xliff:g id="COUNT">%d</xliff:g> अङ्कको हुनै पर्छ"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"अनिवार्य रूपमा <xliff:g id="NUMBER">%d</xliff:g> भन्दा कम वर्ण हुनु पर्छ"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"अनिवार्य रूपमा <xliff:g id="NUMBER">%d</xliff:g> भन्दा कम अङ्क हुनु पर्छ"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"अनिवार्य रूपमा ० देखि ९ सम्मका अङ्कहरू मात्र समावेश हुनु पर्छ।"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"यन्त्रको प्रशासकले पछिल्लो PIN प्रयोग गर्न अनुमति दिँदैन"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"तपाईंका सूचना प्रविधि व्यवस्थापकले धेरै प्रयोग हुने PIN हरूको प्रयोगमा रोक लगाउनु भएको छ। कुनै फरक PIN प्रयोग गरी हेर्नुहोस्।"</string>
@@ -685,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"यन्त्रको व्यवस्थापकले पछिल्लो पासवर्ड प्रयोग गर्ने अनुमति दिँदैन"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"तपाईंका सूचना प्रविधि व्यवस्थापकले धेरै प्रयोग हुने पासवर्डहरूको प्रयोगमा रोक लगाउनु भएको छ। कुनै फरक पासवर्ड प्रयोग गरी हेर्नुहोस्।"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"अङ्कहरूको बढ्दो, घट्दो वा दोहोरिएको अनुक्रम निषेध गरिएको छ।"</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"बढ्दो, घट्दो वा दोहोरिएका अङ्कहरूको अनुक्रमलाई निषेध गरिएको छ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रिन लकका विकल्पहरू"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिनअघि"</string>
     <string name="credentials_reset" msgid="873900550885788639">"प्रमाणहरू मेट्नुहोस्"</string>
