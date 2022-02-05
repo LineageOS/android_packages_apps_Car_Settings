@@ -40,13 +40,9 @@ public final class NewUserDisclaimerActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.new_user_disclaimer);
-
         mAcceptButton = findViewById(R.id.accept_button);
         mAcceptButton.setOnClickListener((v) -> accept());
-
-        mCar = Car.createCar(this);
-        mCarDevicePolicyManager = (CarDevicePolicyManager) mCar.getCarManager(
-                Car.CAR_DEVICE_POLICY_SERVICE);
+        getCarDevicePolicyManager();
     }
 
     @Override
@@ -54,7 +50,8 @@ public final class NewUserDisclaimerActivity extends Activity {
         super.onResume();
 
         LOG.d("showing UI");
-        mCarDevicePolicyManager.setUserDisclaimerShown(getUser());
+
+        getCarDevicePolicyManager().setUserDisclaimerShown(getUser());
     }
 
     @VisibleForTesting
@@ -64,7 +61,21 @@ public final class NewUserDisclaimerActivity extends Activity {
 
     private void accept() {
         LOG.d("user accepted");
-        mCarDevicePolicyManager.setUserDisclaimerAcknowledged(getUser());
+        getCarDevicePolicyManager().setUserDisclaimerAcknowledged(getUser());
+        setResult(RESULT_OK);
         finish();
+
+    }
+
+    private CarDevicePolicyManager getCarDevicePolicyManager() {
+        LOG.d("getCarDevicePolicyManager for user: " + getUser());
+        if (mCarDevicePolicyManager != null) {
+            return mCarDevicePolicyManager;
+        }
+
+        mCar = Car.createCar(this);
+        mCarDevicePolicyManager = (CarDevicePolicyManager) mCar.getCarManager(
+                Car.CAR_DEVICE_POLICY_SERVICE);
+        return mCarDevicePolicyManager;
     }
 }
