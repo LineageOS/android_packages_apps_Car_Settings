@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Abbrechen"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bestätigen"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Muss mindestens 4 Zeichen haben"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Passwort muss mindestens <xliff:g id="COUNT">%d</xliff:g> Zeichen haben"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN muss mindestens <xliff:g id="COUNT">%d</xliff:g> Ziffern haben"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Passwort muss weniger als <xliff:g id="NUMBER">%d</xliff:g> Zeichen haben"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN muss weniger als <xliff:g id="NUMBER">%d</xliff:g> Ziffern haben"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Es dürfen nur Ziffern von 0 bis 9 enthalten sein."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Der Geräteadministrator hat festgelegt, dass bereits verwendete PINs nicht noch einmal verwendet werden dürfen"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Dein IT-Administrator hat die Verwendung allzu häufiger PINs blockiert. Versuch es mit einer anderen PIN."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Der Geräteadministrator hat festgelegt, dass bereits verwendete Passwörter nicht noch einmal verwendet werden dürfen"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Fehler beim Speichern des Passworts"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Dein IT-Administrator hat die Verwendung allzu häufiger Passwörter blockiert. Versuch es mit einem anderen Passwort."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Aufsteigende, absteigende oder sich wiederholende Ziffernfolgen sind unzulässig."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Aufsteigende, absteigende oder wiederholte Ziffernfolgen sind unzulässig"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Optionen für die Displaysperre"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: vor <xliff:g id="NUM_DAYS">%3$s</xliff:g> Tagen"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Anmeldedaten löschen"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Fahrzeugrichtlinien von <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Einstellungen, die vom Manager der Organisation verwaltet werden"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Weitere Informationen zu <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Mindestens <xliff:g id="COUNT_1">%d</xliff:g> Apps</item>
+      <item quantity="one">Mindestens <xliff:g id="COUNT_0">%d</xliff:g> App</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> Apps</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> App</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> Versuche</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> Versuch</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Kamera-Apps</item>
+      <item quantity="one">Kamera-App</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">E-Mail-Client-Apps</item>
+      <item quantity="one">E-Mail-Client-App</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefon-Apps</item>
+      <item quantity="one">Telefon-App</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Fehlerbericht teilen?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Der Manager der Organisation für dieses Fahrzeug hat einen Fehlerbericht zur Fehlerbehebung für dieses Gerät angefordert. Apps und Daten werden unter Umständen geteilt."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Der Manager der Organisation für dieses Fahrzeug hat einen Fehlerbericht zur Fehlerbehebung für dieses Gerät angefordert. Apps und Daten werden unter Umständen geteilt und dein Gerät wird möglicherweise vorübergehend langsamer."</string>

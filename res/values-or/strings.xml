@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ବାତିଲ୍ କରନ୍ତୁ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ନିଶ୍ଚିତ"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମ୍‌ରେ 4 ଅକ୍ଷର ରହିବା ଦରକାର"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g> ଅକ୍ଷର ରହିବା ଦରକାର"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g> ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଦରକାର"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> ଅକ୍ଷରଠାରୁ କମ୍‌ ହେବା ଦରକାର"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> ଅଙ୍କରୁ କମ୍‌ ରହିବା ଦରକାର"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"କେବଳ 0-9 ପର୍ଯ୍ୟନ୍ତ ସଂଖ୍ୟା ରହିବା ଦରକାର"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ଏକ ସାମ୍ପ୍ରତିକ ପିନ୍‌ର ବ୍ୟବହାରକୁ ଡିଭାଇସ୍‌ ଆଡ୍‌ମିନ୍‌ ଅନୁମତି ଦେବନାହିଁ"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"ଆପଣଙ୍କ IT ଆଡମିନଙ୍କ ଦ୍ୱାରା ସାଧାରଣ PINଗୁଡ଼ିକ ବ୍ଲକ୍ କରାଯାଇଛି। ଏକ ଭିନ୍ନ PIN ବ୍ୟବହାର କରି ଦେଖନ୍ତୁ।"</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ଏକ ସମ୍ପ୍ରତି ପାସ୍‌ୱର୍ଡ ବ୍ୟବହାର କରିବାକୁ ଡିଭାଇସ୍‌ ଆଡମିନ୍‌ ଅନୁମତି ଦିଅନ୍ତି ନାହିଁ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"ପାସୱର୍ଡ ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ଆପଣଙ୍କ IT ଆଡମିନଙ୍କ ଦ୍ୱାରା ସାଧାରଣ ପାସୱାର୍ଡଗୁଡ଼ିକ ବ୍ଲକ୍ କରାଯାଇଛି। ଏକ ଭିନ୍ନ ପାସୱାର୍ଡ ବ୍ୟବହାର କରି ଦେଖନ୍ତୁ।"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା କ୍ରମ ଦୋହରାଇବାର ଅନୁମତି ନାହିଁ।"</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା ପୁନରାବୃତ୍ତ କ୍ରମ ଅନୁମୋଦିତ ନୁହେଁ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ସ୍କ୍ରିନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ଦିନ ପୂର୍ବେ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"କ୍ରେଡେନସିଆଲ୍ ଖାଲି କରନ୍ତୁ"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ଗାଡ଼ିର ନୀତି"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ସଂସ୍ଥା ପରିଚାଳକଙ୍କ ଦ୍ୱାରା ପରିଚାଳିତ ହେଉଥିବା ସେଟିଂସ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> ବିଷୟରେ ଅଧିକ ଜାଣନ୍ତୁ"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">ସର୍ବନିମ୍ନ <xliff:g id="COUNT_1">%d</xliff:g>ଟି ଆପ</item>
+      <item quantity="one">ସର୍ବନିମ୍ନ <xliff:g id="COUNT_0">%d</xliff:g>ଟି ଆପ</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ଆପ</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟି ଆପ</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ପ୍ରଚେଷ୍ଟା</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟି ପ୍ରଚେଷ୍ଟା</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">କ୍ୟାମେରା ଆପଗୁଡ଼ିକ</item>
+      <item quantity="one">କ୍ୟାମେରା ଆପ</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">ଇମେଲ କ୍ଲାଏଣ୍ଟ ଆପଗୁଡ଼ିକ</item>
+      <item quantity="one">ଇମେଲ କ୍ଲାଏଣ୍ଟ ଆପ</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ଫୋନ ଆପଗୁଡ଼ିକ</item>
+      <item quantity="one">ଫୋନ ଆପ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ବଗ ରିପୋର୍ଟ ସେୟାର କରିବେ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ଏହି ଡିଭାଇସର ଟ୍ରବୁଲସୁଟ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ ଏହି ଗାଡ଼ିର ସଂସ୍ଥା ପରିଚାଳକ ଏକ ବଗ ରିପୋର୍ଟ ପାଇଁ ଅନୁରୋଧ କରିଛନ୍ତି। ଆପ୍ସ ଓ ଡାଟା ସେୟାର କରାଯାଇପାରେ।"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ଏହି ଡିଭାଇସର ଟ୍ରବୁଲସୁଟ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ ଏହି ଗାଡ଼ିର ସଂସ୍ଥା ପରିଚାଳକ ଏକ ବଗ ରିପୋର୍ଟ ପାଇଁ ଅନୁରୋଧ କରିଛନ୍ତି। ଆପ୍ସ ଓ ଡାଟା ସେୟାର କରାଯାଇପାରେ ଏବଂ ଆପଣଙ୍କ ଡିଭାଇସ ଅସ୍ଥାୟୀ ଭାବେ ଧୀର ହୋଇଯାଇପାରେ।"</string>

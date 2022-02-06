@@ -671,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Anulo"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Konfirmo"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Duhet të jetë të paktën 4 karaktere"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Duhet të jetë të paktën <xliff:g id="COUNT">%d</xliff:g> karaktere"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Kodi PIN duhet të jetë të paktën <xliff:g id="COUNT">%d</xliff:g> shifra"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Duhet të jetë më pak se <xliff:g id="NUMBER">%d</xliff:g> karaktere"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Duhet të jetë më pak se <xliff:g id="NUMBER">%d</xliff:g> shifra"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Duhet të përmbajë vetëm shifra 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administratori i pajisjes nuk e lejon përdorimin e një kodi PIN të përdorur së fundi"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Kodet e zakonshme PIN janë bllokuar nga administratori i teknologjisë së informacionit. Provo një kod tjetër PIN."</string>
@@ -683,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administratori i pajisjes nuk e lejon përdorimin e një fjalëkalimi të përdorur së fundi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Gabim gjatë ruajtjes së fjalëkalimit"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Fjalëkalimet e zakonshme janë bllokuar nga administratori i teknologjisë së informacionit. Provo një fjalëkalim tjetër."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Pastro kredencialet"</string>
@@ -757,6 +781,30 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politika e automjeteve e <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Cilësimet menaxhohen nga menaxheri i organizatës"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Mëso më shumë për \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Minimumi <xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
+      <item quantity="one">Minimumi <xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> përpjekje</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> përpjekje</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Aplikacionet e kamerës</item>
+      <item quantity="one">Aplikacioni i kamerës</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Aplikacionet e klientit të email-it</item>
+      <item quantity="one">Aplikacioni i klientit të email-it</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Aplikacionet e telefonit</item>
+      <item quantity="one">Aplikacioni i telefonit</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Të ndahet raporti i defektit në kod?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Menaxheri i organizatës i automjetit kërkoi një raport të defektit në kod për të ndihmuar në zgjidhjen e problemeve të kësaj pajisjeje. Aplikacionet dhe të dhënat mund të ndahen."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Menaxheri i organizatës i automjetit kërkoi një raport të defektit në kod për të ndihmuar në zgjidhjen e problemeve të kësaj pajisjeje. Aplikacionet dhe të dhënat mund të ndahen dhe pajisja jote mund të ngadalësohet përkohësisht."</string>
