@@ -385,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"To dopuštenje omogućuje aplikaciji izmjenu postavki sustava."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obavijestima"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Želite li dopustiti usluzi <xliff:g id="SERVICE">%1$s</xliff:g> da pristupa obavijestima?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Aplikacija <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> moći će čitati sve obavijesti, uključujući osobne podatke kao što su imena kontakata i tekst poruka koje primate. Moći će i odbacivati obavijesti ili pokretati gumbe za radnje koje obavijesti sadrže.\n\nAplikacija će također moći uključiti ili isključiti značajku Ne uznemiravaj i promijeniti povezane postavke."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obavijestima za <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda će se isključiti i pristup značajci Ne uznemiravaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Odustani"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup SMS-ovima s dodatnom naplatom"</string>
@@ -673,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Otkaži"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potvrdi"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mora imati najmanje četiri znaka"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Broj znakova ne smije biti manji od <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Broj znamenki u PIN-u ne smije biti manji od <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Mora imati manje od ovoliko znakova: <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Mora imati manje od ovoliko znamenki: <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Smije sadržavati samo znamenke od 0 do 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator uređaja ne dopušta upotrebu nedavnog PIN-a"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Vaš je IT administrator blokirao uobičajene PIN-ove. Pokušajte s nekom drugim PIN-om."</string>
@@ -685,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administrator uređaja ne dopušta upotrebu nedavne zaporke"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Pogreška pri spremanju zaporke"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Vaš je IT administrator blokirao uobičajene zaporke. Pokušajte s nekom drugom zaporkom."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Uzastopno rastući ili padajući slijed brojeva ili ponavljanje brojeva nisu dopušteni."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Uzastopno rastući ili padajući slijed brojeva ili ponavljanje brojeva nije dopušteno"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcije zaključavanja zaslona"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : prije <xliff:g id="NUM_DAYS">%3$s</xliff:g> dana"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Izbriši vjerodajnice"</string>

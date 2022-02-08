@@ -385,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Kjo leje e lejon një aplikacion të modifikojë cilësimet e sistemit."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Hyrja te njoftimet"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Të lejohet qasja te njoftimet për \"<xliff:g id="SERVICE">%1$s</xliff:g>\"?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> do të jetë në gjendje të lexojë të gjitha njoftimet, duke përfshirë informacionin personal si p.sh. emrat e kontakteve dhe tekstin e mesazheve që merr. Ai do të jetë po ashtu në gjendje t\'i heqë njoftimet ose të aktivizojë butonat e veprimeve që përmbajnë.\n\nKjo do t\'i japë aplikacionit aftësinë për të aktivizuar ose çaktivizuar opsionin \"Mos shqetëso\" dhe për të ndryshuar cilësimet përkatëse."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nëse çaktivizon hyrjen te njoftimet për <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, mund të çaktivizohet edhe hyrja tek opsioni \"Mos shqetëso\"."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Çaktivizo"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulo"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Qasja te mesazhet SMS premium"</string>
@@ -673,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Anulo"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Konfirmo"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Duhet të jetë të paktën 4 karaktere"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Duhet të jetë të paktën <xliff:g id="COUNT">%d</xliff:g> karaktere"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Kodi PIN duhet të jetë të paktën <xliff:g id="COUNT">%d</xliff:g> shifra"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Duhet të jetë më pak se <xliff:g id="NUMBER">%d</xliff:g> karaktere"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Duhet të jetë më pak se <xliff:g id="NUMBER">%d</xliff:g> shifra"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Duhet të përmbajë vetëm shifra 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administratori i pajisjes nuk e lejon përdorimin e një kodi PIN të përdorur së fundi"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Kodet e zakonshme PIN janë bllokuar nga administratori i teknologjisë së informacionit. Provo një kod tjetër PIN."</string>
@@ -685,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administratori i pajisjes nuk e lejon përdorimin e një fjalëkalimi të përdorur së fundi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Gabim gjatë ruajtjes së fjalëkalimit"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Fjalëkalimet e zakonshme janë bllokuar nga administratori i teknologjisë së informacionit. Provo një fjalëkalim tjetër."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Pastro kredencialet"</string>

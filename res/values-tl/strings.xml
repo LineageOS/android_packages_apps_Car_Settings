@@ -385,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Nagbibigay-daan ang pahintulot na ito sa isang app na baguhin ang mga setting ng system."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Access sa notification"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Payagan ang pag-access sa notification para sa <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Mababasa ni <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ang lahat ng notification, kasama ang personal na impormasyon gaya ng mga pangalan ng contact at text ng mga mensaheng iyong matatanggap. Magagawa rin niyang mag-dismiss ng mga notification o mag-trigger ng mga action button sa mga ito. \n\nDahil dito, mabibigyan din ng kakayahan ang app na i-on o i-off ang Huwag Istorbohin at baguhin ang mga nauugnay na setting."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Kung io-off mo ang access sa notification para kay <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, puwedeng ma-off din ang access sa Huwag Istorbohin."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"I-off"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselahin"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Access sa Premium SMS"</string>
@@ -673,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Kanselahin"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Kumpirmahin"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Dapat ay may hindi bababa sa 4 na character"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Dapat ay may kahit <xliff:g id="COUNT">%d</xliff:g> (na) character"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Dapat ay may kahit <xliff:g id="COUNT">%d</xliff:g> (na) digit ang PIN"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Dapat ay wala pang <xliff:g id="NUMBER">%d</xliff:g> (na) character"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Dapat ay wala pang <xliff:g id="NUMBER">%d</xliff:g> (na) digit"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Binubuo lang dapat ito ng mga digit na 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Hindi pinapayagan ng admin ng device ang paggamit ng kamakailang PIN"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Bina-block ng iyong IT admin ang mga pangkaraniwang PIN. Sumubok ng ibang PIN."</string>
@@ -685,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Hindi pinapayagan ng admin ng device ang paggamit ng kamakailang password"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Nagka-error sa pag-save ng password"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Bina-block ng iyong IT admin ang mga pangkaraniwang password. Sumubok ng ibang password."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Hindi pinapayagan ang pataas, pababa, o paulit-ulit na pagkakasunod-sunod ng mga digit."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Hindi pinapayagan ang pataas, pababa, o paulit-ulit na pagkakasunod-sunod ng mga digit"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Mga opsyon sa lock ng screen"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> (na) araw ang nakalipas"</string>
     <string name="credentials_reset" msgid="873900550885788639">"I-clear ang mga kredensyal"</string>
