@@ -28,6 +28,7 @@ import android.bluetooth.BluetoothClass;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Parcel;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
@@ -56,6 +57,16 @@ public class BluetoothDeviceNamePreferenceControllerTest {
     private BluetoothDeviceNamePreferenceController mPreferenceController;
     private Preference mPreference;
     private CarUxRestrictions mCarUxRestrictions;
+
+    private BluetoothClass createBtClass(int deviceClass) {
+        Parcel p = Parcel.obtain();
+        p.writeInt(deviceClass);
+        p.setDataPosition(0); // reset position of parcel before passing to constructor
+
+        BluetoothClass bluetoothClass = BluetoothClass.CREATOR.createFromParcel(p);
+        p.recycle();
+        return bluetoothClass;
+    }
 
     @Mock
     private FragmentController mFragmentController;
@@ -120,7 +131,7 @@ public class BluetoothDeviceNamePreferenceControllerTest {
     @Test
     public void refreshUi_setsIcon() {
         when(mCachedDevice.getBtClass()).thenReturn(
-                new BluetoothClass(BluetoothClass.Device.Major.PHONE));
+                createBtClass(BluetoothClass.Device.Major.PHONE));
 
         mPreferenceController.refreshUi();
 
