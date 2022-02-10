@@ -844,7 +844,8 @@
             android:excludeFromRecents="true"
             android:clearTaskOnLaunch="true"
             android:exported="true"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:permission="android.permission.CHANGE_WIFI_STATE">
             <intent-filter>
                 <action android:name="android.net.wifi.action.REQUEST_ENABLE" />
                 <action android:name="android.net.wifi.action.REQUEST_DISABLE" />
