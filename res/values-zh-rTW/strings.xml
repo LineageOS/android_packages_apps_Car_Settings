@@ -385,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"這項權限可讓應用程式修改系統設定。"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"通知存取權"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"要允許「<xliff:g id="SERVICE">%1$s</xliff:g>」存取通知嗎？"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」將可讀取所有通知 (包括聯絡人姓名和你收到的訊息文字等個人資訊)，而且還能關閉通知或觸發通知當中的動作按鈕。\n\n此外，該應用程式將因此能夠開啟或關閉「零打擾」模式，以及變更相關設定。"</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"如果你停用「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」的通知存取權，「零打擾」模式的存取權可能會一併停用。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"關閉"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"付費簡訊存取權"</string>
@@ -673,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"取消"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"確認"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"至少要有 4 個字元"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"至少要有 <xliff:g id="COUNT">%d</xliff:g> 個字元"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN 碼至少要有 <xliff:g id="COUNT">%d</xliff:g> 個數字"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"長度必須少於 <xliff:g id="NUMBER">%d</xliff:g> 個字元"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"長度必須少於 <xliff:g id="NUMBER">%d</xliff:g> 個數字"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"只能包含數字 0 到 9。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"裝置管理員不允許使用最近用過的 PIN 碼"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"你的 IT 管理員已封鎖常見 PIN 碼，請改用其他 PIN 碼。"</string>
@@ -685,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"裝置管理員不允許使用最近用過的密碼"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"儲存密碼時發生錯誤"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"你的 IT 管理員已封鎖常見密碼，請改用其他密碼。"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不得使用依遞增或遞減順序排列或是重複的數字。"</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允許使用依遞增或遞減順序排列或是重複的一串數字"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除憑證"</string>
