@@ -85,7 +85,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"מגבלה לשימוש בחבילת הגלישה"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"הגדרה"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"רשת OEM"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"השתמשת ב-%1$s בין %2$s ל-%3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%1$dMB בשימוש %2$s –‏ %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"הצטרפות לרשת אחרת"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"העדפות רשת"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -158,7 +158,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"‎5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"יש לבחור תדר אחד לפחות לנקודת Wi‑Fi לשיתוף אינטרנט:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"נקודה לשיתוף אינטרנט ושיתוף אינטרנט בין מכשירים"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"נקודת אינטרנט"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"כיבוי אוטומטי של הנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"נקודת ה-Wi‑Fi לשיתוף אינטרנט תיכבה כשאין אף מכשיר מחובר"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> רוצה להפעיל את ה-Wi-Fi"</string>
@@ -179,7 +178,7 @@
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"לנתק את המכשיר?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"הרכב יתנתק מ-<xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"כתובת ה-Bluetooth של הרכב: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"כתובת המכשיר לחיבור דרך Bluetooth‏: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"כתובת המכשיר לחיבור דרך Bluetooth: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"שם הרכב"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"שינוי שם הרכב הזה"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"שינוי שם המכשיר"</string>
@@ -301,10 +300,6 @@
     <string name="force_stop" msgid="2153183697014720520">"סגירה ידנית"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"לסגור ידנית?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"אם סוגרים אפליקציה ידנית, ייתכן שהיא לא תפעל כהלכה."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"לכבות את ההגנה על הביצועים?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"בחירה באפשרות הזו עלולה לגרום לפעילות לא תקינה של התוכנה והחומרה."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"לא לכבות"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"כיבוי"</string>
     <string name="disable_text" msgid="4358165448648990820">"השבת"</string>
     <string name="enable_text" msgid="1794971777861881238">"הפעלה"</string>
     <string name="uninstall_text" msgid="277907956072833012">"הסרת התקנה"</string>
@@ -314,7 +309,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"הרשאות"</string>
     <string name="notifications_label" msgid="6586089149665170731">"התראות"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"אחסון ומטמון"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"הבטחת ביצועים מרביים"</string>
     <string name="application_version_label" msgid="8556889839783311649">"גרסה: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"לא הוענקו הרשאות"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"לא התבקשו הרשאות"</string>
@@ -327,7 +321,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"הסרת הרשאות ופינוי נפח אחסון"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s בשטח אחסון פנימי"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"סגירת האפליקציה מאפשרת לחסוך במשאבים כשצריך"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"שימוש בחבילת הגלישה"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"שימוש בחבילת הגלישה באפל\'"</string>
     <string name="computing_size" msgid="5791407621793083965">"מתבצע חישוב…"</string>
@@ -398,7 +391,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"הרשאות ברמת אפליקציה"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"שירותי מיקום"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"שימוש במיקום"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"תכונת המיקום משתמשת במקורות כמו GPS,‏ Wi‑Fi, רשתות סלולריות וחיישנים כדי לעזור בהערכה של מיקום המכשיר שלך."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"מערכת"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"עדכוני מערכת"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"מתקדם"</string>
@@ -470,7 +464,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"מחיקת כל הנתונים והפרופילים ממערכת המידע והבידור"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"הפעולה הזו תמחק את כל הנתונים ממערכת המידע והבידור של הרכב שלך, כולל:\n\n"<li>"חשבון Google שלך"</li>\n<li>"נתוני מערכת ואפליקציות והגדרות"</li>\n<li>"אפליקציות שהורדו"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"יש לך חיבור פעיל כרגע אל החשבונות הבאים:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"פרופילים אחרים הוגדרו לרכב הזה."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"קיימים פרופילים נוספים ברכב זה."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"מחיקת כל הנתונים"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"למחוק את כל הנתונים?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"הפעולה הזו תמחק את כל נתוני הפרופיל האישי, החשבונות והאפליקציות שהורדו במערכת המידע והבידור הזו.\n\nלא ניתן לבטל את הפעולה הזו."</string>
@@ -479,8 +473,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"יש להמתין…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"תאריך ושעה"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"הגדרת תאריך, שעה, אזור זמן ופורמטים"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"הגדרת השעה באופן אוטומטי"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"הגדרת אזור הזמן באופן אוטומטי"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"תאריך ושעה אוטומטיים"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"לפי השעה שמספקת הרשת"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"אזור זמן אוטומטי"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"לפי אזור הזמן שמספקת הרשת"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"פורמט 24 שעות"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"פורמט 24 שעות"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"שעה"</string>
@@ -495,9 +491,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"שעה"</string>
     <string name="user_admin" msgid="1535484812908584809">"מנהל מערכת"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"כניסה בתור מנהל מערכת"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"להעניק הרשאות של מנהל מערכת?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"כל ההרשאות של מנהל מערכת"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"הגדרה כמנהל מערכת"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"מנהל המערכת יוכל למחוק פרופילים אחרים, כולל פרופילים של מנהלים אחרים, ולאפס את מערכת המידע והבידור להגדרות המקוריות."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"לפרופיל תהיה היכולת למחוק פרופילים, כולל מנהלי מערכת אחרים, ולאפס את המערכת להגדרות היצרן."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"פעולה זו אינה הפיכה."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"כן, הגדרה כמנהל מערכת"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"יצירת פרופילים חדשים"</string>
@@ -508,8 +504,8 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"הוספת פרופיל"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"פרופיל חדש"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"להוסיף פרופיל חדש?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"לאחר יצירה של פרופיל חדש, המשתמש של הפרופיל הזה צריך להתאים אותו אישית בעצמו."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"עדכון אפליקציות מפרופיל כלשהו יחיל את העדכונים בכל יתר הפרופילים."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"בזמן הוספת פרופיל חדש, המשתמש הזה צריך להגדיר את המרחב שלו."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"בכל פרופיל ניתן לעדכן אפליקציות בכל שאר הפרופילים."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"הגעת למספר הפרופילים המרבי"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="two">ניתן ליצור רק <xliff:g id="COUNT">%d</xliff:g> פרופילים.</item>
@@ -517,10 +513,10 @@
       <item quantity="other">ניתן ליצור רק <xliff:g id="COUNT">%d</xliff:g> פרופילים.</item>
       <item quantity="one">ניתן ליצור רק פרופיל אחד.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"לא ניתן היה ליצור את הפרופיל החדש"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"יצירת הפרופיל החדש נכשלה"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"למחוק את הפרופיל הזה?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"כל האפליקציות והנתונים של הפרופיל הזה יימחקו"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"לא ניתן היה למחוק את הפרופיל"</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"מחיקת הפרופיל נכשלה."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"הפרופיל הזה יימחק במהלך החלפת פרופילים או הפעלה מחדש של הרכב."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"ביטול"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"ניסיון חוזר"</string>
@@ -593,11 +589,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ביטול הסנכרון"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"יש כרגע בעיות בסינכרון. הוא יתחדש תוך זמן קצר."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"פרטיות"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"הנתונים של מערכת המידע והבידור"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"נתוני הרכב"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"שליטה בגישת האפליקציה למיקום שלך"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"מיקרופון"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"שליטה בגישת האפליקציה למיקרופון"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"הנתונים של מערכת המידע והבידור"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"נתוני הרכב"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"ניהול הפעילויות והמידע שנשמרים ברכב הזה"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"מחיקת הפרופיל שלך"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"מחיקת כל הפרופילים והחשבונות ממערכת המידע והבידור"</string>
@@ -618,6 +614,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"דילוג"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"הגדרת מסך נעילה"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"בחירת קוד גישה"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"הגדרת הקו לביטול נעילה"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"בחירת סיסמה"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"נעילת המסך הנוכחית"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"מטעמי אבטחה, יש להגדיר קו ביטול נעילה"</string>
@@ -661,7 +658,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"צריך להיות פחות מ-<xliff:g id="NUMBER">%d</xliff:g> ספרות"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"צריכה להכיל רק את הספרות 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"מנהל המכשיר לא מאפשר להשתמש בקוד גישה שנעשה בו שימוש לאחרונה"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"קודי אימות נפוצים חסומים בידי מנהל ה-IT. יש לנסות קוד אימות אחר."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"קודי גישה נפוצים חסומים בידי מנהל ה-IT. יש לנסות קוד גישה אחר."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"לא ניתן לכלול תו לא חוקי."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"הסיסמה לא חוקית, היא חייבת להיות באורך של ארבעה תווים לפחות."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -702,7 +699,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"מנהל המכשיר לא מאפשר להשתמש בסיסמה שנעשה בה שימוש לאחרונה"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"שגיאה בשמירת הסיסמה"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"סיסמאות נפוצות חסומות בידי מנהל ה-IT. יש לנסות סיסמה אחרת."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"סיסמאות נפוצות חסומות בידי מנהל ה-IT. יש לנסות סיסמה אחרת."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"אין להגדיר רצף ספרות עולה, יורד או חוזר."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>
@@ -730,7 +727,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"לא ניתן להוסיף פרופיל בזמן הנהיגה"</string>
     <string name="default_search_query" msgid="3137420627428857068">"חיפוש"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant והקול"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"אפליקציית עוזר דיגיטלי"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"אפליקציית Assistant"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"שימוש בטקסט המופיע במסך"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"מתן הרשאה ל-Assistant לגשת לתוכן המסך"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"שימוש בצילום מסך"</string>
@@ -742,5 +739,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"להוספת פרופיל"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"מחיקת הפרופיל"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"הוספת פרופיל"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"לא ניתן לשנות את ההגדרה הזו כרגע."</string>
 </resources>

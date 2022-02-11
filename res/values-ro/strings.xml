@@ -83,7 +83,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Setați o limită de utilizare a datelor"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Setați"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Rețea OEM"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"S-au folosit %1$s în perioada %2$s – %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%1$d MB folosiți în perioada %2$s – %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Alăturați-vă unei alte rețele"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Preferințe privind rețeaua"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -156,7 +156,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Alegeți cel puțin o bandă pentru hotspot Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot și tethering"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Dezactivați automat hotspotul"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspotul Wi-Fi se va dezactiva dacă nu se conectează niciun dispozitiv"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> încearcă să activeze Wi-Fi"</string>
@@ -299,10 +298,6 @@
     <string name="force_stop" msgid="2153183697014720520">"Opriți forțat"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Opriți forțat?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Dacă forțați oprirea unei aplicații, aceasta se poate comporta necorespunzător."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Dezactivați protecția performanței?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Dacă alegeți această opțiune, este posibil ca software-ul și hardware-ul să nu funcționeze la fel de bine."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Mențineți-o activată"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Dezactivați"</string>
     <string name="disable_text" msgid="4358165448648990820">"Dezactivați"</string>
     <string name="enable_text" msgid="1794971777861881238">"Activați"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Dezinstalați"</string>
@@ -312,7 +307,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"Permisiuni"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificări"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Spațiul de stocare și memoria cache"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Asigurați performanța optimă"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versiunea: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nicio permisiune acordată"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nicio permisiune solicitată"</string>
@@ -324,7 +318,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Eliminați permisiuni și eliberați spațiu"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s în memoria internă"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Când e nevoie, închideți aplicația pentru a evita consumul excesiv de resurse"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Utilizarea datelor"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Utilizare date aplicație"</string>
     <string name="computing_size" msgid="5791407621793083965">"Se calculează…"</string>
@@ -394,7 +387,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisiuni la nivel de aplicație"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicii de localizare"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Folosiți locația"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Locația poate folosi surse precum GPS, Wi-Fi, rețele mobile și senzori pentru a ajuta la estimarea locației dispozitivului."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizări de sistem"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avansate"</string>
@@ -465,7 +459,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"Ștergeți toate datele și profilurile de pe sistemul de infotainment"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Astfel, vor fi șterse toate datele de pe sistemul de infotainment al vehiculului, între care:\n\n"<li>"Contul dvs. Google,"</li>\n<li>"datele și setările de sistem și de aplicație,"</li>\n<li>"aplicațiile descărcate."</li>"."</string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"V-ați conectat la următoarele conturi:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Alte profiluri au fost configurate pentru acest vehicul."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"Există și alte profiluri pe acest vehicul."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Ștergeți toate datele"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Ștergeți toate datele?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Astfel, se vor șterge toate datele profilului personal, conturile și aplicațiile descărcate pe acest sistem de infotainment.\n\nNu puteți anula această acțiune."</string>
@@ -474,8 +468,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Așteptați…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data și ora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Setați data, ora, fusul orar și formatele"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Setează ora automat"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Setează fusul orar automat"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Dată și oră automate"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Folosiți ora dată de rețea"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Fus orar automat"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Folosiți fusul orar din rețea"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Format de 24 de ore"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Utilizați formatul de 24 de ore"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Ora"</string>
@@ -490,9 +486,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Ora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Conectat(ă) ca administrator"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Acordați permisiuni de administrator?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Toate permisiunile de administrator"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Setați ca administrator"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Administratorul va putea să șteargă alte profiluri, inclusiv ale altor administratori, și să revină la setările din fabrică ale sistemului de infotainment."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Profilul va putea să șteargă profiluri, inclusiv alți administratori, și să revină la setările din fabrică ale sistemului."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Această acțiune nu este reversibilă."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Da, setez ca administrator"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Creați profiluri noi"</string>
@@ -503,18 +499,18 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Adăugați un profil"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Profil nou"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Adăugați un profil nou?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"După ce creați un profil nou, utilizatorul respectiv trebuie să-l personalizeze."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Aplicațiile pot fi actualizate din orice profil ca să poată fi folosite de toate celelalte profiluri"</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Când adăugați un profil nou, persoana respectivă trebuie să-și configureze spațiul."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Orice profil poate actualiza aplicații pentru toate celelalte profiluri."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Ați atins limita de profiluri"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="few">Puteți crea maximum <xliff:g id="COUNT">%d</xliff:g> profiluri.</item>
       <item quantity="other">Puteți crea maximum <xliff:g id="COUNT">%d</xliff:g> de profiluri.</item>
       <item quantity="one">Puteți crea un singur profil.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Nu s-a putut crea un profil nou"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Nu s-a creat un profil nou"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Ștergeți profilul?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Toate aplicațiile și datele din acest profil vor fi șterse"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Nu s-a putut șterge profilul."</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Nu s-a șters profilul."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Profilul va fi șters când comutați între profiluri sau reporniți mașina."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Închideți"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Reîncercați"</string>
@@ -587,11 +583,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Anulați sincronizarea"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Sincronizarea se confruntă cu probleme. Aceasta va fi funcțională în curând."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Confidențialitate"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Datele sistemului de infotainment"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Date de pe vehicul"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Controlați accesul aplicațiilor la locație"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Microfon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Controlați accesul aplicațiilor la microfon"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Date sistem de infotainment"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Date de pe vehicul"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Gestionați activitățile și informațiile salvate pe acest vehicul"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Ștergeți profilul"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Ștergeți profilul și conturile de pe sistemul de infotainment"</string>
@@ -612,6 +608,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Omiteți"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Setați o blocare a ecranului"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Alegeți codul PIN"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Alegeți modelul"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Alegeți parola"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Blocarea actuală a ecranului"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pentru securitate, setați un model"</string>
@@ -655,7 +652,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Trebuie să conțină maximum <xliff:g id="NUMBER">%d</xliff:g> cifre"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Trebuie să conțină numai cifre de la 0 la 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administratorul dispozitivului nu permite folosirea unui PIN recent"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Codurile PIN obișnuite sunt blocate de administratorul IT. Încercați alt cod PIN."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Codurile PIN obișnuite sunt blocate de administratorul IT. Încercați alt cod PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Aceasta nu poate include un caracter nevalid."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Parolă nevalidă. Trebuie să conțină minimum 4 caractere."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -690,7 +687,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administratorul dispozitivului nu permite folosirea unei parole recente"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Eroare la salvarea parolei"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Parolele obișnuite sunt blocate de administratorul IT. Încercați altă parolă."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Parolele obișnuite sunt blocate de administratorul IT. Încercați altă parolă."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Șirurile de cifre ascendente, descendente sau repetate nu sunt permise."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opțiuni de blocare a ecranului"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: acum <xliff:g id="NUM_DAYS">%3$s</xliff:g> zile"</string>
@@ -718,7 +715,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Nu puteți adăuga un profil în timp ce conduceți"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Căutați"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistent și voce"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplicația asistent digital"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Aplicația Asistent"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Folosiți textul de pe ecran"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Permiteți Asistentului să acceseze conținutul de pe ecran"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Folosiți captura de ecran"</string>
@@ -730,5 +727,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Adăugați un profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ștergeți profilul"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adăugați un profil"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Setarea nu poate fi modificată momentan"</string>
 </resources>

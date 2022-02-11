@@ -25,7 +25,7 @@
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Изменять яркость экрана в зависимости от освещения"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Ночная подсветка включена"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Ночной режим"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"Сеть и интернет"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Сеть и Интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобильная сеть"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-карта</item>
@@ -38,7 +38,7 @@
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активно (cкачанная SIM-карта)"</string>
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Неактивно (скачанная SIM-карта)"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Добавить"</string>
-    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобильный интернет"</string>
+    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобильный Интернет"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ к Интернету по мобильной сети"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Отключить мобильный Интернет?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Выберите SIM-карту"</string>
@@ -85,7 +85,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Лимит трафика"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Сохранить"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Сеть OEM"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Использовано %1$s с %2$s по %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"Использовано %2$s – %3$s: %1$d МБ"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Подключиться к другой сети"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Настройки сетевого подключения"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -158,7 +158,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Диапазон частот для точек доступа Wi-Fi."</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступа и режим модема"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка доступа"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматически выключать точку доступа"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi, если к ней не подключено ни одного устройства"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает включение Wi-Fi"</string>
@@ -223,7 +222,7 @@
     <string name="keyboard_settings" msgid="1959697870618278081">"Клавиатура"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Управление клавиатурами"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Озвучивание текста"</string>
-    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Синтезатор речи по умолчанию"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Синтезатор по умолчанию"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Текущий синтезатор"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Скорость речи"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Тон"</string>
@@ -301,10 +300,6 @@
     <string name="force_stop" msgid="2153183697014720520">"Остановить"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Остановить принудительно?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Принудительное закрытие приложения может отразиться на его функциональности."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Отключить защиту производительности?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"В этом случае программное и аппаратное обеспечение тоже может не работать."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Не отключать"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Отключить"</string>
     <string name="disable_text" msgid="4358165448648990820">"Отключить"</string>
     <string name="enable_text" msgid="1794971777861881238">"Включить"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Удалить"</string>
@@ -314,7 +309,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Уведомления"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Хранилище и кеш"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Макс. производительность"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версия: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"У приложения нет разрешений"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Приложение не запрашивало разрешения"</string>
@@ -327,7 +321,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Удалять разрешения и освобождать место"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s: внутренняя память"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Закрывать приложения для экономии ресурсов"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Передача данных"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Трафик приложения"</string>
     <string name="computing_size" msgid="5791407621793083965">"Вычисление…"</string>
@@ -341,9 +334,9 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Помощник и голосовой ввод"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Помощник"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Использовать текст с экрана"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Разрешить просматривать содержимое экрана в виде текста"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Разрешить Помощнику доступ к тексту на экране."</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Использовать скриншот"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Разрешить приложению-помощнику доступ к изображению экрана"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Разрешить Помощнику доступ к изображению экрана."</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Голосовой ввод"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Автозаполнение"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Нет"</string>
@@ -398,7 +391,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения для приложений"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Геолокация"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Использовать данные о местоположении"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Для определения местоположения устройства могут использоваться данные GPS, Wi-Fi, мобильных сетей и датчиков."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Обновления системы"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Дополнительно"</string>
@@ -427,7 +421,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Авторские права"</string>
     <string name="license_title" msgid="936705938435249965">"Лицензия"</string>
     <string name="terms_title" msgid="5201471373602628765">"Условия использования"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Лицензии System WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Системные лицензии WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Обои"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Спутниковые фотографии:\n© 2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Модель"</string>
@@ -451,7 +445,7 @@
     <string name="reset_network_title" msgid="1284233059990797263">"Сбросить настройки сети"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Будут сброшены все настройки, в том числе:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
-    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильный интернет"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильный Интернет"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Удалить данные всех eSIM автомобиля"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Это действие не отменит ваш тарифный план."</string>
@@ -470,7 +464,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"Удалить все данные и профили из информационно-развлекательной системы"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Будут удалены все данные из информационно-развлекательной системы автомобиля, в том числе:\n\n"<li>"ваш аккаунт Google;"</li>\n<li>"данные и настройки системы и приложений;"</li>\n<li>"скачанные приложения."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Вы вошли в следующие аккаунты:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"На этом автомобиле уже настроены другие профили."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"В системе этого автомобиля есть другие профили."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Удалить все данные"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Удалить все данные?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Из информационно-развлекательной системы будут удалены все данные личных профилей, аккаунты и скачанные приложения.\n\nЭто действие нельзя отменить."</string>
@@ -479,8 +473,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Подождите…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Дата и время"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Установка даты, времени, часового пояса и формата"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Настраивать время автоматически"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Настраивать часовой пояс автоматически"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Дата и время сети"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Использовать время сети"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Автонастройка часового пояса"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Использовать часовой пояс сети"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-часовой формат"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-часовой формат"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Время"</string>
@@ -495,9 +491,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Время"</string>
     <string name="user_admin" msgid="1535484812908584809">"Администратор"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Вы вошли как администратор"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Предоставить права администратора?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Все права администратора"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Назначить администратором"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Администратор сможет удалять профили (в том числе других администраторов) и сбрасывать настройки информационно-развлекательной системы."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Пользователь сможет удалять профили (в том числе других администраторов) и сбрасывать настройки системы."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Это действие нельзя будет отменить."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Назначить администратором"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Создание профилей"</string>
@@ -508,8 +504,8 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Добавить профиль"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Новый профиль"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Добавить профиль?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Когда вы создадите профиль, пользователю потребуется настроить его самостоятельно."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Любой пользователь может обновлять приложения для других профилей."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Когда вы добавите профиль, пользователю потребуется его настроить."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Любой пользователь может обновлять приложения для других профилей."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Нельзя создать больше профилей"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="one">Можно создать до <xliff:g id="COUNT">%d</xliff:g> профиля.</item>
@@ -517,10 +513,10 @@
       <item quantity="many">Можно создать до <xliff:g id="COUNT">%d</xliff:g> профилей.</item>
       <item quantity="other">Можно создать до <xliff:g id="COUNT">%d</xliff:g> профиля.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Не удалось создать профиль"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Не удалось создать профиль"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Удалить профиль?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Все приложения и данные этого профиля будут удалены."</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Не удалось удалить профиль"</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Не получилось удалить профиль"</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Этот профиль удалится, когда вы войдете в другой или перезапустите автомобиль"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Закрыть"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Повторить попытку"</string>
@@ -593,11 +589,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Отменить синхронизацию"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Проблемы с синхронизацией. Скоро все заработает."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Конфиденциальность"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Данные системы"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Данные автомобиля"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Управление доступом приложений к данным о вашем местоположении"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Микрофон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Управление доступом приложений к микрофону"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Данные системы"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Данные автомобиля"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Управление информацией о действиях и другими данными, которые сохраняются в системе этого автомобиля"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Удалить профиль"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Удалить все профили и аккаунты из информационно-развлекательной системы"</string>
@@ -618,6 +614,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Пропустить"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Блокировка экрана"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Выберите PIN-код"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Выберите графический ключ"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Выберите пароль"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Текущий способ блокировки"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Для защиты системы создайте граф. ключ."</string>
@@ -661,7 +658,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN-код должен содержать менее <xliff:g id="NUMBER">%d</xliff:g> цифр"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN-код должен содержать только цифры."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Использовать недавний PIN-код запрещено"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Системный администратор заблокировал простые PIN-коды. Выберите более сложную комбинацию."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"ИТ-администратор запретил использовать простые PIN-коды. Выберите более сложную комбинацию."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Использованы недопустимые символы."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Пароль должен содержать не менее четырех символов."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -702,7 +699,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Использовать недавний пароль запрещено"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не удалось сохранить пароль"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Системный администратор заблокировал простые пароли. Выберите более сложную комбинацию."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"ИТ-администратор запретил использовать простые пароли. Выберите более сложную комбинацию."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Нельзя использовать последовательности из идущих подряд или повторяющихся цифр."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Варианты блокировки экрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> (<xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. назад)"</string>
@@ -730,7 +727,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Невозможно добавить профиль во время вождения."</string>
     <string name="default_search_query" msgid="3137420627428857068">"Поиск"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Ассистент и голосовое управление"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Цифровой помощник"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Помощник"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Использовать текст с экрана"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Разрешить помощнику использовать контент на экране"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Использовать скриншот"</string>
@@ -742,5 +739,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Добавить профиль"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Удалить этот профиль"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Добавить профиль"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Сейчас эту настройку изменить нельзя."</string>
 </resources>

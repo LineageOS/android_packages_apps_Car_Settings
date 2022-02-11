@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Angi grense for databruk"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Angi"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM-nettverk"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s brukt %2$s – %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%1$d MB er brukt (%2$s – %3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Koble til et annet nettverk"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Nettverksinnstillinger"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Velg minst ett bånd for Wi-Fi-sonen:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Wi-Fi-sone og internettdeling"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Wi-Fi-sone"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Slå av Wi-Fi-sone automatisk"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi-sonen blir slått av hvis ingen enheter er koblet til"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker å slå på Wi-Fi"</string>
@@ -297,12 +296,8 @@
     <string name="force_stop" msgid="2153183697014720520">"Tving avslutning"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vil du tvinge avslutning?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Hvis du tvinger avslutning av en app, kan det oppstå problemer."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Vil du slå av ytelsesbeskyttelse?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Hvis du gjør det, kan det føre til at programvaren og maskinvaren ikke fungerer optimalt."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"La den være på"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Slå av"</string>
-    <string name="disable_text" msgid="4358165448648990820">"Deaktiver"</string>
-    <string name="enable_text" msgid="1794971777861881238">"Aktivér"</string>
+    <string name="disable_text" msgid="4358165448648990820">"Slå av"</string>
+    <string name="enable_text" msgid="1794971777861881238">"Slå på"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Avinstaller"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Hvis du slår av denne appen, slutter muligens Android og andre apper å fungere som de skal."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Deaktiver appen"</string>
@@ -310,7 +305,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"Tillatelser"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Varsler"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Lagring og buffer"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Sikre best ytelse"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versjon: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ingen tillatelser er gitt"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ingen tillatelser er forespurt"</string>
@@ -321,7 +315,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Fjern tillatelser og frigjør plass"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s i internminne"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Lukk appen for å unngå overdreven bruk av ressurser (ved behov)"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Databruk"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Appens databruk"</string>
     <string name="computing_size" msgid="5791407621793083965">"Beregner …"</string>
@@ -332,16 +325,16 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Merk: Etter en ny oppstart kan ikke denne appen starte før du låser opp kjøretøyet ditt."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistent og taleinndata"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistentapp"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"Bruk tekst fra skjermen"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"Bruk teksten fra skjermen"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Gi assistentappen tilgang til skjerminnholdet som tekst"</string>
-    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Bruk skjermdump"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Bruk skjermdumpen"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Gi assistentappen tilgang til et bilde av skjermen"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Taleinndata"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Autofylltjeneste"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ingen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Valgt"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistenten kan lese informasjon om appene du bruker i systemet ditt, inkludert informasjon som er synlig på skjermen eller tilgjengelig i appene."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Stoler du på denne appen?&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google autofyll&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen, til å fastslå hva som kan fylles ut automatisk."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sørg for at appen er pålitelig&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google autofyll&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen, til å fastslå hva som kan fylles ut automatisk."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Legg til tjeneste"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Åpning av linker"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Installerte apper"</string>
@@ -390,7 +383,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tillatelser på appnivå"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Posisjonstjenester"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Bruk posisjon"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Posisjonstjenestene kan bruke kilder som GPS, Wi-Fi, mobilnettverk og sensorer for å fastslå posisjonen til enheten."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemoppdateringer"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avansert"</string>
@@ -459,8 +453,8 @@
     <string name="factory_reset_title" msgid="4019066569214122052">"Tøm alle data (tilbake til fabrikkstd.)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Slett alle dataene og profilene fra dette infotainment-systemet"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Dette sletter alle dataene fra kjøretøyets infotainment-system, inkludert\n\n"<li>"Google-kontoen din"</li>\n<li>"system- og appdata samt innstillinger"</li>\n<li>"nedlastede apper"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Du er logget på disse kontoene nå:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Andre profiler er konfigurert for dette kjøretøyet."</string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Du er for øyeblikket logget på disse kontoene:"</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"Det finnes andre profiler tilknyttet dette kjøretøyet."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Slett alle dataene"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Vil du slette alle dataene?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Dette sletter alle de personlige profildataene, kontoene og nedlastede appene på dette infotainment-systemet.\n\nDu kan ikke angre denne handlingen."</string>
@@ -469,8 +463,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Vent litt"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dato og klokkeslett"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Angi dato, klokkeslett, tidssone og formater"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Angi klokkeslettet automatisk"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Angi tidssonen automatisk"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og klokkeslett"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Bruk nettverkets klokkeslett"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Automatisk tidssone"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Bruk nettverkets tidssone"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-timers format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Bruk 24-timers format"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Klokkeslett"</string>
@@ -485,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Klokkeslett"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Logget på som administrator"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Vil du gi administratorrettigheter?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Alle administratortillatelser"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Gjør brukeren til administrator"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Administratoren kan slette andre profiler, inkludert profiler for andre administratorer, og tilbakestille infotainment-systemet til fabrikkstandard."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Denne profilen kan slette profiler, inkludert andre administratorer, og tilbakestille systemet til fabrikkstandard."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Denne handlingen kan ikke angres."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Ja, gjør brukeren til administrator"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Opprett nye profiler"</string>
@@ -498,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Legg til en profil"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Ny profil"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Vil du legge til en ny profil?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Etter at du har opprettet en ny profil, kan brukeren tilpasse den selv."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Apper kan oppdateres fra hvilken som helst profil for bruk av alle andre profiler."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Når du legger til en ny profil, må vedkommende konfigurere sitt eget område."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Alle profiler kan oppdatere apper for andre profiler."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Grensen for antall profiler er nådd"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="other">Du kan opprette opptil <xliff:g id="COUNT">%d</xliff:g> profiler.</item>
       <item quantity="one">Du kan bare opprette én profil.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Kunne ikke opprette ny profil"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Kunne ikke opprette en ny profil"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Vil du slette denne profilen?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Alle appene og dataene tilknyttet denne profilen blir slettet."</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Kunne ikke slette profilen."</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Kunne ikke slette profilen."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Denne profilen blir slettet når du bytter profil eller starter kjøretøyet på nytt."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Avvis"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Prøv på nytt"</string>
@@ -569,8 +565,8 @@
     <string name="remove_account_error_title" msgid="8368044943174826635">"Kunne ikke fjerne kontoen."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Kontosynkronisering"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Synkronisering er slått på for <xliff:g id="ID_1">%1$d</xliff:g> av <xliff:g id="ID_2">%2$d</xliff:g> elementer"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synkronisering er slått på for alle elementer"</string>
-    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Synkronisering er slått av for alle elementer"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synkronisering er slått på for alle elementene"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Synkronisering er slått av for alle elementene"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Synkronisering er av"</string>
     <string name="sync_error" msgid="6698021343089247914">"Synkroniseringsfeil"</string>
     <string name="last_synced" msgid="4745124489150101529">"Sist synkronisert <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
@@ -581,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Avbryt synkroniseringen"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Det er midlertidige problemer med synkroniseringen. Vent litt."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Personvern"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data om infotainment-systemet"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Kjøretøydata"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrollér apptilgangen til posisjonen din"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrollér tilgangen til mikrofonen"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Data om infotainment-systemet"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Kjøretøydata"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Administrer aktivitetene og informasjonen som er lagret i dette kjøretøyet"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Slett profilen din"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Slett profilen din og kontoene dine fra dette infotainment-systemet"</string>
@@ -606,6 +602,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Hopp over"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Angi en skjermlås"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Velg PIN-koden din"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Velg mønster"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Velg passordet ditt"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Gjeldende skjermlås"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Angi et sikkerhetsmønster"</string>
@@ -649,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Må inneholde færre enn <xliff:g id="NUMBER">%d</xliff:g> sifre"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Kan bare inneholde tall fra 0 til 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Enhetsadministratoren forbyr nylig brukte PIN-koder"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Vanlige PIN-koder er blokkert av IT-administratoren din. Prøv en annen PIN-kode."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Vanlige PIN-koder er blokkert av IT-administratoren din. Prøv en annen PIN-kode."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Dette kan ikke inkludere et ugyldig tegn."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Passordet er ugyldig – det må bestå av minst fire tegn."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Enhetsadministratoren forbyr nylig brukte passord"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Feil ved lagring av passord"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Vanlige passord er blokkert av IT-administratoren din. Prøv et annet passord."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Vanlige passord er blokkert av IT-administratoren din. Prøv et annet passord."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"En sekvens av stigende, synkende eller like sifre er ikke tillatt."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Alternativer for skjermlås"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : for <xliff:g id="NUM_DAYS">%3$s</xliff:g> dager siden"</string>
@@ -706,10 +703,10 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Du kan ikke legge til en profil mens du kjører"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Søk"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent og Voice"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digital assistent-app"</string>
-    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Bruk tekst fra skjermen"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Assistentapp"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Bruk teksten fra skjermen"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Gi assistenten tillatelse til å bruke innhold på skjermen"</string>
-    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Bruk skjermdump"</string>
+    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Bruk skjermdumper"</string>
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Gi assistenten tillatelse til å bruke skjermdumper"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"Nylig sendt"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"Alle apper"</string>
@@ -718,5 +715,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Legg til en profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Slett denne profilen"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Legg til en profil"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Du kan ikke endre denne innstillingen akkurat nå"</string>
 </resources>

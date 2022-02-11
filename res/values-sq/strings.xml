@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Cakto kufirin e përdorimit të të dhënave"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Cakto"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Rrjeti OEM"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Të përdorura: %1$s në periudhën %2$s - %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"Të përdorura: %1$d MB (%2$s - %3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Bashkohu në një rrjet tjetër"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Preferencat e rrjetit"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Zgjidh të paktën një brez për zonën e qasjes për internet për Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Zona e qasjes dhe ndarja e internetit"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Zona e qasjes për internet"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Çaktivizo automatikisht zonën e qasjes për internet"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Zona e qasjes për internet e Wi‑Fi do të çaktivizohet nëse nuk është lidhur asnjë pajisje"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> kërkon të aktivizojë Wi-Fi"</string>
@@ -206,7 +205,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Të çiftohet me <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Lejo që <xliff:g id="DEVICE_NAME">%1$s</xliff:g> të ketë qasje te kontaktet dhe historiku i telefonatave"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Mund të duhet gjithashtu ta shkruash këtë kod PIN në pajisjen tjetër."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Mund të duhet gjithashtu ta shkruash këtë çelës kalimi në pajisjen tjetër."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Mund të duhet gjithashtu ta shkruash këtë kod në pajisjen tjetër."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Duhet të ketë 16 shifra"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Zakonisht 0000 ose 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Kërkesa e çiftimit"</string>
@@ -297,10 +296,6 @@
     <string name="force_stop" msgid="2153183697014720520">"Ndalo me forcë"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Të ndalohet me forcë?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Nëse e ndalon me forcë një aplikacion, ai mund të përjetojë çrregullime në funksionim."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Të çaktivizohet mbrojtja e cilësisë së funksionimit?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Nëse e bën këtë, softueri dhe hardueri yt mund të mos funksionojnë aq mirë."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Lëre aktive"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Çaktivizo"</string>
     <string name="disable_text" msgid="4358165448648990820">"Çaktivizo"</string>
     <string name="enable_text" msgid="1794971777861881238">"Aktivizo"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Çinstalo"</string>
@@ -310,7 +305,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"Lejet"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Njoftime"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Hapësira ruajtëse dhe memoria specifike"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Siguro cilësi maksimale funksionimi"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versioni: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nuk është dhënë leje"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nuk është kërkuar leje"</string>
@@ -321,7 +315,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Hiq lejet dhe liro hapësirën"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s në hapësirën e brendshme të ruajtjes"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Kur është e nevojshme, mbylle aplikacionin për të shmangur përdorimin e tepërt të burimeve"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Përdorimi i të dhënave"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Përdorimi i të dhënave"</string>
     <string name="computing_size" msgid="5791407621793083965">"Po llogarit…"</string>
@@ -372,15 +365,15 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modifiko cilësimet e sistemit"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Kjo leje e lejon një aplikacion të modifikojë cilësimet e sistemit."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Hyrja te njoftimet"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Të lejohet qasja te njoftimet për \"<xliff:g id="SERVICE">%1$s</xliff:g>\"?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Të lejohet hyrja te njoftimet për <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> do të jetë në gjendje të lexojë të gjitha njoftimet, duke përfshirë informacionin personal si p.sh. emrat e kontakteve dhe tekstin e mesazheve që merr. Ai do të jetë po ashtu në gjendje t\'i heqë njoftimet ose të aktivizojë butonat e veprimeve që përmbajnë.\n\nKjo do t\'i japë aplikacionit aftësinë për të aktivizuar ose çaktivizuar opsionin \"Mos shqetëso\" dhe për të ndryshuar cilësimet përkatëse."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nëse çaktivizon hyrjen te njoftimet për <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, mund të çaktivizohet edhe hyrja tek opsioni \"Mos shqetëso\"."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Çaktivizo"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulo"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Qasja te mesazhet SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Mesazhet SMS premium mund të kushtojnë dhe do të rritin faturat e operatorit tënd celular. Nëse e aktivizon lejen për një aplikacion, do të mund të dërgosh mesazhe SMS premium me atë aplikacion."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Qasja te përdorimi"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Qasja te përdorimi lejon që një aplikacion të monitorojë se çfarë aplikacionesh të tjera po përdor ti dhe sa shpesh i përdor, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Qasja në përdorim"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Qasja në përdorim lejon që një aplikacion të monitorojë se çfarë aplikacionesh të tjera po përdor ti dhe sa shpesh i përdor, si edhe operatorin celular, cilësimet e gjuhës dhe detaje të tjera."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kontrolli i lidhjes Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontrolli i lidhjes Wi-Fi lejon që një aplikacion të aktivizojë ose të çaktivizojë Wi-Fi, të skanojë dhe të lidhet me rrjetet Wi-Fi, të shtojë ose të heqë rrjetet ose të nisë një zonë qasjeje për internetin vetëm në nivel lokal."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Më shumë"</string>
@@ -390,7 +383,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lejet në nivel aplikacioni"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Shërbimet e vendndodhjes"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Përdor vendndodhjen"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Vendndodhja mund të përdorë burime si GPS, Wi‑Fi, rrjetet celulare dhe sensorët për të ndihmuar me vlerësimin e vendndodhjes së pajisjes sate."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Sistemi"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Përditësimet e sistemit"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Të përparuara"</string>
@@ -460,7 +454,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"Spastro të gjitha të dhënat dhe profilet nga ky sistem info-argëtues"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Kjo do të spastrojë të gjitha të dhënat nga sistemi info-argëtues i automjetit tënd, duke përfshirë:\n\n"<li>"Llogarinë tënde të Google"</li>\n<li>"Të dhënat dhe cilësimet e sistemit dhe të aplikacioneve"</li>\n<li>"Aplikacionet e shkarkuara"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Je i identifikuar aktualisht në llogaritë e mëposhtme:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Për këtë automjet janë konfiguruar profile të tjera."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"Ka profile të tjera të pranishme në këtë automjet."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Spastro të gjitha të dhënat"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Të spastrohen të gjitha të dhënat?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Kjo do të spastrojë të gjitha të dhënat e profilit tënd personal, llogaritë e tua dhe aplikacionet e shkarkuara në këtë sistem info-argëtues.\n\nNuk mund ta zhbësh këtë veprim."</string>
@@ -469,8 +463,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Qëndro në pritje..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data dhe ora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Cakto datën, orën, brezin orar dhe formatet"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Cakto automatikisht orën"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Cakto automatikisht brezin orar"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Data dhe ora automatike"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Përdor orën e ofruar nga rrjeti"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Brezi orar, automatik"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Përdor brezin orar të ofruar nga rrjeti"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Formati 24 orë"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Përdor formatin 24 orë"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Ora"</string>
@@ -485,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Ora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administratori"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Identifikuar si administrator"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Të jepen lejet e administratorit?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Të gjitha autorizimet e administratorit"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Bëje administrator"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Administratori do të mund t\'i fshijë profilet e tjera, duke përfshirë edhe profilet për administratorët e tjerë, si dhe ta rivendosë sistemin info-argëtues në gjendje fabrike."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Profili do të jetë në gjendje të fshijë profilet, duke përfshirë administratorët e tjerë, si dhe të rivendosë sistemin në gjendje fabrike."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Ky veprim është i pakthyeshëm."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Po, bëje administrator"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Krijo profile të reja"</string>
@@ -498,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Shto profil"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Profili i ri"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Të shtohet një profil i ri?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Pasi të krijosh një profil të ri, ai person duhet ta personalizojë vetë atë."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Aplikacionet mund të përditësohen nga çdo profil për t\'u përdorur nga të gjitha profilet e tjera."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Kur shton një profil të ri, ai person duhet të konfigurojë hapësirën e vet."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Çdo profil mund të përditësojë aplikacionet për të gjitha profilet e tjera."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Është arritur kufiri i profileve"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="other">Mund të krijosh deri në <xliff:g id="COUNT">%d</xliff:g> profile.</item>
       <item quantity="one">Mund të krijohet vetëm një profil.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Nuk mund të krijohej një profil i ri"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Krijimi i një profili të ri dështoi"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Të fshihet ky profil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Të gjitha aplikacionet dhe të dhënat për këtë profil do të fshihen"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Profili nuk mund të fshihej."</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Fshirja e profilit dështoi."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Ky profil do të fshihet kur të ndërrosh profilet ose të ndezësh përsëri automjetin."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Hiq"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Riprovo"</string>
@@ -535,7 +531,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Aplikacionet e tjera"</string>
     <string name="storage_files" msgid="6382081694781340364">"Skedarët"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistemi"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistemi përfshin skedarët që përdoren për ekzekutimin e versionit <xliff:g id="VERSION">%s</xliff:g> të Android"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistemi përfshin skedarët e përdorur për ekzekutimin e versionit <xliff:g id="VERSION">%s</xliff:g> të Android"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Skedarët audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Po llogaritet…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Madhësia e aplikacionit"</string>
@@ -573,7 +569,7 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sinkronizimi joaktiv për të gjithë artikujt"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Sinkronizimi është JOAKTIV"</string>
     <string name="sync_error" msgid="6698021343089247914">"Gabim gjatë sinkronizimit"</string>
-    <string name="last_synced" msgid="4745124489150101529">"Sinkronizimi i fundit më <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="4745124489150101529">"Sinkronizuar për herë të fundit <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"Po sinkronizon tani…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"Trokit për ta sinkronizuar tani<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
@@ -581,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Anulo sinkronizimin"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Sinkronizimi ka aktualisht probleme. Do të ofrohet sërish së shpejti."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatësia"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Të dhënat e sistemit info-argëtues"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Të dhënat e automjetit"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrollo qasjen e aplikacioneve te vendndodhja jote"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofoni"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrollo qasjen e aplikacionit te mikrofoni"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Të dhënat e sistemit info-argëtues"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Të dhënat e automjetit"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Menaxho aktivitetet dhe informacionin e ruajtur në këtë automjet"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Fshi profilin tënd"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Spastro profilin dhe llogaritë e tua nga sistemi info-argëtues"</string>
@@ -606,6 +602,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Kapërce"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Cakto një kyçje të ekranit"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Zgjidh kodin PIN"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Zgjidh motivin"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Zgjidh fjalëkalimin"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Kyçja aktuale e ekranit"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Për siguri, cakto një motiv"</string>
@@ -649,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Duhet të jetë më pak se <xliff:g id="NUMBER">%d</xliff:g> shifra"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Duhet të përmbajë vetëm shifra 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administratori i pajisjes nuk e lejon përdorimin e një kodi PIN të përdorur së fundi"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Kodet e zakonshme PIN janë bllokuar nga administratori i teknologjisë së informacionit. Provo një kod tjetër PIN."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Kodet e zakonshme PIN janë bllokuar nga administratori i TI-së. Provo një kod tjetër PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Kjo nuk mund të përfshijë një karakter të pavlefshëm."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Fjalëkalimi i pavlefshëm. Duhet të jetë të paktën 4 karaktere."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administratori i pajisjes nuk e lejon përdorimin e një fjalëkalimi të përdorur së fundi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Gabim gjatë ruajtjes së fjalëkalimit"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Fjalëkalimet e zakonshme janë bllokuar nga administratori i teknologjisë së informacionit. Provo një fjalëkalim tjetër."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Fjalëkalimet e zakonshme janë bllokuar nga administratori i TI-së. Provo një fjalëkalim tjetër."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
@@ -706,7 +703,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Profili nuk mund të shtohet gjatë drejtimit të makinës"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Kërko"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"\"Asistenti\" dhe zëri"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplikacioni i asistentit dixhital"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Aplikacioni \"Asistenti\""</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Përdor tekstin nga ekrani"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Lejo që \"Asistenti\" të ketë qasje te përmbajtjet e ekranit"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Përdor pamjen e ekranit"</string>
@@ -718,5 +715,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Shto një profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Fshije këtë profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Shto profil"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Ky cilësim nuk mund të ndryshohet në këtë moment"</string>
 </resources>
