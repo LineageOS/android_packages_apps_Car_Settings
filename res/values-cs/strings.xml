@@ -85,7 +85,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Nastavení limitu datových přenosů"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Nastavit"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Síť OEM"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s využito %2$s – %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%2$s – %3$s využito %1$d MB"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Připojit k jiné síti"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Možnosti sítě"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -158,7 +158,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Vyberte alespoň jedno pásmo pro hotspot Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot a tethering"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatické vypnutí hotspotu"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Pokud nebudou připojena žádná zařízení, hotspot Wi-Fi se vypne"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Aplikace <xliff:g id="REQUESTER">%s</xliff:g> chce zapnout Wi-Fi"</string>
@@ -301,10 +300,6 @@
     <string name="force_stop" msgid="2153183697014720520">"Vynutit ukončení"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vynutit ukončení?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Vynucené ukončení může způsobit nepředvídatelné chování aplikace."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Vypnout ochranu výkonu?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Pokud ji vypnete, váš software a hardware nemusí fungovat tak dobře."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Ponechat zapnutou"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Vypnout"</string>
     <string name="disable_text" msgid="4358165448648990820">"Zakázat"</string>
     <string name="enable_text" msgid="1794971777861881238">"Povolit"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Odinstalovat"</string>
@@ -314,7 +309,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"Oprávnění"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Oznámení"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Úložiště a mezipaměť"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Zajistit maximální výkon"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Verze: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nebyla udělena žádná oprávnění"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nevyžaduje žádná oprávnění"</string>
@@ -327,7 +321,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Odebrat oprávnění a uvolnit místo"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s v interním úložišti"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"V případě potřeby zavřít aplikaci, aby se předešlo nadměrnému využití prostředků"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Využití dat"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Využití dat aplikací"</string>
     <string name="computing_size" msgid="5791407621793083965">"Probíhá výpočet…"</string>
@@ -361,7 +354,7 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Není nastavena jako výchozí pro žádné akce"</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Aplikace byla nastavena, aby se pro některé akce spouštěla jako výchozí."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Vymazat výchozí nastavení"</string>
-    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Otevírat podporované odkazy"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Otevírání podporovaných odkazů"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Otevírat v této aplikaci"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"Pokaždé se zeptat"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Neotevírat v této aplikaci"</string>
@@ -398,7 +391,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Oprávnění na úrovni aplikace"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Služby určování polohy"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Používat polohu"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Poloha zařízení se určuje pomocí zdrojů, jako je systém GPS, sítě Wi-Fi, mobilní sítě a senzory."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Systém"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Aktualizace systému"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Rozšířená nastavení"</string>
@@ -470,7 +464,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"Vymazat z informačního a zábavního systému všechna data a profily"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Touto akcí vymažete všechna data z informačního a zábavního systému vozidla, včetně těchto:\n\n"<li>"váš účet Google,"</li>\n<li>"data a nastavení systému a aplikací,"</li>\n<li>"stažené aplikace."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Jste přihlášeni k následujícím účtům:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Pro toto vozidlo byly nastaveny jiné profily."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"V tomto vozidle jsou další profily."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Vymazat všechna data"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Vymazat všechna data?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Touto akcí z tohoto informačního a zábavního systému vymažete veškerá data osobního profilu, účty a stažené aplikace.\n\nTuto akci nelze vrátit zpět."</string>
@@ -479,8 +473,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Prosím čekejte…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum a čas"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Umožňuje nastavit datum, čas, časové pásmo a formát"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Nastavit čas automaticky"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Nastavit časové pásmo automaticky"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatické datum a čas"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Používat čas ze sítě"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Automatické časové pásmo"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Používat časové pásmo ze sítě"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24hodinový formát"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Používat 24hodinový formát"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Čas"</string>
@@ -495,9 +491,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Čas"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrátor"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Jste přihlášeni jako administrátor"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Udělit oprávnění administrátora?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Všechna oprávnění administrátora"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Nastavit jako administrátora"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Administrátor bude moci smazat ostatní profily (včetně administrátorských) a resetovat informační a zábavní systém vozidla."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Tento profil bude moci mazat ostatní profily (včetně administrátorů) a resetovat systém do továrního nastavení."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Tuto akci nelze vrátit zpět."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Ano, nastavit jako administrátora"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Vytváření nových profilů"</string>
@@ -508,8 +504,8 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Přidat profil"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Nový profil"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Přidat nový profil?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Uživatel si svůj nově vytvořený profil může přizpůsobit."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Aplikace lze aktualizovat z libovolného profilu k použití všemi profily."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Uživatel každého nově přidaného profilu si musí nastavit vlastní prostor."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Všechny profily mohou aktualizovat aplikace všech ostatních profilů."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Maximální počet profilů dosažen"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="few">Můžete vytvořit až <xliff:g id="COUNT">%d</xliff:g> profily.</item>
@@ -517,10 +513,10 @@
       <item quantity="other">Můžete vytvořit až <xliff:g id="COUNT">%d</xliff:g> profilů.</item>
       <item quantity="one">Můžete vytvořit jen jeden profil.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Nový profil se nepodařilo vytvořit"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Vytvoření nového profilu se nezdařilo"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Vymazat tento profil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Veškeré aplikace a data v tomto profilu budou vymazána"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Profil se nepodařilo smazat."</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Vymazání profilu se nezdařilo."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Když přepnete profily nebo restartujete vozidlo, tento profil bude smazán."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Zavřít"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Zkusit znovu"</string>
@@ -556,7 +552,7 @@
     <string name="storage_total_size_label" msgid="3892138268243791912">"Celkem"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vymazat úložiště"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Vymazat mezipaměť"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Smazat data aplikace?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vymazat data aplikace?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Veškerá data (všechny soubory, nastavení, účty, databáze apod.) této aplikace budou trvale vymazána."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Data aplikace v úložišti se nepodařilo vymazat."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Úložiště <xliff:g id="NAME">%1$s</xliff:g> bylo bezpečně odpojeno"</string>
@@ -593,11 +589,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Zrušit synchronizaci"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Nastaly potíže se synchronizací. Služba bude brzy obnovena."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Soukromí"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data informačního a zábavního systému"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Údaje o vozidlu"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Ovládání přístupu aplikace k vaší poloze"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Ovládání přístupu aplikace k mikrofonu"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Data informačního a zábavního systému"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Údaje o vozidlu"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Správa aktivit a údajů uložených v tomto vozidlu"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Vymazat profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Vymazat profil a účty z informačního a zábavního systému"</string>
@@ -618,6 +614,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Přeskočit"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Nastavení zámku obrazovky"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Zvolte kód PIN"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Vyberte gesto"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Zvolte heslo"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Aktuální zámek obrazovky"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Z bezpečnostních důvodů nastavte gesto"</string>
@@ -661,7 +658,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN musí mít méně než tento počet číslic: <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Kód PIN smí obsahovat pouze číslice 0 až 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrátor zařízení nedovoluje použití nedávno použitého kódu PIN"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Obvyklé kódy PIN jsou blokovány administrátorem IT. Použijte jiný PIN."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Obvyklé kódy PIN jsou blokovány administrátorem IT. Použijte jiný PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Heslo nesmí obsahovat neplatné znaky."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Heslo není platné, musí obsahovat nejméně 4 znaky."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -702,7 +699,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administrátor zařízení neumožňuje použít heslo, které jste použili nedávno"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Při ukládání hesla došlo k chybě"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Obvyklá hesla jsou blokována administrátorem IT. Použijte jiné heslo."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Obvyklá hesla jsou blokována administrátorem IT. Použijte jiné heslo."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Posloupnost rostoucích, klesajících nebo opakujících se číslic není povolena."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Možnosti zámku obrazovky"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : před <xliff:g id="NUM_DAYS">%3$s</xliff:g> dny"</string>
@@ -730,7 +727,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Při řízení nelze přidat profil"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Hledat"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistent a hlas"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplikace digitálního asistenta"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Asistenční aplikace"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Použití textu z obrazovky"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Povolit asistentovi přístup k obsahu obrazovky"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Použití snímku obrazovky"</string>
@@ -742,5 +739,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Přidat profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Smazat tento profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Přidat profil"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Toto nastavení teď nelze změnit"</string>
 </resources>

@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Adathasználati korlát beállítása"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Beállítás"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM-hálózat"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s felhasználva (%2$s – %3$s)"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"Adathasználat: %1$d MB (%2$s – %3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Csatlakozás másik hálózathoz"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Hálózati beállítások"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Válasszon sávot a Wi-Fi-hotspotnak:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot és internetmegosztás"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Wi-Fi-hotspot automatikus kikapcsolása"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"A Wi-Fi-hotspot kikapcsol, ha nincsenek csatlakoztatott eszközök"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"A(z) <xliff:g id="REQUESTER">%s</xliff:g> szeretné bekapcsolni a Wi-Fi-t"</string>
@@ -293,14 +292,10 @@
     <string name="default_applications" msgid="1558183275638697087">"Alapértelmezett alkalmazások"</string>
     <string name="app_permissions" msgid="32799922508313948">"Alkalmazásengedélyek"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Az adataihoz hozzáférő alkalmazások kezelése"</string>
-    <string name="applications_settings" msgid="794261395191035632">"Alkalmazásinfó"</string>
+    <string name="applications_settings" msgid="794261395191035632">"Alkalmazásinformáció"</string>
     <string name="force_stop" msgid="2153183697014720520">"Kényszerített leállítás"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Kényszeríti a leállítást?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ha leállásra kényszeríti az alkalmazást, lehetséges, hogy hibásan fog működni."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Kikapcsolja a teljesítményvédelmet?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Ha kikapcsolja, előfordulhat, hogy a szoftver és a hardver nem működik majd olyan jól."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Maradjon bekapcsolva"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Kikapcsolás"</string>
     <string name="disable_text" msgid="4358165448648990820">"Letiltás"</string>
     <string name="enable_text" msgid="1794971777861881238">"Engedélyezés"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Eltávolítás"</string>
@@ -310,7 +305,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"Engedélyek"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Értesítések"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Tárhely és gyorsítótár"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Csúcsteljesítmény"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Verzió: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nincsenek megadott engedélyek"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nincsenek kért engedélyek"</string>
@@ -321,7 +315,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Engedélytörlés és tárhely-felszabadítás"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s a belső tárhelyen"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Az app bezárásával elkerülhető a túlzott erőforrás-használat"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Adathasználat"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Alkalmazás adathasználata"</string>
     <string name="computing_size" msgid="5791407621793083965">"Számítás…"</string>
@@ -377,7 +370,7 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ha kikapcsolja az értesítésekhez való hozzáférést a(z) <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> számára, előfordulhat, hogy a „Ne zavarjanak” módhoz való hozzáférés is kikapcsolódik."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Kikapcsolás"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Mégse"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Emelt díjas SMS küldése"</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Prémium SMS-hozzáférés"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"A Prémium SMS-ek használata pénzbe kerülhet Önnek, és a szolgáltatója által kiállított számlák végösszegét növeli. Ha engedélyt ad valamelyik alkalmazásnak, akkor azzal lehetősége lesz prémium SMS-eket küldeni."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Használati hozzáférés"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"A használati hozzáférés lehetővé teszi az alkalmazás számára a következők nyomon követését: Ön milyen más alkalmazásokat használ, milyen gyakran használja őket, valamint szolgáltatóit, nyelvi beállításit és egyéb részleteket."</string>
@@ -390,7 +383,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Alkalmazásszintű engedélyek"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Helyszolgáltatások"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Helyadatok használata"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Eszköze helyének meghatározásához a Hely szolgáltatás a GPS, a Wi-Fi- és mobilhálózatok, továbbá az érzékelők adatait használhatja fel."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Rendszer"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Haladó"</string>
@@ -460,7 +454,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"Minden adat és profil törlése az infotainmentrendszerről"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Ez minden adatot töröl a jármű infotainmentrendszeréből, beleértve a következőket:\n\n"<li>"Az Ön Google-fiókja"</li>\n<li>"A rendszer- és alkalmazásadatok, illetve -beállítások"</li>\n<li>"A letöltött alkalmazások"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Jelenleg a következő fiókokba van bejelentkezve:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Be lettek állítva más profilok ennél a járműnél."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"Más profilok is vannak a járművön."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Minden adat törlése"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Törli az összes adatot?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ez törli az ezen az infotainmentrendszeren található összes személyes profilhoz tartozó adatokat, fiókokat és letöltött alkalmazásokat.\n\nEz a művelet nem vonható vissza."</string>
@@ -469,8 +463,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Kérjük, várjon…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dátum és idő"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Dátum, idő, időzóna és formátumok beállítása"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Időpont automatikus beállítása"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Időzóna automatikus beállítása"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatikus dátum és idő"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Hálózat által megadott idő használata"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Automatikus időzóna"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Hálózat által megadott időzóna használata"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 órás formátum"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24 órás formátum használata"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Idő"</string>
@@ -485,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Idő"</string>
     <string name="user_admin" msgid="1535484812908584809">"Rendszergazda"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Rendszergazdaként bejelentkezve"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Rendszergazdai engedélyeket ad?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Összes adminisztrátori engedély"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Rendszergazdai jogosultság megadása"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"A rendszergazda képes lesz más profilokat törölni, beleértve a többi rendszergazdáét is, és vissza tudja állítani az infotainmentrendszer gyári beállításait."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"A profil képes lesz más profilokat törölni, beleértve a többi rendszergazdát is, és vissza tudja majd állítani a rendszer gyári beállításait."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"A művelet nem vonható vissza."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Igen, tegye rendszergazdává"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Új profilok létrehozása"</string>
@@ -498,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Profil hozzáadása"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Új profil"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Szeretne új profilt hozzáadni?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Új profil létrehozása után a profilt a tulajdonosának kell személyre szabnia."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Az alkalmazások bármely profilból frissíthetők a többi profilban való használatra."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Új profil hozzáadásakor a profil tulajdonosának be kell állítania saját felületét."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Bármely profil frissítheti a többi profil alkalmazásait."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Elérte a profilok maximális számát"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="other">Legfeljebb <xliff:g id="COUNT">%d</xliff:g> profilt lehet létrehozni.</item>
       <item quantity="one">Legfeljebb egy profilt lehet létrehozni.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Nem sikerült az új profil létrehozása"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Nem sikerült az új profil létrehozása"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Törli ezt a profilt?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"A profilhoz tartozó összes alkalmazás és adat törlődik"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Nem sikerült a profil törlése"</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Nem sikerült a profil törlése"</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Ez a profil a következő profilváltáskor vagy a jármű újraindításakor lesz törölve."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Bezárás"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Újra"</string>
@@ -581,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Szinkronizálás megszakítása"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"A szinkronizálással problémák vannak. Hamarosan helyreáll."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Adatvédelem"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Infotainmentrendszer-adatok"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Járműadatok"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"A helyadatokhoz hozzáférő alkalmazások kezelése"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"A mikrofonhoz hozzáférő alkalmazások kezelése"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Infotainmentrendszer-adatok"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Járműadatok"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"A járművön mentett tevékenységek és információk kezelése"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Profil törlése"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Profil és fiókok törlése az infotainmentrendszerről"</string>
@@ -606,6 +602,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Kihagyás"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Képernyőzár beállítása"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN-kód kiválasztása"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Válassza ki a mintát"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Jelszó kiválasztása"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Jelenlegi képernyőzár"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"A biztonság érdekében állítson be mintát"</string>
@@ -649,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> számjegynél rövidebbnek kell lennie"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Csak számokat tartalmazhat, 0-tól 9-ig."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Az eszközrendszergazda nem engedélyezi a legutóbbi PIN-kódok használatát"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Rendszergazdája letiltotta a gyakran használt PIN-kódokat. Próbálkozzon másik PIN-kóddal."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Rendszergazdája letiltotta a gyakran használt PIN-kódokat. Próbálkozzon másik PIN-kóddal."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Nem tartalmazhat érvénytelen karaktert."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Érvénytelen jelszó, legalább 4 karakterből kell állnia."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Az eszközrendszergazda nem engedélyezi a legutóbbi jelszavak használatát"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Hiba történt a jelszó mentése során"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Rendszergazdája letiltotta a gyakran használt jelszavakat. Próbálkozzon másik jelszóval."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Rendszergazdája letiltotta a gyakran használt jelszavakat. Próbálkozzon másik jelszóval."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Növekvő, csökkenő vagy ismétlődő számsor megadása nem engedélyezett."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"A képernyőzár beállításai"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> nappal ezelőtt"</string>
@@ -706,7 +703,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Vezetés közben nem lehet profilt hozzáadni"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Keresés"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Segéd és hang"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digitális asszisztens app"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Segédalkalmazás"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Képernyő szövegének használata"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"A képernyő tartalmához való hozzáférés engedélyezése a segédalkalmazás számára"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Képernyőkép használata"</string>
@@ -718,5 +715,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profil hozzáadása"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"A profil törlése"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profil hozzáadása"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Ez a beállítás jelenleg nem módosítható"</string>
 </resources>
