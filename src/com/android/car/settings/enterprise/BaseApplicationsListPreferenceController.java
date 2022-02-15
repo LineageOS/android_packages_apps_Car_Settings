@@ -19,6 +19,7 @@ import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
+import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
@@ -26,6 +27,7 @@ import com.android.car.settings.enterprise.CallbackTranslator.AppsListCallbackTr
 import com.android.car.settings.enterprise.CallbackTranslator.Callback;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.car.settingslib.applications.UserAppInfo;
+import com.android.settingslib.widget.AppPreference;
 
 import java.util.List;
 
@@ -57,5 +59,22 @@ abstract class BaseApplicationsListPreferenceController extends
     @Override
     protected boolean isAvailable(List<UserAppInfo> result) {
         return !result.isEmpty();
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        List<UserAppInfo> apps = getResult();
+        mLogger.d("Updating state with " + apps.size() + " apps");
+        preferenceGroup.removeAll();
+
+        for (int position = 0; position < apps.size(); position++) {
+            UserAppInfo item = apps.get(position);
+            Preference preference = new AppPreference(getContext());
+            preference.setTitle(item.appInfo.loadLabel(mPm));
+            preference.setIcon(item.appInfo.loadIcon(mPm));
+            preference.setOrder(position);
+            preference.setSelectable(false);
+            preferenceGroup.addPreference(preference);
+        }
     }
 }

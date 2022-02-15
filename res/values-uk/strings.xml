@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ до даних через мобільну мережу"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобільна мережа"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Використовувати мобільний Інтернет"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Вимкнено"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Вимкнути мобільне передавання даних?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Виберіть варіант"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Використовувати оператора <xliff:g id="CARRIER">%1$s</xliff:g> для мобільного передавання даних?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Пошук мереж Wi-Fi увімкнено"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Автоматично переходити на мобільне передавання даних"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Вмикати мобільне передавання даних, якщо мережа Wi-Fi не має доступу до Інтернету. Може стягуватися плата за використання трафіку."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Шукати мережі Wi‑Fi і підключатися до них"</string>
     <string name="learn_more" msgid="8214605928933358604">"Докладніше"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Назва точки доступу"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Увімкнення точки доступу \"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>\"…"</string>
@@ -383,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Додаток із цим дозволом може змінювати налаштування системи."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Доступ до сповіщень"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Надати додатку <xliff:g id="SERVICE">%1$s</xliff:g> доступ до сповіщень?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> зможе переглядати всі сповіщення, зокрема з особистою інформацією, як-от іменами контактів і текстами отриманих повідомлень, а також відхиляти сповіщення або активувати в них командні кнопки.\n\nДодаток зможе вмикати й вимикати режим \"Не турбувати\" та змінювати пов’язані з ним налаштування."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Якщо вимкнути доступ додатка <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> до сповіщень, доступ до режиму \"Не турбувати\" також буде вимкнено."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Вимкнути"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Скасувати"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Доступ до платних SMS"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Якщо вимкнути цю опцію, доступ до геоданих буде скасовано для всіх додатків, окрім додатків для допомоги водію."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Викор. геодані для функцій допомоги водію"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геодані транспортного засобу вимкнено"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Додатки для допомоги водію не мають доступу до геоданих"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Змінити"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Надати додаткам для допомоги водію доступ до геоданих"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Якщо вимкнути цю опцію, функції допомоги водію, які використовують геодані, будуть деактивовані."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Використовувати геодані"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Допомога водію"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Геодані, які отримують додатки для допомоги водію, не містять інформації, за якою вас можна ідентифікувати. Вони зберігаються щонайбільше 2 дні, а потім видаляються."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Використовувати мікрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Надати всім додаткам доступ до мікрофона"</string>
@@ -490,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Налаштування додатків скинуто"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Видалити всі дані (скинути налаштування)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Видалити всі дані й профілі з інформаційно-розважальної системи"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Буде видалено всі дані інформаційно-розважальної системи автомобіля, зокрема:\n\n"<li>"обліковий запис Google;"</li>\n<li>"дані й налаштування системи та додатків;"</li>\n<li>"завантажені додатки."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Буде видалено всі дані інформаційно-розважальної системи транспортного засобу, зокрема:\n\n"<li>"ваші облікові записи й профілі;"</li>\n<li>"дані й налаштування системи та додатків;"</li>\n<li>"завантажені додатки."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Ви ввійшли в такі облікові записи:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Для цього транспортного засобу налаштовано інші профілі."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Видалити всі дані"</string>
@@ -584,9 +582,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Облікові записи користувача <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Автоматично синхронізувати дані"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Дозволити додаткам автоматично оновлювати дані"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Увімкнути автосинхронізацію?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Будь-які зміни в облікових записах, внесені в Інтернеті, автоматично копіюватимуться на ваш пристрій.\n\nДеякі облікові записи також можуть автоматично копіювати в Інтернет зміни, внесені на телефоні. Так працює обліковий запис Google."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Вимкнути автосинхронізацію?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Дозволити автоматичну синхронізацію даних?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Будь-які зміни в облікових записах, внесені в Інтернеті, автоматично копіюватимуться на ваш транспортний засіб.\n\nДеякі облікові записи також можуть автоматично копіювати в Інтернет зміни, внесені на транспортному засобі."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Заборонити автоматичну синхронізацію даних?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Це заощадить трафік, проте вам доведеться вручну синхронізувати кожний обліковий запис, щоб отримати останні дані. Сповіщення щодо оновлень також не надходитимуть."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Дані облікового запису"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Додати обліковий запис"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Як намалювати ключ розблокування"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Не вдалося зберегти ключ"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Забагато невдалих спроб. Повторіть через <xliff:g id="NUMBER">%d</xliff:g> с."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Ключ вводиться лише на сенсорній панелі"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Вимкнути блокування екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Будь-хто зможе ввійти у ваш обліковий запис"</string>
@@ -674,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Скасувати"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Підтвердити"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Потрібно ввести принаймні 4 символи"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Мінімальна кількість символів: <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Мінімальна кількість цифр у PIN-коді: <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Максимальна кількість символів: <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Максимальна кількість цифр: <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Має містити лише цифри від 0 до 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Адміністратор пристрою не дозволяє використовувати останній PIN-код"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Системний адміністратор заблокував загальні PIN-коди. Введіть інший PIN-код."</string>
@@ -686,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Адміністратор пристрою не дозволяє використовувати останній пароль"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не вдалося зберегти пароль"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Системний адміністратор заблокував загальні паролі. Введіть інший пароль."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Заборонено однакові цифри або в порядку зростання чи спадання."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Цифри в порядку зростання чи спадання та повторювані цифри заборонені"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Способи блокування екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. тому"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Очистити облікові дані"</string>
@@ -701,6 +722,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Видалити"</string>
     <string name="cancel" msgid="750286395700355455">"Скасувати"</string>
     <string name="allow" msgid="7519431342750394402">"Дозволити"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Не дозволяти"</string>
     <string name="deny" msgid="340512788979930804">"Заборонити"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Клавіша Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Клавіша Enter"</string>
@@ -737,6 +759,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Якщо ви активуєте цей додаток інформаційно-розважальної системи, додаток <xliff:g id="APP_NAME">%1$s</xliff:g> зможе виконувати вказані нижче операції."</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Активувати цей додаток?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Активувати цей додаток інформаційно-розважальної системи"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Вимкнути й видалити"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Деактивувати цей додаток інформаційно-розважальної системи"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Адміністратор організації може відстежувати додатки й дані, пов’язані з цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження транспортного засобу, а також керувати ними."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Адміністратор організації може відстежувати додатки й дані, пов’язані з цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження пристрою, а також керувати ними."</string>
@@ -757,10 +780,43 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Немає активованих додатків"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила організації \"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>\" щодо транспортних засобів"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Налаштування, якими керує адміністратор організації"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Докладніше про сервіс <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додаток</item>
+      <item quantity="few">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додатки</item>
+      <item quantity="many">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додатків</item>
+      <item quantity="other">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додатка</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> додаток</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> додатки</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> додатків</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> додатка</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> спроба</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> спроби</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> спроб</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> спроби</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Додатки для камери</item>
+      <item quantity="few">Додатки для камери</item>
+      <item quantity="many">Додатки для камери</item>
+      <item quantity="other">Додатки для камери</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">Додатки для пошти</item>
+      <item quantity="few">Додатки для пошти</item>
+      <item quantity="many">Додатки для пошти</item>
+      <item quantity="other">Додатки для пошти</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">Додатки для дзвінків</item>
+      <item quantity="few">Додатки для дзвінків</item>
+      <item quantity="many">Додатки для дзвінків</item>
+      <item quantity="other">Додатки для дзвінків</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Надіслати звіт про помилку?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Адміністратор транспортного засобу просить надіслати звіт про помилку, щоб вирішити проблему з цим пристроєм. Він може отримати доступ до ваших додатків і даних."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Адміністратор транспортного засобу просить надіслати звіт про помилку, щоб вирішити проблему з цим пристроєм. Він може отримати доступ до ваших додатків і даних. Це також може тимчасово сповільнити роботу вашого пристрою."</string>
@@ -794,22 +850,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Чорний на білому"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Жовтий на чорному"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Жовтий на синьому"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Програма зчитування з екрана"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Вимкнено"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Озвучувати елементи на екрані"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Використовувати TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Опції"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Налаштування"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Про TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack не працює, коли авто в русі.\n\nКоли функцію TalkBack увімкнено, вона надає голосові підказки, завдяки яким ви можете користуватися своїм пристроєм, не дивлячись на його екран. Функцію TalkBack призначено для людей із вадами зору або ситуацій, коли дивитися на екран складно."</string>
 </resources>

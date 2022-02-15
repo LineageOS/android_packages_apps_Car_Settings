@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan jaringan seluler"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Jaringan seluler"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Gunakan kuota"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Nonaktif"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Nonaktifkan kuota?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Perlu memilih SIM"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Gunakan <xliff:g id="CARRIER">%1$s</xliff:g> untuk kuota?"</string>
@@ -50,7 +51,7 @@
     <string name="data_usage_title" msgid="2923515974389203812">"Kuota utama"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> digunakan"</string>
     <string name="cell_data_warning" msgid="8997739664336571149">"Peringatan penggunaan kuota <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_limit" msgid="6862164869877993009">"Batas kuota <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Batas data <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Peringatan penggunaan kuota <xliff:g id="ID_1">^1</xliff:g>/Batas kuota <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{# hari lagi}other{# hari lagi}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Waktu habis"</string>
@@ -70,8 +71,8 @@
     <string name="mobile_data_usage" msgid="8171519864391091861">"Penggunaan data seluler"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Setel peringatan kuota"</string>
     <string name="data_warning" msgid="116776633806885370">"Peringatan kuota"</string>
-    <string name="set_data_limit" msgid="7136539812414500084">"Setel batas kuota"</string>
-    <string name="data_limit" msgid="227338836292511425">"Batas kuota"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Setel batas data"</string>
+    <string name="data_limit" msgid="227338836292511425">"Batas data"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Membatasi penggunaan data"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Head unit kendaraan akan menonaktifkan kuota jika mencapai batas yang disetel.\n\nKarena penggunaan data diukur oleh head unit, dan operator dapat menghitung penggunaan secara berbeda, pertimbangkan untuk menyetel batas yang konservatif."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Setel peringatan penggunaan data"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Pemindaian Wi-Fi diaktifkan"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Beralih ke kuota secara otomatis"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Gunakan kuota saat Wi-Fi tidak memiliki akses internet. Mungkin dikenakan biaya penggunaan data."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Temukan dan hubungkan ke jaringan Wi-Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Pelajari lebih lanjut"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nama hotspot"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Mengaktifkan <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -383,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Izin ini memungkinkan aplikasi mengubah setelan sistem."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Akses notifikasi"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Izinkan akses notifikasi untuk <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> dapat membaca semua notifikasi, termasuk informasi pribadi seperti nama kontak dan SMS yang diterima. Ini juga dapat menutup notifikasi atau memicu tombol tindakan di dalamnya.\n\nIni juga dapat membuat aplikasi mengaktifkan atau menonaktifkan fitur Jangan Ganggu dan mengubah setelan terkait."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jika akses notifikasi untuk <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> dinonaktifkan, akses fitur Jangan Ganggu juga dapat dinonaktifkan."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Nonaktifkan"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Batal"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Akses SMS Premium"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Jika Anda menonaktifkannya, fitur ini akan menghapus akses lokasi untuk semua aplikasi. Aplikasi Bantuan bagi Pengemudi akan tetap memiliki akses."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Menggunakan lokasi untuk Bantuan bagi Pengemudi"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokasi kendaraan nonaktif"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Aplikasi Bantuan bagi Pengemudi tidak dapat mengakses lokasi Anda"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Ubah"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Mengizinkan aplikasi yang membantu mengemudi mengakses lokasi Anda"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Jika Anda menonaktifkannya, fitur Bantuan bagi Pengemudi yang mengandalkan informasi lokasi akan dinonaktifkan."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Gunakan lokasi"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokasi dapat menggunakan sumber informasi seperti GPS, Wi-Fi, jaringan seluler, dan sensor untuk memperkirakan lokasi perangkat Anda."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bantuan bagi pengemudi"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Informasi lokasi yang dikirimkan ke aplikasi Bantuan bagi Pengemudi tidak berisi informasi yang mengidentifikasi Anda. Informasi tersebut akan disimpan maksimal selama 2 hari sebelum dihapus."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gunakan mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Izinkan semua aplikasi mengakses mikrofon Anda"</string>
@@ -490,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferensi aplikasi telah direset"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Hapus semua (kembali ke setelan pabrik)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Menghapus semua data dan profil dari sistem infotainmen"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Tindakan ini akan menghapus semua data dari sistem infotainmen kendaraan Anda, termasuk:\n\n"<li>"Akun Google"</li>\n<li>"Setelan &amp; data aplikasi dan sistem"</li>\n<li>"Aplikasi yang didownload"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Semua data dari sistem infotainmen kendaraan Anda akan dihapus, termasuk:\n\n"<li>"Profil dan akun Anda"</li>\n<li>"Data dan setelan sistem dan aplikasi"</li>\n<li>"Aplikasi terdownload"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Saat ini Anda telah login ke akun berikut:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Profil lain telah disiapkan untuk kendaraan ini."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Hapus semua data"</string>
@@ -584,9 +582,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Akun untuk <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Otomatis sinkronkan data"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Izinkan aplikasi otomatis memuat ulang data"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Aktifkan sinkronisasi data otomatis?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Perubahan apa pun yang dilakukan pada akun Anda di web akan disalin ke perangkat secara otomatis.\n\nBeberapa akun juga dapat otomatis menyalin setiap perubahan yang dilakukan di ponsel ke web. Akun Google mengikuti cara kerja tersebut."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Nonaktifkan sinkronisasi data otomatis?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Izinkan penyinkronan data otomatis?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Perubahan apa pun yang dilakukan pada akun Anda di web akan disalin ke kendaraan Anda secara otomatis.\n\nBeberapa akun juga dapat otomatis menyalin perubahan apa pun yang dilakukan di kendaraan ke web."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Larang penyinkronan data otomatis?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Tindakan ini akan menghemat kuota, tetapi Anda perlu menyinkronkan setiap akun secara manual untuk mengumpulkan informasi terkini. Selain itu, Anda tidak akan menerima notifikasi ketika ada update."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Info akun"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Tambahkan akun"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cara menggambar pola pembuka kunci"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Error saat menyimpan pola"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Terlalu banyak kesalahan pola. Coba kembali dalam <xliff:g id="NUMBER">%d</xliff:g> detik."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Pola tidak mendukung rotasi, gunakan sentuhan"</string>
     <string name="okay" msgid="4589873324439764349">"Oke"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Hapus kunci layar?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Tindakan ini akan mengizinkan siapa pun mengakses akun Anda"</string>
@@ -674,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Batal"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Konfirmasi"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Minimal 4 karakter"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Minimal berisi <xliff:g id="COUNT">%d</xliff:g> karakter"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN minimal <xliff:g id="COUNT">%d</xliff:g> digit"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Harus kurang dari <xliff:g id="NUMBER">%d</xliff:g> karakter"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Harus kurang dari <xliff:g id="NUMBER">%d</xliff:g> digit"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Hanya boleh berisi digit 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Admin perangkat tidak mengizinkan penggunaan PIN yang baru-baru ini digunakan"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"PIN umum diblokir oleh admin IT. Coba PIN lain."</string>
@@ -686,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Admin perangkat tidak mengizinkan penggunaan sandi yang baru-baru ini digunakan"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Error saat menyimpan sandi"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Sandi umum diblokir oleh admin IT. Coba sandi lain."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Urutan digit naik, turun, atau berulang tidak diizinkan."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Urutan digit naik, turun, atau berulang tidak diizinkan"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsi kunci layar"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> hari yang lalu"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hapus kredensial"</string>
@@ -701,6 +722,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Hapus"</string>
     <string name="cancel" msgid="750286395700355455">"Batal"</string>
     <string name="allow" msgid="7519431342750394402">"Izinkan"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Jangan izinkan"</string>
     <string name="deny" msgid="340512788979930804">"Tolak"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tombol backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tombol enter"</string>
@@ -737,6 +759,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Dengan mengaktifkan aplikasi sistem infotainmen ini, aplikasi <xliff:g id="APP_NAME">%1$s</xliff:g> akan dapat menjalankan operasi berikut:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktifkan apl sistem infotainmen ini?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktifkan aplikasi sistem infotainmen ini"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Nonaktifkan &amp; uninstal"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Nonaktifkan aplikasi sistem infotainmen ini"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Pengelola organisasi dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi kendaraan."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Pengelola organisasi Anda dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi perangkat."</string>
@@ -757,10 +780,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Tidak ada aplikasi yang diaktifkan"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Kebijakan kendaraan <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Setelan dikelola oleh pengelola organisasi"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Pelajari lebih lanjut <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> aplikasi</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> aplikasi</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikasi</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikasi</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> kali percobaan</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> kali percobaan</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Aplikasi Kamera</item>
+      <item quantity="one">Aplikasi Kamera</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Aplikasi program email</item>
+      <item quantity="one">Aplikasi program email</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Aplikasi Telepon</item>
+      <item quantity="one">Aplikasi Telepon</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Bagikan laporan bug?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Pengelola organisasi untuk kendaraan ini meminta laporan bug guna membantu memecahkan masalah perangkat ini. Aplikasi dan data mungkin dibagikan."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Pengelola organisasi untuk kendaraan ini meminta laporan bug guna membantu memecahkan masalah perangkat ini. Aplikasi dan data mungkin dibagikan, serta perangkat Anda mungkin menjadi lambat untuk sementara."</string>
@@ -794,22 +838,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Hitam berlatar putih"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Kuning berlatar hitam"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Kuning berlatar biru"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Pembaca layar"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Nonaktif"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Ucapkan item di layar"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Gunakan TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Opsi"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Setelan"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Tentang TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack tidak tersedia saat kendaraan sedang bergerak.\n\nTalkBack memberikan respons lisan saat aktif sehingga Anda dapat menggunakan perangkat tanpa melihat layar. TalkBack ditujukan untuk situasi yang membuat orang kesulitan melihat layar atau orang yang mengalami gangguan penglihatan."</string>
 </resources>

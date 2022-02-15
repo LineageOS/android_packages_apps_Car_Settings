@@ -40,7 +40,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 abstract class BaseEnterprisePreferenceControllerTestCase extends BaseEnterpriseTestCase {
-
     protected final String mPreferenceKey = "Da Key";
     protected final CarUxRestrictions mUxRestrictions = new CarUxRestrictions.Builder(
             /* reqOpt= */ true, CarUxRestrictions.UX_RESTRICTIONS_FULLY_RESTRICTED, /* time= */ 0)
@@ -144,6 +143,10 @@ abstract class BaseEnterprisePreferenceControllerTestCase extends BaseEnterprise
 
         @Override public int getPreferenceCount() {
             return mList.size();
+        }
+
+        @Override public Preference getPreference(int index) {
+            return mList.get(index);
         }
 
         public List<Preference> getPreferences() {

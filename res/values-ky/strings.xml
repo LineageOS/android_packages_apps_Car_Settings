@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Интернетке мобилдик тармак аркылуу чыгуу"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобилдик тармак"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Мобилдик трафикти колдонуу"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Өчүк"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Мобилдик Интернетти өчүрөсүзбү?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Тандоо керек"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"<xliff:g id="CARRIER">%1$s</xliff:g> Интернети колдонулсунбу?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi\'ды издөө күйгүзүлдү"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Мобилдик Интернетке автоматтык түрдө которулсун"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi аркылуу Интернетке туташуу мүмкүнчүлүгү жок болгондо, мобилдик Интернет колдонулсун. Трафиктин колдонулгандыгы үчүн акы алынышы мүмкүн."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi‑Fi тармактарын таап, туташуу"</string>
     <string name="learn_more" msgid="8214605928933358604">"Кеңири маалымат"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Байланыш түйүнүнүн аталышы"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> күйгүзүлүүдө…"</string>
@@ -383,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын жөндөөлөрүн өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат берилсинби?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> колдонмосу эскертмелердин баарын, ошону менен катар байланыштардын аты-жөнү жана кабыл алынган билдирүүлөр сыяктуу жеке маалыматты окуй алат. Мындан тышкары, ал билдирмелерди жок кылып же алардагы баскычтарды баса алат.\n\nУшуну менен колдонмо \"Тынчымды алба\" режимин иштетүү же өчүрүү, ошондой эле анын жөндөөлөрүн өзгөртүү мүмкүнчүлүгүнө ээ болот."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Эгер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үчүн билдирмени угуу уруксатын өчүрсөңүз, анын \"Тынчымды алба\" режимине да уруксаты жок болуп калышы мүмкүн."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өчүрүү"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Жок"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Акы алынуучу SMS жөнөтүүгө уруксат"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Муну өчүрсөңүз, бардык колдонмолор кайда жүргөнүңүздү көрө албай калат, бирок Айдоочуга көмөктөш колдонмолорго көрүнө берет."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Айдоочуга көмөктөш функцияларга кайда жүргөнүмдү көрсөтүү"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Унаанын жайгашкан жерин аныктоо өчүк"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Айдоочуга көмөктөш колдонмолор кайда жүргөнүңүздү көрө албайт"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өзгөртүү"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Унаада жардам берген колдонмолорго кайда жүргөнүңүздү көрүүгө уруксат бериңиз"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Эгер муну өчүрсөңүз, кайда жүргөнүңүз тууралуу маалыматты колдонгон Айдоочуга көмөктөш колдонмолор өчүрүлөт."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди аныктоо"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Түзмөктүн жайгашкан жери GPS, Wi‑Fi, мобилдик тармактар жана сенсорлор аркылуу аныкталат."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Айдоочуга көмөктөш функциялар"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Айдоочуга көмөктөш колдонмолорго жөнөтүлгөн кайда жүргөнүңүз тууралуу маалыматта өздүгүңүздү аныктаган маалымат камтылбайт. Ал 2 күнгө чейин сакталып, андан кийин өчүрүлөт."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофонду колдонуу"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бардык колдонмолорго микрофонуңузду пайдаланууга уруксат бериңиз"</string>
@@ -490,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Бардык нерселерди өчүрүү (баштапкы абалга кайтаруу)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Инфозоок тутумундагы бардык маалыматты жана профилдерди өчүрүү"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Унааңыздын инфозоок тутумундагы бардык нерселер өчүрүлөт, тактап айтканда:\n\n"<li>"Google аккаунтуңуз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайындары"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Унааңыздын инфозоок тутумундагы бардык нерселер өчүрүлөт, тактап айтканда:\n\n"<li>"Аккаунттарыңыз жана профилдериңиз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайын-даректери"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Бул унаа үчүн башка профилдер жөндөлгөн."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Бардык маалыматты өчүрүү"</string>
@@ -584,9 +582,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> аттуу колдонуучунун аккаунттары"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Дайын-даректерди шайкештирүү"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Колдонмолордун маалыматы автоматтык түрдө жаңырып турат"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Автошайкештирүүнү иштетесизби?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Желеден аккаунтуңузга кандайдыр бир өзгөртүүлөр киргизилгенде, алардын баары телефонуңузга автоматтык түрдө көчүрүлөт.\n\nАйрым учурларда телефонуңуздагы өзгөртүүлөр автоматтык түрдө желеге көчүрүлүшү мүмкүн. Кыскасы, Google аккаунту ушундай жол менен иштейт."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Автошайкештирүүнү токтотосузбу?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Маалымат автоматтык түрдө шайкештирилсинби?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Вебсайтта аккаунттарга киргизилген өзгөрүүлөр автоматтык түрдө унааңызга көчүрүлүп турат.\n\nАйрым учурларда, тескерисинче, унааңыздан вебсайтка көчүрүлөт."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Маалымат автоматтык түрдө шайкештирилбесинби?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ушуну менен трафикти үнөмдөөгө болот. Бирок маалыматты жаңыртып туруу үчүн ар бир аккаунтту кол менен шайкештирип чыгуу керек. Бул учурда жаңыртуулар тууралуу билдирмелер алынбайт."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Аккаунт тууралуу маалымат"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Аккаунт кошуу"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Графикалык ачкычты кантип тартуу керек"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Графикалык ачкычты сактоо катасы"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Туура эмес аракеттер өтө көп болду. <xliff:g id="NUMBER">%d</xliff:g> секунддан кийин кайталап көрүңүз."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Графикалык ачкычта буруу колдоого алынбайт, тийүүнү колдонуңуз"</string>
     <string name="okay" msgid="4589873324439764349">"Жарайт"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экранды кулпулабайсызбы?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Аккаунтуңузга каалаган киши кире берет"</string>
@@ -674,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Жок"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Ырастоо"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Кеминде 4 белгиден турушу керек"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Кеминде <xliff:g id="COUNT">%d</xliff:g> белгиден турушу керек"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN код кеминде <xliff:g id="COUNT">%d</xliff:g> сандан турушу керек"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> белгиден ашпашы керек"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> сандан ашпашы керек"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0-9 сандарынан гана турушу керек."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Түзмөктүн администратору акыркы PIN кодду колдонууга тыюу салган"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Жөнөкөй PIN-коддорду коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак PIN-кодду коюп көрүңүз."</string>
@@ -686,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Түзмөктүн администратору акыркы сырсөздү колдонууга тыюу салган"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Сырсөздү сактоо катасы"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Жөнөкөй сырсөздөрү коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак сырсөздү коюп көрүңүз."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Сандар чоңойгон, кичирейген же кайталанган ыраатта болбошу керек."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Сандар чоңойгон, кичирейген же кайталанган ыраатта болбошу керек"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды кулпулоо ыкмалары"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн мурун"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Эсептик дайындарды тазалоо"</string>
@@ -701,6 +722,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Ооба"</string>
     <string name="cancel" msgid="750286395700355455">"Жок"</string>
     <string name="allow" msgid="7519431342750394402">"Уруксат берүү"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Тыюу салуу"</string>
     <string name="deny" msgid="340512788979930804">"Жок"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace баскычы"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter баскычы"</string>
@@ -737,6 +759,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Инфозоок тутуму колдонмосу иштетилгенде, <xliff:g id="APP_NAME">%1$s</xliff:g> төмөнкү аракеттерди аткара алат:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Бул инфозоок тутуму иштетилсинби?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Бул инфозоок тутуму колдонмосун иштетүү"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Өчүрүп, түзмөктөн чыгарып салуу"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Бул инфозоок тутуму колдонмосун өчүрүү"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Уюмдун башкаруучусу бул профилге байланыштуу колдонмолор менен дайындарды, анын ичинде жөндөөлөр, уруксаттар, корпоративдик кирүү мүмкүнчүлүгү, Интернеттеги аракеттери жана унаанын жайгашкан жери тууралуу маалыматты көзөмөлдөй алат."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Уюмдун башкаруучусу бул профилге байланыштуу колдонмолор менен дайындарды, анын ичинде жөндөөлөр, уруксаттар, корпоративдик кирүү мүмкүнчүлүгү, Интернеттеги аракеттери жана түзмөктүн жайгашкан жери тууралуу маалыматты көзөмөлдөй алат."</string>
@@ -757,10 +780,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Иштетилген колдонмолор жок"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> уюмунун унаалар боюнча саясаты"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Жөндөөлөр уюмдун башкаруучусу тарабынан башкарылат"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> жөнүндө кеңири маалымат"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Кеминде <xliff:g id="COUNT_1">%d</xliff:g> колдонмо</item>
+      <item quantity="one">Кеминде <xliff:g id="COUNT_0">%d</xliff:g> колдонмо</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> колдонмо</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> колдонмо</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> аракет</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> аракет</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Камера колдонмолору</item>
+      <item quantity="one">Камера колдонмосу</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Электрондук почта кардарлары</item>
+      <item quantity="one">Электрондук почта кардары</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Телефон колдонмолору</item>
+      <item quantity="one">Телефон колдонмосу</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Мүчүлүштүк тууралуу кабарды бөлүшөсүзбү?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Бул унаанын уюмунун башкаруучусу түзмөктөгү бузулууларды аныктап оңдоо үчүн мүчүлүштүк тууралуу кабар берүүнү суранды. Колдонмолор менен дайындар бөлүшүлүшү мүмкүн."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Бул унаанын уюмунун башкаруучусу түзмөктөгү бузулууларды аныктап оңдоо үчүн мүчүлүштүк тууралуу кабар берүүнү суранды. Колдонмолор менен дайындар бөлүшүлүп, түзмөгүңүз жайыраак иштеп калышы мүмкүн."</string>
@@ -794,22 +838,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Кара акта"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Сары карада"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Сары көктө"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Экрандагыны окугуч"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Өчүк"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Экрандагы нерселерди айтып берет"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack кызматын колдонуу"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Параметрлер"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Жөндөөлөр"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack жөнүндө"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"Унаа жүрүп баратканда, TalkBack иштебейт.\n\nTalkBack күйүп турганда, экрандагы текстти окуп бергендиктен, түзмөгүңүздү экранын карабай туруп колдоно аласыз. TalkBack экранды даана көрүүгө мүмкүн болбой турган учурларга жана көзү начар көргөн адамдарга арналган."</string>
 </resources>

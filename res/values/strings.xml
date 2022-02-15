@@ -300,6 +300,8 @@
     <string name="wifi_cellular_fallback_summary">Use mobile data when Wi\u2011Fi has no internet access. Data usage charges may apply.</string>
     <!-- Content description for the wifi state switch. [CHAR LIMIT=NONE] -->
     <string name="wifi_state_switch_content_description" translatable="false">Wi\u2011Fi toggle switch</string>
+    <!-- Subtitle for Wi-Fi state switch on the Network & internet page [CHAR LIMIT=45] -->
+    <string name="wifi_network_state_switch_subtitle">Find and connect to Wi\u2011Fi networks</string>
     <!-- url for the wifi scanning required dialog help page -->
     <string name="help_uri_wifi_scanning_required" translatable="false"></string>
     <!-- Button label to allow the user to view additional information [CHAR LIMIT=NONE] -->
@@ -855,9 +857,9 @@
     <!-- Title for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
     <string name="notification_listener_security_warning_title">Allow notification access for <xliff:g id="service" example="NotificationReader">%1$s</xliff:g>?</string>
     <!-- Summary for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
-    <string name="notification_listener_security_warning_summary"><xliff:g id="notification_listener_name">%1$s</xliff:g> will be able to read all notifications, including personal information such as contact names and the text of messages you receive. It will also be able to dismiss notifications or trigger action buttons they contain.\n\nThis will also give the app the ability to turn Do Not Disturb on or off and change related settings.</string>
+    <string name="notification_listener_security_warning_summary" translatable="false"><xliff:g id="notification_listener_name">%1$s</xliff:g> will be able to read all notifications, including personal information such as contact names and the text of messages you receive. It will also be able to dismiss notifications or trigger action buttons they contain.\n\nThis will also give the app the ability to turn Priority mode on or off and change related settings.</string>
     <!-- Summary for a warning message about revoking notification listener access, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
-    <string name="notification_listener_revoke_warning_summary">If you turn off notification access for <xliff:g id="notification_listener_name">%1$s</xliff:g>, Do Not Disturb access may also be turned off.</string>
+    <string name="notification_listener_revoke_warning_summary" translatable="false">If you turn off notification access for <xliff:g id="notification_listener_name">%1$s</xliff:g>, Priority mode access may also be turned off.</string>
     <!-- Positive button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
     <string name="notification_listener_revoke_warning_confirm">Turn off</string>
     <!-- Negative button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
@@ -1136,7 +1138,7 @@
     <!-- Button summary to factory data reset the entire device.  Factory reset will delete all data from the vehicle. [CHAR LIMIT=NONE]-->
     <string name="factory_reset_summary">Erase all data and profiles from the infotainment system</string>
     <!-- Message on screen after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s infotainment system, including:\n\n<li>Your Google Account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
+    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s infotainment system, including:\n\n<li>Your accounts and profiles</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
     <!-- The list of current accounts follows this text. [CHAR LIMIT=NONE] -->
     <string name="factory_reset_accounts">You are currently signed into the following accounts:</string>
     <!-- Message on screen if other profiles are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
@@ -1354,11 +1356,11 @@
     <!-- Switch summary to enable auto sync account [CHAR LIMIT=60] -->
     <string name="account_auto_sync_summary">Let apps refresh data automatically</string>
     <!--  Title of dialog shown when user enables global auto sync [CHAR LIMIT=50] -->
-    <string name="data_usage_auto_sync_on_dialog_title">Turn auto-sync data on?</string>
+    <string name="data_usage_auto_sync_on_dialog_title">Allow automatic data syncing?</string>
     <!--  Body of dialog shown when user enables global auto sync [CHAR LIMIT=NONE] -->
-    <string name="data_usage_auto_sync_on_dialog">Any changes you make to your accounts on the web will be automatically copied to your device.\n\nSome accounts may also automatically copy any changes you make on the phone to the web. A Google Account works this way.</string>
+    <string name="data_usage_auto_sync_on_dialog">Any changes you make to your accounts on the web will be automatically copied to your vehicle.\n\nSome accounts may also automatically copy any changes you make on the vehicle to the web.</string>
     <!--  Title of dialog shown when user disables global auto sync [CHAR LIMIT=50] -->
-    <string name="data_usage_auto_sync_off_dialog_title">Turn auto-sync data off?</string>
+    <string name="data_usage_auto_sync_off_dialog_title">Disallow automatic data syncing?</string>
     <!--  Body of dialog shown when user disables global auto sync [CHAR LIMIT=NONE] -->
     <string name="data_usage_auto_sync_off_dialog">This will conserve data, but you\u2019ll need to sync each account manually to collect recent information. And you won\u2019t receive notifications when updates occur.</string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
@@ -1534,15 +1536,6 @@
     <string name="lockpassword_confirm_label">Confirm</string>
     <!-- Hints for Choose Lock Password Screen [CHAR_LIMIT=73] -->
     <string name="choose_lock_password_hints">Must be at least 4 characters</string>
-    <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=40] -->
-    <string name="lockpassword_password_too_short">Must be at least <xliff:g example="3" id="count">%d</xliff:g> characters</string>
-    <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=44] -->
-    <string name="lockpassword_pin_too_short">PIN must be at least <xliff:g example="3" id="count">%d</xliff:g> digits</string>
-
-    <!-- Error shown in popup when password is too long [CHAR LIMIT=42] -->
-    <string name="lockpassword_password_too_long">Must be fewer than <xliff:g example="17" id="number">%d</xliff:g> characters</string>
-    <!-- Error shown in popup when PIN is too long [CHAR LIMIT=42] -->
-    <string name="lockpassword_pin_too_long">Must be fewer than <xliff:g example="17" id="number">%d</xliff:g> digits</string>
 
     <!-- Error shown when in PIN mode and user enters a non-digit. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=40] -->
     <string name="lockpassword_pin_contains_non_digits">Must contain only digits 0-9.</string>
@@ -1568,8 +1561,105 @@
     <!-- Error shown when a user is choosing a PASSWORD for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PASSWORD that's less common and more complicated. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_password_denylisted_by_admin">Common passwords are blocked by your IT admin. Try a different password.</string>
 
+    <!-- Error shown when in PASSWORD mode and password is all digits [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_alpha">Must contain at least one letter</string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain any digits [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_digit">Must contain at least one digit</string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain any symbols [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_symbol">Must contain at least one symbol</string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of letters [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_requires_letters">
+        {count, plural,
+        =1    {Must contain at least # letter}
+        other {Must contain at least # letters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of lowercase letters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_lowercase">
+        {count, plural,
+        =1    {Must contain at least # lowercase letter}
+        other {Must contain at least # lowercase letters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of uppercase letters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_uppercase">
+        {count, plural,
+        =1    {Must contain at least # uppercase letter}
+        other {Must contain at least # uppercase letters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of numerical digits [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_numeric">
+        {count, plural,
+        =1    {Must contain at least # numerical digit}
+        other {Must contain at least # numerical digits}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of special symbols [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_symbols">
+        {count, plural,
+        =1    {Must contain at least # special symbol}
+        other {Must contain at least # special symbols}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of non-letter characters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_nonletter">
+        {count, plural,
+        =1    {Must contain at least # non-letter character}
+        other {Must contain at least # non-letter characters}
+        }
+    </string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of non-numerical characters [CHAR LIMIT=80]-->
+    <string name="lockpassword_password_requires_nonnumerical">
+        {count, plural,
+        =1    {Must contain at least # non-numerical character}
+        other {Must contain at least # non-numerical characters}
+        }
+    </string>
+
+    <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=60]-->
+    <string name="lockpassword_password_too_short">
+        {count, plural,
+        =1    {Must contain at least # character}
+        other {Must contain at least # characters}
+        }
+    </string>
+
+    <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=60] -->
+    <string name="lockpassword_pin_too_short">
+        {count, plural,
+        =1    {Must contain at least # digit}
+        other {Must contain at least # digits}
+        }
+    </string>
+
+    <!-- Error shown in popup when password is too long [CHAR LIMIT=60] -->
+    <string name="lockpassword_password_too_long">
+        {count, plural,
+        =1    {Must be fewer than # character}
+        other {Must be fewer than # characters}
+        }
+    </string>
+
+    <!-- Error shown in popup when PIN is too long [CHAR LIMIT=60] -->
+    <string name="lockpassword_pin_too_long">
+        {count, plural,
+        =1    {Must be fewer than # digit}
+        other {Must be fewer than # digits}
+        }
+    </string>
+
     <!-- [CHAR_LIMIT=NONE] Error shown when the user tries to set an ascending or descending sequence of digits. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=NONE] -->
-    <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence of digits isn\'t allowed.</string>
+    <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence of digits isn\'t allowed</string>
 
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
     <string name="setup_lock_settings_options_button_label">Screen lock options</string>
@@ -1605,6 +1695,8 @@
     <string name="cancel">Cancel</string>
     <!-- Generic dialog allow button. [CHAR_LIMIT=20] -->
     <string name="allow">Allow</string>
+    <!-- Generic dialog don't allow button. [CHAR_LIMIT=20] -->
+    <string name="do_not_allow">Don\u2019t allow</string>
     <!-- Generic dialog deny button. [CHAR_LIMIT=20] -->
     <string name="deny">Deny</string>
 
@@ -1796,6 +1888,11 @@
         <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> app</item>
         <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> apps</item>
     </plurals>
+    <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. [CHAR LIMIT=NONE] -->
+    <plurals name="enterprise_privacy_number_packages">
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> app</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> apps</item>
+    </plurals>
     <!-- Label explaining that the admin can retrieve network logs on the device. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_network_logs" translatable="false">Most recent network traffic log</string>
     <!-- Label explaining that the admin can request bug reports on the device. [CHAR LIMIT=NONE] -->
@@ -1847,6 +1944,34 @@
         <item quantity="one" translatable="false"><xliff:g id="count">%d</xliff:g> attempt</item>
         <item quantity="other" translatable="false"><xliff:g id="count">%d</xliff:g> attempts</item>
     </plurals>
+    <!-- Strings for displaying which applications were set as default for specific actions. -->
+    <!-- Title for the apps that have been set as default handlers of camera-related intents. [CHAR LIMIT=30] -->
+    <plurals name="default_camera_app_title">
+        <item quantity="one" translatable="false">Camera app</item>
+        <item quantity="other" translatable="false">Camera apps</item>
+    </plurals>
+    <!-- Title for the app that has been set as default handler of calendar-related intents. [CHAR LIMIT=30] -->
+    <string name="default_calendar_app_title" translatable="false">Calendar app</string>
+    <!-- Title for the app that has been set as default handler of contacts-related intents. [CHAR LIMIT=30] -->
+    <string name="default_contacts_app_title" translatable="false">Contacts app</string>
+    <!-- Title for the apps that have been set as default handlers of new email intents. [CHAR LIMIT=30] -->
+    <plurals name="default_email_app_title">
+        <item quantity="one" translatable="false">Email client app</item>
+        <item quantity="other" translatable="false">Email client apps</item>
+    </plurals>
+    <!-- Title for the app that has been set as default handler of geo-related intents. [CHAR LIMIT=30] -->
+    <string name="default_map_app_title" translatable="false">Map app</string>
+    <!-- Title for the apps that have been set as default handlers of call-related intents. [CHAR LIMIT=30] -->
+    <plurals name="default_phone_app_title">
+        <item quantity="one" translatable="false">Phone app</item>
+        <item quantity="other" translatable="false">Phone apps</item>
+    </plurals>
+    <!-- Title for Default Browser settings [CHAR LIMIT=30] -->
+    <string name="default_browser_title" translatable="false">Browser app</string>
+    <!-- Template for concatenating two app names -->
+    <string name="app_names_concatenation_template_2" translatable="false"><xliff:g id="first_app_name">%1$s</xliff:g>, <xliff:g id="second_app_name">%2$s</xliff:g></string>
+    <!-- Template for concatenating three app names -->
+    <string name="app_names_concatenation_template_3" translatable="false"><xliff:g id="first_app_name">%1$s</xliff:g>, <xliff:g id="second_app_name">%2$s</xliff:g>, <xliff:g id="third_app_name">%3$s</xliff:g></string>
 
     <!-- Remote request bugreport --><skip/>
     <!-- Title of dialog shown to ask for user consent for sharing a bugreport that was requested remotely by the vehicle's organization manager. [CHAR LIMIT=50] -->
@@ -1928,22 +2053,17 @@
     <string name="captions_settings_text_style_yellow_on_black">Yellow on black</string>
     <!-- Settings option for closed captions text style to be yellow text on blue background [CHAR LIMIT=40] -->
     <string name="captions_settings_text_style_yellow_on_blue">Yellow on blue</string>
+
     <!-- Header for the section of the accessibility settings that lets the user change their screen reader settings. [CHAR LIMIT=30] -->
     <string name="accessibility_settings_screen_reader_title">Screen reader</string>
-    <!-- Settings title for the TalkBack screen reader section. [CHAR LIMIT=40] -->
-    <string name="talkback_title">TalkBack</string>
-    <!-- Subtitle for the TalkBack screen reader settings item when it is turned off [CHAR LIMIT=30] -->
-    <string name="talkback_settings_off">Off</string>
-    <!-- Subtitle for the TalkBack screen reader settings item when it is turned on [CHAR LIMIT=40] -->
-    <string name="talkback_settings_on">Speak items on screen</string>
-    <!-- Title for toggle to enable TalkBack screen reader. [CHAR LIMIT=30] -->
-    <string name="enable_talkback_toggle_title">Use TalkBack</string>
-    <!-- Header for the options section of the TalkBack screen reader settings. [CHAR LIMIT=30] -->
-    <string name="talkback_options_title">Options</string>
-    <!-- Header for the settings section of the TalkBack screen reader settings. [CHAR LIMIT=30] -->
-    <string name="talkback_settings_title">Settings</string>
-    <!-- Header for the "About TalkBack" section of the TalkBack screen reader settings which describes what it does and how it works. [CHAR LIMIT=30] -->
-    <string name="about_talkback_title">About TalkBack</string>
-    <!-- Description for the "About TalkBack" section of the TalkBack screen reader settings which describes what it does and how it works. [CHAR LIMIT=NONE] -->
-    <string name="about_talkback_description">TalkBack is not available while the vehicle is in motion.\n\nWhen TalkBack is on, it provides spoken feedback so that you can use your device without looking at the screen. TalkBack is intended for situations or people who have difficulty seeing the screen.</string>
+    <!-- Subtitle for the screen reader settings item when it is turned off [CHAR LIMIT=30] -->
+    <string name="screen_reader_settings_off">Off</string>
+    <!-- Subtitle for the screen reader settings item when it is turned on [CHAR LIMIT=40] -->
+    <string name="screen_reader_settings_on">Speak items on screen</string>
+    <!-- Title for toggle to enable the  screen reader. [CHAR LIMIT=30] -->
+    <string name="enable_screen_reader_toggle_title">Use <xliff:g id="accessibility_app_name" example="TalkBack">%1$s</xliff:g></string>
+    <!-- Header for the options section of the screen reader settings. [CHAR LIMIT=30] -->
+    <string name="screen_reader_options_title">Options</string>
+    <!-- Header for the settings section of the screen reader settings. [CHAR LIMIT=30] -->
+    <string name="screen_reader_description_title">Settings</string>
 </resources>

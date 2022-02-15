@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Andmesideühendus mobiilsidevõrgu abil"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobiilsidevõrk"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Kasuta mobiilset andmesidet"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Väljas"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kas lülitada mobiilne andmeside välja?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Valik on nõutav"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Kas kasutada op. <xliff:g id="CARRIER">%1$s</xliff:g> andmesidet?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"WiFi-võrkude otsimine on sisse lülitatud"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Lülita automaatselt mobiilsele andmesidele"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Kui WiFi-l puudub Internetile juurdepääs, kasutatakse mobiilset andmesidet. Rakenduda võivad andmekasutustasud."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"WiFi-võrkude otsimine ja nendega ühendamine"</string>
     <string name="learn_more" msgid="8214605928933358604">"Lisateave"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Kuumkoha nimi"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Kuumkoha <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> sisselülitam. …"</string>
@@ -383,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"See luba võimaldab rakendusel muuta süsteemiseadeid."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Juurdepääs märguannetele"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Kas lubada teenuse <xliff:g id="SERVICE">%1$s</xliff:g> puhul märguannetele juurdepääs?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> saab lugeda kõiki märguandeid, sh isiklikke andmeid, nt kontaktide nimesid ja teile saadetud tekstsõnumeid. See saab ka märguannetest loobuda või neis olevaid toimingunuppe aktiveerida.\n\nSamuti võimaldab see rakendusel funktsiooni Mitte segada sisse või välja lülitada ja sellega seotud seadeid muuta."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Kui lülitate teenuse <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> puhul juurdepääsu märguannetele välja, võidakse välja lülitada ka juurdepääs funktsioonile Mitte segada."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Lülita välja"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Tühista"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Juurdepääs tasuliste SMS-ide saatmiseks"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Kui selle välja lülitate, eemaldatakse juurdepääs asukohale kõigi rakenduste jaoks. Juhiabirakendustel on siiski juurdepääs."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Juhiabifunkts. puhul asukoha kasutamine"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Sõiduki asukoht on välja lülitatud"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Juhiabirakendused ei pääse teie asukohale juurde."</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Muuda"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Anna juhiabirakendustele juurdepääs minu asukohale"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Kui selle välja lülitate, keelatakse juhiabifunktsioonid, mis kasutavad asukohateavet."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Asukoha kasutamine"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Funktsioon Asukoht võib teie seadme asukoha tuvastamiseks kasutada selliseid allikaid nagu GPS, WiFi- ja mobiilsidevõrgud ning andurid."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Juhiabifunktsioonid"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Juhiabirakendustele saadetav asukohateave ei sisalda teid tuvastavat teavet. See talletatakse maksimaalselt kaheks päevaks, pärast mida see kustutatakse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Kasuta mikrofoni"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Andke kõigile rakendustele juurdepääs oma mikrofonile"</string>
@@ -490,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Rakenduse eelistused on lähtestatud"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Kõigi andmete kustutamine (tehaseseaded)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Kustuta teabe ja meelelahutuse süsteemist kõik andmed ja profiilid"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"See kustutab teie sõiduki teabe ja meelelahutuse süsteemist kõik andmed, sh:\n\n"<li>"teie Google\'i konto;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"See kustutab teie sõiduki teabe- ja meelelahutussüsteemist kõik andmed, sh:\n\n"<li>"teie kontod ja profiilid;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Olete praegu sisse logitud järgmistele kontodele:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Selle sõiduki jaoks on seadistatud muud profiilid."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Kustuta kõik andmed"</string>
@@ -584,9 +582,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Kasutaja <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> kontod"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sünkrooni andmed automaatselt"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Luba rakendustel andmeid automaatselt värskendada"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Kas lülitan sünkroonimise sisse?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Veebis kontodel tehtud muudatused kopeeritakse automaatselt teie tahvelarvutisse.\n\nMõned kontod võivad ka kõik tahvelarvutis tehtud muudatused automaatselt veebi kopeerida. Ka Google\'i konto töötab sel moel."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Kas lülitan sünkroonimise välja?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Kas lubada andmete automaatne sünkroonimine?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Veebis kontodel tehtud muudatused kopeeritakse automaatselt teie sõidukisse.\n\nMõned kontod võivad ka kõik sõidukis tehtud muudatused automaatselt veebi kopeerida."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Kas keelata andmete automaatne sünkroonimine?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"See säästab andmemahtu, ent teil tuleb uusima teabe hankimiseks iga kontot käsitsi sünkroonida. Samuti ei saa te värskenduste korral märguandeid."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Konto teave"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Konto lisamine"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Kuidas joonistada avamismustrit?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Viga mustri salvestamisel"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Liiga palju valesid katseid. Proovige uuesti <xliff:g id="NUMBER">%d</xliff:g> sekundi pärast."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Muster ei toeta pöördvalijat, kasutage puudutust."</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Kas eemaldada ekraanilukk?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"See lubab igaühel teie kontole juurde pääseda"</string>
@@ -674,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Tühista"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Kinnita"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Peab olema vähemalt neli tähemärki"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Peab sisaldama vähemalt <xliff:g id="COUNT">%d</xliff:g> tähemärki"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-kood peab sisald. vähemalt <xliff:g id="COUNT">%d</xliff:g> numbrit"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Peab olema lühem kui <xliff:g id="NUMBER">%d</xliff:g> tähemärki"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Peab olema lühem kui <xliff:g id="NUMBER">%d</xliff:g> numbrit"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Tohib sisaldada ainult numbreid 0–9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Seadme administraator ei luba kasutada viimast PIN-koodi"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"IT-administraator on levinud PIN-koodid blokeerinud. Proovige muud PIN-koodi."</string>
@@ -686,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Seadme administraator ei luba kasutada hiljutist parooli"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Viga parooli salvestamisel"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"IT-administraator on levinud paroolid blokeerinud. Proovige muud parooli."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Kasvavad, kahanevad või korduvad numbrijadad on keelatud."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Kasvavad, kahanevad või korduvad numbrijadad on keelatud"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekraaniluku valikud"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> päeva tagasi"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Mandaatide kustutamine"</string>
@@ -701,6 +722,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Eemalda"</string>
     <string name="cancel" msgid="750286395700355455">"Tühista"</string>
     <string name="allow" msgid="7519431342750394402">"Luba"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Ära luba"</string>
     <string name="deny" msgid="340512788979930804">"Keela"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tagasilükkeklahv"</string>
     <string name="enter_key" msgid="2121394305541579468">"Sisestusklahv"</string>
@@ -737,6 +759,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Selle teabe ja meelelahutuse süsteemi rakenduse aktiveerimisel lubatakse rakendusel <xliff:g id="APP_NAME">%1$s</xliff:g> teha järgmisi toiminguid:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Kas aktiveerida see rakendus?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktiveeri see teabe ja meelelahutuse süsteemi rakendus"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Inaktiveeri ja desinstalli"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Inaktiveeri see teabe ja meelelahutuse süsteemi rakendus"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Organisatsiooni haldur saab jälgida ning hallata selle profiiliga seotud rakendusi ja andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja sõiduki asukohateavet."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organisatsiooni haldur saab jälgida ja hallata selle profiiliga seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja seadme asukohateavet."</string>
@@ -757,10 +780,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Aktiveeritud rakendusi pole"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Organisatsiooni <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> sõiduki kasutamise eeskirjad"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Seadeid haldab organisatsiooni haldur"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Lisateave: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Vähemalt <xliff:g id="COUNT_1">%d</xliff:g> rakendust</item>
+      <item quantity="one">Vähemalt <xliff:g id="COUNT_0">%d</xliff:g> rakendus</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> rakendust</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> rakendus</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> katset</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> katse</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Kaamerarakendused</item>
+      <item quantity="one">Kaamerarakendus</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">E-posti kliendi rakendused</item>
+      <item quantity="one">E-posti kliendi rakendus</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefonirakendused</item>
+      <item quantity="one">Telefonirakendus</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Kas jagada veaaruannet?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Selle sõiduki organisatsiooni haldur taotles veaaruannet, mis aitaks seadmes vigu otsida. Rakendusi ja andmeid võidakse jagada."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Selle sõiduki organisatsiooni haldur taotles veaaruannet, mis aitaks seadmes vigu otsida. Rakendusi ja andmeid võidakse jagada ning see võib ajutiselt teie seadet aeglustada."</string>
@@ -794,22 +838,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Must valgel"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Kollane mustal"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Kollane sinisel"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Ekraanilugeja"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Väljas"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Ekraanil kuvatud üksuste ettelugemine"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Kasuta TalkBacki"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Valikud"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Seaded"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Teave TalkBacki kohta"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack ei ole saadaval, kui sõiduk liigub.\n\nKui TalkBack on sisse lülitatud, pakub see suulist tagasisidet, et saaksite oma seadet kasutada ekraani vaatamata. TalkBack on mõeldud kasutamiseks piiratud nähtavusega olukordades või kehva nägemisvõimega inimestele."</string>
 </resources>

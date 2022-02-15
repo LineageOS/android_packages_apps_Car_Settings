@@ -519,7 +519,7 @@ public class ProfileHelperTest {
     private void mockCreateUserFail() {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
         future.complete(new UserCreationResult(UserCreationResult.STATUS_ANDROID_FAILURE,
-                null, null));
+                /* user= */ null));
         AndroidAsyncFuture<UserCreationResult> asyncFuture = new AndroidAsyncFuture<>(future);
         when(mMockCarUserManager.createUser(any(), anyInt())).thenReturn(asyncFuture);
         when(mMockCarUserManager.createGuest(any())).thenReturn(asyncFuture);
@@ -527,26 +527,28 @@ public class ProfileHelperTest {
 
     private void mockCreateUser(String name, int flag, int status, UserInfo userInfo) {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
-        future.complete(new UserCreationResult(status, userInfo.getUserHandle(), null));
+        future.complete(new UserCreationResult(status, userInfo.getUserHandle()));
         when(mMockCarUserManager.createUser(name, flag))
                 .thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockCreateGuest(String name, int status, UserInfo userInfo) {
         AndroidFuture<UserCreationResult> future = new AndroidFuture<>();
-        future.complete(new UserCreationResult(status, userInfo.getUserHandle(), null));
+        future.complete(new UserCreationResult(status, userInfo.getUserHandle()));
         when(mMockCarUserManager.createGuest(name)).thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockSwitchUserSuccess() {
         AndroidFuture<UserSwitchResult> future = new AndroidFuture<>();
-        future.complete(new UserSwitchResult(UserSwitchResult.STATUS_SUCCESSFUL, null));
+        future.complete(
+                new UserSwitchResult(UserSwitchResult.STATUS_SUCCESSFUL, /* errorMessage= */null));
         when(mMockCarUserManager.switchUser(anyInt())).thenReturn(new AndroidAsyncFuture<>(future));
     }
 
     private void mockSwitchUserFailure() {
         AndroidFuture<UserSwitchResult> future = new AndroidFuture<>();
-        future.complete(new UserSwitchResult(UserSwitchResult.STATUS_ANDROID_FAILURE, null));
+        future.complete(new UserSwitchResult(UserSwitchResult.STATUS_ANDROID_FAILURE,
+                /* errorMessage= */null));
         when(mMockCarUserManager.switchUser(anyInt())).thenReturn(new AndroidAsyncFuture<>(future));
     }
 }

@@ -232,6 +232,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.settings.NOTIFICATION_SETTINGS" />
+                <action android:name="android.settings.ALL_APPS_NOTIFICATION_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
@@ -682,6 +683,7 @@
 
         <activity
             android:name=".bluetooth.BluetoothPairingDialog"
+            android:permission="android.permission.BLUETOOTH_PRIVILEGED"
             android:excludeFromRecents="true"
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:taskAffinity="car.settings.bluetooth"
@@ -857,7 +859,8 @@
             android:excludeFromRecents="true"
             android:clearTaskOnLaunch="true"
             android:exported="true"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:permission="android.permission.CHANGE_WIFI_STATE">
             <intent-filter>
                 <action android:name="android.net.wifi.action.REQUEST_ENABLE" />
                 <action android:name="android.net.wifi.action.REQUEST_DISABLE" />

@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Få åtkomst till data via mobilt nätverk"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilnätverk"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Använd mobildata"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Av"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vill du inaktivera mobildata?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Du måste välja något"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Ska mobildata från <xliff:g id="CARRIER">%1$s</xliff:g> användas?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-sökning har aktiverats"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Byt till mobildata automatiskt"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Använd mobildata när wifi-nätverket inte är anslutet till internet. Avgifter för dataanvändning kan tillkomma."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Hitta och ansluta till wifi-nätverk"</string>
     <string name="learn_more" msgid="8214605928933358604">"Läs mer"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Namn på surfzon"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Aktiverar <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> …"</string>
@@ -383,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Med den här behörigheten kan appen ändra systeminställningar."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Åtkomst till aviseringar"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vill du tillåta åtkomst till aviseringar för <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan läsa alla aviseringar, inklusive personliga uppgifter som namn på kontaktpersoner och text i mottagna meddelanden. Den kan också stänga aviseringar eller aktivera åtgärdsknappar i dem. \n\nAppen kan också aktivera eller inaktivera Stör ej och ändra relaterade inställningar."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Om du inaktiverar åtkomst till aviseringar för <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan även åtkomsten till Stör ej inaktiveras."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Inaktivera"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Avbryt"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Åtkomst till premium-sms"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Om du stänger av detta tas platsåtkomst bort för alla appar. Förarassistansappar får fortsatt åtkomst."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Använd plats för förarassistans"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Fordonets plats är av"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Förarassistantsappar kommer inte åt din plats"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Ändra"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Tillåt att appar för förarassistans kommer åt din plats"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Om du stänger av detta inaktiveras funktioner för förarassistans som behöver platsinformation."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Använd plats"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"I Platstjänster används källor som GPS, wifi, mobilnätverk och sensorer för att beräkna enhetens plats."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Förarassistans"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Platsinformation som skickas till förarassistansappar innehåller inga uppgifter som identifierar dig. Informationen sparas i högst två dagar och tas sedan bort."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Använda mikrofonen"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Ge alla appar åtkomst till mikrofonen"</string>
@@ -490,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Appinställningarna har återställts"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Rensa all data (återställ standardinst.)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Radera all data och alla profiler på infotainmentsystemet"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Detta gör att all data raderas från fordonets infotainmentsystem, bland annat:\n\n"<li>"ditt Google-konto"</li>\n<li>"system- och appdata och inställningar"</li>\n<li>"nedladdade appar."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Detta gör att all data raderas från fordonets infotainmentsystem, bland annat\n\n"<li>"dina konton och profiler"</li>\n<li>"system- och appdata och inställningar"</li>\n<li>"nedladdade appar."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Du är inloggad på följande konton:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Andra profiler har redan konfigurerats för det här fordonet."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Radera all data"</string>
@@ -584,9 +582,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Konton som tillhör <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Synkronisera data automatiskt"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Tillåt att data uppdateras av appar automatiskt"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Aktivera automatisk datasynk.?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Alla kontoändringar som görs på webben kopieras automatiskt till enheten.\n\nFör vissa konton kopieras även alla ändringar som görs på mobilen automatiskt till webben. Så här fungerar ett Google-konto."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Inaktivera automatisk datasynk.?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Vill du tillåta automatisk datasynkronisering?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Alla kontoändringar som görs på webben kopieras automatiskt till fordonet.\n\nFör vissa konton kopieras även alla ändringar som görs på fordonet automatiskt till webben."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Vill du inaktivera automatisk datasynkronisering?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Detta minskar dataanvändningen, men varje konto måste synkroniseras manuellt varje gång du vill samla in aktuell information. Du får inga meddelanden om nya uppdateringar."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Kontoinformation"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Lägg till konto"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Så här ritar du ett grafiskt lösenord"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Grafiskt lösenord kunde inte sparas"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"För många felaktiga försök. Försök igen om <xliff:g id="NUMBER">%d</xliff:g> sekunder."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Vridreglage stöds inte. Du måste trycka lösenordet"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Vill du ta bort skärmlåset?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Om du tar bort skärmlåset kan alla få åtkomst till kontot"</string>
@@ -674,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Avbryt"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bekräfta"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Måste innehålla minst fyra tecken"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Lösenordet måste innehålla minst <xliff:g id="COUNT">%d</xliff:g> tecken"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Pinkoden måste innehålla minst <xliff:g id="COUNT">%d</xliff:g> siffror"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Måste vara kortare än <xliff:g id="NUMBER">%d</xliff:g> tecken"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Får inte innehålla fler än <xliff:g id="NUMBER">%d</xliff:g> siffror"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Får endast innehålla siffrorna 0–9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Enhetsadministratören tillåter inte att en pinkod som använts nyligen används igen"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"IT-adminstratören har blockerat de vanligaste pinkoderna. Testa en annan pinkod."</string>
@@ -686,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Enhetsadministratören tillåter inte att ett lösenord som använts nyligen används igen"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Lösenord kunde inte sparas"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"IT-adminstratören har blockerat de vanligaste lösenorden. Testa ett annat lösenord."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"En stigande, fallande eller upprepad siffersekvens är inte tillåten."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"En stigande, fallande eller upprepad siffersekvens är inte tillåten"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Alternativ för skärmlås"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> dagar sedan"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Rensa användaruppgifter"</string>
@@ -701,6 +722,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Ta bort"</string>
     <string name="cancel" msgid="750286395700355455">"Avbryt"</string>
     <string name="allow" msgid="7519431342750394402">"Tillåt"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Tillåt inte"</string>
     <string name="deny" msgid="340512788979930804">"Neka"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backstegstangent"</string>
     <string name="enter_key" msgid="2121394305541579468">"Returtangent"</string>
@@ -737,6 +759,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"Om du aktiverar den här administratörsappen för infotainmentsystemet kan appen <xliff:g id="APP_NAME">%1$s</xliff:g> utföra följande åtgärder:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktivera appen för infotainmentsystemet?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktivera den här appen för infotainmentsystemet"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Inaktivera och installera"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Inaktivera appen för infotainmentsystemet"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till den här profilen, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och fordonets platsuppgifter."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till den här profilen, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och enhetens platsuppgifter."</string>
@@ -757,10 +780,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Inga aktiverade appar"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Fordonspolicy för <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Inställningar som hanteras av organisationsansvarig"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Läs mer om <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Minst <xliff:g id="COUNT_1">%d</xliff:g> appar</item>
+      <item quantity="one">Minst <xliff:g id="COUNT_0">%d</xliff:g> app</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> appar</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> försök</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> försök</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Kameraappar</item>
+      <item quantity="one">Kameraapp</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">E-postklientappar</item>
+      <item quantity="one">E-postklientapp</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefonappar</item>
+      <item quantity="one">Telefonapp</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Vill du dela felrapporten?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Organisationsansvarig för fordonet har bett om en felrapport som hjälp vid felsökningen av den här enheten. Appar och data kan komma att delas."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Organisationsansvarig för fordonet har bett om en felrapport som hjälp vid felsökningen av den här enheten. Appar och data kan komma att delas. Detta kan tillfälligt göra enheten långsammare."</string>
@@ -794,22 +838,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Svart på vitt"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Gult på svart"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Gult på blått"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Skärmläsare"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"Av"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"Läs upp objekt på skärmen"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Använda TalkBack"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"Alternativ"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"Inställningar"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"Om TalkBack"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack är inte tillgängligt när fordonet är i rörelse.\n\nNär TalkBack får du talad feedback så att du kan använda enheten utan att titta på skärmen. TalkBack är avsett för personer med nedsatt syn eller situationer när det är svårt att se skärmen."</string>
 </resources>

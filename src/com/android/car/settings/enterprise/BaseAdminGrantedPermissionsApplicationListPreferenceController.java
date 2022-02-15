@@ -20,16 +20,9 @@ import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
-
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.enterprise.CallbackTranslator.AppsListCallbackTranslator;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
-import com.android.car.settingslib.applications.UserAppInfo;
-import com.android.settingslib.widget.AppPreference;
-
-import java.util.List;
 
 /**
  * Base class for controllers that show the list of apps that were granted permissions by the
@@ -54,22 +47,5 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceController
         mLogger.d("Calling listAppsWithAdminGrantedPermissions()");
         mApplicationFeatureProvider.listAppsWithAdminGrantedPermissions(mPermissions,
                 callbackHolder);
-    }
-
-    @Override
-    protected void updateState(PreferenceGroup preferenceGroup) {
-        List<UserAppInfo> apps = getResult();
-        mLogger.d("Updating state with " + apps.size() + " apps");
-        preferenceGroup.removeAll();
-
-        for (int position = 0; position < apps.size(); position++) {
-            UserAppInfo item = apps.get(position);
-            Preference preference = new AppPreference(getContext());
-            preference.setTitle(item.appInfo.loadLabel(mPm));
-            preference.setIcon(item.appInfo.loadIcon(mPm));
-            preference.setOrder(position);
-            preference.setSelectable(false);
-            preferenceGroup.addPreference(preference);
-        }
     }
 }

@@ -22,26 +22,18 @@ import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.verify;
 
-import android.annotation.Nullable;
 import android.util.Log;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.R;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider.NumberOfAppsCallback;
-import com.android.internal.util.Preconditions;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
-
-import java.util.Objects;
 
 abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
         <C extends BaseAdminGrantedPermissionsPreferenceController> extends
@@ -71,7 +63,8 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
 
     @Test
     public void testGetAvailabilityStatus_noPermissionsGranted() {
-        CallbackHolder callbackHolder = mockCalculateNumberOfAppsWithAdminGrantedPermissions();
+        NumberOfAppsCallbackHolder callbackHolder =
+                mockCalculateNumberOfAppsWithAdminGrantedPermissions();
 
         // Assert initial state
         assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
@@ -81,13 +74,14 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
 
         // Assert post-callback result
         assertAvailability(mSpiedController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
-        assertUiNotRefreshed();
+        assertUiNotRefreshed(mSpiedController);
     }
 
     @Test
     public void testGetAvailabilityStatus_permissionsGranted() {
-        expectUiRefreshed();
-        CallbackHolder callbackHolder = mockCalculateNumberOfAppsWithAdminGrantedPermissions();
+        expectUiRefreshed(mSpiedController);
+        NumberOfAppsCallbackHolder callbackHolder =
+                mockCalculateNumberOfAppsWithAdminGrantedPermissions();
 
         // Assert initial state
         assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
@@ -97,24 +91,25 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
 
         // Assert post-callback result
         assertAvailability(mSpiedController.getAvailabilityStatus(), AVAILABLE);
-        assertUiRefreshed();
+        assertUiRefreshed(mSpiedController);
     }
 
     @Test
     public void testUpdateState() {
-        expectUiRefreshed();
-        CallbackHolder callbackHolder = mockCalculateNumberOfAppsWithAdminGrantedPermissions();
+        expectUiRefreshed(mSpiedController);
+        NumberOfAppsCallbackHolder callbackHolder =
+                mockCalculateNumberOfAppsWithAdminGrantedPermissions();
         mSpiedController.getAvailabilityStatus();
         callbackHolder.release(42);
-        assertUiRefreshed();
+        assertUiRefreshed(mSpiedController);
 
         mSpiedController.updateState(mPreference);
 
-        assertPreferenceStateSet(42);
+        assertPreferenceStateSet(mPreference, 42);
     }
 
-    private CallbackHolder mockCalculateNumberOfAppsWithAdminGrantedPermissions() {
-        CallbackHolder callbackHolder = new CallbackHolder();
+    private NumberOfAppsCallbackHolder mockCalculateNumberOfAppsWithAdminGrantedPermissions() {
+        NumberOfAppsCallbackHolder callbackHolder = new NumberOfAppsCallbackHolder();
 
         doAnswer((inv) -> {
             Log.d(TAG, "answering to " + inv);
@@ -125,42 +120,5 @@ abstract class BaseAdminGrantedPermissionsPreferenceControllerTestCase
                 .calculateNumberOfAppsWithAdminGrantedPermissions(eq(mPermissions),
                         /* sync= */ eq(true), any());
         return callbackHolder;
-    }
-
-    private void assertPreferenceStateSet(int count) {
-        String expectedSummary = mRealContext.getResources().getQuantityString(
-                R.plurals.enterprise_privacy_number_packages_lower_bound, count, count);
-        verifyPreferenceTitleNeverSet(mPreference);
-        verifyPreferenceSummarySet(mPreference, expectedSummary);
-        verifyPreferenceIconNeverSet(mPreference);
-    }
-
-    private void expectUiRefreshed() {
-        doNothing().when(mSpiedController).refreshUi();
-    }
-
-    private void assertUiRefreshed() {
-        verify(mSpiedController).refreshUi();
-    }
-
-    private void assertUiNotRefreshed() {
-        verify(mSpiedController, never()).refreshUi();
-    }
-
-    private final class CallbackHolder {
-        @Nullable
-        private NumberOfAppsCallback mCallback;
-
-        void release(int result) {
-            Preconditions.checkState(mCallback != null, "release() called before setCallback()");
-            Log.d(TAG, "setting result to " + result + " and releasing latch on"
-                    + Thread.currentThread());
-            mCallback.onNumberOfAppsResult(result);
-        }
-
-        void setCallback(NumberOfAppsCallback callback) {
-            Log.d(TAG, "setting callback to "  + callback);
-            mCallback = Objects.requireNonNull(callback, "callback cannot be null");
-        }
     }
 }

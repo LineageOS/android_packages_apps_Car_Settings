@@ -547,13 +547,15 @@
     <string name="pk_enterprise_privacy_header" translatable="false">enterprise_privacy_header</string>
     <string name="pk_enterprise_privacy_input_method" translatable="false">enterprise_privacy_input_method</string>
     <string name="pk_enterprise_privacy_installed_packages" translatable="false">enterprise_privacy_installed_packages</string>
+    <string name="pk_enterprise_privacy_installed_packages_footer" translatable="false">enterprise_privacy_installed_packages_footer</string>
     <string name="pk_enterprise_privacy_camera_access_package" translatable="false">enterprise_privacy_camera_access_package</string>
     <string name="pk_enterprise_privacy_camera_access_package_footer" translatable="false">enterprise_privacy_camera_access_package_footer</string>
+    <string name="pk_enterprise_privacy_list_enterprise_set_default_apps" translatable="false">enterprise_privacy_list_enterprise_set_default_apps</string>
     <string name="pk_enterprise_privacy_location_access_package" translatable="false">enterprise_privacy_location_access_package</string>
     <string name="pk_enterprise_privacy_location_access_package_footer" translatable="false">enterprise_privacy_location_access_package_footer</string>
+    <string name="pk_enterprise_privacy_lock_device" translatable="false">enterprise_privacy_lock_device</string>
     <string name="pk_enterprise_privacy_microphone_access_package" translatable="false">enterprise_privacy_microphone_access_package</string>
     <string name="pk_enterprise_privacy_microphone_access_package_footer" translatable="false">enterprise_privacy_microphone_access_package_footer</string>
-    <string name="pk_enterprise_privacy_lock_device" translatable="false">enterprise_privacy_lock_device</string>
     <string name="pk_enterprise_privacy_network_logs" translatable="false">enterprise_privacy_network_logs</string>
     <string name="pk_enterprise_privacy_number_camera_access_packages" translatable="false">enterprise_privacy_number_camera_access_packages</string>
     <string name="pk_enterprise_privacy_number_enterprise_installed_packages" translatable="false">enterprise_privacy_number_enterprise_installed_packages</string>
@@ -569,4 +571,8 @@
     <string name="pk_captions_settings_style_subheader" translatable="false">captions_settings_style_subheader</string>
     <string name="pk_captions_size_settings_entry" translatable="false">captions_size_settings_entry</string>
     <string name="pk_captions_style_settings_entry" translatable="false">captions_style_settings_entry</string>
+    <string name="pk_screen_reader_settings_header" translatable="false">screen_reader_settings_header</string>
+    <string name="pk_screen_reader_enabled_switch" translatable="false">screen_reader_enabled_switch</string>
+    <string name="pk_screen_reader_description_subheader" translatable="false">screen_reader_description_subbheader</string>
+    <string name="pk_screen_reader_settings_intent" translatable="false">screen_reader_settings_intent</string>
 </resources>

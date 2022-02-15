@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"மொபைல் நெட்வொர்க் மூலம் டேட்டாவைப் பயன்படுத்து"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"மொபைல் நெட்வொர்க்"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"மொபைல் டேட்டாவைப் பயன்படுத்தும்"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"முடக்கப்பட்டது"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"மொபைல் டேட்டாவை ஆஃப் செய்யவா?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"தேர்ந்தெடுக்க வேண்டும்"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"டேட்டாவிற்கு <xliff:g id="CARRIER">%1$s</xliff:g>ஐ உபயோகிக்கவா?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"வைஃபை ஸ்கேனிங் ஆன் செய்யப்பட்டது"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"தானாகவே மொபைல் டேட்டாவிற்கு மாறு"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"வைஃபையில் இணைய அணுகல் இல்லாதபோது மொபைல் டேட்டாவைப் பயன்படுத்தும். டேட்டா உபயோகத்திற்குக் கட்டணம் விதிக்கப்படலாம்."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"வைஃபை நெட்வொர்க்குகளைக் கண்டறிந்து இணைக்கும்"</string>
     <string name="learn_more" msgid="8214605928933358604">"மேலும் அறிக"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ஹாட்ஸ்பாட் பெயர்"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ஆன் ஆகிறது..."</string>
@@ -383,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"இது சிஸ்டம் அமைப்புகளை மாற்ற அனுமதிக்கும்."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"அறிவிப்பு அணுகல்"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> சேவைக்கான அறிவிப்பு அணுகலை அனுமதிக்கவா?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"தொடர்புகளின் பெயர்கள், நீங்கள் பெறும் மெசேஜ்களின் உரை போன்ற தனிப்பட்ட தகவல் உட்பட அனைத்து அறிவிப்புகளையும் <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ஆல் படிக்க முடியும். அத்துடன் அறிவிப்புகளை நிராகரிக்கவோ அல்லது அறிவிப்புகளில் உள்ள செயல் பொத்தான்களைத் தூண்டவோ முடியும். \n\nஇது \'தொந்தரவு செய்ய வேண்டாமை\' இயக்குவதற்கான அல்லது முடக்குவதற்கான அனுமதியையும், தொடர்புடையை அமைப்புகளை மாற்றுவதற்கான அனுமதியையும் ஆப்ஸிற்கு அளிக்கும்."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>என்பதற்கு அறிவிப்பு அணுகலை முடக்கினால், \'தொந்தரவு செய்யாதே\' அணுகல் ஆஃ செய்யப்படக்கூடும்."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ஆஃப் செய்"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"வேண்டாம்"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"பிரீமிய SMS அணுகல்"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"இதை முடக்கினால் அனைத்து ஆப்ஸுக்கான இருப்பிட அணுகலும் அகற்றப்படும். ஓட்டுநர் உதவி ஆப்ஸுக்கு இன்னும் அணுகல் உள்ளது."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ஓட்டுநர் உதவிக்கு இடத்தைப் பயன்படுத்து"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"வாகன இருப்பிடத்தை முடக்குதல்"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"ஓட்டுநர் உதவிக்கு இருப்பிட அணுகல் இல்லை"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"மாற்று"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"வாகனம் ஓட்ட உதவும் ஆப்ஸை இருப்பிடத்தை அணுக அனுமதிக்கவும்"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"இதை முடக்கினால் இருப்பிடத் தகவல்களைச் சார்ந்துள்ள ஓட்டுநர் உதவி ஆப்ஸ் முடக்கப்படும்."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"உங்கள் சாதனத்தின் இருப்பிடத்தைக் கணிக்க உதவுவதற்கு GPS, வைஃபை, மொபைல் நெட்வொர்க்குகள், சென்சார்கள் போன்றவற்றை இருப்பிட அமைப்புகள் பயன்படுத்தக்கூடும்."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ஓட்டுநர் உதவி"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"ஓட்டுநர் உதவி ஆப்ஸுக்கு அனுப்பப்படும் இருப்பிடம் குறித்த தகவல்களில் உங்களை அடையாளம் காணும் தகவல்கள் இருக்காது. நீக்கப்படுவதற்கு முன் அதிகபட்சமாக 2 நாட்கள் வரை இது சேமிக்கப்பட்டிருக்கும்."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"மைக்ரோஃபோன்"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"மைக்ரோஃபோனைப் பயன்படுத்துதல்"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"மைக்ரோஃபோனை அனைத்து ஆப்ஸும் அணுகுவதற்கு அனுமதிக்கும்"</string>
@@ -490,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ஆப்ஸ் விருப்பத்தேர்வுகள் மீட்டமைக்கப்பட்டன"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"அனைத்தையும் அழி (ஆரம்பநிலைக்கு மீட்டமை)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள எல்லாத் தரவையும் சுயவிவரங்களையும் அழித்துவிடும்"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"இது உங்கள் வாகனத்தின் இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள எல்லாத் தரவையும் அழித்துவிடும், இவற்றில் அடங்குபவை:\n\n"<li>"உங்கள் Google கணக்கு"</li>\n<li>"சிஸ்டம் &amp; ஆப்ஸ் தரவு மற்றும் அமைப்புகள்"</li>\n<li>"பதிவிறக்கிய ஆப்ஸ்"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"இது உங்கள் வாகனத்தின் இன்ஃபோடெயின்மென்ட் சிஸ்டத்திலிருந்து அனைத்துத் தரவையும் அழித்துவிடும். இந்தத் தரவில் அடங்குபவை:\n\n"<li>"உங்கள் கணக்குகளும் சுயவிவரங்களும்"</li>\n<li>"சிஸ்டம் மற்றும் ஆப்ஸின் தரவும் அமைப்புகளும்"</li>\n<li>"பதிவிறக்கப்பட்ட ஆப்ஸ்"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"பின்வரும் கணக்குகளில் உள்நுழைந்துள்ளீர்கள்:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"இந்த வாகனத்திற்கான பிற சுயவிவரங்கள் அமைக்கப்பட்டன."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"எல்லாத் தரவையும் அழி"</string>
@@ -584,9 +582,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> இன் கணக்குகள்"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"தானாகத் தரவை ஒத்திசை"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"தானாகத் தரவை ரெஃப்ரெஷ் செய்ய ஆப்ஸை அனுமதிக்கும்"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"தானாக ஒத்திசைப்பதை ஆன் செய்யவா?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"இணையத்திலுள்ள கணக்குகளில் நீங்கள் செய்யும் மாற்றங்கள் தானாகவே உங்கள் சாதனத்தில் நகலெடுக்கப்படும்.\n\n மொபைலில் நீங்கள் செய்யும் மாற்றங்களையும் சில கணக்குகள் தானாகவே இணையத்தில் நகலெடுக்கக்கூடும். Google கணக்கு இவ்வாறுதான் செயல்படுகிறது."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"தானாக ஒத்திசைப்பதை ஆஃப் செய்யவா?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"தானியங்கு தரவு ஒத்திசைவை அனுமதிக்கவா?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"இணையத்தில் உங்கள் கணக்குகளில் ஏதேனும் மாற்றங்களைச் செய்தால் அவை தானாகவே உங்கள் வாகனத்திற்கு நகலெடுக்கப்படும்.\n\nவாகனத்தில் நீங்கள் செய்யும் மாற்றங்களையும் சில கணக்குகள் தானாகவே இணையத்திற்கு நகலெடுக்கக்கூடும்."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"தானியங்கு தரவு ஒத்திசைவை அனுமதிக்க வேண்டாமா?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"இவ்வாறு செய்வது தரவைச் சேமிக்கும், ஆனால் சமீபத்திய தகவலைச் சேகரிக்க ஒவ்வொரு கணக்கையும் நீங்களே நேரடியாக ஒத்திசைக்க வேண்டும். புதுப்பிக்கப்படும்போது அறிவிப்புகளைப் பெறமாட்டீர்கள்."</string>
     <string name="account_details_title" msgid="7529571432258448573">"கணக்குத் தகவல்"</string>
     <string name="add_account_title" msgid="5988746086885210040">"கணக்கைச் சேர்க்கவும்"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"அன்லாக் பேட்டர்னை வரைவது எப்படி?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"பேட்டர்னைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"பலமுறை தவறாக முயன்றுவிட்டீர்கள். <xliff:g id="NUMBER">%d</xliff:g> வினாடிகளில் மீண்டும் முயலவும்."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"தொடுதல் முறையைப் பயன்படுத்தவும்"</string>
     <string name="okay" msgid="4589873324439764349">"சரி"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"திரைப் பூட்டை அகற்றவா?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"திரைப் பூட்டை அகற்றினால், அனைவருக்கும் அணுகல் கிடைக்கும்"</string>
@@ -674,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ரத்துசெய்"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"உறுதிப்படுத்து"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்து இருக்க வேண்டும்"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> இலக்கங்கள் இருக்க வேண்டும்"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>எழுத்தை விட குறைவாக இருக்கவேண்டும்"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> இலக்கங்களை விட குறைவாக இருக்க வேண்டும்"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0-9 இலக்கங்கள் மட்டுமே இருக்க வேண்டும்."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"சாதன நிர்வாகி சமீபத்திய பின்னைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"பொதுவான பின்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு பின்னை முயலவும்."</string>
@@ -686,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"சாதன நிர்வாகி சமீபத்திய கடவுச்சொல்லைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"கடவுச்சொல்லைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"பொதுவான கடவுச்சொற்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு கடவுச்சொல்லை முயலவும்."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைத் தொடர்ந்து பயன்படுத்துவது அனுமதிக்கப்படாது."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைப் பயன்படுத்துவது அனுமதிக்கப்படவில்லை"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
     <string name="credentials_reset" msgid="873900550885788639">"அனுமதிச் சான்றுகளை அழி"</string>
@@ -701,6 +722,7 @@
     <string name="remove_button" msgid="6664656962868194178">"அகற்று"</string>
     <string name="cancel" msgid="750286395700355455">"ரத்துசெய்"</string>
     <string name="allow" msgid="7519431342750394402">"அனுமதி"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"அனுமதிக்க வேண்டாம்"</string>
     <string name="deny" msgid="340512788979930804">"நிராகரி"</string>
     <string name="backspace_key" msgid="1545590866688979099">"பேக்ஸ்பேஸ் விசை"</string>
     <string name="enter_key" msgid="2121394305541579468">"என்டர் விசை"</string>
@@ -737,6 +759,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கினால் பின்வரும் செயல்பாடுகளைச் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை அது அனுமதிக்கும்:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கவா?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கு"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"முடக்கி, நிறுவல் நீக்கு"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை முடக்கு"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"இந்தச் சுயவிவரத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, வாகனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) நிறுவனத்தின் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"இந்தச் சுயவிவரத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, சாதனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) நிறுவனத்தின் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
@@ -757,10 +780,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"செயல்படுத்தப்பட்ட ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> வாகனக் கொள்கை"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"உங்கள் நிறுவனத்தின் நிர்வாகி நிர்வகிக்கும் அமைப்புகள்"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> குறித்து மேலும் அறிக"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">குறைந்தது <xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
+      <item quantity="one">குறைந்தது <xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> முயற்சிகள்</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> முயற்சி</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">கேமரா ஆப்ஸ்</item>
+      <item quantity="one">கேமரா ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">மின்னஞ்சல் கிளையன்ட் ஆப்ஸ்</item>
+      <item quantity="one">மின்னஞ்சல் கிளையன்ட் ஆப்ஸ்</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ஃபோன் ஆப்ஸ்</item>
+      <item quantity="one">ஃபோன் ஆப்ஸ்</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"பிழை அறிக்கையைப் பகிரவா?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"இந்தச் சாதனத்தைப் பிழையறிந்து திருத்துவதற்கு உதவ இந்த வாகன நிறுவனத்தின் நிர்வாகி, பிழை அறிக்கையைக் கோரியுள்ளார். ஆப்ஸும் தரவும் பகிரப்படக்கூடும்."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"இந்தச் சாதனத்தைப் பிழையறிந்து திருத்துவதற்கு உதவ இந்த வாகன நிறுவனத்தின் நிர்வாகி, பிழை அறிக்கையைக் கோரியுள்ளார். ஆப்ஸும் தரவும் பகிரப்படக்கூடும். மேலும் உங்கள் சாதனத்தின் வேகம் தற்காலிகமாகக் குறையக்கூடும்."</string>
@@ -794,22 +838,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"வெண்மையில் கருப்பு"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"கருப்பில் மஞ்சள்"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"நீலத்தில் மஞ்சள்"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"ஸ்கிரீன் ரீடர்"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"முடக்கப்பட்டுள்ளது"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"திரையில் உள்ளவற்றை வாசிக்கும்"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack அம்சத்தை இயக்குதல்"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"விருப்பங்கள்"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"அமைப்புகள்"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack குறித்த விவரங்கள்"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"வாகனம் இயக்கத்தில் இருக்கும்போது TalkBack அம்சம் வேலை செய்யாது.\n\nTalkBack அம்சம் இயக்கத்தில் இருக்கும்போது திரையைப் பார்க்காமலேயே சாதனத்தைப் பயன்படுத்தும் வகையிலான பேச்சுவடிவ விளக்கத்தைப் பெறுவீர்கள். TalkBack அம்சமானது திரையைப் பார்க்க முடியாத சூழ்நிலை/பயனர்களுக்காக வடிவமைக்கப்பட்டதாகும்."</string>
 </resources>

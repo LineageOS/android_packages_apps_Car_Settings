@@ -16,6 +16,15 @@
 
 package com.android.car.settings.bluetooth;
 
+import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
+
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByUm;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -23,7 +32,9 @@ import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.car.ui.AlertDialogBuilder;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -160,6 +171,38 @@ final class BluetoothUtils {
 
         LOG.v("Found no reason to show the dialog - do not show dialog.");
         return false;
+    }
+
+    static int getAvailabilityStatusRestricted(Context context) {
+        if (hasUserRestrictionByUm(context, DISALLOW_CONFIG_BLUETOOTH)) {
+            return DISABLED_FOR_PROFILE;
+        }
+        if (hasUserRestrictionByDpm(context, DISALLOW_CONFIG_BLUETOOTH)) {
+            return AVAILABLE_FOR_VIEWING;
+        }
+        return AVAILABLE;
+    }
+
+    static void onClickWhileDisabled(Context context, FragmentController fragmentController) {
+
+        if (hasUserRestrictionByDpm(context, DISALLOW_CONFIG_BLUETOOTH)) {
+            showActionDisabledByAdminDialog(context, fragmentController);
+        } else {
+            showActionUnavailableToast(context);
+        }
+    }
+
+    static void showActionDisabledByAdminDialog(Context context,
+                FragmentController fragmentController) {
+        fragmentController.showDialog(
+                EnterpriseUtils.getActionDisabledByAdminDialog(context, DISALLOW_CONFIG_BLUETOOTH),
+                DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
+    }
+
+    static void showActionUnavailableToast(Context context) {
+        Toast.makeText(context, context.getString(R.string.action_unavailable),
+                Toast.LENGTH_LONG).show();
+        LOG.d(context.getString(R.string.action_unavailable));
     }
 
     static void persistSelectedDeviceInPicker(Context context, String deviceAddress) {

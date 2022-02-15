@@ -41,6 +41,7 @@ android_library {
         "jsr305",
         "car-ui-lib",
         "car-admin-ui-lib",
+        "car-helper-lib",
         "car-qc-lib",
     ],
 
@@ -114,6 +115,7 @@ android_app {
         "jsr305",
         "car-ui-lib-testing-support",
         "car-admin-ui-lib",
+        "car-helper-lib",
         "car-qc-lib",
     ],
 
@@ -174,6 +176,7 @@ android_library {
         "jsr305",
         "car-ui-lib-testing-support",
         "car-admin-ui-lib",
+        "car-helper-lib",
         "car-qc-lib",
     ],
 

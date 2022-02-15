@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"모바일 네트워크를 사용하여 데이터 액세스"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"모바일 네트워크"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"모바일 데이터 사용"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"꺼짐"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"모바일 데이터를 사용 중지하시겠습니까?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"선택 필요"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"<xliff:g id="CARRIER">%1$s</xliff:g>의 모바일 데이터를 사용하시겠습니까?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi 검색 사용 설정됨"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"모바일 데이터로 자동 전환"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi 인터넷 액세스가 끊기면 모바일 데이터를 사용합니다. 데이터 사용 요금이 부과될 수 있습니다."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi‑Fi 네트워크 찾기 및 연결"</string>
     <string name="learn_more" msgid="8214605928933358604">"자세히 알아보기"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"핫스팟 이름"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> 켜는 중..."</string>
@@ -383,8 +385,6 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"이 권한은 앱이 시스템 설정을 수정하도록 허용합니다."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"알림 액세스"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>의 알림 액세스를 허용하시겠습니까?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>에서 연락처 이름과 수신 메시지 텍스트 등 개인정보를 포함한 모든 알림을 읽을 수 있게 됩니다. 또한 알림을 삭제하거나 포함된 작업 버튼을 실행하며 \n\n앱에서 방해 금지 모드를 사용 또는 사용 중지하고 관련 설정을 변경할 수도 있습니다."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>에서 알림 액세스를 사용 중지하면 방해 금지 모드 액세스도 사용 중지됩니다."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"끄기"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"취소"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"프리미엄 SMS 액세스"</string>
@@ -400,8 +400,7 @@
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"이 기능을 끄면 모든 앱의 위치 액세스 권한이 삭제됩니다. 운전자 지원 앱은 계속 내 위치에 액세스할 수 있습니다."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"운전자 지원에서 위치 사용"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"자동차 위치 사용 중지됨"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (1516786816178866919) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"운전자 지원 앱이 내 위치 정보에 액세스할 수 없음"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"변경"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"운전 지원 앱이 내 위치에 액세스하도록 허용합니다."</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"기능을 끄면 위치 정보를 사용하는 운전자 지원 앱이 사용 중지됩니다."</string>
@@ -413,8 +412,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"위치 사용"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"운전자 지원"</string>
-    <!-- no translation found for adas_settings_footer (5128483877858058534) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="5128483877858058534">"운전자 지원 앱에 전송되는 위치 정보에는 개인 식별 정보가 포함되지 않습니다. 정보는 최대 2일 동안 보관된 후 삭제됩니다."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"마이크"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"마이크 사용"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"모든 앱이 마이크에 액세스하도록 허용"</string>
@@ -490,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"앱 환경설정이 초기화되었습니다."</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"모든 데이터 삭제(초기화)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"인포테인먼트 시스템에서 모든 데이터와 프로필 삭제"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"초기화하면 다음을 포함한 인포테인먼트 시스템의 모든 데이터가 삭제됩니다.\n\n"<li>"Google 계정"</li>\n<li>"시스템과 앱 데이터 및 설정"</li>\n<li>"다운로드한 앱"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"초기화하면 차량의 인포테인먼트 시스템에서 다음을 포함한 모든 데이터가 삭제됩니다.\n\n"<li>"계정 및 프로필"</li>\n<li>"시스템과 앱 데이터 및 설정"</li>\n<li>"다운로드한 앱"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"현재 로그인한 계정:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"차량에 다른 프로필이 설정되어 있습니다."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"모든 데이터 삭제"</string>
@@ -584,9 +582,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>님의 계정"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"자동으로 데이터 동기화"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"앱에서 데이터를 자동으로 새로고침하도록 허용"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"데이터 자동 동기화를 사용하시겠습니까?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"웹에서 변경한 계정 정보가 모두 기기에 자동으로 복사됩니다.\n\n또한 일부 계정은 휴대전화의 변경사항을 웹에 자동으로 복사할 수 있습니다. Google 계정은 이러한 자동 동기화를 지원합니다."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"데이터 자동 동기화를 사용 중지하시겠습니까?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"데이터 자동 동기화를 허용하시겠습니까?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"웹에서 적용한 계정 관련 변경사항은 모두 차량에 자동으로 복사됩니다.\n\n일부 계정은 차량에서 적용한 변경사항을 모두 온라인 계정에 자동으로 복사할 수도 있습니다."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"데이터 자동 동기화를 허용하지 않으시겠습니까?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"이 경우 데이터 사용량이 절약되지만, 최근 정보를 수집하려면 각 계정을 직접 동기화해야 합니다. 또한 업데이트가 발생해도 알림을 받지 못합니다."</string>
     <string name="account_details_title" msgid="7529571432258448573">"계정 정보"</string>
     <string name="add_account_title" msgid="5988746086885210040">"계정 추가"</string>
@@ -650,8 +648,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"잠금해제 패턴을 그리는 방법"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"패턴 저장 중 오류 발생"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"잘못 시도한 횟수가 너무 많습니다. <xliff:g id="NUMBER">%d</xliff:g>초 후에 다시 시도해 주세요."</string>
-    <!-- no translation found for lockpattern_does_not_support_rotary (7356367113555659428) -->
-    <skip />
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"패턴에는 로터리 입력이 지원되지 않습니다. 터치를 사용하세요."</string>
     <string name="okay" msgid="4589873324439764349">"확인"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"화면 잠금을 삭제하시겠습니까?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"화면 잠금을 삭제하면 누구나 계정에 액세스할 수 있습니다."</string>
@@ -674,10 +671,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"취소"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"확인"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"4자 이상이어야 합니다."</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"<xliff:g id="COUNT">%d</xliff:g>자 이상이어야 합니다."</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN은 <xliff:g id="COUNT">%d</xliff:g>자리 이상이어야 합니다."</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>자 미만이어야 합니다."</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>자리 미만이어야 합니다."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"숫자 0~9만 포함해야 합니다."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"기기 관리자가 최근 PIN 사용을 허용하지 않습니다."</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"IT 관리자가 일반적으로 사용되는 PIN을 차단했습니다. 다른 PIN을 시도해 보세요."</string>
@@ -686,7 +679,35 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"기기 관리자가 최근 비밀번호 사용을 허용하지 않습니다."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"비밀번호 저장 중 오류 발생"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"IT 관리자가 일반적으로 사용되는 비밀번호를 차단했습니다. 다른 비밀번호로 시도해 보세요."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"연속으로 올라가거나 내려가는 숫자 또는 반복되는 숫자의 배열은 허용되지 않습니다."</string>
+    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
+    <skip />
+    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
+    <skip />
+    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
+    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"연속으로 올라가거나 내려가는 숫자 또는 반복되는 숫자의 배열은 허용되지 않습니다."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"화면 잠금 옵션"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g>일 전"</string>
     <string name="credentials_reset" msgid="873900550885788639">"사용자 인증 정보 삭제"</string>
@@ -701,6 +722,7 @@
     <string name="remove_button" msgid="6664656962868194178">"삭제"</string>
     <string name="cancel" msgid="750286395700355455">"취소"</string>
     <string name="allow" msgid="7519431342750394402">"허용"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"허용 안함"</string>
     <string name="deny" msgid="340512788979930804">"거부"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace 키"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter 키"</string>
@@ -737,6 +759,7 @@
     <string name="device_admin_warning" msgid="8997805999333600901">"인포테인먼트 시스템 앱을 활성화하면 <xliff:g id="APP_NAME">%1$s</xliff:g> 앱에서 다음 작업을 처리할 수 있습니다."</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"인포테인먼트 시스템 앱을 활성화하시겠습니까?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"인포테인먼트 시스템 앱 활성화"</string>
+    <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"비활성화 및 제거"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"인포테인먼트 시스템 앱 비활성화"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"조직 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 차량의 위치 정보가 포함됩니다."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"조직 관리자는 이 프로필과 연결된 앱 및 데이터를 모니터링하고 관리할 수 있습니다. 여기에는 설정, 권한, 기업 액세스, 네트워크 활동, 기기의 위치 정보가 포함됩니다."</string>
@@ -757,10 +780,31 @@
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"활성화된 앱 없음"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> 차량 정책"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"조직 관리자가 관리하는 설정"</string>
-    <!-- no translation found for footer_learn_more_content_description (7749452309729272078) -->
-    <skip />
-    <!-- no translation found for enterprise_privacy_none (2566653655908700748) -->
-    <skip />
+    <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> 자세히 알아보기"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">앱 최소 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">앱 최소 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other">앱 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
+      <item quantity="one">앱 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>회 시도</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>회 시도</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">카메라 앱</item>
+      <item quantity="one">카메라 앱</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">이메일 클라이언트 앱</item>
+      <item quantity="one">이메일 클라이언트 앱</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">전화 앱</item>
+      <item quantity="one">전화 앱</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"버그 신고를 공유하시겠습니까?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있습니다."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"차량의 조직 관리자가 이 기기의 문제를 해결하기 위해 버그 신고를 요청했습니다. 앱과 데이터가 공유될 수 있으며 기기 속도가 일시적으로 느려질 수 있습니다."</string>
@@ -794,22 +838,13 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"흰색 바탕에 검은색"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"검은색 바탕에 노란색"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"파란색 바탕에 노란색"</string>
-    <!-- no translation found for accessibility_settings_screen_reader_title (5113265553157624836) -->
-    <skip />
-    <!-- no translation found for talkback_title (6529000326454628289) -->
-    <skip />
-    <!-- no translation found for talkback_settings_off (1486849504005704390) -->
-    <skip />
-    <!-- no translation found for talkback_settings_on (796292072895957042) -->
-    <skip />
-    <!-- no translation found for enable_talkback_toggle_title (3027666779214128091) -->
-    <skip />
-    <!-- no translation found for talkback_options_title (7366357383004455638) -->
-    <skip />
-    <!-- no translation found for talkback_settings_title (631275474070654027) -->
-    <skip />
-    <!-- no translation found for about_talkback_title (6048639389606001298) -->
-    <skip />
-    <!-- no translation found for about_talkback_description (5438077447169311605) -->
-    <skip />
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"스크린 리더"</string>
+    <string name="talkback_title" msgid="6529000326454628289">"음성 안내 지원"</string>
+    <string name="talkback_settings_off" msgid="1486849504005704390">"꺼짐"</string>
+    <string name="talkback_settings_on" msgid="796292072895957042">"화면의 항목 읽어주기"</string>
+    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"음성 안내 지원 사용"</string>
+    <string name="talkback_options_title" msgid="7366357383004455638">"옵션"</string>
+    <string name="talkback_settings_title" msgid="631275474070654027">"설정"</string>
+    <string name="about_talkback_title" msgid="6048639389606001298">"음성 안내 지원 정보"</string>
+    <string name="about_talkback_description" msgid="5438077447169311605">"차량이 움직이는 동안에는 음성 안내 지원을 사용할 수 없습니다.\n\n음성 안내 지원이 켜져 있으면 화면을 보지 않고 기기를 사용할 수 있도록 음성 피드백이 제공됩니다. 음성 안내 지원은 화면을 보기 어려운 상황 또는 사용자를 위한 기능입니다."</string>
 </resources>
