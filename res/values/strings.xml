@@ -2028,4 +2028,17 @@
     <string name="captions_settings_text_style_yellow_on_black">Yellow on black</string>
     <!-- Settings option for closed captions text style to be yellow text on blue background [CHAR LIMIT=40] -->
     <string name="captions_settings_text_style_yellow_on_blue">Yellow on blue</string>
+
+    <!-- Header for the section of the accessibility settings that lets the user change their screen reader settings. [CHAR LIMIT=30] -->
+    <string name="accessibility_settings_screen_reader_title">Screen reader</string>
+    <!-- Subtitle for the screen reader settings item when it is turned off [CHAR LIMIT=30] -->
+    <string name="screen_reader_settings_off">Off</string>
+    <!-- Subtitle for the screen reader settings item when it is turned on [CHAR LIMIT=40] -->
+    <string name="screen_reader_settings_on">Speak items on screen</string>
+    <!-- Title for toggle to enable the  screen reader. [CHAR LIMIT=30] -->
+    <string name="enable_screen_reader_toggle_title">Use <xliff:g id="accessibility_app_name" example="TalkBack">%1$s</xliff:g></string>
+    <!-- Header for the options section of the screen reader settings. [CHAR LIMIT=30] -->
+    <string name="screen_reader_options_title">Options</string>
+    <!-- Header for the settings section of the screen reader settings. [CHAR LIMIT=30] -->
+    <string name="screen_reader_description_title">Settings</string>
 </resources>
