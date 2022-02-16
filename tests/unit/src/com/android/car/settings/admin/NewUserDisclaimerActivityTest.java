@@ -23,15 +23,20 @@ import static com.google.common.truth.Truth.assertWithMessage;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
+import android.app.AlertDialog;
 import android.car.Car;
 import android.car.admin.CarDevicePolicyManager;
 import android.car.test.mocks.AbstractExtendedMockitoTestCase;
 import android.car.test.mocks.AndroidMockitoHelper;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.widget.Button;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
+
+import com.android.car.settings.common.ConfirmationDialogFragment;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -84,13 +89,19 @@ public final class NewUserDisclaimerActivityTest extends AbstractExtendedMockito
     @Test
     public void testAccept() throws Exception {
         AndroidMockitoHelper.syncRunOnUiThread(mActivity, () -> {
-            mActivity.onCreate(/* savedInstanceState= */ null);
-            Button button = mActivity.getAcceptButton();
+            Button button = getConfirmationDialog().getButton(DialogInterface.BUTTON_POSITIVE);
             Log.d(TAG, "Clicking accept button: " + button);
             button.performClick();
         });
 
         verify(mCarDevicePolicyManager).setUserDisclaimerAcknowledged(mActivity.getUser());
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         assertWithMessage("activity is finishing").that(mActivity.isFinishing()).isTrue();
+    }
+
+    private AlertDialog getConfirmationDialog() {
+        return (AlertDialog) ((ConfirmationDialogFragment) mActivity.getSupportFragmentManager()
+                .findFragmentByTag(NewUserDisclaimerActivity.DIALOG_TAG))
+                .getDialog();
     }
 }
