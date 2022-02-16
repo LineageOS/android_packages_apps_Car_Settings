@@ -86,8 +86,6 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     private LocalBluetoothAdapter mLocalBluetoothAdapter;
     @Mock
     private LocalBluetoothManager mBluetoothManager;
-    @Mock
-    private UserManager mUserManager;
 
     @Before
     public void setUp() {
@@ -96,15 +94,12 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
                 .strictness(Strictness.LENIENT)
                 .mockStatic(BluetoothAdapter.class)
                 .mockStatic(LocalBluetoothManager.class)
-                .mockStatic(UserManager.class)
                 .startMocking();
         when(BluetoothAdapter.getDefaultAdapter()).thenReturn(mBluetoothAdapter);
         when(mBluetoothAdapter.isEnabled()).thenReturn(true);
         when(LocalBluetoothManager.getInstance(any(), any())).thenReturn(mBluetoothManager);
         when(mBluetoothManager.getBluetoothAdapter()).thenReturn(mLocalBluetoothAdapter);
         when(mLocalBluetoothAdapter.getBondedDevices()).thenReturn(mBondedDevices);
-        when(UserManager.get(any())).thenReturn(mUserManager);
-        when(mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)).thenReturn(false);
 
         CachedBluetoothDeviceManager deviceManager = mock(CachedBluetoothDeviceManager.class);
         when(mBluetoothManager.getCachedDeviceManager()).thenReturn(deviceManager);
@@ -122,7 +117,7 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
 
     @Test
     public void getQCItem_bluetoothDisallowed_returnsNull() {
-        when(mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH)).thenReturn(true);
+        setUserRestriction(DISALLOW_BLUETOOTH, true);
         QCItem item = mPairedBluetoothDevices.getQCItem();
         assertThat(item).isNull();
     }
@@ -233,9 +228,9 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
 
     @Test
     public void getQCItem_hasBaseUmRestriction_togglesDisabled() {
-        setBaseUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
                 /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+        setBaseUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
         QCActionItem btToggle = row.getEndItems().get(0);
@@ -250,9 +245,9 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
 
     @Test
     public void getQCItem_hasUmRestriction_togglesClickableWhileDisabled() {
-        setUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
                 /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+        setUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
         QCActionItem btToggle = row.getEndItems().get(0);
