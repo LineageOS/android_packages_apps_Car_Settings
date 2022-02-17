@@ -344,6 +344,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_wifi_level_4"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
+      <item type="drawable" name="ic_screen_reader_settings"/>
       <item type="drawable" name="ic_settings_about"/>
       <item type="drawable" name="ic_settings_auto_wifi"/>
       <item type="drawable" name="ic_settings_bluetooth"/>
@@ -586,6 +587,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="about_summary"/>
       <item type="string" name="access_point_tag_key"/>
       <item type="string" name="accessibility_settings_captions_title"/>
+      <item type="string" name="accessibility_settings_screen_reader_title"/>
       <item type="string" name="accessibility_settings_title"/>
       <item type="string" name="account_auto_sync_summary"/>
       <item type="string" name="account_auto_sync_title"/>
@@ -760,6 +762,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="choose_new_admin_title"/>
       <item type="string" name="computing_size"/>
       <item type="string" name="condition_night_display_title"/>
+      <item type="string" name="config_default_screen_reader"/>
       <item type="string" name="config_dev_options_module"/>
       <item type="string" name="config_homepage_fragment_class"/>
       <item type="string" name="config_package_installer_package_name"/>
@@ -877,6 +880,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
+      <item type="string" name="enable_screen_reader_toggle_title"/>
       <item type="string" name="enable_text"/>
       <item type="string" name="enter_key"/>
       <item type="string" name="enterprise_privacy_always_on_vpn_device"/>
@@ -1215,6 +1219,10 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="runtime_permissions_summary_no_permissions_requested"/>
       <item type="string" name="safety_and_regulatory_info"/>
       <item type="string" name="screen_lock_options"/>
+      <item type="string" name="screen_reader_description_title"/>
+      <item type="string" name="screen_reader_options_title"/>
+      <item type="string" name="screen_reader_settings_off"/>
+      <item type="string" name="screen_reader_settings_on"/>
       <item type="string" name="screen_reader_settings_title"/>
       <item type="string" name="security_lock_none"/>
       <item type="string" name="security_lock_password"/>
@@ -1573,6 +1581,7 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="xml" name="reset_network_fragment"/>
       <item type="xml" name="reset_options_fragment"/>
       <item type="xml" name="ringtone_picker_fragment"/>
+      <item type="xml" name="screen_reader_settings_fragment"/>
       <item type="xml" name="security_settings_fragment"/>
       <item type="xml" name="sound_settings_fragment"/>
       <item type="xml" name="special_access_fragment"/>
