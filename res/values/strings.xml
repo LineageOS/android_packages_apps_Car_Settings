@@ -1411,6 +1411,10 @@
     <string name="privacy_vehicle_data_title">Infotainment system data</string>
     <!-- Privacy settings screen, setting option that opens a page to manage location settings [CHAR LIMIT=NONE] -->
     <string name="privacy_location_summary">Control app access to your location</string>
+    <!-- Privacy settings screen, title for setting option name enable/disable the camera [CHAR LIMIT=30] -->
+    <string name="mute_camera_title">Camera</string>
+    <!-- Privacy settings screen, summary for setting option to enable/disable the camera [CHAR LIMIT=NONE] -->
+    <string name="mute_camera_summary">Control app access to your cameras</string>
     <!-- Privacy settings screen, title for setting option name enable/disable the microphone [CHAR LIMIT=30] -->
     <string name="mute_mic_title">Microphone</string>
     <!-- Privacy settings screen, summary for setting option to enable/disable the microphone [CHAR LIMIT=NONE] -->
@@ -2066,4 +2070,35 @@
     <string name="screen_reader_options_title">Options</string>
     <!-- Header for the settings section of the screen reader settings. [CHAR LIMIT=30] -->
     <string name="screen_reader_description_title">Settings</string>
+
+    <!-- Camera --><skip/>
+    <!-- Title of camera settings screen [CHAR LIMIT=40] -->
+    <string name="camera_settings_title">Camera</string>
+    <!-- Title of setting to toggle camera [CHAR LIMIT=40] -->
+    <string name="camera_toggle_title">Use camera</string>
+    <!-- Summary of setting to toggle camera [CHAR LIMIT=100] -->
+    <string name="camera_toggle_summary">Allow all apps to access your camera</string>
+    <!-- Title of setting linking to camera permission management screen [CHAR LIMIT=60] -->
+    <string name="camera_manage_permissions">Manage camera permissions</string>
+    <!-- Title of Recent Camera Accesses category [CHAR LIMIT=60] -->
+    <string name="camera_recently_accessed">Recently accessed</string>
+    <!-- Description when no apps have accessed camera recently [CHAR LIMIT=60] -->
+    <string name="camera_no_recent_access">No recent apps</string>
+    <!-- Summary for number of apps that have access when camera is off.  [CHAR LIMIT=100] -->
+    <string name="camera_app_permission_summary_camera_off">0 apps have access</string>
+    <!--
+    Summary for Camera settings when camera is on, explaining how many apps have camera
+    permission. [CHAR LIMIT=100]-->
+    <string name="camera_app_permission_summary_camera_on">
+        {count, plural,
+            =1    {# of {total_count} apps has access}
+            other {# of {total_count} apps have access}
+        }
+    </string>
+    <!-- Title of Recent Camera Requests setting [CHAR LIMIT=60] -->
+    <string name="camera_settings_recent_requests_title">Recently accessed</string>
+    <!-- Title of Recent Camera Requests setting [CHAR LIMIT=60] -->
+    <string name="camera_settings_recent_requests_view_all_title">View all</string>
+    <!-- Camera settings, loading the number of apps which have camera permission [CHAR LIMIT=30] -->
+    <string name="camera_settings_loading_app_permission_stats">Loading\u2026</string>
 </resources>
