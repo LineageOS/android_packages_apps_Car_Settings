@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Адміністратор пристрою не дозволяє використовувати останній пароль"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не вдалося зберегти пароль"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Системний адміністратор заблокував загальні паролі. Введіть інший пароль."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Має містити принаймні одну літеру"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Має містити принаймні одну цифру"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Має містити принаймні один символ"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Має містити принаймні # літеру}one{Має містити принаймні # літеру}few{Має містити принаймні # літери}many{Має містити принаймні # літер}other{Має містити принаймні # літери}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Має містити принаймні # малу літеру}one{Має містити принаймні # малу літеру}few{Має містити принаймні # малі літери}many{Має містити принаймні # малих літер}other{Має містити принаймні # малої літери}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Має містити принаймні # велику літеру}one{Має містити принаймні # велику літеру}few{Має містити принаймні # великі літери}many{Має містити принаймні # великих літер}other{Має містити принаймні # великої літери}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Має містити принаймні # цифру}one{Має містити принаймні # цифру}few{Має містити принаймні # цифри}many{Має містити принаймні # цифр}other{Має містити принаймні # цифри}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Має містити принаймні # спеціальний символ}one{Має містити принаймні # спеціальний символ}few{Має містити принаймні # спеціальні символи}many{Має містити принаймні # спеціальних символів}other{Має містити принаймні # спеціального символу}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Має містити принаймні # символ, який не є літерою}one{Має містити принаймні # символ, який не є літерою}few{Має містити принаймні # символи, які не є літерами}many{Має містити принаймні # символів, які не є літерами}other{Має містити принаймні # символу, які не є літерами}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Має містити принаймні # символ, який не є цифрою}one{Має містити принаймні # символ, який не є цифрою}few{Має містити принаймні # символи, які не є літерами}many{Має містити принаймні # символів, які не є літерами}other{Має містити принаймні # символу, які не є літерами}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Має містити принаймні # символ}one{Має містити принаймні # символ}few{Має містити принаймні # символи}many{Має містити принаймні # символів}other{Має містити принаймні # символу}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Має містити принаймні # цифру}one{Має містити принаймні # цифру}few{Має містити принаймні # цифри}many{Має містити принаймні # цифр}other{Має містити принаймні # цифри}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Має містити менше ніж # символ}one{Має містити менше ніж # символ}few{Має містити менше ніж # символи}many{Має містити менше ніж # символів}other{Має містити менше ніж # символу}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Має містити менше ніж # цифру}one{Має містити менше ніж # цифру}few{Має містити менше ніж # цифри}many{Має містити менше ніж # цифр}other{Має містити менше ніж # цифри}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Цифри в порядку зростання чи спадання та повторювані цифри заборонені"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Способи блокування екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. тому"</string>

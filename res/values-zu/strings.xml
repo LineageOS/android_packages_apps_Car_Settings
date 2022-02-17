@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Umlawuli wedivayisi akavumeli ukusebenzisa iphasiwedi yakamuva"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Iphutha ukulondoloza iphasiwedi"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Amaphasiwedi avamile avinjelwe umlawuli wakho we-IT. Zama iphasiwedi ehlukile."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Kufanele iqukathe okungenani uhlamvu olulodwa"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Kufanele iqukathe okungenani idijithi eyodwa"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Kufanele iqukathe okungenani isimbuli eyodwa"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Kufanele iqukathe okungenani igama eli-1}one{Kufanele okungenani iqukathe izinhlamvu ezingu-#}other{Kufanele okungenani iqukathe izinhlamvu ezingu-#}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Kufanele iqukathe okungenani igama elingu-# lohlamvu oluncane}one{Kufanele iqukathe okungenani amagama angu-# wezinhlamvu ezincane}other{Kufanele iqukathe okungenani amagama angu-# wezinhlamvu ezincane}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Kufanele iqukathe okungenani igama elingu-# elingufeleba}one{Kufanele iqukathe okungenani amagama angu-# angofeleba}other{Kufanele iqukathe okungenani amagama angu-# angofeleba}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Kufanele iqukathe okungenani idijithi elingu-# eliyinombolo}one{Kufanele iqukathe okungenani amadijithi angu-# ayinombolo}other{Kufanele iqukathe okungenani amadijithi angu-# ayinombolo}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Kufanele iqukathe okungenani isimbuli elingu-# ekhethekile}one{Kufanele iqukathe okungenani amasimbuli angu-# akhethekile}other{Kufanele iqukathe okungenani amasimbuli angu-# akhethekile}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Kufanele iqukathe okungenani okungu-# okungelona uhlamvu}one{Kufanele iqukathe okungenani okungu-# okungezona izinhlamvu}other{Kufanele iqukathe okungenani okungu-# okungezona izinhlamvu}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Kufanele iqukathe okungenani uhlamvu olungu-# olungeyona inombolo}one{Kufanele iqukathe okungenani izinhlamvu ezingu-# ezingezona izinombolo}other{Kufanele iqukathe okungenani izinhlamvu ezingu-# ezingezona izinombolo}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Kufanele kuqukathe okungenani uhlamvu olungu-#}one{Kufanele kuqukathe okungenani izinhlamvu ezingu-#}other{Kufanele kuqukathe okungenani izinhlamvu ezingu-#}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Kufanele iqukathe okungenani idijithi elingu-#}one{Kufanele iqukathe okungenani amadijithi angu-#}other{Kufanele iqukathe okungenani amadijithi angu-#}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Kufanele kube ngaphansi kohlamvu olungu-#}one{Kufanele kube ngaphansi kwezinhlamvu ezingu-#}other{Kufanele kube ngaphansi kwezinhlamvu ezingu-#}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Kufanele kube ngaphansi kwedijithi elingu-#}one{Kufanele kube ngaphansi kwamadijithi angu-#}other{Kufanele kube ngaphansi kwamadijithi angu-#}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Ukwenyuka, ukwehla, noma uchungechunge olwehlayo lamadijithi alivunyewe"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Izinketho zokukhiya isikrini"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> izinsuku ezedlule"</string>

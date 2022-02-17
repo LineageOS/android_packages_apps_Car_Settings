@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Skrbnik naprave ne dovoli uporabe nedavnega gesla."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Napaka pri shranjevanju gesla"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Skrbnik za IT je blokiral pogosta gesla. Poskusite z drugim geslom."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Vsebovati mora vsaj eno črko."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Vsebovati mora vsaj eno števko."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Vsebovati mora vsaj en simbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Vsebovati mora vsaj # črko}one{Vsebovati mora vsaj # črko}two{Vsebovati mora vsaj # črki}few{Vsebovati mora vsaj # črke}other{Vsebovati mora vsaj # črk}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Vsebovati mora vsaj # malo črko}one{Vsebovati mora vsaj # malo črko}two{Vsebovati mora vsaj # mali črki}few{Vsebovati mora vsaj # male črke}other{Vsebovati mora vsaj # malih črk}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Vsebovati mora vsaj # veliko črko}one{Vsebovati mora vsaj # veliko črko}two{Vsebovati mora vsaj # veliki črki}few{Vsebovati mora vsaj # velike črke}other{Vsebovati mora vsaj # velikih črk}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Vsebovati mora vsaj # števko}one{Vsebovati mora vsaj # števko}two{Vsebovati mora vsaj # števki}few{Vsebovati mora vsaj # števke}other{Vsebovati mora vsaj # števk}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Vsebovati mora vsaj # posebni znak}one{Vsebovati mora vsaj # posebni znak}two{Vsebovati mora vsaj # posebna znaka}few{Vsebovati mora vsaj # posebne znake}other{Vsebovati mora vsaj # posebnih znakov}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Vsebovati mora vsaj # znak, ki ni črka}one{Vsebovati mora vsaj # znak, ki ni črka}two{Vsebovati mora vsaj # znaka, ki nista črki}few{Vsebovati mora vsaj # znake, ki niso črke}other{Vsebovati mora vsaj # znakov, ki niso črke}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Vsebovati mora vsaj # znak, ki ni števka}one{Vsebovati mora vsaj # znak, ki ni števka}two{Vsebovati mora vsaj # znaka, ki nista števki}few{Vsebovati mora vsaj # znake, ki niso števke}other{Vsebovati mora vsaj # znakov, ki niso števke}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Vsebovati mora vsaj # znak}one{Vsebovati mora vsaj # znak}two{Vsebovati mora vsaj # znaka}few{Vsebovati mora vsaj # znake}other{Vsebovati mora vsaj # znakov}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Vsebovati mora vsaj # števko}one{Vsebovati mora vsaj # števko}two{Vsebovati mora vsaj # števki}few{Vsebovati mora vsaj # števke}other{Vsebovati mora vsaj # števk}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Vsebovati mora manj kot # znak}one{Vsebovati mora manj kot # znak}two{Vsebovati mora manj kot # znaka}few{Vsebovati mora manj kot # znake}other{Vsebovati mora manj kot # znakov}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Vsebovati mora manj kot # števko}one{Vsebovati mora manj kot # števko}two{Vsebovati mora manj kot # števki}few{Vsebovati mora manj kot # števke}other{Vsebovati mora manj kot # števk}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Naraščajoč, padajoč ali ponavljajoč se niz števk je prepovedan."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Možnosti zaklepanja zaslona"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: pred toliko dnevi: <xliff:g id="NUM_DAYS">%3$s</xliff:g>"</string>
