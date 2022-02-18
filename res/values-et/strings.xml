@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Seadme administraator ei luba kasutada hiljutist parooli"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Viga parooli salvestamisel"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"IT-administraator on levinud paroolid blokeerinud. Proovige muud parooli."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Peab sisaldama vähemalt ühte tähte"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Peab sisaldama vähemalt ühte numbrit"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Peab sisaldama vähemalt ühte sümbolit"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Peab sisaldama vähemalt # tähte}other{Peab sisaldama vähemalt # tähte}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Peab sisaldama vähemalt # väiketähte}other{Peab sisaldama vähemalt # väiketähte}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Peab sisaldama vähemalt # suurtähte}other{Peab sisaldama vähemalt # suurtähte}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Peab sisaldama vähemalt # numbrit}other{Peab sisaldama vähemalt # numbrit}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Peab sisaldama vähemalt # erisümbolit}other{Peab sisaldama vähemalt # erisümbolit}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Peab sisaldama vähemalt # tähemärki, mis ei ole täht}other{Peab sisaldama vähemalt # tähemärki, mis ei ole täht}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Peab sisaldama vähemalt # tähemärki, mis ei ole number}other{Peab sisaldama vähemalt # tähemärki, mis ei ole number}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Peab olema lühem kui # tähemärk}other{Peab olema lühem kui # tähemärki}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Peab sisaldama vähemalt # numbrit}other{Peab sisaldama vähemalt # numbrit}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Peab olema lühem kui # tähemärk}other{Peab olema lühem kui # tähemärki}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Peab olema lühem kui # number}other{Peab olema lühem kui # numbrit}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Kasvavad, kahanevad või korduvad numbrijadad on keelatud"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekraaniluku valikud"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> päeva tagasi"</string>

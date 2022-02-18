@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ઉપકરણ વ્યવસ્થાપક તાજેતરના પાસવર્ડનો ઉપયોગ કરવાની મંજૂરી આપતા નથી"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"પાસવર્ડ સાચવવામાં ભૂલ"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"સામાન્ય પાસવર્ડ તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવ્યા છે. કોઈ બીજો પાસવર્ડ અજમાવી જુઓ."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ઓછામાં ઓછો એક વર્ણ શામેલ હોવો જરૂરી છે"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ઓછામાં ઓછો એક અંક શામેલ હોવો જરૂરી છે"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ઓછામાં ઓછું એક પ્રતીક શામેલ હોવું જરૂરી છે"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ઓછામાં ઓછો # વર્ણ શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # વર્ણ શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # વર્ણ શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ઓછામાં ઓછો # લોઅરકેસ વર્ણ શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # લોઅરકેસ વર્ણ શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # લોઅરકેસ વર્ણ શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ઓછામાં ઓછો # અપરકેસ વર્ણ શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # અપરકેસ વર્ણ શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # અપરકેસ વર્ણ શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ઓછામાં ઓછો # સંખ્યાવાચક અંક શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # સંખ્યાવાચક અંક શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # સંખ્યાવાચક અંક શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ઓછામાં ઓછું # વિશિષ્ટ પ્રતીક શામેલ હોવું જરૂરી છે}one{ઓછામાં ઓછું # વિશિષ્ટ પ્રતીક શામેલ હોવું જરૂરી છે}other{ઓછામાં ઓછા # વિશિષ્ટ પ્રતીક શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{વર્ણ ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}one{વર્ણ ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}other{વર્ણ ન હોય તેવા ઓછામાં ઓછા # અક્ષર શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{સંખ્યા ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}one{સંખ્યા ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}other{સંખ્યા ન હોય તેવા ઓછામાં ઓછા # અક્ષર શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # અક્ષર શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ઓછામાં ઓછો # અંક શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # અંક શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # અંક શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# કરતાં ઓછા અક્ષર હોવા જરૂરી છે}one{# કરતાં ઓછા અક્ષર હોવા જરૂરી છે}other{# કરતાં ઓછા અક્ષર હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# કરતાં ઓછા અંક હોવા જરૂરી છે}one{# કરતાં ઓછા અંક હોવા જરૂરી છે}other{# કરતાં ઓછા અંક હોવા જરૂરી છે}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"અંકોના ચઢતા ક્રમની, ઉતરતા ક્રમની અથવા પુનરાવર્તિત અનુક્રમની મંજૂરી નથી"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"સ્ક્રીન લૉકના વિકલ્પો"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> દિવસ પહેલાં"</string>

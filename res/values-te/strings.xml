@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ఇటీవలి పాస్‌వర్డ్‌ను ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"పాస్‌వర్డ్‌ని సేవ్ చేయడంలో ఎర్రర్"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"సాధారణ పాస్‌వర్డ్‌లను మీ IT అడ్మిన్ బ్లాక్ చేశారు. వేరే పాస్‌వర్డ్‌ను ట్రై చేయండి."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"తప్పనిసరిగా కనీసం ఒక అక్షరాన్ని కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"తప్పనిసరిగా కనీసం ఒక అంకెను కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"తప్పనిసరిగా కనీసం ఒక గుర్తును కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{తప్పనిసరిగా కనీసం # లోయర్‌కేస్ అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # లోయర్‌కేస్ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{తప్పనిసరిగా కనీసం # అప్పర్‌కేస్ అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అప్పర్‌కేస్ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{తప్పనిసరిగా కనీసం # సంఖ్యాత్మక అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # సంఖ్యాత్మక అంకెలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{తప్పనిసరిగా కనీసం # ప్రత్యేక గుర్తును కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # ప్రత్యేక గుర్తులను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరేతర అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరేతర అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{తప్పనిసరిగా కనీసం # అసంఖ్యాత్మక అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అసంఖ్యాత్మక అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరం కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{తప్పనిసరిగా కనీసం # అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అంకెలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అక్షరం ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అంకెలను కలిగి ఉండాలి}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"స్క్రీన్ లాక్ ఎంపికలు"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> రోజుల క్రితం"</string>

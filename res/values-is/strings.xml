@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Tækjastjóri leyfir ekki notkun nýlegs aðgangsorðs"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Villa við að vista aðgangsorð"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Kerfisstjórinn þinn hefur lokað á algeng aðgangsorð. Prófaðu annað aðgangsorð."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Verður að innihalda minnst einn bókstaf"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Verður að innihalda minnst einn tölustaf"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Verður að innihalda minnst eitt tákn"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Verður að innihalda minnst # bókstaf}one{Verður að innihalda minnst # bókstaf}other{Verður að innihalda minnst # bókstafi}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Verður að innihalda minnst # lágstaf}one{Verður að innihalda minnst # lágstaf}other{Verður að innihalda minnst # lágstafi}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Verður að innihalda minnst # hástaf}one{Verður að innihalda minnst # hástaf}other{Verður að innihalda minnst # hástafi}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Verður að innihalda minnst # tölustaf}one{Verður að innihalda minnst # tölustaf}other{Verður að innihalda minnst # tölustafi}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Verður að innihalda minnst # sérstaf}one{Verður að innihalda minnst # sérstaf}other{Verður að innihalda minnst # sérstafi}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Verður að innihalda minnst # staftákn sem er ekki bókstafur}one{Verður að innihalda minnst # staftákn sem er ekki bókstafur}other{Verður að innihalda minnst # staftákn sem eru ekki bókstafir}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Verður að innihalda minnst # staftákn sem er ekki tölustafur}one{Verður að innihalda minnst # staftákn sem er ekki tölustafur}other{Verður að innihalda minnst # staftákn sem eru ekki tölustafir}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Verður að innihalda minnst # staf}one{Verður að innihalda minnst # staf}other{Verður að innihalda minnst # stafi}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Verður að innihalda minnst # tölustaf}one{Verður að innihalda minnst # tölustaf}other{Verður að innihalda minnst # tölustafi}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Verður að vera styttra en # stafur}one{Verður að vera styttra en # stafur}other{Verður að vera styttra en # stafir}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Verður að vera styttra en # tölustafur}one{Verður að vera styttra en # tölustafur}other{Verður að vera styttra en # tölustafir}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Hækkandi, lækkandi eða endurtekin röð tölustafa er óheimil"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Valkostir skjálæsingar"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : Fyrir <xliff:g id="NUM_DAYS">%3$s</xliff:g> dögum"</string>

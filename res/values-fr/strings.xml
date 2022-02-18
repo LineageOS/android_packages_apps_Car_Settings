@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'administrateur de l\'appareil n\'autorise pas l\'utilisation d\'un mot de passe récent"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Erreur d\'enregistrement du mot de passe"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Les mots de passe courants sont bloqués par votre administrateur informatique. Choisissez un autre mot de passe."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Doit contenir au moins une lettre"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Doit contenir au moins un chiffre"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Doit contenir au moins un symbole"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Doit contenir au moins # lettre}one{Doit contenir au moins # lettre}other{Doit contenir au moins # lettres}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Doit contenir au moins # lettre minuscule}one{Doit contenir au moins # lettre minuscule}other{Doit contenir au moins # lettres minuscules}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Doit contenir au moins # lettre majuscule}one{Doit contenir au moins # lettre majuscule}other{Doit contenir au moins # lettres majuscules}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Doit contenir au moins # chiffre}one{Doit contenir au moins # chiffre}other{Doit contenir au moins # chiffres}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Doit contenir au moins # symbole spécial}one{Doit contenir au moins # symbole spécial}other{Doit contenir au moins # symboles spéciaux}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Doit contenir au moins # caractère autre qu\'une lettre}one{Doit contenir au moins # caractère autre qu\'une lettre}other{Doit contenir au moins # caractères autres qu\'une lettre}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Doit contenir au moins # caractère non numérique}one{Doit contenir au moins # caractère non numérique}other{Doit contenir au moins # caractères non numériques}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Doit contenir au moins # caractère}one{Doit contenir au moins # caractère}other{Doit contenir au moins # caractères}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Doit contenir au moins # chiffre}one{Doit contenir au moins # chiffre}other{Doit contenir au moins # chiffres}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Doit contenir moins de # caractère}one{Doit contenir moins de # caractère}other{Doit contenir moins de # caractères}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Doit contenir moins de # chiffre}one{Doit contenir moins de # chiffre}other{Doit contenir moins de # chiffres}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Les suites de chiffres croissantes, décroissantes ou répétitives ne sont pas autorisées"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>

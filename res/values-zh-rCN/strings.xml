@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"设备管理员不允许使用最近用过的密码"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"保存密码时出错"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"您的 IT 管理员已禁止使用常用密码。请尝试使用其他密码。"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"必须包含至少 1 个字母"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"必须包含至少 1 个数字"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"必须包含至少 1 个符号"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{必须包含至少 # 个字母}other{必须包含至少 # 个字母}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{必须包含至少 # 个小写字母}other{必须包含至少 # 个小写字母}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{必须包含至少 # 个大写字母}other{必须包含至少 # 个大写字母}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{必须包含至少 # 个数字}other{必须包含至少 # 个数字}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{必须包含至少 # 个特殊符号}other{必须包含至少 # 个特殊符号}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{必须包含至少 # 个非字母字符}other{必须包含至少 # 个非字母字符}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{必须包含至少 # 个非数字字符}other{必须包含至少 # 个非数字字符}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{必须包含至少 # 个字符}other{必须包含至少 # 个字符}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{必须包含至少 # 位数}other{必须包含至少 # 位数}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{必须少于 # 个字符}other{必须少于 # 个字符}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{必须少于 # 位数}other{必须少于 # 位数}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允许使用以升序、降序或重复序列进行排列的一串数字"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>

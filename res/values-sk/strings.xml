@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Správca zariadenia neumožňuje používať nedávne heslo"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Pri ukladaní hesla sa vyskytla chyba"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Bežné heslá zablokoval správca IT. Skúste iné heslo."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Musí obsahovať minimálne jedno písmeno"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Musí obsahovať minimálne jedno číslo"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Musí obsahovať minimálne jeden symbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Musí obsahovať minimálne # písmeno}few{Musí obsahovať minimálne # písmená}many{Must contain at least # letters}other{Musí obsahovať minimálne # písmen}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Musí obsahovať minimálne # malé písmeno}few{Musí obsahovať minimálne # malé písmená}many{Must contain at least # lowercase letters}other{Musí obsahovať minimálne # malých písmen}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Musí obsahovať minimálne # veľké písmeno}few{Musí obsahovať minimálne # veľké písmená}many{Must contain at least # uppercase letters}other{Musí obsahovať minimálne # veľkých písmen}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Musí obsahovať minimálne # číslo}few{Musí obsahovať minimálne # čísla}many{Must contain at least # numerical digits}other{Musí obsahovať minimálne # čísiel}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Musí obsahovať minimálne # špeciálny symbol}few{Musí obsahovať minimálne # špeciálne symboly}many{Must contain at least # special symbols}other{Musí obsahovať minimálne # špeciálnych symbolov}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Musí obsahovať minimálne # znak, ktorý nie je písmeno}few{Musí obsahovať minimálne # znaky, ktoré nie sú písmená}many{Must contain at least # non-letter characters}other{Musí obsahovať minimálne # znakov, ktoré nie sú písmená}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Musí obsahovať minimálne # znak, ktorý nie je číslo}few{Musí obsahovať minimálne # znaky, ktoré nie sú čísla}many{Must contain at least # non-numerical characters}other{Musí obsahovať minimálne # znakov, ktoré nie sú čísla}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Musí obsahovať minimálne # znak}few{Musí obsahovať minimálne # znaky}many{Must contain at least # characters}other{Musí obsahovať minimálne # znakov}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Musí obsahovať minimálne # číslo}few{Musí obsahovať minimálne # čísla}many{Must contain at least # digits}other{Musí obsahovať minimálne # čísiel}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Musí mať menej ako # znak}few{Musí mať menej ako # znaky}many{Must be fewer than # characters}other{Musí mať menej ako # znakov}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Musí mať menej ako # znak}few{Musí mať menej ako # znaky}many{Must be fewer than # digits}other{Musí mať menej ako # znakov}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Vzostupná, zostupná alebo opakovaná sekvencia čísiel nie je povolená"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Možnosti zámky obrazovky"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : pred <xliff:g id="NUM_DAYS">%3$s</xliff:g> dňami"</string>

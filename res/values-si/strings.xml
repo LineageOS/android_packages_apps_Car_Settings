@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"උපාංග පරිපාලක මෑත මුරපදයක් භාවිතා කිරීමට අවසර නොදේ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"මුරපදය සුරැකීමේ දෝෂයකි"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ඔබගේ IT පරිපාලක විසින් සුලබ මුරපද අවහිර කරනු ලැබේ. වෙනත් මුරපදයක් උත්සාහ කරන්න."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"අඩු තරමින් එක් අකුරක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"අඩු තරමින් එක් ඉලක්කමක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"අඩු තරමින් එක් සංකේතයක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}one{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}other{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}one{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}other{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}one{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}other{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{අනුලකුණු #කට වඩා අඩු විය යුතුය}one{අනුලකුණු #කට වඩා අඩු විය යුතුය}other{අනුලකුණු #කට වඩා අඩු විය යුතුය}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ඉලක්කම් #කට වඩා අඩු විය යුතුය}one{ඉලක්කම් #කට වඩා අඩු විය යුතුය}other{ඉලක්කම් #කට වඩා අඩු විය යුතුය}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ආරෝහණ, අවරෝහණ හෝ පුනරාවර්ත අනුක්‍රමයේ ඉලක්කම්වලට ඉඩ නොදේ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"තිර අගුළු විකල්ප"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : දින <xliff:g id="NUM_DAYS">%3$s</xliff:g>කට පෙර"</string>

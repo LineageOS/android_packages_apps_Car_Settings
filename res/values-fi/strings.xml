@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Järjestelmänvalvoja esti salasanan, koska sitä on käytetty viime aikoina."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Virhe tallennettaessa salasanaa"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"IT-järjestelmänvalvoja on estänyt yleiset salasanat. Kokeile eri salasanaa."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Salasanassa on oltava vähintään yksi kirjain"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Salasanassa on oltava vähintään yksi numero"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Salasanassa täytyy olla vähintään yksi symboli"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Salasanassa on oltava vähintään # kirjain}other{Salasanassa on oltava vähintään # kirjainta}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Salasanassa on oltava vähintään # pieni kirjain}other{Salasanassa on oltava vähintään # pientä kirjainta}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Salasanassa on oltava vähintään # iso kirjain}other{Salasanassa on oltava vähintään # isoa kirjainta}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Salasanassa on oltava vähintään # numero}other{Salasanassa on oltava vähintään # numeroa}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Salasanassa on oltava vähintään # erikoismerkki}other{Salasanassa on oltava vähintään # erikoismerkkiä}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Salasanassa on oltava vähintään # merkki, joka ei ole kirjain}other{Salasanassa on oltava vähintään # merkkiä, jotka eivät ole kirjaimia}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Salasanassa on oltava vähintään # merkki, joka ei ole numero}other{Salasanassa on oltava vähintään # merkkiä, jotka eivät ole numeroita}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Salasanassa on oltava ainakin # merkki}other{Salasanassa on oltava ainakin # merkkiä}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{PIN-koodin vähimmäispituus on # numero}other{PIN-koodin vähimmäispituus on # numeroa}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Salasanassa on oltava alle # merkki}other{Salasanassa on oltava alle # merkkiä}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{PIN-koodissa täytyy olla alle # numero}other{PIN-koodissa täytyy olla alle # numeroa}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Nousevat, laskevat tai toistuvat numerosarjat on kielletty."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Näytön lukitusvaihtoehdot"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> päivää sitten"</string>

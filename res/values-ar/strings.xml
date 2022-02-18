@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"لا يسمح مشرف الجهاز باستخدام كلمة مرور تم استخدامها مؤخرًا."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"حدث خطأ أثناء حفظ كلمة المرور."</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"حظرَ مشرف تكنولوجيا المعلومات استخدام كلمات المرور الشائعة. جرِّب استخدام كلمة مرور مختلفة."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"يجب أن تحتوي كلمة المرور على حرف واحد على الأقل."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"يجب أن تحتوي كلمة المرور على رقم واحد على الأقل."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"يجب أن تحتوي كلمة المرور على رمز واحد على الأقل."</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف صغير على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين صغيرين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف صغيرة على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا صغيرًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف صغير على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف كبير على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين كبيرين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف كبيرة على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا كبيرًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف كبير على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{يجب أن تحتوي كلمة المرور على رقم عددي واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # رقم عددي على الأقل.}two{يجب أن تحتوي كلمة المرور على رقمين عددين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أرقام عددية على الأقل.}many{يجب أن تحتوي كلمة المرور على # رقمًا عدديًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # رقم عددي على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # رمز خاص على الأقل.}two{يجب أن تحتوي كلمة المرور على رمزين خاصين على الأقل.}few{يجب أن تحتوي كلمة المرور على # رموز خاصة على الأقل.}many{يجب أن تحتوي كلمة المرور على # رمزًا خاصًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # رمز خاص على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد ليس من الأحرف الأبجدية على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف ليس من الأحرف الأبجدية على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين ليسا من الأحرف الأبجدية على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف ليست من الأحرف الأبجدية على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا ليس من الأحرف الأبجدية على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف ليس من الأحرف الأبجدية على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد غير رقمي على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف غير رقمي على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين غير رقميين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف غير رقمية على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا غير رقمي على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف غير رقمي على الأقل.}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{يجب أن يحتوي رقم التعريف الشخصي على رقم واحد على الأقل.}zero{يجب أن يحتوي رقم التعريف الشخصي على # رقم على الأقل.}two{يجب أن يحتوي رقم التعريف الشخصي على رقمين على الأقل.}few{يجب أن يحتوي رقم التعريف الشخصي على # أرقام على الأقل.}many{يجب أن يحتوي رقم التعريف الشخصي على # رقمًا على الأقل.}other{يجب أن يحتوي رقم التعريف الشخصي على # رقم على الأقل.}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{يجب أن تحتوي كلمة المرور على أقل من حرف واحد.}zero{يجب أن تحتوي كلمة المرور على أقل من # حرف.}two{يجب أن تحتوي كلمة المرور على أقل من حرفين.}few{يجب أن تحتوي كلمة المرور على أقل من # أحرف.}many{يجب أن تحتوي كلمة المرور على أقل من # حرفًا.}other{يجب أن تحتوي كلمة المرور على أقل من # حرف.}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{يجب أن يحتوي رقم التعريف الشخصي على أقل من رقم واحد.}zero{يجب أن يحتوي رقم التعريف الشخصي على أقل من # رقم.}two{يجب أن يحتوي رقم التعريف الشخصي على أقل من رقمين.}few{يجب أن يحتوي رقم التعريف الشخصي على أقل من # أرقام.}many{يجب أن يحتوي رقم التعريف الشخصي على أقل من # رقمًا.}other{يجب أن يحتوي رقم التعريف الشخصي على أقل من # رقم.}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"غير مسموح باستخدام الترتيب التصاعدي أو التنازلي أو المكرر للأرقام."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"خيارات قفل الشاشة"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : قبل <xliff:g id="NUM_DAYS">%3$s</xliff:g> يوم"</string>

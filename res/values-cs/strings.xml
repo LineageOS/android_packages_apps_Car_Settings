@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administrátor zařízení neumožňuje použít heslo, které jste použili nedávno"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Při ukládání hesla došlo k chybě"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Obvyklá hesla jsou blokována administrátorem IT. Použijte jiné heslo."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Heslo musí obsahovat alespoň jedno písmeno."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Heslo musí obsahovat alespoň jednu číslici."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Heslo musí obsahovat alespoň jeden symbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Heslo musí obsahovat alespoň # písmeno}few{Heslo musí obsahovat alespoň # písmena}many{Heslo musí obsahovat alespoň # písmena}other{Heslo musí obsahovat alespoň # písmen}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Heslo musí obsahovat alespoň # malé písmeno}few{Heslo musí obsahovat alespoň # malá písmena}many{Heslo musí obsahovat alespoň # malého písmena}other{Heslo musí obsahovat alespoň # malých písmen}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Heslo musí obsahovat alespoň # velké písmeno}few{Heslo musí obsahovat alespoň # velká písmena}many{Heslo musí obsahovat alespoň # velkého písmena}other{Heslo musí obsahovat alespoň # velkých písmen}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Heslo musí obsahovat alespoň # číslici}few{Heslo musí obsahovat alespoň # číslice}many{Heslo musí obsahovat alespoň # číslice}other{Heslo musí obsahovat alespoň # číslic}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Heslo musí obsahovat alespoň # speciální symbol}few{Heslo musí obsahovat alespoň # speciální symboly}many{Heslo musí obsahovat alespoň # speciálního symbolu}other{Heslo musí obsahovat alespoň # speciálních symbolů}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Heslo musí obsahovat alespoň # znak jiný než písmeno}few{Heslo musí obsahovat alespoň # znaky jiné než písmena}many{Heslo musí obsahovat alespoň # znaku jiného než písmeno}other{Heslo musí obsahovat alespoň # znaků jiných než písmena}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Heslo musí obsahovat alespoň # znak jiný než číslici}few{Heslo musí obsahovat alespoň # znaky jiné než číslice}many{Heslo musí obsahovat alespoň # znaku jiného než číslice}other{Heslo musí obsahovat alespoň # znaků jiných než číslice}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Heslo musí obsahovat alespoň # znak}few{Heslo musí obsahovat alespoň # znaky}many{Heslo musí obsahovat alespoň # znaku}other{Heslo musí obsahovat alespoň # znaků}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{PIN musí obsahovat alespoň # číslici}few{PIN musí obsahovat alespoň # číslice}many{PIN musí obsahovat alespoň # číslice}other{PIN musí obsahovat alespoň # číslic}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Heslo musí být kratší než # znak}few{Heslo musí být kratší než # znaky}many{Heslo musí být kratší než # znaku}other{Heslo musí být kratší než # znaků}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{PIN musí mít méně než # číslici}few{PIN musí mít méně než # číslice}many{PIN musí mít méně než # číslice}other{PIN musí mít méně než # číslic}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Posloupnost rostoucích, klesajících nebo opakujících se číslic není povolena"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Možnosti zámku obrazovky"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : před <xliff:g id="NUM_DAYS">%3$s</xliff:g> dny"</string>
