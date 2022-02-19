@@ -569,7 +569,7 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"נתוני הפרופיל"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"מטמון"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"סה\"כ"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"פינוי שטח אחסון"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"פינוי נפח אחסון"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"ניקוי מטמון"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"למחוק את נתוני האפליקציה?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"כל נתוני האפליקציה יימחקו לתמיד. נתונים אלה כוללים את כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכדומה."</string>
@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"מנהל המכשיר לא מאפשר להשתמש בסיסמה שנעשה בה שימוש לאחרונה"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"שגיאה בשמירת הסיסמה"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"סיסמאות נפוצות חסומות בידי מנהל ה-IT. יש לנסות סיסמה אחרת."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"צריכה להכיל לפחות אות אחת"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"צריכה להכיל לפחות ספרה אחת"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"צריכה להכיל לפחות סמל אחד"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{צריכה להכיל לפחות אות אחת}two{צריכה להכיל לפחות # אותיות}many{צריכה להכיל לפחות # אותיות}other{צריכה להכיל לפחות # אותיות}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{צריכה להכיל לפחות אות קטנה אחת}two{צריכה להכיל לפחות # אותיות קטנות}many{צריכה להכיל לפחות # אותיות קטנות}other{צריכה להכיל לפחות # אותיות קטנות}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{צריכה להכיל לפחות אות גדולה אחת}two{צריכה להכיל לפחות # אותיות גדולות}many{צריכה להכיל לפחות # אותיות גדולות}other{צריכה להכיל לפחות # אותיות גדולות}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}two{צריכה להכיל לפחות # ספרות}many{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{צריכה להכיל לפחות סמל מיוחד אחד}two{צריכה להכיל לפחות # סמלים מיוחדים}many{צריכה להכיל לפחות # סמלים מיוחדים}other{צריכה להכיל לפחות # סמלים מיוחדים}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו אות}two{צריכה להכיל לפחות # תווים שאינם אותיות}many{צריכה להכיל לפחות # תווים שאינם אותיות}other{צריכה להכיל לפחות # תווים שאינם אותיות}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו ספרה}two{צריכה להכיל לפחות # תווים שאינם ספרות}many{צריכה להכיל לפחות # תווים שאינם ספרות}other{צריכה להכיל לפחות # תווים שאינם ספרות}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{צריכה להכיל לפחות תו אחד}two{צריכה להכיל לפחות # תווים}many{צריכה להכיל לפחות # תווים}other{צריכה להכיל לפחות # תווים}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}two{צריכה להכיל לפחות # ספרות}many{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{צריכה להיות קצרה מתו אחד}two{צריכה להיות קצרה מ-# תווים}many{צריכה להיות קצרה מ-# תווים}other{צריכה להיות קצרה מ-# תווים}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{צריכה להיות קצרה מספרה אחת}two{צריכה להיות קצרה מ-# ספרות}many{צריכה להיות קצרה מ-# ספרות}other{צריכה להיות קצרה מ-# ספרות}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"אין להגדיר רצף ספרות עולה, יורד או חוזר"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>

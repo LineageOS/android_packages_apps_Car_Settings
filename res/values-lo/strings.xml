@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ຜູ້ເບິ່ງແຍງລະບົບອຸປະກອນບໍ່ອະນຸຍາດໃຫ້ໃຊ້ລະຫັດຜ່ານເມື່ອບໍ່ດົນມານີ້"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"ເກີດຄວາມຜິດພາດໃນການບັນທຶກລະຫັດຜ່ານ"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ລະຫັດຜ່ານທົ່ວໄປແມ່ນຖືກບລັອກໂດຍຜູ້ເບິ່ງແຍງລະບົບໄອທີຂອງທ່ານ. ໃຫ້ລອງໃຊ້ລະຫັດອື່ນແທນ."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ຕ້ອງມີຕົວອັກສອນຢ່າງໜ້ອຍໜຶ່ງຕົວ"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ຕ້ອງມີຕົວເລກຢ່າງໜ້ອຍໜຶ່ງຕົວ"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ຕ້ອງມີສັນຍາລັກຢ່າງໜ້ອຍໜຶ່ງຕົວ"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ຕ້ອງມີຕົວອັກສອນຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີຕົວອັກສອນຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ຕ້ອງມີຕົວພິມນ້ອຍຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີຕົວພິມນ້ອຍຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ຕ້ອງມີຕົວພິມໃຫຍ່ຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີຕົວພິມໃຫຍ່ຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ຕ້ອງມີຕົວເລກຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີຕົວເລກຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ຕ້ອງມີສັນຍາລັກພິເສດຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີສັນຍາລັກພິເສດຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{ຕ້ອງມີອັກຂະລະທີ່ບໍ່ແມ່ນຕົວອັກສອນຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີອັກຂະລະທີ່ບໍ່ແມ່ນຕົວອັກສອນຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ຕ້ອງມີອັກຂະລະທີ່ບໍ່ແມ່ນຕົວເລກຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີອັກຂະລະທີ່ບໍ່ແມ່ນຕົວເລກຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ຕ້ອງມີອັກຂະລະຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີອັກຂະລະຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ຕ້ອງມີຕົວເລກຢ່າງໜ້ອຍ # ຕົວ}other{ຕ້ອງມີຕົວເລກຢ່າງໜ້ອຍ # ຕົວ}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{ຕ້ອງມີອັກຂະລະໜ້ອຍກວ່າ # ຕົວ}other{ຕ້ອງມີອັກຂະລະໜ້ອຍກວ່າ # ຕົວ}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ຕ້ອງມີຕົວເລກໜ້ອຍກວ່າ # ຕົວ}other{ຕ້ອງມີຕົວເລກໜ້ອຍກວ່າ # ຕົວ}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ບໍ່ອະນຸຍາດໃຫ້ໃຊ້ຊຸດຕົວເລກລຽງກັນແຕ່ນ້ອຍຫາໃຫຍ່, ໃຫຍ່ຫານ້ອຍ ຫຼື ຊຸດຕົວເລກຊ້ຳກັນ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ຕົວເລືອກການລັອກໜ້າຈໍ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ມື້ກ່ອນ"</string>

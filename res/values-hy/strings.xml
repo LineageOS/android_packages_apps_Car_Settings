@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Սարքի ադմինիստրատորը թույլ չի տալիս օգտագործել վերջին գաղտնաբառը"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Չհաջողվեց պահել գաղտնաբառը"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ՏՏ ադմինիստրատորն արգելափակել է պարզ գաղտնաբառերը։ Փորձեք մեկ այլ գաղտնաբառ։"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Պետք է պարունակի առնվազն մեկ տառ"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Պետք է պարունակի առնվազն մեկ թվանշան"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Պետք է պարունակի առնվազն մեկ նշան"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Պետք է պարունակի առնվազն # տառ}one{Պետք է պարունակի առնվազն # տառ}other{Պետք է պարունակի առնվազն # տառ}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Պետք է պարունակի առնվազն # փոքրատառ}one{Պետք է պարունակի առնվազն # փոքրատառ}other{Պետք է պարունակի առնվազն # փոքրատառ}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Պետք է պարունակի առնվազն # մեծատառ}one{Պետք է պարունակի առնվազն # մեծատառ}other{Պետք է պարունակի առնվազն # մեծատառ}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Պետք է պարունակի առնվազն # թվանշան}one{Պետք է պարունակի առնվազն # թվանշան}other{Պետք է պարունակի առնվազն # թվանշան}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Պետք է պարունակի առնվազն # հատուկ նշան}one{Պետք է պարունակի առնվազն # հատուկ նշան}other{Պետք է պարունակի առնվազն # հատուկ նշան}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Պետք է պարունակի առնվազն # ոչ տառային նիշ}one{Պետք է պարունակի առնվազն # ոչ տառային նիշ}other{Պետք է պարունակի առնվազն # ոչ տառային նիշ}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Պետք է պարունակի առնվազն # ոչ թվային նիշ}one{Պետք է պարունակի առնվազն # ոչ թվային նիշ}other{Պետք է պարունակի առնվազն # ոչ թվային նիշ}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Պետք է պարունակի առնվազն # նիշ}one{Պետք է պարունակի առնվազն # նիշ}other{Պետք է պարունակի առնվազն # նիշ}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Պետք է պարունակի առնվազն # թվանշան}one{Պետք է պարունակի առնվազն # թվանշան}other{Պետք է պարունակի առնվազն # թվանշան}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Չպետք է գերազանցի # նիշը}one{Չպետք է գերազանցի # նիշը}other{Չպետք է գերազանցի # նիշը}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Պետք է #-ից քիչ թվանշան պարունակի}one{Պետք է #-ից քիչ թվանշան պարունակի}other{Պետք է #-ից քիչ թվանշան պարունակի}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Թվանշանների աճող, նվազող կամ կրկնվող հաջորդականությունն արգելված է"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Էկրանի կողպման տարբերակներ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> – <xliff:g id="NUM_DAYS">%3$s</xliff:g> օր առաջ"</string>

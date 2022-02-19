@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ଏକ ସମ୍ପ୍ରତି ପାସ୍‌ୱର୍ଡ ବ୍ୟବହାର କରିବାକୁ ଡିଭାଇସ୍‌ ଆଡମିନ୍‌ ଅନୁମତି ଦିଅନ୍ତି ନାହିଁ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"ପାସୱର୍ଡ ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ଆପଣଙ୍କ IT ଆଡମିନଙ୍କ ଦ୍ୱାରା ସାଧାରଣ ପାସୱାର୍ଡଗୁଡ଼ିକ ବ୍ଲକ୍ କରାଯାଇଛି। ଏକ ଭିନ୍ନ ପାସୱାର୍ଡ ବ୍ୟବହାର କରି ଦେଖନ୍ତୁ।"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ଅତିକମରେ ଗୋଟିଏ ଅକ୍ଷର ରହିବା ଆବଶ୍ୟକ"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ଅତିକମରେ ଗୋଟିଏ ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ଅତିକମରେ ଗୋଟିଏ ଚିହ୍ନ ରହିବା ଆବଶ୍ୟକ"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ଅତିକମରେ #ଟି ଅକ୍ଷର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ଅକ୍ଷର ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ଅତିକମରେ #ଟି ସାନ ଅକ୍ଷର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ସାନ ଅକ୍ଷର ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ଅତିକମରେ #ଟି ବଡ଼ ଅକ୍ଷର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ବଡ଼ ଅକ୍ଷର ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ଅତିକମରେ #ଟି ସାଂଖ୍ୟିକ ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ସାଂଖ୍ୟିକ ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ଅତିକମରେ #ଟି ବିଶେଷ ଚିହ୍ନ ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ବିଶେଷ ଚିହ୍ନ ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{ଅତିକମରେ #ଟି ଅକ୍ଷର-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ଅକ୍ଷର-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ଅତିକମରେ #ଟି ସଂଖ୍ୟା-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ସଂଖ୍ୟା-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ଅତିକମରେ #ଟି କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ଅତିକମରେ #ଟି ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{#ଟି କେରେକ୍ଟରରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}other{#ଟି କେରେକ୍ଟରରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{#ଟି ଅଙ୍କରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}other{#ଟି ଅଙ୍କରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା ପୁନରାବୃତ୍ତ କ୍ରମ ଅନୁମୋଦିତ ନୁହେଁ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ସ୍କ୍ରିନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ଦିନ ପୂର୍ବେ"</string>

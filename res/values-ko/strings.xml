@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"기기 관리자가 최근 비밀번호 사용을 허용하지 않습니다."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"비밀번호 저장 중 오류 발생"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"IT 관리자가 일반적으로 사용되는 비밀번호를 차단했습니다. 다른 비밀번호로 시도해 보세요."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"문자를 1개 이상 포함해야 합니다."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"숫자를 1개 이상 포함해야 합니다."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"기호를 1개 이상 포함해야 합니다."</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{문자를 #개 이상 포함해야 합니다.}other{문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{소문자를 #개 이상 포함해야 합니다.}other{소문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{대문자를 #개 이상 포함해야 합니다.}other{대문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{숫자를 #개 이상 포함해야 합니다.}other{숫자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{특수 기호를 #개 이상 포함해야 합니다.}other{특수 기호를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{글자가 아닌 문자를 #개 이상 포함해야 합니다.}other{글자가 아닌 문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{숫자가 아닌 문자를 #개 이상 포함해야 합니다.}other{숫자가 아닌 문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{#자 이상이어야 합니다.}other{#자 이상이어야 합니다.}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{#자리 이상이어야 합니다.}other{#자리 이상이어야 합니다.}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{#자 미만이어야 합니다.}other{#자 미만이어야 합니다.}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{#자리 미만이어야 합니다.}other{#자리 미만이어야 합니다.}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"연속으로 올라가거나 내려가는 숫자 또는 반복되는 숫자의 배열은 허용되지 않습니다."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"화면 잠금 옵션"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g>일 전"</string>

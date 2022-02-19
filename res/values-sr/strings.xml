@@ -679,34 +679,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Администратор уређаја не дозвољава употребу недавно коришћене лозинке"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Грешка при чувању лозинке"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ИТ администратор блокира честе лозинке. Изаберите другу лозинку."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Мора да садржи најмање једно слово"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Мора да садржи најмање једну цифру"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Мора да садржи најмање један симбол"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Мора да садржи најмање # слово}one{Мора да садржи најмање # слово}few{Мора да садржи најмање # слова}other{Мора да садржи најмање # слова}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Мора да садржи најмање # мало слово}one{Мора да садржи најмање # мало слово}few{Мора да садржи најмање # мала слова}other{Мора да садржи најмање # малих слова}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Мора да садржи најмање # велико слово}one{Мора да садржи најмање # велико слово}few{Мора да садржи најмање # велика слова}other{Мора да садржи најмање # великих слова}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Мора да садржи најмање # цифру}one{Мора да садржи најмање # цифру}few{Мора да садржи најмање # цифре}other{Мора да садржи најмање # цифара}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Мора да садржи најмање # специјални симбол}one{Мора да садржи најмање # специјални симбол}few{Мора да садржи најмање # специјална симбола}other{Мора да садржи најмање # специјалних симбола}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Мора да садржи најмање # знак који није слово}one{Мора да садржи најмање # знак који није слово}few{Мора да садржи најмање # знака који нису слова}other{Мора да садржи најмање # знакова који нису слова}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Мора да садржи најмање # знак који није број}one{Мора да садржи најмање # знак који није број}few{Мора да садржи најмање # знака који нису бројеви}other{Мора да садржи најмање # знакова који нису бројеви}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Мора да садржи најмање # знак}one{Мора да садржи најмање # знак}few{Мора да садржи најмање # знака}other{Мора да садржи најмање # знакова}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Мора да садржи најмање # цифру}one{Мора да садржи најмање # цифру}few{Мора да садржи најмање # цифре}other{Мора да садржи најмање # цифара}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Мора да садржи мање од # знака}one{Мора да садржи мање од # знака}few{Мора да садржи мање од # знака}other{Мора да садржи мање од # знакова}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Мора да садржи мање од # цифре}one{Мора да садржи мање од # цифре}few{Мора да садржи мање од # цифре}other{Мора да садржи мање од # цифара}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Растући, опадајући или поновљени низ цифара није дозвољен"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опције закључавања екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пре <xliff:g id="NUM_DAYS">%3$s</xliff:g> дан(а)"</string>
