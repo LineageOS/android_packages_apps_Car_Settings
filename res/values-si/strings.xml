@@ -610,6 +610,10 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"රහස්‍යතාව"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"විනෝදාස්වාද තොරතුරු පද්ධති දත්ත"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ඔබගේ ස්ථානයට යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
+    <!-- no translation found for mute_camera_title (215494079895460172) -->
+    <skip />
+    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
+    <skip />
     <string name="mute_mic_title" msgid="2813215197799569553">"මයික්‍රෆෝනය"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"මයික්‍රෆෝනය වෙත යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"විනෝද තොරතුරු පද්ධති දත්ත"</string>
@@ -679,34 +683,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"උපාංග පරිපාලක මෑත මුරපදයක් භාවිතා කිරීමට අවසර නොදේ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"මුරපදය සුරැකීමේ දෝෂයකි"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ඔබගේ IT පරිපාලක විසින් සුලබ මුරපද අවහිර කරනු ලැබේ. වෙනත් මුරපදයක් උත්සාහ කරන්න."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"අඩු තරමින් එක් අකුරක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"අඩු තරමින් එක් ඉලක්කමක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"අඩු තරමින් එක් සංකේතයක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}one{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}other{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}one{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}other{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}one{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}other{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{අනුලකුණු #කට වඩා අඩු විය යුතුය}one{අනුලකුණු #කට වඩා අඩු විය යුතුය}other{අනුලකුණු #කට වඩා අඩු විය යුතුය}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ඉලක්කම් #කට වඩා අඩු විය යුතුය}one{ඉලක්කම් #කට වඩා අඩු විය යුතුය}other{ඉලක්කම් #කට වඩා අඩු විය යුතුය}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ආරෝහණ, අවරෝහණ හෝ පුනරාවර්ත අනුක්‍රමයේ ඉලක්කම්වලට ඉඩ නොදේ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"තිර අගුළු විකල්ප"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : දින <xliff:g id="NUM_DAYS">%3$s</xliff:g>කට පෙර"</string>
@@ -839,12 +829,36 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"කළු පසුබිමෙහි කහ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"නිල් පසුබිමෙහි කහ"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"තිර කියවනය"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"ක්‍රියාවිරහිතයි"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"තිරය මත අයිතම කියවන්න"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack භාවිත කරන්න"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"විකල්ප"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"සැකසීම්"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack ගැන"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"වාහනය චලනය වන අතරතුර TalkBack ලබා ගත නොහැකිය.\n\nTalkBack ක්‍රියාත්මක විට, එය ඔබට තිරය දෙස නොබලා ඔබගේ උපාංගය භාවිත කළ හැකි වන පරිදි කථන ප්‍රතිපෝෂණ සපයයි. TalkBack තිරය බැලීමට දුෂ්කර අවස්ථා සහ පුද්ගලයන් සඳහා අදහස් කෙරේ."</string>
+    <!-- no translation found for screen_reader_settings_off (6081562047935689764) -->
+    <skip />
+    <!-- no translation found for screen_reader_settings_on (2168217218643349459) -->
+    <skip />
+    <!-- no translation found for enable_screen_reader_toggle_title (7641307781194619254) -->
+    <skip />
+    <!-- no translation found for screen_reader_options_title (1073640098442831819) -->
+    <skip />
+    <!-- no translation found for screen_reader_description_title (8766666406552388012) -->
+    <skip />
+    <!-- no translation found for camera_settings_title (2837785830355288903) -->
+    <skip />
+    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
+    <skip />
+    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
+    <skip />
+    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
+    <skip />
+    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
+    <skip />
+    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
+    <skip />
+    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
+    <skip />
+    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
+    <skip />
+    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
+    <skip />
+    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
+    <skip />
+    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
+    <skip />
 </resources>
