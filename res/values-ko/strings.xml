@@ -610,10 +610,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"개인정보 보호"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"인포테인먼트 시스템 데이터"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"위치에 대한 앱 액세스 제어"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"카메라"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"카메라에 대한 앱 액세스 권한 관리"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"마이크"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"앱의 마이크 액세스 권한 제어"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"인포테인먼트 시스템 데이터"</string>
@@ -829,36 +827,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"검은색 바탕에 노란색"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"파란색 바탕에 노란색"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"스크린 리더"</string>
-    <!-- no translation found for screen_reader_settings_off (6081562047935689764) -->
-    <skip />
-    <!-- no translation found for screen_reader_settings_on (2168217218643349459) -->
-    <skip />
-    <!-- no translation found for enable_screen_reader_toggle_title (7641307781194619254) -->
-    <skip />
-    <!-- no translation found for screen_reader_options_title (1073640098442831819) -->
-    <skip />
-    <!-- no translation found for screen_reader_description_title (8766666406552388012) -->
-    <skip />
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"꺼짐"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"화면의 항목 읽어주기"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> 사용"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"옵션"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"설정"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"카메라"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"카메라 사용"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"모든 앱이 카메라에 액세스하도록 허용"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"카메라 권한 관리"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"최근 액세스함"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"최근에 사용한 앱 없음"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"앱 0개에 액세스 권한이 있음"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{앱 #/{total_count}개에 액세스 권한이 있음}other{앱 #/{total_count}개에 액세스 권한이 있음}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"최근 액세스함"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"모두 보기"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"로드 중…"</string>
 </resources>
