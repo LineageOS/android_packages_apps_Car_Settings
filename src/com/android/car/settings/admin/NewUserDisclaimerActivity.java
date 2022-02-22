@@ -29,7 +29,9 @@ import com.android.internal.annotations.VisibleForTesting;
  * Shows a disclaimer when a new user is added in a device that is managed by a device owner.
  */
 public final class NewUserDisclaimerActivity extends Activity {
-    private static final Logger LOG = new Logger(NewUserDisclaimerActivity.class);
+
+    @VisibleForTesting
+    static final Logger LOG = new Logger(NewUserDisclaimerActivity.class);
 
     private Car mCar;
     private CarDevicePolicyManager mCarDevicePolicyManager;
