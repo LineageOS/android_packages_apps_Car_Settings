@@ -57,6 +57,10 @@ public final class NewUserDisclaimerActivityTest extends AbstractExtendedMockito
     @Mock
     private Car mCar;
 
+    public NewUserDisclaimerActivityTest() {
+        super(NewUserDisclaimerActivity.LOG.getTag());
+    }
+
     @Override
     protected void onSessionBuilder(CustomMockitoSessionBuilder session) {
         session.spyStatic(Car.class);
