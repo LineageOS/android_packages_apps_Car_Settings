@@ -11,7 +11,7 @@ See the License for the specific language governing permissions and
 limitations under the License.-->
 <!--
 THIS FILE WAS AUTO GENERATED, DO NOT EDIT MANUALLY.
-REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
+REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
 -->
 <resources>
   <overlayable name="CarSettings">
@@ -415,7 +415,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="drawable" name="top_level_preference_highlight"/>
       <item type="drawable" name="user_disclaimer_action_button_background"/>
       <item type="drawable" name="wifi_signal"/>
-      <item type="id" name="accept_button"/>
       <item type="id" name="alphanumeric_pin"/>
       <item type="id" name="bottomDivider"/>
       <item type="id" name="build_info"/>
@@ -570,7 +569,6 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="layout" name="logical_preference_group"/>
       <item type="layout" name="multi_action_preference"/>
       <item type="layout" name="multi_action_preference_toggle_button"/>
-      <item type="layout" name="new_user_disclaimer"/>
       <item type="layout" name="pin_pad_view"/>
       <item type="layout" name="preference_dialog_password_edittext"/>
       <item type="layout" name="preference_settings_icon"/>
@@ -1150,6 +1148,8 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="modify_system_settings_title"/>
       <item type="string" name="more_settings_label"/>
       <item type="string" name="more_special_access_title"/>
+      <item type="string" name="mute_camera_summary"/>
+      <item type="string" name="mute_camera_title"/>
       <item type="string" name="mute_mic_summary"/>
       <item type="string" name="mute_mic_title"/>
       <item type="string" name="name_input_blank_error"/>
@@ -1171,6 +1171,9 @@ REGENERATE USING packages/apps/Car/tests/tools/rro/generate-overlayable.py
       <item type="string" name="network_connection_timeout_dialog_message"/>
       <item type="string" name="network_connection_timeout_dialog_ok"/>
       <item type="string" name="new_user_managed_device_acceptance"/>
+      <item type="string" name="new_user_managed_device_learn_more"/>
+      <item type="string" name="new_user_managed_device_text"/>
+      <item type="string" name="new_user_managed_device_title"/>
       <item type="string" name="night_mode_tile_label"/>
       <item type="string" name="nine"/>
       <item type="string" name="no_accounts_added"/>
