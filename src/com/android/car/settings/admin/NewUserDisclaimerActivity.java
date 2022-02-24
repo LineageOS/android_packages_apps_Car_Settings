@@ -15,58 +15,117 @@
  */
 package com.android.car.settings.admin;
 
-import android.app.Activity;
 import android.car.Car;
 import android.car.admin.CarDevicePolicyManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.widget.Button;
 
+import androidx.fragment.app.FragmentActivity;
+
+import com.android.car.admin.ui.ManagedDeviceTextView;
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
 /**
- * Shows a disclaimer when a new user is added in a device that is managed by a device owner.
+ * Shows a disclaimer dialog when a new user is added in a device that is managed by a device owner.
+ *
+ * <p>The dialog text will contain the message from
+ * {@code ManagedDeviceTextView.getManagedDeviceText}.
+ *
+ * <p>The dialog contains two buttons: one to acknowlege the disclaimer; the other to launch
+ * {@code Settings.ACTION_ENTERPRISE_PRIVACY_SETTINGS} for more details. Note: when
+ * {@code Settings.ACTION_ENTERPRISE_PRIVACY_SETTINGS} is closed, the same dialog will be shown.
+ *
+ * <p>Clicking anywhere outside the dialog will dimiss the dialog.
  */
-public final class NewUserDisclaimerActivity extends Activity {
-
+public final class NewUserDisclaimerActivity extends FragmentActivity {
     @VisibleForTesting
     static final Logger LOG = new Logger(NewUserDisclaimerActivity.class);
+    @VisibleForTesting
+    static final String DIALOG_TAG = "NewUserDisclaimerActivity.ConfirmationDialogFragment";
+    private static final int LEARN_MORE_RESULT_CODE = 1;
 
     private Car mCar;
     private CarDevicePolicyManager mCarDevicePolicyManager;
     private Button mAcceptButton;
+    private ConfirmationDialogFragment mConfirmationDialog;
+    private boolean mLearnMoreLaunched;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.new_user_disclaimer);
-        mAcceptButton = findViewById(R.id.accept_button);
-        mAcceptButton.setOnClickListener((v) -> accept());
+        getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
         getCarDevicePolicyManager();
+        setupConfirmationDialog();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        LOG.d("showing UI");
-
+        showConfirmationDialog();
         getCarDevicePolicyManager().setUserDisclaimerShown(getUser());
     }
 
-    @VisibleForTesting
-    Button getAcceptButton() {
-        return mAcceptButton;
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != LEARN_MORE_RESULT_CODE) {
+            LOG.w("onActivityResult(), invalid request code: " + requestCode);
+            return;
+        }
+        mLearnMoreLaunched = false;
     }
 
-    private void accept() {
+    private ConfirmationDialogFragment setupConfirmationDialog() {
+        String managedByOrganizationText = ManagedDeviceTextView.getManagedDeviceText(this)
+                .toString();
+        String managedProfileText = getResources().getString(
+                R.string.new_user_managed_device_text);
+
+        mConfirmationDialog = new ConfirmationDialogFragment.Builder(getApplicationContext())
+                .setTitle(R.string.new_user_managed_device_title)
+                .setMessage(managedByOrganizationText + System.lineSeparator()
+                        + System.lineSeparator() + managedProfileText)
+                .setPositiveButton(R.string.new_user_managed_device_acceptance,
+                        arguments -> onAccept())
+                .setNeutralButton(R.string.new_user_managed_device_learn_more,
+                        arguments -> onLearnMoreClicked())
+                .setDismissListener((arguments, positiveResult) -> onDialogDimissed())
+                .build();
+
+        return mConfirmationDialog;
+    }
+
+    private void showConfirmationDialog() {
+        if (mConfirmationDialog == null) {
+            setupConfirmationDialog();
+        }
+        mConfirmationDialog.show(getSupportFragmentManager(), DIALOG_TAG);
+    }
+
+    private void onAccept() {
         LOG.d("user accepted");
         getCarDevicePolicyManager().setUserDisclaimerAcknowledged(getUser());
         setResult(RESULT_OK);
         finish();
+    }
 
+    private void onLearnMoreClicked() {
+        mLearnMoreLaunched = true;
+        startActivityForResult(new Intent(Settings.ACTION_ENTERPRISE_PRIVACY_SETTINGS),
+                LEARN_MORE_RESULT_CODE);
+    }
+
+    private void onDialogDimissed() {
+        if (mLearnMoreLaunched) {
+            return;
+        }
+        finish();
     }
 
     private CarDevicePolicyManager getCarDevicePolicyManager() {
@@ -74,8 +133,9 @@ public final class NewUserDisclaimerActivity extends Activity {
         if (mCarDevicePolicyManager != null) {
             return mCarDevicePolicyManager;
         }
-
-        mCar = Car.createCar(this);
+        if (mCar == null) {
+            mCar = Car.createCar(this);
+        }
         mCarDevicePolicyManager = (CarDevicePolicyManager) mCar.getCarManager(
                 Car.CAR_DEVICE_POLICY_SERVICE);
         return mCarDevicePolicyManager;
