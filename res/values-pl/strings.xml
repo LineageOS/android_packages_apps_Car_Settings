@@ -610,10 +610,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Prywatność"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Dane systemu multimedialno-rozrywkowego"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontroluj dostęp aplikacji do lokalizacji"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"Aparat"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Zarządzaj dostępem aplikacji do aparatu"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontroluj dostęp aplikacji do mikrofonu"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Dane systemu multimedialnego"</string>
@@ -841,36 +839,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Żółty na czarnym"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Żółty na niebieskim"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Czytnik ekranu"</string>
-    <!-- no translation found for screen_reader_settings_off (6081562047935689764) -->
-    <skip />
-    <!-- no translation found for screen_reader_settings_on (2168217218643349459) -->
-    <skip />
-    <!-- no translation found for enable_screen_reader_toggle_title (7641307781194619254) -->
-    <skip />
-    <!-- no translation found for screen_reader_options_title (1073640098442831819) -->
-    <skip />
-    <!-- no translation found for screen_reader_description_title (8766666406552388012) -->
-    <skip />
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Wyłączono"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Odczytuj elementy widoczne na ekranie"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Użyj aplikacji <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcje"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Ustawienia"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Aparat"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Dostęp do aparatu"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Pozwól wszystkim aplikacjom na dostęp do aparatu"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Zarządzaj dostępem do aparatu"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Ostatnio używane"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Brak ostatnio uruchomionych aplikacji"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Żadna aplikacja nie ma dostępu"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Dostęp ma # z {total_count} aplikacji}few{Dostęp mają # z {total_count} aplikacji}many{Dostęp ma # z {total_count} aplikacji}other{Dostęp ma # z {total_count} aplikacji}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Ostatnio używane"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Wyświetl wszystko"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Ładuję…"</string>
 </resources>

@@ -610,10 +610,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"حریم‌خصوصی"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"داده‌های سیستم اطلاعات-سرگرمی"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"کنترل دسترسی برنامه به مکانتان"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"دوربین"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"کنترل دسترسی برنامه به دوربین‌های شما"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"میکروفون"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"کنترل دسترسی برنامه به میکروفون"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"داده‌های سیستم اطلاعات-سرگرمی"</string>
@@ -829,36 +827,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"زرد در سیاه"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"زرد در آبی"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"صفحه‌خوان"</string>
-    <!-- no translation found for screen_reader_settings_off (6081562047935689764) -->
-    <skip />
-    <!-- no translation found for screen_reader_settings_on (2168217218643349459) -->
-    <skip />
-    <!-- no translation found for enable_screen_reader_toggle_title (7641307781194619254) -->
-    <skip />
-    <!-- no translation found for screen_reader_options_title (1073640098442831819) -->
-    <skip />
-    <!-- no translation found for screen_reader_description_title (8766666406552388012) -->
-    <skip />
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"خاموش"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"موارد روی صفحه بلند خوانده می‌شود"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"استفاده از <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"گزینه‌ها"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"تنظیمات"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"دوربین"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"استفاده از دوربین"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"همه برنامه‌ها مجاز می‌شوند به دوربین دسترسی داشته باشند"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"مدیریت اجازه‌های دوربین"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"هیچ برنامه جدیدی موجود نیست"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"هیچ برنامه‌ای دسترسی ندارد"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# برنامه از {total_count} برنامه دسترسی دارد}one{# برنامه از {total_count} برنامه دسترسی دارد}other{# برنامه از {total_count} برنامه دسترسی دارد}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"مشاهده همه موارد"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"درحال بارگیری…"</string>
 </resources>
