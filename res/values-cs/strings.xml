@@ -610,10 +610,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Soukromí"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data informačního a zábavního systému"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Ovládání přístupu aplikace k vaší poloze"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"Fotoaparát"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Správa přístupu aplikací k fotoaparátům"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Ovládání přístupu aplikace k mikrofonu"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Data informačního a zábavního systému"</string>
@@ -841,36 +839,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Žluté na černém"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Žluté na modrém"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Čtečka obrazovky"</string>
-    <!-- no translation found for screen_reader_settings_off (6081562047935689764) -->
-    <skip />
-    <!-- no translation found for screen_reader_settings_on (2168217218643349459) -->
-    <skip />
-    <!-- no translation found for enable_screen_reader_toggle_title (7641307781194619254) -->
-    <skip />
-    <!-- no translation found for screen_reader_options_title (1073640098442831819) -->
-    <skip />
-    <!-- no translation found for screen_reader_description_title (8766666406552388012) -->
-    <skip />
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Vypnuto"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Čtení položek na obrazovce"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Použít aplikaci <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Možnosti"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Nastavení"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Fotoaparát"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Použití aplikace Fotoaparát"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Povolit všem aplikacím přístup k mikrofonu"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Spravovat oprávnění k fotoaparátu"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Nedávno používáno"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Žádné nedávné aplikace"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Žádná aplikace nemá přístup"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Přístup má # z {total_count} aplikací}few{Přístup mají # z {total_count} aplikací}many{Přístup má # z {total_count} aplikací}other{Přístup má # z {total_count} aplikací}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nedávno používáno"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Zobrazit vše"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Načítání…"</string>
 </resources>
