@@ -313,9 +313,13 @@
     <string name="wifi_hotspot_password_title">Hotspot password</string>
     <!-- Label for Wifi security type title [CHAR LIMIT=15]-->
     <string name="wifi_hotspot_security_title">Security</string>
+    <!-- Label for Wifi security type WPA3-Personal [CHAR LIMIT=25]-->
+    <string name="wifi_hotspot_wpa3_sae">WPA3-Personal</string>
+    <!-- Label for Wifi security type WPA2/WPA3 Transition [CHAR LIMIT=25]-->
+    <string name="wifi_security_psk_sae">WPA2/WPA3-Personal</string>
     <!-- Label for Wifi security type WPA2-Personal [CHAR LIMIT=25]-->
     <string name="wifi_hotspot_wpa2_personal">WPA2-Personal</string>
-    <!-- Label for Wifi security type WPA2-Personal [CHAR LIMIT=25]-->
+    <!-- Label for Wifi security type None [CHAR LIMIT=25]-->
     <string name="wifi_hotspot_security_none">None</string>
     <!-- Label for Wifi hotspot AP Band. [CHAR LIMIT=15]-->
     <string name="wifi_hotspot_ap_band_title">AP Band</string>
