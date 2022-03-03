@@ -38,6 +38,7 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import org.junit.Test;
 import org.mockito.Mock;
@@ -65,7 +66,8 @@ public final class WorkPolicyInfoPreferenceControllerTest
     public void testGetAvailabilityStatus_noFeature() throws Exception {
         WorkPolicyInfoPreferenceController controller = newControllerWithFeatureDisabled();
 
-        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+        PreferenceControllerTestUtil.assertAvailability(controller.getAvailabilityStatus(),
+                UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
@@ -73,7 +75,8 @@ public final class WorkPolicyInfoPreferenceControllerTest
         WorkPolicyInfoPreferenceController controller = newControllerWithFeatureEnabled();
         // Don't need to mock anything else
 
-        assertAvailability(controller.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+        PreferenceControllerTestUtil.assertAvailability(controller.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
     }
 
     @Test
@@ -82,7 +85,8 @@ public final class WorkPolicyInfoPreferenceControllerTest
         mockProfileOwner();
         // Don't need to mock anything else
 
-        assertAvailability(controller.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+        PreferenceControllerTestUtil.assertAvailability(controller.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
     }
 
     @Test
@@ -91,7 +95,8 @@ public final class WorkPolicyInfoPreferenceControllerTest
         mockProfileOwner();
         mockHasIntent();
 
-        assertAvailability(controller.getAvailabilityStatus(), AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(controller.getAvailabilityStatus(),
+                AVAILABLE);
     }
 
     @Test

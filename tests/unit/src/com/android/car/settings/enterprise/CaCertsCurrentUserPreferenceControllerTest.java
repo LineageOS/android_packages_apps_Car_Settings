@@ -30,6 +30,7 @@ import android.net.ConnectivityManager;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import com.google.common.collect.ImmutableList;
 
@@ -62,7 +63,8 @@ public final class CaCertsCurrentUserPreferenceControllerTest extends
 
         mCaCertsCurrentUserPreferenceController.updateState(mPreference);
 
-        assertAvailability(mCaCertsCurrentUserPreferenceController.getAvailabilityStatus(),
+        PreferenceControllerTestUtil.assertAvailability(
+                mCaCertsCurrentUserPreferenceController.getAvailabilityStatus(),
                 DISABLED_FOR_PROFILE);
         assertThat(mPreference.getSummary()).isEqualTo(
                 mRealContext.getResources().getQuantityString(
@@ -75,8 +77,8 @@ public final class CaCertsCurrentUserPreferenceControllerTest extends
 
         mCaCertsCurrentUserPreferenceController.updateState(mPreference);
 
-        assertAvailability(mCaCertsCurrentUserPreferenceController.getAvailabilityStatus(),
-                AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(
+                mCaCertsCurrentUserPreferenceController.getAvailabilityStatus(), AVAILABLE);
         assertThat(mPreference.getSummary()).isEqualTo(mRealContext.getResources()
                 .getQuantityString(R.plurals.enterprise_privacy_number_ca_certs, 2, 2));
     }

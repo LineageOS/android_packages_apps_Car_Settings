@@ -30,7 +30,6 @@ import com.android.car.ui.preference.CarUiPreference;
 /**
  * Controller that ends a managed user session.
  */
-// TODO(b/186905050, b/205185521): add unit test
 public class ProfileDetailsEndSessionPreferenceController
         extends ProfileDetailsBasePreferenceController<CarUiPreference> {
 
