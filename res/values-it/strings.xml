@@ -146,6 +146,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Gli altri dispositivi possono collegarsi a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Password hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sicurezza"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nessuno"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda AP"</string>
@@ -569,7 +573,7 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"Dati del profilo"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Totale"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Cancella spazio di archiviazione"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Cancella dati archiviati"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Svuota cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminare i dati dell\'app?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Tutti i dati dell\'app verranno eliminati definitivamente, inclusi tutti i file, le impostazioni, gli account, i database e così via."</string>
