@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ឧបករណ៍​ផ្សេងទៀត​អាចភ្ជាប់​ជាមួយ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ពាក្យសម្ងាត់​ហតស្ប៉ត"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"សុវត្ថិភាព"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ផ្ទាល់ខ្លួន"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"គ្មាន"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"កម្រិតបញ្ជូន AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ការអនុញ្ញាត​នេះ​អាចឱ្យ​កម្មវិធី​កែការកំណត់ប្រព័ន្ធ។"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"ការចូលប្រើ​ការជូនដំណឹង"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"អនុញ្ញាតឱ្យចូល​ប្រើការជូនដំណឹង​សម្រាប់ <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> នឹងអាច​អាន​ការជូនដំណឹង​ទាំងអស់ រួមទាំង​ព័ត៌មានផ្ទាល់ខ្លួន​ដូចជា ​ឈ្មោះទំនាក់ទំនង និងសារជាអក្សរ​ដែលអ្នក​ទទួលបាន​ជាដើម។ វា​ក៏នឹងអាច​ច្រានចោល​ការជូនដំណឹង ឬ​ចាប់ផ្តើម​ប៊ូតុង​សកម្មភាព​ដែលវាមាន​ផងដែរ។\n\nសកម្មភាពនេះក៏នឹង​អាចឱ្យ​កម្មវិធី​បើក ឬ​បិទ​មុខងារកុំរំខាន ​និងប្ដូរ​ការកំណត់​ដែលពាក់ព័ន្ធ​បានផងដែរ។"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ប្រសិនបើ​អ្នកបិទ​ការចូលប្រើ​ការជូនដំណឹង​សម្រាប់ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> នោះការចូលប្រើ​មុខងារកុំរំខាន​ក៏​ត្រូវបាន​បិទ​ផងដែរ។"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"បិទ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"បោះបង់"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ការចូលប្រើ SMS បង់ប្រាក់"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ឯកជនភាព"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ទិន្នន័យប្រព័ន្ធព័ត៌មាន និងកម្សាន្ត"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"គ្រប់គ្រង​សិទ្ធិចូលប្រើទីតាំង​របស់អ្នក​ពីកម្មវិធី"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"កាមេរ៉ា"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"គ្រប់គ្រងសិទ្ធិចូលប្រើកាមេរ៉ារបស់អ្នកពីកម្មវិធី"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"មីក្រូហ្វូន"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"គ្រប់គ្រង​សិទ្ធិចូលប្រើមីក្រូហ្វូន​ពីកម្មវិធី"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ទិន្នន័យប្រព័ន្ធព័ត៌មាន និងកម្សាន្ត"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"ប្រើ <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ជម្រើស"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ការកំណត់"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"កាមេរ៉ា"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ប្រើ​កាមេរ៉ា"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​កាមេរ៉ា​របស់អ្នក"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"គ្រប់គ្រង​ការអនុញ្ញាត​កាមេរ៉ា"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"គ្មាន​កម្មវិធី​ថ្មីៗ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"កម្មវិធី 0 មានសិទ្ធិចូលប្រើ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{កម្មវិធី # នៃ {total_count} មានសិទ្ធិចូលប្រើ}other{កម្មវិធី # នៃ {total_count} មានសិទ្ធិចូលប្រើ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"មើលទាំងអស់"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"កំពុងផ្ទុក…"</string>
 </resources>

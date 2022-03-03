@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ಇತರೆ ಸಾಧನಗಳು <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ಗೆ ಸಂಪರ್ಕವನ್ನು ಪಡೆದುಕೊಳ್ಳಬಹುದು"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ಹಾಟ್‌ಸ್ಪಾಟ್ ಪಾಸ್‌ವರ್ಡ್"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ಭದ್ರತೆ"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2- ವೈಯಕ್ತಿಕ"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ಯಾವುದೂ ಬೇಡ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ಬ್ಯಾಂಡ್"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ಈ ಅನುಮತಿಯು ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"ಅಧಿಸೂಚನೆ ಪ್ರವೇಶ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ಗಾಗಿ ಅಧಿಸೂಚನೆ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸುವುದೇ?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ಸಂಪರ್ಕ ಹೆಸರುಗಳು ಮತ್ತು ನೀವು ಸ್ವೀಕರಿಸುವ ಸಂದೇಶಗಳ ಪಠ್ಯದಂತಹ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಸೇರಿದಂತೆ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ಗೆ ಎಲ್ಲಾ ಅಧಿಸೂಚನೆಗಳನ್ನು ಓದಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಇದಕ್ಕೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ವಜಾ ಮಾಡಲು ಅಥವಾ ಅವುಗಳು ಹೊಂದಿರುವಂತಹ ಕ್ರಿಯೆ ಬಟನ್‌ಗಳನ್ನು ಟ್ರಿಗರ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.\n\nಇದು \"ಅಡಚಣೆ ಮಾಡಬೇಡಿ\" ಅನ್ನು ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡುವ ಹಾಗೂ ಸಂಬಂಧಿತ ಸೆಟ್ಟಿಂಗ್‍‍ಗಳನ್ನು ಬದಲಾಯಿಸುವ ಸಾಮರ್ಥ್ಯವನ್ನು ಸಹ ಈ ಆ್ಯಪ್‍ಗೆ ನೀಡುತ್ತದೆ."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ಗಾಗಿ ನೀವು ಅಧಿಸೂಚನೆ ಪ್ರವೇಶಿಸುವಿಕೆಯನ್ನು ಆಫ್ ಮಾಡಿದರೆ, \"ಅಡಚಣೆ ಮಾಡಬೇಡಿ\" ಪ್ರವೇಶಿಸುವಿಕೆ ಸಹ ಆಫ್ ಆಗಬಹುದು."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ಆಫ್ ಮಾಡಿ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ರದ್ದುಮಾಡಿ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ಪ್ರೀಮಿಯಂ SMS ಪ್ರವೇಶ"</string>

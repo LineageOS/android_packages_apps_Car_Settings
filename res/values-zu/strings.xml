@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Amanye amadivayisi angaxhuma ku-<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Iphasiwedi ye-Hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Ukuvikela"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"I-WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Lutho"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"I-AP Band"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Le mvume ivumela uhlelo lokusebenza ukushintsha izilungiselelo zesistimu."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Ukufinyelela isaziso"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vumela ukufinyelela kwesaziso kwe-<xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"I-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> izokwazi ukufunda zonke izibuyekezo, ezifaka ulwazi lomuntu siqu olufana namagama woxhumana nabo kanye nombhalo wemilayezo oyitholayo. Izophinda ikwazi ukucashisa izaziso noma izinkinobho zesenzo sokuqalisa ezisiqukethe.\n\nLokhu kuzophinda kunikeze uhlelo lokusebenza ikhono lokuvula noma lokuvala okuthi Ungaphazamisi kuphinde kushintshe izilungiselelo ezihambisanayo."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Uma uvala ukufinyelela kwezaziso kwe-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, Ukufinyelela kokuthi ungaphazamisi nakho kungavalwa."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Vala"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Khansela"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Ukufinyelela ku-Premium SMS"</string>

@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"इतर डिव्हाइस <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> शी कनेक्ट होऊ शकतात"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट पासवर्ड"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"सुरक्षितता"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 वैयक्तिक"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"काहीही नाही"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ही परवानगी ॲपला सिस्टम सेटिंग्ज सुधारित करण्‍याची अनुमती देते."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचना अ‍ॅक्सेस"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ला सूचना अ‍ॅक्सेस करण्याची अनुमती द्यायची का?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"संपर्क नावे आणि तुम्हाला येणारे एसएमएस यासारख्या वैयक्तिक माहितीच्या समावेशासह <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सर्व सूचना पाहू शकेल. ते त्यांच्यामधील सूचना डिसमिस करू शकेल अथवा त्यामध्ये असलेली अ‍ॅक्शन बटणे ट्रिगर करू शकेल. \n\nयामुळे ॲपला व्यत्यय आणू नका सुरू किंवा बंद करता येईल आणि संबंधित सेटिंग्ज बदलता येतील."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ॲपसाठी सूचना अ‍ॅक्सेस बंद केल्यास, व्यत्यय आणू नका चा अ‍ॅक्सेस देखील बंद केला जाऊ शकतो."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"बंद करा"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करा"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रीमियम SMS ॲक्सेस"</string>

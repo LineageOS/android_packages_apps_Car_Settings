@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Muud seadmed saavad kuumkohaga <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ühenduse luua"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Kuumkoha parool"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Turvalisus"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Puudub"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP sagedusriba"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"See luba võimaldab rakendusel muuta süsteemiseadeid."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Juurdepääs märguannetele"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Kas lubada teenuse <xliff:g id="SERVICE">%1$s</xliff:g> puhul märguannetele juurdepääs?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> saab lugeda kõiki märguandeid, sh isiklikke andmeid, nt kontaktide nimesid ja teile saadetud tekstsõnumeid. See saab ka märguannetest loobuda või neis olevaid toimingunuppe aktiveerida.\n\nSamuti võimaldab see rakendusel funktsiooni Mitte segada sisse või välja lülitada ja sellega seotud seadeid muuta."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Kui lülitate teenuse <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> puhul juurdepääsu märguannetele välja, võidakse välja lülitada ka juurdepääs funktsioonile Mitte segada."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Lülita välja"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Tühista"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Juurdepääs tasuliste SMS-ide saatmiseks"</string>

@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Inne urządzenia mogą łączyć się z: <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Hasło do hotspota"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Zabezpieczenia"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Brak"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Pasmo AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Te uprawnienia umożliwiają aplikacji modyfikowanie ustawień systemu."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Dostęp do powiadomień"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Zezwolić usłudze <xliff:g id="SERVICE">%1$s</xliff:g> na dostęp do powiadomień?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Aplikacja <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> będzie mogła czytać wszystkie powiadomienia, w tym informacje osobiste, takie jak nazwy kontaktów i treść otrzymywanych wiadomości. Będzie też mogła odrzucać powiadomienia lub używać zawartych w nich przycisków czynności.\n\nDodatkowo aplikacja będzie mogła włączać lub wyłączać opcję Nie przeszkadzać i zmieniać powiązane ustawienia."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jeśli wyłączysz dostęp do powiadomień dla aplikacji <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, możesz również wyłączyć opcję Nie przeszkadzać."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Wyłącz"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anuluj"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Dostęp do SMS-ów specjalnych"</string>

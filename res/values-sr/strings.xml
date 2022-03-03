@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Други уређаји могу да се повежу са хотспотом <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка хотспота"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Безбедност"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Нема"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Опсег AP-а"</string>
@@ -377,7 +381,7 @@
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Контролишу приступ апликација подацима"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"За Помоћник и друго"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"За систем и друга подешавања"</string>
-    <string name="special_access" msgid="5730278220917123811">"Посебан приступ апликацији"</string>
+    <string name="special_access" msgid="5730278220917123811">"Посебан приступ апликација"</string>
     <string name="show_system" msgid="4401355756969485287">"Прикажи системске"</string>
     <string name="hide_system" msgid="8845453295584638040">"Сакриј системске"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Сакриј системске апликације"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Ова дозвола омогућава апликацији да мења подешавања система."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Приступ обавештењима"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Желите ли да дозволите да <xliff:g id="SERVICE">%1$s</xliff:g> има приступ обавештењима?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ће моћи да чита сва обавештења, укључујући личне податке, попут имена контаката и текста порука које примате. Моћи ће и да одбацује обавештења или да користи дугмад за радње која садрже. \n\nОво ће апликацији омогућити и да укључује или искључује режим Не узнемиравај и мења сродна подешавања."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако искључите приступ обавештењима за <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, можда ћете искључити и приступ режиму Не узнемиравај."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Искључи"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Откажи"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Приступ премијум SMS-овима"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Приватност"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Подаци система за инфо-забаву"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Контролишите приступ апликација локацији"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Контролишите приступ апликација камерама"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Микрофон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Контролише приступ апликација микрофону"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Подаци система за инфо-забаву"</string>
@@ -840,26 +844,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Користи апликацију <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Опције"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Подешавања"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"Камера"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Коришћење камере"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Дозволите свим апликацијама да приступају камери"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Управљајте дозволама за камеру"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Недавно приступано"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Нема недавних апликација"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 апликација има приступ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# од укупно {total_count} апликације која има приступ}one{# од укупно {total_count} апликације која има приступ}few{# од укупно {total_count} апликације које имају приступ}other{# од укупно {total_count} апликација које имају приступ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Недавно приступано"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Прикажи све"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Учитава се…"</string>
 </resources>

@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"อุปกรณ์อื่นๆ เชื่อมต่อได้กับ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"รหัสผ่านฮอตสปอต"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ความปลอดภัย"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ส่วนบุคคล"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ไม่มี"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"ย่านความถี่ AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"สิทธิ์นี้อนุญาตให้แอปแก้ไขการตั้งค่าระบบได้"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"การเข้าถึงการแจ้งเตือน"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"อนุญาตให้ <xliff:g id="SERVICE">%1$s</xliff:g> เข้าถึงการแจ้งเตือนไหม"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> จะอ่านการแจ้งเตือนทั้งหมดได้ รวมถึงข้อมูลส่วนบุคคล เช่น ชื่อผู้ติดต่อและข้อความที่คุณได้รับ นอกจากนี้ยังจะปิดการแจ้งเตือนหรือทริกเกอร์ปุ่มการทำงานในการแจ้งเตือนได้ด้วย\n\nการเปิดใช้ยังทำให้แอปนี้เปิดหรือปิดฟีเจอร์ห้ามรบกวนและเปลี่ยนแปลงการตั้งค่าที่เกี่ยวข้องได้"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"หากคุณปิดการเข้าถึงการแจ้งเตือนสำหรับ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ระบบอาจปิดการเข้าถึงฟีเจอร์ห้ามรบกวนไปด้วย"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ปิด"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ยกเลิก"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"การเข้าถึง SMS แบบพรีเมียม"</string>
