@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"වෙනත් උපාංගවලට <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> වෙත සබැඳිය හැකිය"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"හොට්ස්පොට් මුරපදය"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ආරක්ෂාව"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-පුද්ගලික"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"කිසිවක් නැත"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP කලාපය"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"මෙම අවසරය යෙදුමකට පද්ධති සැකසීම් විකරණයට ඉඩ දෙයි."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"දැනුම්දීම් ප්‍රවේශය"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> සඳහා දැනුම්දීම් ප්‍රවේශයට ඉඩ දෙන්න ද?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> හට සම්බන්ධතා නම් සහ ඔබට ලැබෙන පණිවිඩවල පෙළ වැනි පුද්ගලික තොරතුරු ඇතුළුව, සියලු දැනුම්දීම් කියවීමට හැකි වනු ඇත. එයට දැනුම්දීම අස් කිරීමට හෝ ඒවායේ අඩංගු ක්‍රියා බොත්තම් ප්‍රේරණය කිරීමටත් හැකි වනු ඇත.\n\nමෙය යෙදුමට බාධා නොකරන්න ක්‍රියාත්මක හෝ ක්‍රියාවිරහිත කිරීමට සහ අදාළ සැකසීම් වෙනස් කිරීමටත් හැකියාව ලබා දෙනු ඇත."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ඔබ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> සඳහා දැනුම්දීම් ප්‍රවේශය ක්‍රියාවිරහිත කළහොත්, බාධා නොකරන්න ප්‍රවේශයත් ක්‍රියාවිරහිත කරනු ඇත."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ක්‍රියාවිරහිත කරන්න"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"අවලංගු කරන්න"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"පාරිතෝෂික කෙටිපණිවුඩ ප්‍රවේශය"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"රහස්‍යතාව"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"විනෝදාස්වාද තොරතුරු පද්ධති දත්ත"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ඔබගේ ස්ථානයට යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"කැමරාව"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ඔබ‍ගේ කැමරා වෙත යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"මයික්‍රෆෝනය"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"මයික්‍රෆෝනය වෙත යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"විනෝද තොරතුරු පද්ධති දත්ත"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"උපාංග පරිපාලක මෑත මුරපදයක් භාවිතා කිරීමට අවසර නොදේ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"මුරපදය සුරැකීමේ දෝෂයකි"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ඔබගේ IT පරිපාලක විසින් සුලබ මුරපද අවහිර කරනු ලැබේ. වෙනත් මුරපදයක් උත්සාහ කරන්න."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"අඩු තරමින් එක් අකුරක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"අඩු තරමින් එක් ඉලක්කමක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"අඩු තරමින් එක් සංකේතයක් තිබිය යුතුය"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් සිම්පල් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}one{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}other{අඩු තරමින් කැපිටල් අකුරු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}one{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}other{අඩු තරමින් සංඛ්‍යාමය ඉලක්කම් #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}one{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}other{අඩු තරමින් විශේෂ සංකේත #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් අකුරු නොවන අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් සංඛ්‍යාමය නොවන අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}one{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}other{අඩු තරමින් අනුලකුණු #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}one{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}other{අඩු තරමින් ඉලක්කම් #ක් තිබිය යුතුය}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{අනුලකුණු #කට වඩා අඩු විය යුතුය}one{අනුලකුණු #කට වඩා අඩු විය යුතුය}other{අනුලකුණු #කට වඩා අඩු විය යුතුය}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ඉලක්කම් #කට වඩා අඩු විය යුතුය}one{ඉලක්කම් #කට වඩා අඩු විය යුතුය}other{ඉලක්කම් #කට වඩා අඩු විය යුතුය}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ආරෝහණ, අවරෝහණ හෝ පුනරාවර්ත අනුක්‍රමයේ ඉලක්කම්වලට ඉඩ නොදේ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"තිර අගුළු විකල්ප"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : දින <xliff:g id="NUM_DAYS">%3$s</xliff:g>කට පෙර"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"කළු පසුබිමෙහි කහ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"නිල් පසුබිමෙහි කහ"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"තිර කියවනය"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"ක්‍රියාවිරහිතයි"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"තිරය මත අයිතම කියවන්න"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack භාවිත කරන්න"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"විකල්ප"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"සැකසීම්"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack ගැන"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"වාහනය චලනය වන අතරතුර TalkBack ලබා ගත නොහැකිය.\n\nTalkBack ක්‍රියාත්මක විට, එය ඔබට තිරය දෙස නොබලා ඔබගේ උපාංගය භාවිත කළ හැකි වන පරිදි කථන ප්‍රතිපෝෂණ සපයයි. TalkBack තිරය බැලීමට දුෂ්කර අවස්ථා සහ පුද්ගලයන් සඳහා අදහස් කෙරේ."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"ක්‍රියාවිරහිතයි"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"තිරය මත අයිතම කියවන්න"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> භාවිත කරන්න"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"විකල්ප"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"සැකසීම්"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"කැමරාව"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"කැමරාව භාවිත කරන්න"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ඔබගේ කැමරාවට ප්‍රවේශ වීමට සියලු යෙදුම්වලට ඉඩ දෙන්න"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"කැමරා අවසර කළමනාකරණය කරන්න"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"මෑතකදී පිවිසි"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"මෑත යෙදුම් නැත"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"යෙදුම් 0කට ප්‍රවේශය ඇත"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}one{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}other{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"මෑතකදී පිවිසි"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"සියල්ල බලන්න"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"පූරණය වේ…"</string>
 </resources>

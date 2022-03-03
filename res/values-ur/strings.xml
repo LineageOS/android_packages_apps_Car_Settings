@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"دیگر آلات <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> سے منسلک ہو سکتے ہیں"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ہاٹ اسپاٹ کا پاس ورڈ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"سیکیورٹی"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ذاتی"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"کوئی نہیں"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP بینڈ"</string>
@@ -200,7 +204,7 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"ایک ایپ آپ کے ہیڈ یونٹ کو <xliff:g id="TIMEOUT">%1$d</xliff:g> سیکنڈ کیلئے دیگر بلوٹوتھ آلات پر مرئی بنانا چاہتی ہے۔"</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> بلوٹوتھ آن کرنا اور <xliff:g id="TIMEOUT">%2$d</xliff:g> سیکنڈ کیلئے آپ کے ہیڈ یونٹ کو دیگر آلات پر مرئی بنانا چاہتی ہے۔"</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"ایک ایپ بلوٹوتھ آن کرنا اور <xliff:g id="TIMEOUT">%1$d</xliff:g> سیکنڈ کیلئے آپ کے ہیڈ یونٹ کو دیگر آلات پر مرئی بنانا چاہتی ہے۔"</string>
-    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"‎%1$s کے بطور دوسرے آلات کے لیے مرئی"</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"‫%1$s کے بطور دوسرے آلات کے لیے مرئی"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"میرے آلات"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"پہلے سے منسلک کردہ"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s کو منسلک کر دیا گیا"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"اس اجازت سے ایپ کو سسٹم کی ترتیبات میں ترمیم کرنے میں سہولت ہوتی ہے۔"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"اطلاع تک رسائی"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"‫<xliff:g id="SERVICE">%1$s</xliff:g> کیلئے اطلاع تک رسائی کی اجازت دیں؟"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> تمام اطلاعات  بشمول ذاتی معلومات جیسے رابطہ کے نام اور آپ کو موصول ہونے والے پیغامات کا متن پڑھنے کا اہل ہوگا۔ یہ ان میں شامل اطلاعات یا ٹرگر کارروائیوں کے بٹنز کو برخاست کرنے کا بھی اہل ہوگا۔\n\nاس سے ایپ کو ڈسٹرب نہ کریں آن یا آف کرنے اور متعلقہ ترتیبات تبدیل کرنے کی اہلیت بھی ملے گی۔"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"اگر آپ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> کیلئے اطلاع کی رسائی آف کرتے ہیں تو ڈسٹرب نہ کریں کی رسائی بھی آف ہو سکتی ہے۔"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"آف کریں"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"منسوخ کریں"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"پریمیم SMS رسائی"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"رازداری"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"معلوماتی انٹرٹینمنٹ سسٹم کا ڈیٹا"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"اپنے مقام تک ایپ کی رسائی کو کنٹرول کریں"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"کیمرا"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"اپنے کیمروں تک ایپ کی رسائی کو کنٹرول کریں"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"مائیکروفون"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"مائیکروفون تک ایپ کی رسائی کو کنٹرول کریں"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"معلوماتی انٹرٹینمنٹ سسٹم ڈیٹا"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"آلے کا منتظم ایک حالیہ پاس ورڈ کا استعمال کرنے کی اجازت نہیں دیتا ہے"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"پاس ورڈ محفوظ کرنے میں خرابی"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"آپ کے IT منتظم نے عمومی پاس ورڈز کو مسدود کر دیا ہے۔ کوئی دوسرا پاس ورڈ آزمائیں۔"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"کم از کم ایک حرف پر مشتمل ہونا چاہیے"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"کم از کم ایک ہندسہ پر مشتمل ہونا چاہیے"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"کم از کم ایک علامت پر مشتمل ہونا چاہیے"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{کم از کم # حرف پر مشتمل ہونا چاہیے}other{کم از کم # حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{کم از کم # چھوٹے حرف پر مشتمل ہونا چاہیے}other{کم از کم # چھوٹے حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{کم از کم # بڑے حرف پر مشتمل ہونا چاہیے}other{کم از کم # بڑے حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{کم از کم # عددی ہندسے پر مشتمل ہونا چاہیے}other{کم از کم # عددی ہندسے پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{کم از کم # خصوصی علامت پر مشتمل ہونا چاہیے}other{کم از کم # خصوصی علامات پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{کم از کم # غیر حرفی کیریکٹر پر مشتمل ہونا چاہیے}other{کم از کم # غیر حرفی کیریکٹرز پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{کم از کم # غیر عددی حرف پر مشتمل ہونا چاہیے}other{کم از کم # غیر عددی حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{کم از کم # حرف پر مشتمل ہونا چاہیے}other{کم از کم # حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{کم از کم # ہندسے پر مشتمل ہونا چاہیے}other{کم از کم # ہندسے پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# حرف سے کم ہونا چاہیے}other{# حروف سے کم ہونے چاہئیں}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# ہندسے سے کم ہونا چاہیے}other{# ہندسے سے کم ہونے چاہئیں}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ہندسوں کی صعودی، نزولی یا مکرر ترتیب کی اجازت نہیں ہے"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"اسکرین لاک کے اختیارات"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> دن پہلے"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"سیاہ پر پیلا"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"نیلے پر پیلا"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"اسکرین قاری"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"آف"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"اسکرین پر موجود آئٹمز کو بولیں"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack کا ستعمال کریں"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"اختیارات"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"ترتیبات"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack کے بارے میں"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"گاڑی کے موشَن میں ہونے کے دوران TalkBack دستیاب نہیں ہوتا ہے۔\n\nTalkBack آن ہونے پر، یہ صوتی تاثرات فراہم کرتا ہے تاکہ آپ اسکرین پر دیکھے بغیر اپنا آلہ استعمال کر سکیں۔ TalkBack ایسے لوگوں کے یا ایسی صورتحال میں استعمال کرنے کیلئے تیار کیا گیا ہے جن میں اسکرین پڑھنے میں دشواری پیش آتی ہے۔"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"آف ہے"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"اسکرین پر موجود آئٹمز کو بولیں"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> استعمال کریں"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"اختیارات"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"ترتیبات"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"کیمرا"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"کیمرا استعمال کریں"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"سبھی ایپس کو اپنے کیمرے تک رسائی کی اجازت دیں"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"کیمرے کی اجازتوں کا نظم کریں"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"حال ہی میں رسائی حاصل کردہ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"کوئی حالیہ ایپ نہیں ہے"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ایپس کو رسائی حاصل ہے"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} میں سے # ایپس کو رسائی حاصل ہے}other{{total_count} میں سے # ایپس کو رسائی حاصل ہے}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"حال ہی میں رسائی حاصل کردہ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"سبھی دیکھیں"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"لوڈ ہو رہی ہیں…"</string>
 </resources>

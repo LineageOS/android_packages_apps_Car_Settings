@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Gli altri dispositivi possono collegarsi a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Password hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sicurezza"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nessuno"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda AP"</string>
@@ -300,7 +304,7 @@
     <string name="default_applications" msgid="1558183275638697087">"App predefinite"</string>
     <string name="app_permissions" msgid="32799922508313948">"Autorizzazioni app"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Controlla l\'accesso delle app ai tuoi dati"</string>
-    <string name="applications_settings" msgid="794261395191035632">"Informazioni sull\'app"</string>
+    <string name="applications_settings" msgid="794261395191035632">"Informazioni app"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forza interruzione"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vuoi forzare l\'interruzione?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Se forzi l\'interruzione di un\'app, questa potrebbe funzionare in modo anomalo."</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Questa autorizzazione consente a un\'app di modificare le impostazioni di sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accesso alle notifiche"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Consentire l\'accesso alle notifiche a <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> potrà leggere tutte le notifiche, incluse le informazioni personali quali i nomi dei contatti e il testo dei messaggi ricevuti. Potrà inoltre ignorare le notifiche o attivare i pulsanti di azione inclusi. \n\nL\'app potrà anche attivare o disattivare la funzione Non disturbare e modificare le relative impostazioni."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se disattivi l\'accesso alle notifiche per <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, potrebbe essere disattivato anche l\'accesso alla funzione Non disturbare."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Disattiva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annulla"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accesso a SMS premium"</string>
@@ -569,7 +575,7 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"Dati del profilo"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Totale"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Cancella spazio di archiviazione"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Cancella dati archiviati"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Svuota cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminare i dati dell\'app?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Tutti i dati dell\'app verranno eliminati definitivamente, inclusi tutti i file, le impostazioni, gli account, i database e così via."</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacy"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Dati del sistema di infotainment"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Controlla l\'accesso delle app alla tua posizione"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Fotocamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Controlla l\'accesso delle app alle tue fotocamere"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Microfono"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Controlla l\'accesso delle app al microfono"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Dati sistema di infotainment"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'amministratore del dispositivo non consente l\'utilizzo di una password recente"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Errore di salvataggio della password"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Le password comuni sono state bloccate dall\'amministratore IT. Prova a usare un\'altra password."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Deve contenere almeno una lettera"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Deve contenere almeno una cifra"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Deve contenere almeno un simbolo"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Deve contenere almeno # lettera}one{Deve contenere almeno # lettera}other{Deve contenere almeno # lettere}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Deve contenere almeno # lettera minuscola}one{Deve contenere almeno # lettera minuscola}other{Deve contenere almeno # lettere minuscole}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Deve contenere almeno # lettera maiuscola}one{Deve contenere almeno # lettera maiuscola}other{Deve contenere almeno # lettere maiuscole}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Deve contenere almeno # cifra numerica}one{Deve contenere almeno # cifra numerica}other{Deve contenere almeno # cifre numeriche}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Deve contenere almeno # simbolo speciale}one{Deve contenere almeno # simbolo speciale}other{Deve contenere almeno # simboli speciali}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Deve contenere almeno # carattere non costituito da una lettera}one{Deve contenere almeno # carattere non costituito da una lettera}other{Deve contenere almeno # caratteri non costituiti da una lettera}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Deve contenere almeno # carattere non numerico}one{Deve contenere almeno # carattere non numerico}other{Deve contenere almeno # caratteri non numerici}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Deve contenere almeno # carattere}one{Deve contenere almeno # carattere}other{Deve contenere almeno # caratteri}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Deve contenere almeno # cifra}one{Deve contenere almeno # cifra}other{Deve contenere almeno # cifre}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Deve contenere meno di # carattere}one{Deve contenere meno di # carattere}other{Deve contenere meno di # caratteri}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Deve contenere meno di # cifra}one{Deve contenere meno di # cifra}other{Deve contenere meno di # cifre}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Non sono consentite sequenze di cifre in ordine crescente o decrescente oppure ripetute"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opzioni di blocco schermo"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> giorni fa"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Giallo su nero"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Giallo su blu"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Screen reader"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Off"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Leggi gli elementi sullo schermo"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Usa TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Opzioni"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Impostazioni"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Informazioni su TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack non è disponibile mentre il veicolo è in movimento.\n\nQuando la funzionalità TalkBack è attiva, fornisce una funzione di lettura vocale per consentirti di usare il dispositivo senza dover guardare lo schermo. La funzionalità TalkBack è pensata per situazioni in cui è difficile vedere lo schermo o per persone che hanno difficoltà a vederlo."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Off"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Leggi gli elementi sullo schermo"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Utilizza <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opzioni"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Impostazioni"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Fotocamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Utilizza fotocamera"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Consenti a tutte le app di accedere alla fotocamera"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Gestisci le autorizzazioni di accesso alla fotocamera"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Usi recenti"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nessuna app recente"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Nessuna app ha accesso"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Ha accesso # app su {total_count}}one{Ha accesso # app su {total_count}}other{Hanno accesso # app su {total_count}}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Usi recenti"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Mostra tutto"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Caricamento in corso…"</string>
 </resources>

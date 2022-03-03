@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"အခြားစက်ပစ္စည်းများက <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> နှင့် ချိတ်ဆက်နိုင်သည်"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ဟော့စပေါ့စကားဝှက်"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"လုံခြုံရေး"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ကိုယ်ရေး"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"မရှိ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP လှိုင်းခွင်"</string>
@@ -386,6 +390,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ဤခွင့်ပြုချက်က အက်ပ်ကို စနစ်ဆက်တင်များ ပြင်ခွင့်ပေးသည်။"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"အကြောင်းကြားချက် ရယူခြင်း"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> အတွက် အကြောင်းကြားချက်ကို အသုံးပြုခွင့်ပေးမလား။"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> သည် အဆက်အသွယ် အမည်များနှင့် သင်လက်ခံရရှိသည့် မက်ဆေ့ဂျ်များကဲ့သို့ ကိုယ်ရေးကိုယ်တာ အချက်အလက်များ အပါအဝင် အကြောင်းကြားချက်များ အားလုံးကို ဖတ်နိုင်ပါလိမ့်မည်။ ၎င်းသည် အကြောင်းကြားချက်များကို ပယ်ခြင်း (သို့) ထိုအကြောင်းကြားချက်တွင် ပါဝင်သည့် လုပ်ဆောင်ချက်ခလုတ်များနှိပ်ခြင်းတို့ကို ပြုလုပ်နိုင်ပါသည်။ \n\n၎င်းသည် အက်ပ်ကို \'မနှောင့်ယှက်ရ\' အား အဖွင့်အပိတ် လုပ်စေနိုင်ပြီး အခြားဆက်စပ်ဆက်တင်များကိုလည်း ပြောင်းလဲနိုင်စွမ်းရှိစေပါသည်။"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> အတွက် အကြောင်းကြားချက် အသုံးပြုခွင့်ကို ပိတ်လိုက်လျှင် \'မနှောင့်ယှက်ရ\' ကို အသုံးပြုခွင့်လည်း ပိတ်ပါမည်။"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ပိတ်ရန်"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"မလုပ်တော့"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ပရီမီယံ SMS သုံးခွင့်ရှိခြင်း"</string>
@@ -611,6 +617,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ကန့်သတ်ဆက်တင်"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်ဒေတာ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"အက်ပ်၏ သင့်တည်နေရာသုံးခွင့်ကို ထိန်းချုပ်မည်"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"ကင်မရာ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"အက်ပ်၏ ကင်မရာများအသုံးပြုခွင့်ကို ထိန်းချုပ်နိုင်သည်"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"မိုက်ခရိုဖုန်း"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"အက်ပ်၏ မိုက်ခရိုဖုန်း အသုံးပြုခွင့်ကို ထိန်းချုပ်မည်"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"သတင်းနှင့်ဖျော်ဖြေရေးစနစ် ဒေတာ"</string>
@@ -680,34 +688,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"စက်ပစ္စည်းစီမံခန့်ခွဲသူသည် မကြာသေးမီက အသုံးပြုခဲ့သည့် စကားဝှက်ကို သုံးခွင့်မပြုပါ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"စကားဝှက်ကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"အသုံးပြုလေ့ရှိသော စကားဝှက်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား စကားဝှက်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"အနည်းဆုံး စာလုံးတစ်လုံး ပါရမည်"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"အနည်းဆုံး ဂဏန်းတစ်လုံး ပါရမည်"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"အနည်းဆုံး သင်္ကေတတစ်ခု ပါရမည်"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{အနည်းဆုံး စာလုံး # လုံး ပါရမည်}other{အနည်းဆုံး စာလုံး # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{အနည်းဆုံး စာလုံးအသေး # လုံး ပါရမည်}other{အနည်းဆုံး စာလုံးအသေး # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{အနည်းဆုံး စာလုံးအကြီး # လုံး ပါရမည်}other{အနည်းဆုံး စာလုံးအကြီး # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{အနည်းဆုံး ဂဏန်း # လုံး ပါရမည်}other{အနည်းဆုံး ဂဏန်း # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{အနည်းဆုံး အထူးသင်္ကေတ # ခု ပါရမည်}other{အနည်းဆုံး အထူးသင်္ကေတ # ခု ပါရမည်}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{စာလုံးမဟုတ်သည့် အက္ခရာ အနည်းဆုံး # လုံး ပါရမည်}other{စာလုံးမဟုတ်သည့် အက္ခရာ အနည်းဆုံး # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ဂဏန်းမဟုတ်သည့် အက္ခရာ အနည်းဆုံး # လုံး ပါရမည်}other{ဂဏန်းမဟုတ်သည့် အက္ခရာ အနည်းဆုံး # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{အနည်းဆုံး အက္ခရာ # လုံး ပါရမည်}other{အနည်းဆုံး အက္ခရာ # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{အနည်းဆုံး ဂဏန်း # လုံး ပါရမည်}other{အနည်းဆုံး ဂဏန်း # လုံး ပါရမည်}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{အက္ခရာ # လုံးထက် နည်းရမည်}other{အက္ခရာ # လုံးထက် နည်းရမည်}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ဂဏန်း # လုံးထက် နည်းရမည်}other{ဂဏန်း # လုံးထက် နည်းရမည်}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ငယ်စဉ်ကြီးလိုက်၊ ကြီးစဉ်ငယ်လိုက် သို့မဟုတ် ထပ်နေသည့် နံပါတ်စဉ်များကို ခွင့်မပြုပါ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"မျက်နှာပြင်လော့ခ်ချခြင်း ရွေးချယ်စရာများ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> - လွန်ခဲ့သော <xliff:g id="NUM_DAYS">%3$s</xliff:g> ရက်"</string>
@@ -840,12 +834,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"အမည်းပေါ်အဝါ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"အပြာပေါ်အဝါ"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"ဖန်သားပြင်ဖတ် အက်ပ်"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"ပိတ်ထားသည်"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"ဖန်သားပြင်ပေါ်ရှိ အရာများကိုဖတ်ပါသည်"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack အသုံးပြုခြင်း"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"ရွေးစရာများ"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"ဆက်တင်များ"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack အကြောင်း"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"ယာဉ်သွားနေစဉ် Talkback ကိုမရနိုင်ပါ။\n\nTalkback ကိုဖွင့်ထားပါက စကားပြော တုံ့ပြန်ချက်ပေးသောကြောင့် ဖန်သားပြင်ကို ကြည့်ရန်မလိုအပ်ဘဲ စက်ကိုအသုံးပြုနိုင်သည်။ TalkBack ကိုဖန်သားပြင်ကြည့်ရန် အခက်အခဲရှိသော အခြေအနေ (သို့) လူများအတွက် ရည်ရွယ်ထားသည်။"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"ပိတ်"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"ဖန်သားပြင်ပေါ်ရှိစာများကို ဖတ်သည်"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> သုံးခြင်း"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"ရွေးစရာများ"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"ဆက်တင်များ"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"ကင်မရာ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ကင်မရာသုံးခြင်း"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"အက်ပ်အားလုံးကို ကင်မရာသုံးခွင့်ပေးနိုင်သည်"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"ကင်မရာ ခွင့်ပြုချက်များကို စီမံခြင်း"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"လတ်တလော သုံးထားသည်များ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"လတ်တလောအက်ပ်များ မရှိပါ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"အက်ပ် 0 ခုတွင် သုံးခွင့်ရှိသည်"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{အက်ပ် {total_count} ခုအနက် # ခုတွင် သုံးခွင့်ရှိသည်}other{အက်ပ် {total_count} ခုအနက် # ခုတွင် သုံးခွင့်ရှိသည်}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"လတ်တလော သုံးထားသည်များ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"အားလုံးကြည့်ခြင်း"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ဖွင့်နေသည်…"</string>
 </resources>

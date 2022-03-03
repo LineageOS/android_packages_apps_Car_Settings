@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"다른 기기에서 <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>에 연결할 수 있습니다."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"핫스팟 비밀번호"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"보안"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-개인"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"없음"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 대역"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"이 권한은 앱이 시스템 설정을 수정하도록 허용합니다."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"알림 액세스"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>의 알림 액세스를 허용하시겠습니까?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>에서 연락처 이름과 수신 메시지 텍스트 등 개인정보를 포함한 모든 알림을 읽을 수 있게 됩니다. 또한 알림을 삭제하거나 포함된 작업 버튼을 실행하며 \n\n앱에서 방해 금지 모드를 사용 또는 사용 중지하고 관련 설정을 변경할 수도 있습니다."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>에서 알림 액세스를 사용 중지하면 방해 금지 모드 액세스도 사용 중지됩니다."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"끄기"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"취소"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"프리미엄 SMS 액세스"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"개인정보 보호"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"인포테인먼트 시스템 데이터"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"위치에 대한 앱 액세스 제어"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"카메라"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"카메라에 대한 앱 액세스 권한 관리"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"마이크"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"앱의 마이크 액세스 권한 제어"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"인포테인먼트 시스템 데이터"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"기기 관리자가 최근 비밀번호 사용을 허용하지 않습니다."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"비밀번호 저장 중 오류 발생"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"IT 관리자가 일반적으로 사용되는 비밀번호를 차단했습니다. 다른 비밀번호로 시도해 보세요."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"문자를 1개 이상 포함해야 합니다."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"숫자를 1개 이상 포함해야 합니다."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"기호를 1개 이상 포함해야 합니다."</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{문자를 #개 이상 포함해야 합니다.}other{문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{소문자를 #개 이상 포함해야 합니다.}other{소문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{대문자를 #개 이상 포함해야 합니다.}other{대문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{숫자를 #개 이상 포함해야 합니다.}other{숫자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{특수 기호를 #개 이상 포함해야 합니다.}other{특수 기호를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{글자가 아닌 문자를 #개 이상 포함해야 합니다.}other{글자가 아닌 문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{숫자가 아닌 문자를 #개 이상 포함해야 합니다.}other{숫자가 아닌 문자를 #개 이상 포함해야 합니다.}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{#자 이상이어야 합니다.}other{#자 이상이어야 합니다.}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{#자리 이상이어야 합니다.}other{#자리 이상이어야 합니다.}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{#자 미만이어야 합니다.}other{#자 미만이어야 합니다.}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{#자리 미만이어야 합니다.}other{#자리 미만이어야 합니다.}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"연속으로 올라가거나 내려가는 숫자 또는 반복되는 숫자의 배열은 허용되지 않습니다."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"화면 잠금 옵션"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g>일 전"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"검은색 바탕에 노란색"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"파란색 바탕에 노란색"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"스크린 리더"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"음성 안내 지원"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"꺼짐"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"화면의 항목 읽어주기"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"음성 안내 지원 사용"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"옵션"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"설정"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"음성 안내 지원 정보"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"차량이 움직이는 동안에는 음성 안내 지원을 사용할 수 없습니다.\n\n음성 안내 지원이 켜져 있으면 화면을 보지 않고 기기를 사용할 수 있도록 음성 피드백이 제공됩니다. 음성 안내 지원은 화면을 보기 어려운 상황 또는 사용자를 위한 기능입니다."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"꺼짐"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"화면의 항목 읽어주기"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> 사용"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"옵션"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"설정"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"카메라"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"카메라 사용"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"모든 앱이 카메라에 액세스하도록 허용"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"카메라 권한 관리"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"최근 액세스함"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"최근에 사용한 앱 없음"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"앱 0개에 액세스 권한이 있음"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{앱 #/{total_count}개에 액세스 권한이 있음}other{앱 #/{total_count}개에 액세스 권한이 있음}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"최근 액세스함"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"모두 보기"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"로드 중…"</string>
 </resources>

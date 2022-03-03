@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ሌሎች መሣሪያዎች ከ<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ጋር መገናኘት ይችላሉ"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"የመገናኛ ነጥብ የይለፍ ቃል"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ደኅንነት"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-የግል"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ምንም"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"የኤፒ ባንድ"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ይህ ፈቃድ መተግበሪያው የስርዓት ቅንብሮችን ለመቀየር ያስችለዋል።"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"የማሳወቂያ መዳረሻ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"ለ<xliff:g id="SERVICE">%1$s</xliff:g> የማሳወቂያ መዳረሻ ይፈቀድለት?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> እንደ የእውቂያ ስሞች እና የሚቀበሏቸው የመልዕክቶች ጽሑፍም ያሉ የግል መረጃንም ጨምሮ ሁሉንም ማሳወቂያዎች ማንበብ ይችላል። እንዲሁም ማሳወቂያዎችን ማሰናበት ወይም ሊይዟቸው የሚችሏቸው የእርምጃ አዝራሮችን ሊቀሰቅሱ ይችላሉ።\n\nይሄ እንዲሁም መተግበሪያው «አትረብሽ»ን የማብራት ወይም የማጥፋት እና ተዛማጅ ቅንብሮችን የመቀየር ይችሎታ ይሰጠዋል።"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"የ<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ማሳወቂያ መዳረሻን ካጠፉ የአትረብሽ መዳረሻ እንዲሁም ሊጠፋ ይችላል።"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"አጥፋ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ተወው"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"የፕሪሚየም ኤስኤምኤስ መዳረሻ"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ግላዊነት"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"የኢንፎቴይንመንት ሥርዓት ውሂብ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"የአካባቢዎ የመተግበሪያ መዳረሻን ይቆጣጠሩ"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"ካሜራ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"መተግበሪያ ወደ ካሜራዎችዎን ያለውን መዳረሻ ይቆጣጠሩ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ማይክሮፎን"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"መተግበሪያ ያለው የማይክሮፎን መዳረሻ ይቆጣጠሩ"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"የኢንፎቴይንመንት ሥርዓት ውሂብ"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"የመሣሪያ አስተዳዳሪው የቅርብ ጊዜ የይለፍ ቃልን መጠቀም አይፈቅድም"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"የይለፍ ቃልን ማስቀመጥ ላይ ስህተት"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"የተለመዱ የይለፍ ቃላት በአይቲ አስተዳዳሪዎ የታገዱ ናቸው። የተለየ የይለፍ ቃል ይሞክሩ።"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ቢያንስ አንድ ፊደል መያዝ አለበት"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ቢያንስ አንድ አሃዝ መያዝ አለበት"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ቢያንስ አንድ ምልክት መያዝ አለበት"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ቢያንስ # ፊደል መያዝ አለበት}one{ቢያንስ # ፊደላትን መያዝ አለበት}other{ቢያንስ # ፊደላትን መያዝ አለበት}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ቢያንስ # ንዑስ ሆሄ መያዝ አለበት}one{ቢያንስ # ንዑስ ሆሄያት መያዝ አለበት}other{ቢያንስ # ንዑስ ሆሄያት መያዝ አለበት}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ቢያንስ # ዓቢይ ሆሄ መያዝ አለበት}one{ቢያንስ # ዓቢይ ሆሄያት መያዝ አለበት}other{ቢያንስ # ዓቢይ ሆሄያት መያዝ አለበት}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ቢያንስ # ቁጥራዊ አሃዝ መያዝ አለበት}one{ቢያንስ # ቁጥራዊ አሃዞች መያዝ አለበት}other{ቢያንስ # ቁጥራዊ አሃዞች መያዝ አለበት}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ቢያንስ # ልዩ ምልክት መያዝ አለበት}one{ቢያንስ # ልዩ ምልክቶች መያዝ አለበት}other{ቢያንስ # ልዩ ምልክቶች መያዝ አለበት}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{ቢያንስ # ፊደል ያልሆነ ቁምፊ መያዝ አለበት}one{ቢያንስ # ፊደል ያልሆኑ ቁምፊዎችን መያዝ አለበት}other{ቢያንስ # ፊደል ያልሆኑ ቁምፊዎችን መያዝ አለበት}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ቢያንስ # ቁጥር ያልሆነ ቁምፊ ሊኖረው ይገባል}one{ቢያንስ # ቁጥር ያልሆኑ ቁምፊዎች ሊኖረው ይገባል}other{ቢያንስ # ቁጥር ያልሆኑ ቁምፊዎች ሊኖረው ይገባል}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ቢያንስ # ቁምፊ መያዝ አለበት}one{ቢያንስ # ቁምፊዎች መያዝ አለበት}other{ቢያንስ # ቁምፊዎች መያዝ አለበት}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ቢያንስ # አሃዝ መያዝ አለበት}one{ቢያንስ # አሃዞች መያዝ አለበት}other{ቢያንስ # አሃዞች መያዝ አለበት}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{ከ# ቁምፊ ያነሰ መሆን አለበት}one{ከ# ቁምፊዎች ያነሰ መሆን አለበት}other{ከ# ቁምፊዎች ያነሰ መሆን አለበት}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ከ# አሃዝ ያነሰ መሆን አለበት}one{ከ# አሃዞች ያነሰ መሆን አለበት}other{ከ# አሃዞች ያነሰ መሆን አለበት}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"እየጨመሩ የሚሄዱ፣ እየቀነሱ የሚሄዱ ወይም ተደጋጋሚ የአኃዞች ተከታታይ አይፈቀድም"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"የማያ ገጽ መቆለፊያ አማራጮች"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ቀኖች በፊት"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ቢጫ በጥቁር ላይ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"ቢጫ በሰማያዊ ላይ"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"ማያ ገጽ አንባቢ"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"አጥፋ"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"በማያ ገጽ ላይ ያሉ ንጥሎችን ተናገር"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack ይጠቀሙ"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"አማራጮች"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"ቅንብሮች"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"ስለ TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"ተሽከርካሪው በእንቅስቃሴ ላይ እያለ TalkBack አይገኝም።\n\nTalkBack ሲበራ ማያ ገጹን ሳይመለከቱ መሣሪያዎን መጠቀም እንዲችሉ የቃል ግብረመልስን ያቀርባል። TalkBack ማያ ገጹን መመልከት ለሚቸገሩ ሰዎች ወይም ሁኔታዎች የታሰበ ነው።"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"አጥፋ"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"በማያ ገጽ ላይ ያሉ ንጥሎችን ተናገር"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ን ይጠቀሙ"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"አማራጮች"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"ቅንብሮች"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"ካሜራ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ካሜራ ይጠቀሙ"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ሁሉም መተግበሪያዎች የእርስዎን ካሜራ እንዲደርሱ ይፍቀዱላቸው"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"የካሜራ ፈቃዶችን ያቀናብሩ"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"በቅርብ ጊዜ የተደረሰ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ምንም የቅርብ ጊዜ መተግበሪያዎች የሉም"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 መተግበሪያዎች መዳረሻ አለው"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# ከ{total_count} መተግበሪያዎች መዳረሻ አለው}one{# ከ{total_count} መተግበሪያዎች መዳረሻ አላቸው}other{# ከ{total_count} መተግበሪያዎች መዳረሻ አላቸው}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"በቅርብ ጊዜ የተደረሰ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ሁሉንም ይመልከቱ"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"በመጫን ላይ…"</string>
 </resources>

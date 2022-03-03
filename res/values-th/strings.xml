@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"อุปกรณ์อื่นๆ เชื่อมต่อได้กับ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"รหัสผ่านฮอตสปอต"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ความปลอดภัย"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ส่วนบุคคล"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ไม่มี"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"ย่านความถี่ AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"สิทธิ์นี้อนุญาตให้แอปแก้ไขการตั้งค่าระบบได้"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"การเข้าถึงการแจ้งเตือน"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"อนุญาตให้ <xliff:g id="SERVICE">%1$s</xliff:g> เข้าถึงการแจ้งเตือนไหม"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> จะอ่านการแจ้งเตือนทั้งหมดได้ รวมถึงข้อมูลส่วนบุคคล เช่น ชื่อผู้ติดต่อและข้อความที่คุณได้รับ นอกจากนี้ยังจะปิดการแจ้งเตือนหรือทริกเกอร์ปุ่มการทำงานในการแจ้งเตือนได้ด้วย\n\nการเปิดใช้ยังทำให้แอปนี้เปิดหรือปิดฟีเจอร์ห้ามรบกวนและเปลี่ยนแปลงการตั้งค่าที่เกี่ยวข้องได้"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"หากคุณปิดการเข้าถึงการแจ้งเตือนสำหรับ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ระบบอาจปิดการเข้าถึงฟีเจอร์ห้ามรบกวนไปด้วย"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ปิด"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ยกเลิก"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"การเข้าถึง SMS แบบพรีเมียม"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ความเป็นส่วนตัว"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ข้อมูลระบบสาระบันเทิง"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ควมคุมสิทธิ์ของแอปในการเข้าถึงตำแหน่ง"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"กล้อง"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ควบคุมสิทธิ์ของแอปในการเข้าถึงกล้อง"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ไมโครโฟน"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ควมคุมสิทธิ์ของแอปในการเข้าถึงไมโครโฟน"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ข้อมูลระบบสาระบันเทิง"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ผู้ดูแลระบบอุปกรณ์ไม่อนุญาตให้ใช้รหัสผ่านที่เพิ่งใช้ไป"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"เกิดข้อผิดพลาดในการบันทึกรหัสผ่าน"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ผู้ดูแลระบบไอทีบล็อกรหัสผ่านที่ไม่รัดกุม ลองรหัสผ่านอื่น"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ต้องมีตัวอักษรอย่างน้อย 1 ตัว"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ต้องมีตัวเลขอย่างน้อย 1 ตัว"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ต้องมีสัญลักษณ์อย่างน้อย 1 ตัว"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ต้องมีตัวอักษรอย่างน้อย # ตัว}other{ต้องมีตัวอักษรอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ต้องมีตัวอักษรพิมพ์เล็กอย่างน้อย # ตัว}other{ต้องมีตัวอักษรพิมพ์เล็กอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ต้องมีตัวอักษรพิมพ์ใหญ่อย่างน้อย # ตัว}other{ต้องมีตัวอักษรพิมพ์ใหญ่อย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ต้องมีตัวเลขอย่างน้อย # ตัว}other{ต้องมีตัวเลขอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ต้องมีสัญลักษณ์พิเศษอย่างน้อย # ตัว}other{ต้องมีสัญลักษณ์พิเศษอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{ต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย # ตัว}other{ต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ต้องมีอักขระที่ไม่ใช่ตัวเลขอย่างน้อย # ตัว}other{ต้องมีอักขระที่ไม่ใช่ตัวเลขอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ต้องมีอักขระอย่างน้อย # ตัว}other{ต้องมีอักขระอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ต้องมีตัวเลขอย่างน้อย # ตัว}other{ต้องมีตัวเลขอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{ต้องมีอักขระน้อยกว่า # ตัว}other{ต้องมีอักขระน้อยกว่า # ตัว}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ต้องมีตัวเลขน้อยกว่า # ตัว}other{ต้องมีตัวเลขน้อยกว่า # ตัว}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ไม่อนุญาตให้เรียงจากน้อยไปมาก จากมากไปน้อย หรือเรียงลำดับตัวเลขที่ซ้ำกัน"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ตัวเลือกการล็อกหน้าจอ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> วันที่ผ่านมา"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"สีเหลืองบนพื้นสีดำ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"สีเหลืองบนพื้นสีน้ำเงิน"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"โปรแกรมอ่านหน้าจอ"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"ปิด"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"พูดรายการในหน้าจอ"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"ใช้ TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"ตัวเลือก"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"การตั้งค่า"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"เกี่ยวกับ TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack ไม่พร้อมใช้งานขณะที่รถยนต์กำลังเคลื่อนไหว\n\nTalkBack จะอธิบายและอ่านออกเสียงเมื่อเปิดอยู่ เพื่อให้คุณใช้อุปกรณ์ได้โดยไม่ต้องมองหน้าจอ TalkBack มีไว้สำหรับสถานการณ์หรือบุคคลที่มีปัญหาในการมองเห็นหน้าจอ"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"ปิด"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"พูดรายการในหน้าจอ"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"ใช้ <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"ตัวเลือก"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"การตั้งค่า"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"กล้อง"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ใช้กล้อง"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"อนุญาตให้แอปทั้งหมดเข้าถึงกล้อง"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"จัดการสิทธิ์ของกล้อง"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"เข้าถึงล่าสุด"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ไม่มีแอปล่าสุด"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 แอปมีสิทธิ์เข้าถึง"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# จาก {total_count} แอปมีสิทธิ์เข้าถึง}other{# จาก {total_count} แอปมีสิทธิ์เข้าถึง}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"เข้าถึงล่าสุด"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ดูทั้งหมด"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"กำลังโหลด…"</string>
 </resources>
