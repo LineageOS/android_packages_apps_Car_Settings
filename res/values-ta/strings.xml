@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> உடன் பிற சாதனங்களை இணைக்கலாம்"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ஹாட்ஸ்பாட் கடவுச்சொல்"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"பாதுகாப்பு"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ஏதுமில்லை"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP அலைவரிசை"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"இது சிஸ்டம் அமைப்புகளை மாற்ற அனுமதிக்கும்."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"அறிவிப்பு அணுகல்"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> சேவைக்கான அறிவிப்பு அணுகலை அனுமதிக்கவா?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"தொடர்புகளின் பெயர்கள், நீங்கள் பெறும் மெசேஜ்களின் உரை போன்ற தனிப்பட்ட தகவல் உட்பட அனைத்து அறிவிப்புகளையும் <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ஆல் படிக்க முடியும். அத்துடன் அறிவிப்புகளை நிராகரிக்கவோ அல்லது அறிவிப்புகளில் உள்ள செயல் பொத்தான்களைத் தூண்டவோ முடியும். \n\nஇது \'தொந்தரவு செய்ய வேண்டாமை\' இயக்குவதற்கான அல்லது முடக்குவதற்கான அனுமதியையும், தொடர்புடையை அமைப்புகளை மாற்றுவதற்கான அனுமதியையும் ஆப்ஸிற்கு அளிக்கும்."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>என்பதற்கு அறிவிப்பு அணுகலை முடக்கினால், \'தொந்தரவு செய்யாதே\' அணுகல் ஆஃ செய்யப்படக்கூடும்."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ஆஃப் செய்"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"வேண்டாம்"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"பிரீமிய SMS அணுகல்"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"தனியுரிமை"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"இருப்பிடத்திற்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்து"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"கேமரா"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"கேமராக்களுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தும்"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"மைக்ரோஃபோன்"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"மைக்ரோஃபோனுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தலாம்"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"சாதன நிர்வாகி சமீபத்திய கடவுச்சொல்லைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"கடவுச்சொல்லைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"பொதுவான கடவுச்சொற்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு கடவுச்சொல்லை முயலவும்."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"குறைந்தது ஓர் எழுத்து இருக்க வேண்டும்"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"குறைந்தது ஓர் இலக்கம் இருக்க வேண்டும்"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"குறைந்தது ஒரு குறி இருக்க வேண்டும்"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{குறைந்தது # எழுத்து இருக்க வேண்டும்}other{குறைந்தது # எழுத்துகள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{குறைந்தது # சிற்றெழுத்து இருக்க வேண்டும்}other{குறைந்தது # சிற்றெழுத்துகள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{குறைந்தது # பேரெழுத்து இருக்க வேண்டும்}other{குறைந்தது # பேரெழுத்துகள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{குறைந்தது # எண் இலக்கம் இருக்க வேண்டும்}other{குறைந்தது # எண் இலக்கங்கள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{குறைந்தது # சிறப்புக் குறி இருக்க வேண்டும்}other{குறைந்தது # சிறப்புக் குறிகள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{குறைந்தது # எழுத்து அல்லாத குறி இருக்க வேண்டும்}other{குறைந்தது # எழுத்து அல்லாத குறிகள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{குறைந்தது # எண் அல்லாத எழுத்து இருக்க வேண்டும்}other{குறைந்தது # எண் அல்லாத எழுத்துகள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{குறைந்தது # எழுத்து இருக்க வேண்டும்}other{குறைந்தது # எழுத்துகள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{குறைந்தது # இலக்கம் இருக்க வேண்டும்}other{குறைந்தது # இலக்கங்கள் இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# எழுத்தை விடக் குறைவாக இருக்க வேண்டும்}other{# எழுத்துகளை விடக் குறைவாக இருக்க வேண்டும்}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# இலக்கத்தை விடக் குறைவாக இருக்க வேண்டும்}other{# இலக்கங்களை விடக் குறைவாக இருக்க வேண்டும்}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைப் பயன்படுத்துவது அனுமதிக்கப்படவில்லை"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"கருப்பில் மஞ்சள்"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"நீலத்தில் மஞ்சள்"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"ஸ்கிரீன் ரீடர்"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"முடக்கப்பட்டுள்ளது"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"திரையில் உள்ளவற்றை வாசிக்கும்"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack அம்சத்தை இயக்குதல்"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"விருப்பங்கள்"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"அமைப்புகள்"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack குறித்த விவரங்கள்"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"வாகனம் இயக்கத்தில் இருக்கும்போது TalkBack அம்சம் வேலை செய்யாது.\n\nTalkBack அம்சம் இயக்கத்தில் இருக்கும்போது திரையைப் பார்க்காமலேயே சாதனத்தைப் பயன்படுத்தும் வகையிலான பேச்சுவடிவ விளக்கத்தைப் பெறுவீர்கள். TalkBack அம்சமானது திரையைப் பார்க்க முடியாத சூழ்நிலை/பயனர்களுக்காக வடிவமைக்கப்பட்டதாகும்."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"ஆஃப்"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"திரையில் உள்ளவற்றை வாசிக்கும்"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ஐப் பயன்படுத்து"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"விருப்பங்கள்"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"அமைப்புகள்"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"கேமரா"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"கேமராவைப் பயன்படுத்துதல்"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"கேமராவை அணுக அனைத்து ஆப்ஸையும் அனுமதிக்கும்"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"கேமரா அனுமதிகளை நிர்வகித்தல்"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"சமீபத்தில் அணுகியவை"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"எந்த ஆப்ஸுக்கும் அணுகல் இல்லை"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# / {total_count} ஆப்ஸுக்கு அணுகல் உள்ளது}other{# / {total_count} ஆப்ஸுக்கு அணுகல் உள்ளது}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"சமீபத்தில் அணுகியவை"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"அனைத்தையும் காட்டுதல்"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ஏற்றுகிறது…"</string>
 </resources>

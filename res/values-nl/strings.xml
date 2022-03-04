@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andere apparaten kunnen verbinding maken met <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Wachtwoord hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Beveiliging"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Geen"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Toegangspunt"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Met deze rechten kan een app de systeeminstellingen aanpassen."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Toegang tot meldingen"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Toegang tot meldingen toestaan voor <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan alle meldingen lezen, waaronder persoonlijke informatie zoals contactnamen en de tekst van berichten die je ontvangt. De app kan deze meldingen ook sluiten of actieknoppen activeren die ermee samenhangen. \n\nHierdoor kan de app ook \'Niet storen\' aan- of uitzetten en gerelateerde instellingen wijzigen."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Als je toegang tot meldingen uitzet voor <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan toegang tot \'Niet storen\' ook worden uitgezet."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Uitzetten"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuleren"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium sms-toegang"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacy"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Gegevens infotainmentsysteem"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"App-toegang tot je locatie beheren"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Camera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Beheer de toegang van apps tot je camera\'s"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Microfoon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"App-toegang tot de microfoon beheren"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Gegevens infotainmentsysteem"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Apparaatbeheer staat het gebruik van een recent wachtwoord niet toe"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Fout bij wachtwoord opslaan"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Veelvoorkomende wachtwoorden worden geblokkeerd door je IT-beheerder. Probeer een ander wachtwoord."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Moet minstens 1 letter bevatten"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Moet minstens 1 cijfer bevatten"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Moet minstens 1 symbool bevatten"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Moet minstens # letter bevatten}other{Moet minstens # letters bevatten}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Moet minstens # kleine letter bevatten}other{Moet minstens # kleine letters bevatten}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Moet minstens # hoofdletter bevatten}other{Moet minstens # hoofdletters bevatten}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Moet minstens # cijfer bevatten}other{Moet minstens # cijfers bevatten}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Moet minstens # speciaal symbool bevatten}other{Moet minstens # speciale symbolen bevatten}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Moet minstens # teken bevatten dat geen letter is}other{Moet minstens # tekens bevatten die geen letters zijn}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Moet minstens # niet-numeriek teken bevatten}other{Moet minstens # niet-numerieke tekens bevatten}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Moet minstens # teken bevatten}other{Moet minstens # tekens bevatten}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Moet minstens # cijfer bevatten}other{Moet minstens # cijfers bevatten}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Moet korter zijn dan # teken}other{Moet korter zijn dan # tekens}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Moet korter dan # cijfer zijn}other{Moet korter dan # cijfers lang zijn}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Een oplopende, aflopende of herhaalde reeks cijfers is niet toegestaan"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Schermvergrendelingsopties"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> dagen geleden"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Geel op zwart"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Geel op blauw"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Schermlezer"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Uit"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Items op scherm voorlezen"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack gebruiken"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Opties"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Instellingen"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Over TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack is niet beschikbaar als het voertuig beweegt.\n\nAls TalkBack aanstaat, biedt de functie gesproken feedback zodat je je apparaat kunt gebruiken zonder naar het scherm te kijken. TalkBack is bedoeld voor slechtziende en blinde mensen en voor situaties waarin je het scherm moeilijk kunt zien."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Uit"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Items op scherm voorlezen"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> gebruiken"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opties"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Instellingen"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Camera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Camera gebruiken"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Alle apps toegang tot je camera geven"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Camerarechten beheren"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Recent gebruikt"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Geen recente apps"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 apps hebben toegang"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# van {total_count} apps heeft toegang}other{# van {total_count} apps hebben toegang}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Recent gebruikt"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Alles bekijken"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Laden…"</string>
 </resources>

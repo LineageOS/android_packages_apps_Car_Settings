@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Kiti įrenginiai gali prisijungti prie „<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Vieš. int. prieig. tšk. slapt."</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sauga"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nėra"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"PT juosta"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Programai bus leidžiama keisti sistemos nustatymus."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Prieiga prie pranešimų"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Leisti paslaugos „<xliff:g id="SERVICE">%1$s</xliff:g>“ prieigą prie pranešimų?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"„<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>“ galės skaityti visus pranešimus, įskaitant asmeninę informaciją, pvz., kontaktų vardus ir gautų pranešimų tekstą. Be to, priemonė galės atsisakyti pranešimų ar suaktyvinti juose pateiktus veiksmo mygtukus.\n\nPrograma taip pat galės įjungti ar išjungti režimą „Netrukdyti“ ir keisti susijusius nustatymus."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jei išjungsite „<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>“ prieigą prie pranešimų, prieiga prie režimo „Netrukdyti“ taip pat gali būti išjungta."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Išjungti"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Atšaukti"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Išskirtinių SMS prieiga"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatumas"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Informacinės pramog. sistemos duomenys"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Valdyti programų prieigą prie vietovės"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Fotoaparatas"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Valdyti programų prieigą prie fotoaparato"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofonas"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Valdykite programų prieigą prie mikrofono"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Inform. pramog. sist. duomenys"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Įrenginio administratorius neleidžia naudoti pastarojo slaptažodžio"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Klaida išsaugant slaptažodį"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Dažnai naudojamus slaptažodžius užblokavo IT administratorius. Bandykite naudoti kitą slaptažodį."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Turi būti bent viena raidė"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Turi būti bent vienas skaitmuo"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Turi būti bent vienas simbolis"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Turi būti bent # raidė}one{Turi būti bent # raidė}few{Turi būti bent # raidės}many{Turi būti bent # raidės}other{Turi būti bent # raidžių}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Turi būti bent # mažoji raidė}one{Turi būti bent # mažoji raidė}few{Turi būti bent # mažosios raidės}many{Turi būti bent # mažosios raidės}other{Turi būti bent # mažųjų raidžių}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Turi būti bent # didžioji raidė}one{Turi būti bent # didžioji raidė}few{Turi būti bent # didžiosios raidės}many{Turi būti bent # didžiosios raidės}other{Turi būti bent # didžiųjų raidžių}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Turi būti bent # skaitmuo}one{Turi būti bent # skaitmuo}few{Turi būti bent # skaitmenys}many{Turi būti bent # skaitmens}other{Turi būti bent # skaitmenų}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Turi būti bent # specialusis simbolis}one{Turi būti bent # specialusis simbolis}few{Turi būti bent # specialieji simboliai}many{Turi būti bent # specialiojo simbolio}other{Turi būti bent # specialiųjų simbolių}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Turi būti bent # neraidinis simbolis}one{Turi būti bent # neraidinis simbolis}few{Turi būti bent # neraidiniai simboliai}many{Turi būti bent # neraidinio simbolio}other{Turi būti bent # neraidinių simbolių}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Turi būti bent # neskaitinis simbolis}one{Turi būti bent # neskaitinis simbolis}few{Turi būti bent # neskaitiniai simboliai}many{Turi būti bent # neskaitinio simbolio}other{Turi būti bent # neskaitinių simbolių}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Turi būti bent # simbolis}one{Turi būti bent # simbolis}few{Turi būti bent # simboliai}many{Turi būti bent # simbolio}other{Turi būti bent # simbolių}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Turi būti bent # skaitmuo}one{Turi būti bent # skaitmuo}few{Turi būti bent # skaitmenys}many{Turi būti bent # skaitmens}other{Turi būti bent # skaitmenų}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Turi būti mažiau nei # simbolis}one{Turi būti mažiau nei # simbolis}few{Turi būti mažiau nei # simboliai}many{Turi būti mažiau nei # simbolio}other{Turi būti mažiau nei # simbolių}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Turi būti mažiau nei # skaitmuo}one{Turi būti mažiau nei # skaitmuo}few{Turi būti mažiau nei # skaitmenys}many{Turi būti mažiau nei # skaitmens}other{Turi būti mažiau nei # skaitmenų}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Didėjanti, mažėjanti ar pasikartojanti skaitmenų seka neleidžiama"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekrano užrakto parinktys"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: prieš <xliff:g id="NUM_DAYS">%3$s</xliff:g> d."</string>
@@ -851,12 +845,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Geltonas ant juodo"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Geltonas ant mėlyno"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Ekrano skaitytuvas"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Išjungta"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Ištarti ekrane esančius elementus"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Naudoti „TalkBack“"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Parinktys"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Nustatymai"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Apie „TalkBack“"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"„TalkBack“ nepasiekiama, kol transporto priemonė juda.\n\nKai „TalkBack“ įjungta, ekranas skaitomas balsu, kad galėtumėte naudoti įrenginį nežiūrėdami į ekraną. „Talkback“ skirta naudoti esant tokioms situacijoms, kai sudėtinga matyti ekraną, arba regos sutrikimų turintiems žmonėms."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Išjungta"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Ištarti ekrane esančius elementus"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Naudoti „<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>“"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Parinktys"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Nustatymai"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Fotoaparatas"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Naudoti fotoaparatą"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Leisti visoms programoms pasiekti fotoaparatą"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Tvarkyti fotoaparato leidimus"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Neseniai pasiekta"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nėra naujausių programų"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 programų suteikta prieiga"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# programai iš {total_count} suteikta prieiga}one{# programai iš {total_count} suteikta prieiga}few{# programoms iš {total_count} suteikta prieiga}many{# programos iš {total_count} suteikta prieiga}other{# programų iš {total_count} suteikta prieiga}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Neseniai pasiekta"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Žr. viską"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Įkeliama…"</string>
 </resources>

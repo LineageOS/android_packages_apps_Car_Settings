@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"אפשר לחבר מכשירים נוספים לנקודה <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"הסיסמה לנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"אבטחה"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"אין"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"תדר AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ההרשאה הזו מתירה לאפליקציה לשנות את הגדרות המערכת."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"גישה להתראות"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"האם להתיר ל-<xliff:g id="SERVICE">%1$s</xliff:g> לגשת אל התראות?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ל-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> תהיה אפשרות לקרוא את כל ההתראות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שמתקבלות. האפליקציה תוכל גם לבטל התראות או להפעיל לחצני פעולה שהן כוללות.\n\nכמו כן, האפליקציה תוכל להפעיל או לכבות את התכונה \'נא לא להפריע\' ולשנות הגדרות קשורות."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"אם הגישה של <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> להתראות תושבת, ניתן יהיה להשבית גם את הגישה לתכונה \'נא לא להפריע\'."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"כיבוי"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ביטול"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"שליחת הודעות SMS בתשלום"</string>
@@ -569,7 +575,7 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"נתוני הפרופיל"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"מטמון"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"סה\"כ"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"פינוי שטח אחסון"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"פינוי נפח אחסון"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"ניקוי מטמון"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"למחוק את נתוני האפליקציה?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"כל נתוני האפליקציה יימחקו לתמיד. נתונים אלה כוללים את כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכדומה."</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"פרטיות"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"הנתונים של מערכת המידע והבידור"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"שליטה בגישת האפליקציה למיקום שלך"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"מצלמה"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"שליטה בגישה של האפליקציות למצלמות"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"מיקרופון"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"שליטה בגישת האפליקציה למיקרופון"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"הנתונים של מערכת המידע והבידור"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"מנהל המכשיר לא מאפשר להשתמש בסיסמה שנעשה בה שימוש לאחרונה"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"שגיאה בשמירת הסיסמה"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"סיסמאות נפוצות חסומות בידי מנהל ה-IT. יש לנסות סיסמה אחרת."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"צריכה להכיל לפחות אות אחת"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"צריכה להכיל לפחות ספרה אחת"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"צריכה להכיל לפחות סמל אחד"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{צריכה להכיל לפחות אות אחת}two{צריכה להכיל לפחות # אותיות}many{צריכה להכיל לפחות # אותיות}other{צריכה להכיל לפחות # אותיות}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{צריכה להכיל לפחות אות קטנה אחת}two{צריכה להכיל לפחות # אותיות קטנות}many{צריכה להכיל לפחות # אותיות קטנות}other{צריכה להכיל לפחות # אותיות קטנות}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{צריכה להכיל לפחות אות גדולה אחת}two{צריכה להכיל לפחות # אותיות גדולות}many{צריכה להכיל לפחות # אותיות גדולות}other{צריכה להכיל לפחות # אותיות גדולות}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}two{צריכה להכיל לפחות # ספרות}many{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{צריכה להכיל לפחות סמל מיוחד אחד}two{צריכה להכיל לפחות # סמלים מיוחדים}many{צריכה להכיל לפחות # סמלים מיוחדים}other{צריכה להכיל לפחות # סמלים מיוחדים}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו אות}two{צריכה להכיל לפחות # תווים שאינם אותיות}many{צריכה להכיל לפחות # תווים שאינם אותיות}other{צריכה להכיל לפחות # תווים שאינם אותיות}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו ספרה}two{צריכה להכיל לפחות # תווים שאינם ספרות}many{צריכה להכיל לפחות # תווים שאינם ספרות}other{צריכה להכיל לפחות # תווים שאינם ספרות}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{צריכה להכיל לפחות תו אחד}two{צריכה להכיל לפחות # תווים}many{צריכה להכיל לפחות # תווים}other{צריכה להכיל לפחות # תווים}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}two{צריכה להכיל לפחות # ספרות}many{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{צריכה להיות קצרה מתו אחד}two{צריכה להיות קצרה מ-# תווים}many{צריכה להיות קצרה מ-# תווים}other{צריכה להיות קצרה מ-# תווים}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{צריכה להיות קצרה מספרה אחת}two{צריכה להיות קצרה מ-# ספרות}many{צריכה להיות קצרה מ-# ספרות}other{צריכה להיות קצרה מ-# ספרות}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"אין להגדיר רצף ספרות עולה, יורד או חוזר"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>
@@ -851,12 +845,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"צהוב על גבי שחור"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"צהוב על גבי כחול"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"קורא מסך"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"כבוי"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"הקראת הפריטים במסך"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"שימוש ב-TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"אפשרויות"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"הגדרות"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"מידע על TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"התכונה TalkBack לא זמינה כשהרכב נמצא בתנועה.\n\nכשהתכונה TalkBack פועלת, קורא מסך קולי מאפשר לך להשתמש במכשיר בלי להסתכל על המסך. התכונה TalkBack מיועדת למצבים שבהם קשה לראות את המסך או לאנשים שמתקשים לראות אותו."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"כבוי"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"הקראת הפריטים במסך"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"שימוש באפליקציה <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"אפשרויות"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"הגדרות"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"מצלמה"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"שימוש במצלמה"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"מתן הרשאת גישה למצלמה לכל האפליקציות"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"ניהול הרשאות הגישה למצלמה"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"האפליקציות האחרונות שניגשו למצלמה"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"אין אפליקציות אחרונות"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"אין אפליקציות עם הרשאת גישה"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{לאפליקציה אחת מתוך {total_count} יש גישה}two{ל-# אפליקציות מתוך {total_count} יש גישה}many{ל-# אפליקציות מתוך {total_count} יש גישה}other{ל-# אפליקציות מתוך {total_count} יש גישה}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"בקשות הגישה האחרונות למצלמה"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"הצגת הכול"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"בטעינה…"</string>
 </resources>
