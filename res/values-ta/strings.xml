@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> உடன் பிற சாதனங்களை இணைக்கலாம்"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ஹாட்ஸ்பாட் கடவுச்சொல்"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"பாதுகாப்பு"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ஏதுமில்லை"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP அலைவரிசை"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"இது சிஸ்டம் அமைப்புகளை மாற்ற அனுமதிக்கும்."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"அறிவிப்பு அணுகல்"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> சேவைக்கான அறிவிப்பு அணுகலை அனுமதிக்கவா?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"தொடர்புகளின் பெயர்கள், நீங்கள் பெறும் மெசேஜ்களின் உரை போன்ற தனிப்பட்ட தகவல் உட்பட அனைத்து அறிவிப்புகளையும் <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ஆல் படிக்க முடியும். அத்துடன் அறிவிப்புகளை நிராகரிக்கவோ அல்லது அறிவிப்புகளில் உள்ள செயல் பொத்தான்களைத் தூண்டவோ முடியும். \n\nஇது \'தொந்தரவு செய்ய வேண்டாமை\' இயக்குவதற்கான அல்லது முடக்குவதற்கான அனுமதியையும், தொடர்புடையை அமைப்புகளை மாற்றுவதற்கான அனுமதியையும் ஆப்ஸிற்கு அளிக்கும்."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>என்பதற்கு அறிவிப்பு அணுகலை முடக்கினால், \'தொந்தரவு செய்யாதே\' அணுகல் ஆஃ செய்யப்படக்கூடும்."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ஆஃப் செய்"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"வேண்டாம்"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"பிரீமிய SMS அணுகல்"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"தனியுரிமை"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"இருப்பிடத்திற்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்து"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"கேமரா"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"கேமராக்களுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தும்"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"மைக்ரோஃபோன்"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"மைக்ரோஃபோனுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தலாம்"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ஐப் பயன்படுத்து"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"விருப்பங்கள்"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"அமைப்புகள்"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"கேமரா"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"கேமராவைப் பயன்படுத்துதல்"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"கேமராவை அணுக அனைத்து ஆப்ஸையும் அனுமதிக்கும்"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"கேமரா அனுமதிகளை நிர்வகித்தல்"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"சமீபத்தில் அணுகியவை"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"எந்த ஆப்ஸுக்கும் அணுகல் இல்லை"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# / {total_count} ஆப்ஸுக்கு அணுகல் உள்ளது}other{# / {total_count} ஆப்ஸுக்கு அணுகல் உள்ளது}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"சமீபத்தில் அணுகியவை"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"அனைத்தையும் காட்டுதல்"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ஏற்றுகிறது…"</string>
 </resources>

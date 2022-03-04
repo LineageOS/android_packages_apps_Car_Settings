@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ସହ ଅନ୍ୟ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ ସଂଯୁକ୍ତ ହୋଇପାରିବ"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ହଟସ୍ପଟ୍ ପାସ୍‌ୱାର୍ଡ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ସୁରକ୍ଷା"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ବ୍ୟକ୍ତିଗତ"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"କୌଣସିଟି ନୁହେଁ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ବ୍ୟାଣ୍ଡ"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ଏହି ଅନୁମତି କୌଣସି ଆପ୍‍କୁ ସିଷ୍ଟମ୍ ସେଟିଂସ୍ ବଦଳାଇବାକୁ ଅନୁମତି ଦେଇଥାଏ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ପାଇଁ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌ର ଅନୁମତି ଦେବେ?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ବ୍ୟକ୍ତିଗତ ସୂଚନା ଯେପରି ଯୋଗାଯୋଗ ନାମଗୁଡ଼ିକ ଏବଂ ଆପଣ ପ୍ରାପ୍ତ କରୁଥିବା ମେସେଜ୍‌ଗୁଡ଼ିକର ଟେକ୍ସଟ୍ ସମେତ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ସମସ୍ତ ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ପଢ଼ିବାରେ ସକ୍ଷମ ହେବ। ଏହା ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ଖାରଜ କରିବାରେ କିମ୍ବା ସେମାନଙ୍କ ପାଖରେ ଥିବା ପଦକ୍ଷେପ ବଟନ୍‌ଗୁଡ଼ିକୁ ମଧ୍ୟ ଟ୍ରିଗର୍ କରିବାରେ ସକ୍ଷମ ହେବ। \n\n ଏହା ଆପ୍‌କୁ \'ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\' ବିକଳ୍ପକୁ ଚାଲୁ କିମ୍ବା ବନ୍ଦ କରିବା ତଥା ସମ୍ବନ୍ଧିତ ସେଟିଂସ୍‌କୁ ବଦଳାଇବା କ୍ଷମତା ମଧ୍ୟ ଦେବ।"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ଯଦି <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ପାଇଁ ଆପଣ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌କୁ ବନ୍ଦ କରିବେ, ତେବେ \"ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\" ବିକଳ୍ପ ଆକ୍ସେସ୍ ମଧ୍ୟ ହୁଏତ ବନ୍ଦ ହୋଇଯାଇପାରେ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ବାତିଲ୍ କରନ୍ତୁ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ପ୍ରିମିୟମ୍ SMS ଆକ୍ସେସ୍"</string>

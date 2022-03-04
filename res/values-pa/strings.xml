@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ਹੋਰ ਡੀਵਾਈਸਾਂ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ਨਾਲ ਕਨੈਕਟ ਹੋ ਸਕਦੀਆਂ ਹਨ"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ਹੌਟਸਪੌਟ ਪਾਸਵਰਡ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ਸੁਰੱਖਿਆ"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ਨਿੱਜੀ"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ਕੋਈ ਨਹੀਂ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ਬੈਂਡ"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ਇਹ ਇਜਾਜ਼ਤ ਕਿਸੇ ਐਪ ਨੂੰ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਸੋਧਣ ਦਿੰਦੀ ਹੈ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"ਸੂਚਨਾ ਪਹੁੰਚ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"ਕੀ <xliff:g id="SERVICE">%1$s</xliff:g> ਨੂੰ ਸੂਚਨਾ ਪਹੁੰਚ ਦੇਣੀ ਹੈ?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ਵੱਲੋਂ ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਨੂੰ ਪੜ੍ਹਿਆ ਜਾ ਸਕੇਗਾ ਜਿਸ ਵਿੱਚ ਸੰਪਰਕ ਨਾਮ ਅਤੇ ਤੁਹਾਨੂੰ ਪ੍ਰਾਪਤ ਹੋਣ ਵਾਲੇ ਲਿਖਤ ਸੁਨੇਹਿਆਂ ਵਰਗੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ। ਇਹ ਸੂਚਨਾਵਾਂ ਨੂੰ ਖਾਰਜ ਕਰਨ ਜਾਂ ਉਸ ਵਿੱਚ ਸ਼ਾਮਲ ਕਾਰਵਾਈ ਬਟਨਾਂ ਨੂੰ ਟ੍ਰਿਗਰ ਵੀ ਕਰ ਸਕੇਗੀ। \n\nਇਹ ਐਪ ਨੂੰ \'ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ\' ਨੂੰ ਬੰਦ ਜਾਂ ਚਾਲੂ ਕਰਨ ਅਤੇ ਸੰਬੰਧਿਤ ਸੈਟਿੰਗਾਂ ਨੂੰ ਬਦਲਣ ਦੀ ਸਮਰੱਥਾ ਵੀ ਦੇਵੇਗੀ।"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ਜੇ ਤੁਸੀਂ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ਲਈ ਸੂਚਨਾ ਪਹੁੰਚ ਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ \'ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ\' ਪਹੁੰਚ ਵੀ ਬੰਦ ਹੋ ਸਕਦੀ ਹੈ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ਬੰਦ ਕਰੋ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ਰੱਦ ਕਰੋ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ਪ੍ਰੀਮੀਅਮ SMS ਤੱਕ ਪਹੁੰਚ"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ਪਰਦੇਦਾਰੀ"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਡਾਟਾ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ਐਪ ਦੀ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕੰਟਰੋਲ ਕਰੋ"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"ਕੈਮਰਾ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ਆਪਣੇ ਕੈਮਰਿਆਂ ਤੱਕ ਐਪ ਦੀ ਪਹੁੰਚ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ਐਪ ਦੀ ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਤੱਕ ਪਹੁੰਚ ਕੰਟਰੋਲ ਕਰੋ"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਡਾਟਾ"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ਵਰਤੋ"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ਵਿਕਲਪ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ਸੈਟਿੰਗਾਂ"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"ਕੈਮਰਾ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ਕੈਮਰਾ ਵਰਤੋ"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ਸਾਰੀਆਂ ਐਪਾਂ ਨੂੰ ਆਪਣੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"ਕੈਮਰਾ ਇਜਾਜ਼ਤਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ਕੋਈ ਹਾਲੀਆ ਐਪ ਨਹੀਂ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ}one{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ}other{{total_count} ਵਿੱਚੋਂ # ਐਪਾਂ ਕੋਲ ਪੁਹੰਚ ਹੈ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ਸਭ ਦੇਖੋ"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ਲੋਡ ਹੋ ਰਹੀਆਂ ਹਨ…"</string>
 </resources>

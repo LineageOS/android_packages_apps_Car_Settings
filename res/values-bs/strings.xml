@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Drugi uređaji se mogu povezati na pristupnu tačku <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Lozinka pristupne tačke"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sigurnost"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Lična"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nema"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP opseg"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Ovo odobrenje omogućava aplikaciji da izmijeni postavke sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obavještenjima"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Dozvoliti aplikaciji <xliff:g id="SERVICE">%1$s</xliff:g> pristup obavještenjima?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> će moći čitati sva obavještenja, uključujući lične informacije kao što su imena kontakata i tekst primljenih poruka. Također će moći odbaciti obavještenja ili koristiti dugmad za radnje u obavještenjima.\n\nTime će se aplikaciji dati i mogućnost da uključi i isključi način rada Ne ometaj te da promijeni postavke povezane s tom opcijom."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako aplikaciji <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> isključite pristup obavještenjima, može se isključiti i pristup načinu rada Ne ometaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Otkaži"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup premium SMS-ovima"</string>
@@ -610,8 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatnost"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Podaci informativno-zabavnog sistema"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrolirajte pristup aplikacije vašoj lokaciji"</string>
-    <string name="mute_camera_title" msgid="215494079895460172">"Fotoaparat"</string>
-    <string name="mute_camera_summary" msgid="1237452064757403042">"Upravljajte pristupom aplikacija svojim fotoaparatima"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrolirajte pristup aplikacija kamerama"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrolirajte pristup aplikacije mikrofonu"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Podaci infor.-zabavnog sistema"</string>
@@ -838,14 +844,14 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Koristite aplikaciju <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcije"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Postavke"</string>
-    <string name="camera_settings_title" msgid="2837785830355288903">"Fotoaparat"</string>
-    <string name="camera_toggle_title" msgid="1990732328673068456">"Upotreba fotoaparata"</string>
-    <string name="camera_toggle_summary" msgid="5751159996822627567">"Svim aplikacijama dopustite pristup fotoaparatu"</string>
-    <string name="camera_manage_permissions" msgid="9005596413781984368">"Upravljanje dopuštenjima fotoaparata"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Koristi kameru"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Upravljajte odobrenjima kamere"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Nedavno pristupano"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Nema nedavnih aplikacija"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Nijedna aplikacija nema pristup"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# od {total_count} aplikacija ima pristup}one{# od {total_count} aplikacija ima pristup}few{# od {total_count} aplikacija imaju pristup}other{# od {total_count} aplikacija imaju pristup}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# aplikacija od {total_count} ima pristup}one{# aplikacija od {total_count} ima pristup}few{# aplikacije od {total_count} ima pristup}other{# aplikacija od {total_count} ima pristup}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nedavno pristupano"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Prikaži sve"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Učitavanje…"</string>

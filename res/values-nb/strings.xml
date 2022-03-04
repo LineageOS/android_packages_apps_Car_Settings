@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andre enheter kan koble til <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Passord for Wi-Fi-sone"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sikkerhet"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"Personlig WPA2"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Ingen"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP-bånd"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Med denne tillatelsen kan apper endre systeminnstillingene."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Tilgang til varsler"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vil du gi tilgang til varsler for <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan lese alle varsler, inkludert personopplysninger som kontaktnavn og tekstinnholdet i meldinger du mottar. Den kan også avvise varsler eller utløse handlingsknapper i varslene. \n\nDette gir også appen muligheten til å slå Ikke forstyrr av eller på samt endre tilknyttede innstillinger."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Hvis du slår av varseltilgang for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan tilgang til «Ikke forstyrr» også bli slått av."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slå av"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Avbryt"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Tilgang til premium-SMS"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Personvern"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data om infotainment-systemet"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrollér apptilgangen til posisjonen din"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontroller apptilgangen til kameraene dine"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrollér tilgangen til mikrofonen"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Data om infotainment-systemet"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Bruk <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Alternativer"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Innstillinger"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Bruk kameraet"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Gi alle apper tilgang til kameraet"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Administrer kameratillatelser"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Nylig brukt"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Ingen nylige apper"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 apper har tilgang"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# av {total_count} apper har tilgang}other{# av {total_count} apper har tilgang}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nylig brukt"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Se alle"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Laster inn …"</string>
 </resources>
