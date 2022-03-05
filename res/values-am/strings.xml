@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ሌሎች መሣሪያዎች ከ<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ጋር መገናኘት ይችላሉ"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"የመገናኛ ነጥብ የይለፍ ቃል"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ደኅንነት"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-የግል"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ምንም"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"የኤፒ ባንድ"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ይህ ፈቃድ መተግበሪያው የስርዓት ቅንብሮችን ለመቀየር ያስችለዋል።"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"የማሳወቂያ መዳረሻ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"ለ<xliff:g id="SERVICE">%1$s</xliff:g> የማሳወቂያ መዳረሻ ይፈቀድለት?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> እንደ የእውቂያ ስሞች እና የሚቀበሏቸው የመልዕክቶች ጽሑፍም ያሉ የግል መረጃንም ጨምሮ ሁሉንም ማሳወቂያዎች ማንበብ ይችላል። እንዲሁም ማሳወቂያዎችን ማሰናበት ወይም ሊይዟቸው የሚችሏቸው የእርምጃ አዝራሮችን ሊቀሰቅሱ ይችላሉ።\n\nይሄ እንዲሁም መተግበሪያው «አትረብሽ»ን የማብራት ወይም የማጥፋት እና ተዛማጅ ቅንብሮችን የመቀየር ይችሎታ ይሰጠዋል።"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"የ<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ማሳወቂያ መዳረሻን ካጠፉ የአትረብሽ መዳረሻ እንዲሁም ሊጠፋ ይችላል።"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"አጥፋ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ተወው"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"የፕሪሚየም ኤስኤምኤስ መዳረሻ"</string>

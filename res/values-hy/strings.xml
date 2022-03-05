@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Այլ սարքեր կարող են միանալ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-ին"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Թեժ կետի գաղտնաբառը"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Անվտանգություն"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Չկա"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP դիապազոնը"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Այս թույլտվությունը հնարավորություն է տալիս հավելվածներին փոփոխել համակարգի կարգավորումները:"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Ծանուցումների հասանելիություն"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Հասանելի դարձնե՞լ ծանուցումները <xliff:g id="SERVICE">%1$s</xliff:g> հավելվածին"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> հավելվածը կկարողանա կարդալ բոլոր ծանուցումները, ներառյալ անձնական տվյալները, օրինակ, կոնտակտների անուններն ու հաղորդագրությունները: Այն նաև կկարողանա փակել ծանուցումները և ակտիվացնել դրանցում պարունակվող գործողությունների կոճակները:\n\nՀավելվածին նաև կտրվի «Չանհանգստացնել» գործառույթը միացնելու/անջատելու և դրա կարգավորումները փոխելու թույլտվություն:"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Եթե անջատեք ծանուցումները <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> հավելվածի համար, «Չանհանգստացնել» գործառույթը նույնպես կարող է անջատվել:"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Անջատել"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Չեղարկել"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Վճարովի SMS-ների հասանելիություն"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Գաղտնիություն"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Տեղեկատվաժամանցային համակարգի տվյալներ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Կառավարել տեղորոշման հասանելիությունը հավելվածների համար"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"Տեսախցիկ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Կառավարել տեսախցիկների հասանելիությունը հավելվածների համար"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Խոսափող"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Կառավարել խոսափողի հասանելիությունը հավելվածների համար"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Տեղեկատվաժամանցային համակարգի տվյալներ"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Օգտագործել <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> հավելվածը"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Ընտրանքներ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Կարգավորումներ"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"Տեսախցիկ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Օգտագործել տեսախցիկը"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Հասանելի դարձնել տեսախցիկը բոլոր հավելվածներին"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Կառավարել տեսախցիկի թույլտվությունները"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Տեսախցիկի օգտագործման վերջին հարցումները"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Տեսախցիկը ոչ մի հավելվածի կողմից վերջերս չի օգտագործել"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Հասանելի չէ որևէ հավելվածի"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Հասանելի է {total_count} հավելվածից #-ին}one{Հասանելի է {total_count} հավելվածից #-ին}other{Հասանելի է {total_count} հավելվածից #-ին}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Տեսախցիկի օգտագործման վերջին հարցումները"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Դիտել բոլորը"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Բեռնում…"</string>
 </resources>

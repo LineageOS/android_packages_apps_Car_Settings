@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ৰ সৈতে অন্য ডিভাইচে সংযোগ কৰিব পাৰে"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"হটস্পটৰ পাছৱৰ্ড"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"সুৰক্ষা"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ব্যক্তিগত"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"নাই"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"এপি বেণ্ড"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"এই অনুমতিটোৱে কোনো এপক ছিষ্টেম ছেটিংসমূহ সংশোধন কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"জাননীৰ এক্সেছ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি দিবনে?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>এ সকলো জাননী আৰু ব্যক্তিগত তথ্য যেনে সম্পৰ্কৰ নাম আৰু আপুনি লাভ কৰা পাঠ বাৰ্তা পঢ়িবলৈ সক্ষম হ’ব। ই জাননী প্ৰত্যাখ্যান কৰিব পাৰিব বা সেইবিলাকত থকা ক্ৰিয়া সম্পৰ্কীয় বুটামৰ দ্বাৰা কৰিবলগীয়া কাৰ্যসমূহৰ সূচনা কৰিব পাৰিব। \n\nই এপ্‌টোক অসুবিধা নিদিব অন বা অফ কৰাৰ লগতে তাৰ লগত জড়িত ছেটিংসমূহ সলনি কৰাৰ ক্ষমতা দিব।"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপুনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি নিদিয়ে, তেন্তে অসুবিধা নিদিব-ৰ এক্সেছো অফ হ’ব পাৰে।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"অফ কৰক"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল কৰক"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"প্ৰিমিয়াম এছএমএছৰ এক্সেছ"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"গোপনীয়তা"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ইনফ’টেইনমেণ্ট ছিষ্টেমৰ ডেটা"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"আপোনাৰ অৱস্থানলৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"কেমেৰা"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"আপোনাৰ কেমেৰালৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"মাইক্ৰ’ফ’ন"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"মাইক্ৰ’ফ’নলৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ইনফ’টেইনমেণ্ট ছিষ্টেমৰ ডেটা"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ব্যৱহাৰ কৰক"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"বিকল্প"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ছেটিং"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"কেমেৰা"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"কেমেৰা ব্যৱহাৰ কৰক"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"আটাইবোৰ এপক আপোনাৰ কেমেৰা এক্সেছ কৰিবলৈ দিয়ক"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"কেমেৰাৰ অনুমতি পৰিচালনা কৰক"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"কোনো শেহতীয়া এপ্‌ নাই"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"০ টা এপৰ এক্সেছ আছে"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}one{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}other{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"আটাইবোৰ চাওক"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ল’ড কৰি থকা হৈছে…"</string>
 </resources>

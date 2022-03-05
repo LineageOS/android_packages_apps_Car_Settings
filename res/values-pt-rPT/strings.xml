@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Outros dispositivos podem ligar-se a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Palavra-passe da zona Wi-Fi"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Segurança"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Pessoal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nenhuma"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda do PA"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Esta autorização permite que uma aplicação modifique as definições do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"O serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> consegue ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto das mensagens recebidas. Também consegue ignorar notificações ou acionar botões de ação que estas contenham.\n\nDeste modo, a aplicação também pode ativar ou desativar o modo Não incomodar e alterar as definições relacionadas."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desativar o acesso às notificações para o serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o acesso ao modo Não incomodar seja igualmente desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Acesso a SMS premium"</string>

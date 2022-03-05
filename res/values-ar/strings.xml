@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"يمكن توصيل الأجهزة الأخرى بشبكة <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"كلمة مرور نقطة الاتصال"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"الأمان"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"بلا"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"نطاق نقطة الوصول"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"يتيح هذا الإذن للتطبيق إمكانية تعديل إعدادات النظام."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"الوصول إلى الإشعارات"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"هل تسمح بوصول خدمة <xliff:g id="SERVICE">%1$s</xliff:g> إلى الإشعارات؟"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"سيكون بإمكان <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونصوص الرسائل التي تتلقّاها. وسيتمكّن كذلك من تجاهل الإشعارات أو تشغيل أزرار الإجراءات التي تحتوي عليها.\n\nوتتيح هذه الميزة أيضًا للتطبيق إمكانية تفعيل ميزة \"عدم الإزعاج\" أو إيقافها وتغيير الإعدادات ذات الصلة."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"عند إيقاف الوصول إلى الإشعارات لخدمة <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>، قد يتم إيقاف الوصول إلى ميزة \"عدم الإزعاج\" أيضًا."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"إيقاف"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"إلغاء"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"إمكانية إرسال رسائل قصيرة SMS مميزة"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"الخصوصية"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"بيانات نظام الترفيه والمعلومات"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"التحكُّم في وصول التطبيقات إلى موقعك الجغرافي"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"الكاميرا"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"التحكّم في وصول التطبيقات إلى الكاميرات"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"الميكروفون"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"التحكُّم في وصول التطبيقات إلى الميكروفون"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"بيانات نظام الترفيه والمعلومات"</string>
@@ -858,26 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"استخدام <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"الخيارات"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"الإعدادات"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"الكاميرا"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"استخدام الكاميرا"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"السماح لجميع التطبيقات بالوصول إلى الكاميرا"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"إدارة أذونات الكاميرا"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"لم يحصل أي تطبيق مؤخرًا على إذن بالوصول إلى الكاميرا."</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ما مِن تطبيقات لديها إذن بالوصول إلى الكاميرا."</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{لدى تطبيق واحد من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}zero{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}two{لدى تطبيقين من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}few{لدى # تطبيقات من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}many{لدى # تطبيقًا من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}other{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"عرض الكل"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"جارٍ التحميل…"</string>
 </resources>

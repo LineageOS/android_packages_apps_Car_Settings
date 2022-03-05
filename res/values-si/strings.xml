@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"වෙනත් උපාංගවලට <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> වෙත සබැඳිය හැකිය"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"හොට්ස්පොට් මුරපදය"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ආරක්ෂාව"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-පුද්ගලික"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"කිසිවක් නැත"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP කලාපය"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"මෙම අවසරය යෙදුමකට පද්ධති සැකසීම් විකරණයට ඉඩ දෙයි."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"දැනුම්දීම් ප්‍රවේශය"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> සඳහා දැනුම්දීම් ප්‍රවේශයට ඉඩ දෙන්න ද?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> හට සම්බන්ධතා නම් සහ ඔබට ලැබෙන පණිවිඩවල පෙළ වැනි පුද්ගලික තොරතුරු ඇතුළුව, සියලු දැනුම්දීම් කියවීමට හැකි වනු ඇත. එයට දැනුම්දීම අස් කිරීමට හෝ ඒවායේ අඩංගු ක්‍රියා බොත්තම් ප්‍රේරණය කිරීමටත් හැකි වනු ඇත.\n\nමෙය යෙදුමට බාධා නොකරන්න ක්‍රියාත්මක හෝ ක්‍රියාවිරහිත කිරීමට සහ අදාළ සැකසීම් වෙනස් කිරීමටත් හැකියාව ලබා දෙනු ඇත."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ඔබ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> සඳහා දැනුම්දීම් ප්‍රවේශය ක්‍රියාවිරහිත කළහොත්, බාධා නොකරන්න ප්‍රවේශයත් ක්‍රියාවිරහිත කරනු ඇත."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ක්‍රියාවිරහිත කරන්න"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"අවලංගු කරන්න"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"පාරිතෝෂික කෙටිපණිවුඩ ප්‍රවේශය"</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"රහස්‍යතාව"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"විනෝදාස්වාද තොරතුරු පද්ධති දත්ත"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ඔබගේ ස්ථානයට යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"කැමරාව"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ඔබ‍ගේ කැමරා වෙත යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"මයික්‍රෆෝනය"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"මයික්‍රෆෝනය වෙත යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"විනෝද තොරතුරු පද්ධති දත්ත"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> භාවිත කරන්න"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"විකල්ප"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"සැකසීම්"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"කැමරාව"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"කැමරාව භාවිත කරන්න"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ඔබගේ කැමරාවට ප්‍රවේශ වීමට සියලු යෙදුම්වලට ඉඩ දෙන්න"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"කැමරා අවසර කළමනාකරණය කරන්න"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"මෑතකදී පිවිසි"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"මෑත යෙදුම් නැත"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"යෙදුම් 0කට ප්‍රවේශය ඇත"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}one{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}other{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"මෑතකදී පිවිසි"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"සියල්ල බලන්න"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"පූරණය වේ…"</string>
 </resources>

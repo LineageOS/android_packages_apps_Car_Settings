@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Gli altri dispositivi possono collegarsi a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Password hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sicurezza"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nessuno"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Questa autorizzazione consente a un\'app di modificare le impostazioni di sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accesso alle notifiche"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Consentire l\'accesso alle notifiche a <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> potrà leggere tutte le notifiche, incluse le informazioni personali quali i nomi dei contatti e il testo dei messaggi ricevuti. Potrà inoltre ignorare le notifiche o attivare i pulsanti di azione inclusi. \n\nL\'app potrà anche attivare o disattivare la funzione Non disturbare e modificare le relative impostazioni."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se disattivi l\'accesso alle notifiche per <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, potrebbe essere disattivato anche l\'accesso alla funzione Non disturbare."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Disattiva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annulla"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accesso a SMS premium"</string>
@@ -569,7 +575,7 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"Dati del profilo"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Totale"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Cancella spazio di archiviazione"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Cancella dati archiviati"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Svuota cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminare i dati dell\'app?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Tutti i dati dell\'app verranno eliminati definitivamente, inclusi tutti i file, le impostazioni, gli account, i database e così via."</string>
@@ -610,10 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacy"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Dati del sistema di infotainment"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Controlla l\'accesso delle app alla tua posizione"</string>
-    <!-- no translation found for mute_camera_title (215494079895460172) -->
-    <skip />
-    <!-- no translation found for mute_camera_summary (1237452064757403042) -->
-    <skip />
+    <string name="mute_camera_title" msgid="215494079895460172">"Fotocamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Controlla l\'accesso delle app alle tue fotocamere"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Microfono"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Controlla l\'accesso delle app al microfono"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Dati sistema di infotainment"</string>
@@ -834,26 +838,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Utilizza <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opzioni"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Impostazioni"</string>
-    <!-- no translation found for camera_settings_title (2837785830355288903) -->
-    <skip />
-    <!-- no translation found for camera_toggle_title (1990732328673068456) -->
-    <skip />
-    <!-- no translation found for camera_toggle_summary (5751159996822627567) -->
-    <skip />
-    <!-- no translation found for camera_manage_permissions (9005596413781984368) -->
-    <skip />
-    <!-- no translation found for camera_recently_accessed (8084100710444691977) -->
-    <skip />
-    <!-- no translation found for camera_no_recent_access (965105023454777859) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_off (1437200903113016549) -->
-    <skip />
-    <!-- no translation found for camera_app_permission_summary_camera_on (7260565911222013361) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_title (2433698239374365206) -->
-    <skip />
-    <!-- no translation found for camera_settings_recent_requests_view_all_title (8590811106414244795) -->
-    <skip />
-    <!-- no translation found for camera_settings_loading_app_permission_stats (1402676190705491418) -->
-    <skip />
+    <string name="camera_settings_title" msgid="2837785830355288903">"Fotocamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Utilizza fotocamera"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Consenti a tutte le app di accedere alla fotocamera"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Gestisci le autorizzazioni di accesso alla fotocamera"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Usi recenti"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nessuna app recente"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Nessuna app ha accesso"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Ha accesso # app su {total_count}}one{Ha accesso # app su {total_count}}other{Hanno accesso # app su {total_count}}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Usi recenti"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Mostra tutto"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Caricamento in corso…"</string>
 </resources>
