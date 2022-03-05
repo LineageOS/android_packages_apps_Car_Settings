@@ -146,6 +146,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Other devices can connect to <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Hotspot password"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Security"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"None"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP band"</string>
@@ -305,7 +309,7 @@
     <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Turn on prioritise app performance?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Turning it on can cause potential system instability or long-term hardware impact. Do you want to continue?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Yes"</string>
-    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"No thanks"</string>
+    <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"No, thanks"</string>
     <string name="disable_text" msgid="4358165448648990820">"Disable"</string>
     <string name="enable_text" msgid="1794971777861881238">"Enable"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Uninstall"</string>
