@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Pajisjet e tjera mund të lidhen me <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Fjalëkalimi i zonës së qasjes për internet"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Siguria"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Asnjë"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Brezi AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Kjo leje e lejon një aplikacion të modifikojë cilësimet e sistemit."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Hyrja te njoftimet"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Të lejohet qasja te njoftimet për \"<xliff:g id="SERVICE">%1$s</xliff:g>\"?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> do të jetë në gjendje të lexojë të gjitha njoftimet, duke përfshirë informacionin personal si p.sh. emrat e kontakteve dhe tekstin e mesazheve që merr. Ai do të jetë po ashtu në gjendje t\'i heqë njoftimet ose të aktivizojë butonat e veprimeve që përmbajnë.\n\nKjo do t\'i japë aplikacionit aftësinë për të aktivizuar ose çaktivizuar opsionin \"Mos shqetëso\" dhe për të ndryshuar cilësimet përkatëse."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nëse çaktivizon hyrjen te njoftimet për <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, mund të çaktivizohet edhe hyrja tek opsioni \"Mos shqetëso\"."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Çaktivizo"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulo"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Qasja te mesazhet SMS premium"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatësia"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Të dhënat e sistemit info-argëtues"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrollo qasjen e aplikacioneve te vendndodhja jote"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrollo qasjen e aplikacioneve te kamerat e tua"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofoni"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrollo qasjen e aplikacionit te mikrofoni"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Të dhënat e sistemit info-argëtues"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administratori i pajisjes nuk e lejon përdorimin e një fjalëkalimi të përdorur së fundi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Gabim gjatë ruajtjes së fjalëkalimit"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Fjalëkalimet e zakonshme janë bllokuar nga administratori i teknologjisë së informacionit. Provo një fjalëkalim tjetër."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Duhet të përmbajë të paktën një shkronjë"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Duhet të përmbajë të paktën një shifër"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Duhet të përmbajë të paktën një simbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Duhet të përmbajë të paktën # shkronjë}other{Duhet të përmbajë të paktën # shkronja}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Duhet të përmbajë të paktën # shkronjë të vogël}other{Duhet të përmbajë të paktën # shkronja të vogla}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Duhet të përmbajë të paktën # shkronjë të madhe}other{Duhet të përmbajë të paktën # shkronja të mëdha}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Duhet të përmbajë të paktën # shifër numerike}other{Duhet të përmbajë të paktën # shifra numerike}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Duhet të përmbajë të paktën # simbol të veçantë}other{Duhet të përmbajë të paktën # simbole të veçanta}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Duhet të përmbajë të paktën # karakter që nuk është shkronjë}other{Duhet të përmbajë të paktën # karaktere që nuk janë shkronja}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Duhet të përmbajë të paktën # karakter jonumerik}other{Duhet të përmbajë të paktën # karaktere jonumerike}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Duhet të përmbajë të paktën # karakter}other{Duhet të përmbajë të paktën # karaktere}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Duhet të përmbajë të paktën # shifër}other{Duhet të përmbajë të paktën # shifra}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Duhet të ketë më pak se # karakter}other{Duhet të ketë më pak se # karaktere}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Duhet të ketë më pak se # shifër}other{Duhet të ketë më pak se # shifra}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"E verdhë mbi të zezë"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"E verdhë në të kaltër"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Lexuesi i ekranit"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Joaktiv"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Lexo me zë artikujt në ekran"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Përdor TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Opsionet"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Cilësimet"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Informacione rreth TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack nuk ofrohet kur automjeti është në lëvizje.\n\nKur TalkBack është aktiv, ai ofron komente me zë, në mënyrë që ta përdorësh pajisjen tënde pa e parë ekranin. TalkBack është i synuar për situata ku njerëzit kanë vështirësi në shikimin e ekranit."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Joaktiv"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Lexo me zë artikujt në ekran"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Përdor <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opsionet"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Cilësimet"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Përdor kamerën"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Lejo qasjen në kamerën tënde për të gjitha aplikacionet"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Menaxho lejet e kamerës"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Qasur së fundi"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Asnjë aplikacion i fundit"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 aplikacione kanë qasje"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# nga {total_count} aplikacione ka qasje}other{# nga {total_count} aplikacione kanë qasje}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Qasur së fundi"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Shiko të gjitha"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Po ngarkohet…"</string>
 </resources>

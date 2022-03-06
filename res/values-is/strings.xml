@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Önnur tæki geta tengst við <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Aðgangsorð fyrir heitan reit"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Öryggi"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Engin"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Tíðnisvið"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Þessi heimild leyfir forriti að breyta kerfisstillingum."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Tilkynningaaðgangur"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Veita <xliff:g id="SERVICE">%1$s</xliff:g> aðgang að tilkynningum?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> mun geta lesið allar tilkynningar, þar á meðal persónuupplýsingar á borð við nöfn tengiliða og texta skilaboða sem þú færð. Það mun einnig geta hunsað tilkynningar eða valið aðgerðahnappa innan þeirra.\n\n Þetta mun einnig gera forritinu kleift að kveikja og slökkva á Ónáðið ekki og breyta tengdum stillingum."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ef þú slekkur á tilkynningaaðgangi fyrir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kann einnig að verða slökkt á Ónáðið ekki."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slökkva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hætta við"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Sérstakur SMS-aðgangur"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Persónuvernd"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Gögn upplýsinga- og afþreyingarkerfis"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Stjórna aðgengi forrits að staðsetningu þinni"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Myndavél"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Stjórna forritaaðgangi að myndavélum"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Hljóðnemi"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Stjórna aðgangi forritsins að hljóðnemanum"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Gögn upplýsinga- og afþreyingarkerfis"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Tækjastjóri leyfir ekki notkun nýlegs aðgangsorðs"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Villa við að vista aðgangsorð"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Kerfisstjórinn þinn hefur lokað á algeng aðgangsorð. Prófaðu annað aðgangsorð."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Verður að innihalda minnst einn bókstaf"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Verður að innihalda minnst einn tölustaf"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Verður að innihalda minnst eitt tákn"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Verður að innihalda minnst # bókstaf}one{Verður að innihalda minnst # bókstaf}other{Verður að innihalda minnst # bókstafi}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Verður að innihalda minnst # lágstaf}one{Verður að innihalda minnst # lágstaf}other{Verður að innihalda minnst # lágstafi}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Verður að innihalda minnst # hástaf}one{Verður að innihalda minnst # hástaf}other{Verður að innihalda minnst # hástafi}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Verður að innihalda minnst # tölustaf}one{Verður að innihalda minnst # tölustaf}other{Verður að innihalda minnst # tölustafi}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Verður að innihalda minnst # sérstaf}one{Verður að innihalda minnst # sérstaf}other{Verður að innihalda minnst # sérstafi}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Verður að innihalda minnst # staftákn sem er ekki bókstafur}one{Verður að innihalda minnst # staftákn sem er ekki bókstafur}other{Verður að innihalda minnst # staftákn sem eru ekki bókstafir}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Verður að innihalda minnst # staftákn sem er ekki tölustafur}one{Verður að innihalda minnst # staftákn sem er ekki tölustafur}other{Verður að innihalda minnst # staftákn sem eru ekki tölustafir}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Verður að innihalda minnst # staf}one{Verður að innihalda minnst # staf}other{Verður að innihalda minnst # stafi}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Verður að innihalda minnst # tölustaf}one{Verður að innihalda minnst # tölustaf}other{Verður að innihalda minnst # tölustafi}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Verður að vera styttra en # stafur}one{Verður að vera styttra en # stafur}other{Verður að vera styttra en # stafir}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Verður að vera styttra en # tölustafur}one{Verður að vera styttra en # tölustafur}other{Verður að vera styttra en # tölustafir}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Hækkandi, lækkandi eða endurtekin röð tölustafa er óheimil"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Valkostir skjálæsingar"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : Fyrir <xliff:g id="NUM_DAYS">%3$s</xliff:g> dögum"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Gult á svörtu"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Gult á bláu"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Skjálesari"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Slökkt"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Lesa upp atriði á skjánum"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Nota TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Valkostir"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Stillingar"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Nánar um TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack er ekki í boði á meðan ökutækið er á ferð.\n\nTalkBack býður upp á raddsvörun þegar kveikt er á því svo að þú getir notað tækið án þess að horfa á skjáinn. TalkBack er ætlað fólki sem á erfitt með að sjá á skjái eða til að nota við aðstæður þar sem erfitt er að sjá á skjái."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Slökkt"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Lesa upp atriði á skjánum"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Nota <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Valkostir"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Stillingar"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Myndavél"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Nota myndavél"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Veita öllum forritum aðgang að myndavélinni"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Stjórna myndavélaheimildum"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Nýlega opnað"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Engin nýleg forrit"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 forrit eru með aðgang"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# af {total_count} forriti/forritum er með aðgang}one{# af {total_count} forriti/forritum er með aðgang}other{# af {total_count} forritum er með aðgang}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nýlega opnað"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Skoða allt"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Hleður…"</string>
 </resources>

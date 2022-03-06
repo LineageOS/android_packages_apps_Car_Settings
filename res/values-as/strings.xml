@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ৰ সৈতে অন্য ডিভাইচে সংযোগ কৰিব পাৰে"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"হটস্পটৰ পাছৱৰ্ড"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"সুৰক্ষা"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ব্যক্তিগত"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"নাই"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"এপি বেণ্ড"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"এই অনুমতিটোৱে কোনো এপক ছিষ্টেম ছেটিংসমূহ সংশোধন কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"জাননীৰ এক্সেছ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি দিবনে?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>এ সকলো জাননী আৰু ব্যক্তিগত তথ্য যেনে সম্পৰ্কৰ নাম আৰু আপুনি লাভ কৰা পাঠ বাৰ্তা পঢ়িবলৈ সক্ষম হ’ব। ই জাননী প্ৰত্যাখ্যান কৰিব পাৰিব বা সেইবিলাকত থকা ক্ৰিয়া সম্পৰ্কীয় বুটামৰ দ্বাৰা কৰিবলগীয়া কাৰ্যসমূহৰ সূচনা কৰিব পাৰিব। \n\nই এপ্‌টোক অসুবিধা নিদিব অন বা অফ কৰাৰ লগতে তাৰ লগত জড়িত ছেটিংসমূহ সলনি কৰাৰ ক্ষমতা দিব।"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপুনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি নিদিয়ে, তেন্তে অসুবিধা নিদিব-ৰ এক্সেছো অফ হ’ব পাৰে।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"অফ কৰক"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল কৰক"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"প্ৰিমিয়াম এছএমএছৰ এক্সেছ"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"গোপনীয়তা"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ইনফ’টেইনমেণ্ট ছিষ্টেমৰ ডেটা"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"আপোনাৰ অৱস্থানলৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"কেমেৰা"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"আপোনাৰ কেমেৰালৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"মাইক্ৰ’ফ’ন"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"মাইক্ৰ’ফ’নলৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ইনফ’টেইনমেণ্ট ছিষ্টেমৰ ডেটা"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ডিভাইচৰ প্ৰশাসকে শেহতীয়া পাছৱৰ্ড ব্যৱহাৰ কৰিব নিদিয়ে"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"পাছৱৰ্ড ছেভ কৰোঁতে আঁসোৱাহ"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"আপোনাৰ আইটি প্ৰশাসকে উমৈহতীয়া পাছৱৰ্ডসমূহ অৱৰোধ কৰিছে। অন্য এটা পাছৱৰ্ড ব্যৱহাৰ কৰি চাওক।"</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"কমেও এটা বৰ্ণ থাকিব লাগিব"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"কমেও এটা অংক থাকিব লাগিব"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"কমেও এটা প্ৰতীক থাকিব লাগিব"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{অতি কমেও # টা বৰ্ণ থাকিব লাগিব}one{অতি কমেও # টা বৰ্ণ থাকিব লাগিব}other{অতি কমেও # টা বৰ্ণ থাকিব লাগিব}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{অতি কমেও # টা সৰুফলা বৰ্ণ থাকিব লাগিব}one{অতি কমেও # টা সৰুফলা বৰ্ণ থাকিব লাগিব}other{অতি কমেও # টা সৰুফলা বৰ্ণ থাকিব লাগিব}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{[অতি কমেও # টা বৰফলা বৰ্ণ থাকিব লাগিব}one{অতি কমেও # টা বৰফলা বৰ্ণ থাকিবই লাগিব}other{অতি কমেও # টা বৰফলা বৰ্ণ থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{কমেও # টা সংখ্যা থাকিব লাগিব}one{অতি কমেও # টা অংক থাকিবই লাগিব}other{অতি কমেও # টা অংক থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{অতি কমেও # টা বিশেষ চিহ্ন থাকিব লাগিব}one{অতি কমেও # টা বিশেষ প্ৰতীক থাকিবই লাগিব}other{অতি কমেও # টা বিশেষ প্ৰতীক থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{অতি কমেও # টা সংখ্যা বা প্ৰতীক থাকিব লাগিব}one{অতি কমেও # টা সংখ্যা বা প্ৰতীক থাকিব লাগিব}other{অতি কমেও # টা সংখ্যা বা প্ৰতীক থাকিব লাগিব}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{অতি কমেও # টা এনেকুৱা বৰ্ণ থাকিবই লাগিব যিটো সংখ্যা নহয়}one{অতি কমেও # টা এনেকুৱা বৰ্ণ থাকিবই লাগিব যিটো সংখ্যা নহয়}other{অতি কমেও # টা এনেকুৱা বৰ্ণ থাকিবই লাগিব যিটো সংখ্যা নহয়}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{অতি কমেও # টা বর্ণ থাকিবই লাগিব}one{অতি কমেও # টা বৰ্ণ থাকিবই লাগিব}other{অতি কমেও # টা বৰ্ণ থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{অতি কমেও # টা অংক থাকিবই লাগিব}one{অতি কমেও # টা অংক থাকিবই লাগিব}other{অতি কমেও # টা অংক থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# টা বর্ণতকৈ কম হ\'বই লাগিব}one{# তকৈ কম সংখ্যক আখৰৰ হ\'ব লাগিব}other{# তকৈ কম সংখ্যক আখৰৰ হ\'ব লাগিব}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# টা সংখ্যাতকৈ কম হ\'বই লাগিব}one{# তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব}other{# তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"সংখ্যাবোৰৰ ঊৰ্ধ্বগামী, অধোগামী বা পুনৰাবৃত্তি ক্ৰমক অনুমতি দিয়া নহয়"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্ৰীণ লক সম্পৰ্কীয় বিকল্প"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> দিন আগত"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ক’লাৰ ওপৰত হালধীয়া"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"নীলাৰ ওপৰত হালধীয়া"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"স্ক্ৰীন ৰীডাৰ"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"টকবেক"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"অফ আছে"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"স্ক্ৰীনত থকা বস্তুবোৰ কওক"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"টকবেক ব্যৱহাৰ কৰক"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"বিকল্প"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"ছেটিং"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"টকবেকৰ বিষয়ে"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"বাহনখনে গতি কৰি থকা অৱস্থাত টকবেক উপলব্ধ নহয়।\n\nটকবেক অন হৈ থাকিলে, ই কথিতৰূপত মতামত দিয়ে যাতে আপুনি স্ক্ৰীনখনলৈ নোচোৱাকৈ নিজৰ ডিভাইচটো ব্যৱহাৰ কৰিব পাৰে। টকবেক হৈছে স্ক্ৰীন দেখাত অসুবিধা হোৱা পৰিস্থিতি অথবা লোকসকলৰ উদ্দেশ্যে তৈয়াৰ কৰা এটা সুবিধা।"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"অফ আছে"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"স্ক্ৰীনত থকা বস্তুবোৰ কওক"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ব্যৱহাৰ কৰক"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"বিকল্প"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"ছেটিং"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"কেমেৰা"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"কেমেৰা ব্যৱহাৰ কৰক"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"আটাইবোৰ এপক আপোনাৰ কেমেৰা এক্সেছ কৰিবলৈ দিয়ক"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"কেমেৰাৰ অনুমতি পৰিচালনা কৰক"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"কোনো শেহতীয়া এপ্‌ নাই"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"০ টা এপৰ এক্সেছ আছে"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}one{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}other{{total_count} টা এপৰ ভিতৰত # টাৰ এক্সেছ আছে}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"আটাইবোৰ চাওক"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ল’ড কৰি থকা হৈছে…"</string>
 </resources>

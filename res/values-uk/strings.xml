@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Інші пристрої можуть підключатися до точки доступу \"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>\""</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Пароль точки доступу"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Безпека"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Немає"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Діапазон частот точки доступу"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Додаток із цим дозволом може змінювати налаштування системи."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Доступ до сповіщень"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Надати додатку <xliff:g id="SERVICE">%1$s</xliff:g> доступ до сповіщень?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> зможе переглядати всі сповіщення, зокрема з особистою інформацією, як-от іменами контактів і текстами отриманих повідомлень, а також відхиляти сповіщення або активувати в них командні кнопки.\n\nДодаток зможе вмикати й вимикати режим \"Не турбувати\" та змінювати пов’язані з ним налаштування."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Якщо вимкнути доступ додатка <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> до сповіщень, доступ до режиму \"Не турбувати\" також буде вимкнено."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Вимкнути"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Скасувати"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Доступ до платних SMS"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Конфіденційність"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Дані інформаційно-розважальної системи"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Контролюйте доступ додатка до геоданих"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Control app access to your cameras Контролюйте доступ додатків до камер"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Мікрофон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Контролюйте доступ додатка до мікрофона"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Дані інфо-розважальної системи"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Адміністратор пристрою не дозволяє використовувати останній пароль"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не вдалося зберегти пароль"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Системний адміністратор заблокував загальні паролі. Введіть інший пароль."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Має містити принаймні одну літеру"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Має містити принаймні одну цифру"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Має містити принаймні один символ"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Має містити принаймні # літеру}one{Має містити принаймні # літеру}few{Має містити принаймні # літери}many{Має містити принаймні # літер}other{Має містити принаймні # літери}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Має містити принаймні # малу літеру}one{Має містити принаймні # малу літеру}few{Має містити принаймні # малі літери}many{Має містити принаймні # малих літер}other{Має містити принаймні # малої літери}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Має містити принаймні # велику літеру}one{Має містити принаймні # велику літеру}few{Має містити принаймні # великі літери}many{Має містити принаймні # великих літер}other{Має містити принаймні # великої літери}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Має містити принаймні # цифру}one{Має містити принаймні # цифру}few{Має містити принаймні # цифри}many{Має містити принаймні # цифр}other{Має містити принаймні # цифри}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Має містити принаймні # спеціальний символ}one{Має містити принаймні # спеціальний символ}few{Має містити принаймні # спеціальні символи}many{Має містити принаймні # спеціальних символів}other{Має містити принаймні # спеціального символу}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Має містити принаймні # символ, який не є літерою}one{Має містити принаймні # символ, який не є літерою}few{Має містити принаймні # символи, які не є літерами}many{Має містити принаймні # символів, які не є літерами}other{Має містити принаймні # символу, які не є літерами}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Має містити принаймні # символ, який не є цифрою}one{Має містити принаймні # символ, який не є цифрою}few{Має містити принаймні # символи, які не є літерами}many{Має містити принаймні # символів, які не є літерами}other{Має містити принаймні # символу, які не є літерами}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Має містити принаймні # символ}one{Має містити принаймні # символ}few{Має містити принаймні # символи}many{Має містити принаймні # символів}other{Має містити принаймні # символу}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Має містити принаймні # цифру}one{Має містити принаймні # цифру}few{Має містити принаймні # цифри}many{Має містити принаймні # цифр}other{Має містити принаймні # цифри}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Має містити менше ніж # символ}one{Має містити менше ніж # символ}few{Має містити менше ніж # символи}many{Має містити менше ніж # символів}other{Має містити менше ніж # символу}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Має містити менше ніж # цифру}one{Має містити менше ніж # цифру}few{Має містити менше ніж # цифри}many{Має містити менше ніж # цифр}other{Має містити менше ніж # цифри}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Цифри в порядку зростання чи спадання та повторювані цифри заборонені"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Способи блокування екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. тому"</string>
@@ -851,12 +845,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Жовтий на чорному"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Жовтий на синьому"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Програма зчитування з екрана"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Вимкнено"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Озвучувати елементи на екрані"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Використовувати TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Опції"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Налаштування"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Про TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack не працює, коли авто в русі.\n\nКоли функцію TalkBack увімкнено, вона надає голосові підказки, завдяки яким ви можете користуватися своїм пристроєм, не дивлячись на його екран. Функцію TalkBack призначено для людей із вадами зору або ситуацій, коли дивитися на екран складно."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Вимкнено"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Озвучувати елементи на екрані"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Використовувати <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Параметри"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Налаштування"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Камера"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Використання камери"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Надати всім додаткам доступ до камери"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Керувати дозволами на доступ до камери"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Нещодавно використовувалися"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Жодний додаток не використовував камеру нещодавно"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 додатків мають доступ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# додаток із {total_count} має доступ}one{# додаток із {total_count} має доступ}few{# додатки з {total_count} мають доступ}many{# додатків із {total_count} мають доступ}other{# додатка з {total_count} має доступ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Нещодавно використовувалися"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Показати всі"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Завантаження…"</string>
 </resources>

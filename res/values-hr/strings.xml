@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Drugi uređaji mogu se povezati sa žarišnom točkom <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Zaporka žarišne točke"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sigurnost"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nema"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Pojas AP-a"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"To dopuštenje omogućuje aplikaciji izmjenu postavki sustava."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obavijestima"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Želite li dopustiti usluzi <xliff:g id="SERVICE">%1$s</xliff:g> da pristupa obavijestima?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Aplikacija <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> moći će čitati sve obavijesti, uključujući osobne podatke kao što su imena kontakata i tekst poruka koje primate. Moći će i odbacivati obavijesti ili pokretati gumbe za radnje koje obavijesti sadrže.\n\nAplikacija će također moći uključiti ili isključiti značajku Ne uznemiravaj i promijeniti povezane postavke."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obavijestima za <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda će se isključiti i pristup značajci Ne uznemiravaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Odustani"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup SMS-ovima s dodatnom naplatom"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatnost"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Podaci sustava za informiranje i zabavu"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Upravljanje pristupom aplikacija lokaciji"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Fotoaparat"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Upravljajte pristupom aplikacija svojim fotoaparatima"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Upravljanje pristupa aplikacija mikrofonu"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"sustav za informiranje i zabavu"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administrator uređaja ne dopušta upotrebu nedavne zaporke"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Pogreška pri spremanju zaporke"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Vaš je IT administrator blokirao uobičajene zaporke. Pokušajte s nekom drugom zaporkom."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Mora sadržavati najmanje jedno slovo"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Mora sadržavati najmanje jednu znamenku"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Mora sadržavati najmanje jedan simbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Mora sadržavati najmanje # slovo}one{Mora sadržavati najmanje # slovo}few{Mora sadržavati najmanje # slova}other{Mora sadržavati najmanje # slova}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Mora sadržavati najmanje # malo slovo}one{Mora sadržavati najmanje # malo slovo}few{Mora sadržavati najmanje # mala slova}other{Mora sadržavati najmanje # malih slova}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Mora sadržavati najmanje # veliko slovo}one{Mora sadržavati najmanje # veliko slovo}few{Mora sadržavati najmanje # velika slova}other{Mora sadržavati najmanje # velikih slova}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Mora sadržavati najmanje # znamenku}one{Mora sadržavati najmanje # znamenku}few{Mora sadržavati najmanje # znamenke}other{Mora sadržavati najmanje # znamenki}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Mora sadržavati najmanje # posebni simbol}one{Mora sadržavati najmanje # posebni simbol}few{Mora sadržavati najmanje # posebna simbola}other{Mora sadržavati najmanje # posebnih simbola}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Mora sadržavati najmanje # znak koji nije slovo}one{Mora sadržavati najmanje # znak koji nije slovo}few{Mora sadržavati najmanje # znaka koji nisu slova}other{Mora sadržavati najmanje # znakova koji nisu slova}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Mora sadržavati najmanje # znak koji nije znamenka}one{Mora sadržavati najmanje # znak koji nije znamenka}few{Mora sadržavati najmanje # znaka koji nisu znamenke}other{Mora sadržavati najmanje # znakova koji nisu znamenke}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Mora sadržavati najmanje # znak}one{Mora sadržavati najmanje # znak}few{Mora sadržavati najmanje # znaka}other{Mora sadržavati najmanje # znakova}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Mora sadržavati najmanje # znamenku}one{Mora sadržavati najmanje # znamenku}few{Mora sadržavati najmanje # znamenke}other{Mora sadržavati najmanje # znamenki}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Mora sadržavati manje od # znaka}one{Mora sadržavati manje od # znaka}few{Mora sadržavati manje od # znaka}other{Mora sadržavati manje od # znakova}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Mora sadržavati manje od # znamenke}one{Mora sadržavati manje od # znamenke}few{Mora sadržavati manje od # znamenke}other{Mora sadržavati manje od # znamenki}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Uzastopno rastući ili padajući slijed brojeva ili ponavljanje brojeva nije dopušteno"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcije zaključavanja zaslona"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : prije <xliff:g id="NUM_DAYS">%3$s</xliff:g> dana"</string>
@@ -845,12 +839,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Žuto na crnom"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Žuto na plavom"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Čitač zaslona"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Isključeno"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Izgovaranje stavki na zaslonu"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Upotreba TalkBacka"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Opcije"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Postavke"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"O TalkBacku"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack nije dostupan dok se vozilo kreće.\n\nKad je TalkBack uključen, pruža govorne povratne informacije kako biste mogli koristiti uređaj bez gledanja zaslona. TalkBack je namijenjen situacijama u kojima je zaslon slabo vidljiv ili za osobe koje imaju poteškoća s vidom."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Isključeno"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Izgovaranje stavki na zaslonu"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Koristi aplikaciju <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcije"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Postavke"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Fotoaparat"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Upotreba fotoaparata"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Svim aplikacijama dopustite pristup fotoaparatu"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Upravljanje dopuštenjima fotoaparata"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Nedavno pristupano"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nema nedavnih aplikacija"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Nijedna aplikacija nema pristup"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# od {total_count} aplikacija ima pristup}one{# od {total_count} aplikacija ima pristup}few{# od {total_count} aplikacija imaju pristup}other{# od {total_count} aplikacija imaju pristup}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nedavno pristupano"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Prikaži sve"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Učitavanje…"</string>
 </resources>

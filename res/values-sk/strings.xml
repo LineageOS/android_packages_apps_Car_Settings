@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Ostatné zariadenia sa môžu pripojiť k hotspotu <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Heslo hotspotu"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Zabezpečenie"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nikdy"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Pásmo prístupového bodu"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Toto povolenie umožňuje aplikácii upravovať nastavenia systému."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Prístup k upozorneniam"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Chcete povoliť službe <xliff:g id="SERVICE">%1$s</xliff:g> prístup k upozorneniam?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> bude môcť čítať všetky upozornenia vrátane osobných údajov, ako sú mená kontaktov a texty prijatých správ. Bude môcť tiež zrušiť upozornenia alebo spustiť v nich obsiahnuté tlačidlá akcií.\n\nAplikácia tým získa aj možnosť vypnúť alebo zapnúť režim bez vyrušení a meniť súvisiace nastavenia."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ak vypnete prístup k upozorneniam pre aplikáciu <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, môžete tým tiež deaktivovať prístup k režimu bez vyrušení."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Vypnúť"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Zrušiť"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Prístup k prémiovým správam SMS"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Ochrana súkromia"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Údaje palubného systému"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Ovládať prístup aplikácií k polohe"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Správa prístupu aplikácií ku kamerám"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofón"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Ovládanie prístupu aplikácií k mikrofónu"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Údaje palubného systému"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Správca zariadenia neumožňuje používať nedávne heslo"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Pri ukladaní hesla sa vyskytla chyba"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Bežné heslá zablokoval správca IT. Skúste iné heslo."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Musí obsahovať minimálne jedno písmeno"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Musí obsahovať minimálne jedno číslo"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Musí obsahovať minimálne jeden symbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Musí obsahovať minimálne # písmeno}few{Musí obsahovať minimálne # písmená}many{Must contain at least # letters}other{Musí obsahovať minimálne # písmen}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Musí obsahovať minimálne # malé písmeno}few{Musí obsahovať minimálne # malé písmená}many{Must contain at least # lowercase letters}other{Musí obsahovať minimálne # malých písmen}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Musí obsahovať minimálne # veľké písmeno}few{Musí obsahovať minimálne # veľké písmená}many{Must contain at least # uppercase letters}other{Musí obsahovať minimálne # veľkých písmen}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Musí obsahovať minimálne # číslo}few{Musí obsahovať minimálne # čísla}many{Must contain at least # numerical digits}other{Musí obsahovať minimálne # čísiel}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Musí obsahovať minimálne # špeciálny symbol}few{Musí obsahovať minimálne # špeciálne symboly}many{Must contain at least # special symbols}other{Musí obsahovať minimálne # špeciálnych symbolov}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Musí obsahovať minimálne # znak, ktorý nie je písmeno}few{Musí obsahovať minimálne # znaky, ktoré nie sú písmená}many{Must contain at least # non-letter characters}other{Musí obsahovať minimálne # znakov, ktoré nie sú písmená}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Musí obsahovať minimálne # znak, ktorý nie je číslo}few{Musí obsahovať minimálne # znaky, ktoré nie sú čísla}many{Must contain at least # non-numerical characters}other{Musí obsahovať minimálne # znakov, ktoré nie sú čísla}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Musí obsahovať minimálne # znak}few{Musí obsahovať minimálne # znaky}many{Must contain at least # characters}other{Musí obsahovať minimálne # znakov}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Musí obsahovať minimálne # číslo}few{Musí obsahovať minimálne # čísla}many{Must contain at least # digits}other{Musí obsahovať minimálne # čísiel}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Musí mať menej ako # znak}few{Musí mať menej ako # znaky}many{Must be fewer than # characters}other{Musí mať menej ako # znakov}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Musí mať menej ako # znak}few{Musí mať menej ako # znaky}many{Must be fewer than # digits}other{Musí mať menej ako # znakov}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Vzostupná, zostupná alebo opakovaná sekvencia čísiel nie je povolená"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Možnosti zámky obrazovky"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : pred <xliff:g id="NUM_DAYS">%3$s</xliff:g> dňami"</string>
@@ -851,12 +845,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Žlté na čiernom"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Žlté na modrom"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Čítačka obrazovky"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Vypnuté"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Hovoriť položky na obrazovke"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Používať TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Možnosti"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Nastavenia"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Aplikácia TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack nie je k dispozícii, keď je vozidlo v pohybe.\n\nKeď je aplikácia TalkBack zapnutá, poskytuje hovorenú spätnú väzbu, aby ste mohli zariadenie používať bez pozerania na obrazovku. Aplikácia TalkBack je určená pre situácie alebo ľudí, ktorí nevidia dobre obrazovku."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Vypnuté"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Hovoriť položky na obrazovke"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Použiť aplikáciu <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Možnosti"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Nastavenia"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Používanie kamery"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Povoliť všetkým aplikáciám prístup ku kamere"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Spravovať povolenia kamery"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Nedávno použité"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Žiadne nedávne aplikácie"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Prístup nemajú žiadne aplikácie"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Prístup má # z {total_count} aplikácií}few{Prístup majú # z {total_count} aplikácií}many{# of {total_count} apps have access}other{Prístup má # z {total_count} aplikácií}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nedávno použité"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Zobraziť všetko"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Načítava sa…"</string>
 </resources>

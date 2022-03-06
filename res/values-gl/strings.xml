@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Outros dispositivos poden conectarse a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Contrasinal da zona wifi"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Seguranza"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 persoal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Ningún tipo"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda do PA"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Con este permiso as aplicacións poden modificar a configuración do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a notificacións"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Queres permitir que <xliff:g id="SERVICE">%1$s</xliff:g> teña acceso ás notificacións?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> poderá ler todas as notificacións, incluída a información persoal, coma os nomes dos contactos e o texto das mensaxes que recibas. Tamén poderá ignorar notificacións ou activar os botóns de acción que estas conteñan.\n\nAdemais, poderá activar ou desactivar o modo Non molestar e cambiar a configuración asociada."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desactivas o acceso de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ás notificacións, tamén se pode desactivar o acceso a Non molestar."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS de tarificación adicional"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacidade"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Sistema de información e entretemento"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Controlar acceso das aplicacións á túa localización"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Cámara"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Controla o acceso das aplicacións ás cámaras"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micrófono"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Controla o acceso das aplicacións ao micrófono"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Sistema de inf. e entr.: datos"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"O administrador de dispositivos non permite o uso dun contrasinal recente"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Erro ao gardar o contrasinal"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"O teu administrador de TI bloqueou os contrasinais comúns. Proba cun contrasinal diferente."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Debe conter polo menos unha letra"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Debe conter polo menos un díxito"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Debe conter polo menos un símbolo"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Debe conter polo menos # letra}other{Debe conter polo menos # letras}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Debe conter polo menos # letra minúscula}other{Debe conter polo menos # letras minúsculas}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Debe conter polo menos # letra maiúscula}other{Debe conter polo menos # letras maiúsculas}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Debe conter polo menos # díxito numérico}other{Debe conter polo menos # díxitos numéricos}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Debe conter polo menos # símbolo especial}other{Debe conter polo menos # símbolos especiais}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Debe conter polo menos # carácter que non sexa unha letra}other{Debe conter polo menos # caracteres que non sexan letras}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Debe conter polo menos # carácter que non sexa un número}other{Debe conter polo menos # caracteres que non sexan números}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Debe conter polo menos # carácter}other{Debe conter polo menos # caracteres}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Debe conter polo menos # díxito}other{Debe conter polo menos # díxitos}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Debe conter menos de # carácter}other{Debe conter menos de # caracteres}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Debe conter menos de # díxito}other{Debe conter menos de # díxitos}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Non se permite unha secuencia de díxitos ascendente, descendente nin repetida"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcións de bloqueo de pantalla"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: hai <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Amarelo sobre negro"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Amarelo sobre azul"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Lector de pantalla"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Desactivado"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Le os elementos da pantalla"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Utilizar TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Opcións"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Configuración"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Acerca de TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack non está dispoñible mentres o vehículo se atopa en movemento.\n\nCando a función está activada, ofrece comentarios de voz para que poidas utilizar o dispositivo sen mirar a pantalla. TalkBack está pensado para situacións nas que non se pode mirar a pantalla ou para persoas con problemas visuais."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Desactivado"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Le os elementos da pantalla"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Usar <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcións"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Configuración"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Cámara"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Usar cámara"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Permite que todas as aplicacións accedan á cámara"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Xestionar permisos de acceso á cámara"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Accesos recentes"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Ningunha aplicación accedeu recentemente"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Ningunha aplicación ten acceso"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Aplicacións con acceso: # de {total_count}}other{Aplicacións con acceso: # de {total_count}}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Accesos recentes"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Ver todo"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Cargando…"</string>
 </resources>

@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Други уређаји могу да се повежу са хотспотом <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка хотспота"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Безбедност"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Нема"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Опсег AP-а"</string>
@@ -377,7 +381,7 @@
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Контролишу приступ апликација подацима"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"За Помоћник и друго"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"За систем и друга подешавања"</string>
-    <string name="special_access" msgid="5730278220917123811">"Посебан приступ апликацији"</string>
+    <string name="special_access" msgid="5730278220917123811">"Посебан приступ апликација"</string>
     <string name="show_system" msgid="4401355756969485287">"Прикажи системске"</string>
     <string name="hide_system" msgid="8845453295584638040">"Сакриј системске"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Сакриј системске апликације"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Ова дозвола омогућава апликацији да мења подешавања система."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Приступ обавештењима"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Желите ли да дозволите да <xliff:g id="SERVICE">%1$s</xliff:g> има приступ обавештењима?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ће моћи да чита сва обавештења, укључујући личне податке, попут имена контаката и текста порука које примате. Моћи ће и да одбацује обавештења или да користи дугмад за радње која садрже. \n\nОво ће апликацији омогућити и да укључује или искључује режим Не узнемиравај и мења сродна подешавања."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако искључите приступ обавештењима за <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, можда ћете искључити и приступ режиму Не узнемиравај."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Искључи"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Откажи"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Приступ премијум SMS-овима"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Приватност"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Подаци система за инфо-забаву"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Контролишите приступ апликација локацији"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Контролишите приступ апликација камерама"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Микрофон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Контролише приступ апликација микрофону"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Подаци система за инфо-забаву"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Администратор уређаја не дозвољава употребу недавно коришћене лозинке"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Грешка при чувању лозинке"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ИТ администратор блокира честе лозинке. Изаберите другу лозинку."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Мора да садржи најмање једно слово"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Мора да садржи најмање једну цифру"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Мора да садржи најмање један симбол"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Мора да садржи најмање # слово}one{Мора да садржи најмање # слово}few{Мора да садржи најмање # слова}other{Мора да садржи најмање # слова}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Мора да садржи најмање # мало слово}one{Мора да садржи најмање # мало слово}few{Мора да садржи најмање # мала слова}other{Мора да садржи најмање # малих слова}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Мора да садржи најмање # велико слово}one{Мора да садржи најмање # велико слово}few{Мора да садржи најмање # велика слова}other{Мора да садржи најмање # великих слова}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Мора да садржи најмање # цифру}one{Мора да садржи најмање # цифру}few{Мора да садржи најмање # цифре}other{Мора да садржи најмање # цифара}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Мора да садржи најмање # специјални симбол}one{Мора да садржи најмање # специјални симбол}few{Мора да садржи најмање # специјална симбола}other{Мора да садржи најмање # специјалних симбола}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Мора да садржи најмање # знак који није слово}one{Мора да садржи најмање # знак који није слово}few{Мора да садржи најмање # знака који нису слова}other{Мора да садржи најмање # знакова који нису слова}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Мора да садржи најмање # знак који није број}one{Мора да садржи најмање # знак који није број}few{Мора да садржи најмање # знака који нису бројеви}other{Мора да садржи најмање # знакова који нису бројеви}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Мора да садржи најмање # знак}one{Мора да садржи најмање # знак}few{Мора да садржи најмање # знака}other{Мора да садржи најмање # знакова}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Мора да садржи најмање # цифру}one{Мора да садржи најмање # цифру}few{Мора да садржи најмање # цифре}other{Мора да садржи најмање # цифара}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Мора да садржи мање од # знака}one{Мора да садржи мање од # знака}few{Мора да садржи мање од # знака}other{Мора да садржи мање од # знакова}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Мора да садржи мање од # цифре}one{Мора да садржи мање од # цифре}few{Мора да садржи мање од # цифре}other{Мора да садржи мање од # цифара}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Растући, опадајући или поновљени низ цифара није дозвољен"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опције закључавања екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пре <xliff:g id="NUM_DAYS">%3$s</xliff:g> дан(а)"</string>
@@ -845,12 +839,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Жуто на црно"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Жуто на плаво"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Читач екрана"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Искључено"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Изговара ставке на екрану"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Користи TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Опције"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Подешавања"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"О TalkBack-у"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack није доступан док се возило креће.\n\nКада је TalkBack укључен, он пружа говорне повратне информације да бисте могли да користите уређај без гледања у екран. TalkBack је предвиђен за ситуације или особе са проблемима при прегледу садржаја екрана."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Искључено"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Изговара ставке на екрану"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Користи апликацију <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Опције"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Подешавања"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Камера"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Коришћење камере"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Дозволите свим апликацијама да приступају камери"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Управљајте дозволама за камеру"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Недавно приступано"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Нема недавних апликација"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 апликација има приступ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# од укупно {total_count} апликације која има приступ}one{# од укупно {total_count} апликације која има приступ}few{# од укупно {total_count} апликације које имају приступ}other{# од укупно {total_count} апликација које имају приступ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Недавно приступано"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Прикажи све"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Учитава се…"</string>
 </resources>
