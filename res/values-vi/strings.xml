@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Các thiết bị khác có thể kết nối với <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Mật khẩu điểm phát sóng"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Bảo mật"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Không"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Băng tần AP"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Quyền này cho phép ứng dụng sửa đổi các chế độ cài đặt hệ thống."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Quyền truy cập thông báo"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cho phép <xliff:g id="SERVICE">%1$s</xliff:g> truy cập thông báo?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> có thể đọc tất cả các thông báo, bao gồm cả thông tin cá nhân như tên của người liên hệ và nội dung của thông báo mà bạn nhận được. Ứng dụng này cũng có thể bỏ qua thông báo hoặc kích hoạt các nút thao tác trong những thông báo đó.\n\nĐiều này cũng sẽ cho phép ứng dụng bật hoặc tắt chế độ Không làm phiền và thay đổi chế độ cài đặt có liên quan."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nếu bạn tắt quyền truy cập thông báo của <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, thì quyền truy cập chế độ Không làm phiền cũng có thể bị tắt."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Tắt"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hủy"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Quyền truy cập vào Tin nhắn dịch vụ"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Quyền riêng tư"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Dữ liệu của hệ thống thông tin giải trí"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kiểm soát quyền truy cập của ứng dụng vào thông tin vị trí của bạn"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Máy ảnh"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kiểm soát quyền truy cập của ứng dụng vào dữ liệu máy ảnh"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micrô"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kiểm soát quyền truy cập của ứng dụng vào micrô"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Dữ liệu trong hệ thống thông tin giải trí"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Quản trị viên thiết bị không cho phép sử dụng mật khẩu gần đây"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Lỗi khi lưu mật khẩu"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Quản vị viên CNTT đã chặn các mật khẩu phổ biến. Hãy thử mật khẩu khác."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Phải có ít nhất 1 chữ cái"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Phải có ít nhất 1 chữ số"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Phải có ít nhất 1 ký hiệu"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Phải có ít nhất # chữ cái}other{Phải có ít nhất # chữ cái}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Phải có ít nhất # chữ cái viết thường}other{Phải có ít nhất # chữ cái viết thường}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Phải có ít nhất # chữ cái viết hoa}other{Phải có ít nhất # chữ cái viết hoa}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Phải có ít nhất # chữ số}other{Phải có ít nhất # chữ số}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Phải có ít nhất # ký hiệu đặc biệt}other{Phải có ít nhất # ký hiệu đặc biệt}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Phải có ít nhất # ký tự không phải chữ cái}other{Phải có ít nhất # ký tự không phải chữ cái}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Phải có ít nhất # ký tự không phải chữ số}other{Phải có ít nhất # ký tự không phải chữ số}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Phải có ít nhất # ký tự}other{Phải có ít nhất # ký tự}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Phải có ít nhất # chữ số}other{Phải có ít nhất # chữ số}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Phải có ít hơn # ký tự}other{Phải có ít hơn # ký tự}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Phải có ít hơn # chữ số}other{Phải có ít hơn # chữ số}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Không cho phép thứ tự chữ số tăng dần, giảm dần hoặc lặp lại"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Tùy chọn phương thức khóa màn hình"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ngày trước"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Chữ vàng trên nền đen"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Chữ vàng trên nền xanh dương"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Trình đọc màn hình"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Tắt"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Nói các mục trên màn hình"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"Sử dụng TalkBack"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Tùy chọn"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Cài đặt"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"Giới thiệu về TalkBack"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"TalkBack không hoạt động khi xe đang di chuyển.\n\nKhi đang bật, TalkBack đưa ra phản hồi bằng giọng nói để bạn có thể dùng thiết bị mà không cần nhìn vào màn hình. TalkBack là dành cho những tình huống hoặc người gặp khó khăn khi nhìn màn hình."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Đang tắt"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Nói các mục trên màn hình"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Sử dụng <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Tuỳ chọn"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Cài đặt"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Máy ảnh"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Sử dụng máy ảnh"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Cho phép tất cả ứng dụng truy cập vào dữ liệu máy ảnh"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Quản lý quyền truy cập vào dữ liệu máy ảnh"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Mới truy cập gần đây"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Không có ứng dụng nào mới truy cập"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ứng dụng có quyền truy cập"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{#/{total_count} ứng dụng có quyền truy cập}other{#/{total_count} ứng dụng có quyền truy cập}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Mới truy cập gần đây"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Xem tất cả"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Đang tải…"</string>
 </resources>

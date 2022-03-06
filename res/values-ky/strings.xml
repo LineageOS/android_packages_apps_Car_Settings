@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Башка түзмөктөр <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> тармагына туташа алышат"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Байланыш түйүнүнүн сырсөзү"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Коопсуздук"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Жок"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Wi-Fi диапазону"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын жөндөөлөрүн өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат берилсинби?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> колдонмосу эскертмелердин баарын, ошону менен катар байланыштардын аты-жөнү жана кабыл алынган билдирүүлөр сыяктуу жеке маалыматты окуй алат. Мындан тышкары, ал билдирмелерди жок кылып же алардагы баскычтарды баса алат.\n\nУшуну менен колдонмо \"Тынчымды алба\" режимин иштетүү же өчүрүү, ошондой эле анын жөндөөлөрүн өзгөртүү мүмкүнчүлүгүнө ээ болот."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Эгер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үчүн билдирмени угуу уруксатын өчүрсөңүз, анын \"Тынчымды алба\" режимине да уруксаты жок болуп калышы мүмкүн."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өчүрүү"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Жок"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Акы алынуучу SMS жөнөтүүгө уруксат"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Купуялык"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Инфозоок тутумунун маалыматы"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Колдонмолордун кайда жүргөнүңүздү көрүү мүмкүнчүлүгүн көзөмөлдөйсүз"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Колдонмолордун камераңызды пайдалануу мүмкүнчүлүгүн көзөмөлдөйсүз"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Микрофон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Колдонмолордун микрофонго болгон мүмкүнчүлүгүн көзөмөлдөө"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Инфозоок тутумунун маалыматы"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Түзмөктүн администратору акыркы сырсөздү колдонууга тыюу салган"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Сырсөздү сактоо катасы"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Жөнөкөй сырсөздөрү коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак сырсөздү коюп көрүңүз."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Кеминде бир тамга болушу керек"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Кеминде бир сан болушу керек"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Кеминде бир символ болушу керек"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Кеминде # тамга болушу керек}other{Кеминде # тамга болушу керек}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Кеминде # кичине тамга болушу керек}other{Кеминде # кичине тамга болушу керек}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Кеминде # баш тамга болушу керек}other{Кеминде # баш тамга болушу керек}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Кеминде # сан болушу керек}other{Кеминде # сан болушу керек}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Кеминде # өзгөчө белги болушу керек}other{Кеминде # өзгөчө белги болушу керек}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Тамгадан башка кеминде # белги болушу керек}other{Тамгадан башка кеминде # белги болушу керек}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Тамгадан башка кеминде # сандык эмес символ болушу керек}other{Тамгадан башка кеминде # сандык эмес символ болушу керек}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Кеминде # символ болушу керек}other{Кеминде # символ болушу керек}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Кеминде # сан болушу керек}other{Кеминде # сан болушу керек}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# символдон ашпашы керек}other{# символдон ашпашы керек}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# сандан ашпашы керек}other{# сандан ашпашы керек}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Сандар чоңойгон, кичирейген же кайталанган ыраатта болбошу керек"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды кулпулоо ыкмалары"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн мурун"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Сары карада"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Сары көктө"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Экрандагыны окугуч"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"Өчүк"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"Экрандагы нерселерди айтып берет"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBack кызматын колдонуу"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"Параметрлер"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"Жөндөөлөр"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack жөнүндө"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"Унаа жүрүп баратканда, TalkBack иштебейт.\n\nTalkBack күйүп турганда, экрандагы текстти окуп бергендиктен, түзмөгүңүздү экранын карабай туруп колдоно аласыз. TalkBack экранды даана көрүүгө мүмкүн болбой турган учурларга жана көзү начар көргөн адамдарга арналган."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Өчүк"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Экрандагы нерселерди айтып берет"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> колдонуу"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Параметрлер"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Жөндөөлөр"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Камера"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Камераны иштетүү"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Бардык колдонмолорго камераңызды пайдаланууга уруксат бериңиз"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Камераны пайдалануу уруксаттарын башкаруу"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Жакында колдонулган"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Бир да колдонмо пайдалана элек"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Бир да колдонмо пайдалана албайт"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ичинен # колдонмо пайдалана алат}other{{total_count} ичинен # колдонмо пайдалана алат}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Жакында колдонулган"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Баарын көрүү"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Жүктөлүүдө…"</string>
 </resources>

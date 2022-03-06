@@ -148,6 +148,10 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ఇతర పరికరాలు <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>కు కనెక్ట్ కావచ్చు"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"హాట్‌స్పాట్ పాస్‌వర్డ్‌"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"సెక్యూరిటీ"</string>
+    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
+    <skip />
+    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
+    <skip />
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-వ్యక్తిగతం"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ఏమీ లేవు"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP బ్యాండ్"</string>
@@ -385,6 +389,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"సిస్టమ్ సెట్టింగ్‌లను ఎడిట్ చేయడానికి ఈ అనుమతి యాప్‌కు వీలు కల్పిస్తుంది."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"నోటిఫికేషన్ యాక్సెస్"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను అనుమతించాలా?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ప‌రిచ‌యాల పేర్లు, మీరు స్వీకరించిన మెసేజ్‌ల వంటి వ్యక్తిగత సమాచారంతో సహా అన్ని నోటిఫికేషన్‌లను చదవగలదు. అంతే కాదు ఇది నోటిఫికేషన్‌లను సవరించగలదు లేదా తీసివేయగలదు లేదా అవి కలిగి ఉండే చర్య బటన్‌లను యాక్టివేట్ చేయగలదు.\n\nఇది, అంతరాయం కలిగించవద్దు ఎంపికను ఆన్ చేయగల లేదా ఆఫ్ చేయగల సామర్థ్యాన్ని యాప్‌కు ఇవ్వడంతో పాటు సంబంధిత సెట్టింగ్‌లను కూడా మారుస్తుంది."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"మీరు <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను ఆఫ్ చేస్తే, అంతరాయం కలిగించవద్దు ఎంపిక యాక్సెస్ కూడా ఆఫ్ చేయబడవచ్చు."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ఆఫ్ చేయి"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"రద్దు చేయి"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ప్రీమియం SMS యాక్సెస్"</string>
@@ -610,6 +616,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"గోప్యత"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"సమాచారంతో కూడిన వినోద సిస్టమ్ డేటా"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"మీ లొకేషన్‌కు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"కెమెరా"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"మీ కెమెరాలకు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"మైక్రోఫోన్"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"మైక్రోఫోన్‌కు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"వినోదాత్మక సమాచార సిస్టమ్ డేటా"</string>
@@ -679,34 +687,20 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ఇటీవలి పాస్‌వర్డ్‌ను ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"పాస్‌వర్డ్‌ని సేవ్ చేయడంలో ఎర్రర్"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"సాధారణ పాస్‌వర్డ్‌లను మీ IT అడ్మిన్ బ్లాక్ చేశారు. వేరే పాస్‌వర్డ్‌ను ట్రై చేయండి."</string>
-    <!-- no translation found for lockpassword_password_requires_alpha (713641878535268163) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_digit (8120467503175627546) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbol (6294855131052831204) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_letters (324864645474528299) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_lowercase (5373735547134824114) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_uppercase (2002482631049525313) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_numeric (5694949801691947801) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_symbols (1789501049908004075) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonletter (3089186186422638926) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_requires_nonnumerical (1677123573552379526) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_short (3898753131694105832) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (3671037384464545169) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (1709616257350671045) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (8315542764465856288) -->
-    <skip />
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"తప్పనిసరిగా కనీసం ఒక అక్షరాన్ని కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"తప్పనిసరిగా కనీసం ఒక అంకెను కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"తప్పనిసరిగా కనీసం ఒక గుర్తును కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{తప్పనిసరిగా కనీసం # లోయర్‌కేస్ అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # లోయర్‌కేస్ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{తప్పనిసరిగా కనీసం # అప్పర్‌కేస్ అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అప్పర్‌కేస్ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{తప్పనిసరిగా కనీసం # సంఖ్యాత్మక అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # సంఖ్యాత్మక అంకెలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{తప్పనిసరిగా కనీసం # ప్రత్యేక గుర్తును కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # ప్రత్యేక గుర్తులను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరేతర అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరేతర అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{తప్పనిసరిగా కనీసం # అసంఖ్యాత్మక అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అసంఖ్యాత్మక అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరం కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{తప్పనిసరిగా కనీసం # అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అంకెలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అక్షరం ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అంకెలను కలిగి ఉండాలి}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"స్క్రీన్ లాక్ ఎంపికలు"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> రోజుల క్రితం"</string>
@@ -839,12 +833,20 @@
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"నలుపు బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"నీలం బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"స్క్రీన్ రీడర్"</string>
-    <string name="talkback_title" msgid="6529000326454628289">"TalkBack"</string>
-    <string name="talkback_settings_off" msgid="1486849504005704390">"ఆఫ్‌లో ఉంది"</string>
-    <string name="talkback_settings_on" msgid="796292072895957042">"స్క్రీన్‌పై ఐటెమ్‌లను చదివి వినిపించు"</string>
-    <string name="enable_talkback_toggle_title" msgid="3027666779214128091">"TalkBackను ఉపయోగించండి"</string>
-    <string name="talkback_options_title" msgid="7366357383004455638">"ఆప్షన్‌లు"</string>
-    <string name="talkback_settings_title" msgid="631275474070654027">"సెట్టింగ్‌లు"</string>
-    <string name="about_talkback_title" msgid="6048639389606001298">"TalkBack పరిచయం"</string>
-    <string name="about_talkback_description" msgid="5438077447169311605">"వాహనం చలనంలో ఉన్నప్పుడు TalkBack అందుబాటులో ఉండదు.\n\nTalkBack ఆన్‌లో ఉన్నప్పుడు, అది మాటల ప్రతిస్పందనను అందిస్తుంది, తద్వారా మీరు స్క్రీన్‌ను చూడాల్సిన అవసరం లేకుండానే మీ డివైజ్‌ను ఉపయోగించవచ్చు. TalkBack అనేది స్క్రీన్‌ను చూడటానికి కష్టపడే వ్యక్తులు లేదా పరిస్థితుల కోసం ఉద్దేశించినది."</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"ఆఫ్‌లో ఉంది"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"స్క్రీన్‌పై ఐటెమ్‌లను చదివి వినిపించండి"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ను ఉపయోగించండి"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"ఆప్షన్‌లు"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"సెట్టింగ్‌లు"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"కెమెరా"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"కెమెరాను ఉపయోగించండి"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"మీ కెమెరాను యాక్సెస్ చేయడానికి అన్ని యాప్‌లను అనుమతించండి"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"కెమెరా అనుమతులను మేనేజ్ చేయండి"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"ఇటీవల యాక్సెస్ చేయబడినవి"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ఇటీవలి యాప్‌లు ఏవీ లేవు"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ఏ యాప్‌లకు యాక్సెస్ లేదు"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count}లో # యాప్‌లకు యాక్సెస్ ఉంది}other{{total_count}లో # యాప్‌లకు యాక్సెస్ ఉంది}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ఇటీవల యాక్సెస్ చేయబడినవి"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"అన్నీ చూడండి"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"లోడ్ అవుతోంది…"</string>
 </resources>
