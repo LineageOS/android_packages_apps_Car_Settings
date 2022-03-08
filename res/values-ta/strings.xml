@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"டேட்டா உபயோக வரம்பை அமைத்தல்"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"அமை"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM நெட்வொர்க்"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s முதல் %3$s வரை பயன்படுத்தப்பட்ட அளவு: %1$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%2$s - %3$s வரை %1$d மெ.பை. பயன்படுத்தப்பட்டுள்ளது"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"பிற நெட்வொர்க்கில் இணை"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"நெட்வொர்க் விருப்பத்தேர்வுகள்"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"வைஃபை"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ஒன்றைத் தேர்வுசெய்யவும்:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ஹாட்ஸ்பாட்டும் இணைப்பு முறையும்"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"ஹாட்ஸ்பாட்"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"சாதனங்கள் எவையும் இணைக்கப்படவில்லை எனில் வைஃபை ஹாட்ஸ்பாட் ஆஃப் செய்யப்படும்"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"வைஃபையை ஆன் செய்ய <xliff:g id="REQUESTER">%s</xliff:g> ஆப்ஸ் விரும்புகிறது"</string>
@@ -297,10 +296,6 @@
     <string name="force_stop" msgid="2153183697014720520">"உடனே நிறுத்து"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"உடனே நிறுத்தவா?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ஆப்ஸை உடனே நிறுத்தினால் சரியாக இயங்காமல் போகக்கூடும்."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"செயல்திறன் பாதுகாப்பு அம்சத்தை முடக்கவா?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"இவ்வாறு செய்தால் மென்பொருளும் சாதன பாகங்களும் சரியாக வேலை செய்யாமல் போகலாம்."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"இயக்கத்திலேயே வை"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"முடக்கு"</string>
     <string name="disable_text" msgid="4358165448648990820">"முடக்கு"</string>
     <string name="enable_text" msgid="1794971777861881238">"இயக்கு"</string>
     <string name="uninstall_text" msgid="277907956072833012">"நிறுவல் நீக்கு"</string>
@@ -310,7 +305,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"அனுமதிகள்"</string>
     <string name="notifications_label" msgid="6586089149665170731">"அறிவிப்புகள்"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"சேமிப்பகமும் தற்காலிக சேமிப்பும்"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"அதிக செயல்திறனை உறுதிசெய்தல்"</string>
     <string name="application_version_label" msgid="8556889839783311649">"பதிப்பு: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"அனுமதிகள் எதையும் கோரவில்லை"</string>
@@ -321,7 +315,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"அனுமதிகளை அகற்றி இடத்தைக் காலியாக்குதல்"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"அகச் சேமிப்பகத்தில் %s"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"தேவைப்பட்டால் சாதன வளங்களின் அதிகப்படியான உபயோகத்தைத் தவிர்க்க ஆப்ஸை மூடும்"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
@@ -329,7 +322,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> கூடுதல் அனுமதிகள்</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> கூடுதல் அனுமதி</item>
     </plurals>
-    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"கவனத்திற்கு: மறுபடி தொடங்கிய பிறகு நீங்கள் வாகனத்தை அன்லாக் செய்யும் வரை இந்த ஆப்ஸால் செயல்பட இயலாது."</string>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"கவனத்திற்கு: மறுபடி தொடங்கிய பிறகு நீங்கள் வாகனத்தைத் திறக்கும் வரை இந்த ஆப்ஸால் செயல்பட இயலாது."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"அசிஸ்டண்ட் &amp; குரல் உள்ளீடு"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"அசிஸ்ட் ஆப்ஸ்"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"திரையில் உள்ள உரையைப் பயன்படுத்துதல்"</string>
@@ -390,7 +383,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ஆப்ஸ் நிலை அனுமதிகள்"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"இருப்பிடச் சேவைகள்"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"உங்கள் சாதனத்தின் இருப்பிடத்தைக் கணிக்க உதவுவதற்கு GPS, வைஃபை, மொபைல் நெட்வொர்க்குகள், சென்சார்கள் போன்றவற்றை இருப்பிட அமைப்புகள் பயன்படுத்தக்கூடும்."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"சிஸ்டம்"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"சிஸ்டம் புதுப்பிப்புகள்"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"மேம்பட்டவை"</string>
@@ -460,7 +454,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள எல்லாத் தரவையும் சுயவிவரங்களையும் அழித்துவிடும்"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"இது உங்கள் வாகனத்தின் இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள எல்லாத் தரவையும் அழித்துவிடும், இவற்றில் அடங்குபவை:\n\n"<li>"உங்கள் Google கணக்கு"</li>\n<li>"சிஸ்டம் &amp; ஆப்ஸ் தரவு மற்றும் அமைப்புகள்"</li>\n<li>"பதிவிறக்கிய ஆப்ஸ்"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"பின்வரும் கணக்குகளில் உள்நுழைந்துள்ளீர்கள்:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"இந்த வாகனத்திற்கான பிற சுயவிவரங்கள் அமைக்கப்பட்டன."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"இந்த வாகனத்தில் பிற சுயவிவரங்களும் உள்ளன."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"எல்லாத் தரவையும் அழி"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"எல்லாத் தரவையும் அழிக்கவா?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள உங்களின் தனிப்பட்ட சுயவிவரத் தரவு, கணக்குகள், பதிவிறக்கிய ஆப்ஸ் ஆகிய அனைத்தையும் இது அழித்துவிடும்.\n\nஇதைச் செயல்தவிர்க்க முடியாது."</string>
@@ -469,8 +463,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"காத்திருக்கவும்..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"தேதி &amp; நேரம்"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"தேதி, நேரம், நேரமண்டலம் &amp; வடிவங்களை அமை"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"தானாக நேரத்தை அமை"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"தானாக நேர மண்டலத்தை அமை"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"தானியங்கு தேதி &amp; நேரம்"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"மொபைல் நெட்வொர்க் வழங்கும் நேரத்தைப் பயன்படுத்தும்"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"தானியங்கு நேர மண்டலம்"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"மொபைல் நெட்வொர்க் வழங்கும் நேர மண்டலத்தைப் பயன்படுத்தும்"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 மணிநேர வடிவம்"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24 மணிநேர வடிவத்தைப் பயன்படுத்து"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"நேரம்"</string>
@@ -485,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"நேரம்"</string>
     <string name="user_admin" msgid="1535484812908584809">"நிர்வாகி"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"நிர்வாகியாக உள்நுழைந்துள்ளீர்கள்"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"நிர்வாகி அனுமதிகளை வழங்கவா?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"நிர்வாகி அனுமதிகளை வழங்குதல்"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"நிர்வாகியாக்கு"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"நிர்வாகியால் பிற சுயவிவரங்களை (மற்ற நிர்வாகிகளுக்கான சுயவிவரங்கள் உட்பட) நீக்க முடிவதோடு இன்ஃபோடெயின்மென்ட் சிஸ்டத்தையும் ஆரம்பநிலைக்கு மீட்டமைக்க முடியும்."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"இந்தச் சுயவிவரத்தால் பிற சுயவிவரங்களை (மற்ற நிர்வாகிகள் உட்பட) நீக்க முடிவதோடு சிஸ்டத்தையும் ஆரம்பநிலைக்கு மீட்டமைக்க முடியும்."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"இந்தச் செயலைத் திரும்பப் பெற இயலாது."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"ஆம், நிர்வாகியாக்கு"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"புதிய சுயவிவரங்களை உருவாக்கு"</string>
@@ -498,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"சுயவிவரத்தைச் சேர்"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"புதிய சுயவிவரம்"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"புதிய சுயவிவரத்தைச் சேர்க்கவா?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"புதிய சுயவிவரத்தை நீங்கள் உருவாக்கிய பிறகு, சம்பந்தப்பட்ட நபரே அதைப் பிரத்தியேகமாக்க வேண்டும்."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"எல்லாச் சுயவிவரங்களும் பயன்படுத்துவதற்காக ஆப்ஸை எந்தச் சுயவிவரத்திலிருந்தும் புதுப்பிக்கலாம்."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"புதிய சுயவிவரத்தைச் சேர்க்கும்போது அவர் தனக்கான சேமிப்பிடத்தை அமைக்க வேண்டும்."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"எந்தவொரு சுயவிவரமும் மற்ற எல்லாச் சுயவிவரங்களுக்காகவும் ஆப்ஸைப் புதுப்பிக்கலாம்."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"அனுமதிக்கப்பட்ட அதிகபட்சச் சுயவிவரங்களை உருவாக்கிவிட்டீர்கள்"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> சுயவிவரங்கள் வரை உருவாக்கலாம்.</item>
       <item quantity="one">ஒரு சுயவிவரத்தை மட்டுமே உருவாக்கலாம்.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"புதிய சுயவிவரத்தை உருவாக்க முடியவில்லை"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"புதிய சுயவிவரத்தை உருவாக்க முடியவில்லை"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"இந்தச் சுயவிவரத்தை நீக்கவா?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"இந்தச் சுயவிவரத்திற்கான அனைத்து ஆப்ஸும் தரவும் நீக்கப்படும்"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"சுயவிவரத்தை நீக்க முடியவில்லை."</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"சுயவிவரத்தை நீக்க முடியவில்லை."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"சுயவிவரங்களை மாற்றும்போதோ வாகனத்தை மீண்டும் தொடங்கும்போதோ இந்தச் சுயவிவரம் நீக்கப்படும்."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"நிராகரி"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"மீண்டும் முயலவும்"</string>
@@ -581,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ஒத்திசைவை ரத்துசெய்"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"தற்போது ஒத்திசைக்க இயலவில்லை. விரைவில் இது சரிசெய்யப்படும்."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"தனியுரிமை"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"வாகனத் தரவு"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"இருப்பிடத்திற்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்து"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"மைக்ரோஃபோன்"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"மைக்ரோஃபோனுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தலாம்"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"வாகனத் தரவு"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"இந்த வாகனத்தில் சேமிக்கப்பட்டுள்ள தகவல்களையும் செயல்பாடுகளையும் நிர்வகிக்கலாம்"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"எனது சுயவிவரத்தை நீக்கு"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள உங்கள் சுயவிவரத்தையும் கணக்குகளையும் அழிக்கும்"</string>
@@ -606,19 +602,20 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"தவிர்"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"திரைப் பூட்டை அமைக்கவும்"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"பின்னைத் தேர்ந்தெடுக்கவும்"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"பேட்டர்னைத் தேர்வுசெய்யவும்"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"கடவுச்சொல்லைத் தேர்வுசெய்க"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"தற்போதைய திரைப் பூட்டு"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"பாதுகாப்பிற்கு, பேட்டர்னை அமைக்கவும்"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"அழி"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ரத்துசெய்"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"புதிய அன்லாக் பேட்டர்ன்"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"அன்லாக் பேட்டர்னை வரைக"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"திறப்பதற்கான புதிய பேட்டர்ன்"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"திறப்பதற்கான பேட்டர்னை வரைக"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"முடிந்ததும் விரலை எடுக்கவும்"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"பேட்டர்ன் பதிவுசெய்யப்பட்டது"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"உறுதிப்படுத்த, மீண்டும் பேட்டர்னை வரைக"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"குறைந்தது 4 புள்ளிகளை இணைக்கவும். மீண்டும் முயல்க."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"தவறான பேட்டர்ன்"</string>
-    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"அன்லாக் பேட்டர்னை வரைவது எப்படி?"</string>
+    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"திறப்பதற்கான பேட்டர்னை வரைவது எப்படி?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"பேட்டர்னைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"பலமுறை தவறாக முயன்றுவிட்டீர்கள். <xliff:g id="NUMBER">%d</xliff:g> வினாடிகளில் மீண்டும் முயலவும்."</string>
     <string name="okay" msgid="4589873324439764349">"சரி"</string>
@@ -649,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> இலக்கங்களை விட குறைவாக இருக்க வேண்டும்"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0-9 இலக்கங்கள் மட்டுமே இருக்க வேண்டும்."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"சாதன நிர்வாகி சமீபத்திய பின்னைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"பொதுவான பின்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு பின்னை முயலவும்."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"உங்கள் IT நிர்வாகி, பொதுவான பின்களைத் தடுத்துள்ளார். வேறு பின்னைப் பயன்படுத்திப் பார்க்கவும்."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"இதில் தவறான எழுத்து இருக்கக்கூடாது."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"கடவுச்சொல் செல்லாது, குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"சாதன நிர்வாகி சமீபத்திய கடவுச்சொல்லைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"கடவுச்சொல்லைச் சேமிப்பதில் பிழை"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"பொதுவான கடவுச்சொற்கள் IT நிர்வாகியால் தடைசெய்யப்பட்டுள்ளன. வேறொரு கடவுச்சொல்லை முயலவும்."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"உங்கள் IT நிர்வாகி, பொதுவான கடவுச்சொற்களைத் தடுத்துள்ளார். வேறு கடவுச்சொல்லைப் பயன்படுத்திப் பார்க்கவும்."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைத் தொடர்ந்து பயன்படுத்துவது அனுமதிக்கப்படாது."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
@@ -706,7 +703,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"வாகனம் ஓட்டும்போது சுயவிவரத்தைச் சேர்க்க முடியாது"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant &amp; Voice"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"டிஜிட்டல் அசிஸ்டண்ட் ஆப்ஸ்"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Assistant ஆப்ஸ்"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"திரையில் உள்ள உரையைப் பயன்படுத்து"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"திரையின் உள்ளடக்கத்தை அணுக Assistantடை அனுமதிக்கும்"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"ஸ்கிரீன்ஷாட்டைப் பயன்படுத்து"</string>
@@ -718,5 +715,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"புதிய சுயவிவரத்தைச் சேர்"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"இந்தச் சுயவிவரத்தை நீக்கு"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"சுயவிவரத்தைச் சேர்"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"இந்த அமைப்பை இப்போது மாற்ற முடியாது"</string>
 </resources>

@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"設定數據用量上限"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"設定"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"原始設備製造商 (OEM) 網路"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"已使用 %1$s (%2$s - %3$s)"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"從 %2$s到 %3$s使用了 %1$d MB"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"加入其他網路"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"網路偏好設定"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"請至少為 Wi-Fi 無線基地台選擇一個頻帶："</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"無線基地台與網路共用"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"無線基地台"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉無線基地台"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi 無線基地台會在沒有任何裝置連線時關閉"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
@@ -297,10 +296,6 @@
     <string name="force_stop" msgid="2153183697014720520">"強制停止"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"要強制停止嗎？"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"如果你強制停止應用程式，應用程式可能無法正常運作。"</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"要關閉效能保護功能嗎？"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"如果這麼做，軟體和硬體也可能無法運作。"</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"保持開啟"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"關閉"</string>
     <string name="disable_text" msgid="4358165448648990820">"停用"</string>
     <string name="enable_text" msgid="1794971777861881238">"啟用"</string>
     <string name="uninstall_text" msgid="277907956072833012">"解除安裝"</string>
@@ -310,7 +305,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"權限"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"儲存空間和快取"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"確保最佳效能"</string>
     <string name="application_version_label" msgid="8556889839783311649">"版本：%1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"未取得任何授權"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"未要求任何權限"</string>
@@ -321,7 +315,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"移除權限並釋出空間"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s (內部儲存空間)"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"視需要關閉應用程式，避免資源過度使用"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"數據用量"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"應用程式數據用量"</string>
     <string name="computing_size" msgid="5791407621793083965">"計算中…"</string>
@@ -341,7 +334,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"無"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"已選取"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"小幫手將可讀取系統目前使用中的應用程式相關資訊，包括裝置畫面上顯示的資訊及應用程式內提供存取的資訊。"</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;請確定這是你信任的應用程式&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; 會根據畫面上顯示的內容判斷要自動填入哪些資訊。"</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;請確定這是你信任的應用程式&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; 應用程式會根據你的畫面內容判斷要自動填入的內容。"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"新增服務"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"開啟連結"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"已安裝的應用程式"</string>
@@ -390,7 +383,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"定位服務"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置資訊"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"位置資訊設定可能會使用 GPS、Wi‑Fi、行動網路和感應器等來源，以便推測出裝置的所在位置。"</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"系統"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"系統更新"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"進階"</string>
@@ -460,7 +454,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"清除資訊娛樂系統的所有資料和設定檔"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"這麼做會清除車輛資訊娛樂系統的所有資料，包括：\n\n"<li>"你的 Google 帳戶"</li>\n<li>"系統與應用程式的資料和設定"</li>\n<li>"已下載的應用程式"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"你目前登入了以下帳戶："</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"這輛車上已設定其他設定檔。"</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"這輛車還有其他設定檔。"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"清除所有資料"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"要清除所有資料嗎？"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"這麼做會清除資訊娛樂系統的所有個人設定檔資料、帳戶和已下載的應用程式。\n\n請注意，這項操作無法復原。"</string>
@@ -469,8 +463,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"請稍候…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和時間"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"設定日期、時間、時區及時間格式"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"自動設定時間"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"自動設定時區"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"自動判斷日期和時間"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"使用網路提供的時間"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"自動判定時區"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"使用網路提供的時區"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 小時制"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"使用 24 小時格式"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"時間"</string>
@@ -485,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"時間"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理員"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"登入身分：管理員"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"要授予管理員權限嗎？"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"所有管理員權限"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"設為管理員"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"管理員將可刪除其他設定檔 (包括其他管理員的設定檔)，並將資訊娛樂系統恢復原廠設定。"</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"這個設定檔將可刪除其他設定檔 (包括其他管理員)，以及將系統恢復原廠設定。"</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"這個動作無法復原。"</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"是，設為管理員"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"建立新設定檔"</string>
@@ -498,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"新增設定檔"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"新的設定檔"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"要新增設定檔嗎？"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"當你建立新設定檔後，該使用者必須自己進行個人化設定。"</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"任何設定檔都能更新所有其他設定檔使用的應用程式。"</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"當你新增使用者設定檔時，該使用者必須自行設定個人空間。"</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"任何設定檔都能為所有其他設定檔更新應用程式。"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"設定檔數量已達上限"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="other">最多可以建立 <xliff:g id="COUNT">%d</xliff:g> 個設定檔。</item>
       <item quantity="one">只能建立 1 個設定檔。</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"無法建立新設定檔"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"無法建立新的設定檔"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"要刪除這個設定檔嗎？"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"這個設定檔的所有應用程式和資料都會遭到刪除"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"無法刪除設定檔。"</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"無法刪除設定檔。"</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"這個設定檔將在你切換設定檔或重新發動車輛時刪除。"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"關閉"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"重試"</string>
@@ -581,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"取消同步處理"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"同步處理目前發生問題，將於短時間內恢復。"</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"隱私權"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"資訊娛樂系統資料"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"車輛資料"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"控管哪些應用程式可存取你的位置資訊"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"麥克風"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"控管哪些應用程式可存取麥克風"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"資訊娛樂系統資料"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"車輛資料"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"管理這輛車儲存的活動和資訊"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"刪除你的設定檔"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"清除資訊娛樂系統的設定檔和帳戶"</string>
@@ -606,6 +602,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"略過"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"設定螢幕鎖定"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"選擇 PIN 碼"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"選擇圖案"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"選擇密碼"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"目前的螢幕鎖定方式"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"為了安全起見，請設定圖案"</string>
@@ -649,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"長度必須少於 <xliff:g id="NUMBER">%d</xliff:g> 個數字"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"只能包含數字 0 到 9。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"裝置管理員不允許使用最近用過的 PIN 碼"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"你的 IT 管理員已封鎖常見 PIN 碼，請改用其他 PIN 碼。"</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"你的 IT 管理員已封鎖常見 PIN 碼，請改用其他 PIN 碼。"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"不得包含無效字元。"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"密碼無效，至少要有 4 個字元。"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"裝置管理員不允許使用最近用過的密碼"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"儲存密碼時發生錯誤"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"你的 IT 管理員已封鎖常見密碼，請改用其他密碼。"</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"你的 IT 管理員已封鎖常見密碼，請改用其他密碼。"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不得使用依遞增或遞減順序排列或是重複的數字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
@@ -706,7 +703,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"開車時無法新增設定檔"</string>
     <string name="default_search_query" msgid="3137420627428857068">"搜尋"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和語音功能"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"數位助理應用程式"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"助理應用程式"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"使用畫面中的文字"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"允許助理應用程式存取畫面的內容"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"使用螢幕截圖"</string>
@@ -718,5 +715,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"新增設定檔"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"刪除這個設定檔"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"新增設定檔"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"目前無法變更這項設定"</string>
 </resources>

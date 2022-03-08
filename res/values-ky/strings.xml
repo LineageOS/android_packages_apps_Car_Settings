@@ -44,7 +44,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"Мобилдик Интернет үчүн <xliff:g id="CARRIER2_0">%2$s</xliff:g> операторун колдонуп жатасыз. Эгер <xliff:g id="CARRIER1">%1$s</xliff:g> операторуна которулсаңыз, <xliff:g id="CARRIER2_1">%2$s</xliff:g> мобилдик Интернет үчүн колдонулбай калат."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> операторун колдонуу"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Роуминг"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"Роуминг учурунда маалыматтарды өткөрүүчү кызматтарга туташасыз"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Роуминг учурунда дайын-даректерди өткөрүүчү кызматтарга туташуу"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Интернет-роумингди иштетесизби?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Роуминг акысын төлөп калышыңыз мүмкүн."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Маалымат алмашуу"</string>
@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Трафикти чектөө"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Коюу"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM тармагы"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%2$s баштап %3$s чейин %1$s колдонулду"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%1$d Мб %2$s – %3$s колдонулду"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Башка тармакка кошулуу"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Тармак жөндөөлөрү"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi байланыш түйүнүн иштетүү үчүн кеминде бир жыштыкты тандаңыз:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Байланыш түйүнү жана модем режими"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Байланыш түйүнү"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Байланыш түйүнү автоматтык түрдө өчөт"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Бир дагы түзмөк туташпаса, Wi‑Fi байланыш түйүнү автоматтык түрдө өчүп калат"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> WiFi\'ды күйгүзгөнү жатат"</string>
@@ -195,7 +194,7 @@
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Колдонмо Bluetooth\'ду күйгүзүп, негизги шайманыңызды башка түзмөктөр үчүн <xliff:g id="TIMEOUT">%1$d</xliff:g> секундка көрүнүктүү кылганы жатат."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Башка түзмөктөргө %1$s катары көрүнөт"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Менин түзмөктөрүм"</string>
-    <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Буга чейин туташкан түзмөктөр"</string>
+    <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Мурда туташкан"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s туташты"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ажыратылды"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth жупташтыруу өтүнүчү"</string>
@@ -297,10 +296,6 @@
     <string name="force_stop" msgid="2153183697014720520">"Мажбурлап токтотуу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Токтотулсунбу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Колдонмону мажбурлап токтотсоңуз, ал туура эмес иштеп калышы мүмкүн."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"Майнаптуулукту коргоо күйгүзүлсүнбү?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Эгер өчүрсөңүз, программа менен аппараттык камсыздоо да иштебей калышы мүмкүн."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Күйгөн боюнча калтыруу"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"Өчүрүү"</string>
     <string name="disable_text" msgid="4358165448648990820">"Өчүрүү"</string>
     <string name="enable_text" msgid="1794971777861881238">"Иштетүү"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Чыгарып салуу"</string>
@@ -310,18 +305,16 @@
     <string name="permissions_label" msgid="2701446753515612685">"Уруксаттар"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Билдирмелер"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Сактагыч жана кеш"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Майнаптуулукту камсыздоо"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версиясы: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Бир да уруксат берилген жок"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Бир да уруксат суралган жок"</string>
-    <string name="unused_apps" msgid="648471933781010395">"Колдонулбаган колдонмолор"</string>
+    <string name="unused_apps" msgid="648471933781010395">"Иштетилбеген колдонмолор"</string>
     <plurals name="unused_apps_summary" formatted="false" msgid="6410080383909014362">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> колдонулбаган колдонмо</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> колдонулбаган колдонмо</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> иштетилбеген колдонмо</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> иштетилбеген колдонмо</item>
     </plurals>
-    <string name="unused_apps_switch" msgid="4433958286200341563">"Уруксаттарды өчүрүп, орун бошотуу"</string>
+    <string name="unused_apps_switch" msgid="4433958286200341563">"Уруксаттарды өчүрүп, орун бошотуңуз"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"Ички сактагычтын %s ээлеп турат"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Керек болгондо колдонмону жаап, булактардын ашыкча колдонулушуна тоскоол болуңуз"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Маалымат алмашуу"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Колдонмолордун трафиги"</string>
     <string name="computing_size" msgid="5791407621793083965">"Эсептелүүдө…"</string>
@@ -335,8 +328,8 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"Экрандагы текстти колдонуу"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Көмөкчү колдонмого экрандагы текстти колдонууга уруксат берүү"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Скриншотту колдонуу"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Көмөкчү колдонмого экрандагы сүрөттү көрүүгө уруксат бересиз"</string>
-    <string name="voice_input_settings_title" msgid="3238707827815647526">"Айтып киргизүү"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Көмөкчү колдонмого экрандагы сүрөттү көрүү мүмкүнчүлүгүн бересиз"</string>
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Оозеки киргизүү"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Автотолтуруу кызматы"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Жок"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Тандалды"</string>
@@ -350,7 +343,7 @@
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> жана башка URL\'дер ачылат"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"Демейки боюнча ачуу"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Башка демейкилер"</string>
-    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Демейки маанилер коюлган жок."</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Демейкилер коюлган жок."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Бул колдонмо айрым аракеттер үчүн абалкы болуп орнотулган"</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Демейкилерди тазалоо"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Колдоого алынган шилтемелерди ачуу"</string>
@@ -367,7 +360,7 @@
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Тутум жана башка жөндөөлөргө"</string>
     <string name="special_access" msgid="5730278220917123811">"Колдонмонун атайын уруксаты"</string>
     <string name="show_system" msgid="4401355756969485287">"Тутум процесстерин көрсөтүү"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Системдик процесстерди жашыруу"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Системалык процесстерди жашыруу"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Тутум колдонмолорун жашыруу"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Системанын жөндөөлөрүн өзгөртүү"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын жөндөөлөрүн өзгөртө алат."</string>
@@ -377,8 +370,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Эгер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үчүн билдирмени угуу уруксатын өчүрсөңүз, анын \"Тынчымды алба\" режимине да уруксаты жок болуп калышы мүмкүн."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өчүрүү"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Жок"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Акы алынуучу SMS жөнөтүүгө уруксат"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"Акы алынуучу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу акы алынуучу SMS жөнөтө аласыз."</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Артыкчылыктуу SMS жөнөтүүгө уруксат"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Артыкчылыктуу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу артыкчылыктуу SMS жөнөтө аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Колдонуу таржымалын көрүү"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Колдонуу таржымалы аркылуу кайсы колдонмолор канчалык көп колдонула турганын, ошондой эле байланыш операторуңузду, тил жөндөөлөрүн жана башка параметрлерди көрө аласыз."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi\'ды көзөмөлдөө"</string>
@@ -389,8 +382,9 @@
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Жакында изделген жерлер жок"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Колдонмонун уруксаттары"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
-    <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди аныктоо"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Түзмөктүн жайгашкан жери GPS, Wi‑Fi, мобилдик тармактар жана сенсорлор аркылуу аныкталат."</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди колдонуу"</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"Тутум"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системанын жаңыртуулары"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Өркүндөтүлгөн"</string>
@@ -424,7 +418,7 @@
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Спутниктик сүрөттөр:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Үлгү"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"Сериялык номер"</string>
-    <string name="hardware_revision" msgid="5713759927934872874">"Аппараттын версиясы"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Аппараттык камсыздоонун версиясы"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Үчүнчү тараптын уруксаттамалары"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Уруксаттамалар жүктөлүп жатканда көйгөй келип чыкты."</string>
@@ -453,14 +447,14 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Жөндөөлөрдү кайра коюу"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Тармак жөндөөлөрү кайра коюлду"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Колдонмонун жөндөөлөрүн баштапкы абалга келтирүү"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөр кайра жөндөлөт:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык маалыматтары сакталып калат."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөрдүн жөндөөлөрү баштапкы абалга келтирилет:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык дайындары сакталып калат."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Баштапкы абалга келтирүү"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Бардык нерселерди өчүрүү (баштапкы абалга кайтаруу)"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Бардык дайындарды өчүрүү (демейки жөндөөлөргө кайтаруу)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Инфозоок тутумундагы бардык маалыматты жана профилдерди өчүрүү"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Унааңыздын инфозоок тутумундагы бардык нерселер өчүрүлөт, тактап айтканда:\n\n"<li>"Google аккаунтуңуз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайындары"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
+    <string name="factory_reset_desc" msgid="1688333312943433244">"Унааңыздын инфозоок тутумундагы бардык маалымат өчүрүлөт, тактап айтканда:\n\n"<li>"Google аккаунтуңуз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайындары"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Бул унаа үчүн башка профилдер жөндөлгөн."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"Бул унаада башка профилдер бар."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Бардык маалыматты өчүрүү"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Бардык дайындар тазалансынбы?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ушуну менен жеке профилиңиздеги бардык маалымат, аккаунттар жана жүктөлүп алынган колдонмолор инфозоок тутумунан өчүрүлөт.\n\nБул аракетти артка кайтарууга болбойт."</string>
@@ -469,8 +463,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Күтө туруңуз…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Күн жана убакыт"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Күндү, убакытты, убакыт алкагын, жана форматтарды жөндөө"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Убакытты автоматтык түрдө коюу"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Убакыт алкагын автоматтык түрдө коюу"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Тармактын күнү жана убакыты"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Тармактын убакыты колдонулсун"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Убакыт алкагын авто-аныктоо"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Тармактын убакыт алкагы колдонулсун"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 сааттык формат"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24 сааттык форматты колдонуу"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Убакыт"</string>
@@ -485,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Убакыт"</string>
     <string name="user_admin" msgid="1535484812908584809">"Админ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Администратор катары кирдиңиз"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Админ уруксаттарын бересизби?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Администратордун бардык уруксаттары"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Админ кылуу"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Админ башка профилдерди (башка админдердин профилдерин да) өчүрүп, инфозоок тутумун баштапкы абалга кайтара алат."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Профиль башка Админдерди жана профилдерди өчүрүп, тутумду баштапкы жөндөөлөргө кайтара алат."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Бул аракетти кайтарууга болбойт."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Ооба, админ кылуу"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Жаңы профилдерди түзүү"</string>
@@ -498,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Профиль кошуу"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Жаңы профиль"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Жаңы профиль кошулсунбу?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Жаңы профиль түзүлгөндөн кийин, ал аны өзүнө ыңгайлаштырып алышы керек."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Колдонуучулардын баары колдонмолорду бардык профилдер үчүн жаңырта алат."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Жаңы профиль кошулганда, ал өзүнүн профилин жөндөп алышы керек."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Профилдерди бир профиль жаңыртканда, ал калган бардык колдонуучулар үчүн да жаңырат."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Профилдердин саны чекке жетти"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> профилге чейин гана түзүүгө болот.</item>
       <item quantity="one">Бир профилди гана түзүүгө болот.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Жаңы профиль түзүлбөй койду"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Жаңы профиль түзүлгөн жок"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Бул профиль жок кылынсынбы?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Бул профилдеги бардык колдонмолор жана маалыматтар өчүрүлөт"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Профиль өчпөй койду."</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Профиль жок кылынбай калды."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Профилдерди которуштуруп же унааны өчүрүп күйгүзгөнүңүздө, бул профиль өчүрүлөт."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Четке кагуу"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Кайталоо"</string>
@@ -516,7 +512,7 @@
     <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"Эгер бул унаадагы акыркы профилди өчүрсөңүз, ал профиль менен байланышкан бардык маалымат, жөндөөлөр жана колдонмолор өчүрүлөт."</string>
     <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"Баштапкы абалга келтирилгенден кийин жаңы профилди жөндөп алсаңыз болот."</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Жаңы администраторду тандоо"</string>
-    <string name="choose_new_admin_message" msgid="7468286545352043354">"Жок дегенде бир администраторуңуз болушу керек. Бул администраторду өчүрүү үчүн биринчиден ордуна башка бирөөнү тандаңыз."</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Жок дегенде бир администраторуңуз болушу керек. Бул администраторду өчүрүү үчүн, биринчиден ордуна башка бирөөнү тандаңыз."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Администраторду тандоо"</string>
     <string name="user_guest" msgid="3465399481257448601">"Конок"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Конок"</string>
@@ -540,10 +536,10 @@
     <string name="memory_calculating_size" msgid="1672238502950390033">"Эсептелүүдө…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Колдонмонун көлөмү"</string>
     <string name="storage_data_size_label" msgid="7986110464268960652">"Профилдин маалыматы"</string>
-    <string name="storage_cache_size_label" msgid="6361308766707419555">"Кеш"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Кэш"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Жалпы"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Сактагычты тазалоо"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Кешти тазалоо"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Кэшти тазалоо"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Колдонмонун дайындары өчүрүлсүнбү?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Бул колдонмодогу файлдар, жөндөөлөр, аккаунттар жана маалымат базасы сыяктуу бардык нерселер биротоло өчүрүлөт."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Колдонмонун сактагычы тазаланган жок."</string>
@@ -581,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Шайкештирүүнү жокко чыгаруу"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Учурда шайкештирүү көйгөйгө дуушар болууда. Ал бир аздан кийин калыбына келет."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Купуялык"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Инфозоок тутумунун маалыматы"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Унаа тууралуу маалымат"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Колдонмолордун кайда жүргөнүңүздү көрүү мүмкүнчүлүгүн көзөмөлдөйсүз"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Микрофон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Колдонмолордун микрофонго болгон мүмкүнчүлүгүн көзөмөлдөө"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Инфозоок тутумунун маалыматы"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Унаа тууралуу маалымат"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Бул унаадагы аракеттерди жана сакталган маалыматты башкаруу"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Профилди жок кылуу"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Инфозоок тутумундагы бардык профилдерди жана аккаунттарды өчүрүү"</string>
@@ -606,6 +602,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Өткөрүп жиберүү"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Экран кулпусун коюп алыңыз"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN кодуңузду тандаңыз"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Графикалык ачкычты тандаңыз"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Сырсөзүңүздү тандаңыз"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Учурдагы экран кулпусу"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Коопсуздук үчүн графикалык ачкыч коюңуз"</string>
@@ -649,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> сандан ашпашы керек"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0-9 сандарынан гана турушу керек."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Түзмөктүн администратору акыркы PIN кодду колдонууга тыюу салган"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Жөнөкөй PIN-коддорду коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак PIN-кодду коюп көрүңүз."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Жөнөкөй PIN-коддорду коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак PIN-кодду коюп көрүңүз."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Бул жерде жараксыз белги камтылбашы керек."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Сырсөз жараксыз, кеминде 4 белгиден турушу керек."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Түзмөктүн администратору акыркы сырсөздү колдонууга тыюу салган"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Сырсөздү сактоо катасы"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Жөнөкөй сырсөздөрү коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак сырсөздү коюп көрүңүз."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Жөнөкөй сырсөздөрү коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак сырсөздү коюп көрүңүз."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Сандар чоңойгон, кичирейген же кайталанган ыраатта болбошу керек."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды кулпулоо ыкмалары"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн мурун"</string>
@@ -699,14 +696,14 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter баскычы"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Демо режимден чыгуу"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Демо режимден чыгасызбы?"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Ушуну менен демо аккаунт жок кылынып, тутум кайра башынан жөндөлөт. Профилдин бардык маалыматтары өчүрүлөт."</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Ушуну менен демо аккаунт жок кылынып, тутум кайра башынан жөндөлөт. Профилдин бардык дайындары өчүрүлөт."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демо режимден чыгуу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЧЕТКЕ КАГУУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Унаа айдаганда бул функция жеткиликтүү эмес"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Унаа айдап баратканда профиль кошууга болбойт"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Издөө"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Жардамчы жана үн"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Санариптик жардамчы колдонмосу"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Жардамчы колдонмо"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Экрандагы текстти колдонуу"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Жардамчыга экрандагы мазмунду колдонууга уруксат берүү"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Скриншотту колдонуу"</string>
@@ -718,5 +715,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профиль кошуу"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бул профилди өчүрүү"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль кошуу"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Бул жөндөөнү азыр өзгөртүүгө болбойт"</string>
 </resources>

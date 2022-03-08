@@ -81,7 +81,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Itakda ang limitasyon sa paggamit ng data"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Itakda"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM network"</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s ang nagamit %2$s - %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="5766788098591757730">"%1$d MB ang nagamit %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Sumali sa ibang network"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Mga kagustuhan sa network"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
@@ -154,7 +154,6 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pumili ng kahit isang band para sa Wi‑Fi hotspot:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot at pag-tether"</string>
-    <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Awtomatikong i-off ang hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Mao-off ang Wi‑Fi hotspot kung walang nakakonektang device"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Gustong i-on ng <xliff:g id="REQUESTER">%s</xliff:g> ang Wi-Fi"</string>
@@ -297,10 +296,6 @@
     <string name="force_stop" msgid="2153183697014720520">"Sapilitang ihinto"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Sapilitang itigil?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Kung sapilitan mong ititigil ang isang app, maaari itong kumilos nang hindi tama."</string>
-    <string name="peak_performance_dialog_title" msgid="5970933611683430870">"I-off ang proteksyon sa performance?"</string>
-    <string name="peak_performance_dialog_text" msgid="7648337738884134499">"Kapag ginawa mo ito, posibleng hindi rin gumana ang iyong software at hardware."</string>
-    <string name="peak_performance_dialog_action_on" msgid="2139033153500237350">"Iwanang naka-on"</string>
-    <string name="peak_performance_dialog_action_off" msgid="1019653666533456482">"I-off"</string>
     <string name="disable_text" msgid="4358165448648990820">"I-disable"</string>
     <string name="enable_text" msgid="1794971777861881238">"I-enable"</string>
     <string name="uninstall_text" msgid="277907956072833012">"I-uninstall"</string>
@@ -310,7 +305,6 @@
     <string name="permissions_label" msgid="2701446753515612685">"Mga Pahintulot"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Mga Notification"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Storage at cache"</string>
-    <string name="peak_performance_label" msgid="1592816366516845648">"Peak perf, tiyakin"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Bersyon: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Walang ibinigay na pahintulot"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Walang hiniling na pahintulot"</string>
@@ -321,7 +315,6 @@
     </plurals>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Alisin ang pahintulot, i-clear ang space"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s sa internal storage"</string>
-    <string name="peak_performance_summary" msgid="2450911487290019786">"Isara para di magamit gaano ang resource"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Paggamit ng data"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Paggamit ng data ng app"</string>
     <string name="computing_size" msgid="5791407621793083965">"Kinakalkula…"</string>
@@ -390,7 +383,8 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Mga pahintulot sa antas ng app"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Mga Serbisyo ng Lokasyon"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gumamit ng lokasyon"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Posibleng gumamit ang mga lokasyon ng mga source na gaya ng GPS, Wi‑Fi, mga mobile network, at sensor para tumulong sa pagtantiya ng lokasyon ng iyong device."</string>
+    <!-- no translation found for location_settings_footer (296892848338100051) -->
+    <skip />
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mga pag-update ng system"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Advanced"</string>
@@ -460,7 +454,7 @@
     <string name="factory_reset_summary" msgid="854815182943504327">"Burahin ang lahat ng data at profile mula sa infotainment system"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Buburahin nito ang lahat ng data mula sa infotainment system ng iyong sasakyan, kasama ang:\n\n"<li>"Iyong Google Account"</li>\n<li>"Data at mga setting ng system at app"</li>\n<li>"Mga na-download na app"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Kasalukuyan kang naka-sign in sa mga sumusunod na account:"</string>
-    <string name="factory_reset_other_users_present" msgid="3852324375352090570">"May iba pang profile na na-set up para sa sasakyang ito."</string>
+    <string name="factory_reset_other_users_present" msgid="3254426161455117822">"May iba pang profile sa sasakyang ito."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Burahin ang lahat ng data"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Burahin ang lahat ng data?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Buburahin nito ang lahat ng iyong data ng personal na profile, account, at na-download na app sa infotainment system na ito.\n\nHindi mo maa-undo ang pagkilos na ito."</string>
@@ -469,8 +463,10 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Maghintay..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Petsa at oras"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Itakda ang petsa, oras, time zone, at mga format"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Awtomatikong itakda ang oras"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Awtomatikong itakda ang time zone"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Awtomatikong petsa at oras"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Gamitin ang oras na mula sa network"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"Awtomatikong time zone"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Gamitin ang time zone na mula sa network"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 na oras na format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Gamitin ang 24 na oras na format"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Oras"</string>
@@ -485,9 +481,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Oras"</string>
     <string name="user_admin" msgid="1535484812908584809">"Admin"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Naka-sign in bilang admin"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Bigyan ng mga pahintulot ng admin?"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Lahat ng pang-admin na pahintulot"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Gawing Admin"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Magagawa ng admin na i-delete ang iba pang profile, kabilang ang mga profile para sa iba pang admin, at i-factory reset ang infotainment system."</string>
+    <string name="grant_admin_permissions_message" msgid="6160752287870078438">"Magagawa ng profile na mag-delete mga profile, kabilang ang iba pang Admin, at i-factory reset ang system."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Hindi mababawi ang pagkilos na ito."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Oo, gawing admin"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Gumawa ng mga bagong profile"</string>
@@ -498,17 +494,17 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Magdagdag ng profile"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Bagong profile"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Magdagdag ng bagong profile?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Kapag nakagawa ka na ng bagong profile, dapat itong i-customize ng taong iyon para sa sarili niya."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"Puwedeng i-update ang mga app mula sa anumang profile para sa paggamit ng lahat ng iba pang profile."</string>
+    <string name="user_add_user_message_setup" msgid="1104228754378776843">"Kapag nagdagdag ka ng bagong profile, kailangang i-set up ng taong iyon ang kanyang espasyo."</string>
+    <string name="user_add_user_message_update" msgid="4426216049383534983">"Puwedeng i-update ng alinmang profile ang mga app para sa lahat ng iba pang profile."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Naabot na ang limitasyon ng profile"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="3310152546154693349">
       <item quantity="one">Puwede kang gumawa ng hanggang <xliff:g id="COUNT">%d</xliff:g> profile.</item>
       <item quantity="other">Puwede kang gumawa ng hanggang <xliff:g id="COUNT">%d</xliff:g> na profile.</item>
     </plurals>
-    <string name="add_user_error_title" msgid="7589792057846396341">"Hindi makagawa ng bagong profile"</string>
+    <string name="add_user_error_title" msgid="1083971272311209015">"Hindi nakagawa ng bagong profile"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"I-delete ang profile na ito?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Made-delete ang lahat ng app at data para sa profile na ito"</string>
-    <string name="delete_user_error_title" msgid="6422249596301690254">"Hindi ma-delete ang profile."</string>
+    <string name="delete_user_error_title" msgid="3673233389115187280">"Hindi na-delete ang profile."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Ide-delete ang profile na ito kapag nagpalit ka ng profile o ni-restart mo ang sasakyan."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"I-dismiss"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Subukang muli"</string>
@@ -581,11 +577,11 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Kanselahin ang pag-sync"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Kasalukuyang nagkakaproblema sa pag-sync. Babalik ito pagkalipas ng ilang sandali."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacy"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data ng infotainment system"</string>
+    <string name="privacy_vehicle_data_title" msgid="3648848044709285993">"Data ng sasakyan"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrolin ang access ng app sa iyong lokasyon"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikropono"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrolin ang access ng app sa mikropono"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Data ng infotainment system"</string>
+    <string name="vehicle_data_title" msgid="7422375925983229871">"Data ng sasakyan"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Pamahalaan ang mga aktibidad at impormasyong naka-save sa sasakyang ito"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"I-delete ang iyong profile"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Burahin ang iyong profile at mga account mula sa infotainment system"</string>
@@ -606,6 +602,7 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Laktawan"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Magtakda ng lock ng screen"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Pumili ng iyong PIN"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Pumili ng iyong pattern"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Pumili ng iyong password"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Kasalukuyang lock ng screen"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Para sa seguridad, magtakda ng pattern"</string>
@@ -649,7 +646,7 @@
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Dapat ay wala pang <xliff:g id="NUMBER">%d</xliff:g> (na) digit"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Binubuo lang dapat ito ng mga digit na 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Hindi pinapayagan ng admin ng device ang paggamit ng kamakailang PIN"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Bina-block ng iyong IT admin ang mga pangkaraniwang PIN. Sumubok ng ibang PIN."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="7412709707800738442">"Bina-block ng iyong IT admin ang mga pangkaraniwang PIN. Sumubok ng ibang PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Hindi ito maaaring maglaman ng invalid na character."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Invalid ang password, dapat ay may hindi bababa sa 4 na character."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
@@ -678,7 +675,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Hindi pinapayagan ng admin ng device ang paggamit ng kamakailang password"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Nagka-error sa pag-save ng password"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Bina-block ng iyong IT admin ang mga pangkaraniwang password. Sumubok ng ibang password."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="7965893810326503891">"Bina-block ng iyong IT admin ang mga pangkaraniwang password. Sumubok ng ibang password."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Hindi pinapayagan ang pataas, pababa, o paulit-ulit na pagkakasunod-sunod ng mga digit."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Mga opsyon sa lock ng screen"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> (na) araw ang nakalipas"</string>
@@ -706,7 +703,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Hindi makakapagdagdag ng profile habang nagmamaneho"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Hanapin"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant at boses"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digital assistant app"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="6438964789533662537">"Assistant app"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Gamitin ang text mula sa screen"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Payagan ang assistant na i-access ang mga content ng screen"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Gamitin ang screenshot"</string>
@@ -718,5 +715,4 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Magdagdag ng profile"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"I-delete ang profile na ito"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Magdagdag ng profile"</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Hindi mababago ang setting na ito sa ngayon"</string>
 </resources>
