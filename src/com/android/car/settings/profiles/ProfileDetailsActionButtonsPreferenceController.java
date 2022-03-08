@@ -132,10 +132,9 @@ public final class ProfileDetailsActionButtonsPreferenceController
         boolean isDemoProfile = mUserManager.isDemoUser();
         // When DISALLOW_ADD_USER is set by device or profile owner, the button should still be
         // visible but disabled
-        boolean shouldShowAddProfile = mUserManager.isAdminUser()
+        boolean shouldShowAddProfile = !(mUserManager.isAdminUser() && areThereOtherProfiles())
                 && mProfileHelper.isCurrentProcessUser(getUserInfo())
-                && !hasUserRestrictionByUm(getContext(), DISALLOW_ADD_USER)
-                && !areThereOtherProfiles();
+                && !hasUserRestrictionByUm(getContext(), DISALLOW_ADD_USER);
         boolean shouldEnableAddProfile = shouldShowAddProfile
                 && !hasUserRestrictionByDpm(getContext(), DISALLOW_ADD_USER);
         boolean shouldShowProfilesButton = isDemoProfile || shouldShowAddProfile
