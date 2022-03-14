@@ -24,6 +24,7 @@ import android.car.drivingstate.CarUxRestrictions;
 
 import com.android.car.admin.ui.R;
 import com.android.car.settings.common.CarFooterPreference;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -53,7 +54,8 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
 
         mEnterpriseDisclosurePreferenceController.updateState(mPreference);
 
-        assertAvailability(mEnterpriseDisclosurePreferenceController.getAvailabilityStatus(),
+        PreferenceControllerTestUtil.assertAvailability(
+                mEnterpriseDisclosurePreferenceController.getAvailabilityStatus(),
                 DISABLED_FOR_PROFILE);
     }
 
