@@ -25,6 +25,8 @@ import static org.mockito.Mockito.when;
 import android.net.ConnectivityManager;
 import android.net.ProxyInfo;
 
+import com.android.car.settings.common.PreferenceControllerTestUtil;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -49,15 +51,15 @@ public final class GlobalHttpProxyPreferenceControllerTest extends
         when(mConnectivityManager.getGlobalProxy()).thenReturn(
                 ProxyInfo.buildDirectProxy("test.com", 43));
 
-        assertAvailability(mGlobalHttpProxyPreferenceController.getAvailabilityStatus(),
-                AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(
+                mGlobalHttpProxyPreferenceController.getAvailabilityStatus(), AVAILABLE);
     }
 
     @Test
     public void testGlobalProxySet_enablesPreference() {
         when(mConnectivityManager.getGlobalProxy()).thenReturn(null);
 
-        assertAvailability(mGlobalHttpProxyPreferenceController.getAvailabilityStatus(),
-                DISABLED_FOR_PROFILE);
+        PreferenceControllerTestUtil.assertAvailability(
+                mGlobalHttpProxyPreferenceController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
     }
 }
