@@ -24,6 +24,7 @@ import android.app.AppOpsManager;
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.enterprise.DeviceAdminAddHeaderPreferenceController.ActivationListener;
 
 import org.junit.Before;
@@ -50,7 +51,7 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
 
     @Test
     public void testGetAvailabilityStatus_admin() throws Exception {
-        assertAvailability(mController.getAvailabilityStatus(),
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
                 PreferenceController.AVAILABLE);
     }
 
@@ -60,7 +61,7 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
                 new DeviceAdminAddHeaderPreferenceController(mSpiedContext, mPreferenceKey,
                         mFragmentController, mUxRestrictions);
 
-        assertAvailability(controller.getAvailabilityStatus(),
+        PreferenceControllerTestUtil.assertAvailability(controller.getAvailabilityStatus(),
                 PreferenceController.CONDITIONALLY_UNAVAILABLE);
     }
 
