@@ -30,6 +30,7 @@ import android.util.Log;
 import androidx.preference.PreferenceGroup;
 import androidx.test.annotation.UiThreadTest;
 
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider;
 import com.android.car.settingslib.applications.ApplicationFeatureProvider.ListOfAppsCallback;
 
@@ -65,13 +66,15 @@ public class EnterpriseInstalledPackagesListPreferenceControllerTest extends
         ListOfAppsCallbackHolder callbackHolder = mockListPolicyInstalledApps();
 
         // Assert initial state
-        assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mSpiedController.getAvailabilityStatus(),
+                CONDITIONALLY_UNAVAILABLE);
 
         // Unblock async call
         callbackHolder.release();
 
         // Assert post-callback result
-        assertAvailability(mSpiedController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+        PreferenceControllerTestUtil.assertAvailability(mSpiedController.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
         assertUiNotRefreshed(mSpiedController);
     }
 
@@ -81,13 +84,15 @@ public class EnterpriseInstalledPackagesListPreferenceControllerTest extends
         ListOfAppsCallbackHolder callbackHolder = mockListPolicyInstalledApps();
 
         // Assert initial state
-        assertAvailability(mSpiedController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mSpiedController.getAvailabilityStatus(),
+                CONDITIONALLY_UNAVAILABLE);
 
         // Unblock async call
         callbackHolder.release(newUserAppInfo("foo"), newUserAppInfo("bar"));
 
         // Assert post-callback result
-        assertAvailability(mSpiedController.getAvailabilityStatus(), AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mSpiedController.getAvailabilityStatus(),
+                AVAILABLE);
         assertUiRefreshed(mSpiedController);
     }
 

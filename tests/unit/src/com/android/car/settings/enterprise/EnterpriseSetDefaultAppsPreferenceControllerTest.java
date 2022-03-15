@@ -30,6 +30,7 @@ import android.util.Log;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settingslib.applications.UserAppInfo;
 import com.android.car.settingslib.enterprise.EnterpriseDefaultApps;
 
@@ -65,24 +66,28 @@ public final class EnterpriseSetDefaultAppsPreferenceControllerTest
     public void testGetAvailabilityStatus_none() throws Exception {
         setEnterpriseSetDefaultApps(EnterpriseDefaultApps.BROWSER, 0);
 
-        assertAvailability(mController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
     }
 
     @Test
     public void testGetAvailabilityStatus_one() throws Exception {
         setEnterpriseSetDefaultApps(EnterpriseDefaultApps.BROWSER, 1);
 
-        assertAvailability(mController.getAvailabilityStatus(), AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                AVAILABLE);
     }
 
     @Test
     public void testGetAvailabilityStatus_cached() throws Exception {
         setEnterpriseSetDefaultApps(EnterpriseDefaultApps.BROWSER, 1);
 
-        assertAvailability(mController.getAvailabilityStatus(), AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                AVAILABLE);
 
         setEnterpriseSetDefaultApps(EnterpriseDefaultApps.BROWSER, 0);
-        assertAvailability(mController.getAvailabilityStatus(), AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                AVAILABLE);
 
         verifyFindPersistentPreferredActivitiesCalledOnce();
     }
