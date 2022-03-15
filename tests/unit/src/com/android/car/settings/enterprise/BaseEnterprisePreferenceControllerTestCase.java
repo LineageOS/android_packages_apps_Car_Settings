@@ -32,7 +32,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceController;
 
 import org.mockito.Mock;
 
@@ -46,30 +45,6 @@ abstract class BaseEnterprisePreferenceControllerTestCase extends BaseEnterprise
                     .build();
     @Mock
     protected FragmentController mFragmentController;
-
-    protected static final String availabilityToString(int value) {
-        switch (value) {
-            case PreferenceController.AVAILABLE:
-                return "AVAILABLE";
-            case PreferenceController.AVAILABLE_FOR_VIEWING:
-                return "AVAILABLE_FOR_VIEWING";
-            case PreferenceController.CONDITIONALLY_UNAVAILABLE:
-                return "CONDITIONALLY_UNAVAILABLE";
-            case PreferenceController.DISABLED_FOR_PROFILE:
-                return "DISABLED_FOR_PROFILE";
-            case PreferenceController.UNSUPPORTED_ON_DEVICE:
-                return "UNSUPPORTED_ON_DEVICE";
-            default:
-                return "INVALID-" + value;
-        }
-    }
-
-    protected static final void assertAvailability(int actualValue, int expectedValue) {
-        assertWithMessage("controller availability (%s=%s, %s=%s)",
-                actualValue, availabilityToString(actualValue),
-                expectedValue, availabilityToString(expectedValue))
-                        .that(actualValue).isEqualTo(expectedValue);
-    }
 
     protected static final void assertPreferenceSummary(Preference preference, String summary) {
         assertWithMessage("(preference %s).getSummary()", preference).that(preference.getSummary())

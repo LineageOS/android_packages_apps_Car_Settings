@@ -21,6 +21,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +46,7 @@ public final class FailedPasswordWipeCurrentUserPreferenceControllerTest
     public void testGetAvailabilityStatus_maxNotSet() throws Exception {
         mockGetMaximumFailedPasswordsForWipe(0);
 
-        assertAvailability(mController.getAvailabilityStatus(),
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
                 PreferenceController.CONDITIONALLY_UNAVAILABLE);
     }
 
@@ -53,7 +54,8 @@ public final class FailedPasswordWipeCurrentUserPreferenceControllerTest
     public void testGetAvailabilityStatus_maxSet() throws Exception {
         mockGetMaximumFailedPasswordsForWipe(42);
 
-        assertAvailability(mController.getAvailabilityStatus(), PreferenceController.AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                PreferenceController.AVAILABLE);
     }
 
     @Test
