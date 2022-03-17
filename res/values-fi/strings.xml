@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> on muiden laitteiden käytettävissä."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Hotspotin salasana"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Suojaus"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Ei mitään"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP-taajuus"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Ajoneuvokäytäntö / <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Organisaation ylläpitäjän hallinnoimat asetukset"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Lue lisää: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Hallinnoidun ajoneuvon tiedot"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Laitteiston järjestelmänvalvojan ylläpitämät asetukset"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Laitteiston järjestelmänvalvoja saattaa muuttaa infotainment-järjestelmän asetuksia ja asentaa järjestelmään ohjelmistoja saadakseen pääsyn hallinnoidun ajoneuvon dataan.\n\nPyydä lisätietoja järjestelmänvalvojalta."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Laitteiston järjestelmänvalvojalle näkyvät tiedot"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Laitteiston järjestelmänvalvojan tekemät muutokset"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Hallinnoituun ajoneuvotiliin liittyvä data"</li>\n" "<li>"Hallinnoidussa ajoneuvossa olevat sovellukset"</li>\n" "<li>"Kussakin sovelluksessa käytetty aika ja data"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Pääsy infotainment-järjestelmään"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Ajoneuvossa olevat sovellukset"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Sovellusten lukumäärä on arvio. Luku ei välttämättä sisällä sovelluksia, jotka on asennettu muualta kuin Play Kaupasta."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Vähintään <xliff:g id="COUNT_1">%d</xliff:g> sovellusta</item>
       <item quantity="one">Vähintään <xliff:g id="COUNT_0">%d</xliff:g> sovellus</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> sovellusta</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> sovellus</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Viimeisin verkkoliikenneloki"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Viimeisin virheraportti"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Viimeisin tietoturvaloki"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"–"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Asennetut sovellukset"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Sijaintiluvat"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Mikrofoniluvat"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Kameraluvat"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Oletussovellukset"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Oletusnäppäimistö"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Asetus: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Yleinen HTTP-välityspalvelin asetettu"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Henkilökohtaisen profiilin luotetut kirjautumistiedot"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Järjestelmänvalvoja voi lukita infotainment-järjestelmän ja nollata salasanan"</li>\n" "<li>"Järjestelmänvalvoja voi poistaa dataa infotainment-järjestelmästä"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Epäonnistuneet salasanan kirjoitusyritykset ennen kaiken datan poistamista infotainment-järjestelmästä"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Epäonnistuneet salasanan kirjoitusyritykset ennen kaikkien profiilin tietojen poistamista"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> yritystä</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> yritys</item>

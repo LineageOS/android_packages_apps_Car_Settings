@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"दूसरे डिवाइस <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> से कनेक्ट हो सकते हैं"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट का पासवर्ड"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"सुरक्षा"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-निजी"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-निजी"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 व्यक्तिगत"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"कोई नहीं"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"एपी बैंड"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> गाड़ी से जुड़ी नीति"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"वे सेटिंग जिन्हें ऑर्गनाइज़ेशन मैनेजर मैनेज करता है"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> के बारे में ज़्यादा जानें"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"मैनेज की जा रही गाड़ी की जानकारी"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"वे सेटिंग जिन्हें फ़्लीट एडमिन मैनेज करता है"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"मैनेज की जा रही आपकी गाड़ी की स्क्रीन पर डेटा को ऐक्सेस करने की अनुमति देने के लिए, हो सकता है कि फ़्लीट एडमिन कुछ सेटिंग में बदलाव करे. यह भी हो सकता है कि वह सूचना और मनोरंजन की सुविधा देने वाले डिवाइस पर कोई सॉफ़्टवेयर इंस्टॉल करे.\n\nज़्यादा जानकारी के लिए, अपने फ़्लीट एडमिन से संपर्क करें."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"वह जानकारी जिसे आपका फ़्लीट एडमिन देख सकता है"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"फ़्लीट एडमिन के किए गए बदलाव"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"मैनेज की जा रही आपकी गाड़ी से जुड़ा डेटा"</li>\n" "<li>"उन ऐप्लिकेशन की सूची जिन्हें मैनेज की जा रही आपकी गाड़ी की स्क्रीन पर इस्तेमाल किया जा सकता है"</li>\n" "<li>"हर ऐप्लिकेशन को इस्तेमाल करने में खर्च हुए डेटा और समय का हिसाब"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"सूचना और मनोरंजन की सुविधा देने वाले डिवाइस का आपका ऐक्सेस"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"आपकी गाड़ी की स्क्रीन पर इस्तेमाल किए जाने वाले ऐप्लिकेशन की सूची"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"ऐप्लिकेशन की संख्या अंदाज़े के आधार पर दी गई है. ऐसा हो सकता है कि इसमें Play Store के बाहर से इंस्टॉल किए गए ऐप्लिकेशन शामिल न हों."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">कम से कम <xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
       <item quantity="other">कम से कम <xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
@@ -779,6 +786,22 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"हाल ही का नेटवर्क ट्रैफ़िक लॉग"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"हाल ही में हुई गड़बड़ी की रिपोर्ट"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"हाल ही का सुरक्षा लॉग"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"एक बार भी नहीं"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"इंस्टॉल किए गए ऐप्लिकेशन"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"जगह की जानकारी की अनुमतियां"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"माइक्रोफ़ोन से जुड़ी अनुमतियां"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"कैमरे से जुड़ी अनुमतियां"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"डिफ़ॉल्ट ऐप्लिकेशन"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"डिफ़ॉल्ट कीबोर्ड"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> पर सेट है"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"ग्लोबल एचटीटीपी प्रॉक्सी को सेट किया गया"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"आपकी निजी प्रोफ़ाइल में भरोसेमंद CA सर्टिफ़िकेट इंस्टॉल किए गए"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"एडमिन, सूचना और मनोरंजन की सुविधा देने वाले डिवाइस को लॉक कर सकता है और उसका पासवर्ड रीसेट कर सकता है"</li>\n" "<li>"सूचना और मनोरंजन की सुविधा देने वाले डिवाइस पर मौजूद डेटा को एडमिन मिटा सकता है"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"सूचना और मनोरंजन की सुविधा देने वाले डिवाइस पर मौजूद सारा डेटा मिटाने से पहले, इतनी बार गलत पासवर्ड डाला गया"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"प्रोफ़ाइल का डेटा मिटाने से पहले, इतनी बार गलत पासवर्ड डाला गया"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> बार कोशिश की गई</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> बार कोशिश की गई</item>

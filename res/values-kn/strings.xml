@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ಇತರೆ ಸಾಧನಗಳು <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ಗೆ ಸಂಪರ್ಕವನ್ನು ಪಡೆದುಕೊಳ್ಳಬಹುದು"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ಹಾಟ್‌ಸ್ಪಾಟ್ ಪಾಸ್‌ವರ್ಡ್"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ಭದ್ರತೆ"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-ವೈಯಕ್ತಿಕ"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-ವೈಯಕ್ತಿಕ"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2- ವೈಯಕ್ತಿಕ"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ಯಾವುದೂ ಬೇಡ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ಬ್ಯಾಂಡ್"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ವಾಹನ ನೀತಿ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರಿಂದ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗಿದೆ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ನಿರ್ವಹಿಸಲಾದ ವಾಹನ ಮಾಹಿತಿ"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರು ನಿರ್ವಹಿಸಿದ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ಈ ನಿರ್ವಹಿಸಲಾದ ಈ ವಾಹನದಲ್ಲಿ ಡೇಟಾಗೆ ಆ್ಯಕ್ಸೆಸ್ ನೀಡಲು, ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಬಹುದು ಮತ್ತು ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನಲ್ಲಿ ಸಾಫ್ಟ್‌ವೇರ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಬಹುದು.\n\nಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ, ನಿಮ್ಮ ಫ್ಲೀಟ್ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ನಿಮ್ಮ ಫ್ಲೀಟ್ಸ್ ನಿರ್ವಾಹಕರು ನೋಡಬಹುದಾದ ಮಾಹಿತಿ"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"ನಿಮ್ಮ ಫ್ಲೀಟ್ಸ್ ನಿರ್ವಾಹಕರು ಮಾಡಿದ ಬದಲಾವಣೆಗಳು"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ನಿರ್ವಹಿಸಲಾದ ನಿಮ್ಮ ವಾಹನ ಖಾತೆಗೆ ಸಂಬಂಧಿಸಿದ ಡೇಟಾ"</li>\n" "<li>"ನಿರ್ವಹಿಸಲಾದ ನಿಮ್ಮ ವಾಹನದಲ್ಲಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಪಟ್ಟಿ"</li>\n" "<li>"ಪ್ರತಿ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಖರ್ಚು ಮಾಡಿದ ಸಮಯ ಮತ್ತು ಡೇಟಾ"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಇರುವ ನಿಮ್ಮ ಆ್ಯಕ್ಸೆಸ್"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಲ್ಲಿರುವ ಆ್ಯಪ್‌ಗಳ ಪಟ್ಟಿ"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"ಆ್ಯಪ್‌ಗಳ ಸಂಖ್ಯೆಯನ್ನು ಅಂದಾಜು ಮಾಡಲಾಗಿದೆ. Play ಸ್ಟೋರ್‌ನಲ್ಲಿರುವುದನ್ನು ಹೊರತುಪಡಿಸಿ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿರುವ ಆ್ಯಪ್‌ಗಳು ಇದರಲ್ಲಿ ಒಳಗೊಂಡಿಲ್ಲದೇ ಇರಬಹುದು."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">ಕನಿಷ್ಠ <xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
       <item quantity="other">ಕನಿಷ್ಠ <xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
@@ -779,6 +786,22 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಆ್ಯಪ್‌ಗಳು</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"ಅತ್ಯಂತ ಇತ್ತೀಚಿನ ನೆಟ್‌ವರ್ಕ್ ಟ್ರಾಫಿಕ್ ಲಾಗ್"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"ಅತ್ಯಂತ ಇತ್ತೀಚಿನ ಬಗ್ ವರದಿ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"ಅತ್ಯಂತ ಇತ್ತೀಚಿನ ಭದ್ರತಾ ಲಾಗ್"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ಯಾವುದೂ ಅಲ್ಲ"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"ಆ್ಯಪ್‌ಗಳನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"ಸ್ಥಳದ ಅನುಮತಿಗಳು"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"ಮೈಕ್ರೋಫೋನ್ ಅನುಮತಿಗಳು"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"ಕ್ಯಾಮರಾ ಅನುಮತಿಗಳು"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ಡೀಫಾಲ್ಟ್ ಆ್ಯಪ್‌ಗಳು"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ಡೀಫಾಲ್ಟ್ ಕೀಬೋರ್ಡ್"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> ಗೆ ಸೆಟ್ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"ಜಾಗತಿಕ HTTP ಪ್ರಾಕ್ಸಿ ಸೆಟ್"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಪ್ರೊಫೈಲ್‌ನಲ್ಲಿರುವ ವಿಶ್ವಾಸಾರ್ಹ ರುಜುವಾತುಗಳು"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ನಿರ್ವಾಹಕರು ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಇರುವ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಲಾಕ್ ಮಾಡಬಹುದು ಹಾಗೂ ಪಾಸ್‌ವರ್ಡ್ ರೀಸೆಟ್ ಮಾಡಬಹುದು"</li>\n" "<li>"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನಲ್ಲಿರುವ ಡೇಟಾವನ್ನು ನಿರ್ವಾಹಕರು ಅಳಿಸಬಹುದು"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸುವ ಮುನ್ನ, ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸುವಿಕೆಯ ವಿಫಲ ಪ್ರಯತ್ನಗಳು"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"ಪ್ರೊಫೈಲ್‌ನ ಡೇಟಾವನ್ನು ಅಳಿಸುವ ಮುನ್ನ, ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸುವಿಕೆಯ ವಿಫಲ ಪ್ರಯತ್ನಗಳು"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಪ್ರಯತ್ನಗಳು</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಪ್ರಯತ್ನಗಳು</item>

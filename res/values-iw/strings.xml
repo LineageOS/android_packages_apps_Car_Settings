@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"אפשר לחבר מכשירים נוספים לנקודה <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"הסיסמה לנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"אבטחה"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"אין"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"תדר AP"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"מדיניות הרכב של <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ההגדרות מנוהלות על ידי המנהל של הארגון"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"מידע נוסף על <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"פרטי הרכב המנוהל"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ההגדרות מנוהלות על ידי האדמין של הצי"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"כדי לספק גישה לנתונים שברכב המנוהל הזה, יכול להיות שהאדמין של הצי ישנה את ההגדרות ויתקין תוכנה במערכת המידע והבידור.\n\nלמידע נוסף, יש ליצור קשר עם האדמין של הצי."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"מידע שזמין לצפייה על ידי האדמין של הצי"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"שינויים שנעשו על ידי האדמין של הצי"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"נתונים שמשויכים לחשבון הרכב המנוהל שלך"</li>\n" "<li>"רשימת אפליקציות ברכב המנוהל שלך"</li>\n" "<li>"כמות הזמן והנתונים שכל אפליקציה ניצלה"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"הגישה שלך למערכת המידע והבידור"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"רשימת האפליקציות ברכב שלך"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"זוהי הערכה של מספר האפליקציות. יכול להיות שהמספר לא כולל אפליקציות שהותקנו מחוץ לחנות Play."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="two">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
       <item quantity="many">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
@@ -783,6 +790,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
       <item quantity="one">אפליקציה אחת (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"היומן האחרון של התנועה ברשת"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"הדוח האחרון על באג"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"יומן האבטחה האחרון"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ללא"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"אפליקציות מותקנות"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"הרשאות מיקום"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"הרשאות המיקרופון"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"הרשאות המצלמה"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"אפליקציות ברירת מחדל"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"מקלדת המוגדרת כברירת מחדל"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"שיטת הקלט הוגדרה כ-<xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"הוגדר שרת proxy גלובלי של HTTP"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"פרטי כניסה מהימנים בפרופיל האישי שלך"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"בסמכות האדמין לנעול את מערכת המידע והבידור ולאפס את הסיסמה"</li>\n" "<li>"בסמכות האדמין למחוק נתונים ממערכת המידע והבידור"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"מספר הזנות של סיסמה שגויה לפני מחיקה של כל הנתונים במערכת המידע והבידור"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"מספר הזנות של סיסמה שגויה לפני מחיקה של נתוני הפרופיל"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
       <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>

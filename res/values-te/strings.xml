@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ఇతర పరికరాలు <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>కు కనెక్ట్ కావచ్చు"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"హాట్‌స్పాట్ పాస్‌వర్డ్‌"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"సెక్యూరిటీ"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-వ్యక్తిగతం"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ఏమీ లేవు"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP బ్యాండ్"</string>
@@ -175,7 +173,7 @@
     <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే రిక్వెస్ట్‌ను రద్దు చేసింది."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"అన్నింటినీ చూపు"</string>
-    <string name="progress_scanning" msgid="7191583064717479795">"శోధించడం"</string>
+    <string name="progress_scanning" msgid="7191583064717479795">"సెర్చ్ చేయడం"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"బ్లూటూత్"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"పేరులేని పరికరం"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"జత చేయబడిన పరికరాలు"</string>
@@ -322,7 +320,7 @@
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"యాప్ పనితీరుకు ప్రాధాన్యత ఇవ్వండి"</string>
     <string name="application_version_label" msgid="8556889839783311649">"వెర్షన్: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"అనుమతులు మంజూరు కాలేదు"</string>
-    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"అనుమతులను అభ్యర్థించలేదు"</string>
+    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"అనుమతులను రిక్వెస్ట్ చేయలేదు"</string>
     <string name="unused_apps" msgid="648471933781010395">"ఉపయోగించని యాప్‌లు"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ఉపయోగించని యాప్}other{# ఉపయోగించని యాప్‌లు}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"అనుమతులను తీసివేసి స్పేస్‌ను ఖాళీ చేయండి"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> వాహన పాలసీ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"సంస్థ మేనేజర్ ద్వారా సెట్టింగ్‌లు మేనేజ్ చేయబడతాయి"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> గురించి మరింత తెలుసుకోండి"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"మేనేజ్ చేయబడే వాహన సమాచారం"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ఫ్లీట్ అడ్మిన్ ద్వారా మేనేజ్ చేయబడే సెట్టింగ్‌లు"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ఈ మేనేజ్ చేయబడే వాహనంలో డేటాకు యాక్సెస్‌ను అందించడానికి, ఫ్లీట్ అడ్మిన్ సెట్టింగ్‌లను మార్చవచ్చు, అలాగే సమాచారంతో కూడిన వినోదం సిస్టమ్‌లో సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయవచ్చు.\n\nమరిన్ని వివరాల కోసం మీ ఫ్లీట్స్ అడ్మిన్‌ను సంప్రదించండి."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"మీ ఫ్లీట్స్ అడ్మిన్ చూడగల సమాచారం"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"మీ ఫ్లీట్స్ అడ్మిన్ చేసిన మార్పులు"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"మీరు మేనేజ్ చేసే వాహనానికి సంబంధించిన ఖాతాతో అనుబంధించబడిన డేటా"</li>\n" "<li>"మీరు మేనేజ్ చేసే వాహనంలోని యాప్‌ల లిస్ట్"</li>\n" "<li>"ప్రతి యాప్‌లోను మీరు వెచ్చించిన సమయం, డేటా"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌కు మీ యాక్సెస్"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"మీ వాహనంలో ఉన్న యాప్‌ల లిస్ట్"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"యాప్‌ల సంఖ్య అంచనా సమాచారం మాత్రమే. Play Store నుండి ఇన్‌స్టాల్ చేయని యాప్‌లను ఇందులో పరిగణనలోకి తీసుకుని ఉండకపోవచ్చు."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">కనీసం <xliff:g id="COUNT_1">%d</xliff:g> యాప్‌లు</item>
       <item quantity="one">కనీసం <xliff:g id="COUNT_0">%d</xliff:g> యాప్</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> యాప్‌లు</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> యాప్</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"అత్యంత ఇటీవలి నెట్‌వర్క్ ట్రాఫిక్ లాగ్"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"అత్యంత ఇటీవలి బగ్ రిపోర్ట్"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"అత్యంత ఇటీవలి సెక్యూరిటీ లాగ్"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ఏవీ లేవు"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"యాప్‌లు ఇన్‌స్టాల్ చేయబడ్డాయి"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"లొకేషన్ అనుమతులు"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"మైక్రోఫోన్ అనుమతులు"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"కెమెరా అనుమతులు"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ఆటోమేటిక్ యాప్‌లు"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ఆటోమేటిక్ కీబోర్డ్"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>కు సెట్ చేయబడింది"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"గ్లోబల్ HTTP ప్రాక్సీ సెట్ చేయబడింది"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"మీ వ్యక్తిగత ప్రొఫైల్‌లో విశ్వసనీయ ఆధారాలు"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"అడ్మిన్ సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను లాక్ చేయగలరు"</li>\n" "<li>"అడ్మిన్ సమాచారంతో కూడిన వినోదం సిస్టమ్‌కు సంబంధించిన డేటాను తొలగించగలరు"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌లో డేటా అంతటినీ తొలగించడానికి ముందు జరిగిన పాస్‌వర్డ్ విఫలయత్నాలు"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"ఆఫీస్ ప్రొఫైల్ డేటాను తొలగించడానికి ముందు జరిగిన పాస్‌వర్డ్ విఫలయత్నాలు"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ప్రయత్నాలు</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ప్రయత్నం</item>
