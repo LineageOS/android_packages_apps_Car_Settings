@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andere apparaten kunnen verbinding maken met <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Wachtwoord hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Beveiliging"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Geen"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Toegangspunt"</string>
@@ -438,7 +436,7 @@
     <string name="hardware_info_summary" msgid="8262576443254075921">"Model: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Smalbandversie"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel-versie"</string>
-    <string name="build_number" msgid="3997326631001009102">"Build-nummer"</string>
+    <string name="build_number" msgid="3997326631001009102">"Buildnummer"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth-adres"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Niet beschikbaar"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Voertuigbeleid van <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Instellingen beheerd door de organisatiebeheerder"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Meer informatie over <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informatie over beheerd voertuig"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Instellingen beheerd door wagenparkbeheerder"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"De wagenparkbeheerder kan instellingen wijzigen en software installeren op het infotainmentsysteem om toegang te geven tot gegevens in dit beheerde voertuig.\n\nNeem contact op met je wagenparkbeheerder voor meer informatie."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informatie die je wagenparkbeheerder kan zien"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Wijzigingen die zijn aangebracht door je wagenparkbeheerder"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Gegevens die zijn gekoppeld aan het account van je beheerde voertuig"</li>\n" "<li>"Lijst met apps in je beheerde voertuig"</li>\n" "<li>"Hoeveel tijd en data je hebt besteed in elke app"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Je toegang tot het infotainmentsysteem"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lijst met apps in je voertuig"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Het aantal apps is een schatting die mogelijk geen apps omvat die zijn geïnstalleerd buiten de Play Store om."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Minimaal <xliff:g id="COUNT_1">%d</xliff:g> apps</item>
       <item quantity="one">Minimaal <xliff:g id="COUNT_0">%d</xliff:g> app</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Recentste logboek voor netwerkverkeer"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Recentste bugrapport"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Recentste beveiligingslogboek"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Geen"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Apps geïnstalleerd"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Locatierechten"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Microfoonrechten"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Camerarechten"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Standaard-apps"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Standaardtoetsenbord"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Ingesteld op <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Algemene HTTP-proxy ingesteld"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Vertrouwde inloggegevens in je persoonlijke profiel"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"De beheerder kan het infotainmentsysteem vergrendelen en het wachtwoord resetten"</li>\n" "<li>"De beheerder kan gegevens op het infotainmentsysteem verwijderen"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Aantal mislukte wachtwoordpogingen voordat alle gegevens op het infotainmentsysteem worden verwijderd"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Aantal mislukte wachtwoordpogingen voordat de profielgegevens worden verwijderd"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pogingen</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> poging</item>

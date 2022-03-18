@@ -27,7 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Modo noturno"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rede e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rede móvel"</string>
-    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}one{# SIM(s)}other{# SIMs}}"</string>
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMs}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Ativo/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inativo/SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"Ativo/SIM transferido"</string>
@@ -52,7 +52,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"Aviso de dados de <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Limite de dados de <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Aviso de dados de <xliff:g id="ID_1">^1</xliff:g>/limite de dados de <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{Falta # dia}one{Falta(m) # dia(s)}other{Faltam # dias}}"</string>
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{Falta # dia}other{Faltam # dias}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Sem tempo restante"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Resta menos de 1 dia"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"Atualizado por <xliff:g id="ID_1">^1</xliff:g> há <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Outros dispositivos podem ligar-se a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Palavra-passe da zona Wi-Fi"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Segurança"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Pessoal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nenhuma"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda do PA"</string>
@@ -324,7 +322,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nenhuma autorização concedida."</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nenhuma autorização solicitada."</string>
     <string name="unused_apps" msgid="648471933781010395">"Apps não utilizadas"</string>
-    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# app não utilizada}one{# app(s) não utilizada(s)}other{# apps não utilizadas}}"</string>
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# app não utilizada}other{# apps não utilizadas}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Remover autorizações e libertar espaço"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s de memória de armazenamento interno"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Utiliza os recursos do sistema para dar prioridade ao desempenho da app"</string>
@@ -342,7 +340,7 @@
     <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Restringir dados"</string>
     <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Usar dados móveis só com a app em primeiro plano"</string>
     <string name="computing_size" msgid="5791407621793083965">"A calcular…"</string>
-    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# autorização adicional}one{# autorização(ões) adicional(ais)}other{# autorizações adicionais}}"</string>
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# autorização adicional}other{# autorizações adicionais}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Nota: após reiniciar, só é possível iniciar esta aplicação quando o veículo for desbloqueado."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistente e entrada de texto por voz"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"App de assistência"</string>
@@ -424,7 +422,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Acedido recentemente"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Nenhuma app recente"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 apps têm acesso"</string>
-    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{# de {total_count} apps tem acesso}one{# de {total_count} apps tem(têm) acesso}other{# de {total_count} apps têm acesso}}"</string>
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{# de {total_count} apps tem acesso}other{# de {total_count} apps têm acesso}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Acedido recentemente"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Ver tudo"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"A carregar…"</string>
@@ -466,7 +464,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licenças de terceiros"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ocorreu um problema ao carregar as licenças."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"A carregar…"</string>
-    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Está agora a # passo de se tornar um programador.}one{Está agora a # passo(s) de se tornar um programador.}other{Está agora a # passos de se tornar um programador.}}"</string>
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Está agora a # passo de se tornar um programador.}other{Está agora a # passos de se tornar um programador.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Agora é um programador!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Não é necessário, já é um programador."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opções de programador"</string>
@@ -535,7 +533,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Depois de criar um novo perfil, deve ser a pessoa em questão a personalizá-lo."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"As apps podem ser atualizadas a partir de qualquer perfil para utilização por todos os perfis."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Limite de perfis atingido"</string>
-    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Apenas pode criar um perfil.}one{Pode criar até # perfil(is).}other{Pode criar até # perfis.}}"</string>
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Apenas pode criar um perfil.}other{Pode criar até # perfis.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Não foi possível criar um perfil novo"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Pretende eliminar este perfil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Todos os dados e apps deste perfil serão eliminados"</string>
@@ -686,17 +684,17 @@
     <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Tem de incluir, pelo menos, uma letra"</string>
     <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Tem de incluir, pelo menos, um dígito"</string>
     <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Tem de incluir, pelo menos, um símbolo"</string>
-    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Tem de incluir, pelo menos, # letra}one{Tem de incluir, pelo menos, # letra(s)}other{Tem de incluir, pelo menos, # letras}}"</string>
-    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Tem de incluir, pelo menos, # letra minúscula}one{Tem de incluir, pelo menos, # letra(s) minúscula(s)}other{Tem de incluir, pelo menos, # letras minúsculas}}"</string>
-    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Tem de incluir, pelo menos, # letra maiúscula}one{Tem de incluir, pelo menos, # letra(s) maiúscula(s)}other{Tem de incluir, pelo menos, # letras maiúsculas}}"</string>
-    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Tem de incluir, pelo menos, # dígito numérico}one{Tem de incluir, pelo menos, # dígito(s) numérico(s)}other{Tem de incluir, pelo menos, # dígitos numéricos}}"</string>
-    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Tem de incluir, pelo menos, # símbolo especial}one{Tem de incluir, pelo menos, # símbolo(s) especial(ais).}other{Tem de incluir, pelo menos, # símbolos especiais.}}"</string>
-    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Tem de incluir, pelo menos, # caráter que não seja uma letra}one{Tem de incluir, pelo menos, # ou mais carateres que não sejam letras}other{Tem de incluir, pelo menos, # carateres que não sejam letras}}"</string>
-    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Tem de incluir, pelo menos, # caráter que não seja um número}one{Tem de incluir, pelo menos, # ou mais carateres que não sejam números}other{Tem de incluir, pelo menos, # carateres que não sejam números}}"</string>
-    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Tem de incluir, pelo menos, # caráter}one{Tem de incluir, pelo menos, # caráter(carateres)}other{Tem de incluir, pelo menos, # carateres}}"</string>
-    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Tem de incluir, pelo menos, # dígito}one{Tem de incluir, pelo menos, # dígito(s)}other{Tem de incluir, pelo menos, # dígitos}}"</string>
-    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Tem de ter menos de # caráter}one{Tem de ter menos de # caráter(carateres)}other{Tem de ter menos de # carateres}}"</string>
-    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Tem de ter menos de # dígito}one{Tem de ter menos de # dígito(s)}other{Tem de ter menos de # dígitos}}"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Tem de incluir, pelo menos, # letra}other{Tem de incluir, pelo menos, # letras}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Tem de incluir, pelo menos, # letra minúscula}other{Tem de incluir, pelo menos, # letras minúsculas}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Tem de incluir, pelo menos, # letra maiúscula}other{Tem de incluir, pelo menos, # letras maiúsculas}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Tem de incluir, pelo menos, # dígito numérico}other{Tem de incluir, pelo menos, # dígitos numéricos}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Tem de incluir, pelo menos, # símbolo especial}other{Tem de incluir, pelo menos, # símbolos especiais.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Tem de incluir, pelo menos, # caráter que não seja uma letra}other{Tem de incluir, pelo menos, # carateres que não sejam letras}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Tem de incluir, pelo menos, # caráter que não seja um número}other{Tem de incluir, pelo menos, # carateres que não sejam números}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Tem de incluir, pelo menos, # caráter}other{Tem de incluir, pelo menos, # carateres}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Tem de incluir, pelo menos, # dígito}other{Tem de incluir, pelo menos, # dígitos}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Tem de ter menos de # caráter}other{Tem de ter menos de # carateres}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Tem de ter menos de # dígito}other{Tem de ter menos de # dígitos}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Não é permitida uma sequência de dígitos ascendente, descendente ou repetida."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opções de bloqueio de ecrã"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: há <xliff:g id="NUM_DAYS">%3$s</xliff:g> dias"</string>
@@ -766,34 +764,59 @@
     <string name="default_admin_support_msg" msgid="2986598061733013282">"O acesso a algumas funcionalidades está limitado pela organização.\n\nSe tiver dúvidas, contacte o gestor da mesma."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Apps de administrador de veículos"</string>
-    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# app ativada}one{# app(s) ativada(s)}other{# apps ativadas}}"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# app ativada}other{# apps ativadas}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nenhuma app ativada"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política de veículos da organização <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Definições geridas pelo gestor da organização"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Saiba mais sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informações do veículo gerido"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Definições geridas pelo administrador da frota"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Para fornecer acesso a todos os dados neste veículo gerido, o administrador da frota pode alterar as definições e instalar o software no sistema de infoentretenimento.\n\nPara mais detalhes, contacte o administrador da frota."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informações que o administrador da frota pode ver"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Alterações feitas pelo administrador da frota"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Dados associados à conta do seu veículo gerido"</li>\n" "<li>"Lista de apps no seu veículo gerido"</li>\n" "<li>"Quantidade de tempo e dados gastos em cada app"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"O seu acesso ao sistema de infoentretenimento"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lista de apps no seu veículo"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"O número de apps é uma estimativa. Pode não incluir as apps instaladas fora da Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
-      <item quantity="one">No mínimo, <xliff:g id="COUNT_0">%d</xliff:g> app</item>
       <item quantity="other">No mínimo, <xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+      <item quantity="one">No mínimo, <xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
     <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Registo de tráfego de rede mais recente"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Relatório de erro mais recente"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Registo de segurança mais recente"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Nenhum"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Apps instaladas"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Autorizações de acesso à localização"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Autorizações do microfone"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Autorizações da câmara"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Apps predefinidas"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Teclado predefinido"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Defina como <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Proxy HTTP global definido"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Credenciais fidedignas no seu perfil pessoal"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"O administrador pode bloquear o sistema de infoentretenimento e repor a palavra-passe"</li>\n" "<li>"O administrador pode eliminar dados no sistema de infoentretenimento"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Tentativas de introdução da palavra-passe falhadas antes da eliminação de todos os dados no sistema de infoentretenimento"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Tentativas de introdução da palavra-passe falhadas antes da eliminação dos dados do perfil"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> tentativa</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> tentativas</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> tentativa</item>
     </plurals>
     <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
-      <item quantity="one">App de câmara</item>
       <item quantity="other">Apps de câmara</item>
+      <item quantity="one">App de câmara</item>
     </plurals>
     <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
-      <item quantity="one">App de cliente de email</item>
       <item quantity="other">Apps de cliente de email</item>
+      <item quantity="one">App de cliente de email</item>
     </plurals>
     <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
-      <item quantity="one">App Telefone</item>
       <item quantity="other">Apps Telefone</item>
+      <item quantity="one">App Telefone</item>
     </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Pretende partilhar o relatório de erro?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"O gestor da organização do veículo solicitou um relatório de erro para ajudar a resolver problemas com este dispositivo. As apps e os dados podem ser partilhados."</string>

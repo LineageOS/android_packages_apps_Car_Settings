@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"D\'autres appareils peuvent se connecter à <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Mot de passe du point d\'accès"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sécurité"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personnel"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Aucun"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Bande PA"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politique des véhicules de <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Les paramètres sont gérés par le gestionnaire de l\'organisation"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"En savoir plus sur : <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Données sur les véhicules gérés"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Paramètres gérés par l\'administrateur du parc"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Pour permettre l\'accès aux données sur ce véhicule géré, l\'administrateur du parc peut installer des logiciels sur le système d\'infodivertissement et en modifier les paramètres.\n\nPour en savoir plus, contactez l\'administrateur de votre parc."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informations que l\'administrateur de votre parc peut voir"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Modifications apportées par l\'administrateur de votre parc"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Données associées à votre compte de véhicule géré"</li>\n" "<li>"Liste des applications sur votre véhicule géré"</li>\n" "<li>"Temps d\'utilisation et quantité de données utilisées pour chaque application"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Votre accès au système d\'infodivertissement"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Liste des applications installées sur votre véhicule"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Le nombre d\'applications est estimé. Il peut ne pas inclure les applications installées en dehors de la boutique Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">Minimum de <xliff:g id="COUNT_1">%d</xliff:g> application</item>
       <item quantity="other">Minimum de <xliff:g id="COUNT_1">%d</xliff:g> applications</item>
@@ -779,6 +786,22 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> application</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> applications</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Journal de trafic réseau le plus récent"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Rapport de bogue le plus récent"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Journal de sécurité le plus récent"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Aucune"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Applications installées"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Autorisations de localisation"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Autorisations du microphone"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Autorisations de l\'appareil photo"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Applications par défaut"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Clavier par défaut"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Défini à <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Le serveur mandataire HTTP global a été défini"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Certificats de confiance installés dans votre profil personnel"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"L\'administrateur peut verrouiller le système d\'infodivertissement et réinitialiser le mot de passe"</li>\n" "<li>"L\'administrateur peut supprimer des données du système d\'infodivertissement"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Nombre de tentatives d\'entrée du mot de passe avant de supprimer toutes les données du système d\'infodivertissement"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Nombre de tentatives d\'entrée du mot de passe avant de supprimer les données de profil"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> tentative</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> tentatives</item>

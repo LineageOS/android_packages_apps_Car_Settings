@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ອຸປະກອນອື່ນສາມາດເຊື່ອມຕໍ່ກັບ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ລະຫັດຜ່ານຮັອດສະປອດ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ຄວາມປອດໄພ"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ສ່ວນຕົວ"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ບໍ່ມີ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"ຄື້ນ AP"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"ນະໂຍບາຍພາຫະນະຂອງ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ການຕັ້ງຄ່າທີ່ຈັດການໂດຍຜູ້ຈັດການອົງການ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ສຶກສາເພີ່ມເຕີມກ່ຽວກັບ <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ຂໍ້ມູນພາຫະນະທີ່ມີການຈັດການ"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ການຕັ້ງຄ່າທີ່ຈັດການໂດຍຜູ້ເບິ່ງແຍງລະບົບກຸ່ມລົດ"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ເພື່ອໃຫ້ການເຂົ້າເຖິງຂໍ້ມູນໃນພາຫະນະທີ່ມີການຈັດການນີ້, ຜູ້ເບິ່ງແຍງລະບົບກຸ່ມລົດອາດຈະປ່ຽນການຕັ້ງຄ່າ ແລະ ຕິດຕັ້ງຊອບແວໃນລະບົບສາລະບັນເທີງ.\n\nສຳລັບລາຍລະອຽດເພີ່ມເຕີມ, ໃຫ້ຕິດຕໍ່ຜູ້ເບິ່ງແຍງກຸ່ມລົດຂອງທ່ານ."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ຂໍ້ມູນທີ່ຜູ້ເບິ່ງແຍງກຸ່ມລົດຂອງທ່ານສາມາດເບິ່ງເຫັນ"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"ການປ່ຽນແປງທີ່ສ້າງຂຶ້ນໂດຍຜູ້ເບິ່ງແຍງກຸ່ມລົດຂອງທ່ານ"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ຂໍ້ມູນທີ່ເຊື່ອມໂຍງກັບບັນຊີພາຫະນະທີ່ມີການຈັດການຂອງທ່ານ"</li>\n" "<li>"ລາຍຊື່ແອັບໃນພາຫະນະທີ່ມີການຈັດການຂອງທ່ານ"</li>\n" "<li>"ໄລຍະເວລາ ແລະ ຂໍ້ມູນທີ່ໃຊ້ໃນແຕ່ລະແອັບ"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ການເຂົ້າເຖິງລະບົບສາລະບັນເທີງຂອງທ່ານ"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"ລາຍຊື່ແອັບໃນພາຫະນະຂອງທ່ານ"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"ຈຳນວນຂອງແອັບແມ່ນເປັນການປະມານການເທົ່ານັ້ນ. ມັນອາດບໍ່ຮວມແອັບທີ່ຕິດຕັ້ງຈາກນອກ Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">ຂັ້ນຕ່ຳ <xliff:g id="COUNT_1">%d</xliff:g> ແອັບ</item>
       <item quantity="one">ຂັ້ນຕ່ຳ <xliff:g id="COUNT_0">%d</xliff:g> ແອັບ</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ແອັບ</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ແອັບ</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"ບັນທຶກການຈາລະຈອນເຄືອຂ່າຍຫຼ້າສຸດ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"ລາຍງານຂໍ້ຜິດພາດຫຼ້າສຸດ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"ບັນທຶກຄວາມປອດໄພຫຼ້າສຸດ"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ບໍ່ມີ"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"ຕິດຕັ້ງແອັບແລ້ວ"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"ການອະນຸຍາດສະຖານທີ່"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"ການອະນຸຍາດໄມໂຄຣໂຟນ"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"ການອະນຸຍາດກ້ອງຖ່າຍຮູບ"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ແອັບເລີ່ມຕົ້ນ"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ແປ້ນພິມເລີ່ມຕົ້ນ"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"ຕັ້ງເປັນ <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"ຕັ້ງພຣັອກຊີ HTTP ສ່ວນກາງແລ້ວ"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"ຂໍ້ມູນການເຂົ້າສູ່ລະບົບທີ່ເຊື່ອຖືໃນໂປຣໄຟລ໌ສ່ວນຕົວຂອງທ່ານ"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ຜູ້ເບິ່ງແຍງລະບົບສາມາດລັອກລະບົບສາລະບັນເທີງ ແລະ ຣີເຊັດລະຫັດຜ່ານ"</li>\n" "<li>"ຜູ້ເບິ່ງແຍງສາມາດລຶບຂໍ້ມູນໃນລະບົບສາລະບັນເທີງ"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ຈຳນວນການໃສ່ລະຫັດຜ່ານບໍ່ສຳເລັດກ່ອນຈະລຶບຂໍ້ມູນທັງໝົດໃນລະບົບສາລະບັນເທີງ"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"ຈຳນວນການໃສ່ລະຫັດຜ່ານບໍ່ສຳເລັດກ່ອນຈະລຶບຂໍ້ມູນໂປຣໄຟລ໌ອອກ"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other">ພະຍາຍາມ <xliff:g id="COUNT_1">%d</xliff:g> ເທື່ອ</item>
       <item quantity="one">ພະຍາຍາມ <xliff:g id="COUNT_0">%d</xliff:g> ເທື່ອ</item>

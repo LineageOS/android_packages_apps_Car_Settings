@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Alte dispozitive se pot conecta la <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Parolă hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Securitate"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2 / WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Fără"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Bandă AP"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politica <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> privind vehiculele"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Setări gestionate de administratorul organizației"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Aflați mai multe despre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informații despre vehiculul gestionat"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Setări gestionate de administratorul flotei"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Pentru a acorda acces la datele acestui vehicul gestionat, administratorul flotei poate să modifice setările și să instaleze software pe sistemul de infotainment.\n\nPentru detalii suplimentare, contactați administratorul flotei."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informații pe care le poate vedea administratorul flotei"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Modificări făcute de administratorul flotei"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Datele asociate cu contul vehiculului gestionat"</li>\n" "<li>"Lista de aplicații vehiculului gestionat"</li>\n" "<li>"Timpul petrecut și cantitatea de date folosite pentru fiecare aplicație"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Accesul la sistemul de infotainment"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lista de aplicații ale vehiculului"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Numărul de aplicații este estimat. Este posibil ca acesta să nu includă aplicațiile instalate în afara Magazinului Play."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="few">Minimum <xliff:g id="COUNT_1">%d</xliff:g> aplicații</item>
       <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> de aplicații</item>
@@ -781,6 +788,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de aplicații</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicație</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Cel mai recent jurnal de trafic de rețea"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Cel mai recent raport de eroare"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Cel mai recent jurnal de securitate"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Niciuna"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Aplicații instalate"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Permisiuni pentru locație"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Permisiuni pentru microfon"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Permisiuni pentru camera foto"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Aplicații prestabilite"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Tastatură prestabilită"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Setată la <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Proxy global HTTP setat"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Date de conectare de încredere în profilul personal"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Administratorii pot să blocheze sistemul de infotainment și să reseteze parola"</li>\n" "<li>"Administratorii pot să șteargă date de pe sistemul de infotainment"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Încercări nereușite de introducere a parolei înainte de a șterge toate datele de pe sistemul de infotainment"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Încercări nereușite de introducere a parolei înainte de a șterge datele din profil"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> încercări</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de încercări</item>
