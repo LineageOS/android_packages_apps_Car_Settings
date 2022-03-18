@@ -763,6 +763,7 @@
 
         <activity
             android:name=".security.ChooseLockPatternActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:windowSoftInputMode="adjustPan"
             android:noHistory="true"
             android:exported="false">
@@ -771,6 +772,7 @@
 
         <activity
             android:name=".security.ChooseLockPinActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:windowSoftInputMode="adjustPan"
             android:noHistory="true"
             android:exported="false">
@@ -779,6 +781,7 @@
 
         <activity
             android:name=".security.ChooseLockPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:windowSoftInputMode="adjustResize"
             android:noHistory="true"
             android:exported="false">
