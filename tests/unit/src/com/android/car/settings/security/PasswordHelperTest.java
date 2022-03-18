@@ -74,6 +74,8 @@ public final class PasswordHelperTest {
 
     @Mock
     LockPatternUtils mLockPatternUtils;
+    @Mock
+    LockscreenCredential mExistingCredential;
     @Rule
     public final MockitoRule rule = MockitoJUnit.rule();
 
@@ -93,7 +95,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 SHORT_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -112,7 +114,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 MEDIUM_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
@@ -126,7 +128,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 SHORT_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -145,7 +147,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 MEDIUM_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
@@ -159,7 +161,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 SHORT_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -178,7 +180,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 MEDIUM_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -197,7 +199,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 MEDIUM_ALPHANUMERIC_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_ALPHANUMERIC_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
@@ -211,7 +213,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 MEDIUM_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -231,7 +233,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 MEDIUM_ALPHANUMERIC_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_ALPHANUMERIC_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -250,7 +252,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 LONG_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(LONG_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -268,7 +270,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPassword(
                 LONG_ALPHANUMERIC_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, LONG_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, LONG_ALPHANUMERIC_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(LONG_ALPHANUMERIC_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
@@ -282,7 +284,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 SHORT_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -301,7 +303,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 MEDIUM_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
@@ -315,7 +317,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 SHORT_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -334,7 +336,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 MEDIUM_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
@@ -348,7 +350,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 SHORT_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -367,7 +369,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 MEDIUM_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -385,7 +387,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 MEDIUM_PIN_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_PIN_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
@@ -399,7 +401,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 MEDIUM_PIN_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(MEDIUM_PIN_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -418,7 +420,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 LONG_SEQUENTIAL_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password)).isFalse();
+                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
         assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(LONG_SEQUENTIAL_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.ERROR_CODE);
@@ -436,7 +438,7 @@ public final class PasswordHelperTest {
         LockscreenCredential password = LockscreenCredential.createPin(
                 LONG_PIN_PASSWORD);
         assertWithMessage(PASSWORD_MESSAGE, LONG_PIN_PASSWORD)
-                .that(passwordHelper.validate(password)).isTrue();
+                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
         assertWithMessage(PASSWORD_MESSAGE, LONG_PIN_PASSWORD)
                 .that(passwordHelper.validateSetupWizard(LONG_PIN_PASSWORD.getBytes()))
                 .isEqualTo(PasswordHelper.NO_ERROR);
