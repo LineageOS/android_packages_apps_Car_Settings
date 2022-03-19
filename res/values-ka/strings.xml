@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-ს შეიძლება სხვა მოწყობილობები დაუკავშირდეს"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"უსადენო ქსელის პაროლი"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"უსაფრთხოება"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"არცერთი"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-ის სატრანსპორტო საშუალებების წესები"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ორგანიზაციის მენეჯერის მიერ მართული პარამეტრები"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"შეიტყვეთ მეტი <xliff:g id="SERVICE">%1$s</xliff:g>-ის შესახებ"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ინფორმაცია მართული სატრანსპორტო საშუალების შესახებ"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ჯგუფის ადმინისტრატორის მიერ მართული პარამეტრები"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ამ მართული სატრანსპორტო საშუალების მონაცემებზე წვდომისთვის ჯგუფის ადმინისტრატორმა შეიძლება შეცვალოს პარამეტრები და დააინსტალიროს გართობის/საინფორმაციო სისტემის პროგრამული უზრუნველყოფა.\n\nდამატებითი ინფორმაციისთვის დაუკავშირდით თქვენი ჯგუფის ადმინისტრატორს."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ინფორმაცია, რომლის ნახვაც ჯგუფის ადმინისტრატორს შეუძლია"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"თქვენი ჯგუფის ადმინისტრატორის მიერ შეტანილი ცვლილებები"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"მართულ სატრანსპორტო საშუალებასთან დაკავშირებული მონაცემები"</li>\n" "<li>"მართული სატრანსპორტო საშუალების აპების სია"</li>\n" "<li>"თითოეულ აპთან გატარებული დრო და მასთან დაკავშირებული მონაცემები"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"გართობის/საინფორმაციო სისტემაზე თქვენი წვდომა"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"სატრანსპორტო საშუალების აპების სია"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"აპების რაოდენობა მიახლოებითია. ის შეიძლება არ მოიცავდეს იმ აპებს, რომლებიც დაინსტალირდა Play Store-ისგან განსხვავებული წყაროებიდან."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">მინიმუმ <xliff:g id="COUNT_1">%d</xliff:g> აპი</item>
       <item quantity="one">მინიმუმ <xliff:g id="COUNT_0">%d</xliff:g> აპი</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> აპი</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> აპი</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"ქსელის ტრაფიკის ყველაზე ბოლო ჟურნალი"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"ხარვეზის შესახებ ყველაზე ბოლო ანგარიში"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"უსაფრთხოების ყველაზე ბოლო ჟურნალი"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"არცერთი"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"დაინსტალირებული აპები"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"მდებარეობის ნებართვები"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"მიკროფონის ნებართვები"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"კამერის ნებართვები"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ნაგულისხმევი აპები"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ნაგულისხმევი კლავიატურა"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>-ზე დაყენება"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"გლობალური HTTP-პროქსი დაყენებულია"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"სანდო სერტიფიკატები თქვენს პირად პროფილში"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ადმინისტრატორს შეუძლია ჩაკეტოს გართობის/საინფორმაციო სისტემა და გადააყენოს პაროლი"</li>\n" "<li>"ადმინისტრატორს შეუძლია წაშალოს მონაცემები გართობის/საინფორმაციო სისტემიდან"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"პაროლის არასწორად შეყვანის მცდელობების რაოდენობა, სანამ გართობის/საინფორმაციო სისტემიდან ყველა მონაცემი წაიშლება"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"პაროლის არასწორად შეყვანის მცდელობების რაოდენობა, სანამ პროფილის მონაცემები წაიშლება"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> მცდელობა</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> მცდელობა</item>

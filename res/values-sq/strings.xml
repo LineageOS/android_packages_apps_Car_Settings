@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Pajisjet e tjera mund të lidhen me <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Fjalëkalimi i zonës së qasjes për internet"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Siguria"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Asnjë"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Brezi AP"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politika e automjeteve e <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Cilësimet menaxhohen nga menaxheri i organizatës"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Mëso më shumë për \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informacionet e automjetit të menaxhuar"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Cilësimet e menaxhuara nga administratori i flotës"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Për të ofruar qasje tek të dhënat e këtij automjeti të menaxhuar, administratori i flotës mund të ndryshojë cilësimet e sistemit dhe të instalojë softuerë në sistemin info-argëtues.\n\nKontakto administratorin e flotës për më shumë detaje."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informacionet që administratori i flotës mund të shohë"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Ndryshimet e kryera nga administratori i flotës"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Të dhënat e lidhura me llogarinë e automjetit tënd të menaxhuar"</li>\n" "<li>"Lista e aplikacioneve në automjetin tënd të menaxhuar"</li>\n" "<li>"Sasia e kohës dhe të dhënat e harxhuara në secilin aplikacion"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Qasja jote në sistemin info-argëtues"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lista e aplikacioneve në automjetin tënd"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Numri i aplikacioneve është i përafërt. Ai mund të mos përfshijë aplikacionet e instaluara jashtë \"Dyqanit të Play\"."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Minimumi <xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
       <item quantity="one">Minimumi <xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacione</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikacion</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Evidenca më e fundit e trafikut të rrjetit"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Raporti më i fundit i defekteve në kod"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Evidenca më e fundit e sigurisë"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Asnjë"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Aplikacionet e instaluara"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Lejet e vendndodhjes"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Lejet e mikrofonit"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Lejet e kamerës"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Aplikacionet e parazgjedhura"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Tastiera e parazgjedhur"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"U caktua në <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Proxy global HTTP është caktuar"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Kredencialet e besuara në profilin tënd personal"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Administratori mund ta kyçë sistemin info-argëtues dhe të rivendosë fjalëkalimin"</li>\n" "<li>"Administratori mund të fshijë të dhëna në sistemin info-argëtues"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Përpjekjet e pasuksesshme për fjalëkalimin përpara fshirjes së të gjithave të dhënave në sistemin info-argëtues"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Përpjekjet e pasuksesshme për fjalëkalimin përpara fshirjes së të dhënave të profilit"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> përpjekje</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> përpjekje</item>

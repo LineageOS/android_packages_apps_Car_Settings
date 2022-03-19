@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"อุปกรณ์อื่นๆ เชื่อมต่อได้กับ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"รหัสผ่านฮอตสปอต"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ความปลอดภัย"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ส่วนบุคคล"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ไม่มี"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"ย่านความถี่ AP"</string>
@@ -586,9 +584,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"บัญชีของ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ซิงค์ข้อมูลอัตโนมัติ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ให้แอปรีเฟรชข้อมูลอัตโนมัติ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"เปิดซิงค์ข้อมูลอัตโนมัติหรือไม่"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"เปิดซิงค์ข้อมูลอัตโนมัติไหม"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"การเปลี่ยนแปลงที่คุณทำต่อบัญชีในเว็บจะคัดลอกไปยังอุปกรณ์ของคุณโดยอัตโนมัติ\n\nบัญชีบางบัญชีอาจคัดลอกการเปลี่ยนแปลงที่คุณทำในโทรศัพท์ไปยังเว็บโดยอัตโนมัติด้วยเช่นกัน บัญชี Google ทำงานในลักษณะนี้"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ปิดซิงค์ข้อมูลอัตโนมัติหรือไม่"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ปิดซิงค์ข้อมูลอัตโนมัติไหม"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ตัวเลือกนี้จะช่วยประหยัดอินเทอร์เน็ต แต่คุณจะต้องซิงค์แต่ละบัญชีด้วยตนเองเพื่อรวบรวมข้อมูลล่าสุด และคุณจะไม่ได้รับการแจ้งเตือนเมื่อมีการอัปเดต"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ข้อมูลบัญชี"</string>
     <string name="add_account_title" msgid="5988746086885210040">"เพิ่มบัญชี"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"นโยบายเกี่ยวกับรถยนต์ของ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"การตั้งค่าที่ผู้จัดการองค์กรดูแล"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ดูข้อมูลเพิ่มเติมเกี่ยวกับ<xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ข้อมูลของยานพาหนะที่ได้รับการจัดการ"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"การตั้งค่าที่จัดการโดยผู้ดูแลระบบของกลุ่มรถยนต์"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"หากต้องการมอบสิทธิ์เข้าถึงข้อมูลในยานพาหนะที่ได้รับการจัดการนี้ ผู้ดูแลระบบของกลุ่มรถยนต์สามารถเปลี่ยนการตั้งค่าและติดตั้งซอฟต์แวร์ในระบบสาระบันเทิง\n\nติดต่อผู้ดูแลระบบของกลุ่มรถยนต์เพื่อขอทราบรายละเอียดเพิ่มเติม"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ข้อมูลที่ผู้ดูแลระบบของกลุ่มรถยนต์สามารถเห็นได้"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"การเปลี่ยนแปลงโดยผู้ดูแลระบบกลุ่มรถยนต์ของคุณ"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ข้อมูลที่เกี่ยวข้องกับบัญชียานพาหนะที่ได้รับการจัดการของคุณ"</li>\n" "<li>"รายการแอปในยานพาหนะที่ได้รับการจัดการของคุณ"</li>\n" "<li>"เวลาและปริมาณของข้อมูลที่ใช้ในแต่ละแอป"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"การเข้าถึงระบบสาระบันเทิงของคุณ"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"รายการแอปในยานพาหนะของคุณ"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"จำนวนแอปเป็นเพียงค่าประมาณซึ่งอาจไม่รวมแอปที่ติดตั้งจากที่อื่นที่ไม่ใช่ Play Store"</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">อย่างน้อย <xliff:g id="COUNT_1">%d</xliff:g> แอป</item>
       <item quantity="one">อย่างน้อย <xliff:g id="COUNT_0">%d</xliff:g> แอป</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> แอป</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> แอป</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"บันทึกการจราจรของข้อมูลในเครือข่ายล่าสุด"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"รายงานข้อบกพร่องล่าสุด"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"บันทึกความปลอดภัยล่าสุด"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ไม่มี"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"ติดตั้งแอปแล้ว"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"สิทธิ์เข้าถึงตำแหน่ง"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"สิทธิ์เข้าถึงไมโครโฟน"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"สิทธิ์เข้าถึงกล้องถ่ายรูป"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"แอปเริ่มต้น"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"แป้นพิมพ์เริ่มต้น"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"ตั้งค่าเป็น <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"ตั้งค่าพร็อกซี HTTP ส่วนกลางแล้ว"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"ข้อมูลรับรองที่เชื่อถือได้ในโปรไฟล์ส่วนตัวของคุณ"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ผู้ดูแลระบบสามารถล็อกระบบสาระบันเทิงและรีเซ็ตรหัสผ่านได้"</li>\n" "<li>"ผู้ดูแลระบบสามารถลบข้อมูลในระบบสาระบันเทิงได้"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"มีการป้อนรหัสผ่านผิดหลายครั้งก่อนที่ระบบจะลบข้อมูลทั้งหมดในระบบสาระบันเทิง"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"มีการป้อนรหัสผ่านผิดหลายครั้งก่อนที่ระบบจะลบข้อมูลโปรไฟล์งาน"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other">พยายาม <xliff:g id="COUNT_1">%d</xliff:g> ครั้ง</item>
       <item quantity="one">พยายาม <xliff:g id="COUNT_0">%d</xliff:g> ครั้ง</item>

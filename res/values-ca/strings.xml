@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Altres dispositius es poden connectar a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Contrasenya punt d\'accés Wi‑Fi"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Seguretat"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Cap"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda del PA"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política del vehicle <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Configuració gestionada pel gestor de l\'organització"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Més informació sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informació del vehicle gestionat"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Configuració gestionada per l\'administrador de la flota"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Per donar accés a les dades d\'aquest vehicle gestionat, l\'administrador de la flota pot canviar la configuració del sistema d\'informació i entreteniment i també instal·lar-hi programari.\n\nPer obtenir més informació, contacta amb l\'administrador de la flota."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informació que l\'administrador de la flota pot veure"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Canvis fets per l\'administrador de la flota"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Dades associades al compte del vehicle gestionat"</li>\n" "<li>"Llista d\'aplicacions del vehicle gestionat"</li>\n" "<li>"Temps dedicat i dades utilitzades en cada aplicació"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"El teu accés al sistema d\'informació i entreteniment"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Llista de les aplicacions que hi ha al vehicle"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"El nombre d\'aplicacions és aproximat. És possible que no inclogui les aplicacions instal·lades que no provenen de Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacions com a mínim</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicació com a mínim</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacions</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicació</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Registre del trànsit de xarxa més recent"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Informe d\'errors més recent"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Registre de seguretat més recent"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Cap"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Aplicacions instal·lades"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Permisos d\'ubicació"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Permisos d\'accés al micròfon"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Permisos d\'accés a la càmera"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Aplicacions predeterminades"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Teclat predeterminat"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Mètode definit: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"S\'ha definit el servidor intermediari HTTP global"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Certificats de confiança al teu perfil personal"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"L\'administrador pot bloquejar el sistema d\'informació i entreteniment i també restablir la contrasenya"</li>\n" "<li>"L\'administrador pot suprimir dades del sistema d\'informació i entreteniment"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Intents fallits d\'introduir la contrasenya abans que se suprimeixin totes les dades del sistema d\'informació i entreteniment"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Intents fallits d\'introduir la contrasenya abans que se suprimeixin les dades del perfil"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> intents</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> intent</item>

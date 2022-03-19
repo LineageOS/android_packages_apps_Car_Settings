@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"इतर डिव्हाइस <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> शी कनेक्ट होऊ शकतात"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट पासवर्ड"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"सुरक्षितता"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-वैयक्तिक"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-वैयक्तिक"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 वैयक्तिक"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"काहीही नाही"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> चे वाहनाशी संबंधित धोरण"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"संस्थेच्या व्यवस्थापकाद्वारे व्यवस्थापित केली जाणारी सेटिंग्ज"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> बद्दल अधिक जाणून घ्या"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"व्यवस्थापित वाहनांची माहिती"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"फ्लीट ॲडमिनद्वारे व्यवस्थापित सेटिंग्ज"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"या व्यवस्थापित वाहनावर डेटाचा अ‍ॅक्सेस पुरवण्यासाठी, फ्लीट ॲडमिन कदाचित सेटिंग्ज बदलू शकतात आणि इंफोटेनमेंट सिस्टीमवर सॉफ्टवेअर इंस्टॉल करू शकतात.\n\nआणखी तपशिलांसाठी, तुमच्या फ्लीट ॲडमिनशी संपर्क साधा."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"तुमचा फ्लीट ॲडमिन पाहू शकणारी माहिती"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"तुमच्या फ्लीट ॲडमिनने केलेले बदल"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"तुमच्या व्यवस्थापित केलेल्या वाहन खात्याशी संलग्न डेटा"</li>\n" "<li>"तुमच्या व्यवस्थापित वाहनावर असणाऱ्या ॲप्सची सूची"</li>\n" "<li>"प्रत्येक ॲपमध्ये खर्च केलेला वेळ आणि डेटा"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"तुमचा इंफोटेनमेंट सिस्टीमचा अ‍ॅक्सेस"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"तुमच्या वाहनावरील ॲप्सची सूची"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"अ‍ॅप्सची संख्या ही अंदाजे आहे. त्यामध्ये कदाचित Play Store वरून इंस्टॉल न केलेल्या अ‍ॅप्सचा समावेश नसेल."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">किमान <xliff:g id="COUNT_1">%d</xliff:g> ॲप्स</item>
       <item quantity="one">किमान <xliff:g id="COUNT_0">%d</xliff:g> ॲप</item>
@@ -779,6 +786,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अ‍ॅप्स</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अ‍ॅप</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"सर्वात अलीकडील नेटवर्क रहदारीचा लॉग"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"सर्वात अलीकडील बग रिपोर्ट"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"सर्वात अलीकडील सुरक्षा लॉग"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"कधीही नाही"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"इंस्टॉल केलेली अ‍ॅप्स"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"स्थान परवानग्या"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"मायक्रोफोन परवानग्या"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"कॅमेरा परवानग्या"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"डीफॉल्ट अ‍ॅप्स"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"डीफॉल्ट कीबोर्ड"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> वर सेट करा"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"जागतिक HTTP प्रॉक्‍सी सेट केली आहे"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"तुमच्‍या वैयक्तिक प्रोफाइलमधील विश्वसनीय क्रेडेंशियल"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ॲडमिन इंफोटेनमेंट सिस्टीम लॉक करू शकतात आणि पासवर्ड रीसेट करू शकतात"</li>\n" "<li>"ॲडमिन इंफोटेनमेंट सिस्टीमवरील डेटा हटवू शकतात"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"इंफोटेनमेंट सिस्टीमवरील सर्व डेटा हटवण्यापूर्वी अयशस्वी झालेले पासवर्ड प्रयत्न"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"प्रोफाइल डेटा हटवण्यापूर्वी अयशस्वी झालेले पासवर्ड प्रयत्न"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> प्रयत्न</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> प्रयत्न</item>

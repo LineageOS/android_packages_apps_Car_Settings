@@ -146,10 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ৰ সৈতে অন্য ডিভাইচে সংযোগ কৰিব পাৰে"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"হটস্পটৰ পাছৱৰ্ড"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"সুৰক্ষা"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-ব্যক্তিগত"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-ব্যক্তিগত"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ব্যক্তিগত"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"নাই"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"এপি বেণ্ড"</string>
@@ -771,6 +769,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>ৰ বাহনৰ নীতি"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"প্ৰতিষ্ঠানটোৰ পৰিচালকে পৰিচালনা কৰা ছেটিং"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g>ৰ বিষয়ে অধিক জানক"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"পৰিচালিত বাহনৰ তথ্য"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ফ্লীটৰ প্ৰশাসকে পৰিচালনা কৰা ছেটিং"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"এই পৰিচালিত বাহনখনত থকা ডেটাৰ এক্সেছ প্ৰদান কৰিবলৈ ফ্লীটৰ প্ৰশাসকে ছেটিং সলনি কৰিব পাৰে আৰু ইনফ’টেইনমেণ্ট ছিষ্টেমটোত ছফ্টৱেৰ ইনষ্টল কৰিব পাৰে।\n\nঅধিক জানিবলৈ আপোনাৰ ফ্লীটৰ প্ৰশাসকৰ সৈতে যোগাযোগ কৰক।"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"আপোনাৰ ফ্লীটৰ প্ৰশাসকে চাব পৰা তথ্য"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"আপোনাৰ ফ্লীটৰ প্ৰশাসকে কৰা সালসলনি"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"আপোনাৰ পৰিচালিত বাহনৰ একাউণ্টৰ সৈতে জড়িত ডেটা"</li>\n" "<li>"আপোনাৰ পৰিচালিত বাহনত থকা এপৰ সূচী"</li>\n" "<li>"প্ৰতিটো এপত খৰচ কৰা সময় আৰু ডেটাৰ পৰিমাণ"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ইনফ’টেইনমেণ্ট ছিষ্টেমলৈ থকা আপোনাৰ এক্সেছ"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"আপোনাৰ বাহনত থকা এপৰ সূচী"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"এপৰ সংখ্যাটো আনুমানিক। Play Storeৰ বাহিৰৰ পৰা ইনষ্টল কৰা এপ্‌ ইয়াত অন্তৰ্ভুক্ত নহ’বও পাৰে।"</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">ন্যূনতম <xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
       <item quantity="other">ন্যূনতম <xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
@@ -779,6 +786,22 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"সকলোতকৈ শেহতীয়া নেটৱৰ্ক ট্ৰেফিকৰ লগ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"একেবাৰে শেহতীয়া বাগ ৰিপ’ৰ্ট"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"সকলোতকৈ শেহতীয়া নিৰাপত্তা লগ"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"একো নাই"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"এপ্‌ ইনষ্টল কৰা হৈছে"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"অৱস্থানৰ অনুমতি"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"মাইক্ৰ’ফ’নৰ অনুমতি"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"কেমেৰাৰ অনুমতি"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ডিফ’ল্ট এপ্‌"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ডিফ’ল্ট কীব’ৰ্ড"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>লৈ ছেট কৰক"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"গোলকীয় HTTP প্ৰ’ক্সী ছেট কৰা হৈছে"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"আপোনাৰ ব্যক্তিগত প্ৰ’ফাইলত থকা বিশ্বাসী ক্ৰিডেনশ্বিয়েল"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"প্ৰশাসকে ইনফ’টেইনমেণ্ট ছিষ্টেমটো লক কৰিব আৰু পাছৱৰ্ড ৰিছেট কৰিব পাৰে"</li>\n" "<li>"প্ৰশাসকে ইনফ’টেইনমেণ্ট ছিষ্টেমত থকা ডেটা মচিব পাৰে"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ইনফ’টেইনমেণ্ট ছিষ্টেমত থকা আটাইবোৰ ডেটা মচাৰ আগতে পাছৱৰ্ড দিয়াৰ ব্যৰ্থ প্ৰয়াস"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"প্ৰ’ফাইলৰ ডেটা মচাৰ পূৰ্বে পাছৱৰ্ড দিয়াৰ ব্যৰ্থ প্ৰয়াস"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> টা প্ৰয়াস</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> টা প্ৰয়াস</item>
