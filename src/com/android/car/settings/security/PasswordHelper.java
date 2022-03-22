@@ -113,15 +113,17 @@ public class PasswordHelper {
      * Validates PIN/Password and returns the validation result and updates mValidationErrors
      * and checks whether the password has been reused.
      *
-     * @param credential credential the user typed in.
+     * @param enteredCredential credential the user typed in.
+     * @param existingCredential existing credential the user previously set.
      * @return whether password satisfies all the requirements.
      */
-    public boolean validate(LockscreenCredential credential) {
-        byte[] password = credential.getCredential();
+    public boolean validate(LockscreenCredential enteredCredential,
+            LockscreenCredential existingCredential) {
+        byte[] password = enteredCredential.getCredential();
         mValidationErrors =
                 PasswordMetrics.validatePassword(mMinMetrics, mMinComplexity, mIsPin, password);
         if (mValidationErrors.isEmpty() && mLockPatternUtils.checkPasswordHistory(
-                password, getPasswordHistoryHashFactor(credential), mUserId)) {
+                password, getPasswordHistoryHashFactor(existingCredential), mUserId)) {
             mValidationErrors =
                     Collections.singletonList(new PasswordValidationError(RECENTLY_USED));
         }
