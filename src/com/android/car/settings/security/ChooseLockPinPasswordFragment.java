@@ -302,7 +302,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     }
 
     private boolean shouldEnableSubmit() {
-        return mPasswordHelper.validate(getEnteredPassword())
+        return mPasswordHelper.validate(getEnteredPassword(), mExistingCredential)
                 && (mSaveLockWorker == null || mSaveLockWorker.isFinished());
     }
 
@@ -331,7 +331,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         switch (mUiStage) {
             case Introduction:
-                boolean passwordCompliant = mPasswordHelper.validate(mCurrentEntry);
+                boolean passwordCompliant =
+                        mPasswordHelper.validate(mCurrentEntry, mExistingCredential);
                 if (passwordCompliant) {
                     mFirstEntry = mCurrentEntry;
                     mPasswordField.setText("");
@@ -406,7 +407,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             mPinPad.setEnterKeyIcon(mUiStage.enterKeyIcon);
         }
 
-        mPasswordHelper.validate(getEnteredPassword());
+        mPasswordHelper.validate(getEnteredPassword(), mExistingCredential);
         List<String> messages = mPasswordHelper.convertErrorCodeToMessages();
         mHintMessage.setText(String.join("\n", messages));
 

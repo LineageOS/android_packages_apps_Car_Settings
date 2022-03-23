@@ -112,7 +112,7 @@ public class ProfileHelper {
             sInstance = new ProfileHelper(
                     appContext.getSystemService(UserManager.class), resources,
                     resources.getString(com.android.internal.R.string.owner_name),
-                    resources.getString(R.string.user_guest),
+                    resources.getString(com.android.internal.R.string.guest_name),
                     getCarUserManager(appContext));
         }
         return sInstance;
