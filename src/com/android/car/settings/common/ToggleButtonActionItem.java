@@ -58,6 +58,8 @@ public final class ToggleButtonActionItem extends BaseActionItem {
         // Required to be effectively final for inner class access
         final DrawableStateToggleButton toggleButton = getOptionalToggleButton(frameLayout);
         toggleButton.setOnClickListener(null);
+        // Prevent "double calls" when checked status is changed
+        toggleButton.setOnCheckedChangeListener(null);
         toggleButton.setButtonDrawable(mDrawable);
         toggleButton.setChecked(mIsChecked);
         toggleButton.setEnabled(isEnabled());
