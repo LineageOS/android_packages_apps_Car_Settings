@@ -549,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Välj en ny administratör"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Du måste ha minst en administratör. Välj en ersättare innan du tar bort administratören."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Välj administratör"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Gäst"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Gäst"</string>
     <string name="user_switch" msgid="6544839750534690781">"Byt"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Du (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Namn"</string>
@@ -631,7 +629,7 @@
     <string name="security_lock_password" msgid="4420203740048322494">"Lösenord"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Välj en låstyp"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Låsalternativ"</string>
-    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Ange det grafiska lösenordet"</string>
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Ange mönstret"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Bekräfta"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Rita igen"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Fortsätt"</string>
@@ -641,18 +639,18 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Välj en pinkod"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Välj ett lösenord"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Nuvarande skärmlås"</string>
-    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Ange ett grafiskt lösenord som skydd"</string>
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Ange ett mönster som skydd"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Rensa"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Avbryt"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Ditt nya grafiska lösenord"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Rita ett grafiskt lösenord"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Rita ett mönster"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Lyft fingret när du är klar"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Det grafiska lösenordet har registrerats"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Mönstret har registrerats"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Bekräfta genom att rita lösenordet igen"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Anslut minst 4 punkter. Försök igen."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Fel grafiskt lösenord"</string>
-    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Så här ritar du ett grafiskt lösenord"</string>
-    <string name="error_saving_lockpattern" msgid="2933512812768570130">"Grafiskt lösenord kunde inte sparas"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Fel mönster"</string>
+    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Så här ritar du ett mönster"</string>
+    <string name="error_saving_lockpattern" msgid="2933512812768570130">"Mönstret kunde inte sparas"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"För många felaktiga försök. Försök igen om <xliff:g id="NUMBER">%d</xliff:g> sekunder."</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Vridreglage stöds inte. Du måste trycka lösenordet"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>

@@ -23,7 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Helderheidsniveau"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"De schermhelderheid aanpassen aan de omgeving"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Nachtverlichting ingeschakeld"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Nachtverlichting aangezet"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Nachtstand"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netwerk en internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobiel netwerk"</string>
@@ -92,7 +92,7 @@
     <string name="wifi_starting" msgid="473253087503153167">"Wifi aanzetten…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wifi uitzetten…"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Wifi-lijst laden…"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wifi uitgeschakeld"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wifi staat uit"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Vergeten van netwerk is mislukt"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Kan geen verbinding maken met het netwerk"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Netwerk toevoegen"</string>
@@ -135,10 +135,10 @@
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wifi-voorkeuren"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wifi automatisch aanzetten"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wifi schakelt in bij opgeslagen kwaliteitsnetwerken, zoals je thuisnetwerk"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Niet beschikbaar: locatie uitgeschakeld. Schakel "<annotation id="link">"locatie"</annotation>" in."</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Niet beschikbaar: locatie uitgezet. Zet "<annotation id="link">"locatie"</annotation>" aan."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wifi-scannen aanzetten?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aanzetten"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-scannen ingeschakeld"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-scannen aangezet"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatisch overschakelen naar mobiele data"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Mobiele data gebruiken wanneer er geen internettoegang via wifi is. Er kunnen kosten voor datagebruik in rekening worden gebracht."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Zoek en maak verbinding met wifi-netwerken"</string>
@@ -549,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Nieuwe beheerder kiezen"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Je hebt ten minste één beheerder nodig. Als je deze beheerder wilt verwijderen, moet je eerst een vervanger kiezen."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Beheerder kiezen"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Gast"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Gast"</string>
     <string name="user_switch" msgid="6544839750534690781">"Wijzigen"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Jij (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Naam"</string>
@@ -602,7 +600,7 @@
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Synchronisatie staat aan voor <xliff:g id="ID_1">%1$d</xliff:g> van de <xliff:g id="ID_2">%2$d</xliff:g> items"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Synchronisatie staat aan voor alle items"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Synchronisatie staat uit voor alle items"</string>
-    <string name="sync_disabled" msgid="393531064334628258">"Synchroniseren uitgeschakeld"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"Synchroniseren staat uit"</string>
     <string name="sync_error" msgid="6698021343089247914">"Fout bij synchroniseren"</string>
     <string name="last_synced" msgid="4745124489150101529">"Laatst gesynchroniseerd: <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"Nu synchroniseren…"</string>
