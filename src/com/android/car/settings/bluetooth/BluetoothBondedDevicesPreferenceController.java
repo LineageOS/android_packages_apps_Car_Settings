@@ -219,10 +219,12 @@ public class BluetoothBondedDevicesPreferenceController extends
             updatePhoneActionItemAvailability(preference, /* isAvailable= */ true);
             boolean phoneEnabled = phoneProfile.isEnabled(cachedDevice.getDevice());
 
+            if (hasDisallowConfigRestriction()) {
+                phoneItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
+                        .onClickWhileDisabled(getContext(), getFragmentController()));
+            }
             phoneItem.setOnClickListener(isChecked ->
                     finalPhoneProfile.setEnabled(cachedDevice.getDevice(), isChecked));
-            phoneItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
-                    .onClickWhileDisabled(getContext(), getFragmentController()));
             phoneItem.setChecked(phoneEnabled);
         }
 
@@ -235,10 +237,12 @@ public class BluetoothBondedDevicesPreferenceController extends
             updateMediaActionItemAvailability(preference, /* isAvailable= */ true);
             boolean mediaEnabled = mediaProfile.isEnabled(cachedDevice.getDevice());
 
+            if (hasDisallowConfigRestriction()) {
+                mediaItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
+                        .onClickWhileDisabled(getContext(), getFragmentController()));
+            }
             mediaItem.setOnClickListener(isChecked ->
                     finalMediaProfile.setEnabled(cachedDevice.getDevice(), isChecked));
-            mediaItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
-                    .onClickWhileDisabled(getContext(), getFragmentController()));
             mediaItem.setChecked(mediaEnabled);
         }
     }

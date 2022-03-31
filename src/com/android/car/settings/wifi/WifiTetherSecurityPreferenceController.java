@@ -76,6 +76,7 @@ public class WifiTetherSecurityPreferenceController extends
         super.onCreateInternal();
         mSecurityType = getCarSoftApConfig().getSecurityType();
         getCarWifiManager().registerSoftApCallback(getContext().getMainExecutor(), this);
+        updatePreferenceOptions();
     }
 
     private void updatePreferenceOptions() {
