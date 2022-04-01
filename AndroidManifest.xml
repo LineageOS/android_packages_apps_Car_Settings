@@ -25,7 +25,7 @@
 
     <uses-sdk
         android:minSdkVersion="24"
-        android:targetSdkVersion="29"/>
+        android:targetSdkVersion="31"/>
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -669,6 +669,7 @@
 
         <activity
             android:name=".bluetooth.BluetoothPairingDialog"
+            android:permission="android.permission.BLUETOOTH_PRIVILEGED"
             android:excludeFromRecents="true"
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:taskAffinity="car.settings.bluetooth"
@@ -762,6 +763,7 @@
 
         <activity
             android:name=".security.ChooseLockPatternActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:windowSoftInputMode="adjustPan"
             android:noHistory="true"
             android:exported="false">
@@ -770,6 +772,7 @@
 
         <activity
             android:name=".security.ChooseLockPinActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:windowSoftInputMode="adjustPan"
             android:noHistory="true"
             android:exported="false">
@@ -778,6 +781,7 @@
 
         <activity
             android:name=".security.ChooseLockPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:windowSoftInputMode="adjustResize"
             android:noHistory="true"
             android:exported="false">
@@ -844,7 +848,8 @@
             android:excludeFromRecents="true"
             android:clearTaskOnLaunch="true"
             android:exported="true"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:permission="android.permission.CHANGE_WIFI_STATE">
             <intent-filter>
                 <action android:name="android.net.wifi.action.REQUEST_ENABLE" />
                 <action android:name="android.net.wifi.action.REQUEST_DISABLE" />
