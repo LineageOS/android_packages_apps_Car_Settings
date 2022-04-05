@@ -73,7 +73,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Datalimiet instellen"</string>
     <string name="data_limit" msgid="227338836292511425">"Datalimiet"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datagebruik beperken"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"De hoofdeenheid van je voertuig schakelt mobiele data uit zodra je de ingestelde limiet bereikt.\n\nAangezien het datagebruik wordt gemeten door de hoofdeenheid, en je provider tot een ander totaal kan komen, kun je het beste een voorzichtige limiet instellen."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"De hoofdeenheid van je voertuig zet mobiele data uit zodra je de ingestelde limiet bereikt.\n\nAangezien het datagebruik wordt gemeten door de hoofdeenheid, en je provider tot een ander totaal kan komen, kun je het beste een voorzichtige limiet instellen."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Waarschuwing voor datagebruik instellen"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limiet voor datagebruik instellen"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Het datagebruik wordt gemeten door je apparaat. Dit kan verschillen van de data die je mobiele provider meet."</string>
@@ -133,7 +133,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"Gateway"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wifi-voorkeuren"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wifi automatisch aanzetten"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wifi schakelt in bij opgeslagen kwaliteitsnetwerken, zoals je thuisnetwerk"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wifi wordt aangezet bij opgeslagen kwaliteitsnetwerken, zoals je thuisnetwerk"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Niet beschikbaar: locatie uitgezet. Zet "<annotation id="link">"locatie"</annotation>" aan."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wifi-scannen aanzetten?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aanzetten"</string>
@@ -485,7 +485,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Instellingen resetten"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Netwerkinstellingen zijn gereset"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"App-voorkeuren resetten"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Hiermee worden alle voorkeuren gereset voor:\n\n"<li>"Uitgeschakelde apps"</li>\n<li>"Uitgeschakelde app-meldingen"</li>\n<li>"Standaardapps voor acties"</li>\n<li>"Beperkingen voor achtergrondgegevens voor apps"</li>\n<li>"Rechtenbeperkingen"</li>\n\n"Je verliest geen app-gegevens."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Hiermee worden alle voorkeuren gereset voor:\n\n"<li>"Uitgezette apps"</li>\n<li>"Uitgezette app-meldingen"</li>\n<li>"Standaardapps voor acties"</li>\n<li>"Beperkingen voor achtergrondgegevens voor apps"</li>\n<li>"Rechtenbeperkingen"</li>\n\n"Je verliest geen app-gegevens."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Apps resetten"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-voorkeuren zijn gereset"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Alle gegevens wissen (fabrieksreset)"</string>
