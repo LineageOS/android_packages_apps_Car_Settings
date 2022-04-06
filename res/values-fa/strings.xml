@@ -148,10 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"سایر دستگاه‌ها می‌توانند به <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> متصل شوند."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"گذرواژه نقطه اتصال"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"امنیت"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-شخصی"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"وجود ندارد"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"باند AP"</string>
@@ -488,10 +486,10 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"همه تنظیمات شبکه بازنشانی شود؟ امکان واگرد این کار وجود ندارد!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"بازنشانی تنظیمات"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"تنظیمات شبکه بازنشانی شد"</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"بازنشانی تنظیمات برگزیده برنامه"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"بازنشانی اولویت‌های برنامه"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"با این کار همه اولویت‌های مربوط به موارد زیر بازنشانی می‌شود:\n\n"<li>"برنامه‌های غیرفعال‌شده"</li>\n<li>"اعلان‌های برنامه غیرفعال‌شده"</li>\n<li>"برنامه‌های پیش‌فرض برای عملکردها"</li>\n<li>"محدودیت‌های داده پس‌زمینه برای برنامه‌ها"</li>\n<li>"هرگونه محدودیت مجوز"</li>\n\n"هیچ داده برنامه‌ای را از دست نخواهید داد."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"بازنشانی برنامه‌ها"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تنظیمات برگزیده برنامه بازنشانی شده است"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"اولویت‌های برنامه بازنشانی شده است"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"پاک‌سازی داده‌ها (بازنشانی کارخانه‌ای)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"پاک کردن همه داده‌ها و نمایه‌های سیستم اطلاعات-سرگرمی"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"با این کار، همه داده‌های سیستم اطلاعات-سرگرمی خودرو پاک می‌شود، ازجمله:\n\n"<li>"حساب‌ها و نمایه‌های شما"</li>\n<li>"تنظیمات و داده‌های برنامه و سیستم"</li>\n<li>"برنامه‌های بارگیری‌شده"</li></string>
@@ -551,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"انتخاب سرپرست جدید"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"حداقل یک سرپرست لازم دارید. برای حذف این سرپرست، ابتدا جایگزینی انتخاب کنید."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"انتخاب سرپرست"</string>
-    <string name="user_guest" msgid="3465399481257448601">"مهمان"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"مهمان"</string>
     <string name="user_switch" msgid="6544839750534690781">"جابه‌جایی"</string>
     <string name="current_user_name" msgid="3813671533249316823">"شما (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
@@ -775,6 +771,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"خط‌مشی وسیله نقلیه <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"تنظیمات تحت‌کنترل مدیر سازمان"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"درباره <xliff:g id="SERVICE">%1$s</xliff:g> بیشتر بدانید"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"اطلاعات خودروی مدیریت‌شده"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"تنظیمات تحت‌مدیریت سرپرست ناوگان"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"برای ارائه دسترسی به داده‌ها در این خودروی مدیریت‌شده، سرپرست ناوگان ممکن است تنظیمات را تغییر دهد و نرم‌افزاری در سیستم اطلاعات-سرگرمی نصب کند.\n\nبرای جزئیات بیشتر، با سرپرست ناوگانتان تماس بگیرید."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"اطلاعاتی که سرپرست ناوگان شما می‌تواند ببیند"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"تغییراتی که سرپرست ناوگان شما اعمال کرده است"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"داده‌های مرتبط با حساب خودروی مدیریت‌شده شما"</li>\n" "<li>"فهرست برنامه‌ها در خودروی مدیریت‌شده شما"</li>\n" "<li>"میزان مصرف زمان و داده هر برنامه"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"دسترسی شما به سیستم اطلاعات-سرگرمی"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"فهرست برنامه‌ها در خودروی شما"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"تعداد برنامه‌ها تخمینی است و ممکن است شامل برنامه‌های نصب‌شده از خارج از «فروشگاه Play» نباشد."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
       <item quantity="other">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
@@ -783,6 +788,22 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"جدیدترین گزارش ترافیک شبکه"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"جدیدترین گزارش اشکال"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"جدیدترین گزارش امنیتی"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"خالی"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"برنامه‌ها نصب شده‌اند"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"اجازه‌های مکان"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"اجازه‌های میکروفون"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"اجازه‌های دوربین"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"برنامه‌های پیش‌فرض"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"صفحه‌کلید پیش‌فرض"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"تنظیم روی <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"تنظیم پروکسی HTTP جهانی"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"اطلاعات کاربری مطمئن در نمایه شخصی شما"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"سرپرست می‌تواند سیستم اطلاعات-سرگرمی را قفل کند و گذرواژه را بازنشانی کند"</li>\n" "<li>"سرپرست می‌تواند داده‌ها را در سیستم اطلاعات-سرگرمی حذف کند"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ورود ناموفق گذرواژه پیش‌از حذف همه داده‌ها در سیستم اطلاعات-سرگرمی"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"ورود ناموفق گذرواژه پیش‌از حذف داده‌های نمایه"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>

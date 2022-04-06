@@ -17,7 +17,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="settings_label" msgid="5147911978211079839">"ସେଟିଙ୍ଗ"</string>
+    <string name="settings_label" msgid="5147911978211079839">"ସେଟିଂସ"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"ଅଧିକ"</string>
     <string name="display_settings" msgid="5325515247739279185">"ଡିସ୍‌ପ୍ଲେ"</string>
     <string name="brightness" msgid="2919605130898772866">"ଉଜ୍ଜ୍ୱଳତା ସ୍ତର"</string>
@@ -148,10 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ସହ ଅନ୍ୟ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ ସଂଯୁକ୍ତ ହୋଇପାରିବ"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ହଟସ୍ପଟ୍ ପାସ୍‌ୱାର୍ଡ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ସୁରକ୍ଷା"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ବ୍ୟକ୍ତିଗତ"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"କୌଣସିଟି ନୁହେଁ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ବ୍ୟାଣ୍ଡ"</string>
@@ -485,8 +483,8 @@
     <string name="reset_network_select" msgid="2433825874868038739">"ନେଟ୍‍ୱାର୍କ ବାଛନ୍ତୁ"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"ସେଟିଂ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"ରିସେଟ୍‌ କରିବେ?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ସବୁ ନେଟ୍‌ୱାର୍କ ସେଟିଂ ରିସେଟ୍‌ କରିବେ? ଏହାକୁ ଆପଣ ଆଉ ପୂର୍ବବତ୍‍ କରିପାରିବେ ନାହିଁ!"</string>
-    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ସେଟିଂ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ସବୁ ନେଟୱାର୍କର ସେଟିଂସକୁ ରିସେଟ କରିବେ? ଏହି କାର୍ଯ୍ୟକୁ ଆପଣ ଆଉ ପୂର୍ବବତ୍‍ କରିପାରିବେ ନାହିଁ!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ସେଟିଂସକୁ ରିସେଟ କରନ୍ତୁ"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ନେଟ୍‌ୱାର୍କ ସେଟିଂ ରିସେଟ୍‌ କରିଦିଆଯାଇଛି"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"ଆପ୍‌ ଅଗ୍ରାଧିକାରଗୁଡିକୁ ରିସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ଏହା ନିମ୍ନରେ ଥିବା ସମସ୍ତ ପସନ୍ଦକୁ ରିସେଟ୍‍ କରିବ:\n\n"<li>" ଅକ୍ଷମ କରାଯାଇଥିବା ଆପ୍ସ"</li>\n<li>" ଅକ୍ଷମ କରାଯାଇଥିବା ଆପ୍‍ ବିଜ୍ଞପ୍ତି"</li>\n<li>" କାର୍ଯ୍ୟ ପାଇଁ ଡିଫଲ୍ଟ ଆପ୍ଲିକେସନ୍‍"</li>\n<li>" ଆପ୍ସ ପାଇଁ ବ୍ୟାକଗ୍ରାଉଣ୍ଡ ଡାଟା ପ୍ରତିବନ୍ଧକ"</li>\n<li>" ଯେ କୌଣସି ଅନୁମତି ପ୍ରତିବନ୍ଧକ"</li>\n\n"ଆପଣ କୌଣସି ଆପ୍‍ ଡାଟା ହରାଇବେ ନାହିଁ।"</string>
@@ -551,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"ନୂଆ ଆଡ୍‌ମିନ୍‌ ବାଛନ୍ତୁ"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"ଆପଣ ଅତିକମ୍‍ରେ ଜଣେ ଆଡ୍‌ମିନ୍‌ ଆବଶ୍ଯକ କରନ୍ତି। ଏହା ଡିଲିଟ୍‍ କରିବାକୁ, ପ୍ରଥମେ ଏକ ପ୍ରତ୍ୟାବର୍ତ୍ତନ ବାଛନ୍ତୁ।"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"ଆଡ୍‌ମିନ୍‌ ବାଛନ୍ତୁ"</string>
-    <string name="user_guest" msgid="3465399481257448601">"ଅତିଥି"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"ଅତିଥି"</string>
     <string name="user_switch" msgid="6544839750534690781">"ବଦଳାନ୍ତୁ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ଆପଣ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ନାମ"</string>
@@ -775,6 +771,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ଗାଡ଼ିର ନୀତି"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ସଂସ୍ଥା ପରିଚାଳକଙ୍କ ଦ୍ୱାରା ପରିଚାଳିତ ହେଉଥିବା ସେଟିଂସ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> ବିଷୟରେ ଅଧିକ ଜାଣନ୍ତୁ"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ପରିଚାଳିତ ଗାଡ଼ିର ସୂଚନା"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ଫ୍ଲିଟ ଆଡମିନଙ୍କ ଦ୍ୱାରା ପରିଚାଳିତ ସେଟିଂସ"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ଏହି ପରିଚାଳିତ ଗାଡ଼ିରେ ଡାଟାର ଆକ୍ସେସ ପ୍ରଦାନ କରିବା ପାଇଁ, ଫ୍ଲିଟ ଆଡମିନ ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମରେ ସେଟିଂସ ପରିବର୍ତ୍ତନ କରି ସଫ୍ଟୱେର ଇନଷ୍ଟଲ କରିପାରେ।\n\nଅଧିକ ବିବରଣୀ ପାଇଁ, ଆପଣଙ୍କ ଫ୍ଲିଟର ଆଡମିନଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ।"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ଆପଣଙ୍କ ଫ୍ଲିଟ ଆଡମିନ ଦେଖିପାରୁଥିବା ସୂଚନା"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"ଆପଣଙ୍କ ଫ୍ଲିଟ ଆଡମିନଙ୍କ ଦ୍ୱାରା କରାଯାଇଥିବା ପରିବର୍ତ୍ତନଗୁଡ଼ିକ"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ଆପଣଙ୍କ ପରିଚାଳିତ ଗାଡ଼ିର ଆକାଉଣ୍ଟ ସହ ସମ୍ବନ୍ଧିତ ଡାଟା"</li>\n" "<li>"ଆପଣଙ୍କ ପରିଚାଳିତ ଗାଡ଼ିରେ ଥିବା ଆପ୍ସର ତାଲିକା"</li>\n" "<li>"ପ୍ରତ୍ୟେକ ଆପରେ ଅତିବାହିତ ହୋଇଥିବା ସମୟ ଏବଂ ବ୍ୟବହାର ହୋଇଥିବା ଡାଟାର ପରିମାଣ"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମକୁ ଆପଣଙ୍କ ଆକ୍ସେସ"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"ଆପଣଙ୍କ ଗାଡ଼ିରେ ଥିବା ଆପ୍ସର ତାଲିକା"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"ଆପ୍ସ ସଂଖ୍ୟା ଅନୁମାନ କରାଯାଇଛି। Play Store ବାହାରେ ଇନଷ୍ଟଲ କରାଯାଇଥିବା ଆପ୍ସ ଏଥିରେ ଅନ୍ତର୍ଭୁକ୍ତ ହୋଇନଥାଇପାରେ।"</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">ସର୍ବନିମ୍ନ <xliff:g id="COUNT_1">%d</xliff:g>ଟି ଆପ</item>
       <item quantity="one">ସର୍ବନିମ୍ନ <xliff:g id="COUNT_0">%d</xliff:g>ଟି ଆପ</item>
@@ -783,6 +788,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ଆପ</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟି ଆପ</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"ବର୍ତ୍ତମାନର ନେଟୱାର୍କ ଟ୍ରାଫିକ ଲଗ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"ବର୍ତ୍ତମାନର ନୂଆ ବଗ ରିପୋର୍ଟ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"ବର୍ତ୍ତମାନର ସୁରକ୍ଷା ଲଗ"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"କିଛି ନାହିଁ"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"ଆପ୍ସ ଇନଷ୍ଟଲ କରାଯାଇଛି"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"ଲୋକେସନ ଅନୁମତିଗୁଡ଼ିକ"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"ମାଇକ୍ରୋଫୋନ ଅନୁମତିଗୁଡ଼ିକ"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"କ୍ୟାମେରା ଅନୁମତିଗୁଡ଼ିକ"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ଡିଫଲ୍ଟ ଆପ୍ସ"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ଡିଫଲ୍ଟ କୀବୋର୍ଡ"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>ରେ ସେଟ କରନ୍ତୁ"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"ଗ୍ଲୋବାଲ HTTP ପ୍ରକ୍ସି ସେଟ କରାଯାଇଛି"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"ଆପଣଙ୍କ ବ୍ୟକ୍ତିଗତ ପ୍ରୋଫାଇଲରେ ଥିବା ଟ୍ରଷ୍ଟେଡ କ୍ରେଡେନସିଆଲଗୁଡ଼ିକ"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ଆଡମିନ, ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମକୁ ଲକ କରିପାରିବେ ଏବଂ ପାସୱାର୍ଡକୁ ରିସେଟ କରିପାରିବେ"</li>\n" "<li>"ଆଡମିନ, ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମରେ ଥିବା ଡାଟାକୁ ଡିଲିଟ କରିପାରିବେ"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମରେ ଥିବା ସମସ୍ତ ଡାଟା ଡିଲିଟ କରିବା ପୂର୍ବରୁ ବିଫଳ ହୋଇଥିବା ପାସୱାର୍ଡ ପ୍ରଚେଷ୍ଟା"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"ପ୍ରୋଫାଇଲ ଡାଟା ଡିଲିଟ କରିବା ପୂର୍ବରୁ ବିଫଳ ହୋଇଥିବା ପାସୱାର୍ଡ ପ୍ରଚେଷ୍ଟା"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ପ୍ରଚେଷ୍ଟା</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟି ପ୍ରଚେଷ୍ଟା</item>

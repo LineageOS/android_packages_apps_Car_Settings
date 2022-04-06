@@ -148,10 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-এর সাথে অন্য ডিভাইস কানেক্ট করা যেতে পারে"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"হটস্পটের পাসওয়ার্ড"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"নিরাপত্তা"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"কোনওটিই নয়"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ব্যান্ড"</string>
@@ -551,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"নতুন অ্যাডমিন বেছে নিন"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"আপনার একজন অ্যাডমিন প্রয়োজন। এটি মুছে ফেলতে, অন্য একটি বিকল্প বেছে নিন।"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"অ্যাডমিন বেছে নিন"</string>
-    <string name="user_guest" msgid="3465399481257448601">"অতিথি"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"অতিথি"</string>
     <string name="user_switch" msgid="6544839750534690781">"পরিবর্তন করুন"</string>
     <string name="current_user_name" msgid="3813671533249316823">"আপনি (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"নাম"</string>
@@ -775,6 +771,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-এর গাড়ি সংক্রান্ত নীতি"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"প্রতিষ্ঠানের ম্যানেজার সেটিংস ম্যানেজ করেন"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> সম্পর্কে আরও জানুন"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ম্যানেজ করা গাড়ির তথ্য"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ফ্লিট অ্যাডমিনের মাধ্যমে ম্যানেজ করা সেটিংস"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ম্যানেজ করা এই গাড়ির ডেটায় অ্যাক্সেস দিতে, ফ্লিট অ্যাডমিন হয়ত ইনফোটেইনমেন্ট সিস্টেমের সেটিংস পরিবর্তন ও এতে সফ্টওয়্যার ইনস্টল করতে পারবেন।\n\nআরও তথ্যের জন্য ফ্লিটের অ্যাডমিনের সাথে যোগাযোগ করুন।"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"আপনার ফ্লিট অ্যাডমিন যেসব তথ্য দেখতে পারবেন"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"আপনার ফ্লিট অ্যাডমিন যেসব পরিবর্তন করেছেন"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ম্যানেজ করা গাড়ির অ্যাকাউন্টের সাথে যেসব ডেটা যুক্ত আছে"</li>\n" "<li>"ম্যানেজ করা গাড়িতে থাকা অ্যাপের তালিকা"</li>\n" "<li>"প্রতিটি অ্যাপে যত পরিমাণ সময় ও ডেটা খরচ হয়েছে"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ইনফোটেইনমেন্ট সিস্টেমে আপনার অ্যাক্সেস"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"আপনার গাড়িতে থাকা অ্যাপের তালিকা"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"অ্যাপের সংখ্যা আনুমানিক। Play Store ছাড়া অন্য কোনও জায়গা থেকে ইনস্টল করা অ্যাপ এর মধ্যে অন্তর্ভুক্ত নাও থাকতে পারে।"</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">কমপক্ষে <xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
       <item quantity="other">কমপক্ষে <xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
@@ -783,6 +788,22 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টি অ্যাপ</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"সবচেয়ে সাম্প্রতিক নেটওয়ার্ক ট্রাফিক লগ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"সবচেয়ে সাম্প্রতিক সমস্যার রিপোর্ট"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"সবচেয়ে সাম্প্রতিক নিরাপত্তা লগ"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"কোনওটিই নয়"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"অ্যাপ ইনস্টল করা হয়েছে"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"লোকেশন অ্যাক্সেস করার অনুমতি"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"মাইক্রোফোন অ্যাক্সেস করার অনুমতি"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"ক্যামেরা অ্যাক্সেস সংক্রান্ত অনুমতি"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ডিফল্ট অ্যাপ"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ডিফল্ট কীবোর্ড"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>-এ সেট করা হয়েছে"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"অ্যাডমিনের সেট করা গ্লোবাল HTTP প্রক্সি"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"আপনার ব্যক্তিগত প্রোফাইলে বিশ্বস্ত ক্রেডেনশিয়াল"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"অ্যাডমিন, ইনফোটেইনমেন্ট সিস্টেম লক ও পাসওয়ার্ড রিসেট করতে পারবেন"</li>\n" "<li>"অ্যাডমিন ইনফোটেইনমেন্ট সিস্টেমের ডেটা মুছে দিতে পারবেন"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ইনফোটেইনমেন্ট সিস্টেমের সব ডেটা মুছতে সঠিক পাসওয়ার্ড লিখতে হবে, কিন্তু আপনি অনেকবার ভুল পাসওয়ার্ড লিখেছেন"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"প্রোফাইলের সব ডেটা মুছতে সঠিক পাসওয়ার্ড লিখতে হবে, কিন্তু আপনি অনেকবার ভুল পাসওয়ার্ড লিখেছেন"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> বার চেষ্টা করা হয়েছে</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> বার চেষ্টা করা হয়েছে</item>

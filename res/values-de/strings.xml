@@ -148,10 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andere Geräte können sich mit <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> verbinden"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Passwort des Hotspots"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sicherheit"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Keiner"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Band für Zugangspunkt"</string>
@@ -551,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Neuen Administrator auswählen"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Du benötigst mindestens einen Administrator. Damit diesen Administrator löschen kannst, musst du zuerst einen Ersatz auswählen."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Administrator auswählen"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Gast"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Gast"</string>
     <string name="user_switch" msgid="6544839750534690781">"Wechseln"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Du (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Name"</string>
@@ -775,6 +771,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Fahrzeugrichtlinien von <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Einstellungen, die vom Manager der Organisation verwaltet werden"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Weitere Informationen zu <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informationen zum verwalteten Fahrzeug"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Einstellungen, die vom Flottenmanager verwaltet werden"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Um Zugriff auf Daten dieses verwalteten Fahrzeugs zu geben, kann der Flottenmanager im Infotainmentsystem Einstellungen ändern und Software installieren.\n\nWeitere Details erhältst du von deinem Flottenmanager."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informationen, die dein Flottenmanager sehen kann"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Änderungen, die dein Flottenmanager vorgenommen hat"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Daten, die mit dem Konto deines verwalteten Fahrzeugs verknüpft sind"</li>\n" "<li>"Liste der Apps bei deinem verwalteten Fahrzeug"</li>\n" "<li>"Nutzungsdauer und genutzte Datenmenge für jede App"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Dein Zugriff auf das Infotainmentsystem"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Liste der Apps bei deinem Fahrzeug"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Die Anzahl der Apps ist eine Schätzung. Installierte Apps, die nicht aus dem Play Store stammen, werden möglicherweise nicht berücksichtigt."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Mindestens <xliff:g id="COUNT_1">%d</xliff:g> Apps</item>
       <item quantity="one">Mindestens <xliff:g id="COUNT_0">%d</xliff:g> App</item>
@@ -783,6 +788,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> Apps</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> App</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Neuestes Protokoll zum Netzwerkverkehr"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Neuester Fehlerbericht"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Neuestes Sicherheitsprotokoll"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Keine"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Apps installiert"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Berechtigungen zur Standortermittlung"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Mikrofonberechtigungen"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Kameraberechtigungen"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Standard-Apps"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Standardtastatur"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Auf <xliff:g id="APP_LABEL">%s</xliff:g> festgelegt"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Globaler HTTP-Proxy wurde eingerichtet"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Vertrauenswürdige Anmeldedaten in deinem privaten Profil"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Der Flottenmanager kann das Infotainmentsystem sperren und das Passwort zurücksetzen"</li>\n" "<li>"Der Flottenmanager kann im Infotainmentsystem Daten löschen"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Anzahl falscher Passworteingaben, bevor alle Daten im Infotainmentsystem gelöscht werden"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Anzahl falscher Passworteingaben, bevor die Profildaten gelöscht werden"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> Versuche</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> Versuch</item>

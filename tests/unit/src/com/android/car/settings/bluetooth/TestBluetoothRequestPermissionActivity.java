@@ -32,4 +32,9 @@ public class TestBluetoothRequestPermissionActivity extends BluetoothRequestPerm
     public String getCallingPackage() {
         return CALLING_PACKAGE;
     }
+
+    @Override
+    public String getLaunchedFromPackage() {
+        return CALLING_PACKAGE;
+    }
 }

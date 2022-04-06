@@ -148,10 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Другите уреди може да се поврзат на <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка за точката на пристап"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Безбедност"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Лична"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Нема"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Пристапна точка"</string>
@@ -551,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Избирање нов администратор"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Треба да имате најмалку еден администратор. За да го избришете постоечкиот, прво изберете замена."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Изберете администратор"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Гостин"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Гостин"</string>
     <string name="user_switch" msgid="6544839750534690781">"Промени"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Вие (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Име"</string>
@@ -775,6 +771,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила за возило на <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Со поставките управува управникот на организацијата"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Дознајте повеќе за <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Податоци за управуваното возило"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Поставки управувани од администраторот на возниот парк"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"За да обезбеди пристап до податоците на ова управувано возило, администраторот на возниот парк може да ги промени поставките и да инсталира софтвер на системот за информации и забава.\n\nЗа повеќе детали, контактирајте со администраторот на возниот парк."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Податоци што може да ги види администраторот на возниот парк"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Промени што ги извршил администраторот на возниот парк"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Податоци поврзани со сметката на управуваното возило"</li>\n" "<li>"Список со апликации на управуваното возило"</li>\n" "<li>"Количина на време и мобилен интернет потрошени во секоја апликација"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Вашиот пристап до системот за информации и забава"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Список со апликации во возилото"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Бројот на апликации е приближен. Можеби не опфаќа апликации што не се инсталирани од Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">Минимум <xliff:g id="COUNT_1">%d</xliff:g> апликација</item>
       <item quantity="other">Минимум <xliff:g id="COUNT_1">%d</xliff:g> апликации</item>
@@ -783,6 +788,22 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> апликација</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> апликации</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Најнова евиденција за мрежниот сообраќај"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Најнов извештај за грешки"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Најнова евиденција за безбедноста"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Нема"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Инсталирани се апликации"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Дозволи за локацијата"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Дозволи за микрофонот"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Дозволи за камерата"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Стандардни апликации"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Стандардна тастатура"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Поставено на <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Глобални HTTP-поставки за прокси"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Доверливи акредитиви во личниот профил"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Администраторот може да го заклучи системот за информации и забава и да ја ресетира лозинката"</li>\n" "<li>"Администраторот може да ги избрише податоците од системот за информации и забава"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Неуспешни обиди за внесување лозинка пред да се избришат сите податоци од системот за информации и забава"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Неуспешни обиди за внесување лозинка пред да се избришат податоците од профилот"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> обид</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> обиди</item>

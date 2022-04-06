@@ -1278,10 +1278,6 @@
     <string name="choose_new_admin_label">Choose admin</string>
 
     <!-- User info --><skip/>
-    <!-- Title for Guest user [CHAR LIMIT=35] -->
-    <string name="user_guest">Guest</string>
-    <!-- Title for button for starting a new guest session [CHAR LIMIT=35] -->
-    <string name="start_guest_session">Guest</string>
     <!-- Description for icon to switch user [CHAR LIMIT=35] -->
     <string name="user_switch">Switch</string>
     <!-- Description for user name that is currently in use -->
@@ -1868,29 +1864,28 @@
     <string name="footer_learn_more_content_description">Learn more about <xliff:g id="service" example="Select to Speak">%1$s</xliff:g></string>
 
     <!-- Enterprise Privacy --> <skip />
-    <!-- TODO(b/206022572, b/203004258): remove translatable="false" once the proper strings have been defined -->
     <!-- Title of setting on security settings screen. This will take the user to a screen with information about admin powers and their impact on the user's privacy on a managed device. Shown on enterprise-managed devices only. Note: "Device" is singular and refers to the device (e.g. phone or tablet) that the user is holding in their hand. -->
-    <string name="enterprise_privacy_settings" translatable="false">Managed device info</string>
+    <string name="enterprise_privacy_settings">Managed vehicle info</string>
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
-    <string name="enterprise_privacy_settings_summary_generic" translatable="false">Changes &amp; settings managed by your organization</string>
+    <string name="enterprise_privacy_settings_summary_generic">Settings managed by fleet admin</string>
     <!-- Enterprise Privacy settings activity header, summarizing the powers that the admin has. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_header" translatable="false">To provide access to your work data, your organization may change settings and install software on your device.\n\nFor more details, contact your organization\'s admin.</string>
+    <string name="enterprise_privacy_header">To provide access to data on this managed vehicle, the fleet admin may change settings and install software on the infotainment system.\n\nFor more details, contact your fleet\'s admin.</string>
     <!-- Title for the 'Types of information your organization can see' preference category. [CHAR LIMIT=60] -->
-    <string name="enterprise_privacy_exposure_category" translatable="false">Types of information your organization can see</string>
+    <string name="enterprise_privacy_exposure_category">Information your fleet\’s admin can see</string>
     <!-- Title for the 'Changes made by your organization’s admin' preference category. [CHAR LIMIT=60] -->
-    <string name="enterprise_privacy_exposure_changes_category" translatable="false">Changes made by your organization\'s admin</string>
+    <string name="enterprise_privacy_exposure_changes_category">Changes made by your fleet\’s admin</string>
     <!-- Description for the information that organization can see on managed device. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_exposure_desc" translatable="false">
-        <li>Data associated with your work account, such as email and calendar</li>\n
-        <li>List of apps on your device</li>\n
+    <string name="enterprise_privacy_exposure_desc">
+        <li>Data associated with your managed vehicle account</li>\n
+        <li>List of apps on your managed vehicle</li>\n
         <li>Amount of time and data spent in each app</li>
     </string>
     <!-- Title for the 'Your access to this device' preference category. [CHAR LIMIT=60] -->
-    <string name="enterprise_privacy_device_access_category" translatable="false">Your access to this device</string>
+    <string name="enterprise_privacy_device_access_category">Your access to the infotainment system</string>
     <!-- Label explaining that the admin can see apps installed on the device. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_installed_packages" translatable="false">List of apps on your device</string>
+    <string name="enterprise_privacy_installed_packages">List of apps on your vehicle</string>
     <!-- Label explaining that the number of apps is an estimation. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_apps_count_estimation_info" translatable="false">Number of apps is estimated. It may not include apps installed outside of the Play Store.</string>
+    <string name="enterprise_privacy_apps_count_estimation_info">Number of apps is estimated. It may not include apps installed outside of the Play Store.</string>
     <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. The number shown is a minimum as there may be additional apps we do not know about. [CHAR LIMIT=NONE] -->
     <plurals name="enterprise_privacy_number_packages_lower_bound">
         <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> app</item>
@@ -1902,57 +1897,57 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> apps</item>
     </plurals>
     <!-- Label explaining that the admin can retrieve network logs on the device. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_network_logs" translatable="false">Most recent network traffic log</string>
+    <string name="enterprise_privacy_network_logs">Most recent network traffic log</string>
     <!-- Label explaining that the admin can request bug reports on the device. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_bug_reports" translatable="false">Most recent bug report</string>
+    <string name="enterprise_privacy_bug_reports">Most recent bug report</string>
     <!-- Label explaining that the admin can retrieve security on from the device. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_security_logs" translatable="false">Most recent security log</string>
+    <string name="enterprise_privacy_security_logs">Most recent security log</string>
     <!-- Label indicating that the admin never took a given action so far (e.g. did not retrieve security logs or request bug reports). -->
-    <string name="enterprise_privacy_none" translatable="false">None</string>
+    <string name="enterprise_privacy_none">None</string>
     <!-- Label indicating that the admin installed one or more apps on the device. -->
-    <string name="enterprise_privacy_enterprise_installed_packages" translatable="false">Apps installed</string>
+    <string name="enterprise_privacy_enterprise_installed_packages">Apps installed</string>
     <!-- Label indicating that the admin granted one or more apps access to the device's location. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_location_access" translatable="false">Location permissions</string>
+    <string name="enterprise_privacy_location_access">Location permissions</string>
     <!-- Label indicating that the admin granted one or more apps access to the microphone. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_microphone_access" translatable="false">Microphone permissions</string>
+    <string name="enterprise_privacy_microphone_access">Microphone permissions</string>
     <!-- Label indicating that the admin granted one or more apps access to the camera. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_camera_access" translatable="false">Camera permissions</string>
+    <string name="enterprise_privacy_camera_access">Camera permissions</string>
     <!-- Label indicating that the admin set one or more apps as defaults for common actions (e.g. open browser, send e-mail). [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_enterprise_set_default_apps" translatable="false">Default apps</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps">Default apps</string>
     <!-- Label explaining that the current input method was set by the admin. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_input_method" translatable="false">Default keyboard</string>
+    <string name="enterprise_privacy_input_method">Default keyboard</string>
     <!-- Summary indicating the input method set by the admin. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_input_method_name" translatable="false">Set to <xliff:g id="app_label" example="Example Keyboard">%s</xliff:g></string>
-    <!-- Label explaining that an always-on VPN was set by the admin for the entire device. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_input_method_name">Set to <xliff:g id="app_label" example="Example Keyboard">%s</xliff:g></string>
+    <!-- TODO(b/222330070) Remove unsupported code. Label explaining that an always-on VPN was set by the admin for the entire device. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_always_on_vpn_device" translatable="false">Always-on VPN turned on</string>
     <!-- Label explaining that a global HTTP proxy was set by the admin. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_global_http_proxy" translatable="false">Global HTTP proxy set</string>
-    <!-- Label explaining that the admin installed trusted CA certificates in personal profile. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_ca_certs_personal" translatable="false">Trusted credentials in your personal profile</string>
+    <string name="enterprise_privacy_global_http_proxy">Global HTTP proxy set</string>
+    <!-- TODO(b/222330070) Remove unsupported code. Label explaining that the admin installed trusted CA certificates in personal profile. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_ca_certs_personal">Trusted credentials in your personal profile</string>
     <!-- Description for device access on managed device. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_device_access_desc" translatable="false">
-        <li>Admin can lock the device and reset password</li>\n
-        <li>Admin can delete all device data</li>
+    <string name="enterprise_privacy_device_access_desc">
+        <li>Admin can lock the infotainment system and reset password</li>\n
+        <li>Admin can delete data on infotainment system</li>
     </string>
     <!-- Label explaining that the admin configured the device to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_failed_password_wipe_device" translatable="false">Failed password attempts before deleting all device data</string>
+    <string name="enterprise_privacy_failed_password_wipe_device">Failed password attempts before deleting all data on infotainment system</string>
     <!-- Label explaining that the admin configured the current user to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
-    <string name="enterprise_privacy_failed_password_wipe_current_user" translatable="false">Failed password attempts before deleting  profile data</string>
-    <!-- Label explaining that an always-on VPN was set by the admin in the personal profile. [CHAR LIMIT=NONE] -->
+    <string name="enterprise_privacy_failed_password_wipe_current_user">Failed password attempts before deleting profile data</string>
+    <!-- TODO(b/222330070) Remove unsupported code. Label explaining that an always-on VPN was set by the admin in the personal profile. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_always_on_vpn_personal" translatable="false">Always-on VPN turned on in your personal profile</string>
-    <!-- Label explaining that the admin installed trusted CA certificates for the entire device. [CHAR LIMIT=NONE] -->
+    <!-- TODO(b/222330070) Remove unsupported code. Label explaining that the admin installed trusted CA certificates for the entire device. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_ca_certs_device" translatable="false">Trusted credentials</string>
-    <!-- Summary indicating the number of trusted CA certificates installed by the admin. The number shown is a minimum as there may be additional CA certificates we do not know about. [CHAR LIMIT=NONE] -->
+    <!-- TODO(b/222330070) Remove unsupported code. Summary indicating the number of trusted CA certificates installed by the admin. The number shown is a minimum as there may be additional CA certificates we do not know about. [CHAR LIMIT=NONE] -->
     <plurals name="enterprise_privacy_number_ca_certs" translatable="false">
         <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> CA certificate</item>
         <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> CA certificates</item>
     </plurals>
     <!-- Summary indicating the number of mistyped passwords after which the device or work profile wipes itself. [CHAR LIMIT=NONE] -->
     <plurals name="enterprise_privacy_number_failed_password_wipe">
-        <item quantity="one" translatable="false"><xliff:g id="count">%d</xliff:g> attempt</item>
-        <item quantity="other" translatable="false"><xliff:g id="count">%d</xliff:g> attempts</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> attempt</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> attempts</item>
     </plurals>
-    <!-- Strings for displaying which applications were set as default for specific actions. -->
+    <!-- TODO(b/222330070) Remove unsupported code. Strings for displaying which applications were set as default for specific actions. -->
     <!-- Title for the apps that have been set as default handlers of camera-related intents. [CHAR LIMIT=30] -->
     <plurals name="default_camera_app_title">
         <item quantity="one" translatable="false">Camera app</item>

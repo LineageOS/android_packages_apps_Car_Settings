@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -47,7 +48,8 @@ public final class ImePreferenceControllerTest
         mockHasDeviceAdminFeature();
         mockGetImeLabelIfOwnerSet(null);
 
-        assertAvailability(mController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
     }
 
     @Test
@@ -55,7 +57,8 @@ public final class ImePreferenceControllerTest
         mockHasDeviceAdminFeature();
         mockGetImeLabelIfOwnerSet("Da Lablue");
 
-        assertAvailability(mController.getAvailabilityStatus(), AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                AVAILABLE);
     }
 
     @Test

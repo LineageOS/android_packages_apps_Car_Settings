@@ -148,10 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Είναι δυνατή η σύνδεση άλλων συσκευών στο <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Κωδικός ΣΠ Wi-Fi"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Ασφάλεια"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Κανένα"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Ζώνη ΣΠ"</string>
@@ -551,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Επιλογή νέου διαχειριστή"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Θα πρέπει να υπάρχει τουλάχιστον ένας διαχειριστής. Για να διαγράψετε αυτόν τον διαχειριστή, πρώτα επιλέξτε έναν αντικαταστάτη."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Επιλογή διαχειριστή"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Επισκέπτης"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Επισκέπτης"</string>
     <string name="user_switch" msgid="6544839750534690781">"Εναλλαγή"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Εσείς (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Όνομα"</string>
@@ -775,6 +771,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Πολιτική οχημάτων του οργανισμού <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Η διαχείριση των ρυθμίσεων πραγματοποιείται από τον διαχειριστή οργανισμού"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Μάθετε περισσότερα για την υπηρεσία <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Πληροφορίες διαχειριζόμενου οχήματος"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Ρυθμίσεις που διαχειρίζεται ο διαχειριστής στόλου σας"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Για να παρέχει πρόσβαση σε δεδομένα σε αυτό το διαχειριζόμενο όχημα, ο διαχειριστής στόλου μπορεί να αλλάξει τις ρυθμίσεις και να εγκαταστήσει λογισμικό στο σύστημα ενημέρωσης και ψυχαγωγίας.\n\nΓια λεπτομέρειες, επικοινωνήστε με τον διαχειριστή στόλου."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Πληροφορίες που μπορεί να δει ο διαχειριστής στόλου"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Αλλαγές που πραγματοποιήθηκαν από τον διαχειριστή στόλου"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Δεδομένα που συσχετίζονται με τον λογαριασμό διαχειριζόμενου οχήματός σας"</li>\n" "<li>"Λίστα των εφαρμογών στο διαχειριζόμενο όχημα"</li>\n" "<li>"Ο όγκος των δεδομένων και ο χρόνος που αφιερώθηκε σε κάθε εφαρμογή"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Η πρόσβασή σας στο σύστημα ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Λίστα εφαρμογών στο όχημά σας"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Γίνεται εκτίμηση του αριθμού των εφαρμογών. Μπορεί να μην περιλαμβάνει εφαρμογές που έχουν εγκατασταθεί εκτός του Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Τουλάχιστον σε <xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
       <item quantity="one">Τουλάχιστον σε <xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
@@ -783,6 +788,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Το πιο πρόσφατο αρχείο καταγραφής επισκεψιμότητας δικτύου"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Η πιο πρόσφατη αναφορά σφάλματος"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Το πιο πρόσφατο αρχείο καταγραφής ασφαλείας"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Καμία"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Εγκατεστημένες εφαρμογές"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Άδειες τοποθεσίας"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Άδειες μικροφώνου"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Άδειες κάμερας"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Προεπιλεγμένες εφαρμογές"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Προεπιλεγμένο πληκτρολόγιο"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Ορισμός σε <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Ο γενικός διακομιστής μεσολάβησης HTTP ορίστηκε"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Αξιόπιστα διαπιστευτήρια στο προσωπικό προφίλ σας"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Ο διαχειριστής μπορεί να κλειδώσει το σύστημα ενημέρωσης και ψυχαγωγίας και να επαναφέρει τον κωδικό πρόσβασης"</li>\n" "<li>"Ο διαχειριστής μπορεί να διαγράψει δεδομένα στο σύστημα ενημέρωσης και ψυχαγωγίας"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Αποτυχημένες προσπάθειες εισαγωγής κωδικού πρόσβασης πριν από τη διαγραφή όλων των δεδομένων του συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Αποτυχημένες προσπάθειες εισαγωγής κωδικού πρόσβασης πριν από τη διαγραφή των δεδομένων του προφίλ"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> προσπάθειες</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> προσπάθεια</item>

@@ -148,10 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Бусад төхөөрөмж <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-д холбогдох боломжтой"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Сүлжээний цэгийн нууц үг"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Аюулгүй байдал"</string>
-    <!-- no translation found for wifi_hotspot_wpa3_sae (4752416911592950174) -->
-    <skip />
-    <!-- no translation found for wifi_security_psk_sae (8738371461215752280) -->
-    <skip />
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Хувийн"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Хувийн"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Хувийн"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Байхгүй"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Мессеж"</string>
@@ -551,8 +549,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Шинэ админ сонгох"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Танд хамгийн багадаа нэг админ шаардлагатай. Үүнийг устгахын тулд эхлээд орлуулалтыг сонгоно уу."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Админ сонгох"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Зочин"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Зочин"</string>
     <string name="user_switch" msgid="6544839750534690781">"Сэлгэх"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Та (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Нэр"</string>
@@ -775,6 +771,15 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-н тээврийн хэрэгслийн бодлого"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Байгууллагын менежерийн удирддаг тохиргоо"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g>-н талаар нэмэлт мэдээлэл авах"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Удирддаг тээврийн хэрэгслийн мэдээлэл"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Флотын админы удирддаг тохиргоо"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Энэ удирддаг тээврийн хэрэгсэл дээрх өгөгдөлд хандах эрх өгөхийн тулд флотын админ тохиргоог өөрчилж, инфотэйнмент систем дээр программ хангамж суулгаж магадгүй.\n\nИлүү дэлгэрэнгүй мэдээлэл авах бол флотынхоо админтай холбогдоно уу."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Таны флотын админы харах боломжтой мэдээлэл"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Таны флотын админы хийсэн өөрчлөлтүүд"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Таны удирддаг тээврийн хэрэгслийн бүртгэлтэй холбоотой өгөгдөл"</li>\n" "<li>"Таны удирддаг тээврийн хэрэгсэл дээрх аппуудын жагсаалт"</li>\n" "<li>"Апп тус бүр дээр зарцуулсан хугацаа болон өгөгдөл"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Таны инфотэйнмент системийн хандалт"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Таны тээврийн хэрэгсэл дээрх аппуудын жагсаалт"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Аппын тоог барагцаалж тооцоолсон. Үүнд Play Store-с гадуур суулгасан аппуудыг оруулаагүй байж болзошгүй."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Хамгийн багадаа <xliff:g id="COUNT_1">%d</xliff:g> апп</item>
       <item quantity="one">Хамгийн багадаа <xliff:g id="COUNT_0">%d</xliff:g> апп</item>
@@ -783,6 +788,22 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> апп</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> апп</item>
     </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Хамгийн сүүлийн сүлжээний ачааллын лог"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Хамгийн сүүлийн алдааны мэдээ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Хамгийн сүүлийн аюулгүй байдлын лог"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Байхгүй"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Суулгасан аппууд"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Байршлын зөвшөөрөл"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Микрофоны зөвшөөрөл"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Камерын зөвшөөрөл"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Өгөгдмөл аппууд"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Өгөгдмөл гар"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> гэж тохируулсан"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Олон улсын HTTP проксиг тохируулсан"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Таны хувийн профайл дахь итгэмжлэгдсэн мандат үнэмлэх"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Админ нь инфотэйнмент системийг түгжиж, мөн нууц үгийг шинэчлэх боломжтой"</li>\n" "<li>"Админ нь инфотэйнмент систем дээрх өгөгдлийг устгах боломжтой"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Нууц үгний амжилтгүй оролдлогуудын дараа инфотэйнмент систем дээрх бүх өгөгдлийг устгана"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Нууц үгний амжилтгүй оролдлогуудын дараа профайлын өгөгдлийг устгана"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> оролдлого</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> оролдлого</item>
