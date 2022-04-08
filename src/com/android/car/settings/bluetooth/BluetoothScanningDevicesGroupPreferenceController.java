@@ -96,6 +96,11 @@ public abstract class BluetoothScanningDevicesGroupPreferenceController extends
         }
     }
 
+    @Override
+    protected boolean shouldShowDisconnectedStateSubtitle() {
+        return false;
+    }
+
     protected void reenableScanning() {
         if (isStarted()) {
             mIsScanningEnabled = true;
