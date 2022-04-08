@@ -45,13 +45,20 @@ public class BluetoothDevicePreference extends MultiActionPreference {
 
     private final CachedBluetoothDevice mCachedDevice;
     private final boolean mShowDevicesWithoutNames;
+    private final boolean mShowDisconnectedStateSubtitle;
     private final CachedBluetoothDevice.Callback mDeviceCallback = this::refreshUi;
 
     private UpdateToggleButtonListener mUpdateToggleButtonListener;
 
     public BluetoothDevicePreference(Context context, CachedBluetoothDevice cachedDevice) {
+        this(context, cachedDevice, /* showDisconnectedStateSubtitle= */ true);
+    }
+
+    public BluetoothDevicePreference(Context context, CachedBluetoothDevice cachedDevice,
+            boolean showDisconnectedStateSubtitle) {
         super(context);
         mCachedDevice = cachedDevice;
+        mShowDisconnectedStateSubtitle = showDisconnectedStateSubtitle;
         mShowDevicesWithoutNames = SystemProperties.getBoolean(
                 BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY, false);
     }
@@ -99,7 +106,8 @@ public class BluetoothDevicePreference extends MultiActionPreference {
 
     private void refreshUi() {
         setTitle(mCachedDevice.getName());
-        setSummary(mCachedDevice.getCarConnectionSummary(/* shortSummary= */ true));
+        setSummary(mCachedDevice.getCarConnectionSummary(/* shortSummary= */ true,
+                mShowDisconnectedStateSubtitle));
 
         Pair<Drawable, String> pair = com.android.settingslib.bluetooth.BluetoothUtils
                 .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
