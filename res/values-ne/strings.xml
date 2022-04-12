@@ -135,9 +135,9 @@
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi का प्राथमिकताहरू"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi स्वतः अन गरियोस्"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तपाईंको घरको नेटवर्क जस्ता सेभ गरिएका उच्च गुणस्तरका नेटवर्कहरू नजिक हुँदा Wi‑Fi फेरि सक्रिय हुने छ"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान निष्क्रिय पारिएको हुनाले उपलब्ध छैन। "<annotation id="link">"स्थान"</annotation>" सक्रिय गर्नुहोस्।"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान निष्क्रिय पारिएको हुनाले उपलब्ध छैन। "<annotation id="link">"स्थान"</annotation>" अन गर्नुहोस्।"</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi स्क्यान गर्ने सुविधा सक्रिय गर्ने हो?"</string>
-    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"सक्रिय गर्नुहोस्"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"अन गर्नुहोस्"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi स्क्यान गर्ने सेवा सक्रिय छ"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Wi-Fi  बाट बदलेर स्वतः मोबाइल डेटा प्रयोग गर्नुहोस्"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi मार्फत इन्टरनेट उपलब्ध नभएको बेलामा मोबाइल डेटाको खपत गर्नुहोस्। डेटा प्रयोगको शुल्क लाग्न सक्छ।"</string>
@@ -821,8 +821,8 @@
       <item quantity="one">फोन एप</item>
     </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"बग रिपोर्ट सेयर गर्ने हो?"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका खातिर एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन्।"</string>
-    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका खातिर एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन् र तपाईंको डिभाइस केही समयका लागि सुस्त चल्न सक्छ।"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका लागि एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन्।"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका लागि एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन् र तपाईंको डिभाइस केही समयका लागि सुस्त चल्न सक्छ।"</string>
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"यो त्रुटिको रिपोर्ट यस सवारी साधनको सङ्गठनका प्रबन्धकसँग सेयर गरिँदै छ। यस सम्बन्धमा थप विवरणका लागि उहाँसँग सम्पर्क गर्नुहोस्।"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"सेयर गर्नुहोस्"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"अस्वीकार गर्नुहोस्"</string>
