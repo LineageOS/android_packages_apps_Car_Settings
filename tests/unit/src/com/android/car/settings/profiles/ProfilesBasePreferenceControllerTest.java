@@ -99,7 +99,8 @@ public class ProfilesBasePreferenceControllerTest {
         screen.addPreference(mPreferenceGroup);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
 
-        ExtendedMockito.when(ProfileHelper.getInstance(mContext)).thenReturn(mProfileHelper);
+        ExtendedMockito.doReturn(mProfileHelper)
+                .when(() -> ProfileHelper.getInstance(eq(mContext)));
         when(mProfileHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mProfileHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
         when(mProfileHelper.getAllSwitchableProfiles()).thenReturn(
