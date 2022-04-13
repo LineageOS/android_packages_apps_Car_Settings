@@ -179,8 +179,8 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নাম নথকা ডিভাইচ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"যোৰা লগোৱা ডিভাইচসমূহ"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"নতুন ডিভাইচ যোৰা লগাওক"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"যোৰা লগাবলৈ ব্লুটুথ অন হ’ব"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"নতুন ডিভাইচ পেয়াৰ কৰক"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"পেয়াৰ কৰিবলৈ ব্লুটুথ অন হ’ব"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ডিভাইচৰ সংযোগ বিচ্ছিন্ন কৰিবনে?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"আপোনাৰ বাহনৰ সৈতে <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ৰ সংযোগ বিচ্ছিন্ন হ’ব।"</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"বাহনৰ ব্লুটুথৰ ঠিকনা: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -208,18 +208,18 @@
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s সংযোগ কৰা হ’ল"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$sৰ সংযোগ বিচ্ছিন্ন কৰা হ’ল"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ব্লুটুথ যোৰা লগোৱাৰ অনুৰোধ"</string>
-    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"যোৰা লগাওক আৰু সংযোগ কৰক"</string>
+    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"পেয়াৰ আৰু সংযোগ কৰক"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ব্লুটুথ যোৰ লগোৱা ক’ড"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"পিনত বৰ্ণ বা প্ৰতীকবোৰ থাকে"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"যোৰা লগোৱা ক’ডটো টাইপ কৰক আৰু তাৰ পিছত ৰিটাৰ্ণ বা এণ্টাৰ কী হেঁচক"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ৰ সৈতে যোৰা লগাবনে?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ৰ সৈতে পেয়াৰ কৰিবনে?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ক আপোনাৰ সম্পৰ্কসূচী আৰু কলৰ ইতিহাস চাবলৈ দিয়ক"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"আপুনি এই পিনটো আনটো ডিভাইচত টাইপ কৰিবলগীয়াও হ’ব পাৰে৷"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"আপুনি এই পাছকীটো আনটো ডিভাইচত টাইপ কৰিবলগীয়াও হ’ব পাৰে৷"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"১৬টা অংকযুক্ত হ\'ব লাগিব"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"সচৰাচৰতে ০০০০ বা ১২৩৪"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"যোৰা লগোৱাৰ অনুৰোধ"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ৰ লগত যোৰা লগাবলৈ টিপক"</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ৰ লগত পেয়াৰ কৰিবলৈ টিপক"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ব্লুটুথ ডিভাইচ বাছনি কৰক"</string>
     <string name="language_settings" msgid="2079258598337245546">"ভাষা"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ভাষা আৰু ইনপুট"</string>
@@ -588,7 +588,7 @@
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"আপুনি ৱেবৰ যোগেৰে আপোনাৰ একাউণ্টত কৰা যিকোনো সাল-সলনি স্বয়ংক্ৰিয়ভাৱে আপোনাৰ বাহনত প্ৰতিফলিত হ’ব।\n\nকিছুমান একাউণ্টে আপুনি বাহনত কৰা সাল-সলনিসমূহো স্বয়ংক্ৰিয়ভাৱে ৱেবলৈ প্ৰতিলিপি কৰিব পাৰে।"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"স্বয়ংক্ৰিয়ভাৱে ডেটা ছিংক কৰাৰ অনুমতি বাতিল কৰিবনে?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ইয়ে ডেটা ৰাহি কৰিব, কিন্তু আপুনি শেহতীয়া তথ্য পাবলৈ নিজে নিজে প্ৰতিটো একাউণ্ট ছিংক কৰিব লাগিব। আৰু আপডে’ট আহিলে আপুনি তাৰ জাননী নাপাব।"</string>
-    <string name="account_details_title" msgid="7529571432258448573">"একাউণ্টৰ তথ্য়"</string>
+    <string name="account_details_title" msgid="7529571432258448573">"একাউণ্টৰ তথ্য"</string>
     <string name="add_account_title" msgid="5988746086885210040">"একাউণ্ট যোগ কৰক"</string>
     <string name="add_an_account" msgid="1072285034300995091">"একাউণ্ট যোগ কৰক"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"সীমিত প্ৰ\'ফাইলসমূহে একাউণ্ট যোগ কৰিব নোৱাৰে"</string>
