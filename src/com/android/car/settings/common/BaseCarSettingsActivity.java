@@ -160,6 +160,8 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         if (shouldFocusContentOnLaunch()) {
             requestContentPaneFocus();
             mHasInitialFocus = true;
+        } else {
+            requestTopLevelMenuFocus();
         }
         setUpFocusChangeListener(true);
     }
@@ -452,7 +454,15 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         if (focusArea == null) {
             return;
         }
-        focusArea.performAccessibilityAction(ACTION_FOCUS, /* arguments= */ null);
+        removeGlobalLayoutListener();
+        mGlobalLayoutListener = () -> {
+            if (focusArea.isInTouchMode() || focusArea.hasFocus()) {
+                return;
+            }
+            focusArea.performAccessibilityAction(ACTION_FOCUS, /* arguments= */ null);
+            removeGlobalLayoutListener();
+        };
+        fragmentView.getViewTreeObserver().addOnGlobalLayoutListener(mGlobalLayoutListener);
     }
 
     private void requestContentPaneFocus() {
@@ -479,22 +489,20 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                 return;
             }
         }
+        removeGlobalLayoutListener();
         View finalFocusArea = focusArea; // required to be effectively final for inner class access
-        mGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                if (finalFocusArea.isInTouchMode() || finalFocusArea.hasFocus()) {
-                    return;
-                }
-                boolean success = finalFocusArea.performAccessibilityAction(
+        mGlobalLayoutListener = () -> {
+            if (finalFocusArea.isInTouchMode() || finalFocusArea.hasFocus()) {
+                return;
+            }
+            boolean success = finalFocusArea.performAccessibilityAction(
+                    ACTION_FOCUS, /* arguments= */ null);
+            if (success) {
+                removeGlobalLayoutListener();
+            } else {
+                findViewById(
+                        R.id.settings_focus_parking_view).performAccessibilityAction(
                         ACTION_FOCUS, /* arguments= */ null);
-                if (success) {
-                    removeGlobalLayoutListener();
-                } else {
-                    findViewById(
-                            R.id.settings_focus_parking_view).performAccessibilityAction(
-                            ACTION_FOCUS, /* arguments= */ null);
-                }
             }
         };
         fragmentView.getViewTreeObserver().addOnGlobalLayoutListener(mGlobalLayoutListener);
@@ -504,15 +512,21 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         if (mGlobalLayoutListener == null) {
             return;
         }
-        if (getCurrentFragment() == null) {
-            return;
+
+        // Check content pane
+        Fragment contentFragment = getCurrentFragment();
+        if (contentFragment != null && contentFragment.getView() != null) {
+            contentFragment.getView().getViewTreeObserver()
+                    .removeOnGlobalLayoutListener(mGlobalLayoutListener);
         }
-        View fragmentView = getCurrentFragment().getView();
-        if (fragmentView == null) {
-            return;
+
+        // Check top level menu
+        Fragment topLevelMenu = getSupportFragmentManager().findFragmentById(R.id.top_level_menu);
+        if (topLevelMenu != null && topLevelMenu.getView() != null) {
+            topLevelMenu.getView().getViewTreeObserver()
+                    .removeOnGlobalLayoutListener(mGlobalLayoutListener);
         }
-        fragmentView.getViewTreeObserver()
-                .removeOnGlobalLayoutListener(mGlobalLayoutListener);
+
         mGlobalLayoutListener = null;
     }
 
