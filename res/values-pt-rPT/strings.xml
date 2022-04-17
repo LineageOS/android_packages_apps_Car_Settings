@@ -38,7 +38,7 @@
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rede móvel"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Utilizar dados móveis"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Desativada"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Pretende desativar os dados móveis?"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Desativar os dados móveis?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"A seleção é necessária."</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g> para dados móveis?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Está a utilizar o operador <xliff:g id="CARRIER2_0">%2$s</xliff:g> para dados móveis. Se mudar para o operador <xliff:g id="CARRIER1">%1$s</xliff:g>, o operador <xliff:g id="CARRIER2_1">%2$s</xliff:g> deixa de ser utilizado para dados móveis."</string>
@@ -136,7 +136,7 @@
     <string name="wifi_wakeup" msgid="7451825226044542000">"Ativar o Wi‑Fi automaticamente"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi é reativ. quando perto de redes de alta qual. guard., como a rede domést."</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisp. porque a localiz. está desativ. Ative a "<annotation id="link">"localização"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Pretende ativar a procura de Wi‑Fi?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Ativar a procura de Wi‑Fi?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Ativar"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Procura de Wi-Fi ativada"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mude automaticamente para os dados móveis"</string>
@@ -537,7 +537,7 @@
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Limite de perfis atingido"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Apenas pode criar um perfil.}other{Pode criar até # perfis.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Não foi possível criar um perfil novo"</string>
-    <string name="delete_user_dialog_title" msgid="575517556232943687">"Pretende eliminar este perfil?"</string>
+    <string name="delete_user_dialog_title" msgid="575517556232943687">"Eliminar este perfil?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"Todos os dados e apps deste perfil serão eliminados"</string>
     <string name="delete_user_error_title" msgid="287249031795906102">"Perfil não eliminado. Pode reiniciar o dispositivo e repetir."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Este perfil vai ser eliminado quando mudar de perfil ou arrancar novamente o veículo"</string>
