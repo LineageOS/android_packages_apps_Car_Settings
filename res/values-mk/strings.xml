@@ -456,7 +456,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Авторски права"</string>
     <string name="license_title" msgid="936705938435249965">"Лиценца"</string>
     <string name="terms_title" msgid="5201471373602628765">"Одредби и услови"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Системски лиценци за WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Лиценци за System WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Тапети"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Извор на сателитски снимки:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Модел"</string>
@@ -585,16 +585,16 @@
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Автоматска синхронизација на податоци"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Дозволи апликациите автоматски да ги освежуваат податоците"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Да се дозволи автоматско синхронизирање податоци?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Сите промени што ќе ги направите на вашите сметки на интернет автоматски ќе се ископираат на возилото.\n\nНекои сметки можеби автоматски ќе ги ископираат и промените што ги вршите од возилотот на интернет."</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Сите промени што ќе ги извршите на вашите сметки во прелистувачот ќе се ископираат автоматски и во возилото.\n\nКај некои сметки, сите извршени промени преку возилото може да се ископираат автоматски и во прелистувачот."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Да се забрани автоматско синхронизирање податоци?"</string>
-    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ова ќе ви заштеди интернет, но ќе треба да ја синхронизирате секоја сметка рачно за да се соберат најновите информации. Освен тоа, нема да добивате известувања за ажурирања."</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ова ќе ви заштеди интернет, но ќе треба да ја синхронизирате секоја сметка рачно за да се приберат најновите информации. Освен тоа, нема да добивате известувања за ажурирања."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Информации за сметката"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Додајте сметка"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Додајте сметка"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Ограничените профили не можат да додаваат сметки"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Отстрани сметка"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Да се отстрани сметката?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"Со отстранување на оваа сметка ќе се избришат сите нејзини пораки, контакти и другите податоци од уредот!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"Ако ја отстраните оваа сметка, од уредот ќе се избришат сите нејзини пораки, контакти и други податоци."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Не успеа да се отстрани сметката."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Синхронизирање сметка"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Синхронизацијата е вклучена за <xliff:g id="ID_1">%1$d</xliff:g> од <xliff:g id="ID_2">%2$d</xliff:g> ставки"</string>
@@ -840,7 +840,7 @@
     <string name="captions_settings_on" msgid="5374984113566914978">"Вклучено"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"Читач на екран"</string>
     <string name="show_captions_toggle_title" msgid="710582308974826311">"Прикажувај титлови"</string>
-    <string name="captions_text_size_title" msgid="1960814652560877963">"Големина на текст"</string>
+    <string name="captions_text_size_title" msgid="1960814652560877963">"Големина на текстот"</string>
     <string name="captions_settings_style_header" msgid="944591388386054372">"Големина и стил на титловите"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Многу мал"</string>
     <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Мал"</string>
