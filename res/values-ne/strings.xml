@@ -355,7 +355,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"कुनै पनि होइन"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चयन गरिएको"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका अनुप्रयोगहरूबारे जानकारी पढ्न सक्ने छ।"</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो एपमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस एपले स्वतः भर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो एपमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस एपले अटोफिल गर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा थप्नुहोस्"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"लिंकहरू खोल्दा"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"इन्स्टल गरिएका एपहरू"</string>
@@ -597,8 +597,8 @@
     <string name="really_remove_account_message" msgid="4296769280849579900">"यो खातालाई हटाउनुले यस डिभाइसबाट यस खातामा रहेका सम्पूर्ण सन्देश, सम्पर्कहरू र अन्य डेटा मेटाउने छ!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"खाता हटाउन सकिएन।"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"खाताको सिंक"</string>
-    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> मध्ये <xliff:g id="ID_1">%1$d</xliff:g> वस्तु सिंक गर्ने सुविधा अन छ"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सबै वस्तु सिंक गर्ने सुविधा अन छ"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> मध्ये <xliff:g id="ID_1">%1$d</xliff:g> वस्तुका हकमा सिंक अन छ"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सबै वस्तुका हकमा सिंक अन छ"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"सिंक गर्ने सुविधा पूर्णतया अफ छ"</string>
     <string name="sync_disabled" msgid="393531064334628258">"सिंक निष्क्रिय छ"</string>
     <string name="sync_error" msgid="6698021343089247914">"सिंकसम्बन्धी त्रुटि"</string>
