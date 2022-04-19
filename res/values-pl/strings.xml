@@ -66,7 +66,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Data resetowania cyklu transmisji danych"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Data w każdym miesiącu:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Ustaw"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Ostrzeżenie dotyczące danych i limit"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Ostrzeżenie dotyczące limitu danych"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cykl użycia danych w aplikacjach"</string>
     <string name="mobile_data_usage" msgid="8171519864391091861">"Użycie mobilnej transmisji danych"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Ustaw ostrzeżenie dotyczące danych"</string>
@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Ustaw limit danych"</string>
     <string name="data_limit" msgid="227338836292511425">"Limit danych"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograniczanie użycia danych"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Po osiągnięciu ustawionego przez Ciebie limitu serwer pojazdu wyłączy mobilną transmisję danych.\n\nPonieważ transmisję danych mierzy serwer i może to robić inaczej niż operator, dobrze jest ustawić mniejszy limit."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Po osiągnięciu ustawionego przez Ciebie limitu serwer pojazdu wyłączy mobilną transmisję danych.\n\nSerwer może obliczać ilość przesłanych danych inaczej niż operator sieci komórkowej, więc pomyśl o ustawieniu niższego, bezpiecznego limitu."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ustawianie ostrzeżenia o użyciu danych"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ustawianie limitu użycia danych"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Użycie danych jest mierzone przez urządzenie. Może się różnić w zależności od połączenia danych operatora komórkowego."</string>
