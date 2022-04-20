@@ -16,6 +16,7 @@
 
 package com.android.car.settings.bluetooth;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -36,6 +37,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager.BluetoothManagerC
 final class BluetoothUtils {
     private static final Logger LOG = new Logger(BluetoothUtils.class);
     private static final String SHARED_PREFERENCES_NAME = "bluetooth_settings";
+    private static final String CAR_SYSTEMUI_PACKAGE_NAME = "com.android.systemui";
 
     private static final BluetoothManagerCallback mOnInitCallback = new BluetoothManagerCallback() {
         @Override
@@ -177,5 +179,21 @@ final class BluetoothUtils {
 
     public static LocalBluetoothManager getLocalBtManager(Context context) {
         return LocalBluetoothManager.getInstance(context, mOnInitCallback);
+    }
+
+    /**
+     * Determines whether to enable bluetooth scanning or not depending on the calling package. The
+     * calling package should be Settings or SystemUi.
+     *
+     * @param context The context to call
+     * @param callingPackageName The package name of the calling activity
+     * @return Whether bluetooth scanning should be enabled
+     */
+    public static boolean shouldEnableBTScanning(Context context, String callingPackageName) {
+        // Find Settings package name
+        String settingsPackageName = context.getPackageName();
+
+        return TextUtils.equals(callingPackageName, settingsPackageName)
+                || TextUtils.equals(callingPackageName, CAR_SYSTEMUI_PACKAGE_NAME);
     }
 }
