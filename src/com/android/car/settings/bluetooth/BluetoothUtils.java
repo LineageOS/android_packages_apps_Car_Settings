@@ -25,6 +25,7 @@ import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFra
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByUm;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -220,5 +221,38 @@ final class BluetoothUtils {
 
     public static LocalBluetoothManager getLocalBtManager(Context context) {
         return LocalBluetoothManager.getInstance(context, mOnInitCallback);
+    }
+
+    /**
+     * Determines whether to enable bluetooth scanning or not depending on the calling package. The
+     * calling package should be Settings or SystemUi.
+     *
+     * @param context The context to call
+     * @param callingPackageName The package name of the calling activity
+     * @return Whether bluetooth scanning should be enabled
+     */
+    public static boolean shouldEnableBTScanning(Context context, String callingPackageName) {
+        // Find Settings package name
+        String settingsPackageName = context.getPackageName();
+
+        // Find SystemUi package name
+        String systemUiPackageName;
+        String flattenName = context.getResources()
+                .getString(com.android.internal.R.string.config_systemUIServiceComponent);
+        if (TextUtils.isEmpty(flattenName)) {
+            throw new IllegalStateException("No "
+                    + "com.android.internal.R.string.config_systemUIServiceComponent resource");
+        }
+        try {
+            ComponentName componentName = ComponentName.unflattenFromString(flattenName);
+            systemUiPackageName =  componentName.getPackageName();
+        } catch (RuntimeException e) {
+            throw new IllegalStateException("Invalid component name defined by "
+                    + "com.android.internal.R.string.config_systemUIServiceComponent resource: "
+                    + flattenName);
+        }
+
+        return TextUtils.equals(callingPackageName, settingsPackageName)
+                || TextUtils.equals(callingPackageName, systemUiPackageName);
     }
 }
