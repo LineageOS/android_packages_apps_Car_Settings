@@ -648,7 +648,7 @@
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"تم تسجيل النقش."</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ارسم النقش مرة أخرى للتأكيد."</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"صِل 4 نقاط على الأقل. أعد المحاولة."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"نقش غير صحيح"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"النقش غير صحيح."</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"كيفية رسم نقش فتح القفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"حدث خطأ أثناء حفظ النقش."</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تم إجراء عدد كبير جدًا من المحاولات غير الصحيحة. أعِد المحاولة خلال <xliff:g id="NUMBER">%d</xliff:g> ثانية."</string>
@@ -664,13 +664,13 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"إعادة إدخال رقم التعريف الشخصي"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"يجب أن يتكوّن PIN من‏ 4 أرقام على الأقل."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"رقم التعريف الشخصي غير صالح لأنه يجب أن يحتوي على 4 أرقام على الأقل."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"أرقام PIN غير متطابقة"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"رقما التعريف الشخصي غير متطابقَين"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"حدث خطأ أثناء حفظ رقم التعريف الشخصي."</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"رقم تعريف شخصي خاطئ"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"كلمة مرور غير صحيحة"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"للحفاظ على الأمان، يجب تعيين كلمة مرور."</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"إعادة إدخال كلمة المرور"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"كلمات المرور غير متطابقة"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"كلمتا المرور غير متطابقتَين"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"محو"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"إلغاء"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تأكيد"</string>
