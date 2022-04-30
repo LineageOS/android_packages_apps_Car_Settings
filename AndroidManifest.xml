@@ -933,7 +933,7 @@
         </activity>
 
         <activity android:name=".notifications.NotificationAccessConfirmationActivity"
-            android:exported="true"
+            android:exported="false"
             android:taskAffinity="com.android.car.settings.notifications.NotificationAccessConfirmationActivity"
             android:theme="@style/ActionDialogTheme"
             />
