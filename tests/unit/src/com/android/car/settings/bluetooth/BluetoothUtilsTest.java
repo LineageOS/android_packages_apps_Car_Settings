@@ -22,10 +22,12 @@ import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
@@ -44,15 +46,21 @@ public final class BluetoothUtilsTest {
 
     private static final String TEST_RESTRICTION =
             android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
+    private static final String SYSTEM_UI_PACKAGE_NAME = "com.package.systemui";
+    private static final String SYSTEM_UI_COMPONENT_NAME = "com.package.systemui/testclass";
     private final Context mContext = spy(ApplicationProvider.getApplicationContext());
 
     @Mock
     private UserManager mMockUserManager;
+    @Mock
+    private Resources mMockResources;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
+        when(mContext.getResources()).thenReturn(mMockResources);
+        when(mMockResources.getString(anyInt())).thenReturn(SYSTEM_UI_COMPONENT_NAME);
     }
 
     @Test
@@ -86,5 +94,23 @@ public final class BluetoothUtilsTest {
 
         assertThat(BluetoothUtils.getAvailabilityStatusRestricted(mContext))
                 .isEqualTo(DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void isSystemCallingPackage_shouldEnableBluetoothScanning() {
+        String settingsPackage = mContext.getPackageName();
+
+        assertThat(BluetoothUtils.shouldEnableBTScanning(mContext, settingsPackage))
+                .isEqualTo(true);
+        assertThat(BluetoothUtils.shouldEnableBTScanning(mContext, SYSTEM_UI_PACKAGE_NAME))
+                .isEqualTo(true);
+    }
+
+    @Test
+    public void isNotSystemCallingPackage_shouldNotEnableBluetoothScanning() {
+        String fakePackage = "not.real.package";
+
+        assertThat(BluetoothUtils.shouldEnableBTScanning(mContext, fakePackage))
+                .isEqualTo(false);
     }
 }
