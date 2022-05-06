@@ -82,6 +82,23 @@ public class RingtonePreferenceController extends
 
             Uri ringtoneUri = data.getParcelableExtra(
                     RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+
+            if (ringtoneUri != null) {
+                String mimeType = mUserContext.getContentResolver().getType(ringtoneUri);
+                if (mimeType == null) {
+                    LOG.e("onSaveRingtone for URI:" + ringtoneUri
+                            + " ignored: failure to find mimeType (no access from this context?)");
+                    return;
+                }
+
+                if (!(mimeType.startsWith("audio/") || mimeType.equals("application/ogg"))) {
+                    LOG.e("onSaveRingtone for URI:" + ringtoneUri
+                            + " ignored: associated mimeType:" + mimeType
+                            + " is not an audio type");
+                    return;
+                }
+            }
+
             RingtoneManager.setActualDefaultRingtoneUri(mUserContext,
                     getPreference().getRingtoneType(), ringtoneUri);
             refreshUi();
