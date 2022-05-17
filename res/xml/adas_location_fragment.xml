@@ -31,7 +31,7 @@
             settings:controller="com.android.car.settings.location.AdasLocationSwitchSubMenuPreferenceController"/>
         <com.android.car.settings.common.DividerPreference/>
     </com.android.car.settings.common.LogicalPreferenceGroup>
-    <Preference
+    <com.android.car.ui.preference.CarUiFooterPreference
         android:key="@string/pk_location_footer"
         android:summary="@string/adas_settings_footer"
         android:icon="@drawable/ic_settings_about"
