@@ -22,6 +22,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assume.assumeTrue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
@@ -125,6 +126,7 @@ public class BluetoothScanningDevicesGroupPreferenceControllerTest {
                 BluetoothUtils.class, withSettings().lenient()).startMocking();
         when(BluetoothUtils.getLocalBtManager(any())).thenReturn(
                 mMockManager);
+        when(BluetoothUtils.shouldEnableBTScanning(eq(mContext), any())).thenReturn(true);
         when(mDevice.getBondState()).thenReturn(BluetoothDevice.BOND_NONE);
         when(mCachedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_NONE);
         when(mCachedDevice.getDevice()).thenReturn(mDevice);
@@ -259,6 +261,18 @@ public class BluetoothScanningDevicesGroupPreferenceControllerTest {
         mController.refreshUi();
 
         verify(mBluetoothAdapter).setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
+    }
+
+    @Test
+    public void refreshUi_notValidCallingPackage_doesNotSetScanMode() {
+        when(BluetoothUtils.shouldEnableBTScanning(eq(mContext), any())).thenReturn(false);
+        mController.onCreate(mLifecycleOwner);
+        mController.onStart(mLifecycleOwner);
+
+        mController.refreshUi();
+
+        verify(mBluetoothAdapter, never())
+                .setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
     }
 
     @Test
