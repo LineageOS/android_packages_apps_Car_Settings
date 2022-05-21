@@ -19,6 +19,8 @@ package com.android.car.settings.bluetooth;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assume.assumeTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
@@ -136,6 +138,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking();
         when(BluetoothUtils.getLocalBtManager(mContext)).thenReturn(mLocalBluetoothManager);
+        when(BluetoothUtils.shouldEnableBTScanning(eq(mContext), any())).thenReturn(true);
         BluetoothManager bluetoothManager = mock(BluetoothManager.class);
         when(bluetoothManager.getAdapter()).thenReturn(mMockBluetoothAdapter);
         when(mContext.getSystemService(BluetoothManager.class)).thenReturn(bluetoothManager);
