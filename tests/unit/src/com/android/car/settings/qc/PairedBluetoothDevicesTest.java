@@ -148,23 +148,41 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void getQCItem_hasDevices_hasRows() {
         addBluetoothDevice("Device1", /* connected= */ true, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         addBluetoothDevice("Device2",  /* connected= */ true, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         assertThat(list.getRows().size()).isEqualTo(2);
     }
 
     @Test
+    public void getQCItem_hasDevices_onlyDisplaysHumanReadableNames() {
+        addBluetoothDevice("Device1", /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
+        addBluetoothDevice("Device2",  /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ false);
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        assertThat(list.getRows().size()).isEqualTo(1);
+    }
+
+    @Test
     public void getQCItem_limitsDeviceCount() {
         addBluetoothDevice("Device1", /* connected= */ true, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         addBluetoothDevice("Device2",  /* connected= */ false, /* busy= */ false,
-                /* phoneEnabled= */ false, /* mediaEnabled= */ false);
+                /* phoneEnabled= */ false, /* mediaEnabled= */ false,
+                /* hasHumanReadableName= */ true);
         addBluetoothDevice("Device3",  /* connected= */ false, /* busy= */ false,
-                /* phoneEnabled= */ false, /* mediaEnabled= */ false);
+                /* phoneEnabled= */ false, /* mediaEnabled= */ false,
+                /* hasHumanReadableName= */ true);
         addBluetoothDevice("Device4",  /* connected= */ false, /* busy= */ false,
-                /* phoneEnabled= */ false, /* mediaEnabled= */ false);
+                /* phoneEnabled= */ false, /* mediaEnabled= */ false,
+                /* hasHumanReadableName= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         assertThat(list.getRows().size()).isEqualTo(3);
     }
@@ -172,7 +190,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void getQCItem_setsTitle() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
         assertThat(row.getTitle()).isEqualTo(DEFAULT_NAME);
@@ -181,7 +200,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void getQCItem_bluetoothDisabled_togglesUpdated() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ false, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
         QCActionItem btToggle = row.getEndItems().get(0);
@@ -196,7 +216,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void getQCItem_bluetoothEnabled_togglesUpdated() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
         QCActionItem btToggle = row.getEndItems().get(0);
@@ -215,7 +236,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void getQCItem_isBusy_togglesDisabled() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ true,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
         QCActionItem btToggle = row.getEndItems().get(0);
@@ -229,7 +251,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void getQCItem_hasBaseUmRestriction_togglesDisabled() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         setBaseUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
@@ -246,7 +269,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void getQCItem_hasUmRestriction_togglesClickableWhileDisabled() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         setUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH, /* restricted= */ true);
         QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
         QCRow row = list.getRows().get(0);
@@ -263,7 +287,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void onNotifyChange_toggleBluetooth() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ false, /* busy= */ true,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         Intent intent = new Intent();
         intent.putExtra(EXTRA_DEVICE_KEY, DEFAULT_ADDRESS);
         intent.putExtra(EXTRA_BUTTON_TYPE, BLUETOOTH_BUTTON);
@@ -276,7 +301,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void onNotifyChange_togglePhone() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ false, /* busy= */ true,
-                /* phoneEnabled= */ false, /* mediaEnabled= */ true);
+                /* phoneEnabled= */ false, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
         Intent intent = new Intent();
         intent.putExtra(EXTRA_DEVICE_KEY, DEFAULT_ADDRESS);
         intent.putExtra(EXTRA_BUTTON_TYPE, PHONE_BUTTON);
@@ -290,7 +316,8 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     @Test
     public void onNotifyChange_toggleMedia() {
         addBluetoothDevice(DEFAULT_NAME, /* connected= */ false, /* busy= */ true,
-                /* phoneEnabled= */ true, /* mediaEnabled= */ false);
+                /* phoneEnabled= */ true, /* mediaEnabled= */ false,
+                /* hasHumanReadableName= */ true);
         Intent intent = new Intent();
         intent.putExtra(EXTRA_DEVICE_KEY, DEFAULT_ADDRESS);
         intent.putExtra(EXTRA_BUTTON_TYPE, MEDIA_BUTTON);
@@ -302,7 +329,7 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
     }
 
     private void addBluetoothDevice(String name, boolean connected, boolean busy,
-            boolean phoneEnabled, boolean mediaEnabled) {
+            boolean phoneEnabled, boolean mediaEnabled, boolean hasHumanReadableName) {
         CachedBluetoothDevice cachedDevice = mock(CachedBluetoothDevice.class);
         BluetoothDevice device = mock(BluetoothDevice.class);
         when(cachedDevice.getDevice()).thenReturn(device);
@@ -312,6 +339,7 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
         when(cachedDevice.isConnected()).thenReturn(connected);
         when(cachedDevice.isBusy()).thenReturn(busy);
         when(cachedDevice.getCarConnectionSummary(anyBoolean())).thenReturn(DEFAULT_SUMMARY);
+        when(cachedDevice.hasHumanReadableName()).thenReturn(hasHumanReadableName);
         BluetoothClass btClass = mock(BluetoothClass.class);
         when(cachedDevice.getBtClass()).thenReturn(btClass);
         when(btClass.getMajorDeviceClass()).thenReturn(BluetoothClass.Device.Major.PHONE);
