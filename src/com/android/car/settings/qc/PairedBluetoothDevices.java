@@ -34,6 +34,7 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemProperties;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.VisibleForTesting;
@@ -43,6 +44,7 @@ import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
+import com.android.car.settings.bluetooth.BluetoothUtils;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -74,12 +76,15 @@ public class PairedBluetoothDevices extends SettingsQCItem {
 
     private final LocalBluetoothManager mBluetoothManager;
     private final int mDeviceLimit;
+    private final boolean mShowDevicesWithoutNames;
 
     public PairedBluetoothDevices(Context context) {
         super(context);
         mBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */ null);
         mDeviceLimit = context.getResources().getInteger(
                 R.integer.config_qc_bluetooth_device_limit);
+        mShowDevicesWithoutNames = SystemProperties.getBoolean(
+                BluetoothUtils.BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY, false);
     }
 
     @Override
@@ -130,15 +135,17 @@ public class PairedBluetoothDevices extends SettingsQCItem {
                 : filteredDevices.size();
         for (int j = 0; j < deviceLimit; j++) {
             CachedBluetoothDevice cachedDevice = filteredDevices.get(j);
-            listBuilder.addRow(new QCRow.Builder()
-                    .setTitle(cachedDevice.getName())
-                    .setSubtitle(cachedDevice.getCarConnectionSummary(/* shortSummary= */ true))
-                    .setIcon(Icon.createWithResource(getContext(), getIconRes(cachedDevice)))
-                    .addEndItem(createBluetoothButton(cachedDevice, i++))
-                    .addEndItem(createPhoneButton(cachedDevice, i++))
-                    .addEndItem(createMediaButton(cachedDevice, i++))
-                    .build()
-            );
+            if (mShowDevicesWithoutNames || cachedDevice.hasHumanReadableName()) {
+                listBuilder.addRow(new QCRow.Builder()
+                        .setTitle(cachedDevice.getName())
+                        .setSubtitle(cachedDevice.getCarConnectionSummary(/* shortSummary= */ true))
+                        .setIcon(Icon.createWithResource(getContext(), getIconRes(cachedDevice)))
+                        .addEndItem(createBluetoothButton(cachedDevice, i++))
+                        .addEndItem(createPhoneButton(cachedDevice, i++))
+                        .addEndItem(createMediaButton(cachedDevice, i++))
+                        .build()
+                );
+            }
         }
 
         return listBuilder.build();
