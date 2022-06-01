@@ -62,10 +62,14 @@ android_app {
         "CarSettings-core",
     ],
 
+    libs: [
+        "android.car",
+    ],
+
     certificate: "platform",
 
     optimize: {
-        enabled: false,
+        proguard_flags_files: ["proguard.flags"],
     },
 
     privileged: true,
