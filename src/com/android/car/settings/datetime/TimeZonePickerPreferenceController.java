@@ -65,7 +65,7 @@ public class TimeZonePickerPreferenceController extends PreferenceController<Pre
     @Override
     protected void onStartInternal() {
         getContext().registerReceiver(mTimeChangeReceiver, mIntentFilter,
-                Context.RECEIVER_EXPORTED_UNAUDITED);
+                Context.RECEIVER_NOT_EXPORTED);
     }
 
     /** Stops the broadcast receiver which listens for time changes */
