@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Басқа құрылғылар <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> хотспотына қосыла алады."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Хотспот құпия сөзі"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Қауіпсіздік"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Жоқ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP диапазоны"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Бас тарту"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Растау"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Ең кемі 4 таңбадан тұруы керек"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Кемінде <xliff:g id="COUNT">%d</xliff:g> таңба болуы керек."</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN коды кемінде <xliff:g id="COUNT">%d</xliff:g> таңбадан тұруы керек"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Ең көбі <xliff:g id="NUMBER">%d</xliff:g> таңба болуы керек"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Ең көбі <xliff:g id="NUMBER">%d</xliff:g> сан болуы керек"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Тек 0-9 арасындағы сандар болуы керек."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Құрылғы әкімшісі жақында пайдаланылған PIN кодын қолдануға рұқсат бермейді"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Әкімшіңіз оңай PIN кодтарына тыйым салды. Басқа PIN кодын енгізіп көріңіз."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Құрылғы әкімшісі соңғы құпия сөзді қолдануға рұқсат бермейді"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Құпия сөзді сақтау кезінде қате кетті"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Әкімшіңіз оңай құпия сөздерге тыйым салды. Басқа құпия сөз енгізіп көріңіз."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Сандардың артатын, кемитін немесе қайталанатын ретіне рұқсат берілмейді"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Кемінде бір әріп болуы керек."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Кемінде бір сан болуы керек."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Кемінде бір таңба болуы керек."</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Кемінде # әріп болуы керек.}other{Кемінде # әріп болуы керек.}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Кемінде # кіші әріп болуы керек.}other{Кемінде # кіші әріп болуы керек.}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Кемінде # бас әріп болуы керек.}other{Кемінде # бас әріп болуы керек.}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Кемінде # цифр болуы керек.}other{Кемінде # цифр болуы керек.}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Кемінде # арнайы таңба болуы керек.}other{Кемінде # арнайы таңба болуы керек.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Кемінде # әріпке жатпайтын таңба болуы керек.}other{Кемінде # әріпке жатпайтын таңба болуы керек.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Кемінде # цифрға жатпайтын таңба болуы керек.}other{Кемінде # цифрға жатпайтын таңба болуы керек.}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Кемінде # таңба болуы керек.}other{Кемінде # таңба болуы керек.}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Кемінде # цифр болуы керек.}other{Кемінде # цифр болуы керек.}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Ең көбі # таңба болуы керек.}other{Ең көбі # таңба болуы керек.}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Ең көбі # цифр болуы керек.}other{Ең көбі # цифр болуы керек.}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Сандардың артатын, кемитін немесе қайталанатын ретіне рұқсат берілмейді"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды құлыптау опциялары"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн бұрын"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Тіркелу деректерін өшіру"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> көлік саясаты"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Параметрлерді ұйым басқарушысы басқарады."</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> туралы толығырақ ақпарат"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Басқарылатын көлік туралы ақпарат"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Автопарк әкімшісі басқаратын параметрлер"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Осы басқарылатын көліктегі деректерді пайдалану үшін автопарк әкімшісі ақпараттық-сауықтық жүйеде параметрлерді өзгертіп, бағдарламалық құрал орната алады.\n\nҚосымша мәліметтер алу үшін автопарк әкімшісіне хабарласыңыз."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Автопарк әкімшісі көре алатын ақпарат"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Автопарк әкімшісі енгізген өзгерістер"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Басқарылатын көлік аккаунтымен байланыстырылған дерек"</li>\n" "<li>"Басқарылатын көліктегі қолданбалар тізімі"</li>\n" "<li>"Әр қолданбада жұмсалған уақыт пен дерек мөлшері"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Ақпараттық-сауықтық жүйеге кіру"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Көліктегі қолданбалар тізімі"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Қолданба саны шамамен алынған. Бұған Play Store дүкенінен тыс орнатылған қолданбалар кірмеуі мүмкін."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Кемінде <xliff:g id="COUNT_1">%d</xliff:g> қолданба</item>
+      <item quantity="one">Кемінде <xliff:g id="COUNT_0">%d</xliff:g> қолданба</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> қолданба</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> қолданба</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Желі трафигінің ең соңғы журналы"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Қателер туралы ең соңғы есеп"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Ең соңғы қауіпсіздік журналы"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Ешқандай"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Орнатылған қолданбалар"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Геодерек пайдалану рұқсаттары"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Микрофон пайдалану рұқсаттары"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Камера пайдалану рұқсаттары"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Әдепкі қолданбалар"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Әдепкі пернетақта"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> орнатылды."</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Ғаламдық HTTP прокси-сервері орнатылды."</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Жеке профильдегі сенімді тіркелу деректері"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Әкімші ақпараттық-сауықтық жүйені құлыптай және құпия сөзді қайта орната алады."</li>\n" "<li>"Әкімші ақпараттық-сауықтық жүйедегі деректі өшіре алады."</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Құпия сөз бірнеше рет қате енгізілсе, ақпараттық-сауықтық жүйедегі барлық дерек жойылады."</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Құпия сөз бірнеше рет қате енгізілсе, профиль дерегі жойылады."</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> әрекет</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> әрекет</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Камера қолданбалары</item>
+      <item quantity="one">Камера қолданбасы</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Электрондық поштаның клиенттік қолданбалары</item>
+      <item quantity="one">Электрондық поштаның клиенттік қолданбасы</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Телефон қолданбалары</item>
+      <item quantity="one">Телефон қолданбасы</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Қате туралы есеп бөлісілсін бе?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Бұл көлік ұйымының басқарушысы осы құрылғының ақауларын жоюға көмектесу үшін қате туралы есепті сұрады. Қолданбалар мен дерек бөлісілуі мүмкін."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Бұл көлік ұйымының басқарушысы осы құрылғының ақауларын жоюға көмектесу үшін қате туралы есепті сұрады. Қолданбалар мен дерек бөлісілуі, құрылғыңыз уақытша баяулауы мүмкін."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Ақтағы қара"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Қарадағы сары"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Көктегі сары"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Экранды оқу құралы"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Өшіру"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Экрандағы элементтерді дауыстап оқу"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> қолданбасын пайдалану"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Oпциялар"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Параметрлер"</string>
 </resources>

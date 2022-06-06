@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"يمكن توصيل الأجهزة الأخرى بشبكة <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"كلمة مرور نقطة الاتصال"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"الأمان"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"بلا"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"نطاق نقطة الوصول"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"إلغاء"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تأكيد"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"يجب أن تتكوَّن كلمة المرور من 4 أحرف على الأقل."</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"يجب أن تحتوي على <xliff:g id="COUNT">%d</xliff:g> حرف على الأقل."</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"يجب أن يحتوي PIN على <xliff:g id="COUNT">%d</xliff:g> رقم على الأقل."</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"يجب ألا تزيد كلمة المرور عن <xliff:g id="NUMBER">%d</xliff:g> حرف."</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"يجب ألا يزيد رقم التعريف الشخصي عن <xliff:g id="NUMBER">%d</xliff:g> رقم."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"يجب أن يحتوي رقم التعريف الشخصي على أرقام من ۰ إلى ٩ فقط."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"لا يسمح مشرف الجهاز باستخدام رقم تعريف شخصي تم استخدامه مؤخرًا."</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"حظرَ مشرف تكنولوجيا المعلومات استخدام أرقام التعريف الشخصية الشائعة. جرِّب استخدام رقم تعريف شخصي مختلف."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"لا يسمح مشرف الجهاز باستخدام كلمة مرور تم استخدامها مؤخرًا."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"حدث خطأ أثناء حفظ كلمة المرور."</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"حظرَ مشرف تكنولوجيا المعلومات استخدام كلمات المرور الشائعة. جرِّب استخدام كلمة مرور مختلفة."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"لا يُسمح باستخدام الترتيب التصاعدي أو التنازلي أو المكرر للأرقام."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"يجب أن تحتوي كلمة المرور على حرف واحد على الأقل."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"يجب أن تحتوي كلمة المرور على رقم واحد على الأقل."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"يجب أن تحتوي كلمة المرور على رمز واحد على الأقل."</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف صغير على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين صغيرين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف صغيرة على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا صغيرًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف صغير على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف كبير على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين كبيرين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف كبيرة على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا كبيرًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف كبير على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{يجب أن تحتوي كلمة المرور على رقم عددي واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # رقم عددي على الأقل.}two{يجب أن تحتوي كلمة المرور على رقمين عددين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أرقام عددية على الأقل.}many{يجب أن تحتوي كلمة المرور على # رقمًا عدديًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # رقم عددي على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # رمز خاص على الأقل.}two{يجب أن تحتوي كلمة المرور على رمزين خاصين على الأقل.}few{يجب أن تحتوي كلمة المرور على # رموز خاصة على الأقل.}many{يجب أن تحتوي كلمة المرور على # رمزًا خاصًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # رمز خاص على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد ليس من الأحرف الأبجدية على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف ليس من الأحرف الأبجدية على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين ليسا من الأحرف الأبجدية على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف ليست من الأحرف الأبجدية على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا ليس من الأحرف الأبجدية على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف ليس من الأحرف الأبجدية على الأقل.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد غير رقمي على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف غير رقمي على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين غير رقميين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف غير رقمية على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا غير رقمي على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف غير رقمي على الأقل.}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{يجب أن تحتوي كلمة المرور على حرف واحد على الأقل.}zero{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}two{يجب أن تحتوي كلمة المرور على حرفين على الأقل.}few{يجب أن تحتوي كلمة المرور على # أحرف على الأقل.}many{يجب أن تحتوي كلمة المرور على # حرفًا على الأقل.}other{يجب أن تحتوي كلمة المرور على # حرف على الأقل.}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{يجب أن يحتوي رقم التعريف الشخصي على رقم واحد على الأقل.}zero{يجب أن يحتوي رقم التعريف الشخصي على # رقم على الأقل.}two{يجب أن يحتوي رقم التعريف الشخصي على رقمين على الأقل.}few{يجب أن يحتوي رقم التعريف الشخصي على # أرقام على الأقل.}many{يجب أن يحتوي رقم التعريف الشخصي على # رقمًا على الأقل.}other{يجب أن يحتوي رقم التعريف الشخصي على # رقم على الأقل.}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{يجب أن تحتوي كلمة المرور على أقل من حرف واحد.}zero{يجب أن تحتوي كلمة المرور على أقل من # حرف.}two{يجب أن تحتوي كلمة المرور على أقل من حرفين.}few{يجب أن تحتوي كلمة المرور على أقل من # أحرف.}many{يجب أن تحتوي كلمة المرور على أقل من # حرفًا.}other{يجب أن تحتوي كلمة المرور على أقل من # حرف.}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{يجب أن يحتوي رقم التعريف الشخصي على أقل من رقم واحد.}zero{يجب أن يحتوي رقم التعريف الشخصي على أقل من # رقم.}two{يجب أن يحتوي رقم التعريف الشخصي على أقل من رقمين.}few{يجب أن يحتوي رقم التعريف الشخصي على أقل من # أرقام.}many{يجب أن يحتوي رقم التعريف الشخصي على أقل من # رقمًا.}other{يجب أن يحتوي رقم التعريف الشخصي على أقل من # رقم.}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"غير مسموح باستخدام الترتيب التصاعدي أو التنازلي أو المكرر للأرقام."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"خيارات قفل الشاشة"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : قبل <xliff:g id="NUM_DAYS">%3$s</xliff:g> يوم"</string>
     <string name="credentials_reset" msgid="873900550885788639">"محو بيانات الاعتماد"</string>
@@ -757,6 +769,79 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"سياسة المركبات السارية لدى <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"الإعدادات التي يديرها مدير المؤسسة"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"مزيد من المعلومات عن <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"معلومات عن المركبة المُدارة"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"الإعدادات التي يُديرها المشرف على مجموعة المركبات"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"لإتاحة الوصول إلى البيانات المتوفّرة على هذه المركبة المُدارة، يمكن للمشرف على مجموعة المركبات تغيير الإعدادات وتثبيت برامج على \"نظام الترفيه والمعلومات\".\n\nللحصول على مزيد من التفاصيل، يمكنك التواصل مع المشرف على مجموعة المركبات."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"المعلومات التي يمكن للمشرف على مجموعة المركبات الاطلاع عليها"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"التغييرات التي أجراها المشرف على مجموعة المركبات"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"البيانات المرتبطة بالحساب الخاص بمركبتك المُدارة"</li>\n" "<li>"قائمة بالتطبيقات المتوفّرة على مركبتك المُدارة"</li>\n" "<li>"مقدار الوقت المنقضي والبيانات المستخدمة في كل تطبيق"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"إمكانية الوصول إلى \"نظام الترفيه والمعلومات\""</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"قائمة التطبيقات المتوفّرة على مركبتك"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"عدد التطبيقات تقديري، وقد لا يشمل التطبيقات المُثبَّتة من متجر غير \"متجر Play\"."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق كحد أدنى</item>
+      <item quantity="two">تطبيقان (<xliff:g id="COUNT_1">%d</xliff:g>) كحد أدنى</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات كحد أدنى</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا كحد أدنى</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق كحد أدنى</item>
+      <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>) كحد أدنى</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="two">تطبيقان (<xliff:g id="COUNT_1">%d</xliff:g>)</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقات</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> تطبيقًا</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تطبيق</item>
+      <item quantity="one">تطبيق واحد (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"أحدث سجلّ لحركة بيانات الشبكة"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"أحدث تقرير خطأ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"أحدث سجلّ أمان"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"لم يتم اتخاذ أي إجراء"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"التطبيقات المثبّتة"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"أذونات تحديد الموقع الجغرافي"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"أذونات الميكروفون"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"أذونات الكاميرا"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"التطبيقات التلقائية"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"لوحة المفاتيح التلقائية"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"ضبط على <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"تم ضبط الخادم الوكيل HTTP العام."</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"بيانات اعتماد موثوقة في ملفك الشخصي"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"يمكن للمشرف قَفل \"نظام الترفيه والمعلومات\" وإعادة ضبط كلمة المرور."</li>\n" "<li>" ويمكن للمشرف حذف البيانات المتوفّرة على \"نظام الترفيه والمعلومات\"."</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"المحاولات الفاشلة لإدخال كلمة المرور قبل حذف كل البيانات المتوفّرة على \"نظام الترفيه والمعلومات\""</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"المحاولات الفاشلة لإدخال كلمة المرور قبل حذف بيانات الملف الشخصي"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="zero">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="two">لديك محاولتان (<xliff:g id="COUNT_1">%d</xliff:g>).</item>
+      <item quantity="few">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولات.</item>
+      <item quantity="many">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="other">لديك <xliff:g id="COUNT_1">%d</xliff:g> محاولة.</item>
+      <item quantity="one">لديك محاولة واحدة (<xliff:g id="COUNT_0">%d</xliff:g>).</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="zero">تطبيق الكاميرا</item>
+      <item quantity="two">تطبيقا الكاميرا</item>
+      <item quantity="few">تطبيقات الكاميرا</item>
+      <item quantity="many">تطبيقات الكاميرا</item>
+      <item quantity="other">تطبيقات الكاميرا</item>
+      <item quantity="one">تطبيق الكاميرا</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="zero">تطبيق بريد إلكتروني</item>
+      <item quantity="two">تطبيقا البريد الإلكتروني</item>
+      <item quantity="few">تطبيقات البريد الإلكتروني</item>
+      <item quantity="many">تطبيقات البريد الإلكتروني</item>
+      <item quantity="other">تطبيقات البريد الإلكتروني</item>
+      <item quantity="one">تطبيق البريد الإلكتروني</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="zero">تطبيق الهاتف</item>
+      <item quantity="two">تطبيقا الهاتف</item>
+      <item quantity="few">تطبيقات الهاتف</item>
+      <item quantity="many">تطبيقات الهاتف</item>
+      <item quantity="other">تطبيقات الهاتف</item>
+      <item quantity="one">تطبيق الهاتف</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"هل تريد مشاركة تقرير الخطأ؟"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. وقد تتم مشاركة التطبيقات والبيانات."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"طلب مدير المؤسسة التابعة لها هذه المركبة الحصول على تقرير خطأ للمساعدة في تحديد مشكلة هذا الجهاز وحلّها. قد تتم مشاركة التطبيقات والبيانات، وقد يعمل جهازك ببطء مؤقتًا."</string>
@@ -784,4 +869,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"أسود في أبيض"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"أصفر في أسود"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"أصفر في أزرق"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"قارئ الشاشة"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"إيقاف"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"قراءة العناصر على الشاشة"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"استخدام <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"الخيارات"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"الإعدادات"</string>
 </resources>

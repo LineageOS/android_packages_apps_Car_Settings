@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Είναι δυνατή η σύνδεση άλλων συσκευών στο <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Κωδικός ΣΠ Wi-Fi"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Ασφάλεια"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Κανένα"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Ζώνη ΣΠ"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Ακύρωση"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Επιβεβαίωση"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Πρέπει να αποτελείται τουλάχιστον από 4 χαρακτήρες"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Πρέπει να έχει τουλάχιστον <xliff:g id="COUNT">%d</xliff:g> χαρακτήρες"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Το PIN πρέπει να έχει τουλάχιστον <xliff:g id="COUNT">%d</xliff:g> ψηφία"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Πρέπει να έχει λιγότερ. από <xliff:g id="NUMBER">%d</xliff:g> χαρακτήρες"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Πρέπει να έχει λιγότερα από <xliff:g id="NUMBER">%d</xliff:g> ψηφία"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Πρέπει να περιέχει μόνο ψηφία από το 0 έως το 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Ο διαχειριστής της συσκευής δεν επιτρέπει τη χρήση πρόσφατου PIN"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Τα συνηθισμένα PIN αποκλείονται από τον διαχειριστή IT. Δοκιμάστε να χρησιμοποιήσετε διαφορετικό PIN."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Ο διαχειριστής της συσκευής δεν επιτρέπει τη χρήση πρόσφατου κωδικού πρόσβασης"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Σφάλμα κατά την αποθ. του κωδ. πρόσβασης"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Οι συνηθισμένοι κωδικοί πρόσβασης αποκλείονται από τον διαχειριστή IT. Δοκιμάστε να χρησιμοποιήσετε διαφορετικό κωδικό πρόσβασης."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Δεν επιτρέπεται η αύξουσα, φθίνουσα ή επαναλαμβανόμενη ακολουθία ψηφίων."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Πρέπει να περιέχει τουλάχιστον ένα γράμμα."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Πρέπει να περιέχει τουλάχιστον ένα ψηφίο."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Πρέπει να περιέχει τουλάχιστον ένα σύμβολο."</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # γράμμα.}other{Πρέπει να περιέχει τουλάχιστον # γράμματα.}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # πεζό γράμμα.}other{Πρέπει να περιέχει τουλάχιστον # πεζά γράμματα.}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # κεφαλαίο γράμμα.}other{Πρέπει να περιέχει τουλάχιστον # κεφαλαία γράμματα.}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # αριθμητικό ψηφίο.}other{Πρέπει να περιέχει τουλάχιστον # αριθμητικά ψηφία.}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # ειδικό σύμβολο.}other{Πρέπει να περιέχει τουλάχιστον # ειδικά σύμβολα.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # χαρακτήρα που δεν είναι γράμμα.}other{Πρέπει να περιέχει τουλάχιστον # χαρακτήρες που δεν είναι γράμματα.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # μη αριθμητικό χαρακτήρα.}other{Πρέπει να περιέχει τουλάχιστον # μη αριθμητικούς χαρακτήρες.}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # χαρακτήρα.}other{Πρέπει να περιέχει τουλάχιστον # χαρακτήρες.}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Πρέπει να περιέχει τουλάχιστον # ψηφίο.}other{Πρέπει να περιέχει τουλάχιστον # ψηφία.}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Πρέπει να περιέχει λιγότερους από # χαρακτήρα.}other{Πρέπει να περιέχει λιγότερους από # χαρακτήρες.}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Πρέπει να περιέχει λιγότερα από # ψηφίο.}other{Πρέπει να περιέχει λιγότερα από # ψηφία.}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Δεν επιτρέπεται η αύξουσα, φθίνουσα ή επαναλαμβανόμενη ακολουθία ψηφίων"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Επιλογές κλειδώματος οθόνης"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ημέρες πριν"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Διαγραφή διαπιστευτηρίων"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Πολιτική οχημάτων του οργανισμού <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Η διαχείριση των ρυθμίσεων πραγματοποιείται από τον διαχειριστή οργανισμού"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Μάθετε περισσότερα για την υπηρεσία <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Πληροφορίες διαχειριζόμενου οχήματος"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Ρυθμίσεις που διαχειρίζεται ο διαχειριστής στόλου σας"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Για να παρέχει πρόσβαση σε δεδομένα σε αυτό το διαχειριζόμενο όχημα, ο διαχειριστής στόλου μπορεί να αλλάξει τις ρυθμίσεις και να εγκαταστήσει λογισμικό στο σύστημα ενημέρωσης και ψυχαγωγίας.\n\nΓια λεπτομέρειες, επικοινωνήστε με τον διαχειριστή στόλου."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Πληροφορίες που μπορεί να δει ο διαχειριστής στόλου"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Αλλαγές που πραγματοποιήθηκαν από τον διαχειριστή στόλου"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Δεδομένα που συσχετίζονται με τον λογαριασμό διαχειριζόμενου οχήματός σας"</li>\n" "<li>"Λίστα των εφαρμογών στο διαχειριζόμενο όχημα"</li>\n" "<li>"Ο όγκος των δεδομένων και ο χρόνος που αφιερώθηκε σε κάθε εφαρμογή"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Η πρόσβασή σας στο σύστημα ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Λίστα εφαρμογών στο όχημά σας"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Γίνεται εκτίμηση του αριθμού των εφαρμογών. Μπορεί να μην περιλαμβάνει εφαρμογές που έχουν εγκατασταθεί εκτός του Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Τουλάχιστον σε <xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
+      <item quantity="one">Τουλάχιστον σε <xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Το πιο πρόσφατο αρχείο καταγραφής επισκεψιμότητας δικτύου"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Η πιο πρόσφατη αναφορά σφάλματος"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Το πιο πρόσφατο αρχείο καταγραφής ασφαλείας"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Καμία"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Εγκατεστημένες εφαρμογές"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Άδειες τοποθεσίας"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Άδειες μικροφώνου"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Άδειες κάμερας"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Προεπιλεγμένες εφαρμογές"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Προεπιλεγμένο πληκτρολόγιο"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Ορισμός σε <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Ο γενικός διακομιστής μεσολάβησης HTTP ορίστηκε"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Αξιόπιστα διαπιστευτήρια στο προσωπικό προφίλ σας"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Ο διαχειριστής μπορεί να κλειδώσει το σύστημα ενημέρωσης και ψυχαγωγίας και να επαναφέρει τον κωδικό πρόσβασης"</li>\n" "<li>"Ο διαχειριστής μπορεί να διαγράψει δεδομένα στο σύστημα ενημέρωσης και ψυχαγωγίας"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Αποτυχημένες προσπάθειες εισαγωγής κωδικού πρόσβασης πριν από τη διαγραφή όλων των δεδομένων του συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Αποτυχημένες προσπάθειες εισαγωγής κωδικού πρόσβασης πριν από τη διαγραφή των δεδομένων του προφίλ"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> προσπάθειες</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> προσπάθεια</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Εφαρμογές κάμερας</item>
+      <item quantity="one">Εφαρμογή κάμερας</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Εφαρμογές πελάτες ηλεκτρονικού ταχυδρομείου</item>
+      <item quantity="one">Εφαρμογή πελάτης ηλεκτρονικού ταχυδρομείου</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Εφαρμογές τηλεφώνου</item>
+      <item quantity="one">Εφαρμογή τηλεφώνου</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Να κοινοποιηθεί η αναφορά σφάλματος;"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Ο διαχειριστής οργανισμού του οχήματος ζήτησε μια αναφορά σφάλματος για να συμβάλει στην αντιμετώπιση του προβλήματος αυτής της συσκευής. Ενδέχεται να κοινοποιηθούν οι εφαρμογές και τα δεδομένα."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Ο διαχειριστής οργανισμού του οχήματος ζήτησε μια αναφορά σφάλματος για να συμβάλει στην αντιμετώπιση του προβλήματος αυτής της συσκευής. Ενδέχεται να κοινοποιηθούν οι εφαρμογές και τα δεδομένα και να επιβραδυνθεί προσωρινά η λειτουργία της συσκευής σας."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Μαύρο σε λευκό"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Κίτρινο σε μαύρο"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Κίτρινο σε μπλε"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Αναγνώστης οθόνης"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Ανενεργό"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Εκφώνηση στοιχείων της οθόνης"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Χρήση <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Επιλογές"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Ρυθμίσεις"</string>
 </resources>

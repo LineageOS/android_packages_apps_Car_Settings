@@ -32,6 +32,8 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.Process;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.TextUtils;
 
@@ -283,10 +285,19 @@ public class BluetoothRequestPermissionActivity extends ComponentActivity {
                 return REQUEST_UNKNOWN;
         }
 
-        String packageName = getCallingPackage();
-        if (TextUtils.isEmpty(packageName)) {
-            packageName = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME);
+        String packageName = getLaunchedFromPackage();
+        int mCallingUid = getLaunchedFromUid();
+
+        if (UserHandle.isSameApp(mCallingUid, Process.SYSTEM_UID)
+                && getIntent().getStringExtra(Intent.EXTRA_PACKAGE_NAME) != null) {
+            packageName = getIntent().getStringExtra(Intent.EXTRA_PACKAGE_NAME);
         }
+
+        if (!UserHandle.isSameApp(mCallingUid, Process.SYSTEM_UID)
+                && getIntent().getStringExtra(Intent.EXTRA_PACKAGE_NAME) != null) {
+            LOG.w("Non-system Uid: " + mCallingUid + " tried to override packageName");
+        }
+
         if (!mBypassConfirmDialog && !TextUtils.isEmpty(packageName)) {
             try {
                 ApplicationInfo applicationInfo = getPackageManager().getApplicationInfo(

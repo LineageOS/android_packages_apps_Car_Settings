@@ -16,8 +16,7 @@
 package com.android.car.settings.enterprise;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
-import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 
 import static org.mockito.Mockito.when;
 
@@ -29,30 +28,18 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-public final class ImePreferenceControllerTest extends BasePreferenceControllerTestCase {
+public final class ImePreferenceControllerTest
+        extends BaseEnterprisePrivacyPreferenceControllerTestCase {
 
     private ImePreferenceController mController;
 
     @Mock
     private Preference mPreference;
 
-    @Mock
-    private EnterprisePrivacyFeatureProvider mProvider;
-
     @Before
     public void setUp() throws Exception {
         mController = new ImePreferenceController(mSpiedContext, mPreferenceKey,
-                mFragmentController, mUxRestrictions, mProvider);
-    }
-
-    @Test
-    public void testGetgetAvailabilityStatus_noFeature() {
-        mockNoDeviceAdminFeature();
-        // Cannot use mController because it check for feature on constructor
-        ImePreferenceController controller = new ImePreferenceController(mSpiedContext,
-                mPreferenceKey, mFragmentController, mUxRestrictions, mProvider);
-
-        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+                mFragmentController, mUxRestrictions, mEnterprisePrivacyFeatureProvider);
     }
 
     @Test
@@ -60,7 +47,7 @@ public final class ImePreferenceControllerTest extends BasePreferenceControllerT
         mockHasDeviceAdminFeature();
         mockGetImeLabelIfOwnerSet(null);
 
-        assertAvailability(mController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+        assertAvailability(mController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
     }
 
     @Test
@@ -85,6 +72,6 @@ public final class ImePreferenceControllerTest extends BasePreferenceControllerT
     }
 
     private void mockGetImeLabelIfOwnerSet(String label) {
-        when(mProvider.getImeLabelIfOwnerSet()).thenReturn(label);
+        when(mEnterprisePrivacyFeatureProvider.getImeLabelIfOwnerSet()).thenReturn(label);
     }
 }

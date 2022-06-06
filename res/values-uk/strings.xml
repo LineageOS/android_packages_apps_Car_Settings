@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Інші пристрої можуть підключатися до точки доступу \"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>\""</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Пароль точки доступу"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Безпека"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Немає"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Діапазон частот точки доступу"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Скасувати"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Підтвердити"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Потрібно ввести принаймні 4 символи"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Мінімальна кількість символів: <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Мінімальна кількість цифр у PIN-коді: <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Максимальна кількість символів: <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Максимальна кількість цифр: <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Має містити лише цифри від 0 до 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Адміністратор пристрою не дозволяє використовувати останній PIN-код"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Системний адміністратор заблокував загальні PIN-коди. Введіть інший PIN-код."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Адміністратор пристрою не дозволяє використовувати останній пароль"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Не вдалося зберегти пароль"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Системний адміністратор заблокував загальні паролі. Введіть інший пароль."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Заборонено однакові цифри або в порядку зростання чи спадання."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Має містити принаймні одну літеру"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Має містити принаймні одну цифру"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Має містити принаймні один символ"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Має містити принаймні # літеру}one{Має містити принаймні # літеру}few{Має містити принаймні # літери}many{Має містити принаймні # літер}other{Має містити принаймні # літери}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Має містити принаймні # малу літеру}one{Має містити принаймні # малу літеру}few{Має містити принаймні # малі літери}many{Має містити принаймні # малих літер}other{Має містити принаймні # малої літери}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Має містити принаймні # велику літеру}one{Має містити принаймні # велику літеру}few{Має містити принаймні # великі літери}many{Має містити принаймні # великих літер}other{Має містити принаймні # великої літери}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Має містити принаймні # цифру}one{Має містити принаймні # цифру}few{Має містити принаймні # цифри}many{Має містити принаймні # цифр}other{Має містити принаймні # цифри}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Має містити принаймні # спеціальний символ}one{Має містити принаймні # спеціальний символ}few{Має містити принаймні # спеціальні символи}many{Має містити принаймні # спеціальних символів}other{Має містити принаймні # спеціального символу}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Має містити принаймні # символ, який не є літерою}one{Має містити принаймні # символ, який не є літерою}few{Має містити принаймні # символи, які не є літерами}many{Має містити принаймні # символів, які не є літерами}other{Має містити принаймні # символу, які не є літерами}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Має містити принаймні # символ, який не є цифрою}one{Має містити принаймні # символ, який не є цифрою}few{Має містити принаймні # символи, які не є літерами}many{Має містити принаймні # символів, які не є літерами}other{Має містити принаймні # символу, які не є літерами}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Має містити принаймні # символ}one{Має містити принаймні # символ}few{Має містити принаймні # символи}many{Має містити принаймні # символів}other{Має містити принаймні # символу}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Має містити принаймні # цифру}one{Має містити принаймні # цифру}few{Має містити принаймні # цифри}many{Має містити принаймні # цифр}other{Має містити принаймні # цифри}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Має містити менше ніж # символ}one{Має містити менше ніж # символ}few{Має містити менше ніж # символи}many{Має містити менше ніж # символів}other{Має містити менше ніж # символу}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Має містити менше ніж # цифру}one{Має містити менше ніж # цифру}few{Має містити менше ніж # цифри}many{Має містити менше ніж # цифр}other{Має містити менше ніж # цифри}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Цифри в порядку зростання чи спадання та повторювані цифри заборонені"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Способи блокування екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. тому"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Очистити облікові дані"</string>
@@ -757,6 +769,67 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила організації \"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>\" щодо транспортних засобів"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Налаштування, якими керує адміністратор організації"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Докладніше про сервіс <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Дані про керований транспортний засіб"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Налаштування, якими керує адміністратор"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Щоб надати доступ до даних у цьому керованому транспортному засобі, адміністратор може змінити налаштування та встановити програмне забезпечення в інформаційно-розважальній системі.\n\nЩоб дізнатися більше, зв’яжіться з адміністратором."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Інформація, яку може бачити ваш адміністратор"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Зміни, внесені вашим адміністратором"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Дані, зв’язані з обліковим записом керованого транспортного засобу"</li>\n" "<li>"Список додатків у вашому керованому транспортному засобі"</li>\n" "<li>"Кількість проведеного часу й використаних даних у кожному додатку"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Ваш доступ до інформаційно-розважальної системи"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Список додатків у транспортному засобі"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Це приблизна кількість додатків. Сюди можуть не входити додатки, установлені не з Google Play."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додаток</item>
+      <item quantity="few">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додатки</item>
+      <item quantity="many">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додатків</item>
+      <item quantity="other">Принаймні <xliff:g id="COUNT_1">%d</xliff:g> додатка</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> додаток</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> додатки</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> додатків</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> додатка</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Останній журнал мережевого трафіку"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Останній звіт про помилку"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Останній журнал безпеки"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Немає"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Установлені додатки"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Дозволи на доступ до геоданих"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Дозволи на доступ до мікрофона"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Дозволи на доступ до камери"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Додатки за умовчанням"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Клавіатура за умовчанням"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Вибрано <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Налаштовано глобальний проксі-сервер HTTP"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Надійні облікові дані в особистому профілі"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Адміністратор може заблокувати інформаційно-розважальну систему та скинути пароль"</li>\n" "<li>"Адміністратор може видалити дані з інформаційно-розважальної системи"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Усі дані в інформаційно-розважальній системі буде видалено після стількох невдалих спроб введення пароля"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Дані профілю буде видалено після стількох невдалих спроб введення пароля"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> спроба</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> спроби</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> спроб</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> спроби</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Додатки для камери</item>
+      <item quantity="few">Додатки для камери</item>
+      <item quantity="many">Додатки для камери</item>
+      <item quantity="other">Додатки для камери</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">Додатки для пошти</item>
+      <item quantity="few">Додатки для пошти</item>
+      <item quantity="many">Додатки для пошти</item>
+      <item quantity="other">Додатки для пошти</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">Додатки для дзвінків</item>
+      <item quantity="few">Додатки для дзвінків</item>
+      <item quantity="many">Додатки для дзвінків</item>
+      <item quantity="other">Додатки для дзвінків</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Надіслати звіт про помилку?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Адміністратор транспортного засобу просить надіслати звіт про помилку, щоб вирішити проблему з цим пристроєм. Він може отримати доступ до ваших додатків і даних."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Адміністратор транспортного засобу просить надіслати звіт про помилку, щоб вирішити проблему з цим пристроєм. Він може отримати доступ до ваших додатків і даних. Це також може тимчасово сповільнити роботу вашого пристрою."</string>
@@ -784,4 +857,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Чорний на білому"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Жовтий на чорному"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Жовтий на синьому"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Програма зчитування з екрана"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Вимкнено"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Озвучувати елементи на екрані"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Використовувати <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Параметри"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Налаштування"</string>
 </resources>

@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"其他裝置可連接至<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"熱點密碼"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"安全性"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"無"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 頻段"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"取消"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"確認"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"必須包含至少 4 個字元"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"必需有至少 <xliff:g id="COUNT">%d</xliff:g> 個字元"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN 必需有至少 <xliff:g id="COUNT">%d</xliff:g> 個數字"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"必需少於 <xliff:g id="NUMBER">%d</xliff:g> 個字元"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"必需少於 <xliff:g id="NUMBER">%d</xliff:g> 個數字"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"只可包含數字 0-9。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"裝置管理員不允許使用最近用過的 PIN"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"您的 IT 管理員已禁止使用常用的 PIN，請嘗試輸入另一個 PIN。"</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"裝置管理員不允許使用最近用過的密碼"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"儲存密碼時發生錯誤"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"您的 IT 管理員已禁止使用常用的密碼，請嘗試輸入另一組密碼。"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不可使用依遞增或遞減順序排列或重複的連續數字。"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"必須包含最少 1 個字母"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"必須包含最少 1 個數字"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"必須包含最少 1 個符號"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{必須包含至少 # 個字母}other{必須包含至少 # 個字母}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{必須包含至少 # 個小寫字母}other{必須包含至少 # 個小寫字母}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{必須包含至少 # 個大寫字母}other{必須包含至少 # 個大寫字母}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{必須包含至少 # 個數字}other{必須包含至少 # 個數字}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{必須包含至少 # 個特別符號}other{必須包含至少 # 個特別符號}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{必須包含至少 # 個非字母字元}other{必須包含至少 # 個非字母字元}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{必須包含至少 # 個非數字字元}other{必須包含至少 # 個非數字字元}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{必須包含至少 # 個字元}other{必須包含至少 # 個字元}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{必須包含至少 # 個數字}other{必須包含至少 # 個數字}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{必須少於 # 個字元}other{必須少於 # 個字元}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{必須少於 # 個數字}other{必須少於 # 個數字}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允許使用依遞增或遞減順序排列或是重複的一串數字"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除憑證"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> 車輛政策"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"由機構管理員管理的設定"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"進一步瞭解「<xliff:g id="SERVICE">%1$s</xliff:g>」"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"受管理的車輛資料"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"由車隊管理員管理的設定"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"為提供此受管理車輛的資料存取權，車隊管理員可能會在資訊娛樂系統上變更設定及安裝軟件。\n\n如要瞭解詳情，請聯絡您的車隊管理員。"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"車隊管理員可查看的資料"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"車隊管理員作出的變更"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"與受管理車輛帳戶關聯的資料"</li>\n" "<li>"受管理車輛上的應用程式清單"</li>\n" "<li>"每個應用程式的使用時間和數據用量"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"您的資訊娛樂系統存取權"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"車輛上的應用程式清單"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"應用程式數量為估計值，其中可能不包括在「Play 商店」以外安裝的應用程式。"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">最少 <xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
+      <item quantity="one">最少 <xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"最新網絡流量記錄"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"最新錯誤報告"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"最新安全性記錄"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"無"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"已安裝應用程式"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"位置權限"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"麥克風權限"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"相機權限"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"預設應用程式"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"預設鍵盤"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"已設定為「<xliff:g id="APP_LABEL">%s</xliff:g>」"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"已設定全域 HTTP Proxy"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"您個人設定檔中信任的憑證"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"管理員可鎖定資訊娛樂系統並重設密碼"</li>\n" "<li>"管理員可刪除資訊娛樂系統中的資料"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"輸入錯誤密碼的次數上限，超過後系統將刪除資訊娛樂系統中的所有資料"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"輸入錯誤密碼的次數上限，超過後系統將刪除個人檔案資料"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 次嘗試</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 次嘗試</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">相機應用程式</item>
+      <item quantity="one">相機應用程式</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">電子郵件用戶端應用程式</item>
+      <item quantity="one">電子郵件用戶端應用程式</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">手機應用程式</item>
+      <item quantity="one">手機應用程式</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"要分享錯誤報告嗎？"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"此車輛的機構管理員要求您提供錯誤報告，以協助解決此裝置的問題。報告可能包含應用程式和相關資料。"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"此車輛的機構管理員要求您提供錯誤報告，以協助解決此裝置的問題。報告可能包含應用程式和相關資料，裝置的運作速度也可能暫時減慢。"</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"白底黑字"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"黑底黃字"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"藍底黃字"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"螢幕閱讀器"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"關閉"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"朗讀螢幕上的項目"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"使用「<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>」"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"選項"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"設定"</string>
 </resources>

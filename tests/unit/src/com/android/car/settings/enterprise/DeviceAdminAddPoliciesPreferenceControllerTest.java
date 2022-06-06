@@ -35,7 +35,7 @@ import org.mockito.Mock;
 import java.util.ArrayList;
 
 public final class DeviceAdminAddPoliciesPreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePreferenceControllerTestCase {
 
     private static final String TAG = DeviceAdminAddPoliciesPreferenceControllerTest.class
             .getSimpleName();
