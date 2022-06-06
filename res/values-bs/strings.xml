@@ -157,7 +157,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Odaberite barem jedan frekvencijski pojas za WiFi pristupnu tačku:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Pristupna tačka i povezivanje putem mobitela"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Pristupna tačka i dijeljenje internetske veze"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Pristupna tačka"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Isključeno"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatski isključi pristupnu tačku"</string>
@@ -297,7 +297,7 @@
     <string name="all_applications" msgid="7798210477486822168">"Prikaži sve aplikacije"</string>
     <string name="default_applications" msgid="1558183275638697087">"Zadane aplikacije"</string>
     <string name="app_permissions" msgid="32799922508313948">"Odobrenja za aplikaciju"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrolirajte pristup aplikacije podacima"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrolirajte pristup aplikacija podacima"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informacije o aplikaciji"</string>
     <string name="force_stop" msgid="2153183697014720520">"Prisilno zaustavi"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Prisilno zaustaviti?"</string>
@@ -372,10 +372,10 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"Nedavno otvarano"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Prikaži sve aplikacije (%1$d)"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Upravitelj odobrenja"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrolirajte pristup aplikacije podacima"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrolirajte pristup aplikacija podacima"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Za Asistenta i druge usluge"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Za sistem i druge postavke"</string>
-    <string name="special_access" msgid="5730278220917123811">"Poseban pristup aplikacijama"</string>
+    <string name="special_access" msgid="5730278220917123811">"Poseban pristup za aplikacije"</string>
     <string name="show_system" msgid="4401355756969485287">"Prikaži sistemske procese"</string>
     <string name="hide_system" msgid="8845453295584638040">"Sakrij sistemske procese"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Sakrij sistemske aplikacije"</string>
@@ -391,7 +391,7 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Moguće je da se usluga slanja premium SMS-ova dodatno plaća, a trošak će se dodati na račun operatera. Ako aplikaciji date odobrenje, moći ćete slati premium SMS-ove putem te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup korištenju"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Pristup korištenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi vašeg mobilnog operatera, postavke jezika i druge detalje."</string>
-    <string name="wifi_control_title" msgid="5660436566907731929">"Upravljanje WiFi mrežom"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Upravljanje WiFi-jem"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontroliranje WiFi mreže omogućava aplikaciji da uključi ili isključi WiFi, skenira i da se poveže na WiFi, doda ili ukloni mreže te pokrene lokalnu pristupnu tačku."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Više"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
@@ -499,7 +499,7 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Pričekajte..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum i vrijeme"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Postavi datum, vrijeme, vremensku zonu i formate"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Postavi vrijeme automatski"</string>
+    <string name="date_time_auto" msgid="6018635902717385962">"Automatski postavi vrijeme"</string>
     <string name="zone_auto" msgid="4174874778459184605">"Automatski postavi vremensku zonu"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-satni format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Koristi 24-satni format"</string>
@@ -571,7 +571,7 @@
     <string name="storage_total_size_label" msgid="3892138268243791912">"Ukupno"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Obriši pohranu"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Obriši keš memoriju"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Izbrisati podatke aplikacija?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Izbrisati podatke aplikacije?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Svi podaci ove aplikacije će biti trajno izbrisani. To uključuje sve fajlove, postavke, račune, baze podataka itd."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Pohrana za aplikaciju nije obrisana."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> je sigurno izbačena"</string>
@@ -582,7 +582,7 @@
     <string name="account_list_title" msgid="7631588514613843065">"Računi za korisnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatsko sinhroniziranje podataka"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Omogućava aplikacijama automatsko osvježavanje podataka"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Uklj. autom. sinhron. podataka?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Uključiti autom. sinhr. podataka?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Promjene računa koje unesete na webu automatski će se kopirati na vaš uređaj.\n\nNeki računi također mogu automatski kopirati promjene s telefona na web. Google račun funkcionira na ovaj način."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Isklj. autom. sinhron. podataka?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ovim će se uštedjeti na prijenosu podataka, ali ćete morati ručno sinhronizirati svaki račun da prikupite najnovije informacije. Također, nećete primati obavještenja kada se izvrše ažuriranja."</string>
@@ -631,7 +631,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Nastavi"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Pokušaj ponovo"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Preskoči"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Postavljanje zaključavanja ekrana"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Postavite zaključavanje ekrana"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Odabir PIN-a"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Odabir lozinke"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Trenutni način zaključavanja ekrana"</string>
@@ -641,7 +641,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Novi uzorak za otključavanje"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Nacrtajte uzorak za otključavanje"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Podignite prst kada završite"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Uzorak snimljen"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Uzorak je snimljen"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Ponovo nacrtajte uzorak da potvrdite"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Povežite bar 4 tačke. Pokušajte ponovo."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pogrešan uzorak"</string>

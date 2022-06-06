@@ -75,7 +75,7 @@
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datu-erabilera mugatzea"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Ibilgailua ezarri duzun datuen mugara heltzen denean, ibilgailuaren unitate nagusiak datu-konexioa desaktibatuko du.\n\nIbilgailuaren unitate nagusiak datu-erabilera neurtzen du, baina baliteke operadoreak erabilera hori beste era batera neurtzea. Horregatik, muga zuhurra ezartzea gomendatzen dugu."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ezarri datu-erabileraren abisua"</string>
-    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ezarri datu-erabilera-muga"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ezarri datu-erabileraren muga"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Gailuak neurtzen du datu-konexioaren erabilera. Baliteke telefonia mugikorreko operadoreak eskainitako datu-konexioaren arabera aldatzea."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ezarri"</string>
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Gorde"</string>
@@ -447,8 +447,8 @@
     <string name="legal_information" msgid="1838443759229784762">"Lege-informazioa"</string>
     <string name="contributors_title" msgid="7698463793409916113">"Kolaboratzaileak"</string>
     <string name="manual" msgid="4819839169843240804">"Eskuzko ezarpenak"</string>
-    <string name="regulatory_labels" msgid="3165587388499646779">"Legezko etiketak"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Segurtasunaren eta legeen eskuliburua"</string>
+    <string name="regulatory_labels" msgid="3165587388499646779">"Arau-etiketak"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Segurtasunaren eta arauen eskuliburua"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Copyrighta"</string>
     <string name="license_title" msgid="936705938435249965">"Lizentzia"</string>
     <string name="terms_title" msgid="5201471373602628765">"Zehaztapenak eta baldintzak"</string>
@@ -562,7 +562,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Beste aplikazio batzuk"</string>
     <string name="storage_files" msgid="6382081694781340364">"Fitxategiak"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistema"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android-en <xliff:g id="VERSION">%s</xliff:g> bertsioa exekutatzeko balio duten fitxategiak daude sisteman"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android-en <xliff:g id="VERSION">%s</xliff:g> bertsioa exekutatzeko erabiltzen diren fitxategiak daude sisteman"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Audio-fitxategiak"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Kalkulatzen…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Aplikazioaren tamaina"</string>
@@ -631,7 +631,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Egin aurrera"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Saiatu berriro"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Saltatu"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Ezarri pantailaren blokeo bat"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Ezarri pantailaren blokeoa"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Aukeratu PIN bat"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Aukeratu pasahitz bat"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Ezarrita dagoen pantailaren blokeoa"</string>

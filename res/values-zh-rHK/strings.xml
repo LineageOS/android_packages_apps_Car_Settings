@@ -620,7 +620,7 @@
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"無"</string>
-    <string name="security_lock_pattern" msgid="1174352995619563104">"鎖定圖案"</string>
+    <string name="security_lock_pattern" msgid="1174352995619563104">"上鎖圖案"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"密碼"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"請選擇上鎖方式"</string>
@@ -635,7 +635,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"選擇 PIN"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"選擇密碼"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"目前的螢幕鎖定方式"</string>
-    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"為安全起見，請設定鎖定圖案"</string>
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"為安全起見，請設定上鎖圖案"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"清除"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"取消"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"新解鎖圖案"</string>
@@ -646,7 +646,7 @@
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"圖案至少要連接 4 點，請再試一次。"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"圖案錯誤"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"如何畫出解鎖圖案"</string>
-    <string name="error_saving_lockpattern" msgid="2933512812768570130">"儲存鎖定圖案時發生錯誤"</string>
+    <string name="error_saving_lockpattern" msgid="2933512812768570130">"儲存上鎖圖案時發生錯誤"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"錯誤次數太多，請於 <xliff:g id="NUMBER">%d</xliff:g> 秒後再試。"</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"圖案不支援旋轉輸入；請使用輕觸輸入"</string>
     <string name="okay" msgid="4589873324439764349">"確定"</string>

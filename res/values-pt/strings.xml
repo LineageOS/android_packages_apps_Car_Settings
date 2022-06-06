@@ -209,7 +209,7 @@
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"O PIN contém letras ou símbolos"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Digite o código de pareamento e pressione Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Parear com o <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que o <xliff:g id="DEVICE_NAME">%1$s</xliff:g> acesse seus contatos e o histórico de chamadas"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que o <xliff:g id="DEVICE_NAME">%1$s</xliff:g> acesse seus contatos e o histórico de ligações"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Talvez seja necessário digitar este PIN no outro dispositivo."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Talvez seja necessário digitar esta senha no outro dispositivo."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"São necessários 16 dígitos"</string>
@@ -488,7 +488,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"As preferências do app foram redefinidas"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Limpar todos os dados"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Apague todos os dados e perfis do sistema de infoentretenimento"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Essa ação apagará todos os dados do sistema de infoentretenimento do seu veículo, incluindo:\n\n"<li>"sua Conta do Google;"</li>\n<li>"dados e configurações do sistema e de apps;"</li>\n<li>"apps transferidos."</li></string>
+    <string name="factory_reset_desc" msgid="1688333312943433244">"Essa ação vai apagar todos os dados do sistema de infoentretenimento do seu veículo, incluindo:\n\n"<li>"sua Conta do Google;"</li>\n<li>"dados e configurações do sistema e de apps;"</li>\n<li>"apps transferidos."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"No momento, as seguintes contas estão conectadas:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Outros perfis foram configurados para este veículo."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Limpar todos os dados"</string>

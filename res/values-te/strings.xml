@@ -132,7 +132,7 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 అడ్రస్‌లు"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"గేట్‌వే"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi ప్రాధాన్యతలు"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fiని ఆటోమేటిక్‌గా ఆన్ చేయి"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fiని ఆటోమేటిక్‌గా ఆన్ చేయండి"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"మీ ఇంటి నెట్‌వర్క్‌ల వంటి సేవ్ చేసిన అధిక క్వాలిటీ గల నెట్‌వర్క్‌లు అందుబాటులో ఉన్నప్పుడు Wi‑Fi తిరిగి ఆన్ చేయబడుతుంది"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"లొకేషన్ ఆఫ్ చేయబడింది కనుక అందుబాటులో లేదు. "<annotation id="link">"లొకేషన్‌ను"</annotation>" ఆన్ చేయండి."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi స్కానింగ్‌ను ఆన్ చేయాలా?"</string>
@@ -215,7 +215,7 @@
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"తప్పనిసరిగా 16 అంకెలు ఉండాలి"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"సాధారణంగా 0000 లేదా 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"జత చేయడానికి రిక్వెస్ట్‌"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>తో జత చేయడానికి నొక్కండి."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>తో పెయిర్ చేయడానికి ట్యాప్ చేయండి."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"బ్లూటూత్ పరికరాన్ని ఎంచుకోండి"</string>
     <string name="language_settings" msgid="2079258598337245546">"భాషలు"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"భాషలు &amp; ఇన్‌పుట్"</string>
@@ -228,7 +228,7 @@
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ప్రస్తుత ఇంజిన్"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"స్పీచ్ రేట్"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"పిచ్"</string>
-    <string name="tts_reset" msgid="6289481549801844709">"రీసెట్ చేయి"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"రీసెట్ చేయండి"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ధ్వని"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"రింగ్ వాల్యూమ్"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"నావిగేషన్ వాల్యూమ్"</string>
@@ -308,7 +308,7 @@
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"వద్దు, ధన్యవాదాలు"</string>
     <string name="disable_text" msgid="4358165448648990820">"డిజేబుల్ చేయి"</string>
     <string name="enable_text" msgid="1794971777861881238">"ప్రారంభించు"</string>
-    <string name="uninstall_text" msgid="277907956072833012">"అన్ఇన్‌స్టాల్ చేయి"</string>
+    <string name="uninstall_text" msgid="277907956072833012">"అన్ఇన్‌స్టాల్ చేయండి"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"మీరు ఈ యాప్‌ను నిలిపివేస్తే, Android మరియు ఇతర యాప్‌లు ఇకపై ఉద్దేశించిన రీతిలో పని చేయకపోవచ్చు."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"యాప్‌ను నిలిపివేయి"</string>
     <string name="not_installed" msgid="4163454337822508007">"ఈ ప్రొఫైల్‌లో ఇన్‌స్టాల్ చేయబడలేదు"</string>
@@ -562,7 +562,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"ఇతర యాప్‌లు"</string>
     <string name="storage_files" msgid="6382081694781340364">"ఫైళ్లు"</string>
     <string name="storage_system" msgid="1271345630248014010">"సిస్టమ్"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"సిస్టమ్‌లో Android వెర్షన్ <xliff:g id="VERSION">%s</xliff:g>ను అమలు చేయడానికి అవసరమైన ఫైళ్లు ఉంటాయి"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"సిస్టమ్‌లో Android వెర్షన్ <xliff:g id="VERSION">%s</xliff:g>ను రన్ చేయడానికి అవసరమైన ఫైళ్లు ఉంటాయి"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ఆడియో ఫైళ్లు"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"గణిస్తోంది…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"యాప్ సైజ్"</string>
@@ -590,7 +590,7 @@
     <string name="add_account_title" msgid="5988746086885210040">"ఖాతాను జోడించండి"</string>
     <string name="add_an_account" msgid="1072285034300995091">"ఖాతాను జోడించండి"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"పరిమిత ప్రొఫైళ్లలో ఖాతాలను జోడించడం సాధ్యపడదు"</string>
-    <string name="remove_account_title" msgid="8840386525787836381">"ఖాతాను తీసివేయి"</string>
+    <string name="remove_account_title" msgid="8840386525787836381">"ఖాతాను తీసివేయండి"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ఖాతాను తీసివేయాలా?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ఈ ఖాతాను తీసివేయడం వలన పరికరం నుండి దానికి సంబంధించిన అన్ని మెసేజ్‌లు, కాంటాక్ట్‌లు మరియు ఇతర డేటా తొలగించబడతాయి!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"ఖాతాను తీసివేయడం విఫలమైంది."</string>
@@ -630,7 +630,7 @@
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"మళ్లీ గీయి"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"కొనసాగించు"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"మళ్లీ ప్రయత్నించు"</string>
-    <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"దాటవేయి"</string>
+    <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"స్కిప్ చేయండి"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"స్క్రీన్ లాక్‌ను సెట్ చేయండి"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"మీ పిన్ ఎంచుకోండి"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"మీ పాస్‌వర్డ్‌ను ఎంచుకోండి"</string>
@@ -658,7 +658,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"మీ పాస్‌వర్డ్‌ను నమోదు చేయండి"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"సెక్యూరిటీ కోసం, పిన్‌ను సెట్ చేయండి"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"మీ పిన్‌ను మళ్లీ నమోదు చేయండి"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"పిన్ తప్పనిసరిగా కనీసం 4 అంకెలు ఉండాలి"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN తప్పక కనీసం 4 అంకెలతో ఉండాలి"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"పిన్ చెల్లదు, కనీసం 4 అంకెలు ఉండాలి."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"పిన్‌లు సరిపోలలేదు"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"పిన్‌ని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>

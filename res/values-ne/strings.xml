@@ -134,9 +134,9 @@
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi का प्राथमिकताहरू"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi स्वतः अन गरियोस्"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"तपाईंको घरको नेटवर्क जस्ता सेभ गरिएका उच्च गुणस्तरका नेटवर्कहरू नजिक हुँदा Wi‑Fi फेरि सक्रिय हुने छ"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान निष्क्रिय पारिएको हुनाले उपलब्ध छैन। "<annotation id="link">"स्थान"</annotation>" सक्रिय गर्नुहोस्।"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान निष्क्रिय पारिएको हुनाले उपलब्ध छैन। "<annotation id="link">"स्थान"</annotation>" अन गर्नुहोस्।"</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi स्क्यान गर्ने सुविधा सक्रिय गर्ने हो?"</string>
-    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"सक्रिय गर्नुहोस्"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"अन गर्नुहोस्"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi स्क्यान गर्ने सेवा सक्रिय छ"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Wi-Fi  बाट बदलेर स्वतः मोबाइल डेटा प्रयोग गर्नुहोस्"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi मार्फत इन्टरनेट उपलब्ध नभएको बेलामा मोबाइल डेटाको खपत गर्नुहोस्। डेटा प्रयोगको शुल्क लाग्न सक्छ।"</string>
@@ -297,7 +297,7 @@
     <string name="all_applications" msgid="7798210477486822168">"सबै एपहरू देखाउनुहोस्"</string>
     <string name="default_applications" msgid="1558183275638697087">"डिफल्ट एपहरू"</string>
     <string name="app_permissions" msgid="32799922508313948">"एपसम्बन्धी अनुमति"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछ भन्ने कुरा तय गर्नु…"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"कुन कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछन् भन्ने कुरा तय गर्नुहोस्"</string>
     <string name="applications_settings" msgid="794261395191035632">"एपसम्बन्धी जानकारी"</string>
     <string name="force_stop" msgid="2153183697014720520">"जबर्जस्ती रोक्नुहोस्"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"जबरजस्ती रोक्ने हो?"</string>
@@ -350,8 +350,8 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"अटोफिल सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कुनै पनि होइन"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चयन गरिएको"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका अनुप्रयोगहरूबारे जानकारी पढ्न सक्ने छ।"</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो एपमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस एपले स्वतः भर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका एपबारे जानकारी पढ्न सक्ने छ।"</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो एपमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस एपले अटोफिल गर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा थप्नुहोस्"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"लिंकहरू खोल्दा"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"इन्स्टल गरिएका एपहरू"</string>
@@ -372,7 +372,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"हालसालै खोलिएका"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"सबै %1$d वटा एप हेर्नुहोस्"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"अनुमति म्यानेजर"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछ भन्ने कुरा तय गर्नु…"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"कुन कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछन् भन्ने कुरा तय गर्नुहोस्"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"सहायक तथा अन्य एप हेर्न"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"प्रणालीसम्बन्धी सेटिङ तथा अन्य सेटिङ हेर्न"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अनुप्रयोगमाथिको पहुँच"</string>
@@ -595,8 +595,8 @@
     <string name="really_remove_account_message" msgid="4296769280849579900">"यो खातालाई हटाउनुले यस डिभाइसबाट यस खातामा रहेका सम्पूर्ण सन्देश, सम्पर्कहरू र अन्य डेटा मेटाउने छ!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"खाता हटाउन सकिएन।"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"खाताको सिंक"</string>
-    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> मध्ये <xliff:g id="ID_1">%1$d</xliff:g> वस्तु सिंक गर्ने सुविधा अन छ"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सबै वस्तु सिंक गर्ने सुविधा अन छ"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> मध्ये <xliff:g id="ID_1">%1$d</xliff:g> वस्तुका हकमा सिंक अन छ"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सबै वस्तुका हकमा सिंक अन छ"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"सिंक गर्ने सुविधा पूर्णतया अफ छ"</string>
     <string name="sync_disabled" msgid="393531064334628258">"सिंक निष्क्रिय छ"</string>
     <string name="sync_error" msgid="6698021343089247914">"सिंकसम्बन्धी त्रुटि"</string>
@@ -758,8 +758,8 @@
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"सङ्गठनका प्रबन्धकले व्यवस्थापन गर्ने सेटिङ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> का बारेमा थप जान्नुहोस्"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"बग रिपोर्ट सेयर गर्ने हो?"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका खातिर एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन्।"</string>
-    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका खातिर एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन् र तपाईंको डिभाइस केही समयका लागि सुस्त चल्न सक्छ।"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका लागि एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन्।"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"यो सवारी साधनको सङ्गठनका प्रबन्धकले यो डिभाइसको समस्या निवारण गर्न सघाउ पुगोस् भन्नाका लागि एउटा त्रुटिको रिपोर्ट सेयर गर्न अनुरोध गर्नुभएको छ। डिभाइसमा भएका एप तथा डेटा सेयर गरिन सक्छन् र तपाईंको डिभाइस केही समयका लागि सुस्त चल्न सक्छ।"</string>
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"यो त्रुटिको रिपोर्ट यस सवारी साधनको सङ्गठनका प्रबन्धकसँग सेयर गरिँदै छ। यस सम्बन्धमा थप विवरणका लागि उहाँसँग सम्पर्क गर्नुहोस्।"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"सेयर गर्नुहोस्"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"अस्वीकार गर्नुहोस्"</string>

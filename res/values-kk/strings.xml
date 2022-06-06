@@ -65,7 +65,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Пайдалану циклін бастапқы күйге қайтару күні"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Әр айдағы күн:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Орнату"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Дерек ескертуі және шегі"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Дерек шығыны туралы ескерту және шектеу"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Қолданбаның дерек шығыны циклі"</string>
     <string name="mobile_data_usage" msgid="8171519864391091861">"Мобильдік интернет трафигі"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Дерек шығыны туралы ескерту"</string>
@@ -74,7 +74,7 @@
     <string name="data_limit" msgid="227338836292511425">"Дерек шегі"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Дерек трафигін шектеу"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Орнатқан шекке жеткеннен кейін, көліктегі құрылғы мобильдік деректерді өшіреді.\n\nҚұрылғы деректерді пайдалану шегін белгілейтіндіктен және оператор трафикті басқаша есептеуі мүмкін болғандықтан, қатаңырақ шек қойған жөн."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Дерек шығыны туралы ескерту"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Дерек шығыны туралы ескерту қою"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Дерек трафигі шегін орнату"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Дерек трафигін құрылғы өлшейді. Бұл мобильдік оператордың дерегінен басқаша болуы мүмкін."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Орнату"</string>
@@ -380,7 +380,7 @@
     <string name="hide_system" msgid="8845453295584638040">"Жүйені жасыру"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Жүйелік қолданбаларды жасыру"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Жүйе параметрлерін өзгерту"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Бұл рұқсат қолданбаға жүйе параметрлерін өзгертуге рұқсат етеді."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Бұл рұқсат қолданбаға жүйе параметрлерін өзгертуге мүмкіндік береді."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Хабарландыруларды пайдалану"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> қызметіне хабарландыруларды пайдалануға рұқсат берілсін бе?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> барлық хабарландыруларды, соның ішінде контакт аттары, сізге келген хабарлардың мәтіні сияқты жеке ақпаратты оқи алатын болады. Сондай-ақ хабарландыруларды өзгерте, жаба немесе олардағы әрекет түймелерін қоса алады. \n\nБұл, сондай-ақ қолданбаға Мазаламау режимін қосуға немесе өшіруге және тиісті параметрлерді өзгертуге мүмкіндік береді."</string>
@@ -390,7 +390,7 @@
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Ақылы SMS жіберу"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Ақылы SMS жіберу үшін оператор тарифтеріне сәйкес ақы алынады. Егер қолданбаға рұқсат берсеңіз, сол қолданба арқылы ақылы SMS жібере аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Пайдалану тарихын көру"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Пайдалану тарихын көру мүмкіндігі қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Пайдалану тарихын көру рұқсаты қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi желісін басқару"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi желісін басқару функциясы қолданбаға Wi-Fi желісін қосуға немесе өшіруге, Wi-Fi желілерін іздеуге және оларға жалғануға, желілерді енгізуге не өшіруге немесе тек жергілікті хотспотты іске қосуға рұқсат етеді."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Тағы"</string>
@@ -635,7 +635,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN кодын таңдаңыз"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Құпия сөзді таңдаңыз"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Қазіргі экран құлпы"</string>
-    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Қауіпсіздік үшін өрнекті орнатыңыз"</string>
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Қауіпсіздік үшін өрнек орнатыңыз"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Өшіру"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Бас тарту"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Құлыпты ашатын жаңа өрнек"</string>

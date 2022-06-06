@@ -204,7 +204,7 @@
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s કનેક્ટ કરેલું છે"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ડિસ્કનેક્ટ કરેલું છે"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"બ્લૂટૂથ જોડાણ બનાવવાની વિનંતી"</string>
-    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"જોડાણ બનાવો અને કનેક્ટ કરો"</string>
+    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"જોડી બનાવો અને કનેક્ટ કરો"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"બ્લૂટૂથનો જોડાણ કરવાનો કોડ"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"પિનમાં અક્ષરો અથવા પ્રતીકોનો સમાવેશ થાય છે"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"જોડાણ કરવાનો કોડ ટાઇપ કરો, પછી Return અથવા Enter દબાવો"</string>
@@ -582,7 +582,7 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> માટેના એકાઉન્ટ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ડેટાને ઑટોમૅટિક રીતે સિંક કરો"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ઍપને ઑટોમૅટિક રીતે ડેટાને રિફ્રેશ કરવા દો"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ડેટા ઑટો સિંક કરો ચાલુ કરીએ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ઑટો સિંક ડેટા ચાલુ કરીએ?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"તમે વેબ પર તમારા એકાઉન્ટમાં કરો તે કોઈપણ ફેરફારોને ઑટોમૅટિક રીતે તમારા ડિવાઇસ પર કૉપિ કરાશે.\n\nઅમુક એકાઉન્ટ પણ તમે ડિવાઇસ પર કરો તે ફેરફારોને વેબ પર ઑટોમૅટિક રીતે કૉપિ કરશે. Google એકાઉન્ટ આ પ્રમાણે કાર્ય કરે છે."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ડેટા ઑટો સિંક કરો બંધ કરીએ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"આમ કરવું તે ડેટા બચાવશે, પરંતુ તાજેતરની માહિતી એકત્રિત કરવા માટે તમને દરેક એકાઉન્ટને મેન્યુઅલી સિંક કરવાની જરૂર પડશે. અને જ્યારે અપડેટ આવશે ત્યારે તમને નોટિફિકેશન પ્રાપ્ત થશે નહીં."</string>
@@ -592,7 +592,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"પ્રતિબંધિત પ્રોફાઇલ એકાઉન્ટ ઉમેરી શકતી નથી"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"એકાઉન્ટ કાઢી નાખો"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"એકાઉન્ટ કાઢી નાખીએ?"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"આ એકાઉન્ટને કાઢી નાખવાથી તેમાંના બધા સંદેશા, સંપર્કો તેમજ ડિવાઇસનો અન્ય ડેટા ડિલીટ થઈ જશે!"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"આ એકાઉન્ટને કાઢી નાખવાથી તેમાંના બધા મેસેજ, સંપર્કો તેમજ ડિવાઇસનો અન્ય ડેટા ડિલીટ થઈ જશે!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"એકાઉન્ટ કાઢી નાખવામાં નિષ્ફળ થયાં."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"એકાઉન્ટ સિંક કરો"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> માંથી <xliff:g id="ID_1">%1$d</xliff:g> આઇટમ માટે સિંક ચાલુ છે"</string>

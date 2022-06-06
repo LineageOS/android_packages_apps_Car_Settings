@@ -24,7 +24,7 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo adaptativo"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Adaptar el brillo de la pantalla al entorno"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Luz nocturna activada"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Modo nocturno"</string>
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"Modo Noche"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Redes e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Red móvil"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMs}}"</string>
@@ -51,7 +51,7 @@
     <string name="data_used_formatted" msgid="6684557577780068339">"Datos usados: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="cell_data_warning" msgid="8997739664336571149">"Advertencia de datos: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Límite de datos: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Advertencia de datos: <xliff:g id="ID_1">^1</xliff:g>/Límite de datos: <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Advertencia de datos: <xliff:g id="ID_1">^1</xliff:g> / Límite de datos: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{Queda # día}other{Quedan # días}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"No queda tiempo"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Queda menos de 1 día"</string>
@@ -65,7 +65,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Día de inicio de cada ciclo de uso"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Día de cada mes:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Definir"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Límite y advertencia de datos"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Advertencia y límite de datos"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclo de uso de datos de aplicaciones"</string>
     <string name="mobile_data_usage" msgid="8171519864391091861">"Uso de datos móviles"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Establecer advertencia de datos"</string>
@@ -124,7 +124,7 @@
     <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
-    <string name="wifi_network_detail" msgid="9070182553555487360">"Detalles de la red"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Detalles de red"</string>
     <string name="wifi_mac_address" msgid="1466178247802349180">"Dirección MAC"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"Dirección IP"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"Máscara de subred"</string>
@@ -200,7 +200,7 @@
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Una aplicación quiere activar el Bluetooth y hacer visible la unidad principal para otros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Se muestra como %1$s a otros dispositivos"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Mis dispositivos"</string>
-    <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectados anteriormente"</string>
+    <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectado anteriormente"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s conectado"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s desconectado"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitud de emparejamiento por Bluetooth"</string>
@@ -486,7 +486,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Se restablecerán todas las preferencias de:\n\n"<li>"Aplicaciones desactivadas"</li>\n<li>"Notificaciones de aplicaciones desactivadas"</li>\n<li>"Aplicaciones para acciones predeterminadas"</li>\n<li>"Restricciones de datos en segundo plano de aplicaciones"</li>\n<li>"Restricciones de permisos"</li>\n\n"No se perderán los datos de las aplicaciones."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se han restablecido las preferencias de las aplicaciones"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Volver al estado de fábrica (borrar todo)"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Borrar todo (volver al estado de fábrica)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Borrar todos los datos y perfiles del sistema de infoentretenimiento"</string>
     <string name="factory_reset_desc" msgid="1688333312943433244">"Se borrarán todos los datos del sistema de infoentretenimiento de tu vehículo, como:\n\n"<li>"Tu cuenta de Google"</li>\n<li>"Los ajustes y datos de aplicaciones y del sistema"</li>\n<li>"Las aplicaciones descargadas"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Has iniciado sesión en estas cuentas:"</string>
@@ -702,7 +702,7 @@
     <string name="backspace_key" msgid="1545590866688979099">"Tecla de retroceso"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tecla Intro"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Salir de demostración"</string>
-    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Salir del modo demostración"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Salir del modo Demo"</string>
     <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"Se eliminará la cuenta de demostración y se restablecerá el estado de fábrica del sistema. Se perderán todos los datos del perfil."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Salir de demostración"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"CERRAR"</string>

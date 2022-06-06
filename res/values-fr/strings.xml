@@ -226,7 +226,7 @@
     <string name="text_to_speech_settings" msgid="811985746199507343">"Synthèse vocale"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Moteur préféré"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Moteur actuel"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"Cadence"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Débit"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Ton"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Réinitialiser"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Son"</string>
@@ -389,13 +389,13 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accès aux SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Les SMS premium peuvent être payants et s\'ajouter aux factures de votre opérateur. Si vous activez l\'autorisation pour une application, vous serez en mesure d\'envoyer des SMS premium à l\'aide de cette dernière."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Accès aux infos d\'utilisation"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Accès aux données d\'utilisation"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"L\'accès aux données d\'utilisation permet à une application d\'effectuer le suivi des applications que vous utilisez, de la fréquence d\'utilisation, de l\'opérateur, des paramètres de langue et d\'autres détails."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Contrôle Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou supprimer des réseaux, ou à lancer un point d\'accès local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Plus"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Position"</string>
-    <string name="location_toggle_title" msgid="836779750812064601">"Utiliser la position"</string>
+    <string name="location_toggle_title" msgid="836779750812064601">"Utiliser la localisation"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Autoriser applis spécifiées à accéder à position"</string>
     <string name="location_toggle_off_warning" msgid="8396854289251143748">"Si vous désactivez cela, l\'accès à la position sera supprimé pour toutes les applis, sauf les applis d\'aide à la conduite."</string>
     <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Utiliser position pour aide à conduite"</string>
@@ -409,7 +409,7 @@
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations des applis"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
-    <string name="location_use_location_title" msgid="117735895374606680">"Utiliser ma position"</string>
+    <string name="location_use_location_title" msgid="117735895374606680">"Utiliser la localisation"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Les services de localisation peuvent utiliser des sources telles que le GPS, le Wi-Fi, les réseaux mobiles et les capteurs pour estimer la position de votre appareil."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Aide à la conduite"</string>
     <string name="adas_settings_footer" msgid="5128483877858058534">"Les informations de localisation envoyées aux applis d\'aide à la conduite ne contiennent aucun détail vous identifiant. Elles sont stockées pendant deux jours au maximum, puis supprimées."</string>
@@ -569,8 +569,8 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"Données de profil"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Total"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Effacer les données"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Vider le cache"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Effacer du stockage"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Effacer du cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Supprimer les données ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Les données de cette application (fichiers, paramètres, comptes, bases de données, etc.) seront définitivement supprimées."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Impossible d\'effacer les données de l\'application."</string>

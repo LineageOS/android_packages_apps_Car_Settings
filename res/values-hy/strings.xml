@@ -641,7 +641,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Ձեր նոր ապակողպող նախշը"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Ապակողպող նախշ գծեք"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Ավարտելուց հետո մատը բաց թողեք"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշը պահվեց"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշը գրանցվեց"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Հաստատելու համար նորից նկարեք նախշը"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Միացրեք առնվազն 4 կետ:"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Նախշը սխալ է"</string>
@@ -758,9 +758,9 @@
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Կազմակերպության ադմինիստրատորի կողմից կառավարվող կարգավորումներ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Իմանալ ավելին «<xliff:g id="SERVICE">%1$s</xliff:g>» ծառայության մասին"</string>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Ուղարկե՞լ վրիպակի զեկույցը"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ։"</string>
-    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ, իսկ սարքի աշխատանքը կարող է ժամանակավորապես դանդաղել։"</string>
-    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Այս վրիպակի զեկույցը տրամադրվում է ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին։ Դիմեք նրան՝ լրացուցիչ տեղեկություններ ստանալու համար։"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի մասին հաղորդում։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ։"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի մասին հաղորդում։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ, իսկ սարքի աշխատանքը կարող է ժամանակավորապես դանդաղել։"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Վրիպակի մասին այս հաղորդումը տրամադրվում է ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին։ Դիմեք նրան՝ լրացուցիչ տեղեկություններ ստանալու համար։"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Ուղարկել"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Մերժել"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ներկայումս հնարավոր չէ փոխել այս կարգավորումը"</string>
@@ -780,8 +780,8 @@
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Շատ մեծ"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"Ենթագրերի ոճը"</string>
     <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Կարգավորված է հավելվածով"</string>
-    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Սպիտակը սևի վրա"</string>
-    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Սևը սպիտակի վրա"</string>
-    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Դեղինը սևի վրա"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Սպիտակ՝ սևի վրա"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Սև՝ սպիտակի վրա"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Դեղին՝ սևի վրա"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Դեղինը կապույտի վրա"</string>
 </resources>
