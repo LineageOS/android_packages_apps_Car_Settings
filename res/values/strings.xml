@@ -922,10 +922,16 @@
     <string name="driver_assistance_warning_confirm_label">
         Turn off anyway
     </string>
-    <!-- Title of Recent Location Requests setting [CHAR LIMIT=60] -->
-    <string name="location_settings_recent_requests_title">Recent Location Requests</string>
-    <!-- Message indicating that no apps have requested location recently [CHAR LIMIT=60] -->
-    <string name="location_settings_recent_requests_empty_message">No recent location requests</string>
+    <!-- Title of Recent Location Accesses category [CHAR LIMIT=60] -->
+    <string name="location_recently_accessed">Recently accessed</string>
+    <!-- Title of Location Recently Accessed setting [CHAR LIMIT=60] -->
+    <string name="location_settings_recently_accessed_title">Recently accessed</string>
+    <!-- Title of preference name to view all apps that recently accessed location [CHAR LIMIT=60] -->
+    <string name="location_settings_recently_accessed_view_all_title">View all</string>
+    <!-- Message indicating that no apps have accessed location recently [CHAR LIMIT=60] -->
+    <string name="location_no_recent_access">No recent apps</string>
+    <!-- Label for driver assistance apps that recently accessed location [CHAR LIMIT=60] -->
+    <string name="driver_assistance_label"><xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver Assistance</string>
     <!-- Title of Location App-level Permissions setting [CHAR LIMIT=60] -->
     <string name="location_settings_app_permissions_title">App-level permissions</string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
@@ -978,7 +984,7 @@
     </string>
     <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
     <string name="microphone_settings_recent_requests_title">Recently accessed</string>
-    <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
+    <!-- Title of preference name to view all apps that recently accessed microphone [CHAR LIMIT=60] -->
     <string name="microphone_settings_recent_requests_view_all_title">View all</string>
     <!-- Microphone settings, loading the number of apps which have microphone permission [CHAR LIMIT=30] -->
     <string name="microphone_settings_loading_app_permission_stats">Loading\u2026</string>

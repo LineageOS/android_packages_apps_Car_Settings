@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The Android Open Source Project
+ * Copyright (C) 2022 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.privacy;
+package com.android.car.settings.location;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -60,33 +60,39 @@ import java.util.Collections;
 import java.util.List;
 
 @RunWith(AndroidJUnit4.class)
-public class MicrophoneRecentAccessViewAllPreferenceControllerTest {
+public class LocationRecentAccessViewAllPreferenceControllerTest {
 
     private final Context mContext = Mockito.spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
     private LogicalPreferenceGroup mPreference;
-    private MicrophoneRecentAccessViewAllPreferenceController mPreferenceController;
+    private LocationRecentAccessViewAllPreferenceController mPreferenceController;
 
-    @Mock
-    private FragmentController mFragmentController;
-    @Mock
-    private RecentAppOpsAccess mRecentMicrophoneAccesses;
+    @Mock private FragmentController mFragmentController;
+    @Mock private RecentAppOpsAccess mRecentLocationAccesses;
 
     @Before
     @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
-        CarUxRestrictions carUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
-                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+        CarUxRestrictions carUxRestrictions =
+                new CarUxRestrictions.Builder(
+                                /* reqOpt= */ true,
+                                CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+                                /* timestamp= */ 0)
+                        .build();
 
         PreferenceManager preferenceManager = new PreferenceManager(mContext);
         PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
         mPreference = new LogicalPreferenceGroup(mContext);
         screen.addPreference(mPreference);
-        mPreferenceController = new MicrophoneRecentAccessViewAllPreferenceController(mContext,
-                "key", mFragmentController, carUxRestrictions,
-                mRecentMicrophoneAccesses);
+        mPreferenceController =
+                new LocationRecentAccessViewAllPreferenceController(
+                        mContext,
+                        "key",
+                        mFragmentController,
+                        carUxRestrictions,
+                        mRecentLocationAccesses);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         doNothing().when(mContext).startActivity(any());
     }
@@ -94,39 +100,43 @@ public class MicrophoneRecentAccessViewAllPreferenceControllerTest {
     @Test
     public void updateState_noSystemAppsByDefault() {
         initializePreference();
-        verify(mRecentMicrophoneAccesses, never()).getAppListSorted(/* showSystem= */ true);
+        verify(mRecentLocationAccesses, never()).getAppListSorted(/* showSystem= */ true);
     }
 
     @Test
     public void setShowSystem_showsSystemApps() {
         initializePreference();
         mPreferenceController.setShowSystem(true);
-        verify(mRecentMicrophoneAccesses).getAppListSorted(/* showSystem= */ true);
+        verify(mRecentLocationAccesses).getAppListSorted(/* showSystem= */ true);
     }
 
     @Test
-    public void refreshUi_noRecentRequests_showsEmptyState() {
+    public void refreshUi_noRecentAccesses_showsEmptyState() {
         initializePreference();
 
-        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
+        when(mRecentLocationAccesses.getAppListSorted(/* showSystem= */ false))
                 .thenReturn(Collections.emptyList());
         mPreferenceController.refreshUi();
 
-        assertThat(mPreference.getPreference(0).getTitle()).isEqualTo(
-                mContext.getString(R.string.microphone_no_recent_access));
+        assertThat(mPreference.getPreference(0).getTitle())
+                .isEqualTo(mContext.getString(R.string.location_no_recent_access));
     }
 
     @Test
-    public void refreshUi_someRecentRequests_displaysAppInformation() {
+    public void refreshUi_someRecentAccesses_displaysAppInformation() {
         initializePreference();
 
         String fakeLabel = "Test app 1";
-        RecentAppOpsAccess.Access fakeAccess = new RecentAppOpsAccess.Access("com.test",
-                UserHandle.CURRENT, mock(Drawable.class), fakeLabel,
-                "fake contentDescription", Clock.systemDefaultZone().millis());
+        RecentAppOpsAccess.Access fakeAccess =
+                new RecentAppOpsAccess.Access(
+                        "com.test",
+                        UserHandle.CURRENT,
+                        mock(Drawable.class),
+                        fakeLabel,
+                        "fake contentDescription",
+                        Clock.systemDefaultZone().millis());
         List<RecentAppOpsAccess.Access> list = Collections.singletonList(fakeAccess);
-        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
-                .thenReturn(list);
+        when(mRecentLocationAccesses.getAppListSorted(/* showSystem= */ false)).thenReturn(list);
         mPreferenceController.refreshUi();
 
         assertThat(mPreference.getPreference(0).getTitle()).isEqualTo(fakeLabel);
@@ -134,13 +144,12 @@ public class MicrophoneRecentAccessViewAllPreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_recentRequests_launchMicrophoneSettings() {
+    public void refreshUi_recentAccesses_launchLocationSettings() {
         initializePreference();
 
-        List<RecentAppOpsAccess.Access> list = Collections.singletonList(
-                mock(RecentAppOpsAccess.Access.class));
-        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
-                .thenReturn(list);
+        List<RecentAppOpsAccess.Access> list =
+                Collections.singletonList(mock(RecentAppOpsAccess.Access.class));
+        when(mRecentLocationAccesses.getAppListSorted(/* showSystem= */ false)).thenReturn(list);
         mPreferenceController.refreshUi();
 
         mPreference.getPreference(0).performClick();
@@ -151,17 +160,16 @@ public class MicrophoneRecentAccessViewAllPreferenceControllerTest {
         Intent intent = captor.getValue();
         assertThat(intent.getAction()).isEqualTo(Intent.ACTION_MANAGE_APP_PERMISSION);
         assertThat(intent.getStringExtra(Intent.EXTRA_PERMISSION_GROUP_NAME))
-            .isEqualTo(Manifest.permission_group.MICROPHONE);
+                .isEqualTo(Manifest.permission_group.LOCATION);
     }
 
     @Test
-    public void refreshUi_newRecentRequests_listIsUpdated() {
+    public void refreshUi_newRecentAccesses_listIsUpdated() {
         initializePreference();
 
-        List<RecentAppOpsAccess.Access> list1 = Collections.singletonList(
-                mock(RecentAppOpsAccess.Access.class));
-        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
-                .thenReturn(list1);
+        List<RecentAppOpsAccess.Access> list1 =
+                Collections.singletonList(mock(RecentAppOpsAccess.Access.class));
+        when(mRecentLocationAccesses.getAppListSorted(/* showSystem= */ false)).thenReturn(list1);
 
         List<RecentAppOpsAccess.Access> list2 = new ArrayList<>(list1);
         list2.add(mock(RecentAppOpsAccess.Access.class));
@@ -169,8 +177,7 @@ public class MicrophoneRecentAccessViewAllPreferenceControllerTest {
         mPreferenceController.refreshUi();
         assertThat(mPreference.getPreferenceCount()).isEqualTo(list1.size());
 
-        when(mRecentMicrophoneAccesses.getAppListSorted(/* showSystem= */ false))
-                .thenReturn(list2);
+        when(mRecentLocationAccesses.getAppListSorted(/* showSystem= */ false)).thenReturn(list2);
         mPreferenceController.refreshUi();
         assertThat(mPreference.getPreferenceCount()).isEqualTo(list2.size());
     }
@@ -180,4 +187,3 @@ public class MicrophoneRecentAccessViewAllPreferenceControllerTest {
         mPreferenceController.onStart(mLifecycleOwner);
     }
 }
-
