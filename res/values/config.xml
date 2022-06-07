@@ -160,4 +160,9 @@
          exists. If it is left blank then no screen reader will show up in settings.
     -->
     <string name="config_default_screen_reader" translatable="false"></string>
+
+    <!--
+        Delay in milliseconds between preference onclick calls
+    -->
+    <integer name="config_preference_onclick_debounce_ms">200</integer>
 </resources>
