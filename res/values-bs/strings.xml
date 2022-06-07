@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Drugi uređaji se mogu povezati na pristupnu tačku <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Lozinka pristupne tačke"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sigurnost"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Lična"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nema"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP opseg"</string>
@@ -157,7 +159,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Odaberite barem jedan frekvencijski pojas za WiFi pristupnu tačku:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Pristupna tačka i povezivanje putem mobitela"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Pristupna tačka i dijeljenje internetske veze"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Pristupna tačka"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Isključeno"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatski isključi pristupnu tačku"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Otkaži"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potvrdite"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mora sadržavati najmanje 4 znaka"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Broj znakova mora biti najmanje <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Broj cifri u PIN-u mora biti najmanje <xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Ukupan broj znakova mora biti manji od <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Ukupan broj cifri mora biti manji od <xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Mora sadržavati samo cifre 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator uređaja ne dozvoljava korištenje nedavnog PIN kôda"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Vaš IT administrator je blokirao česte PIN kodove. Probajte drugi PIN kôd."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administrator uređaja ne dozvoljava korištenje nedavne lozinke"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Greška prilikom pohrane lozinke"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Vaš IT administrator je blokirao česte lozinke. Probajte drugu lozinku."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nije dozvoljen rastući, opadajući ili ponavljajući niz cifri."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Mora sadržavati najmanje jedno slovo"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Mora sadržavati najmanje jednu cifru"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Mora sadržavati najmanje jedan simbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Mora sadržavati najmanje # slovo}one{Mora sadržavati najmanje # slovo}few{Mora sadržavati najmanje # slova}other{Mora sadržavati najmanje # slova}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Mora sadržavati najmanje # malo slovo}one{Mora sadržavati najmanje # malo slovo}few{Mora sadržavati najmanje # mala slova}other{Mora sadržavati najmanje # malih slova}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Mora sadržavati najmanje # veliko slovo}one{Mora sadržavati najmanje # veliko slovo}few{Mora sadržavati najmanje # velika slova}other{Mora sadržavati najmanje # velikih slova}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Mora sadržavati najmanje # cifru}one{Mora sadržavati najmanje # cifru}few{Mora sadržavati najmanje # cifre}other{Mora sadržavati najmanje # cifara}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Mora sadržavati najmanje # posebni znak}one{Mora sadržavati najmanje # posebni znak}few{Mora sadržavati najmanje # posebna znaka}other{Mora sadržavati najmanje # posebnih znakova}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Mora sadržavati najmanje # znak koji nije slovo}one{Mora sadržavati najmanje # znak koji nije slovo}few{Mora sadržavati najmanje # znaka koja nisu slova}other{Mora sadržavati najmanje # znakova koja nisu slova}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Mora sadržavati najmanje # znak koji nije broj}one{Mora sadržavati najmanje # znak koji nije broj}few{Mora sadržavati najmanje # znaka koja nisu brojevi}other{Mora sadržavati najmanje # znakova koji nisu brojevi}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Mora sadržavati najmanje # znak}one{Mora sadržavati najmanje # znak}few{Mora sadržavati najmanje # znaka}other{Mora sadržavati najmanje # znakova}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Mora sadržavati najmanje # cifru}one{Mora sadržavati najmanje # cifru}few{Mora sadržavati najmanje # cifre}other{Mora sadržavati najmanje # cifara}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Ukupan broj znakova mora biti manji od #}one{Ukupan broj znakova mora biti manji od #}few{Ukupan broj znakova mora biti manji od #}other{Ukupan broj znakova mora biti manji od #}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Ukupan broj cifara mora biti manji od #}one{Ukupan broj cifara mora biti manji od #}few{Ukupan broj cifara mora biti manji od #}other{Ukupan broj cifara mora biti manji od #}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Nije dozvoljen rastući, opadajući ili ponavljajući niz cifri"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcije zaključavanja ekrana"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : prije <xliff:g id="NUM_DAYS">%3$s</xliff:g> dana"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Brisanje akreditiva"</string>
@@ -757,6 +769,61 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Pravila o vozilima organizacije <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Postavkama upravlja upravitelj organizacije"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Saznajte više o usluzi <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Podaci o upravljanom vozilu"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Postavke kojima upravlja administrator voznog parka"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Da pružite pristup podacima na ovom upravljanom vozilu, administrator voznog parka može promijeniti postavke i instalirati softver na informativno-zabavnom sistemu.\n\nZa više detalja kontaktirajte administratora voznog parka."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informacije koje može vidjeti administrator voznog parka"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Izmjene koje je izvršio administrator voznog parka"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Podaci povezani s upravljanim računom vozila"</li>\n" "<li>"Lista aplikacija na upravljanom vozilu"</li>\n" "<li>"Količina provedenog vremena i utrošenih podataka u svakoj aplikaciji"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Vaš pristup informativno-zabavnom sistemu"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lista aplikacija u vašem vozilu"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Broj aplikacija je samo procjena. Možda nisu obuhvaćene aplikacije koje su instalirane izvan Play trgovine."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Minimalno <xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
+      <item quantity="few">Minimalno <xliff:g id="COUNT_1">%d</xliff:g> aplikacije</item>
+      <item quantity="other">Minimalno <xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aplikacije</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Najnoviji zapisnik mrežnog saobraćaja"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Najnoviji izvještaj o greškama"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Najnoviji zapisnik o sigurnosti"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Ništa"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Instalirane aplikacije"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Odobrenja za lokaciju"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Odobrenja za mikrofon"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Odobrenja za kameru"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Zadane aplikacije"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Zadana tastatura"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Postavljeno na: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Postavljen je globalni HTTP proksi server"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Pouzdani akreditivi na vašem ličnom profilu"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Administrator može zaključati informativno-zabavni sistem i poništiti lozinku"</li>\n" "<li>"Administrator može izbrisati podatke na informativno-zabavnom sistemu"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Neuspjeli pokušaji upisivanja lozinke prije brisanja svih podataka na informativno-zabavnom sistemu"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Neuspjeli pokušaji upisivanja lozinke prije brisanja podataka profila"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> pokušaj</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> pokušaja</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pokušaja</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Aplikacije za kameru</item>
+      <item quantity="few">Aplikacije za kameru</item>
+      <item quantity="other">Aplikacije za kameru</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">Aplikacije klijenta za e-poštu</item>
+      <item quantity="few">Aplikacije klijenta za e-poštu</item>
+      <item quantity="other">Aplikacije klijenta za e-poštu</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">Aplikacije za telefon</item>
+      <item quantity="few">Aplikacije za telefon</item>
+      <item quantity="other">Aplikacije za telefon</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Podijeliti izvještaj o grešci?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Upravitelj organizacije za ovo vozilo je zatražio izvještaj o grešci radi lakšeg rješavanja problema ovog uređaja. To može uzrokovati dijeljenje aplikacija i podataka."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Upravitelj organizacije za ovo vozilo je zatražio izvještaj o grešci radi lakšeg rješavanja problema ovog uređaja. To može uzrokovati dijeljenje aplikacija i podataka te privremeno usporiti vaš uređaj."</string>
@@ -784,4 +851,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Crno na bijeloj podlozi"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Žuto na crnoj podlozi"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Žuto na plavoj podlozi"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Čitač ekrana"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Isključeno"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Izgovor stavki na ekranu"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Koristite aplikaciju <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcije"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Postavke"</string>
 </resources>

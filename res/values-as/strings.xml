@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ৰ সৈতে অন্য ডিভাইচে সংযোগ কৰিব পাৰে"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"হটস্পটৰ পাছৱৰ্ড"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"সুৰক্ষা"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-ব্যক্তিগত"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-ব্যক্তিগত"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ব্যক্তিগত"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"নাই"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"এপি বেণ্ড"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"বাতিল কৰক"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"নিশ্চিত কৰক"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"অতি কমেও ৪টা বর্ণ থাকিব লাগিব"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"অতি কমেও <xliff:g id="COUNT">%d</xliff:g>টা বৰ্ণ থাকিব লাগিব"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"পিনটোত অতি কমেও <xliff:g id="COUNT">%d</xliff:g>টা অংক থাকিব লাগিব"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>তকৈ কম সংখ্যক বৰ্ণ থাকিব লাগিব"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"কেৱল ০-৯ৰ ভিতৰৰ অংকহে থাকিব লাগিব।"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ডিভাইচৰ প্ৰশাসকে শেহতীয়া পিন ব্যৱহাৰ কৰিব নিদিয়ে"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"আপোনাৰ আইটি প্ৰশাসকে উমৈহতীয়া পিনসমূহ অৱৰোধ কৰিছে। অন্য এটা পিন ব্যৱহাৰ কৰি চাওক।"</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ডিভাইচৰ প্ৰশাসকে শেহতীয়া পাছৱৰ্ড ব্যৱহাৰ কৰিব নিদিয়ে"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"পাছৱৰ্ড ছেভ কৰোঁতে আঁসোৱাহ"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"আপোনাৰ আইটি প্ৰশাসকে উমৈহতীয়া পাছৱৰ্ডসমূহ অৱৰোধ কৰিছে। অন্য এটা পাছৱৰ্ড ব্যৱহাৰ কৰি চাওক।"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"সংখ্যাবোৰৰ ঊৰ্ধ্বগামী, অধোগামী বা পুনৰাবৃত্তি ক্ৰমক অনুমতি দিয়া নহয়।"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"কমেও এটা বৰ্ণ থাকিব লাগিব"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"কমেও এটা অংক থাকিব লাগিব"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"কমেও এটা প্ৰতীক থাকিব লাগিব"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{অতি কমেও # টা বৰ্ণ থাকিব লাগিব}one{অতি কমেও # টা বৰ্ণ থাকিব লাগিব}other{অতি কমেও # টা বৰ্ণ থাকিব লাগিব}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{অতি কমেও # টা সৰুফলা বৰ্ণ থাকিব লাগিব}one{অতি কমেও # টা সৰুফলা বৰ্ণ থাকিব লাগিব}other{অতি কমেও # টা সৰুফলা বৰ্ণ থাকিব লাগিব}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{[অতি কমেও # টা বৰফলা বৰ্ণ থাকিব লাগিব}one{অতি কমেও # টা বৰফলা বৰ্ণ থাকিবই লাগিব}other{অতি কমেও # টা বৰফলা বৰ্ণ থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{কমেও # টা সংখ্যা থাকিব লাগিব}one{অতি কমেও # টা অংক থাকিবই লাগিব}other{অতি কমেও # টা অংক থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{অতি কমেও # টা বিশেষ চিহ্ন থাকিব লাগিব}one{অতি কমেও # টা বিশেষ প্ৰতীক থাকিবই লাগিব}other{অতি কমেও # টা বিশেষ প্ৰতীক থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{অতি কমেও # টা সংখ্যা বা প্ৰতীক থাকিব লাগিব}one{অতি কমেও # টা সংখ্যা বা প্ৰতীক থাকিব লাগিব}other{অতি কমেও # টা সংখ্যা বা প্ৰতীক থাকিব লাগিব}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{অতি কমেও # টা এনেকুৱা বৰ্ণ থাকিবই লাগিব যিটো সংখ্যা নহয়}one{অতি কমেও # টা এনেকুৱা বৰ্ণ থাকিবই লাগিব যিটো সংখ্যা নহয়}other{অতি কমেও # টা এনেকুৱা বৰ্ণ থাকিবই লাগিব যিটো সংখ্যা নহয়}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{অতি কমেও # টা বর্ণ থাকিবই লাগিব}one{অতি কমেও # টা বৰ্ণ থাকিবই লাগিব}other{অতি কমেও # টা বৰ্ণ থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{অতি কমেও # টা অংক থাকিবই লাগিব}one{অতি কমেও # টা অংক থাকিবই লাগিব}other{অতি কমেও # টা অংক থাকিবই লাগিব}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# টা বর্ণতকৈ কম হ\'বই লাগিব}one{# তকৈ কম সংখ্যক আখৰৰ হ\'ব লাগিব}other{# তকৈ কম সংখ্যক আখৰৰ হ\'ব লাগিব}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# টা সংখ্যাতকৈ কম হ\'বই লাগিব}one{# তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব}other{# তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"সংখ্যাবোৰৰ ঊৰ্ধ্বগামী, অধোগামী বা পুনৰাবৃত্তি ক্ৰমক অনুমতি দিয়া নহয়"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্ৰীণ লক সম্পৰ্কীয় বিকল্প"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> দিন আগত"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ক্ৰেডেনশ্বিয়েল মচক"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>ৰ বাহনৰ নীতি"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"প্ৰতিষ্ঠানটোৰ পৰিচালকে পৰিচালনা কৰা ছেটিং"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g>ৰ বিষয়ে অধিক জানক"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"পৰিচালিত বাহনৰ তথ্য"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ফ্লীটৰ প্ৰশাসকে পৰিচালনা কৰা ছেটিং"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"এই পৰিচালিত বাহনখনত থকা ডেটাৰ এক্সেছ প্ৰদান কৰিবলৈ ফ্লীটৰ প্ৰশাসকে ছেটিং সলনি কৰিব পাৰে আৰু ইনফ’টেইনমেণ্ট ছিষ্টেমটোত ছফ্টৱেৰ ইনষ্টল কৰিব পাৰে।\n\nঅধিক জানিবলৈ আপোনাৰ ফ্লীটৰ প্ৰশাসকৰ সৈতে যোগাযোগ কৰক।"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"আপোনাৰ ফ্লীটৰ প্ৰশাসকে চাব পৰা তথ্য"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"আপোনাৰ ফ্লীটৰ প্ৰশাসকে কৰা সালসলনি"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"আপোনাৰ পৰিচালিত বাহনৰ একাউণ্টৰ সৈতে জড়িত ডেটা"</li>\n" "<li>"আপোনাৰ পৰিচালিত বাহনত থকা এপৰ সূচী"</li>\n" "<li>"প্ৰতিটো এপত খৰচ কৰা সময় আৰু ডেটাৰ পৰিমাণ"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ইনফ’টেইনমেণ্ট ছিষ্টেমলৈ থকা আপোনাৰ এক্সেছ"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"আপোনাৰ বাহনত থকা এপৰ সূচী"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"এপৰ সংখ্যাটো আনুমানিক। Play Storeৰ বাহিৰৰ পৰা ইনষ্টল কৰা এপ্‌ ইয়াত অন্তৰ্ভুক্ত নহ’বও পাৰে।"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">ন্যূনতম <xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
+      <item quantity="other">ন্যূনতম <xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> টা এপ্‌</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"সকলোতকৈ শেহতীয়া নেটৱৰ্ক ট্ৰেফিকৰ লগ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"একেবাৰে শেহতীয়া বাগ ৰিপ’ৰ্ট"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"সকলোতকৈ শেহতীয়া নিৰাপত্তা লগ"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"একো নাই"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"এপ্‌ ইনষ্টল কৰা হৈছে"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"অৱস্থানৰ অনুমতি"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"মাইক্ৰ’ফ’নৰ অনুমতি"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"কেমেৰাৰ অনুমতি"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ডিফ’ল্ট এপ্‌"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ডিফ’ল্ট কীব’ৰ্ড"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>লৈ ছেট কৰক"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"গোলকীয় HTTP প্ৰ’ক্সী ছেট কৰা হৈছে"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"আপোনাৰ ব্যক্তিগত প্ৰ’ফাইলত থকা বিশ্বাসী ক্ৰিডেনশ্বিয়েল"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"প্ৰশাসকে ইনফ’টেইনমেণ্ট ছিষ্টেমটো লক কৰিব আৰু পাছৱৰ্ড ৰিছেট কৰিব পাৰে"</li>\n" "<li>"প্ৰশাসকে ইনফ’টেইনমেণ্ট ছিষ্টেমত থকা ডেটা মচিব পাৰে"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ইনফ’টেইনমেণ্ট ছিষ্টেমত থকা আটাইবোৰ ডেটা মচাৰ আগতে পাছৱৰ্ড দিয়াৰ ব্যৰ্থ প্ৰয়াস"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"প্ৰ’ফাইলৰ ডেটা মচাৰ পূৰ্বে পাছৱৰ্ড দিয়াৰ ব্যৰ্থ প্ৰয়াস"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> টা প্ৰয়াস</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> টা প্ৰয়াস</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">কেমেৰা এপ্‌সমূহ</item>
+      <item quantity="other">কেমেৰা এপ্‌সমূহ</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">ইমেইল ক্লাইণ্ট এপ্‌সমূহ</item>
+      <item quantity="other">ইমেইল ক্লাইণ্ট এপ্‌সমূহ</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">ফ’ন এপ্‌সমূহ</item>
+      <item quantity="other">ফ’ন এপ্‌সমূহ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"বাগ সম্পর্কীয় অভিযোগ শ্বেয়াৰ কৰিবনে?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"এই বাহনখনৰ প্ৰতিষ্ঠানৰ প্ৰশাসকে এই ডিভাইচটোৰ সমস্যা সমাধান কৰাত সহায় কৰিবলৈ এটা বাগ সম্পর্কীয় অভিযোগৰ বাবে অনুৰোধ জনাইছে। এপ্ আৰু ডেটা শ্বেয়াৰ কৰা হ\'ব পাৰে।"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"এই বাহনখনৰ প্ৰতিষ্ঠানৰ প্ৰশাসকে এই ডিভাইচটোৰ সমস্যা সমাধান কৰাত সহায় কৰিবলৈ এটা বাগ সম্পর্কীয় অভিযোগৰ বাবে অনুৰোধ জনাইছে। এপ্ আৰু ডেটা শ্বেয়াৰ কৰা হ\'ব পাৰে আৰু আপোনাৰ ডিভাইচটো সাময়িকভাৱে লেহেমীয়া হ\'ব পাৰে।"</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"বগাৰ ওপৰত ক’লা"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ক’লাৰ ওপৰত হালধীয়া"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"নীলাৰ ওপৰত হালধীয়া"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"স্ক্ৰীন ৰীডাৰ"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"অফ আছে"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"স্ক্ৰীনত থকা বস্তুবোৰ কওক"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ব্যৱহাৰ কৰক"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"বিকল্প"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"ছেটিং"</string>
 </resources>

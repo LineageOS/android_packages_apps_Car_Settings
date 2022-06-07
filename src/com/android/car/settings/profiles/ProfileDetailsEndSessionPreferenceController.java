@@ -64,11 +64,8 @@ public class ProfileDetailsEndSessionPreferenceController
     public boolean handlePreferenceClicked(CarUiPreference preference) {
         LOG.i("ending session (" + getUserInfo().toFullString() + ") and switching back to user "
                 + mLogoutUserId);
-        boolean switched = ProfileHelper.getInstance(getContext()).switchProfile(mLogoutUserId);
-        if (switched) {
-            LOG.d("clearing logout user");
-            mDpm.clearLogoutUser();
-        } else {
+        boolean switched = ProfileHelper.getInstance(getContext()).logoutProfile();
+        if (!switched) {
             LOG.e("Switch failed");
         }
         return true;

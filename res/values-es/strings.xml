@@ -47,7 +47,7 @@
     <string name="roaming_alert_title" msgid="4433901635766775763">"¿Quieres permitir el roaming de datos?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Es posible que se apliquen cargos por roaming."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Uso de datos"</string>
-    <string name="data_usage_title" msgid="2923515974389203812">"Datos principales"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"Datos primarios"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Datos usados: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="cell_data_warning" msgid="8997739664336571149">"Advertencia de datos: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Límite de datos: <xliff:g id="ID_1">^1</xliff:g>"</string>
@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Otros dispositivos pueden conectarse a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Contraseña del punto de acceso"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Seguridad"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nada"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda del PA"</string>
@@ -203,7 +205,7 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectados anteriormente"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s conectado"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s desconectado"</string>
-    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitud de vinculación de Bluetooth"</string>
+    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitud de emparejamiento por Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Sincronizar y conectar"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de emparejamiento por Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"El PIN contiene letras o símbolos"</string>
@@ -410,7 +412,7 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos de las aplicaciones"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicios de ubicación"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Se pueden utilizar distintas fuentes, como el GPS, sensores y redes Wi‑Fi y móviles, para determinar la ubicación de este dispositivo."</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"La ubicación puede utilizar distintas fuentes, como el GPS, los sensores y las redes Wi‑Fi y móviles, para determinar la ubicación de este dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia en la conducción"</string>
     <string name="adas_settings_footer" msgid="5128483877858058534">"La información de la ubicación enviada a las aplicaciones de asistencia en la conducción no contiene datos que te identifiquen. Se ha almacenado durante un máximo de 2 días antes de eliminarse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Cancelar"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Confirmar"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Debe tener al menos 4 caracteres"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Debe tener al menos <xliff:g id="COUNT">%d</xliff:g> caracteres"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"El PIN debe tener al menos <xliff:g id="COUNT">%d</xliff:g> dígitos"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Debe tener menos de <xliff:g id="NUMBER">%d</xliff:g> caracteres"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Debe tener menos de <xliff:g id="NUMBER">%d</xliff:g> dígitos"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Solo debe tener dígitos comprendidos entre el 0 y el 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"El administrador de dispositivos no permite utilizar un PIN reciente"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Tu administrador de TI ha bloqueado los PINs más habituales. Prueba con otro."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"El administrador de dispositivos no permite utilizar una contraseña reciente"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"No se ha podido guardar la contraseña"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Tu administrador de TI ha bloqueado las contraseñas más habituales. Prueba con otra."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No se permite utilizar una secuencia ascendente, descendente ni repetida de dígitos."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Debe tener al menos una letra"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Debe tener al menos un dígito"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Debe tener al menos un símbolo"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Debe tener al menos # letra}other{Debe tener al menos # letras}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Debe tener al menos # letra minúscula}other{Debe tener al menos # letras minúsculas}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Debe tener al menos # letra mayúscula}other{Debe tener al menos # letras mayúsculas}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Debe tener al menos # dígito numérico}other{Debe tener al menos # dígitos numéricos}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Debe tener al menos # símbolo especial}other{Debe tener al menos # símbolos especiales}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Debe tener al menos # carácter que no sea una letra}other{Debe tener al menos # caracteres que no sean letras}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Debe tener al menos # carácter que no sea un número}other{Debe tener al menos # caracteres que no sean números}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Debe tener al menos # carácter}other{Debe tener al menos # caracteres}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Debe tener al menos # dígito}other{Debe tener al menos # dígitos}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Debe tener # carácter menos}other{Debe tener # caracteres menos}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Debe tener # dígito menos}other{Debe tener # dígitos menos}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"No se permite utilizar una secuencia ascendente, descendente ni repetida de dígitos"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opciones de bloqueo de pantalla"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : hace <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Borrar credenciales"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política del vehículo <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Ajustes gestionados por el administrador de la organización"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Más información sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Información sobre el vehículo gestionado"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Configuración gestionada por el administrador de la flota"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Para proporcionar acceso a datos de este vehículo gestionado, el administrador de tu flota puede cambiar configuración e instalar software en el sistema de infoentretenimiento.\n\nPara obtener información detallada, contacta con el administrador de tu flota."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Información visible para los administradores de tu flota"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Cambios hechos por los administradores de tu flota"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Datos asociados a la cuenta de tu vehículo gestionado"</li>\n" "<li>"Lista de aplicaciones de tu vehículo gestionado"</li>\n" "<li>"Tiempo y datos totales gastados en cada aplicación"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Tu acceso al sistema de infoentretenimiento"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lista de aplicaciones de tu vehículo"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"El número de aplicaciones es una estimación. Pueden no incluirse aplicaciones instaladas que no sean de Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Al menos <xliff:g id="COUNT_1">%d</xliff:g> aplicaciones</item>
+      <item quantity="one">Al menos <xliff:g id="COUNT_0">%d</xliff:g> aplicación</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicaciones</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplicación</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Registro de tráfico de red más reciente"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Informe de errores más reciente"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Registro de seguridad más reciente"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Nada"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Aplicaciones instaladas"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Permisos de ubicación"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Permisos de micrófono"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Permisos de cámara"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Aplicaciones predeterminadas"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Teclado predeterminado"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Seleccionar <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Definido el proxy HTTP global"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Credenciales de confianza en tu perfil personal"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"El administrador puede bloquear el sistema de infoentretenimiento y cambiar la contraseña"</li>\n" "<li>"El administrador puede eliminar datos del sistema de infoentretenimiento"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Intentos fallidos de introducir la contraseña antes de borrar todos los datos del sistema de infoentretenimiento"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Intentos fallidos de introducir la contraseña antes de borrar los datos del perfil"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> intentos</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> intento</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Aplicaciones de cámara</item>
+      <item quantity="one">Aplicación de cámara</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Aplicaciones de cliente de correo</item>
+      <item quantity="one">Aplicación de cliente de correo</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Aplicaciones de teléfono</item>
+      <item quantity="one">Aplicación de teléfono</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"¿Compartir informe de errores?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"El administrador de la organización de este vehículo ha solicitado un informe de errores para solucionar problemas en este dispositivo. Es posible que se compartan las aplicaciones y los datos, y que el dispositivo funcione más lento de forma temporal."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Negro sobre blanco"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Amarillo sobre negro"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Amarillo sobre azul"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Lector de pantalla"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Desactivado"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Decir los elementos que hay en pantalla"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Usar <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opciones"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Ajustes"</string>
 </resources>

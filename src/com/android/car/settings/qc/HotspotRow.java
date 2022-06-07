@@ -18,6 +18,7 @@ package com.android.car.settings.qc;
 
 import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
 import static com.android.car.qc.QCItem.QC_TYPE_ACTION_SWITCH;
+import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
 import static com.android.car.settings.qc.SettingsQCRegistry.HOTSPOT_ROW_URI;
 
 import android.content.Context;
@@ -27,6 +28,7 @@ import android.net.TetheringManager;
 import android.net.Uri;
 import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiManager;
+import android.os.UserManager;
 import android.text.TextUtils;
 
 import com.android.car.qc.QCActionItem;
@@ -34,6 +36,7 @@ import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 
 /**
  * QCItem for showing a hotspot row element.
@@ -56,11 +59,21 @@ public class HotspotRow extends SettingsQCItem {
     QCItem getQCItem() {
         Icon icon = Icon.createWithResource(getContext(), R.drawable.ic_qc_hotspot);
 
+        String userRestriction = UserManager.DISALLOW_CONFIG_TETHERING;
+        boolean hasDpmRestrictions = EnterpriseUtils.hasUserRestrictionByDpm(getContext(),
+                userRestriction);
+        boolean hasUmRestrictions = EnterpriseUtils.hasUserRestrictionByUm(getContext(),
+                userRestriction);
+
         QCActionItem hotpotToggle = new QCActionItem.Builder(QC_TYPE_ACTION_SWITCH)
                 .setChecked(HotspotQCUtils.isHotspotEnabled(mWifiManager))
-                .setEnabled(!HotspotQCUtils.isHotspotBusy(mWifiManager))
+                .setEnabled(!HotspotQCUtils.isHotspotBusy(mWifiManager)
+                        && !hasUmRestrictions && !hasDpmRestrictions)
                 .setAvailable(mIsSupported)
                 .setAction(getBroadcastIntent())
+                .setClickableWhileDisabled(hasDpmRestrictions)
+                .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
+                        userRestriction))
                 .build();
 
         QCRow hotspotRow = new QCRow.Builder()
