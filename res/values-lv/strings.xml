@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Citas ierīces var izveidot savienojumu ar tīklāju <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Tīklāja parole"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Drošība"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 personiska"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nav"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"PP josla"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Atcelt"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Apstiprināt"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Jābūt vismaz 4 rakstzīmēm"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Ir jāietver vismaz <xliff:g id="COUNT">%d</xliff:g> rakstzīmes."</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kodā ir jāietver vismaz <xliff:g id="COUNT">%d</xliff:g> cipari."</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Ir jābūt mazāk nekā <xliff:g id="NUMBER">%d</xliff:g> rakstzīmēm."</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Ir jābūt mazāk nekā <xliff:g id="NUMBER">%d</xliff:g> cipariem."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Ir jāietver tikai cipari no 0 līdz 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Ierīces administrators neļauj izmantot nesen izveidotu PIN."</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Jūsu IT administrators ir bloķējis bieži lietotus PIN. Izmēģiniet citu PIN."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Ierīces administrators neļauj izmantot nesen izveidotu paroli."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Saglabājot paroli, radās kļūda."</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Jūsu IT administrators ir bloķējis bieži lietotas paroles. Izmēģiniet citu paroli."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nav atļauta augoša, dilstoša vai atkārtota ciparu secība."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Ir jāietver vismaz viens burts."</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Ir jāietver vismaz viens cipars."</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Ir jāietver vismaz viens simbols."</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Ir jāietver vismaz # burts.}zero{Ir jāietver vismaz # burti.}one{Ir jāietver vismaz # burts.}other{Ir jāietver vismaz # burti.}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Ir jāietver vismaz # mazais burts.}zero{Ir jāietver vismaz # mazie burti.}one{Ir jāietver vismaz # mazais burts.}other{Ir jāietver vismaz # mazie burti.}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Ir jāietver vismaz # lielais burts.}zero{Ir jāietver vismaz # lielie burti.}one{Ir jāietver vismaz # lielais burts.}other{Ir jāietver vismaz # lielie burti.}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Ir jāietver vismaz # cipars.}zero{Ir jāietver vismaz # cipari.}one{Ir jāietver vismaz # cipars.}other{Ir jāietver vismaz # cipari.}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Ir jāietver vismaz # īpašais simbols.}zero{Ir jāietver vismaz # īpašie simboli.}one{Ir jāietver vismaz # īpašais simbols.}other{Ir jāietver vismaz # īpašie simboli.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Ir jāietver vismaz # rakstzīme, kas nav burts.}zero{Ir jāietver vismaz # rakstzīmes, kas nav burti.}one{Ir jāietver vismaz # rakstzīme, kas nav burti.}other{Ir jāietver vismaz # rakstzīmes, kas nav burti.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Ir jāietver vismaz # rakstzīme, kas nav cipars.}zero{Ir jāietver vismaz # rakstzīmes, kas nav cipari.}one{Ir jāietver vismaz # rakstzīme, kas nav cipari.}other{Ir jāietver vismaz # rakstzīmes, kas nav cipari.}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Ir jābūt vismaz # rakstzīmei.}zero{Ir jābūt vismaz # rakstzīmēm.}one{Ir jābūt vismaz # rakstzīmei.}other{Ir jābūt vismaz # rakstzīmēm.}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Ir jāietver vismaz # cipars.}zero{Ir jāietver vismaz # cipari.}one{Ir jāietver vismaz # cipars.}other{Ir jāietver vismaz # cipari.}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Ir jābūt mazāk par # rakstzīmi.}zero{Ir jābūt mazāk par # rakstzīmēm.}one{Ir jābūt mazāk par # rakstzīmi.}other{Ir jābūt mazāk par # rakstzīmēm.}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Ir jābūt mazāk par # ciparu.}zero{Ir jābūt mazāk par # cipariem.}one{Ir jābūt mazāk par # ciparu.}other{Ir jābūt mazāk par # cipariem.}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Nav atļauta augoša, dilstoša vai atkārtota ciparu secība."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekrāna bloķēšanas opcijas"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: pirms <xliff:g id="NUM_DAYS">%3$s</xliff:g> dienām"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Notīrīt akreditācijas datus"</string>
@@ -757,6 +769,61 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>: transportlīdzekļa politika"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Iestatījumi, ko pārvalda organizācijas pārvaldnieks"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Plašāka informācija par: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Pārvaldītā transportlīdzekļa informācija"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Iestatījumi, ko pārvalda autoparka administrators"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Lai šajā pārvaldītajā transportlīdzeklī nodrošinātu piekļuvi datiem, autoparka administrators var mainīt iestatījumus un instalēt programmatūru informatīvi izklaidējošajā sistēmā.\n\nLai uzzinātu vairāk, sazinieties ar autoparka administratoru."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informācija, kas redzama autoparka administratoram:"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Autoparka administratora ieviestās izmaiņas"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ar jūsu pārvaldītā transportlīdzekļa kontu saistītie dati;"</li>\n" "<li>"jūsu pārvaldītajā transportlīdzeklī pieejamo lietotņu saraksts;"</li>\n" "<li>"katras lietotnes izmantošanas laiks un izmantotais datu apjoms."</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Jūsu piekļuve informatīvi izklaidējošajai sistēmai"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Jūsu transportlīdzekļa lietotņu saraksts"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Lietotņu skaits ir aptuvens. Tajā var nebūt ietvertas lietotnes, kas instalētas ārpus Play veikala."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="zero">Vismaz <xliff:g id="COUNT_1">%d</xliff:g> lietotņu</item>
+      <item quantity="one">Vismaz <xliff:g id="COUNT_1">%d</xliff:g> lietotne</item>
+      <item quantity="other">Vismaz <xliff:g id="COUNT_1">%d</xliff:g> lietotnes</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> lietotņu</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> lietotne</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> lietotnes</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Pēdējais tīkla datplūsmas žurnāls"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Pēdējais kļūdas pārskats"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Pēdējais drošības žurnāls"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Nav"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Instalētas lietotnes"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Atrašanās vietas atļaujas"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Mikrofona atļaujas"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Kameras atļaujas"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Noklusējuma lietotnes"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Noklusējuma tastatūra"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Iestatīta: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Ir iestatīts globālais HTTP starpniekserveris"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Jūsu personīgajā profilā instalēti uzticami akreditācijas dati"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Administrators var bloķēt informatīvi izklaidējošo sistēmu un atiestatīt paroli."</li>\n" "<li>"Administrators var dzēst datus no informatīvi izklaidējošās sistēmas."</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Nesekmīgu paroles ievadīšanas mēģinājumu skaits, pēc kura tiek dzēsti visi informatīvi izklaidējošās sistēmas dati"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Nesekmīgu paroles ievadīšanas mēģinājumu skaits, pēc kura tiek dzēsti profila dati"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> mēģinājumu</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> mēģinājums</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> mēģinājumi</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="zero">Kameras lietotnes</item>
+      <item quantity="one">Kameras lietotnes</item>
+      <item quantity="other">Kameras lietotnes</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="zero">E-pasta klienta lietotnes</item>
+      <item quantity="one">E-pasta klienta lietotnes</item>
+      <item quantity="other">E-pasta klienta lietotnes</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="zero">Tālruņa lietotnes</item>
+      <item quantity="one">Tālruņa lietotnes</item>
+      <item quantity="other">Tālruņa lietotnes</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Vai kopīgot kļūdas pārskatu?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Šī transportlīdzekļa organizācijas pārvaldnieks pieprasīja kļūdas pārskatu, lai varētu palīdzēt novērst problēmu šajā ierīcē. Var tikt kopīgotas lietotnes un dati."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Šī transportlīdzekļa organizācijas pārvaldnieks pieprasīja kļūdas pārskatu, lai varētu palīdzēt novērst problēmu šajā ierīcē. Var tikt kopīgotas lietotnes un dati, un jūsu ierīces darbība var īslaicīgi palēnināties."</string>
@@ -784,4 +851,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Melns uz balta"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Dzeltens uz melna"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Dzeltens uz zila"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Ekrāna lasītājs"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Izslēgts"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Izrunāt ekrānā redzamos vienumus"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Izmantot lietotni <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcijas"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Iestatījumi"</string>
 </resources>

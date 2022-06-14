@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Amanye amadivayisi angaxhuma ku-<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Iphasiwedi ye-Hotspot"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Ukuvikela"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"I-WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"I-WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"I-WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Lutho"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"I-AP Band"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Khansela"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Qinisekisa"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Kumele okungenani ibe izinhlamvu ezingu-4"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Kumele okungenani kube izinhlamvu ezingu-<xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Iphinikhodi kumele ibe okungenani amadijithi angu-<xliff:g id="COUNT">%d</xliff:g>"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Kumele ibe izinhlamvu ezincane kunezingu-<xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Kumele ibe namadijithi ambalwa kunangu-<xliff:g id="NUMBER">%d</xliff:g>"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Kumele iqukathe amadijithi angu-0-9 kuphela."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Umlawuli wedivayisi akavumeli ukusebenzisa iphinikhodi yakamuva"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Ama-PIN avamile avinjelwe umlawuli wakho we-IT. Zama i-PIN ehlukile."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Umlawuli wedivayisi akavumeli ukusebenzisa iphasiwedi yakamuva"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Iphutha ukulondoloza iphasiwedi"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Amaphasiwedi avamile avinjelwe umlawuli wakho we-IT. Zama iphasiwedi ehlukile."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Ukwenyuka, ukwehla, noma ukulandelana okuphindiwe kwamadijithi akuvunyelwe."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Kufanele iqukathe okungenani uhlamvu olulodwa"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Kufanele iqukathe okungenani idijithi eyodwa"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Kufanele iqukathe okungenani isimbuli eyodwa"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Kufanele iqukathe okungenani igama eli-1}one{Kufanele okungenani iqukathe izinhlamvu ezingu-#}other{Kufanele okungenani iqukathe izinhlamvu ezingu-#}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Kufanele iqukathe okungenani igama elingu-# lohlamvu oluncane}one{Kufanele iqukathe okungenani amagama angu-# wezinhlamvu ezincane}other{Kufanele iqukathe okungenani amagama angu-# wezinhlamvu ezincane}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Kufanele iqukathe okungenani igama elingu-# elingufeleba}one{Kufanele iqukathe okungenani amagama angu-# angofeleba}other{Kufanele iqukathe okungenani amagama angu-# angofeleba}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Kufanele iqukathe okungenani idijithi elingu-# eliyinombolo}one{Kufanele iqukathe okungenani amadijithi angu-# ayinombolo}other{Kufanele iqukathe okungenani amadijithi angu-# ayinombolo}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Kufanele iqukathe okungenani isimbuli elingu-# ekhethekile}one{Kufanele iqukathe okungenani amasimbuli angu-# akhethekile}other{Kufanele iqukathe okungenani amasimbuli angu-# akhethekile}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Kufanele iqukathe okungenani okungu-# okungelona uhlamvu}one{Kufanele iqukathe okungenani okungu-# okungezona izinhlamvu}other{Kufanele iqukathe okungenani okungu-# okungezona izinhlamvu}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Kufanele iqukathe okungenani uhlamvu olungu-# olungeyona inombolo}one{Kufanele iqukathe okungenani izinhlamvu ezingu-# ezingezona izinombolo}other{Kufanele iqukathe okungenani izinhlamvu ezingu-# ezingezona izinombolo}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Kufanele kuqukathe okungenani uhlamvu olungu-#}one{Kufanele kuqukathe okungenani izinhlamvu ezingu-#}other{Kufanele kuqukathe okungenani izinhlamvu ezingu-#}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Kufanele iqukathe okungenani idijithi elingu-#}one{Kufanele iqukathe okungenani amadijithi angu-#}other{Kufanele iqukathe okungenani amadijithi angu-#}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Kufanele kube ngaphansi kohlamvu olungu-#}one{Kufanele kube ngaphansi kwezinhlamvu ezingu-#}other{Kufanele kube ngaphansi kwezinhlamvu ezingu-#}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Kufanele kube ngaphansi kwedijithi elingu-#}one{Kufanele kube ngaphansi kwamadijithi angu-#}other{Kufanele kube ngaphansi kwamadijithi angu-#}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Ukwenyuka, ukwehla, noma uchungechunge olwehlayo lamadijithi alivunyewe"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Izinketho zokukhiya isikrini"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> izinsuku ezedlule"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Sula ukuqinisekisa"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"inqubomgomo yemoto ye-<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Amasethingi aphethwe ngumphathi wale nhlangano"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Funda kabanzi nge-<xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Ulwazi lwemoto olulawulwayo"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Amasethingi alawulwa umlawuli wezithuthi"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Ukuze anikeze ukufinyelela kudatha kule moto elawulwayo, umlawuli wesithuthi angase ashintshe amasethingi futhi afake isofthiwe kusistimu ye-infotainment.\n\nUkuze uthole imininingwane eyengeziwe, thinta umlawuli wezithuthi."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Ulwazi olukwazi ukubonwa umlawuli wakho wezithuthi"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Izinguquko ezenziwe umlawuli wakho wezithuthi"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Idatha ehlobene ne-akhawunti yakho elawulwayo yemoto"</li>\n" "<li>"Uhlu lwama-app emotweni yakho elawulwayo"</li>\n" "<li>"Inani lesikhathi nedatha echithwe ku-app ngayinye"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Ukufinyelela kwakho kusistimu ye-infotainment"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Uhlu lwama-app emotweni yakho"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Inombolo yama-app iyalinganiswa. Ingahle ingabandakanyi ama-app angaphandle kwe-Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Ubuncane bama-app obungu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">Ubuncane bama-app obungu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one">ama-app <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">ama-app <xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Ilogo yethrafikhi yenethiwekhi yakamuva kakhulu"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Umbiko wakamuva kakhulu wesiphazamisi"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Ilogi lokuvikela lakamuva kakhulu"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Lutho"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Ama-app afakiwe"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Izimvume zendawo"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Izimvume zemakrofoni"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Izimvume zekhamera"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Ama-app azenzakalelayo"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Ikhibhodi ezenzakalelayo"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Setha ku-<xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Ummeleli we-Global HTTP usethiwe"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Ukuqinisekisa okwethembekile kuphrofayela yomuntu siqu"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Umlawuli angakwazi ukukhiya isistimu ye-infotainment futhi asethe kabusha iphasiwedi"</li>\n" "<li>"Umlawuli angakwazi ukusula idatha kusistimu ye-infotainment"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Imizamo ehlulekile yephasiwedi ngaphambi kokusula yonke isistimu ye-infotainment"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Imizamo ehlulekile yephasiwedi ngaphambi kokusula idatha yephrofayela"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one">imizamo engu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="other">imizamo engu-<xliff:g id="COUNT_1">%d</xliff:g></item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Ama-app wekhamera</item>
+      <item quantity="other">Ama-app wekhamera</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">Ama-app weklayenti ye-imeyili</item>
+      <item quantity="other">Ama-app weklayenti ye-imeyili</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">Ama-app wefoni</item>
+      <item quantity="other">Ama-app wefoni</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Yabelana ngombiko wesiphazamisi?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Umphathi wenhlangano yale moto ucele umbiko wesiphazamisi ukusiza ukuxazulula inkinga kule divayisi. Ama-app nedatha kungabelwana."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Umphathi wenhlangano yale moto ucele umbiko wesiphazamisi ukusiza ukuxazulula inkinga kule divayisi. Ama-app nedatha kungabelwana, futhi idivayisi yakho ingahle yehle kancane."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Okumnyama kokumhlophe"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Okuliphuzi kokumnyama"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Okuliphuzi kokuluhlaza okwesibhakabhaka"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Isifundi sesikrini"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Valiwe"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Khuluma izinto kusikrini"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Sebenzisa i-<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Izinketho"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Amasethingi"</string>
 </resources>

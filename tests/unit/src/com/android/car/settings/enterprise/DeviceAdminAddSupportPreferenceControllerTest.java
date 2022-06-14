@@ -24,7 +24,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 public final class DeviceAdminAddSupportPreferenceControllerTest extends
-        BasePreferenceControllerTestCase {
+        BaseEnterprisePreferenceControllerTestCase {
 
     @Mock
     private Preference mPreference;

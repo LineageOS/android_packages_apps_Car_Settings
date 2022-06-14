@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"دیگر آلات <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> سے منسلک ہو سکتے ہیں"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ہاٹ اسپاٹ کا پاس ورڈ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"سیکیورٹی"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3 ذاتی"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3 ذاتی"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ذاتی"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"کوئی نہیں"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP بینڈ"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"منسوخ کریں"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تصدیق کریں"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"کم از کم 4 حروف ہونا ضروری ہے"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"کم از کم <xliff:g id="COUNT">%d</xliff:g> حروف پر مشتمل ہونا چاہیے"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN کم از کم <xliff:g id="COUNT">%d</xliff:g> ہندسوں کا ہونا چاہیے"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"کریکٹرز <xliff:g id="NUMBER">%d</xliff:g> سے کم ہونے چاہئیں"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ہندسے <xliff:g id="NUMBER">%d</xliff:g> سے کم ہونے چاہئیں۔"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"صرف ‎0-9 ہندسے شامل ہونے چاہئیں۔"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"آلہ کا منتظم ایک حالیہ PIN استعمال کرنے کی اجازت نہیں دیتا ہے"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"آپ کے IT منتظم نے عمومی PINs کو مسدود کر دیا ہے۔ کوئی دوسرا PIN آزمائیں۔"</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"آلے کا منتظم ایک حالیہ پاس ورڈ کا استعمال کرنے کی اجازت نہیں دیتا ہے"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"پاس ورڈ محفوظ کرنے میں خرابی"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"آپ کے IT منتظم نے عمومی پاس ورڈز کو مسدود کر دیا ہے۔ کوئی دوسرا پاس ورڈ آزمائیں۔"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ہندسوں کی صعودی، نزولی یا مکرر ترتیب کی اجازت نہیں ہے۔"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"کم از کم ایک حرف پر مشتمل ہونا چاہیے"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"کم از کم ایک ہندسہ پر مشتمل ہونا چاہیے"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"کم از کم ایک علامت پر مشتمل ہونا چاہیے"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{کم از کم # حرف پر مشتمل ہونا چاہیے}other{کم از کم # حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{کم از کم # چھوٹے حرف پر مشتمل ہونا چاہیے}other{کم از کم # چھوٹے حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{کم از کم # بڑے حرف پر مشتمل ہونا چاہیے}other{کم از کم # بڑے حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{کم از کم # عددی ہندسے پر مشتمل ہونا چاہیے}other{کم از کم # عددی ہندسے پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{کم از کم # خصوصی علامت پر مشتمل ہونا چاہیے}other{کم از کم # خصوصی علامات پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{کم از کم # غیر حرفی کیریکٹر پر مشتمل ہونا چاہیے}other{کم از کم # غیر حرفی کیریکٹرز پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{کم از کم # غیر عددی حرف پر مشتمل ہونا چاہیے}other{کم از کم # غیر عددی حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{کم از کم # حرف پر مشتمل ہونا چاہیے}other{کم از کم # حروف پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{کم از کم # ہندسے پر مشتمل ہونا چاہیے}other{کم از کم # ہندسے پر مشتمل ہونے چاہئیں}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# حرف سے کم ہونا چاہیے}other{# حروف سے کم ہونے چاہئیں}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# ہندسے سے کم ہونا چاہیے}other{# ہندسے سے کم ہونے چاہئیں}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ہندسوں کی صعودی، نزولی یا مکرر ترتیب کی اجازت نہیں ہے"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"اسکرین لاک کے اختیارات"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> دن پہلے"</string>
     <string name="credentials_reset" msgid="873900550885788639">"اسنادات صاف کریں"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> گاڑی کی پالیسی"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"تنظیم کے مینیجر کے زیر انتظام ترتیبات"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> کے بارے میں مزید جانیں"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"نظم کردہ گاڑی کی فہرست"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"فلیٹ منتظم کے زیر انتظام ترتیبات"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"اس نظم کردہ گاڑی پر موجود ڈیٹا تک رسائی فراہم کرنے کے لیے، فلیٹ منتظم ترتیبات کو تبدیل کر سکتا ہے اور معلوماتی انٹرٹینمنٹ سسٹم پر سافٹ ویئر انسٹال کر سکتا ہے۔\n\nمزید تفصیلات کے لیے، اپنے فلیٹ کے منتظم سے رابطہ کریں۔"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"وہ معلومات جسے آپ کے فلیٹ کا منتظم دیکھ سکتا ہے"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"آپ کے فلیٹ کے منتظم کی طرف سے کی گئی تبدیلیاں"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"آپ کی نظم کردہ گاڑی کے اکاؤنٹ سے وابستہ ڈیٹا"</li>\n" "<li>"آپ کی نظم کردہ گاڑی پر ایپس کی فہرست"</li>\n" "<li>"ہر ایپ میں صَرف کئے گئے وقت اور ڈیٹا کی مقدار"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"معلوماتی انٹرٹینمنٹ سسٹم تک آپ کی رسائی"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"آپ کی گاڑی پر موجود ایپس کی فہرست"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"ایپس کی تعداد تخمینی ہے۔ ہو سکتا ہے Play اسٹور سے باہر انسٹال کردہ ایپس اس میں شامل نہ ہوں۔"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">کم از کم <xliff:g id="COUNT_1">%d</xliff:g> ایپس</item>
+      <item quantity="one">کم از کم <xliff:g id="COUNT_0">%d</xliff:g> ایپ</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ایپس</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ایپ</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"حالیہ ترین نیٹ ورک ٹریفک لاگ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"حالیہ ترین بگ رپورٹ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"حالیہ ترین سیکیورٹی لاگ"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"کوئی نہیں"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"ایپس انسٹال ہو گئیں"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"مقام کی اجازتیں"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"مائیکروفون کی اجازتیں"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"کیمرے کی اجازتیں"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ڈیفالٹ ایپس"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ڈیفالٹ کی بورڈ"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> پر سیٹ کریں"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"عالمی HTTP پراکسی سیٹ ہے"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"آپ کی ذاتی پروفائل میں بھروسہ مند اسناد"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"منتظم معلوماتی انٹرٹینمنٹ سسٹم کو لاک کر سکتا ہے اور پاس ورڈ کو ری سیٹ کر سکتا ہے"</li>\n" "<li>"منتظم معلوماتی انٹرٹینمنٹ سسٹم پر موجود ڈیٹا کو حذف کر سکتا ہے"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"معلوماتی انٹرٹینمنٹ سسٹم پر موجود تمام ڈیٹا کو حذف کرنے سے قبل پاس ورڈ درج کرنے کی ناکام کوششیں"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"پروفائل کے ڈیٹا کو حذف کرنے سے قبل پاس ورڈ درج کرنے کی ناکام کوششیں"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> کوششیں</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> کوشش</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">کیمرا ایپس</item>
+      <item quantity="one">کیمرا ایپ</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">ای میل کلائنٹ ایپس</item>
+      <item quantity="one">ای میل کلائنٹ ایپ</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">فون ایپس</item>
+      <item quantity="one">فون ایپ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"بگ رپورٹ کا اشتراک کریں؟"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"اس گاڑی کی تنظیم کے مینیجر نے اس آلہ کا مسئلہ حل کرنے میں مدد کے لیے ایک بگ رپورٹ کی درخواست کی ہے۔ ایپس اور ڈیٹا کا اشتراک ہو سکتا ہے۔"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"اس گاڑی کی تنظیم کے مینیجر نے اس آلہ کا مسئلہ حل کرنے میں مدد کے لیے ایک بگ رپورٹ کی درخواست کی ہے۔ ایپس اور ڈیٹا کا اشتراک ہو سکتا ہے اور آپ کا آلہ عارضی طور پر سست ہو سکتا ہے۔"</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"سفید پر سیاہ"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"سیاہ پر پیلا"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"نیلے پر پیلا"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"اسکرین قاری"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"آف ہے"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"اسکرین پر موجود آئٹمز کو بولیں"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> استعمال کریں"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"اختیارات"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"ترتیبات"</string>
 </resources>

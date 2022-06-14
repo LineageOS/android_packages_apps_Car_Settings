@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ឧបករណ៍​ផ្សេងទៀត​អាចភ្ជាប់​ជាមួយ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ពាក្យសម្ងាត់​ហតស្ប៉ត"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"សុវត្ថិភាព"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ផ្ទាល់ខ្លួន"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"គ្មាន"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"កម្រិតបញ្ជូន AP"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"បោះបង់"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"បញ្ជាក់"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ត្រូវ​មាន​យ៉ាងហោចណាស់ 4 តួ"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ត្រូវ​​មាន​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> តួ"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"កូដ PIN ​ត្រូវ​មានយ៉ាងតិច <xliff:g id="COUNT">%d</xliff:g> ខ្ទង់"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ត្រូវមានតិចជាង <xliff:g id="NUMBER">%d</xliff:g> តួ"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ត្រូវមានលេខតិចជាង <xliff:g id="NUMBER">%d</xliff:g> ខ្ទង់"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ត្រូវមាន​លេខពី 0-9 តែ​ប៉ុណ្ណោះ។"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​កូដ PIN ​ទើបប្រើ​ហើយ​ទេ"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"កូដ PIN លក្ខណៈ​សាមញ្ញ​ត្រូវ​បាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រងផ្នែក​ព័ត៌មាន​វិទ្យា​របស់អ្នក។ សូមសាកល្បង​ប្រើ​កូដ PIN ផ្សេង​ពីនេះ។"</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​ពាក្យ​សម្ងាត់​​ដែលទើបប្រើ​ហើយ​ទេ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"មាន​បញ្ហា​ក្នុងការ​រក្សាទុក​ពាក្យ​សម្ងាត់"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ពាក្យសម្ងាត់​លក្ខណៈ​សាមញ្ញ​ត្រូវបាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រង​ផ្នែកព័ត៌មាន​វិទ្យា​របស់អ្នក។ សូមសាកល្បង​ប្រើ​ពាក្យសម្ងាត់​ផ្សេងពីនេះ។"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់​ឡើង ចុះ ឬ​ដដែលៗ​ទេ។"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ត្រូវមានអក្សរយ៉ាងហោចណាស់មួយតួ"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ត្រូវមានលេខយ៉ាងហោចណាស់មួយតួ"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ត្រូវមានសញ្ញាយ៉ាងហោចណាស់មួយ"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ត្រូវមានអក្សរយ៉ាងហោចណាស់ # តួ}other{ត្រូវមានអក្សរយ៉ាងហោចណាស់ # តួ}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ត្រូវមានអក្សរតូចយ៉ាងហោចណាស់ # តួ}other{ត្រូវមានអក្សរតូចយ៉ាងហោចណាស់ # តួ}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ត្រូវមានអក្សរធំយ៉ាងហោចណាស់ # តួ}other{ត្រូវមានអក្សរធំយ៉ាងហោចណាស់ # តួ}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ត្រូវមានលេខយ៉ាងហោចណាស់ # ខ្ទង់}other{ត្រូវមានលេខយ៉ាងហោចណាស់ # ខ្ទង់}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ត្រូវមានសញ្ញាពិសេសយ៉ាងហោចណាស់ #}other{ត្រូវមានសញ្ញាពិសេសយ៉ាងហោចណាស់ #}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{ត្រូវមានតួដែលមិនមែនជាអក្សរយ៉ាងហោចណាស់ #}other{ត្រូវមានតួដែលមិនមែនជាអក្សរយ៉ាងហោចណាស់ #}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ត្រូវតែមាន​តួដែលមិនមែន​ជាលេខ​យ៉ាងហោចណាស់ #}other{ត្រូវតែមាន​តួដែលមិនមែន​ជាលេខ​យ៉ាងហោចណាស់ #}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ត្រូវតែ​មាន​យ៉ាងហោចណាស់ # តួ}other{ត្រូវតែ​មាន​យ៉ាងហោចណាស់ # តួ}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ត្រូវតែមានយ៉ាងហោចណាស់ # ខ្ទង់}other{ត្រូវតែមានយ៉ាងហោចណាស់ # ខ្ទង់}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{ត្រូវតែ​តិចជាង # តួ}other{ត្រូវតែ​តិចជាង # តួ}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ត្រូវតែ​តិចជាង # ខ្ទង់}other{ត្រូវតែ​តិចជាង # ខ្ទង់}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់ឡើង ចុះ ឬដដែលៗទេ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ជម្រើស​ការចាក់សោអេក្រង់"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\nថ្ងៃ <xliff:g id="DATE">%2$s</xliff:g>៖ <xliff:g id="NUM_DAYS">%3$s</xliff:g> ថ្ងៃមុន"</string>
     <string name="credentials_reset" msgid="873900550885788639">"សម្អាត​ព័ត៌មានផ្ទៀងផ្ទាត់"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"គោលការណ៍​យានជំនិះ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ការកំណត់ដែលស្ថិតក្រោមការគ្រប់គ្រងរបស់អ្នក​គ្រប់គ្រងស្ថាប័ន"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ស្វែងយល់បន្ថែមអំពី <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ព័ត៌មាន​អំពីយានជំនិះដែលត្រូវបានគ្រប់គ្រង"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ការកំណត់ដែលត្រូវបានគ្រប់គ្រងដោយអ្នកគ្រប់គ្រងក្រុមយានជំនិះ"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ដើម្បីផ្ដល់សិទ្ធិចូលប្រើទិន្នន័យនៅលើយានជំនិះដែលត្រូវបានគ្រប់គ្រងនេះ អ្នកគ្រប់គ្រងក្រុមយានជំនិះអាចនឹងផ្លាស់ប្ដូរការកំណត់ និងដំឡើងកម្មវិធីនៅលើប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត។\n\nសម្រាប់ព័ត៌មានលម្អិតបន្ថែម សូមទាក់ទងអ្នកគ្រប់គ្រងក្រុមយានជំនិះរបស់អ្នក។"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ព័ត៌មានដែលអ្នកគ្រប់គ្រងក្រុមយានជំនិះ​របស់អ្នកអាចមើលឃើញ"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"ការផ្លាស់ប្ដូរដែលបានធ្វើឡើងដោយអ្នកគ្រប់គ្រងក្រុមយានជំនិះរបស់អ្នក"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ទិន្នន័យដែលពាក់ព័ន្ធនឹងគណនីយានជំនិះដែលត្រូវបានគ្រប់គ្រងរបស់អ្នក"</li>\n" "<li>"បញ្ជីកម្មវិធីនៅលើយានជំនិះដែលត្រូវបានគ្រប់គ្រងរបស់អ្នក"</li>\n" "<li>"រយៈពេល និងទិន្នន័យដែលចំណាយនៅក្នុងកម្មវិធីនីមួយៗ"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ការចូលប្រើរបស់អ្នកនៅក្នុងប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"បញ្ជីកម្មវិធីនៅលើយានជំនិះរបស់អ្នក"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"ចំនួនកម្មវិធី​គឺត្រូវបាន​ប៉ាន់ស្មាន។ វាប្រហែល​ជាមិនរួមបញ្ចូល​កម្មវិធី​ដែលបានដំឡើង​ក្រៅពី Play Store ទេ។"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">មានកម្មវិធី​អប្បបរមាចំនួន <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">មានកម្មវិធី​អប្បបរមាចំនួន <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other">កម្មវិធី <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">កម្មវិធី <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"កំណត់​ហេតុ​ចរាចរណ៍​បណ្តាញ​ថ្មីបំផុត"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"របាយការណ៍​អំពី​បញ្ហា​ថ្មីបំផុត"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"កំណត់ហេតុ​សុវត្ថិភាព​ថ្មី​បំផុត"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"គ្មាន"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"បានដំឡើង​កម្មវិធី"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"ការអនុញ្ញាត​ឱ្យប្រើ​ទីតាំង"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"ការអនុញ្ញាត​ឱ្យប្រើ​មីក្រូហ្វូន"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"ការអនុញ្ញាត​ឱ្យចូលប្រើ​កាមេរ៉ា"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"កម្មវិធី​លំនាំដើម"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ក្ដារចុច​លំនាំ​ដើម"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"កំណត់ទៅ <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"បាន​កំណត់​ប្រូកស៊ី HTTP សកល"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"ព័ត៌មាន​ផ្ទៀងផ្ទាត់​ដែល​ទុកចិត្ត​នៅក្នុងកម្រងព័ត៌មាន​ផ្ទាល់ខ្លួន​របស់អ្នក"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"អ្នកគ្រប់គ្រងអាចចាក់សោប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត និងកំណត់ពាក្យសម្ងាត់ឡើងវិញ"</li>\n" "<li>"អ្នកគ្រប់គ្រងអាចលុបទិន្នន័យនៅក្នុងប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"មិនអាច​បញ្ចូល​ពាក្យ​សម្ងាត់​បាន​ទេ លុះត្រាតែ​អ្នក​លុប​ទិន្នន័យទាំងអស់នៅក្នុងប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត​ជាមុន​សិន"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"មិនអាច​បញ្ចូល​ពាក្យ​សម្ងាត់​បាន​ទេ លុះត្រាតែ​អ្នក​លុប​ទិន្នន័យ​កម្រងព័ត៌មាន​ជាមុន​សិន"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other">ព្យាយាមបញ្ចូល <xliff:g id="COUNT_1">%d</xliff:g> ដង</item>
+      <item quantity="one">ព្យាយាមបញ្ចូល <xliff:g id="COUNT_0">%d</xliff:g> ដង</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">កម្មវិធី​កាមេរ៉ា</item>
+      <item quantity="one">កម្មវិធី​កាមេរ៉ា</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">កម្មវិធី​ផ្ញើអ៊ីមែល</item>
+      <item quantity="one">កម្មវិធី​ផ្ញើអ៊ីមែល</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">កម្មវិធី​ទូរសព្ទ</item>
+      <item quantity="one">កម្មវិធី​ទូរសព្ទ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"ចែករំលែក​របាយការណ៍អំពី​បញ្ហាឬ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក។"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"អ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះបានស្នើសុំរបាយការណ៍អំពីបញ្ហា ដើម្បីជួយដោះស្រាយបញ្ហាឧបករណ៍នេះ។ កម្មវិធី និងទិន្នន័យអាចនឹងត្រូវបានចែករំលែក ហើយឧបករណ៍របស់អ្នកអាចនឹងដំណើរការយឺតជាបណ្តោះអាសន្ន។"</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"ពណ៌ខ្មៅ​លើ​ពណ៌ស"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ពណ៌លឿង​​លើ​​ពណ៌​ខ្មៅ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"ពណ៌លឿង​លើ​ពណ៌ខៀវ"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"កម្មវិធី​អាន​អេក្រង់"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"បិទ"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"អានធាតុនៅលើអេក្រង់"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"ប្រើ <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"ជម្រើស"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"ការកំណត់"</string>
 </resources>

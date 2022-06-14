@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-ს შეიძლება სხვა მოწყობილობები დაუკავშირდეს"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"უსადენო ქსელის პაროლი"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"უსაფრთხოება"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"არცერთი"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"გაუქმება"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"დადასტურება"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"უნდა შეიცავდეს მინიმუმ 4 სიმბოლოს"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"უნდა შეიცავდეს მინიმუმ <xliff:g id="COUNT">%d</xliff:g> სიმბოლოს"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-კოდი უნდა შედგებოდეს მინიმუმ <xliff:g id="COUNT">%d</xliff:g> ციფრისგან"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"უნდა შეიცავდეს <xliff:g id="NUMBER">%d</xliff:g> სიმბოლოზე ნაკლებს"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"უნდა შეიცავდეს <xliff:g id="NUMBER">%d</xliff:g> ციფრზე ნაკლებს"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"უნდა შეიცავდეს მხოლოდ ციფრებს 0-დან 9-მდე."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ბოლოდროინდელი PIN-კოდის ხელახლა გამოყენება მოწყობილობის ადმინისტრატორის მიერ ნებადართული არ არის"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"ხშირად გამოყენებული PIN-კოდები თქვენი IT ადმინისტრატორის მიერ დაბლოკილია. ცადეთ სხვა PIN-კოდი."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ბოლოდროინდელი პაროლის ხელახლა გამოყენება მოწყობილობის ადმინისტრატორის მიერ ნებადართული არ არის"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"პაროლის შენახვისას მოხდა შეცდომა"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ხშირად გამოყენებული პაროლები თქვენი IT ადმინისტრატორის მიერ დაბლოკილია. ცადეთ სხვა პაროლი."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ციფრების ზრდადი, კლებადი ან გამეორებადი მიმდევრობის გამოყენება ნებადართული არ არის."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"უნდა შეიცავდეს მინიმუმ ერთ ასოს"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"უნდა შეიცავდეს მინიმუმ ერთ ციფრს"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"უნდა შეიცავდეს მინიმუმ ერთ სიმბოლოს"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # ასოს}other{უნდა შეიცავდეს მინიმუმ # ასოს}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # არამთავრულ ასოს}other{უნდა შეიცავდეს მინიმუმ # არამთავრულ ასოს}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # მთავრულ ასოს}other{უნდა შეიცავდეს მინიმუმ # მთავრულ ასოს}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # ციფრს}other{უნდა შეიცავდეს მინიმუმ # ციფრს}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # სპეციალურ სიმბოლოს}other{უნდა შეიცავდეს მინიმუმ # სპეციალურ სიმბოლოს}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # არაანბანურ სიმბოლოს}other{უნდა შეიცავდეს მინიმუმ # არაანბანურ სიმბოლოს}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # არარიცხვით სიმბოლოს}other{უნდა შეიცავდეს მინიმუმ # არარიცხვით სიმბოლოს}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # სიმბოლოს}other{უნდა შეიცავდეს მინიმუმ # სიმბოლოს}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{უნდა შეიცავდეს მინიმუმ # ციფრს}other{უნდა შეიცავდეს მინიმუმ # ციფრს}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{უნდა შეიცავდეს #-ზე ნაკლებ სიმბოლოს}other{უნდა შეიცავდეს #-ზე ნაკლებ სიმბოლოს}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{უნდა შეიცავდეს #-ზე ნაკლებ ციფრს}other{უნდა შეიცავდეს #-ზე ნაკლებ ციფრს}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ციფრების ზრდადი, კლებადი ან გამეორებადი მიმდევრობის გამოყენება ნებადართული არ არის"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ეკრანის დაბლოკვის ვარიანტები"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> დღის წინ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ავტორიზაციის მონაცემების გასუფთავება"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>-ის სატრანსპორტო საშუალებების წესები"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ორგანიზაციის მენეჯერის მიერ მართული პარამეტრები"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"შეიტყვეთ მეტი <xliff:g id="SERVICE">%1$s</xliff:g>-ის შესახებ"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ინფორმაცია მართული სატრანსპორტო საშუალების შესახებ"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ჯგუფის ადმინისტრატორის მიერ მართული პარამეტრები"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ამ მართული სატრანსპორტო საშუალების მონაცემებზე წვდომისთვის ჯგუფის ადმინისტრატორმა შეიძლება შეცვალოს პარამეტრები და დააინსტალიროს გართობის/საინფორმაციო სისტემის პროგრამული უზრუნველყოფა.\n\nდამატებითი ინფორმაციისთვის დაუკავშირდით თქვენი ჯგუფის ადმინისტრატორს."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ინფორმაცია, რომლის ნახვაც ჯგუფის ადმინისტრატორს შეუძლია"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"თქვენი ჯგუფის ადმინისტრატორის მიერ შეტანილი ცვლილებები"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"მართულ სატრანსპორტო საშუალებასთან დაკავშირებული მონაცემები"</li>\n" "<li>"მართული სატრანსპორტო საშუალების აპების სია"</li>\n" "<li>"თითოეულ აპთან გატარებული დრო და მასთან დაკავშირებული მონაცემები"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"გართობის/საინფორმაციო სისტემაზე თქვენი წვდომა"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"სატრანსპორტო საშუალების აპების სია"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"აპების რაოდენობა მიახლოებითია. ის შეიძლება არ მოიცავდეს იმ აპებს, რომლებიც დაინსტალირდა Play Store-ისგან განსხვავებული წყაროებიდან."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">მინიმუმ <xliff:g id="COUNT_1">%d</xliff:g> აპი</item>
+      <item quantity="one">მინიმუმ <xliff:g id="COUNT_0">%d</xliff:g> აპი</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> აპი</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> აპი</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"ქსელის ტრაფიკის ყველაზე ბოლო ჟურნალი"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"ხარვეზის შესახებ ყველაზე ბოლო ანგარიში"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"უსაფრთხოების ყველაზე ბოლო ჟურნალი"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"არცერთი"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"დაინსტალირებული აპები"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"მდებარეობის ნებართვები"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"მიკროფონის ნებართვები"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"კამერის ნებართვები"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ნაგულისხმევი აპები"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ნაგულისხმევი კლავიატურა"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>-ზე დაყენება"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"გლობალური HTTP-პროქსი დაყენებულია"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"სანდო სერტიფიკატები თქვენს პირად პროფილში"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ადმინისტრატორს შეუძლია ჩაკეტოს გართობის/საინფორმაციო სისტემა და გადააყენოს პაროლი"</li>\n" "<li>"ადმინისტრატორს შეუძლია წაშალოს მონაცემები გართობის/საინფორმაციო სისტემიდან"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"პაროლის არასწორად შეყვანის მცდელობების რაოდენობა, სანამ გართობის/საინფორმაციო სისტემიდან ყველა მონაცემი წაიშლება"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"პაროლის არასწორად შეყვანის მცდელობების რაოდენობა, სანამ პროფილის მონაცემები წაიშლება"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> მცდელობა</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> მცდელობა</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">კამერის აპები</item>
+      <item quantity="one">კამერის აპი</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">ელფოსტის კლიენტის აპები</item>
+      <item quantity="one">ელფოსტის კლიენტის აპი</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ტელეფონის აპები</item>
+      <item quantity="one">ტელეფონის აპი</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"გსურთ ხარვეზის შესახებ ანგარიშის გაზიარება?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ამ მოწყობილობის პრობლემების აღმოფხვრაში დასახმარებლად, სატრანსპორტო საშუალების ორგანიზაციის მენეჯერმა ხარვეზის ანგარიში მოითხოვა. აპები და მონაცემები შეიძლება გაზიარდეს."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ამ მოწყობილობის პრობლემების აღმოფხვრაში დასახმარებლად, სატრანსპორტო საშუალების ორგანიზაციის მენეჯერმა ხარვეზის ანგარიში მოითხოვა. ამ დროს შეიძლება გაზიარდეს აპები და მონაცემები, ხოლო თქვენი მოწყობილობა დროებით შენელდეს."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"შავით თეთრზე"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ყვითლით შავზე"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"ყვითლით ლურჯზე"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"ეკრანის წამკითხველი"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"გამორთულია"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"ეკრანზე არსებული ერთეულების გახმოვანება"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>-ის გამოყენება"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"ვარიანტები"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"პარამეტრები"</string>
 </resources>

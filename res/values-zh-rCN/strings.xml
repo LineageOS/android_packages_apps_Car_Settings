@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"其他设备可以连接到 <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"热点密码"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"安全"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"无"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 频段"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"取消"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"确认"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"必须至少包含 4 个字符"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"必须至少包含 <xliff:g id="COUNT">%d</xliff:g> 个字符"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN 码必须至少为 <xliff:g id="COUNT">%d</xliff:g> 位数"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"必须少于 <xliff:g id="NUMBER">%d</xliff:g> 个字符"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"必须少于 <xliff:g id="NUMBER">%d</xliff:g> 位数"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"只能包含 0-9 的数字。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"设备管理员不允许使用最近用过的 PIN 码"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"您的 IT 管理员已禁止使用常用 PIN 码。请尝试使用其他 PIN 码。"</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"设备管理员不允许使用最近用过的密码"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"保存密码时出错"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"您的 IT 管理员已禁止使用常用密码。请尝试使用其他密码。"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不允许使用以升序、降序或重复序列进行排列的一串数字。"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"必须包含至少 1 个字母"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"必须包含至少 1 个数字"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"必须包含至少 1 个符号"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{必须包含至少 # 个字母}other{必须包含至少 # 个字母}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{必须包含至少 # 个小写字母}other{必须包含至少 # 个小写字母}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{必须包含至少 # 个大写字母}other{必须包含至少 # 个大写字母}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{必须包含至少 # 个数字}other{必须包含至少 # 个数字}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{必须包含至少 # 个特殊符号}other{必须包含至少 # 个特殊符号}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{必须包含至少 # 个非字母字符}other{必须包含至少 # 个非字母字符}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{必须包含至少 # 个非数字字符}other{必须包含至少 # 个非数字字符}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{必须包含至少 # 个字符}other{必须包含至少 # 个字符}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{必须包含至少 # 位数}other{必须包含至少 # 位数}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{必须少于 # 个字符}other{必须少于 # 个字符}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{必须少于 # 位数}other{必须少于 # 位数}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允许使用以升序、降序或重复序列进行排列的一串数字"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除凭据"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>的车辆政策"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"由组织管理员管理的设置"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"详细了解“<xliff:g id="SERVICE">%1$s</xliff:g>”"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"受管理汽车的信息"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"由车队管理员所管理的设置"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"若要提供对这部受管理汽车上数据的访问权限，车队管理员可以更改相关设置，以及在信息娱乐系统上安装软件。\n\n如需了解详情，请联系您的车队管理员。"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"车队管理员可以查看的信息"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"车队管理员所做的更改"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"与您受管理汽车的帐号相关的数据"</li>\n" "<li>"受管理汽车上应用的列表"</li>\n" "<li>"每个应用的使用时长和数据用量"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"您对信息娱乐系统的访问权限"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"车载设备上应用的列表"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"应用数量是估算值，其中可能不包括从 Play 商店以外的来源安装的应用。"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">至少 <xliff:g id="COUNT_1">%d</xliff:g> 个应用</item>
+      <item quantity="one">至少 <xliff:g id="COUNT_0">%d</xliff:g> 个应用</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 个应用</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 个应用</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"最新的网络流量日志"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"最新的错误报告"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"最新的安全日志"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"无"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"已安装的应用"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"位置信息权限"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"麦克风权限"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"相机权限"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"默认应用"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"默认键盘"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"已设为<xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"已设置全局 HTTP 代理"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"您个人资料中的可信凭据"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"管理员可以锁定信息娱乐系统并重置密码"</li>\n" "<li>"管理员可以删除信息娱乐系统中的数据"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"输入错误密码的尝试次数上限（如果超过此上限，系统将删除信息娱乐系统中的所有数据）"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"输入错误密码的尝试次数上限（如果超过此上限，系统将删除个人资料数据）"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other">已尝试 <xliff:g id="COUNT_1">%d</xliff:g> 次</item>
+      <item quantity="one">已尝试 <xliff:g id="COUNT_0">%d</xliff:g> 次</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">相机应用</item>
+      <item quantity="one">相机应用</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">电子邮件客户端应用</item>
+      <item quantity="one">电子邮件客户端应用</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">电话应用</item>
+      <item quantity="one">电话应用</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"要分享错误报告吗？"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"此车辆的组织管理员要求提供错误报告，以便对这台设备进行问题排查。报告中可能会包含应用信息和数据。"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"此车辆的组织管理员要求提供错误报告，以便对这台设备进行问题排查。报告中可能会包含应用信息和数据，并且您的设备可能会暂时变慢。"</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"白底黑字"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"黑底黄字"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"蓝底黄字"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"屏幕阅读器"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"已关闭"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"读出屏幕上的内容"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"使用“<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>”"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"选项"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"设置"</string>
 </resources>

@@ -16,6 +16,7 @@
 package com.android.car.settings.enterprise;
 
 import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.UserHandle;
@@ -81,4 +82,16 @@ final class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFea
             return null;
         }
     }
+
+    @Override
+    public int getMaximumFailedPasswordsBeforeWipeInCurrentUser() {
+        ComponentName owner = mDpm.getDeviceOwnerComponentOnCallingUser();
+        if (owner == null) {
+            owner = mDpm.getProfileOwnerAsUser(MY_USER_ID);
+        }
+        if (owner == null) {
+            return 0;
+        }
+        return mDpm.getMaximumFailedPasswordsForWipe(owner, MY_USER_ID);
+    };
 }

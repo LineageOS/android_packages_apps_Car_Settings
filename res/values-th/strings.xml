@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"อุปกรณ์อื่นๆ เชื่อมต่อได้กับ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"รหัสผ่านฮอตสปอต"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ความปลอดภัย"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ส่วนบุคคล"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ไม่มี"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"ย่านความถี่ AP"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ยกเลิก"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ยืนยัน"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ต้องมีอักขระอย่างน้อย 4 ตัว"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ต้องมีอักขระอย่างน้อย <xliff:g id="COUNT">%d</xliff:g> ตัว"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN ต้องมีตัวเลขอย่างน้อย <xliff:g id="COUNT">%d</xliff:g> ตัว"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ต้องมีอักขระไม่เกิน <xliff:g id="NUMBER">%d</xliff:g> ตัว"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ต้องมีตัวเลขไม่เกิน <xliff:g id="NUMBER">%d</xliff:g> ตัว"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ต้องมีตัวเลข 0-9 เท่านั้น"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ผู้ดูแลระบบอุปกรณ์ไม่อนุญาตให้ใช้ PIN ที่เพิ่งใช้ไป"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"ผู้ดูแลระบบไอทีบล็อก PIN ที่ไม่รัดกุม ลอง PIN อื่น"</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ผู้ดูแลระบบอุปกรณ์ไม่อนุญาตให้ใช้รหัสผ่านที่เพิ่งใช้ไป"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"เกิดข้อผิดพลาดในการบันทึกรหัสผ่าน"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ผู้ดูแลระบบไอทีบล็อกรหัสผ่านที่ไม่รัดกุม ลองรหัสผ่านอื่น"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ไม่อนุญาตให้เรียงจากน้อยไปมาก จากมากไปน้อย หรือเรียงลำดับตัวเลขที่ซ้ำกัน"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ต้องมีตัวอักษรอย่างน้อย 1 ตัว"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ต้องมีตัวเลขอย่างน้อย 1 ตัว"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ต้องมีสัญลักษณ์อย่างน้อย 1 ตัว"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ต้องมีตัวอักษรอย่างน้อย # ตัว}other{ต้องมีตัวอักษรอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ต้องมีตัวอักษรพิมพ์เล็กอย่างน้อย # ตัว}other{ต้องมีตัวอักษรพิมพ์เล็กอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ต้องมีตัวอักษรพิมพ์ใหญ่อย่างน้อย # ตัว}other{ต้องมีตัวอักษรพิมพ์ใหญ่อย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ต้องมีตัวเลขอย่างน้อย # ตัว}other{ต้องมีตัวเลขอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ต้องมีสัญลักษณ์พิเศษอย่างน้อย # ตัว}other{ต้องมีสัญลักษณ์พิเศษอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{ต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย # ตัว}other{ต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ต้องมีอักขระที่ไม่ใช่ตัวเลขอย่างน้อย # ตัว}other{ต้องมีอักขระที่ไม่ใช่ตัวเลขอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ต้องมีอักขระอย่างน้อย # ตัว}other{ต้องมีอักขระอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ต้องมีตัวเลขอย่างน้อย # ตัว}other{ต้องมีตัวเลขอย่างน้อย # ตัว}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{ต้องมีอักขระน้อยกว่า # ตัว}other{ต้องมีอักขระน้อยกว่า # ตัว}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ต้องมีตัวเลขน้อยกว่า # ตัว}other{ต้องมีตัวเลขน้อยกว่า # ตัว}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ไม่อนุญาตให้เรียงจากน้อยไปมาก จากมากไปน้อย หรือเรียงลำดับตัวเลขที่ซ้ำกัน"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ตัวเลือกการล็อกหน้าจอ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> วันที่ผ่านมา"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ล้างข้อมูลรับรอง"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"นโยบายเกี่ยวกับรถยนต์ของ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"การตั้งค่าที่ผู้จัดการองค์กรดูแล"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ดูข้อมูลเพิ่มเติมเกี่ยวกับ<xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ข้อมูลของยานพาหนะที่ได้รับการจัดการ"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"การตั้งค่าที่จัดการโดยผู้ดูแลระบบของกลุ่มรถยนต์"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"หากต้องการมอบสิทธิ์เข้าถึงข้อมูลในยานพาหนะที่ได้รับการจัดการนี้ ผู้ดูแลระบบของกลุ่มรถยนต์สามารถเปลี่ยนการตั้งค่าและติดตั้งซอฟต์แวร์ในระบบสาระบันเทิง\n\nติดต่อผู้ดูแลระบบของกลุ่มรถยนต์เพื่อขอทราบรายละเอียดเพิ่มเติม"</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"ข้อมูลที่ผู้ดูแลระบบของกลุ่มรถยนต์สามารถเห็นได้"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"การเปลี่ยนแปลงโดยผู้ดูแลระบบกลุ่มรถยนต์ของคุณ"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"ข้อมูลที่เกี่ยวข้องกับบัญชียานพาหนะที่ได้รับการจัดการของคุณ"</li>\n" "<li>"รายการแอปในยานพาหนะที่ได้รับการจัดการของคุณ"</li>\n" "<li>"เวลาและปริมาณของข้อมูลที่ใช้ในแต่ละแอป"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"การเข้าถึงระบบสาระบันเทิงของคุณ"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"รายการแอปในยานพาหนะของคุณ"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"จำนวนแอปเป็นเพียงค่าประมาณซึ่งอาจไม่รวมแอปที่ติดตั้งจากที่อื่นที่ไม่ใช่ Play Store"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">อย่างน้อย <xliff:g id="COUNT_1">%d</xliff:g> แอป</item>
+      <item quantity="one">อย่างน้อย <xliff:g id="COUNT_0">%d</xliff:g> แอป</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> แอป</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> แอป</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"บันทึกการจราจรของข้อมูลในเครือข่ายล่าสุด"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"รายงานข้อบกพร่องล่าสุด"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"บันทึกความปลอดภัยล่าสุด"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ไม่มี"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"ติดตั้งแอปแล้ว"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"สิทธิ์เข้าถึงตำแหน่ง"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"สิทธิ์เข้าถึงไมโครโฟน"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"สิทธิ์เข้าถึงกล้องถ่ายรูป"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"แอปเริ่มต้น"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"แป้นพิมพ์เริ่มต้น"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"ตั้งค่าเป็น <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"ตั้งค่าพร็อกซี HTTP ส่วนกลางแล้ว"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"ข้อมูลรับรองที่เชื่อถือได้ในโปรไฟล์ส่วนตัวของคุณ"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ผู้ดูแลระบบสามารถล็อกระบบสาระบันเทิงและรีเซ็ตรหัสผ่านได้"</li>\n" "<li>"ผู้ดูแลระบบสามารถลบข้อมูลในระบบสาระบันเทิงได้"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"มีการป้อนรหัสผ่านผิดหลายครั้งก่อนที่ระบบจะลบข้อมูลทั้งหมดในระบบสาระบันเทิง"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"มีการป้อนรหัสผ่านผิดหลายครั้งก่อนที่ระบบจะลบข้อมูลโปรไฟล์งาน"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other">พยายาม <xliff:g id="COUNT_1">%d</xliff:g> ครั้ง</item>
+      <item quantity="one">พยายาม <xliff:g id="COUNT_0">%d</xliff:g> ครั้ง</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">แอปกล้องถ่ายรูป</item>
+      <item quantity="one">แอปกล้องถ่ายรูป</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">แอปโปรแกรมรับส่งอีเมล</item>
+      <item quantity="one">แอปโปรแกรมรับส่งอีเมล</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">แอปโทรศัพท์</item>
+      <item quantity="one">แอปโทรศัพท์</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"แชร์รายงานข้อบกพร่องไหม"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ผู้จัดการองค์กรของรถยนต์คันนี้ได้ขอรายงานข้อบกพร่องเพื่อช่วยแก้ปัญหาอุปกรณ์ อาจมีการแชร์แอปและข้อมูล"</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ผู้จัดการองค์กรของรถยนต์คันนี้ได้ขอรายงานข้อบกพร่องเพื่อช่วยแก้ปัญหาอุปกรณ์ อาจมีการแชร์แอปและข้อมูล ซึ่งอาจทำให้อุปกรณ์ทำงานช้าลงชั่วคราว"</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"สีดำบนพื้นสีขาว"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"สีเหลืองบนพื้นสีดำ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"สีเหลืองบนพื้นสีน้ำเงิน"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"โปรแกรมอ่านหน้าจอ"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"ปิด"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"พูดรายการในหน้าจอ"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"ใช้ <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"ตัวเลือก"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"การตั้งค่า"</string>
 </resources>

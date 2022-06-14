@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"બીજા ડિવાઇસ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> સાથે કનેક્ટ કરી શકે છે"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"હૉટસ્પૉટનો પાસવર્ડ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"સુરક્ષા"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-વ્યક્તિગત"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-વ્યક્તિગત"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-વ્યક્તિગત"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"કોઈ નહીં"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP બૅન્ડ"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"રદ કરો"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"કન્ફર્મ કરો"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ઓછામાં ઓછા 4 અક્ષર હોવા આવશ્યક છે"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ઓછામાં ઓછા <xliff:g id="COUNT">%d</xliff:g> અક્ષર હોવા આવશ્યક છે"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"પિન ઓછામાં ઓછા <xliff:g id="COUNT">%d</xliff:g> અંક ધરાવતો હોવો જોઈએ"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> કરતાં ઓછા અક્ષર હોવા આવશ્યક છે"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>થી ઓછા અંક હોવા આવશ્યક છે"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"માત્ર 0-9 અંક શામેલ હોવા આવશ્યક છે."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ઉપકરણ વ્યવસ્થાપક તાજેતરના પિનનો ઉપયોગ કરવાની મંજૂરી આપતા નથી"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"સામાન્ય પિન તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવ્યા છે. કોઈ બીજો પિન અજમાવી જુઓ."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ઉપકરણ વ્યવસ્થાપક તાજેતરના પાસવર્ડનો ઉપયોગ કરવાની મંજૂરી આપતા નથી"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"પાસવર્ડ સાચવવામાં ભૂલ"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"સામાન્ય પાસવર્ડ તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવ્યા છે. કોઈ બીજો પાસવર્ડ અજમાવી જુઓ."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"અંકોના ચઢતા ક્રમની, ઉતરતા ક્રમની અથવા પુનરાવર્તિત અનુક્રમની મંજૂરી નથી."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"ઓછામાં ઓછો એક વર્ણ શામેલ હોવો જરૂરી છે"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"ઓછામાં ઓછો એક અંક શામેલ હોવો જરૂરી છે"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"ઓછામાં ઓછું એક પ્રતીક શામેલ હોવું જરૂરી છે"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{ઓછામાં ઓછો # વર્ણ શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # વર્ણ શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # વર્ણ શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{ઓછામાં ઓછો # લોઅરકેસ વર્ણ શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # લોઅરકેસ વર્ણ શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # લોઅરકેસ વર્ણ શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{ઓછામાં ઓછો # અપરકેસ વર્ણ શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # અપરકેસ વર્ણ શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # અપરકેસ વર્ણ શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{ઓછામાં ઓછો # સંખ્યાવાચક અંક શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # સંખ્યાવાચક અંક શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # સંખ્યાવાચક અંક શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{ઓછામાં ઓછું # વિશિષ્ટ પ્રતીક શામેલ હોવું જરૂરી છે}one{ઓછામાં ઓછું # વિશિષ્ટ પ્રતીક શામેલ હોવું જરૂરી છે}other{ઓછામાં ઓછા # વિશિષ્ટ પ્રતીક શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{વર્ણ ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}one{વર્ણ ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}other{વર્ણ ન હોય તેવા ઓછામાં ઓછા # અક્ષર શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{સંખ્યા ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}one{સંખ્યા ન હોય તેવો ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}other{સંખ્યા ન હોય તેવા ઓછામાં ઓછા # અક્ષર શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # અક્ષર શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # અક્ષર શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ઓછામાં ઓછો # અંક શામેલ હોવો જરૂરી છે}one{ઓછામાં ઓછો # અંક શામેલ હોવો જરૂરી છે}other{ઓછામાં ઓછા # અંક શામેલ હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# કરતાં ઓછા અક્ષર હોવા જરૂરી છે}one{# કરતાં ઓછા અક્ષર હોવા જરૂરી છે}other{# કરતાં ઓછા અક્ષર હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# કરતાં ઓછા અંક હોવા જરૂરી છે}one{# કરતાં ઓછા અંક હોવા જરૂરી છે}other{# કરતાં ઓછા અંક હોવા જરૂરી છે}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"અંકોના ચઢતા ક્રમની, ઉતરતા ક્રમની અથવા પુનરાવર્તિત અનુક્રમની મંજૂરી નથી"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"સ્ક્રીન લૉકના વિકલ્પો"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> દિવસ પહેલાં"</string>
     <string name="credentials_reset" msgid="873900550885788639">"લૉગ ઇન વિગતોને સાફ કરો"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>ની વાહનની પૉલિસી"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"સંસ્થાના મેનેજર દ્વારા મેનેજ કરાતા સેટિંગ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> વિશે વધુ જાણો"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"મેનેજ કરેલા વાહનની માહિતી"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ફ્લીટ ઍડમિન દ્વારા મેનેજ કરવામાં આવેલા સેટિંગ"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"મેનેજ કરેલા આ વાહનની સ્ક્રીન પર ડેટાને ઍક્સેસ કરવાની પરવાનગી આપવા માટે શક્ય છે કે ફ્લીટ ઍડમિન ઇન્ફોટેનમેન્ટ સિસ્ટમના સેટિંગમાં ફેરફાર કરે અને સૉફ્ટવેર ઇન્સ્ટૉલ કરે.\n\nવધુ વિગતો માટે તમારા ફ્લીટ ઍડમિનનો સંપર્ક કરો."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"એવી માહિતી કે જે તમારા ફ્લીટ ઍડમિન જોઈ શકે છે"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"તમારા ફ્લીટ ઍડમિન દ્વારા કરવામાં આવેલા ફેરફારો"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"મેનેજ કરેલા તમારા વાહનના એકાઉન્ટ સાથે સંકળાયેલો ડેટા"</li>\n" "<li>"તમારા મેનેજ કરેલા વાહનમાંની ઍપની સૂચિ"</li>\n" "<li>"દરેક ઍપ પર વિતાવવામાં આવેલા સમય અને વપરાયેલા ડેટાનો હિસાબ"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"ઇન્ફોટેનમેન્ટ સિસ્ટમનો તમારો ઍક્સેસ"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"તમારા વાહનમાં ઍપની સૂચિ"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"ઍપની સંખ્યા અંદાજિત છે. તેમાં Play Storeની બહારથી ઇન્સ્ટૉલ કરેલી ઍપનો કદાચ સમાવેશ ન હોય."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">ન્યૂનતમ <xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
+      <item quantity="other">ન્યૂનતમ <xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ઍપ</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"સૌથી તાજેતનો નેટવર્ક ટ્રાફિક લૉગ"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"સૌથી તાજેતરનો બગ રિપોર્ટ"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"સૌથી તાજેતરનો સુરક્ષા લૉગ"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ક્યારેય નહીં"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"ઇન્સ્ટૉલ કરેલી ઍપ"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"સ્થાન માટેની પરવાનગીઓ"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"માઇક્રોફોન માટેની પરવાનગીઓ"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"કૅમેરા માટેની પરવાનગીઓ"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ડિફૉલ્ટ ઍપ"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ડિફૉલ્ટ કીબોર્ડ"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> પર સેટ કર્યું"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"વૈશ્વિક HTTP પ્રૉક્સી સેટ કરી"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"તમારી વ્યક્તિગત પ્રોફાઇલમાંની વિશ્વસનીય લૉગ ઇન વિગતો"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"ઍડમિન ઇન્ફોટેનમેન્ટ સિસ્ટમને લૉક કરી શકે છે અને તેનો પાસવર્ડ રીસેટ કરી શકે છે"</li>\n" "<li>"ઍડમિન ઇન્ફોટેનમેન્ટ સિસ્ટમ પરનો ડેટા ડિલીટ કરી શકે છે"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"ઇન્ફોટેનમેન્ટ સિસ્ટમમાંનો બધો ડેટા ડિલીટ કરતા પહેલાં, ઘણી વાર પાસવર્ડ દાખલ કરવાના પ્રયાસો નિષ્ફળ થયા"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"પ્રોફાઇલનો ડેટા ડિલીટ કરતા પહેલાં, ઘણી વાર પાસવર્ડ દાખલ કરવાના પ્રયાસો નિષ્ફળ થયા"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> પ્રયાસ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> પ્રયાસ</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">કૅમેરા ઍપ</item>
+      <item quantity="other">કૅમેરા ઍપ</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">ઇમેઇલ ક્લાયન્ટ ઍપ</item>
+      <item quantity="other">ઇમેઇલ ક્લાયન્ટ ઍપ</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">ફોન ઍપ</item>
+      <item quantity="other">ફોન ઍપ</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"બગ રિપોર્ટ શેર કરીએ?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"આ વાહનની સંસ્થાના મેનેજરે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે અને તમારું ડિવાઇસ હંગામી રીતે ધીમું થઈ શકે છે."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"સફેદ પર કાળી ટેક્સ્ટ"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"કાળા પર પીળી ટેક્સ્ટ"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"વાદળી પર પીળી ટેક્સ્ટ"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"સ્ક્રીન રીડર"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"બંધ છે"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"સ્ક્રીન પરની આઇટમ બોલો"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>નો ઉપયોગ કરો"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"વિકલ્પો"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"સેટિંગ"</string>
 </resources>
