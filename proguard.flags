@@ -38,3 +38,7 @@
 -keepclassmembers public class * extends com.android.car.settings.qc.SettingsQCBackgroundWorker {
    public <init>(...);
 }
+
+# Keep fragments that are only created via xml
+-keep public class * extends com.android.car.settings.common.SettingsFragment
+-keep public class * extends com.android.car.settings.common.BaseFragment
