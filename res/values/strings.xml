@@ -173,10 +173,6 @@
     <string name="data_usage_settings_footer">Data usage is measured by your device. It may vary from your mobile carrier\u2019s data.</string>
     <!-- Positive button title for data usage bytes threshold picker, confirming that changes should be saved. [CHAR LIMIT=32] -->
     <string name="usage_bytes_threshold_picker_positive_button">Set</string>
-    <string-array name="bytes_picker_sizes" translatable="false">
-        <item>@*android:string/megabyteShort</item>
-        <item>@*android:string/gigabyteShort</item>
-    </string-array>
     <!-- Data warning threshold save button [CHAR LIMIT=48] -->
     <string name="data_usage_warning_save_title">Save</string>
     <!-- Network & internet settings screen, setting option name to enable OEM network connectivity [CHAR LIMIT=60] -->
