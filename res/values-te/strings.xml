@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ఇతర పరికరాలు <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>కు కనెక్ట్ కావచ్చు"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"హాట్‌స్పాట్ పాస్‌వర్డ్‌"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"సెక్యూరిటీ"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-వ్యక్తిగతం"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ఏమీ లేవు"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP బ్యాండ్"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"రద్దు చేయి"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"నిర్ధారించు"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"తప్పనిసరిగా కనీసం 4 అక్షరాలు ఉండాలి"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"తప్పనిసరిగా కనీసం <xliff:g id="COUNT">%d</xliff:g> అక్షరాలు ఉండాలి"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"పిన్ తప్పనిసరిగా కనీసం <xliff:g id="COUNT">%d</xliff:g> అంకెలు ఉండాలి"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"తప్పనిసరిగా <xliff:g id="NUMBER">%d</xliff:g> కంటే తక్కువ అక్షరాలు ఉండాలి"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"తప్పనిసరిగా <xliff:g id="NUMBER">%d</xliff:g> కంటే తక్కువ అంకెలు ఉండాలి"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"తప్పనిసరిగా 0-9 అంకెలను మాత్రమే కలిగి ఉండాలి."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ఇటీవలి పిన్‌ని ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"సాధారణ PINలను మీ IT అడ్మిన్ బ్లాక్ చేశారు. వేరే PINను ట్రై చేయండి."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ఇటీవలి పాస్‌వర్డ్‌ను ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"పాస్‌వర్డ్‌ని సేవ్ చేయడంలో ఎర్రర్"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"సాధారణ పాస్‌వర్డ్‌లను మీ IT అడ్మిన్ బ్లాక్ చేశారు. వేరే పాస్‌వర్డ్‌ను ట్రై చేయండి."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"తప్పనిసరిగా కనీసం ఒక అక్షరాన్ని కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"తప్పనిసరిగా కనీసం ఒక అంకెను కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"తప్పనిసరిగా కనీసం ఒక గుర్తును కలిగి ఉండాలి"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{తప్పనిసరిగా కనీసం # లోయర్‌కేస్ అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # లోయర్‌కేస్ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{తప్పనిసరిగా కనీసం # అప్పర్‌కేస్ అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అప్పర్‌కేస్ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{తప్పనిసరిగా కనీసం # సంఖ్యాత్మక అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # సంఖ్యాత్మక అంకెలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{తప్పనిసరిగా కనీసం # ప్రత్యేక గుర్తును కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # ప్రత్యేక గుర్తులను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరేతర అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరేతర అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{తప్పనిసరిగా కనీసం # అసంఖ్యాత్మక అక్షరాన్ని కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అసంఖ్యాత్మక అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{తప్పనిసరిగా కనీసం # అక్షరం కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{తప్పనిసరిగా కనీసం # అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా కనీసం # అంకెలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అక్షరం ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అక్షరాలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అంకెలను కలిగి ఉండాలి}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"స్క్రీన్ లాక్ ఎంపికలు"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> రోజుల క్రితం"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ఆధారాలను క్లియర్ చేయండి"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> వాహన పాలసీ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"సంస్థ మేనేజర్ ద్వారా సెట్టింగ్‌లు మేనేజ్ చేయబడతాయి"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> గురించి మరింత తెలుసుకోండి"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"మేనేజ్ చేయబడే వాహన సమాచారం"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"ఫ్లీట్ అడ్మిన్ ద్వారా మేనేజ్ చేయబడే సెట్టింగ్‌లు"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"ఈ మేనేజ్ చేయబడే వాహనంలో డేటాకు యాక్సెస్‌ను అందించడానికి, ఫ్లీట్ అడ్మిన్ సెట్టింగ్‌లను మార్చవచ్చు, అలాగే సమాచారంతో కూడిన వినోదం సిస్టమ్‌లో సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయవచ్చు.\n\nమరిన్ని వివరాల కోసం మీ ఫ్లీట్స్ అడ్మిన్‌ను సంప్రదించండి."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"మీ ఫ్లీట్స్ అడ్మిన్ చూడగల సమాచారం"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"మీ ఫ్లీట్స్ అడ్మిన్ చేసిన మార్పులు"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"మీరు మేనేజ్ చేసే వాహనానికి సంబంధించిన ఖాతాతో అనుబంధించబడిన డేటా"</li>\n" "<li>"మీరు మేనేజ్ చేసే వాహనంలోని యాప్‌ల లిస్ట్"</li>\n" "<li>"ప్రతి యాప్‌లోను మీరు వెచ్చించిన సమయం, డేటా"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌కు మీ యాక్సెస్"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"మీ వాహనంలో ఉన్న యాప్‌ల లిస్ట్"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"యాప్‌ల సంఖ్య అంచనా సమాచారం మాత్రమే. Play Store నుండి ఇన్‌స్టాల్ చేయని యాప్‌లను ఇందులో పరిగణనలోకి తీసుకుని ఉండకపోవచ్చు."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">కనీసం <xliff:g id="COUNT_1">%d</xliff:g> యాప్‌లు</item>
+      <item quantity="one">కనీసం <xliff:g id="COUNT_0">%d</xliff:g> యాప్</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> యాప్‌లు</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> యాప్</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"అత్యంత ఇటీవలి నెట్‌వర్క్ ట్రాఫిక్ లాగ్"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"అత్యంత ఇటీవలి బగ్ రిపోర్ట్"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"అత్యంత ఇటీవలి సెక్యూరిటీ లాగ్"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"ఏవీ లేవు"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"యాప్‌లు ఇన్‌స్టాల్ చేయబడ్డాయి"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"లొకేషన్ అనుమతులు"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"మైక్రోఫోన్ అనుమతులు"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"కెమెరా అనుమతులు"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"ఆటోమేటిక్ యాప్‌లు"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"ఆటోమేటిక్ కీబోర్డ్"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g>కు సెట్ చేయబడింది"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"గ్లోబల్ HTTP ప్రాక్సీ సెట్ చేయబడింది"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"మీ వ్యక్తిగత ప్రొఫైల్‌లో విశ్వసనీయ ఆధారాలు"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"అడ్మిన్ సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను లాక్ చేయగలరు"</li>\n" "<li>"అడ్మిన్ సమాచారంతో కూడిన వినోదం సిస్టమ్‌కు సంబంధించిన డేటాను తొలగించగలరు"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌లో డేటా అంతటినీ తొలగించడానికి ముందు జరిగిన పాస్‌వర్డ్ విఫలయత్నాలు"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"ఆఫీస్ ప్రొఫైల్ డేటాను తొలగించడానికి ముందు జరిగిన పాస్‌వర్డ్ విఫలయత్నాలు"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ప్రయత్నాలు</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ప్రయత్నం</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">కెమెరా యాప్‌లు</item>
+      <item quantity="one">కెమెరా యాప్</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">ఈమెయిల్ క్లయింట్ యాప్‌లు</item>
+      <item quantity="one">ఈమెయిల్ క్లయింట్ యాప్</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">ఫోన్ యాప్‌లు</item>
+      <item quantity="one">ఫోన్ యాప్</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"బగ్ రిపోర్ట్‌ను షేర్ చేయాలా?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"ఈ వాహన సంస్థ మేనేజర్, ఈ పరికర సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు, ఇంకా డేటా షేర్ చేయబడవచ్చు."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"ఈ వాహన సంస్థ మేనేజర్, ఈ పరికర సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు, ఇంకా డేటా షేర్ చేయబడవచ్చు, మీ పరికరం పనితీరు తాత్కాలికంగా నెమ్మదించవచ్చు."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"తెలుపు బ్యాక్‌గ్రౌండ్‌లో నలుపు టెక్స్ట్"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"నలుపు బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"నీలం బ్యాక్‌గ్రౌండ్‌లో పసుపు టెక్స్ట్"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"స్క్రీన్ రీడర్"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"ఆఫ్‌లో ఉంది"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"స్క్రీన్‌పై ఐటెమ్‌లను చదివి వినిపించండి"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ను ఉపయోగించండి"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"ఆప్షన్‌లు"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"సెట్టింగ్‌లు"</string>
 </resources>

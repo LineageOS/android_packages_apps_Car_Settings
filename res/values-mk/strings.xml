@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Другите уреди може да се поврзат на <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка за точката на пристап"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Безбедност"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Лична"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Нема"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Пристапна точка"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Откажи"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Потврди"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мора да има најмалку 4 знаци"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Мора да има најмалку <xliff:g id="COUNT">%d</xliff:g> знаци"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-кодот мора да содржи барем <xliff:g id="COUNT">%d</xliff:g> цифри"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Мора да содржи помалку од <xliff:g id="NUMBER">%d</xliff:g> знаци"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Мора да содржи помалку од <xliff:g id="NUMBER">%d</xliff:g> цифри"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Мора да содржи само цифри од 0 до 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Администраторот на уредот не дозволува користење на неодамнешен PIN"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Обичните PIN-кодови се блокирани од вашиот IT-администратор. Обидете се со друг PIN."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Администраторот на уредот не дозволува користење на неодамнешна лозинка"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Грешка при зачувување на лозинката"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Обичните лозинки се блокирани од вашиот IT-администратор. Обидете се со друга лозинка."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Не е дозволена низа на цифри со растечки, опаѓачки или повторлив редослед."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Мора да содржи најмалку една буква"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Мора да содржи најмалку една цифра"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Мора да содржи најмалку еден симбол"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Мора да содржи најмалку # буква}one{Мора да содржи најмалку # буква}other{Мора да содржи најмалку # букви}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Мора да содржи најмалку # мала буква}one{Мора да содржи најмалку # мала буква}other{Мора да содржи најмалку # мали букви}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Мора да содржи најмалку # голема буква}one{Мора да содржи најмалку # голема буква}other{Мора да содржи најмалку # големи букви}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Мора да содржи најмалку # цифра}one{Мора да содржи најмалку # цифра}other{Мора да содржи најмалку # цифри}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Мора да содржи најмалку # специјален симбол}one{Мора да содржи најмалку # специјален симбол}other{Мора да содржи најмалку # специјални симболи}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Мора да содржи најмалку # знак што не е буква}one{Мора да содржи најмалку # знак што не е буква}other{Мора да содржи најмалку # знаци што не се букви}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Мора да содржи најмалку # знак што не е број}one{Мора да содржи најмалку # знак што не е број}other{Мора да содржи најмалку # знаци што не се броеви}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Мора да содржи најмалку # знак}one{Мора да содржи најмалку # знак}other{Мора да содржи најмалку # знаци}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Мора да содржи најмалку # цифра}one{Мора да содржи најмалку # цифра}other{Мора да содржи најмалку # цифри}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Мора да содржи помалку од # знак}one{Мора да содржи помалку од # знак}other{Мора да содржи помалку од # знаци}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Мора да содржи помалку од # цифра}one{Мора да содржи помалку од # цифра}other{Мора да содржи помалку од # цифри}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Не е дозволена нагорна, надолна или повторлива секвенца на цифри"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заклучување на екранот"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пред <xliff:g id="NUM_DAYS">%3$s</xliff:g> дена"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Бришење акредитиви"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила за возило на <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Со поставките управува управникот на организацијата"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Дознајте повеќе за <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Податоци за управуваното возило"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Поставки управувани од администраторот на возниот парк"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"За да обезбеди пристап до податоците на ова управувано возило, администраторот на возниот парк може да ги промени поставките и да инсталира софтвер на системот за информации и забава.\n\nЗа повеќе детали, контактирајте со администраторот на возниот парк."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Податоци што може да ги види администраторот на возниот парк"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Промени што ги извршил администраторот на возниот парк"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Податоци поврзани со сметката на управуваното возило"</li>\n" "<li>"Список со апликации на управуваното возило"</li>\n" "<li>"Количина на време и мобилен интернет потрошени во секоја апликација"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Вашиот пристап до системот за информации и забава"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Список со апликации во возилото"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Бројот на апликации е приближен. Можеби не опфаќа апликации што не се инсталирани од Play Store."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">Минимум <xliff:g id="COUNT_1">%d</xliff:g> апликација</item>
+      <item quantity="other">Минимум <xliff:g id="COUNT_1">%d</xliff:g> апликации</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> апликација</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> апликации</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Најнова евиденција за мрежниот сообраќај"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Најнов извештај за грешки"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Најнова евиденција за безбедноста"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Нема"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Инсталирани се апликации"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Дозволи за локацијата"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Дозволи за микрофонот"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Дозволи за камерата"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Стандардни апликации"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Стандардна тастатура"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Поставено на <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Глобални HTTP-поставки за прокси"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Доверливи акредитиви во личниот профил"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Администраторот може да го заклучи системот за информации и забава и да ја ресетира лозинката"</li>\n" "<li>"Администраторот може да ги избрише податоците од системот за информации и забава"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Неуспешни обиди за внесување лозинка пред да се избришат сите податоци од системот за информации и забава"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Неуспешни обиди за внесување лозинка пред да се избришат податоците од профилот"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> обид</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> обиди</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">Апликации за камера</item>
+      <item quantity="other">Апликации за камера</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">Апликации за клиент за е-пошта</item>
+      <item quantity="other">Апликации за клиент за е-пошта</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">Апликации за телефон</item>
+      <item quantity="other">Апликации за телефон</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Да се сподели извештајот за грешки?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Управникот на организацијата на возилово побара извештај за грешки за да ви помогне да ги решите проблемите на уредов. Можно е да се споделат апликации и податоци."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Управникот на организацијата на возилово побара извештај за грешки за да ви помогне да ги решите проблемите на уредов. Можно е да се споделат апликации и податоци, а уредот привремено да биде побавен."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Црни на бело"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Жолти на црно"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Жолти на сино"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Читач на екран"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Исклучен"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Ги изговара ставките на екранот"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Користи <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Опции"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Поставки"</string>
 </resources>

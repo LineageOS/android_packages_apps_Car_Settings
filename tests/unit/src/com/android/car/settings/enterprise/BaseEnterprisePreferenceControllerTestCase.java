@@ -39,8 +39,7 @@ import org.mockito.Mock;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
-
+abstract class BaseEnterprisePreferenceControllerTestCase extends BaseEnterpriseTestCase {
     protected final String mPreferenceKey = "Da Key";
     protected final CarUxRestrictions mUxRestrictions = new CarUxRestrictions.Builder(
             /* reqOpt= */ true, CarUxRestrictions.UX_RESTRICTIONS_FULLY_RESTRICTED, /* time= */ 0)
@@ -81,6 +80,10 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
             CharSequence... titles) {
         assertThat(preferenceGroup.getPreferences().stream()
                 .map(p -> p.getTitle()).collect(toList())).containsExactly(titles);
+    }
+
+    protected static final void verifyPreferenceVisibleSet(Preference preference, boolean visible) {
+        verify(preference).setVisible(visible);
     }
 
     protected static final void verifyPreferenceTitleSet(Preference preference,
@@ -140,6 +143,10 @@ abstract class BasePreferenceControllerTestCase extends BaseEnterpriseTestCase {
 
         @Override public int getPreferenceCount() {
             return mList.size();
+        }
+
+        @Override public Preference getPreference(int index) {
+            return mList.get(index);
         }
 
         public List<Preference> getPreferences() {

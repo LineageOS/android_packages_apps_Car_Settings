@@ -214,7 +214,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         }
     }
 
-    private void launchFragmentInternal(Fragment fragment) {
+    protected void launchFragmentInternal(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(

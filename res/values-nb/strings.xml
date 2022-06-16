@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andre enheter kan koble til <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Passord for Wi-Fi-sone"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sikkerhet"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"Personlig WPA2"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Ingen"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP-bånd"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Avbryt"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bekreft"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Må bestå av minst fire tegn"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Må være minst <xliff:g id="COUNT">%d</xliff:g> tegn"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-koden må være på minst <xliff:g id="COUNT">%d</xliff:g> sifre"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Må inneholde færre enn <xliff:g id="NUMBER">%d</xliff:g> tegn"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Må inneholde færre enn <xliff:g id="NUMBER">%d</xliff:g> sifre"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Kan bare inneholde tall fra 0 til 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Enhetsadministratoren forbyr nylig brukte PIN-koder"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Vanlige PIN-koder er blokkert av IT-administratoren din. Prøv en annen PIN-kode."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Enhetsadministratoren forbyr nylig brukte passord"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Feil ved lagring av passord"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Vanlige passord er blokkert av IT-administratoren din. Prøv et annet passord."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"En sekvens av stigende, synkende eller like sifre er ikke tillatt."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Må inneholde minst én bokstav"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Må inneholde minst ett siffer"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Må inneholde minst ett symbol"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Må inneholde minst # bokstav}other{Må inneholde minst # bokstaver}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Må inneholde minst # liten bokstav}other{Må inneholde minst # små bokstaver}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Må inneholde minst # stor bokstav}other{Må inneholde minst # store bokstaver}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Må inneholde minst # siffer}other{Må inneholde minst # sifre}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Må inneholde minst # spesialtegn}other{Må inneholde minst # spesialtegn}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Må inneholde minst # annet tegn enn bokstaver}other{Må inneholde minst # andre tegn enn bokstaver}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Må inneholde minst # tegn som ikke er et tall}other{Må inneholde minst # tegn som ikke er et tall}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Må inneholde minst # tegn}other{Må inneholde minst # tegn}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Må inneholde minst # siffer}other{Må inneholde minst # sifre}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Må inneholde færre enn # tegn}other{Må inneholde færre enn # tegn}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Må inneholde færre enn # siffer}other{Må inneholde færre enn # sifre}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"En sekvens av stigende, synkende eller like sifre er ikke tillatt"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Alternativer for skjermlås"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : for <xliff:g id="NUM_DAYS">%3$s</xliff:g> dager siden"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Tøm legitimasjonslageret"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Retningslinjer for kjøretøy for <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Innstillinger administreres av organisasjonsadministratoren"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Finn ut mer om <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informasjon om det administrerte kjøretøyet"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Innstillinger som administreres av hovedadministratoren"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"For å gi tilgang til data på dette administrerte kjøretøyet kan hovedadministratoren endre innstillinger og installere programvare i infotainment-systemet.\n\nKontakt hovedadministratoren for å få mer informasjon."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informasjon hovedadministratoren kan se"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Endringer utført av hovedadministratoren"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Data tilknyttet kontoen for det administrerte kjøretøyet ditt"</li>\n" "<li>"Liste over apper på det administrerte kjøretøyet ditt"</li>\n" "<li>"Hvor mye tid og data som er brukt i hver app"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Tilgangen din til infotainment-systemet"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Liste over apper på kjøretøyet ditt"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Antall apper et anslag. Det inkluderer muligens ikke apper som er installert utenfor Play-butikken."</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> apper</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> app</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apper</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Den nyeste nettverkstrafikkloggen"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Den nyeste feilrapporten"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Den nyeste sikkerhetsloggen"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Ingen"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Installerte apper"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Posisjonstillatelser"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Mikrofontillatelser"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Kameratillatelser"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Standardapper"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Standardtastatur"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Angitt som <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Global HTTP-proxy-tjener er angitt"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Pålitelig legitimasjon i den personlige profilen din"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Administratoren kan låse infotainment-systemet og tilbakestille passordet"</li>\n" "<li>"Administratoren kan slette data på infotainment-systemet"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Antall mislykkede forsøk på å oppgi passordet før dataene i infotainment-systemet slettes"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Antall mislykkede forsøk på å oppgi passordet før profildataene slettes"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> forsøk</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> forsøk</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Kameraapper</item>
+      <item quantity="one">Kameraapp</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">E-postapper</item>
+      <item quantity="one">E-postapp</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefonapper</item>
+      <item quantity="one">Telefonapp</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Vil du dele feilrapporten?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Organisasjonsadministratoren for dette kjøretøyet har bedt om en feilrapport for å hjelpe med feilsøkingen på denne enheten. Apper og data kan bli delt."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Organisasjonsadministratoren for dette kjøretøyet har bedt om en feilrapport for å hjelpe med feilsøkingen på denne enheten. Apper og data kan bli delt. Dette kan midlertidig gjøre enheten din tregere."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Svart på hvitt"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Gult på svart"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Gult på blått"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Skjermleser"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Av"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Taleelementer på skjermen"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Bruk <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Alternativer"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Innstillinger"</string>
 </resources>

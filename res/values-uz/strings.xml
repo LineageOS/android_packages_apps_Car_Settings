@@ -146,6 +146,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Boshqa qurilmalar <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> nomli tarmoqqa ulanishi mumkin"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Hotspot paroli"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Himoya"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Hech qanday"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Wi-Fi diapazoni"</string>
@@ -671,10 +673,6 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Bekor qilish"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Tasdiqlash"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Kamida 4 ta belgi kiriting"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Kamida <xliff:g id="COUNT">%d</xliff:g> ta belgi bo‘lishi kerak"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kod kamida <xliff:g id="COUNT">%d</xliff:g> raqamli bo‘lsin"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Parol maksimum <xliff:g id="NUMBER">%d</xliff:g> ta belgili bo‘lsin"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN kod maksimum <xliff:g id="NUMBER">%d</xliff:g> ta raqamli bo‘lsin"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN kod faqat 0-9 raqamlaridan iborat bo‘lishi lozim."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Qurilma administratori oxirgi PIN koddan yana foydalanishga ruxsat bermaydi"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Oddiy PIN kodlar AT admini tomonidan bloklangan. Murakkabroq PIN kod tanlang."</string>
@@ -683,7 +681,21 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Qurilma administratori yaqinda foydalanilgan paroldan yana foydalanishga ruxsat bermaydi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Parol saqlanmadi"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"Oddiy parollar AT admini tomonidan bloklangan. Murakkabroq parol tanlang."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Oshib boruvchi, kamayib boruvchi yoki qaytarilgan ketma-ket raqamlarga ruxsat berilmaydi."</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Tarkibida kamida bitta harf boʻlsin"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Tarkibida kamida bitta raqam boʻlsin"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Tarkibida kamida bitta belgi boʻlsin"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Tarkibida kamida # ta harf boʻlsin}other{Tarkibida kamida # ta harf boʻlsin}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Tarkibida kamida # ta kichik harf boʻlsin}other{Tarkibida kamida # ta kichik harf boʻlsin}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Tarkibida kamida # ta bosh harf boʻlsin}other{Tarkibida kamida # ta bosh harf boʻlsin}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Tarkibida kamida # ta raqam boʻlsin}other{Tarkibida kamida # ta raqam boʻlsin}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Tarkibida kamida # ta maxsus belgi boʻlsin}other{Tarkibida kamida # ta maxsus belgi boʻlsin}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Tarkibida kamida # ta harf boʻlmagan belgi boʻlsin}other{Tarkibida kamida # ta harf boʻlmagan belgi boʻlsin}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Tarkibida kamida # ta raqamsiz belgi boʻlsin}other{Tarkibida kamida # ta raqamsiz belgi boʻlsin}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Tarkibida kamida # ta belgi boʻlsin}other{Tarkibida kamida # ta belgi boʻlsin}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Tarkibida kamida # ta raqam boʻlsin}other{Tarkibida kamida # ta raqam boʻlsin}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Tarkibidagi belgilar # tadan oshmasin}other{Tarkibidagi belgilar # tadan oshmasin}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Tarkibidagi raqamlar # tadan oshmasin}other{Tarkibidagi raqamlar # tadan oshmasin}}"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Oshib boruvchi, kamayib boruvchi yoki qaytarilgan ketma-ket raqamlarga ruxsat berilmaydi"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekran qulfi parametrlari"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> kun oldin"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hisobga oid axborotni tozalash"</string>
@@ -757,6 +769,55 @@
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> tashkilotining avtomobildan foydalanish qoidalari"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Sozlamalar tashkilot menejeri tomonidan boshqariladi"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> haqida batafsil"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Boshqariladigan transport axboroti"</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Sozlamalar avtopark admini boshqaruvida"</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Bu boshqariladigan transportda maʼlumotlarga ruxsat berish uchun avtopark admini sozlamalarni oʻzgartirishi va axborot-hordiq tizimida dasturiy taʼminot oʻrnatishi mumkin.\n\nBatafsil axborot uchun avtopark adminiga murojaat qiling."</string>
+    <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Avtopark admini koʻra oladigan axborot"</string>
+    <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Avtopark admini amalga oshirgan oʻzgarishlar"</string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Boshqariladigan transport hisobiga tegishli maʼlumotlar"</li>\n" "<li>"Boshqariladigan transportdagi ilovalar roʻyxati"</li>\n" "<li>"Har bir ilovaning ishlatilish vaqti"</li></string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Axborot-hordiq tizimidan foydalanishga ruxsatingiz"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Transportdagi ilovalar roʻyxati"</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Ilovalar soni hisoblanmoqda. Play Market orqali oʻrnatilmagan ilovalar hisoblanmasligi mumkin"</string>
+    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="other">Kamida <xliff:g id="COUNT_1">%d</xliff:g> ta ilova</item>
+      <item quantity="one">Kamida <xliff:g id="COUNT_0">%d</xliff:g> ta ilova</item>
+    </plurals>
+    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta ilova</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta ilova</item>
+    </plurals>
+    <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Eng oxirgi tarmoq trafigi jurnali"</string>
+    <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Eng oxirgi xatoliklar hisoboti"</string>
+    <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Eng oxirgi xavfsizlik jurnali"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Hech qanday"</string>
+    <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Oʻrnatilgan ilovalar"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Joylashuv axboroti uchun ruxsatlar"</string>
+    <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Mikrofon ruxsatnomasi"</string>
+    <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Kamera uchun ruxsatlar"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Birlamchi ilovalar"</string>
+    <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Asosiy klaviatura"</string>
+    <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Sozlash: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
+    <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Global HTTP proksi-serveri sozlandi"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Shaxsiy profilingizdagi ishonchli sertifikatlar"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Admin axborot-hordiq tizimini qulflashi va parolini tiklashi mumkin"</li>\n" "<li>"Admin axborot-hordiq tizimi maʼlumotlarini oʻchira oladi"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Axborot-hordiq tizimida barcha maʼlumotlar tozalanishi uchun parol necha marta xato kiritilishi kerak"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Profil maʼlumotlari oʻchirib tashlanishi uchun necha marta parol xato kiritilishi kerak"</string>
+    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta urinish</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta urinish</item>
+    </plurals>
+    <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="other">Kamera uchun ilovalar</item>
+      <item quantity="one">Kamera uchun ilova</item>
+    </plurals>
+    <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="other">Email uchun ilovalar</item>
+      <item quantity="one">Email uchun ilova</item>
+    </plurals>
+    <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="other">Telefon uchun ilovalar</item>
+      <item quantity="one">Telefon uchun ilova</item>
+    </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Xatoliklar hisoboti yuborilsinmi?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Transport vositasi tashkilot menejeri bu qurilma nosozliklarini tuzatish uchun xatoliklar hisobotini soʻramoqda. Ilova va maʼlumotlardan foydalanilishi mumkin."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Transport vositasi tashkilot menejeri bu qurilma nosozliklarini tuzatish uchun xatoliklar hisobotini soʻramoqda. Ilova va maʼlumotlardan foydalanilishi va bu vaqtincha qurilmangizni sekinlashtirishi ham mumkin."</string>
@@ -784,4 +845,10 @@
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Oq ustida qora"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Qora ustida sariq"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Koʻk ustida sariq"</string>
+    <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Ekrandan oʻqish vositasi"</string>
+    <string name="screen_reader_settings_off" msgid="6081562047935689764">"Oʻchiq"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Ekrangi elementlarni tinglash"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ishlatish"</string>
+    <string name="screen_reader_options_title" msgid="1073640098442831819">"Parametrlar"</string>
+    <string name="screen_reader_description_title" msgid="8766666406552388012">"Sozlamalar"</string>
 </resources>

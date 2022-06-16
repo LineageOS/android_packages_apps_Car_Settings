@@ -22,16 +22,14 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.UserManager;
 
-import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.qc.QCItem;
@@ -45,8 +43,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
-public class WifiTileTest {
-    private Context mContext = spy(ApplicationProvider.getApplicationContext());
+public class WifiTileTest extends BaseSettingsQCItemTestCase {
     private WifiTile mWifiTile;
 
     @Mock
@@ -99,6 +96,26 @@ public class WifiTileTest {
         assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
         assertThat(tile.isChecked()).isTrue();
         assertThat(tile.getSubtitle()).isEqualTo(testSSID);
+    }
+
+    @Test
+    public void getQCItem_hasBaseUmRestriction_tileDisabled() {
+        when(mWifiManager.isWifiEnabled()).thenReturn(false);
+        when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_DISABLED);
+        setBaseUserRestriction(UserManager.DISALLOW_CONFIG_WIFI, /* restricted= */ true);
+        QCTile tile = getWifiTile();
+        assertThat(tile.isEnabled()).isFalse();
+        assertThat(tile.isClickableWhileDisabled()).isFalse();
+    }
+
+    @Test
+    public void getQCItem_hasUmRestriction_tileClickableWhileDisabled() {
+        when(mWifiManager.isWifiEnabled()).thenReturn(false);
+        when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_DISABLED);
+        setUserRestriction(UserManager.DISALLOW_CONFIG_WIFI, /* restricted= */ true);
+        QCTile tile = getWifiTile();
+        assertThat(tile.isEnabled()).isFalse();
+        assertThat(tile.isClickableWhileDisabled()).isTrue();
     }
 
     @Test

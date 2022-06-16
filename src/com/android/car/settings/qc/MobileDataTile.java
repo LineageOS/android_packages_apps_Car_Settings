@@ -17,12 +17,14 @@
 package com.android.car.settings.qc;
 
 import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
+import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
 import static com.android.car.settings.qc.SettingsQCRegistry.MOBILE_DATA_TILE_URI;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
+import android.os.UserManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
@@ -31,6 +33,7 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCTile;
 import com.android.car.settings.R;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.settingslib.net.DataUsageController;
 
 /**
@@ -57,11 +60,21 @@ public class MobileDataTile extends SettingsQCItem {
         }
         Icon icon = MobileNetworkQCUtils.getMobileNetworkSignalIcon(getContext());
 
+        String userRestriction = UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS;
+        boolean hasDpmRestrictions = EnterpriseUtils.hasUserRestrictionByDpm(getContext(),
+                userRestriction);
+        boolean hasUmRestrictions = EnterpriseUtils.hasUserRestrictionByUm(getContext(),
+                userRestriction);
+
         return new QCTile.Builder()
                 .setIcon(icon)
                 .setChecked(mDataUsageController.isMobileDataEnabled())
                 .setAction(getBroadcastIntent())
                 .setSubtitle(subtitle)
+                .setEnabled(!hasUmRestrictions && !hasDpmRestrictions)
+                .setClickableWhileDisabled(hasDpmRestrictions)
+                .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
+                        userRestriction))
                 .build();
     }
 
