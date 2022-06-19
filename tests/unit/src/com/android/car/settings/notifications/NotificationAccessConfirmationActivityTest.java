@@ -200,14 +200,10 @@ public final class NotificationAccessConfirmationActivityTest {
 
         @Override
         public Object getSystemService(String name) {
-            if (!name.toLowerCase(Locale.ROOT).contains("notification")) {
-                return super.getSystemService(name);
-            }
-
-            if (mNotificationManagerSpy == null) {
-                mNotificationManagerSpy = spy(super.getSystemService(NotificationManager.class));
-            }
-            return mNotificationManagerSpy;
+            return mNotificationManagerSpy != null
+                    && name.toLowerCase(Locale.ROOT).contains("notification")
+                    ? mNotificationManagerSpy
+                    : super.getSystemService(name);
         }
 
         @Override
