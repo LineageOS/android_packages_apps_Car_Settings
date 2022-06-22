@@ -543,6 +543,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="integer" name="recent_apps_days_threshold"/>
       <item type="integer" name="recent_apps_max_count"/>
       <item type="integer" name="recent_camera_access_apps_list_count"/>
+      <item type="integer" name="recent_location_access_apps_list_count"/>
       <item type="integer" name="recent_microphone_access_apps_list_count"/>
       <item type="integer" name="recent_notifications_apps_list_count"/>
       <item type="integer" name="recent_notifications_days_threshold"/>
@@ -1054,8 +1055,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="location_driver_assistance_toggle_title"/>
       <item type="string" name="location_settings_app_permissions_title"/>
       <item type="string" name="location_settings_footer"/>
-      <item type="string" name="location_settings_recent_requests_empty_message"/>
-      <item type="string" name="location_settings_recent_requests_title"/>
+      <item type="string" name="location_settings_recently_accessed_title"/>
+      <item type="string" name="location_recently_accessed"/>
+      <item type="string" name="location_settings_recently_accessed_view_all_title"/>
+      <item type="string" name="location_no_recent_access"/>
+      <item type="string" name="driver_assistance_label"/>
       <item type="string" name="location_settings_services_title"/>
       <item type="string" name="location_settings_title"/>
       <item type="string" name="location_state_switch_content_description"/>
@@ -1605,8 +1609,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="language_picker_fragment"/>
       <item type="xml" name="languages_and_input_fragment"/>
       <item type="xml" name="legal_information_fragment"/>
-      <item type="xml" name="location_recent_requests_fragment"/>
       <item type="xml" name="location_settings_fragment"/>
+      <item type="xml" name="location_recent_accessed_view_all_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>
       <item type="xml" name="microphone_recent_requests_view_all_fragment"/>
       <item type="xml" name="mobile_network_fragment"/>
