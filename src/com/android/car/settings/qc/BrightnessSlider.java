@@ -46,12 +46,16 @@ public class BrightnessSlider extends SettingsQCItem {
     private static final Logger LOG = new Logger(BrightnessSlider.class);
     private final int mMaximumBacklight;
     private final int mMinimumBacklight;
+    private final Context mContextForUser;
 
     public BrightnessSlider(Context context) {
         super(context);
         PowerManager powerManager = context.getSystemService(PowerManager.class);
         mMaximumBacklight = powerManager.getMaximumScreenBrightnessSetting();
         mMinimumBacklight = powerManager.getMinimumScreenBrightnessSetting();
+        mContextForUser = context
+                .createContextAsUser(
+                        UserHandle.of(UserHandle.myUserId()), /* flags= */ 0);
     }
 
     @Override
@@ -74,8 +78,9 @@ public class BrightnessSlider extends SettingsQCItem {
             return;
         }
         int linear = convertGammaToLinear(value, mMinimumBacklight, mMaximumBacklight);
-        Settings.System.putIntForUser(getContext().getContentResolver(),
-                Settings.System.SCREEN_BRIGHTNESS, linear, UserHandle.myUserId());
+
+        Settings.System.putInt(mContextForUser.getContentResolver(),
+                Settings.System.SCREEN_BRIGHTNESS, linear);
     }
 
     protected QCRow.Builder getBrightnessRowBuilder() {
@@ -102,8 +107,8 @@ public class BrightnessSlider extends SettingsQCItem {
     private int getSeekbarValue() {
         int gamma = GAMMA_SPACE_MAX;
         try {
-            int linear = Settings.System.getIntForUser(getContext().getContentResolver(),
-                    Settings.System.SCREEN_BRIGHTNESS, UserHandle.myUserId());
+            int linear = Settings.System.getInt(mContextForUser.getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS);
             gamma = convertLinearToGamma(linear, mMinimumBacklight, mMaximumBacklight);
         } catch (Settings.SettingNotFoundException e) {
             LOG.w("Can't find setting for SCREEN_BRIGHTNESS.");

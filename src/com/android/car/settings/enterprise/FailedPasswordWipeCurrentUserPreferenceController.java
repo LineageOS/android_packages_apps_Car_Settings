@@ -46,9 +46,6 @@ public final class FailedPasswordWipeCurrentUserPreferenceController
 
     @Override
     protected int getAvailabilityStatus() {
-        // TODO(b/208725892): STOPSHIP this API is not really working for profile owners on
-        // secondary users, so if it's not fixed for Android 12, it should always return
-        // UNSUPPORTED_ON_DEVICE (and the respective test on CtsVerifier should be disabled)
         int superStatus = super.getAvailabilityStatus();
         if (superStatus != AVAILABLE) return superStatus;
 

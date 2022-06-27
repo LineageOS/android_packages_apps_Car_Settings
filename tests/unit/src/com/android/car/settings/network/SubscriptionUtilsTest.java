@@ -108,7 +108,8 @@ public class SubscriptionUtilsTest {
 
     private UiccSlotInfo createUuicSlotInfo(boolean isActive, boolean isEsim, int simSlotIndex,
             String cardId, int cardStateInfo) {
-        return new UiccSlotInfo(isEsim, cardId, cardStateInfo,
+        return new UiccSlotInfo(
+                isEsim, cardId, cardStateInfo,
                 /* isExtendedApduSupported= */ false, /* isRemovable= */ true,
                 Collections.singletonList(
                         new UiccPortInfo("" /* iccId */, 0 /* portIdx */,

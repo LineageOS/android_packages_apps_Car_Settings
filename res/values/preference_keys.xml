@@ -296,6 +296,7 @@
     <string name="pk_privacy_manage_perms" translatable="false">privacy_manage_perms</string>
     <string name="pk_show_password" translatable="false">privacy_show_password</string>
     <string name="pk_privacy_extra_settings" translatable="false">privacy_extra_settings</string>
+    <string name="pk_mute_camera_switch" translatable="false">privacy_mute_camera</string>
     <string name="pk_mute_mic_switch" translatable="false">privacy_mute_mic</string>
     <string name="pk_vehicle_data" translatable="false">vehicle_data</string>
     <string name="pk_vehicle_data_delete_profile" translatable="false">vehicle_data_delete_profile</string>
@@ -369,11 +370,11 @@
     <string name="pk_units_pressure" translatable="false">units_pressure</string>
 
     <!-- Location Settings -->
-    <string name="pk_location_recent_requests_entry" translatable="false">
-        location_recent_requests_entry
+    <string name="pk_location_recent_accesses_category" translatable="false">
+        location_recent_accesses_category
     </string>
-    <string name="pk_location_recent_requests" translatable="false">
-        location_recent_requests
+    <string name="pk_location_recently_accessed" translatable="false">
+        location_recently_accessed
     </string>
     <string name="pk_location_app_permissions" translatable="false">location_app_permissions
     </string>
@@ -575,4 +576,19 @@
     <string name="pk_screen_reader_enabled_switch" translatable="false">screen_reader_enabled_switch</string>
     <string name="pk_screen_reader_description_subheader" translatable="false">screen_reader_description_subbheader</string>
     <string name="pk_screen_reader_settings_intent" translatable="false">screen_reader_settings_intent</string>
+
+    <!-- Camera Settings -->
+    <string name="pk_camera_state_switch" translatable="false">camera_state_switch</string>
+    <string name="pk_camera_manage_permissions" translatable="false">
+        camera_manage_permissions
+    </string>
+    <string name="pk_camera_recent_accesses_category" translatable="false">
+        camera_recent_accesses_category
+    </string>
+    <string name="pk_camera_recent_accesses_view_all_entry" translatable="false">
+        camera_recent_accesses_view_all_entry
+    </string>
+    <string name="pk_camera_recent_requests" translatable="false">
+        camera_recent_requests
+    </string>
 </resources>

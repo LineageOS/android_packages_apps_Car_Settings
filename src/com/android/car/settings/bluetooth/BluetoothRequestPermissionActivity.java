@@ -213,7 +213,7 @@ public class BluetoothRequestPermissionActivity extends ComponentActivity {
                         | PackageManager.MATCH_DIRECT_BOOT_UNAWARE
                         | PackageManager.MATCH_DISABLED_COMPONENTS);
         if (matches.size() == 1) {
-            return matches.get(0).getComponentInfo().packageName;
+            return matches.get(0).activityInfo.packageName;
         } else {
             LOG.e("There should probably be exactly one setup wizard; found " + matches.size()
                     + ": matches=" + matches);

@@ -99,6 +99,78 @@ public class WifiTileTest extends BaseSettingsQCItemTestCase {
     }
 
     @Test
+    public void getQCItem_passpointWifiConnected_hasFriendlyName_returnsTile() {
+        String testTitle = "TEST_TITLE";
+        when(mWifiManager.isWifiEnabled()).thenReturn(true);
+        when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_ENABLED);
+        WifiInfo wifiInfo = mock(WifiInfo.class);
+        when(wifiInfo.isPasspointAp()).thenReturn(true);
+        when(wifiInfo.getPasspointProviderFriendlyName()).thenReturn(testTitle);
+        when(wifiInfo.getNetworkId()).thenReturn(1);
+        when(wifiInfo.getRssi()).thenReturn(-90);
+        when(mWifiManager.getConnectionInfo()).thenReturn(wifiInfo);
+        when(mWifiManager.calculateSignalLevel(anyInt())).thenReturn(4);
+        QCTile tile = getWifiTile();
+        assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
+        assertThat(tile.isChecked()).isTrue();
+        assertThat(tile.getSubtitle()).isEqualTo(testTitle);
+    }
+
+    @Test
+    public void getQCItem_passpointWifiConnected_noFriendlyName_returnsRow() {
+        String testSSID = "TEST_SSID";
+        when(mWifiManager.isWifiEnabled()).thenReturn(true);
+        when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_ENABLED);
+        WifiInfo wifiInfo = mock(WifiInfo.class);
+        when(wifiInfo.isPasspointAp()).thenReturn(true);
+        when(wifiInfo.getSSID()).thenReturn(testSSID);
+        when(wifiInfo.getNetworkId()).thenReturn(1);
+        when(wifiInfo.getRssi()).thenReturn(-90);
+        when(mWifiManager.getConnectionInfo()).thenReturn(wifiInfo);
+        when(mWifiManager.calculateSignalLevel(anyInt())).thenReturn(4);
+        QCTile tile = getWifiTile();
+        assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
+        assertThat(tile.isChecked()).isTrue();
+        assertThat(tile.getSubtitle()).isEqualTo(testSSID);
+    }
+
+    @Test
+    public void getQCItem_osuWifiConnected_hasFriendlyName_returnsTile() {
+        String testTitle = "TEST_TITLE";
+        when(mWifiManager.isWifiEnabled()).thenReturn(true);
+        when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_ENABLED);
+        WifiInfo wifiInfo = mock(WifiInfo.class);
+        when(wifiInfo.isOsuAp()).thenReturn(true);
+        when(wifiInfo.getPasspointProviderFriendlyName()).thenReturn(testTitle);
+        when(wifiInfo.getNetworkId()).thenReturn(1);
+        when(wifiInfo.getRssi()).thenReturn(-90);
+        when(mWifiManager.getConnectionInfo()).thenReturn(wifiInfo);
+        when(mWifiManager.calculateSignalLevel(anyInt())).thenReturn(4);
+        QCTile tile = getWifiTile();
+        assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
+        assertThat(tile.isChecked()).isTrue();
+        assertThat(tile.getSubtitle()).isEqualTo(testTitle);
+    }
+
+    @Test
+    public void getQCItem_osuWifiConnected_noFriendlyName_returnsTile() {
+        String testSSID = "TEST_SSID";
+        when(mWifiManager.isWifiEnabled()).thenReturn(true);
+        when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_ENABLED);
+        WifiInfo wifiInfo = mock(WifiInfo.class);
+        when(wifiInfo.isOsuAp()).thenReturn(true);
+        when(wifiInfo.getSSID()).thenReturn(testSSID);
+        when(wifiInfo.getNetworkId()).thenReturn(1);
+        when(wifiInfo.getRssi()).thenReturn(-90);
+        when(mWifiManager.getConnectionInfo()).thenReturn(wifiInfo);
+        when(mWifiManager.calculateSignalLevel(anyInt())).thenReturn(4);
+        QCTile tile = getWifiTile();
+        assertThat(tile.getIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
+        assertThat(tile.isChecked()).isTrue();
+        assertThat(tile.getSubtitle()).isEqualTo(testSSID);
+    }
+
+    @Test
     public void getQCItem_hasBaseUmRestriction_tileDisabled() {
         when(mWifiManager.isWifiEnabled()).thenReturn(false);
         when(mWifiManager.getWifiState()).thenReturn(WifiManager.WIFI_STATE_DISABLED);

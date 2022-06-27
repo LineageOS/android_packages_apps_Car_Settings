@@ -63,7 +63,8 @@ public class DatePickerPreferenceController extends PreferenceController<Prefere
     /** Starts the broadcast receiver which listens for time changes */
     @Override
     protected void onStartInternal() {
-        getContext().registerReceiver(mTimeChangeReceiver, mIntentFilter);
+        getContext().registerReceiver(mTimeChangeReceiver, mIntentFilter,
+                Context.RECEIVER_NOT_EXPORTED);
     }
 
     /** Stops the broadcast receiver which listens for time changes */

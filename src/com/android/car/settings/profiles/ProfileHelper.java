@@ -112,7 +112,7 @@ public class ProfileHelper {
             sInstance = new ProfileHelper(
                     appContext.getSystemService(UserManager.class), resources,
                     resources.getString(com.android.internal.R.string.owner_name),
-                    resources.getString(R.string.user_guest),
+                    resources.getString(com.android.internal.R.string.guest_name),
                     getCarUserManager(appContext));
         }
         return sInstance;
@@ -329,7 +329,7 @@ public class ProfileHelper {
         UserCreationResult result = getResult("create admin",
                 mCarUserManager.createUser(userName, UserInfo.FLAG_ADMIN));
         if (result == null) return null;
-        UserInfo user = result.getUser();
+        UserInfo user = mUserManager.getUserInfo(result.getUser().getIdentifier());
 
         new ProfileIconProvider().assignDefaultIcon(mUserManager, mResources, user);
         return user;
@@ -347,7 +347,8 @@ public class ProfileHelper {
         // createGuest() will return null if a guest already exists.
         UserCreationResult result = getResult("create guest",
                 mCarUserManager.createGuest(mDefaultGuestName));
-        UserInfo newGuest = result == null ? null : result.getUser();
+        UserInfo newGuest = result == null ? null
+                : mUserManager.getUserInfo(result.getUser().getIdentifier());
 
         if (newGuest != null) {
             new ProfileIconProvider().assignDefaultIcon(mUserManager, mResources, newGuest);

@@ -26,8 +26,6 @@ import android.content.Intent;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.UserManager;
-import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -57,11 +55,8 @@ public class MobileDataRow extends SettingsQCItem {
         if (!mDataUsageController.isMobileDataSupported()) {
             return null;
         }
-        TelephonyManager manager = getContext().getSystemService(TelephonyManager.class);
-        String subtitle = manager != null ? manager.getNetworkOperatorName() : null;
-        if (TextUtils.isEmpty(subtitle)) {
-            subtitle = null;
-        }
+        boolean dataEnabled = mDataUsageController.isMobileDataEnabled();
+        String subtitle = MobileNetworkQCUtils.getMobileNetworkSummary(getContext(), dataEnabled);
         Icon icon = MobileNetworkQCUtils.getMobileNetworkSignalIcon(getContext());
 
         String userRestriction = UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS;
@@ -71,7 +66,7 @@ public class MobileDataRow extends SettingsQCItem {
                 userRestriction);
 
         QCActionItem dataToggle = new QCActionItem.Builder(QC_TYPE_ACTION_SWITCH)
-                .setChecked(mDataUsageController.isMobileDataEnabled())
+                .setChecked(dataEnabled)
                 .setAction(getBroadcastIntent())
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions)
                 .setClickableWhileDisabled(hasDpmRestrictions)
