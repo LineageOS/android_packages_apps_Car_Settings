@@ -220,7 +220,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ସାଧାରଣତଃ 0000 କିମ୍ବା 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ପେୟାରିଙ୍ଗ ଅନୁରୋଧ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ସହ ପେୟାର୍‌ କରିବାକୁ ଟାପ୍‌ କରନ୍ତୁ"</string>
-    <string name="bluetooth_device_picker" msgid="673238198452345475">"ବ୍ଲୁଟୂଥ୍ ଡିଭାଇସ୍ ଚୟନ କରନ୍ତୁ"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"ବ୍ଲୁଟୂଥ ଡିଭାଇସ ବାଛନ୍ତୁ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ଭାଷା"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ଭାଷା ଓ ଇନ୍‌‌ପୁଟ୍‌"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"ପରାମର୍ଶିତ"</string>
@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିବାକୁ ଡ୍ରାଇଭିଂରେ ସାହାଯ୍ୟ କରୁଥିବା ଆପ୍ସକୁ ଅନୁମତି ଦିଅ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପଗୁଡ଼ିକ ଅକ୍ଷମ ହୋଇଯିବ।"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ବର୍ତ୍ତମାନର ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
