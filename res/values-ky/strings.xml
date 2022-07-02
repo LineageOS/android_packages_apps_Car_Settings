@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Унаада жардам берген колдонмолорго кайда жүргөнүңүздү көрүүгө уруксат бериңиз"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Эгер муну өчүрсөңүз, кайда жүргөнүңүз тууралуу маалыматты колдонгон Айдоочуга көмөктөш колдонмолор өчүрүлөт."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Баары бир өчүрүү"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Жакында изделген жерлер"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Жакында изделген жерлер жок"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Жакында пайдалангандар"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Жакында пайдалангандар"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Баарын көрүү"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Бир да колдонмо пайдалана элек"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> •Айдоочуга көмөктөш функциялар"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Колдонмонун уруксаттары"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди аныктоо"</string>
@@ -635,7 +638,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Улантуу"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Кайталоо"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Өткөрүп жиберүү"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Экран кулпусун коюп алыңыз"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Экран кулпусун коюу"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN кодуңузду тандаңыз"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Сырсөзүңүздү тандаңыз"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Учурдагы экран кулпусу"</string>

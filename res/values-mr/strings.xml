@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"तुमचे स्थान अ‍ॅक्सेस करण्यासाठी ड्राइव्ह करण्यात मदत करणाऱ्या ॲप्सना अनुमती द्या"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"तुम्ही हे बंद केल्यास, स्थान माहितीवर अवलंबून असलेली ड्रायव्हर साहाय्य ॲप्स बंद केली जातील."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"तरीही बंद करा"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"अलीकडील स्थान विनंत्या"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"अलीकडील कोणत्याही स्थान विनंत्या नाहीत"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"अलीकडे अ‍ॅक्सेस केलेले"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"अलीकडे अ‍ॅक्सेस केलेले"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"सर्व पहा"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"कोणतीही अलीकडील अ‍ॅप्स नाहीत"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ड्रायव्हर साहाय्य"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ॲप पातळी परवानग्या"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"स्‍थान सेवा"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"स्थान वापरा"</string>

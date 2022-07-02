@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Дозволи апликациите што помагаат со возењето да пристапуваат до локацијата"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ако го исклучите ова, функциите за помош за возачи што зависат од податоците за локација ќе бидат оневозможени."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Сепак исклучи"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последни барања за локација"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема неодамнешни барања за локација"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Неодамна пристапени"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Неодамна пристапени"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Прикажи ги сите"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Нема неодамнешни апликации"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Помош за возачи"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на ниво на апликација"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги според локација"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Користи ја локацијата"</string>
