@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Povoľte prístup k polohe aplikáciám, ktoré pomáhajú pri šoférovaní"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ak túto možnosť vypnete, aplikácie asistencie pre vodiča, ktoré fungujú na základe údajov o polohe, sa deaktivujú."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Aj tak vypnúť"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedávne žiadosti o polohu"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Žiadne nedávne žiadosti o polohu"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Nedávno použité"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedávno použité"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Zobraziť všetko"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Žiadne nedávne aplikácie"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia pre vodiča"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Povolenia na úrovni aplikácie"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Služby určovania polohy"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Používať polohu"</string>

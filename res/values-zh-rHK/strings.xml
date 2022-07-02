@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"允許協助駕駛的應用程式存取您的位置"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"關閉此功能後，需要依賴位置資料的「駕駛輔助」應用程式將會停用。"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"繼續關閉"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置資訊要求"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近沒有位置資訊要求"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"最近存取"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"最近存取"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"查看全部"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"沒有最近存取過的應用程式"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • 駕駛輔助"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"定位服務"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置資訊"</string>

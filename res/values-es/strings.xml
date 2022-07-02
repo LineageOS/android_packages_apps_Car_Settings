@@ -220,7 +220,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalmente: 0000 o 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitud de vinculación"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para emparejar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
-    <string name="bluetooth_device_picker" msgid="673238198452345475">"Seleccionar dispositivo Bluetooth"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"Elige un dispositivo Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e introducción de texto"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugerencias"</string>
@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir acceso a la ubicación de las apps de asistencia en la conducción"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si la desactivas, se inhabilitarán las aplicaciones de asistencia en la conducción que usan información de la ubicación."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactivar de todas formas"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ninguna solicitud de ubicación reciente"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recientes"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recientes"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"No hay aplicaciones recientes"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia en la conducción"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos de las aplicaciones"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicios de ubicación"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
