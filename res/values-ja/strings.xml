@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"運転をサポートするアプリに位置情報へのアクセスを許可します"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"この設定を OFF にすると、位置情報を使用するドライバー サポート アプリは無効になります。"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"OFF にする"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近の位置情報リクエスト"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近の位置情報リクエストはありません"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"最近アクセスしたもの"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"最近アクセスしたもの"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"すべて表示"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"最近使ったアプリはありません"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ドライバー サポート"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"アプリレベルの権限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置情報サービス"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"位置情報を使用"</string>
@@ -662,7 +665,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"パスワードの入力"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"セキュリティ強化のために PIN を設定"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN の再入力"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN は 4 桁以上で作成してください"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN は 4 桁以上で設定してください"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN が無効です。4 桁以上にしてください。"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN が一致しません"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN の保存中にエラーが発生しました"</string>
@@ -839,7 +842,7 @@
     <string name="captions_settings_off" msgid="7568096968016015626">"OFF"</string>
     <string name="captions_settings_on" msgid="5374984113566914978">"ON"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"スクリーン リーダー"</string>
-    <string name="show_captions_toggle_title" msgid="710582308974826311">"字幕の表示"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"字幕を表示"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"文字のサイズ"</string>
     <string name="captions_settings_style_header" msgid="944591388386054372">"字幕のサイズとスタイル"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"極小"</string>

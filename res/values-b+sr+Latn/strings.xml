@@ -38,7 +38,7 @@
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilna mreža"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Koristi mobilne podatke"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Isključeno"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Želite li da isključite mobilne podatke?"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Želite da isključite mobilne podatke?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Treba da izaberete nešto"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Koristiti <xliff:g id="CARRIER">%1$s</xliff:g> za mob. podatke?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Koristite <xliff:g id="CARRIER2_0">%2$s</xliff:g> za mobilne podatke. Ako pređete na <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> se više neće koristiti za mobilne podatke."</string>
@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Dozvoljava pristup lokaciji aplikacijama za pomoć u vožnji"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ako isključite ovo, aplikacije pomoći za vozače koje se oslanjaju na informacije o lokaciji će se onemogućiti."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Ipak isključi"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtevi za lokaciju"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nema nedavnih zahteva za lokaciju"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Nedavno pristupano"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedavno pristupano"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Prikaži sve"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Nema nedavnih aplikacija"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • pomoć za vozače"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Dozvole na nivou aplikacija"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
@@ -862,7 +865,7 @@
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Čitač ekrana"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Isključeno"</string>
     <string name="screen_reader_settings_on" msgid="2168217218643349459">"Izgovara stavke na ekranu"</string>
-    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Koristi aplikaciju <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Koristi: <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcije"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Podešavanja"</string>
     <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>

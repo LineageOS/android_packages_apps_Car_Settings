@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"السماح للتطبيقات التي تساعدك على القيادة بالوصول إلى موقعك الجغرافي"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"إذا أوقفت ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"إيقاف على أي حال"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"عرض الكل"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"لم يَصِل أي تطبيق مؤخرًا إلى الموقع الجغرافي."</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • مساعدة السائق"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات الموقع الجغرافي"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"استخدام الموقع الجغرافي"</string>
@@ -645,10 +648,10 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"نقش فتح القفل الجديد"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ارسم نقش فتح القفل."</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ارفع إصبعك عن الشاشة عند الانتهاء."</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"تم تسجيل النقش."</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"تم حفظ النقش."</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ارسم النقش مرة أخرى للتأكيد."</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"صِل 4 نقاط على الأقل. أعد المحاولة."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"نقش غير صحيح"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"النقش غير صحيح."</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"كيفية رسم نقش فتح القفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"حدث خطأ أثناء حفظ النقش."</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تم إجراء عدد كبير جدًا من المحاولات غير الصحيحة. أعِد المحاولة خلال <xliff:g id="NUMBER">%d</xliff:g> ثانية."</string>
@@ -664,13 +667,13 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"إعادة إدخال رقم التعريف الشخصي"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"يجب أن يتكوّن PIN من‏ 4 أرقام على الأقل."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"رقم التعريف الشخصي غير صالح لأنه يجب أن يحتوي على 4 أرقام على الأقل."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"أرقام PIN غير متطابقة"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"رقما التعريف الشخصي غير متطابقَين"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"حدث خطأ أثناء حفظ رقم التعريف الشخصي."</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"رقم تعريف شخصي خاطئ"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"كلمة مرور غير صحيحة"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"للحفاظ على الأمان، يجب تعيين كلمة مرور."</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"إعادة إدخال كلمة المرور"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"كلمات المرور غير متطابقة"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"كلمتا المرور غير متطابقتَين"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"محو"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"إلغاء"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تأكيد"</string>
