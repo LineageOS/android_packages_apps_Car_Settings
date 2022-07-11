@@ -932,6 +932,12 @@
     <string name="location_no_recent_access">No recent apps</string>
     <!-- Label for driver assistance apps that recently accessed location [CHAR LIMIT=60] -->
     <string name="driver_assistance_label"><xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver Assistance</string>
+    <!-- Content description for privacy policy header [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_privacy_policy_header_content">
+        Apps with location permission to access to this vehicle’s location for driver assistance features.
+    </string>
+    <!-- Text policy button of driver assistance app [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_privacy_policy_button_text">Privacy policy</string>
     <!-- Title of Location App-level Permissions setting [CHAR LIMIT=60] -->
     <string name="location_settings_app_permissions_title">App-level permissions</string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
