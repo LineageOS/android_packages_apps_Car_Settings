@@ -356,7 +356,7 @@ public class ApplicationActionButtonsPreferenceController extends
             LOG.d("Sending broadcast to query restart status for " + mPackageName);
             getContext().sendOrderedBroadcastAsUser(intent,
                     UserHandle.CURRENT,
-                    /* receiverPermission= */ null,
+                    android.Manifest.permission.HANDLE_QUERY_PACKAGE_RESTART,
                     mCheckKillProcessesReceiver,
                     /* scheduler= */ null,
                     Activity.RESULT_CANCELED,
