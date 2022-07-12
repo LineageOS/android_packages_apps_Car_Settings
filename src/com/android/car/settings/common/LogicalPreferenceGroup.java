@@ -30,10 +30,35 @@ import com.android.car.ui.preference.CarUiPreference;
 /**
  * {@link PreferenceGroup} which does not display a title, icon, or summary. This allows for
  * logical grouping of preferences without indications in the UI.
+ *
+ * <P>Items added to this group will automatically added into the parent of this group. When the
+ * parent is set to isOrderingAsAdded the order will be preserved and items will be placed after
+ * this group and before any other already added items of the parent. The order how children are
+ * added will be also preserved.
+ *
+ * <P>Example:
+ * <ul>
+ *     <li>A</li>
+ *     <li>B</li>
+ * </ul>
+ * A.addPreference(A_1);
+ * A.addPreference(A_2);
+ *
+ * will result in
+ * <ul>
+ *     <li>A
+ *         <ul>
+ *             <li>A_1</li>
+ *             <li>A_2</li>
+ *         </ul>
+ *     </li>
+ *     <li>B</li>
+ * </ul>
  */
 public class LogicalPreferenceGroup extends PreferenceGroup {
 
     private final boolean mShouldShowChevron;
+    private int mInsertedPreferences = 0;
 
     public LogicalPreferenceGroup(Context context, AttributeSet attrs, int defStyleAttr,
             int defStyleRes) {
@@ -67,6 +92,28 @@ public class LogicalPreferenceGroup extends PreferenceGroup {
                 || preference instanceof CarUiEditTextPreference)) {
             ((CarUiPreference) preference).setShowChevron(false);
         }
-        return super.addPreference(preference);
+
+        boolean result = getParent().addPreference(preference);
+        updateOrder(preference);
+        return result;
+    }
+
+    private void updateOrder(Preference newPreference) {
+        if (!getParent().isOrderingAsAdded()) {
+            return;
+        }
+
+        int preferenceOrder = getOrder();
+        for (int index = 0; index < getParent().getPreferenceCount(); index++) {
+            Preference preference = getParent().getPreference(index);
+            if (preference != this
+                    && preference != newPreference
+                    && preference.getOrder() > preferenceOrder + mInsertedPreferences) {
+                preference.setOrder(preference.getOrder() + 1);
+            }
+        }
+        mInsertedPreferences++;
+        newPreference.setOrder(preferenceOrder + mInsertedPreferences);
+        notifyHierarchyChanged();
     }
 }
