@@ -390,7 +390,7 @@
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ବ୍ୟକ୍ତିଗତ ସୂଚନା ଯେପରି ଯୋଗାଯୋଗ ନାମଗୁଡ଼ିକ ଏବଂ ଆପଣ ପ୍ରାପ୍ତ କରୁଥିବା ମେସେଜ୍‌ଗୁଡ଼ିକର ଟେକ୍ସଟ୍ ସମେତ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ସମସ୍ତ ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ପଢ଼ିବାରେ ସକ୍ଷମ ହେବ। ଏହା ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ଖାରଜ କରିବାରେ କିମ୍ବା ସେମାନଙ୍କ ପାଖରେ ଥିବା ପଦକ୍ଷେପ ବଟନ୍‌ଗୁଡ଼ିକୁ ମଧ୍ୟ ଟ୍ରିଗର୍ କରିବାରେ ସକ୍ଷମ ହେବ। \n\n ଏହା ଆପ୍‌କୁ \'ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\' ବିକଳ୍ପକୁ ଚାଲୁ କିମ୍ବା ବନ୍ଦ କରିବା ତଥା ସମ୍ବନ୍ଧିତ ସେଟିଂସ୍‌କୁ ବଦଳାଇବା କ୍ଷମତା ମଧ୍ୟ ଦେବ।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ଯଦି <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ପାଇଁ ଆପଣ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌କୁ ବନ୍ଦ କରିବେ, ତେବେ \"ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\" ବିକଳ୍ପ ଆକ୍ସେସ୍ ମଧ୍ୟ ହୁଏତ ବନ୍ଦ ହୋଇଯାଇପାରେ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ବନ୍ଦ କରନ୍ତୁ"</string>
-    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ବାତିଲ୍ କରନ୍ତୁ"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ପ୍ରିମିୟମ୍ SMS ଆକ୍ସେସ୍"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ପ୍ରିମିୟମ୍ SMSରେ ଆପଣଙ୍କୁ ଖର୍ଚ୍ଚ କରିବାକୁ ପଡ଼ିପାରେ ଏବଂ ତାହା ଆପଣଙ୍କର ମୋବାଇଲ୍ କମ୍ପାନୀର ବିଲ୍‌ରେ ଯୋଗ ହୋଇଯିବ। ଯଦି ଆପଣ ଏକ ଆପ୍ ପାଇଁ ଅନୁମତି ଦେଇଛନ୍ତି, ତେବେ ସେହି ଆପ୍ ବ୍ୟବହାର କରି ଆପଣ ପ୍ରିମିୟମ୍ SMS ପଠାଇ ପାରିବେ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ବ୍ୟବହାର ଆକସେସ୍"</string>
@@ -414,6 +414,10 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
+    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
+    <skip />
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
@@ -481,7 +485,7 @@
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"ମୋବାଇଲ୍‍ ଡାଟା"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ବ୍ଲୁଟୁଥ୍‍"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"ସମସ୍ତ ଗାଡି eSIM ଖାଲି କରିଦିଅନ୍ତୁ"</string>
-    <string name="reset_esim_desc" msgid="1437276625485586740">"ଏହା ଆପଣଙ୍କ ସେବା ପ୍ଲାନ୍‍ ବାତିଲ୍‌ କରିବ ନାହିଁ।"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"ଏହା ଆପଣଙ୍କ ସେବା ପ୍ଲାନ ବାତିଲ କରିବ ନାହିଁ।"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM ରିସେଟ୍‌ କରିପାରିବ ନାହିଁ"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"ନେଟ୍‍ୱାର୍କ ବାଛନ୍ତୁ"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"ସେଟିଂ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
@@ -610,7 +614,7 @@
     <string name="sync_one_time_sync" msgid="491707183321353107">"ବର୍ତ୍ତମାନ <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g> ରେ  ସିଙ୍କ୍‌ କରିବାକୁ ଟାପ୍‌ କରନ୍ତୁ"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ବର୍ତ୍ତମାନ ସିଙ୍କ କରନ୍ତୁ"</string>
-    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ସିଙ୍କ୍‌ ବାତିଲ୍‌‌ କରନ୍ତୁ"</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ସିଙ୍କ ବାତିଲ କରନ୍ତୁ"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"ସମ୍ପ୍ରତି ସିଙ୍କ କରିବାରେ ସମସ୍ୟା ହେଉଛି। ଏହା ଖୁବ୍‌ ଶୀଘ୍ର ଫେରିବ।"</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"ଗୋପନୀୟତା"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ଡାଟା"</string>
@@ -644,7 +648,7 @@
     <string name="current_screen_lock" msgid="637651611145979587">"ବର୍ତ୍ତମାନର ସ୍କ୍ରୀନ୍‌ ଲକ୍‌"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ସୁରକ୍ଷା ପାଇଁ ଗୋଟିଏ ପାଟର୍ନ ସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ଖାଲି କରନ୍ତୁ"</string>
-    <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ବାତିଲ୍ କରନ୍ତୁ"</string>
+    <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"ଆପଣଙ୍କର ନୂଆ ଅନ୍‌ଲକ୍‌ ପାଟର୍ନ"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ଏକ ଅନଲକ ପାଟର୍ନ ଆଙ୍କନ୍ତୁ"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ହୋଇଯିବା ପରେ ଆଙ୍ଗୁଠି କାଢ଼ିଦିଅନ୍ତୁ"</string>
@@ -675,7 +679,7 @@
     <string name="confirm_your_password_header" msgid="7052891840366724938">"ପାସ୍‌ୱର୍ଡ ପୁନଃ-ପ୍ରବେଶ କରନ୍ତୁ"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"ପାସୱାର୍ଡଗୁଡ଼ିକ ମେଳ ହେଉନାହିଁ"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ଖାଲି କରନ୍ତୁ"</string>
-    <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ବାତିଲ୍ କରନ୍ତୁ"</string>
+    <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ନିଶ୍ଚିତ"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମ୍‌ରେ 4 ଅକ୍ଷର ରହିବା ଦରକାର"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"କେବଳ 0-9 ପର୍ଯ୍ୟନ୍ତ ସଂଖ୍ୟା ରହିବା ଦରକାର"</string>
@@ -713,7 +717,7 @@
     <string name="disconnect" msgid="6140789953324820336">"ବିଛିନ୍ନ କରନ୍ତୁ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ଡିଲିଟ୍‍"</string>
     <string name="remove_button" msgid="6664656962868194178">"କାଢ଼ିଦିଅନ୍ତୁ"</string>
-    <string name="cancel" msgid="750286395700355455">"ବାତିଲ୍ କରନ୍ତୁ"</string>
+    <string name="cancel" msgid="750286395700355455">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="allow" msgid="7519431342750394402">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="do_not_allow" msgid="3157082400084747525">"ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ"</string>
     <string name="deny" msgid="340512788979930804">"ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ"</string>
