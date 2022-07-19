@@ -354,6 +354,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_wifi_level_2"/>
       <item type="drawable" name="ic_qc_wifi_level_3"/>
       <item type="drawable" name="ic_qc_wifi_level_4"/>
+      <item type="drawable" name="ic_reboot"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
       <item type="drawable" name="ic_screen_reader_settings"/>
@@ -802,6 +803,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="confirm_your_pin_header"/>
       <item type="string" name="connect"/>
       <item type="string" name="continue_button_text"/>
+      <item type="string" name="continue_confirmation"/>
       <item type="string" name="contributors_title"/>
       <item type="string" name="copyright_title"/>
       <item type="string" name="create_user_permission_title"/>
@@ -903,6 +905,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_none"/>
       <item type="string" name="domain_urls_summary_one"/>
       <item type="string" name="domain_urls_summary_some"/>
+      <item type="string" name="driver_assistance_label"/>
       <item type="string" name="driver_assistance_settings_title"/>
       <item type="string" name="driver_assistance_warning_confirm_label"/>
       <item type="string" name="location_driver_assistance_privacy_policy_header_content"/>
@@ -1054,13 +1057,12 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="location_driver_assistance_toggle_off_warning"/>
       <item type="string" name="location_driver_assistance_toggle_summary"/>
       <item type="string" name="location_driver_assistance_toggle_title"/>
+      <item type="string" name="location_no_recent_access"/>
+      <item type="string" name="location_recently_accessed"/>
       <item type="string" name="location_settings_app_permissions_title"/>
       <item type="string" name="location_settings_footer"/>
       <item type="string" name="location_settings_recently_accessed_title"/>
-      <item type="string" name="location_recently_accessed"/>
       <item type="string" name="location_settings_recently_accessed_view_all_title"/>
-      <item type="string" name="location_no_recent_access"/>
-      <item type="string" name="driver_assistance_label"/>
       <item type="string" name="location_settings_services_title"/>
       <item type="string" name="location_settings_title"/>
       <item type="string" name="location_state_switch_content_description"/>
@@ -1252,6 +1254,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="reset_network_title"/>
       <item type="string" name="reset_options_summary"/>
       <item type="string" name="reset_options_title"/>
+      <item type="string" name="restart_infotainment_system_dialog_text"/>
+      <item type="string" name="restart_infotainment_system_title"/>
       <item type="string" name="restricted_while_driving"/>
       <item type="string" name="ring_volume_title"/>
       <item type="string" name="ringtone_picker_save_title"/>
@@ -1610,8 +1614,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="language_picker_fragment"/>
       <item type="xml" name="languages_and_input_fragment"/>
       <item type="xml" name="legal_information_fragment"/>
-      <item type="xml" name="location_settings_fragment"/>
       <item type="xml" name="location_recent_accessed_view_all_fragment"/>
+      <item type="xml" name="location_settings_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>
       <item type="xml" name="microphone_recent_requests_view_all_fragment"/>
       <item type="xml" name="mobile_network_fragment"/>
