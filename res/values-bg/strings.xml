@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Показване на всички"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Търси се"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Използване на Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Устройство без име"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Сдвоени устройства"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Сдвояване на ново устройство"</string>
@@ -414,10 +415,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Преглед на всички"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Няма скорошни приложения"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Помощ за шофьорите"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Прилож. с разрешение за достъп до местоп. имат достъп до местоп. на това прев. средство във връзка с функциите за помощ за шофьорите."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Декларация за поверителност"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения на ниво приложение"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги за местоположение"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Използване на местоположението"</string>

@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Pokaż wszystko"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Wyszukiwanie"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Użyj Bluetootha"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Urządzenie bez nazwy"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Sparowane urządzenia"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Sparuj nowe urządzenie"</string>
@@ -414,10 +415,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Wyświetl wszystko"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Brak ostatnich aplikacji"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Funkcje wspomagania kierowcy"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Aplikacje z dostępem do lokalizacji pojazdu na potrzeby funkcji wspomagania kierowcy."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Polityka prywatności"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uprawnienia na poziomie aplikacji"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usługi lokalizacyjne"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Używaj lokalizacji"</string>
