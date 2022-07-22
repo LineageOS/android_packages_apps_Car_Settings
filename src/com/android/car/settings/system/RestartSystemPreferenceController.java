@@ -16,6 +16,7 @@
 
 package com.android.car.settings.system;
 
+import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -41,7 +42,7 @@ import com.android.car.settings.common.PreferenceController;
  */
 public class RestartSystemPreferenceController extends PreferenceController<Preference> {
     private static final Logger LOG = new Logger(RestartSystemPreferenceController.class);
-    private static final String REBOOT_PERMISSIONS_TAG = "android.permission.REBOOT";
+    private static final String REBOOT_PERMISSIONS_TAG = Manifest.permission.REBOOT;
     private final PowerManager mPowerManager;
     private final boolean mIsRebootPermissionGranted;
     @VisibleForTesting
