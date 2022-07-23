@@ -177,6 +177,8 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"نمایش همه"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"در حال جستجو"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
+    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
+    <skip />
     <string name="bluetooth_device" msgid="3178478829314083240">"دستگاه بی‌نام"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"دستگاه‌های مرتبط‌شده"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"مرتبط‌ کردن دستگاه جدید"</string>
@@ -414,10 +416,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"مشاهده همه برنامه‌ها"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"برنامه اخیری وجود ندارد"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • دستیار راننده"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"برنامه‌هایی که اجازه مکان دارند تا برای ویژگی‌های دستیار راننده به مکان این خودرو دسترسی پیدا کنند."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"خط‌مشی رازداری"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"اجازه‌های سطح برنامه"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات مکان"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"استفاده از مکان"</string>

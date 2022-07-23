@@ -177,6 +177,8 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"सभी दिखाएं"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"खोजना"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लूटूथ"</string>
+    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
+    <skip />
     <string name="bluetooth_device" msgid="3178478829314083240">"बिना नाम वाला डिवाइस"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"जुड़े हुए डिवाइस"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"नया डिवाइस जोड़ें"</string>
@@ -414,10 +416,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"सभी ऐप्लिकेशन देखें"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"हाल ही में, किसी ऐप्लिकेशन ने जगह की जानकारी ऐक्सेस नहीं की"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ड्राइवर की सुरक्षा में मदद करने वाली सुविधाएं"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"ड्राइवर की सुरक्षा में मदद करने वाली सुविधाओं के लिए, इस गाड़ी की जगह की जानकारी को ऐक्सेस करने की अनुमति वाले ऐप्लिकेशन."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"निजता नीति"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ऐप्लिकेशन-लेवल की अनुमतियां"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"जगह की जानकारी से जुड़ी सेवाएं"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"जगह की जानकारी का इस्तेमाल करें"</string>

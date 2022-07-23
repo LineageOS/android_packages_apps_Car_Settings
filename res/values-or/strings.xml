@@ -177,6 +177,8 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ସମସ୍ତ ଦେଖାନ୍ତୁ"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ଖୋଜୁଛି..."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ବ୍ଲୁଟୁଥ୍‌"</string>
+    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
+    <skip />
     <string name="bluetooth_device" msgid="3178478829314083240">"ନାମହୀନ ଡିଭାଇସ୍‍"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ପେୟାର୍‌ ହୋଇଥିବା ଡିଭାଇସ୍‌ଗୁଡ଼ିକ"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ନୂଆ ଡିଭାଇସ୍‌କୁ ପେୟାର୍‌ କରନ୍ତୁ"</string>
@@ -414,10 +416,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"ଲୋକେସନ ଅନୁମତି ଥିବା ଆପ୍ସର ଡ୍ରାଇଭର ସହାୟତା ଫିଚରଗୁଡ଼ିକ ପାଇଁ ଏହି ଗାଡ଼ିର ଲୋକେସନକୁ ଆକ୍ସେସ ଅଛି।"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"ଗୋପନୀୟତା ନୀତି"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
@@ -560,7 +560,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"ଆପଣ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ନାମ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ସେଟ୍ ହୋଇନାହିଁ"</string>
-    <string name="edit_user_name_title" msgid="1118500707473139995">"ପ୍ରୋଫାଇଲ୍ ନାମ ଏଡିଟ୍ କରନ୍ତୁ"</string>
+    <string name="edit_user_name_title" msgid="1118500707473139995">"ପ୍ରୋଫାଇଲ ନାମ ଏଡିଟ କରନ୍ତୁ"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"ନାମ ଲେଖିବା ସ୍ଥାନକୁ ଖାଲି ଛାଡ଼ି ହେବନାହିଁ।"</string>
     <string name="name_input_invalid_error" msgid="4355625213535164704">"ଲେଖାଯାଇଥିବା ପ୍ରୋଫାଇଲ୍ ନାମ ଅବୈଧ ଅଟେ।"</string>
     <string name="users_list_title" msgid="770764290290240909">"ୟୁଜର୍"</string>
