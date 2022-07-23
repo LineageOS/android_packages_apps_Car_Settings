@@ -38,5 +38,7 @@ android_test {
     test_suites: [
         "device-tests",
         "automotive-tests",
-    ]
+    ],
+
+    compile_multilib: "64",
 }
