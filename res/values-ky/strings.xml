@@ -177,6 +177,8 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Баарын көрсөтүү"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Изделүүдө"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
+    <skip />
     <string name="bluetooth_device" msgid="3178478829314083240">"Аты жок түзмөк"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Жупташтырылган түзмөктөр"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Жаңы түзмөктү байланыштыруу"</string>
@@ -414,10 +416,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Баарын көрүү"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Бир да колдонмо пайдалана элек"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> •Айдоочуга көмөктөш функциялар"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Жүргөн жерди аныктоого уруксат алган колдонмолор айдоочунун көмөкчү функцияларын иштетүү үчүн ушул унаанын кайда жүргөнүн билип турат."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Купуялык саясаты"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Колдонмонун уруксаттары"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди аныктоо"</string>
@@ -664,7 +664,7 @@
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экранды кулпулабайсызбы?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Аккаунтуңузга каалаган киши кире берет"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"Профилди кулпулоо"</string>
-    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Кулпусун автоматтык түрдө ачууну жөндөө"</string>
+    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Кулпусун автоматтык түрдө ачууну тууралоо"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN кодуңузду киргизиңиз"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Сырсөзүңүздү киргизиңиз"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Коопсуздук үчүн PIN код коюп алыңыз"</string>

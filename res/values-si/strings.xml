@@ -177,6 +177,8 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"සියල්ල පෙන්වන්න"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"සොයමින්"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"බ්ලූටූත්"</string>
+    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
+    <skip />
     <string name="bluetooth_device" msgid="3178478829314083240">"නම් නොකළ උපාංගය"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"යුගල කළ උපාංග"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"නව උපාංගය යුගල කරන්න"</string>
@@ -414,10 +416,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"සියල්ල බලන්න"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"මෑත යෙදුම් නැත"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • රියදුරු සහාය"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"ස්ථාන අවසරය ඇති යෙදුම්වලට රියදුරු සහයක විශේෂාංග සඳහා මෙම වාහනයේ ස්ථානයට ප්‍රවේශය ඇත"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"පෞද්ගලිකත්ව ප්‍රතිපත්තිය"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"යෙදුම්-මට්ටමේ අවසර"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ස්ථානීය සේවා"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ස්ථානය භාවිත කරන්න"</string>

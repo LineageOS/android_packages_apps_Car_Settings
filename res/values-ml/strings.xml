@@ -177,6 +177,8 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"എല്ലാം കാണിക്കുക"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"തിരയുന്നു"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
+    <skip />
     <string name="bluetooth_device" msgid="3178478829314083240">"പേരിടാത്ത ഉപകരണം"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ജോടിയാക്കിയ ഉപകരണങ്ങൾ"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"പുതിയ ഉപകരണവുമായി ജോടിയാക്കുക"</string>
@@ -414,10 +416,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"എല്ലാം കാണുക"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"അടുത്തിടെ ഉപയോഗിച്ച ആപ്പുകളൊന്നുമില്ല"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ഡ്രൈവർ സഹായി"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"ഡ്രൈവർ സഹായി ഫീച്ചറിനായി ഈ വാഹന ലൊക്കേഷൻ ആക്സസ് ചെയ്യാൻ ലൊക്കേഷൻ അനുമതിയുള്ള ആപ്പുകൾ."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"സ്വകാര്യതാ നയം"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ആപ്പ്-തല അനുമതികൾ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ലൊക്കേഷൻ സേവനങ്ങൾ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
