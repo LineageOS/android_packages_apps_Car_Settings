@@ -177,6 +177,8 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"அனைத்தையும் காட்டு"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"தேடுகிறது"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"புளூடூத்"</string>
+    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
+    <skip />
     <string name="bluetooth_device" msgid="3178478829314083240">"பெயரிடப்படாத சாதனம்"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"இணைக்கப்பட்ட சாதனங்கள்"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"புதிய சாதனத்தை இணை"</string>
@@ -414,10 +416,8 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"அனைத்தையும் காட்டுதல்"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ஓட்டுநர் உதவி"</string>
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (5379878649789479100) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (669921557502414704) -->
-    <skip />
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"ஓட்டுநர் உதவி அம்சங்களுக்காக இந்த வாகனத்தின் இருப்பிடத்தை அணுகுவதற்கு இருப்பிட அனுமதியுள்ள ஆப்ஸ்."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"தனியுரிமைக் கொள்கை"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ஆப்ஸ் நிலை அனுமதிகள்"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"இருப்பிடச் சேவைகள்"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
@@ -439,6 +439,12 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"சிஸ்டம் புதுப்பிப்புகள்"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"மேம்பட்டவை"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"சாதனம் குறித்த தகவல், சட்டப்பூர்வத் தகவல், மீட்டமைத்தல் மற்றும் பல"</string>
+    <!-- no translation found for restart_infotainment_system_title (5174129167446756511) -->
+    <skip />
+    <!-- no translation found for restart_infotainment_system_dialog_text (3561747384941962284) -->
+    <skip />
+    <!-- no translation found for continue_confirmation (1598892163951467191) -->
+    <skip />
     <string name="firmware_version" msgid="8491753744549309333">"Android பதிப்பு"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android பாதுகாப்பின் பேட்ச் நிலை"</string>
     <string name="hardware_info" msgid="3973165746261507658">"மாடல் &amp; வன்பொருள்"</string>
