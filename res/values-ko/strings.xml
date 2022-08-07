@@ -177,8 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"모두 표시"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"검색 중"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"블루투스"</string>
-    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
-    <skip />
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"블루투스 사용"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"이름이 없는 기기"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"페어링된 기기"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"새 기기와 페어링"</string>
@@ -439,12 +438,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"고급"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"정보, 법률 정보, 초기화 등"</string>
-    <!-- no translation found for restart_infotainment_system_title (5174129167446756511) -->
-    <skip />
-    <!-- no translation found for restart_infotainment_system_dialog_text (3561747384941962284) -->
-    <skip />
-    <!-- no translation found for continue_confirmation (1598892163951467191) -->
-    <skip />
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"인포테인먼트 시스템을 다시 시작합니다"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"차량 인포테인먼트 시스템을 다시 시작하려면 최대 몇 분이 걸릴 수 있습니다. 계속하시겠어요?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"계속"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 버전"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 보안 패치 수준"</string>
     <string name="hardware_info" msgid="3973165746261507658">"모델 및 하드웨어"</string>
