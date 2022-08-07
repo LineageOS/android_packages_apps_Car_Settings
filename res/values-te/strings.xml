@@ -177,8 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"అన్నింటినీ చూపు"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"సెర్చ్ చేయడం"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"బ్లూటూత్"</string>
-    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
-    <skip />
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"బ్లూటూత్‌ను ఉపయోగించండి"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"పేరులేని పరికరం"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"జత చేయబడిన పరికరాలు"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"కొత్త పరికరాన్ని జత చేయి"</string>
@@ -589,7 +588,7 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"ఖాతాను జోడించు"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ఖాతాలు జోడించబడలేదు"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> యొక్క ఖాతాలు"</string>
-    <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాను ఆటోమేటిక్‌గా సమకాలీకరించు"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాను ఆటోమేటిక్‌గా సింక్ చేయండి"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"డేటాను ఆటోమేటిక్‌గా రిఫ్రెష్ చేసేలా యాప్‌లు అనుమతించబడతాయి"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించాలా?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"మీరు వెబ్‌లో మీ ఖాతాలకు చేసే ఏవైనా మార్పులు, మీ వెహికల్‌కు ఆటోమేటిక్‌గా కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు వెహికల్‌లో చేసే ఏవైనా మార్పులను వెబ్‌కు కూడా ఆటోమేటిక్‌గా కాపీ చేయవచ్చు."</string>
@@ -609,11 +608,11 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"అన్ని అంశాలకు సింక్‌ ఆఫ్‌లో ఉంది"</string>
     <string name="sync_disabled" msgid="393531064334628258">"సింక్‌ ఆఫ్‌లో ఉంది"</string>
     <string name="sync_error" msgid="6698021343089247914">"సింక్‌ ఎర్రర్"</string>
-    <string name="last_synced" msgid="4745124489150101529">"చివరిగా సమకాలీకరించినది <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="4745124489150101529">"చివరిగా సింక్ చేసినది <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"ఇప్పుడు సింక్ చేస్తోంది…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"ఇప్పుడే సింక్ చేయడానికి నొక్కండి<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
-    <string name="sync_button_sync_now" msgid="5767643057970371315">"ఇప్పుడే సమకాలీకరించు"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"ఇప్పుడే సింక్ చేయండి"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"సింక్‌ను రద్దు చేయి"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"సింక్‌ ప్రస్తుతం సమస్యలను ఎదుర్కొంటోంది. ఇది త్వరలో అందుబాటులోకి వస్తుంది."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"గోప్యత"</string>
