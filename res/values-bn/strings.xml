@@ -177,8 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"সব দেখুন"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"সার্চ করা হচ্ছে"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
-    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
-    <skip />
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ব্লুটুথ ব্যবহার করুন"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নামবিহীন ডিভাইস"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"পেয়ার করা ডিভাইসগুলি"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"নতুন ডিভাইস পেয়ার করুন"</string>
@@ -439,12 +438,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"সিস্টেম আপডেট"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"উন্নত"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"এই বিষয়ে, আইন সংক্রান্ত তথ্য, রিসেট করা এবং আরও অনেক কিছু"</string>
-    <!-- no translation found for restart_infotainment_system_title (5174129167446756511) -->
-    <skip />
-    <!-- no translation found for restart_infotainment_system_dialog_text (3561747384941962284) -->
-    <skip />
-    <!-- no translation found for continue_confirmation (1598892163951467191) -->
-    <skip />
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ইনফোটেইনমেন্ট সিস্টেম রিস্টার্ট করুন"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"আপনার গাড়ির ইনফোটেইনমেন্ট সিস্টেম রিস্টার্ট করতে কয়েক মিনিট পর্যন্ত সময় লাগতে পারে। আপনি কি এগিয়ে যেতে চান?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"এগিয়ে যান"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ভার্সন"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android সুরক্ষার প্যাচ লেবেল"</string>
     <string name="hardware_info" msgid="3973165746261507658">"মডেল ও হার্ডওয়্যার"</string>
