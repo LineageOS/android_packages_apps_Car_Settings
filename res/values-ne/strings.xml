@@ -177,8 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"सबै देखाउनुहोस्"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"खोजी गर्दै"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लुटुथ"</string>
-    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
-    <skip />
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ब्लुटुथ प्रयोग गर्नुहोस्"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"बेनामी यन्त्र"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"कनेक्ट गरिएका डिभाइस"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"नयाँ डिभाइससँग कनेक्ट गर्नुहोस्"</string>
@@ -439,12 +438,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"प्रणालीसम्बन्धी अद्यावधिकहरू"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"उन्नत"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"यसको बारेमा, कानुनी जानकारी, रिसेट गर्नुहोस् र थप सेटिङ"</string>
-    <!-- no translation found for restart_infotainment_system_title (5174129167446756511) -->
-    <skip />
-    <!-- no translation found for restart_infotainment_system_dialog_text (3561747384941962284) -->
-    <skip />
-    <!-- no translation found for continue_confirmation (1598892163951467191) -->
-    <skip />
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"इन्फोटेनमेन्ट प्रणाली रिस्टार्ट गर्नुहोस्"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"तपाईंको कारको इन्फोटेनमेन्ट प्रणाली रिस्टार्ट गर्न केही मिनेट लाग्न सक्छ। तपाईं जारी राख्न चाहनुहुन्छ?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"जारी राख्नुहोस्"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android संस्करण"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षा प्याचको चरण"</string>
     <string name="hardware_info" msgid="3973165746261507658">"मोडेल तथा हार्डवेयर"</string>
