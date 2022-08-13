@@ -264,7 +264,7 @@ public class BluetoothBondedDevicesPreferenceController extends
             phoneItem.setEnabled(isAvailable && !hasDisallowConfigRestriction());
             phoneItem.setDrawable(getContext(), isAvailable
                     ? R.drawable.ic_bluetooth_phone : R.drawable.ic_bluetooth_phone_unavailable);
-            phoneItem.setRestricted(!isAvailable);
+            phoneItem.setRestricted(!isAvailable && mHasUxRestriction);
         });
     }
 
@@ -276,7 +276,7 @@ public class BluetoothBondedDevicesPreferenceController extends
             mediaItem.setEnabled(isAvailable && !hasDisallowConfigRestriction());
             mediaItem.setDrawable(getContext(), isAvailable
                     ? R.drawable.ic_bluetooth_media : R.drawable.ic_bluetooth_media_unavailable);
-            mediaItem.setRestricted(!isAvailable);
+            mediaItem.setRestricted(!isAvailable && mHasUxRestriction);
         });
     }
 
