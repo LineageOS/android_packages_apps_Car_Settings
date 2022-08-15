@@ -16,6 +16,8 @@
 
 package com.android.car.settings.applications;
 
+import static android.app.Activity.RESULT_FIRST_USER;
+
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.DISABLE_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.FORCE_STOP_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.applications.ApplicationActionButtonsPreferenceController.UNINSTALL_DEVICE_ADMIN_REQUEST_CODE;
@@ -756,6 +758,20 @@ public class ApplicationActionButtonsPreferenceControllerTest {
                 Activity.RESULT_OK, /* data= */ null);
 
         verify(mFragmentController).goBack();
+    }
+
+
+    @Test
+    public void processActivityResult_uninstallDeviceAdmin_resultFirstUser_showsDisabledDialog() {
+        setupAndAssignPreference();
+        setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.processActivityResult(UNINSTALL_DEVICE_ADMIN_REQUEST_CODE,
+                RESULT_FIRST_USER, /* data= */ null);
+
+        verify(mFragmentController).showDialog(any(ActionDisabledByAdminDialogFragment.class),
+                eq(DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG));
     }
 
     private void setMocks() {
