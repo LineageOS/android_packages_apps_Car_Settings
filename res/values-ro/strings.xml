@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accesați datele folosind rețeaua mobilă"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rețea mobilă"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Folosiți datele mobile"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Dezactivată"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Dezactivați datele mobile?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Selectați o opțiune"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Folosiți <xliff:g id="CARRIER">%1$s</xliff:g> pentru date mobile?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Căutarea de rețele Wi-Fi este activată"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Comutați automat la date mobile"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Folosiți datele mobile atunci când rețeaua Wi-Fi nu are acces la internet. Este posibil să se aplice taxe pentru utilizarea datelor."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Găsiți rețele Wi-Fi și conectați-vă"</string>
     <string name="learn_more" msgid="8214605928933358604">"Aflați mai multe"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nume hotspot"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Se activează <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permiteți accesul la locație aplicațiilor de asistență pentru șofer"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Dacă dezactivați opțiunea, aplicațiile de asistență pentru șofer care se bazează pe informațiile despre locație vor fi dezactivate."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Dezactivați oricum"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitări recente privind locația"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nu există solicitări recente privind locația"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Accesate recent"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesate recent"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Afișați-le pe toate"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Nicio aplicație recentă"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Asistență pentru șofer"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisiuni la nivel de aplicație"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicii de localizare"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Folosiți locația"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferințele pentru aplicații au fost resetate"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Ștergeți datele (setări din fabrică)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ștergeți toate datele și profilurile de pe sistemul de infotainment"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Astfel, vor fi șterse toate datele de pe sistemul de infotainment al vehiculului, între care:\n\n"<li>"Contul dvs. Google,"</li>\n<li>"datele și setările de sistem și de aplicație,"</li>\n<li>"aplicațiile descărcate."</li>"."</string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Astfel, vor fi șterse toate datele din sistemul de infotainment al vehiculului, între care:\n\n"<li>"conturile și profilurile dvs.;"</li>\n<li>"datele și setările de sistem și de aplicație;"</li>\n<li>"aplicațiile descărcate."</li>"."</string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"V-ați conectat la următoarele conturi:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Alte profiluri au fost configurate pentru acest vehicul."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Ștergeți toate datele"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Alegeți un administrator nou"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Aveți nevoie de cel puțin un administrator. Pentru a-l șterge pe acesta, mai întâi alegeți un înlocuitor."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Alegeți un administrator"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Invitat"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Invitat"</string>
     <string name="user_switch" msgid="6544839750534690781">"Comutați"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Dvs. (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nume"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Conturi pentru <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizare automată a datelor"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permiteți aplicațiilor să actualizeze date automat"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Activați sincronizarea datelor?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Ceea ce modificați în conturi pe web se va reflecta automat și pe dispozitiv.\n\nUnele conturi pot să copieze automat pe web toate modificările de pe telefon. Așa funcționează un Cont Google."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Opriți sincronizarea automată?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Permiteți sincronizarea automată a datelor?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Modificările conturilor dvs. pe web vor fi copiate automat pe vehicul.\n\nUnele conturi pot și să copieze automat pe web toate modificările pe care le efectuați pe vehicul."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Interziceți sincronizarea automată a datelor?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Această acțiune va economisi date, dar va trebui să sincronizați fiecare cont manual pentru a colecta informațiile recente. În plus, nu veți primi notificări atunci când apar actualizări."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informații despre cont"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Adăugați un cont"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Confidențialitate"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Datele sistemului de infotainment"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Controlați accesul aplicațiilor la locație"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Camera foto"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Controlați accesul aplicațiilor la camerele foto"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Microfon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Controlați accesul aplicațiilor la microfon"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Date sistem de infotainment"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Eliminați"</string>
     <string name="cancel" msgid="750286395700355455">"Anulați"</string>
     <string name="allow" msgid="7519431342750394402">"Permiteți"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Nu permiteți"</string>
     <string name="deny" msgid="340512788979930804">"Refuzați"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tasta Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tasta Enter"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Activați această aplicație pentru sistemul de infotainment"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Dezactivați și dezinstalați"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Dezactivați aplicația pentru sistemul de infotainment"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Mai multe detalii"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Administratorul organizației poate să monitorizeze și să gestioneze aplicațiile și datele asociate acestui profil, inclusiv setările, permisiunile, accesul la nivelul companiei, activitatea în rețea și informațiile despre locația vehiculului."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Administratorul organizației poate să monitorizeze și să gestioneze aplicațiile și datele asociate acestui profil, inclusiv setările, permisiunile, accesul la nivelul companiei, activitatea în rețea și informațiile despre locația dispozitivului."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Administratorul organizației poate să monitorizeze și să gestioneze aplicațiile și datele asociate acestui sistem de infotainment, inclusiv setările, permisiunile, accesul la nivelul companiei, activitatea în rețea și informațiile despre locația vehiculului."</string>
@@ -830,6 +835,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Raportul de eroare este trimis administratorului organizației care deține vehiculul. Contactați administratorul pentru mai multe detalii."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Trimiteți"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Refuzați"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Resetați sistemul de infotainment"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistemul dvs. a primit solicitarea de a reveni la setările din fabrică și a șterge toate datele. Îl puteți reseta acum sau se va reseta data viitoare când pornește mașina. Apoi puteți configura un nou profil."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Resetați acum"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Resetați mai târziu"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Sistemul de infotainment se va reseta când pornește mașina."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Mașina trebuie să fie parcată pentru a reseta."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Setarea nu poate fi modificată momentan"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Accesibilitate"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Subtitrări"</string>
@@ -857,4 +868,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Folosiți <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opțiuni"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Setări"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Camera foto"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Folosiți camera foto"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Permiteți accesul tuturor aplicațiilor la camera foto"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Gestionați permisiunile pentru camera foto"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Accesate recent"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nicio aplicație recentă"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Nicio aplicație nu are acces"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# din {total_count} aplicații are acces}few{# din {total_count} aplicații au acces}other{# din {total_count} aplicații au acces}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Accesate recent"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Afișați tot"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Se încarcă…"</string>
 </resources>

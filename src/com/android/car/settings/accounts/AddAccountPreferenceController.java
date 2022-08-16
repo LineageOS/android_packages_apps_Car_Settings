@@ -23,7 +23,6 @@ import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestric
 import static com.android.car.settings.enterprise.EnterpriseUtils.isDeviceManaged;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
@@ -31,6 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
+import com.android.car.settings.admin.NewUserDisclaimerActivity;
 import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
@@ -46,15 +46,10 @@ import java.util.Set;
  */
 public class AddAccountPreferenceController extends PreferenceController<Preference>
         implements ActivityResultCallback {
-    @VisibleForTesting
-    static final int NEW_USER_DISCLAIMER_REQUEST = 1;
-    @VisibleForTesting
-    static final ComponentName NEW_USER_DISCLAIMER_ACTIVITY_COMPONENT =
-            ComponentName.unflattenFromString(
-                    "com.android.car/com.android.car.admin.NewUserDisclaimerActivity");
+    public static final int NEW_USER_DISCLAIMER_REQUEST = 1;
+    private static final Logger LOG = new Logger(AddAccountPreferenceController.class);
 
     private String[] mAuthorities;
-    private static final Logger LOG = new Logger(AddAccountPreferenceController.class);
     private String[] mAccountTypes;
 
     public AddAccountPreferenceController(Context context, String preferenceKey,
@@ -152,8 +147,8 @@ public class AddAccountPreferenceController extends PreferenceController<Prefere
 
     private void startNewUserDisclaimerActivityForResult() {
         getFragmentController().startActivityForResult(
-                new Intent().setComponent(NEW_USER_DISCLAIMER_ACTIVITY_COMPONENT),
-                NEW_USER_DISCLAIMER_REQUEST, /* callback= */ this);
+                new Intent(getContext(), NewUserDisclaimerActivity.class),
+                        NEW_USER_DISCLAIMER_REQUEST, /* callback= */ this);
     }
 
     @VisibleForTesting

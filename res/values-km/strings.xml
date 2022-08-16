@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"បណ្ដាញទូរសព្ទចល័ត"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ប្រើ​ទិន្នន័យ​ទូរសព្ទ​ចល័ត"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"បិទ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"បិទទិន្នន័យ​ទូរសព្ទចល័ត?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"តម្រូវឱ្យមាន​ការជ្រើសរើស"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ប្រើ <xliff:g id="CARRIER">%1$s</xliff:g> សម្រាប់​ទិន្នន័យទូរសព្ទចល័ត?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"បានបើក​ការស្កេន Wi‑Fi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ប្តូរទៅ​ទិន្នន័យទូរសព្ទ​ចល័តដោយស្វ័យ​ប្រវត្តិ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ប្រើទិន្នន័យ​ទូរសព្ទចល័ត​ នៅពេល​ដែល Wi‑Fi មិនមាន​ការភ្ជាប់អ៊ីនធឺណិត។ អាច​នឹង​គិតថ្លៃលើការ​ប្រើទិន្នន័យ។"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"ស្វែងរក និងភ្ជាប់បណ្ដាញ Wi‑Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"ស្វែងយល់បន្ថែម"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ឈ្មោះ​ហតស្ប៉ត"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"កំពុងបើក <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"អនុញ្ញាតឱ្យកម្មវិធីដែលផ្ដល់ជំនួយពាក់ព័ន្ធនឹងការបើកបរចូលប្រើទីតាំងរបស់អ្នក"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ។"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"មិនអីទេ បិទចុះ"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"មើលទាំងអស់"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"គ្មាន​កម្មវិធី​ថ្មីៗ"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ជំនួយអ្នកបើកបរ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"សេវាកម្ម​ទីតាំង"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"បាន​កំណត់​ចំណូល​ចិត្ត​កម្មវិធីឡើង​វិញ​ហើយ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"លុបទិន្នន័យទាំងអស់ (កំណត់ដូចចេញពីរោងចក្រ)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"លុបទិន្នន័យ និង​កម្រងព័ត៌មាន​ទាំងអស់​ពីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្ត"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ការធ្វើបែបនេះ​នឹងលុប​ទិន្នន័យ​ទាំងអស់​ពីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តរបស់​យានជំនិះអ្នក រួមមាន៖\n\n"<li>"គណនី Google របស់អ្នក"</li>\n<li>"ទិន្នន័យកម្មវិធី​និងប្រព័ន្ធ និង​ការកំណត់"</li>\n<li>"កម្មវិធី​ដែលបានទាញយក"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ការធ្វើបែបនេះនឹងលុបទិន្នន័យទាំងអស់ចេញពីប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនៃយានជំនិះរបស់អ្នក ដែលរួមមាន៖\n\n"<li>"គណនី និងកម្រងព័ត៌មានរបស់អ្នក"</li>\n<li>"ការកំណត់ និងទិន្នន័យកម្មវិធីនិងប្រព័ន្ធ"</li>\n<li>"កម្មវិធីដែលបានទាញយក"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"បច្ចុប្បន្ន​ អ្នក​បាន​ចូល​គណនី​ដូច​ខាង​ក្រោម៖"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"កម្រងព័ត៌មានផ្សេងទៀតត្រូវបានរៀបចំសម្រាប់យានជំនិះនេះ។"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"លុប​ទិន្នន័យ​ទាំង​អស់"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"ជ្រើសរើស​អ្នកគ្រប់គ្រងថ្មី"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"អ្នកត្រូវការ​​អ្នកគ្រប់គ្រងយ៉ាងហោចណាស់​ម្នាក់។ ដើម្បីលុប​អ្នកគ្រប់គ្រង​នេះ សូមជ្រើសរើស​អ្នកជំនួស​ជាមុនសិន។"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"ជ្រើសរើសអ្នកគ្រប់គ្រង"</string>
-    <string name="user_guest" msgid="3465399481257448601">"ភ្ញៀវ"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"ភ្ញៀវ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ប្ដូរ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"អ្នក (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ឈ្មោះ"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"គណនី​សម្រាប់ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ធ្វើ​សមកាលកម្ម​ទិន្នន័យ​ដោយស្វ័យប្រវត្តិ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"អនុញ្ញាតឱ្យ​កម្មវិធី​ផ្ទុកទិន្នន័យ​ឡើងវិញ​ដោយស្វ័យប្រវត្តិ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"បើក​ការ​ធ្វើ​សម​កាល​កម្ម​ទិន្នន័យ​ស្វ័យ​ប្រវត្តិ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ការ​ផ្លាស់ប្ដូរ​ណា​មួយ​ដែល​អ្នក​ធ្វើ​ឡើងចំពោះ​គណនី​របស់​អ្នក​នៅ​លើ​បណ្ដាញ នឹង​ត្រូវ​បាន​ចម្លង​ដោយ​ស្វ័យ​ប្រវត្តិ​ទៅ​ឧបករណ៍​របស់​អ្នក។\n\nគណនី​មួយ​ចំនួន​ក៏​អាច​ចម្លង​ការ​ផ្លាស់ប្ដូរ​របស់អ្នក​នៅលើ​ទូរសព្ទ​ទៅ​បណ្ដាញដោយ​ស្វ័យ​ប្រវត្តិផងដែរ។ គណនី Google ដំណើរការ​តាម​វិធី​នេះ។"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"បិទការធ្វើ​សមកាលកម្មទិន្នន័យស្វ័យ​ប្រវតិ្ត?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"អនុញ្ញាតឱ្យធ្វើសមកាលកម្មទិន្នន័យស្វ័យប្រវត្តិឬ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"រាល់ការផ្លាស់ប្ដូរដែលអ្នកធ្វើចំពោះគណនីរបស់អ្នកនៅលើបណ្ដាញនឹងត្រូវបានចម្លងដោយស្វ័យប្រវត្តិទៅយានជំនិះរបស់អ្នក។\n\nគណនីមួយចំនួនក៏អាចចម្លងរាល់ការផ្លាស់ប្ដូរដែលអ្នកធ្វើចំពោះយានជំនិះ ទៅបណ្ដាញបានផងដែរ។"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"មិនអនុញ្ញាតឱ្យធ្វើសមកាលកម្មទិន្នន័យស្វ័យប្រវត្តិឬ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ការធ្វើបែបនេះ​នឹងរក្សាទិន្នន័យ ប៉ុន្តែអ្នក​នឹងត្រូវធ្វើសមកាលកម្ម​គណនីនីមួយៗ​ដោយផ្ទាល់ ដើម្បីប្រមូលព័ត៌មានថ្មីៗ។ ហើយអ្នកនឹង​មិនទទួលបាន​ការជូនដំណឹងទេ នៅពេលមានការធ្វើ​បច្ចុប្បន្នភាព។"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ព័ត៌មាន​​អំពី​​គណនី"</string>
     <string name="add_account_title" msgid="5988746086885210040">"បញ្ចូលគណនី"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ឯកជនភាព"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ទិន្នន័យប្រព័ន្ធព័ត៌មាន និងកម្សាន្ត"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"គ្រប់គ្រង​សិទ្ធិចូលប្រើទីតាំង​របស់អ្នក​ពីកម្មវិធី"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"កាមេរ៉ា"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"គ្រប់គ្រងសិទ្ធិចូលប្រើកាមេរ៉ារបស់អ្នកពីកម្មវិធី"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"មីក្រូហ្វូន"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"គ្រប់គ្រង​សិទ្ធិចូលប្រើមីក្រូហ្វូន​ពីកម្មវិធី"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ទិន្នន័យប្រព័ន្ធព័ត៌មាន និងកម្សាន្ត"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"លុប"</string>
     <string name="cancel" msgid="750286395700355455">"បោះបង់"</string>
     <string name="allow" msgid="7519431342750394402">"អនុញ្ញាត"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"មិនអនុញ្ញាត"</string>
     <string name="deny" msgid="340512788979930804">"បដិសេធ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"គ្រាប់​ចុច​លុប"</string>
     <string name="enter_key" msgid="2121394305541579468">"គ្រាប់​ចុច​បញ្ចូល"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"បើកដំណើរការ​កម្មវិធីប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"បិទដំណើរការ ហើយលុប"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"បិទដំណើរការ​កម្មវិធីប្រព័ន្ធ​ព័ត៌មាន និងកម្សាន្តនេះ"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"ព័ត៌មានលម្អិតបន្ថែម"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"អ្នកគ្រប់គ្រងស្ថាប័ន​របស់អ្នក​អាច​តាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាន​នេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មាន​ទីតាំងរបស់យានជំនិះ​ផងដែរ។"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"អ្នកគ្រប់គ្រងស្ថាប័ន​របស់អ្នក​អាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យដែលពាក់ព័ន្ធនឹង​កម្រងព័ត៌មាននេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើ​លក្ខណៈក្រុមហ៊ុន សកម្មភាព​បណ្តាញ និងព័ត៌មានទីតាំង​របស់ឧបករណ៍​ផងដែរ។"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"អ្នកគ្រប់គ្រង​ស្ថាប័នអាចតាមដាន និងគ្រប់គ្រងកម្មវិធី និងទិន្នន័យ​ដែលពាក់ព័ន្ធនឹង​ប្រព័ន្ធព័ត៌មាន និងកម្សាន្តនេះ រួមទាំងការកំណត់ ការអនុញ្ញាត ការចូលប្រើលក្ខណៈក្រុមហ៊ុន សកម្មភាពបណ្ដាញ និងព័ត៌មានទីតាំងរបស់​យានជំនិះផងដែរ។"</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"របាយការណ៍អំពីបញ្ហានេះកំពុងត្រូវបានចែករំលែកជាមួយអ្នកគ្រប់គ្រងស្ថាប័នរបស់យានជំនិះនេះ។ សូមទាក់ទងគាត់ ដើម្បីទទួលបានព័ត៌មានលម្អិតបន្ថែម។"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"ចែករំលែក"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"បដិសេធ"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"កំណត់ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្តឡើងវិញ"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ប្រព័ន្ធ​របស់អ្នកបានទទួលសំណើសុំកំណត់​ដូច​ចេញ​ពី​រោងចក្រ​ និងលុបទិន្នន័យទាំងអស់។ អ្នកអាចកំណត់ប្រព័ន្ធឡើងវិញឥឡូវនេះ ឬវានឹងកំណត់ឡើងវិញ នៅពេលរថយន្តចាប់ផ្ដើមលើកក្រោយ។ បន្ទាប់ពីនោះ អ្នកអាចរៀបចំកម្រងព័ត៌មានថ្មីបាន។"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"កំណត់ឡើងវិញឥឡូវនេះ"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"ចាប់ផ្ដើមឡើងវិញពេលក្រោយ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្តនឹងកំណត់ឡើងវិញ នៅពេលរថយន្តចាប់ផ្ដើមលើកក្រោយ។"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ត្រូវតែចតរថយន្ត ដើម្បីចាប់ផ្ដើមការកំណត់ឡើងវិញ។"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"មិនអាចផ្លាស់ប្ដូរ​ការកំណត់នេះ​នៅពេលនេះ​បានទេ"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ភាពងាយស្រួល"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"អក្សររត់"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"ប្រើ <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ជម្រើស"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ការកំណត់"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"កាមេរ៉ា"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ប្រើ​កាមេរ៉ា"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​កាមេរ៉ា​របស់អ្នក"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"គ្រប់គ្រង​ការអនុញ្ញាត​កាមេរ៉ា"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"គ្មាន​កម្មវិធី​ថ្មីៗ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"កម្មវិធី 0 មានសិទ្ធិចូលប្រើ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{កម្មវិធី # នៃ {total_count} មានសិទ្ធិចូលប្រើ}other{កម្មវិធី # នៃ {total_count} មានសិទ្ធិចូលប្រើ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"មើលទាំងអស់"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"កំពុងផ្ទុក…"</string>
 </resources>

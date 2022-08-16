@@ -56,9 +56,9 @@ public final class EnterpriseDisclosurePreferenceController extends
         footerPreference.setLearnMoreAction(view ->
                 getContext().startActivity(new Intent(Settings.ACTION_ENTERPRISE_PRIVACY_SETTINGS))
         );
-        String learnMoreContentDescription = getContext().getString(
+        String learnMoreText = getContext().getString(
                 R.string.footer_learn_more_content_description, getLabelName());
-        footerPreference.setLearnMoreContentDescription(learnMoreContentDescription);
+        footerPreference.setLearnMoreText(learnMoreText);
     }
 
     private String getLabelName() {

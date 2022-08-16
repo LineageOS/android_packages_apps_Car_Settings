@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Օգտվել բջջային ինտերնետից"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Բջջային ցանց"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Օգտագործել բջջային ինտերնետ"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Անջատված է"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Անջատե՞լ բջջային ինտերնետը"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Ընտրեք SIM քարտը"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Անցնե՞լ <xliff:g id="CARRIER">%1$s</xliff:g>-ի բջջային ինտերնետին"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi-Fi ցանցերի որոնումը միացված է"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Ավտոմատ կերպով անցնել բջջային ինտերնետի"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Օգտագործել բջջային ինտերնետը, եթե չի հաջողվում միանալ համացանցին Wi-Fi-ի միջոցով։ Կարող են կիրառվել գանձումներ։"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Գտեք Wi-Fi ցանցեր և միացեք դրանց"</string>
     <string name="learn_more" msgid="8214605928933358604">"Մանրամասն"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Թեժ կետի անունը"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"«<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>» թեժ կետը միանում է…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Վարորդին օգնող հավելվածներին հասանելի դարձրեք ձեր տեղադրությունը"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Եթե անջատեք կարգավորումը, «Օգնություն վարորդին» հավելվածները, որոնք օգտագործում են տեղադրության տվյալները, չեն աշխատի։"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Անջատել"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Տեղադրության տվյալների վերջին հարցումները"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Վերջերս տեղորոշման տվյալների հարցումներ չեն արվել"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Տեղադրության տվյալների օգտագործման վերջին հարցումները"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Տեղադրության տվյալների օգտագործման վերջին հարցումները"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Դիտել բոլորը"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Ոչ մի հավելված վերջերս չի օգտագործել տեղադրության տվյալները"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Օգնություն վարորդին"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Հավելվածների թույլտվություններ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Տեղորոշման ծառայություններ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Օգտագործել տեղորոշումը"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Հավելվածների կարգավորումները զրոյացվեցին"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Ջնջել բոլոր տվյալները (գործ. վերակայում)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ջնջել բոլոր տվյալներն ու պրոֆիլները տեղեկատվաժամանցային համակարգից"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Մեքենայի տեղեկատվաժամանցային համակարգից կջնջվեն բոլոր տվյալները, այդ թվում՝\n\n"<li>"Ձեր Google հաշիվը"</li>\n<li>"Համակարգի և հավելվածների տվյալներն ու կարգավորումները"</li>\n<li>"Ներբեռնված հավելվածները"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Մեքենայի տեղեկատվաժամանցային համակարգից կջնջվեն բոլոր տվյալները, այդ թվում՝\n\n"<li>"ձեր Google հաշիվներն ու պրոֆիլները,"</li>\n<li>"համակարգի և հավելվածների տվյալներն ու կարգավորումները,"</li>\n<li>"ներբեռնված հավելվածները։"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Դուք մտել եք հետևյալ հաշիվներ՝"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Այս մեքենայի համար կարգավորված են այլ պրոֆիլներ։"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Ջնջել բոլոր տվյալները"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Ընտրեք նոր ադմինիստրատոր"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Հարկավոր է ընտրել առնվազն մեկ ադմինիստրատոր։ Այս ադմինիստրատորին հեռացնելուց առաջ ընտրեք նրան փոխարինողին։"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Ընտրել ադմինիստրատոր"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Հյուր"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Հյուր"</string>
     <string name="user_switch" msgid="6544839750534690781">"Փոխել օգտատիրոջը"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Դուք (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Անուն"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>-ի հաշիվներ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Ավտոմատ համաժամացնել տվյալները"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Թույլ տալ հավելվածներին ավտոմատ թարմացնել տվյալները"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Միացնե՞լ ավտոմատ համաժամացումը"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Համացանցում կատարած ցանկացած փոփոխություն ավտոմատ կպատճենվի ձեր սարքում:\n\nՈրոշ հաշիվներ կարող են հեռախոսով կատարած փոփոխություններն ավտոմատ պատճենել համացանցում: Google հաշիվն աշխատում է հենց այդպես:"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Անջատե՞լ ավտոմատ համաժամացումը"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Թույլատրե՞լ տվյալների ավտոմատ համաժամացումը"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Համացանցում կատարած ցանկացած փոփոխություն ավտոմատ կպատճենվի ձեր մեքենայում։\n\nՈրոշ հաշիվներ նաև կարող են հեռախոսով արված փոփոխություններն ավտոմատ պատճենել համացանցում։"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Չթույլատրե՞լ տվյալների ավտոմատ համաժամացումը"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Դա կկրճատի թրաֆիկի օգտագործումը, բայց դուք պետք է ձեռքով համաժամացնեք բոլոր հաշիվների տվյալները։ Թարմացումների մասին ծանուցումներ չեն ցուցադրվի։"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Հաշվի մասին"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Ավելացրեք հաշիվ"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Գաղտնիություն"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Տեղեկատվաժամանցային համակարգի տվյալներ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Կառավարել տեղորոշման հասանելիությունը հավելվածների համար"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Տեսախցիկ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Կառավարել տեսախցիկների հասանելիությունը հավելվածների համար"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Խոսափող"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Կառավարել խոսափողի հասանելիությունը հավելվածների համար"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Տեղեկատվաժամանցային համակարգի տվյալներ"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Հեռացնել"</string>
     <string name="cancel" msgid="750286395700355455">"Չեղարկել"</string>
     <string name="allow" msgid="7519431342750394402">"Թույլատրել"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Չթույլատրել"</string>
     <string name="deny" msgid="340512788979930804">"Մերժել"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace ստեղն"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter ստեղն"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Միացնել տեղեկատվաժամանցային համակարգի այս հավելվածը"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Ապակտիվացնել և ապատեղադրել"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Անջատել տեղեկատվաժամանցային համակարգի այս հավելվածը"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Այլ մանրամասներ"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Կազմակերպության ադմինիստրատորը կարող է վերահսկել և կառավարել այս օգտատիրոջ հետ առնչվող հավելվածները և տվյալները, այդ թվում՝ կարգավորումները, թույլտվությունները, կորպորատիվ մուտքը, ցանցային գործունեությունը և մեքենայի տեղադրության տվյալները։"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Կազմակերպության ադմինիստրատորը կարող է վերահսկել և կառավարել այս օգտատիրոջ հետ առնչվող հավելվածները և տվյալները, այդ թվում՝ կարգավորումները, թույլտվությունները, կորպորատիվ մուտքը, ցանցային գործունեությունը և սարքի տեղադրության տվյալները։"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Կազմակերպության ադմինիստրատորը կարող է վերահսկել և կառավարել այս տեղեկատվաժամանցային համակարգի հետ կապված հավելվածները և տվյալները, այդ թվում՝ կարգավորումները, թույլտվությունները, կորպորատիվ մուտքը, ցանցային գործունեությունը և մեքենայի տեղադրության տվյալները։"</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Վրիպակի մասին այս հաղորդումը տրամադրվում է ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին։ Դիմեք նրան՝ լրացուցիչ տեղեկություններ ստանալու համար։"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Ուղարկել"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Մերժել"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Վերակայեք տեղեկատվաժամանցային համակարգը"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Ձեր համակարգը ստացել է գործարանային կարգավորումների վերականգնման և տվյալների ջնջման հարցում։ Դուք կարող եք վերակայել հիմա կամ համակարգը կվերակայվի, երբ հաջորդ անգամ մեքենան միացնեք։ Այնուհետև կարող եք նոր պրոֆիլ կարգավորել։"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Վերակայել"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Վերակայել ավելի ուշ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Համակարգը կվերակայվի, երբ մեքենան հաջորդ անգամ միացնեք։"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Վերակայումը սկսելու համար մեքենան կայանեք։"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ներկայումս հնարավոր չէ փոխել այս կարգավորումը"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Հատուկ գործառույթներ"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Ենթագրեր"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Օգտագործել <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> հավելվածը"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Ընտրանքներ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Կարգավորումներ"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Տեսախցիկ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Օգտագործել տեսախցիկը"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Հասանելի դարձնել տեսախցիկը բոլոր հավելվածներին"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Կառավարել տեսախցիկի թույլտվությունները"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Տեսախցիկի օգտագործման վերջին հարցումները"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Տեսախցիկը ոչ մի հավելվածի կողմից վերջերս չի օգտագործել"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Հասանելի չէ որևէ հավելվածի"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Հասանելի է {total_count} հավելվածից #-ին}one{Հասանելի է {total_count} հավելվածից #-ին}other{Հասանելի է {total_count} հավելվածից #-ին}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Տեսախցիկի օգտագործման վերջին հարցումները"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Դիտել բոլորը"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Բեռնում…"</string>
 </resources>

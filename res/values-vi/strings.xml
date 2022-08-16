@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Sử dụng dữ liệu qua mạng di động"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mạng di động"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Dùng dữ liệu di động"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Tắt"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Tắt dữ liệu di động?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Cần phải lựa chọn"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Sử dụng <xliff:g id="CARRIER">%1$s</xliff:g> cho dữ liệu di động?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Đã bật tính năng quét tìm mạng Wi‑Fi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Tự động chuyển sang dữ liệu di động"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Sử dụng dữ liệu di động khi Wi‑Fi không truy cập được Internet. Bạn có thể mất thêm phí sử dụng dữ liệu."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Tìm và kết nối với mạng Wi-Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Tìm hiểu thêm"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Tên điểm phát sóng"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Đang bật <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Cho phép ứng dụng hỗ trợ lái xe truy cập vị trí"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Nếu bạn tắt chế độ này, những ứng dụng hỗ trợ dành cho người lái xe dựa vào thông tin vị trí sẽ bị tắt."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Vẫn tắt"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Các yêu cầu gần đây về vị trí"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Không có yêu cầu nào gần đây về vị trí"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Mới truy cập gần đây"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Mới truy cập gần đây"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Xem tất cả"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Không có ứng dụng nào mới truy cập"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Công nghệ hỗ trợ dành cho người lái xe"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Quyền cấp ứng dụng"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Dịch vụ vị trí"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Sử dụng vị trí"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Đã đặt lại tùy chọn ứng dụng"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Xóa mọi dữ liệu (đặt lại về trạng thái ban đầu)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Xóa toàn bộ dữ liệu và hồ sơ khỏi hệ thống thông tin giải trí này"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Thao tác này sẽ xóa toàn bộ dữ liệu trong hệ thống giải trí trên xe của bạn, bao gồm:\n\n"<li>"Tài khoản Google"</li>\n<li>"Dữ liệu hệ thống, dữ liệu ứng dụng và các chế độ cài đặt"</li>\n<li>"Ứng dụng đã tải xuống"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Thao tác này sẽ xoá toàn bộ dữ liệu khỏi hệ thống thông tin giải trí trên xe, bao gồm cả:\n\n"<li>"Tài khoản và hồ sơ của bạn"</li>\n<li>"Dữ liệu ứng dụng và hệ thống và các chế độ cài đặt"</li>\n<li>"Ứng dụng đã tải xuống"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Bạn hiện đã đăng nhập vào các tài khoản sau đây:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Đã có hồ sơ khác được thiết lập cho xe này."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Xóa toàn bộ dữ liệu"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Chọn quản trị viên mới"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Bạn cần chọn ít nhất một quản trị viên. Để xóa người này, hãy chọn một người thay thế."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Chọn quản trị viên"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Khách"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Khách"</string>
     <string name="user_switch" msgid="6544839750534690781">"Nút chuyển"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Bạn (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Tên"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Tài khoản cho <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Tự động đồng bộ hóa dữ liệu"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Cho phép ứng dụng tự động làm mới dữ liệu"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Bật tính năng tự động đồng bộ hóa dữ liệu?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Mọi thay đổi bạn thực hiện đối với các tài khoản trên web sẽ được tự động sao chép vào thiết bị.\n\nMột số tài khoản cũng có thể tự động sao chép mọi thay đổi bạn thực hiện trên điện thoại lên web. Đây là cách hoạt động của Tài khoản Google."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Tắt tính năng tự động đồng bộ hóa dữ liệu?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Cho phép tự động đồng bộ hoá dữ liệu?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Mọi thay đổi bạn thực hiện đối với tài khoản trên web sẽ tự động được sao chép sang xe.\n\nMột số tài khoản cũng có thể tự động sao chép mọi thay đổi bạn thực hiện trên xe lên web."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Không cho phép tự động đồng bộ hoá dữ liệu?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Việc này sẽ bảo toàn dữ liệu, tuy nhiên, bạn cần phải đồng bộ hóa từng tài khoản theo cách thủ công để thu thập thông tin gần đây. Đồng thời, bạn sẽ không nhận được thông báo khi quá trình cập nhật diễn ra."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Thông tin tài khoản"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Thêm tài khoản"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Quyền riêng tư"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Dữ liệu của hệ thống thông tin giải trí"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kiểm soát quyền truy cập của ứng dụng vào thông tin vị trí của bạn"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Máy ảnh"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kiểm soát quyền truy cập của ứng dụng vào dữ liệu máy ảnh"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micrô"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kiểm soát quyền truy cập của ứng dụng vào micrô"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Dữ liệu trong hệ thống thông tin giải trí"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Xóa"</string>
     <string name="cancel" msgid="750286395700355455">"Hủy"</string>
     <string name="allow" msgid="7519431342750394402">"Cho phép"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Không cho phép"</string>
     <string name="deny" msgid="340512788979930804">"Từ chối"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Phím xóa lùi (Backspace)"</string>
     <string name="enter_key" msgid="2121394305541579468">"Phím Enter"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Kích hoạt ứng dụng hệ thống thông tin giải trí này"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Hủy kích hoạt và gỡ cài đặt"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Hủy kích hoạt ứng dụng hệ thống thông tin giải trí này"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Thông tin khác"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hồ sơ này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hồ sơ này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Người quản lý của tổ chức có thể giám sát và quản lý các ứng dụng cũng như dữ liệu liên kết với hệ thống thông tin giải trí này, bao gồm cả các chế độ cài đặt, quyền, quyền truy cập vào dữ liệu của công ty, hoạt động trên mạng và thông tin vị trí của xe."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Báo cáo lỗi này đang được chia sẻ với người quản lý của tổ chức của xe này. Bạn có thể liên hệ với họ để biết thêm thông tin."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Chia sẻ"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Từ chối"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Đặt lại hệ thống thông tin giải trí"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Hệ thống của bạn đã nhận được một yêu cầu đặt lại về trạng thái ban đầu và xóa mọi dữ liệu. Bạn có thể đặt lại ngay hoặc đặt lại vào lần khởi động xe tiếp theo. Sau đó, bạn có thể thiết lập một hồ sơ mới."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Đặt lại ngay"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Đặt lại sau"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Hệ thống thông tin giải trí sẽ được đặt lại vào lần khởi động xe tiếp theo."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Bạn phải đỗ xe để bắt đầu quá trình đặt lại."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Không thể thay đổi chế độ cài đặt này ngay bây giờ"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Hỗ trợ tiếp cận"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Phụ đề"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Sử dụng <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Tuỳ chọn"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Cài đặt"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Máy ảnh"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Sử dụng máy ảnh"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Cho phép tất cả ứng dụng truy cập vào dữ liệu máy ảnh"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Quản lý quyền truy cập vào dữ liệu máy ảnh"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Mới truy cập gần đây"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Không có ứng dụng nào mới truy cập"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ứng dụng có quyền truy cập"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{#/{total_count} ứng dụng có quyền truy cập}other{#/{total_count} ứng dụng có quyền truy cập}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Mới truy cập gần đây"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Xem tất cả"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Đang tải…"</string>
 </resources>

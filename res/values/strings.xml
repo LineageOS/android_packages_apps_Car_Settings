@@ -74,6 +74,8 @@
     <string name="mobile_network_mobile_network_toggle_title">Mobile network</string>
     <!-- Mobile network screen, toggle mobile network summary [CHAR LIMIT=50] -->
     <string name="mobile_network_mobile_network_toggle_summary">Use mobile data</string>
+    <!-- Subtitle for when mobile network is toggled off [CHAR LIMIT=45] -->
+    <string name="mobile_network_state_off">Off</string>
     <!-- Mobile network screen, confirmation dialog to turn off mobile data [CHAR LIMIT=50] -->
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
     <!-- When a SIM preference hasn't been selected yet, this string is displayed as the pref summary until the user chooses a SIM subscription from the preference list. [CHAR LIMIT=50] -->
@@ -294,6 +296,8 @@
     <string name="wifi_cellular_fallback_summary">Use mobile data when Wi\u2011Fi has no internet access. Data usage charges may apply.</string>
     <!-- Content description for the wifi state switch. [CHAR LIMIT=NONE] -->
     <string name="wifi_state_switch_content_description" translatable="false">Wi\u2011Fi toggle switch</string>
+    <!-- Subtitle for Wi-Fi state switch on the Network & internet page [CHAR LIMIT=45] -->
+    <string name="wifi_network_state_switch_subtitle">Find and connect to Wi\u2011Fi networks</string>
     <!-- url for the wifi scanning required dialog help page -->
     <string name="help_uri_wifi_scanning_required" translatable="false"></string>
     <!-- Button label to allow the user to view additional information [CHAR LIMIT=NONE] -->
@@ -914,10 +918,16 @@
     <string name="driver_assistance_warning_confirm_label">
         Turn off anyway
     </string>
-    <!-- Title of Recent Location Requests setting [CHAR LIMIT=60] -->
-    <string name="location_settings_recent_requests_title">Recent Location Requests</string>
-    <!-- Message indicating that no apps have requested location recently [CHAR LIMIT=60] -->
-    <string name="location_settings_recent_requests_empty_message">No recent location requests</string>
+    <!-- Title of Recent Location Accesses category [CHAR LIMIT=60] -->
+    <string name="location_recently_accessed">Recently accessed</string>
+    <!-- Title of Location Recently Accessed setting [CHAR LIMIT=60] -->
+    <string name="location_settings_recently_accessed_title">Recently accessed</string>
+    <!-- Title of preference name to view all apps that recently accessed location [CHAR LIMIT=60] -->
+    <string name="location_settings_recently_accessed_view_all_title">View all</string>
+    <!-- Message indicating that no apps have accessed location recently [CHAR LIMIT=60] -->
+    <string name="location_no_recent_access">No recent apps</string>
+    <!-- Label for driver assistance apps that recently accessed location [CHAR LIMIT=60] -->
+    <string name="driver_assistance_label"><xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver Assistance</string>
     <!-- Title of Location App-level Permissions setting [CHAR LIMIT=60] -->
     <string name="location_settings_app_permissions_title">App-level permissions</string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
@@ -970,7 +980,7 @@
     </string>
     <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
     <string name="microphone_settings_recent_requests_title">Recently accessed</string>
-    <!-- Title of Recent Microphone Requests setting [CHAR LIMIT=60] -->
+    <!-- Title of preference name to view all apps that recently accessed microphone [CHAR LIMIT=60] -->
     <string name="microphone_settings_recent_requests_view_all_title">View all</string>
     <!-- Microphone settings, loading the number of apps which have microphone permission [CHAR LIMIT=30] -->
     <string name="microphone_settings_loading_app_permission_stats">Loading\u2026</string>
@@ -1134,7 +1144,7 @@
     <!-- Button summary to factory data reset the entire device.  Factory reset will delete all data from the vehicle. [CHAR LIMIT=NONE]-->
     <string name="factory_reset_summary">Erase all data and profiles from the infotainment system</string>
     <!-- Message on screen after user selects factory reset. [CHAR LIMIT=NONE] -->
-    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s infotainment system, including:\n\n<li>Your Google Account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
+    <string name="factory_reset_desc">This will erase all data from your vehicle\u2019s infotainment system, including:\n\n<li>Your accounts and profiles</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
     <!-- The list of current accounts follows this text. [CHAR LIMIT=NONE] -->
     <string name="factory_reset_accounts">You are currently signed into the following accounts:</string>
     <!-- Message on screen if other profiles are present on the device after user selects factory reset. [CHAR LIMIT=NONE] -->
@@ -1270,10 +1280,6 @@
     <string name="choose_new_admin_label">Choose admin</string>
 
     <!-- User info --><skip/>
-    <!-- Title for Guest user [CHAR LIMIT=35] -->
-    <string name="user_guest">Guest</string>
-    <!-- Title for button for starting a new guest session [CHAR LIMIT=35] -->
-    <string name="start_guest_session">Guest</string>
     <!-- Description for icon to switch user [CHAR LIMIT=35] -->
     <string name="user_switch">Switch</string>
     <!-- Description for user name that is currently in use -->
@@ -1352,11 +1358,11 @@
     <!-- Switch summary to enable auto sync account [CHAR LIMIT=60] -->
     <string name="account_auto_sync_summary">Let apps refresh data automatically</string>
     <!--  Title of dialog shown when user enables global auto sync [CHAR LIMIT=50] -->
-    <string name="data_usage_auto_sync_on_dialog_title">Turn auto-sync data on?</string>
+    <string name="data_usage_auto_sync_on_dialog_title">Allow automatic data syncing?</string>
     <!--  Body of dialog shown when user enables global auto sync [CHAR LIMIT=NONE] -->
-    <string name="data_usage_auto_sync_on_dialog">Any changes you make to your accounts on the web will be automatically copied to your device.\n\nSome accounts may also automatically copy any changes you make on the phone to the web. A Google Account works this way.</string>
+    <string name="data_usage_auto_sync_on_dialog">Any changes you make to your accounts on the web will be automatically copied to your vehicle.\n\nSome accounts may also automatically copy any changes you make on the vehicle to the web.</string>
     <!--  Title of dialog shown when user disables global auto sync [CHAR LIMIT=50] -->
-    <string name="data_usage_auto_sync_off_dialog_title">Turn auto-sync data off?</string>
+    <string name="data_usage_auto_sync_off_dialog_title">Disallow automatic data syncing?</string>
     <!--  Body of dialog shown when user disables global auto sync [CHAR LIMIT=NONE] -->
     <string name="data_usage_auto_sync_off_dialog">This will conserve data, but you\u2019ll need to sync each account manually to collect recent information. And you won\u2019t receive notifications when updates occur.</string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
@@ -1407,6 +1413,10 @@
     <string name="privacy_vehicle_data_title">Infotainment system data</string>
     <!-- Privacy settings screen, setting option that opens a page to manage location settings [CHAR LIMIT=NONE] -->
     <string name="privacy_location_summary">Control app access to your location</string>
+    <!-- Privacy settings screen, title for setting option name enable/disable the camera [CHAR LIMIT=30] -->
+    <string name="mute_camera_title">Camera</string>
+    <!-- Privacy settings screen, summary for setting option to enable/disable the camera [CHAR LIMIT=NONE] -->
+    <string name="mute_camera_summary">Control app access to your cameras</string>
     <!-- Privacy settings screen, title for setting option name enable/disable the microphone [CHAR LIMIT=30] -->
     <string name="mute_mic_title">Microphone</string>
     <!-- Privacy settings screen, summary for setting option to enable/disable the microphone [CHAR LIMIT=NONE] -->
@@ -1691,6 +1701,8 @@
     <string name="cancel">Cancel</string>
     <!-- Generic dialog allow button. [CHAR_LIMIT=20] -->
     <string name="allow">Allow</string>
+    <!-- Generic dialog don't allow button. [CHAR_LIMIT=20] -->
+    <string name="do_not_allow">Don\u2019t allow</string>
     <!-- Generic dialog deny button. [CHAR_LIMIT=20] -->
     <string name="deny">Deny</string>
 
@@ -1800,8 +1812,6 @@
     <string name="deactivate_and_uninstall_device_admin">Deactivate &amp; uninstall</string>
     <!-- Label for button to remove the active device admin app [CHAR LIMIT=NONE] -->
     <string name="remove_device_admin">Deactivate this infotainment system app</string>
-<!-- Shown in dialog to allow user to see more information about the device admin [CHAR LIMIT=NONE] -->
-    <string name="admin_support_more_info">More details</string>
     <!-- Shown in admin details page to warn user about policies the admin can set in a work profile. [CHAR LIMIT=NONE] -->
     <string name="admin_profile_owner_message">The organization manager can monitor and manage apps and data
         associated with this profile, including settings, permissions, corporate access,
@@ -1982,6 +1992,35 @@
     <!-- Decline label of dialog shown to ask for user consent for sharing the remote bugreport. [CHAR LIMIT=20] -->
     <string name="decline_remote_bugreport_action">Decline</string>
 
+    <!-- Strings used by FactoryResetActivity --><skip/>
+    <!-- Title for the dialog when delayed factory reset is required [CHAR_LIMIT=60] -->
+    <string name="factory_reset_parked_title">Reset the infotainment system</string>
+    <!-- Message for the dialog when delayed factory reset is required [CHAR_LIMIT=NONE] -->
+    <string name="factory_reset_parked_text">Your system has received a request to factory reset and erase all data. You can reset it now, or it will reset the next time the car starts. You can then set up a new profile.</string>
+    <!-- Label for the button that will reset the device now [CHAR_LIMIT=20] -->
+    <string name="factory_reset_now_button">Reset Now</string>
+    <!-- Label for the button that will reset the device later [CHAR_LIMIT=20] -->
+    <string name="factory_reset_later_button">Reset Later</string>
+    <!-- Text of the toast shown when the factory reset will be delayed [CHAR_LIMIT=50] -->
+    <string name="factory_reset_later_text">The infotainment system will reset the next time the car starts.</string>
+    <!-- Text of the toast shown to when detailed factory reset information is requested when driving [CHAR_LIMIT=50]-->
+    <string name="factory_reset_driving_text">The car must be parked to start the reset.</string>
+
+    <!-- Strings used by NewUserDisclaimerActivity --><skip/>
+    <!-- TODO(b/203004258): remove translatable="false" for following Strings once the proper strings have been defined -->
+    <!-- Title of the new managed user disclaimer dialog that informs the user that device is owned and managed by an enterprise [CHAR_LIMIT=60] -->
+    <string name="new_user_managed_device_title" translatable="false">This is a managed vehicle</string>
+    <!-- Message of the new managed user disclaimer dialog asking user to accept [CHAR_LIMIT=NONE] -->
+    <string name="new_user_managed_device_text" translatable="false">
+        New profiles will also be managed. Terms apply.\n\nIf you have questions, contact the admin. \n
+    </string>
+    <!-- Text for the new managed user disclaimer dialog button to launch Enterprise Privacy settings screen [CHAR_LIMIT=20]  -->
+    <string name="new_user_managed_device_learn_more" translatable="false">Learn more</string>
+    <!-- Text for the new managed user disclaimer dialog button to accept the disclaimer [CHAR_LIMIT=20] -->
+    <string name="new_user_managed_device_acceptance" translatable="false">Accept and continue</string>
+
+    <!-- End of Device Policy Management --><skip/>
+
     <!-- Power policy --><skip/>
     <!-- Power components which are disabled by the current power policy cannot be toggled in Setting. [CHAR LIMIT=80] -->
     <string name="power_component_disabled">This setting can\'t be changed right now</string>
@@ -2040,4 +2079,35 @@
     <string name="screen_reader_options_title">Options</string>
     <!-- Header for the settings section of the screen reader settings. [CHAR LIMIT=30] -->
     <string name="screen_reader_description_title">Settings</string>
+
+    <!-- Camera --><skip/>
+    <!-- Title of camera settings screen [CHAR LIMIT=40] -->
+    <string name="camera_settings_title">Camera</string>
+    <!-- Title of setting to toggle camera [CHAR LIMIT=40] -->
+    <string name="camera_toggle_title">Use camera</string>
+    <!-- Summary of setting to toggle camera [CHAR LIMIT=100] -->
+    <string name="camera_toggle_summary">Allow all apps to access your camera</string>
+    <!-- Title of setting linking to camera permission management screen [CHAR LIMIT=60] -->
+    <string name="camera_manage_permissions">Manage camera permissions</string>
+    <!-- Title of Recent Camera Accesses category [CHAR LIMIT=60] -->
+    <string name="camera_recently_accessed">Recently accessed</string>
+    <!-- Description when no apps have accessed camera recently [CHAR LIMIT=60] -->
+    <string name="camera_no_recent_access">No recent apps</string>
+    <!-- Summary for number of apps that have access when camera is off.  [CHAR LIMIT=100] -->
+    <string name="camera_app_permission_summary_camera_off">0 apps have access</string>
+    <!--
+    Summary for Camera settings when camera is on, explaining how many apps have camera
+    permission. [CHAR LIMIT=100]-->
+    <string name="camera_app_permission_summary_camera_on">
+        {count, plural,
+            =1    {# of {total_count} apps has access}
+            other {# of {total_count} apps have access}
+        }
+    </string>
+    <!-- Title of Recent Camera Requests setting [CHAR LIMIT=60] -->
+    <string name="camera_settings_recent_requests_title">Recently accessed</string>
+    <!-- Title of Recent Camera Requests setting [CHAR LIMIT=60] -->
+    <string name="camera_settings_recent_requests_view_all_title">View all</string>
+    <!-- Camera settings, loading the number of apps which have camera permission [CHAR LIMIT=30] -->
+    <string name="camera_settings_loading_app_permission_stats">Loading\u2026</string>
 </resources>

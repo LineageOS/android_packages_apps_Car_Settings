@@ -30,6 +30,7 @@ import android.net.VpnManager;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,6 +47,7 @@ public final class AlwaysOnVpnCurrentUserPreferenceControllerTest extends
     @Before
     public void setUp() {
         when(mSpiedContext.getSystemService(VpnManager.class)).thenReturn(mVpnManager);
+        mockHasDeviceAdminFeature();
         mPreference = new Preference(mSpiedContext);
         mAlwaysOnVpnCurrentUserPreferenceController =
                 new AlwaysOnVpnCurrentUserPreferenceController(
@@ -58,8 +60,8 @@ public final class AlwaysOnVpnCurrentUserPreferenceControllerTest extends
 
         mAlwaysOnVpnCurrentUserPreferenceController.updateState(mPreference);
 
-        assertAvailability(mAlwaysOnVpnCurrentUserPreferenceController.getAvailabilityStatus(),
-                AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(
+                mAlwaysOnVpnCurrentUserPreferenceController.getAvailabilityStatus(), AVAILABLE);
     }
 
     @Test
@@ -68,7 +70,8 @@ public final class AlwaysOnVpnCurrentUserPreferenceControllerTest extends
 
         mAlwaysOnVpnCurrentUserPreferenceController.updateState(mPreference);
 
-        assertAvailability(mAlwaysOnVpnCurrentUserPreferenceController.getAvailabilityStatus(),
+        PreferenceControllerTestUtil.assertAvailability(
+                mAlwaysOnVpnCurrentUserPreferenceController.getAvailabilityStatus(),
                 DISABLED_FOR_PROFILE);
     }
 

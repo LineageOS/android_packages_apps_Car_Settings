@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Få åtkomst till data via mobilt nätverk"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilnätverk"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Använd mobildata"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Av"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vill du inaktivera mobildata?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Du måste välja något"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Ska mobildata från <xliff:g id="CARRIER">%1$s</xliff:g> användas?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-sökning har aktiverats"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Byt till mobildata automatiskt"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Använd mobildata när wifi-nätverket inte är anslutet till internet. Avgifter för dataanvändning kan tillkomma."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Hitta och ansluta till wifi-nätverk"</string>
     <string name="learn_more" msgid="8214605928933358604">"Läs mer"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Namn på surfzon"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Aktiverar <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> …"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Tillåt att appar för förarassistans kommer åt din plats"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Om du stänger av detta inaktiveras funktioner för förarassistans som behöver platsinformation."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Inaktivera ändå"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nyligen gjorda platsförfrågningar"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Inga platsförfrågningar har gjorts nyligen"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Har nyligen haft åtkomst"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Har nyligen haft åtkomst"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Visa alla"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Inga appar har haft åtkomst nyligen"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Förarassistans"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Behörigheter på appnivå"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Platstjänster"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Använd plats"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Appinställningarna har återställts"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Rensa all data (återställ standardinst.)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Radera all data och alla profiler på infotainmentsystemet"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Detta gör att all data raderas från fordonets infotainmentsystem, bland annat:\n\n"<li>"ditt Google-konto"</li>\n<li>"system- och appdata och inställningar"</li>\n<li>"nedladdade appar."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Detta gör att all data raderas från fordonets infotainmentsystem, bland annat\n\n"<li>"dina konton och profiler"</li>\n<li>"system- och appdata och inställningar"</li>\n<li>"nedladdade appar."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Du är inloggad på följande konton:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Andra profiler har redan konfigurerats för det här fordonet."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Radera all data"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Välj en ny administratör"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Du måste ha minst en administratör. Välj en ersättare innan du tar bort administratören."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Välj administratör"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Gäst"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Gäst"</string>
     <string name="user_switch" msgid="6544839750534690781">"Byt"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Du (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Namn"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Konton som tillhör <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Synkronisera data automatiskt"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Tillåt att data uppdateras av appar automatiskt"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Aktivera automatisk datasynk.?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Alla kontoändringar som görs på webben kopieras automatiskt till enheten.\n\nFör vissa konton kopieras även alla ändringar som görs på mobilen automatiskt till webben. Så här fungerar ett Google-konto."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Inaktivera automatisk datasynk.?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Vill du tillåta automatisk datasynkronisering?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Alla kontoändringar som görs på webben kopieras automatiskt till fordonet.\n\nFör vissa konton kopieras även alla ändringar som görs på fordonet automatiskt till webben."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Vill du inaktivera automatisk datasynkronisering?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Detta minskar dataanvändningen, men varje konto måste synkroniseras manuellt varje gång du vill samla in aktuell information. Du får inga meddelanden om nya uppdateringar."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Kontoinformation"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Lägg till konto"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Integritet"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Infotainmentsystemdata"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Styr appåtkomst till din plats"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Styr appåtkomst till kamerorna"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Styr appåtkomst till mikrofonen"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Infotainmentsystemdata"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Ta bort"</string>
     <string name="cancel" msgid="750286395700355455">"Avbryt"</string>
     <string name="allow" msgid="7519431342750394402">"Tillåt"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Tillåt inte"</string>
     <string name="deny" msgid="340512788979930804">"Neka"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backstegstangent"</string>
     <string name="enter_key" msgid="2121394305541579468">"Returtangent"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Aktivera den här appen för infotainmentsystemet"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Inaktivera och installera"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Inaktivera appen för infotainmentsystemet"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Mer information"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till den här profilen, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och fordonets platsuppgifter."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till den här profilen, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och enhetens platsuppgifter."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organisationsansvarig kan övervaka och hantera appar och data som är kopplade till det här infotainmentsystemet, bland annat inställningar, behörigheter, företagsåtkomst, nätverksaktivitet och fordonets platsuppgifter."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Felrapporten delas med organisationsansvarig för fordonet. Kontakta hen om du vill veta mer."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Dela"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Avvisa"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Återställ infotainmentsystemet"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Systemet har tagit emot en begäran om att återställa standardinställningarna och rensa all data. Du kan återställa nu eller nästa gång bilen startas. Sedan kan du konfigurera en ny profil."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Återställ nu"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Återställ senare"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Infotainmentsystemet återställs när bilen startas."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Bilen måste vara parkerad när du återställer."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Det går inte att ändra den här inställningen just nu"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Tillgänglighet"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Textning"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Använd <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Alternativ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Inställningar"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Använda kameran"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Ge alla appar åtkomst till kameran"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Hantera kamerabehörigheter"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Har nyligen haft åtkomst"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Inga appar har haft åtkomst nyligen"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 appar har åtkomst"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# av {total_count} appar har åtkomst}other{# av {total_count} appar har åtkomst}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Har nyligen haft åtkomst"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Visa alla"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Läser in …"</string>
 </resources>

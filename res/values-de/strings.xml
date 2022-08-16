@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datenzugriff über Mobilfunknetz"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilfunknetz"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Mobile Daten nutzen"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Aus"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobile Daten deaktivieren?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Auswahl erforderlich"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"<xliff:g id="CARRIER">%1$s</xliff:g> für mobile Daten nutzen?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"WLAN-Suche aktiviert"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatisch zur mobilen Datennutzung wechseln"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wenn Internetzugriff über WLAN nicht möglich ist, mobile Daten verwenden. Es können Gebühren für die Datennutzung anfallen."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"WLAN suchen und eine Verbindung herstellen"</string>
     <string name="learn_more" msgid="8214605928933358604">"Weitere Informationen"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Name des Hotspots"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> wird aktiviert…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Fahrassistenzsystem Zugriff auf Standort erlauben"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Wenn du das Fahrassistenzsystem ausschaltest, werden die Funktionen des Systems deaktiviert, die Standortinformationen benötigen."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Trotzdem deaktivieren"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Letzte Standortanfragen"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Keine letzten Standortanfragen"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Vor Kurzem zugegriffen"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Vor Kurzem zugegriffen"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Alle ansehen"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Keine Apps, die vor Kurzem zugegriffen haben"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Fahrassistenzsystem"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Berechtigungen auf App-Ebene"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Standortdienste"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Standort verwenden"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-Einstellungen wurden zurückgesetzt"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Alle Daten löschen"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Alle Daten und Profile aus dem Infotainmentsystem löschen"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Hierdurch werden alle Daten vom Infotainmentsystem deines Fahrzeugs gelöscht, wie z. B. die Folgenden:\n\n"<li>"Dein Google-Konto"</li>\n<li>"System- und App-Daten sowie entsprechende Einstellungen"</li>\n<li>"Heruntergeladene Apps"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Hierdurch werden alle Daten aus dem Infotainmentsystem deines Fahrzeugs gelöscht, wie z. B. die Folgenden:\n\n"<li>"Deine Konten und Profile"</li>\n<li>"System- und App-Daten sowie entsprechende Einstellungen"</li>\n<li>"Heruntergeladene Apps"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Du bist zurzeit in folgenden Konten angemeldet:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Für dieses Fahrzeug existieren bereits andere Profile."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Alle Daten löschen"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Neuen Administrator auswählen"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Du benötigst mindestens einen Administrator. Damit diesen Administrator löschen kannst, musst du zuerst einen Ersatz auswählen."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Administrator auswählen"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Gast"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Gast"</string>
     <string name="user_switch" msgid="6544839750534690781">"Wechseln"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Du (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Name"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Konten für <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Daten automatisch synchronisieren"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Apps die automatische Aktualisierung von Daten erlauben"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Automatische Synchronisierung aktivieren?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Wenn du im Web Änderungen an deinen Konten vornimmst, werden diese automatisch auf dein Gerät kopiert.\n\nIm Gegenzug werden bei manchen Konten automatisch alle Änderungen, die auf dem Gerät vorgenommen wurden, ins Web kopiert. Dazu gehören auch Google-Konten."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Automatische Synchronisierung deaktivieren?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Automatische Datensynchronisierung zulassen?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Änderungen, die du im Web an deinen Konten vornimmst, werden automatisch für dein Fahrzeug kopiert.\n\nIm Gegenzug werden bei manchen Konten auch automatisch alle Änderungen, die für das Fahrzeug vorgenommen werden, ins Web kopiert."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Automatische Datensynchronisierung verbieten?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"So reduzierst du den Datenverbrauch, musst jedoch jedes einzelne Konto manuell synchronisieren, um neue Informationen abzurufen. Außerdem erhältst du keine Benachrichtigung über Updates mehr."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Kontoinformationen"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Konto hinzufügen"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Datenschutz"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Daten des Infotainmentsystems"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"App-Zugriff auf meinen Standort steuern"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"App-Zugriff auf meine Kameras steuern"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"App-Zugriff auf Mikrofon steuern"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Daten des Infotainmentsystems"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Entfernen"</string>
     <string name="cancel" msgid="750286395700355455">"Abbrechen"</string>
     <string name="allow" msgid="7519431342750394402">"Zulassen"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Nicht zulassen"</string>
     <string name="deny" msgid="340512788979930804">"Ablehnen"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Rücktaste"</string>
     <string name="enter_key" msgid="2121394305541579468">"Schlüssel eingeben"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Diese Infotainmentsystem-App aktivieren"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Deaktivieren und deinstallieren"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Diese Infotainmentsystem-App deaktivieren"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Weitere Informationen"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Der Manager der Organisation kann die mit diesem Profil verknüpften Apps und Daten überwachen und verwalten, einschließlich der Einstellungen, Berechtigungen, Zugriffe auf Unternehmensinhalte, Netzwerkaktivitäten und Standortdaten des Fahrzeugs."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Der Manager der Organisation kann die mit diesem Profil verknüpften Apps und Daten überwachen und verwalten, einschließlich der Einstellungen, Berechtigungen, Zugriffe auf Unternehmensinhalte, Netzwerkaktivitäten und Standortdaten des Geräts."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Der Manager der Organisation kann die mit diesem Infotainmentsystem verknüpften Apps und Daten überwachen und verwalten, einschließlich der Einstellungen, Berechtigungen, Zugriffe auf Unternehmensinhalte, Netzwerkaktivitäten und Standortdaten des Fahrzeugs."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Dieser Fehlerbericht wird mit dem Manager der Organisation für dieses Fahrzeug geteilt. Wende dich an ihn, wenn du nähere Informationen wünschst."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Teilen"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Ablehnen"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Infotainmentsystem zurücksetzen"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Dein System hat eine Anfrage zum Zurücksetzen auf die Werkseinstellungen und Löschen aller Daten erhalten. Das kannst du jetzt machen. Ansonsten wird das System beim nächsten Start zurückgesetzt. Danach kannst du ein neues Profil einrichten."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Jetzt zurücksetzen"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Später zurücksetzen"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Das Infotainmentsystem wird beim nächsten Start zurückgesetzt."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Zum Zurücksetzen muss das Auto stehen."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Diese Einstellung kann momentan nicht geändert werden"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Bedienungshilfen"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Untertitel"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> verwenden"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Optionen"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Einstellungen"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Kamera verwenden"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Allen Apps den Zugriff auf deine Kamera gewähren"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kameraberechtigungen verwalten"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Vor Kurzem zugegriffen"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Keine neuen Apps"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 Apps haben Zugriff"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# von {total_count} Apps hat Zugriff}other{# von {total_count} Apps haben Zugriff}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Vor Kurzem zugegriffen"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Alle ansehen"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Wird geladen…"</string>
 </resources>

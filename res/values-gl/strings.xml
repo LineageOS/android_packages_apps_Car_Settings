@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder aos datos cunha rede de telefonía móbil"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rede de telefonía móbil"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Usar datos móbiles"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Desactivada"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Queres desactivar os datos móbiles?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"É necesario seleccionar unha opción"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Usar <xliff:g id="CARRIER">%1$s</xliff:g> para os datos móbiles?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Activouse a busca de redes wifi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Cambiar aos datos móbiles automaticamente"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Utiliza datos móbiles cando a Wifi non ten acceso a Internet. É posible que se apliquen cargos polo uso de datos."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Busca redes wifi e conéctate a elas"</string>
     <string name="learn_more" msgid="8214605928933358604">"Máis información"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nome da zona wifi"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Activando <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permite que as apps de condución accedan á localización"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Se desactivas esta opción, deshabilitaranse as funcións de asistencia para a condución que utilizan a información de localización."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactivar de todos os xeitos"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de localización recentes"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Non hai solicitudes de localización recentes"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recentes"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recentes"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Ningunha aplicación accedeu recentemente"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia para a condución"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos para as aplicacións"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizos de localización"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utilizar localización"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Restablecéronse as preferencias das aplicacións"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Borrar datos (restabl. conf. de fábrica)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Borra todos os datos e os perfís do sistema de información e entretemento"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Ao realizar esta acción, borraranse todos os datos do sistema de información e entretemento do teu vehículo, entre os que se inclúen os seguintes:\n\n"<li>"A túa Conta de Google"</li>\n<li>"Os datos e a configuración do sistema e das aplicacións"</li>\n<li>"As aplicacións descargadas"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Ao realizar esta acción, borraranse todos os datos do sistema de información e entretemento do teu vehículo, entre os que se inclúen os seguintes:\n\n"<li>"As túas contas e perfís"</li>\n<li>"Os datos e a configuración do sistema e das aplicacións"</li>\n<li>"As aplicacións descargadas"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Actualmente tes a sesión iniciada nas seguintes contas:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Configuráronse outros perfís para este vehículo."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Borrar todos os datos"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Escolle un novo administrador"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Necesitas polo menos un administrador. Para eliminar este, primeiro escolle outro."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Escoller administrador"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Convidado"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Convidado"</string>
     <string name="user_switch" msgid="6544839750534690781">"Cambiar"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ti (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nome"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar datos automaticamente"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permite ás aplicacións actualizar os datos automaticamente"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Activar sincronización aut.?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Todos os cambios que efectúes nas túas contas na Web copiaranse automaticamente no teu dispositivo.\n\nAlgunhas contas tamén poden copiar automaticamente na Web os cambios que realices no teléfono. As Contas de Google funcionan desta última forma."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Desactivar sincronización aut.?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Queres permitir a sincronización automática?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Os cambios que fagas nas contas desde a web copiaranse de forma automática no vehículo.\n\nCon algunhas contas, os cambios que realices no vehículo tamén poden copiarse automaticamente na web."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Queres desactivar a sincronización automática?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Desta forma aforraranse datos, pero terás que sincronizar cada conta manualmente para recompilar a información recente. Non recibirás notificacións cando se realicen actualizacións."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Información da conta"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Engadir conta"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacidade"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Sistema de información e entretemento"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Controlar acceso das aplicacións á túa localización"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Cámara"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Controla o acceso das aplicacións ás cámaras"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micrófono"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Controla o acceso das aplicacións ao micrófono"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Sistema de inf. e entr.: datos"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Quitar"</string>
     <string name="cancel" msgid="750286395700355455">"Cancelar"</string>
     <string name="allow" msgid="7519431342750394402">"Permitir"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Non permitir"</string>
     <string name="deny" msgid="340512788979930804">"Denegar"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tecla de retroceso"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tecla Intro"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Activar esta aplicación do sistema de información e entretemento"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Desactivar e desinstalar"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desactivar esta aplicación do sistema de información e entretemento"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Máis detalles"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este perfil (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do dispositivo)."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"O xestor da organización pode supervisar e xestionar as aplicacións e os datos asociados a este sistema de información e entretemento (por exemplo, os permisos, a configuración, o acceso corporativo, a actividade da rede e a información de localización do vehículo)."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Este informe de erros estase compartindo co xestor da organización do vehículo. Contacta co xestor para obter máis información."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Compartir"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Rexeitar"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Restablece o sistema de información e entretemento"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"O sistema recibiu unha solicitude para restablecer a configuración de fábrica e borrar todos os datos. Podes facelo agora ou a próxima vez que se arrinque o coche. Despois, poderás configurar un perfil novo."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Restablecer agora"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Restablecer despois"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"O sistema restablecerase cando se volva arrincar o coche."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"O coche debe estar aparcado para restablecelo."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Non se pode cambiar esta opción de configuración neste momento"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Accesibilidade"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Subtítulos"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Usar <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcións"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Configuración"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Cámara"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Usar cámara"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Permite que todas as aplicacións accedan á cámara"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Xestionar permisos de acceso á cámara"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Accesos recentes"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Ningunha aplicación accedeu recentemente"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Ningunha aplicación ten acceso"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Aplicacións con acceso: # de {total_count}}other{Aplicacións con acceso: # de {total_count}}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Accesos recentes"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Ver todo"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Cargando…"</string>
 </resources>

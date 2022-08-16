@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"મોબાઇલ નેટવર્કનો ઉપયોગ કરીને ડેટા ઍક્સેસ કરો"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"મોબાઇલ નેટવર્ક"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"મોબાઇલ ડેટાનો ઉપયોગ કરો"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"બંધ છે"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"મોબાઇલ ડેટા બંધ કરીએ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"પસંદગી કરવી જરૂરી છે"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"મોબાઇલ ડેટા માટે <xliff:g id="CARRIER">%1$s</xliff:g>નો ઉપયોગ કરીએ?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"વાઇ-ફાઇ માટે સ્કૅનિંગ ચાલુ કરી છે"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"મોબાઇલ ડેટા પર ઑટોમૅટિક રીતે સ્વિચ કરો"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"જ્યારે વાઇ-ફાઇ પાસે ઇન્ટરનેટનો ઍક્સેસ ન હોય, ત્યારે મોબાઇલ ડેટાનો ઉપયોગ કરો. ડેટા વપરાશ શુલ્ક લાગુ થઈ શકે છે."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"વાઇ-ફાઇ નેટવર્ક શોધીને તેની સાથે કનેક્ટ કરો"</string>
     <string name="learn_more" msgid="8214605928933358604">"વધુ જાણો"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"હૉટસ્પૉટનું નામ"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ચાલુ કરી રહ્યાં છીએ..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ડ્રાઇવિંગ માટે સહાય કરતી ઍપને તમારું સ્થાન ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"જો તમે આને બંધ કરશો, તો સ્થાનની માહિતી પર આધારિત ડ્રાઇવર માટે સહાયતાની સુવિધાઓ બંધ કરવામાં આવશે."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"કોઈપણ રીતે બંધ કરો"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"સ્થાન માટે તાજેતરની વિનંતીઓ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"સ્થાન માટે તાજેતરમાં કોઈ વિનંતી નથી"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"તાજેતરમાં ઍક્સેસ કર્યો હોય એવી ઍપ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"તાજેતરમાં ઍક્સેસ કર્યો હોય એવી ઍપ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"બધી જુઓ"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"ઍક્સેસ હોય એવી તાજેતરની કોઈ ઍપ નથી"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ડ્રાઇવર માટે સહાયતા"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ઍપ લેવલની પરવાનગીઓ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"જગ્યાની સેવાઓ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"સ્થાનનો ઉપયોગ કરો"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ઍપ પસંદગીઓ રીસેટ કરવામાં આવી છે"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"બધો ડેટા કાઢી નાખો (ફેક્ટરી રીસેટ)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"તમામ ડેટા અને પ્રોફાઇલ ઇન્ફોટેનમેન્ટ સિસ્ટમમાંથી કાઢી નાખો"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"આમ કરવાથી, તમારા વાહનની ઇન્ફોટેનમેન્ટ સિસ્ટમમાંથી નીચે જણાવેલા સહિત બધો ડેટા કાઢી નાખવામાં આવશે:\n\n"<li>"તમારું Google એકાઉન્ટ"</li>\n<li>"સિસ્ટમ અને ઍપનો ડેટા તેમજ બધા સેટિંગ"</li>\n<li>"ડાઉનલોડ કરેલી બધી ઍપ"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"આમ કરવાથી, તમારા વાહનની ઇન્ફોટેનમેન્ટ સિસ્ટમમાંથી નીચે જણાવેલા સહિતનો, બધો ડેટા કાઢી નાખવામાં આવશે:\n\n"<li>"તમારું એકાઉન્ટ અને પ્રોફાઇલ"</li>\n<li>"સિસ્ટમ અને ઍપનો ડેટા અને સેટિંગ"</li>\n<li>"ડાઉનલોડ કરેલી ઍપ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"હાલમાં તમે નીચે જણાવેલા બધા એકાઉન્ટમાં સાઇન ઇન થયા છો:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"આ વાહન માટે અન્ય પ્રોફાઇલ સેટઅપ કરવામાં આવી છે."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"બધો ડેટા કાઢી નાખો"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"નવા વ્યવસ્થાપકની પસંદગી કરો"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"તમારી પાસે એક વ્યવસ્થાપકનું હોવું જરૂરી છે. આને ડિલીટ કરવા માટે, પહેલા નવાની પસંદગી કરો."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"વ્યવસ્થાપક પસંદ કરો"</string>
-    <string name="user_guest" msgid="3465399481257448601">"અતિથિ"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"અતિથિ"</string>
     <string name="user_switch" msgid="6544839750534690781">"સ્વિચ કરો"</string>
     <string name="current_user_name" msgid="3813671533249316823">"તમે (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"નામ"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> માટેના એકાઉન્ટ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ડેટાને ઑટોમૅટિક રીતે સિંક કરો"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ઍપને ઑટોમૅટિક રીતે ડેટાને રિફ્રેશ કરવા દો"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ઑટો સિંક ડેટા ચાલુ કરીએ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"તમે વેબ પર તમારા એકાઉન્ટમાં કરો તે કોઈપણ ફેરફારોને ઑટોમૅટિક રીતે તમારા ડિવાઇસ પર કૉપિ કરાશે.\n\nઅમુક એકાઉન્ટ પણ તમે ડિવાઇસ પર કરો તે ફેરફારોને વેબ પર ઑટોમૅટિક રીતે કૉપિ કરશે. Google એકાઉન્ટ આ પ્રમાણે કાર્ય કરે છે."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ડેટા ઑટો સિંક કરો બંધ કરીએ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ઑટોમૅટિક રીતે ડેટા સિંક કરવાની મંજૂરી આપીએ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"તમે વેબ પર તમારા એકાઉન્ટમાં કરશો તે કોઈપણ ફેરફારને ઑટોમૅટિક રીતે તમારા વાહન પર કૉપિ કરાશે.\n\nકેટલાક એકાઉન્ટ તમે વાહન પર કરશો તે ફેરફારોની પણ વેબ પર ઑટોમૅટિક રીતે કૉપિ કરશે."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ઑટોમૅટિક રીતે ડેટા સિંક કરવાનું નામંજૂર કરીએ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"આમ કરવું તે ડેટા બચાવશે, પરંતુ તાજેતરની માહિતી એકત્રિત કરવા માટે તમને દરેક એકાઉન્ટને મેન્યુઅલી સિંક કરવાની જરૂર પડશે. અને જ્યારે અપડેટ આવશે ત્યારે તમને નોટિફિકેશન પ્રાપ્ત થશે નહીં."</string>
     <string name="account_details_title" msgid="7529571432258448573">"એકાઉન્ટની માહિતી"</string>
     <string name="add_account_title" msgid="5988746086885210040">"એકાઉન્ટ ઉમેરો"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"પ્રાઇવસી"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ઇન્ફોટેનમેન્ટ સિસ્ટમનો ડેટા"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ઍપને તમારા સ્થાનનો ઍક્સેસ આપવા પર નિયંત્રણ કરો"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"કૅમેરા"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ઍપને મળતો તમારા કૅમેરાનો ઍક્સેસ નિયંત્રિત કરો"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"માઇક્રોફોન"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ઍપ દ્વારા માઇક્રોફોનના ઍક્સેસનું નિયંત્રણ કરો"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ઇન્ફોટેનમેન્ટ સિસ્ટમનો ડેટા"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"કાઢી નાખો"</string>
     <string name="cancel" msgid="750286395700355455">"રદ કરો"</string>
     <string name="allow" msgid="7519431342750394402">"મંજૂરી આપો"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"મંજૂરી આપશો નહીં"</string>
     <string name="deny" msgid="340512788979930804">"નકારો"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace કી"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter કી"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપ સક્રિય કરો"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"નિષ્ક્રિય અને અનઇન્સ્ટૉલ કરો"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"આ ઇન્ફોટેનમેન્ટ સિસ્ટમ ઍપને નિષ્ક્રિય કરો"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"વધુ વિગતો"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનના સ્થાનની માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસના સ્થાનની માહિતી સહિત આ પ્રોફાઇલ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"સંસ્થાના મેનેજર સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને વાહનના સ્થાનની માહિતી સહિત આ ઇન્ફોટેનમેન્ટ સિસ્ટમ સાથે સંકળાયેલી ઍપ અને ડેટાનું નિરીક્ષણ કરી શકે છે અને મેનેજ કરી શકે છે."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"આ બગ રિપોર્ટ આ વાહનની સંસ્થાના મેનેજર સાથે શેર કરવામાં આવી શકે છે. વધુ વિગતો માટે તેમનો સંપર્ક કરો."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"શેર કરો"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"નકારો"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"ઇન્ફોટેનમેન્ટ સિસ્ટમ રીસેટ કરો"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"તમારી સિસ્ટમને ફેક્ટરી રીસેટની અને બધો ડેટા કાઢી નાખવાની વિનંતી મળી છે. તમે હમણાં રીસેટ કરી શકો છો અથવા આગલી વખતે જ્યારે કારને ચાલુ કરવામાં આવે ત્યારે તે રીસેટ થશે. ત્યાર પછી તમે નવી પ્રોફાઇલ સેટઅપ કરી શકો છો."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"હમણાં રીસેટ કરો"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"પછીથી રીસેટ કરો"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"આગલી વખતે જ્યારે કારને ચાલુ કરવામાં આવે ત્યારે ઇન્ફોટેનમેન્ટ સિસ્ટમ રીસેટ થશે."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"રીસેટ શરૂ કરવા માટે કાર પાર્ક કરેલી હોવી જરૂરી છે."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"હમણાં આ સેટિંગમાં ફેરફાર કરી શકાશે નહીં"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ઍક્સેસિબિલિટી"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"કૅપ્શન"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>નો ઉપયોગ કરો"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"વિકલ્પો"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"સેટિંગ"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"કૅમેરા"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"કૅમેરાનો ઉપયોગ કરો"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"બધી ઍપને તમારા કૅમેરાના ઍક્સેસની મંજૂરી આપો"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"કૅમેરાની પરવાનગીઓ મેનેજ કરો"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"તાજેતરમાં ઍક્સેસ કર્યો"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"તાજેતરમાં કૅમેરા ઍક્સેસ કર્યો હોય તેવી કોઈ ઍપ નથી"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"કોઈપણ ઍપ પાસે ઍક્સેસ નથી"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count}માંથી # ઍપ પાસે ઍક્સેસ છે}one{{total_count}માંથી # ઍપ પાસે ઍક્સેસ છે}other{{total_count}માંથી # ઍપ પાસે ઍક્સેસ છે}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"તાજેતરમાં ઍક્સેસ કર્યો"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"તમામ જુઓ"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"લોડ કરી રહ્યાં છીએ…"</string>
 </resources>

@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"موبائل نیٹ ورک کے ذریعے ڈیٹا تک رسائی حاصل کریں"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"موبائل نیٹ ورک"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"موبائل ڈیٹا استعمال کریں"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"آف"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"موبائل ڈیٹا آف کریں؟"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"انتخاب درکار ہے"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"موبائل ڈیٹا کیلئے <xliff:g id="CARRIER">%1$s</xliff:g> یوز کریں؟"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi اسکیننگ آن ہے"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"خودکار طور پر موبائل ڈیٹا پر سوئچ کریں"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi پر انٹرنیٹ تک رسائی نہ ہونے کی صورت میں موبائل ڈیٹا استعمال کریں۔ ڈیٹا کے استعمال کے چارجز عائد ہو سکتے ہیں۔"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi-Fi نیٹ ورکس تلاش کریں اور ان سے منسلک ہوں"</string>
     <string name="learn_more" msgid="8214605928933358604">"مزید جانیں"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ہاٹ اسپاٹ کا نام"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> آن ہو رہا ہے..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ڈرائیونگ میں مدد کرنے والی ایپس کو اپنے مقام تک رسائی کی اجازت دیں"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"اگر آپ اسے آف کرتے ہیں تو مقام کی معلومات پر مبنی ڈرائیور کی مدد کی ایپس غیر فعال ہو جائیں گی۔"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"بہر حال آف کریں"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"مقام کی حالیہ درخواستیں"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"مقام کی کوئی حالیہ درخواست نہیں ہے"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"حال ہی میں رسائی حاصل کردہ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"حال ہی میں رسائی حاصل کردہ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"سبھی دیکھیں"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"کوئی حالیہ ایپس نہیں ہیں"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ڈرائیور کی مدد"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ایپ کی سطح کی اجازتیں"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"مقام کی سروسز"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"مقام کا استعمال کریں"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ایپ کی ترجیحات کو ری سیٹ کر دیا ہے"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"سبھی ڈیٹا کو حذف کریں (فیکٹری ری سیٹ)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"معلوماتی انٹرٹینمنٹ سسٹم سے سبھی ڈیٹا اور پروفائلز مٹائیں"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"یہ آپ کی گاڑی کے معلوماتی انٹرٹینمنٹ سسٹم سے سبھی ڈیٹا کو مٹا دے گا، بشمول:\n\n"<li>"آپ کا Google اکاؤنٹ"</li>\n<li>"سسٹم اور ایپ ڈیٹا اور ترتیبات"</li>\n<li>"ڈاؤن لوڈ کردہ ایپس"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"یہ آپ کی گاڑی کے معلوماتی انٹرٹینمنٹ سسٹم سے سبھی ڈیٹا کو مٹا دے گا، بشمول:\n\n"<li>"آپ کے اکاؤنٹس اور پروفائلز"</li>\n<li>"سسٹم اور ایپ کا ڈیٹا اور ترتیبات"</li>\n<li>"ڈاؤن لوڈ کردہ ایپس"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"آپ فی الحال مندرجہ ذیل اکاؤنٹس میں سائن ان ہیں:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"اس گاڑی کے لیے دیگر پروفائلز سیٹ اپ کر دی گئی ہیں۔"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"سبھی ڈیٹا مٹائیں"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"نیا منتظم منتخب کریں"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"آپ کو کم از کم ایک منتظم کی ضرورت ہے۔ اسے حذف کرنے کیلئے، پہلے ایک متبادل کا انتخاب کریں۔"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"منتظم منتخب کریں"</string>
-    <string name="user_guest" msgid="3465399481257448601">"مہمان"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"مہمان"</string>
     <string name="user_switch" msgid="6544839750534690781">"سوئچ کریں"</string>
     <string name="current_user_name" msgid="3813671533249316823">"آپ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"‫<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> کیلئے اکاؤنٹس"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"خودکار طور پر ڈیٹا سِنک کریں"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ایپس کو خودکار طور پر ڈیٹا ریفریش کرنے دیں"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ڈیٹا آٹو سنک کریں کو آن کریں؟"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"آپ ویب پر اپنے اکاؤنٹس میں جو بھی تبدیلیاں کریں گے وہ آپ کے آلہ پر خودکار طور پر کاپی ہو جائیں گی۔\n\nایسی تبدیلیاں جو آپ فون پر کرتے ہیں انہیں کچھ اکاؤنٹس خودکار طور پر ویب پر بھی کاپی کر سکتے ہیں۔ Google اکاؤنٹ اس طریقے سے کام کرتا ہے۔"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ڈیٹا آٹو سنک کریں کو آف کریں؟"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ڈیٹا کی خودکار مطابقت پذیری کی اجازت دیں؟"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"آپ ویب پر اپنے اکاؤنٹس میں جو بھی تبدیلیاں کریں گے وہ آپ کی گاڑی پر خودکار طور پر کاپی ہو جائیں گی۔\n\nایسی تبدیلیاں جو آپ ویب پر کرتے ہیں انہیں کچھ اکاؤنٹس خودکار طور پر گاڑی پر بھی کاپی کر سکتے ہیں۔"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ڈیٹا کی خودکار مطابقت پذیری کی اجازت نہ دیں؟"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"اس سے ڈیٹا کی بچت ہوگی، لیکن آپ کو حالیہ معلومات اکٹھا کرنے کیلئے ہر ایک اکاؤنٹ کو دستی طور پر سنک کرنا ہوگا۔ اور اپ ڈیٹس ہونے پر آپ کو اطلاعات موصول نہیں ہوں گی۔"</string>
     <string name="account_details_title" msgid="7529571432258448573">"اکا‌‌‌ؤنٹ کی معلومات"</string>
     <string name="add_account_title" msgid="5988746086885210040">"اکاؤنٹ شامل کریں"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"رازداری"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"معلوماتی انٹرٹینمنٹ سسٹم کا ڈیٹا"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"اپنے مقام تک ایپ کی رسائی کو کنٹرول کریں"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"کیمرا"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"اپنے کیمروں تک ایپ کی رسائی کو کنٹرول کریں"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"مائیکروفون"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"مائیکروفون تک ایپ کی رسائی کو کنٹرول کریں"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"معلوماتی انٹرٹینمنٹ سسٹم ڈیٹا"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"ہٹائیں"</string>
     <string name="cancel" msgid="750286395700355455">"منسوخ کریں"</string>
     <string name="allow" msgid="7519431342750394402">"اجازت دیں"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"اجازت نہ دیں"</string>
     <string name="deny" msgid="340512788979930804">"مسترد کریں"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace کلید"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter کلید"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"معلوماتی انٹرٹینمنٹ سسٹم ایپ فعال کریں"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"غیر فعال اور اَن انسٹال کریں"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"اس معلوماتی انٹرٹینمنٹ سسٹم ایپ کو غیر فعال کریں"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"مزید تفصیلات"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"تنظیم کا مینیجر اس پروفائل سے وابستہ ایپس اور ڈیٹا سمیت ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور گاڑی کے مقام کی معلومات کی نگرانی اور ان کا نظم کر سکتا ہے۔"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"تنظیم کا مینیجر اس پروفائل سے وابستہ ایپس اور ڈیٹا سمیت ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور آلہ کے مقام کی معلومات کی نگرانی اور ان کا نظم کر سکتا ہے۔"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"تنظیم کا مینیجر اس معلوماتی انٹرٹینمنٹ سسٹم سے وابستہ ایپس اور ڈیٹا سمیت ترتیبات، اجازتیں، کارپوریٹ رسائی، نیٹ ورک کی سرگرمی اور گاڑی کے مقام کی معلومات کی نگرانی اور ان کا نظم کر سکتا ہے۔"</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"اس بگ رپورٹ کا اس گاڑی کے مینیجر کے ساتھ اشتراک کیا جا رہا ہے۔ مزید تفصیلات کے لیے ان سے رابطہ کریں۔"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"اشتراک کریں"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"مسترد کریں"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"معلوماتی انٹرٹینمنٹ سسٹم ری سیٹ کریں"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"آپ کے سسٹم کو فیکٹری ری سیٹ اور سبھی ڈیٹا کو صاف کرنے کی درخواست موصول ہوئی ہے۔ آپ اسے ابھی ری سیٹ کر سکتے ہیں یا اگلی بار کار کے شروع ہونے پر یہ ری سیٹ ہو جائے گا۔ پھر اس کے بعد آپ نئی پروفائل سیٹ اپ کر سکتے ہیں۔"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ابھی ری سیٹ کریں"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"بعد میں ری سیٹ کریں"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"اگلی بار کار کے شروع ہونے پر معلوماتی انٹرٹینمنٹ سسٹم ری سیٹ ہو جائے گا۔"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ری سیٹ شروع کرنے کیلئے کار کا پارک ہونا ضروری ہے۔"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"اس ترتیب کو ابھی تبدیل نہیں کیا جا سکتا"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ایکسیسبیلٹی"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"کیپشنز"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> استعمال کریں"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"اختیارات"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ترتیبات"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"کیمرا"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"کیمرا استعمال کریں"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"سبھی ایپس کو اپنے کیمرے تک رسائی کی اجازت دیں"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"کیمرے کی اجازتوں کا نظم کریں"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"حال ہی میں رسائی حاصل کردہ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"کوئی حالیہ ایپ نہیں ہے"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ایپس کو رسائی حاصل ہے"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} میں سے # ایپس کو رسائی حاصل ہے}other{{total_count} میں سے # ایپس کو رسائی حاصل ہے}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"حال ہی میں رسائی حاصل کردہ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"سبھی دیکھیں"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"لوڈ ہو رہی ہیں…"</string>
 </resources>

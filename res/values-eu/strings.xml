@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Atzitu datuak datu-konexioaren bidez"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Sare mugikorra"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Erabili datu-konexioa"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Desaktibatuta"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Datu-konexioa desaktibatu nahi duzu?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Hautatu egin behar da"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"<xliff:g id="CARRIER">%1$s</xliff:g> erabili nahi duzu datu-konexiorako?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Aktibatu da Wifi-sareen bilaketa"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Aldatu datu-konexiora automatikoki"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wifi bidez ezin denean, erabili datu-konexioa Internetera konektatzeko. Baliteke zerbait ordaindu behar izatea datuak erabiltzeagatik."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Aurkitu wifi-sareak eta konektatu haietara"</string>
     <string name="learn_more" msgid="8214605928933358604">"Lortu informazio gehiago"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Wifi-gunearen izena"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aktibatzen…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Eman kokapena atzitzeko baimena gidatzeko laguntza ematen duten aplikazioei"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Aukera hau desaktibatuz gero, kokapenari buruzko informazioa erabiltzen duten gidatzeko laguntzarekin erlazionatutako aplikazioak desgaituko dira."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desaktibatu, halere"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Azken kokapen-eskaerak"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ez da egin kokapen-eskaerarik azkenaldian"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Azkenaldian kokapena atzitu dutenak"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Azkenaldian kokapena atzitu dutenak"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ikusi guztiak"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Ez dago azkenaldian kokapena atzitu duen aplikaziorik"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Gidatzeko laguntza"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Erabili kokapena"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Berrezarri dira aplikazioen hobespenak"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Ezabatu datu guztiak (berrezarri jatorrizkoak)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ezabatu informazio- eta aisia-sistemako datu eta profil guztiak"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Ibilgailuaren informazio- eta aisia-sistemako datu guztiak ezabatuko dira, honako hauek barne:\n\n"<li>"Google-ko kontua,"</li>\n<li>"sistemako eta aplikazioetako datuak eta ezarpenak,"</li>\n<li>"deskargatutako aplikazioak."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Ibilgailuaren informazio- eta aisia-sistemako datu guztiak ezabatuko dira, honako hauek barne:\n\n"<li>"kontuak eta profilak"</li>\n<li>"sistemako eta aplikazioetako datuak eta ezarpenak"</li>\n<li>"deskargatutako aplikazioak"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Kontu hauetan hasi duzu saioa:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Ibilgailu honetarako beste profil batzuk konfiguratu dira."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Ezabatu datu guztiak"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Aukeratu beste administratzaile bat"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Gutxienez administratzaile bat behar duzu. Honako hau ezabatzeko, aukeratu ordezko bat."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Aukeratu administratzailea"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Gonbidatua"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Gonbidatua"</string>
     <string name="user_switch" msgid="6544839750534690781">"Aldatu"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Zu (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Izena"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> erabiltzailearen kontuak"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizatu datuak automatikoki"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Utzi aplikazioei datuak automatikoki freskatzen"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Sinkronizazio automatikoa aktibatu nahi duzu?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Kontuei sarean egiten dizkiezun aldaketa guztiak automatikoki kopiatuko dira gailuan.\n\nHorrez gain, baliteke kontu batzuek sarean kopiatzea telefonoan egiten dituzun aldaketak. Google-ko kontuek horrela funtzionatzen dute."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Sinkronizazio automatikoa desaktibatu nahi duzu?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Datuak automatikoki sinkronizatzeko baimena eman?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Kontuei sarean egiten dizkiezun aldaketa guztiak automatikoki kopiatuko dira ibilgailuan.\n\nHorrez gain, baliteke kontu batzuek ibilgailuan egiten dituzun aldaketak sarean kopiatzea."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Datuak automatikoki sinkronizatzeko baimena kendu?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Datuak aurrezten lagunduko dizu, baina kontu bakoitza eskuz sinkronizatu beharko duzu informazio berriena biltzeko. Gainera, ez duzu jasoko berritasunen jakinarazpenik."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Kontuaren informazioa"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Gehitu kontu bat"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Pribatutasuna"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Informazio- eta aisia-sistemaren datuak"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrolatu aplikazioek kokapena atzitzeko duten baimena"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrolatu aplikazioek kamera atzitzeko dituzten baimenak"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofonoa"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrolatu aplikazioek mikrofonoa erabiltzeko duten baimena"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Informazio- eta aisia-sistemaren datuak"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Kendu"</string>
     <string name="cancel" msgid="750286395700355455">"Utzi"</string>
     <string name="allow" msgid="7519431342750394402">"Baimendu"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Ez eman baimenik"</string>
     <string name="deny" msgid="340512788979930804">"Ukatu"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Atzera tekla"</string>
     <string name="enter_key" msgid="2121394305541579468">"\"Sartu\" tekla"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Aktibatu informazio- eta aisia-sistemaren aplikazioa"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Desaktibatu eta desinstalatu"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Desaktibatu informazio- eta aisia-sistemaren aplikazioa"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Xehetasun gehiago"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Erakundearen kudeatzaileak profilarekin erlazionatutako aplikazioak eta datuak gainbegiratu eta kudea ditzake; besteak beste, ezarpenak, baimenak, enpresen sarbide-maila, sareko jarduerak eta ibilgailuaren kokapenari buruzko informazioa."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Erakundearen kudeatzaileak profilarekin erlazionatutako aplikazioak eta datuak gainbegiratu eta kudea ditzake; besteak beste, ezarpenak, baimenak, enpresen sarbide-maila, sareko jarduerak eta gailuaren kokapenari buruzko informazioa."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Erakundearen kudeatzaileak informazio- eta aisia-sistemarekin erlazionatutako aplikazioak eta datuak gainbegiratu eta kudea ditzake; besteak beste, ezarpenak, baimenak, enpresen sarbide-maila, sareko jarduerak eta ibilgailuaren kokapenari buruzko informazioa."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Ibilgailuaren erakundearen kudeatzailearekin partekatu dugu akatsen txostena. Xehetasun gehiago lortzeko, jarri harekin harremanetan."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Partekatu"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Baztertu"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Berrezarri informazio- eta aisia-sistema"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistemak jatorrizko datuak berrezarri eta datu guztiak ezabatzeko eskaera bat jaso du. Orain berrezar dezakezu, edo autoa abiarazten den hurrengo aldian berrezarriko da. Ondoren, profil berria konfiguratu ahalko duzu."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Berrezarri"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Berrezarri geroago"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Informazio- eta aisia-sistema autoa abiarazten den hurrengo aldian berrezarriko da."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Autoak aparkatuta egon behar du berrezartzea hasteko."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Une honetan ezin da aldatu ezarpena"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Erabilerraztasuna"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Azpitituluak"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Erabili <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Aukerak"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Ezarpenak"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Erabili kamera"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Eman kamera atzitzeko baimena aplikazio guztiei"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kudeatu kamera atzitzeko baimenak"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Berriki atzitu dutenak"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Ez dago azkenaldian atzitu duen aplikaziorik"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Ez dago sarbidea duen aplikaziorik"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{#/{total_count} aplikaziok du sarbidea}other{#/{total_count} aplikaziok dute sarbidea}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Berriki atzitu dutenak"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Ikusi guztiak"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Kargatzen…"</string>
 </resources>

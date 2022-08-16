@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"I-access ang data gamit ang mobile network"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobile network"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Gumamit ng mobile data"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Naka-off"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"I-off ang mobile data?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Kinakailangang pumili"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Gamitin ang <xliff:g id="CARRIER">%1$s</xliff:g> sa mobile data?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Na-on ang pag-scan ng Wi‑Fi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Awtomatikong lumipat sa mobile data"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Gumamit ng mobile data kapag walang access sa internet ang Wi‑Fi. Maaaring may mga babayaran sa paggamit ng data."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Maghanap ng at kumonekta sa mga Wi‑Fi network"</string>
     <string name="learn_more" msgid="8214605928933358604">"Matuto pa"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Pangalan ng hotspot"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Ino-on ang <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Payagan ang mga app na tulong sa pagmamaneho na i-access ang lokasyon mo"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Kung io-off mo ito, madi-disable ang mga app na Tulong sa Driver na dumedepende sa impormasyon ng lokasyon."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"I-off pa rin"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Mga Kamakailang Kahilingan sa Lokasyon"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Walang kamakailang kahilingan sa lokasyon"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Kamakailang na-access"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Kamakailang na-access"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tingnan lahat"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Walang kamakailang app"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Tulong sa Driver"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Mga pahintulot sa antas ng app"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Mga Serbisyo ng Lokasyon"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gumamit ng lokasyon"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Na-reset na ang mga kagustuhan sa app"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Burahin lahat ng data (i-factory reset)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Burahin ang lahat ng data at profile mula sa infotainment system"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Buburahin nito ang lahat ng data mula sa infotainment system ng iyong sasakyan, kasama ang:\n\n"<li>"Iyong Google Account"</li>\n<li>"Data at mga setting ng system at app"</li>\n<li>"Mga na-download na app"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Mabubura nito ang lahat ng data mula sa infotainment system ng iyong sasakyan, kasama ang:\n\n"<li>"Iyong mga account at profile"</li>\n<li>"Data at mga setting ng system at app"</li>\n<li>"Mga na-download na app"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Kasalukuyan kang naka-sign in sa mga sumusunod na account:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"May iba pang profile na na-set up para sa sasakyang ito."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Burahin ang lahat ng data"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Pumili ng bagong admin"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Kailangan mo ng kahit isang admin lang. Para i-delete ang isang ito, pumili muna ng kapalit."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Pumili ng admin"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Bisita"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Bisita"</string>
     <string name="user_switch" msgid="6544839750534690781">"Lumipat"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ikaw (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Pangalan"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Mga account para kay <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Awtomatikong i-sync ang data"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Hayaan ang mga app na awtomatikong mag-refresh ng data"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"I-on ang pag-auto-sync ng data?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Ang anumang pagbabagong gagawin mo sa iyong mga account sa web ay awtomatikong makokopya sa device mo.\n\nMaaari ding awtomatikong kopyahin ng ilang account sa web ang anumang pagbabagong gagawin mo sa telepono. Ganito gumagana ang Google Account."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"I-off ang pag-auto sync ng data?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Payagan ang awtomatikong pag-sync ng data?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Ang anumang pagbabagong gagawin mo sa iyong mga account sa web ay awtomatikong makokopya sa sasakyan mo.\n\nPosible ring awtomatikong kopyahin ng ilang account ang anumang pagbabagong gagawin mo sa sasakyan sa web."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Huwag payagan ang awtomatikong pag-sync ng data?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Makakatipid ito ng data, ngunit kakailanganin mong manual na i-sync ang bawat account para makakuha ng kamakailang impormasyon. At hindi ka makakatanggap ng mga notification kapag nagkaroon ng mga update."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Impormasyon ng account"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Magdagdag ng account"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacy"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data ng infotainment system"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrolin ang access ng app sa iyong lokasyon"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Camera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrolin ang access sa app sa iyong mga camera"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikropono"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrolin ang access ng app sa mikropono"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Data ng infotainment system"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Alisin"</string>
     <string name="cancel" msgid="750286395700355455">"Kanselahin"</string>
     <string name="allow" msgid="7519431342750394402">"Payagan"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Huwag payagan"</string>
     <string name="deny" msgid="340512788979930804">"Tanggihan"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace key"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter key"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"I-activate ang infotainment system app na ito"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"I-deactivate at i-uninstall"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"I-deactivate ang infotainment system app na ito"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Higit pang detalye"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Masusubaybayan at mapapamahalaan ng manager ng organisasyon ang mga app at data na nauugnay sa profile na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng sasakyan."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Masusubaybayan at mapapamahalaan ng manager ng organisasyon ang mga app at data na nauugnay sa profile na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng device."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Masusubaybayan at mapapamahalaan ng manager ng organisasyon ang mga app at data na nauugnay sa infotainment system na ito, kabilang ang mga setting, pahintulot, access ng kumpanya, aktibidad ng network, at impormasyon ng lokasyon ng sasakyan."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Ibinabahagi ang ulat ng bug na ito sa manager ng organisasyon ng sasakyang ito. Makipag-ugnayan sa kanya para sa higit pang detalye."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Ibahagi"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Tanggihan"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"I-reset ang infotainment system"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Nakatanggap ang iyong system ng kahilingang mag-factory reset at magbura ng lahat ng data. Puwede mo itong i-reset ngayon, o magre-reset ito sa susunod na mag-start ang sasakyan. Pagkatapos, makakapag-set up ka ng bagong profile."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"I-reset Ngayon"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"I-reset Mamaya"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Magre-reset ang infotainment system sa susunod na mag-start ang sasakyan."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Dapat nakaparada ang sasakyan para makapag-reset."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Hindi mababago ang setting na ito sa ngayon"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Accessibility"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Mga Caption"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Gamitin ang <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Mga Opsyon"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Mga Setting"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Camera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Gamitin ang camera"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Payagan ang lahat ng app na i-access ang iyong camera"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Pamahalaan ang mga pahintulot sa camera"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Kamakailang na-access"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Walang kamakailang app"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 app ang may access"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# sa {total_count} app ang may access}one{# sa {total_count} app ang may access}other{# sa {total_count} na app ang may access}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Kamakailang na-access"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Tingnan lahat"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Naglo-load…"</string>
 </resources>

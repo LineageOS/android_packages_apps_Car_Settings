@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"የተንቀሳቃሽ ስልክ አውታረ መረብን በመጠቀም ውሂብን ይድረሱበት"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"የተንቀሳቃሽ ስልክ አውታረ መረብ"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"የተንቀሳቃሽ ስልክ ውሂብን ተጠቀም"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ጠፍቷል"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"የተንቀሳቃሽ ስልክ ውሂብ ይጥፋ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"መምረጥ ያስፈልጋል"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ለተንቀሳቃሽ ውሂብ <xliff:g id="CARRIER">%1$s</xliff:g>ን ይጠቀሙ?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi ቅኝት በርቷል"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"በራስ-ሰር ወደ የተንቀሳቃሽ ስልክ ውሂብ ቀይር"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"የWi-Fi በይነመረብ መዳረሻ በማይኖርበት ጊዜ የተንቀሳቃሽ ስልክ ውሂብ ይጠቀሙ። የውሂብ ክፍያዎች ሊከፈልባቸው ይችላል።"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"የWi‑Fi አውታረ መረቦችን ያግኙ እና ከእነሱ ጋር ይገናኙ"</string>
     <string name="learn_more" msgid="8214605928933358604">"የበለጠ ለመረዳት"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"የመገናኛ ነጥብ ስም"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ን በማብራት ላይ..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"መንዳትን የሚያግዙ መተግበሪያዎች አካባቢዎን እንዲደርሱ ይፍቀዱ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ይህን ካጠፉት በአከባቢ መረጃ ላይ የሚደገፉ የአሽከርካሪ ድጋፍ መተግበሪያዎች ይሰናከላሉ።"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ለማንኛውም አጥፋ"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"የቅርብ ጊዜ የአካባቢ ጥያቄዎች"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ምንም የቅርብ ጊዜ የአካባቢ ጥያቄዎች የሉም"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"በቅርብ ጊዜ የተደረሰበት"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"በቅርብ ጊዜ የተደረሰበት"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ሁሉንም ይመልከቱ"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"ምንም የቅርብ ጊዜ መተግበሪያዎች የሉም"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • የአሽከርካሪ ረዳት"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"የመተግበሪያ ደረጃ ፈቃዶች"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"የአካባቢ አገልግሎቶች"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"አካባቢን ተጠቀም"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"የመተግበሪያ ምርጫዎች ዳግም ተቀናብረዋል"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ሁሉንም ውሂብ ደምስስ (የፋብሪካ ዳግም ማስጀመር)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ሁሉንም ውሂብ እና መገለጫዎች ከኢንፎቴይንመንት ስርዓት ይደምስሱ"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ይህ የሚከተሉትን ጨምሮ ሁሉንም ውሂብ ከኢንፎቴይንመንት ስርዓትዎ ይደመስሰዋል፦\n\n"<li>"የእርስዎ የGoogle መለያ"</li>\n<li>"የስርዓት እና የመተግበሪያ ውሂብ እና ቅንብሮች"</li>\n<li>"የወረዱ መተግበሪያዎች"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ይህ የሚከተሉትን ጨምሮ ሁሉንም ውሂብ ከኢንፎቴይንመንት ስርዓትዎ ይደመስሰዋል፦\n\n"<li>"የእርስዎ መለያዎች እና መገለጫዎች"</li>\n<li>"የስርዓት እና የመተግበሪያ ውሂብ እና ቅንብሮች"</li>\n<li>"የወረዱ መተግበሪያዎች"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"እርስዎ በአሁን ጊዜ የሚከተለው መለያዎች ውስጥ ገብተዋል፦"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ሌሎች መገለጫዎች ለዚህ ተሽከርካሪ ተዋቅረዋል።"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ሁሉንም ውሂብ ደምስስ"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"አዲስ አስተዳዳሪ ይምረጡ"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"ቢያንስ አንድ አስተዳዳሪ ያስፈልገዎታል። ይህን ለመሰረዝ መጀመሪያ ምትኩን ይምረጡ።"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"አስተዳዳሪ ይምረጡ"</string>
-    <string name="user_guest" msgid="3465399481257448601">"እንግዳ"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"እንግዳ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ቀይር"</string>
     <string name="current_user_name" msgid="3813671533249316823">"እርስዎ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ስም"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"የ<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> መለያዎች"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ውሂብን በራስ-ሰር አስምር"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"መተግበሪያዎች ውሂብን በራስ-ሰር ያድሱ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ውሂብን ራስ-አሳምር ይብራ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ድር ላይ በመለያዎችዎ ላይ የሚያደርጓቸው ማንኛቸውም ለውጦች በራስ-ሰር ወደ ስልክዎ ይቀዳሉ።\n\nአንዳንድ መለያዎች እንዲሁም በስልክ ላይ የሚያደርጓቸውን ማንኛቸውም ለውጦች ወደ ድሩ ሊቀዷቸው ይችላሉ። የGoogle መለያ በዚህ መንገድ ነው የሚሰራው።"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ውሂብን ራስ-አሳምር ይጥፋ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ራስ-ሰር የውሂብ ስምረት ይፈቀድ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ድር ላይ በተሽከርካሪዎ ላይ የሚያደርጓቸው ማናቸውም ለውጦች በራስ-ሰር ወደ ተሽከርካሪዎ ይቀዳሉ።\n\nአንዳንድ መለያዎች እንዲሁም በተሽከርካሪው ላይ የሚያደርጓቸውን ማናቸውም ለውጦች ወደ ድሩ ሊቀዱት ይችላሉ።"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ራስ-ሰር የውሂብ ስምረት አይፈቀድ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ይህ ውሂብን ይቆጥባል፣ ነገር ግን የቅርብ ጊዜውን መረጃ ለመሰብሰብ እያንዳንዱን መለያ ራስዎ ማሳመር ይኖርብዎታል። እና ዝማኔዎች ሲከሰቱ ማሳወቂያዎች አይደርሰዎትም።"</string>
     <string name="account_details_title" msgid="7529571432258448573">"የመለያ መረጃ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"መለያ ያክሉ"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ግላዊነት"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"የኢንፎቴይንመንት ሥርዓት ውሂብ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"የአካባቢዎ የመተግበሪያ መዳረሻን ይቆጣጠሩ"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"ካሜራ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"መተግበሪያ ወደ ካሜራዎችዎን ያለውን መዳረሻ ይቆጣጠሩ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ማይክሮፎን"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"መተግበሪያ ያለው የማይክሮፎን መዳረሻ ይቆጣጠሩ"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"የኢንፎቴይንመንት ሥርዓት ውሂብ"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"አስወግድ"</string>
     <string name="cancel" msgid="750286395700355455">"ይቅር"</string>
     <string name="allow" msgid="7519431342750394402">"ፍቀድ"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"አትፍቀድ"</string>
     <string name="deny" msgid="340512788979930804">"ከልክል"</string>
     <string name="backspace_key" msgid="1545590866688979099">"የBackspace ቁልፍ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ቁልፍ አስገባ"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"ይህንን የኢንፎቴይንመንት ስርዓት መተግበሪያን አግብር"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"አቦዝን &amp; አራግፍ"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ይህንን የኢንፎቴይንመንት ስርዓት መተግበሪያን አቦዝን"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"ተጨማሪ ዝርዝሮች"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"የድርጅት አስተዳዳሪው ቅንብሮችን፣ ፈቃዶችን፣ የኮርፖሬት መዳረሻን፣ የአውታረ መረብ እንቅስቃሴን እና የተሽከርካሪውን አካባቢ መረጃን ጨምሮ ከዚህ መገለጫ ጋር የተጎዳኙ መተግበሪያዎችን እና ውሂብን መከታተል እና ማስተዳደር ይችላል።"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"የድርጅት አስተዳዳሪው ቅንብሮችን፣ ፈቃዶችን፣ የኮርፖሬት መዳረሻን፣ የአውታረ መረብ እንቅስቃሴን እና የመሳሪያውን አካባቢ መረጃን ጨምሮ ከዚህ መገለጫ ጋር የተጎዳኙ መተግበሪያዎችን እና ውሂብን መከታተል እና ማስተዳደር ይችላል።"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"የድርጅት አስተዳዳሪ ቅንብሮችን፣ ፈቃዶችን፣ የኮርፖሬት መዳረሻን፣ የአውታረ መረብ እንቅስቃሴን እና የተሽከርካሪውን አካባቢ መረጃን ጨምሮ ከዚህ የኢንፎቴይንመንት ስርዓት ጋር የተጎዳኙ መተግበሪያዎችን እና ውሂብን መቆጣጠር እና ማስተዳደር ይችላል።"</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ይህ የሳንካ ሪፖርት ለዚህ ተሽከርካሪ ድርጅት አስተዳዳሪ እየተጋራ ነው። ተጨማሪ ዝርዝሮችን ለማግኘት ያነጋግሯቸው።"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"አጋራ"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"አትቀበል"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"የኢንፎቴንመንት ሥርዓቱን ዳግም ያስጀምሩት"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"የእርስዎ ሥርዓት የፋብሪካ ዳግም ለማስጀመር እና ሁሉንም ውሂብ የመደምሰስ ጥያቄ ተቀብሏል። አሁን ዳግም ሊያስጀምሩት ይችላሉ፣ ወይም መኪናው በሚቀጥለው ጊዜ ሲጀምር ዳግም ይጀምራል። ከዚያ አዲስ መገለጫ ማቀናበር ይችላሉ።"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"አሁን ዳግም አስጀምር"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"በኋላ ዳግም አስጀምር"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"መኪናው በሚቀጥለው ጊዜ ሲጀምር የኢንፎቴይንመንት ሥርዓቱ ዳግም ይጀምራል።"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ዳግም ማስጀመርን ለመጀመር መኪናው መቆም አለበት።"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ይህ ቅንብር አሁን መቀየር አይችልም"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ተደራሽነት"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"መግለጫ ፅሁፎች"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ን ይጠቀሙ"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"አማራጮች"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ቅንብሮች"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"ካሜራ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ካሜራ ይጠቀሙ"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ሁሉም መተግበሪያዎች የእርስዎን ካሜራ እንዲደርሱ ይፍቀዱላቸው"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"የካሜራ ፈቃዶችን ያቀናብሩ"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"በቅርብ ጊዜ የተደረሰ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ምንም የቅርብ ጊዜ መተግበሪያዎች የሉም"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 መተግበሪያዎች መዳረሻ አለው"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# ከ{total_count} መተግበሪያዎች መዳረሻ አለው}one{# ከ{total_count} መተግበሪያዎች መዳረሻ አላቸው}other{# ከ{total_count} መተግበሪያዎች መዳረሻ አላቸው}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"በቅርብ ጊዜ የተደረሰ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ሁሉንም ይመልከቱ"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"በመጫን ላይ…"</string>
 </resources>

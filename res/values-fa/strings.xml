@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"دسترسی به داده‌ها با استفاده از شبکه تلفن همراه"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"شبکه تلفن همراه"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"استفاده از داده تلفن همراه"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"خاموش"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"داده تلفن همراه خاموش شود؟"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"انتخاب ضروری است"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"استفاده از <xliff:g id="CARRIER">%1$s</xliff:g> برای داده همراه؟"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"اسکن کردن Wi-Fi روشن شد"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"تغییر وضعیت خودکار به داده تلفن همراه"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"وقتی Wi-Fi به اینترنت دسترسی ندارد، از داده تلفن همراه استفاده شود. ممکن است هزینه مصرف داده اعمال شود."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"پیدا کردن شبکه‌های Wi-Fi و اتصال به آن‌ها"</string>
     <string name="learn_more" msgid="8214605928933358604">"بیشتر بدانید"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"نام نقطه اتصال"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"درحال روشن کردن <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
@@ -225,7 +227,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"همه زبان‌ها"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"صفحه‌کلید"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"مدیریت صفحه‌کلیدها"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"خروجی تبدیل نوشتار به گفتار"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"خروجی نوشتار به گفتار"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"موتور ترجیحی"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"موتور کنونی"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"سرعت گفتار"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"به برنامه‌های یاری‌رسان رانندگی اجازه دسترسی به مکان داده می‌شود"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"اگر این تنظیم را خاموش کنید، برنامه‌های «دستیار راننده» که بر اطلاعات مکان متکی‌اند غیرفعال خواهد شد."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"درهرصورت خاموش شود"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"درخواست‌های اخیر مکان"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"درخواست مکان جدیدی وجود ندارد"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"مشاهده همه برنامه‌ها"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"برنامه اخیری وجود ندارد"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • دستیار راننده"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"اجازه‌های سطح برنامه"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات مکان"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"استفاده از مکان"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"اولویت‌های برنامه بازنشانی شده است"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"پاک‌سازی داده‌ها (بازنشانی کارخانه‌ای)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"پاک کردن همه داده‌ها و نمایه‌های سیستم اطلاعات-سرگرمی"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"با این کار، همه داده‌های سیستم اطلاعات-سرگرمی خودرو پاک می‌شود، ازجمله:\n\n"<li>"حساب Google شما"</li>\n<li>"تنظیمات و داده‌های برنامه و سیستم"</li>\n<li>"برنامه‌های بارگیری‌شده"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"با این کار، همه داده‌های سیستم اطلاعات-سرگرمی خودرو پاک می‌شود، ازجمله:\n\n"<li>"حساب‌ها و نمایه‌های شما"</li>\n<li>"تنظیمات و داده‌های برنامه و سیستم"</li>\n<li>"برنامه‌های بارگیری‌شده"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"درحال‌حاضر به سیستم حساب های زیر وارد شده‌اید:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"نمایه‌های دیگری برای این خودرو راه‌اندازی شده است."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"پاک کردن تمام داده‌ها"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"انتخاب سرپرست جدید"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"حداقل یک سرپرست لازم دارید. برای حذف این سرپرست، ابتدا جایگزینی انتخاب کنید."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"انتخاب سرپرست"</string>
-    <string name="user_guest" msgid="3465399481257448601">"مهمان"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"مهمان"</string>
     <string name="user_switch" msgid="6544839750534690781">"جابه‌جایی"</string>
     <string name="current_user_name" msgid="3813671533249316823">"شما (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"حساب‌های <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"همگام‌سازی خودکار داده‌ها"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"اجازه دادن به برنامه‌ها برای بازآوری خودکار داده‌ها"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"همگام‌سازی خودکار داده روشن شود؟"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"هر تغییری که در حساب‌هایتان در وب بدهید، به‌طور خودکار در دستگاهتان کپی می‌شود.\n\nبرخی حساب‌ها هم ممکن است به‌طور خودکار هر تغییری را که در تلفنتان می‌دهید در وب کپی کنند. حساب Google به‌این‌صورت کار می‌کند."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"همگام‌سازی خودکار داده خاموش شود؟"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"همگام‌سازی خودکار داده‌ها مجاز شود؟"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"هر تغییری که در حساب‌هایتان در وب ایجاد می‌کنید به‌صورت خودکار در خودروی شما کپی می‌شود.\n\nبرخی‌از حساب‌ها نیز ممکن است هر تغییری را که در خودرو ایجاد می‌کنید به‌طور خودکار در وب کپی کنند."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"همگام‌سازی خودکار داده‌ها غیرمجاز شود؟"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"با این کار از داده‌ها محافظت می‌شود، اما برای جمع‌آوری اطلاعات اخیر باید همه حساب‌ها را به‌طور دستی همگام‌سازی کنید. درصورت به‌روزرسانی نیز اعلان دریافت نمی‌کنید."</string>
     <string name="account_details_title" msgid="7529571432258448573">"اطلاعات حساب"</string>
     <string name="add_account_title" msgid="5988746086885210040">"افزودن حساب"</string>
@@ -609,9 +612,11 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"اکنون همگام‌سازی شود"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"لغو همگام‌سازی"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"همگام‌سازی درحال حاضر با مشکلی روبرو است. به‌زودی درست خواهد شد."</string>
-    <string name="privacy_settings_title" msgid="3150145262029229572">"حریم‌خصوصی"</string>
+    <string name="privacy_settings_title" msgid="3150145262029229572">"حریم خصوصی"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"داده‌های سیستم اطلاعات-سرگرمی"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"کنترل دسترسی برنامه به مکانتان"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"دوربین"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"کنترل دسترسی برنامه به دوربین‌های شما"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"میکروفون"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"کنترل دسترسی برنامه به میکروفون"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"داده‌های سیستم اطلاعات-سرگرمی"</string>
@@ -675,12 +680,12 @@
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"باید حداقل ۴ نویسه داشته باشد"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"فقط می‌تواند اعداد ۰ تا ۹ داشته باشد."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"سرپرست دستگاه اجازه استفاده از پین اخیر را نمی‌دهد"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"پین‌های رایج توسط سرپرست سیستمتان شما مسدود شده‌اند. پین متفاوتی را امتحان کنید."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"«پین‌های رایج» توسط سرپرست فناوری اطلاعات مسدود شده‌اند. پین دیکری را امتحان کنید."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"نمی‌تواند نویسه نامعتبر داشته باشد."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"گذرواژه نامعتبر است، گذرواژه باید حداقل ۴ نویسه داشته باشد."</string>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"سرپرست دستگاه اجازه استفاده از گذرواژه اخیر را نمی‌دهد"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"خطای ذخیره گذرواژه"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"گذرواژه‌های رایج توسط سرپرست سیستمتان مسدود شده‌اند. گذرواژه متفاوتی را امتحان کنید."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"گذرواژه‌های رایج توسط سرپرست فناوری اطلاعات مسدود شده‌اند. گذرواژه متفاوتی را امتحان کنید."</string>
     <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"باید حداقل یک حرف داشته باشد"</string>
     <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"باید حداقل یک رقم داشته باشد"</string>
     <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"باید حداقل یک نماد داشته باشد"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"حذف"</string>
     <string name="cancel" msgid="750286395700355455">"لغو"</string>
     <string name="allow" msgid="7519431342750394402">"مجاز"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"اجازه ندادن"</string>
     <string name="deny" msgid="340512788979930804">"رد کردن"</string>
     <string name="backspace_key" msgid="1545590866688979099">"کلید پس‌بر"</string>
     <string name="enter_key" msgid="2121394305541579468">"کلید را وارد کنید"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"فعال کردن این برنامه سیستم اطلاعات-سرگرمی"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"غیرفعال کردن و حذف کردن نصب"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"غیرفعال کردن این برنامه سیستم اطلاعات-سرگرمی"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"جزئیات بیشتر"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"مدیر سازمان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه، ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه، و اطلاعات مکان خودرو نظارت داشته باشد و آن‌ها را مدیریت کند."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"مدیر سازمان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه، ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه، و اطلاعات مکان دستگاه نظارت داشته باشد و آن‌ها را مدیریت کند."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"مدیر سازمان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این سیستم اطلاعات-سرگرمی، ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه، و اطلاعات مکان خودرو نظارت داشته باشد و آن‌ها را مدیریت کند."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"این گزارش اشکال درحال هم‌رسانی با مدیر سازمان این خودرو است. برای جزئیات بیشتر با او تماس بگیرید."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"هم‌رسانی"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"رد کردن"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"بازنشانی سیستم اطلاعات-سرگرمی"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"سیستم درخواستی برای بازنشانی کارخانه‌ای و پاک کردن همه داده‌ها دریافت کرده است. می‌توانید آن را اکنون بازنشانی کنید، یا دفعه بعدی که خودرو راه‌اندازی می‌شود سیستم بازنشانی خواهد شد. می‌توانید بعداً نمایه جدیدی راه‌اندازی کنید."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"اکنون بازنشانی شود"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"بعداً بازنشانی شود"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"دفعه بعدی که خودرو راه‌اندازی شد، سیستم اطلاعات-سرگرمی بازنشانی می‌شود."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"برای شروع بازنشانی، خودرو باید پارک شده باشد."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"درحال‌حاضر نمی‌توان این تنظیم را تغییر داد"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"دسترس‌پذیری"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"زیرنویس ناشنوایان"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"استفاده از <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"گزینه‌ها"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"تنظیمات"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"دوربین"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"استفاده از دوربین"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"همه برنامه‌ها مجاز می‌شوند به دوربین دسترسی داشته باشند"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"مدیریت اجازه‌های دوربین"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"هیچ برنامه جدیدی موجود نیست"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"هیچ برنامه‌ای دسترسی ندارد"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# برنامه از {total_count} برنامه دسترسی دارد}one{# برنامه از {total_count} برنامه دسترسی دارد}other{# برنامه از {total_count} برنامه دسترسی دارد}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"مشاهده همه موارد"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"درحال بارگیری…"</string>
 </resources>

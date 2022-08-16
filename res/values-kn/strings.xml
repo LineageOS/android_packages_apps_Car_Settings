@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಿ"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ಆಫ್"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ಮೊಬೈಲ್ ಡೇಟಾ ಆಫ್ ಮಾಡಬೇಕೆ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ಆಯ್ಕೆ ಅಗತ್ಯವಿದೆ"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ಮೊಬೈಲ್ ಡೇಟಾಗಾಗಿ <xliff:g id="CARRIER">%1$s</xliff:g> ಬಳಸುವುದೇ?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"ವೈ-ಫೈ ಸ್ಕ್ಯಾನಿಂಗ್ ಅನ್ನು ಆನ್ ಮಾಡಲಾಗಿದೆ"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ಮೊಬೈಲ್ ಡೇಟಾಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬದಲಿಸಿ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ವೈ-ಫೈ ಯಾವುದೇ ಇಂಟರ್ನೆಟ್ ಪ್ರವೇಶವನ್ನು ಹೊಂದಿರದಿದ್ದರೆ, ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಿ. ಡೇಟಾ ಬಳಕೆಯ ಶುಲ್ಕ ಅನ್ವಯಿಸಬಹುದು."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಹುಡುಕಿ, ಕನೆಕ್ಟ್ ಮಾಡಿ"</string>
     <string name="learn_more" msgid="8214605928933358604">"ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ಹಾಟ್‌ಸ್ಪಾಟ್ ಹೆಸರು"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ಆನ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸುವಲ್ಲಿ ಡ್ರೈವಿಂಗ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಸ್ಥಳ ಮಾಹಿತಿಯ ಮೇಲೆ ಅವಲಂಬಿತವಾದ ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತದೆ."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ಹೇಗಿದ್ದರೂ ಆಫ್ ಮಾಡಿ"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ಯಾವುದೇ ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು ಇಲ್ಲ"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"ಇತ್ತೀಚೆಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ಇತ್ತೀಚೆಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"ಇತ್ತೀಚಿನ ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ಆ್ಯಪ್‌ ಹಂತದ ಅನುಮತಿಗಳು"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ಸ್ಥಳ ಸೇವೆಗಳು"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ಸ್ಥಳವನ್ನು ಬಳಸಿ"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಆ್ಯಪ್‍ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ರಿಸೆಟ್)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನ ಎಲ್ಲಾ ಡೇಟಾ ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸುತ್ತದೆ"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ಇದರಿಂದಾಗಿ ಈ ಕೆಳಗಿನವೂ ಸೇರಿದಂತೆ, ನಿಮ್ಮ ವಾಹನದ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ:\n\n"<li>"ನಿಮ್ಮ Google ಖಾತೆ"</li>\n<li>"ಸಿಸ್ಟಂ ಮತ್ತು ಆ್ಯಪ್ ಡೇಟಾ ಹಾಗೂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</li>\n<li>"ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಆ್ಯಪ್‌ಗಳು"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ಇದರಿಂದಾಗಿ ಈ ಕೆಳಗಿನವೂ ಸೇರಿದಂತೆ, ನಿಮ್ಮ ವಾಹನದ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ:\n\n"<li>"ನಿಮ್ಮ ಖಾತೆಗಳು ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗಳು"</li>\n<li>"ಸಿಸ್ಟಂ ಮತ್ತು ಆ್ಯಪ್ ಡೇಟಾ ಹಾಗೂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</li>\n<li>"ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾದ ಆ್ಯಪ್‌ಗಳು"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"ನೀವು ಪ್ರಸ್ತುತವಾಗಿ ಕೆಳಗಿನ ಖಾತೆಗಳಿಗೆ ಸೈನ್ ಇನ್ ಆಗಿರುವಿರಿ:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ಈ ವಾಹನಕ್ಕಾಗಿ ಇತರ ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಸೆಟಪ್ ಮಾಡಲಾಗಿದೆ."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಿ"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"ಹೊಸ ನಿರ್ವಾಹಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"ನಿಮಗೆ ಕನಿಷ್ಟ ಒಂದು ನಿರ್ವಾಹಕ ಅಗತ್ಯವಿರುತ್ತದೆ. ಇದನ್ನು ಅಳಿಸಲು, ಮೊದಲು ಬದಲಿ ಆಯ್ಕೆ ಮಾಡಿ."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"ನಿರ್ವಾಹಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"</string>
-    <string name="user_guest" msgid="3465399481257448601">"ಅತಿಥಿ"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"ಅತಿಥಿ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ಬದಲಿಸಿ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ನೀವು (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ಹೆಸರು"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ಅವರಿಗಾಗಿ ಖಾತೆಗಳು"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ಡೇಟಾವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಿಂಕ್ ಮಾಡಿ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ಆ್ಯಪ್‌ಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಡೇಟಾವನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲು ಬಿಡಿ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆನ್‌‌ಮಾಡುವುದೇ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ವೆಬ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಗಳಿಗೆ ಮಾಡಲಾದ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಮ್ಮ ಸಾಧನಕ್ಕೆ ನಕಲಿಸಲಾಗುತ್ತದೆ. \n\nಫೋನ್‌ನಲ್ಲಿ ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಕೆಲವು ಖಾತೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ವೆಬ್‌ಗೆ ನಕಲಿಸುತ್ತವೆ. Google ಖಾತೆ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ರೀತಿ ಇದು."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆಫ್‌ ಮಾಡುವುದೇ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ಸ್ವಯಂಚಾಲಿತ ಡೇಟಾ ಸಿಂಕ್ ಅನ್ನು ಅನುಮತಿಸಬೇಕೇ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ವೆಬ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಗಳಲ್ಲಿ ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಮ್ಮ ವಾಹನಕ್ಕೆ ನಕಲಿಸಲಾಗುತ್ತದೆ.\n\nವಾಹನದಲ್ಲಿ ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ವೆಬ್‌ಗೆ ಕೆಲವು ಖಾತೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಕಲಿಸಬಹುದು."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ಸ್ವಯಂಚಾಲಿತ ಡೇಟಾ ಸಿಂಕ್ ಅನ್ನು ಅನುಮತಿಸಬಾರದೇ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ಇದು ಡೇಟಾ ಪೋಲಾಗದಂತೆ ತಡೆಯುತ್ತದೆ, ಆದರೆ ಇತ್ತೀಚಿನ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ನೀವು ಪ್ರತಿ ಖಾತೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಿಂಕ್‌ ಮಾಡಬೇಕಾಗುತ್ತದೆ. ಮತ್ತು ಅಪ್‌ಡೇಟ್‌ಗಳ ಸಂದರ್ಭದಲ್ಲಿ ನೀವು ಅಧಿಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ಖಾತೆಯ ಮಾಹಿತಿ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ಖಾತೆ ಸೇರಿಸಿ"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ಗೌಪ್ಯತೆ"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಡೇಟಾ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ನಿಮ್ಮ ಸ್ಥಳಕ್ಕೆ ಆ್ಯಪ್ ಪ್ರವೇಶವನ್ನು ನಿಯಂತ್ರಿಸಿ"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"ಕ್ಯಾಮರಾ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ನಿಮ್ಮ ಕ್ಯಾಮರಾಗಳಿಗೆ ಆ್ಯಪ್ ಪ್ರವೇಶವನ್ನು ನಿಯಂತ್ರಿಸಿ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ಮೈಕ್ರೋಫೋನ್"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ಮೈಕ್ರೋಫೋನ್‌ಗೆ ಆ್ಯಪ್‌ನ ಪ್ರವೇಶವನ್ನು ನಿಯಂತ್ರಿಸಿ"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಡೇಟಾ"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"ತೆಗೆದುಹಾಕಿ"</string>
     <string name="cancel" msgid="750286395700355455">"ರದ್ದುಮಾಡಿ"</string>
     <string name="allow" msgid="7519431342750394402">"ಅನುಮತಿಸಿ"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"ಅನುಮತಿಸಬೇಡಿ"</string>
     <string name="deny" msgid="340512788979930804">"ನಿರಾಕರಿಸಿ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace ಕೀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ಕೀಲಿಯನ್ನು ನಮೂದಿಸಿ"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಆ್ಯಪ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"ಇನ್ನಷ್ಟು ವಿವರಗಳು"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಬಳಕೆದಾರರಿಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ಸಾಧನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಪ್ರೊಫೈಲ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಅನುಮತಿಗಳು, ಕಾರ್ಪೊರೇಟ್‌ ಪ್ರವೇಶ, ನೆಟ್‌‌ವರ್ಕ್‌ ಚಟುವಟಿಕೆ ಮತ್ತು ವಾಹನದ ಸ್ಥಳ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಈ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂಗೆ ಸಂಬಂಧಿಸಿದ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಬಹುದು ಮತ್ತು ನಿರ್ವಹಿಸಬಹುದು."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ಈ ಬಗ್ ವರದಿಯನ್ನು ಈ ವಾಹನದ ಸಂಸ್ಥೆಯ ನಿರ್ವಾಹಕರ ಜೊತೆಗೆ ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ. ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗಾಗಿ ಅವರನ್ನು ಸಂಪರ್ಕಿಸಿ."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"ಹಂಚಿಕೊಳ್ಳಿ"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"ನಿರಾಕರಿಸಿ"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಅನ್ನು ರೀಸೆಟ್ ಮಾಡಿ"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ಫ್ಯಾಕ್ಟರಿ ರೀಸೆಟ್ ಮಾಡಲು ಮತ್ತು ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಲು ನಿಮ್ಮ ಸಿಸ್ಟಂ ವಿನಂತಿಯನ್ನು ಸ್ವೀಕರಿಸಿದೆ. ನೀವು ಅದನ್ನು ಈಗಲೇ ರೀಸೆಟ್ ಮಾಡಬಹುದು ಅಥವಾ ಮುಂದಿನ ಬಾರಿ ಕಾರ್ ಆರಂಭವಾದಾಗ ಅದನ್ನು ರೀಸೆಟ್ ಮಾಡಲಾಗುತ್ತದೆ. ನಂತರ ನೀವು ಹೊಸ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಸೆಟಪ್ ಮಾಡಬಹುದು."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ಈಗಲೇ ರೀಸೆಟ್ ಮಾಡಿ"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"ನಂತರ ರೀಸೆಟ್ ಮಾಡಿ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"ಮುಂದಿನ ಬಾರಿ ಕಾರ್ ಆರಂಭವಾದಾಗ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಅನ್ನು ರೀಸೆಟ್ ಮಾಡಲಾಗುತ್ತದೆ."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ರೀಸೆಟ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಕಾರ್ ಅನ್ನು ನಿಲ್ಲಿಸಿರಬೇಕು."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ಈ ಸೆಟ್ಟಿಂಗ್‌ ಅನ್ನು ಸದ್ಯಕ್ಕೆ ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ಪ್ರವೇಶಿಸುವಿಕೆ"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"ಶೀರ್ಷಿಕೆಗಳು"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ಅನ್ನು ಬಳಸಿ"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ಆಯ್ಕೆಗಳು"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"ಕ್ಯಾಮರಾ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ಕ್ಯಾಮರಾವನ್ನು ಬಳಸಿ"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ನಿಮ್ಮ ಕ್ಯಾಮರಾವನ್ನು ಪ್ರವೇಶಿಸಲು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"ಕ್ಯಾಮರಾ ಅನುಮತಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"ಇತ್ತೀಚಿಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ಇತ್ತೀಚಿನ ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ಆ್ಯಪ್‌ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗೆ ಪ್ರವೇಶವಿದೆ}one{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ}other{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ಇತ್ತೀಚಿಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ಲೋಡ್ ಆಗುತ್ತಿದೆ…"</string>
 </resources>

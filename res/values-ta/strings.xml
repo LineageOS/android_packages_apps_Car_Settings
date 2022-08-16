@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"மொபைல் நெட்வொர்க் மூலம் டேட்டாவைப் பயன்படுத்து"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"மொபைல் நெட்வொர்க்"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"மொபைல் டேட்டாவைப் பயன்படுத்தும்"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"முடக்கப்பட்டது"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"மொபைல் டேட்டாவை ஆஃப் செய்யவா?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"தேர்ந்தெடுக்க வேண்டும்"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"டேட்டாவிற்கு <xliff:g id="CARRIER">%1$s</xliff:g>ஐ உபயோகிக்கவா?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"வைஃபை ஸ்கேனிங் ஆன் செய்யப்பட்டது"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"தானாகவே மொபைல் டேட்டாவிற்கு மாறு"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"வைஃபையில் இணைய அணுகல் இல்லாதபோது மொபைல் டேட்டாவைப் பயன்படுத்தும். டேட்டா உபயோகத்திற்குக் கட்டணம் விதிக்கப்படலாம்."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"வைஃபை நெட்வொர்க்குகளைக் கண்டறிந்து இணைக்கும்"</string>
     <string name="learn_more" msgid="8214605928933358604">"மேலும் அறிக"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ஹாட்ஸ்பாட் பெயர்"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ஆன் ஆகிறது..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"வாகனம் ஓட்ட உதவும் ஆப்ஸை இருப்பிடத்தை அணுக அனுமதிக்கவும்"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"இதை முடக்கினால் இருப்பிடத் தகவல்களைச் சார்ந்துள்ள ஓட்டுநர் உதவி ஆப்ஸ் முடக்கப்படும்."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"பரவாயில்லை, முடக்கு"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள்"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள் இல்லை"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"சமீபத்தில் அணுகியவை"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"சமீபத்தில் அணுகியவை"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"அனைத்தையும் காட்டுதல்"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ஓட்டுநர் உதவி"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ஆப்ஸ் நிலை அனுமதிகள்"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"இருப்பிடச் சேவைகள்"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ஆப்ஸ் விருப்பத்தேர்வுகள் மீட்டமைக்கப்பட்டன"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"அனைத்தையும் அழி (ஆரம்பநிலைக்கு மீட்டமை)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள எல்லாத் தரவையும் சுயவிவரங்களையும் அழித்துவிடும்"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"இது உங்கள் வாகனத்தின் இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள எல்லாத் தரவையும் அழித்துவிடும், இவற்றில் அடங்குபவை:\n\n"<li>"உங்கள் Google கணக்கு"</li>\n<li>"சிஸ்டம் &amp; ஆப்ஸ் தரவு மற்றும் அமைப்புகள்"</li>\n<li>"பதிவிறக்கிய ஆப்ஸ்"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"இது உங்கள் வாகனத்தின் இன்ஃபோடெயின்மென்ட் சிஸ்டத்திலிருந்து அனைத்துத் தரவையும் அழித்துவிடும். இந்தத் தரவில் அடங்குபவை:\n\n"<li>"உங்கள் கணக்குகளும் சுயவிவரங்களும்"</li>\n<li>"சிஸ்டம் மற்றும் ஆப்ஸின் தரவும் அமைப்புகளும்"</li>\n<li>"பதிவிறக்கப்பட்ட ஆப்ஸ்"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"பின்வரும் கணக்குகளில் உள்நுழைந்துள்ளீர்கள்:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"இந்த வாகனத்திற்கான பிற சுயவிவரங்கள் அமைக்கப்பட்டன."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"எல்லாத் தரவையும் அழி"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"புதிய \'நிர்வாகிக் கணக்கைத்\' தேர்வு செய்க"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"குறைந்தபட்சம் ஒரு \'நிர்வாகிக் கணக்காவது’ இருக்க வேண்டும். இக்கணக்கை நீக்க, முதலில் ஒரு மாற்றுக் கணக்கைத் தேர்வு செய்யவும்."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"நிர்வாகியைத் தேர்வு செய்க"</string>
-    <string name="user_guest" msgid="3465399481257448601">"கெஸ்ட்"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"கெஸ்ட்"</string>
     <string name="user_switch" msgid="6544839750534690781">"பயனரை மாற்றும்"</string>
     <string name="current_user_name" msgid="3813671533249316823">"நீங்கள் (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"பெயர்"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> இன் கணக்குகள்"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"தானாகத் தரவை ஒத்திசை"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"தானாகத் தரவை ரெஃப்ரெஷ் செய்ய ஆப்ஸை அனுமதிக்கும்"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"தானாக ஒத்திசைப்பதை ஆன் செய்யவா?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"இணையத்திலுள்ள கணக்குகளில் நீங்கள் செய்யும் மாற்றங்கள் தானாகவே உங்கள் சாதனத்தில் நகலெடுக்கப்படும்.\n\n மொபைலில் நீங்கள் செய்யும் மாற்றங்களையும் சில கணக்குகள் தானாகவே இணையத்தில் நகலெடுக்கக்கூடும். Google கணக்கு இவ்வாறுதான் செயல்படுகிறது."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"தானாக ஒத்திசைப்பதை ஆஃப் செய்யவா?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"தானியங்கு தரவு ஒத்திசைவை அனுமதிக்கவா?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"இணையத்தில் உங்கள் கணக்குகளில் ஏதேனும் மாற்றங்களைச் செய்தால் அவை தானாகவே உங்கள் வாகனத்திற்கு நகலெடுக்கப்படும்.\n\nவாகனத்தில் நீங்கள் செய்யும் மாற்றங்களையும் சில கணக்குகள் தானாகவே இணையத்திற்கு நகலெடுக்கக்கூடும்."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"தானியங்கு தரவு ஒத்திசைவை அனுமதிக்க வேண்டாமா?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"இவ்வாறு செய்வது தரவைச் சேமிக்கும், ஆனால் சமீபத்திய தகவலைச் சேகரிக்க ஒவ்வொரு கணக்கையும் நீங்களே நேரடியாக ஒத்திசைக்க வேண்டும். புதுப்பிக்கப்படும்போது அறிவிப்புகளைப் பெறமாட்டீர்கள்."</string>
     <string name="account_details_title" msgid="7529571432258448573">"கணக்குத் தகவல்"</string>
     <string name="add_account_title" msgid="5988746086885210040">"கணக்கைச் சேர்க்கவும்"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"தனியுரிமை"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"இருப்பிடத்திற்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்து"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"கேமரா"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"கேமராக்களுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தும்"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"மைக்ரோஃபோன்"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"மைக்ரோஃபோனுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தலாம்"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் தரவு"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"அகற்று"</string>
     <string name="cancel" msgid="750286395700355455">"ரத்துசெய்"</string>
     <string name="allow" msgid="7519431342750394402">"அனுமதி"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"அனுமதிக்க வேண்டாம்"</string>
     <string name="deny" msgid="340512788979930804">"நிராகரி"</string>
     <string name="backspace_key" msgid="1545590866688979099">"பேக்ஸ்பேஸ் விசை"</string>
     <string name="enter_key" msgid="2121394305541579468">"என்டர் விசை"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை இயக்கு"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"முடக்கி, நிறுவல் நீக்கு"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டம் ஆப்ஸை முடக்கு"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"கூடுதல் விவரங்கள்"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"இந்தச் சுயவிவரத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, வாகனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) நிறுவனத்தின் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"இந்தச் சுயவிவரத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, சாதனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) நிறுவனத்தின் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"இந்த இன்ஃபோடெயின்மென்ட் சிஸ்டத்துடன் தொடர்புடைய ஆப்ஸையும் தரவையும் (அமைப்புகள், அனுமதிகள், கார்ப்பரேட் அணுகல், நெட்வொர்க் செயல்பாடு, வாகனத்தின் இருப்பிடத் தகவல் போன்றவை உட்பட) நிறுவனத்தின் நிர்வாகியால் கண்காணிக்கவும் நிர்வகிக்கவும் முடியும்."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"இந்தப் பிழை அறிக்கை வாகன நிறுவனத்தின் நிர்வாகியுடன் பகிரப்படுகிறது. மேலும் விவரங்களுக்கு அவரைத் தொடர்புகொள்ளவும்."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"பகிர்"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"நிராகரி"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தை மீட்டமையுங்கள்"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ஆரம்பநிலைக்கு மீட்டமைப்பதற்கும் அனைத்துத் தரவையும் அழிப்பதற்குமான கோரிக்கையை உங்கள் சிஸ்டம் பெற்றுள்ளது. இப்போது மீட்டமைக்கலாம் அல்லது அடுத்தமுறை காரை இயக்கத் தொடங்கும்போது மீட்டமைக்கப்படும். அதன்பிறகு புதிய சுயவிவரத்தை அமைக்கலாம்."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"இப்போதே மீட்டமை"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"பிறகு மீட்டமை"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"அடுத்தமுறை காரை இயக்கத் தொடங்கும்போது இன்ஃபோடெயின்மென்ட் சிஸ்டம் மீட்டமைக்கப்படும்."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"மீட்டமைத்தலைத் தொடங்க காரை நிறுத்த வேண்டும்."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"இந்த அமைப்பை இப்போது மாற்ற முடியாது"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"அணுகல்தன்மை"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"வசனங்கள்"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ஐப் பயன்படுத்து"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"விருப்பங்கள்"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"அமைப்புகள்"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"கேமரா"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"கேமராவைப் பயன்படுத்துதல்"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"கேமராவை அணுக அனைத்து ஆப்ஸையும் அனுமதிக்கும்"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"கேமரா அனுமதிகளை நிர்வகித்தல்"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"சமீபத்தில் அணுகியவை"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"எந்த ஆப்ஸுக்கும் அணுகல் இல்லை"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# / {total_count} ஆப்ஸுக்கு அணுகல் உள்ளது}other{# / {total_count} ஆப்ஸுக்கு அணுகல் உள்ளது}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"சமீபத்தில் அணுகியவை"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"அனைத்தையும் காட்டுதல்"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ஏற்றுகிறது…"</string>
 </resources>

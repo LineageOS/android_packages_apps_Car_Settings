@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ମୋବାଇଲ୍ ନେଟ୍‌ୱର୍କକୁ ବ୍ୟବହାରକରି ଡାଟା ଆକ୍ସେସ୍ କରନ୍ତୁ"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ମୋବାଇଲ ନେଟୱାର୍କ"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ବନ୍ଦ ଅଛି"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ମୋବାଇଲ୍‌ ଡାଟା ବନ୍ଦ କରିବେ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ଆବଶ୍ୟକୀୟ ମନୋନୟନ"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ମୋବାଇଲ୍ ଡାଟା ପାଇଁ <xliff:g id="CARRIER">%1$s</xliff:g> ବ୍ୟବହାର କରିନ୍ତୁ?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"ୱାଇ-ଫାଇ ସ୍କାନିଂ ଚାଲୁ ଅଛି"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ସ୍ୱଚାଳିତ ଭାବେ ମୋବାଇଲ୍ ଡାଟାକୁ ସ୍ୱିଚ୍ କରନ୍ତୁ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fiର ଇଣ୍ଟର୍ନେଟ୍ ଆକ୍ସେସ୍ ନଥିବା ବେଳେ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରନ୍ତୁ। ଡାଟା ବ୍ୟବହାର ଦେୟ ଲାଗୁ ହୋଇପାରେ।"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"ୱାଇ-ଫାଇ ନେଟୱାର୍କ ଖୋଜି ସେଥିରେ ସଂଯୋଗ କରନ୍ତୁ"</string>
     <string name="learn_more" msgid="8214605928933358604">"ଅଧିକ ଜାଣନ୍ତୁ"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ହଟ୍‌ସ୍ପଟ୍ ନାମ"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ଚାଲୁ ହେଉଛି..."</string>
@@ -218,7 +220,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ସାଧାରଣତଃ 0000 କିମ୍ବା 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ପେୟାରିଙ୍ଗ ଅନୁରୋଧ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ସହ ପେୟାର୍‌ କରିବାକୁ ଟାପ୍‌ କରନ୍ତୁ"</string>
-    <string name="bluetooth_device_picker" msgid="673238198452345475">"ବ୍ଲୁଟୂଥ୍ ଡିଭାଇସ୍ ଚୟନ କରନ୍ତୁ"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"ବ୍ଲୁଟୂଥ ଡିଭାଇସ ବାଛନ୍ତୁ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ଭାଷା"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ଭାଷା ଓ ଇନ୍‌‌ପୁଟ୍‌"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"ପରାମର୍ଶିତ"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିବାକୁ ଡ୍ରାଇଭିଂରେ ସାହାଯ୍ୟ କରୁଥିବା ଆପ୍ସକୁ ଅନୁମତି ଦିଅ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପଗୁଡ଼ିକ ଅକ୍ଷମ ହୋଇଯିବ।"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ବର୍ତ୍ତମାନର ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ଆପ୍‍ ଅଗ୍ରାଧିକାର ରିସେଟ୍‍ ହୋଇଛି"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ସବୁ ଡାଟା ଖାଲି କରନ୍ତୁ (ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମରୁ ସମସ୍ତ ଡାଟା ଏବଂ ପ୍ରୋଫାଇଲକୁ ଡିଲିଟ୍ କରନ୍ତୁ"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ଏହା, ଆପଣଙ୍କ ଗାଡ଼ିର ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମର ସମସ୍ତ ଡାଟା ଖାଲି କରିବ:\n\n"<li>"ଆପଣଙ୍କ Google ଆକାଉଣ୍ଟ"</li>\n<li>"ସିଷ୍ଟମ ଏବଂ ଆପ୍ ଡାଟା ଓ ସେଟିଂସ୍"</li>\n<li>"ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଆପଗୁଡ଼ିକ"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ଏହା, ନିମ୍ନୋକ୍ତ ସମେତ ଆପଣଙ୍କ ଗାଡ଼ିର ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମର ସମସ୍ତ ଡାଟା ଖାଲି କରିଦେବ:\n\n"<li>"ଆପଣଙ୍କ ଆକାଉଣ୍ଟ ଏବଂ ପ୍ରୋଫାଇଲଗୁଡ଼ିକ"</li>\n<li>"ସିଷ୍ଟମ ଏବଂ ଆପ ଡାଟା ଓ ସେଟିଂସ"</li>\n<li>"ଡାଉନଲୋଡ କରାଯାଇଥିବା ଆପଗୁଡ଼ିକ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"ଆପଣ ବର୍ତ୍ତମାନ ନିମ୍ନୋକ୍ତ ଆକାଉଣ୍ଟଗୁଡ଼ିକରେ ସାଇନ୍ ଇନ୍ କରିଛନ୍ତି:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ଏହି ଗାଡ଼ି ପାଇଁ ଅନ୍ୟ ପ୍ରୋଫାଇଲଗୁଡ଼ିକୁ ସେଟ୍ ଅପ୍ କରାଯାଇଛି।"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ସମସ୍ତ ଡାଟା ଖାଲି କରନ୍ତୁ"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"ନୂଆ ଆଡ୍‌ମିନ୍‌ ବାଛନ୍ତୁ"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"ଆପଣ ଅତିକମ୍‍ରେ ଜଣେ ଆଡ୍‌ମିନ୍‌ ଆବଶ୍ଯକ କରନ୍ତି। ଏହା ଡିଲିଟ୍‍ କରିବାକୁ, ପ୍ରଥମେ ଏକ ପ୍ରତ୍ୟାବର୍ତ୍ତନ ବାଛନ୍ତୁ।"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"ଆଡ୍‌ମିନ୍‌ ବାଛନ୍ତୁ"</string>
-    <string name="user_guest" msgid="3465399481257448601">"ଅତିଥି"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"ଅତିଥି"</string>
     <string name="user_switch" msgid="6544839750534690781">"ବଦଳାନ୍ତୁ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ଆପଣ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ନାମ"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ପାଇଁ ଆକାଉଣ୍ଟ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ସ୍ୱଚାଳିତ ଭାବେ ଡାଟା ସିଙ୍କ ହେଉ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ଆପ୍‌କୁ ସ୍ୱଚାଳିତ ଭାବେ ଡାଟା ସତେଜ କରିବାକୁ ଦିଅନ୍ତୁ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ସ୍ୱଚାଳିତ-ସିଙ୍କ ଡାଟା ଚାଲୁ କରିବେ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ୱେବ୍‌ରେ ଆପଣ ନିଜ ଆକାଉଣ୍ଟରେ ଯାହାକିଛି ବି ପରିବର୍ତ୍ତନ କରିବେ, ତାହା ଅଟୋମେଟିକାଲୀ ଆପଣଙ୍କ ଡିଭାଇସ୍‌କୁ ଚାଲିଆସିବ।\n\nକେତେକ ଆକାଉଣ୍ଟ, ଫୋନ୍‌ରେ କରାଯାଇଥିବା ପରିବର୍ତ୍ତନକୁ ଅଟୋମେଟିକଲୀ ୱେବ୍‌କୁ ନେଇଯାଆନ୍ତି। ଗୋଟିଏ ଗୁଗଲ୍‌ ଆକାଉଣ୍ଟ, ଏହିପରି କାମ କରିଥାଏ।"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ସ୍ୱଚାଳିତ ଭାବେ ଡାଟା ସିଙ୍କ ହେବାକୁ ଅଫ୍‌ କରିବେ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ସ୍ୱଚାଳିତ ଡାଟା ସିଙ୍କ କରିବାର ଅନୁମତି ଦେବେ କି?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ଆପଣ ୱେବ ମାଧ୍ୟମରେ ଆପଣଙ୍କ ଆକାଉଣ୍ଟଗୁଡ଼ିକରେ କରିଥିବା ଯେ କୌଣସି ପରିବର୍ତ୍ତନ ସ୍ୱଚାଳିତ ଭାବେ ଆପଣଙ୍କ ଗାଡ଼ିକୁ କପି କରାଯିବ।\n\nଆପଣ ଗାଡ଼ିରେ କରିଥିବା ଯେ କୌଣସି ପରିବର୍ତ୍ତନକୁ କିଛି ଆକାଉଣ୍ଟ ସ୍ୱଚାଳିତ ଭାବେ ୱେବକୁ ମଧ୍ୟ କପି କରିପାରେ।"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ସ୍ୱଚାଳିତ ଡାଟା ସିଙ୍କ କରିବାର ଅନୁମତିକୁ ବାତିଲ କରିବେ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ଏହା ମୋବାଇଲ୍ ଡାଟା କମ୍ ବ୍ୟବହାର ହେବ, କିନ୍ତୁ ତାଜା ସୂଚନା ସଂଗ୍ରହ କରିବା ପାଇଁ ପ୍ରତ୍ୟେକ ଆକାଉଣ୍ଟକୁ ମାନୁଆଲୀ ସିଙ୍କ କରିବାକୁ ପଡ଼ିବ ଏବଂ ଆପଣ ଅପ୍‌ଡେଟ୍‌ ହେଲେ ଆପଣ ବିଜ୍ଞପ୍ତି ପ୍ରାପ୍ତ କରିବେ ନାହିଁ।"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ଆକାଉଣ୍ଟ ସୂଚନା"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ଗୋପନୀୟତା"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ଡାଟା"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ଆପଣଙ୍କ ଲୋକେସନକୁ ଆପର ଆକ୍ସେସ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"କ୍ୟାମେରା"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ଆପଣଙ୍କ କ୍ୟାମେରାଗୁଡ଼ିକୁ ଆପର ଆକ୍ସେସ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ମାଇକ୍ରୋଫୋନକୁ ଆପ୍ ଆକ୍ସେସ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ଡାଟା"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"କାଢ଼ିଦିଅନ୍ତୁ"</string>
     <string name="cancel" msgid="750286395700355455">"ବାତିଲ୍ କରନ୍ତୁ"</string>
     <string name="allow" msgid="7519431342750394402">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ"</string>
     <string name="deny" msgid="340512788979930804">"ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace କୀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"କୀ ଦବାନ୍ତୁ"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆପକୁ ସକ୍ରିୟ କରନ୍ତୁ"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"ନିଷ୍କ୍ରିୟ ଏବଂ ଅନଇନଷ୍ଟଲ କରନ୍ତୁ"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆପକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"ଅଧିକ ବିବରଣୀ"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"ସେଟିଂସ, ଅନୁମତି, କର୍ପୋରେଟ ଆକ୍ସେସ, ନେଟୱାର୍କ କାର୍ଯ୍ୟକଳାପ ଏବଂ ଗାଡ଼ିର ଲୋକେସନ ସୂଚନା ସମେତ ଏହି ପ୍ରୋଫାଇଲ ସହ ସମ୍ବନ୍ଧିତ ଥିବା ଆପ ଓ ଡାଟାକୁ ସଂସ୍ଥା ପରିଚାଳକ ମନିଟର ଓ ପରିଚାଳନା କରିପାରିବେ।"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ସେଟିଂସ, ଅନୁମତି, କର୍ପୋରେଟ ଆକ୍ସେସ, ନେଟୱାର୍କ କାର୍ଯ୍ୟକଳାପ ଏବଂ ଡିଭାଇସର ଲୋକେସନ ସୂଚନା ସମେତ ଏହି ପ୍ରୋଫାଇଲ ସହ ସମ୍ବନ୍ଧିତ ଥିବା ଆପ ଓ ଡାଟାକୁ ସଂସ୍ଥା ପରିଚାଳକ ମନିଟର ଓ ପରିଚାଳନା କରିପାରିବେ।"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"ସେଟିଂସ, ଅନୁମତି, କର୍ପୋରେଟ ଆକ୍ସେସ, ନେଟୱାର୍କ ସମ୍ବନ୍ଧିତ କାର୍ଯ୍ୟକଳାପ ଓ ଗାଡ଼ିର ଲୋକେସନ ସୂଚନା ସମେତ ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ସହ ସମ୍ବନ୍ଧିତ ଥିବା ଆପ ଓ ଡାଟାକୁ ସଂସ୍ଥା ପରିଚାଳକ ମନିଟର ଏବଂ ପରିଚାଳନା କରିପାରିବେ।"</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ଏହି ଗାଡ଼ିର ସଂସ୍ଥା ପରିଚାଳକଙ୍କ ସହ ଏହି ବଗ ରିପୋର୍ଟ ସେୟାର କରାଯାଉଛି। ଅଧିକ ବିବରଣୀ ପାଇଁ ତାଙ୍କ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ।"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"ସେୟାର କରନ୍ତୁ"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ରିସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ଆପଣଙ୍କର ସିଷ୍ଟମ୍ ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍ ଏବଂ ସମସ୍ତ ଡାଟା ଖାଲି କରିବାକୁ ଏକ ଅନୁରୋଧ ପ୍ରାପ୍ତ କରିଛି। ଆପଣ ଏବେ ଏହା ରିସେଟ୍ କରିପାରିବେ କିମ୍ବା ପରବର୍ତ୍ତୀ ସମୟରେ କାର୍ ଷ୍ଟାର୍ଟ ହେଲେ ଏହା ରିସେଟ୍ ହେବ। ଆପଣ ତା\'ପରେ ଏକ ନୂଆ ପ୍ରୋଫାଇଲ୍ ସେଟ୍ ଅପ୍ କରିପାରିବେ।"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ଏବେ ରିସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"ପରେ ରିସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"କାର୍ ଷ୍ଟାର୍ଟ ହେଲେ ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ରିସେଟ୍ ହେବ।"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ରିସେଟ୍ ଆରମ୍ଭ କରିବାକୁ କାର୍ ପାର୍କ କରାଯିବା ଆବଶ୍ୟକ।"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ବର୍ତ୍ତମାନ ଏହି ସେଟିଂକୁ ବଦଳାଯାଇପାରିବ ନାହିଁ"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ଆକ୍ସେସିବିଲିଟୀ"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"କ୍ୟାପସନଗୁଡ଼ିକ"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ବିକଳ୍ପଗୁଡ଼ିକ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ସେଟିଂସ"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"କ୍ୟାମେରା"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"କ୍ୟାମେରା ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ଆପଣଙ୍କ କ୍ୟାମେରାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ସମସ୍ତ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"କ୍ୟାମେରା ଅନୁମତିଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0ଟି ଆପର ଆକ୍ସେସ ଅଛି"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count}ଟିରୁ #ଟି ଆପର ଆକ୍ସେସ ଅଛି}other{{total_count}ଟିରୁ #ଟି ଆପର ଆକ୍ସେସ ଅଛି}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ସବୁ ଦେଖନ୍ତୁ"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ଲୋଡ ହେଉଛି…"</string>
 </resources>

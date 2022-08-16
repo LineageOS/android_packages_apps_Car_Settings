@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"മൊബൈൽ നെറ്റ്‌വർക്ക് ഉപയോഗിച്ച് ഡാറ്റ ആക്‌സസ് ചെയ്യുക"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"മൊബൈൽ നെറ്റ്‌വർക്ക്"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കുക"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ഓഫാണ്"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"മൊബൈൽ ഡാറ്റ ഓഫാക്കണോ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"തിരഞ്ഞെടുക്കേണ്ടത് ആവശ്യമാണ്"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"മൊബൈൽ ഡാറ്റയ്‌ക്ക് <xliff:g id="CARRIER">%1$s</xliff:g> വേണോ?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"വൈഫൈ സ്‌കാനിംഗ് ഓണാക്കി"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"മൊബൈൽ ഡാറ്റയിലേക്ക് സ്വയമേവ മാറുക"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"വൈഫൈയിൽ നിന്നുള്ള ഇന്‍റർനെറ്റ് ആക്‌സ‌സ് ഇല്ലാത്തപ്പോൾ മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കുക. ഡാറ്റാ ഉപയോഗ നിരക്കുകൾ ബാധകമായേക്കാം."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"വൈഫൈ നെറ്റ്‌വർക്ക് കണ്ടെത്തി, കണക്റ്റ് ചെയ്യൂ"</string>
     <string name="learn_more" msgid="8214605928933358604">"കൂടുതലറിയുക"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ഹോട്ട്‌സ്‌പോട്ടിന്റെ പേര്"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ഓണാക്കുന്നു..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ഡ്രെെവിംഗിന് സഹായിക്കുന്ന ആപ്പുകളെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കൂ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"എന്തായാലും ഓഫാക്കുക"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകൾ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകളൊന്നുമില്ല"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"എല്ലാം കാണുക"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"അടുത്തിടെ ഉപയോഗിച്ച ആപ്പുകളൊന്നുമില്ല"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ഡ്രൈവർ സഹായി"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ആപ്പ്-തല അനുമതികൾ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ലൊക്കേഷൻ സേവനങ്ങൾ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ആപ്പ് മുൻഗണനകൾ പുനഃസജ്ജീകരിച്ചു"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"എല്ലാ ഡാറ്റയും മായ്ക്കൂ (ഫാക്‌ടറി റീസെറ്റ്)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ഇൻഫോറ്റേയിൻമെന്റ് സി‌സ്‌റ്റത്തിൽ നിന്ന് എല്ലാ ഡാറ്റയും പ്രൊഫൈലുകളും മായ്‌ക്കുക"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ഇനിപ്പറയുന്നവ ഉൾപ്പെടെ നിങ്ങളുടെ വാഹനത്തിന്റെ ഇൻഫോറ്റേയിൻമെന്റ് സി‌സ്റ്റത്തിൽ നിന്നുള്ള എല്ലാ ഡാറ്റയും ഇത് മായ്‌ക്കും:\n\n"<li>"നിങ്ങളുടെ Google അക്കൗണ്ട്"</li>\n<li>"സിസ്‌റ്റത്തിന്റെയും ആപ്പിന്റെയും ഡാറ്റയും ക്രമീകരണവും"</li>\n<li>"ഡൗൺലോഡ് ചെയ്‌ത ആപ്പുകൾ"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ഇനിപ്പറയുന്നവ ഉൾപ്പെടെ നിങ്ങളുടെ വാഹനത്തിന്റെ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്റ്റത്തിൽ നിന്നുള്ള എല്ലാ ഡാറ്റയും ഇത് മായ്ക്കും:\n\n"<li>"നിങ്ങളുടെ അക്കൗണ്ടുകളും പ്രൊഫൈലുകളും"</li>\n<li>"സിസ്റ്റം, ആപ്പ് ഡാറ്റയും ക്രമീകരണവും"</li>\n<li>"ഡൗൺലോഡ് ചെയ്ത ആപ്പുകൾ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"നിലവിൽ നിങ്ങൾ ഇനിപ്പറയുന്ന അക്കൗണ്ടുകളിലേക്ക് സൈൻ ഇൻ ചെയ്‌തിരിക്കുന്നു:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ഈ വാഹനത്തിന് മറ്റ് പ്രൊഫെെലുകൾ സജ്ജീകരിച്ചിട്ടുണ്ട്."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"എല്ലാ ഡാറ്റയും മായ്ക്കുക"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"പുതിയ അഡ്‌മിനെ തിരഞ്ഞെടുക്കുക"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"ഒരു അഡ്‌മിൻ എങ്കിലും നിങ്ങൾക്ക് ആവശ്യമുണ്ട്. ഇത് ഇല്ലാതാക്കാൻ, നിലവിലുള്ളതിന്റെ ഒരു മാറ്റി സ്ഥാപിക്കൽ ആദ്യം തിരഞ്ഞെടുക്കുക."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"അഡ്‌മിനെ തിരഞ്ഞെടുക്കുക"</string>
-    <string name="user_guest" msgid="3465399481257448601">"അതിഥി"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"അതിഥി"</string>
     <string name="user_switch" msgid="6544839750534690781">"മാറുക"</string>
     <string name="current_user_name" msgid="3813671533249316823">"നിങ്ങൾ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"പേര്"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> എന്നയാളുടെ അക്കൗണ്ടുകൾ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ഡാറ്റ സ്വയമേവ സമന്വയിപ്പിക്കുക"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ഡാറ്റ സ്വയമേവ പുതുക്കിയെടുക്കാൻ ആപ്പുകളെ അനുവദിക്കുക"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ഡാറ്റാ സ്വയം സമന്വയം ഓണാക്കണോ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"വെബിൽ നിങ്ങളുടെ അക്കൗണ്ടുകളിൽ വരുത്തുന്ന മാറ്റങ്ങളെല്ലാം ഉപകരണത്തിലേക്ക് സ്വയമേവ പകർത്തും.\n\nഫോണിൽ വരുത്തുന്ന മാറ്റങ്ങളെല്ലാം ചില അക്കൗണ്ടുകൾ സ്വയമേവ വെബ്ബിലേക്കും പകർത്തിയേക്കാം. ഇങ്ങനെയാണ് Google അക്കൗണ്ട് പ്രവർത്തിക്കുന്നത്."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ഡാറ്റാ സ്വയം സമന്വയം ഓഫാക്കണോ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"സ്വയമേവയുള്ള ഡാറ്റാ സമന്വയം അനുവദിക്കണോ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"വെബിൽ നിങ്ങൾ വരുത്തുന്ന ഏതൊരു മാറ്റവും നിങ്ങളുടെ വാഹനത്തിലേക്ക് സ്വയമേവ പകർത്തും.\n\nവാഹനത്തിൽ നിങ്ങൾ വരുത്തുന്ന മാറ്റങ്ങളെല്ലാം ചില അക്കൗണ്ടുകൾ സ്വയമേവ വെബിലേക്കും പകർത്തിയേക്കാം."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"സ്വയമേവയുള്ള ഡാറ്റാ സമന്വയം അനുവദിക്കാതിരിക്കണോ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ഇത് ഡാറ്റ ലാഭിക്കും, എന്നാൽ അടുത്തിടെയുള്ള വിവരം ശേഖരിക്കാൻ, നിങ്ങൾ ഓരോ അക്കൗണ്ടും നേരിട്ട് സമന്വയിപ്പിക്കേണ്ടിവരും. അപ്‌ഡേറ്റുകൾ നടക്കുമ്പോൾ അറിയിപ്പുകൾ ലഭിക്കുകയുമില്ല."</string>
     <string name="account_details_title" msgid="7529571432258448573">"അക്കൗണ്ട് വിവരങ്ങൾ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"അക്കൗണ്ട് ചേർക്കുക"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"സ്വകാര്യത"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം ഡാറ്റ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"നിങ്ങളുടെ ലൊക്കേഷനിലേക്കുള്ള ആപ്പ് ആക്‌സസ് നിയന്ത്രിക്കുക"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"ക്യാമറ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"നിങ്ങളുടെ ക്യാമറകളിലേക്കുള്ള ആപ്പ് ആക്സസ് നിയന്ത്രിക്കുക"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"മൈക്രോഫോൺ"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"മൈക്രോഫോണിലേക്കുള്ള ആപ്പ് ആക്‌സസ് നിയന്ത്രിക്കുക"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ഇൻഫോറ്റേയിൻമെന്റ് സി‌സ്‌റ്റം ഡാറ്റ"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"നീക്കം ചെയ്യുക"</string>
     <string name="cancel" msgid="750286395700355455">"റദ്ദാക്കുക"</string>
     <string name="allow" msgid="7519431342750394402">"അനുവദിക്കുക"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"അനുവദിക്കരുത്"</string>
     <string name="deny" msgid="340512788979930804">"നിരസിക്കുക"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace കീ"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter കീ"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം ആപ്പ് സജീവമാക്കുക"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"നിഷ്ക്രിയമാക്കുക, അൺഇൻസ്റ്റാൾ ചെയ്യുക"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം ആപ്പ് നിഷ്ക്രിയമാക്കുക"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"കൂടുതൽ വിശദാംശങ്ങൾ"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"ക്രമീകരണവും അനുമതികളും കോർപ്പറേറ്റ് ആക്‌സസും നെറ്റ്‌വർക്ക് ആക്‌റ്റിവിറ്റിയും വാഹനത്തിന്റെ ലൊക്കേഷൻ വിവരങ്ങളും ഉൾപ്പെടെ, ഈ പ്രൊഫൈലുമായി ബന്ധപ്പെട്ട ആപ്പുകളും ഡാറ്റയും നിരീക്ഷിക്കാനും മാനേജ് ചെയ്യാനും നിങ്ങളുടെ സ്ഥാപനത്തിന്റെ മാനേജർക്ക് കഴിയും."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ക്രമീകരണവും അനുമതികളും കോർപ്പറേറ്റ് ആക്‌സസും നെറ്റ്‌വർക്ക് ആക്‌റ്റിവിറ്റിയും ഉപകരണത്തിന്റെ ലൊക്കേഷൻ വിവരങ്ങളും ഉൾപ്പെടെ, ഈ പ്രൊഫൈലുമായി ബന്ധപ്പെട്ട ആപ്പുകളും ഡാറ്റയും നിരീക്ഷിക്കാനും മാനേജ് ചെയ്യാനും നിങ്ങളുടെ സ്ഥാപനത്തിന്റെ മാനേജർക്ക് കഴിയും."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"ക്രമീകരണവും അനുമതികളും കോർപ്പറേറ്റ് ആക്‌സസും നെറ്റ്‌വർക്ക് ആക്‌റ്റിവിറ്റിയും വാഹനത്തിന്റെ ലൊക്കേഷൻ വിവരങ്ങളും ഉൾപ്പെടെ, ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റവുമായി ബന്ധപ്പെട്ട ആപ്പുകളും ഡാറ്റയും നിരീക്ഷിക്കാനും മാനേജ് ചെയ്യാനും സ്ഥാപനത്തിന്റെ മാനേജർക്ക് കഴിയും."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ഈ വാഹനവുമായി ബന്ധപ്പെട്ട സ്ഥാപനത്തിന്റെ മാനേജരുമായി ഈ ബഗ് റിപ്പോർട്ട് പങ്കിടുന്നു. കൂടുതൽ വിശദാംശങ്ങൾക്ക് അവരെ ബന്ധപ്പെടുക."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"പങ്കിടുക"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"നിരസിക്കുക"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം റീസെറ്റ് ചെയ്യുക"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ഫാക്‌ടറി റീസെറ്റിനും എല്ലാ ഡാറ്റയും മായ്ക്കാനുമുള്ള ഒരു അഭ്യർത്ഥന നിങ്ങളുടെ സിസ്‌റ്റത്തിന് ലഭിച്ചു. നിങ്ങൾക്കിത് ഇപ്പോൾ അല്ലെങ്കിൽ അടുത്ത തവണ കാർ സ്‌റ്റാർട്ട് ചെയ്യുമ്പോൾ റീസെറ്റ് ചെയ്യാം. നിങ്ങൾക്ക് തുടർന്ന് ഒരു പുതിയ പ്രൊഫൈൽ സജ്ജീകരിക്കാം."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ഇപ്പോൾ റീസെറ്റ് ചെയ്യൂ"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"പിന്നീട് റീസെറ്റ് ചെയ്യൂ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"അടുത്ത തവണ കാർ സ്റ്റാർട്ട് ചെയ്യുമ്പോൾ ഈ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്റ്റം റീസെറ്റ് ചെയ്യും."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"റീസെറ്റ് ആരംഭിക്കാൻ കാർ പാർക്ക് ചെയ്‌തിരിക്കണം."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ഈ ക്രമീകരണം ഇപ്പോൾ മാറ്റാനാകില്ല"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ഉപയോഗസഹായി"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"അടിക്കുറിപ്പുകൾ"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ഉപയോഗിക്കുക"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ഓപ്ഷനുകൾ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ക്രമീകരണം"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"ക്യാമറ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ക്യാമറ ഉപയോഗിക്കുക"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"നിങ്ങളുടെ ക്യാമറ ആക്‌സസ് ചെയ്യാൻ എല്ലാ ആപ്പുകളെയും അനുവദിക്കുക"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"ക്യാമറാ അനുമതികൾ മാനേജ് ചെയ്യുക"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"അടുത്തിടെ ഉപയോഗിച്ച ആപ്പുകളൊന്നുമില്ല"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ആപ്പുകൾക്കൊന്നിനും ആക്‌സസ് ഇല്ല"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ആപ്പുകളിൽ #-ന് ആക്‌സസ് ഉണ്ട്}other{{total_count} ആപ്പുകളിൽ #-ന് ആക്‌സസ് ഉണ്ട്}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"എല്ലാം കാണുക"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ലോഡ് ചെയ്യുന്നു…"</string>
 </resources>

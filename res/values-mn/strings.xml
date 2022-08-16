@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Мобайл сүлжээг ашиглан датад хандах"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобайл сүлжээ"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Мобайл датаг ашиглах"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Унтраалттай"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Мобайл датаг унтраах уу?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Сонгох шаардлагатай"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"<xliff:g id="CARRIER">%1$s</xliff:g>-г мобайл датад ашиглах уу?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi хайлтыг асаасан"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Мобайл дата руу автоматаар шилжүүлэх"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi-н интернет холболт тасарсан үед мобайл дата ашиглана уу. Дата ашиглалтын төлбөр гарж болзошгүй."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi-Fi сүлжээг олж, холбогдоно уу"</string>
     <string name="learn_more" msgid="8214605928933358604">"Нэмэлт мэдээлэл авах"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Сүлжээний цэгийн нэр"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-г асааж байна..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Жолоодлогод тусалдаг аппуудыг байршилдаа хандахыг зөвшөөрнө"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Хэрэв та үүнийг унтраавал байршлын мэдээлэлд тулгуурладаг Жолоочийн туслах аппуудыг идэвхгүй болгоно."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Ямартай ч унтраах"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Саяхны байршлын хүсэлтүүд"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Саяхны байршлын хүсэлт алга"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Саяхан хандсан"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Саяхан хандсан"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Бүгдийг харах"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Саяхан хандсан апп алга"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Жолоочийн туслах"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Аппын түвшний зөвшөөрөл"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Байршлын үйлчилгээ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Байршлыг ашиглах"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Аппын тохиргоог шинэчиллээ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Бүх өгөгдлийг устгах (үйлдвэрийн тохиргоонд шинэчлэх)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Бүх өгөгдөл, профайлыг инфотэйнмент системээс устгах"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Энэ нь таны тээврийн хэрэгслийн инфотэйнмент системийн бүх өгөгдлийг устгана. Үүнд:\n\n"<li>"Таны Google Бүртгэл"</li>\n<li>"Систем, аппын өгөгдөл болон тохиргоо"</li>\n<li>"Татсан аппууд"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Энэ нь \n\n"<li>" зэрэг бүх өгөгдлийг таны тээврийн хэрэгслийн инфотэйнмент системээс устгах болно. Таны бүртгэл болон профайлууд"</li>\n<li>"Систем, аппын өгөгдөл болон тохиргоо"</li>\n<li>"Татсан аппууд"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Та одоогоор дараах бүртгэлүүдэд нэвтэрсэн байна:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Энэ тээврийн хэрэгсэлд бусад профайлыг тохируулсан."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Бүх өгөгдлийг устгах"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Шинэ админ сонгох"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Танд хамгийн багадаа нэг админ шаардлагатай. Үүнийг устгахын тулд эхлээд орлуулалтыг сонгоно уу."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Админ сонгох"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Зочин"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Зочин"</string>
     <string name="user_switch" msgid="6544839750534690781">"Сэлгэх"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Та (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Нэр"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>-н бүртгэл"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Өгөгдлийг автоматаар синк хийх"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Өгөгдлийг автоматаар сэргээхийг аппад зөвшөөрөх"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Өгөгдлийг автоматаар синк хийхийг асаах уу?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Таны веб дээрээс бүртгэлдээ оруулсан аливаа өөрчлөлтийг таны төхөөрөмжид автоматаар хуулах болно.\n\nЗарим бүртгэл нь таны утсан дээрээ оруулсан аливаа өөрчлөлтийг веб рүү автоматаар хуулж болзошгүй. Google бүртгэл ингэж ажилладаг."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Өгөгдлийг автоматаар синк хийхийг унтраах уу?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Автоматаар өгөгдөл синк хийхийг зөвшөөрөх үү?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Таны веб дээрх бүртгэлдээ оруулсан бүх өөрчлөлтийг автоматаар таны тээврийн хэрэгсэлд хуулах болно.\n\nЗарим бүртгэл нь таны тээврийн хэрэгсэл дээрх оруулсан өөрчлөлтийг веб рүү автоматаар хуулж болзошгүй."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Автоматаар өгөгдөл синк хийхийг зөвшөөрөхгүй юу?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Энэ нь датаг хэмнэх боловч та сүүлийн үеийн мэдээллийг цуглуулахын тулд бүртгэл бүрийг гараар синк хийх шаардлагатай болно. Мөн шинэчлэлтийг хийх үед та мэдэгдэл хүлээн авахгүй."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Бүртгэлийн мэдээлэл"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Бүртгэл нэмэх"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Нууцлал"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Инфотэйнмент системийн өгөгдөл"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Байршлынхаа аппын хандалтыг хянах"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Камер"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Камертаа аппын хандалтыг удирдаарай"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Микрофон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Микрофоны аппын хандалтыг хянах"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Инфотэйнмент системийн өгөгдөл"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Устгах"</string>
     <string name="cancel" msgid="750286395700355455">"Цуцлах"</string>
     <string name="allow" msgid="7519431342750394402">"Зөвшөөрөх"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Бүү зөвшөөр"</string>
     <string name="deny" msgid="340512788979930804">"Татгалзах"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Ухраах түлхүүр"</string>
     <string name="enter_key" msgid="2121394305541579468">"Oруулах түлхүүр"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Энэ инфотэйнмент системийн аппыг идэвхжүүлэх"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Идэвхгүй болгох, устгах"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Энэ инфотэйнмент системийн аппыг идэвхгүй болгох"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Дэлгэрэнгүй мэдээлэл"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Байгууллагын менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Байгууллагын менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, төхөөрөмжийн байршлын мэдээлэл зэрэг энэ профайлтай холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Байгууллагын менежер нь тохиргоо, зөвшөөрөл, байгууллагын хандалт, сүлжээний үйл ажиллагаа, тээврийн хэрэгслийн байршлын мэдээлэл зэрэг энэ инфотэйнмент системтэй холбоотой апп болон өгөгдлийг хянах, удирдах боломжтой."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Энэ алдааны мэдээг энэ тээврийн хэрэгслийн байгууллагын менежертэй хуваалцаж байна. Дэлгэрэнгүй мэдээлэл авахын тулд тэдэнтэй холбогдоно уу."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Хуваалцах"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Татгалзах"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Инфотэйнмент системийг шинэчлэх"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Таны систем үйлдвэрийн тохиргоонд шинэчлэх болон бүх өгөгдлийг устгах хүсэлт хүлээн авсан. Та үүнийг одоо шинэчлэх боломжтой. Эсвэл машиныг дараагийн удаа асаахад үүнийг шинэчилнэ. Та дараа нь шинэ профайл тохируулах боломжтой."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Одоо шинэчлэх"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Дараа шинэчлэх"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Машин дараа асахад инфотэйнмент системийг шинэчилнэ"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Шинэчилж эхлэхэд машиныг зогсоосон байх ёстой."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Энэ тохиргоог яг одоо өөрчлөх боломжгүй байна"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Хандалт"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Тайлбар"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>-г ашиглах"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Сонголт"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Тохиргоо"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Камер"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Камер ашиглах"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Бүх аппад таны камерт хандахыг зөвшөөрнө үү"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Камерын зөвшөөрлийг удирдах"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Саяхан хандсан"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Саяхан хандсан апп алга"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 апп хандах эрхтэй байна"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count}-н # апп хандах эрхтэй байна}other{{total_count}-н # апп хандах эрхтэй байна}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Саяхан хандсан"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Бүгдийг харах"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Ачаалж байна…"</string>
 </resources>

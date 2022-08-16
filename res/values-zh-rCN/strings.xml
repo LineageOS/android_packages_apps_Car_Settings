@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"通过移动网络访问数据"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"移动网络"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"使用移动流量"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"已关闭"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要关闭移动数据网络吗？"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"必须选择"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"要使用<xliff:g id="CARRIER">%1$s</xliff:g>的移动数据吗？"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"WLAN 扫描功能已开启"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"自动切换到移动数据网络"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"在 WLAN 网络无法连接到互联网时切换到移动数据网络（可能会消耗移动数据流量）。"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"查找并连接到 WLAN 网络"</string>
     <string name="learn_more" msgid="8214605928933358604">"了解详情"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"热点名称"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"正在开启<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"允许驾驶辅助应用获取您的位置信息"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"如果您关闭了此设置，需要使用位置信息的驾驶辅助应用将被停用。"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"仍然关闭"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"近期获取过"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期获取过"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"查看全部"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"最近没有应用获取过位置信息"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • 驾驶辅助"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"应用级权限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置信息服务"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置信息"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"清除所有数据（恢复出厂设置）"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"清除信息娱乐系统中的所有数据和个人资料"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"如果您选择恢复出厂设置，您车辆上的信息娱乐系统中的所有数据都将被清除，包括：\n\n"<li>"您的 Google 帐号"</li>\n<li>"系统/应用数据和设置"</li>\n<li>"下载的应用"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"如果您选择恢复出厂设置，您车辆上的信息娱乐系统中的所有数据都将被清除，包括：\n\n"<li>"您的帐号和个人资料"</li>\n<li>"系统/应用数据和设置"</li>\n<li>"下载的应用"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"您目前已登录以下帐号："</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"这辆车已设置其他个人资料。"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"清除所有数据"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"选择新的管理员"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"您至少要有一位管理员。要删除现有的这位管理员，请先选择接替者。"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"选择管理员"</string>
-    <string name="user_guest" msgid="3465399481257448601">"访客"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"访客"</string>
     <string name="user_switch" msgid="6544839750534690781">"开关"</string>
     <string name="current_user_name" msgid="3813671533249316823">"您 (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名称"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>的帐号"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"自动同步数据"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"让应用自动刷新数据"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"要开启自动同步数据功能吗？"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"您在网络上对自己的帐号进行的所有更改都会自动同步到您的设备。\n\n有些帐号还可以自动将您在手机上进行的所有更改同步到网络上。Google 帐号就支持这类双向同步。"</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"要关闭自动同步数据功能吗？"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"要允许自动同步数据吗？"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"您在网络上对自己的帐号进行的所有更改都会自动同步到您的车辆。\n\n有些帐号可能还会将您在车辆上进行的所有更改自动同步到网络上。"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"要禁止自动同步数据吗？"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"这样可以节省数据流量，但您需要手动同步每个帐号才能获得最新信息，并且在有更新时不会收到通知。"</string>
     <string name="account_details_title" msgid="7529571432258448573">"帐号信息"</string>
     <string name="add_account_title" msgid="5988746086885210040">"添加帐号"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"隐私"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"信息娱乐系统数据"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"控制应用对您的位置信息的使用权限"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"相机"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"控制应用的相机使用权限"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"麦克风"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"控制应用对麦克风的使用权限"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"信息娱乐系统数据"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"移除"</string>
     <string name="cancel" msgid="750286395700355455">"取消"</string>
     <string name="allow" msgid="7519431342750394402">"允许"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"不允许"</string>
     <string name="deny" msgid="340512788979930804">"拒绝"</string>
     <string name="backspace_key" msgid="1545590866688979099">"退格键"</string>
     <string name="enter_key" msgid="2121394305541579468">"输入密钥"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"启用此信息娱乐系统应用"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"停用并卸载"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"停用此信息娱乐系统应用"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"更多详情"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"组织管理员可以监控和管理与此个人资料相关联的应用和数据，其中包括设置、权限、企业权限、网络活动以及车辆的位置信息。"</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"组织管理员可以监控和管理与此个人资料相关联的应用和数据，其中包括设置、权限、企业权限、网络活动以及设备的位置信息。"</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"组织管理员可以监控和管理与此信息娱乐系统相关联的应用和数据，其中包括设置、权限、企业权限、网络活动以及车辆的位置信息。"</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"正在与此车辆的组织管理员分享该错误报告。如需更多详细信息，请联系组织管理员。"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"分享"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"拒绝"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"重置信息娱乐系统"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"您的系统已收到恢复出厂设置并清空所有数据的请求。您可以立即重置，也可以让系统在下次汽车发动时重置。重置完成后，您可以设置新的个人资料。"</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"立即重置"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"以后再重置"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"信息娱乐系统将在下次汽车发动时重置。"</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"必须停车才能启动重置流程。"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"暂时无法更改此设置"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"无障碍功能"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"字幕"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"使用“<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>”"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"选项"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"设置"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"相机"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"使用相机"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"允许所有应用使用相机"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"管理相机权限"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"近期使用过"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"最近没有应用使用过相机"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"任何应用都无法使用相机"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# 个应用（共 {total_count} 个）可以使用相机}other{# 个应用（共 {total_count} 个）可以使用相机}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"近期使用过"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"查看全部"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"正在加载…"</string>
 </resources>

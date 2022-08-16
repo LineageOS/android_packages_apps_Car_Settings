@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Adathozzáférés a mobilhálózaton keresztül"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilhálózat"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Mobiladatok használata"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Ki"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kikapcsolja a mobiladatokat?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Kiválasztás szükséges"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"A(z) <xliff:g id="CARRIER">%1$s</xliff:g> szolgáltatót használja?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-keresés bekapcsolva"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatikus váltás mobiladat-kapcsolatra"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Mobilhálózat használata, ha nincs Wi-Fi-kapcsolat. A szolgáltató adatforgalmi díjat számíthat fel."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi‑Fi-hálózatok keresése és csatlakozás"</string>
     <string name="learn_more" msgid="8214605928933358604">"További információ"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Hotspot neve"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> bekapcsolása…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"A vezetést segítő alkalmazások hozzáférhetnek a helyadatokhoz"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ha kikapcsolja ezt a beállítást, letiltja a helyadatokra támaszkodó sofőrtámogató alkalmazásokat is."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Kikapcsolás mindenképp"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Legutóbbi helylekérdezések"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nincsenek friss helylekérdezések"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"A közelmúltban hozzáférő alkalmazások"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"A közelmúltban hozzáférő alkalmazások"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Összes megtekintése"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Nincs a közelmúltban hozzáférő alkalmazás"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Sofőrtámogatás"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Alkalmazásszintű engedélyek"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Helyszolgáltatások"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Helyadatok használata"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Az alkalmazásbeállítások vissza lettek állítva"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Összes adat törlése"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Minden adat és profil törlése az infotainmentrendszerről"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Ez minden adatot töröl a jármű infotainmentrendszeréből, beleértve a következőket:\n\n"<li>"Az Ön Google-fiókja"</li>\n<li>"A rendszer- és alkalmazásadatok, illetve -beállítások"</li>\n<li>"A letöltött alkalmazások"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Ezzel minden adatot töröl a jármű infotainmentrendszeréből, beleértve a következőket:\n\n"<li>"Az Ön fiókjai és profiljai"</li>\n<li>"Rendszer- és alkalmazásadatok, valamint -beállítások"</li>\n<li>"Letöltött alkalmazások"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Jelenleg a következő fiókokba van bejelentkezve:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Be lettek állítva más profilok ennél a járműnél."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Minden adat törlése"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Új adminisztrátor kiválasztása"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Legalább egy adminisztrátorra szükség van. Ha törölni szeretné a jelenlegit, előbb válassza ki azt, akivel helyettesítené."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Adminisztrátor választása"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Vendég"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Vendég"</string>
     <string name="user_switch" msgid="6544839750534690781">"Váltás"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ön (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Név"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> fiókjai"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Adatok automatikus szinkronizálása"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Az adatok automatikus frissítésének engedélyezése"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Bekapcsolja a szinkronizálást?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Az interneten végrehajtott fiókmódosítások automatikusan megjelennek az eszközén is.\n\nEgyes fiókok esetében ez fordítva is igaz. A Google-fiók így működik."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Kikapcsolja a szinkronizálást?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Engedélyezi az automatikus adatszinkronizálást?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Az interneten végrehajtott fiókmódosítások automatikusan megjelennek a járművében is.\n\nEgyes fiókok esetében ez fordítva is igaz."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Letiltja az automatikus adatszinkronizálást?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ez mérsékli az adathasználatot, de minden egyes fiókot manuálisan kell majd szinkronizálnia a legfrissebb információk begyűjtéséhez. Emellett a frissítésekről sem kap értesítéseket."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Fiókadatok"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Fiók hozzáadása"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Adatvédelem"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Infotainmentrendszer-adatok"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"A helyadatokhoz hozzáférő alkalmazások kezelése"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"A kamerákhoz hozzáférő alkalmazások kezelése"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"A mikrofonhoz hozzáférő alkalmazások kezelése"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Infotainmentrendszer-adatok"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Eltávolítás"</string>
     <string name="cancel" msgid="750286395700355455">"Mégse"</string>
     <string name="allow" msgid="7519431342750394402">"Engedélyezés"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Tiltás"</string>
     <string name="deny" msgid="340512788979930804">"Tiltás"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace billentyű"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter billentyű"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Az infotainmentrendszer-app aktiválása"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Kikapcsolás és eltávolítás"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Az infotainmentrendszer-alkalmazás deaktiválása"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"További részletek"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"A szervezetkezelő figyelheti és kezelheti az ezzel a profillal társított alkalmazásokat és adatokat, beleértve a beállításokat, az engedélyeket, a vállalati hozzáférést, a hálózati tevékenységeket és a jármű helyadatait is."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"A szervezetkezelő figyelheti és kezelheti az ezzel a profillal társított alkalmazásokat és adatokat, beleértve a beállításokat, az engedélyeket, a vállalati hozzáférést, a hálózati tevékenységeket és az eszköz helyadatait is."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"A szervezetkezelő figyelheti és kezelheti az ezzel az infotainmentrendszerrel társított alkalmazásokat és adatokat, beleértve a beállításokat, az engedélyeket, a vállalati hozzáférést, a hálózati tevékenységeket és a jármű helyadatait is."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"A rendszer megosztja a hibajelentést a szervezetkezelővel, aki alá a jármű tartozik. További részletekért forduljon hozzá."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Megosztás"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Elutasítás"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Infotainmentrendszer visszaállítása"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"A rendszer a gyári beállítások visszaállítására és az összes adat törlésére vonatkozó kérést kapott. Visszaállíthatja a beállításokat most, vagy az autó következő elindításakor automatikusan megtörténik a visszaállítás. Ezt követően új profilt állíthat be."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Visszaállítás most"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Visszaállítás később"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"A rendszer a következő indításkor áll vissza."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"A visszaállításhoz le kell parkolni az autót."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ez a beállítás jelenleg nem módosítható"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Kisegítő lehetőségek"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Feliratok"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> használata"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Lehetőségek"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Beállítások"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"A kamera használata"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Kamerához való hozzáférés engedélyezése az összes alkalmazás számára"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kamerahasználati engedélyek kezelése"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"A közelmúltban hozzáférő alkalmazások"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nincs a közelmúltban hozzáférő alkalmazás"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 alkalmazás rendelkezik hozzáféréssel"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} alkalmazásból # rendelkezik hozzáféréssel}other{{total_count} alkalmazásból # rendelkezik hozzáféréssel}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"A közelmúltban hozzáférő alkalmazások"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Összes megtekintése"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Betöltés…"</string>
 </resources>

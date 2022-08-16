@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"మొబైల్ నెట్‌వర్క్‌ను ఉపయోగించి డేటాను యాక్సెస్ చేయండి"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"మొబైల్ నెట్‌వర్క్"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"మొబైల్ డేటాను ఉపయోగించండి"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ఆఫ్‌లో ఉంది"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"మొబైల్ డేటాని ఆఫ్ చేయాలా?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ఎంపిక అవసరం"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"మొబైల్ డేటా కోసం <xliff:g id="CARRIER">%1$s</xliff:g> ఉపయోగించాలా?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi-Fi స్కానింగ్ ఆన్ చేయబడింది"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ఆటోమేటిక్‌గా మొబైల్ డేటాకి మార్చు"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fiకి ఇంటర్నెట్ యాక్సెస్ లేనప్పుడు మొబైల్ డేటాను ఉపయోగిస్తుంది. డేటా వినియోగ ఛార్జీలు వర్తించవచ్చు."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi-Fi నెట్‌వర్క్‌లను కనుగొని, కనెక్ట్ అవ్వండి"</string>
     <string name="learn_more" msgid="8214605928933358604">"మరింత తెలుసుకోండి"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"హాట్‌స్పాట్ పేరు"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ను ఆన్ చేస్తోంది..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"డ్రైవింగ్‌లో సహాయపడే యాప్‌లను మీ లొకేషన్‌ను యాక్సెస్ చేయడానికి అనుమతించండి"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"మీరు దీనిని ఆఫ్ చేస్తే, లొకేషన్ సమాచారంపై ఆధారపడే \'డ్రైవర్ సహాయం\' యాప్‌లు డిజేబుల్ చేయబడతాయి."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ఏదేమైనా ఆఫ్ చేయండి"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి లొకేషన్ రిక్వెస్ట్‌లు"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి లొకేషన్ రిక్వెస్ట్‌లు లేవు"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"ఇటీవల యాక్సెస్ చేసినవి"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ఇటీవల యాక్సెస్ చేసినవి"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"అన్నింటినీ చూడండి"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"ఇటీవలి యాప్‌లు ఏవీ లేవు"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • డ్రైవర్ సహాయం"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"యాప్‌-స్థాయి అనుమతులు"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"లొకేషన్ సర్వీస్‌లు"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"లొకేషన్‌ను ఉపయోగించండి"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"యాప్ ప్రాధాన్యతలు రీసెట్ చేయబడ్డాయి"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"డేటా అంతటినీ తొలగించు (ఫ్యాక్టరీ రీసెట్)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మొత్తం డేటా, ప్రొఫైల్‌లను ఫ్యాక్టరీ రీసెట్ చేస్తుంది"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"వీటితో సహా ఇది మీ వాహన సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మొత్తం డేటాను ఫ్యాక్టరీ రీసెట్ చేస్తుంది:\n\n"<li>"మీ Google ఖాతా"</li>\n<li>"సిస్టమ్, యాప్ డేటా, సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేసిన యాప్‌లు"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ఇది మీ వెహికల్ సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి వీటితో సహా మొత్తం డేటాను తొలగిస్తుంది:\n\n"<li>"మీ ఖాతాలు, ప్రొఫైళ్లు"</li>\n<li>"సిస్టమ్ ఇంకా యాప్ డేటా, సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేయబడిన యాప్‌లు"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"మీరు ప్రస్తుతం కింది ఖాతాలకు సైన్ ఇన్ చేశారు:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ఈ వాహనం కోసం ఇతర ప్రొఫైళ్లు సెటప్ చేయబడ్డాయి."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"మొత్తం డేటాను తొలగించండి"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"కొత్త నిర్వాహకుడిని ఎంచుకోండి"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"మీకు కనీసం ఒక నిర్వాహకుడు అవసరం. ఈ నిర్వహకుడిని తొలగించడానికి, ముందుగా ఒక ప్రత్యామ్నాయాన్ని ఎంచుకోండి."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"నిర్వాహకుడిని ఎంచుకోండి"</string>
-    <string name="user_guest" msgid="3465399481257448601">"అతిథి"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"అతిథి"</string>
     <string name="user_switch" msgid="6544839750534690781">"మార్చు"</string>
     <string name="current_user_name" msgid="3813671533249316823">"మీరు (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"పేరు"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> యొక్క ఖాతాలు"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాని ఆటోమేటిక్‌గా సమకాలీకరించు"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"డేటాని ఆటోమేటిక్‌గా రిఫ్రెష్ చేసేలా యాప్‌లు అనుమతించబడతాయి"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"స్వీయ-సింక్‌ డేటాను ప్రారంభించాలా?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"వెబ్‌లో మీ ఖాతాలకు మీరు ఏవైనా మార్పులు చేస్తే అవి ఆటోమేటిక్‌గా మీ పరికరానికి కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు ఫోన్‌లో ఏవైనా మార్పులు చేస్తే కూడా ఆటోమేటిక్‌గా వాటిని వెబ్‌కి కాపీ చేస్తాయి. Google ఖాతా ఈ విధంగానే పనిచేస్తుంది."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"స్వీయ-సింక్‌ డేటాను ఆఫ్ చేయాలా?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించాలా?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"మీరు వెబ్‌లో మీ ఖాతాలకు చేసే ఏవైనా మార్పులు, మీ వెహికల్‌కు ఆటోమేటిక్‌గా కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు వెహికల్‌లో చేసే ఏవైనా మార్పులను వెబ్‌కు కూడా ఆటోమేటిక్‌గా కాపీ చేయవచ్చు."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించవద్దా?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ఇది డేటాను ఆదా చేస్తుంది, కానీ మీరు ఇటీవలి సమాచారాన్ని సేకరించడానికి మాన్యువల్‌గా ప్రతి ఖాతాను సమకాలీకరించాల్సి ఉంటుంది. అలాగే మీరు అప్‌డేట్‌లు జరిగినప్పుడు నోటిఫికేషన్‌లను స్వీకరించరు."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ఖాతా సమాచారం"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ఖాతాను జోడించండి"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"గోప్యత"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"సమాచారంతో కూడిన వినోద సిస్టమ్ డేటా"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"మీ లొకేషన్‌కు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"కెమెరా"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"మీ కెమెరాలకు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"మైక్రోఫోన్"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"మైక్రోఫోన్‌కు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"వినోదాత్మక సమాచార సిస్టమ్ డేటా"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"తీసివేయి"</string>
     <string name="cancel" msgid="750286395700355455">"రద్దు చేయి"</string>
     <string name="allow" msgid="7519431342750394402">"అనుమతించు"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"అనుమతించవద్దు"</string>
     <string name="deny" msgid="340512788979930804">"తిరస్కరించు"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace కీ"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter కీ"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను యాక్టివేట్ చేయండి"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"డీయాక్టివేట్ చేసి, అన్ఇన్‌స్టాల్ చేయండి"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్ యాప్‌ను డియాక్టివేట్ చేయండి"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"మరిన్ని వివరాలు"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా వాహన లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను సంస్థ మేనేజర్ మానిటర్ చేయగలరు, అలాగే మేనేజ్ చేయగలరు."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా పరికర లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను సంస్థ మేనేజర్ మానిటర్ చేయగలరు, అలాగే మేనేజ్ చేయగలరు."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"సెట్టింగ్‌లు, అనుమతులు, కార్పొరేట్ యాక్సెస్, నెట్‌వర్క్ యాక్టివిటీ, ఇంకా వాహన లొకేషన్‌కు సంబంధించిన సమాచారంతో పాటు ఈ సమాచారంతో కూడిన వినోదం సిస్టమ్‌తో అనుబంధించబడి ఉన్న యాప్‌లను, డేటాను సంస్థ మేనేజర్ మానిటర్ చేయగలరు, అలాగే మేనేజ్ చేయగలరు."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ఈ బగ్ రిపోర్ట్, ఈ వాహన సంస్థ మేనేజర్‌తో షేర్ చేయబడుతోంది. మరిన్ని వివరాల కోసం వారిని సంప్రదించండి."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"షేర్ చేయండి"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"తిరస్కరించండి"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను రీసెట్ చేయండి"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ఫ్యాక్టరీ రీసెట్ చేయడానికి, మొత్తం డేటాను తొలగించడానికి మీ సిస్టమ్ రిక్వెస్ట్‌ను అందుకుంది. మీరు దీన్ని ఇప్పుడే రీసెట్ చేయవచ్చు లేదా తర్వాతి సారి కారు ప్రారంభమైనప్పుడు ఇది రీసెట్ అవుతుంది. అప్పుడు మీరు కొత్త ప్రొఫైల్‌ను సెటప్ చేయవచ్చు."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ఇప్పుడే రీసెట్ చేయి"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"తర్వాత రీసెట్ చేయి"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"ఇన్ఫోటైన్‌మెంట్ సిస్టం కారు స్టార్టయ్యాక రీసెట్ అవుతుంది."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"రీసెట్ ప్రారంభించడానికి మీ కారును పార్క్ చేయండి."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ఈ సెట్టింగ్‌ను ఇప్పుడే మార్చడం సాధ్యం కాదు"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"యాక్సెసిబిలిటీ"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"క్యాప్షన్‌లు"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>ను ఉపయోగించండి"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ఆప్షన్‌లు"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"సెట్టింగ్‌లు"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"కెమెరా"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"కెమెరాను ఉపయోగించండి"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"మీ కెమెరాను యాక్సెస్ చేయడానికి అన్ని యాప్‌లను అనుమతించండి"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"కెమెరా అనుమతులను మేనేజ్ చేయండి"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"ఇటీవల యాక్సెస్ చేయబడినవి"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ఇటీవలి యాప్‌లు ఏవీ లేవు"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ఏ యాప్‌లకు యాక్సెస్ లేదు"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count}లో # యాప్‌లకు యాక్సెస్ ఉంది}other{{total_count}లో # యాప్‌లకు యాక్సెస్ ఉంది}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ఇటీవల యాక్సెస్ చేయబడినవి"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"అన్నీ చూడండి"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"లోడ్ అవుతోంది…"</string>
 </resources>

@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"שימוש בחבילת הגלישה דרך הרשת הסלולרית"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"רשת סלולרית"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"שימוש בחבילת גלישה"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"כבויה"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"לכבות את חבילת הגלישה?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"עליך לבחור אפשרות כלשהי"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"להשתמש ב-<xliff:g id="CARRIER">%1$s</xliff:g> בשביל חבילת גלישה?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"סריקת Wi-Fi מופעלת"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"מעבר אוטומטי לחבילת גלישה"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"יש להשתמש בחבילת הגלישה כשאין גישה לאינטרנט ברשת Wi-Fi. ייתכנו חיובים על שימוש בחבילת הגלישה."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"איתור רשתות Wi-Fi והתחברות אליהן"</string>
     <string name="learn_more" msgid="8214605928933358604">"מידע נוסף"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"שם הנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"המערכת מפעילה את <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"אישור לאפליקציות העזרה לנהג לגשת למיקום"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"אם משביתים את האפשרות הזו, משביתים את אפליקציות העזרה לנהג שמתבססות על פרטי המיקום."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"השבתה בכל זאת"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"בקשות של מיקומים אחרונים"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"אין בקשות של מיקומים אחרונים"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"בקשות הגישה האחרונות"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"בקשות הגישה האחרונות"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"הצגת הכול"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"אין אפליקציות אחרונות"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • עזרה לנהג"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"הרשאות ברמת אפליקציה"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"שירותי מיקום"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"שימוש במיקום"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"העדפות האפליקציה אופסו"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"מחיקת כל הנתונים (איפוס להגדרות מקוריות)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"מחיקת כל הנתונים והפרופילים ממערכת המידע והבידור"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"הפעולה הזו תמחק את כל הנתונים ממערכת המידע והבידור של הרכב שלך, כולל:\n\n"<li>"חשבון Google שלך"</li>\n<li>"נתוני מערכת ואפליקציות והגדרות"</li>\n<li>"אפליקציות שהורדו"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"הפעולה הזו תמחק את כל הנתונים ממערכת המידע והבידור שברכב, כולל:\n\n"<li>"החשבונות והפרופילים שלך"</li>\n<li>"נתונים והגדרות של האפליקציות והמערכת וכן"</li>\n<li>"אפליקציות שהורדת"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"יש לך חיבור פעיל כרגע אל החשבונות הבאים:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"פרופילים אחרים הוגדרו לרכב הזה."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"מחיקת כל הנתונים"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"בחירת מנהל מערכת חדש"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"יש צורך במנהל מערכת אחד לפחות: לפני שמוחקים את מנהל המערכת הזה, צריך לבחור מחליף."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"לבחירת מנהל מערכת"</string>
-    <string name="user_guest" msgid="3465399481257448601">"אורח"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"אורח"</string>
     <string name="user_switch" msgid="6544839750534690781">"החלפה"</string>
     <string name="current_user_name" msgid="3813671533249316823">"את/ה (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"שם"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"חשבונות עבור <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"סנכרון נתונים באופן אוטומטי"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"אפליקציות יוכלו לרענן נתונים באופן אוטומטי"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"להפעיל סנכרון אוטומטי של נתונים?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"כל שינוי שיבוצע בחשבונות שלך באינטרנט יועתק באופן אוטומטי למכשיר.\n\nייתכן גם שחלק מהשינויים שיבוצעו בטלפון יועתקו באופן אוטומטי לאינטרנט. כך פועל חשבון Google."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"להשבית סנכרון אוטומטי של נתונים?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"לאפשר את סנכרון הנתונים האוטומטי?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"כל שינוי שיבוצע בחשבונות שלך באינטרנט יועתק באופן אוטומטי לרכב.\n\nבנוסף, יכול להיות שחלק מהשינויים שיבוצעו ברכב יועתקו באופן אוטומטי לאינטרנט."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"למנוע את סנכרון הנתונים האוטומטי?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"פעולה זו תחסוך בשימוש בנתונים, אבל יהיה צורך לסנכרן כל חשבון באופן ידני כדי לאסוף מידע עדכני. בזמן עדכונים לא יתקבלו התראות."</string>
     <string name="account_details_title" msgid="7529571432258448573">"פרטי חשבון"</string>
     <string name="add_account_title" msgid="5988746086885210040">"הוספת חשבון"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"פרטיות"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"הנתונים של מערכת המידע והבידור"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"שליטה בגישת האפליקציה למיקום שלך"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"מצלמה"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"שליטה בגישה של האפליקציות למצלמות"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"מיקרופון"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"שליטה בגישת האפליקציה למיקרופון"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"הנתונים של מערכת המידע והבידור"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"הסרה"</string>
     <string name="cancel" msgid="750286395700355455">"ביטול"</string>
     <string name="allow" msgid="7519431342750394402">"אישור"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"אין אישור"</string>
     <string name="deny" msgid="340512788979930804">"עדיף שלא"</string>
     <string name="backspace_key" msgid="1545590866688979099">"מקש Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"הזנת מפתח"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"הפעלת האפליקציה הזאת של מערכת המידע והבידור"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"השבתה והסרה"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"השבתת האפליקציה הזאת של מערכת המידע והבידור"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"פרטים נוספים"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"מנהל הארגון יכול לפקח על אפליקציות ונתונים המשויכים לפרופיל הזה ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום הרכב."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"מנהל הארגון יכול לפקח על אפליקציות ונתונים המשויכים לפרופיל הזה ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום המכשיר."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"מנהל הארגון יכול לפקח על אפליקציות ונתונים המשויכים למערכת הזו של המידע והבידור ולנהל אותם, כולל הגדרות, הרשאות, גישה ארגונית, פעילות הרשת ומידע על מיקום הרכב."</string>
@@ -836,6 +841,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"דוח איתור הבאגים משותף עכשיו עם מנהל הארגון האחראי לרכב הזה. צריך ליצור איתו קשר כדי לקבל פרטים נוספים."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"שיתוף"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"דחייה"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"איפוס מערכת המידע והבידור"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"המערכת שלך קיבלה בקשה לאיפוס להגדרות המקוריות ולמחיקת כל הנתונים. ניתן לבצע את האיפוס עכשיו, או שהוא יתבצע בהתנעה הבאה של המכונית. לאחר מכן ניתן יהיה להגדיר פרופיל חדש."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"לאיפוס עכשיו"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"לאיפוס מאוחר יותר"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"מערכת המידע והבידור תתאפס בהתנעה הבאה של המכונית."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"אפשר להתחיל באיפוס רק כשהמכונית חונה."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"לא ניתן לשנות את ההגדרה הזו כרגע."</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"נגישות"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"כתוביות"</string>
@@ -863,4 +874,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"שימוש באפליקציה <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"אפשרויות"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"הגדרות"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"מצלמה"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"שימוש במצלמה"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"מתן הרשאת גישה למצלמה לכל האפליקציות"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"ניהול הרשאות הגישה למצלמה"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"האפליקציות האחרונות שניגשו למצלמה"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"אין אפליקציות אחרונות"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"אין אפליקציות עם הרשאת גישה"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{לאפליקציה אחת מתוך {total_count} יש גישה}two{ל-# אפליקציות מתוך {total_count} יש גישה}many{ל-# אפליקציות מתוך {total_count} יש גישה}other{ל-# אפליקציות מתוך {total_count} יש גישה}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"בקשות הגישה האחרונות למצלמה"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"הצגת הכול"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"בטעינה…"</string>
 </resources>

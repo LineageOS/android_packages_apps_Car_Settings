@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Qasu te të dhënat duke përdorur rrjetin celular"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rrjeti celular"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Përdor të dhënat celulare"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Joaktiv"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Të çaktivizohen të dhënat celulare?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Kërkohet përzgjedhja"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Të përdoret <xliff:g id="CARRIER">%1$s</xliff:g> për të dhënat celulare?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Skanimi i Wi‑Fi është aktivizuar"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Kalo automatikisht te të dhënat celulare"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Përdor të dhënat celulare kur Wi-Fi nuk ka qasje në internet. Mund të zbatohen tarifa për të dhënat."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Gjej dhe lidhu me rrjetet Wi-Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Mëso më shumë"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Emri i zonës së qasjes për internet"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> po aktivizohet..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Lejo aplikacionet për drejtimin të kenë qasje te vendndodhja"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Nëse e çaktivizon këtë, aplikacionet e \"Ndihmës për drejtuesin e makinës\" që mbështeten në informacionin e vendndodhjes do të çaktivizohen."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Çaktivizo gjithsesi"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Kërkesat e vendndodhjeve të fundit"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nuk ka kërkesa të vendndodhjeve të fundit"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Qasur së fundi"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Qasur së fundi"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Shiko të gjitha"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Asnjë aplikacion i fundit"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Ndihma për drejtuesin e makinës"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lejet në nivel aplikacioni"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Shërbimet e vendndodhjes"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Përdor vendndodhjen"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferencat e aplikacioneve janë rivendosur"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Spastro të gjitha të dhënat (rivendosja e fabrikës)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Spastro të gjitha të dhënat dhe profilet nga ky sistem info-argëtues"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Kjo do të spastrojë të gjitha të dhënat nga sistemi info-argëtues i automjetit tënd, duke përfshirë:\n\n"<li>"Llogarinë tënde të Google"</li>\n<li>"Të dhënat dhe cilësimet e sistemit dhe të aplikacioneve"</li>\n<li>"Aplikacionet e shkarkuara"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Kjo do të fshijë të gjitha të dhënat nga sistemi info-argëtues i automjetit, duke përfshirë:\n\n"<li>"Llogaritë dhe profilet e tua"</li>\n<li>"Të dhënat dhe cilësimet e sistemit dhe të aplikacioneve"</li>\n<li>"Aplikacionet e shkarkuara"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Je i identifikuar aktualisht në llogaritë e mëposhtme:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Për këtë automjet janë konfiguruar profile të tjera."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Spastro të gjitha të dhënat"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Zgjidh një administrator të ri"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Të duhet të paktën një administrator. Për ta fshirë këtë, në fillim zgjidh një zëvendësues."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Zgjidh administratorin"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Vizitor"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Vizitor"</string>
     <string name="user_switch" msgid="6544839750534690781">"Ndërro"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ti (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Emri"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Llogaritë për <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizo automatikisht të dhënat"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Lejo që aplikacionet t\'i rifreskojnë automatikisht të dhënat"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Të aktivizohen të dhënat e sinkronizimit automatik?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Çdo ndryshim që bën në llogaritë e tua në ueb do të kopjohet automatikisht te pajisja jote.\n\nDisa llogari mund të kopjojnë po ashtu automatikisht në ueb çdo ndryshim që bën në telefon, për ta sinkronizuar në ueb. Kështu funksionon \"Llogaria e Google\"."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Të çaktivizohen të dhënat e sinkronizimit automatik?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Të lejohet sinkronizimi automatik i të dhënave?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Çdo ndryshim që bën në llogaritë e tua në ueb do të kopjohen automatikisht në automjetin tënd.\n\nDisa llogari mund edhe të kopjojnë automatikisht në ueb çdo ndryshim që ti bën në automjet."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Të ndalohet sinkronizimi automatik i të dhënave?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Kjo do të kursejë të dhënat, por për të mbledhur informacionet më të fundit, do të të duhet të sinkronizosh në mënyrë manuale çdo llogari. Dhe nuk do të marrësh njoftime kur të ndodhin përditësimet."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informacionet e llogarisë"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Shto llogari"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatësia"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Të dhënat e sistemit info-argëtues"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrollo qasjen e aplikacioneve te vendndodhja jote"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrollo qasjen e aplikacioneve te kamerat e tua"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofoni"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontrollo qasjen e aplikacionit te mikrofoni"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Të dhënat e sistemit info-argëtues"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Hiq"</string>
     <string name="cancel" msgid="750286395700355455">"Anulo"</string>
     <string name="allow" msgid="7519431342750394402">"Lejo"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Mos lejo"</string>
     <string name="deny" msgid="340512788979930804">"Refuzo"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tasti \"Kthim prapa\""</string>
     <string name="enter_key" msgid="2121394305541579468">"Tasti \"Hyrje\""</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Aktivizo këtë aplikacion të sistemit info-argëtues"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Çaktivizo dhe çinstalo"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Çaktivizo këtë aplikacion të sistemit info-argëtues"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Më shumë detaje"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Menaxheri i organizatës mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë profil, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin në rrjet dhe informacionin e vendndodhjes së automjetit."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Menaxheri i organizatës mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë profil, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin në rrjet dhe informacionin e vendndodhjes së pajisjes."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Menaxheri i organizatës mund të monitorojë dhe menaxhojë aplikacionet dhe të dhënat e lidhura me këtë sistem info-argëtues, duke përfshirë cilësimet, lejet, qasjen e korporatës, aktivitetin në rrjet dhe informacionin e vendndodhjes së automjetit."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Raporti i defektit në kod po ndahet me menaxherin e organizatës e automjetit. Kontaktoje atë për detaje."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Ndaj"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Refuzo"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Rivendos sistemin info-argëtues"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistemi yt ka marrë një kërkesë për ta rivendosur në gjendje fabrike dhe për të spastruar të gjitha të dhënat. Mund ta rivendosësh tani ose do të rivendoset herën tjetër që do të ndizet makina. Më pas mund të konfigurosh një profil të ri."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Rivendos tani"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Rivendose më vonë"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Sistemi info-argëtues do të rivendoset herën tjetër që do të ndizet makina."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Makina duhet të jetë e parkuar për të nisur rivendosjen."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Ky cilësim nuk mund të ndryshohet në këtë moment"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Qasshmëria"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Titrat"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Përdor <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opsionet"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Cilësimet"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Përdor kamerën"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Lejo qasjen në kamerën tënde për të gjitha aplikacionet"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Menaxho lejet e kamerës"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Qasur së fundi"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Asnjë aplikacion i fundit"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 aplikacione kanë qasje"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# nga {total_count} aplikacione ka qasje}other{# nga {total_count} aplikacione kanë qasje}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Qasur së fundi"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Shiko të gjitha"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Po ngarkohet…"</string>
 </resources>

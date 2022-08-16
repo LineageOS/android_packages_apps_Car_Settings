@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ да даных па мабільнай сетцы"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мабільная сетка"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Выкарыстоўваць мабільную перадачу даных"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Выключана"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Адключыць мабільную перадачу даных?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Трэба выбраць"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Выкарыстоўваць <xliff:g id="CARRIER">%1$s</xliff:g> для трафіка?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Сканіраванне Wi‑Fi уключана"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Пераключацца на мабільную перадачу даных аўтаматычна"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Выкарыстоўваць мабільную перадачу даных, калі сетка Wi-Fi страчвае доступ да інтэрнэту. Можа спаганяцца плата за выкарыстанне трафіка."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Знайсці сеткі Wi-Fi і падключыцца"</string>
     <string name="learn_more" msgid="8214605928933358604">"Даведацца больш"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Назва хот-спота"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Уключаецца <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Даць доступ да геаданых праграмам падтрымкі вадзіцеля"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Калі выключыць гэту наладу, праграмы падтрымкі вадзіцеля, для работы якіх патрабуецца інфармацыя аб месцазнаходжанні, будуць выключаны."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Усё роўна выключыць"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Нядаўнія запыты геаданых"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма нядаўніх запытаў геаданых"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Нядаўна быў атрыманы доступ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Нядаўна быў атрыманы доступ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Паказаць усе"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Ніякія праграмы не атрымлівалі нядаўна доступу да геаданых"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Дапамога вадзіцелю"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дазволы на ўзроўні праграм"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Службы геалакацыі"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Выкарыстоўваць геалакацыю"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Налады праграм скінуты"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Сцерці даныя (скід да заводскіх налад)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Выдаліць усе даныя і профілі з інфармацыйна-забаўляльнай сістэмы"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"З інфармацыйна-забаўляльнай сістэмы аўтамабіля будуць выдалены ўсе даныя, у тым ліку:\n\n"<li>"ваш Уліковы запіс Google;"</li>\n<li>"налады і даныя сістэмы і праграм;"</li>\n<li>"спампаваныя праграмы."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"З інфармацыйна-забаўляльнай сістэмы аўтамабіля будуць выдалены ўсе даныя, у тым ліку:\n\n"<li>"вашы ўліковыя запісы і профілі;"</li>\n<li>"налады і даныя праграм і сістэмы;"</li>\n<li>"спампаваныя праграмы."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"У дадзены момант вы ўвайшлі ў наступныя ўліковыя запісы:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"На гэтым аўтамабілі наладжаны іншыя профілі."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Сцерці ўсе даныя"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Выберыце новага адміністратара"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Патрэбны па меншай меры адзін адміністратар. Каб выдаліць існуючага, спачатку выберыце яму замену."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Выберыце адміністратара"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Госць"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Госць"</string>
     <string name="user_switch" msgid="6544839750534690781">"Пераключыцца"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Вы (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Імя"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Уліковыя запісы карыстальніка <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Аўтаматычна сінхранізаваць даныя"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Дазволіць праграмам абнаўляць даныя аўтаматычна"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Уключыць аўтасінхранізацыю?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Усе змяненні, унесеныя ва ўліковы запіс у інтэрнэце, аўтаматычна капіруюцца ў памяць прылады.\n\nДля некаторых уліковых запісаў усе змены, зробленыя ў тэлефоне, могуць таксама аўтаматычна капіравацца ў інтэрнэт. Уліковы запіс Google працуе такім чынам."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Адключыць аўтасінхранізацыю?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Дазволіць аўтаматычную сінхранізацыю даных?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Усе змены, унесеныя ва ўліковыя запісы з прылад, паключаных да інтэрнэту, будуць аўтаматычна капіравацца ў памяць аўтамабіля.\n\nНекаторыя ўліковыя запісы ў інтэрнэце могуць таксама капіраваць тыя змены, якія вы ўносіце на аўтамабілі."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Забараніць аўтаматычную сінхранізацыю даных?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Гэта дапаможа ашчаджаць трафік. Але, каб мець свежую інфармацыю, вам давядзецца сінхранізаваць кожны ўліковы запіс уручную. І вы не будзеце атрымліваць апавяшчэнні пра абнаўленні."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Даныя аб уліковым запісе"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Дадаць уліковы запіс"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Прыватнасць"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Даныя інфармацыйна-забаўляльнай сістэмы"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Кіраваць доступам праграм да даных пра месцазнаходжанне"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Кіраванне доступам праграм да камеры"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Мікрафон"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Кіраваць доступам праграм да мікрафона"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Даныя інфа-забаўляльнай сістэмы"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Выдаліць"</string>
     <string name="cancel" msgid="750286395700355455">"Скасаваць"</string>
     <string name="allow" msgid="7519431342750394402">"Дазволіць"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Не дазваляць"</string>
     <string name="deny" msgid="340512788979930804">"Адмовіць"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Клавіша Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Клавіша Enter"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Актываваць гэту праграму інфармацыйна-забаўляльнай сістэмы"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Дэактываваць і выдаліць"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Адключыць гэту праграму інфармацыйна-забаўляльнай сістэмы"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Дадатковая інфармацыя"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Менеджар арганізацыі можа адсочваць праграмы і даныя, звязаныя з гэтым профілем (у тым ліку налады, дазволы, параметры карпаратыўнага доступу, дзеянні ў сетцы і месцазнаходжанне аўтамабіля), і кіраваць імі."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Менеджар арганізацыі можа адсочваць праграмы і даныя, звязаныя з гэтым профілем (у тым ліку налады, дазволы, параметры карпаратыўнага доступу, дзеянні ў сетцы і месцазнаходжанне прылады), і кіраваць імі."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Менеджар арганізацыі можа адсочваць праграмы і даныя, звязаныя з гэтай інфармацыйна-забаўляльнай сістэмай (у тым ліку налады, дазволы, параметры карпаратыўнага доступу, сеткавую актыўнасць і месцазнаходжанне аўтамабіля) і кіраваць імі."</string>
@@ -836,6 +841,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Гэта справаздача пра памылку абагульваецца з менеджарам арганізацыі, якой належыць гэты аўтамабіль. Каб даведацца больш, звяжыцеся з менеджарам."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Абагуліць"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Адхіліць"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Скід налад інфармацыйна-забаўляльнай сістэмы"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Ваша сістэма атрымала запыт на скід да заводскіх налад і сціранне ўсіх даных. Скід можна выканаць зараз, або ён адбудзецца пры наступным запуску аўтамабіля. Пасля гэтага вы зможаце наладзіць новы профіль."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Скінуць налады зараз"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Скінуць пазней"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Скід адбудзецца пры наступным запуску аўтамабіля."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Каб пачаць скід налад, прыпаркуйце аўтамабіль."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Гэту наладу зараз нельга змяніць"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Спецыяльныя магчымасці"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Субцітры"</string>
@@ -863,4 +874,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Выкарыстоўваць праграму \"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>\""</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Параметры"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Налады"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Камера"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Выкарыстоўваць камеру"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Даць усім праграмам доступ да камеры"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Кіраваць дазволамі камеры"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Нядаўна атрымлівалі доступ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Ніякія праграмы не выкарыстоўвалі нядаўна камеру"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Ні адна праграма не мае доступу"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{У # праграмы з {total_count} ёсць доступ}one{У # праграмы з {total_count} ёсць доступ}few{У # праграм з {total_count} ёсць доступ}many{У # праграм з {total_count} ёсць доступ}other{У # праграмы з {total_count} ёсць доступ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Нядаўна атрымлівалі доступ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Праглядзець усе"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Ідзе загрузка…"</string>
 </resources>

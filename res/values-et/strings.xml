@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Andmesideühendus mobiilsidevõrgu abil"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobiilsidevõrk"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Kasuta mobiilset andmesidet"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Väljas"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kas lülitada mobiilne andmeside välja?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Valik on nõutav"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Kas kasutada op. <xliff:g id="CARRIER">%1$s</xliff:g> andmesidet?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"WiFi-võrkude otsimine on sisse lülitatud"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Lülita automaatselt mobiilsele andmesidele"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Kui WiFi-l puudub Internetile juurdepääs, kasutatakse mobiilset andmesidet. Rakenduda võivad andmekasutustasud."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"WiFi-võrkude otsimine ja nendega ühendamine"</string>
     <string name="learn_more" msgid="8214605928933358604">"Lisateave"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Kuumkoha nimi"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Kuumkoha <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> sisselülitam. …"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Anna juhiabirakendustele juurdepääs minu asukohale"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Kui selle välja lülitate, keelatakse juhiabifunktsioonid, mis kasutavad asukohateavet."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Lülita ikkagi välja"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Hiljutised asukohapäringud"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ühtegi hiljutist asukohapäringut pole"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Hiljuti juurde pääsetud"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Hiljuti juurde pääsetud"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Kuva kõik"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Hiljutisi rakendusi pole"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Juhiabifunktsioonid"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Rakendusetasemel load"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Asukohateenused"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Asukoha kasutamine"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Rakenduse eelistused on lähtestatud"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Kõigi andmete kustutamine (tehaseseaded)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Kustuta teabe ja meelelahutuse süsteemist kõik andmed ja profiilid"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"See kustutab teie sõiduki teabe ja meelelahutuse süsteemist kõik andmed, sh:\n\n"<li>"teie Google\'i konto;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"See kustutab teie sõiduki teabe- ja meelelahutussüsteemist kõik andmed, sh:\n\n"<li>"teie kontod ja profiilid;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Olete praegu sisse logitud järgmistele kontodele:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Selle sõiduki jaoks on seadistatud muud profiilid."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Kustuta kõik andmed"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Valige uus administraator"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Vajate vähemalt ühte administraatorit. Selle kustutamiseks valige mõni teine administraator."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Valige administraator"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Külaline"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Külaline"</string>
     <string name="user_switch" msgid="6544839750534690781">"Lüliti"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Teie (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nimi"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Kasutaja <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> kontod"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sünkrooni andmed automaatselt"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Luba rakendustel andmeid automaatselt värskendada"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Kas lülitan sünkroonimise sisse?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Veebis kontodel tehtud muudatused kopeeritakse automaatselt teie tahvelarvutisse.\n\nMõned kontod võivad ka kõik tahvelarvutis tehtud muudatused automaatselt veebi kopeerida. Ka Google\'i konto töötab sel moel."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Kas lülitan sünkroonimise välja?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Kas lubada andmete automaatne sünkroonimine?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Veebis kontodel tehtud muudatused kopeeritakse automaatselt teie sõidukisse.\n\nMõned kontod võivad ka kõik sõidukis tehtud muudatused automaatselt veebi kopeerida."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Kas keelata andmete automaatne sünkroonimine?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"See säästab andmemahtu, ent teil tuleb uusima teabe hankimiseks iga kontot käsitsi sünkroonida. Samuti ei saa te värskenduste korral märguandeid."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Konto teave"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Konto lisamine"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privaatsus"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Teabe ja meelelahutuse süsteemi andmed"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Rakenduse puhul asukohale juurdepääsu haldamine"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kaamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Hallake rakenduste juurdepääsu teie kaameratele"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Rakenduse puhul mikrofonile juurdepääsu haldamine"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Teabe ja meelelah. süs. andmed"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Eemalda"</string>
     <string name="cancel" msgid="750286395700355455">"Tühista"</string>
     <string name="allow" msgid="7519431342750394402">"Luba"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Ära luba"</string>
     <string name="deny" msgid="340512788979930804">"Keela"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tagasilükkeklahv"</string>
     <string name="enter_key" msgid="2121394305541579468">"Sisestusklahv"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Aktiveeri see teabe ja meelelahutuse süsteemi rakendus"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Inaktiveeri ja desinstalli"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Inaktiveeri see teabe ja meelelahutuse süsteemi rakendus"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Rohkem üksikasju"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Organisatsiooni haldur saab jälgida ning hallata selle profiiliga seotud rakendusi ja andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja sõiduki asukohateavet."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organisatsiooni haldur saab jälgida ja hallata selle profiiliga seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja seadme asukohateavet."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organisatsiooni haldur saab jälgida ja hallata selle teabe ja meelelahutuse süsteemiga seotud rakendusi ning andmeid, sh seadeid, lube, ettevõtte juurdepääsu, võrgutegevusi ja sõiduki asukohateavet."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Veaaruannet jagatakse sõiduki organisatsiooni halduriga. Lisateabe saamiseks võtke nendega ühendust."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Jaga"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Keeldu"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Teabe ja meelelahutuse süsteemi lähtestamine"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Teie süsteem sai taotluse tehaseseadetele lähtestamiseks ja kõigi andmete kustutamiseks. Võite kohe lähtestada või see lähtestatakse järgmisel korral, kui auto käivitatakse. Seejärel saate seadistada uue profiili."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Lähtesta kohe"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Lähtesta hiljem"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Teabe ja meelelahutuse süsteem lähtestatakse järgmisel korral, kui auto käivitatakse."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Lähtestamise alustamiseks peab auto olema pargitud."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Seda seadet ei saa praegu muuta"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Juurdepääsetavus"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Subtiitrid"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Kasuta rakendust <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Valikud"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Seaded"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kaamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Kasuta kaamerat"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Andke kõigile rakendustele juurdepääs oma kaamerale"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kaamera lubade haldamine"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Hiljuti juurde pääsetud"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Hiljutisi rakendusi pole"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 rakendusel on juurdepääs"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# rakendusel {total_count}-st on juurdepääs}other{# rakendusel {total_count}-st on juurdepääs}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Hiljuti juurde pääsetud"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Kuva kõik"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Laadimine …"</string>
 </resources>

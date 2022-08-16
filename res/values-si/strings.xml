@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ජංගම ජාලය භාවිතයෙන් දත්තවලට ප්‍රවේශය"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ජංගම ජාලය"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ජංගම දත්ත භාවිත කරන්න"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ක්‍රියාවිරහිතයි"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ජංගම දත්ත ක්‍රියාවිරහිත කරන්න ද?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"තේරීම අවශ්‍යයි"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ජංගම දත්ත සඳහා <xliff:g id="CARRIER">%1$s</xliff:g> භාවිත කරන්න ද?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi ස්කෑන් කිරීම ක්‍රියාත්මකයි"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ජංගම දත්ත වෙත ස්වයංක්‍රීයව මාරු වන්න"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi හට අන්තර්ජාල ප්‍රවේශය නැති විට ජංගම දත්ත භාවිතා කරන්න. දත්ත භාවිතයේ ගාස්තු අදාළ විය හැකිය."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi-Fi ජාල සොයා ගෙන සම්බන්ධ වන්න"</string>
     <string name="learn_more" msgid="8214605928933358604">"තව දැන ගන්න"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"හොට්ස්පොට් නම"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ක්‍රියාත්මක කරමින්..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"රිය පැදවීමට උදවු වන යෙදුම්වලට ඔබේ ස්ථානයට පිවිසීමට ඉඩ දෙන්න"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ඔබ මෙය ක්‍රියාවිරහිත කළහොත්, ස්ථාන තොරතුරු මත යැපෙන රියදුරු සහාය යෙදුම් අබල කරනු ඇත."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"කෙසේ වෙතත් ක්‍රියාවිරහිත කරන්න"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"මෑත ස්ථාන ඉල්ලීම්"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"මෑත ස්ථාන ඉල්ලීම් නැත"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"මෑතක දී ප්‍රවේශ වූ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"මෑතක දී ප්‍රවේශ වූ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"සියල්ල බලන්න"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"මෑත යෙදුම් නැත"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • රියදුරු සහාය"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"යෙදුම්-මට්ටමේ අවසර"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ස්ථානීය සේවා"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ස්ථානය භාවිත කරන්න"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"යෙදුම් මනාප යළි පිහිටුවා ඇත"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"සියලු දත්ත මකන්න (කර්මාන්තශාලා සැකසීම)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"සියලු දත්ත සහ පැතිකඩවල් තොරතුරු විනෝදාස්වාද පද්ධතියෙන් මකන්න"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"මෙය මේවා ඇතුළුව, ඔබ‍ගේ වාහනයේ විනෝදාස්වාද පද්ධතියෙන් සියලු දත්ත මකනු ඇත:\n\n"<li>"ඔබ‍ගේ Google ගිණුම"</li>\n<li>"පද්ධති සහ යෙදුම් දත්ත සහ සැකසීම්"</li>\n<li>"බාගත් යෙදුම්"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"මෙය මේවා ඇතුළුව, ඔබ‍ගේ වාහනයේ විනෝදාස්වාද පද්ධතියෙන් සියලු දත්ත මකනු ඇත:\n\n"<li>"ඔබගේ ගිණුම් සහ පැතිකඩවල්"</li>\n<li>"පද්ධති සහ යෙදුම් දත්ත සහ සැකසීම්"</li>\n<li>"බාගත් යෙදුම්"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"ඔබ දැනට පහත ගිණුම් වෙත පුරා සිටියි:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"මෙම වාහනය සඳහා වෙනත් පැතිකඩ පිහිටුවා ඇත."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"සියලු දත්ත මකන්න"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"නව පරිපාලක තෝරන්න"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"ඔබට අවම වශයෙන් එක් පරිපාලකයෙකු සිටිය යුතුය. මෙම කොටස මකා දැමීම සඳහා, මුලින්ම විකල්පයක් තෝරා ගන්න."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"පරිපාලක තෝරන්න"</string>
-    <string name="user_guest" msgid="3465399481257448601">"අමුත්තා"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"අමුත්තා"</string>
     <string name="user_switch" msgid="6544839750534690781">"මාරු වෙන්න"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ඔබ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"නම‍"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> සඳහා ගිණුම්"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ස්වයංක්‍රීයව දත්ත සමමුහූර්ත කරන්න"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"යෙදුම් වෙත දත්ත ස්වයංක්‍රීයව නැවුම් කිරීමට ඉඩ දෙන්න"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"දත්ත ස්වයංක්‍රීය-සමමුහූර්ත වීම සක්‍රී කරන්නේද?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"අන්තර්ජාලයේ ඔබගේ උපාංගවලට ඔබ කරන ඕනෑම වෙනස්කමක් ස්වයංක්‍රියව දුරකතනයට පිටපත් වෙයි.\n\nසමහර ගිණුම් මඟින් ඔබ දුරකථනයේ සිදු කරන ඕනෑම වෙනස්කමක් ස්වයංක්‍රීයව වෙබ් අඩවියට පිටපත් කිරීම ද කළ හැක. Google ගිණුමක් මෙවැනි ආකාරයකට ක්‍රියා කරයි."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"දත්ත ස්වයංක්‍රීය-සමමුහූර්ත වීම අක්‍රිය කරන්නේද?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ස්වයංක්‍රීය දත්ත සමමුහුර්ත කිරීම ඉඩ දෙන්නද?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"වෙබයෙහි ඔබගේ ගිණුම්වලට ඔබ සිදු කරන ඕනෑම වෙනස් කිරීමක් ස්වයංක්‍රියව ඔබගේ වාහනයට පිටපත් කරනු ඇත.\n\nසමහර ගිණුම් ඔබ වාහනයේ සිදු කරන ඕනෑම වෙනස් කිරීමක් ස්වයංක්‍රියව වෙබයට පිටපත් කිරීමටද ඉඩ ඇත."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ස්වයංක්‍රීය දත්ත සමමුහුර්ත කිරීම ඉඩ නොදෙන්නද?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"මෙමඟින් දත්ත භාවිතය ඉතිරි කරන, නමුත් මෑත තොරතුරු එකතු කිරීමට සෑම ගිණුමක්ම ඔබ හස්තීයව සමමුහූර්ත  කළ යුතු වෙයි. තවද යාවත්කාලීන සිදුවන විට ඔබට දැනුම්දීම් නොලැබෙයි."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ගිණුම් තතු"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ගිණුම එක් කරන්න"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"රහස්‍යතාව"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"විනෝදාස්වාද තොරතුරු පද්ධති දත්ත"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ඔබගේ ස්ථානයට යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"කැමරාව"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ඔබ‍ගේ කැමරා වෙත යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"මයික්‍රෆෝනය"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"මයික්‍රෆෝනය වෙත යෙදුම් ප්‍රවේශය පාලනය කරන්න"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"විනෝද තොරතුරු පද්ධති දත්ත"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"ඉවත් කරන්න"</string>
     <string name="cancel" msgid="750286395700355455">"අවලංගු කරන්න"</string>
     <string name="allow" msgid="7519431342750394402">"ඉඩ දෙන්න"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"ඉඩ නොදෙන්න"</string>
     <string name="deny" msgid="340512788979930804">"ප්‍රතික්ෂේප කරන්න"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace යතුර"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter යතුර"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"මෙම තොරතුරු විනෝදාස්වාද පද්ධතිය සක්‍රිය කරන්න"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"අක්‍රිය කරන්න සහ අස්ථාපනය කරන්න"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"මෙම තොරතුරු විනෝදාස්වාද පද්ධති යෙදුම අක්‍රිය කරන්න"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"වැඩි විස්තර"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"සැකසීම්, අවසර, සංස්ථාපිත ප්‍රවේශය, ජාල ක්‍රියාකාරකම සහ වාහනයේ ස්ථාන තොරතුරු ඇතුළුව, මෙම පැතිකඩ සමඟ සම්බන්ධිත යෙදුම් සහ දත්ත නිරීක්ෂණය කිරීමට සහ කළමනාකරණය කිරීමට ඔබගේ සංවිධාන කළමනාකරුට හැකිය."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"සැකසීම්, අවසර, සංස්ථාපිත ප්‍රවේශය, ජාල ක්‍රියාකාරකම සහ උපාංගයේ ස්ථාන තොරතුරු ඇතුළුව, මෙම පැතිකඩ සමඟ සම්බන්ධිත යෙදුම් සහ දත්ත නිරීක්ෂණය කිරීමට සහ කළමනාකරණය කිරීමට ඔබගේ සංවිධාන කළමනාකරුට හැකිය."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"සැකසීම්, අවසර, සංස්ථාපිත ප්‍රවේශය, ජාල ක්‍රියාකාරකම සහ වාහනයේ ස්ථාන තොරතුරු ඇතුළුව, මෙම තොරතුරු විනෝදාස්වාද පද්ධතිය සමඟ සම්බන්ධිත යෙදුම් සහ දත්ත නිරීක්ෂණය කිරීමට සහ කළමනාකරණය කිරීමට සංවිධාන කළමනාකරුට හැකිය."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"මෙම දෝෂ වාර්තාව මෙම වාහනයේ සංවිධාන කළමනාකරු සමගින් බෙදා ගනිමින් ඇත. වැඩි විස්තර සඳහා ඔවුන්ව සම්බන්ධ කර ගන්න."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"බෙදා ගන්න"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"ප්‍රතික්ෂේප කරන්න"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"තොරතුරු විනෝදාස්වාද පද්ධතිය යළි සකසන්න"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"කර්මාන්තශාලා යළි සැකසීමට සහ සියලු දත්ත මැකීමට ඔබගේ පද්ධතියට ඉල්ලීමක් ලැබී ඇත. ඔබට දැන් එය යළි සැකසිය හැකිය, නැතහොත් ඊළඟ වතාවේ මෝටර් රථය ආරම්භ වන විට එය යළි සකසනු ඇත. ඔබට අනතුරුව නව පැතිකඩක් පිහිටුවිය හැකිය."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"දැන් යළි සකසන්න"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"පසුව යළි සකසන්න"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"ඊළඟට මෝටර් රථය අරඹන විට තොරතුරු විනෝදාස්වාද පද්ධතිය යළි සැකසේ."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"යළි සැකසීම ඇරඹීමට මෝටර් රථය නවතා තැබිය යුතුය."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"මෙම සැකසීම මේ අවස්ථාවේදී වෙනස් කළ නොහැකිය"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ප්‍රවේශ්‍යතාව"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"සිරස්තල"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> භාවිත කරන්න"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"විකල්ප"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"සැකසීම්"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"කැමරාව"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"කැමරාව භාවිත කරන්න"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ඔබගේ කැමරාවට ප්‍රවේශ වීමට සියලු යෙදුම්වලට ඉඩ දෙන්න"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"කැමරා අවසර කළමනාකරණය කරන්න"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"මෑතකදී පිවිසි"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"මෑත යෙදුම් නැත"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"යෙදුම් 0කට ප්‍රවේශය ඇත"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}one{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}other{යෙදුම් {total_count}කින් #කට ප්‍රවේශය ඇත}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"මෑතකදී පිවිසි"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"සියල්ල බලන්න"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"පූරණය වේ…"</string>
 </resources>

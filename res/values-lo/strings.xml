@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ເຂົ້າເຖິງອິນເຕີເນັດໂດຍໃຊ້ເຄືອຂ່າຍມືຖື"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ເຄືອຂ່າຍມືຖື"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ໃຊ້ອິນເຕີເນັດມືຖື"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"ປິດ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ປິດອິນເຕີເນັດມືຖືບໍ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ຈໍາເປັນຕ້ອງເລືອກ"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ໃຊ້ <xliff:g id="CARRIER">%1$s</xliff:g> ສຳລັບອິນເຕີເນັດມືຖືບໍ?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"ເປີດການສະແກນ Wi‑Fi ແລ້ວ"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ປ່ຽນໄປໃຊ້ອິນເຕີເນັດມືຖືໂດຍອັດຕະໂນມັດ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ໃຊ້ອິນເຕີເນັດມືຖືເມື່ອ Wi-Fi ຂາດການເຊື່ອມຕໍ່ອິນເຕີເນັດ. ອາດມີການຮຽກເກັບຄ່າບໍລິການ."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"ຊອກຫາ ແລະ ເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍ Wi‑Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"ສຶກສາເພີ່ມເຕີມ"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ຊື່ຮັອດສະປອດ"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"ກຳລັງເປີດ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ອະນຸຍາດແອັບທີ່ຊ່ວຍໃນການຂັບຂີ່ເຂົ້າເຖິງສະຖານທີ່ຂອງທ່ານ"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ຖ້າທ່ານປິດສິ່ງນີ້, ຄຸນສົມບັດຕົວຊ່ວຍຜູ້ຂັບທີ່ອາໄສໃສ່ຂໍ້ມູນສະຖານທີ່ຈະຖືກປິດການນຳໃຊ້."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ຢືນຢັນການປິດ"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ຄຳຂໍຂໍ້ມູນສະຖານທີ່ຫຼ້າສຸດ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ບໍ່ມີຄຳຂໍຂໍ້ມູນສະຖານທີ່ຫຼ້າສຸດ"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ເບິ່ງທັງໝົດ"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"ບໍ່ມີແອັບທີ່ໃຊ້ຫຼ້າສຸດ"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ຕົວຊ່ວຍຜູ້ຂັບ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ການອະນຸຍາດລະດັບແອັບ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ການບໍລິການສະຖານທີ່"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ໃຊ້ສະຖານທີ່"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ຣີເຊັດການຕັ້ງຄ່າແອັບແລ້ວ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ລຶບຂໍ້ມູນທັງໝົດ (ຣີເຊັດເປັນຄ່າຈາກໂຮງງານ)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ລຶບຂໍ້ມູນ ແລະ ໂປຣໄຟລ໌ທັງໝົດຈາກລະບົບສາລະບັນເທີງ"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"ນີ້ຈະລຶບຂໍ້ມູນທັງໝົດອອກຈາກລະບົບສາລະບັນເທີງຂອງພາຫານະຂອງທ່ານ, ຮວມທັງ:\n\n"<li>"ບັນຊີ Google ຂອງທ່ານ"</li>\n<li>"ຂໍ້ມູນ ແລະ ການຕັ້ງຄ່າຂອງລະບົບ ແລະ ແອັບ"</li>\n<li>"ແອັບທີ່ດາວໂຫຼດ"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"ນີ້ຈະລຶບຂໍ້ມູນທັງໝົດອອກຈາກລະບົບສາລະບັນເທີງຂອງພາຫານະຂອງທ່ານ, ຮວມທັງ:\n\n"<li>"ບັນຊີ ແລະ ໂປຣໄຟລ໌ຂອງທ່ານ"</li>\n<li>"ຂໍ້ມູນ ແລະ ການຕັ້ງຄ່າຂອງລະບົບ ແລະ ແອັບ"</li>\n<li>"ແອັບທີ່ດາວໂຫຼດ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"ປັດຈຸບັນທ່ານຢູ່ໃນລະບົບບັນຊີຕໍ່ໄປນີ້:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ມີການຕັ້ງຄ່າໂປຣໄຟລ໌ອື່ນສຳລັບພາຫະນີ້ແລ້ວ."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ລຶບຂໍ້ມູນທັງໝົດ"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"ເລືອກຜູ້ເບິ່ງແຍງລະບົບໃໝ່"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"ທ່ານຈຳເປັນຕ້ອງມີຜູ້ເບິ່ງແຍງລະບົບຢ່າງໜ້ອຍໜຶ່ງຄົນ. ເພື່ອລຶບຜູ້ເບິ່ງແຍງລະບົບນີ້ອອກ, ກະລຸນາເລືອກຜູ້ປ່ຽນແທນກ່ອນ."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"ເລືອກຜູ້ເບິ່ງແຍງລະບົບ"</string>
-    <string name="user_guest" msgid="3465399481257448601">"ແຂກ"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"ແຂກ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ສະຫຼັບ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ທ່ານ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ຊື່"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"ບັນຊີສຳລັບ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ຊິ້ງຂໍ້ມູນອັດຕະໂນມັດ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"ໃຫ້ແອັບໂຫຼດຂໍ້ມູນຄືນໃໝ່ໂດຍອັດຕະໂນມັດ"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ເປີດການຊິ້ງຂໍ້ມູນອັດຕະໂນມັດບໍ?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ລະບົບຈະສຳເນົາການ​ປ່ຽນ​ແປງຕ່າງໆ​ທີ່​ທ່ານ​ເຮັດກັບ​ບັນ​ຊີ​ຂອງ​ທ່ານ​ໃນ​ເວັບ​ໄວ້ໃນອຸປະກອນຂອງທ່ານ​ໂດຍ​ອັດ​ຕະ​ໂນ​ມັດ.\n\nບາງ​ບັນ​ຊີ​ອາດ​ຈະສຳ​ເນົາ​ການ​ປ່ຽນ​ແປງ​ຕ່າງໆທີ່ທ່ານເຮັດ​ໃນ​ໂທ​ລະ​ສັບ​ໄວ້​ໃນ​ເວັບ​​ໂດຍ​ອັດ​ຕະ​ໂນ​ມັດ. ​ບັນ​ຊີ Google ເຮັດ​ວຽກໃນແບບນີ້."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ປິດການຊິ້ງຂໍ້ມູນອັດຕະໂນມັດບໍ?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ອະນຸຍາດການຊິ້ງຂໍ້ມູນອັດຕະໂນມັດບໍ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ການປ່ຽນແປງຕ່າງໆທີ່ທ່ານເຮັດກັບບັນຊີຂອງທ່ານໃນເວັບຈະຖືກສຳເນົາໄວ້ໃນພາຫະນະຂອງທ່ານໂດຍອັດຕະໂນມັດ.\n\nບາງບັນຊີອາດຈະສຳເນົາການປ່ຽນແປງຕ່າງໆທີ່ທ່ານເຮັດໃນພາຫະນະໄວ້ໃນເວັບໂດຍອັດຕະໂນມັດເຊັ່ນກັນ."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ບໍ່ອະນຸຍາດການຊິ້ງຂໍ້ມູນອັດຕະໂນມັດບໍ?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ນີ້ຈະປະຢັດອິນເຕີເນັດ, ແຕ່ທ່ານຈະຈຳເປັນຕ້ອງຊິ້ງຂໍ້ມູນແຕ່ລະບັນຊີດ້ວຍຕົນເອງເພື່ອເກັບກຳຂໍ້ມູນຫຼ້າສຸດ. ແລະ ທ່ານຈະບໍ່ໄດ້ຮັບການແຈ້ງເຕືອນເມື່ອມີການອັບເດດ."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ຂໍ້ມູນບັນຊີ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ເພີ່ມບັນຊີ"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ຄວາມເປັນສ່ວນຕົວ"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ຂໍ້ມູນລະບົບສາລະບັນເທີງ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ຄວບຄຸມສິດເຂົ້າເຖິງສະຖານທີ່ຂອງທ່ານໂດຍແອັບ"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"ກ້ອງຖ່າຍຮູບ"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"ຄວບຄຸມສິດເຂົ້າເຖິງກ້ອງຂອງແອັບ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ໄມໂຄຣໂຟນ"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ຄວບຄຸມສິດເຂົ້າເຖິງໄມໂຄຣໂຟນຂອງແອັບ"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"ຂໍ້ມູນລະບົບສາລະບັນເທີງ"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"ລຶບອອກ"</string>
     <string name="cancel" msgid="750286395700355455">"ຍົກເລີກ"</string>
     <string name="allow" msgid="7519431342750394402">"ອະນຸຍາດ"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"ບໍ່ອະນຸຍາດ"</string>
     <string name="deny" msgid="340512788979930804">"ປະຕິເສດ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"ປຸ່ມລຶບກັບຫຼັງ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ປຸ່ມເອັນເທີ"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"ເປີດນຳໃຊ້ແອັບລະບົບສາລະບັນເທີງນີ້"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"ປິດການນຳໃຊ້ ແລະ ຖອນການຕິດຕັ້ງ"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"ປິດນຳໃຊ້ແອັບລະບົບສາລະບັນເທີງນີ້"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"ລາຍລະອຽດເພີ່ມເຕີມ"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"ຜູ້ຈັດການອົງການສາມາດຕິດຕາມ ແລະ ຈັດການແອັບ ແລະ ຂໍ້ມູນທີ່ເຊື່ອມໂຍງກັບໂປຣໄຟລ໌ນີ້ໄດ້ ເຊິ່ງຮວມເຖິງການຕັ້ງຄ່າ, ການອະນຸຍາດ, ການເຂົ້າເຖິງອົງກອນ, ການເຄື່ອນໄຫວເຄືອຂ່າຍ ແລະ ຂໍ້ມູນສະຖານທີ່ຂອງພາຫະນະ."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"ຜູ້ຈັດການອົງການສາມາດຕິດຕາມ ແລະ ຈັດການແອັບ ແລະ ຂໍ້ມູນທີ່ເຊື່ອມໂຍງກັບໂປຣໄຟລ໌ນີ້ໄດ້ ເຊິ່ງຮວມເຖິງການຕັ້ງຄ່າ, ການອະນຸຍາດ, ການເຂົ້າເຖິງອົງກອນ, ການເຄື່ອນໄຫວເຄືອຂ່າຍ ແລະ ຂໍ້ມູນສະຖານທີ່ຂອງອຸປະກອນ."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"ຜູ້ຈັດການອົງການສາມາດກວດສອບ ແລະ ຈັດການແອັບ ແລະ ຂໍ້ມູນທີ່ເຊື່ອມໂຍງກັບລະບົບສາລະບັນເທີງນີ້, ຮວມທັງການຕັ້ງຄ່າ, ການອະນຸຍາດ, ສິດເຂົ້າເຖິງຂອງບໍລິສັດ, ການເຄື່ອນໄຫວເຄືອຂ່າຍ ແລະ ຂໍ້ມູນສະຖານທີ່ຂອງພາຫະນະ."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"ກຳລັງມີການແບ່ງປັນລາຍງານຂໍ້ຜິດພາດນີ້ກັບຜູ້ຈັດການອົງການຂອງພາຫະນະນີ້. ຕິດຕໍ່ເຂົາເຈົ້າສຳລັບລາຍລະອຽດເພີ່ມເຕີມ."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"ແບ່ງປັນ"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"ປະຕິເສດ"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"ຣີເຊັດລະບົບສາລະບັນເທີງ"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"ລະບົບຂອງທ່ານໄດ້ຮັບຄຳຂໍໃຫ້ຣີເຊັດເປັນຄ່າຈາກໂຮງງານ ແລະ ລຶບຂໍ້ມູນທັງໝົດ. ທ່ານສາມາດຣີເຊັດມັນໄດ້ດຽວນີ້ ຫຼື ມັນຈະຣີເຊັດໃນຄັ້ງຕໍ່ໄປທີ່ລົດຕິດຈັກ. ຈາກນັ້ນທ່ານສາມາດຕັ້ງຄ່າໂປຣໄຟລ໌ໃໝ່."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"ຣີເຊັດດຽວນີ້"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"ຣີເຊັດໃນພາຍຫຼັງ"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"ລະບົບສາລະບັນເທີງຈະຣີເຊັດໃນຄັ້ງຕໍ່ໄປທີ່ລົດຕິດຈັກ."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"ຕ້ອງຈອດລົດເພື່ອເລີ່ມຕົ້ນການຣີເຊັດ."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ບໍ່ສາມາດປ່ຽນການຕັ້ງຄ່ານີ້ໄດ້ໃນຂະນະນີ້"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ການຊ່ວຍເຂົ້າເຖິງ"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"ຄຳບັນຍາຍ"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"ໃຊ້ <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ຕົວເລືອກ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ການຕັ້ງຄ່າ"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"ກ້ອງຖ່າຍຮູບ"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"ໃຊ້ກ້ອງຖ່າຍຮູບ"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"ອະນຸຍາດໃຫ້ແອັບທັງໝົດເຂົ້າເຖິງກ້ອງຂອງທ່ານ"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"ຈັດການການອະນຸຍາດກ້ອງ"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"ເຂົ້າໃຊ້ຫຼ້າສຸດ"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"ບໍ່ມີແອັບທີ່ໃຊ້ຫຼ້າສຸດ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ບໍ່ມີແອັບໃດມີສິດເຂົ້າເຖິງ"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# ແອັບຈາກທັງໝົດ {total_count} ແອັບມີສິດເຂົ້າເຖິງ}other{# ແອັບຈາກທັງໝົດ {total_count} ແອັບມີສິດເຂົ້າເຖິງ}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ເຂົ້າໃຊ້ຫຼ້າສຸດ"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ເບິ່ງທັງໝົດ"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ກຳລັງໂຫລດ…"</string>
 </resources>

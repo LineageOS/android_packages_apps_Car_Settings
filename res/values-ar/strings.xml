@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"الوصول إلى البيانات باستخدام شبكة الجوّال"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"شبكة الجوّال"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"استخدام بيانات الجوّال"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"متوقفة"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"هل تريد إيقاف بيانات الجوّال؟"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"يجب الاختيار."</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"هل تريد بيانات الجوّال من <xliff:g id="CARRIER">%1$s</xliff:g>؟"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"تم تفعيل البحث عن شبكات Wi‑Fi."</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"التبديل إلى بيانات الجوال تلقائيًا"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"يمكنك استخدام بيانات الجوّال إذا تعذّر الدخول إلى الإنترنت عبر شبكة Wi‑Fi، وقد يتم فرض رسوم على استخدام البيانات."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"البحث عن شبكات Wi‑Fi والاتصال بها"</string>
     <string name="learn_more" msgid="8214605928933358604">"مزيد من المعلومات"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"اسم نقطة الاتصال"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"جارٍ تفعيل <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"السماح للتطبيقات التي تساعدك على القيادة بالوصول إلى موقعك الجغرافي"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"إذا أوقفت ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"إيقاف على أي حال"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"عرض الكل"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"لم يَصِل أي تطبيق مؤخرًا إلى الموقع الجغرافي."</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • مساعدة السائق"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات الموقع الجغرافي"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"استخدام الموقع الجغرافي"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تمت إعادة ضبط الإعدادات المفضّلة للتطبيقات"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"محو جميع البيانات (إعادة الضبط على الإعدادات الأصلية)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"محو جميع البيانات والملفات الشخصية من \"نظام الترفيه والمعلومات\"."</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"سيؤدي هذا الإجراء إلى محو جميع البيانات من \"نظام الترفيه والمعلومات\" لمركبتك، بما في ذلك:\n\n"<li>"حسابك على Google"</li>\n<li>"البيانات والإعدادات المتوفّرة على النظام والتطبيقات"</li>\n<li>"التطبيقات التي تم تنزيلها"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"سيؤدي هذا الإجراء إلى محو جميع البيانات من \"نظام الترفيه والمعلومات\" لمركبتك، بما في ذلك:\n\n"<li>"حساباتك وملفاتك الشخصية"</li>\n<li>"البيانات والإعدادات المتوفّرة على النظام والتطبيقات"</li>\n<li>"التطبيقات التي تم تنزيلها"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"الحسابات المسجَّل الدخول إليها حاليًا:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"تم إعداد ملفات شخصية أخرى لهذه السيارة."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"محو جميع البيانات"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"اختر مسؤولًا جديدًا."</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"أنت بحاجة إلى مدير واحد على الأقل. ولحذف هذا المدير، اختر بديلًا أولًا."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"اختر المدير"</string>
-    <string name="user_guest" msgid="3465399481257448601">"الضيف"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"ضيف"</string>
     <string name="user_switch" msgid="6544839750534690781">"تبديل"</string>
     <string name="current_user_name" msgid="3813671533249316823">"أنت (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"الاسم"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"حسابات <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"مزامنة البيانات تلقائيًا"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"السماح للتطبيقات بتحديث البيانات تلقائيًا"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"هل تريد تفعيل ميزة \"مزامنة البيانات تلقائيًا\"؟"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"سيتمّ نسخ أيّ تغييرات تجريها على حساباتك على الويب إلى جهازك تلقائيًا.\n\nوقد تعمل بعض الحسابات أيضًا على نسخ التغييرات التي تجريها على الهاتف إلى الويب تلقائيًا، فهذه هي طريقة عمل \"حساب Google\"."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"أتريد إيقاف مزامنة البيانات تلقائيًا؟"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"هل تريد السماح بمزامنة البيانات التلقائية؟"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"أي تغييرات تجريها على حساباتك على الويب سيتم نسخها إلى مركبتك تلقائيًا.\n\nوقد تنسخ بعض الحسابات أيضًا أي تغييرات تجريها على المركبة إلى الويب تلقائيًا."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"هل تريد عدم السماح بمزامنة البيانات التلقائية؟"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"سيؤدي ذلك إلى الحفاظ على البيانات، ولكن ستحتاج إلى مزامنة كل حساب يدويًا لجمع المعلومات الحديثة. ولن تتلقى إشعارات عند إتمام التحديثات."</string>
     <string name="account_details_title" msgid="7529571432258448573">"معلومات الحساب"</string>
     <string name="add_account_title" msgid="5988746086885210040">"إضافة حساب"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"الخصوصية"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"بيانات نظام الترفيه والمعلومات"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"التحكُّم في وصول التطبيقات إلى موقعك الجغرافي"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"الكاميرا"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"التحكّم في وصول التطبيقات إلى الكاميرات"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"الميكروفون"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"التحكُّم في وصول التطبيقات إلى الميكروفون"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"بيانات نظام الترفيه والمعلومات"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"إزالة"</string>
     <string name="cancel" msgid="750286395700355455">"إلغاء"</string>
     <string name="allow" msgid="7519431342750394402">"سماح"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"عدم السماح"</string>
     <string name="deny" msgid="340512788979930804">"رفض"</string>
     <string name="backspace_key" msgid="1545590866688979099">"مفتاح Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"مفتاح Enter"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"تفعيل تطبيق \"نظام الترفيه والمعلومات\" هذا"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"إلغاء التفعيل وإلغاء التثبيت"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"إيقاف تطبيق \"نظام الترفيه والمعلومات\" هذا"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"المزيد من التفاصيل"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"يمكن لمدير مؤسستك مراقبة التطبيقات والبيانات المرتبطة بهذا الملف الشخصي وإدارتها، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للمركبة."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"يمكن لمدير مؤسستك مراقبة التطبيقات والبيانات المرتبطة بهذا الملف الشخصي وإدارتها، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للجهاز."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"يمكن لمدير المؤسسة مراقبة التطبيقات والبيانات المرتبطة بنظام الترفيه والمعلومات هذا وإدارتها، بما في ذلك الإعدادات والأذونات وميزات الوصول إلى موارد المؤسسة ونشاط الشبكة ومعلومات الموقع الجغرافي للمركبة."</string>
@@ -848,6 +853,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"تتم مشاركة تقرير الخطأ هذا مع مدير المؤسسة التابعة لها هذه المركبة. للحصول على مزيد من التفاصيل، يمكنك التواصل مع مدير المؤسسة."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"مشاركة"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"رفض"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"إعادة ضبط \"نظام الترفيه والمعلومات\""</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"تلقّى النظام طلبًا لإعادة الضبط على الإعدادات الأصلية ومحو كل البيانات. يمكنك إعادة ضبط النظام الآن أو ستتم إعادة ضبطه عند تشغيل السيارة لاحقًا. وبعد إعادة الضبط، يمكنك إعداد ملف شخصي جديد."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"إعادة الضبط الآن"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"إعادة الضبط لاحقًا"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"سيُعاد ضبط \"نظام الترفيه والمعلومات\" عند تشغيل السيارة لاحقًا."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"يجب أن تكون السيارة متوقفة لبدء إعادة الضبط."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"لا يمكن تغيير هذا الإعداد الآن."</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"أدوات تسهيل الاستخدام"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"الشرح"</string>
@@ -875,4 +886,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"استخدام <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"الخيارات"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"الإعدادات"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"الكاميرا"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"استخدام الكاميرا"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"السماح لجميع التطبيقات بالوصول إلى الكاميرا"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"إدارة أذونات الكاميرا"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"لم يحصل أي تطبيق مؤخرًا على إذن بالوصول إلى الكاميرا."</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ما مِن تطبيقات لديها إذن بالوصول إلى الكاميرا."</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{لدى تطبيق واحد من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}zero{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}two{لدى تطبيقين من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}few{لدى # تطبيقات من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}many{لدى # تطبيقًا من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}other{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"عرض الكل"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"جارٍ التحميل…"</string>
 </resources>

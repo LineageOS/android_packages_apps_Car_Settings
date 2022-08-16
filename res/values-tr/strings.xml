@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Verilere mobil ağ üzerinden erişim"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobil ağ"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Mobil veri kullan"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Kapalı"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobil veri kapatılsın mı?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Seçim yapmanız gerekiyor"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Mobil veride <xliff:g id="CARRIER">%1$s</xliff:g> kullanılsın mı?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Kablosuz tarama açıldı"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mobil veriye otomatik olarak geç"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Kablosuz internet erişimi yoksa mobil veri kullan. Veri kullanımı ücretleri uygulanabilir."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Kablosuz ağları bulup bağlanın"</string>
     <string name="learn_more" msgid="8214605928933358604">"Daha fazla bilgi"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Hotspot adı"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> etkinleştiriliyor..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Sürüşe yardımcı uygulamaların konuma erişmesine izin verin"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Bu özelliği kapatırsanız konum bilgilerine dayanan sürüş yardımı uygulamaları devre dışı bırakılır."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Yine de kapat"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Yeni Konum İstekleri"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Yeni konum isteği yok"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Yakın zamanda erişildi"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yakın zamanda erişildi"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tümünü göster"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Kameraya yakın zamanda erişen uygulama yok"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Sürüş yardımı"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uygulama düzeyinde izinler"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Konum Hizmetleri"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Konumu kullan"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Uygulama tercihleri sıfırlandı"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Tüm verileri sil (sıfırla)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Bilgi-eğlence sistemindeki tüm verileri ve profilleri sil"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Bu işlem, aracınızın bilgi-eğlence sisteminden şunlar dahil tüm verileri siler:\n\n"<li>"Google hesabınız"</li>\n<li>"Sistem ve uygulama verileri ile ayarları"</li>\n<li>"İndirilen uygulamalar"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Bu işlem, aracınızın bilgi-eğlence sisteminden şunlar dahil tüm verileri siler:\n\n"<li>"Hesaplarınız ve profilleriniz"</li>\n<li>"Sistem ve uygulama verileri ile ayarları"</li>\n<li>"İndirilen uygulamalar"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Şu anda oturum açmış olduğunuz hesaplar:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Bu araç için ayarlanmış başka profiller var."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Tüm verileri sil"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Yeni yönetici seçin"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"En az bir yöneticiye ihtiyacınız var. Bu yöneticiyi silmek için önce yedek yönetici seçin."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Yönetici seçin"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Misafir"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Misafir"</string>
     <string name="user_switch" msgid="6544839750534690781">"Değiştir"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ad"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> kullanıcı hesapları"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Verileri otomatik olarak senkronize et"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Uygulamaların verileri otomatik olarak yenilemesine izin ver"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Otomatik veri senk. açılsın mı?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Hesaplarınızda web üzerinden yaptığınız tüm değişiklikler cihazınıza otomatik olarak kopyalanacaktır.\n\nBazı hesaplar telefonda yaptığınız değişiklikleri de web\'e otomatik olarak kopyalayabilir. Google Hesaplarının işleyişi bu şekildedir."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Otomatik senk. kapatılsın mı?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Otomatik veri senkronizasyonuna izin verilsin mi?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Hesaplarınızda web üzerinden yaptığınız tüm değişiklikler aracınıza otomatik olarak kopyalanacaktır.\n\nBazı hesaplar araçta yaptığınız değişiklikleri de web\'e otomatik olarak kopyalayabilir."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Otomatik veri senkronizasyonu engellensin mi?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Bu işlem verileri korur ancak son bilgileri almak için her bir hesabı manuel olarak senkronize etmeniz gerekecektir. Güncelleme olduğunda bildirim de almazsınız."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hesap bilgileri"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hesap ekle"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Gizlilik"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"bilgi-eğlence sistemi verileri"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Uygulamaların konumunuza erişimini kontrol edin"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Uygulamaların kameralarınıza erişimini kontrol edin"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Uygulamaların mikrofona erişimini kontrol et"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"bilgi-eğlence sistemi verileri"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Kaldır"</string>
     <string name="cancel" msgid="750286395700355455">"İptal et"</string>
     <string name="allow" msgid="7519431342750394402">"İzin ver"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"İzin verme"</string>
     <string name="deny" msgid="340512788979930804">"Reddet"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Geri tuşu"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter tuşu"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Bu bilgi-eğlence sistemi uygulamasını etkinleştir"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Devre dışı bırak ve yüklemesini kaldır"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Bu bilgi-eğlence sistemi uygulamasını devre dışı bırak"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Diğer ayrıntılar"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Kuruluş yöneticisi; ayarlar, izinler, kurumsal erişim, ağ etkinliği ve aracın konum bilgileri de dahil olmak üzere bu profille ilişkilendirilen uygulamaları ve verileri izleyip yönetebilir."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Kuruluş yöneticisi; ayarlar, izinler, kurumsal erişim, ağ etkinliği ve cihazın konum bilgileri de dahil olmak üzere bu profille ilişkilendirilen uygulamaları ve verileri izleyip yönetebilir."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Kuruluş yöneticisi; ayarlar, izinler, kurumsal erişim, ağ etkinliği ve aracın konum bilgileri de dahil olmak üzere bu bilgi-eğlence sistemiyle ilişkilendirilen uygulamaları ve verileri izleyip yönetebilir."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Bu hata raporu, bu aracın kuruluş yöneticisiyle paylaşılıyor. Daha fazla bilgi için yöneticiyle iletişim kurun."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Paylaş"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Reddet"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Bilgi-eğlence sistemini sıfırlayın"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sisteminiz, fabrika ayarlarına sıfırlama ve tüm verileri silme isteği aldı. Sistemi şimdi sıfırlayabilirsiniz veya sistem, araba tekrar çalıştırıldığında sıfırlanır. Ardından yeni profil oluşturabilirsiniz."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Şimdi Sıfırla"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Daha Sonra Sıfırla"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Bilgi-eğlence sistemi, araç tekrar çalıştırıldığında sıfırlanacaktır."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Sıfırlamayı başlatmak için araç park edilmelidir."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Bu ayar şu anda değiştirilemiyor"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Erişilebilirlik"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Altyazılar"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> hareketini kullanın"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Seçenekler"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Ayarlar"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Kamerayı kullan"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Tüm uygulamaların kameranıza erişmesine izin verin"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kamera izinlerini yönet"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Yakın zamanda erişildi"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Kameraya yakın zamanda erişen uygulama yok"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 uygulamanın erişimi var"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} uygulamadan # tanesinin erişimi var}other{{total_count} uygulamadan # tanesinin erişimi var}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Yakın zamanda erişildi"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Tümünü göster"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Yükleniyor…"</string>
 </resources>

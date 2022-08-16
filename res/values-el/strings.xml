@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Πρόσβαση σε δεδομένα μέσω δικτύου κινητής τηλεφ."</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Δίκτυο κινητής τηλεφωνίας"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Να χρησιμοποιούνται δεδομένα κινητής τηλεφωνίας"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Ανενεργό"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Απενεργοποίηση δεδομένων κινητής τηλεφωνίας;"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Απαιτείται επιλογή"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Χρήση <xliff:g id="CARRIER">%1$s</xliff:g> για δεδoμένα κιν. τηλ.;"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Ενεργοποιήθηκε η σάρωση Wi‑Fi"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Αυτόματη εναλλαγή σε δεδομένα κινητής τηλεφωνίας"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Χρησιμοποιήστε δεδομένα κινητής τηλεφωνίας όταν το Wi‑Fi δεν έχει πρόσβαση στο διαδίκτυο. Μπορεί να ισχύουν χρεώσεις χρήσης δεδομένων."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Εύρεση και σύνδεση σε δίκτυα Wi‑Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Μάθετε περισσότερα"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Όνομα ΣΠ Wi-Fi"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Ενεργοποίηση <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Να επιτρέπεται στις εφαρμογές υποβοήθησης οδήγησης η πρόσβαση στην τοποθεσία σας."</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Απενεργοποίηση ούτως ή άλλως"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Πρόσφατα αιτήματα τοποθεσίας"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Δεν υπάρχουν πρόσφατα αιτήματα τοποθεσίας"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Πρόσφατη πρόσβαση"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Πρόσφατη πρόσβαση"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Προβολή όλων"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Καμία πρόσφατη εφαρμογή"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Υποβοήθηση οδηγού"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Άδειες επιπέδου εφαρμογής"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Υπηρεσίες τοποθεσίας"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Χρήση τοποθεσίας"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Έγινε επαναφορά των προτιμήσεων των εφαρμογών"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Διαγραφή δεδομένων (επαναφ. εργ. ρυθ.)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Διαγραφή όλων των δεδομένων και προφίλ του συστήματος ενημέρωσης και ψυχαγωγίας"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από το σύστημα ενημέρωσης και ψυχαγωγίας του οχήματος, συμπεριλαμβανομένων των εξής:\n\n"<li>"Του Λογαριασμού σας Google"</li>\n<li>"Των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"Των εφαρμογών που έχετε κατεβάσει"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από το σύστημα ενημέρωσης και ψυχαγωγίας του οχήματος, συμπεριλαμβανομένων των εξής:\n\n"<li>"Του λογαριασμού και των προφίλ σας"</li>\n<li>"Των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"Των εφαρμογών που έχετε κατεβάσει"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Αυτήν τη στιγμή είστε συνδεδεμένοι στους παρακάτω λογαριασμούς:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Έχουν ρυθμιστεί άλλα προφίλ για αυτό το όχημα."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Διαγραφή όλων των δεδομένων"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Επιλογή νέου διαχειριστή"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Θα πρέπει να υπάρχει τουλάχιστον ένας διαχειριστής. Για να διαγράψετε αυτόν τον διαχειριστή, πρώτα επιλέξτε έναν αντικαταστάτη."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Επιλογή διαχειριστή"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Επισκέπτης"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Επισκέπτης"</string>
     <string name="user_switch" msgid="6544839750534690781">"Εναλλαγή"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Εσείς (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Όνομα"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Λογαριασμοί για <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Αυτόματος συγχρονισμός δεδομένων"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Επιτρέπει στις εφαρμογές να ανανεώνουν δεδομένα αυτόματα"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Ενεργοπ. αυτόμ. συγχρ. δεδομ.;"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Θα γίνεται αυτόματη αντιγραφή τυχόν αλλαγών που πραγματοποιείτε στους λογαριασμούς σας στον ιστό στη συσκευή σας.\n\nΣε ορισμένους λογαριασμούς ενδέχεται να γίνεται αυτόματη αντιγραφή τυχόν αλλαγών που πραγματοποιείτε στο τηλέφωνό σας στον ιστό. Ένας Λογαριασμός Google λειτουργεί με αυτόν τον τρόπο."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Απενέργ. αυτ/του συγχρονισμού;"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Αποδοχή αυτόματου συγχρονισμού δεδομένων;"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Θα γίνεται αυτόματη αντιγραφή τυχόν αλλαγών που πραγματοποιείτε στους λογαριασμούς σας στον ιστό στο όχημά σας.\n\nΣε ορισμένους λογαριασμούς ενδέχεται να γίνεται επίσης αυτόματη αντιγραφή τυχόν αλλαγών που πραγματοποιείτε στο όχημά σας στον ιστό."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Απαγόρευση αυτόματου συγχρονισμού δεδομένων;"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Με αυτόν τον τρόπο θα εξοικονομήσετε δεδομένα, αλλά θα πρέπει να συγχρονίσετε κάθε λογαριασμό με μη αυτόματο τρόπο για να συλλέξετε πρόσφατες πληροφορίες. Δεν θα λαμβάνετε ειδοποιήσεις κατά τη διάρκεια των ενημερώσεων."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Πληροφορίες λογαριασμού"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Προσθήκη λογαριασμού"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Απόρρητο"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"δεδομ. συστήμ. ενημέρωσης και ψυχαγωγίας"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Ελέγξτε την πρόσβαση εφαρμογών στην τοποθεσία σας"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Κάμερα"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Έλεγχος της πρόσβασης εφαρμογών στις κάμερές σας"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Μικρόφωνο"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Ελέγξτε την πρόσβαση των εφαρμογών στο μικρόφωνο"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"δεδομ. σύστ. ενημ. και ψυχαγ."</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Κατάργηση"</string>
     <string name="cancel" msgid="750286395700355455">"Ακύρωση"</string>
     <string name="allow" msgid="7519431342750394402">"Να επιτρέπεται"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Να μην επιτρέπεται"</string>
     <string name="deny" msgid="340512788979930804">"Να μην επιτρέπεται"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Πλήκτρο Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Πλήκτρο Enter"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Ενεργοποίηση αυτής της εφαρμογής συστήματος ενημέρωσης και ψυχαγωγίας"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Απενεργοποίηση και απεγκατάσταση"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Απενεργοποιήστε αυτήν την εφαρμογή συστήματος ενημέρωσης και ψυχαγωγίας"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Περισσότερες λεπτομέρειες"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που σχετίζονται με αυτό το προφίλ, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας του οχήματος."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που συσχετίζονται με αυτό το προφίλ, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας της συσκευής."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που σχετίζονται με αυτό το σύστημα ενημέρωσης και ψυχαγωγίας, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας του οχήματος."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Αυτή η αναφορά σφάλματος κοινοποιήθηκε στον διαχειριστή οργανισμού αυτού του οχήματος. Επικοινωνήστε μαζί του για περισσότερες λεπτομέρειες."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Κοινοποίηση"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Απόρριψη"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Επαναφορά του συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Το σύστημά σας έλαβε ένα αίτημα για επαναφορά εργοστασιακών ρυθμίσεων και διαγραφή όλων των δεδομένων. Μπορείτε να κάνετε την επαναφορά τώρα, ειδάλλως θα εκτελεστεί κατά την επόμενη εκκίνηση του αυτοκινήτου. Στη συνέχεια, θα μπορείτε να ρυθμίσετε ένα νέο προφίλ."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Επαναφορά τώρα"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Επαναφορά αργότερα"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Επαναφ. συστήμ. ενημέρ. και ψυχαγ. στην επόμενη εκκίνηση αυτοκ."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Σταθμεύστε το αυτοκίνητο για έναρξη επαναφοράς."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Δεν είναι δυνατή η αλλαγή της ρύθμισης αυτήν τη στιγμή"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Προσβασιμότητα"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Υπότιτλοι"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Χρήση <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Επιλογές"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Ρυθμίσεις"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Κάμερα"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Χρήση κάμερας"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Επιτρέψτε σε όλες τις εφαρμογές να έχουν πρόσβαση στην κάμερα"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Άδειες διαχείρισης κάμερας"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Πρόσφατη πρόσβαση"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Καμία πρόσφατη εφαρμογή"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 εφαρμογές έχουν πρόσβαση"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{Έχει πρόσβαση # από {total_count} εφαρμογές}other{Έχουν πρόσβαση # από {total_count} εφαρμογές}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Πρόσφατη πρόσβαση"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Προβολή όλων"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Φόρτωση…"</string>
 </resources>

@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Koristi podatke preko mobilne mreže"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilna mreža"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Koristi mobilne podatke"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Isključeno"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Želite da isključite mobilne podatke?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Treba da izaberete nešto"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Koristiti <xliff:g id="CARRIER">%1$s</xliff:g> za mob. podatke?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi skeniranje je uključeno"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatski pređi na mobilne podatke"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Koristite mobilne podatke kada Wi‑Fi nema pristup internetu. Može da vam bude naplaćena potrošnja podataka."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Pronađite WiFi mreže i povežite se sa njima"</string>
     <string name="learn_more" msgid="8214605928933358604">"Saznajte više"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Naziv hotspota"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Uključuje se <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Dozvoljava pristup lokaciji aplikacijama za pomoć u vožnji"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ako isključite ovo, aplikacije pomoći za vozače koje se oslanjaju na informacije o lokaciji će se onemogućiti."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Ipak isključi"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtevi za lokaciju"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nema nedavnih zahteva za lokaciju"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Nedavno pristupano"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedavno pristupano"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Prikaži sve"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Nema nedavnih aplikacija"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • pomoć za vozače"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Dozvole na nivou aplikacija"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Podešavanja aplikacija su resetovana"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Obriši sve podatke (fabrička podešavanja)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Obriši sve podatke i profile iz sistema za info-zabavu"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Ovim brišete sve podatke iz sistema za info-zabavu vozila, uključujući:\n\n"<li>"Google nalog"</li>\n<li>"podatke i podešavanja sistema i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Ovim brišete sve podatke iz sistema za info-zabavu vozila, uključujući:\n\n"<li>"vaše naloge i profile"</li>\n<li>"podatke i podešavanja sistema i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni na sledeće naloge:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Za ovo vozilo su podešeni drugi profili."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Obriši sve podatke"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Odaberite novog administratora"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Treba vam najmanje jedan administrator. Da biste izbrisali ovog, prvo odaberite zamenu."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Odaberite administratora"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Gost"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Gost"</string>
     <string name="user_switch" msgid="6544839750534690781">"Prebacite na drugog korisnika"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Vi (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ime"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Nalozi za korisnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatski sinhronizuj podatke"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Omogućava aplikacijama da automatski osvežavaju podatke"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Uključiti autom. sinh. podataka?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Sve promene koje unesete na naloge na vebu će automatski biti kopirane na uređaj.\n\nNeki nalozi mogu i automatski da kopiraju na veb sve promene koje unesete na telefonu. Tako funkcioniše Google nalog."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Isključiti autom. sinh. podataka?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Dozvolićete automatsko sinhronizovanje podataka?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Sve promene koje unesete na naloge na vebu će automatski biti kopirane u vozilo.\n\nNeki nalozi mogu i automatski da kopiraju na veb sve promene koje unesete u vozilu."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Zabranićete automatsko sinhronizovanje podataka?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"To će se smanjiti potrošnju podataka, ali biće potrebno da ručno sinhronizujete svaki nalog da biste prikupili nedavne informacije. Nećete primati obaveštenja o ažuriranjima."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informacije o nalogu"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Dodajte nalog"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatnost"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Podaci sistema za info-zabavu"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrolišite pristup aplikacija lokaciji"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrolišite pristup aplikacija kamerama"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontroliše pristup aplikacija mikrofonu"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Podaci sistema za info-zabavu"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Ukloni"</string>
     <string name="cancel" msgid="750286395700355455">"Otkaži"</string>
     <string name="allow" msgid="7519431342750394402">"Dozvoli"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Zabrani"</string>
     <string name="deny" msgid="340512788979930804">"Odbij"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Taster za brisanje unazad"</string>
     <string name="enter_key" msgid="2121394305541579468">"Taster Enter"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Aktiviraj ovu aplikaciju sistema za info-zabavu"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Deaktiviraj i deinstaliraj"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Deaktiviraj ovu aplikaciju sistema za info-zabavu"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Još detalja"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Menadžer organizacije može da nadgleda aplikacije i podatke povezane sa ovim profilom, uključujući podešavanja, dozvole, korporativni pristup, mrežnu aktivnost i informacije o lokaciji vozila, kao i da upravlja njima."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Menadžer organizacije može da nadgleda aplikacije i podatke povezane sa ovim profilom, uključujući podešavanja, dozvole, korporativni pristup, mrežnu aktivnost i informacije o lokaciji uređaja, kao i da upravlja njima."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Menadžer organizacije može da nadgleda aplikacije i podatke povezane sa ovim sistemom za info-zabavu, uključujući podešavanja, dozvole, korporativni pristup, aktivnosti na mreži i informacije o lokaciji uređaja, kao i da upravlja njima."</string>
@@ -830,6 +835,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Ovaj izveštaj o grešci se deli sa menadžerom organizacije za ovo vozilo. Obratite mu se za više detalja."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Deli"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Odbij"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Resetujte sistem za info-zabavu"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem je primio zahtev da se resetuje na fabrička podešavanja i obriše sve podatke. Možete da ga resetujete odmah ili će se resetovati kada sledeći put upalite kola. Tada možete da podesite novi profil."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Resetuj"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Resetuj kasnije"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Sis. za info-zab. se reset. kada opet upal. kola."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Morate da parkirate kola za početak resetovanja."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Trenutno ne možete da promenite ovo podešavanje"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Pristupačnost"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Titl"</string>
@@ -857,4 +868,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Koristi: <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcije"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Podešavanja"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Korišćenje kamere"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Dozvolite svim aplikacijama da pristupaju kameri"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Upravljajte dozvolama za kameru"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Nedavno pristupano"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nema nedavnih aplikacija"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 aplikacija ima pristup"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# od ukupno {total_count} aplikacije koja ima pristup}one{# od ukupno {total_count} aplikacije koja ima pristup}few{# od ukupno {total_count} aplikacije koje imaju pristup}other{# od ukupno {total_count} aplikacija koje imaju pristup}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nedavno pristupano"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Prikaži sve"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Učitava se…"</string>
 </resources>

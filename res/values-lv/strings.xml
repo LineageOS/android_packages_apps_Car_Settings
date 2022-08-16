@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Piekļuve datiem, izmantojot mobilo tīklu"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilais tīkls"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Izmantot mobilos datus"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Izslēgts"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vai izslēgt mobilos datus?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Jāveic atlase"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Vai mobilajiem datiem lietot <xliff:g id="CARRIER">%1$s</xliff:g>?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi meklēšana ir ieslēgta"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automātiski pārslēgties uz mobilajiem datiem"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Izmantojiet mobilo datu savienojumu, kad Wi‑Fi tīklā nav piekļuves internetam. Var tikt piemērota maksa par datu lietojumu."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Atrast Wi-Fi tīklus un veidot savien. ar tiem"</string>
     <string name="learn_more" msgid="8214605928933358604">"Uzzināt vairāk"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Tīklāja nosaukums"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Tīklāja <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ieslēgšana..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Ļaut palīdzības lietotnēm piekļūt atrašanās vietai"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ja izslēgsiet šo iestatījumu, tiks atspējotas autovadītāja palīdzības lietotnes, kuru pamatā ir atrašanās vietas informācija."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Tomēr izslēgt"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Neseni atrašanās vietu pieprasījumi"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nav nesenu atrašanās vietu pieprasījumu"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Atrašanās vietas, kam nesen piekļūts"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Atrašanās vietas, kam nesen piekļūts"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Skatīt visas"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Nav nesen izmantotu lietotņu"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Autovadītāja palīdzība"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lietotnes līmeņa atļaujas"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Atrašanās vietu pakalpojumi"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Izmantot atrašanās vietu"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Lietotņu preferences ir atiestatītas"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Dzēst visu (atiestatīt rūpnīcas datus)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Dzēst visus datus un profilus no informatīvi izklaidējošās sistēmas"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Tādējādi tiks dzēsti visi dati no jūsu transportlīdzekļa informatīvi izklaidējošās sistēmas:\n\n"<li>"jūsu Google konts;"</li>\n<li>"sistēmas un lietotņu dati un iestatījumi;"</li>\n<li>"lejupielādētās lietotnes."</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Tādējādi tiks dzēsti visi transportlīdzekļa informatīvi izklaidējošajā sistēmā esošie dati, tostarp:\n\n"<li>"jūsu konti un profili;"</li>\n<li>"sistēmas un lietotņu dati un iestatījumi;"</li>\n<li>"lejupielādētās lietotnes."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Jūs pašlaik esat pierakstījies tālāk norādītajos kontos."</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Šim transportlīdzeklim ir iestatīti citi profili."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Dzēst visus datus"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Jauna administratora izvēle"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Nepieciešams vismaz viens administrators. Lai dzēstu šo administratoru, vispirms izvēlieties aizvietotāju."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Izvēlēties administratoru"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Viesis"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Viesis"</string>
     <string name="user_switch" msgid="6544839750534690781">"Pārslēgt"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Jūs (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Vārds"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Lietotāja <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> konti"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automātiski sinhronizēt datus"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Ļaut lietotnēm automātiski atsvaidzināt datus"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Vai ieslēgt datu sinhronizāciju?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Visas jūsu tīmekļa kontos veiktās izmaiņas tiks automātiski kopētas uz jūsu ierīci.\n\nNoteiktiem kontiem visas tālrunī veiktās izmaiņas var arī tikt automātiski kopētas uz tīmekļa kontu. Šādi darbojas arī Google konts."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Vai izslēgt datu sinhronizāciju?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Vai atļaut automātisku datu sinhronizēšanu?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Visas jūsu tīmekļa kontos veiktās izmaiņas tiks automātiski kopētas uz jūsu transportlīdzekli.\n\nNoteiktiem kontiem visas transportlīdzeklī veiktās izmaiņas var arī tikt automātiski kopētas uz tīmekļa kontu."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Vai neatļaut automātisku datu sinhronizēšanu?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Dati tiks saglabāti, taču jums būs jāsinhronizē katra konta dati manuāli, lai iegūtu jaunāko informāciju. Turklāt jūs nesaņemsiet paziņojumus par atjauninājumiem."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informācija par kontu"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Konta pievienošana"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Konfidencialitāte"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Informatīvi izklaidējošās sistēmas dati"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Pārvaldiet lietotņu piekļuvi jūsu atrašanās vietas informācijai"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Pārvaldiet lietotņu piekļuvi jūsu kamerām"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofons"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Pārvaldiet lietotņu piekļuvi mikrofonam"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Inform. izklaid. sistēmas dati"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Noņemt"</string>
     <string name="cancel" msgid="750286395700355455">"Atcelt"</string>
     <string name="allow" msgid="7519431342750394402">"Atļaut"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Neatļaut"</string>
     <string name="deny" msgid="340512788979930804">"Neatļaut"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Atkāpšanās taustiņš"</string>
     <string name="enter_key" msgid="2121394305541579468">"Ievadīšanas taustiņš"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Aktivizēt šo informatīvi izklaidējošās sistēmas lietotni"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Deaktivizēt un atinstalēt"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Deaktivizēt šo informatīvi izklaidējošās sistēmas lietotni"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Plašāka informācija"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Organizācijas pārvaldnieks var pārraudzīt un pārvaldīt ar šo profilu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par transportlīdzekļa atrašanās vietu."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Organizācijas pārvaldnieks var pārraudzīt un pārvaldīt ar šo profilu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par ierīces atrašanās vietu."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Organizācijas pārvaldnieks var pārraudzīt un pārvaldīt ar šo informatīvi izklaidējošo sistēmu saistītās lietotnes un datus, tostarp iestatījumus, atļaujas, korporatīvo piekļuvi, darbības tīklā un informāciju par transportlīdzekļa atrašanās vietu."</string>
@@ -830,6 +835,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Šis kļūdas pārskats tiek kopīgots ar šī transportlīdzekļa organizācijas pārvaldnieku. Lai iegūtu plašāku informāciju, sazinieties ar pārvaldnieku."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Kopīgot"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Noraidīt"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Informatīvi izklaidējošās sistēmas atiestatīšana"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Jūsu sistēma saņēma pieprasījumu atiestatīt rūpnīcas datus un dzēst visus datus. Varat veikt atiestatīšanu tūlīt, vai arī sistēma tiks atiestatīta, nākamreiz palaižot automašīnu. Pēc tam varēsiet iestatīt jaunu profilu."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Atiestatīt tūlīt"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Atiestatīt vēlāk"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Informatīvi izklaidējošā sistēma tiks atiestatīta, nākamreiz palaižot automašīnu."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Automašīnai jābūt apturētai, lai sāktu atiestatīšanu."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Šo iestatījumu pašlaik nevar mainīt."</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Pieejamība"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Subtitri"</string>
@@ -857,4 +868,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Izmantot lietotni <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opcijas"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Iestatījumi"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Izmantot kameru"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Atļaut visām lietotnēm piekļūt jūsu kamerai"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kameras atļauju pārvaldība"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Nesen piekļuva"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Nav nesen izmantotu lietotņu"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 lietotnēm ir piekļuve"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# lietotnei no {total_count} ir piekļuve}zero{# lietotnēm no {total_count} ir piekļuve}one{# lietotnei no {total_count} ir piekļuve}other{# lietotnēm no {total_count} ir piekļuve}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Nesen piekļuva"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Skatīt visu"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Notiek ielāde…"</string>
 </resources>

@@ -45,7 +45,6 @@ import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.enterprise.EnterpriseUtils;
-import com.android.settingslib.bluetooth.BluetoothUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.HidProfile;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -133,7 +132,7 @@ public class PairedBluetoothDevices extends SettingsQCItem {
             CachedBluetoothDevice cachedDevice = filteredDevices.get(j);
             listBuilder.addRow(new QCRow.Builder()
                     .setTitle(cachedDevice.getName())
-                    .setSubtitle(getSubtitle(cachedDevice))
+                    .setSubtitle(cachedDevice.getCarConnectionSummary(/* shortSummary= */ true))
                     .setIcon(Icon.createWithResource(getContext(), getIconRes(cachedDevice)))
                     .addEndItem(createBluetoothButton(cachedDevice, i++))
                     .addEndItem(createPhoneButton(cachedDevice, i++))
@@ -149,7 +148,6 @@ public class PairedBluetoothDevices extends SettingsQCItem {
     Uri getUri() {
         return SettingsQCRegistry.PAIRED_BLUETOOTH_DEVICES_URI;
     }
-
 
     @Override
     void onNotifyChange(Intent intent) {
@@ -207,15 +205,6 @@ public class PairedBluetoothDevices extends SettingsQCItem {
     @Override
     Class getBackgroundWorkerClass() {
         return PairedBluetoothDevicesWorker.class;
-    }
-
-    private String getSubtitle(CachedBluetoothDevice device) {
-        if (device.isConnected()) {
-            return getContext().getString(BluetoothUtils
-                            .getConnectionStateSummary(BluetoothProfile.STATE_CONNECTED),
-                    /* appended text= */ "");
-        }
-        return device.getCarConnectionSummary();
     }
 
     @DrawableRes

@@ -37,6 +37,7 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan jaringan seluler"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Jaringan seluler"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Gunakan kuota"</string>
+    <string name="mobile_network_state_off" msgid="471795861420831748">"Nonaktif"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Nonaktifkan kuota?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Perlu memilih SIM"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Gunakan <xliff:g id="CARRIER">%1$s</xliff:g> untuk kuota?"</string>
@@ -140,6 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Pemindaian Wi-Fi diaktifkan"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Beralih ke kuota secara otomatis"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Gunakan kuota saat Wi-Fi tidak memiliki akses internet. Mungkin dikenakan biaya penggunaan data."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Temukan dan hubungkan ke jaringan Wi-Fi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Pelajari lebih lanjut"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nama hotspot"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Mengaktifkan <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -407,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Mengizinkan aplikasi yang membantu mengemudi mengakses lokasi Anda"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Jika Anda menonaktifkannya, fitur Bantuan bagi Pengemudi yang mengandalkan informasi lokasi akan dinonaktifkan."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Tetap nonaktifkan"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Permintaan Lokasi Terbaru"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Tidak ada permintaan lokasi terbaru"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Diakses baru-baru ini"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Diakses baru-baru ini"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Lihat semua"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Tidak ada aplikasi yang baru-baru ini mengakses lokasi"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Bantuan bagi Pengemudi"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Izin tingkat aplikasi"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Layanan Lokasi"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gunakan lokasi"</string>
@@ -490,7 +495,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferensi aplikasi telah direset"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Hapus semua (kembali ke setelan pabrik)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Menghapus semua data dan profil dari sistem infotainmen"</string>
-    <string name="factory_reset_desc" msgid="1688333312943433244">"Tindakan ini akan menghapus semua data dari sistem infotainmen kendaraan Anda, termasuk:\n\n"<li>"Akun Google"</li>\n<li>"Setelan &amp; data aplikasi dan sistem"</li>\n<li>"Aplikasi yang didownload"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Semua data dari sistem infotainmen kendaraan Anda akan dihapus, termasuk:\n\n"<li>"Profil dan akun Anda"</li>\n<li>"Data dan setelan sistem dan aplikasi"</li>\n<li>"Aplikasi terdownload"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Saat ini Anda telah login ke akun berikut:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Profil lain telah disiapkan untuk kendaraan ini."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Hapus semua data"</string>
@@ -547,8 +552,6 @@
     <string name="choose_new_admin_title" msgid="1915428454917699587">"Pilih admin baru"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Anda memerlukan minimal satu admin. Untuk menghapus admin ini, terlebih dahulu pilih pengganti."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Pilih admin"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Tamu"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Tamu"</string>
     <string name="user_switch" msgid="6544839750534690781">"Ganti"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Anda (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nama"</string>
@@ -584,9 +587,9 @@
     <string name="account_list_title" msgid="7631588514613843065">"Akun untuk <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Otomatis sinkronkan data"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Izinkan aplikasi otomatis memuat ulang data"</string>
-    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Aktifkan sinkronisasi data otomatis?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Perubahan apa pun yang dilakukan pada akun Anda di web akan disalin ke perangkat secara otomatis.\n\nBeberapa akun juga dapat otomatis menyalin setiap perubahan yang dilakukan di ponsel ke web. Akun Google mengikuti cara kerja tersebut."</string>
-    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Nonaktifkan sinkronisasi data otomatis?"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Izinkan penyinkronan data otomatis?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Perubahan apa pun yang dilakukan pada akun Anda di web akan disalin ke kendaraan Anda secara otomatis.\n\nBeberapa akun juga dapat otomatis menyalin perubahan apa pun yang dilakukan di kendaraan ke web."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Larang penyinkronan data otomatis?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Tindakan ini akan menghemat kuota, tetapi Anda perlu menyinkronkan setiap akun secara manual untuk mengumpulkan informasi terkini. Selain itu, Anda tidak akan menerima notifikasi ketika ada update."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Info akun"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Tambahkan akun"</string>
@@ -612,6 +615,8 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privasi"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Data sistem infotainmen"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrol akses aplikasi ke lokasi Anda"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
+    <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrol akses aplikasi ke kamera Anda"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Mengontrol akses aplikasi ke mikrofon"</string>
     <string name="vehicle_data_title" msgid="935933215161763721">"Data sistem infotainmen"</string>
@@ -710,6 +715,7 @@
     <string name="remove_button" msgid="6664656962868194178">"Hapus"</string>
     <string name="cancel" msgid="750286395700355455">"Batal"</string>
     <string name="allow" msgid="7519431342750394402">"Izinkan"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"Jangan izinkan"</string>
     <string name="deny" msgid="340512788979930804">"Tolak"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tombol backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tombol enter"</string>
@@ -748,7 +754,6 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Aktifkan aplikasi sistem infotainmen ini"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Nonaktifkan &amp; uninstal"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Nonaktifkan aplikasi sistem infotainmen ini"</string>
-    <string name="admin_support_more_info" msgid="380785608579390750">"Detail selengkapnya"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Pengelola organisasi dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi kendaraan."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Pengelola organisasi Anda dapat memantau serta mengelola aplikasi dan data yang terkait dengan profil ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi perangkat."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Pengelola organisasi dapat memantau serta mengelola aplikasi dan data yang terkait dengan sistem infotainmen ini, termasuk setelan, izin, akses perusahaan, aktivitas jaringan, dan informasi lokasi kendaraan."</string>
@@ -824,6 +829,12 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Laporan bug ini akan dibagikan kepada pengelola organisasi untuk kendaraan ini. Hubungi pengelola tersebut untuk detail selengkapnya."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Bagikan"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Tolak"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Reset sistem infotainmen"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem Anda telah menerima permintaan reset ke setelan pabrik untuk menghapus semua data. Anda dapat meresetnya sekarang, atau saat mobil dinyalakan lagi. Setelah itu, Anda dapat menyiapkan profil baru."</string>
+    <string name="factory_reset_now_button" msgid="4461863686086129437">"Reset Sekarang"</string>
+    <string name="factory_reset_later_button" msgid="2653125445148367016">"Reset Nanti"</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Sistem infotainmen akan direset nanti."</string>
+    <string name="factory_reset_driving_text" msgid="6833832382688900191">"Mobil harus diparkir untuk memulai reset."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Setelan ini tidak dapat diubah untuk saat ini"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Aksesibilitas"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Teks"</string>
@@ -851,4 +862,15 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Gunakan <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opsi"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Setelan"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Gunakan kamera"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Izinkan semua aplikasi mengakses kamera Anda"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kelola izin kamera"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Diakses baru-baru ini"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Tidak ada aplikasi yang baru-baru ini mengakses kamera"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 aplikasi memiliki akses"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# dari {total_count} aplikasi memiliki akses}other{# dari {total_count} aplikasi memiliki akses}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Diakses baru-baru ini"</string>
+    <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Lihat semua"</string>
+    <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Memuat…"</string>
 </resources>

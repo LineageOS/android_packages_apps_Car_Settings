@@ -21,6 +21,7 @@ import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_O
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -49,7 +50,8 @@ public final class EnterprisePrivacySettingsPreferenceControllerTest
                 new EnterprisePrivacySettingsPreferenceController(mSpiedContext, mPreferenceKey,
                         mFragmentController, mUxRestrictions);
 
-        assertAvailability(controller.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+        PreferenceControllerTestUtil.assertAvailability(controller.getAvailabilityStatus(),
+                UNSUPPORTED_ON_DEVICE);
     }
 
 
@@ -57,14 +59,16 @@ public final class EnterprisePrivacySettingsPreferenceControllerTest
     public void testGetAvailabilityStatus_noDeviceOwner() {
         mockNoDeviceOwner();
 
-        assertAvailability(mController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
     public void testGetAvailabilityStatus_withDeviceOwner() {
         mockDeviceOwner();
 
-        assertAvailability(mController.getAvailabilityStatus(), AVAILABLE);
+        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
+                AVAILABLE);
     }
 
     @Test
