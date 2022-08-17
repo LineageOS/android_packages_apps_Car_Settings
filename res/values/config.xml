@@ -165,4 +165,7 @@
         Delay in milliseconds between preference onclick calls
     -->
     <integer name="config_preference_onclick_debounce_ms">200</integer>
+
+    <!-- Whether to scan and start a custom pair device flow. -->
+    <bool name="config_use_custom_pair_device_flow">true</bool>
 </resources>
