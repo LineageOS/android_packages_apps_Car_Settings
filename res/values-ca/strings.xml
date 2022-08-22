@@ -402,27 +402,34 @@
     <string name="location_settings_title" msgid="901334356682423679">"Ubicació"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Utilitza la ubicació"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Permet l\'accés a la ubicació a algunes apps"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Si desactives aquesta opció, se suprimirà l\'accés a la ubicació per a totes les aplicacions. Les aplicacions d\'assistència al conductor continuaran tenint-hi accés."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Usa ubicació per a assistència al conductor"</string>
+    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"La ubicació del vehicle està desactivada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Assistència al conductor no té accés a la ubicació"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Canvia"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permet a apps d\'assistència al conductor accedir a la ubicació"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si desactives aquesta opció, les aplicacions d\'assistència al conductor que depenen de la informació d\'ubicació es desactivaran."</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
+    <skip />
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactiva igualment"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"S\'hi ha accedit fa poc"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"S\'hi ha accedit fa poc"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Mostra-ho tot"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"No hi ha aplicacions recents"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Assistència al conductor"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Apps amb permís d\'ubicació tenen accés a la ubicació del vehicle per a l\'assistència al conductor."</string>
+    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
+    <skip />
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Política de privadesa"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos al nivell de l\'aplicació"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Serveis d\'ubicació"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utilitza la ubicació"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"La ubicació pot utilitzar fonts com el GPS, la connexió Wi‑Fi, les xarxes mòbils i els sensors per calcular la ubicació del dispositiu."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistència al conductor"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"La informació d\'ubicació enviada a les aplicacions d\'assistència al conductor no inclou cap dada que t\'identifiqui. S\'emmagatzema durant 2 dies com a màxim abans de suprimir-se."</string>
+    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micròfon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utilitza el micròfon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permet que totes les aplicacions accedeixin al teu micròfon"</string>

@@ -402,27 +402,34 @@
     <string name="location_settings_title" msgid="901334356682423679">"定位"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置資訊"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"允許你指定的應用程式存取位置資訊"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"如果關閉這項功能，系統也會停用所有應用程式的位置存取權。不過，駕駛輔助應用程式還是可以存取位置資訊。"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"開啟定位功能以便使用駕駛輔助功能"</string>
+    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"車輛定位功能目前為關閉狀態"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"駕駛輔助應用程式無法存取你的位置資訊"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"變更"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"允許駕駛輔助應用程式存取位置資訊"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"如果關閉這項功能，系統會停用必須用到位置資訊的駕駛輔助應用程式。"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
+    <skip />
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"仍要關閉"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"近期存取"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期存取"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"全部顯示"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"最近沒有存取位置資訊的應用程式"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • 駕駛輔助"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"具有位置存取權的應用程式可存取這輛車的位置資訊，以便提供駕駛輔助功能。"</string>
+    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
+    <skip />
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"隱私權政策"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"定位服務"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置資訊"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"位置資訊設定可能會使用 GPS、Wi‑Fi、行動網路和感應器等來源，以便推測出裝置的所在位置。"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"駕駛輔助"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"傳送給駕駛輔助應用程式的位置資訊中不會有你的個人身分識別資訊。這類位置資訊最多保留 2 天，期限一到就會刪除。"</string>
+    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"麥克風"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麥克風"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允許所有應用程式存取麥克風"</string>
