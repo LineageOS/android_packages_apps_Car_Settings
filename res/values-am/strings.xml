@@ -347,8 +347,8 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"ማስታወሻ፦ ከዳግም ማስነሳት በኋላ ይህ መተግበሪያ ተሽከርካሪዎን እስከሚከፍቱት ድረስ ሊጀምር አይችልም።"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"እገዛ እና የድምጽ ግቤት"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"የእገዛ መተግበሪያ"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"ከማያ ገጽ ላይ ጽሑፍ ተጠቀም"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"ረዳት መተግበሪያው የማያ ገጹን ይዘቶች እንደ ጽሑፍ እንዲደርሳባቸው ይፍቀዱ"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"ከማያ ገጽ ላይ ጽሁፍ ተጠቀም"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"ረዳት መተግበሪያው የማያ ገጹን ይዘቶች እንደ ጽሁፍ እንዲደርሳባቸው ይፍቀዱ"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ቅጽበታዊ ገጽ እይታ ይጠቀሙ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ረዳት መተግበሪያው የማያ ገጹን ምስል እንዲደርስበት ይፍቀዱ"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"የድምፅ ግቤት"</string>
@@ -402,27 +402,34 @@
     <string name="location_settings_title" msgid="901334356682423679">"አካባቢ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"አካባቢን ተጠቀም"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"የጠቀሷቸው መተግበሪያዎች አካባቢዎን እንዲደርሱበት ይፍቀዱ"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"ይህን ካጠፉት ለሁሉም መተግበሪያዎች የአካባቢ መዳረሻን ያስወግዳል። የአሽከርካሪ ረዳት መተግበሪያዎች አሁንም መዳረሻ ይኖራቸዋል።"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ለአሽከርካሪ ረዳት አካባቢን ይጠቀሙ"</string>
+    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
+    <skip />
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"የተሽከርካሪ አካባቢ ጠፍቷል"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"የአሽከርካሪ ረዳት መተግበሪያዎች ወደ አካባቢዎ መድረስ አይችሉም"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
+    <skip />
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ቀይር"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"መንዳትን የሚያግዙ መተግበሪያዎች አካባቢዎን እንዲደርሱ ይፍቀዱ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ይህን ካጠፉት በአከባቢ መረጃ ላይ የሚደገፉ የአሽከርካሪ ድጋፍ መተግበሪያዎች ይሰናከላሉ።"</string>
+    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
+    <skip />
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ለማንኛውም አጥፋ"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"በቅርብ ጊዜ የተደረሰበት"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"በቅርብ ጊዜ የተደረሰበት"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ሁሉንም ይመልከቱ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ምንም የቅርብ ጊዜ መተግበሪያዎች የሉም"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • የአሽከርካሪ ረዳት"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"ለአሽከርካሪ ረዳት ባህሪያት የዚህን ተሽከርካሪ አካባቢ ለመድረስ የአካባቢ ፈቃድ ያላቸው መተግበሪያዎች።"</string>
+    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
+    <skip />
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"የግላዊነት መመሪያ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"የመተግበሪያ ደረጃ ፈቃዶች"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"የአካባቢ አገልግሎቶች"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"አካባቢን ተጠቀም"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"አካባቢ የመሣሪያዎን አካባቢ እንዲገምት ለማገዝ እንደ ጂፒኤስ፣ Wi‑Fi፣ የተንቀሳቃሽ ስልክ አውታረ መረቦች እና ዳሳሾች ያሉ ምንጮችን ሊጠቀም ይችላል።"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"የአሽከርካሪ ረዳት"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"ወደ የአሽከርካሪ ረዳት መተግበሪያዎች የተላከ የአካባቢ መረጃ እርስዎን የሚለይ መረጃ የለውም። ከመሰረዙ በፊት ቢበዛ ለ2 ቀናት ነው የሚከማቸው።"</string>
+    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"ማይክሮፎን"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ማይክፎሮን ተጠቀም"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ሁሉም መተግበሪያዎች የእርስዎን ማይክሮፎን እንዲደርሱ ይፍቀዱላቸው"</string>
@@ -458,7 +465,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"አስተዋጽዖ አበርካቾች"</string>
     <string name="manual" msgid="4819839169843240804">"በራስ"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"የመከታተያ መሰየሚያዎች"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"የደህንነት እና የቁጥጥር መመሪያ ጽሑፍ"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"የደህንነት እና የቁጥጥር መመሪያ ጽሁፍ"</string>
     <string name="copyright_title" msgid="4220237202917417876">"የቅጂ መብት"</string>
     <string name="license_title" msgid="936705938435249965">"ፈቃድ"</string>
     <string name="terms_title" msgid="5201471373602628765">"ደንቦች እና ሁኔታዎች"</string>
@@ -732,7 +739,7 @@
     <string name="default_search_query" msgid="3137420627428857068">"ይፈልጉ"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"ረዳት &amp; ድምፅ"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"የዲጂታል ረዳት መተግበሪያ"</string>
-    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"ከማያ ገጽ ላይ ጽሑፍ ተጠቀም"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"ከማያ ገጽ ላይ ጽሁፍ ተጠቀም"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"ረዳት የማያ ገጽ ይዘቶችን እንዲደርስ ይፍቀዱለት"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"ቅጽበታዊ ገጽ እይታ ይጠቀሙ"</string>
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"ረዳት የማያ ገጽ ምስልን እንዲደርስ ይፍቀዱለት"</string>
@@ -841,19 +848,19 @@
     <string name="power_component_disabled" msgid="7084144472096800457">"ይህ ቅንብር አሁን መቀየር አይችልም"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ተደራሽነት"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"መግለጫ ፅሁፎች"</string>
-    <string name="captions_settings_title" msgid="5738067618097295831">"የመግለጫ ጽሑፍ ምርጫዎች"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"የመግለጫ ጽሁፍ ምርጫዎች"</string>
     <string name="captions_settings_off" msgid="7568096968016015626">"አጥፋ"</string>
     <string name="captions_settings_on" msgid="5374984113566914978">"አብራ"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"ማያ ገጽ አንባቢ"</string>
     <string name="show_captions_toggle_title" msgid="710582308974826311">"መግለጫ ጽሑፎችን አሳይ"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"የጽሑፍ መጠን"</string>
-    <string name="captions_settings_style_header" msgid="944591388386054372">"የመግለጫ ጽሑፍ መጠን እና ቅጥ"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"የመግለጫ ጽሁፍ መጠን እና ቅጥ"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"በጣም ትንሽ"</string>
     <string name="captions_settings_text_size_small" msgid="1481895299805450566">"ትንሽ"</string>
     <string name="captions_settings_text_size_default" msgid="2227802573224038267">"ነባሪ"</string>
     <string name="captions_settings_text_size_large" msgid="5198207220911360512">"ትልቅ"</string>
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"በጣም ትልቅ"</string>
-    <string name="captions_text_style_title" msgid="8547777957403577760">"የመግለጫ ጽሑፍ ቅጥ"</string>
+    <string name="captions_text_style_title" msgid="8547777957403577760">"የመግለጫ ጽሁፍ ቅጥ"</string>
     <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"በመተግበሪያ የተቀናበረ"</string>
     <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"ነጭ በጥቁር ላይ"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"ጥቁር በነጭ ላይ"</string>

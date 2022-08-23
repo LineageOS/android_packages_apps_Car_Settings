@@ -402,27 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Байршил"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Байршлыг ашиглах"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Заасан аппууддаа таны байршилд хандахыг зөвшөөрнө"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Хэрэв та үүнийг унтраавал энэ нь бүх аппын байршилд хандах эрхийг хасна. Жолоочийн туслах аппууд хандах эрхтэй хэвээр байна."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Жолоочийн туслахын байршлыг ашиглах"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Хэрэв та үүнийг унтраавал энэ нь жолоочийн туслахад шаардлагатайгаас бусад бүх аппын байршилд хандах эрхийг хасна"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Жолоочийн туслахад байршил ашиглах"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Тээврийн хэрэгслийн байршил унтраалттай"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Жолоочийн туслах апп таны байршилд хандах боломжгүй"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Жолоочийн туслах аппууд таны байршилд хандах боломжгүй"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өөрчлөх"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Жолоодлогод тусалдаг аппуудыг байршилдаа хандахыг зөвшөөрнө"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Хэрэв та үүнийг унтраавал байршлын мэдээлэлд тулгуурладаг Жолоочийн туслах аппуудыг идэвхгүй болгоно."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Хэрэв та үүнийг унтраавал байршлын мэдээлэлд тулгуурласан жолоочийн туслах аппуудыг идэвхгүй болно"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Ямартай ч унтраах"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Саяхан хандсан"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Саяхан хандсан"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Бүгдийг харах"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Саяхан хандсан апп алга"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Жолоочийн туслах"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Жолоочийн туслах онцлогуудыг ашиглахын тулд энэ машины байршилд хандах эрхтэй байршлын зөвшөөрөлтэй аппууд."</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Жолоочийн туслах"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Жолоочийн туслах онцлогуудыг ашиглахын тулд энэ машины байршилд хандах зөвшөөрөлтэй аппууд"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Нууцлалын бодлого"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Аппын түвшний зөвшөөрөл"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Байршлын үйлчилгээ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Байршлыг ашиглах"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Байршил нь таны төхөөрөмжийн байршлыг тооцоолоход туслах зорилгоор GPS, Wi-Fi, мобайл сүлжээ болон мэдрэгч зэрэг эх сурвалжийг ашиглаж болзошгүй."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Жолоочийн туслах"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Жолоочийн туслах апп руу илгээсэн байршлын мэдээлэлд таныг тодорхойлох мэдээлэл агуулдаггүй. Үүнийг устгахаас өмнө хамгийн ихдээ 2 хоног хадгалдаг."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Жолоочийн туслахын аппууд руу илгээсэн байршлын мэдээлэлд таныг таних мэдээлэл агуулдаггүй. Үүнийг устгахаас өмнө хамгийн ихдээ 2 хоног хадгалдаг."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофоныг ашиглах"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бүх аппад таны микрофонд хандахыг зөвшөөрнө үү"</string>

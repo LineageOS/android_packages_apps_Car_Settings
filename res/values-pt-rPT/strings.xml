@@ -324,7 +324,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"Versão: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nenhuma autorização concedida."</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nenhuma autorização solicitada."</string>
-    <string name="unused_apps" msgid="648471933781010395">"Apps não utilizadas"</string>
+    <string name="unused_apps" msgid="648471933781010395">"Apps não usadas"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# app não utilizada}other{# apps não utilizadas}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Remover autorizações e libertar espaço"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s de memória de armazenamento interno"</string>
@@ -402,27 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Localização"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localização"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Permita que certas apps acedam à localização"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Se desativar esta opção, remove o acesso à localização para todas as apps. As apps de assistência ao condutor continuam a ter acesso."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Utilizar localiz. p/ assist. ao condutor"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desativar esta opção, remove o acesso à localização para todas as apps, exceto as necessárias para a assistência ao condutor"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Usar localiz. para assist. ao condutor"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"A localização do veículo está desativada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Apps de ass. ao cond. sem acesso à loc."</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps de assist. ao condutor não acedem à localiz."</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Alterar"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permita que apps de assistência à condução acedam à localização"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Se desativar esta opção, as apps de assistência ao condutor que dependem de informações de localização serão desativadas."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Se desativar esta opção, as apps de assistência ao condutor que dependem de informações de localização são desativadas"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desativar mesmo assim"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver tudo"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Nenhuma app recente"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Assistência ao condutor"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Apps com autorização para aceder à localização deste veículo para funcionalidades de assistência ao condutor."</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Assistência ao condutor"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps c/ autorização p/ aceder à localização do veículo p/ assistência ao condutor"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Política de Privacidade"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizações de nível de app"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Serviços de localização"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar localização"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"A localização pode utilizar fontes como o GPS, o Wi‑Fi, as redes móveis e os sensores para ajudar a calcular a localização do seu dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistência ao condutor"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"As informações de localização enviadas para as apps de assistência ao condutor não incluem informações de identificação. São armazenadas durante um período máximo de 2 dias antes de serem eliminadas."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"As informações de localização enviadas para as apps de assistência ao condutor não incluem informações de identificação. São armazenadas durante um período máximo de 2 dias antes de serem eliminadas."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utilizar microfone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as apps acedam ao microfone"</string>
