@@ -181,7 +181,7 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"Zařízení bez názvu"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Spárovaná zařízení"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Spárovat nové zařízení"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Zapne se Bluetooth za účelem spárování"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Za účelem spárování se zapne Bluetooth"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Odpojit zařízení?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Vozidlo bude odpojeno od zařízení <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Adresa Bluetooth vozidla: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -402,27 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Poloha"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Používat polohu"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Přístup k poloze pro vybrané aplikace"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Pokud tuto možnost vypnete, o přístup k poloze přijdou všechny aplikace. Asistence pro řidiče bude mít přístup i nadále."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Používat polohu při asistenci pro řidiče"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Pokud tuto možnost vypnete, o přístup k poloze přijdou všechny aplikace (kromě aplikací nezbytných k asistenci pro řidiče)"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Používat polohu při asistenci pro řidiče"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Poloha vozidla je vypnutá"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Aplikace pro řidiče nevidí vaši polohu"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Aplikace pro řidiče nevidí vaši polohu"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Změnit"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Povolit přístup k poloze"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Pokud tuto možnost vypnete, budou deaktivovány funkce asistentce pro řidiče, které vyžadují údaje o poloze."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Pokud tuto možnost vypnete, budou deaktivovány funkce asistentce pro řidiče, které vyžadují údaje o poloze."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Přesto vypnout"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Nedávno používáno"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedávno používáno"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Zobrazit vše"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Žádné nedávné aplikace"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Asistence pro řidiče"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Aplikace s oprávněním pro přístup k poloze mají přístup k poloze tohoto vozidla pro funkce asistence pro řidiče."</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistence pro řidiče"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplikace s oprávněním mají přístup k poloze tohoto vozidla pro funkce asistence pro řidiče."</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Zásady ochrany soukromí"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Oprávnění na úrovni aplikace"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Služby určování polohy"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Používat polohu"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Poloha zařízení se určuje pomocí zdrojů, jako je systém GPS, sítě Wi-Fi, mobilní sítě a senzory."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistence pro řidiče"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Informace o poloze odesílané do aplikací asistence pro řidiče nezahrnují údaje umožňující zjistit vaši totožnost. Informace jsou ukládány nejvýše 2 dny a pak jsou smazány."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Informace o poloze odesílané do aplikací asistence pro řidiče nezahrnují údaje umožňující zjistit vaši totožnost. Informace jsou ukládány nejvýše 2 dny a pak jsou smazány."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Použít mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Povolit všem aplikacím přístup k mikrofonu"</string>
