@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"ສະຖານທີ່"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ໃຊ້ສະຖານທີ່"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"ອະນຸຍາດໃຫ້ແອັບທີ່ທ່ານລະບຸໄວ້ເຂົ້າເຖິງສະຖານທີ່ຂອງທ່ານ"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"ຖ້າທ່ານປິດສິ່ງນີ້, ມັນຈະລຶບສິດເຂົ້າເຖິງສະຖານທີ່ຂອງແອັບທັງໝົດອອກ ຍົກເວັ້ນສິດເຂົ້າເຖິງທີ່ຈຳເປັນສຳລັບຕົວຊ່ວຍຜູ້ຂັບ"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ໃຊ້ສະຖານທີ່ສຳລັບຕົວຊ່ວຍຜູ້ຂັບ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ສະຖານທີ່ພາຫະນະປິດຢູ່"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ແອັບຕົວຊ່ວຍຜູ້ຂັບບໍ່ສາມາດເຂົ້າເຖິງສະຖານທີ່ຂອງທ່ານໄດ້"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ປ່ຽນ"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ອະນຸຍາດແອັບທີ່ຊ່ວຍໃນການຂັບຂີ່ເຂົ້າເຖິງສະຖານທີ່ຂອງທ່ານ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ຖ້າທ່ານປິດສິ່ງນີ້, ແອັບຕົວຊ່ວຍຜູ້ຂັບທີ່ອາໄສຂໍ້ມູນສະຖານທີ່ຈະຖືກປິດການນຳໃຊ້"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ຢືນຢັນການປິດ"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ເບິ່ງທັງໝົດ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ບໍ່ມີແອັບທີ່ໃຊ້ຫຼ້າສຸດ"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ຕົວຊ່ວຍຜູ້ຂັບ"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ແອັບທີ່ໄດ້ຮັບການອະນຸຍາດເຂົ້າເຖິງສະຖານທີ່ຂອງພາຫະນະນີ້ສຳລັບຄຸນສົມບັດຕົວຊ່ວຍຜູ້ຂັບ"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ການອະນຸຍາດລະດັບແອັບ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ການບໍລິການສະຖານທີ່"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ໃຊ້ສະຖານທີ່"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ສະຖານທີ່ອາດຈະໃຊ້ແຫລ່ງຂໍ້ມູນຕ່າງໆ ເຊັ່ນ: GPS, Wi‑Fi ແລະ ເຄືອຂ່າຍມືຖື ແລະ ເຊັນເຊີເພື່ອຊ່ວຍຄາດຄະເນສະຖານທີ່ຂອງອຸປະກອນຂອງທ່ານ."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ຕົວຊ່ວຍຜູ້ຂັບ"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"ຂໍ້ມູນສະຖານທີ່ທີ່ສົ່ງໃຫ້ແອັບຕົວຊ່ວຍຜູ້ຂັບບໍ່ມີຂໍ້ມູນທີ່ລະບຸຕົວຕົນຂອງທ່ານ. ລະບົບຈະເກັບຂໍ້ມູນໄວ້ສູງສຸດ 2 ມື້ກ່ອນທີ່ຈະລຶບມັນ."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ໄມໂຄຣໂຟນ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ໃຊ້ໄມໂຄຣໂຟນ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ອະນຸຍາດໃຫ້ແອັບທັງໝົດເຂົ້າເຖິງໄມໂຄຣໂຟນຂອງທ່ານ"</string>

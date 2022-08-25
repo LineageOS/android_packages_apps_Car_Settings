@@ -402,27 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Koristi lokaciju"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Dozvolite odabranim aplikacijama pristup lokaciji"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ako isključite tu postavku, uklonit će se pristup lokaciji za sve aplikacije, osim za one koje su potrebne za pomoć u vožnji"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Koristi lokaciju za pomoć u vožnji"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ako isključite ovu funkciju, uklonit će se pristup lokaciji za sve aplikacije, osim onih koje su potrebne za pomoć za vozače"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Koristi lokaciju za pomoć za vozače"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokacija vozila je isključena"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Aplikacije za pomoć u vožnji ne mogu pristupiti lokaciji"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apl. pomoći za vozače ne mogu pristupiti lokaciji"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Promijeni"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Dozvolite aplikacijama za vožnju da pristupe lokaciji"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ako isključite tu postavku, onemogućit će se aplikacije za pomoć u vožnji koje se oslanjaju na podatke o lokaciji"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ako isključite ovu funkciju, onemogućit će se aplikacije pomoći za vozače koje se oslanjaju na podatke o lokaciji"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Svejedno isključi"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Nedavno pristupano"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedavno pristupano"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Prikaži sve"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Nema nedavnih aplikacija"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Pomoć u vožnji"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplikacije s dopuštenjem za pristup lokaciji ovog vozila radi značajki pomoći u vožnji"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Pomoć za vozače"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplikacije s odobrenjem za pristup lokaciji vozila za funkcije pomoći za vozače"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Pravila privatnosti"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Odobrenja na nivou aplikacija"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokacija može koristiti izvore kao što su GPS, WiFi, mobilne mreže i senzori za lakšu procjenu lokacije uređaja."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Pomoć za vozače"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Podaci o lokaciji koji se šalju aplikacijama za pomoć u vožnji ne sadrže informacije koje otkrivaju vaš identitet. Čuvaju se najviše dva dana prije nego što se izbrišu."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Informacije o lokaciji koje se šalju aplikacijama pomoći za vozače ne sadržavaju informacije pomoću kojih vas je moguće identificirati. Pohranjuju se najduže 2 dana prije nego što se izbrišu."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristite mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>

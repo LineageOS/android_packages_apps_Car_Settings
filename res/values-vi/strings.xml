@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Dùng thông tin vị trí"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Cho phép ứng dụng bạn chọn truy cập vị trí"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Thao tác tắt tính năng này sẽ xoá quyền truy cập thông tin vị trí của mọi ứng dụng, ngoại trừ các ứng dụng cần thiết để hỗ trợ người lái xe."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Dùng vị trí để hỗ trợ người lái xe"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Thông tin vị trí của xe đang tắt"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Ứng dụng hỗ trợ người lái không truy cập được vị trí của bạn"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Thay đổi"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Cho phép ứng dụng hỗ trợ lái xe truy cập vị trí"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Thao tác tắt chế độ này cũng sẽ vô hiệu hoá các ứng dụng hỗ trợ người lái xe cần đến thông tin vị trí."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Vẫn tắt"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Xem tất cả"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Không có ứng dụng nào mới truy cập"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Ứng dụng hỗ trợ người lái xe"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Ứng dụng có quyền truy cập thông tin vị trí xe để cung cấp tính năng hỗ trợ người lái"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Chính sách quyền riêng tư"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Quyền cấp ứng dụng"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Dịch vụ vị trí"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Sử dụng vị trí"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Dịch vụ vị trí có thể sử dụng những nguồn như GPS, Wi‑Fi, mạng di động và cảm biến để giúp ước tính vị trí của thiết bị."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Công nghệ hỗ trợ dành cho người lái xe"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Thông tin vị trí gửi tới các ứng dụng hỗ trợ người lái xe là loại thông tin không nhận dạng được bạn. Thông tin này được lưu trữ trong tối đa 2 ngày trước khi bị xoá."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrô"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Sử dụng micrô"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Cho phép mọi ứng dụng truy cập vào micrô"</string>

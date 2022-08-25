@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Месцазнаходжанне"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Выкарыстоўваць месцазнаходжанне"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Даць доступ да геаданых выбраным праграмам"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Калі выключыць гэту наладу, доступ да геаданых будзе выдалены для ўсіх праграм, акрамя тых, якія патрабуюцца для дапамогі вадзіцелю"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Карыстацца геаданымі для дапамогі вадзіцелю"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геалакацыя аўтамабіля выключана"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Праграмы дапамогі вадзіцелю не маюць доступу да геаданых"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Змяніць"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Даць доступ да геаданых праграмам падтрымкі вадзіцеля"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Калі выключыць гэту наладу, праграмы дапамогі вадзіцелю, для работы якіх патрабуецца інфармацыя аб месцазнаходжанні, будуць выключаны"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Усё роўна выключыць"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Нядаўна быў атрыманы доступ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Нядаўна быў атрыманы доступ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Паказаць усе"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ніякія праграмы не атрымлівалі нядаўна доступу да геаданых"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Дапамога вадзіцелю"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Праграмы з доступам да даных пра месцазнаходжанне аўтамабіля для дапамогі вадзіцелю"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Палітыка прыватнасці"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дазволы на ўзроўні праграм"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Службы геалакацыі"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Выкарыстоўваць геалакацыю"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для вызначэння месцазнаходжання прылады могуць выкарыстоўвацца даныя GPS, Wi-Fi, мабільных сетак і датчыкаў."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Падтрымка вадзіцеля"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Звесткі пра месцазнаходжанне, якія адпраўляюцца праграмам дапамогі вадзіцелю, не змяшчаюць інфармацыі, па якой вас можна ідэнтыфікаваць. Яны захоўваюцца не больш за 2 дні, пасля чаго выдаляюцца."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрафон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Выкарыстоўваць мікрафон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Даць усім праграмам доступ да мікрафона"</string>

@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Locatie"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Locatie gebruiken"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Apps die je opgeeft toegang tot je locatie geven"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Als je dit uitzet, wordt locatietoegang verwijderd voor alle apps, behalve de apps die nodig zijn voor bestuurdersondersteuning."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Locatie gebruiken voor bestuurdersondersteuning"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Voertuiglocatie staat uit"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps voor bestuurdersondersteuning hebben geen toegang tot je locatie"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Wijzigen"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Apps die helpen bij het rijden toegang tot je locatie geven"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Als je dit uitzet, zet je apps voor bestuurdersondersteuning die locatie-informatie nodig hebben ook uit"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Toch uitzetten"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Recent gebruikt"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Recent gebruikt"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Alles bekijken"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Geen recente apps"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Bestuurdersondersteuning"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps met dit recht hebben toegang tot de locatie van dit voertuig voor functies voor bestuurdersondersteuning"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Privacybeleid"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Rechten op app-niveau"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Locatieservices"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Locatie gebruiken"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Voor de schatting van je apparaatlocatie kunnen bronnen worden gebruikt zoals gps, wifi, mobiele netwerken en sensoren."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bestuurdersondersteuning"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Locatie-informatie die naar apps voor bestuurdersondersteuning wordt gestuurd, bevat geen informatie waarmee je kunt worden geïdentificeerd. De informatie wordt maximaal 2 dagen opgeslagen en daarna verwijderd."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfoon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Microfoon gebruiken"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Alle apps toegang tot je microfoon geven"</string>
@@ -648,7 +641,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Doorgaan"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Opnieuw proberen"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Overslaan"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Een schermvergrendeling instellen"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Schermvergrendeling instellen"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Je pincode kiezen"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Je wachtwoord kiezen"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Huidige schermvergrendeling"</string>
