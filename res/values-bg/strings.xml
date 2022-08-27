@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Местоположение"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Използване на местоположението"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Разреш. на достъп до мест. на прил., които посочите"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ако изключите тази настройка, достъпът до местоположението ще бъде премахнат за всички приложения освен за тези, които са нужни за помощ за шофьорите"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Използв. на мест. за помощ за шофьорите"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Местоположението на автомобила е изкл."</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Прил. за помощ за шофьорите нямат достъп до мест. ви"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Промяна"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Разреш. на достъп до мест. на прил., помагащи при шофир."</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ако изключите тази настройка, приложенията за помощ за шофьорите, които разчитат на данните за местоположението, ще бъдат деактивирани"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Изключване въпреки това"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Със скорошен достъп"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Със скорошен достъп"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Преглед на всички"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Няма скорошни приложения"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Помощ за шофьорите"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Прил. с разреш. за достъп до местоп. на това прев. средство за функциите за помощ за шофьорите"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Декларация за поверителност"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения на ниво приложение"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги за местоположение"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Използване на местоположението"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Функцията за местоположението може да използва източници като GPS, Wi‑Fi, мобилни мрежи и сензори, за да определя къде се намира устройството ви."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Помощ за шофьорите"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Данните за местоположението, които се изпращат до приложенията за помощ за шофьорите, не съдържат информация, която ви идентифицира. Те се съхраняват за максимум 2 дни, преди да бъдат изтрити."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Използване на микрофона"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Разрешаване на всички приложения да осъществяват достъп до микрофона ви"</string>

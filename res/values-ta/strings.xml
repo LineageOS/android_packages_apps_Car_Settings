@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"இருப்பிடத்தைப் பயன்படுத்துதல்"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"இடத்தை அணுக நீங்கள் குறிப்பிடும் ஆப்ஸை அனுமதிக்கும்"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"இதை முடக்கினால், ஓட்டுநர் உதவி அம்சத்திற்குத் தேவையான ஆப்ஸைத் தவிர, மற்ற ஆப்ஸ் அனைத்துக்கும் இருப்பிட அணுகல் அகற்றப்படும்."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ஓட்டுநர் உதவி ஆப்ஸுக்கு இருப்பிட அணுகலை வழங்குதல்"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"வாகன இருப்பிடத்தை முடக்குதல்"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ஓட்டுநர் உதவி ஆப்ஸுக்கு இருப்பிட அணுகலை வழங்காதே"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"மாற்று"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"வாகனம் ஓட்ட உதவும் ஆப்ஸை இருப்பிடத்தை அணுக அனுமதிக்கவும்"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"இதை முடக்கினால், இருப்பிடத் தகவல்களைச் சார்ந்துள்ள ஓட்டுநர் உதவி ஆப்ஸ் முடக்கப்படும்"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"பரவாயில்லை, முடக்கு"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"அனைத்தையும் காட்டுதல்"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ஓட்டுநர் உதவி"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ஓட்டுநர் உதவி அம்சங்களை வழங்குவதற்காக, இந்த வாகனத்தின் இருப்பிடத்தை அணுகுவதற்கான அனுமதியுள்ள ஆப்ஸ்"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"தனியுரிமைக் கொள்கை"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ஆப்ஸ் நிலை அனுமதிகள்"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"இருப்பிடச் சேவைகள்"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"உங்கள் சாதனத்தின் இருப்பிடத்தைக் கணிக்க உதவுவதற்கு GPS, வைஃபை, மொபைல் நெட்வொர்க்குகள், சென்சார்கள் போன்றவற்றை இருப்பிட அமைப்புகள் பயன்படுத்தக்கூடும்."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ஓட்டுநர் உதவி"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"ஓட்டுநர் உதவி ஆப்ஸுக்கு அனுப்பப்படும் இருப்பிடம் குறித்த தகவல்களில் உங்களை அடையாளம் காணும் தகவல்கள் இருக்காது. அதிகபட்சம் 2 நாட்கள் மட்டுமே இவை சேமிக்கப்பட்டிருக்கும், அதன் பிறகு நீக்கப்படும்."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"மைக்ரோஃபோன்"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"மைக்ரோஃபோனைப் பயன்படுத்துதல்"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"மைக்ரோஃபோனை அனைத்து ஆப்ஸும் அணுகுவதற்கு அனுமதிக்கும்"</string>

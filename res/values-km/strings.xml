@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"អនុញ្ញាតឱ្យកម្មវិធីដែលអ្នកបញ្ជាក់ចូលប្រើទីតាំងរបស់អ្នក"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ លើកលែងតែ​កម្មវិធីដែលត្រូវការ​មុខងារជំនួយអ្នកបើកបរ"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ប្រើទីតាំងសម្រាប់​មុខងារជំនួយ​អ្នកបើកបរ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ទីតាំងយានជំនិះត្រូវបានបិទ"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"កម្មវិធីជំនួយអ្នកបើកបរមិនអាចចូលប្រើទីតាំងរបស់អ្នកទេ"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ផ្លាស់​ប្ដូរ"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"អនុញ្ញាតឱ្យកម្មវិធីដែលផ្ដល់ជំនួយពាក់ព័ន្ធនឹងការបើកបរចូលប្រើទីតាំងរបស់អ្នក"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"មិនអីទេ បិទចុះ"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"មើលទាំងអស់"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"គ្មាន​កម្មវិធី​ថ្មីៗ"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ជំនួយអ្នកបើកបរ"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"កម្មវិធីដែលមានការអនុញ្ញាតចូលប្រើទីតាំងរបស់យានជំនិះនេះសម្រាប់មុខងារជំនួយអ្នកបើកបរ"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"គោលការណ៍ឯកជនភាព"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"សេវាកម្ម​ទីតាំង"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ជំនួយ​អ្នកបើកបរ"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"ព័ត៌មានទីតាំង​ដែលបានបញ្ជូន​ទៅកម្មវិធី​ជំនួយអ្នកបើកបរ​មិនមាន​ព័ត៌មានដែល​សម្គាល់អ្នកទេ។ ព័ត៌មាននោះ​ត្រូវបានរក្សាទុក​យ៉ាងយូរបំផុត 2 ថ្ងៃ មុនពេល​ត្រូវបានលុប។"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​មីក្រូហ្វូន​របស់អ្នក"</string>

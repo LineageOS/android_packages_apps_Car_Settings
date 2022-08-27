@@ -402,34 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"ස්ථානය"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ස්ථානය භාවිත කරන්න"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"ඔබ සඳහන් කරන යෙදුම්වලට ඔබේ ස්ථානයට පිවිසීමට ඉඩ දෙන්න"</string>
-    <!-- no translation found for location_toggle_off_warning (5959449346865136081) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_toggle_title (3780157378527924932) -->
-    <skip />
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"ඔබ මෙය ක්‍රියාවිරහිත කරන්නේ නම්, එය රියැදුරු සහාය සඳහා අවශ්‍ය ඒවා හැර අනෙකුත් සියලු යෙදුම් සඳහා ස්ථාන ප්‍රවේශය ඉවත් කරනු ඇත"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"රියැදුරු සහාය සඳහා ස්ථානය භාවිතා කරන්න"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"වාහනයේ ස්ථානය ක්‍රියාවිරහිත කර ඇත"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_summary (6040822988891113026) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"රියැදුරු සහායක යෙදුම්වලට ඔබේ ස්ථානයට ප්‍රවේශ විය නොහැක"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"වෙනස් කරන්න"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"රිය පැදවීමට උදවු වන යෙදුම්වලට ඔබේ ස්ථානයට පිවිසීමට ඉඩ දෙන්න"</string>
-    <!-- no translation found for location_driver_assistance_toggle_off_warning (2733124752598498356) -->
-    <skip />
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ඔබ මෙය ක්‍රියාවිරහිත කරන්නේ නම්, ස්ථාන තොරතුරු මත යැපෙන රියැදුරු සහායක යෙදුම් අබල කරනු ඇත"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"කෙසේ වෙතත් ක්‍රියාවිරහිත කරන්න"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"මෑතක දී ප්‍රවේශ වූ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"මෑතක දී ප්‍රවේශ වූ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"සියල්ල බලන්න"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"මෑත යෙදුම් නැත"</string>
-    <!-- no translation found for driver_assistance_label (9217315205754658940) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_header_content (8118086439003674350) -->
-    <skip />
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • රියැදුරු සහාය"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"රියැදුරු සහායක විශේෂාංග සඳහා මෙම වාහනයේ ස්ථානයට ප්‍රවේශ වීමට අවසර ඇති යෙදුම්"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"පෞද්ගලිකත්ව ප්‍රතිපත්තිය"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"යෙදුම්-මට්ටමේ අවසර"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ස්ථානීය සේවා"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ස්ථානය භාවිත කරන්න"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ස්ථානය ඔබගේ උපාංගයෙහි ස්ථානය තක්සේරු කිරීමට උදවු කිරීමට, GPS, Wi-Fi, ජංගම ජාල සහ සංවේදක වැනි මූලාශ්‍ර භාවිත කළ හැකිය."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"රියදුරු සහාය"</string>
-    <!-- no translation found for adas_settings_footer (6697021691244459156) -->
-    <skip />
+    <string name="adas_settings_footer" msgid="6697021691244459156">"රියැදුරු සහායක යෙදුම් වෙත යවන ලද ස්ථාන තොරතුරුවල ඔබව හඳුනා ගන්නා තොරතුරු අඩංගු නොවේ. මැකීමට පෙර එය උපරිම වශයෙන් දින 2ක් ගබඩා කරනු ලැබේ."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"මයික්‍රෆෝනය"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"මයික්‍රෆෝනය භාවිත කරන්න"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ඔබගේ මයික්‍රෆෝනයට ප්‍රවේශ වීමට සියලු යෙදුම්වලට ඉඩ දෙන්න"</string>
