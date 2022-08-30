@@ -42,6 +42,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.BluetoothTestUtils;
 import com.android.car.settings.testutils.EnterpriseTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -118,7 +119,7 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
         mSwitchPreference.setChecked(false);
-        BluetoothAdapter.getDefaultAdapter().disable();
+        BluetoothTestUtils.setBluetoothState(mContext, /* enable= */ false);
 
         mSwitchPreference.performClick();
 
@@ -142,7 +143,7 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
         mSwitchPreference.setEnabled(true);
-        BluetoothAdapter.getDefaultAdapter().enable();
+        BluetoothTestUtils.setBluetoothState(mContext, /* enable= */ true);
 
         mSwitchPreference.performClick();
 
@@ -155,7 +156,7 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
-        BluetoothAdapter.getDefaultAdapter().enable();
+        BluetoothTestUtils.setBluetoothState(mContext, /* enable= */ true);
 
         mSwitchPreference.performClick();
 
@@ -171,7 +172,7 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
         mSwitchPreference.setChecked(true);
-        BluetoothAdapter.getDefaultAdapter().enable();
+        BluetoothTestUtils.setBluetoothState(mContext, /* enable= */ true);
 
         mSwitchPreference.performClick();
 
