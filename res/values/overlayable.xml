@@ -91,6 +91,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="bool" name="config_top_level_enable_chevrons"/>
       <item type="bool" name="config_top_level_injection_background_always_use_default"/>
       <item type="bool" name="config_top_level_injection_enable_summaries"/>
+      <item type="bool" name="config_use_custom_pair_device_flow"/>
       <item type="color" name="bluetooth_bonded_device_background"/>
       <item type="color" name="bluetooth_bonded_device_foreground"/>
       <item type="color" name="bluetooth_bonded_device_icon_color_checked"/>
@@ -908,8 +909,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="driver_assistance_label"/>
       <item type="string" name="driver_assistance_settings_title"/>
       <item type="string" name="driver_assistance_warning_confirm_label"/>
-      <item type="string" name="location_driver_assistance_privacy_policy_header_content"/>
-      <item type="string" name="location_driver_assistance_privacy_policy_button_text"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
@@ -1052,6 +1051,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="link_speed"/>
       <item type="string" name="loading_wifi_list"/>
       <item type="string" name="location_driver_assistance_action_text"/>
+      <item type="string" name="location_driver_assistance_privacy_policy_button_text"/>
+      <item type="string" name="location_driver_assistance_privacy_policy_header_content"/>
       <item type="string" name="location_driver_assistance_toggle_off_summary"/>
       <item type="string" name="location_driver_assistance_toggle_off_title"/>
       <item type="string" name="location_driver_assistance_toggle_off_warning"/>
