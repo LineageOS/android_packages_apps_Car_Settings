@@ -481,7 +481,8 @@ public class ApplicationActionButtonsPreferenceControllerTest {
 
         verify(mContext).sendOrderedBroadcastAsUser(any(Intent.class),
                 eq(UserHandle.CURRENT),
-                /* receiverPermission= */ isNull(),
+                /* receiverPermission= */
+                eq(android.Manifest.permission.HANDLE_QUERY_PACKAGE_RESTART),
                 any(BroadcastReceiver.class),
                 /* scheduler= */ isNull(),
                 eq(Activity.RESULT_CANCELED),
