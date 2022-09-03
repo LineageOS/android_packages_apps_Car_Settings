@@ -38,7 +38,7 @@
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"మొబైల్ నెట్‌వర్క్"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"మొబైల్ డేటాను ఉపయోగించండి"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"ఆఫ్‌లో ఉంది"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"మొబైల్ డేటాని ఆఫ్ చేయాలా?"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"మొబైల్ డేటాను ఆఫ్ చేయాలా?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ఎంపిక అవసరం"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"మొబైల్ డేటా కోసం <xliff:g id="CARRIER">%1$s</xliff:g> ఉపయోగించాలా?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"మీరు మొబైల్ డేటా కోసం <xliff:g id="CARRIER2_0">%2$s</xliff:g>ను వినియోగిస్తున్నారు. మీరు <xliff:g id="CARRIER1">%1$s</xliff:g>కు మారితే, <xliff:g id="CARRIER2_1">%2$s</xliff:g> ఇప్పటి నుండి మొబైల్ డేటా కోసం ఉపయోగించబడదు."</string>
@@ -574,8 +574,8 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"ప్రొఫైల్ డేటా"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"కాష్"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"మొత్తం"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"నిల్వను తీసివేయి"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"కాష్‌ను తీసివేయి"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"నిల్వను తీసివేయండి"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"కాష్‌ను తీసివేయండి"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"యాప్ డేటాను తొలగించాలా?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ఈ యాప్ డేటా మొత్తం శాశ్వతంగా తొలగించబడుతుంది. ఇందులో అన్ని ఫైళ్లు, సెట్టింగ్‌లు, ఖాతాలు, డేటాబేస్‌లు మొదలైనవి ఉంటాయి."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"యాప్ యొక్క నిల్వను తీసివేయడం సాధ్యపడలేదు."</string>
@@ -585,8 +585,8 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"ఖాతాను జోడించు"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ఖాతాలు జోడించబడలేదు"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> యొక్క ఖాతాలు"</string>
-    <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాని ఆటోమేటిక్‌గా సమకాలీకరించు"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"డేటాని ఆటోమేటిక్‌గా రిఫ్రెష్ చేసేలా యాప్‌లు అనుమతించబడతాయి"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాను ఆటోమేటిక్‌గా సింక్ చేయండి"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"డేటాను ఆటోమేటిక్‌గా రిఫ్రెష్ చేసేలా యాప్‌లు అనుమతించబడతాయి"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించాలా?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"మీరు వెబ్‌లో మీ ఖాతాలకు చేసే ఏవైనా మార్పులు, మీ వెహికల్‌కు ఆటోమేటిక్‌గా కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు వెహికల్‌లో చేసే ఏవైనా మార్పులను వెబ్‌కు కూడా ఆటోమేటిక్‌గా కాపీ చేయవచ్చు."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించవద్దా?"</string>
@@ -605,11 +605,11 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"అన్ని అంశాలకు సింక్‌ ఆఫ్‌లో ఉంది"</string>
     <string name="sync_disabled" msgid="393531064334628258">"సింక్‌ ఆఫ్‌లో ఉంది"</string>
     <string name="sync_error" msgid="6698021343089247914">"సింక్‌ ఎర్రర్"</string>
-    <string name="last_synced" msgid="4745124489150101529">"చివరిగా సమకాలీకరించినది <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="4745124489150101529">"చివరిగా సింక్ చేసినది <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"ఇప్పుడు సింక్ చేస్తోంది…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"ఇప్పుడే సింక్ చేయడానికి నొక్కండి<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
-    <string name="sync_button_sync_now" msgid="5767643057970371315">"ఇప్పుడే సమకాలీకరించు"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"ఇప్పుడే సింక్ చేయండి"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"సింక్‌ను రద్దు చేయి"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"సింక్‌ ప్రస్తుతం సమస్యలను ఎదుర్కొంటోంది. ఇది త్వరలో అందుబాటులోకి వస్తుంది."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"గోప్యత"</string>
@@ -643,7 +643,7 @@
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"మీ పాస్‌వర్డ్‌ను ఎంచుకోండి"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ప్రస్తుత స్క్రీన్ లాక్"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"సెక్యూరిటీ కోసం, ఆకృతిని సెట్ చేయండి"</string>
-    <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయి"</string>
+    <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయండి"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"రద్దు చేయి"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"మీ కొత్త అన్‌లాక్ ఆకృతి"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"అన్‌లాక్ నమూనాని గీయండి"</string>
@@ -674,7 +674,7 @@
     <string name="choose_lock_password_message" msgid="6124341145027370784">"సెక్యూరిటీ కోసం, పాస్‌వర్డ్‌ను సెట్ చేయండి"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"మీ పాస్‌వర్డ్‌ను మళ్లీ నమోదు చేయండి"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"పాస్‌‌వర్డ్‌లు సరిపోలలేదు"</string>
-    <string name="lockpassword_clear_label" msgid="6363680971025188064">"తీసివేయి"</string>
+    <string name="lockpassword_clear_label" msgid="6363680971025188064">"తీసివేయండి"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"రద్దు చేయి"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"నిర్ధారించు"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"తప్పనిసరిగా కనీసం 4 అక్షరాలు ఉండాలి"</string>
@@ -712,9 +712,9 @@
     <string name="connect" msgid="5861699594602380150">"కనెక్ట్ చేయి"</string>
     <string name="disconnect" msgid="6140789953324820336">"డిస్‌కనెక్ట్ చేయి"</string>
     <string name="delete_button" msgid="5840500432614610850">"తొలగించు"</string>
-    <string name="remove_button" msgid="6664656962868194178">"తీసివేయి"</string>
+    <string name="remove_button" msgid="6664656962868194178">"తీసివేయండి"</string>
     <string name="cancel" msgid="750286395700355455">"రద్దు చేయి"</string>
-    <string name="allow" msgid="7519431342750394402">"అనుమతించు"</string>
+    <string name="allow" msgid="7519431342750394402">"అనుమతించండి"</string>
     <string name="do_not_allow" msgid="3157082400084747525">"అనుమతించవద్దు"</string>
     <string name="deny" msgid="340512788979930804">"తిరస్కరించు"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace కీ"</string>
