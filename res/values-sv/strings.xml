@@ -352,7 +352,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Använda skärmbild"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Tillåt att assistentappen får åtkomst till en bild på skärmen"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Röstinmatning"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Tjänsten Autofyll"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Autofylltjänst"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ingen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Vald"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistenten kan läsa information om appar som används i systemet, inklusive information som visas på skärmen eller är åtkomlig i apparna."</string>
@@ -775,6 +775,8 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktiverad app}other{# aktiverade appar}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Inga aktiverade appar"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Fordonspolicy för <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
+    <skip />
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Inställningar som hanteras av organisationsansvarig"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Läs mer om <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Information om hanterat fordon"</string>
