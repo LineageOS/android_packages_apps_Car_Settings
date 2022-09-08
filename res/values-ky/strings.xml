@@ -491,11 +491,11 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Тармак жөндөөлөрү кайра коюлду"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Колдонмонун жөндөөлөрүн баштапкы абалга келтирүү"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөр кайра жөндөлөт:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык маалыматтары сакталып калат."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Баштапкы абалга келтирүү"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Кайра коюу"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Бардык нерселерди өчүрүү (баштапкы абалга кайтаруу)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Инфозоок тутумундагы бардык маалыматты жана профилдерди өчүрүү"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"Унааңыздын инфозоок тутумундагы бардык нерселер өчүрүлөт, тактап айтканда:\n\n"<li>"Аккаунттарыңыз жана профилдериңиз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайын-даректери"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Унааңыздын инфозоок тутумундагы бардык нерселер өчүрүлөт, тактап айтканда:\n\n"<li>"Аккаунттарыңыз жана профилдериңиз"</li>\n<li>"Системанын жана колдонмолордун жөндөөлөрү жана дайын-даректери"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Бул унаа үчүн башка профилдер жөндөлгөн."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Бардык маалыматты өчүрүү"</string>
@@ -660,7 +660,7 @@
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экранды кулпулабайсызбы?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Аккаунтуңузга каалаган киши кире берет"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"Профилди кулпулоо"</string>
-    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Кулпусун автоматтык түрдө ачууну жөндөө"</string>
+    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Кулпусун автоматтык түрдө ачууну тууралоо"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN кодуңузду киргизиңиз"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Сырсөзүңүздү киргизиңиз"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Коопсуздук үчүн PIN код коюп алыңыз"</string>

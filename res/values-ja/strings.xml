@@ -493,7 +493,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"この操作により、次の設定がすべてリセットされます。\n\n"<li>"無効化されているアプリ"</li>\n<li>"無効化されているアプリの通知"</li>\n<li>"特定の操作で使用するデフォルトのアプリ"</li>\n<li>"アプリのバックグラウンド データの制限"</li>\n<li>"権限のすべての制限"</li>\n\n"アプリのデータが失われることはありません。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"アプリをリセット"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"アプリの設定をリセットしました"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"全データを消去（出荷時リセット）"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"すべてのデータを消去（初期設定にリセット）"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"インフォテインメント システムからデータとプロファイルをすべて消去します"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"この操作を行うと、以下のデータを含め、車のインフォテインメント システムからすべてのデータが消去されます。\n\n"<li>"アカウントとプロファイル"</li>\n<li>"システムやアプリのデータと設定"</li>\n<li>"ダウンロードしたアプリ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"以下のアカウントにログインしています。"</string>
@@ -524,7 +524,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"管理者としてログイン済み"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"管理者権限を付与しますか？"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"管理者にする"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"管理者は、他のプロファイル（他の管理者のプロファイルを含む）を削除したり、インフォテインメント システムを出荷時の設定にリセットしたりできるようになります。"</string>
+    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"管理者は、他のプロファイル（他の管理者のプロファイルを含む）を削除したり、インフォテインメント システムを初期設定にリセットしたりできるようになります。"</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"この操作は元に戻せません。"</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"はい、管理者にする"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"新しいプロファイルの作成"</string>
@@ -721,7 +721,7 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter キー"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"デモを終了"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"デモモードの終了"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"この操作を行うと、デモアカウントが削除され、システムが出荷時の設定にリセットされます。プロファイル データはすべて失われます。"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"この操作を行うと、デモアカウントが削除され、システムが初期設定にリセットされます。プロファイル データはすべて失われます。"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"デモを終了"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"閉じる"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"この機能は運転中は利用できません"</string>
@@ -830,7 +830,7 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"共有"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"同意しない"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"インフォテインメント システムのリセット"</string>
-    <string name="factory_reset_parked_text" msgid="1446768795193651311">"システムが、出荷時の設定にリセットしてすべてのデータを消去するリクエストを受信しました。今すぐリセットできます。すぐにリセットしない場合は、次回車が始動したときに自動的にリセットされます。リセット後、新しいプロファイルを設定できます。"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"システムが、初期設定にリセットしてすべてのデータを消去するリクエストを受信しました。今すぐリセットできます。すぐにリセットしない場合は、次回車が始動したときに自動的にリセットされます。リセット後、新しいプロファイルを設定できます。"</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"今すぐリセット"</string>
     <string name="factory_reset_later_button" msgid="2653125445148367016">"後でリセット"</string>
     <string name="factory_reset_later_text" msgid="6371031843489938419">"インフォテインメント システムは、車の次回始動時にリセットされます。"</string>
