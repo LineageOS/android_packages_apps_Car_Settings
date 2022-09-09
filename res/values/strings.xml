@@ -32,8 +32,6 @@
     <string name="keywords_display_brightness_level" translatable="false">dim screen, touchscreen, battery</string>
     <string name="keywords_display_auto_brightness" translatable="false">dim screen, touchscreen, battery</string>
     <string name="keywords_display_night_display" translatable="false">dim screen, night, tint</string>
-    <!-- Label for night mode toggle tile in quick setting [CHAR LIMIT=20] -->
-    <string name="night_mode_tile_label">Night mode</string>
     <!-- Empty placeholder string to be used while waiting for a string to be loaded asynchronously. [CHAR LIMIT=NONE] -->
     <string name="empty_placeholder" translatable="false">&#160;</string>
 
@@ -1683,10 +1681,6 @@
 
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
     <string name="setup_lock_settings_options_button_label">Screen lock options</string>
-
-    <!-- Format of the message displayed at the bottom of the quick settings page, that shows build information in
-         user-debug and eng builds. -->
-    <string name="build_info_fmt"><xliff:g example="google/gcar_emu_x86/..." id="fingerprint">%1$s</xliff:g>\n<xliff:g example="Thu Aug 30" id="date">%2$s</xliff:g> : <xliff:g example="4" id="num_days">%3$s</xliff:g> days ago</string>
 
     <!-- security credentials --><skip/>
     <!-- Title of preference to reset credential storage. [CHAR LIMIT=40] -->
