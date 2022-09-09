@@ -69,220 +69,229 @@ public class MultiActionPreferenceTest {
     @Test
     @UiThreadTest
     public void onBindViewHolder_actionItemsNullByDefault() {
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_one),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_one_action_item_one),
                 anyInt())).thenReturn(-1);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_two),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(-1);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_three),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(-1);
         mPref = new MultiActionPreference(mContext);
         mPref.onBindViewHolder(mHolder);
 
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1))
+
+        assertThat(
+                mPref.getGroupOneActionItem(MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1))
                 .isNull();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2))
+
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1))
                 .isNull();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3))
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2))
                 .isNull();
     }
 
     @Test
     @UiThreadTest
     public void onBindViewHolder_toggleButtons_attributesVisible() {
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_one),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_one_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_two),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_three),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getBoolean(eq(R.styleable.MultiActionPreference_action_item_one_shown),
+
+        when(mTypedArray.getBoolean(
+                eq(R.styleable.MultiActionPreference_group_one_action_item_one_shown),
                 anyBoolean())).thenReturn(true);
-        when(mTypedArray.getBoolean(eq(R.styleable.MultiActionPreference_action_item_two_shown),
+        when(mTypedArray.getBoolean(
+                eq(R.styleable.MultiActionPreference_group_two_action_item_one_shown),
                 anyBoolean())).thenReturn(true);
-        when(mTypedArray.getBoolean(eq(R.styleable.MultiActionPreference_action_item_three_shown),
+        when(mTypedArray.getBoolean(
+                eq(R.styleable.MultiActionPreference_group_two_action_item_two_shown),
                 anyBoolean())).thenReturn(true);
         mPref = new MultiActionPreference(mContext);
         mPref.onBindViewHolder(mHolder);
 
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
-                .isVisible()).isTrue();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2)
-                .isVisible()).isTrue();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3)
-                .isVisible()).isTrue();
+        assertThat(
+                mPref.getGroupOneActionItem(MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1)
+                        .isVisible()).isTrue();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)
+                        .isVisible()).isTrue();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)
+                        .isVisible()).isTrue();
     }
 
     @Test
     @UiThreadTest
     public void onBindViewHolder_toggleButtons_attributesEnabled() {
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_one),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_one_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_two),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_three),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(0);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_one_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_one_action_item_one_enabled),
+                anyBoolean()))
                 .thenReturn(true);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_two_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_two_action_item_one_enabled),
+                anyBoolean()))
                 .thenReturn(true);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_three_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_two_action_item_two_enabled),
+                anyBoolean()))
                 .thenReturn(true);
         mPref = new MultiActionPreference(mContext);
         mPref.onBindViewHolder(mHolder);
 
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
-                .isEnabled()).isTrue();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2)
-                .isEnabled()).isTrue();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3)
-                .isEnabled()).isTrue();
+        assertThat(
+                mPref.getGroupOneActionItem(MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1)
+                        .isEnabled()).isTrue();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)
+                        .isEnabled()).isTrue();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)
+                        .isEnabled()).isTrue();
     }
 
     @Test
     @UiThreadTest
     public void onBindViewHolder_toggleButtons_attributesNotVisible() {
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_one),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_one_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_two),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_three),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getBoolean(eq(R.styleable.MultiActionPreference_action_item_one_shown),
+        when(mTypedArray.getBoolean(
+                eq(R.styleable.MultiActionPreference_group_one_action_item_one_shown),
                 anyBoolean())).thenReturn(false);
-        when(mTypedArray.getBoolean(eq(R.styleable.MultiActionPreference_action_item_two_shown),
+        when(mTypedArray.getBoolean(
+                eq(R.styleable.MultiActionPreference_group_two_action_item_one_shown),
                 anyBoolean())).thenReturn(false);
-        when(mTypedArray.getBoolean(eq(R.styleable.MultiActionPreference_action_item_three_shown),
+        when(mTypedArray.getBoolean(
+                eq(R.styleable.MultiActionPreference_group_two_action_item_two_shown),
                 anyBoolean())).thenReturn(false);
         mPref = new MultiActionPreference(mContext);
         mPref.onBindViewHolder(mHolder);
 
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
-                .isVisible()).isFalse();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2)
-                .isVisible()).isFalse();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3)
-                .isVisible()).isFalse();
+        assertThat(
+                mPref.getGroupOneActionItem(MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1)
+                        .isVisible()).isFalse();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)
+                        .isVisible()).isFalse();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)
+                        .isVisible()).isFalse();
     }
 
     @Test
     @UiThreadTest
     public void onBindViewHolder_toggleButtons_attributesNotEnabled() {
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_one),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_one_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_two),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_three),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(0);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_one_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_one_action_item_one_enabled),
+                anyBoolean()))
                 .thenReturn(false);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_two_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_two_action_item_one_enabled),
+                anyBoolean()))
                 .thenReturn(false);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_three_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_two_action_item_two_enabled),
+                anyBoolean()))
                 .thenReturn(false);
         mPref = new MultiActionPreference(mContext);
         mPref.onBindViewHolder(mHolder);
 
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
-                .isEnabled()).isFalse();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2)
-                .isEnabled()).isFalse();
-        assertThat(mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3)
-                .isEnabled()).isFalse();
+        assertThat(
+                mPref.getGroupOneActionItem(MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1)
+                        .isEnabled()).isFalse();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)
+                        .isEnabled()).isFalse();
+        assertThat(
+                mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)
+                        .isEnabled()).isFalse();
     }
 
     @Test
     @UiThreadTest
     public void toggleButtons_onClick_checkedStateChanges() {
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_one),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_two),
-                anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_action_item_three),
+        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(0);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_one_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_two_action_item_one_enabled),
+                anyBoolean()))
                 .thenReturn(true);
         when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_two_enabled), anyBoolean()))
-                .thenReturn(true);
-        when(mTypedArray.getBoolean(
-                eq(R.styleable.MultiActionPreference_action_item_three_enabled), anyBoolean()))
+                eq(R.styleable.MultiActionPreference_group_two_action_item_two_enabled),
+                anyBoolean()))
                 .thenReturn(true);
         mPref = new MultiActionPreference(mContext);
         // OnClickListeners needed for check state to change
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM1)).setOnClickListener(c -> {});
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM2)).setOnClickListener(c -> {});
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM3)).setOnClickListener(c -> {});
+        ((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)).setOnClickListener(c -> {});
+        ((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)).setOnClickListener(c -> {});
         mPref.onBindViewHolder(mHolder);
 
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM1)).isChecked()).isTrue();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM2)).isChecked()).isTrue();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM3)).isChecked()).isTrue();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)).isChecked()).isTrue();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)).isChecked()).isTrue();
 
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM1)).onClick();
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM2)).onClick();
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM3)).onClick();
+        ((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)).onClick();
+        ((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)).onClick();
 
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM1)).isChecked()).isFalse();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM2)).isChecked()).isFalse();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM3)).isChecked()).isFalse();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)).isChecked()).isFalse();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)).isChecked()).isFalse();
     }
 
     @Test
     @UiThreadTest
     public void toggleButtons_onClickRestricted_checkedStateDoesNotChange() {
-        when(mTypedArray.getInteger(eq(R.styleable.MultiActionPreference_action_item_one),
+        when(mTypedArray.getInteger(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInteger(eq(R.styleable.MultiActionPreference_action_item_two),
-                anyInt())).thenReturn(0);
-        when(mTypedArray.getInteger(eq(R.styleable.MultiActionPreference_action_item_three),
+        when(mTypedArray.getInteger(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(0);
         mPref = new MultiActionPreference(mContext);
-        mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
+        mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)
                 .setRestricted(true);
-        mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2)
-                .setRestricted(true);
-        mPref.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3)
+        mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)
                 .setRestricted(true);
         mPref.onBindViewHolder(mHolder);
 
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM1)).isChecked()).isTrue();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM2)).isChecked()).isTrue();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM3)).isChecked()).isTrue();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)).isChecked()).isTrue();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)).isChecked()).isTrue();
 
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM1)).onClick();
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM2)).onClick();
-        ((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM3)).onClick();
+        ((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)).onClick();
+        ((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)).onClick();
 
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM1)).isChecked()).isTrue();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM2)).isChecked()).isTrue();
-        assertThat(((ToggleButtonActionItem) mPref.getActionItem(
-                MultiActionPreference.ActionItem.ACTION_ITEM3)).isChecked()).isTrue();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)).isChecked()).isTrue();
+        assertThat(((ToggleButtonActionItem) mPref.getGroupTwoActionItem(
+                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)).isChecked()).isTrue();
     }
 }
