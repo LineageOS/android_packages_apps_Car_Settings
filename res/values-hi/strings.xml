@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"आस-पास की रोशनी के हिसाब से स्क्रीन की चमक"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"आस-पास की रोशनी के हिसाब से स्क्रीन की चमक में बदलाव करें"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"नाइट लाइट चालू है"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"रात वाला मोड"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"नेटवर्क और इंटरनेट"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"मोबाइल नेटवर्क"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# सिम}one{# सिम}other{# सिम}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{पिन में # अंक कम होना चाहिए}one{पिन में # अंक कम होना चाहिए}other{पिन में # अंक कम होने चाहिए}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"अंकों को बढ़ते, घटते या दोहराए गए क्रम में लिखने की मंज़ूरी नहीं है"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक विकल्प"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> days ago"</string>
     <string name="credentials_reset" msgid="873900550885788639">"क्रेडेंशियल हटाएं"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"सभी सर्टिफ़िकेट हटाएं"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"सभी सामग्री हटाएं?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ऐप्लिकेशन जो चालू है}one{# ऐप्लिकेशन जो चालू है}other{# ऐप्लिकेशन जो चालू हैं}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"कोई ऐप्लिकेशन चालू नहीं है"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> गाड़ी से जुड़ी नीति"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"गाड़ी से जुड़ी नीति"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"वे सेटिंग जिन्हें ऑर्गनाइज़ेशन मैनेजर मैनेज करता है"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> के बारे में ज़्यादा जानें"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"मैनेज की जा रही गाड़ी की जानकारी"</string>

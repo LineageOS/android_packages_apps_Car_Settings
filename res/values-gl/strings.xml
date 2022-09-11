@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo intelixente"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Axusta o brillo da pantalla ao contorno"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Luz nocturna activada"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Modo nocturno"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rede e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rede de telefonía móbil"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Debe conter menos de # díxito}other{Debe conter menos de # díxitos}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Non se permite unha secuencia de díxitos ascendente, descendente nin repetida"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcións de bloqueo de pantalla"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: hai <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Borrar credenciais"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Elimina todos os certificados"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Queres quitar todo o contido?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplicación activada}other{# aplicacións activadas}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Non hai ningunha aplicación activada"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política do vehículo de <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Política do vehículo"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Configuración xestionada polo xestor da organización"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Máis información sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Información do vehículo xestionado"</string>

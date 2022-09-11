@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптыўная яркасць"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Карэкціраваць яркасць экрана з улікам наваколля"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Начная падсветка ўключана"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Начны рэжым"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Сетка і інтэрнэт"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мабільная сетка"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-карта}one{# SIM-карта}few{# SIM-карты}many{# SIM-карт}other{# SIM-карты}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Пароль павінен змяшчаць менш чым # лічбу}one{Пароль павінен змяшчаць менш чым # лічбу}few{Пароль павінен змяшчаць менш чым # лічбы}many{Пароль павінен змяшчаць менш чым # лічбаў}other{Пароль павінен змяшчаць менш чым # лічбы}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Забаронена выкарыстоўваць паслядоўнасці з лічбаў, якія ідуць адна за адной або паўтараюцца"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Параметры блакіроўкі экрана"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> сут. таму назад"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Выдаліць уліковыя даныя"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Выдаліць усе сертыфікаты"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Выдаліць усё змесціва?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# актываваная праграма}one{# актываваная праграма}few{# актываваныя праграмы}many{# актываваных праграм}other{# актываванай праграмы}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Няма актываваных праграм"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Палітыка кампаніі \"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>\" адносна транспартных сродкаў"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Палітыка адносна транспартных сродкаў"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Налады, якімі кіруе менеджар арганізацыі"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Даведацца больш пра сэрвіс \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Інфармацыя пра аўтамабіль пад кіраваннем"</string>
