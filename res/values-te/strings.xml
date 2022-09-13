@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"పరిసర అనుకూల ప్రకాశం"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"స్క్రీన్ ప్రకాశాన్ని పరిసరాలకు అనుగుణంగా సర్దుబాటు చేయండి"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"రాత్రి కాంతి ఆన్‌లో ఉంది"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"రాత్రి మోడ్"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"నెట్‌వర్క్ &amp; ఇంటర్నెట్"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"మొబైల్ నెట్‌వర్క్"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMలు}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అంకెలను కలిగి ఉండాలి}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"స్క్రీన్ లాక్ ఎంపికలు"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> రోజుల క్రితం"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ఆధారాలను క్లియర్ చేయండి"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"అన్ని స‌ర్టిఫికెట్‌ల‌ను తీసివేయండి"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"అన్ని కంటెంట్‌లను తీసివేయాలా?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# యాక్టివేట్ చేయబడిన యాప్}other{# యాక్టివేట్ చేయబడిన యాప్‌లు}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"యాక్టివేట్ చేయబడిన యాప్‌లు ఏవీ లేవు"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> వాహన పాలసీ"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"వాహన పాలసీ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"సంస్థ మేనేజర్ ద్వారా సెట్టింగ్‌లు మేనేజ్ చేయబడతాయి"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> గురించి మరింత తెలుసుకోండి"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"మేనేజ్ చేయబడే వాహన సమాచారం"</string>

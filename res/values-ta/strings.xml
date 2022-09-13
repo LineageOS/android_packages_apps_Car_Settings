@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"சூழலுக்கு ஏற்ற ஒளிர்வு"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"சூழலுக்கேற்றவாறு திரை ஒளிர்வைச் சரிசெய்யும்"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"நைட் லைட் ஆன் செய்யப்பட்டது"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"இரவுப் பயன்முறை"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"நெட்வொர்க் &amp; இணையம்"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"மொபைல் நெட்வொர்க்"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# சிம்}other{# சிம்கள்}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# இலக்கத்தை விடக் குறைவாக இருக்க வேண்டும்}other{# இலக்கங்களை விடக் குறைவாக இருக்க வேண்டும்}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைப் பயன்படுத்துவது அனுமதிக்கப்படவில்லை"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
     <string name="credentials_reset" msgid="873900550885788639">"அனுமதிச் சான்றுகளை அழி"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"அனைத்து சான்றிதழ்களையும் அகற்றும்"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"அனைத்து உள்ளடக்கத்தையும் அகற்ற வேண்டுமா?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# செயல்படுத்தப்பட்ட ஆப்ஸ்}other{# செயல்படுத்தப்பட்ட ஆப்ஸ்}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"செயல்படுத்தப்பட்ட ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> வாகனக் கொள்கை"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"வாகனம் தொடர்பான கொள்கை"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"உங்கள் நிறுவனத்தின் நிர்வாகி நிர்வகிக்கும் அமைப்புகள்"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> குறித்து மேலும் அறிக"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"நிர்வகிக்கப்படும் வாகனம் குறித்த தகவல்கள்"</string>
