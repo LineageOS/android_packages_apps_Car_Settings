@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Prisitaikantis šviesumas"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Koreguokite ekrano šviesumą pagal aplinką"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nakties šviesa įjungta"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Naktinis režimas"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Tinklas ir internetas"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobiliojo ryšio tinklas"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM kortelė}one{# SIM kortelė}few{# SIM kortelės}many{# SIM kortelės}other{# SIM kortelių}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Turi būti mažiau nei # skaitmuo}one{Turi būti mažiau nei # skaitmuo}few{Turi būti mažiau nei # skaitmenys}many{Turi būti mažiau nei # skaitmens}other{Turi būti mažiau nei # skaitmenų}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Didėjanti, mažėjanti ar pasikartojanti skaitmenų seka neleidžiama"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekrano užrakto parinktys"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: prieš <xliff:g id="NUM_DAYS">%3$s</xliff:g> d."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Išvalyti prisijungimo duomenis"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Pašalinti visus sertifikatus"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Pašalinti visą turinį?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# suaktyvinta programa}one{# suaktyvinta programa}few{# suaktyvintos programos}many{# suaktyvintos programos}other{# suaktyvintų programų}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nėra jokių suaktyvintų programų"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"„<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>“ transporto priemonių politika"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Transporto priemonių politika"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Organizacijos valdytojo tvarkomi nustatymai"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Sužinokite daugiau apie paslaugą „<xliff:g id="SERVICE">%1$s</xliff:g>“"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Valdomos transporto priemonės informacija"</string>

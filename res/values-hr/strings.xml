@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Prilagodljiva svjetlina"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Prilagodba svjetline zaslona okruženju"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Noćno je svjetlo uključeno"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Noćni način rada"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Mreža i internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilna mreža"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}one{# SIM}few{# SIM-a}other{# SIM-ova}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Mora sadržavati manje od # znamenke}one{Mora sadržavati manje od # znamenke}few{Mora sadržavati manje od # znamenke}other{Mora sadržavati manje od # znamenki}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Uzastopno rastući ili padajući slijed brojeva ili ponavljanje brojeva nije dopušteno"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcije zaključavanja zaslona"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : prije <xliff:g id="NUM_DAYS">%3$s</xliff:g> dana"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Izbriši vjerodajnice"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Ukloni sve certifikate"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Ukloniti sve sadržaje?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktivirana aplikacija}one{# aktivirana aplikacija}few{# aktivirane aplikacije}other{# aktiviranih aplikacija}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nema aktiviranih aplikacija"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Pravila o vozilima organizacije <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Pravila o vozilima"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Postavke kojima upravlja upravitelj organizacije"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Saznajte više o usluzi <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informacije o upravljanom vozilu"</string>

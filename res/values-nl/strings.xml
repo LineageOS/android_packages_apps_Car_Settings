@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"De schermhelderheid aanpassen aan de omgeving"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nachtverlichting aangezet"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Nachtstand"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netwerk en internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobiel netwerk"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# simkaart}other{# simkaarten}}"</string>
@@ -708,7 +707,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Moet korter dan # cijfer zijn}other{Moet korter dan # cijfers lang zijn}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Een oplopende, aflopende of herhaalde reeks cijfers is niet toegestaan"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Schermvergrendelingsopties"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> dagen geleden"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Certificaatgegevens wissen"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Alle certificaten verwijderen"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Alle content verwijderen?"</string>
@@ -778,8 +776,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# geactiveerde app}other{# geactiveerde apps}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Geen geactiveerde apps"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Voertuigbeleid van <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Voertuigbeleid"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Instellingen beheerd door de organisatiebeheerder"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Meer informatie over <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informatie over beheerd voertuig"</string>
