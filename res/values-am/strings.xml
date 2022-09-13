@@ -306,7 +306,7 @@
     <string name="applications_settings" msgid="794261395191035632">"የመተግበሪያ መረጃ"</string>
     <string name="force_stop" msgid="2153183697014720520">"በኃይል አቁም"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"በኃይል አቁም?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"መተግበሪያን በጉልበት እንዲቆም ካደረጉት ከአደብ ውጪ ሊሆን ይችላል።"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"መተግበሪያን በጉልበት እንዲቆም ካደረጉት ከአደብ ውጭ ሊሆን ይችላል።"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"ለመተግበሪያ አፈጻጸም ቅድሚያ መስጠት ይብራ?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"እሱን ማብራት ሊከሰት የሚችል የስርዓት አለመረጋጋትን ወይም የረጅም ጊዜ የሃርድዌር ተፅእኖን ሊያስከትል ይችላል። መቀጠል ይፈልጋሉ?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"አዎ"</string>
@@ -775,8 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# የገበረ መተግበሪያ}one{# የገበሩ መተግበሪያዎች}other{# የገበሩ መተግበሪያዎች}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"ምንም የገበሩ መተግበሪያዎች የሉም"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"የ<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ተሽከርካሪ መመሪያ"</string>
-    <!-- no translation found for work_policy_privacy_settings_no_org_name (8011687012493940230) -->
-    <skip />
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"የተሽከርካሪ መመሪያ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"በድርጅቱ አስተዳዳሪ የሚተዳደሩ ቅንብሮች"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ስለ<xliff:g id="SERVICE">%1$s</xliff:g> የበለጠ ይወቁ"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"የሚተዳደር የተሽከርካሪ መረጃ"</string>
