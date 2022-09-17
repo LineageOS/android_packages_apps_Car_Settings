@@ -34,7 +34,9 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.PackageTagsList;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.PreferenceManager;
@@ -66,6 +68,7 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
 
     @Mock private FragmentController mFragmentController;
     @Mock private PackageManager mPackageManager;
+    @Mock private LocationManager mLocationManager;
 
     @Before
     @UiThreadTest
@@ -86,7 +89,12 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
         screen.addPreference(mPreference);
         mPreferenceController =
                 new AdasPrivacyPolicyDisclosurePreferenceController(
-                        mContext, "key", mFragmentController, carUxRestrictions, mPackageManager);
+                        mContext,
+                        "key",
+                        mFragmentController,
+                        carUxRestrictions,
+                        mPackageManager,
+                        mLocationManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         doNothing().when(mContext).startActivity(any());
 
@@ -256,6 +264,12 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
     }
 
     private void initializePreference() {
+        // This test is expected to run on a device with the adaslocation on the device, because of
+        // {@link AdasPrivacyPolicyUtil#createPrivacyPolicyPreference(Context, String, UserHandle)}
+        PackageTagsList list =
+                new PackageTagsList.Builder().add("com.google.android.car.adaslocation").build();
+        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
+
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
     }
