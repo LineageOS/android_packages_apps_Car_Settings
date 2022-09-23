@@ -425,6 +425,8 @@ public class ProfileHelper {
             filteredListStream =
                     filteredListStream.filter(userInfo -> userInfo.id != UserHandle.USER_SYSTEM);
         }
+        filteredListStream = filteredListStream.sorted(
+                (u1, u2) -> Long.signum(u1.creationTime - u2.creationTime));
         return filteredListStream.collect(Collectors.toList());
     }
 
