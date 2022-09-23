@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Дерек шығынын шектеу"</string>
     <string name="data_limit" msgid="227338836292511425">"Дерек шегі"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Дерек трафигін шектеу"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Орнатқан шекке жеткеннен кейін, көліктегі құрылғы мобильдік деректерді өшіреді.\n\nҚұрылғы деректерді пайдалану шегін белгілейтіндіктен және оператор трафикті басқаша есептеуі мүмкін болғандықтан, қатаңырақ шек қойған жөн."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Орнатқан шекке жеткеннен кейін, көліктегі құрылғы мобильдік интернетті өшіреді.\n\nҚұрылғы деректерді пайдалану шегін белгілейтіндіктен және оператор трафикті басқаша есептеуі мүмкін болғандықтан, қатаңырақ шек қойған жөн."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Дерек шығыны туралы ескерту қою"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Дерек трафигі шегін орнату"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Дерек трафигін құрылғы өлшейді. Бұл мобильдік оператордың дерегінен басқаша болуы мүмкін."</string>
@@ -139,8 +139,8 @@
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi іздеу функциясы қосылсын ба?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Қосу"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi іздеу функциясы қосулы"</string>
-    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Мобильдік деректерге автоматты ауысу"</string>
-    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi желісінде интернетпен байланыс болмаған кезде, мобильдік деректер пайдаланылады. Деректер ақысы алынуы мүмкін."</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Мобильдік интернетке автоматты ауысу"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi желісінде интернетпен байланыс болмаған кезде, мобильдік интернет пайдаланылады. Деректер ақысы алынуы мүмкін."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Wi‑Fi желілерін тауып, оларға қосылу"</string>
     <string name="learn_more" msgid="8214605928933358604">"Толығырақ"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Хотспот атауы"</string>
@@ -478,7 +478,7 @@
     <string name="reset_network_title" msgid="1284233059990797263">"Желіні бастапқы күйге қайтару"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Келесілерді қоса, барлық желі параметрлері бастапқы күйіне қайтарылады:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
-    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильдік деректер"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильдік интернет"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Көліктің барлық eSIM карталарының деректерін өшіру"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Қызмет жоспарынан бас тартылмайды."</string>
@@ -529,7 +529,7 @@
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Иә, әкімші етілсін"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Жаңа профильдер жасау"</string>
     <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Телефон қоңырауларын шалу"</string>
-    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Автокөліктің мобильдік деректері арқылы хабар алмасу"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Автокөліктің мобильдік интернетімен хабар алмасу"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Жаңа қолданбаларды орнату"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Қолданбаларды жою"</string>
     <string name="user_add_user_menu" msgid="4125869008006021799">"Профиль қосу"</string>
