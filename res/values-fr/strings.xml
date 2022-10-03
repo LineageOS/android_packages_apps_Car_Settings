@@ -177,8 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Tout afficher"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Recherche en cours"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <!-- no translation found for bluetooth_toggle_title (1431803611346881088) -->
-    <skip />
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Utiliser le Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Appareil sans nom"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Appareils associés"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Associer un nouvel appareil"</string>
@@ -403,27 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Position"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Utiliser la localisation"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Autoriser applis spécifiées à accéder à position"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Si vous désactivez cela, l\'accès à la position sera supprimé pour toutes les applis, sauf les applis d\'aide à la conduite."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Utiliser position pour aide à conduite"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Si vous désactivez cela, l\'accès à la position sera supprimé pour toutes les applis, sauf celles requises pour l\'aide à la conduite"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Utiliser position pour aide à conduite"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Localisation du véhicule désactivée"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Applis d\'aide à conduite ne peuvent pas accéder à position"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Applis d\'aide à conduite ne peuvent pas accéder à position"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Modifier"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Autoriser applis d\'aide à conduite à accéder à position"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si vous désactivez cela, les applis d\'aide à la conduite basées sur les informations de localisation seront désactivées."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Si vous désactivez cela, les applis d\'aide à la conduite basées sur les informations de localisation seront désactivées"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Désactiver malgré tout"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Accès récent(s)"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accès récent(s)"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tout afficher"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Aucune appli récente"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Aide à la conduite"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Applis avec autorisation d\'accéder à position du véhicule pour fonctionnalités d\'aide à conduite"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Aide à la conduite"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Applis avec autorisation d\'accéder à position du véhicule pour fonctionnalités d\'aide à conduite"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Règles de confidentialité"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations des applis"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utiliser la localisation"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Les services de localisation peuvent utiliser des sources telles que le GPS, le Wi-Fi, les réseaux mobiles et les capteurs pour estimer la position de votre appareil."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Aide à la conduite"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Les informations de localisation envoyées aux applis d\'aide à la conduite ne contiennent aucun détail vous identifiant. Elles sont stockées pendant deux jours au maximum, puis supprimées."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Les informations de localisation envoyées aux applis d\'aide à la conduite ne contiennent aucun détail vous identifiant. Elles sont stockées pendant deux jours au maximum, puis supprimées."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micro"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utiliser le micro"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Autoriser toutes les applis à accéder à votre micro"</string>
@@ -581,7 +580,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Effacer du stockage"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Effacer du cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Supprimer les données ?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Les données de cette application (fichiers, paramètres, comptes, bases de données, etc.) seront définitivement supprimées."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Les données de cette appli (fichiers, paramètres, comptes, bases de données, etc.) seront définitivement supprimées."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Impossible d\'effacer les données de l\'application."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"La mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" a bien été éjectée de manière sécurisée"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Impossible d\'éjecter la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" de manière sécurisée"</string>
@@ -776,6 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# appli activée}one{# appli activée}other{# applis activées}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Aucune appli activée"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Règlement <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> concernant les véhicules"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Règlement concernant les véhicules"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Paramètres gérés par le gestionnaire de l\'organisation"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"En savoir plus sur <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Infos sur le véhicule géré"</string>
