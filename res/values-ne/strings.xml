@@ -301,7 +301,7 @@
     <string name="all_applications" msgid="7798210477486822168">"सबै एपहरू देखाउनुहोस्"</string>
     <string name="default_applications" msgid="1558183275638697087">"डिफल्ट एपहरू"</string>
     <string name="app_permissions" msgid="32799922508313948">"एपसम्बन्धी अनुमति"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"कुन कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछन् भन्ने कुरा तय गर्नुहोस्"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछ भन्ने कुरा तय गर्नु…"</string>
     <string name="applications_settings" msgid="794261395191035632">"एपसम्बन्धी जानकारी"</string>
     <string name="force_stop" msgid="2153183697014720520">"जबर्जस्ती रोक्नुहोस्"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"जबरजस्ती रोक्ने हो?"</string>
@@ -354,7 +354,7 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"अटोफिल सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कुनै पनि होइन"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चयन गरिएको"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका एपबारे जानकारी पढ्न सक्ने छ।"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका अनुप्रयोगहरूबारे जानकारी पढ्न सक्ने छ।"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो एपमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस एपले अटोफिल गर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा थप्नुहोस्"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"लिंकहरू खोल्दा"</string>
@@ -376,7 +376,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"हालसालै खोलिएका"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"सबै %1$d वटा एप हेर्नुहोस्"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"अनुमति म्यानेजर"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"कुन कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछन् भन्ने कुरा तय गर्नुहोस्"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछ भन्ने कुरा तय गर्नु…"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"सहायक तथा अन्य एप हेर्न"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"प्रणालीसम्बन्धी सेटिङ तथा अन्य सेटिङ हेर्न"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अनुप्रयोगमाथिको पहुँच"</string>
@@ -409,11 +409,8 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"सुरक्षित तरिकाले गाडी चलाउन मद्दत गर्ने एपलाई तपाईंको लोकेसन प्रयोग गर्ने अनुमति दिइयोस्"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"तपाईंले यो प्रविधि अफ गर्नुभयो भने लोकेसनसम्बन्धी जानकारीमा निर्भर हुने चालकलाई अझ सुरक्षित पार्ने प्रविधिसँग सम्बन्धित सुविधाहरू अफ गरिने छन्।"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"जे भए पनि अफ गर्नुहोस्"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"हालसालै लोकेसन प्रयोग गरेका एपहरू"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"हालसालै लोकेसन प्रयोग गरेका एपहरू"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"सबै हेर्नुहोस्"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"हालसालै कुनै पनि एपले लोकेसन प्रयोग गरेको छैन"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • चालकलाई अझ सुरक्षित पार्ने प्रविधि"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हालसालैका स्थानसम्बन्धी कुनै पनि अनुरोध छैन"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"एप स्तरीय अनुमति"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"लोकेसन सर्भिस"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"लोकेसन प्रयोग गरियोस्"</string>

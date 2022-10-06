@@ -740,6 +740,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="bluetooth_settings_title"/>
       <item type="string" name="bluetooth_state_switch_content_description"/>
       <item type="string" name="bluetooth_state_switch_summary"/>
+      <item type="string" name="bluetooth_toggle_title"/>
       <item type="string" name="bluetooth_turning_off"/>
       <item type="string" name="bluetooth_turning_on"/>
       <item type="string" name="bluetooth_vehicle_mac_address"/>
@@ -905,6 +906,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_some"/>
       <item type="string" name="driver_assistance_settings_title"/>
       <item type="string" name="driver_assistance_warning_confirm_label"/>
+      <item type="string" name="location_driver_assistance_privacy_policy_header_content"/>
+      <item type="string" name="location_driver_assistance_privacy_policy_button_text"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
@@ -1535,6 +1538,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_wakeup_summary"/>
       <item type="string" name="wifi_wakeup_summary_no_location"/>
       <item type="string" name="work_policy_privacy_settings"/>
+      <item type="string" name="work_policy_privacy_settings_no_org_name"/>
       <item type="string" name="work_policy_privacy_settings_summary"/>
       <item type="string" name="zero"/>
       <item type="string" name="zone_auto"/>

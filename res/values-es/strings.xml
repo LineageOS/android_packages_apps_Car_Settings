@@ -125,7 +125,7 @@
     <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
-    <string name="wifi_network_detail" msgid="9070182553555487360">"Detalles de red"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Detalles de la red"</string>
     <string name="wifi_mac_address" msgid="1466178247802349180">"Dirección MAC"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"Dirección IP"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"Máscara de subred"</string>
@@ -220,7 +220,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalmente: 0000 o 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitud de vinculación"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para emparejar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
-    <string name="bluetooth_device_picker" msgid="673238198452345475">"Elige un dispositivo Bluetooth"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"Seleccionar dispositivo Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e introducción de texto"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugerencias"</string>
@@ -409,11 +409,8 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir acceso a la ubicación de las apps de asistencia en la conducción"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si la desactivas, se inhabilitarán las aplicaciones de asistencia en la conducción que usan información de la ubicación."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactivar de todas formas"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recientes"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recientes"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"No hay aplicaciones recientes"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia en la conducción"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ninguna solicitud de ubicación reciente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos de las aplicaciones"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicios de ubicación"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
@@ -493,7 +490,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Se restablecerán todas las preferencias de:\n\n"<li>"Aplicaciones desactivadas"</li>\n<li>"Notificaciones de aplicaciones desactivadas"</li>\n<li>"Aplicaciones para acciones predeterminadas"</li>\n<li>"Restricciones de datos en segundo plano de aplicaciones"</li>\n<li>"Restricciones de permisos"</li>\n\n"No se perderán los datos de las aplicaciones."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se han restablecido las preferencias de las aplicaciones"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Borrar todo (volver al estado de fábrica)"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Volver al estado de fábrica (borrar todo)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Borrar todos los datos y perfiles del sistema de infoentretenimiento"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Se borrarán todos los datos del sistema de infoentretenimiento de tu vehículo, incluidos los siguientes:\n\n"<li>"Tus cuentas y perfiles"</li>\n<li>"Los ajustes y los datos de aplicaciones y del sistema"</li>\n<li>"Las aplicaciones descargadas"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Has iniciado sesión en estas cuentas:"</string>

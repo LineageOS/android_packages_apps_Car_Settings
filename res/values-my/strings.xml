@@ -227,7 +227,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"ဘာသာစကားအားလုံး"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"လက်ကွက်"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"လက်ကွက်များ စီမံခန့်ခွဲရန်"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"စာ-မှ-စကား အထွက်"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"စာသားမှ စကားပြောသို့ အထွက်"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ဦးစားပေးအင်ဂျင်"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"လက်ရှိ အင်ဂျင်"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"စကားပြောနှုန်း"</string>
@@ -301,7 +301,7 @@
     <string name="all_applications" msgid="7798210477486822168">"အက်ပ်အားလုံး ပြရန်"</string>
     <string name="default_applications" msgid="1558183275638697087">"မူရင်း အက်ပ်များ"</string>
     <string name="app_permissions" msgid="32799922508313948">"အက်ပ်ခွင့်ပြုချက်များ"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"အက်ပ်၏ သင့်ဒေတာအသုံးပြုခွင့်ကို ထိန်းချုပ်ရန်"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"အက်ပ်၏ သင့်ဒေတာအသုံးပြုခွင့်ကို ထိန်းချုပ်မည်"</string>
     <string name="applications_settings" msgid="794261395191035632">"အက်ပ်အချက်အလက်များ"</string>
     <string name="force_stop" msgid="2153183697014720520">"ချက်ချင်း ရပ်ရန်"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"မဖြစ်မနေ ရပ်ခိုင်းမလား။"</string>
@@ -377,7 +377,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"လတ်တလော ဖွင့်ထားသည်များ"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"အက်ပ် %1$d ခုလုံး ကြည့်ရန်"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"ခွင့်ပြုချက် မန်နေဂျာ"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"အက်ပ်၏ သင့်ဒေတာအသုံးပြုခွင့်ကို ထိန်းချုပ်ရန်"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"အက်ပ်၏ သင့်ဒေတာအသုံးပြုခွင့်ကို ထိန်းချုပ်မည်"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant နှင့် အခြားအရာများအတွက်"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"စနစ်နှင့် အခြားဆက်တင်များသို့"</string>
     <string name="special_access" msgid="5730278220917123811">"အထူးအက်ပ်များ သုံးခွင့်ရှိသည်"</string>
@@ -410,11 +410,8 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ယာဉ်မောင်းအကူအညီအက်ပ်များကို တည်နေရာသုံးခွင့်ပြုနိုင်သည်"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ပိတ်လိုက်ပါက တည်နေရာအချက်အလက်အပေါ် အားထားရသော ‘ယာဉ်မောင်းသူ အထောက်အကူ’ အက်ပ်များ ပိတ်သွားပါမည်။"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"မည်သို့ဖြစ်စေ ပိတ်ရန်"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"လတ်တလော သုံးထားသည်များ"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"လတ်တလော သုံးထားသည်များ"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"အားလုံးကြည့်ရန်"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"လတ်တလောအက်ပ်များ မရှိပါ"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ယာဉ်မောင်းသူ အထောက်အကူ"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ မရှိပါ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"အက်ပ်အဆင့် ခွင့်ပြုချက်များ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"တည်နေရာဝန်ဆောင်မှုများ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"တည်နေရာကို သုံးရန်"</string>

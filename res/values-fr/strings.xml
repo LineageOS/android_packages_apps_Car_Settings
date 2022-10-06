@@ -230,7 +230,7 @@
     <string name="text_to_speech_settings" msgid="811985746199507343">"Synthèse vocale"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Moteur préféré"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Moteur actuel"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"Débit"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Cadence"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Ton"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Réinitialiser"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Son"</string>
@@ -393,7 +393,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accès aux SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Les SMS premium peuvent être payants et s\'ajouter aux factures de votre opérateur. Si vous activez l\'autorisation pour une application, vous serez en mesure d\'envoyer des SMS premium à l\'aide de cette dernière."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Accès aux données d\'utilisation"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Accès aux infos d\'utilisation"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"L\'accès aux données d\'utilisation permet à une application d\'effectuer le suivi des applications que vous utilisez, de la fréquence d\'utilisation, de l\'opérateur, des paramètres de langue et d\'autres détails."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Contrôle Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou supprimer des réseaux, ou à lancer un point d\'accès local."</string>
@@ -409,11 +409,8 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Autoriser applis d\'aide à conduite à accéder à position"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si vous désactivez cela, les applis d\'aide à la conduite basées sur les informations de localisation seront désactivées."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Désactiver malgré tout"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"Accès récent(s)"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accès récent(s)"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tout afficher"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"Aucune appli récente"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Aide à la conduite"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Demandes de localisation récentes"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations des applis"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utiliser la localisation"</string>

@@ -383,7 +383,7 @@
     <string name="show_system" msgid="4401355756969485287">"Prikaz sistemskih procesov"</string>
     <string name="hide_system" msgid="8845453295584638040">"Skrivanje sistemskih procesov"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Skrivanje sistemskih aplikacij"</string>
-    <string name="modify_system_settings_title" msgid="4596320571562433972">"Spreminjanje sistemskih nastavitev"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Spreminjanje sist. nastavitev"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"To dovoljenje aplikaciji dovoljuje spreminjanje sistemskih nastavitev."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Dostop do obvestil"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Želite storitvi <xliff:g id="SERVICE">%1$s</xliff:g> dovoliti dostop do obvestil?"</string>
@@ -409,11 +409,8 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Aplikacijam za pomoč pri vožnji omogočite dostop do lokacije"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Če to izklopite, boste onemogočili aplikacije za pomoč vozniku, ki delujejo na podlagi podatkov o lokaciji."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Vseeno izklopi"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"Nedavno dostopano"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedavno dostopano"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ogled vseh"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"Ni nedavnih aplikacij"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Pomoč vozniku"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavne zahteve za lokacijo"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ni nedavnih zahtev za lokacijo"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Dovoljenja na ravni aplikacije"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Lokacijske storitve"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Uporaba lokacije"</string>
@@ -665,7 +662,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Vnesite geslo"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Zaradi varnosti nastavite kodo PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Znova vnesite kodo PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Koda PIN mora biti najmanj 4-mestna."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Koda PIN mora biti najmanj 4-mestna"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Koda PIN je neveljavna. Vsebovati mora najmanj 4 števke."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kodi PIN se ne ujemata"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Napaka pri shranjevanju kode PIN"</string>
