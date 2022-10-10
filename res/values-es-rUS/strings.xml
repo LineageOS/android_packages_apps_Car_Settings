@@ -577,7 +577,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Liberar espacio de almacenamiento"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Borrar caché"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"¿Borrar los datos de la app?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Se borrarán de forma permanente todos los datos de esta app, incluidos archivos, ajustes, cuentas, bases de datos, etc."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Se borrarán de forma permanente los datos de esta app. Se incluyen archivos, parámetros de configuración, bases de datos y otros datos de app."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"No se pudo liberar espacio para la app."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Se expulsó <xliff:g id="NAME">%1$s</xliff:g> de forma segura"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"No se pudo expulsar <xliff:g id="NAME">%1$s</xliff:g> de forma segura"</string>
@@ -614,7 +614,7 @@
     <string name="sync_is_failing" msgid="5766255460901806206">"En este momento la sincronización experimenta problemas. Volverá en breve."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privacidad"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Datos del sistema de infoentretenimiento"</string>
-    <string name="privacy_location_summary" msgid="7019817848470566242">"Controla el acceso de la app a tu ubicación"</string>
+    <string name="privacy_location_summary" msgid="7019817848470566242">"Controla el acceso de las apps a tu ubicación"</string>
     <string name="mute_camera_title" msgid="215494079895460172">"Cámara"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"Controla el acceso de las apps a tus cámaras"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micrófono"</string>
