@@ -176,7 +176,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Konektatu da"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Erakutsi guztiak"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Bilatzen"</string>
-    <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth-a"</string>
+    <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetootha"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Erabili Bluetooth bidezko konexioa"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Izenik gabeko gailua"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Parekatutako gailuak"</string>
@@ -193,16 +193,16 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Gailu erabilgarriak"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profilak"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
-    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetooth-a aktibatzen…"</string>
-    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetooth-a desaktibatzen…"</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a aktibatu nahi du"</string>
-    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a desaktibatu nahi du"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikazio batek Bluetooth-a aktibatu nahi du"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikazio batek Bluetooth-a desaktibatu nahi du"</string>
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetootha aktibatzen…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetootha desaktibatzen…"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetootha aktibatu nahi du"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetootha desaktibatu nahi du"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikazio batek Bluetootha aktibatu nahi du"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikazio batek Bluetootha desaktibatu nahi du"</string>
     <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du Bluetooth bidezko beste gailu batzuen aurrean."</string>
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Aplikazio batek gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du Bluetooth bidezko beste gailu batzuen aurrean."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikazio batek Bluetooth-a aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetootha aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikazio batek Bluetootha aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"%1$s gisa dago ikusgai beste gailuetan"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Nire gailuak"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Aurretik konektatutakoak"</string>
@@ -482,7 +482,7 @@
     <string name="reset_network_desc" msgid="602381374544634925">"Sareko ezarpen guztiak berrezarriko dira; besteak beste:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wifi‑konexioa"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datu-konexioa"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth-a"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetootha"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Ezabatu ibilgailuaren eSIM txarteletako eduki guztia"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Ez da utziko bertan behera daukazun zerbitzu-plana."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Ezin dira berrezarri eSIM txartelak"</string>
@@ -744,8 +744,8 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ezabatu profila"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Gehitu profila"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Bistaratu distira"</string>
-    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktibatu Bluetooth-a gailuak ikusteko"</string>
-    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ireki Bluetooth-aren ezarpenak gailu batekin parekatzeko"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktibatu Bluetootha gailuak ikusteko"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ireki Bluetootharen ezarpenak gailu batekin parekatzeko"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informazio- eta aisia-sistemaren administratzailea"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktibatutako aplikazioak"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Desaktibatutako aplikazioak"</string>
