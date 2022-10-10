@@ -88,11 +88,11 @@
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s brukt %2$s – %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Koble til et annet nettverk"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Nettverksinnstillinger"</string>
-    <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Slår på Wi-Fi …"</string>
-    <string name="wifi_stopping" msgid="3534173972547890148">"Slår av Wi-Fi …"</string>
+    <string name="wifi_settings" msgid="7701477685273103841">"Wifi"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"Slår på Wifi …"</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"Slår av Wifi …"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Laster inn Wi‑Fi-liste"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi er slått av"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wifi er slått av"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Kunne ikke glemme nettverket"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Kunne ikke koble til nettverket"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Legg til nettverk"</string>
@@ -140,8 +140,8 @@
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Slå på"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-skanning er slått på"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Bytt til mobildata automatisk"</string>
-    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Bruk mobildata når Wi-Fi ikke har internettilgang. Avgifter for databruk kan påløpe."</string>
-    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Finn og koble til Wi-Fi-nettverk"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Bruk mobildata når Wifi ikke har internettilgang. Avgifter for databruk kan påløpe."</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Finn og koble til Wifi-nettverk"</string>
     <string name="learn_more" msgid="8214605928933358604">"Finn ut mer"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Navn på wifi-sone"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Slår på <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> …"</string>
@@ -160,14 +160,14 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GHz-bånd foretrekkes"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
-    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Velg minst ett bånd for Wi-Fi-sonen:"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Velg minst ett bånd for wifi-sonen:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Wifi-sone og internettdeling"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Wifi-sone"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Av"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Slå av wifi-sone automatisk"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi-sonen blir slått av hvis ingen enheter er koblet til"</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker å slå på Wi-Fi"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker å slå av Wi-Fi"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker å slå på Wifi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker å slå av Wifi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Feil"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Enhet som skal brukes med <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Fant ingen enheter. Sørg for at enhetene er slått på og tilgjengelige for tilkobling."</string>
@@ -333,7 +333,7 @@
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Appens databruk"</string>
     <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Brukslogg"</string>
     <string name="data_usage_all_apps_title" msgid="5956991037518761599">"Alle apper"</string>
-    <string name="app_data_usage_title" msgid="6991057296054761322">"Data- og Wi-Fi-bruk"</string>
+    <string name="app_data_usage_title" msgid="6991057296054761322">"Data- og Wifi-bruk"</string>
     <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Brukslogg"</string>
     <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Total bruk"</string>
     <string name="app_data_usage_foreground" msgid="76513424438149709">"Forgrunnen"</string>
@@ -397,7 +397,7 @@
     <string name="usage_access_title" msgid="7153427122072303254">"Brukstilgang"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Med brukstilgang kan apper spore hvilke andre apper du bruker, og hvor ofte du bruker dem. Operatør, språkinnstillinger og annen informasjon kan også spores med brukstilgang."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wifi-kontroll"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Med wifi-kontroll kan en app slå Wi-Fi på eller av, søke etter og koble til Wi-Fi-nettverk, legge til eller fjerne nettverk eller starte en lokal wifi-sone"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Med wifi-kontroll kan en app slå Wifi på eller av, søke etter og koble til wifi-nettverk, legge til eller fjerne nettverk eller starte en lokal wifi-sone"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Posisjon"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Bruk posisjon"</string>
@@ -420,7 +420,7 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tillatelser på appnivå"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Posisjonstjenester"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Bruk posisjon"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Posisjonstjenestene kan bruke kilder som GPS, Wi-Fi, mobilnettverk og sensorer for å fastslå posisjonen til enheten."</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Posisjonstjenestene kan bruke kilder som GPS, Wifi, mobilnettverk og sensorer for å fastslå posisjonen til enheten."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Førerhjelp"</string>
     <string name="adas_settings_footer" msgid="6697021691244459156">"Posisjonsinformasjon som sendes til apper for førerhjelp, inneholder ikke informasjon som identifiserer deg. Den lagres i maksimalt to dager før den slettes."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
@@ -520,7 +520,7 @@
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Dato"</string>
     <string name="date_time_set_date" msgid="2537494485643283230">"Angi dato"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"Sortér alfabetisk"</string>
-    <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Sortér etter tidssone"</string>
+    <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Sorter etter tidssone"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Dato"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Klokkeslett"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
