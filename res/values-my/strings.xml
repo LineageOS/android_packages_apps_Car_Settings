@@ -227,7 +227,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"ဘာသာစကားအားလုံး"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"လက်ကွက်"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"လက်ကွက်များ စီမံခန့်ခွဲရန်"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"စာသားမှ စကားပြောသို့ အထွက်"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"စာ-မှ-စကား အထွက်"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ဦးစားပေးအင်ဂျင်"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"လက်ရှိ အင်ဂျင်"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"စကားပြောနှုန်း"</string>
@@ -326,7 +326,7 @@
     <string name="unused_apps" msgid="648471933781010395">"အသုံးမပြုသော အက်ပ်များ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{အသုံးမပြုသောအက်ပ် # ခု}other{အသုံးမပြုသောအက်ပ် # ခု}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ခွင့်ပြုချက်ဖယ်ရှားပြီး နေရာလွတ်လုပ်ရန်"</string>
-    <string name="storage_type_internal" msgid="8918688427078709570">"စက်အတွင်းသိမ်းဆည်းရန်နေရာတွင် %s"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"စက်တွင်းသိုလှောင်ခန်းတွင် %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"အက်ပ်စွမ်းဆောင်ရည်ကို ဦးစားပေးရန် စနစ်ရင်းမြစ်များကို သုံးနိုင်သည်"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ဒေတာသုံးစွဲမှု"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"အက်ပ်ဒေတာ သုံးစွဲမှု"</string>
@@ -410,8 +410,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ယာဉ်မောင်းအကူအညီအက်ပ်များကို တည်နေရာသုံးခွင့်ပြုနိုင်သည်"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ပိတ်လိုက်ပါက တည်နေရာအချက်အလက်အပေါ် အားထားရသော ‘ယာဉ်မောင်းသူ အထောက်အကူ’ အက်ပ်များ ပိတ်သွားပါမည်။"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"မည်သို့ဖြစ်စေ ပိတ်ရန်"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ မရှိပါ"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"လတ်တလော သုံးထားသည်များ"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"လတ်တလော သုံးထားသည်များ"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"အားလုံးကြည့်ရန်"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"လတ်တလောအက်ပ်များ မရှိပါ"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ယာဉ်မောင်းသူ အထောက်အကူ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"အက်ပ်အဆင့် ခွင့်ပြုချက်များ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"တည်နေရာဝန်ဆောင်မှုများ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"တည်နေရာကို သုံးရန်"</string>

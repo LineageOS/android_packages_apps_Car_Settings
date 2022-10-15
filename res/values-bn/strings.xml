@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"এমন অ্যাপে অনুমতি দিন যা লোকেশন অ্যাক্সেস করে আপনাকে গাড়ি চালানোয় সাহায্য করে"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"আপনি এটি বন্ধ করলে, লোকেশন সংক্রান্ত তথ্যের উপরে নির্ভর করে থাকা সব ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ বন্ধ হয়ে যাবে।"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"যাইহোক বন্ধ করুন"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"সব দেখুন"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"কোনও সাম্প্রতিক অ্যাপ নেই"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ড্রাইভার অ্যাসিস্ট্যান্স"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"অ্যাপ-লেবেল অনুমতি"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"লোকেশন পরিষেবা"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"লোকেশন ব্যবহার করুন"</string>

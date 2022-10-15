@@ -409,8 +409,11 @@
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Autoriser les applis d\'aide à la conduite à accéder à votre position"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Si vous désactivez cette option, les fonctionnalités d\'assistance au conducteur qui dépendent des renseignements de lieu seront désactivées."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Désactiver quand même"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Accès récents"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accès récents"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tout afficher"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Aucune application récente"</string>
+    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Assistance au conducteur"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applis"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utiliser ma position"</string>
