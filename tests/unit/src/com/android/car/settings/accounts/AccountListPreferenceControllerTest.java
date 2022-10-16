@@ -66,7 +66,6 @@ import org.mockito.MockitoSession;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -325,14 +324,11 @@ public class AccountListPreferenceControllerTest {
     }
 
     private void initMocks() {
-        mAccountTypeToLabelMap = new HashMap<String, String>() {
-            {
-                put("com.acct1", mContext.getString(R.string.account_type1_label));
-                put("com.acct2", mContext.getString(R.string.account_type2_label));
-                put("com.acct3", mContext.getString(R.string.account_type3_label));
-            }
-        };
-        mAuthenticatedAccountTypes = new HashSet<>(Arrays.asList("com.acct1", "com.acct2"));
+        mAccountTypeToLabelMap = Map.of(
+                "com.acct1", mContext.getString(R.string.account_type1_label),
+                "com.acct2", mContext.getString(R.string.account_type2_label),
+                "com.acct3", mContext.getString(R.string.account_type3_label));
+        mAuthenticatedAccountTypes = Set.of("com.acct1", "com.acct2");
         mAccountTypeToNameMap = new HashMap<>();
         updateEnabledAccountTypes();
         when(mMockAuthenticatorHelper.getLabelForType(any(), any())).then(invocation -> {
