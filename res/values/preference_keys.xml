@@ -240,6 +240,17 @@
         opening_links_app_details_reset
     </string>
 
+    <!-- Performance-impacting App Settings -->
+    <string name="pk_performance_impacting_apps_entry" translatable="false">
+        performance_impacting_apps_settings_entry
+    </string>
+    <string name="pk_performance_impacting_apps_settings" translatable="false">
+        performance_impacting_apps_settings
+    </string>
+    <string name="pk_performance_impacting_apps_description" translatable="false">
+        performance_impacting_apps_description
+    </string>
+
     <!-- Special App Access Settings -->
     <string name="pk_modify_system_settings_entry" translatable="false">
         modify_system_settings_entry
