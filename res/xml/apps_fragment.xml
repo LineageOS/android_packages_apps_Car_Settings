@@ -62,6 +62,11 @@
         <intent android:action="android.intent.action.MANAGE_UNUSED_APPS"/>
     </Preference>
     <Preference
+        android:fragment="com.android.car.settings.applications.performance.PerformanceImpactingAppSettingsFragment"
+        android:key="@string/pk_performance_impacting_apps_entry"
+        android:title="@string/performance_impacting_apps"
+        settings:controller="com.android.car.settings.applications.PerfImpactingAppsEntryPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.applications.specialaccess.SpecialAccessSettingsFragment"
         android:key="@string/pk_special_access_entry"
         android:title="@string/special_access"
