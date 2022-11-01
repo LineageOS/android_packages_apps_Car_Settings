@@ -673,11 +673,15 @@
     <!-- Applications settings title. If clicked, the user is taken to the list of installed applications. [CHAR LIMIT=40] -->
     <string name="applications_settings">App info</string>
     <!-- Manage applications, text label for button to kill / force stop an application. [CHAR LIMIT=30] -->
-    <string name="force_stop">Force stop</string>
+    <string name="force_stop">Stop app</string>
     <!-- Manage applications, title for dialog when killing persistent apps. [CHAR LIMIT=40] -->
-    <string name="force_stop_dialog_title">Force stop?</string>
+    <string name="force_stop_dialog_title">Stop app?</string>
     <!-- Manage applications, text for dialog when killing persistent apps. [CHAR LIMIT=200] -->
     <string name="force_stop_dialog_text">If you force stop an app, it may misbehave.</string>
+    <!-- Manage applications, text for dialog when killing persistent apps. [CHAR LIMIT=200] -->
+    <string name="force_stop_success_toast_text">
+        <xliff:g id="app_name" example="Radio">%1$s</xliff:g> has been stopped.
+    </string>
     <!-- Manage applications, title for dialog when turning on prioritize app performance setting. [CHAR LIMIT=40] -->
     <string name="prioritize_app_performance_dialog_title">Prioritize app performance?</string>
     <!-- Manage applications, text for dialog when turning on prioritize app performance setting. [CHAR LIMIT=200] -->

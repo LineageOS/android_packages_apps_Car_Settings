@@ -43,6 +43,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.ArraySet;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
@@ -133,6 +134,9 @@ public class ApplicationActionButtonsPreferenceController extends
                             .forceStopPackage(mPackageName);
                     int userId = UserHandle.getUserId(mAppEntry.info.uid);
                     mApplicationsState.invalidatePackage(mPackageName, userId);
+                    Toast.makeText(getContext(), getContext().getResources()
+                            .getString(R.string.force_stop_success_toast_text,
+                                    mAppEntry.info.loadLabel(mPm)), Toast.LENGTH_LONG).show();
                 }
             };
 
