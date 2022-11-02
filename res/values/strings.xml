@@ -666,6 +666,8 @@
     <string name="all_applications">Show all apps</string>
     <!-- Default app settings title, which allows user to select defaults for certain application types. [CHAR LIMIT=40] -->
     <string name="default_applications">Default apps</string>
+    <!-- Performance-impacting app settings title, which allows users to view CarWatchdog disabled apps. [CHAR LIMIT=40] -->
+    <string name="performance_impacting_apps">Performance-impacting apps</string>
     <!-- Label for list that shows all permissions [CHAR LIMIT=40] -->
     <string name="app_permissions">App permissions</string>
     <!-- Summary of permissions currently granted to apps [CHAR LIMIT=60] -->
@@ -679,9 +681,9 @@
     <!-- Manage applications, text for dialog when killing persistent apps. [CHAR LIMIT=200] -->
     <string name="force_stop_dialog_text">If you force stop an app, it may misbehave.</string>
     <!-- Manage applications, title for dialog when turning on prioritize app performance setting. [CHAR LIMIT=40] -->
-    <string name="prioritize_app_performance_dialog_title">Turn on prioritize app performance?</string>
+    <string name="prioritize_app_performance_dialog_title">Prioritize app performance?</string>
     <!-- Manage applications, text for dialog when turning on prioritize app performance setting. [CHAR LIMIT=200] -->
-    <string name="prioritize_app_performance_dialog_text">Turning it on can cause potential system instability or long-term hardware impact. Do you want to continue?</string>
+    <string name="prioritize_app_performance_dialog_text">This can cause potential system instability or long-term hardware impact. Do you want to continue?</string>
     <!-- Manage applications, text for dialog button when turning on prioritize app performance setting. [CHAR LIMIT=200] -->
     <string name="prioritize_app_performance_dialog_action_on">Yes</string>
     <!-- Manage applications, text for dialog button when turning on prioritize app performance setting. [CHAR LIMIT=200] -->
@@ -839,6 +841,13 @@
     <string name="apps_permission_manager_summary">Control app access to your data</string>
     <!-- Apps settings screen, setting option description of default apps [CHAR LIMIT=100] -->
     <string name="apps_default_apps_summary">For Assistant and more</string>
+    <!-- Apps settings screen, setting option description of performance-impacting apps [CHAR LIMIT=100] -->
+    <string name="performance_impacting_apps_summary">
+        {count, plural,
+            =1    {# app impacting performance}
+            other {# apps impacting performance}
+        }
+    </string>
     <!-- Apps settings screen, setting option description of special app access [CHAR LIMIT=100] -->
     <string name="apps_special_app_access_summary">To system and other settings</string>
 
@@ -866,6 +875,10 @@
     <string name="notification_listener_revoke_warning_confirm">Turn off</string>
     <!-- Negative button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
     <string name="notification_listener_revoke_warning_cancel">Cancel</string>
+    <!-- Description of Performance-impacting app settings. [CHAR_LIMIT=NONE] -->
+    <string name="performance_impacting_apps_description">These apps negatively impact system performance and have been prevented from running in the background.\nPrioritize app to allow background usage and remove it from this list.</string>
+    <!-- Button label for prioritizing an app in the Performance-impacting app settings. [CHAR_LIMIT=20] -->
+    <string name="performance_impacting_apps_button_label">Prioritize app</string>
     <!-- Title for screen controlling which apps have access to send premium sms messages. [CHAR_LIMIT=60] -->
     <string name="premium_sms_access_title">Premium SMS access</string>
     <!-- Message shown for option to enable Premium SMS for an app. [CHAR_LIMIT=NONE] -->
