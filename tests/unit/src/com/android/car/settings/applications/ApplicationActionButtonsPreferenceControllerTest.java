@@ -60,6 +60,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -581,6 +582,7 @@ public class ApplicationActionButtonsPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
     public void forceStopDialogConfirmed_forceStopsPackage() {
         setupAndAssignPreference();
         setApplicationInfo(/* stopped= */ false, /* enabled= */ true, /* system= */ false);
