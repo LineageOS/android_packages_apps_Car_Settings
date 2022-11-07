@@ -301,14 +301,18 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Rakendused ja märguanded"</string>
     <string name="all_applications" msgid="7798210477486822168">"Kuva kõik rakendused"</string>
     <string name="default_applications" msgid="1558183275638697087">"Vaikerakendused"</string>
+    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
+    <skip />
     <string name="app_permissions" msgid="32799922508313948">"Rakenduste load"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Rakenduste puhul andmetele juurdepääsu haldamine"</string>
     <string name="applications_settings" msgid="794261395191035632">"Rakenduste teave"</string>
     <string name="force_stop" msgid="2153183697014720520">"Sundpeata"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Kas sundpeatada?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Kui sundpeatate rakenduse, võib see toimida valesti."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Rakenduse toimivuse prioriseerim. sisse?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Selle sisselülitamine võib põhjustada ebastabiilsust süsteemis või pikaajaliselt riistvara mõjutada. Kas soovite jätkata?"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
+    <skip />
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Jah"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Tänan, ei"</string>
     <string name="disable_text" msgid="4358165448648990820">"Keela"</string>
@@ -379,6 +383,8 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Lubade haldur"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Rakenduste puhul andmetele juurdepääsu haldamine"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistendi ja muu jaoks"</string>
+    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
+    <skip />
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Süsteemile ja muudele seadetele"</string>
     <string name="special_access" msgid="5730278220917123811">"Rakenduse erijuurdepääs"</string>
     <string name="show_system" msgid="4401355756969485287">"Kuva süsteem"</string>
@@ -392,6 +398,10 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Kui lülitate teenuse <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> puhul juurdepääsu märguannetele välja, võidakse välja lülitada ka juurdepääs funktsioonile Mitte segada."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Lülita välja"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Tühista"</string>
+    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
+    <skip />
+    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
+    <skip />
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Juurdepääs tasuliste SMS-ide saatmiseks"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Tasuliste SMS-ide saatmisel võidakse teilt nõuda tasu, mis lisatakse operaatori esitatud arvele. Kui annate rakendusele loa, on teil selle rakenduse abil võimalik tasulisi SMS-e saata."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Juurdepääs kasutusele"</string>

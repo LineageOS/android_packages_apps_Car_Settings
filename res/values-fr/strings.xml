@@ -301,14 +301,18 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Applications et notifications"</string>
     <string name="all_applications" msgid="7798210477486822168">"Afficher toutes les applications"</string>
     <string name="default_applications" msgid="1558183275638697087">"Applications par défaut"</string>
+    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
+    <skip />
     <string name="app_permissions" msgid="32799922508313948">"Autorisations des applis"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Contrôler l\'accès des applis à vos données"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informations sur les applications"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forcer l\'arrêt"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Forcer l\'arrêt ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"L\'arrêt forcé d\'une application peut provoquer un fonctionnement instable."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Prioriser les performances de l\'appli ?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Ce paramètre peut engendrer une instabilité système ou avoir un impact à long terme sur le matériel. Voulez-vous continuer ?"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
+    <skip />
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Oui"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Non, merci"</string>
     <string name="disable_text" msgid="4358165448648990820">"Désactiver"</string>
@@ -379,6 +383,8 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Gestionnaire d\'autorisations"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Contrôler l\'accès des applis à vos données"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant et plus"</string>
+    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
+    <skip />
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Système et autres paramètres"</string>
     <string name="special_access" msgid="5730278220917123811">"Accès spéciaux des applis"</string>
     <string name="show_system" msgid="4401355756969485287">"Afficher process. système"</string>
@@ -392,6 +398,10 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si vous désactivez l\'accès aux notifications pour <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, l\'accès au mode Ne pas déranger peut également être désactivé."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Désactiver"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
+    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
+    <skip />
+    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
+    <skip />
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accès aux SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Les SMS premium peuvent être payants et s\'ajouter aux factures de votre opérateur. Si vous activez l\'autorisation pour une application, vous serez en mesure d\'envoyer des SMS premium à l\'aide de cette dernière."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Accès aux données d\'utilisation"</string>

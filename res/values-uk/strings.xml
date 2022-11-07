@@ -301,14 +301,18 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Додатки та сповіщення"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показати всі додатки"</string>
     <string name="default_applications" msgid="1558183275638697087">"Додатки за умовчанням"</string>
+    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
+    <skip />
     <string name="app_permissions" msgid="32799922508313948">"Дозволи додатків"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Контролюйте доступ додатків до ваших даних"</string>
     <string name="applications_settings" msgid="794261395191035632">"Про додаток"</string>
     <string name="force_stop" msgid="2153183697014720520">"Примусово припинити роботу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Примусово припинити роботу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Після примусового припинення роботи додаток може працювати неналежним чином."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Пріоритезувати продуктивність додатка?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Увімкнення налаштування може спричинити нестабільність системи або вплинути на роботу апаратного забезпечення в довгостроковій перспективі. Продовжити?"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
+    <skip />
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Так"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Ні, дякую"</string>
     <string name="disable_text" msgid="4358165448648990820">"Вимкнути"</string>
@@ -379,6 +383,8 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Диспетчер дозволів"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Контролюйте доступ додатків до ваших даних"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Для Асистента й інших додатків"</string>
+    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
+    <skip />
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Системні та інші налаштування"</string>
     <string name="special_access" msgid="5730278220917123811">"Спеціальний доступ"</string>
     <string name="show_system" msgid="4401355756969485287">"Показати системні додатки"</string>
@@ -392,6 +398,10 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Якщо вимкнути доступ додатка <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> до сповіщень, доступ до режиму \"Не турбувати\" також буде вимкнено."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Вимкнути"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Скасувати"</string>
+    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
+    <skip />
+    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
+    <skip />
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Доступ до платних SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Кошти за платні SMS стягує оператор. Ви зможете надсилати платні SMS у додатку, якому надасте такий дозвіл."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Доступ до історії використання"</string>
