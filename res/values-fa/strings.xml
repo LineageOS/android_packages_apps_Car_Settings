@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"برنامه‌ها و اعلان‌ها"</string>
     <string name="all_applications" msgid="7798210477486822168">"نمایش همه برنامه‌ها"</string>
     <string name="default_applications" msgid="1558183275638697087">"برنامه‌های پیش‌فرض"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"برنامه‌های تأثیرگذار بر عملکرد"</string>
     <string name="app_permissions" msgid="32799922508313948">"اجازه‌های برنامه"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"کنترل دسترسی برنامه به داده‌های شما"</string>
     <string name="applications_settings" msgid="794261395191035632">"اطلاعات برنامه"</string>
     <string name="force_stop" msgid="2153183697014720520">"توقف اجباری"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"توقف اجباری؟"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"توقف اجباری یک برنامه ممکن است باعث عملکرد نادرست آن شود."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"اولویت‌بندی عملکرد برنامه روشن شود؟"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"خاموش کردن آن می‌تواند منجر به ناپایداری احتمالی سیستم یا تأثیرات سخت‌افزاری بلندمدت شود. می‌خواهید ادامه دهید؟"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"عملکرد برنامه در اولویت قرار بگیرد؟"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"این کار می‌تواند منجر به ناپایداری احتمالی سیستم یا تأثیرات سخت‌افزاری بلندمدت شود. می‌خواهید ادامه دهید؟"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"بله"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"نه متشکرم"</string>
     <string name="disable_text" msgid="4358165448648990820">"غیرفعال کردن"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"مدیر اجازه‌ها"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"کنترل دسترسی برنامه به داده‌های شما"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"برای «دستیار» وغیره"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# برنامه بر عملکرد تأثیر می‌گذارد}one{# برنامه بر عملکرد تأثیر می‌گذارد}other{# برنامه بر عملکرد تأثیر می‌گذارد}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"برای سیستم و سایر تنظیمات"</string>
     <string name="special_access" msgid="5730278220917123811">"دسترسی ویژه به برنامه"</string>
     <string name="show_system" msgid="4401355756969485287">"نمایش سیستم"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"اگر دسترسی به اعلان را برای <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> خاموش کنید، ممکن است دسترسی به «مزاحم نشوید» هم خاموش شود."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"خاموش کردن"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"لغو"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"این برنامه‌ها تأثیری منفی بر عملکرد سیستم دارند و اجرای آن‌ها در پس‌زمینه متوقف شده است.\nبرای اینکه به برنامه اجازه دهید در پس‌زمینه اجرا شود آن را در اولویت قرار دهید و از این فهرست بردارید."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"اولویت‌بندی برنامه"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"دسترسی پیامک ممتاز"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ممکن است استفاده از «پیامک ممتاز» برای شما هزینه داشته باشد و مبلغ صورت‌حساب‌های شرکت مخابراتی‌تان را افزایش دهد. اگر مجوز را برای برنامه‌ای فعال کنید، می‌توانید با استفاده از آن برنامه پیامک ممتاز ارسال کنید."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"دسترسی به داده‌های مصرف"</string>

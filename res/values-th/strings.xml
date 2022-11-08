@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"แอปและการแจ้งเตือน"</string>
     <string name="all_applications" msgid="7798210477486822168">"แสดงแอปทั้งหมด"</string>
     <string name="default_applications" msgid="1558183275638697087">"แอปเริ่มต้น"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"แอปที่มีผลต่อประสิทธิภาพ"</string>
     <string name="app_permissions" msgid="32799922508313948">"สิทธิ์ของแอป"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"ควมคุมสิทธิ์ของแอปในการเข้าถึงข้อมูล"</string>
     <string name="applications_settings" msgid="794261395191035632">"ข้อมูลแอป"</string>
     <string name="force_stop" msgid="2153183697014720520">"บังคับให้หยุด"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"บังคับให้หยุดไหม"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"แอปอาจทำงานผิดพลาดหากบังคับให้หยุด"</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"เปิดประสิทธิภาพของแอปตามลำดับสำคัญใช่ไหม"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"หากเปิดอาจทำให้ระบบไม่เสถียรหรืออาจส่งผลกระทบต่อฮาร์ดแวร์ในระยะยาว ต้องการทำต่อไหม"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ตั้งค่าให้เน้นที่ประสิทธิภาพของแอปไหม"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"การตั้งค่านี้อาจทำให้ระบบไม่เสถียรหรืออาจส่งผลกระทบต่อฮาร์ดแวร์ในระยะยาว ต้องการทำต่อไหม"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ใช่"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"ไม่เป็นไร"</string>
     <string name="disable_text" msgid="4358165448648990820">"ปิดใช้"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"เครื่องมือจัดการสิทธิ์"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"ควมคุมสิทธิ์ของแอปในการเข้าถึงข้อมูล"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"สำหรับ Assistant และอื่นๆ"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# แอปที่มีผลต่อประสิทธิภาพ}other{# แอปที่มีผลต่อประสิทธิภาพ}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"เข้าถึงระบบและการตั้งค่าอื่นๆ"</string>
     <string name="special_access" msgid="5730278220917123811">"สิทธิ์เข้าถึงพิเศษของแอป"</string>
     <string name="show_system" msgid="4401355756969485287">"แสดงระบบ"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"หากคุณปิดการเข้าถึงการแจ้งเตือนสำหรับ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ระบบอาจปิดการเข้าถึงฟีเจอร์ห้ามรบกวนไปด้วย"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ปิด"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ยกเลิก"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"แอปเหล่านี้ส่งผลเสียต่อประสิทธิภาพของระบบและถูกป้องกันไม่ให้ทำงานในเบื้องหลัง\nตั้งแอปเป็นแอปสำคัญเพื่ออนุญาตการใช้งานในเบื้องหลังและนำแอปดังกล่าวออกจากรายการนี้"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ตั้งเป็นแอปสำคัญ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"การเข้าถึง SMS แบบพรีเมียม"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS แบบพรีเมียมอาจมีค่าใช้จ่ายและจะเพิ่มเข้าไปในใบเรียกเก็บเงินจากผู้ให้บริการ หากคุณให้สิทธิ์แอปหนึ่งๆ คุณจะใช้แอปนั้นส่ง SMS แบบพรีเมียมได้"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"การเข้าถึงการใช้งาน"</string>

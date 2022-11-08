@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Mga app at notification"</string>
     <string name="all_applications" msgid="7798210477486822168">"Ipakita ang lahat ng app"</string>
     <string name="default_applications" msgid="1558183275638697087">"Mga default na app"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Mga app na nakakaapekto sa performance"</string>
     <string name="app_permissions" msgid="32799922508313948">"Mga pahintulot sa app"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrolin ang pag-access ng app sa iyong data"</string>
     <string name="applications_settings" msgid="794261395191035632">"Impormasyon ng app"</string>
     <string name="force_stop" msgid="2153183697014720520">"Sapilitang ihinto"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Sapilitang itigil?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Kung sapilitan mong ititigil ang isang app, maaari itong kumilos nang hindi tama."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"I-on ang gawing priyoridad ang performance ng app?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Kapag na-on ito, puwede itong magdulot ng posibleng kawalan ng stability sa system o pangmatagalang epekto sa hardware. Gusto mo bang magpatuloy?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Isapriyoridad ang performance ng app?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Puwede itong magdulot ng posibleng kawalan ng stability sa system o pangmatagalang epekto sa hardware. Gusto mo bang magpatuloy?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Oo"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Huwag na lang"</string>
     <string name="disable_text" msgid="4358165448648990820">"I-disable"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Manager ng pahintulot"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrolin ang pag-access ng app sa iyong data"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Para sa Assistant at higit pa"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# app ang nakakaapekto sa performance}one{# app ang nakakaapekto sa performance}other{# na app ang nakakaapekto sa performance}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Para sa system at iba pang setting"</string>
     <string name="special_access" msgid="5730278220917123811">"Espesyal na access ng app"</string>
     <string name="show_system" msgid="4401355756969485287">"Ipakita ang system"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Kung io-off mo ang access sa notification para kay <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, puwedeng ma-off din ang access sa Huwag Istorbohin."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"I-off"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselahin"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Negatibo ang nagiging epekto ng mga app na ito sa performance ng system at pinigilan ang mga ito sa pagtakbo sa background.\nIsapriyoridad ang app para payagan ang paggamit ng background at alisin ito sa listahang ito."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Isapriyoridad ang app"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Access sa Premium SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Puwedeng kailanganin mong magbayad para sa Premium SMS at isasama ito sa mga singilin ng iyong carrier. Kung ie-enable mo ang pahintulot para sa isang app, magagawa mong magpadala ng premium SMS gamit ang app na iyon."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Access sa paggamit"</string>

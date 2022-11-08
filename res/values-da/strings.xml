@@ -301,14 +301,18 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps og notifikationer"</string>
     <string name="all_applications" msgid="7798210477486822168">"Vis alle apps"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standardapps"</string>
+    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
+    <skip />
     <string name="app_permissions" msgid="32799922508313948">"Apptilladelser"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Administrer dine apps\' adgang til data"</string>
     <string name="applications_settings" msgid="794261395191035632">"Appinfo"</string>
     <string name="force_stop" msgid="2153183697014720520">"Tving til at standse"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vil du tvinge appen til at standse?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Hvis du tvinger en app til at standse, kan det medføre, at den ikke fungerer korrekt."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Vil du aktivere prioritering af app-ydeevne?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Aktivering af denne indstilling kan muligvis medføre, at systemet bliver ustabilt eller have en langvarig effekt på hardwaren. Vil du fortsætte?"</string>
+    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
+    <skip />
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ja"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nej tak"</string>
     <string name="disable_text" msgid="4358165448648990820">"Deaktiver"</string>
@@ -379,6 +383,8 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Tilladelsesadministrator"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Administrer dine apps\' adgang til data"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Til Assistent m.m."</string>
+    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
+    <skip />
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Til systemindstillinger m.m."</string>
     <string name="special_access" msgid="5730278220917123811">"Særlig appadgang"</string>
     <string name="show_system" msgid="4401355756969485287">"Vis system"</string>
@@ -392,6 +398,10 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Hvis du deaktiverer notifikationer for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, deaktiveres adgangen til Forstyr ikke muligvis også."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Deaktiver"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuller"</string>
+    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
+    <skip />
+    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
+    <skip />
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Adgang til overtakseret sms"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Overtakseret sms kan koste dig penge, som opkræves via din mobilregning. Hvis du aktiverer tilladelsen for en app, kan du sende overtakserede sms-beskeder ved hjælp af denne app."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Adgang til telefonbrug"</string>
