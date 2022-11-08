@@ -1126,15 +1126,15 @@
 
     <!-- Reset Network --><skip/>
     <!-- Button title to reset Wi-Fi settings, mobile data settings, and Bluetooth settings. [CHAR LIMIT=40] -->
-    <string name="reset_network_title">Reset Wi\u2011Fi and Bluetooth</string>
+    <string name="reset_network_title">Reset network</string>
     <!-- Message on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
-    <string name="reset_network_desc">This will reset Wi\u2011Fi and Bluetooth settings, removing memory of previously connected:</string>
+    <string name="reset_network_desc">This will reset all network settings, including:</string>
     <!-- List item for Wi-Fi on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
-    <string name="reset_network_item_wifi"><li>Wi\u2011Fi networks and passwords</li></string>
+    <string name="reset_network_item_wifi"><li>Wi\u2011Fi</li></string>
     <!-- List item for Mobile data on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
     <string name="reset_network_item_mobile"><li>Mobile data</li></string>
     <!-- List item for Bluetooth on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
-    <string name="reset_network_item_bluetooth"><li>Phones and other Bluetooth devices</li></string>
+    <string name="reset_network_item_bluetooth"><li>Bluetooth</li></string>
     <!-- Title for option to reset all eSIMs for the vehicle. [CHAR LIMIT=50] -->
     <string name="reset_esim_title">Erase all vehicle eSIMs</string>
     <!-- Description text for option to reset all eSIMs for the vehicle. [CHAR LIMIT=NONE] -->
