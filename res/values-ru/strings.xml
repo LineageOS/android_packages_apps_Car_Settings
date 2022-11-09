@@ -300,14 +300,22 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Приложения и уведомления"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показать все приложения"</string>
     <string name="default_applications" msgid="1558183275638697087">"Приложения по умолчанию"</string>
+    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
+    <skip />
     <string name="app_permissions" msgid="32799922508313948">"Разрешения для приложений"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Управление доступом приложений к вашим данным"</string>
     <string name="applications_settings" msgid="794261395191035632">"Сведения о приложениях"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Остановить"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Остановить принудительно?"</string>
+    <!-- no translation found for force_stop (1616958676171167028) -->
+    <skip />
+    <!-- no translation found for force_stop_dialog_title (4481858344628934971) -->
+    <skip />
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Принудительное закрытие приложения может отразиться на его функциональности."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Приоритизировать производительность приложения?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Включение этой настройки может привести к нестабильной работе системы и долговременному воздействию на аппаратное обеспечение. Продолжить?"</string>
+    <!-- no translation found for force_stop_success_toast_text (2986272849275894254) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
+    <skip />
+    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
+    <skip />
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Да"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Нет"</string>
     <string name="disable_text" msgid="4358165448648990820">"Отключить"</string>
@@ -378,6 +386,8 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Управление разрешениями"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Управление доступом приложений к вашим данным"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Для Ассистента и не только"</string>
+    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
+    <skip />
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Доступ к системным и другим настройкам"</string>
     <string name="special_access" msgid="5730278220917123811">"Специальный доступ для приложений"</string>
     <string name="show_system" msgid="4401355756969485287">"Показать системные"</string>
@@ -391,6 +401,10 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Если вы отключите доступ к уведомлениям для приложения \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\", также может быть отключен доступ к настройкам режима \"Не беспокоить\"."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Отключить"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отмена"</string>
+    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
+    <skip />
+    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
+    <skip />
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Доступ к платным SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Обратите внимание, что такие SMS могут оплачиваться дополнительно. Предоставив разрешение приложению, вы сможете отправлять платные SMS с его помощью."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Доступ к истории использования"</string>
@@ -480,11 +494,15 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Для разработчиков"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Сброс настроек"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Сброс настроек сети, приложений и устройства"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Сбросить настройки сети"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Будут сброшены все настройки, в том числе:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <!-- no translation found for reset_network_title (3077846909739832734) -->
+    <skip />
+    <!-- no translation found for reset_network_desc (3332203703135823033) -->
+    <skip />
+    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
+    <skip />
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильный интернет"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
+    <skip />
     <string name="reset_esim_title" msgid="8132107637911831211">"Удалить данные всех eSIM автомобиля"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Это действие не отменит ваш тарифный план."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Не удалось сбросить настройки eSIM"</string>
