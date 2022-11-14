@@ -59,10 +59,10 @@
     <string name="mobile_network_inactive_sim">Inactive / SIM</string>
     <!-- Summary for an item in the page listing multiple mobile service subscriptions, indicating
          that service is active and is tied to an eSIM profile [CHAR LIMIT=40] -->
-    <string name="mobile_network_active_esim">Active / Downloaded SIM</string>
+    <string name="mobile_network_active_esim">Active / eSIM</string>
     <!-- Summary for an item in the page listing multiple mobile service subscriptions, indicating
          that service is inactive and is tied to an eSIM profile [CHAR LIMIT=40] -->
-    <string name="mobile_network_inactive_esim">Inactive / Downloaded SIM</string>
+    <string name="mobile_network_inactive_esim">Inactive / eSIM</string>
     <!-- Title of item shown at the bottom of the page listing multiple mobile service
          subscriptions; tapping it leads to a UI to add more [CHAR LIMIT=40] -->
     <string name="mobile_network_list_add_more">Add more</string>
