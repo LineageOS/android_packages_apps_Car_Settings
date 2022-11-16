@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"အက်ပ်များနှင့် အကြောင်းကြားချက်များ"</string>
     <string name="all_applications" msgid="7798210477486822168">"အက်ပ်အားလုံး ပြရန်"</string>
     <string name="default_applications" msgid="1558183275638697087">"မူရင်း အက်ပ်များ"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"စွမ်းဆောင်ရည်ပေါ် သက်ရောက်သောအက်ပ်များ"</string>
     <string name="app_permissions" msgid="32799922508313948">"အက်ပ်ခွင့်ပြုချက်များ"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"အက်ပ်၏ သင့်ဒေတာအသုံးပြုခွင့်ကို ထိန်းချုပ်ရန်"</string>
     <string name="applications_settings" msgid="794261395191035632">"အက်ပ်အချက်အလက်များ"</string>
     <string name="force_stop" msgid="2153183697014720520">"ချက်ချင်း ရပ်ရန်"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"မဖြစ်မနေ ရပ်ခိုင်းမလား။"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"အက်ပ်ကို မဖြစ်မနေရပ်ခိုင်းလျှင် ပုံမှန် အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"အက်ပ်စွမ်းဆောင်ရည်ကို ဦးစားပေးမလား။"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"၎င်းသည် စနစ်မတည်ငြိမ်မှု (သို့) ရေရှည်တွင် ဟာ့ဒ်ဝဲထိခိုက်မှုကို ဖြစ်စေနိုင်သည်။ ရှေ့ဆက်လိုပါသလား။"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Yes"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"မလိုပါ"</string>
     <string name="disable_text" msgid="4358165448648990820">"ပိတ်ရန်"</string>
@@ -384,8 +381,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"ခွင့်ပြုချက် မန်နေဂျာ"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"အက်ပ်၏ သင့်ဒေတာအသုံးပြုခွင့်ကို ထိန်းချုပ်ရန်"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant နှင့် အခြားအရာများအတွက်"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{စွမ်းဆောင်ရည်ပေါ် သက်ရောက်သော အက်ပ် # ခု}other{စွမ်းဆောင်ရည်ပေါ် သက်ရောက်သော အက်ပ် # ခု}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"စနစ်နှင့် အခြားဆက်တင်များသို့"</string>
     <string name="special_access" msgid="5730278220917123811">"အထူးအက်ပ်များ သုံးခွင့်ရှိသည်"</string>
     <string name="show_system" msgid="4401355756969485287">"စနစ်ကိုပြသရန်"</string>
@@ -399,10 +395,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> အတွက် အကြောင်းကြားချက် အသုံးပြုခွင့်ကို ပိတ်လိုက်လျှင် \'မနှောင့်ယှက်ရ\' ကို အသုံးပြုခွင့်လည်း ပိတ်ပါမည်။"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ပိတ်ရန်"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"မလုပ်တော့"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ဤအက်ပ်များသည် စနစ်စွမ်းဆောင်ရည်ကို ထိခိုက်စေပြီး ၎င်းတို့ကို နောက်ခံတွင်လုပ်ဆောင်ခြင်းမှ တားဆီးလိုက်သည်။\nနောက်ခံတွင်သုံးခွင့်ပြုရန် အက်ပ်ကို ဦးစားပေးပြီး ဤစာရင်းမှဖယ်ရှားနိုင်သည်။"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"အက်ပ်ကို ဦးစားပေးရန်"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ပရီမီယံ SMS သုံးခွင့်ရှိခြင်း"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ပရီမီယံ SMS သည်ငွေကြေးကုန်ကျနိုင်ပြီး သင့်ဖုန်းကုမ္ပဏီ၏ ငွေတောင်းခံလွှာသို့ ပေါင်း၍ ထည့်သွင်းပါမည်။ အက်ပ်တစ်ခုကို သင်ခွင့်ပြုလိုက်လျှင် ၎င်းအက်ပ်ကိုအသုံးပြုပြီး ပရီမီယံ SMS ပို့နိုင်မည်ဖြစ်သည်။"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"အသုံးပြုမှု ကြည့်ခြင်း"</string>

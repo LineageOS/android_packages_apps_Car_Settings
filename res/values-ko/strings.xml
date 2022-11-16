@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"앱 및 알림"</string>
     <string name="all_applications" msgid="7798210477486822168">"모든 앱 표시"</string>
     <string name="default_applications" msgid="1558183275638697087">"기본 앱"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"성능에 영향을 주는 앱"</string>
     <string name="app_permissions" msgid="32799922508313948">"앱 권한"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"내 데이터에 대한 앱 액세스 권한 제어"</string>
     <string name="applications_settings" msgid="794261395191035632">"앱 정보"</string>
     <string name="force_stop" msgid="2153183697014720520">"강제 종료"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"강제 종료하시겠습니까?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"앱을 강제 종료하면 예기치 않은 오류가 발생할 수 있습니다."</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"앱 성능 우선순위를 지정하시겠습니까?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"잠재적으로 시스템이 불안정해지거나 장기적인 하드웨어 문제가 발생할 수 있습니다. 계속하시겠습니까?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"예"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"아니요"</string>
     <string name="disable_text" msgid="4358165448648990820">"사용 중지"</string>
@@ -383,8 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"권한 관리자"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"내 데이터에 대한 앱 액세스 권한 제어"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"어시스턴트용 기본 앱"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{성능에 영향을 주는 앱 #개}other{성능에 영향을 주는 앱 #개}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"시스템 및 기타 설정"</string>
     <string name="special_access" msgid="5730278220917123811">"특수 앱 액세스"</string>
     <string name="show_system" msgid="4401355756969485287">"시스템 표시"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>에서 알림 액세스를 사용 중지하면 방해 금지 모드 액세스도 사용 중지됩니다."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"끄기"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"취소"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"시스템 성능에 부정적인 영향을 미쳐 백그라운드 실행이 차단된 앱입니다.\n앱 우선순위를 지정하여 백그라운드 사용을 허용하고 이 목록에서 삭제하세요."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"앱 우선순위 지정"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"프리미엄 SMS 액세스"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"프리미엄 SMS는 요금이 부과될 수 있으며 이는 이동통신사 요금에 추가됩니다. 앱에 권한을 부여하면 해당 앱을 사용하여 프리미엄 SMS를 사용할 수 있게 됩니다."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"사용 기록에 액세스"</string>

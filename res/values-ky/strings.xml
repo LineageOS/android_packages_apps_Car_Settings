@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Колдонмолор жана билдирмелер"</string>
     <string name="all_applications" msgid="7798210477486822168">"Бардык колдонмолорду көрсөтүү"</string>
     <string name="default_applications" msgid="1558183275638697087">"Демейки колдонмолор"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Майнаптуулукка таасирин тийгизген колдонмолор"</string>
     <string name="app_permissions" msgid="32799922508313948">"Колдонмонун уруксаттары"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Колдонмолордун маалыматты колдонуу мүмкүнчүлүгүн көзөмөлдөө"</string>
     <string name="applications_settings" msgid="794261395191035632">"Колдонмо тууралуу маалымат"</string>
     <string name="force_stop" msgid="2153183697014720520">"Мажбурлап токтотуу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Токтотулсунбу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Колдонмону мажбурлап токтотсоңуз, ал туура эмес иштеп калышы мүмкүн."</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Колдонмого артыкчылык берилсинби?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Бул тутумдун туруктуу иштөөсүнө же аппараттык камсыздоого кедергисин тийгизиши мүмкүн. Улантасызбы?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ооба"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Жок, рахмат"</string>
     <string name="disable_text" msgid="4358165448648990820">"Өчүрүү"</string>
@@ -383,8 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Уруксаттарды башкаргыч"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Колдонмолордун маалыматты колдонуу мүмкүнчүлүгүн көзөмөлдөө"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Жардамчы жана башкалар үчүн"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# колдонмо майнаптуулукка таасирин тийгизип жатат}other{# колдонмо майнаптуулукка таасирин тийгизип жатат}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Тутум жана башка жөндөөлөргө"</string>
     <string name="special_access" msgid="5730278220917123811">"Колдонмонун атайын уруксаты"</string>
     <string name="show_system" msgid="4401355756969485287">"Тутум процесстерин көрсөтүү"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Эгер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үчүн билдирмени угуу уруксатын өчүрсөңүз, анын \"Тынчымды алба\" режимине да уруксаты жок болуп калышы мүмкүн."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өчүрүү"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Жок"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Бул колдонмолор тутумдун майнаптуулугуна терс таасирин тийгизгендиктен, фондо иштетилбей калышты.\nКолдонмону фондо иштетүү үчүн ага арткычылык берип, бул тизмеден өчүрүңүз."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Колдонмого артыкчылык берүү"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Акы алынуучу SMS жөнөтүүгө уруксат"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Акы алынуучу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу акы алынуучу SMS жөнөтө аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Колдонуу таржымалын көрүү"</string>

@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"অ্যাপ ও বিজ্ঞপ্তি"</string>
     <string name="all_applications" msgid="7798210477486822168">"সব অ্যাপ দেখুন"</string>
     <string name="default_applications" msgid="1558183275638697087">"ডিফল্ট অ্যাপ"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"পারফর্ম্যান্স প্রভাবিত করে এমন অ্যাপ"</string>
     <string name="app_permissions" msgid="32799922508313948">"অ্যাপের অনুমতি"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"আপনার ডেটায় অ্যাপের অ্যাক্সেস কন্ট্রোল করুন"</string>
     <string name="applications_settings" msgid="794261395191035632">"অ্যাপের তথ্য"</string>
     <string name="force_stop" msgid="2153183697014720520">"জোর করে বন্ধ করুন"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"জোর করে বন্ধ করবেন?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"আপনি একটি অ্যাপকে জোর করে বন্ধ করলে, তা সঠিক ভাবে কাজ নাও করতে পারে।"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"অ্যাপ পারফর্ম্যান্সকে অগ্রাধিকার দেবেন?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"এর ফলে সিস্টেমের সম্ভাব্য ক্ষতি হতে পারে বা হার্ডওয়্যারের উপরে দীর্ঘমেয়াদি প্রভাব পড়তে পারে। আপনি কি এগিয়ে যেতে চান?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"হ্যাঁ"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"না, থাক"</string>
     <string name="disable_text" msgid="4358165448648990820">"বন্ধ করুন"</string>
@@ -383,8 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"অনুমতি ম্যানেজার"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"আপনার ডেটায় অ্যাপের অ্যাক্সেস কন্ট্রোল করুন"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant এবং আরও অনেক কিছুর জন্য"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{#টি অ্যাপ পারফর্ম্যান্স প্রভাবিত করছে}one{#টি অ্যাপ পারফর্ম্যান্স প্রভাবিত করছে}other{#টি অ্যাপ পারফর্ম্যান্স প্রভাবিত করছে}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"সিস্টেম এবং অন্যান্য সেটিংসের জন্য"</string>
     <string name="special_access" msgid="5730278220917123811">"অ্যাপের বিশেষ অ্যাক্সেস"</string>
     <string name="show_system" msgid="4401355756969485287">"সিস্টেম অ্যাপ দেখুন"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-এর জন্য বিজ্ঞপ্তির অ্যাক্সেস বন্ধ করেন, তাহলে \'বিরক্ত করবে না\' এর অ্যাক্সেসও বন্ধ হয়ে যেতে পারে।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"বন্ধ করুন"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল করুন"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"এইসব অ্যাপ সিস্টেম পারফর্ম্যান্সের উপরে নেতিবাচক প্রভাব ফেলে এবং ব্যাকগ্রাউন্ডে রান করা থেকে এগুলিকে আটকানো হয়েছে।\nব্যাকগ্রাউন্ডে চলার জন্য অ্যাপকে অগ্রাধিকার দিন ও এই তালিকা থেকে সেটি সরিয়ে দিন।"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"অ্যাপকে অগ্রাধিকার দিন"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"প্রিমিয়াম এসএমএস অ্যাক্সেস"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"প্রিমিয়াম এসএমএসের জন্য অর্থ খরচ হতে পারে এবং আপনার পরিষেবা প্রদানকারীর বিলে যোগ করা হবে৷ আপনি যদি কোনও অ্যাপের জন্য অনুমতি চালু করেন তাহলে আপনি সেই অ্যাপ ব্যবহার করে প্রিমিয়াম এসএমএস পাঠাতে পারবেন।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ব্যবহারের তথ্যে অ্যাক্সেস"</string>

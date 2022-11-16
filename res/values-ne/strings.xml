@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"एप तथा सूचनाहरू"</string>
     <string name="all_applications" msgid="7798210477486822168">"सबै एपहरू देखाउनुहोस्"</string>
     <string name="default_applications" msgid="1558183275638697087">"डिफल्ट एपहरू"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"पर्फर्मेन्समा प्रभाव पार्ने एपहरू"</string>
     <string name="app_permissions" msgid="32799922508313948">"एपसम्बन्धी अनुमति"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"कुन कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछन् भन्ने कुरा तय गर्नुहोस्"</string>
     <string name="applications_settings" msgid="794261395191035632">"एपसम्बन्धी जानकारी"</string>
     <string name="force_stop" msgid="2153183697014720520">"जबर्जस्ती रोक्नुहोस्"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"जबरजस्ती रोक्ने हो?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"तपाईंले कुनै एपलाई जबरजस्ती रोक्नुभयो भने त्यसले सही तरिकाले काम नगर्न सक्छ।"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"एपको पर्फर्मेन्सलाई प्राथमिकता दिने हो?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"तपाईंले यो सुविधा अन गर्नुभयो भने सिस्टममा अस्थिरता हुने वा यसले लामो समयका लागि हार्डवेयरमा असर गर्ने सम्भावना हुन्छ। तपाईं जारी राख्न चाहनुहुन्छ?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"अँ"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"अहँ, धन्यवाद"</string>
     <string name="disable_text" msgid="4358165448648990820">"असक्षम पार्नुहोस्"</string>
@@ -383,8 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"अनुमति म्यानेजर"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"कुन कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछन् भन्ने कुरा तय गर्नुहोस्"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"सहायक तथा अन्य एप हेर्न"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# एपले पर्फर्मेन्समा प्रभाव पारिरहेको छ}other{# वटा एपले पर्फर्मेन्समा प्रभाव पारिरहेका छन्}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"प्रणालीसम्बन्धी सेटिङ तथा अन्य सेटिङ हेर्न"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अनुप्रयोगमाथिको पहुँच"</string>
     <string name="show_system" msgid="4401355756969485287">"सिस्टम देखाइयोस्"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"तपाईंले <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> का सूचनामाथिको पहुँच निष्क्रिय पार्नुभएका खण्डमा बाधा नपुऱ्याउनुहोस् नामक मोडमाथिको पहुँच पनि निष्क्रिय पारिन सक्छ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"निष्क्रिय पार्नुहोस्"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द गर्नुहोस्"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"यी एपहरूले सिस्टमको पर्फर्मेन्समा नकरात्मक प्रभाव पार्छन् र यी एपहरूलाई ब्याकग्राउन्डमा चल्ने अनुमति दिइएको छैन।\nतपाईं एपलाई ब्याकग्राउन्डमा चल्ने अनुमति दिन चाहनुहुन्छ भने यसलाई प्राथमिकता दिनुहोस् र सूचीबाट हटाउनुहोस्।"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"एपलाई प्राथमिकता दिनुहोस्"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रिमियम SMS सुविधामाथिको पहुँच"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले एपका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस एपको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"प्रयोग गर्ने अनुमति"</string>
