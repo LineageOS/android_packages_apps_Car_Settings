@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-kaart}other{# SIM-kaarte}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktief / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Onaktief / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktief / Afgelaaide SIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Onaktief / Afgelaaide SIM"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Voeg nog by"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Kry toegang tot data deur selnetwerk"</string>
@@ -443,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Gevorderd"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Meer oor, regsinligting, terugstelling, en meer"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Herbegin inligtingvermaakstelsel"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Dit kan ’n paar minute neem om jou motor se inligtingvermaakstelsel te herbegin. Wil jy voortgaan?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Dit kan ’n paar minute neem om jou motor se inligtingvermaakstelsel te herbegin. Wil jy voortgaan?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Gaan voort"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-weergawe"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android-sekuriteitregstellingvlak"</string>
@@ -485,15 +487,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Ontwikkelaaropsies"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Terugstellingopsies"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Terugstelling van netwerk, programme of toestel"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Stel wi-fi en Bluetooth terug"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Dit sal die wi-fi- en Bluetooth-instellings terugstel, wat die geheue sal verwyder van die voorheen gekoppelde:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑fi-netwerke en -wagwoorde"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobiele data"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Fone en ander Bluetooth-toestelle"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Vee alle voertuig-e-SIM\'e uit"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Dit sal nie jou diensplan kanselleer nie."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Kan nie e-SIM\'e terugstel nie"</string>

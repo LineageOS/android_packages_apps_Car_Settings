@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# सिम}other{# सिम}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"अ‍ॅक्टिव्ह / सिम"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"अ‍ॅक्टिव्ह नसलेले / सिम"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"ॲक्टिव्ह / डाउनलोड केलेले सिम"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"अ‍ॅक्टिव्ह नसलेले / डाउनलोड केलेले सिम"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"अधिक जोडा"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क वापरून डेटा ॲक्सेस करा"</string>
@@ -443,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"प्रगत"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"याविषयी, कायदेशीर माहिती, रीसेट करणे आणि आणखी बरेच काही"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"इंफोटेनमेंट सिस्टीम पुन्हा सुरू करा"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"तुमच्या कारची इंफोटेनमेंट सिस्टीम पुन्हा सुरू करण्यासाठी काही मिनिटे लागू शकतात. तुम्हाला पुढे सुरू ठेवायचे आहे का?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"पुढे सुरू ठेवा"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android आवृत्ती"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षितता पॅच पातळी"</string>
@@ -485,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"डेव्‍हलपर पर्याय"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"रीसेट पर्याय"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"नेटवर्क, अ‍ॅप्स किंवा डिव्हाइस रीसेट"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"वाय-फाय आणि ब्लूटूथ रीसेट करा"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"हे पूर्वी कनेक्ट केलेल्या पुढील गोष्टींची मेमरी काढून टाकून वाय-फाय आणि ब्लूटूथ सेटिंग्ज रीसेट करेल:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"वाय-फाय नेटवर्क आणि पासवर्ड"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"मोबाइल डेटा"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"फोन आणि इतर ब्लूटूथ डिव्‍हाइस"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"सर्व वाहन eSIMs काढून टाका"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"तुमचा सेवा प्लॅन रद्द होणार नाही."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM रीसेट करू शकत नाही"</string>

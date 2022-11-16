@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMలు}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"యాక్టివ్‌గా ఉంది / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"ఇన్‌యాక్టివ్‌గా ఉంది / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"యాక్టివ్ / డౌన్‌లోడ్ చేసిన SIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"ఇన్‌యాక్టివ్ / డౌన్‌లోడ్ చేసిన SIM"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"మరిన్నింటిని జోడించు"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"మొబైల్ డేటా"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"మొబైల్ నెట్‌వర్క్‌ను ఉపయోగించి డేటాను యాక్సెస్ చేయండి"</string>
@@ -443,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"అధునాతనం"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"పరిచయం, చట్టపరమైన సమాచారం, రీసెట్, మరిన్ని"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను రీస్టార్ట్ చేయండి"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"మీ కారు తాలూకు సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను రీస్టార్ట్ చేయడానికి కొన్ని నిమిషాల వరకు పట్టవచ్చు. మీరు కొనసాగాలనుకుంటున్నారా?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"కొనసాగించండి"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android వెర్షన్"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android సెక్యూరిటీ ప్యాచ్ స్థాయి"</string>
@@ -485,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"డెవలపర్ ఎంపికలు"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"రీసెట్ ఎంపికలు"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"నెట్‌వర్క్, యాప్‌లు లేదా పరికరాన్ని రీసెట్ చేయి"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi, బ్లూటూత్‌ని రీసెట్ చేయండి"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"ఇది Wi‑Fi, బ్లూటూత్ సెట్టింగ్‌లను రీసెట్ చేస్తుంది, గతంలో కనెక్ట్ చేయబడిన మెమరీని తీసివేస్తుంది:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi నెట్‌వర్క్‌లు, పాస్‌వర్డ్‌లు"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"మొబైల్ డేటా"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"ఫోన్‌లు, ఇతర బ్లూటూత్ పరికరాలు"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"వాహన eSIMలన్నింటినీ తొలగించండి"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"ఇది మీ సేవా ప్లాన్‌ని రద్దు చేయదు."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"ESIMలను రీసెట్ చేయడం సాధ్యం కాదు"</string>
