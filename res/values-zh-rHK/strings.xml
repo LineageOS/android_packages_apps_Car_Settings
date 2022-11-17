@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"應用程式及通知"</string>
     <string name="all_applications" msgid="7798210477486822168">"顯示所有應用程式"</string>
     <string name="default_applications" msgid="1558183275638697087">"預設應用程式"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"影響系統效能的應用程式"</string>
     <string name="app_permissions" msgid="32799922508313948">"應用程式權限"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"控制應用程式資料存取權"</string>
     <string name="applications_settings" msgid="794261395191035632">"應用程式資料"</string>
     <string name="force_stop" msgid="2153183697014720520">"強制停止"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"要強制停止應用程式嗎？"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"如果您強制停止應用程式，應用程式可能無法正常操作。"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"要優先處理應用程式效能嗎？"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"此設定可能會導致系統不穩定或對硬件造成長期影響。您要繼續嗎？"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"是"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"不用了，謝謝"</string>
     <string name="disable_text" msgid="4358165448648990820">"停用"</string>
@@ -383,8 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"權限管理員"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控制應用程式資料存取權"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"「Google 助理」及其他"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# 個應用程式正在影響系統效能}other{# 個應用程式正在影響系統效能}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"系統及其他設定"</string>
     <string name="special_access" msgid="5730278220917123811">"特別應用程式權限"</string>
     <string name="show_system" msgid="4401355756969485287">"顯示系統"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"如果您關閉「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」的通知存取權，「請勿騷擾」的存取權亦可能會關閉。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"關閉"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"這些應用程式會對系統效能造成負面影響，並已禁止在背景運行。\n您可設定優先處理應用程式，以允許該應用程式在背景運行，並將它從此清單中移除。"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"優先處理應用程式"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"付費短訊存取權"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"付費短訊的費用可能高昂，並會增加您流動網絡供應商帳單的款項。如果您為應用程式開放權限，將可以透過該應用程式發送付費短訊。"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"使用記錄存取權"</string>

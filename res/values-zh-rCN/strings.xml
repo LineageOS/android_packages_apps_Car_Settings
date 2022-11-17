@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"应用和通知"</string>
     <string name="all_applications" msgid="7798210477486822168">"显示所有应用"</string>
     <string name="default_applications" msgid="1558183275638697087">"默认应用"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"会影响性能的应用"</string>
     <string name="app_permissions" msgid="32799922508313948">"应用权限"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"控制应用对您的数据的使用权限"</string>
     <string name="applications_settings" msgid="794261395191035632">"应用信息"</string>
     <string name="force_stop" msgid="2153183697014720520">"强行停止"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"要强行停止吗？"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"如果您强行停止某个应用，可能会导致该应用无法正常运行。"</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"要优先保证应用性能吗？"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"开启该设置可能会导致系统不稳定或对硬件产生长期影响。是否继续？"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"是"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"不用了"</string>
     <string name="disable_text" msgid="4358165448648990820">"停用"</string>
@@ -383,8 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"权限管理器"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控制应用对您的数据的使用权限"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"针对 Google 助理和更多应用"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# 款会影响性能的应用}other{# 款会影响性能的应用}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"针对系统和其他设置"</string>
     <string name="special_access" msgid="5730278220917123811">"特殊应用权限"</string>
     <string name="show_system" msgid="4401355756969485287">"显示系统应用"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"如果您停用<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>的通知访问权限，勿扰模式的访问权限可能也会遭到停用。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"关闭"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"这些应用会对系统性能造成负面影响，已被禁止在后台运行。\n将应用设为优先运行即可允许在后台使用相应应用，并将其从此列表中移出。"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"将应用设为优先运行"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"付费短信权限"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"“付费短信”可能会产生费用，而且相关费用将计入您的运营商帐单。如果您为某个应用启用该权限，那么您将能够使用该应用发送付费短信。"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"使用情况访问权限"</string>

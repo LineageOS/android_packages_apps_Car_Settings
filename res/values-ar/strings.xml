@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"التطبيقات والإشعارات"</string>
     <string name="all_applications" msgid="7798210477486822168">"إظهار جميع التطبيقات"</string>
     <string name="default_applications" msgid="1558183275638697087">"التطبيقات التلقائية"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"التطبيقات التي تؤثر في الأداء"</string>
     <string name="app_permissions" msgid="32799922508313948">"أذونات التطبيقات"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"التحكُّم في وصول التطبيقات إلى بياناتك"</string>
     <string name="applications_settings" msgid="794261395191035632">"معلومات التطبيق"</string>
     <string name="force_stop" msgid="2153183697014720520">"فرض الإيقاف"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"هل تريد فرض إيقاف التطبيق؟"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"في حال فرض إيقاف التطبيق، قد لا يعمل بشكل صحيح."</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"هل تريد منح الأولوية لأداء التطبيق؟"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"يمكن أن يؤدي تفعيل هذا الإعداد إلى حدوث عدم استقرار محتمل في النظام أو تأثير طويل الأمد في الأجهزة. هل تريد المتابعة؟"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"نعم"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"لا، شكرًا"</string>
     <string name="disable_text" msgid="4358165448648990820">"إيقاف"</string>
@@ -383,11 +380,10 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"مدير الأذونات"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"التحكُّم في وصول التطبيقات إلى بياناتك"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"لعرض تطبيق المساعد وتطبيقات أخرى"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{تطبيق واحد يؤثر في الأداء}zero{# تطبيق تؤثر في الأداء}two{تطبيقان يؤثران في الأداء}few{# تطبيقات تؤثر في الأداء}many{# تطبيقًا تؤثر في الأداء}other{# تطبيق تؤثر في الأداء}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"الانتقال إلى النظام والإعدادات الأخرى"</string>
     <string name="special_access" msgid="5730278220917123811">"أذونات خاصة للتطبيقات"</string>
-    <string name="show_system" msgid="4401355756969485287">"عرض عمليات النظام"</string>
+    <string name="show_system" msgid="4401355756969485287">"إظهار تطبيقات النظام"</string>
     <string name="hide_system" msgid="8845453295584638040">"إخفاء عمليات النظام"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"إخفاء تطبيقات النظام"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"تعديل إعدادات النظام"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"عند إيقاف الوصول إلى الإشعارات لخدمة <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>، قد يتم إيقاف الوصول إلى ميزة \"عدم الإزعاج\" أيضًا."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"إيقاف"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"إلغاء"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"تؤثر هذه التطبيقات سلبًا في أداء النظام وقد تم منع استخدامها في الخلفية.\nعليك منح الأولوية للتطبيق للسماح باستخدامه في الخلفية وإزالته من هذه القائمة."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"منح أولوية للتطبيق"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"إمكانية إرسال رسائل قصيرة SMS مميزة"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"يمكن أن تكلفك الرسائل القصيرة SMS المميزة بعض الرسوم، وستتم إضافة هذه الرسوم إلى فواتير مشغِّل شبكة الجوّال. وفي حال تفعيل الإذن لأحد التطبيقات، ستتمكن من إرسال رسائل قصيرة SMS مميزة باستخدام هذا التطبيق."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"الوصول إلى بيانات الاستخدام"</string>

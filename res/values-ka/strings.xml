@@ -301,18 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"აპები და შეტყობინებები"</string>
     <string name="all_applications" msgid="7798210477486822168">"ყველა აპის ჩვენება"</string>
     <string name="default_applications" msgid="1558183275638697087">"ნაგულისხმევი აპები"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"შესრულება-ზემოქმედების აპები"</string>
     <string name="app_permissions" msgid="32799922508313948">"აპის ნებართვები"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"მართეთ აპების წვდომა თქვენს მონაცემებზე"</string>
     <string name="applications_settings" msgid="794261395191035632">"აპის ინფო"</string>
     <string name="force_stop" msgid="2153183697014720520">"ძალით შეჩერება"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"გსურთ ძალით შეჩერება?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"აპისთვის მუშაობის ძალით შეჩერების შემთხვევაში, მან შეიძლება არასათანადოდ იმუშაოს."</string>
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"გსურთ აპის პრიორიტეტის შესრულება?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"ამან შეიძლება გამოიწვიოს სისტემის პოტენციური არასტაბილურობა ან დიდი ხნით იმოქმედოს აპარატურაზე. გსურთ გაგრძელება?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"დიახ"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"არა, გმადლობთ"</string>
     <string name="disable_text" msgid="4358165448648990820">"გათიშვა"</string>
@@ -383,8 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"ნებართვების მმართველი"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"მართეთ აპების წვდომა თქვენს მონაცემებზე"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"ასისტენტისა და სხვებისთვის"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# აპი გავლენას ახდენს შესრულებაზე}other{# აპი გავლენას ახდენს შესრულებაზე}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"სისტემაზე და სხვა პარამეტრებზე"</string>
     <string name="special_access" msgid="5730278220917123811">"აპების სპეციალური წვდომა"</string>
     <string name="show_system" msgid="4401355756969485287">"სისტემის ჩვენება"</string>
@@ -398,10 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"შეტყობინებებზე წვდომის გამორთვის შემთხვევაში <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> სავარაუდოდ, „არ შემაწუხოთ“ რეჟიმზე წვდომასაც დაკარგავს."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"გამორთვა"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"გაუქმება"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ეს აპები უარყოფითად აისახება სისტემის მუშაობაზე და აკრძალულია ფონში გაშვება.\nმიანიჭეთ აპს პრიორიტეტი, რათა დაუშვათ ფონური გამოყენება და ამოშალოთ იგი ამ სიიდან."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"აპის პრიორიტეტიზაცია"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"პრემიუმ SMS შეტყობინებების გაგზავნაზე წვდომა"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"პრემიუმ SMS შეტყობინებებისთვის შეიძლება დამატებითი საფასურის გადახდა მოგიწიოთ. აპისთვის ამ ნებართვის მიცემის შემთხვევაში, თქვენ მისი მეშვეობით პრემიუმ SMS შეტყობინებების გაგზავნას შეძლებთ."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"გამოყენებაზე წვდომა"</string>
