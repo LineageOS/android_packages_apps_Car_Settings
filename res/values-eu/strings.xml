@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktibo / SIM txartela"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktibo / SIM txartela"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktibo / Deskargatutako SIMa"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inaktibo / Deskargatutako SIMa"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Gehitu beste batzuk"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datu-konexioa"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Atzitu datuak datu-konexioaren bidez"</string>
@@ -443,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Aurreratuak"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Sistemari buruz, legezko informazioa, berrezartzea eta beste"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Berrabiarazi autoko informazio- eta aisia-sistema"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Baliteke minutu bat baino gehiago behar izatea autoko informazio- eta aisia-sistema berrabiarazteko. Aurrera egin nahi duzu?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Minutu batzuk beharko dira autoaren informazio- eta aisia-sistema berrabiarazteko. Aurrera egin nahi duzu?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Egin aurrera"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-en bertsioa"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android-en segurtasun-adabakiaren maila"</string>
@@ -485,15 +487,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Garatzaileentzako aukerak"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Berrezartzeko aukerak"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Sarea, aplikazioak edo gailua berrezartzea"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Berrezarri wifiaren eta Bluetootharen ezarpenak"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Wifiaren eta Bluetootharen ezarpenak berrezarriko dira; aurrez konektatutako gailu hauen memoria kentzen:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wifi-sareak eta pasahitzak"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datu-konexioa"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefonoak eta Bluetooth bidezko beste gailu batzuk"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Ezabatu ibilgailuaren eSIM txarteletako eduki guztia"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Ez da utziko bertan behera daukazun zerbitzu-plana."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Ezin dira berrezarri eSIM txartelak"</string>

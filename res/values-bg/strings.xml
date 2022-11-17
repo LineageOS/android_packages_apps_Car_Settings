@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM карта}other{# SIM карти}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активно/SIM карта"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Неактивно/SIM карта"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активно/изтеглена SIM карта"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Неактивно/изтеглена SIM карта"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Добавяне на още"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилни данни"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Достъп до данните през мобилната мрежа"</string>
@@ -300,22 +302,16 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Приложения и известия"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показване на всички приложения"</string>
     <string name="default_applications" msgid="1558183275638697087">"Приложения по подразбиране"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Приложения, засягащи ефективността"</string>
     <string name="app_permissions" msgid="32799922508313948">"Разрешения за приложенията"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Управлявайте достъпа на приложенията до данните ви"</string>
     <string name="applications_settings" msgid="794261395191035632">"Информация за приложенията"</string>
-    <!-- no translation found for force_stop (1616958676171167028) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_title (4481858344628934971) -->
-    <skip />
+    <string name="force_stop" msgid="1616958676171167028">"Спиране на приложението"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Да се спре ли приложението?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ако принудително спрете приложение, то може да не функционира правилно."</string>
-    <!-- no translation found for force_stop_success_toast_text (2986272849275894254) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"Приложението <xliff:g id="APP_NAME">%1$s</xliff:g> е спряно."</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Ефективност на прил.: Приоритизиране?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Това може да доведе до потенциални проблеми със стабилността на системата или дълготрайно въздействие върху хардуера. Искате ли да продължите?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Да"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Не, благодаря"</string>
     <string name="disable_text" msgid="4358165448648990820">"Деактивиране"</string>
@@ -386,8 +382,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Мениджър на разрешенията"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Управлявайте достъпа на приложенията до данните ви"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"За Асистент и др."</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# приложение засяга ефективността}other{# приложения засягат ефективността}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Към системните и други настройки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специален достъп за приложението"</string>
     <string name="show_system" msgid="4401355756969485287">"Системни процеси"</string>
@@ -401,10 +396,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако изключите достъпа до известията за „<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>“, този до „Не безпокойте“ също може да се изключи."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Изключване"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отказ"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Тези приложения се отразяват отрицателно на ефективността на системата и работата им на заден план е спряна.\nПриоритизирайте приложението, за да разрешите използването му на заден план, и го премахнете от този списък."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Прил.: Приоритизир."</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Достъп до SMS, за които получателят заплаща"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS съобщенията, за които се таксува получателят, може да ви въвлекат в разходи и ще увеличат сметката към оператора ви. Ако дадете разрешението на дадено приложение, ще можете да изпращате такива съобщения чрез него."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Достъп до данни за ползването"</string>
@@ -452,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Разширени"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Всичко за Android Auto, правна информация, нулиране и др."</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Рестартиране на основното устройство"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Рестартирането на основното устройство на автомобила ви може да отнеме няколко минути. Искате ли да продължите?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"Напред"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версия на Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Ниво на корекцията на сигурността под Android"</string>
@@ -494,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Опции за програмисти"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Опции за нулиране"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Нулиране на мрежата, приложенията или устройството"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Нулиране на Wi‑Fi и Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Това действие ще нулира настройките за Wi‑Fi и Bluetooth и ще премахне историята на по-рано свързаните:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi мрежи и пароли."</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобилни данни"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Телефони и други устройства с Bluetooth."</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Изтриване на всички ел. SIM карти за автомобила"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Това действие няма да анулира плана ви за услуги."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Електронните SIM карти не могат да бъдат нулирани"</string>

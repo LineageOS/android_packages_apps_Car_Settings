@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-карта}one{# SIM-карта}few{# SIM-карти}many{# SIM-карт}other{# SIM-карти}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активовано/SIM-карта"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Не активовано/SIM-карта"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активовано/завантажена SIM-карта"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Не активовано/завантажена SIM-карта"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Додати ще"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобільне передавання даних"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ до даних через мобільну мережу"</string>
@@ -300,22 +302,16 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Додатки та сповіщення"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показати всі додатки"</string>
     <string name="default_applications" msgid="1558183275638697087">"Додатки за умовчанням"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Додатки, що впливають на продуктивність"</string>
     <string name="app_permissions" msgid="32799922508313948">"Дозволи додатків"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Контролюйте доступ додатків до ваших даних"</string>
     <string name="applications_settings" msgid="794261395191035632">"Про додаток"</string>
-    <!-- no translation found for force_stop (1616958676171167028) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_title (4481858344628934971) -->
-    <skip />
+    <string name="force_stop" msgid="1616958676171167028">"Припинити роботу додатка"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Припинити роботу додатка?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Після примусового припинення роботи додаток може працювати неналежним чином."</string>
-    <!-- no translation found for force_stop_success_toast_text (2986272849275894254) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"Роботу додатка <xliff:g id="APP_NAME">%1$s</xliff:g> припинено."</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Пріоритезувати продуктивність додатка?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Ця дія може спричинити нестабільність системи або вплинути на роботу апаратного забезпечення в довгостроковій перспективі. Продовжити?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Так"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Ні, дякую"</string>
     <string name="disable_text" msgid="4358165448648990820">"Вимкнути"</string>
@@ -386,8 +382,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Диспетчер дозволів"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Контролюйте доступ додатків до ваших даних"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Для Асистента й інших додатків"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# додаток, що впливає на продуктивність}one{# додаток, що впливає на продуктивність}few{# додатки, що впливають на продуктивність}many{# додатків, що впливають на продуктивність}other{# додатка, що впливає на продуктивність}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Системні та інші налаштування"</string>
     <string name="special_access" msgid="5730278220917123811">"Спеціальний доступ"</string>
     <string name="show_system" msgid="4401355756969485287">"Показати системні додатки"</string>
@@ -401,10 +396,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Якщо вимкнути доступ додатка <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> до сповіщень, доступ до режиму \"Не турбувати\" також буде вимкнено."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Вимкнути"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Скасувати"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ці додатки негативно впливають на продуктивність системи, тому їх роботу у фоновому режимі заблоковано.\nНадайте додатку пріоритет, щоб дозволити його використання у фоновому режимі й вилучити з цього списку."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Надати пріоритет"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Доступ до платних SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Кошти за платні SMS стягує оператор. Ви зможете надсилати платні SMS у додатку, якому надасте такий дозвіл."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Доступ до історії використання"</string>
@@ -452,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Додатково"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Докладніше, правова інформація, скидання тощо"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Перезапустити інформаційно-розважальну систему"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Перезапуск інформаційно-розважальної системи автомобіля може тривати кілька хвилин. Продовжити?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"Продовжити"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версія Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Рівень виправлення системи безпеки Android"</string>
@@ -494,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Параметри розробника"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Варіанти скидання"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Скидання налаштувань мережі, додатків або пристрою"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Скинути налаштування Wi‑Fi і Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Налаштування Wi‑Fi і Bluetooth буде скинуто, і з пам‘яті буде вилучено використовувані раніше:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"мережі й паролі Wi-Fi."</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобільне передавання даних"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"телефони та інші пристрої з Bluetooth;"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Видалити всі eSIM-карти автомобіля"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Ваш тарифний план не буде скасовано."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Не вдається скинути eSIM-карти"</string>

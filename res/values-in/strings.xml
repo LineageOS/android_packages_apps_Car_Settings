@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktif / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Tidak aktif / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktif / SIM yang didownload"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Tidak Aktif / SIM yang Didownload"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Tambahkan lainnya"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Kuota"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan jaringan seluler"</string>
@@ -443,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Lanjutan"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Tentang, info hukum, reset, dan lainnya"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Mulai ulang sistem infotainmen"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Memulai ulang sistem infotainmen mobil Anda dapat memakan waktu beberapa menit. Ingin melanjutkan?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Memulai ulang sistem infotainmen mobil Anda dapat memerlukan waktu beberapa menit. Ingin melanjutkan?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Lanjutkan"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versi Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Tingkat patch keamanan Android"</string>
@@ -485,15 +487,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsi developer"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opsi reset"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Mereset jaringan, aplikasi, atau perangkat"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Reset Wi‑Fi dan Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Tindakan ini akan mereset setelan Wi‑Fi dan Bluetooth, serta menghapus histori setelan perangkat yang sebelumnya terhubung:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Sandi dan jaringan Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Kuota"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Ponsel dan perangkat Bluetooth lainnya"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Hapus semua eSIM kendaraan"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Tindakan ini tidak akan membatalkan paket layanan Anda."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Tidak dapat menyetel ulang eSIM"</string>

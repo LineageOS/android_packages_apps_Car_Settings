@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# ຊິມ}other{# ຊິມ}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"ນຳໃຊ້ຢູ່ / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"ບໍ່ໄດ້ນຳໃຊ້ / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"ນຳໃຊ້ຢູ່ / SIM ທີ່ດາວໂຫລດແລ້ວ"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"ບໍ່ໄດ້ນຳໃຊ້ / SIM ທີ່ດາວໂຫລດແລ້ວ"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ເພີ່ມອີກ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ອິນເຕີເນັດມືຖື"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ເຂົ້າເຖິງອິນເຕີເນັດໂດຍໃຊ້ເຄືອຂ່າຍມືຖື"</string>
@@ -443,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"ຂັ້ນສູງ"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"ກ່ຽວກັບ, ຂໍ້ມູນທາງກົດໝາຍ, ຣີເຊັດ ແລະ ອື່ນໆ"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ຣີສະຕາດລະບົບສາລະບັນເທີງ"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"ການຣີສະຕາດລະບົບສາລະບັນເທີງຂອງລົດທ່ານອາດໃຊ້ເວລາເຖິງສອງສາມນາທີ. ທ່ານຕ້ອງການດຳເນີນການຕໍ່ບໍ?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ການຣີສະຕາດລະບົບສາລະບັນເທີງຂອງລົດທ່ານອາດໃຊ້ເວລາສອງສາມນາທີ. ທ່ານຕ້ອງການສືບຕໍ່ບໍ?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"ສືບຕໍ່"</string>
     <string name="firmware_version" msgid="8491753744549309333">"ເວີຊັນ Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"ລະດັບໂປຣແກຣມແກ້ໄຂຄວາມປອດໄພ Android"</string>
