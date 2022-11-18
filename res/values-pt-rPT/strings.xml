@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMs}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Ativo/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inativo/SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Ativo/SIM transferido"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inativo/SIM transferido"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Adicione mais"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dados móveis"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Aceder aos dados através de rede móvel"</string>
@@ -443,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Avançadas"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Acerca de, informações legais, reposição e muito mais"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Reinicie o sistema de infoentretenimento"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Reiniciar o sistema de infoentretenimento do seu carro pode demorar alguns minutos. Quer continuar?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Reiniciar o sistema de infoentretenimento do seu carro pode demorar alguns minutos. Quer continuar?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Continuar"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versão do Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nível do patch de segurança do Android"</string>
@@ -485,15 +487,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opções de programador"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opções de reposição"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Reposição da rede, de aplicações ou do dispositivo"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Repor Wi‑Fi e Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Isto vai repor as definições de Wi-Fi e Bluetooth, e remover do histórico os seguintes dispositivos que estavam anteriormente associados:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Redes Wi-Fi e respetivas palavras-passe"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Dados móveis"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telemóveis e outros dispositivos Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Apagar todos os eSIMs do veículo"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Esta opção não cancela o seu plano de serviço."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Não é possível repor os eSIMs"</string>
@@ -548,7 +546,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Desinstalar aplicações"</string>
     <string name="user_add_user_menu" msgid="4125869008006021799">"Adicionar perfil"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Novo perfil"</string>
-    <string name="user_add_user_title" msgid="6296827596015729982">"Quer adicionar o novo perfil?"</string>
+    <string name="user_add_user_title" msgid="6296827596015729982">"Adicionar o novo perfil?"</string>
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Depois de criar um novo perfil, deve ser a pessoa em questão a personalizá-lo."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"As apps podem ser atualizadas a partir de qualquer perfil para utilização por todos os perfis."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Limite de perfis atingido"</string>

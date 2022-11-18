@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# kartë SIM}other{# karta SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktiv / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Joaktiv / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktiv / karta SIM e shkarkuar"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Joaktiv / karta SIM e shkarkuar"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Shto më shumë"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Të dhënat celulare"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Qasu te të dhënat duke përdorur rrjetin celular"</string>
@@ -300,22 +302,16 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplikacionet dhe njoftimet"</string>
     <string name="all_applications" msgid="7798210477486822168">"Shfaq të gjitha aplikacionet"</string>
     <string name="default_applications" msgid="1558183275638697087">"Aplikacionet e parazgjedhura"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Aplikacione me ndikim te performanca"</string>
     <string name="app_permissions" msgid="32799922508313948">"Lejet e aplikacionit"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrollo qasjen e aplikacioneve te të dhënat e tua"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informacioni mbi aplikacionin"</string>
-    <!-- no translation found for force_stop (1616958676171167028) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_title (4481858344628934971) -->
-    <skip />
+    <string name="force_stop" msgid="1616958676171167028">"Ndalo aplikacionin"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Të ndalohet aplikacioni?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Nëse e ndalon me forcë një aplikacion, ai mund të përjetojë çrregullime në funksionim."</string>
-    <!-- no translation found for force_stop_success_toast_text (2986272849275894254) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> është ndaluar."</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Të ketë përparësi performanca e apl.?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Kjo mund të shkaktojë paqëndrueshmëri të mundshme të sistemit ose ndikim afatgjatë te hardueri. Dëshiron të vazhdosh?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Po"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Jo, faleminderit"</string>
     <string name="disable_text" msgid="4358165448648990820">"Çaktivizo"</string>
@@ -386,8 +382,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Menaxheri i lejeve"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrollo qasjen e aplikacioneve te të dhënat e tua"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Për \"Asistentin\" dhe më shumë"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# apl me ndikim te performanca}other{# apl me ndikime te performanca}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Te cilësimet e sistemit dhe cilësime të tjera"</string>
     <string name="special_access" msgid="5730278220917123811">"Qasja e veçantë e aplikacioneve"</string>
     <string name="show_system" msgid="4401355756969485287">"Shfaq sistemin"</string>
@@ -401,10 +396,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nëse çaktivizon hyrjen te njoftimet për <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, mund të çaktivizohet edhe hyrja tek opsioni \"Mos shqetëso\"."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Çaktivizo"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulo"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Këto aplikacione ndikojnë negativisht te performanca e sistemit dhe ekzekutimi i tyre në sfond është ndaluar.\nJepi përparësi aplikacionit për të lejuar përdorimin në sfond dhe hiqe nga kjo listë."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Jepi përparësi apl."</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Qasja te mesazhet SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Mesazhet SMS premium mund të kushtojnë dhe do të rritin faturat e operatorit tënd celular. Nëse e aktivizon lejen për një aplikacion, do të mund të dërgosh mesazhe SMS premium me atë aplikacion."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Qasja te përdorimi"</string>
@@ -452,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Të përparuara"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Informacione, informacione ligjore, rivendosja etj."</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Rinis sistemin info-argëtues"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Rinisja e sistemit info-argëtues të makinës sate mund të zgjasë deri në disa minuta. Dëshiron të vazhdosh?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"Vazhdo"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versioni i Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Niveli i korrigjimit të sigurisë së Android"</string>
@@ -494,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsionet e zhvilluesit"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opsionet e rivendosjes"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Rivendosja e rrjetit, aplikacioneve ose pajisjes"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Rivendos Wi‑Fi dhe Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Kjo do të rivendosë cilësimet e Wi-Fi dhe të Bluetooth, duke hequr memorien e lidhjeve të mëparshme:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Rrjetet Wi‑Fi dhe fjalëkalimet"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Të dhënat celulare"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefonat dhe pajisjet e tjera Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Spastro të gjitha kartat eSIM të automjetit"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Kjo nuk do të anulojë planin tënd të shërbimit."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Kartat eSIM nuk mund të rivendosen"</string>
