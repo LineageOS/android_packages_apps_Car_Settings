@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMs}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Activo/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inactivo/SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Activo/SIM descargada"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactivo/SIM descargada"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Añadir más"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datos móviles"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a datos con la red móvil"</string>
@@ -300,22 +302,16 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplicaciones y notificaciones"</string>
     <string name="all_applications" msgid="7798210477486822168">"Mostrar todas las aplicaciones"</string>
     <string name="default_applications" msgid="1558183275638697087">"Aplicaciones predeterminadas"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Aplicaciones que afectan al rendimiento"</string>
     <string name="app_permissions" msgid="32799922508313948">"Permisos de aplicaciones"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Controla el acceso de las aplicaciones a tus datos"</string>
     <string name="applications_settings" msgid="794261395191035632">"Información de las aplicaciones"</string>
-    <!-- no translation found for force_stop (1616958676171167028) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_title (4481858344628934971) -->
-    <skip />
+    <string name="force_stop" msgid="1616958676171167028">"Detener aplicación"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"¿Detener la aplicación?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Si se fuerza la detención de una aplicación, es posible que no funcione correctamente."</string>
-    <!-- no translation found for force_stop_success_toast_text (2986272849275894254) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> se ha detenido."</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"¿Priorizar rendimiento de la aplicación?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Puede provocar inestabilidad en el sistema o afectar al hardware a largo plazo. ¿Quieres continuar?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Sí"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"No, gracias"</string>
     <string name="disable_text" msgid="4358165448648990820">"Inhabilitar"</string>
@@ -386,8 +382,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Gestor de permisos"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Controla el acceso de las aplicaciones a tus datos"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Para el Asistente y más"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplicación que afecta al rendimiento}other{# aplicaciones que afectan al rendimiento}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Al sistema y otros ajustes"</string>
     <string name="special_access" msgid="5730278220917123811">"Aplicaciones con accesos especiales"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
@@ -401,10 +396,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si desactivas el acceso a las notificaciones de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, es posible que también se desactive el modo No molestar."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Estas aplicaciones afectan negativamente al rendimiento del sistema, y se ha impedido que se ejecuten en segundo plano.\nPrioriza aplicaciones para que puedan ejecutarse en segundo plano y se eliminen de esta lista."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Priorizar aplicación"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso a SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Es posible que el envío de SMS premium te cueste dinero y el importe correspondiente se sume a las facturas de tu operador. Si habilitas el permiso para una aplicación, puedes enviar SMS premium con ella."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acceso a datos de uso"</string>
@@ -452,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Ajustes avanzados"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Información del sistema, información legal, restablecimiento del estado de fábrica, etc."</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Reiniciar sistema de infoentretenimiento"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Reiniciar el sistema de infoentretenimiento de tu coche puede llevar algunos minutos. ¿Quieres continuar?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Reiniciar el sistema de infoentretenimiento de tu coche puede tardar unos minutos. ¿Quieres continuar?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Continuar"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versión de Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nivel del parche de seguridad de Android"</string>
@@ -494,15 +487,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opciones para desarrolladores"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opciones de recuperación"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Restablecer dispositivo, aplicaciones y red"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Restablecer Wi-Fi y Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Se restablecerán los ajustes de Wi-Fi y Bluetooth, y se eliminarán los registros de conexiones anteriores:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Contraseñas y redes Wi-Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datos móviles"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Teléfonos y otros dispositivos Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Borrar todas las eSIM del vehículo"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"No se cancelará tu plan de servicios."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"No se puede recuperar el estado de las tarjetas eSIM"</string>

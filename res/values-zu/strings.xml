@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{I-SIM #}one{Ama-SIM #}other{Ama-SIM #}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Ukusebenza / i-SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Ukungasebenzi / i-SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Kuyasebenza / I-SIM elandiwe"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Akusebenzi / i-SIM elandiwe"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Engeza okuningi"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Idatha yeselula"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Finyelela kudatha usebenzisa inethiwekhi yeselula"</string>
@@ -443,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Okuthuthukisiwe"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Mayelana, ulwazi lwezomthetho, setha kabusha, nokuningi"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Qala kabusha isistimu ye-infotainment"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Ukuqalisa kabusha isistimu ye-infotainment yemoto yakho kungathatha imizuzu embalwa. Ingabe ufuna ukuqhubeka?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"Qhubeka"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Inguqulo ye-Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Ileveli yokuvikeleka ye-Android"</string>
@@ -485,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Izinketho zonjiniyela"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Izinketho zokusetha kabusha"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Inethiwekhi, izinhlelo zokusebenza, noma ukusetha kabusha idivayisi"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Setha kabusha i-Wi-Fi ne-Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Lokhu kuzosetha kabusha amasething ze-Wi-Fi ne-Bluetooth, kususe inkumbulo yokuxhunywe ngaphambilini:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Inethiwekhi ye-Wi-Fi namaphasiwedi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Idatha yeselula"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Amafoni namanye amadivaysi e-Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Sula onke ama-eSIM emoto"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Lokhu ngeke kukhansele uhlelo lwakho lwesevisi."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Ayikwazi ukusetha kabusha ama-eSIM"</string>

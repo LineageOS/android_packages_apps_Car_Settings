@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{SIM #}other{SIM #}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Inatumika / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Haitumiki / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Inatumika / Imepakua SIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Haitumiki / Imepakua SIM"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Ongeza zaidi"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Data ya mtandao wa simu"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Tumia data ya mtandao wa simu"</string>
@@ -300,22 +302,16 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Programu na arifa"</string>
     <string name="all_applications" msgid="7798210477486822168">"Onyesha programu zote"</string>
     <string name="default_applications" msgid="1558183275638697087">"Programu chaguomsingi"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Programu zinazoathiri utendaji"</string>
     <string name="app_permissions" msgid="32799922508313948">"Ruhusa za programu"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Dhibiti uwezo wa programu kufikia data yako"</string>
     <string name="applications_settings" msgid="794261395191035632">"Maelezo ya programu"</string>
-    <!-- no translation found for force_stop (1616958676171167028) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_title (4481858344628934971) -->
-    <skip />
+    <string name="force_stop" msgid="1616958676171167028">"Sitisha programu"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Ungependa kusitisha programu?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ukilazimisha programu izime, huenda isifanye kazi vizuri."</string>
-    <!-- no translation found for force_stop_success_toast_text (2986272849275894254) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"Umesitisha programu ya <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Ungependa kuupa kipaumbele utendaji wa programu?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Hali hii inaweza kusababisha kuyumba kwa mfumo au athari ya muda mrefu kwenye maunzi. Ungependa kuendelea?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ndiyo"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Hapana"</string>
     <string name="disable_text" msgid="4358165448648990820">"Zima"</string>
@@ -386,8 +382,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Kidhibiti cha ruhusa"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Dhibiti uwezo wa programu kufikia data yako"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Kwa programu ya Mratibu na zaidi"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{Programu # inayoathiri utendaji}other{Programu # zinazoathiri utendaji}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Kwa mfumo na mipangilio mingine"</string>
     <string name="special_access" msgid="5730278220917123811">"Ufikiaji wa programu maalum"</string>
     <string name="show_system" msgid="4401355756969485287">"Onyesha mfumo"</string>
@@ -401,10 +396,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ukizima ufikiaji wa arifa katika <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, huenda hali hii pia ikazima ufikiaji wa kipengee cha Usinisumbue."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Zima"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ghairi"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Programu hizi huathiri vibaya mfumo wa utendaji na zimezuiliwa kufanya kazi katika hali ya chinichini.\nIpe programu kipaumbele ili kuruhusu matumizi katika hali ya chinichini na uiondoe kwenye orodha hii."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Ipe programu kipaumbele"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Kufikia huduma ya SMS zinazolipiwa"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Gharama ya huduma ya SMS zinazolipiwa itajumuishwa kwenye bili yako ya mtoa huduma. Ikiwa utaipa programu fulani ruhusa, utaweza kutuma SMS zinazolipiwa ukitumia programu hiyo."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Kufikia matumizi"</string>
@@ -452,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Mipangilio ya kina"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Kuhusu, maelezo ya kisheria, kuweka upya na zaidi"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Zima kisha uwashe mfumo wa burudani na habari"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Hatua ya kuzima kisha kuwasha mfumo wa burudani na habari wa gari yako inaweza kuchukua dakika chache. Ungependa kuendelea?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"Endelea"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Toleo la Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Usasishaji wa rekebisho la usalama kwenye Android"</string>
@@ -494,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Chaguo za wasanidi programu"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Chaguo za kubadilisha mipangilio"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Kubadilisha mipangilio ya kifaa, programu au mtandao"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Weka upya Mipangilio ya Wi-Fi na Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Hatua hii itaweka upya mipangilio ya Wi-Fi na Bluetooth, ikiondoa kumbukumbu ya vifaa vilivyounganishwa awali:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Mitandao ya Wi‑Fi na manenosiri"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Data ya mtandao wa simu"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Simu na vifaa vingine vyenye Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Futa eSIM zote za gari"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Hatua hii haitaghairi mpango wako wa huduma."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Imeshindwa kuweka eSIM upya"</string>

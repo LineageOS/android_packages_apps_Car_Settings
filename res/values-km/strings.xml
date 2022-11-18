@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{ស៊ីម #}other{ស៊ីម #}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"សកម្ម / ស៊ីម"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"អសកម្ម / ស៊ីម"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"សកម្ម / ស៊ីមដែលបាន​ទាញយក"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"អសកម្ម / ស៊ីមដែលបានទាញយក"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"បញ្ចូល​បន្ថែម​​ទៀត"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ទិន្នន័យ​ទូរសព្ទចល័ត"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
@@ -443,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"កម្រិតខ្ពស់"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"អំពី ព័ត៌មាន​ផ្នែកច្បាប់ ការកំណត់​ឡើងវិញ និង​ច្រើនទៀត"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ចាប់ផ្ដើម​ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត​ឡើង​វិញ"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"ការចាប់ផ្ដើម​ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត​នៃ​រថយន្ត​របស់​អ្នក​ឡើង​វិញ​អាច​ចំណាយ​ពេល​រហូត​ដល់​ពីរ​បី​នាទី។ តើ​អ្នក​ចង់​បន្ត​ដែរ​ឬ​ទេ?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ការចាប់ផ្ដើម​ប្រព័ន្ធ​ព័ត៌មាន​ និងកម្សាន្ត​នៃ​រថយន្ត​របស់​អ្នក​ឡើង​វិញ​អាច​ចំណាយ​ពេល​​ពីរ​បី​នាទី។ តើ​អ្នក​ចង់​បន្ត​ដែរ​ឬ​ទេ?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"បន្ត"</string>
     <string name="firmware_version" msgid="8491753744549309333">"កំណែ Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"កម្រិតបំណះសុវត្ថិភាព Android"</string>
@@ -485,15 +487,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"ជម្រើស​សម្រាប់អ្នក​អភិវឌ្ឍន៍"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ជម្រើស​កំណត់​ឡើងវិញ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ការកំណត់​បណ្តាញ កម្មវិធី ឬ​ឧបករណ៍​ឡើងវិញ"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"កំណត់ Wi-Fi និងប៊្លូធូស​ឡើងវិញ"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"ការធ្វើបែបនេះនឹង​កំណត់​ការកំណត់ Wi‑Fi និងប៊្លូធូស​ឡើងវិញ ដែលលុបប្រវត្តិបានភ្ជាប់ពីមុន៖"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"ពាក្យសម្ងាត់ និងបណ្ដាញ Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"ទិន្នន័យ​ទូរសព្ទចល័ត"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"ទូរសព្ទ និងឧបករណ៍​ប៊្លូធូសផ្សេងទៀត"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"លុប eSIM សម្រាប់យានជំនិះ​ទាំងអស់"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"ការធ្វើបែបនេះនឹងមិនបោះបង់គម្រោង​សេវាកម្មរបស់អ្នកទេ។"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"មិន​អាច​កំណត់ eSIM ​ឡើងវិញ​បានទេ"</string>

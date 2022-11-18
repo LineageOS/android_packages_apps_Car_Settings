@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM karta}few{# SIM karty}many{# SIM karty}other{# SIM karet}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktivní / SIM karta"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Neaktivní / SIM karta"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktivní stažená SIM karta"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Neaktivní stažená SIM karta"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Přidat další"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilní data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Používat datové připojení přes mobilní síť"</string>
@@ -443,7 +445,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Rozšířená nastavení"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Informace, právní informace, resetování a další"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Restartovat informační a zábavní systém"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Restartování informačního a zábavního systému auta může chvíli trvat. Chcete pokračovat?"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Restartování informačního a zábavního systému auta může chvíli trvat. Chcete pokračovat?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Pokračovat"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Verze systému Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Úroveň opravy zabezpečení Android"</string>
@@ -485,15 +487,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Pro vývojáře"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Možnosti resetu"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Resetování sítě, aplikací nebo zařízení"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Resetovat Wi‑Fi a Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Resetujte se nastavení Wi-Fi a Bluetooth a z paměti budou odstraněny dříve připojené:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Sítě Wi‑Fi a hesla"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobilní data"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefony a další zařízení Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Vymazat všechny eSIM karty ve vozidle"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Váš tarif nebude zrušen."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM karty nelze resetovat"</string>

@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}one{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Virk / SIM-kort"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Óvirk / SIM-kort"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Virk / sótt SIM-kort"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Óvirk / sótt SIM-kort"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Bæta fleirum við"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Farsímagögn"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Aðgangur að gögnum um farsímakerfi"</string>
@@ -300,22 +302,16 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Forrit og tilkynningar"</string>
     <string name="all_applications" msgid="7798210477486822168">"Sýna öll forrit"</string>
     <string name="default_applications" msgid="1558183275638697087">"Sjálfgefin forrit"</string>
-    <!-- no translation found for performance_impacting_apps (3439260699394720569) -->
-    <skip />
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Forrit sem hafa áhrif á afköst"</string>
     <string name="app_permissions" msgid="32799922508313948">"Heimildir forrits"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Stjórna aðgangi forrita að gögnunum þínum"</string>
     <string name="applications_settings" msgid="794261395191035632">"Upplýsingar um forrit"</string>
-    <!-- no translation found for force_stop (1616958676171167028) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_title (4481858344628934971) -->
-    <skip />
+    <string name="force_stop" msgid="1616958676171167028">"Stöðva forrit"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Stöðva forritið?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ef þú þvingar fram lokun forrits gæti það látið illa."</string>
-    <!-- no translation found for force_stop_success_toast_text (2986272849275894254) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_title (3205297520523665568) -->
-    <skip />
-    <!-- no translation found for prioritize_app_performance_dialog_text (4321564728229192878) -->
-    <skip />
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> var stöðvað."</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Forgangsraða afköstum forrits?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Þetta gæti valdið óstöðugleika í kerfinu eða vélbúnaður gæti orðið fyrir langtímaáhrifum. Viltu halda áfram?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Já"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nei, takk"</string>
     <string name="disable_text" msgid="4358165448648990820">"Slökkva"</string>
@@ -386,8 +382,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Heimildastjóri"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Stjórna aðgangi forrita að gögnunum þínum"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Fyrir Hjálpara og fleira"</string>
-    <!-- no translation found for performance_impacting_apps_summary (7762122057244111162) -->
-    <skip />
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# forrit hefur áhrif á afköst}one{# forrit hefur áhrif á afköst}other{# forrit hafa áhrif á afköst}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Kerfisstillingar og aðrar stillingar"</string>
     <string name="special_access" msgid="5730278220917123811">"Sérstakur forritaaðgangur"</string>
     <string name="show_system" msgid="4401355756969485287">"Sýna kerfi"</string>
@@ -401,10 +396,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ef þú slekkur á tilkynningaaðgangi fyrir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kann einnig að verða slökkt á Ónáðið ekki."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slökkva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hætta við"</string>
-    <!-- no translation found for performance_impacting_apps_description (7361464904617808444) -->
-    <skip />
-    <!-- no translation found for performance_impacting_apps_button_label (8277507326717608783) -->
-    <skip />
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Þessi forrit hafa neikvæð áhrif á afköst kerfisins og komið hefur verið í veg fyrir að þau keyri í bakgrunni.\nTil að leyfa bakgrunnsnotkun forrits skaltu setja það í forgang og fjarlægja það af þessum lista."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Forgangsraða forriti"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Sérstakur SMS-aðgangur"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Sérstök SMS-skilaboð geta kostað þig peninga og munu bætast við símreikninginn þinn. Ef þú virkjar leyfi fyrir forrit geturðu sent sérstök SMS með því forriti."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Notkunaraðgangur"</string>
@@ -452,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Ítarlegt"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Frekari upplýsingar, lagalegar upplýsingar, endurstilling og fleira"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Endurræsa upplýsinga- og afþreyingarkerfi"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="3561747384941962284">"Endurræsing á upplýsinga- og afþreyingarkerfi bílsins getur tekið nokkrar mínútur Viltu halda áfram?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"Áfram"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android útgáfa"</string>
     <string name="security_patch" msgid="4794276590178386903">"Stig Android öryggisplásturs"</string>
@@ -494,15 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Forritunarkostir"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Valkostir endurstillingar"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Endurstilling netkerfis, forrita eða tækis"</string>
-    <!-- no translation found for reset_network_title (3077846909739832734) -->
-    <skip />
-    <!-- no translation found for reset_network_desc (3332203703135823033) -->
-    <skip />
-    <!-- no translation found for reset_network_item_wifi (2876370861806060314) -->
-    <skip />
+    <string name="reset_network_title" msgid="3077846909739832734">"Endurstilla Wi‑Fi og Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Nú verða stillingar Wi-Fi og Bluetooth endurstilltar og fyrri tengingar fjarlægðar úr minni:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi-net og aðgangsorð"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Farsímagögn"</li></string>
-    <!-- no translation found for reset_network_item_bluetooth (7475279871421815601) -->
-    <skip />
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Símar og Bluetooth-tæki"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Eyða öllum eSIM-kortum ökutækisins"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Þetta segir ekki upp áskrift þinni."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Ekki er hægt að endurstilla eSIM-kort"</string>
