@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-ბარათი}other{# SIM-ბარათი}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"აქტიური / SIM ბარათი"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"არააქტიური / SIM ბარათი"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"აქტიური / eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"არააქტიური / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"დამატება"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"მობილური ინტერნეტი"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"მონაცემებზე წვდომა მობილური ქსელით"</string>
