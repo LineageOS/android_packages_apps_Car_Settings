@@ -133,7 +133,7 @@ public class BrightnessLevelPreferenceController extends PreferenceController<Se
     }
 
     @Override
-    public int getAvailabilityStatus() {
+    public int getDefaultAvailabilityStatus() {
         if (hasUserRestrictionByUm(getContext(), DISALLOW_CONFIG_BRIGHTNESS)
                 || hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_BRIGHTNESS)) {
             return AVAILABLE_FOR_VIEWING;

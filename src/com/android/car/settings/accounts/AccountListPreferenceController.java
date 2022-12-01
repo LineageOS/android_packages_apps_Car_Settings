@@ -107,7 +107,7 @@ public class AccountListPreferenceController extends
     }
 
     @Override
-    protected int getAvailabilityStatus() {
+    protected int getDefaultAvailabilityStatus() {
         ProfileHelper profileHelper = getProfileHelper();
         boolean canModifyAccounts = profileHelper.canCurrentProcessModifyAccounts();
 

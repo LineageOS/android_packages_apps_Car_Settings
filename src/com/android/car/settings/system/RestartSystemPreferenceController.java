@@ -118,8 +118,8 @@ public class RestartSystemPreferenceController extends PreferenceController<Pref
     }
 
     @Override
-    protected int getAvailabilityStatus() {
-        int availabilityStatus = super.getAvailabilityStatus();
+    protected int getDefaultAvailabilityStatus() {
+        int availabilityStatus = super.getDefaultAvailabilityStatus();
         if (availabilityStatus == AVAILABLE && !isRebootEnabled()) {
             return UNSUPPORTED_ON_DEVICE;
         }

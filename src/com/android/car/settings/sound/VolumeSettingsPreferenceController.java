@@ -266,7 +266,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
     }
 
     @Override
-    public int getAvailabilityStatus() {
+    public int getDefaultAvailabilityStatus() {
         if (hasUserRestrictionByUm(getContext(), DISALLOW_ADJUST_VOLUME)
                 || hasUserRestrictionByDpm(getContext(), DISALLOW_ADJUST_VOLUME)) {
             return AVAILABLE_FOR_VIEWING;
