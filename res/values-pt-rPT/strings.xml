@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMs}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Ativo/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inativo/SIM"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Ativo/eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inativo/eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Adicione mais"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dados móveis"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Aceder aos dados através de rede móvel"</string>
@@ -588,7 +586,7 @@
     <string name="storage_total_size_label" msgid="3892138268243791912">"Total"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Limpar armazenamento"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Limpar cache"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminar dados da app?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Apagar dados da app?"</string>
     <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Os dados desta app vão ser eliminados permanentemente. Estão incluídos ficheiros, definições, bases de dados e outros dados de apps."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Impossível limpar o armazenamento da aplicação."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> foi ejetado com segurança."</string>

@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Attivo/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Non attivo/SIM"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Attivo/eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Non attivo/eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Aggiungi altri"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dati mobili"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accedi ai dati tramite la rete mobile"</string>
@@ -445,8 +443,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Avanzate"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Informazioni, informazioni legali, reimpostazione e altre impostazioni"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Riavvia il sistema di infotainment"</string>
-    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
-    <skip />
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Il riavvio del sistema di infotainment dell\'auto può richiedere alcuni minuti. Vuoi continuare?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Continua"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versione Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Livello patch di sicurezza Android"</string>
@@ -483,7 +480,7 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Errore di caricamento delle licenze."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Caricamento…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Ti manca # passaggio per diventare sviluppatore.}other{Ti mancano # passaggi per diventare sviluppatore.}}"</string>
-    <string name="show_dev_on" msgid="5339077400040834808">"Ora sei sviluppatore."</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"Ora sei uno sviluppatore."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Non è necessario, sei già sviluppatore."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opzioni sviluppatore"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opzioni di ripristino"</string>
