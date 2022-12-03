@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# carte SIM}one{# carte SIM}other{# cartes SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Services actifs/Carte SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Services inactifs/Carte SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Services actifs/Carte SIM téléchargée"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Ser. inactifs/Carte SIM téléchargée"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Actif – eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inactif – eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Ajouter"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Données mobiles"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accéder aux données sur réseau cellulaire"</string>
@@ -161,7 +161,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Choisir au moins une bande de PA Wi-Fi :"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Point d\'accès et partage de connexion"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Point d\'accès sans fil et partage de connexion"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Point d\'accès sans fil"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Désactivé"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Désactiver automatiquement le point d\'accès Wi‑Fi"</string>
