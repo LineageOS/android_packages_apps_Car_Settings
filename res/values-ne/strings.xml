@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# वटा SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"सक्रिय / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"निष्क्रिय / SIM"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"सक्रिय / eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"निष्क्रिय / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"अरू थप्नुहोस्"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क प्रयोग गरी डेटामाथि पहुँच राख्नु…"</string>
@@ -445,8 +443,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"उन्नत"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"यसको बारेमा, कानुनी जानकारी, रिसेट गर्नुहोस् र थप सेटिङ"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"इन्फोटेनमेन्ट प्रणाली रिस्टार्ट गर्नुहोस्"</string>
-    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
-    <skip />
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"तपाईंको कारको इन्फोटेनमेन्ट सिस्टम रिस्टार्ट गर्न केही बेर लाग्न सक्छ। तपाईं जारी राख्न चाहनुहुन्छ?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"जारी राख्नुहोस्"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android संस्करण"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षा प्याचको चरण"</string>
