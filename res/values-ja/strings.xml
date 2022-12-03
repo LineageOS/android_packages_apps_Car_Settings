@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# 件の SIM}other{# 件の SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"有効 / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"無効 / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"有効 / ダウンロード型 SIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"無効 / ダウンロード型 SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"有効 / eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"無効 / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"追加"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"モバイルデータ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"モバイル ネットワーク経由でデータにアクセス"</string>
@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"すべて表示"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"検索中"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth の使用"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"名前のないデバイス"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ペア設定済みのデバイス"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"新しいデバイスとペア設定"</string>
@@ -401,22 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"位置情報"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"位置情報の使用"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"指定したアプリに位置情報へのアクセスを許可します"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"この設定を OFF にすると、すべてのアプリで位置情報へのアクセス権限が削除されます。ドライバー サポート アプリのアクセス権限は保持されます。"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"位置情報をドライバー サポートで使用する"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"この設定を OFF にすると、すべてのアプリで位置情報へのアクセス権限が削除されます。ただし、ドライバー サポートに位置情報を必要とするアプリは除きます。"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"位置情報をドライバー サポートで使用する"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"車の位置情報はオフです"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"ドライバー サポート アプリが位置情報にアクセスできません"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ドライバー サポート アプリが位置情報にアクセスできません"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"変更"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"運転をサポートするアプリに位置情報へのアクセスを許可します"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"この設定を OFF にすると、位置情報を使用するドライバー サポート アプリは無効になります。"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"この設定を OFF にすると、位置情報を使用するドライバー サポート アプリは無効になります"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"OFF にする"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近の位置情報リクエスト"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近の位置情報リクエストはありません"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"最近アクセスしたもの"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"最近アクセスしたもの"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"すべて表示"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"最近使ったアプリはありません"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ドライバー サポート"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"この権限を付与されたアプリは、ドライバー サポート機能を利用する際にこの車の位置情報にアクセスします"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"プライバシー ポリシー"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"アプリレベルの権限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置情報サービス"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"位置情報を使用"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"位置情報の特定には、GPS、Wi-Fi、モバイル ネットワーク、センサーなどを使用する場合があります。"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ドライバー サポート"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"ドライバー サポート アプリに送信された位置情報に、ユーザーを識別する情報は含まれていません。この情報は最大 2 日間保存されてから削除されます。"</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"ドライバー サポート アプリに送信された位置情報に、ユーザーを識別する情報は含まれていません。この情報は最大 2 日間保存されてから削除されます。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"マイク"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"マイクの使用"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"すべてのアプリにマイクへのアクセスを許可します"</string>
@@ -490,7 +496,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"この操作により、次の設定がすべてリセットされます。\n\n"<li>"無効化されているアプリ"</li>\n<li>"無効化されているアプリの通知"</li>\n<li>"特定の操作で使用するデフォルトのアプリ"</li>\n<li>"アプリのバックグラウンド データの制限"</li>\n<li>"権限のすべての制限"</li>\n\n"アプリのデータが失われることはありません。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"アプリをリセット"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"アプリの設定をリセットしました"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"全データを消去（出荷時リセット）"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"すべてのデータを消去（初期設定にリセット）"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"インフォテインメント システムからデータとプロファイルをすべて消去します"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"この操作を行うと、以下のデータを含め、車のインフォテインメント システムからすべてのデータが消去されます。\n\n"<li>"アカウントとプロファイル"</li>\n<li>"システムやアプリのデータと設定"</li>\n<li>"ダウンロードしたアプリ"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"以下のアカウントにログインしています。"</string>
@@ -521,7 +527,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"管理者としてログイン済み"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"管理者権限を付与しますか？"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"管理者にする"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"管理者は、他のプロファイル（他の管理者のプロファイルを含む）を削除したり、インフォテインメント システムを出荷時の設定にリセットしたりできるようになります。"</string>
+    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"管理者は、他のプロファイル（他の管理者のプロファイルを含む）を削除したり、インフォテインメント システムを初期設定にリセットしたりできるようになります。"</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"この操作は元に戻せません。"</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"はい、管理者にする"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"新しいプロファイルの作成"</string>
@@ -574,7 +580,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"ストレージを消去"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"キャッシュを削除"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"アプリのデータを削除しますか？"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"このアプリのすべてのデータ（ファイル、設定、アカウント、データベースを含む）が完全に削除されます。"</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"このアプリのデータが完全に削除されます。ファイル、設定、データベース、その他のアプリデータが対象になります。"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"アプリのストレージを消去できませんでした。"</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>を安全に取り出しました"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>を安全に取り出せませんでした"</string>
@@ -662,7 +668,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"パスワードの入力"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"セキュリティ強化のために PIN を設定"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN の再入力"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN は 4 桁以上で作成してください"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN は 4 桁以上で設定してください"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN が無効です。4 桁以上にしてください。"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN が一致しません"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN の保存中にエラーが発生しました"</string>
@@ -718,7 +724,7 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter キー"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"デモを終了"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"デモモードの終了"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"この操作を行うと、デモアカウントが削除され、システムが出荷時の設定にリセットされます。プロファイル データはすべて失われます。"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"この操作を行うと、デモアカウントが削除され、システムが初期設定にリセットされます。プロファイル データはすべて失われます。"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"デモを終了"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"閉じる"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"この機能は運転中は利用できません"</string>
@@ -769,6 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# 個の有効なアプリ}other{# 個の有効なアプリ}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"有効なアプリはありません"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> の車両に関するポリシー"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"車両に関するポリシー"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"設定は組織の管理者によって管理されています"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"「<xliff:g id="SERVICE">%1$s</xliff:g>」の詳細"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"管理対象車両の情報"</string>
@@ -827,7 +834,7 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"共有"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"同意しない"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"インフォテインメント システムのリセット"</string>
-    <string name="factory_reset_parked_text" msgid="1446768795193651311">"システムが、出荷時の設定にリセットしてすべてのデータを消去するリクエストを受信しました。今すぐリセットできます。すぐにリセットしない場合は、次回車が始動したときに自動的にリセットされます。リセット後、新しいプロファイルを設定できます。"</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"システムが、初期設定にリセットしてすべてのデータを消去するリクエストを受信しました。今すぐリセットできます。すぐにリセットしない場合は、次回車が始動したときに自動的にリセットされます。リセット後、新しいプロファイルを設定できます。"</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"今すぐリセット"</string>
     <string name="factory_reset_later_button" msgid="2653125445148367016">"後でリセット"</string>
     <string name="factory_reset_later_text" msgid="6371031843489938419">"インフォテインメント システムは、車の次回始動時にリセットされます。"</string>
@@ -839,7 +846,7 @@
     <string name="captions_settings_off" msgid="7568096968016015626">"OFF"</string>
     <string name="captions_settings_on" msgid="5374984113566914978">"ON"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"スクリーン リーダー"</string>
-    <string name="show_captions_toggle_title" msgid="710582308974826311">"字幕の表示"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"字幕を表示"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"文字のサイズ"</string>
     <string name="captions_settings_style_header" msgid="944591388386054372">"字幕のサイズとスタイル"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"極小"</string>
