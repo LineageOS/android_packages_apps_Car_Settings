@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# ਸਿਮ}one{# ਸਿਮ}other{# ਸਿਮ}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"ਕਿਰਿਆਸ਼ੀਲ / ਸਿਮ"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"ਅਕਿਰਿਆਸ਼ੀਲ / ਸਿਮ"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"ਕਿਰਿਆਸ਼ੀਲ / ਈ-ਸਿਮ"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"ਅਕਿਰਿਆਸ਼ੀਲ / ਈ-ਸਿਮ"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ਹੋਰ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ਮੋਬਾਈਲ ਡਾਟਾ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ ਵਰਤ ਕੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
@@ -445,8 +443,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"ਉੱਨਤ"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"ਇਸ ਬਾਰੇ, ਕਨੂੰਨੀ ਜਾਣਕਾਰੀ, ਰੀਸੈੱਟ ਕਰੋ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਨੂੰ ਮੁੜ-ਸ਼ੁਰੂ ਕਰੋ"</string>
-    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
-    <skip />
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਨੂੰ ਮੁੜ-ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਕੁਝ ਮਿੰਟ ਲੱਗ ਸਕਦੇ ਹਨ। ਕੀ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"ਜਾਰੀ ਰੱਖੋ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ਵਰਜਨ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ਸੁਰੱਖਿਆ ਪੈਚ ਪੱਧਰ"</string>

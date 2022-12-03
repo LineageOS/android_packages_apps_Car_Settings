@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{ဆင်းမ် # ကတ်}other{ဆင်းမ် # ကတ်}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"သုံးနေသော / ဆင်းမ်ကတ်"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"မသုံးသော / ဆင်းမ်ကတ်"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"သုံးနေသည် / eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"အသုံးမပြုပါ / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ထပ်ထည့်ရန်"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"မိုဘိုင်းဒေတာ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"မိုဘိုင်းကွန်ရက်သုံးပြီး ဒေတာကို ဝင်သုံးခွင့်ပေးပါ"</string>
@@ -446,8 +444,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"အဆင့်မြင့်"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"အကြောင်း၊ ဥပဒေဆိုင်ရာ အချက်အလက်၊ ပြင်ဆင်သတ်မှတ်ရန် စသည်"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်ကို ပြန်စရန်"</string>
-    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
-    <skip />
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ကား၏ သတင်းနှင့်ဖျော်ဖြေရေး စနစ်ကို ပြန်စရန် မိနစ်အနည်းငယ် ကြာနိုင်သည်။ ရှေ့ဆက်လိုပါသလား။"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"ရှေ့ဆက်ရန်"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ဗားရှင်း"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android လုံခြုံရေးပက်ချ်အဆင့်"</string>
