@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-карта}one{# SIM-карта}few{# SIM-карти}many{# SIM-карт}other{# SIM-карти}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активовано/SIM-карта"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Не активовано/SIM-карта"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активовано/завантажена SIM-карта"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Не активовано/завантажена SIM-карта"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Сервіс активний / eSIM-карта"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Сервіс неактивний / eSIM-карта"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Додати ще"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобільне передавання даних"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ до даних через мобільну мережу"</string>
@@ -459,7 +459,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Авторські права"</string>
     <string name="license_title" msgid="936705938435249965">"Ліцензія"</string>
     <string name="terms_title" msgid="5201471373602628765">"Умови використання"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Ліцензії WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Ліцензії системи WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Фонові малюнки"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Постачальники супутникових зображень:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Модель"</string>

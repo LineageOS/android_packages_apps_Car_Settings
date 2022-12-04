@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{شريحة SIM واحدة}zero{# شريحة SIM}two{شريحتَا SIM}few{# شرائح SIM}many{# شريحة SIM}other{# شريحة SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"مفعّلة / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"غير مفعّلة / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"مفعّلة / شريحة SIM التي تم تنزيلها"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"غير مفعّلة / شريحة SIM التي تم تنزيلها"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"مفعَّلة / شريحة eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"غير مفعّلة / شريحة eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"إضافة المزيد"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"بيانات الجوّال"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"الوصول إلى البيانات باستخدام شبكة الجوّال"</string>
@@ -380,7 +380,7 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"لعرض تطبيق المساعد وتطبيقات أخرى"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"الانتقال إلى النظام والإعدادات الأخرى"</string>
     <string name="special_access" msgid="5730278220917123811">"أذونات خاصة للتطبيقات"</string>
-    <string name="show_system" msgid="4401355756969485287">"عرض عمليات النظام"</string>
+    <string name="show_system" msgid="4401355756969485287">"إظهار تطبيقات النظام"</string>
     <string name="hide_system" msgid="8845453295584638040">"إخفاء عمليات النظام"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"إخفاء تطبيقات النظام"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"تعديل إعدادات النظام"</string>
