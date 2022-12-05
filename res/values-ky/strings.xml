@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM карта}other{# SIM карта}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активдүү / SIM-карта"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Активдүү эмес / SIM-карта"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активдүү / Жүктөлүп алынган SIM-карта"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Активдүү эмес / Жүктөлүп алынган SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Активдүү/eSIM-карта"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Активдүү эмес/eSIM-карта"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Дагы кошуу"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилдик Интернет"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Интернетке мобилдик тармак аркылуу чыгуу"</string>
@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Баарын көрсөтүү"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Изделүүдө"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth\'ду иштетүү"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Аты жок түзмөк"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Жупташтырылган түзмөктөр"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Жаңы түзмөктү байланыштыруу"</string>
@@ -362,7 +363,7 @@
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"Колдоого алынган шилтемелер ачылбайт"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> колдонмосун ачуу"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> жана башка URL\'дер ачылат"</string>
-    <string name="app_launch_title" msgid="3442601467010363057">"Демейки боюнча ачуу"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Демейки шарт боюнча ачуу"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Башка демейкилер"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Демейки маанилер коюлган жок."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Бул колдонмо айрым аракеттер үчүн абалкы болуп орнотулган"</string>
@@ -401,22 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Жайгашкан жер"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Жайгашкан жерди колдонуу"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Көрсөтүлгөн колдонмолорго кайда жүргөнүңүздү көрүүгө уруксат бериңиз"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Муну өчүрсөңүз, бардык колдонмолор кайда жүргөнүңүздү көрө албай калат, бирок Айдоочуга көмөктөш колдонмолорго көрүнө берет."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Айдоочуга көмөктөш функцияларга кайда жүргөнүмдү көрсөтүү"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Бул функцияны өчүрсөңүз, айдоочуларга арналган колдонмолор гана жүргөн жерди аныктай алышат"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Айдоочулардын функциялары жүргөн жерди аныктасын"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Унаанын жайгашкан жерин аныктоо өчүк"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Айдоочуга көмөктөш колдонмолор кайда жүргөнүңүздү көрө албайт"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Айдоочуларга арналган колдонмолор кайда жүргөнүңүздү көрө албайт"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өзгөртүү"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Унаада жардам берген колдонмолорго кайда жүргөнүңүздү көрүүгө уруксат бериңиз"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Эгер муну өчүрсөңүз, кайда жүргөнүңүз тууралуу маалыматты колдонгон Айдоочуга көмөктөш колдонмолор өчүрүлөт."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Эгер өчүрсөңүз, кайда жүргөнүңүздү аныктаган айдоочулардын колдонмолору өчүрүлөт"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Баары бир өчүрүү"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Жакында изделген жерлер"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Жакында изделген жерлер жок"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Жакында пайдалангандар"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Жакында пайдалангандар"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Баарын көрүү"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Бир да колдонмо пайдалана элек"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> •Айдоочуларга арналган функциялар"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Бул унаанын жүргөн жерин аныктаган колдонмолор айдоочуларга арналган функциялар үчүн колдонулат"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Купуялык саясаты"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Колдонмонун уруксаттары"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди аныктоо"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Түзмөктүн жайгашкан жери GPS, Wi‑Fi, мобилдик тармактар жана сенсорлор аркылуу аныкталат."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Айдоочуга көмөктөш функциялар"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Айдоочуга көмөктөш колдонмолорго жөнөтүлгөн кайда жүргөнүңүз тууралуу маалыматта өздүгүңүздү аныктаган маалымат камтылбайт. Ал 2 күнгө чейин сакталып, андан кийин өчүрүлөт."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Айдоочуларга арналган колдонмолордо кайда жүргөнүңүз көрүнүп, өздүгүңүз көрүнбөйт. Маалымат 2 күнгө чейин сакталып, андан кийин өчүп калат."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофонду колдонуу"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бардык колдонмолорго микрофонуңузду пайдаланууга уруксат бериңиз"</string>
@@ -488,11 +494,11 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Тармак жөндөөлөрү кайра коюлду"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Колдонмонун жөндөөлөрүн баштапкы абалга келтирүү"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөр кайра жөндөлөт:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык маалыматтары сакталып калат."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Баштапкы абалга келтирүү"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Кайра коюу"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Бардык нерселерди өчүрүү (баштапкы абалга кайтаруу)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Инфозоок тутумундагы бардык маалыматты жана профилдерди өчүрүү"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"Унааңыздын инфозоок тутумундагы бардык нерселер өчүрүлөт, тактап айтканда:\n\n"<li>"Аккаунттарыңыз жана профилдериңиз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайын-даректери"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Унааңыздын инфозоок тутумундагы бардык нерселер өчүрүлөт, тактап айтканда:\n\n"<li>"Аккаунттарыңыз жана профилдериңиз"</li>\n<li>"Системанын жана колдонмолордун жөндөөлөрү жана дайын-даректери"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Бул унаа үчүн башка профилдер жөндөлгөн."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Бардык маалыматты өчүрүү"</string>
@@ -538,7 +544,7 @@
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Бир профилди гана түзүүгө болот.}other{# профилге чейин гана түзүүгө болот.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Жаңы профиль түзүлбөй койду"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Бул профиль жок кылынсынбы?"</string>
-    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Бул профилдеги бардык колдонмолор жана маалыматтар өчүрүлөт"</string>
+    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Бул профилдеги бардык колдонмолор жана аларга байланыштуу нерселер өчүрүлөт"</string>
     <string name="delete_user_error_title" msgid="287249031795906102">"Профиль өчүрүлдү. Түзмөктү өчүрүп-күйгүзүп, кайталап көрүңүз."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Профилдерди которуштуруп же унааны өчүрүп күйгүзгөнүңүздө, бул профиль өчүрүлөт."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Четке кагуу"</string>
@@ -574,7 +580,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Сактагычты тазалоо"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Кешти тазалоо"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Колдонмонун дайындары өчүрүлсүнбү?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Бул колдонмодогу файлдар, жөндөөлөр, аккаунттар жана маалымат базасы сыяктуу бардык нерселер биротоло өчүрүлөт."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Бул колдонмодогу маалымат биротоло жок кылынат. Ага файлдар, жөндөөлөр, дайындар базалары жана колдонмонун башка дайындары кирет."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Колдонмонун сактагычы тазаланган жок."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> коопсуз чыгарылды"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> коопсуз чыгарылбай койду"</string>
@@ -635,7 +641,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Улантуу"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Кайталоо"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Өткөрүп жиберүү"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Экран кулпусун коюп алыңыз"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Экран кулпусун коюу"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN кодуңузду тандаңыз"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Сырсөзүңүздү тандаңыз"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Учурдагы экран кулпусу"</string>
@@ -657,7 +663,7 @@
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Экранды кулпулабайсызбы?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Аккаунтуңузга каалаган киши кире берет"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"Профилди кулпулоо"</string>
-    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Кулпусун автоматтык түрдө ачууну жөндөө"</string>
+    <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Кулпусун автоматтык түрдө ачууну тууралоо"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN кодуңузду киргизиңиз"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Сырсөзүңүздү киргизиңиз"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Коопсуздук үчүн PIN код коюп алыңыз"</string>
@@ -769,6 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# иштетилген колдонмо}other{# иштетилген колдонмо}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Иштетилген колдонмолор жок"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> уюмунун унаалар боюнча саясаты"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Компаниянын унаалар боюнча саясаты"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Жөндөөлөр уюмдун башкаруучусу тарабынан башкарылат"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> жөнүндө кеңири маалымат"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Башкарылган унаа жөнүндө маалымат"</string>

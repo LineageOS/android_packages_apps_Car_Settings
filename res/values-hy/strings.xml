@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM քարտ}one{# SIM քարտ}other{# SIM քարտ}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Ակտիվ է/SIM քարտ"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Ակտիվ չէ/SIM քարտ"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Ակտիվ է/ներբեռնված SIM քարտ"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Ակտիվ չէ/ներբեռնված SIM քարտ"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Ակտիվ է / eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Ակտիվ չէ / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Ավելացնել"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Բջջային ինտերնետ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Օգտվել բջջային ինտերնետից"</string>
@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Ցույց տալ բոլորը"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Որոնում"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Օգտագործել Bluetooth-ը"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Անանուն սարք"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Զուգակցված սարքեր"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Զուգակցել նոր սարք"</string>
@@ -401,22 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Օգտագործել տեղորոշումը"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Թույլատրել նշված հավելվածներին օգտագործել տեղադրությունը"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Եթե անջատեք կարգավորումը, տեղադրության հասանելիությունը կչեղարկվի բոլոր հավելվածների համար։ «Օգնություն վարորդին» հավելվածներին այն հասանելի կլինի։"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Միացնել տեղադրությունը «Օգնություն վարորդին» գործառույթներում"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Եթե անջատեք այս կարգավորումը, տեղադրության հասանելիությունը կչեղարկվի բոլոր հավելվածների համար՝ բացառությամբ այն հավելվածների, որոնք անհրաժեշտ են վարորդին օգնելու համար"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Օգտագործել տեղադրությունը"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Սարքի տեղորոշումն անջատված է"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"«Օգնություն վարորդին» հավելվածներին հասանելի չէ ձեր տեղադրությունը"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Վարորդին օգնող հավելվածներին հասանելի չէ ձեր վայրը"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Փոխել"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Վարորդին օգնող հավելվածներին հասանելի դարձրեք ձեր տեղադրությունը"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Եթե անջատեք կարգավորումը, «Օգնություն վարորդին» հավելվածները, որոնք օգտագործում են տեղադրության տվյալները, չեն աշխատի։"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Եթե անջատեք կարգավորումը, վարորդին օգնող հավելվածները, որոնք օգտագործում են տեղադրության տվյալները, չեն աշխատի"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Անջատել"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Տեղադրության տվյալների վերջին հարցումները"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Վերջերս տեղորոշման տվյալների հարցումներ չեն արվել"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"Տեղադրության տվյալների օգտագործման վերջին հարցումները"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Տեղադրության տվյալների օգտագործման վերջին հարցումները"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Դիտել բոլորը"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Ոչ մի հավելված վերջերս չի օգտագործել տեղադրության տվյալները"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Օգնություն վարորդին"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Հավելվածներ, որոնց հասանելի է այս մեքենայի տեղադրությունը՝ վարորդին օգնելու համար"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Գաղտնիության քաղաքականություն"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Հավելվածների թույլտվություններ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Տեղորոշման ծառայություններ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Օգտագործել տեղորոշումը"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Ձեր սարքի տեղադրությունը որոշելու համար տեղորոշման ծառայությունն օգտվում է տարբեր աղբյուրներից (GPS, Wi‑Fi, բջջային ցանցեր և տվիչներ)։"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Օգնություն վարորդին"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Տեղադրության տվյալները, որոնք ուղարկվում են «Օգնություն վարորդին» հավելվածներին, չեն պարունակում ձեզ նույնականացնող տեղեկություններ։ Այդ տվյալները պահվում են առավելագույնը 2 օր։"</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Տեղադրության տվյալները, որոնք ուղարկվում են վարորդին օգնող հավելվածներին, չեն պարունակում ձեզ նույնականացնող տեղեկություններ։ Այդ տվյալները պահվում են առավելագույնը 2 օր։"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Խոսափող"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Օգտագործել խոսափողը"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Հասանելի դարձնել խոսափողը բոլոր հավելվածներին"</string>
@@ -574,7 +580,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Մաքրել հիշողությունը"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Մաքրել քեշը"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ջնջե՞լ հավելվածի տվյալները:"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Այս հավելվածի բոլոր տվյալներն ընդմիշտ կջնջվեն՝ ներառյալ բոլոր ֆայլերը, կարգավորումները, հաշիվները, տվյալների շտեմարանները և այլն:"</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Այս հավելվածի տվյալներն ընդմիշտ կջնջվեն։ Դա վերաբերում է ֆայլերին, կարգավորումներին, տվյալների շտեմարաններին և հավելվածի այլ տվյալներին։"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Չհաջողվեց մաքրել հիշողությունը:"</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Կրիչը (<xliff:g id="NAME">%1$s</xliff:g>) անվտանգ կերպով հեռացվեց"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Չհաջողվեց հեռացնել կրիչը (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
@@ -645,7 +651,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Ձեր նոր ապակողպող նախշը"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Ապակողպող նախշ գծեք"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Ավարտելուց հետո մատը բաց թողեք"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշը պահվեց"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշը գրանցվեց"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Հաստատելու համար նորից նկարեք նախշը"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Միացրեք առնվազն 4 կետ:"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Նախշը սխալ է"</string>
@@ -769,6 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ակտիվացված հավելված}one{# ակտիվացված հավելված}other{# ակտիվացված հավելված}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Ակտիվացված հավելվածներ չկան"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"«<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>» կազմակերպության տրանսպորտային միջոցների կանոններ"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Տրանսպորտային միջոցների կանոններ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Կազմակերպության ադմինիստրատորի կողմից կառավարվող կարգավորումներ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Իմանալ ավելին «<xliff:g id="SERVICE">%1$s</xliff:g>» ծառայության մասին"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Կառավարվող մեքենայի մասին"</string>
@@ -821,9 +828,9 @@
       <item quantity="other">Հեռախոսի հավելվածներ</item>
     </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Ուղարկե՞լ վրիպակի զեկույցը"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ։"</string>
-    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ, իսկ սարքի աշխատանքը կարող է ժամանակավորապես դանդաղել։"</string>
-    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Այս վրիպակի զեկույցը տրամադրվում է ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին։ Դիմեք նրան՝ լրացուցիչ տեղեկություններ ստանալու համար։"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի մասին հաղորդում։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ։"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին անհրաժեշտ է վրիպակի մասին հաղորդում։ Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ, իսկ սարքի աշխատանքը կարող է ժամանակավորապես դանդաղել։"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Վրիպակի մասին այս հաղորդումը տրամադրվում է ձեր ավտոմեքենայի կազմակերպության ադմինիստրատորին։ Դիմեք նրան՝ լրացուցիչ տեղեկություններ ստանալու համար։"</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Ուղարկել"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Մերժել"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Վերակայեք տեղեկատվաժամանցային համակարգը"</string>
@@ -849,9 +856,9 @@
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Շատ մեծ"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"Ենթագրերի ոճը"</string>
     <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Կարգավորված է հավելվածով"</string>
-    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Սպիտակը սևի վրա"</string>
-    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Սևը սպիտակի վրա"</string>
-    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Դեղինը սևի վրա"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Սպիտակ՝ սևի վրա"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Սև՝ սպիտակի վրա"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Դեղին՝ սևի վրա"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Դեղինը կապույտի վրա"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Էկրանի ընթերցիչ"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Անջատված է"</string>
