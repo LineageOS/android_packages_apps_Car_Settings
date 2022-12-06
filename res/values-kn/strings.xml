@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}one{# SIM ಗಳು}other{# SIM ಗಳು}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"ಸಕ್ರಿಯ / ಸಿಮ್"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"ಸಕ್ರಿಯವಾಗಿರದ / ಸಿಮ್"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"ಸಕ್ರಿಯ / eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"ನಿಷ್ಕ್ರಿಯ / eSIM"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ಇನ್ನಷ್ಟು ಸೇರಿಸಿ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ಮೊಬೈಲ್ ಡೇಟಾ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
@@ -443,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"ಸುಧಾರಿತ"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"ಕುರಿತು, ಕಾನೂನು ಮಾಹಿತಿ, ರೀಸೆಟ್ ಮತ್ತು ಇನ್ನಷ್ಟು"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ನಿಮ್ಮ ಕಾರ್‌ನ ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲು ಕೆಲವು ನಿಮಿಷಗಳು ಬೇಕಾಗಬಹುದು. ನೀವು ಮುಂದುವರಿಸಲು ಬಯಸುತ್ತೀರಾ?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"ಮುಂದುವರಿಸಿ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ಆವೃತ್ತಿ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ಭದ್ರತೆ ಪ್ಯಾಚ್ ಮಟ್ಟ"</string>

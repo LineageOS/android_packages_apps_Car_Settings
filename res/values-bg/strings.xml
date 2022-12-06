@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM карта}other{# SIM карти}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активно/SIM карта"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Неактивно/SIM карта"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Активно/електронна SIM карта"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Неактивно/електронна SIM карта"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Добавяне на още"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилни данни"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Достъп до данните през мобилната мрежа"</string>
@@ -443,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Разширени"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Всичко за Android Auto, правна информация, нулиране и др."</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Рестартиране на основното устройство"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Рестартирането на основното устройство на автомобила ви може да отнеме няколко минути. Искате ли да продължите?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"Напред"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версия на Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Ниво на корекцията на сигурността под Android"</string>

@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktibo / SIM txartela"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktibo / SIM txartela"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktibo; eSIMaren profil batekin lotuta"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktibo; eSIMaren profil batekin lotuta"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Gehitu beste batzuk"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datu-konexioa"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Atzitu datuak datu-konexioaren bidez"</string>
@@ -792,7 +794,7 @@
     <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Ibilgailu kudeatuaren kontuarekin erlazionatutako datuak."</li>\n" "<li>"Ibilgailu kudeatuaren aplikazioen zerrenda."</li>\n" "<li>"Aplikazio bakoitzean emandako denbora eta erabilitako datuak."</li></string>
     <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Informazio- eta aisia-sistemarako duzun sarbidea"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Ibilgailuko aplikazioen zerrenda"</string>
-    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Estimazio da aplikazio kopurua. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Gutxi gorabeherakoa da aplikazio kopurua. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Gutxienez <xliff:g id="COUNT_1">%d</xliff:g> aplikazio</item>
       <item quantity="one">Gutxienez <xliff:g id="COUNT_0">%d</xliff:g> aplikazio</item>

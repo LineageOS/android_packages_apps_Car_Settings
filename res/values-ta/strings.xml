@@ -29,8 +29,10 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# சிம்}other{# சிம்கள்}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"செயலில் உள்ளது / சிம்"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"செயலில் இல்லை / சிம்"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"செயலில் உள்ளது / eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"செயலில் இல்லை / eSIM"</string>
+    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
+    <skip />
+    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
+    <skip />
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"மேலும் சேர்"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"மொபைல் டேட்டா"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"மொபைல் நெட்வொர்க் மூலம் டேட்டாவைப் பயன்படுத்து"</string>
@@ -443,7 +445,8 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"மேம்பட்டவை"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"சாதனம் குறித்த தகவல், சட்டப்பூர்வத் தகவல், மீட்டமைத்தல் மற்றும் பல"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தை மீண்டும் தொடங்குதல்"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"உங்கள் காரின் இன்ஃபோடெயின்மென்ட் சிஸ்டம் மீண்டும் தொடங்குவதற்குச் சில நிமிடங்கள் ஆகலாம். தொடர விரும்புகிறீர்களா?"</string>
+    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
+    <skip />
     <string name="continue_confirmation" msgid="1598892163951467191">"தொடர்க"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android பதிப்பு"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android பாதுகாப்பின் பேட்ச் நிலை"</string>
