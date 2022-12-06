@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# सिम}one{# सिम}other{# सिम}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"चालू / सिम"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"बंद / सिम"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"ऐक्टिव है / ई-सिम"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"इनऐक्टिव है / ई-सिम"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ज़्यादा जोड़ें"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क का इस्तेमाल करके डेटा ऐक्सेस करें"</string>
@@ -445,8 +443,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"बेहतर सेटिंग"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"इसके बारे में, कानूनी जानकारी, रीसेट करें वगैरह"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"सूचना और मनोरंजन की सुविधा देने वाला डिवाइस रीस्टार्ट करें"</string>
-    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
-    <skip />
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"आपकी कार में सूचना और मनोरंजन की सुविधा देने वाले डिवाइस को रीस्टार्ट करने में कुछ मिनट लग सकते हैं. क्या आपको जारी रखना है?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"जारी रखें"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android का वर्शन"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षा पैच लेवल"</string>

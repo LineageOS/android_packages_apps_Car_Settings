@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# സിം}other{# സിമ്മുകൾ}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"സജീവം / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"നിഷ്‌ക്രിയം / SIM"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"സജീവം / ഇ-സിം"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"നിഷ്‌ക്രിയം / ഇ-സിം"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"കൂടുതൽ ചേർക്കുക"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"മൊബൈൽ ഡാറ്റ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"മൊബൈൽ നെറ്റ്‌വർക്ക് ഉപയോഗിച്ച് ഡാറ്റ ആക്‌സസ് ചെയ്യുക"</string>
@@ -445,8 +443,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"വിപുലമായത്"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"ആമുഖം, നിയമ വിവരങ്ങൾ, റീസെറ്റ് ചെയ്യൽ എന്നിവയും മറ്റും"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം റീസ്റ്റാർട്ട് ചെയ്യുക"</string>
-    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
-    <skip />
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"നിങ്ങളുടെ കാറിന്റെ ഇൻഫോറ്റേയിൻമെന്റ് സിസ്‌റ്റം റീസ്‌റ്റാർട്ട് ചെയ്യുന്നതിന് അൽപ്പസമയമെടുത്തേക്കാം. നിങ്ങൾക്ക് തുടരണമെന്നുണ്ടോ?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"തുടരുക"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android പതിപ്പ്"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android സുരക്ഷാ പാച്ച് നില"</string>

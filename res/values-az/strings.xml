@@ -29,10 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktiv / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Deaktiv / SIM"</string>
-    <!-- no translation found for mobile_network_active_esim (5175362818078597096) -->
-    <skip />
-    <!-- no translation found for mobile_network_inactive_esim (7273712403773327964) -->
-    <skip />
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktiv / eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Deaktiv / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Daha çox əlavə edin"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobil data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Mobil internetə giriş"</string>
@@ -445,8 +443,7 @@
     <string name="system_advanced_title" msgid="6303355131691523362">"Qabaqcıl"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Haqqında, hüquqi məlumat, sıfırlama və daha çoxu"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Məlumat-əyləncə sistemini yenidən başladın"</string>
-    <!-- no translation found for restart_infotainment_system_dialog_text (6395281407323116808) -->
-    <skip />
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Avtomobilinizin məlumat-əyləncə sisteminin yenidən başladılması bir neçə dəqiqə çəkə bilər. Davam etmək istəyirsiniz?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Davam edin"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android versiyası"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android təhlükəsizlik gücləndirmə səviyyəsi"</string>
