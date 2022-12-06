@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Shfaq të gjitha"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Po kërkon"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Përdor Bluetooth-in"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Pajisje e paemërtuar"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Pajisjet e çiftuara"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Çifto pajisjen e re"</string>
@@ -227,7 +228,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Të gjitha gjuhët"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastiera"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Menaxho tastierat"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"Dalja \"tekst-në-ligjërim\""</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Dalja \"Tekst në ligjërim\""</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motori i preferuar"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motori aktual"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Shpejtësia e të folurit"</string>
@@ -401,25 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Vendndodhja"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Përdor vendndodhjen"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Aplikacionet që cakton kanë qasje te vendndodhja"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Nëse e çaktivizon këtë, kjo do të heqë qasjen te vendndodhja për të gjitha aplikacionet. Aplikacionet e \"Ndihmës për drejtuesin e makinës\" do të kenë ende qasje."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Vendndodhja për \"Ndihmën për drejtuesin\""</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Nëse e çaktivizon këtë, kjo do të heqë qasjen te vendndodhja për të gjitha aplikacionet, përveç atyre që duhen për ndihmën për drejtuesin e makinës"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Vendndodhja për ndihmën për drejtuesin"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Vendndodhja e automjetit është joaktive"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Aplikacionet e \"Ndihmës për drejtuesin e makinës\" nuk kanë qasje te vendndodhja"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Aplikacionet e ndihmës për drejtuesin nuk kanë qasje te vendndodhja"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Ndrysho"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Lejo aplikacionet për drejtimin të kenë qasje te vendndodhja"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Nëse e çaktivizon këtë, aplikacionet e \"Ndihmës për drejtuesin e makinës\" që mbështeten në informacionin e vendndodhjes do të çaktivizohen."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Nëse e çaktivizon këtë, aplikacionet e ndihmës për drejtuesin e makinës që mbështeten në informacionin e vendndodhjes do të çaktivizohen"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Çaktivizo gjithsesi"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Qasur së fundi"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Qasur së fundi"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Shiko të gjitha"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Asnjë aplikacion i fundit"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Ndihma për drejtuesin e makinës"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Ndihma për drejtuesin e makinës"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplikacione me qasje te vendndodhja e automjetit për veçoritë e ndihmës për drejtuesin"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Politika e privatësisë"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lejet në nivel aplikacioni"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Shërbimet e vendndodhjes"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Përdor vendndodhjen"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Vendndodhja mund të përdorë burime si GPS, Wi‑Fi, rrjetet celulare dhe sensorët për të ndihmuar me vlerësimin e vendndodhjes së pajisjes sate."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Ndihma për drejtuesin e makinës"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Informacioni i vendndodhjes që iu dërgua aplikacioneve të \"Ndihmës për drejtuesin e makinës\" nuk përmban informacione që të identifikojnë ty. Ai ruhet për maksimumi 2 ditë përpara se të fshihet."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Informacioni i vendndodhjes që iu dërgua aplikacioneve të ndihmës për drejtuesin e makinës nuk përmban informacione që të identifikojnë ty. Ai ruhet për maksimumi 2 ditë përpara se të fshihet."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Përdor mikrofonin"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Lejo qasjen në mikrofonin tënd për të gjitha aplikacionet"</string>
@@ -577,7 +580,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Pastro hapësirën ruajtëse"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Pastro memorien specifike"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Të fshihen të dhënat e aplikacionit?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Të gjitha të dhënat e këtij aplikacioni do të fshihen përgjithmonë. Kjo përfshin të gjithë skedarët, cilësimet, llogaritë, bazat e të dhënave etj."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Të dhënat e këtij aplikacioni do të fshihen përgjithmonë. Këtu përfshihen skedarët, cilësimet, bazat e të dhënave dhe të dhëna të tjera të aplikacionit."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Nuk mund të pastrohet hapësira për aplikacionin."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> u nxor në mënyrë të sigurt"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> nuk mund të nxirrej në mënyrë të sigurt"</string>
@@ -772,6 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplikacion i aktivizuar}other{# aplikacione të aktivizuara}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nuk ka aplikacion të aktivizuar"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Politika e automjeteve e <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Politika e automjeteve"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Cilësimet menaxhohen nga menaxheri i organizatës"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Mëso më shumë për \"<xliff:g id="SERVICE">%1$s</xliff:g>\""</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informacionet e automjetit të menaxhuar"</string>

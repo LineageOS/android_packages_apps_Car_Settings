@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Показване на всички"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Търси се"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Използване на Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Устройство без име"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Сдвоени устройства"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Сдвояване на ново устройство"</string>
@@ -401,25 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Местоположение"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Използване на местоположението"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Разреш. на достъп до мест. на прил., които посочите"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Ако изключите тази настройка, достъпът до местоположението ще бъде премахнат за всички приложения. Приложенията за помощ за шофьорите ще продължат да имат достъп."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Използв. на мест. за помощ за шофьорите"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ако изключите тази настройка, достъпът до местоположението ще бъде премахнат за всички приложения освен за тези, които са нужни за помощ за шофьорите"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Използв. на мест. за помощ за шофьорите"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Местоположението на автомобила е изкл."</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Прил. за помощ за шофьорите нямат достъп до мест. ви"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Прил. за помощ за шофьорите нямат достъп до мест. ви"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Промяна"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Разреш. на достъп до мест. на прил., помагащи при шофир."</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ако изключите тази настройка, функциите за помощ за шофьорите, които разчитат на данните за местоположението, ще бъдат деактивирани."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ако изключите тази настройка, приложенията за помощ за шофьорите, които разчитат на данните за местоположението, ще бъдат деактивирани"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Изключване въпреки това"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Със скорошен достъп"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Със скорошен достъп"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Преглед на всички"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Няма скорошни приложения"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Помощ за шофьорите"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Помощ за шофьорите"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Прил. с разреш. за достъп до местоп. на това прев. средство за функциите за помощ за шофьорите"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Декларация за поверителност"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения на ниво приложение"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги за местоположение"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Използване на местоположението"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Функцията за местоположението може да използва източници като GPS, Wi‑Fi, мобилни мрежи и сензори, за да определя къде се намира устройството ви."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Помощ за шофьорите"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Данните за местоположението, които се изпращат до приложенията за помощ за шофьорите, не съдържат информация, която ви идентифицира. Те се съхраняват за максимум 2 дни, преди да бъдат изтрити."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Данните за местоположението, които се изпращат до приложенията за помощ за шофьорите, не съдържат информация, която ви идентифицира. Те се съхраняват за максимум 2 дни, преди да бъдат изтрити."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Използване на микрофона"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Разрешаване на всички приложения да осъществяват достъп до микрофона ви"</string>
@@ -577,7 +580,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Изчистване на данните"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Изчистване на кеша"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Да се изтрият ли данните от прил.?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Всички данни на това приложение ще се изтрият за постоянно. Това включва всички файлове, настройки, профили, бази от данни и др."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Данните на приложението ще бъдат изтрити за постоянно. Това включва файловете, настройките, базите от данни и други данни от приложението."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Данните за приложението не можаха да се изтрият."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Безопасното изваждане на <xliff:g id="NAME">%1$s</xliff:g> бе успешно"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> не можа да се извади безопасно"</string>
@@ -638,7 +641,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Напред"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Нов опит"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Пропускане"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Задайте опция за заключване на екрана"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Задаване на опция за заключване на екрана"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Изберете ПИН кода си"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Изберете паролата си"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Текуща опция за заключване на екрана"</string>
@@ -772,6 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активирано приложение}other{# активирани приложения}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Няма активирани приложения"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила на <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> за превозните средства"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Правила за превозните средства"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Настройки, управлявани от администратора на организацията"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Научете повече за <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Информация за управляваното превозно средство"</string>
