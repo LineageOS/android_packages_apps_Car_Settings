@@ -375,6 +375,8 @@
     <!-- Bluetooth settings --><skip/>
     <!-- Title of Bluetooth settings pages. [CHAR LIMIT=30] -->
     <string name="bluetooth_settings_title">Bluetooth</string>
+    <!-- Title of Bluetooth toggle. [CHAR LIMIT=40] -->
+    <string name="bluetooth_toggle_title">Use Bluetooth</string>
     <!--Bluetooth settings screen, text for Bluetooth device with no name. [CHAR LIMIT=40] -->
     <string name="bluetooth_device">Unnamed device</string>
     <!-- Category title for paired Bluetooth devices. [CHAR LIMIT=40] -->
@@ -888,18 +890,17 @@
     <string name="location_toggle_summary">Allow apps you specify to access your location</string>
     <!-- Warning message when users try to toggle location off [CHAR LIMIT=NONE] -->
     <string name="location_toggle_off_warning">
-        If you turn this off, it will remove location access for all apps. Driver Assistance apps
-        will still have access.
+        If you turn this off, it will remove location access for all apps except those needed for driver assistance
     </string>
     <!-- Title of driver assistance toggle setting [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_toggle_title">
-        Use location for Driver Assistance
+        Use location for driver assistance
     </string>
     <!-- Title of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_toggle_off_title">Vehicle location is off</string>
     <!-- Summary of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_toggle_off_summary">
-        Driver Assistance apps cannot access your location
+        Driver assistance apps cannot access your location
     </string>
     <!-- -Text of driver assistance text toggle [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_action_text">
@@ -911,8 +912,8 @@
     </string>
     <!-- Warning message when users try to toggle driver assistance off [CHAR LIMIT=NONE] -->
     <string name="location_driver_assistance_toggle_off_warning">
-        If you turn this off, Driver Assistance apps that rely on location information will be
-        disabled.
+        If you turn this off, driver assistance apps that rely on location information will be
+        disabled
     </string>
     <!-- Confirm button label for confirmation dialog [CHAR LIMIT=40]-->
     <string name="driver_assistance_warning_confirm_label">
@@ -927,7 +928,13 @@
     <!-- Message indicating that no apps have accessed location recently [CHAR LIMIT=60] -->
     <string name="location_no_recent_access">No recent apps</string>
     <!-- Label for driver assistance apps that recently accessed location [CHAR LIMIT=60] -->
-    <string name="driver_assistance_label"><xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver Assistance</string>
+    <string name="driver_assistance_label"><xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver assistance</string>
+    <!-- Content description for privacy policy header [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_privacy_policy_header_content">
+        Apps with permission to access this vehicle’s location for driver assistance features
+    </string>
+    <!-- Text policy button of driver assistance app [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_privacy_policy_button_text">Privacy policy</string>
     <!-- Title of Location App-level Permissions setting [CHAR LIMIT=60] -->
     <string name="location_settings_app_permissions_title">App-level permissions</string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
@@ -945,7 +952,7 @@
     <string name="driver_assistance_settings_title">Driver assistance</string>
     <!--Driver assistance settings footer warning text [CHAR LIMIT=NONE] -->
     <string name="adas_settings_footer">
-        Location information sent to Driver Assistance apps doesn’t contain information that
+        Location information sent to driver assistance apps doesn’t contain information that
         identifies you. It’s stored for a maximum of 2 days before being deleted.
     </string>
 
@@ -1334,7 +1341,7 @@
     <!-- Individual application screen, confirmation dialog title. Displays when user selects to "Clear data". [CHAR LIMIT=45] -->
     <string name="storage_clear_data_dlg_title">Delete app data?</string>
     <!-- Individual application screen, confirmation dialog message. Displays when user selects to "Clear data". It warns the user of the consequences of clearing the data for an app. [CHAR LIMIT=200] -->
-    <string name="storage_clear_data_dlg_text">All this app\u2019s data will be deleted permanently. This includes all files, settings, accounts, databases, etc.</string>
+    <string name="storage_clear_data_dlg_text">This app\u2019s data will be permanently deleted. This includes files, settings, databases, and other app data.</string>
     <!-- Text for dialog if clear data fails. [CHAR LIMIT=55] -->
     <string name="storage_clear_failed_dlg_text">Couldn\u2019t clear storage for app.</string>
     <!-- Toast informing that storage unmount operation was successful. [CHAR LIMIT=80]-->
@@ -1860,6 +1867,8 @@
     <string name="number_of_device_admins_none">No activated apps</string>
     <!-- Title of setting on privacy settings screen that will show vehicle policy info. [CHAR LIMIT=NONE] -->
     <string name="work_policy_privacy_settings"><xliff:g id="organization_name">%1$s</xliff:g> vehicle policy</string>
+    <!-- Search result title of the work policy page. Does not display company name. [CHAR LIMIT=NONE] -->
+    <string name="work_policy_privacy_settings_no_org_name">Vehicle policy</string>
     <!-- Summary for Enterprise Privacy settings, explaining what the user can expect to find under it [CHAR LIMIT=NONE]-->
     <string name="work_policy_privacy_settings_summary">Settings managed by the organization manager</string>
     <!-- Footer to show help link content description. [CHAR LIMIT=NONE] -->

@@ -19,6 +19,7 @@ package com.android.car.settings.common;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
+import android.os.SystemClock;
 import android.widget.Toast;
 
 import androidx.annotation.IntDef;
@@ -232,7 +233,7 @@ public abstract class PreferenceController<V extends Preference> implements
         mPreference.setOnPreferenceClickListener(
                 clickedPref -> {
                     // Debounce onClick() calls
-                    long curTime = System.currentTimeMillis();
+                    long curTime = SystemClock.elapsedRealtime();
                     if (mDebounceStartTimeMs != 0
                             && curTime < (mDebounceStartTimeMs + mDebounceIntervalMs)) {
                         LOG.i("OnClick event dropped due to debouncing");

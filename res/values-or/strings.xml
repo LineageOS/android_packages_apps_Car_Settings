@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ସମସ୍ତ ଦେଖାନ୍ତୁ"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ଖୋଜୁଛି..."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ବ୍ଲୁଟୁଥ୍‌"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ବ୍ଲୁଟୁଥ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ନାମହୀନ ଡିଭାଇସ୍‍"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ପେୟାର୍‌ ହୋଇଥିବା ଡିଭାଇସ୍‌ଗୁଡ଼ିକ"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ନୂଆ ଡିଭାଇସ୍‌କୁ ପେୟାର୍‌ କରନ୍ତୁ"</string>
@@ -401,25 +402,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିବାକୁ ଆପଣ ନିର୍ଦ୍ଦିଷ୍ଟ କରିଥିବା ଆପ୍ସକୁ ଅନୁମତି ଦିଅ"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଏହା ସମସ୍ତ ଆପ ପାଇଁ ଲୋକେସନ ଆକ୍ସେସକୁ କାଢ଼ି ଦେବ। ଡ୍ରାଇଭର ସହାୟତା ଆପଗୁଡ଼ିକର ଏବେ ବି ଆକ୍ସେସ ରହିବ।"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ଡ୍ରାଇଭର ସହାୟତା ପାଇଁ ଲୋକେସନ ସୂଚନା ବ୍ୟବହାର"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଡ୍ରାଇଭର ସହାୟତା ପାଇଁ ଆବଶ୍ୟକ ଆପ୍ସ ବ୍ୟତୀତ ଏହା ସମସ୍ତ ଆପ୍ସ ପାଇଁ ଲୋକେସନ ଆକ୍ସେସକୁ କାଢ଼ି ଦେବ"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ଡ୍ରାଇଭର ସହାୟତା ପାଇଁ ଲୋକେସନ ସୂଚନା ବ୍ୟବହାର କର"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ଗାଡ଼ିର ଲୋକେସନ ଫିଚର ବନ୍ଦ ଅଛି"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଲୋକେସନ ସୂଚନାକୁ ଆକ୍ସେସ କରିପାରିବ ନାହିଁ"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଆପଣଙ୍କ ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିପାରିବ ନାହିଁ"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ବଦଳାନ୍ତୁ"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିବାକୁ ଡ୍ରାଇଭିଂରେ ସାହାଯ୍ୟ କରୁଥିବା ଆପ୍ସକୁ ଅନୁମତି ଦିଅ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପଗୁଡ଼ିକ ଅକ୍ଷମ ହୋଇଯିବ।"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଅକ୍ଷମ ହୋଇଯିବ"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ଡ୍ରାଇଭର ସହାୟତା ଫିଚର ପାଇଁ ଏହି ଗାଡ଼ିର ଲୋକେସନକୁ ଆକ୍ସେସର ଅନୁମତି ଥିବା ଆପ୍ସ"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"ଗୋପନୀୟତା ନୀତି"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ଆପଣଙ୍କ ଡିଭାଇସର ଲୋକେସନ୍ ଅନୁମାନ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ GPS, ୱାଇ‑ଫାଇ, ମୋବାଇଲ୍ ନେଟୱାର୍କ ଏବଂ ସେନ୍ସରଗୁଡ଼ିକ ଭଳି ସୋର୍ସଗୁଡ଼ିକୁ ଲୋକେସନ୍ ବ୍ୟବହାର କରିପାରେ।"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ଡ୍ରାଇଭର୍ ସହାୟତା"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"ଡ୍ରାଇଭର ସହାୟତା ଆପଗୁଡ଼ିକୁ ପଠାଯାଇଥିବା ଲୋକେସନ ସୂଚନାରେ ଆପଣଙ୍କୁ ଚିହ୍ନଟ କରୁଥିବା ସୂଚନା ଅନ୍ତର୍ଭୁକ୍ତ ନାହିଁ। ଡିଲିଟ କରାଯିବା ପୂର୍ବରୁ ଏହାକୁ ସର୍ବାଧିକ 2 ଦିନ ପାଇଁ ଷ୍ଟୋର କରାଯାଏ।"</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସକୁ ପଠାଯାଇଥିବା ଲୋକେସନ ସୂଚନାରେ ଆପଣଙ୍କୁ ଚିହ୍ନଟ କରୁଥିବା ସୂଚନା ଅନ୍ତର୍ଭୁକ୍ତ ନାହିଁ। ଡିଲିଟ କରାଯିବା ପୂର୍ବରୁ ଏହାକୁ ସର୍ବାଧିକ 2 ଦିନ ପାଇଁ ଷ୍ଟୋର କରାଯାଏ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ମାଇକ୍ରୋଫୋନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ଆପଣଙ୍କ ମାଇକ୍ରୋଫୋନକୁ ଆକ୍ସେସ୍ କରିବା ପାଇଁ ସମସ୍ତ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
@@ -577,7 +580,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"ଷ୍ଟୋରେଜ୍ ଖାଲି କରନ୍ତୁ"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"କ୍ୟାଶ୍ ଖାଲି କରନ୍ତୁ"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ଆପ୍ ଡାଟା ଡିଲିଟ୍ କରିବେ?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ଏହି ସମସ୍ତ ଆପ୍ ଡାଟା ସ୍ଥାୟୀ ଭାବେ ଡିଲିଟ୍ ହୋଇଯିବ। ଏଥିରେ ସମସ୍ତ ଫାଇଲ୍, ସେଟିଂସ୍, ଆକାଉଣ୍ଟ, ଡାଟାବେସ୍ ଇତ୍ୟାଦି ସାମିଲ ଥାଏ।"</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"ଏହି ଆପର ଡାଟା ସ୍ଥାୟୀ ଭାବେ ଡିଲିଟ ହୋଇଯିବ। ଏଥିରେ ଫାଇଲ, ସେଟିଂସ, ଡାଟାବେସ ଏବଂ ଅନ୍ୟ ଆପ ଡାଟା ଅନ୍ତର୍ଭୁକ୍ତ ଅଛି।"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ଆପ୍ ପାଇଁ ଷ୍ଟୋରେଜ୍‌କୁ ଖାଲି କରିହେବ ନାହିଁ।"</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>କୁ ସୁରକ୍ଷିତ ଭାବେ ବାହାର କରିଦିଆଯାଇଛି"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>କୁ ସୁରକ୍ଷିତ ଭାବେ ବାହାର କରିହେଲା ନାହିଁ"</string>
@@ -772,6 +775,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{#ଟି ସକ୍ରିୟ ଥିବା ଆପ}other{#ଟି ସକ୍ରିୟ ଥିବା ଆପ}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"କୌଣସି ସକ୍ରିୟ ଥିବା ଆପ ନାହିଁ"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> ଗାଡ଼ିର ନୀତି"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"ଗାଡ଼ି ନୀତି"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ସଂସ୍ଥା ପରିଚାଳକଙ୍କ ଦ୍ୱାରା ପରିଚାଳିତ ହେଉଥିବା ସେଟିଂସ"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> ବିଷୟରେ ଅଧିକ ଜାଣନ୍ତୁ"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ପରିଚାଳିତ ଗାଡ଼ିର ସୂଚନା"</string>
