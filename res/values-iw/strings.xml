@@ -27,7 +27,7 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"מצב לילה"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"רשת ואינטרנט"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"רשת סלולרית"</string>
-    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{כרטיס SIM אחד}two{# כרטיסי SIM}many{# כרטיסי SIM}other{# כרטיסי SIM}}"</string>
+    <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{כרטיס SIM אחד}one{# כרטיסי SIM}two{# כרטיסי SIM}other{# כרטיסי SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"פעיל / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"לא פעיל / SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"פעיל / SIM שהורדת"</string>
@@ -53,7 +53,7 @@
     <string name="cell_data_warning" msgid="8997739664336571149">"אזהרה לגבי שימוש בנתונים: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"מגבלת נתונים: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"אזהרה לגבי שימוש בנתונים:<xliff:g id="ID_1">^1</xliff:g>/מגבלת נתונים:<xliff:g id="ID_2">^2</xliff:g>"</string>
-    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{נותר יום אחד}two{נותרו יומיים}many{נותרו # ימים}other{נותרו # ימים}}"</string>
+    <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{נותר יום אחד}one{נותרו # ימים}two{נותרו יומיים}other{נותרו # ימים}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"לא נשאר זמן"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"נותר פחות מיום אחד"</string>
     <string name="carrier_and_update_text" msgid="4351043160977741244">"עדכון בוצע על ידי <xliff:g id="ID_1">^1</xliff:g> לפני <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -326,7 +326,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"לא הוענקו הרשאות"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"לא התבקשו הרשאות"</string>
     <string name="unused_apps" msgid="648471933781010395">"אפליקציות שמזמן לא השתמשת בהן"</string>
-    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{אפליקציה אחת שמזמן לא השתמשת בה}two{# אפליקציות שמזמן לא השתמשת בהן}many{# אפליקציות שמזמן לא השתמשת בהן}other{# אפליקציות שמזמן לא השתמשת בהן}}"</string>
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{אפליקציה אחת שמזמן לא השתמשת בה}one{# אפליקציות שמזמן לא השתמשת בהן}two{# אפליקציות שמזמן לא השתמשת בהן}other{# אפליקציות שמזמן לא השתמשת בהן}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"הסרת הרשאות ופינוי נפח אחסון"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s בשטח אחסון פנימי"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"שימוש במשאבי המערכת תוך מתן עדיפות לביצועי אפליקציות"</string>
@@ -344,7 +344,7 @@
     <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"הגבלת השימוש בחבילת גלישה"</string>
     <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"השימוש בחבילת גלישה מותר רק כשהאפליקציה פועלת ברקע"</string>
     <string name="computing_size" msgid="5791407621793083965">"מתבצע חישוב…"</string>
-    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{הרשאה אחת נוספת}two{# הרשאות נוספות}many{# הרשאות נוספות}other{# הרשאות נוספות}}"</string>
+    <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{הרשאה אחת נוספת}one{# הרשאות נוספות}two{# הרשאות נוספות}other{# הרשאות נוספות}}"</string>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"הערה: לאחר הפעלה מחדש, ניתן להפעיל את האפליקציה רק לאחר ביטול של נעילת הרכב."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"קלט אסיסטנט וקלט קולי"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"אפליקציית עזרה"</string>
@@ -380,7 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"מנהל ההרשאות"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"שליטה בגישת האפליקציה לנתונים שלך"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"ל-Assistant ועוד"</string>
-    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{אפליקציה אחת משפיעה על הביצועים}two{# אפליקציות משפיעות על הביצועים}many{# אפליקציות משפיעות על הביצועים}other{# אפליקציות משפיעות על הביצועים}}"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{אפליקציה אחת משפיעה על הביצועים}one{# אפליקציות משפיעות על הביצועים}two{# אפליקציות משפיעות על הביצועים}other{# אפליקציות משפיעות על הביצועים}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"למערכת ולהגדרות אחרות"</string>
     <string name="special_access" msgid="5730278220917123811">"הרשאת גישה מיוחדת לאפליקציה"</string>
     <string name="show_system" msgid="4401355756969485287">"הצגת המערכת"</string>
@@ -434,7 +434,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"האפליקציות האחרונות שניגשו למיקרופון"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"אין אפליקציות אחרונות"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"אין אפליקציות עם הרשאת גישה"</string>
-    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{לאפליקציה אחת מתוך {total_count} יש גישה}two{ל-# אפליקציות מתוך {total_count} יש גישה}many{ל-# אפליקציות מתוך {total_count} יש גישה}other{ל-# אפליקציות מתוך {total_count} יש גישה}}"</string>
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{לאפליקציה אחת מתוך {total_count} יש גישה}one{ל-# אפליקציות מתוך {total_count} יש גישה}two{ל-# אפליקציות מתוך {total_count} יש גישה}other{ל-# אפליקציות מתוך {total_count} יש גישה}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"בקשות הגישה האחרונות למיקרופון"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"הצגת כל הבקשות"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"בטעינה…"</string>
@@ -476,7 +476,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"רישיונות צד שלישי"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"יש בעיה בטעינת הרישיון."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"בטעינה…"</string>
-    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{נותר עוד שלב אחד להגדרתך כמפתח.}two{נותרו עוד # שלבים אחד להגדרתך כמפתח.}many{נותרו עוד # שלבים אחד להגדרתך כמפתח.}other{נותרו עוד # שלבים אחד להגדרתך כמפתח.}}"</string>
+    <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{נותר עוד שלב אחד להגדרתך כמפתח.}one{נותרו עוד # שלבים אחד להגדרתך כמפתח.}two{נותרו עוד # שלבים אחד להגדרתך כמפתח.}other{נותרו עוד # שלבים אחד להגדרתך כמפתח.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"את/ה מפתח/ת עכשיו!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"אין צורך, את/ה כבר מפתח/ת."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"אפשרויות למפתחים"</string>
@@ -545,7 +545,7 @@
     <string name="user_add_user_message_setup" msgid="812616230454605159">"לאחר יצירה של פרופיל חדש, המשתמש של הפרופיל הזה צריך להתאים אותו אישית בעצמו."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"עדכון אפליקציות מפרופיל כלשהו יחיל את העדכונים בכל יתר הפרופילים."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"הגעת למספר הפרופילים המרבי"</string>
-    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{ניתן ליצור רק פרופיל אחד.}two{ניתן ליצור רק # פרופילים.}many{ניתן ליצור רק # פרופילים.}other{ניתן ליצור רק # פרופילים.}}"</string>
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{ניתן ליצור רק פרופיל אחד.}one{ניתן ליצור רק # פרופילים.}two{ניתן ליצור רק # פרופילים.}other{ניתן ליצור רק # פרופילים.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"לא ניתן היה ליצור את הפרופיל החדש"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"למחוק את הפרופיל הזה?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"כל האפליקציות והנתונים של הפרופיל הזה יימחקו"</string>
@@ -696,17 +696,17 @@
     <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"צריכה להכיל לפחות אות אחת"</string>
     <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"צריכה להכיל לפחות ספרה אחת"</string>
     <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"צריכה להכיל לפחות סמל אחד"</string>
-    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{צריכה להכיל לפחות אות אחת}two{צריכה להכיל לפחות # אותיות}many{צריכה להכיל לפחות # אותיות}other{צריכה להכיל לפחות # אותיות}}"</string>
-    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{צריכה להכיל לפחות אות קטנה אחת}two{צריכה להכיל לפחות # אותיות קטנות}many{צריכה להכיל לפחות # אותיות קטנות}other{צריכה להכיל לפחות # אותיות קטנות}}"</string>
-    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{צריכה להכיל לפחות אות גדולה אחת}two{צריכה להכיל לפחות # אותיות גדולות}many{צריכה להכיל לפחות # אותיות גדולות}other{צריכה להכיל לפחות # אותיות גדולות}}"</string>
-    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}two{צריכה להכיל לפחות # ספרות}many{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
-    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{צריכה להכיל לפחות סמל מיוחד אחד}two{צריכה להכיל לפחות # סמלים מיוחדים}many{צריכה להכיל לפחות # סמלים מיוחדים}other{צריכה להכיל לפחות # סמלים מיוחדים}}"</string>
-    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו אות}two{צריכה להכיל לפחות # תווים שאינם אותיות}many{צריכה להכיל לפחות # תווים שאינם אותיות}other{צריכה להכיל לפחות # תווים שאינם אותיות}}"</string>
-    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו ספרה}two{צריכה להכיל לפחות # תווים שאינם ספרות}many{צריכה להכיל לפחות # תווים שאינם ספרות}other{צריכה להכיל לפחות # תווים שאינם ספרות}}"</string>
-    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{צריכה להכיל לפחות תו אחד}two{צריכה להכיל לפחות # תווים}many{צריכה להכיל לפחות # תווים}other{צריכה להכיל לפחות # תווים}}"</string>
-    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}two{צריכה להכיל לפחות # ספרות}many{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
-    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{צריכה להיות קצרה מתו אחד}two{צריכה להיות קצרה מ-# תווים}many{צריכה להיות קצרה מ-# תווים}other{צריכה להיות קצרה מ-# תווים}}"</string>
-    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{צריכה להיות קצרה מספרה אחת}two{צריכה להיות קצרה מ-# ספרות}many{צריכה להיות קצרה מ-# ספרות}other{צריכה להיות קצרה מ-# ספרות}}"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{צריכה להכיל לפחות אות אחת}one{צריכה להכיל לפחות # אותיות}two{צריכה להכיל לפחות # אותיות}other{צריכה להכיל לפחות # אותיות}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{צריכה להכיל לפחות אות קטנה אחת}one{צריכה להכיל לפחות # אותיות קטנות}two{צריכה להכיל לפחות # אותיות קטנות}other{צריכה להכיל לפחות # אותיות קטנות}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{צריכה להכיל לפחות אות גדולה אחת}one{צריכה להכיל לפחות # אותיות גדולות}two{צריכה להכיל לפחות # אותיות גדולות}other{צריכה להכיל לפחות # אותיות גדולות}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}one{צריכה להכיל לפחות # ספרות}two{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{צריכה להכיל לפחות סמל מיוחד אחד}one{צריכה להכיל לפחות # סמלים מיוחדים}two{צריכה להכיל לפחות # סמלים מיוחדים}other{צריכה להכיל לפחות # סמלים מיוחדים}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו אות}one{צריכה להכיל לפחות # תווים שאינם אותיות}two{צריכה להכיל לפחות # תווים שאינם אותיות}other{צריכה להכיל לפחות # תווים שאינם אותיות}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו ספרה}one{צריכה להכיל לפחות # תווים שאינם ספרות}two{צריכה להכיל לפחות # תווים שאינם ספרות}other{צריכה להכיל לפחות # תווים שאינם ספרות}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{צריכה להכיל לפחות תו אחד}one{צריכה להכיל לפחות # תווים}two{צריכה להכיל לפחות # תווים}other{צריכה להכיל לפחות # תווים}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}one{צריכה להכיל לפחות # ספרות}two{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
+    <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{צריכה להיות קצרה מתו אחד}one{צריכה להיות קצרה מ-# תווים}two{צריכה להיות קצרה מ-# תווים}other{צריכה להיות קצרה מ-# תווים}}"</string>
+    <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{צריכה להיות קצרה מספרה אחת}one{צריכה להיות קצרה מ-# ספרות}two{צריכה להיות קצרה מ-# ספרות}other{צריכה להיות קצרה מ-# ספרות}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"אין להגדיר רצף ספרות עולה, יורד או חוזר"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>
@@ -776,7 +776,7 @@
     <string name="default_admin_support_msg" msgid="2986598061733013282">"הגישה לחלק מהתכונות מוגבלת על ידי הארגון.\n\nיש לך שאלות? כדאי ליצור קשר עם מנהל הארגון."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"אפליקציות למנהלי מערכות של הרכב"</string>
-    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{אפליקציה אחת מופעלת}two{# אפליקציות מופעלות}many{# אפליקציות מופעלות}other{# אפליקציות מופעלות}}"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{אפליקציה אחת מופעלת}one{# אפליקציות מופעלות}two{# אפליקציות מופעלות}other{# אפליקציות מופעלות}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"אין אפליקציות פעילות"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"מדיניות הרכב של <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
     <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"מדיניות הרכב"</string>
@@ -792,16 +792,14 @@
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"רשימת האפליקציות ברכב שלך"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"זוהי הערכה של מספר האפליקציות. יכול להיות שהמספר לא כולל אפליקציות שהותקנו מחוץ לחנות Play."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
+      <item quantity="one">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
       <item quantity="two">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="many">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
       <item quantity="other">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="one">אפליקציה אחת (<xliff:g id="COUNT_0">%d</xliff:g>) לפחות</item>
     </plurals>
     <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
       <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="one">אפליקציה אחת (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
     </plurals>
     <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"היומן האחרון של התנועה ברשת"</string>
     <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"הדוח האחרון על באג"</string>
@@ -820,28 +818,24 @@
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"מספר הזנות של סיסמה שגויה לפני מחיקה של כל הנתונים במערכת המידע והבידור"</string>
     <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"מספר הזנות של סיסמה שגויה לפני מחיקה של נתוני הפרופיל"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
       <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
-      <item quantity="one">ניסיון אחד (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
     </plurals>
     <plurals name="default_camera_app_title" formatted="false" msgid="2650102837354606942">
+      <item quantity="one">אפליקציות מצלמה</item>
       <item quantity="two">אפליקציות מצלמה</item>
-      <item quantity="many">אפליקציות מצלמה</item>
       <item quantity="other">אפליקציות מצלמה</item>
-      <item quantity="one">אפליקציית מצלמה</item>
     </plurals>
     <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
+      <item quantity="one">אפליקציות של תוכנת אימייל</item>
       <item quantity="two">אפליקציות של תוכנת אימייל</item>
-      <item quantity="many">אפליקציות של תוכנת אימייל</item>
       <item quantity="other">אפליקציות של תוכנת אימייל</item>
-      <item quantity="one">אפליקציה של תוכנת אימייל</item>
     </plurals>
     <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
+      <item quantity="one">אפליקציות טלפון</item>
       <item quantity="two">אפליקציות טלפון</item>
-      <item quantity="many">אפליקציות טלפון</item>
       <item quantity="other">אפליקציות טלפון</item>
-      <item quantity="one">אפליקציית טלפון</item>
     </plurals>
     <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"לשתף את דוח איתור הבאגים?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"מנהל הארגון האחראי לרכב הזה ביקש דוח איתור באגים כדי לסייע בפתרון בעיות במכשיר הזה. יכול להיות שהאפליקציות והנתונים שלך ישותפו."</string>
@@ -889,7 +883,7 @@
     <string name="camera_recently_accessed" msgid="8084100710444691977">"האפליקציות האחרונות שניגשו למצלמה"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"אין אפליקציות אחרונות"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"אין אפליקציות עם הרשאת גישה"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{לאפליקציה אחת מתוך {total_count} יש גישה}two{ל-# אפליקציות מתוך {total_count} יש גישה}many{ל-# אפליקציות מתוך {total_count} יש גישה}other{ל-# אפליקציות מתוך {total_count} יש גישה}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{לאפליקציה אחת מתוך {total_count} יש גישה}one{ל-# אפליקציות מתוך {total_count} יש גישה}two{ל-# אפליקציות מתוך {total_count} יש גישה}other{ל-# אפליקציות מתוך {total_count} יש גישה}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"בקשות הגישה האחרונות למצלמה"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"הצגת הכול"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"בטעינה…"</string>
