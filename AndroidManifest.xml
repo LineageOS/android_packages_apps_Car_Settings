@@ -731,7 +731,8 @@
         <activity
             android:name=".accounts.AddAccountActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"/>
 
         <activity
             android:name=".applications.managedomainurls.ManageDomainUrlsActivity"
