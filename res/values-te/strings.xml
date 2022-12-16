@@ -32,7 +32,7 @@
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"ఇన్‌యాక్టివ్‌గా ఉంది / SIM"</string>
     <string name="mobile_network_active_esim" msgid="5864100786496761032">"యాక్టివ్ / డౌన్‌లోడ్ చేసిన SIM"</string>
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"ఇన్‌యాక్టివ్ / డౌన్‌లోడ్ చేసిన SIM"</string>
-    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"మరిన్నింటిని జోడించు"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"మరిన్నింటిని జోడించండి"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"మొబైల్ డేటా"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"మొబైల్ నెట్‌వర్క్‌ను ఉపయోగించి డేటాను యాక్సెస్ చేయండి"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"మొబైల్ నెట్‌వర్క్"</string>
@@ -95,7 +95,7 @@
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi నిలిపివేయబడింది"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"నెట్‌వర్క్‌ను మర్చిపోవడంలో విఫలమైంది"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"నెట్‌వర్క్‌కు కనెక్ట్ చేయడం విఫలమైంది"</string>
-    <string name="wifi_setup_add_network" msgid="3660498520389954620">"నెట్‌వర్క్‌ను జోడించు"</string>
+    <string name="wifi_setup_add_network" msgid="3660498520389954620">"నెట్‌వర్క్‌ను జోడించండి"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"కనెక్ట్"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"కనెక్ట్ అవుతోంది…"</string>
     <string name="wifi_disconnected" msgid="4485699234859368137">"కనెక్ట్ చేయబడలేదు"</string>
@@ -313,7 +313,7 @@
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"అవును"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"వద్దు, ధన్యవాదాలు"</string>
     <string name="disable_text" msgid="4358165448648990820">"డిజేబుల్ చేయి"</string>
-    <string name="enable_text" msgid="1794971777861881238">"ప్రారంభించు"</string>
+    <string name="enable_text" msgid="1794971777861881238">"ప్రారంభించండి"</string>
     <string name="uninstall_text" msgid="277907956072833012">"అన్ఇన్‌స్టాల్ చేయండి"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"మీరు ఈ యాప్‌ను నిలిపివేస్తే, Android మరియు ఇతర యాప్‌లు ఇకపై ఉద్దేశించిన రీతిలో పని చేయకపోవచ్చు."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"యాప్‌ను నిలిపివేయి"</string>
@@ -358,7 +358,7 @@
     <string name="default_app_selected_app" msgid="5289396663745484773">"ఎంచుకోబడింది"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"అసిస్టెంట్ మీ సిస్టమ్‌లో వినియోగంలో ఉన్న యాప్‌ల గురించిన సమాచారం, అలాగే మీ స్క్రీన్‌పై కనిపించే లేదా యాప్‌లలో యాక్సెస్ చేసే సమాచారాన్ని చదవగలుగుతుంది."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ఈ యాప్‌ను మీరు విశ్వసిస్తున్నట్లు నిర్ధారించండి&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; మీ స్క్రీన్‌పై ఉన్నవాటిని పరిగణనలోకి తీసుకొని వేటిని ఆటోమేటిక్‌గా పూరించాలో నిశ్చయిస్తుంది."</string>
-    <string name="autofill_add_service" msgid="6413893366443609951">"సేవను జోడించు"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"సేవను జోడించండి"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"లింక్‌లను తెరవడం"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"ఇన్‌స్టాల్ చేయబడిన యాప్‌లు"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"మద్దతిచ్చే లింక్‌లను తెరవదు"</string>
@@ -589,7 +589,7 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> సురక్షితంగా తొలగించబడింది"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>ని సురక్షితంగా తొలగించలేకపోయింది"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ఖాతాలు"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"ఖాతాను జోడించు"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"ఖాతాను జోడించండి"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ఖాతాలు జోడించబడలేదు"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> యొక్క ఖాతాలు"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాను ఆటోమేటిక్‌గా సింక్ చేయండి"</string>
@@ -744,7 +744,7 @@
     <string name="notifications_all_apps" msgid="3557079551048958846">"అన్ని యాప్‌లు"</string>
     <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"ప్రొఫైళ్లు &amp; ఖాతాలు"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"ఇతర ప్రొఫైల్‌లను మేనేజ్ చేయండి"</string>
-    <string name="add_a_profile_button_text" msgid="8027395095117925114">"ఒక ప్రొఫైల్‌ను జోడించు"</string>
+    <string name="add_a_profile_button_text" msgid="8027395095117925114">"ఒక ప్రొఫైల్‌ను జోడించండి"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ఈ ప్రొఫైల్‌ను తొలగించు"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ప్రొఫైల్‌ను జోడించండి"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"డిస్‌ప్లే బ్రైట్‌నెస్"</string>
