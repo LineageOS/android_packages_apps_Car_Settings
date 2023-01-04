@@ -18,6 +18,7 @@ package com.android.car.settings.qc;
 
 import static com.android.car.qc.QCItem.QC_ACTION_SLIDER_VALUE;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
+import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 import static com.android.car.settings.qc.SettingsQCRegistry.BRIGHTNESS_SLIDER_URI;
 import static com.android.settingslib.display.BrightnessUtils.GAMMA_SPACE_MAX;
 import static com.android.settingslib.display.BrightnessUtils.convertGammaToLinear;
@@ -50,6 +51,8 @@ public class BrightnessSlider extends SettingsQCItem {
 
     public BrightnessSlider(Context context) {
         super(context);
+        setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
+                R.xml.display_settings_fragment, R.string.pk_brightness_level));
         PowerManager powerManager = context.getSystemService(PowerManager.class);
         mMaximumBacklight = powerManager.getMaximumScreenBrightnessSetting();
         mMinimumBacklight = powerManager.getMinimumScreenBrightnessSetting();
@@ -60,6 +63,9 @@ public class BrightnessSlider extends SettingsQCItem {
 
     @Override
     QCItem getQCItem() {
+        if (isHiddenForZone()) {
+            return null;
+        }
         QCList.Builder listBuilder = new QCList.Builder()
                 .addRow(getBrightnessRowBuilder().build());
 
@@ -96,7 +102,8 @@ public class BrightnessSlider extends SettingsQCItem {
                         .setMax(GAMMA_SPACE_MAX)
                         .setValue(getSeekbarValue())
                         .setInputAction(getBroadcastIntent())
-                        .setEnabled(!hasUmRestrictions && !hasDpmRestrictions)
+                        .setEnabled(!hasUmRestrictions && !hasDpmRestrictions
+                                && isWritableForZone())
                         .setClickableWhileDisabled(hasDpmRestrictions)
                         .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
                                 userRestriction))

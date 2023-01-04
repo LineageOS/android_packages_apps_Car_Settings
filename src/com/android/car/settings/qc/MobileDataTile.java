@@ -18,6 +18,7 @@ package com.android.car.settings.qc;
 
 import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
+import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 import static com.android.car.settings.qc.SettingsQCRegistry.MOBILE_DATA_TILE_URI;
 
 import android.content.Context;
@@ -43,12 +44,14 @@ public class MobileDataTile extends SettingsQCItem {
 
     public MobileDataTile(Context context) {
         super(context);
+        setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
+                R.xml.network_and_internet_fragment, R.string.pk_mobile_network_settings_entry));
         mDataUsageController = getDataUsageController(context);
     }
 
     @Override
     QCItem getQCItem() {
-        if (!mDataUsageController.isMobileDataSupported()) {
+        if (!mDataUsageController.isMobileDataSupported() || isHiddenForZone()) {
             return null;
         }
         boolean dataEnabled = mDataUsageController.isMobileDataEnabled();
@@ -69,7 +72,7 @@ public class MobileDataTile extends SettingsQCItem {
                 .setChecked(dataEnabled)
                 .setAction(getBroadcastIntent())
                 .setSubtitle(subtitle)
-                .setEnabled(!hasUmRestrictions && !hasDpmRestrictions)
+                .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
                 .setClickableWhileDisabled(hasDpmRestrictions)
                 .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
                         userRestriction))

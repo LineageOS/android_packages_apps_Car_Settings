@@ -328,6 +328,97 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
         verify(profile).setEnabled(any(), eq(true));
     }
 
+    @Test
+    public void getQCItem_createsItem_bluetoothDisabled_zoneWrite() {
+        when(mBluetoothAdapter.isEnabled()).thenReturn(false);
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("write");
+        QCItem item = mPairedBluetoothDevices.getQCItem();
+        assertThat(item).isNotNull();
+    }
+
+    @Test
+    public void getQCItem_createsItem_bluetoothDisabled_zoneRead() {
+        when(mBluetoothAdapter.isEnabled()).thenReturn(false);
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("read");
+        QCItem item = mPairedBluetoothDevices.getQCItem();
+        assertThat(item).isNotNull();
+    }
+
+    @Test
+    public void getQCItem_createsItem_bluetoothDisabled_zoneHidden() {
+        when(mBluetoothAdapter.isEnabled()).thenReturn(false);
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("hidden");
+        QCItem item = mPairedBluetoothDevices.getQCItem();
+        assertThat(item).isNull();
+    }
+
+    @Test
+    public void getQCItem_createsItem_noDevices_zoneWrite() {
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("write");
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        assertThat(list.getRows().size()).isEqualTo(1);
+        QCRow row = list.getRows().get(0);
+        assertThat(row.getStartIcon()).isNotNull();
+    }
+
+    @Test
+    public void getQCItem_createsItem_noDevices_zoneRead() {
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("read");
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        assertThat(list.getRows().size()).isEqualTo(1);
+        QCRow row = list.getRows().get(0);
+        assertThat(row.getStartIcon()).isNotNull();
+    }
+
+    @Test
+    public void getQCItem_createsItem_noDevices_zoneHidden() {
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("hidden");
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        assertThat(list).isNull();
+    }
+
+    @Test
+    public void getQCItem_createsToggles_bluetoothEnabled_zoneWrite() {
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("write");
+        addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        QCRow row = list.getRows().get(0);
+        QCActionItem btToggle = row.getEndItems().get(0);
+        QCActionItem phoneToggle = row.getEndItems().get(1);
+        QCActionItem mediaToggle = row.getEndItems().get(2);
+        assertThat(btToggle.isEnabled()).isTrue();
+        assertThat(phoneToggle.isEnabled()).isTrue();
+        assertThat(mediaToggle.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void getQCItem_createsToggles_bluetoothEnabled_zoneRead() {
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("read");
+        addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        QCRow row = list.getRows().get(0);
+        QCActionItem btToggle = row.getEndItems().get(0);
+        QCActionItem phoneToggle = row.getEndItems().get(1);
+        QCActionItem mediaToggle = row.getEndItems().get(2);
+        assertThat(btToggle.isEnabled()).isFalse();
+        assertThat(phoneToggle.isEnabled()).isFalse();
+        assertThat(mediaToggle.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void getQCItem_createsToggles_bluetoothEnabled_zoneHidden() {
+        mPairedBluetoothDevices.setAvailabilityStatusForZone("hidden");
+        addBluetoothDevice(DEFAULT_NAME, /* connected= */ true, /* busy= */ false,
+                /* phoneEnabled= */ true, /* mediaEnabled= */ true,
+                /* hasHumanReadableName= */ true);
+        QCList list = (QCList) mPairedBluetoothDevices.getQCItem();
+        assertThat(list).isNull();
+    }
+
     private void addBluetoothDevice(String name, boolean connected, boolean busy,
             boolean phoneEnabled, boolean mediaEnabled, boolean hasHumanReadableName) {
         CachedBluetoothDevice cachedDevice = mock(CachedBluetoothDevice.class);

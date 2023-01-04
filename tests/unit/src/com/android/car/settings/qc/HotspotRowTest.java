@@ -144,6 +144,29 @@ public class HotspotRowTest extends BaseSettingsQCItemTestCase {
                 eq(ConcurrentUtils.DIRECT_EXECUTOR), any());
     }
 
+    @Test
+    public void getQCItem_createsRow_zoneWrite() {
+        mHotspotRow.setAvailabilityStatusForZone("write");
+        QCRow row = getHotspotRow();
+        QCActionItem actionItem = row.getEndItems().get(0);
+        assertThat(actionItem.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void getQCItem_createsRow_zoneRead() {
+        mHotspotRow.setAvailabilityStatusForZone("read");
+        QCRow row = getHotspotRow();
+        QCActionItem actionItem = row.getEndItems().get(0);
+        assertThat(actionItem.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void getQCItem_createsRow_zoneHidden() {
+        mHotspotRow.setAvailabilityStatusForZone("hidden");
+        QCItem item = mHotspotRow.getQCItem();
+        assertThat(item).isNull();
+    }
+
     private QCRow getHotspotRow() {
         QCItem item = mHotspotRow.getQCItem();
         assertThat(item).isNotNull();
