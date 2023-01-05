@@ -91,7 +91,7 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
                             == PackageManager.PERMISSION_GRANTED) {
                 CarUiTwoActionTextPreference perf =
                         AdasPrivacyPolicyUtil.createPrivacyPolicyPreference(
-                                getContext(), adasApp, Process.myUserHandle());
+                                getContext(), mPackageManager, adasApp, Process.myUserHandle());
                 if (perf != null) {
                     getPreference().addPreference(perf);
                 }
