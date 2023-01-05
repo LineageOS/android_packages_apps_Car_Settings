@@ -59,6 +59,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="min"/>
       <item type="attr" name="minLabel"/>
       <item type="attr" name="mute_icon"/>
+      <item type="attr" name="occupant_driver"/>
+      <item type="attr" name="occupant_front_passenger"/>
+      <item type="attr" name="occupant_rear_passenger"/>
       <item type="attr" name="profileSwitcherAddIconBackgroundColor"/>
       <item type="attr" name="profileSwitcherAddIconColor"/>
       <item type="attr" name="profileSwitcherBackground"/>

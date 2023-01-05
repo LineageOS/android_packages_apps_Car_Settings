@@ -19,6 +19,7 @@ package com.android.car.settings.qc;
 import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
 import static com.android.car.qc.QCItem.QC_TYPE_ACTION_SWITCH;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
+import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 import static com.android.car.settings.qc.SettingsQCRegistry.ADAPTIVE_BRIGHTNESS_SWITCH_URI;
 
 import android.content.Context;
@@ -42,11 +43,13 @@ import com.android.car.settings.enterprise.EnterpriseUtils;
 public class AdaptiveBrightnessSwitch extends SettingsQCItem {
     public AdaptiveBrightnessSwitch(Context context) {
         super(context);
+        setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
+                R.xml.display_settings_fragment, R.string.pk_adaptive_brightness_switch));
     }
 
     @Override
     QCItem getQCItem() {
-        if (!supportsAdaptiveBrightness()) {
+        if (!supportsAdaptiveBrightness() || isHiddenForZone()) {
             return null;
         }
 
@@ -59,7 +62,7 @@ public class AdaptiveBrightnessSwitch extends SettingsQCItem {
         QCActionItem actionItem = new QCActionItem.Builder(QC_TYPE_ACTION_SWITCH)
                 .setChecked(isAdaptiveBrightnessEnabled())
                 .setAction(getBroadcastIntent())
-                .setEnabled(!hasUmRestrictions && !hasDpmRestrictions)
+                .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
                 .setClickableWhileDisabled(hasDpmRestrictions)
                 .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
                         userRestriction))

@@ -18,6 +18,7 @@ package com.android.car.settings.qc;
 
 import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
+import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 import static com.android.car.settings.qc.SettingsQCRegistry.HOTSPOT_TILE_URI;
 
 import android.content.Context;
@@ -45,12 +46,17 @@ public class HotspotTile extends SettingsQCItem {
 
     public HotspotTile(Context context) {
         super(context);
+        setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
+                R.xml.network_and_internet_fragment, R.string.pk_wifi_tether_settings_entry));
         mTetheringManager = context.getSystemService(TetheringManager.class);
         mWifiManager = context.getSystemService(WifiManager.class);
     }
 
     @Override
     QCItem getQCItem() {
+        if (isHiddenForZone()) {
+            return null;
+        }
         Icon actionIcon = Icon.createWithResource(getContext(), R.drawable.ic_qc_hotspot);
 
         String userRestriction = UserManager.DISALLOW_CONFIG_TETHERING;
@@ -64,7 +70,7 @@ public class HotspotTile extends SettingsQCItem {
                 .setIcon(actionIcon)
                 .setChecked(HotspotQCUtils.isHotspotEnabled(mWifiManager))
                 .setEnabled(!HotspotQCUtils.isHotspotBusy(mWifiManager)
-                        && !hasUmRestrictions && !hasDpmRestrictions)
+                        && !hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
                 .setAvailable(mIsSupported)
                 .setAction(getBroadcastIntent())
                 .setClickableWhileDisabled(hasDpmRestrictions)

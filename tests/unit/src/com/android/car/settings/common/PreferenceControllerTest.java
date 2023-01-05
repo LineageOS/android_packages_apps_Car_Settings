@@ -310,7 +310,7 @@ public class PreferenceControllerTest {
         }
 
         @Override
-        protected int getAvailabilityStatus() {
+        protected int getDefaultAvailabilityStatus() {
             return mAvailabilityStatus;
         }
 

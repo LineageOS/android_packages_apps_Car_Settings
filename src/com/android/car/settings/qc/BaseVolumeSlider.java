@@ -21,6 +21,7 @@ import static android.car.media.CarAudioManager.PRIMARY_AUDIO_ZONE;
 
 import static com.android.car.qc.QCItem.QC_ACTION_SLIDER_VALUE;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
+import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 
 import android.app.PendingIntent;
 import android.car.Car;
@@ -62,6 +63,8 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
 
     public BaseVolumeSlider(Context context) {
         super(context);
+        setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
+                R.xml.sound_settings_fragment, R.string.pk_volume_settings));
         mVolumeItems = VolumeItemParser.loadAudioUsageItems(context, carVolumeItemsXml());
     }
 
@@ -69,7 +72,7 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
 
     @Override
     QCItem getQCItem() {
-        if (!initializeCarAudioManager()) {
+        if (!initializeCarAudioManager() || isHiddenForZone()) {
             return null;
         }
 
@@ -99,7 +102,8 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
                             .setMax(max)
                             .setValue(value)
                             .setInputAction(createSliderAction(groupId))
-                            .setEnabled(!hasUmRestrictions && !hasDpmRestrictions)
+                            .setEnabled(!hasUmRestrictions && !hasDpmRestrictions
+                                    && isWritableForZone())
                             .setClickableWhileDisabled(hasDpmRestrictions)
                             .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
                                     userRestriction))

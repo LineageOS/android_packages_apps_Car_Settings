@@ -21,6 +21,7 @@ import static android.os.UserManager.DISALLOW_WIFI_TETHERING;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 import static com.android.car.settings.testutils.EnterpriseTestUtils.mockUserRestrictionSetByDpm;
 import static com.android.car.settings.testutils.EnterpriseTestUtils.mockUserRestrictionSetByUm;
@@ -108,6 +109,33 @@ public class AddWifiPreferenceControllerTest extends AbstractExpectableTestCase 
     }
 
     @Test
+    public void getAvailabilityStatus_wifiFeatureDisabled_zoneWrite() {
+        when(mMockPackageManager.hasSystemFeature(PackageManager.FEATURE_WIFI)).thenReturn(false);
+        mController.setAvailabilityStatusForZone("write");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_wifiFeatureDisabled_zoneRead() {
+        when(mMockPackageManager.hasSystemFeature(PackageManager.FEATURE_WIFI)).thenReturn(false);
+        mController.setAvailabilityStatusForZone("read");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_wifiFeatureDisabled_zoneHidden() {
+        when(mMockPackageManager.hasSystemFeature(PackageManager.FEATURE_WIFI)).thenReturn(false);
+        mController.setAvailabilityStatusForZone("hidden");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
     public void getAvailabilityStatus_restrictionByUm() {
         mockUserRestrictionSetByUm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
 
@@ -115,10 +143,64 @@ public class AddWifiPreferenceControllerTest extends AbstractExpectableTestCase 
     }
 
     @Test
+    public void getAvailabilityStatus_restrictionByUm_zoneWrite() {
+        mockUserRestrictionSetByUm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
+        mController.setAvailabilityStatusForZone("write");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void getAvailabilityStatus_restrictionByUm_zoneRead() {
+        mockUserRestrictionSetByUm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
+        mController.setAvailabilityStatusForZone("read");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void getAvailabilityStatus_restrictionByUm_zoneHidden() {
+        mockUserRestrictionSetByUm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
+        mController.setAvailabilityStatusForZone("hidden");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
     public void getAvailabilityStatus_restrictionByDpm() {
         mockUserRestrictionSetByDpm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void getAvailabilityStatus_restrictionByDpm_zoneWrite() {
+        mockUserRestrictionSetByDpm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
+        mController.setAvailabilityStatusForZone("write");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void getAvailabilityStatus_restrictionByDpm_zoneRead() {
+        mockUserRestrictionSetByDpm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
+        mController.setAvailabilityStatusForZone("read");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void getAvailabilityStatus_restrictionByDpm_zoneHidden() {
+        mockUserRestrictionSetByDpm(mMockUserManager, DISALLOW_ADD_WIFI_CONFIG, true);
+        mController.setAvailabilityStatusForZone("hidden");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
@@ -130,10 +212,67 @@ public class AddWifiPreferenceControllerTest extends AbstractExpectableTestCase 
     }
 
     @Test
+    public void getAvailabilityStatus_differentRestriction_zoneWrite() {
+        mockUserRestrictionSetByUm(mMockUserManager, DISALLOW_WIFI_TETHERING, true);
+        mockUserRestrictionSetByDpm(mMockUserManager, DISALLOW_WIFI_TETHERING, true);
+        mController.setAvailabilityStatusForZone("write");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_differentRestriction_zoneRead() {
+        mockUserRestrictionSetByUm(mMockUserManager, DISALLOW_WIFI_TETHERING, true);
+        mockUserRestrictionSetByDpm(mMockUserManager, DISALLOW_WIFI_TETHERING, true);
+        mController.setAvailabilityStatusForZone("read");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void getAvailabilityStatus_differentRestriction_zoneHidden() {
+        mockUserRestrictionSetByUm(mMockUserManager, DISALLOW_WIFI_TETHERING, true);
+        mockUserRestrictionSetByDpm(mMockUserManager, DISALLOW_WIFI_TETHERING, true);
+        mController.setAvailabilityStatusForZone("hidden");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
     public void getAvailabilityStatus_noRestrictions() {
         // UserManager#hasRestriciton() returns false by default. No need to mock.
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_noRestrictions_zoneWrite() {
+        // UserManager#hasRestriciton() returns false by default. No need to mock.
+        mController.setAvailabilityStatusForZone("write");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_noRestrictions_zoneRead() {
+        // UserManager#hasRestriciton() returns false by default. No need to mock.
+        mController.setAvailabilityStatusForZone("read");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void getAvailabilityStatus_noRestrictions_zoneHidden() {
+        // UserManager#hasRestriciton() returns false by default. No need to mock.
+        mController.setAvailabilityStatusForZone("hidden");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
