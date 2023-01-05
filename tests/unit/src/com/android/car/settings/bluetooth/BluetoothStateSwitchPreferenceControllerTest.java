@@ -19,6 +19,7 @@ package com.android.car.settings.bluetooth;
 import static android.os.UserManager.DISALLOW_BLUETOOTH;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -134,6 +135,40 @@ public class BluetoothStateSwitchPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void restrictedByDpm_availabilityIsAvailableForViewing_zoneWrite() {
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
+        mPreferenceController.setAvailabilityStatusForZone("write");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void restrictedByDpm_availabilityIsAvailableForViewing_zoneRead() {
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
+        mPreferenceController.setAvailabilityStatusForZone("read");
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void restrictedByDpm_availabilityIsAvailableForViewing_zoneHidden() {
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
+        mPreferenceController.setAvailabilityStatusForZone("hidden");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test

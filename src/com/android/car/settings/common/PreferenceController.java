@@ -16,6 +16,9 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.PreferenceXmlParser.PREF_AVAILABILITY_STATUS_HIDDEN;
+import static com.android.car.settings.common.PreferenceXmlParser.PREF_AVAILABILITY_STATUS_READ;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
@@ -25,6 +28,7 @@ import android.widget.Toast;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
@@ -134,6 +138,29 @@ public abstract class PreferenceController<V extends Preference> implements
     public static final int AVAILABLE_FOR_VIEWING = 4;
 
     /**
+     * Denotes the availability of a setting for the current zone.
+     *
+     * @see #getAvailabilityStatusForZone()
+     */
+    @Retention(RetentionPolicy.SOURCE)
+    @IntDef({AVAILABLE_FOR_ZONE, AVAILABLE_FOR_VIEWING_FOR_ZONE, HIDDEN_FOR_ZONE})
+    public @interface AvailabilityStatusForZone {
+    }
+
+    /**
+     * The setting is available for this zone
+     */
+    public static final int AVAILABLE_FOR_ZONE = 0;
+    /**
+     * The setting cannot be changed for this zone
+     */
+    public static final int AVAILABLE_FOR_VIEWING_FOR_ZONE = 1;
+    /**
+     * The setting is hidden for this zone.
+     */
+    public static final int HIDDEN_FOR_ZONE = 2;
+
+    /**
      * Indicates whether all Preferences are configured to ignore UX Restrictions Event.
      */
     private final boolean mAlwaysIgnoreUxRestrictions;
@@ -156,6 +183,7 @@ public abstract class PreferenceController<V extends Preference> implements
     private boolean mIsCreated;
     private boolean mIsStarted;
     private long mDebounceStartTimeMs;
+    private int mAvailabilityStatusForZone;
 
     /**
      * Controllers should be instantiated from XML. To pass additional arguments see
@@ -175,6 +203,21 @@ public abstract class PreferenceController<V extends Preference> implements
                 mContext.getResources().getString(R.string.car_ui_restricted_while_driving);
         mDebounceIntervalMs =
                 mContext.getResources().getInteger(R.integer.config_preference_onclick_debounce_ms);
+    }
+
+    /**
+     * Sets the setting's availabilityStatus for this zone.
+     * Defaults to {@link #AVAILABLE_FOR_ZONE}.
+     */
+    @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
+    public final void setAvailabilityStatusForZone(@Nullable String availabilityStatusForZone) {
+        if (PREF_AVAILABILITY_STATUS_READ.equals(availabilityStatusForZone)) {
+            mAvailabilityStatusForZone = AVAILABLE_FOR_VIEWING_FOR_ZONE;
+        } else if (PREF_AVAILABILITY_STATUS_HIDDEN.equals(availabilityStatusForZone)) {
+            mAvailabilityStatusForZone = HIDDEN_FOR_ZONE;
+        } else {
+            mAvailabilityStatusForZone = AVAILABLE_FOR_ZONE;
+        }
     }
 
     /**
@@ -385,12 +428,53 @@ public abstract class PreferenceController<V extends Preference> implements
     }
 
     /**
-     * Returns the {@link AvailabilityStatus} for the setting. This status is used to determine
-     * if the setting should be shown, hidden, or disabled. Defaults to {@link #AVAILABLE}. This
-     * will be called before the controller lifecycle begins and on refresh events.
+     * Returns the {@link AvailabilityStatus} for the setting. This status is used as the final
+     * result to determine if the setting should be shown, hidden, or disabled. Defaults to
+     * {@link #AVAILABLE}. It is determined by considering the return value of
+     * {@link #getDefaultAvailabilityStatus()} and the availabilityStatus for zone with and the
+     * availabilityStatus for the current CarOccupantZone of the display where Settings are shown.
+     * This will be called before the controller lifecycle begins and on refresh events.
      */
     @AvailabilityStatus
-    protected int getAvailabilityStatus() {
+    @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
+    public final int getAvailabilityStatus() {
+        int defaultStatus = getDefaultAvailabilityStatus();
+        switch (defaultStatus) {
+            case CONDITIONALLY_UNAVAILABLE: // fall through
+            case UNSUPPORTED_ON_DEVICE: // fall through
+            case DISABLED_FOR_PROFILE:
+                return defaultStatus;
+            case AVAILABLE_FOR_VIEWING:
+                switch (mAvailabilityStatusForZone) {
+                    case HIDDEN_FOR_ZONE:
+                        return CONDITIONALLY_UNAVAILABLE;
+                    case AVAILABLE_FOR_ZONE: // fall through
+                    case AVAILABLE_FOR_VIEWING_FOR_ZONE: // fall through
+                    default:
+                        return AVAILABLE_FOR_VIEWING;
+                }
+            case AVAILABLE: // fall through
+            default:
+                switch (mAvailabilityStatusForZone) {
+                    case AVAILABLE_FOR_VIEWING_FOR_ZONE:
+                        return AVAILABLE_FOR_VIEWING;
+                    case HIDDEN_FOR_ZONE:
+                        return CONDITIONALLY_UNAVAILABLE;
+                    case AVAILABLE_FOR_ZONE: // fall through
+                    default:
+                        return AVAILABLE;
+                }
+        }
+    }
+
+    /**
+     * Returns the {@link AvailabilityStatus} for the setting. This status is used
+     * with the availabilityStatus for zone within {@link #getAvailabilityStatus()} to determine
+     * if the setting should be shown, hidden, or disabled according to menu settings.
+     * Defaults to {@link #AVAILABLE}.
+     */
+    @AvailabilityStatus
+    protected int getDefaultAvailabilityStatus() {
         return AVAILABLE;
     }
 

@@ -22,6 +22,7 @@ import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
 import static com.android.car.qc.QCItem.QC_TYPE_ACTION_TOGGLE;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
+import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 
 import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
@@ -80,6 +81,8 @@ public class PairedBluetoothDevices extends SettingsQCItem {
 
     public PairedBluetoothDevices(Context context) {
         super(context);
+        setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
+                R.xml.bluetooth_settings_fragment, R.string.pk_bluetooth_paired_devices));
         mBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */ null);
         mDeviceLimit = context.getResources().getInteger(
                 R.integer.config_qc_bluetooth_device_limit);
@@ -91,7 +94,7 @@ public class PairedBluetoothDevices extends SettingsQCItem {
     QCItem getQCItem() {
         if (!getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
                 || EnterpriseUtils.hasUserRestrictionByDpm(getContext(), DISALLOW_BLUETOOTH)
-                || mDeviceLimit == 0) {
+                || mDeviceLimit == 0 || isHiddenForZone()) {
             return null;
         }
 
@@ -289,7 +292,7 @@ public class PairedBluetoothDevices extends SettingsQCItem {
         return new QCActionItem.Builder(QC_TYPE_ACTION_TOGGLE)
                 .setAvailable(available)
                 .setChecked(checked)
-                .setEnabled(enabled)
+                .setEnabled(enabled && isWritableForZone())
                 .setClickableWhileDisabled(clickableWhileDisabled)
                 .setAction(action)
                 .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),

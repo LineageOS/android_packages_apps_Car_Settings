@@ -22,6 +22,7 @@ import static android.os.UserManager.DISALLOW_ADJUST_VOLUME;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -311,6 +312,42 @@ public class VolumeSettingsPreferenceControllerTest {
     }
 
     @Test
+    public void testGetAvailabilityStatus_restrictedByUm_unavailable_zoneWrite() {
+        mockUserRestrictionSetByUm(true);
+        mPreferenceController.setAvailabilityStatusForZone("write");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_restrictedByUm_unavailable_zoneRead() {
+        mockUserRestrictionSetByUm(true);
+        mPreferenceController.setAvailabilityStatusForZone("read");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_restrictedByUm_unavailable_zoneHidden() {
+        mockUserRestrictionSetByUm(true);
+        mPreferenceController.setAvailabilityStatusForZone("hidden");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
     public void testGetAvailabilityStatus_restrictedByDpm_unavailable() {
         mockUserRestrictionSetByDpm(true);
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -319,6 +356,42 @@ public class VolumeSettingsPreferenceControllerTest {
         VolumeSeekBarPreference preference =
                 spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
         assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_restrictedByDpm_unavailable_zoneWrite() {
+        mockUserRestrictionSetByDpm(true);
+        mPreferenceController.setAvailabilityStatusForZone("write");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_restrictedByDpm_unavailable_zoneRead() {
+        mockUserRestrictionSetByDpm(true);
+        mPreferenceController.setAvailabilityStatusForZone("read");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_restrictedByDpm_unavailable_zoneHidden() {
+        mockUserRestrictionSetByDpm(true);
+        mPreferenceController.setAvailabilityStatusForZone("hidden");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
@@ -331,6 +404,45 @@ public class VolumeSettingsPreferenceControllerTest {
         VolumeSeekBarPreference preference =
                 spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
         assertThat(preference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unrestricted_available_zoneWrite() {
+        mockUserRestrictionSetByDpm(false);
+
+        mPreferenceController.setAvailabilityStatusForZone("write");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unrestricted_available_zoneRead() {
+        mockUserRestrictionSetByDpm(false);
+
+        mPreferenceController.setAvailabilityStatusForZone("read");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        VolumeSeekBarPreference preference =
+                spy((VolumeSeekBarPreference) mPreferenceGroup.getPreference(0));
+        assertThat(preference.isEnabled()).isFalse();
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unrestricted_available_zoneHidden() {
+        mockUserRestrictionSetByDpm(false);
+
+        mPreferenceController.setAvailabilityStatusForZone("hidden");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test

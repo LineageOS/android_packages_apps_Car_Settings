@@ -131,4 +131,46 @@ public class RestartSystemPreferenceControllerTest {
 
         assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
+
+    @Test
+    public void getAvailabilityStatus_noAccessPrivilege_unsupportedOnDevice_zoneWrite() {
+        mPreferenceController = new RestartSystemPreferenceController(mContext,
+                "key", mFragmentController, mCarUxRestrictions,
+                /* rebootPermissionGranted */ false);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.setAvailabilityStatusForZone("write");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_noAccessPrivilege_unsupportedOnDevice_zoneRead() {
+        mPreferenceController = new RestartSystemPreferenceController(mContext,
+                "key", mFragmentController, mCarUxRestrictions,
+                /* rebootPermissionGranted */ false);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.setAvailabilityStatusForZone("read");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_noAccessPrivilege_unsupportedOnDevice_zoneHidden() {
+        mPreferenceController = new RestartSystemPreferenceController(mContext,
+                "key", mFragmentController, mCarUxRestrictions,
+                /* rebootPermissionGranted */ false);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.setAvailabilityStatusForZone("hidden");
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
 }

@@ -55,9 +55,9 @@ public class AddWifiPreferenceController extends WifiBasePreferenceController<Pr
     }
 
     @Override
-    public int getAvailabilityStatus() {
+    public int getDefaultAvailabilityStatus() {
         // If the base controller is not available, so is this controller.
-        int superStatus = super.getAvailabilityStatus();
+        int superStatus = super.getDefaultAvailabilityStatus();
         if (superStatus != AVAILABLE) return superStatus;
 
         // Check the DISALLOW_ADD_WIFI_CONFIG restriction.

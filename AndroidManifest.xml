@@ -76,6 +76,7 @@
         android:protectionLevel="signature|setup"/>
 
     <application
+        android:name=".CarSettingsApplication"
         android:icon="@drawable/ic_launcher_settings"
         android:theme="@style/CarSettingTheme"
         android:label="@string/settings_label"

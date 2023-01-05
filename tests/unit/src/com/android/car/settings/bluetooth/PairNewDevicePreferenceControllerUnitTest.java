@@ -17,6 +17,7 @@
 package com.android.car.settings.bluetooth;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -106,6 +107,45 @@ public final class PairNewDevicePreferenceControllerUnitTest {
         mSwitchPreference.performClick();
 
         assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void restrictedByDpm_availabilityIsAvailableForViewing_zoneWrite() {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
+        mPreferenceController.setAvailabilityStatusForZone("write");
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        mSwitchPreference.performClick();
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void restrictedByDpm_availabilityIsAvailableForViewing_zoneRead() {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
+        mPreferenceController.setAvailabilityStatusForZone("read");
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        mSwitchPreference.performClick();
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void restrictedByDpm_availabilityIsAvailableForViewing_zoneHidden() {
+        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
+        mPreferenceController.setAvailabilityStatusForZone("hidden");
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        mSwitchPreference.performClick();
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
