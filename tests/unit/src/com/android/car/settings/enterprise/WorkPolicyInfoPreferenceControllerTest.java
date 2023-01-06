@@ -329,6 +329,6 @@ public final class WorkPolicyInfoPreferenceControllerTest
 
     private void verifyPreferenceTitleSet() {
         verify(mPreference).setTitle(mRealContext.getString(R.string.work_policy_privacy_settings,
-                mPackageName)); // NOTE: this test package doesn't provide a label
+                mAppName));
     }
 }
