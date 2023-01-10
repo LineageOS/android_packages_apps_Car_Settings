@@ -30,5 +30,6 @@
         settings:controller="com.android.car.settings.accessibility.ScreenReaderSettingsIntentPreferenceController"/>
     <Preference
         android:key="@string/pk_screen_reader_description_subheader"
-        settings:controller="com.android.car.settings.accessibility.ScreenReaderSettingsSubheaderPreferenceController"/>
+        settings:controller="com.android.car.settings.accessibility.ScreenReaderSettingsSubheaderPreferenceController"
+        android:selectable="false"/>
 </PreferenceScreen>

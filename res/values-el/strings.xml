@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Εφαρμογές και ειδοποιήσεις"</string>
     <string name="all_applications" msgid="7798210477486822168">"Εμφάνιση όλων των εφαρμογών"</string>
     <string name="default_applications" msgid="1558183275638697087">"Προεπιλεγμένες εφαρμογές"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Εφαρμογές που επηρεάζουν την απόδοση"</string>
     <string name="app_permissions" msgid="32799922508313948">"Άδειες εφαρμογών"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Ελέγξτε την πρόσβαση των εφαρμογών στα δεδομένα σας"</string>
     <string name="applications_settings" msgid="794261395191035632">"Πληροφορίες εφαρμογής"</string>
     <string name="force_stop" msgid="2153183697014720520">"Αναγκαστική διακοπή"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Αναγκαστική διακοπή;"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Εάν επιβάλετε τη διακοπή μιας εφαρμογής, ενδέχεται να μην λειτουργήσει σωστά."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Ενεργοποίηση προτεραιότητας απόδοσης εφαρμογών;"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Η ενεργοποίηση της ρύθμισης μπορεί να προκαλέσει πιθανή αστάθεια συστήματος ή να έχει μακροπρόθεσμο αντίκτυπο στον εξοπλισμό. Θέλετε να συνεχίσετε;"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Προτεραιότητα στην απόδοση εφαρμογών;"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Αυτό μπορεί να προκαλέσει πιθανή αστάθεια συστήματος ή να έχει μακροπρόθεσμο αντίκτυπο στον εξοπλισμό. Θέλετε να συνεχίσετε;"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ναι"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Όχι, ευχαριστώ"</string>
     <string name="disable_text" msgid="4358165448648990820">"Απενεργοποίηση"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Διαχείριση αδειών"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Ελέγξτε την πρόσβαση των εφαρμογών στα δεδομένα σας"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Για τον Βοηθό κ.ά."</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# εφαρμογή επηρεάζει την απόδοση}other{# εφαρμογές επηρεάζουν την απόδοση}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Για το σύστημα και άλλες ρυθμίσεις"</string>
     <string name="special_access" msgid="5730278220917123811">"Ειδική πρόσβαση στην εφαρμογή"</string>
     <string name="show_system" msgid="4401355756969485287">"Εμφάνιση συστήματος"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Εάν απενεργοποιήσετε την πρόσβαση των ειδοποιήσεων για το <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, μπορεί να απενεργοποιηθεί επίσης η πρόσβαση της λειτουργίας Μην ενοχλείτε."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Απενεργοποίηση"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ακύρωση"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Αυτές οι εφαρμογές επηρεάζουν αρνητικά την απόδοση του συστήματος και η εκτέλεσή τους στο παρασκήνιο έχει αποτραπεί.\nΔώστε προτεραιότητα στην εφαρμογή για να επιτρέψετε τη χρήση στο παρασκήνιο και καταργήστε την από τη λίστα."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Προτερ. εφαρμογής"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Πρόσβαση σε SMS επιπλέον χρέωσης"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Τα SMS επιπλέον χρέωσης ενδέχεται να κοστίζουν χρήματα και θα αυξήσουν το συνολικό ποσό των λογαριασμών της εταιρείας κινητής τηλεφωνίας. Εάν ενεργοποιήσετε την πρόσβαση για μια εφαρμογή, θα μπορείτε να στέλνετε SMS επιπλέον χρέωσης χρησιμοποιώντας τη συγκεκριμένη εφαρμογή."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Πρόσβαση χρήσης"</string>
@@ -402,27 +406,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Χρήση τοποθεσίας"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Να επιτρέπεται στις εφαρμογές που καθορίζετε η πρόσβαση στην τοποθεσία σας."</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Αν απενεργοποιήσετε αυτήν τη επιλογή, θα καταργηθεί η πρόσβαση στην τοποθεσία για όλες τις εφαρμογές. Οι εφαρμογές υποβοήθησης οδηγού θα εξακολουθήσουν να έχουν πρόσβαση."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Χρήση τοποθεσίας για υποβοήθηση οδηγού"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Αν απενεργοποιήσετε αυτήν τη επιλογή, θα καταργηθεί η πρόσβαση στην τοποθεσία για όλες τις εφαρμογές, εκτός από αυτές που απαιτούνται για υποβοήθηση οδηγού"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Χρήση τοποθεσίας για υποβοήθηση οδηγού"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Η τοποθεσία οχήματος είναι ανενεργή"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Η υποβ. οδηγού δεν έχει πρόσβ. στην τοπ."</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Η υποβοήθηση οδηγού δεν έχει πρόσβαση στην τοποθεσία"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Αλλαγή"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Να επιτρέπεται στις εφαρμογές υποβοήθησης οδήγησης η πρόσβαση στην τοποθεσία σας."</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Απενεργοποίηση ούτως ή άλλως"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Προβολή όλων"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Καμία πρόσφατη εφαρμογή"</string>
-    <string name="driver_assistance_label" msgid="2737647848529375121">"<xliff:g id="TIME">%1$s</xliff:g> • Υποβοήθηση οδηγού"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="5379878649789479100">"Εφαρμογές με άδεια τοποθεσίας για πρόσβαση στην τοποθεσία του οχήματος για λειτουργίες υποβοήθησης οδηγού."</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Υποβοήθηση οδηγού"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Εφαρμογές με άδεια πρόσβασης στην τοποθεσία οχήματος για υποβοήθηση οδηγού"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Πολιτική απορρήτου"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Άδειες επιπέδου εφαρμογής"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Υπηρεσίες τοποθεσίας"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Χρήση τοποθεσίας"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Η τοποθεσία μπορεί να χρησιμοποιεί πηγές όπως GPS, Wi-Fi, δίκτυα κινητής τηλεφωνίας και αισθητήρες για την εκτίμηση της τοποθεσίας της συσκευής σας."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Υποβοήθηση οδηγού"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"Οι πληροφορίες τοποθεσίας που αποστέλλονται στις εφαρμογές υποβοήθησης οδηγού δεν περιέχουν πληροφορίες που προσδιορίζουν την ταυτότητά σας. Παραμένουν αποθηκευμένες έως δύο ημέρες προτού διαγραφούν."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"Οι πληροφορίες τοποθεσίας που αποστέλλονται στις εφαρμογές υποβοήθησης οδηγού δεν περιέχουν πληροφορίες που προσδιορίζουν την ταυτότητά σας. Παραμένουν αποθηκευμένες έως 2 ημέρες προτού διαγραφούν."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Μικρόφωνο"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Χρήση μικροφώνου"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Επιτρέψτε σε όλες τις εφαρμογές να έχουν πρόσβαση στο μικρόφωνο"</string>
@@ -577,10 +581,10 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"Δεδομένα προφίλ"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Κρυφή μνήμη"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Σύνολο"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Διαγραφή αποθηκευτικού χώρου"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Εκκαθάριση αποθηκευτικού χώρου"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Διαγραφή κρυφής μνήμης"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Διαγραφή δεδομένων εφαρμογής;"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Όλα τα δεδομένα της εφαρμογής θα διαγραφούν μόνιμα. Σε αυτά περιλαμβάνονται όλα τα αρχεία, οι ρυθμίσεις, οι λογαριασμοί, οι βάσεις δεδομένων κ.λπ."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Τα δεδομένα αυτής της εφαρμογής θα διαγραφούν οριστικά. Σε αυτά περιλαμβάνονται αρχεία, ρυθμίσεις, βάσεις δεδομένων και άλλα δεδομένα εφαρμογών."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Αδυναμία διαγραφής αποθηκ. χώρου για την εφαρμογή."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Έγινε κατάργηση της συσκευής <xliff:g id="NAME">%1$s</xliff:g> με ασφάλεια"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Δεν ήταν δυνατή η κατάργηση της συσκευής <xliff:g id="NAME">%1$s</xliff:g> με ασφάλεια"</string>
@@ -775,6 +779,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# ενεργοποιημένη εφαρμογή}other{# ενεργοποιημένες εφαρμογές}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Δεν υπάρχουν ενεργοποιημένες εφαρμογές."</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Πολιτική οχημάτων του οργανισμού <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Πολιτική οχημάτων"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Η διαχείριση των ρυθμίσεων πραγματοποιείται από τον διαχειριστή οργανισμού"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Μάθετε περισσότερα για την υπηρεσία <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Πληροφορίες διαχειριζόμενου οχήματος"</string>

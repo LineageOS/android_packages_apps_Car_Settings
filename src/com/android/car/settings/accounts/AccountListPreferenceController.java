@@ -68,6 +68,7 @@ public class AccountListPreferenceController extends
     private AuthenticatorHelper mAuthenticatorHelper;
     private String[] mAuthorities;
     private boolean mListenerRegistered = false;
+    private boolean mNeedToRefreshUserInfo = false;
 
     private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
         @Override
@@ -103,8 +104,6 @@ public class AccountListPreferenceController extends
         super.onCreateInternal();
         setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> getProfileHelper()
                 .runClickableWhileDisabled(getContext(), getFragmentController()));
-        registerForUserEvents();
-        mListenerRegistered = true;
     }
 
     @Override
@@ -130,6 +129,13 @@ public class AccountListPreferenceController extends
     @Override
     protected void onStartInternal() {
         mAuthenticatorHelper.listenToAccountUpdates();
+        registerForUserEvents();
+        mListenerRegistered = true;
+
+        /* refresh UserInfo only when restarting */
+        if (mNeedToRefreshUserInfo) {
+            onUsersUpdate();
+        }
     }
 
     /**
@@ -138,12 +144,9 @@ public class AccountListPreferenceController extends
     @Override
     protected void onStopInternal() {
         mAuthenticatorHelper.stopListeningToAccountUpdates();
-    }
-
-    @Override
-    protected void onDestroyInternal() {
         unregisterForUserEvents();
         mListenerRegistered = false;
+        mNeedToRefreshUserInfo = true;
     }
 
     @Override

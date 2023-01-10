@@ -20,6 +20,7 @@ import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Process;
 
 import com.android.car.settings.common.FragmentController;
@@ -27,6 +28,8 @@ import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiTwoActionTextPreference;
 import com.android.internal.annotations.VisibleForTesting;
+
+import java.util.Collection;
 
 /**
  * Displays a list of ADAS apps with their privacy policy and a link to their location permission
@@ -36,6 +39,7 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
         extends PreferenceController<LogicalPreferenceGroup> {
 
     private final PackageManager mPackageManager;
+    private final LocationManager mLocationManager;
 
     public AdasPrivacyPolicyDisclosurePreferenceController(
             Context context,
@@ -47,7 +51,8 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
                 preferenceKey,
                 fragmentController,
                 uxRestrictions,
-                context.getPackageManager());
+                context.getPackageManager(),
+                context.getSystemService(LocationManager.class));
     }
 
     @VisibleForTesting
@@ -56,9 +61,11 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
             String preferenceKey,
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions,
-            PackageManager packageManager) {
+            PackageManager packageManager,
+            LocationManager locationManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mPackageManager = packageManager;
+        mLocationManager = locationManager;
     }
 
     @Override
@@ -75,13 +82,7 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
     private void loadAppsWithLocationPermission() {
         getPreference().removeAll();
 
-        String[] adasApps =
-                getContext()
-                        .getResources()
-                        .getStringArray(
-                                com.android.internal.R.array
-                                        .config_locationDriverAssistancePackageNames);
-
+        Collection<String> adasApps = mLocationManager.getAdasAllowlist().getPackages();
         for (String adasApp : adasApps) {
             if (mPackageManager.checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION, adasApp)
                             == PackageManager.PERMISSION_GRANTED
