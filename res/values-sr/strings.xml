@@ -30,15 +30,15 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM картица}one{# SIM картица}few{# SIM картице}other{# SIM картица}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активно/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Неактивно/SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Активни eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Неактивни eSIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активно/преузети SIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Неактивно/преузети SIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Додајте још"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилни подаци"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Користи податке преко мобилне мреже"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобилна мрежа"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Користи мобилне податке"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Искључено"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Желите да искључите мобилне податке?"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Желите ли да искључите мобилне податке?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Треба да изаберете нешто"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Користити <xliff:g id="CARRIER">%1$s</xliff:g> за моб. податке?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Користите <xliff:g id="CARRIER2_0">%2$s</xliff:g> за мобилне податке. Ако пређете на <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> се више неће користити за мобилне податке."</string>
@@ -177,7 +177,6 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Прикажи све"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Претражује се"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Користи Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Неименовани уређај"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Упарени уређаји"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Упари нови уређај"</string>
@@ -402,27 +401,22 @@
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Користи локацију"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Дозвољава локацију за апликације које наведете"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ако искључите ово, уклониће приступ локацији за све апликације осим оних које су потребне за помоћ за возаче"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Користи локацију за помоћ за возаче"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Ако искључите ово, уклонићете приступ локацији за све апликације. Апликације помоћи за возаче ће и даље имати приступ."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Користи локацију за помоћ за возаче"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Локација возика је искључена"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Апликације помоћи за возаче не приступају локацији"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Помоћ за возаче не приступа локацији"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Промени"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Дозвољава приступ локацији апликацијама за помоћ у вожњи"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ако искључите ово, апликације помоћи за возаче које се ослањају на информације о локацији ће се онемогућити"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ако искључите ово, апликације помоћи за возаче које се ослањају на информације о локацији ће се онемогућити."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Ипак искључи"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"Недавно приступано"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Недавно приступано"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Прикажи све"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"Нема недавних апликација"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Помоћ за возаче"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Апликације са дозволом за приступ локацији возила у сврху функција помоћи за возаче"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Политика приватности"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема недавних захтева за локацију"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволе на нивоу апликација"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуге локације"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Користи локацију"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Локација може да користи изворе као што су GPS, WiFi, мобилне мреже и сензори да би се лакше одредила локација уређаја."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Помоћ за возаче"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Информације о локацији које се шаљу апликацијама помоћи за возаче не садрже информације које вас идентификују. Чувају се највише 2 дана пре него што се избришу."</string>
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Информације о локацији које се шаљу апликацијама помоћи за возаче не садрже информације које вас идентификују. Чувају се највише 2 дана пре него што се избришу."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Користи микрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Дозволите свим апликацијама да приступају микрофону"</string>
@@ -580,7 +574,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Обриши меморијски простор"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Обриши кеш"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Бришете податке апликација?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Подаци ове апликације ће се трајно избрисати. То обухвата фајлове, подешавања, базе података и друге податке апликација."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Сви подаци ове апликације биће трајно избрисани. То обухвата све датотеке, подешавања, налоге, базе података итд."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Брисање меморије за апликацију није успело."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Уређај <xliff:g id="NAME">%1$s</xliff:g> је безбедно искључен"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Безбедно искључивање уређаја <xliff:g id="NAME">%1$s</xliff:g> није успело"</string>
@@ -775,7 +769,6 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активирана апликација}one{# активирана апликација}few{# активиране апликације}other{# активираних апликација}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Нема активираних апликација"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Смернице за возила организације <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Смернице за возила организације"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Подешавања којима управља менаџер организације"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Сазнајте више о: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Информације о возилу којим се управља"</string>
@@ -869,7 +862,7 @@
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Читач екрана"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Искључено"</string>
     <string name="screen_reader_settings_on" msgid="2168217218643349459">"Изговара ставке на екрану"</string>
-    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Користи: <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Користи апликацију <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Опције"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Подешавања"</string>
     <string name="camera_settings_title" msgid="2837785830355288903">"Камера"</string>

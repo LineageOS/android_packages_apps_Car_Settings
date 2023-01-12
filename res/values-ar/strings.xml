@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{شريحة SIM واحدة}zero{# شريحة SIM}two{شريحتَا SIM}few{# شرائح SIM}many{# شريحة SIM}other{# شريحة SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"مفعّلة / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"غير مفعّلة / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"مفعَّلة / شريحة eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"غير مفعّلة / شريحة eSIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"مفعّلة / شريحة SIM التي تم تنزيلها"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"غير مفعّلة / شريحة SIM التي تم تنزيلها"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"إضافة المزيد"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"بيانات الجوّال"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"الوصول إلى البيانات باستخدام شبكة الجوّال"</string>
@@ -177,7 +177,6 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"عرض الكل"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"البحث"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"البلوتوث"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"استخدام البلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"جهاز بدون اسم"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"الأجهزة المقترنة"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"إقران جهاز جديد"</string>
@@ -381,7 +380,7 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"لعرض تطبيق المساعد وتطبيقات أخرى"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"الانتقال إلى النظام والإعدادات الأخرى"</string>
     <string name="special_access" msgid="5730278220917123811">"أذونات خاصة للتطبيقات"</string>
-    <string name="show_system" msgid="4401355756969485287">"إظهار تطبيقات النظام"</string>
+    <string name="show_system" msgid="4401355756969485287">"عرض عمليات النظام"</string>
     <string name="hide_system" msgid="8845453295584638040">"إخفاء عمليات النظام"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"إخفاء تطبيقات النظام"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"تعديل إعدادات النظام"</string>
@@ -402,27 +401,22 @@
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"استخدام الموقع الجغرافي"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"السماح للتطبيقات التي تحددها بالوصول إلى موقعك الجغرافي"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"إذا أوقفت هذا الإعداد، سيؤدي ذلك إلى إزالة إمكانية وصول كل التطبيقات إلى الموقع الجغرافي باستثناء تلك اللازمة لتطبيقات \"مساعد السائق\"."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"استخدام الموقع الجغرافي لميزة \"مساعدة السائق\""</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"إذا أوقفت هذا الإعداد، سيؤدي ذلك إلى إزالة إمكانية وصول كل التطبيقات إلى الموقع الجغرافي. وسيظل بإمكان تطبيقات \"مساعدة السائق\" الوصول إلى الموقع الجغرافي."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"استخدام الموقع الجغرافي لميزات \"مساعدة السائق\""</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ميزة الموقع الجغرافي للسيارة غير مفعَّلة"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"يتعذّر على تطبيقات \"مساعدة السائق\" الوصول لموقعك الجغرافي."</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"يتعذّر على تطبيقات \"مساعدة السائق\" الوصول إلى موقعك الجغرافي."</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"تغيير"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"السماح للتطبيقات التي تساعدك على القيادة بالوصول إلى موقعك الجغرافي"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"إذا تم إيقاف ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"إذا أوقفت ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"إيقاف على أي حال"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"عرض الكل"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"لم يَصِل أي تطبيق مؤخرًا إلى الموقع الجغرافي."</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • مساعدة السائق"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"يمكن للتطبيقات التي لديها إذن وصول للموقع الجغرافي لهذه السيارة الحصول على ميزات \"مساعدة السائق\"."</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"سياسة الخصوصية"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات الموقع الجغرافي"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"استخدام الموقع الجغرافي"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"قد تستخدم ميزة الموقع الجغرافي مصادر مثل نظام تحديد المواقع العالمي (GPS) أو شبكة Wi-Fi أو شبكات الجوّال أو أجهزة الاستشعار للمساعدة في تقدير الموقع الجغرافي لجهازك."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"مساعدة السائق"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"لا تحتوي معلومات الموقع الجغرافي التي تم إرسالها إلى تطبيقات \"مساعدة السائق\" على أي معلومات تحدِّد هويتك. ويتم تخزين تلك المعلومات لمدة يومَين كحد أقصى قبل حذفها."</string>
+    <string name="adas_settings_footer" msgid="5128483877858058534">"لا تحتوي معلومات الموقع الجغرافي التي تم إرسالها إلى تطبيقات \"مساعدة السائق\" على أي معلومات تحدِّد هويتك. وسيتم تخزين تلك المعلومات لمدة يومين كحد أقصى قبل حذفها."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"الميكروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استخدام الميكروفون"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"السماح لجميع التطبيقات باستخدام الميكروفون"</string>
@@ -580,7 +574,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"محو مساحة التخزين"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"محو ذاكرة التخزين المؤقت"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"هل تريد حذف بيانات التطبيق؟"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"سيتم حذف بيانات هذا التطبيق نهائيًا، بما في ذلك الملفات والإعدادات وقواعد البيانات وبيانات التطبيق الأخرى."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا. ويشمل ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات وما إلى ذلك."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"تعذّر محو مساحة تخزين للتطبيق."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"تم إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"تعذّر إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
@@ -651,10 +645,10 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"نقش فتح القفل الجديد"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ارسم نقش فتح القفل."</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ارفع إصبعك عن الشاشة عند الانتهاء."</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"تم حفظ النقش."</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"تم تسجيل النقش."</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ارسم النقش مرة أخرى للتأكيد."</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"صِل 4 نقاط على الأقل. أعد المحاولة."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"النقش غير صحيح."</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"نقش غير صحيح"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"كيفية رسم نقش فتح القفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"حدث خطأ أثناء حفظ النقش."</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تم إجراء عدد كبير جدًا من المحاولات غير الصحيحة. أعِد المحاولة خلال <xliff:g id="NUMBER">%d</xliff:g> ثانية."</string>
@@ -670,13 +664,13 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"إعادة إدخال رقم التعريف الشخصي"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"يجب أن يتكوّن PIN من‏ 4 أرقام على الأقل."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"رقم التعريف الشخصي غير صالح لأنه يجب أن يحتوي على 4 أرقام على الأقل."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"رقما التعريف الشخصي غير متطابقَين"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"أرقام PIN غير متطابقة"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"حدث خطأ أثناء حفظ رقم التعريف الشخصي."</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"رقم تعريف شخصي خاطئ"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"كلمة مرور غير صحيحة"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"للحفاظ على الأمان، يجب تعيين كلمة مرور."</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"إعادة إدخال كلمة المرور"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"كلمتا المرور غير متطابقتَين"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"كلمات المرور غير متطابقة"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"محو"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"إلغاء"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تأكيد"</string>
@@ -775,7 +769,6 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{تطبيق واحد مفعّل}zero{# تطبيق مفعّل}two{تطبيقان مفعّلان}few{# تطبيقات مفعّلة}many{# تطبيقًا مفعّلاً}other{# تطبيق مفعّل}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"ما مِن تطبيقات مفعّلة"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"سياسة المركبات السارية لدى <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"سياسة المركبات"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"الإعدادات التي يديرها مدير المؤسسة"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"مزيد من المعلومات عن <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"معلومات عن المركبة المُدارة"</string>

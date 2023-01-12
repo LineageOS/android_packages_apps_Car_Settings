@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Servizo activado/SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Servizo desactivado/SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Servizo activo/eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Servizo inactivo/eSIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Servizo activado/SIM descargada"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Servizo desactivado/SIM descargada"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Engadir máis"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datos móbiles"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder aos datos cunha rede de telefonía móbil"</string>
@@ -42,7 +42,7 @@
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"É necesario seleccionar unha opción"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Usar <xliff:g id="CARRIER">%1$s</xliff:g> para os datos móbiles?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Estás utilizando <xliff:g id="CARRIER2_0">%2$s</xliff:g> para os datos móbiles. Se cambias a <xliff:g id="CARRIER1">%1$s</xliff:g>, deixarase de utilizar <xliff:g id="CARRIER2_1">%2$s</xliff:g> para os datos móbiles."</string>
-    <string name="sim_change_data_ok" msgid="2348804996223271081">"Usar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Itinerancia"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Conéctase a servizos de datos en itinerancia"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Queres permitir a itinerancia de datos?"</string>
@@ -177,7 +177,6 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostrar todo"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Buscando"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Usar Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sen nome"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos vinculados"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Vincular dispositivo novo"</string>
@@ -402,27 +401,22 @@
     <string name="location_settings_title" msgid="901334356682423679">"Localización"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localización"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Deixa que as apps elixidas accedan á posición"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desactivas esta opción, quitarase o permiso de localización en todas as aplicacións excepto nas que sexa necesario por mor da asistencia para a condución"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Usar localización para a condución"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Se desactivas esta opción, quitarase o permiso de localización en todas as aplicacións. As aplicacións de asistencia para a condución conservarán o acceso."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Usar localización para a condución"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Localización do vehículo desactivada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"As apps de asistencia non acceden á localización"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"As apps de asistencia non acceden á localización"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permite que as apps de condución accedan á localización"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Se desactivas esta opción, deshabilitaranse as aplicacións de asistencia para a condución que utilizan a información de localización"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Se desactivas esta opción, deshabilitaranse as funcións de asistencia para a condución que utilizan a información de localización."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactivar de todos os xeitos"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recentes"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recentes"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"Ningunha aplicación accedeu recentemente"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia para a condución"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplicacións con acceso á localización do vehículo para asistencia para a condución"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Política de privacidade"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de localización recentes"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Non hai solicitudes de localización recentes"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos para as aplicacións"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizos de localización"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utilizar localización"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Os servizos de localización poden usar fontes como o GPS, a wifi, as redes de telefonía móbil e os sensores para determinar onde está o teu dispositivo."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia para a condución"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Os datos sobre a localización que se envían ás aplicacións de asistencia para a condución non conteñen información que permita identificarte. Almacénanse durante un máximo de 2 días e despois elimínanse."</string>
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Os datos sobre a localización que se envían ás aplicacións de asistencia para a condución non conteñen información que permita identificarte. Almacénanse durante un máximo de 2 días e despois elimínanse."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as aplicacións accedan ao micrófono"</string>
@@ -580,7 +574,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Borrar almacenamento"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Borrar caché"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminar os datos da aplicación?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Os datos desta aplicación (como os ficheiros, a configuración e as bases de datos) eliminaranse de forma permanente."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Eliminaranse todos os datos desta aplicación permanentemente. Entre estes inclúense todos os ficheiros, opcións de configuracións, contas, bases de datos etc."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Non se puido borrar o almacenamento da aplicación."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>: expulsouse con seguranza"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>: non se puido expulsar con seguranza"</string>
@@ -775,7 +769,6 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aplicación activada}other{# aplicacións activadas}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Non hai ningunha aplicación activada"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Política do vehículo de <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Política do vehículo"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Configuración xestionada polo xestor da organización"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Máis información sobre <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Información do vehículo xestionado"</string>

@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# سیم‌کارت}one{# سیم‌کارت}other{# سیم‌کارت}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"فعال / سیم‌کارت"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"غیرفعال / سیم‌کارت"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"فعال / سیم‌کارت داخلی"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"غیرفعال / سیم‌کارت داخلی"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"فعال / سیم‌کارت بارگیری‌شده"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"غیرفعال / سیم‌کارت‌ بارگیری‌شده"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"افزودن موارد بیشتر"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"داده تلفن همراه"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"دسترسی به داده‌ها با استفاده از شبکه تلفن همراه"</string>
@@ -126,7 +126,7 @@
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"۲٫۴ گیگاهرتز"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"۵ گیگاهرتز"</string>
     <string name="wifi_network_detail" msgid="9070182553555487360">"جزئیات شبکه"</string>
-    <string name="wifi_mac_address" msgid="1466178247802349180">"مک آدرس"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"نشانی واد"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"نشانی IP"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"پوشش زیرشبکه"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
@@ -177,7 +177,6 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"نمایش همه"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"در حال جستجو"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"استفاده از بلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"دستگاه بی‌نام"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"دستگاه‌های مرتبط‌شده"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"مرتبط‌ کردن دستگاه جدید"</string>
@@ -216,7 +215,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"‏<xliff:g id="DEVICE_NAME">%1$s</xliff:g> مرتبط‌سازی شود؟"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"به <xliff:g id="DEVICE_NAME">%1$s</xliff:g> اجازه داده شود به مخاطبین و سابقه تماس شما دسترسی داشته باشد"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ممکن است لازم باشد که این پین را در دستگاه دیگر وارد کنید."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ممکن است لازم باشد این گذرکلید را در دستگاه دیگر هم وارد کنید."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ممکن است لازم باشد این کلید عبور را نیز در دستگاه دیگر وارد کنید."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"باید ۱۶ رقم باشد"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"معمولا ۰۰۰۰ یا ۱۲۳۴"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"درخواست مرتبط‌سازی"</string>
@@ -228,7 +227,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"همه زبان‌ها"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"صفحه‌کلید"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"مدیریت صفحه‌کلیدها"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"خروجی نوشتار به گفتار"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"خروجی تبدیل نوشتار به گفتار"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"موتور ترجیحی"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"موتور کنونی"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"سرعت گفتار"</string>
@@ -402,27 +401,22 @@
     <string name="location_settings_title" msgid="901334356682423679">"مکان"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"استفاده از مکان"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"به برنامه‌های انتخابی‌تان اجازه دسترسی به مکان داده می‌شود"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"اگر این تنظیم را خاموش کنید، دسترسی به مکان برای همه برنامه‌ها حذف خواهد شد، به‌جز برنامه‌هایی که برای «دستیار راننده» موردنیاز هستند"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"استفاده از مکان برای «دستیار راننده»"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"اگر این ویژگی را خاموش کنید، دسترسی به مکان را برای همه برنامه حذف خواهد کرد. برنامه‌های «دستیار راننده» همچنان دسترسی خواهند داشت."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"استفاده از مکان برای «دستیار راننده»"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"مکان خودرو خاموش است"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"برنامه‌های «دستیار راننده» نمی‌توانند به مکانتان دسترسی پیدا کنند"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"برنامه‌های «دستیار راننده» نمی‌توانند به مکانتان دسترسی پیدا کنند"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"تغییر"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"به برنامه‌های یاری‌رسان رانندگی اجازه دسترسی به مکان داده می‌شود"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"اگر این تنظیم را خاموش کنید، برنامه‌های «دستیار راننده» که بر اطلاعات مکان متکی‌اند غیرفعال خواهد شد"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"اگر این تنظیم را خاموش کنید، برنامه‌های «دستیار راننده» که بر اطلاعات مکان متکی‌اند غیرفعال خواهد شد."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"درهرصورت خاموش شود"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"مشاهده همه برنامه‌ها"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"برنامه اخیری وجود ندارد"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • دستیار راننده"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"برنامه‌هایی که اجازه دارند برای ویژگی‌های »دستیار راننده» به مکان این خودرو دسترسی پیدا کنند"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"خط‌مشی رازداری"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"درخواست‌های اخیر مکان"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"درخواست مکان جدیدی وجود ندارد"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"اجازه‌های سطح برنامه"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات مکان"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"استفاده از مکان"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"«مکان» ممکن است برای تخمین مکان دستگاهتان از منابعی مانند GPS،‏ Wi-Fi، شبکه تلفن همراه و حسگرها استفاده کند."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"دستیار راننده"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"اطلاعات مکان ارسال‌شده به برنامه‌های «دستیار راننده» حاوی اطلاعات شناساننده هویت شما نیستند. این اطلاعات حداکثر ۲ روز ذخیره می‌مانند و بعداز آن حذف می‌شوند."</string>
+    <string name="adas_settings_footer" msgid="5128483877858058534">"اطلاعات مکان ارسال‌شده به برنامه‌های «دستیار راننده» حاوی اطلاعات شناساننده هویت شما نیستند. این اطلاعات حداکثر ۲ روز ذخیره می‌مانند و بعداز آن حذف می‌شوند."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"میکروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استفاده از میکروفون"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"همه برنامه‌ها مجاز می‌شوند به میکروفون دسترسی داشته باشند"</string>
@@ -580,7 +574,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"پاک کردن فضای ذخیره‌سازی"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"پاک کردن حافظهٔ پنهان"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"داده‌های برنامه حذف شود؟"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"داده‌های این برنامه به‌طور دائم حذف خواهد شد. این شامل فایل‌ها، تنظیمات، پایگاه‌های داده، و دیگر داده‌های برنامه می‌شود."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"همه داده‌های این برنامه به‌صورت دائمی حذف می‌شود. این شامل تمام فایل‌ها، تنظیمات، حساب‌ها، پایگاه‌های داده و دیگر موارد می‌شود."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"فضای ذخیره‌سازی برای برنامه پاک نشد."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> به‌صورت امن خارج شد"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> به‌صورت امن خارج نشد"</string>
@@ -615,7 +609,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"اکنون همگام‌سازی شود"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"لغو همگام‌سازی"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"همگام‌سازی درحال حاضر با مشکلی روبرو است. به‌زودی درست خواهد شد."</string>
-    <string name="privacy_settings_title" msgid="3150145262029229572">"حریم خصوصی"</string>
+    <string name="privacy_settings_title" msgid="3150145262029229572">"حریم‌خصوصی"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"داده‌های سیستم اطلاعات-سرگرمی"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"کنترل دسترسی برنامه به مکانتان"</string>
     <string name="mute_camera_title" msgid="215494079895460172">"دوربین"</string>
@@ -683,12 +677,12 @@
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"باید حداقل ۴ نویسه داشته باشد"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"فقط می‌تواند اعداد ۰ تا ۹ داشته باشد."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"سرپرست دستگاه اجازه استفاده از پین اخیر را نمی‌دهد"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"«پین‌های رایج» توسط سرپرست فناوری اطلاعات مسدود شده‌اند. پین دیکری را امتحان کنید."</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"پین‌های رایج توسط سرپرست سیستمتان شما مسدود شده‌اند. پین متفاوتی را امتحان کنید."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"نمی‌تواند نویسه نامعتبر داشته باشد."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"گذرواژه نامعتبر است، گذرواژه باید حداقل ۴ نویسه داشته باشد."</string>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"سرپرست دستگاه اجازه استفاده از گذرواژه اخیر را نمی‌دهد"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"خطای ذخیره گذرواژه"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"گذرواژه‌های رایج توسط سرپرست فناوری اطلاعات مسدود شده‌اند. گذرواژه متفاوتی را امتحان کنید."</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"گذرواژه‌های رایج توسط سرپرست سیستمتان مسدود شده‌اند. گذرواژه متفاوتی را امتحان کنید."</string>
     <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"باید حداقل یک حرف داشته باشد"</string>
     <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"باید حداقل یک رقم داشته باشد"</string>
     <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"باید حداقل یک نماد داشته باشد"</string>
@@ -717,8 +711,8 @@
     <string name="delete_button" msgid="5840500432614610850">"حذف"</string>
     <string name="remove_button" msgid="6664656962868194178">"حذف"</string>
     <string name="cancel" msgid="750286395700355455">"لغو"</string>
-    <string name="allow" msgid="7519431342750394402">"اجازه دادن"</string>
-    <string name="do_not_allow" msgid="3157082400084747525">"اجازه ندادن"</string>
+    <string name="allow" msgid="7519431342750394402">"مجاز"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"اجازه داده نشود"</string>
     <string name="deny" msgid="340512788979930804">"رد کردن"</string>
     <string name="backspace_key" msgid="1545590866688979099">"کلید پس‌بر"</string>
     <string name="enter_key" msgid="2121394305541579468">"کلید را وارد کنید"</string>
@@ -775,7 +769,6 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# برنامه فعال}one{# برنامه فعال}other{# برنامه فعال}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"برنامه فعالی وجود ندارد"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"خط‌مشی وسیله نقلیه <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"خط‌مشی وسیله نقلیه"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"تنظیمات تحت‌کنترل مدیر سازمان"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"درباره <xliff:g id="SERVICE">%1$s</xliff:g> بیشتر بدانید"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"اطلاعات خودروی مدیریت‌شده"</string>

@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-карта}one{# SIM-карта}few{# SIM-карти}many{# SIM-карт}other{# SIM-карти}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активовано/SIM-карта"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Не активовано/SIM-карта"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Сервіс активний / eSIM-карта"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Сервіс неактивний / eSIM-карта"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активовано/завантажена SIM-карта"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Не активовано/завантажена SIM-карта"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Додати ще"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобільне передавання даних"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ до даних через мобільну мережу"</string>
@@ -177,7 +177,6 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Показати всі"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Пошук"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Використовувати Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Пристрій без назви"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Пристрої, з якими створено пару"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Створити пару з новим пристроєм"</string>
@@ -302,7 +301,7 @@
     <string name="all_applications" msgid="7798210477486822168">"Показати всі додатки"</string>
     <string name="default_applications" msgid="1558183275638697087">"Додатки за умовчанням"</string>
     <string name="app_permissions" msgid="32799922508313948">"Дозволи додатків"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"Контролюйте доступ додатків до ваших даних"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"Контролюйте доступ додатка до даних"</string>
     <string name="applications_settings" msgid="794261395191035632">"Про додаток"</string>
     <string name="force_stop" msgid="2153183697014720520">"Примусово припинити роботу"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Примусово припинити роботу?"</string>
@@ -377,7 +376,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"Нещодавно відкриті"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Переглянути всі додатки (%1$d)"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Диспетчер дозволів"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Контролюйте доступ додатків до ваших даних"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Контролюйте доступ додатка до даних"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Для Асистента й інших додатків"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Системні та інші налаштування"</string>
     <string name="special_access" msgid="5730278220917123811">"Спеціальний доступ"</string>
@@ -402,27 +401,22 @@
     <string name="location_settings_title" msgid="901334356682423679">"Геодані"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Використовувати геодані"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Дати вибраним додаткам доступ до геоданих"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Якщо вимкнути цю опцію, доступ до геоданих буде скасовано для всіх додатків, крім потрібних для допомоги водію"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Використов. геодані для допомоги водію"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Якщо вимкнути цю опцію, доступ до геоданих буде скасовано для всіх додатків, окрім додатків для допомоги водію."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Викор. геодані для функцій допомоги водію"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геодані транспортного засобу вимкнено"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Додатки для допомоги водію не мають доступу до геоданих"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Додатки для допомоги водію не мають доступу до геоданих"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Змінити"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Надати додаткам для допомоги водію доступ до геоданих"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Якщо вимкнути цю опцію, додатки для допомоги водію, які використовують геодані, буде вимкнено"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Якщо вимкнути цю опцію, функції допомоги водію, які використовують геодані, будуть деактивовані."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Вимкнути"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"Нещодавно використовувалися"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Нещодавно використовувалися"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Показати всі"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"Жодний додаток не використовував геодані нещодавно"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Допомога водію"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Додатки з дозволом на доступ до геоданих можуть визначати місцезнаходження цього транспортного засобу для роботи функцій допомоги водію"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Політика конфіденційності"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Останні запити на геодані"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Немає останніх запитів на геодані"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на рівні додатка"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Геолокація"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Використовувати геодані"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Допомога водію"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Геодані, які отримують додатки для допомоги водію, не містять інформації, за якою вас можна ідентифікувати. Вони зберігаються щонайбільше 2 дні, а потім видаляються."</string>
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Геодані, які отримують додатки для допомоги водію, не містять інформації, за якою вас можна ідентифікувати. Вони зберігаються щонайбільше 2 дні, а потім видаляються."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Використовувати мікрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Надати всім додаткам доступ до мікрофона"</string>
@@ -462,7 +456,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Авторські права"</string>
     <string name="license_title" msgid="936705938435249965">"Ліцензія"</string>
     <string name="terms_title" msgid="5201471373602628765">"Умови використання"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Ліцензії системи WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Ліцензії WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Фонові малюнки"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Постачальники супутникових зображень:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Модель"</string>
@@ -580,7 +574,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Очистити пам’ять"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Очистити кеш"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Видалити дані додатка?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Дані цього додатка буде видалено назавжди. До них належать файли, налаштування, бази даних тощо."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Усі дані цього додатка буде остаточно видалено (файли, налаштування, облікові записи, бази даних тощо)."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Не вдалося очистити пам’ять для додатка."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Пристрій <xliff:g id="NAME">%1$s</xliff:g> безпечно вийнято"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Не вдалося безпечно вийняти пристрій <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -775,7 +769,6 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# активований додаток}one{# активований додаток}few{# активовані додатки}many{# активованих додатків}other{# активованого додатка}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Немає активованих додатків"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Правила організації \"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>\" щодо транспортних засобів"</string>
-    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Правила щодо транспортних засобів"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Налаштування, якими керує адміністратор організації"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Докладніше про сервіс <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Дані про керований транспортний засіб"</string>

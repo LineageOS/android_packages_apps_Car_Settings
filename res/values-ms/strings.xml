@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktif / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Tidak aktif / SIM"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktif / eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Tidak aktif / eSIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktif / SIM Dimuat Turun"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Tidak Aktif / SIM Dimuat Turun"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Tambah lagi"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Data mudah alih"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan rangkaian mudah alih"</string>
@@ -177,7 +177,6 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Tunjukkan semua"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Mencari"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Gunakan Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Peranti tidak bernama"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Peranti gandingan"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Gandingkan peranti baharu"</string>
@@ -402,27 +401,22 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gunakan lokasi"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Benarkan apl tertentu mengakses lokasi"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Jika anda mematikan ciri ini, akses lokasi akan dialih keluar untuk semua apl kecuali apl yang diperlukan untuk bantuan pemandu"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Gunakan lokasi untuk bantuan pemandu"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"Jika anda mematikan tetapan ini, akses lokasi akan dialih keluar untuk semua apl. Apl Bantuan Pemandu masih akan mempunyai akses."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Gunakan lokasi untuk Bantuan Pemandu"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokasi kenderaan dimatikan"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apl bantuan pemandu tidak boleh mengakses lokasi anda"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"Apl Bantuan Pemandu tidak boleh mengakses lokasi anda"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Tukar"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Benarkan akses lokasi kepada apl bantuan pemandu"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Jika anda mematikan ciri ini, apl bantuan pemandu yang bergantung pada maklumat lokasi akan dilumpuhkan"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Jika anda mematikan tetapan ini, apl Bantuan Pemandu yang bergantung pada maklumat lokasi akan dilumpuhkan."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Matikan juga"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"Diakses baru-baru ini"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Diakses baru-baru ini"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Lihat semua"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"Tiada apl terbaharu"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Bantuan pemandu"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apl dengan kebenaran untuk mengakses lokasi kenderaan ini untuk ciri bantuan pemandu"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Dasar privasi"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Permintaan Lokasi Terbaharu"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Tiada permintaan lokasi terbaharu"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Kebenaran tahap apl"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Perkhidmatan Lokasi"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gunakan lokasi"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokasi mungkin menggunakan sumber seperti GPS, Wi-Fi, rangkaian mudah alih dan penderia untuk menganggarkan lokasi peranti anda."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bantuan pemandu"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Maklumat lokasi yang dihantar ke apl bantuan pemandu tidak mengandungi maklumat yang mengenal pasti anda. Maklumat disimpan selama maksimum 2 hari sebelum dipadamkan."</string>
+    <string name="adas_settings_footer" msgid="5128483877858058534">"Maklumat lokasi yang dihantar ke apl Bantuan Pemandu tidak mengandungi maklumat yang mengenal pasti anda. Maklumat disimpan selama maksimum 2 hari sebelum dipadamkan."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gunakan mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Benarkan semua apl mengakses mikrofon anda"</string>
@@ -580,7 +574,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Kosongkan storan"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Kosongkan cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Padamkan data apl?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Data apl ini akan dipadamkan secara kekal. Data ini termasuklah fail, tetapan, pangkalan data dan data apl yang lain."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Semua data apl ini akan dipadamkan secara kekal. Ini termasuk semua fail, tetapan, akaun, pangkalan data, dll."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Tidak dapat mengosongkan storan untuk apl."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> dikeluarkan dengan selamat"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Tidak dapat mengeluarkan <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -775,7 +769,6 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# apl yang diaktifkan}other{# apl yang diaktifkan}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Tiada apl yang diaktifkan"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"Dasar kenderaan <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Dasar kenderaan"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"Tetapan diurus oleh pengurus organisasi"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Ketahui lebih lanjut tentang <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Maklumat kenderaan terurus"</string>

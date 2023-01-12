@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{ស៊ីម #}other{ស៊ីម #}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"សកម្ម / ស៊ីម"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"អសកម្ម / ស៊ីម"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"ដំណើរការ / eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"មិនដំណើរការ / eSIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"សកម្ម / ស៊ីមដែលបាន​ទាញយក"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"អសកម្ម / ស៊ីមដែលបានទាញយក"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"បញ្ចូល​បន្ថែម​​ទៀត"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ទិន្នន័យ​ទូរសព្ទចល័ត"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
@@ -177,7 +177,6 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"បង្ហាញ​ទាំងអស់"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ស្វែងរក"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ប៊្លូធូស"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ប្រើប៊្លូធូស"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ឧបករណ៍​គ្មានឈ្មោះ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ឧបករណ៍​ដែល​បាន​ផ្គូផ្គង"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ផ្គូផ្គង​ឧបករណ៍ថ្មី"</string>
@@ -272,7 +271,7 @@
     <string name="units_unit_name_mile" msgid="8337486880403419613">"ម៉ាយល៍"</string>
     <string name="units_unit_name_celsius" msgid="1642787068882598698">"អង្សាសេ"</string>
     <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"ហ្វារិនហៃ"</string>
-    <string name="units_unit_name_kelvin" msgid="4043908998904418360">"កែលវិន"</string>
+    <string name="units_unit_name_kelvin" msgid="4043908998904418360">"កែវិន"</string>
     <string name="units_unit_name_milliliter" msgid="2735564290593738653">"មីល្លីលីត្រ"</string>
     <string name="units_unit_name_liter" msgid="2682609997247920434">"លីត្រ"</string>
     <string name="units_unit_name_us_gallon" msgid="2991675590060288099">"ហ្កាឡុង"</string>
@@ -402,27 +401,22 @@
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"អនុញ្ញាតឱ្យកម្មវិធីដែលអ្នកបញ្ជាក់ចូលប្រើទីតាំងរបស់អ្នក"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ លើកលែងតែ​កម្មវិធីដែលត្រូវការ​មុខងារជំនួយអ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ប្រើទីតាំងសម្រាប់​មុខងារជំនួយ​អ្នកបើកបរ"</string>
+    <string name="location_toggle_off_warning" msgid="8396854289251143748">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ កម្មវិធី​ជំនួយអ្នកបើកបរនឹង​នៅតែមានសិទ្ធិចូលប្រើដដែល។"</string>
+    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"ប្រើទីតាំងសម្រាប់​មុខងារជំនួយ​អ្នកបើកបរ"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ទីតាំងយានជំនិះត្រូវបានបិទ"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"កម្មវិធីជំនួយអ្នកបើកបរមិនអាចចូលប្រើទីតាំងរបស់អ្នកទេ"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"កម្មវិធីជំនួយអ្នកបើកបរមិនអាចចូលប្រើទីតាំងរបស់អ្នកបានទេ"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ផ្លាស់​ប្ដូរ"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"អនុញ្ញាតឱ្យកម្មវិធីដែលផ្ដល់ជំនួយពាក់ព័ន្ធនឹងការបើកបរចូលប្រើទីតាំងរបស់អ្នក"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ"</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ។"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"មិនអីទេ បិទចុះ"</string>
-    <string name="location_recently_accessed" msgid="522888989582110975">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
-    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
-    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"មើលទាំងអស់"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"គ្មាន​កម្មវិធី​ថ្មីៗ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ជំនួយអ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"កម្មវិធីដែលមានការអនុញ្ញាតចូលប្រើទីតាំងរបស់យានជំនិះនេះសម្រាប់មុខងារជំនួយអ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"គោលការណ៍ឯកជនភាព"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"សេវាកម្ម​ទីតាំង"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ជំនួយ​អ្នកបើកបរ"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ព័ត៌មានទីតាំង​ដែលបានបញ្ជូន​ទៅកម្មវិធី​ជំនួយអ្នកបើកបរ​មិនមាន​ព័ត៌មានដែល​សម្គាល់អ្នកទេ។ ព័ត៌មាននោះ​ត្រូវបានរក្សាទុក​យ៉ាងយូរបំផុត 2 ថ្ងៃ មុនពេល​ត្រូវបានលុប។"</string>
+    <string name="adas_settings_footer" msgid="5128483877858058534">"ព័ត៌មានទីតាំង​ដែលបានបញ្ជូន​ទៅកម្មវិធី​ជំនួយអ្នកបើកបរ​មិនមាន​ព័ត៌មានដែល​សម្គាល់អ្នកទេ។ ព័ត៌មាននោះ​ត្រូវបានរក្សាទុក​យ៉ាងយូរបំផុត 2 ថ្ងៃ មុនពេល​ត្រូវបានលុប។"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​មីក្រូហ្វូន​របស់អ្នក"</string>
@@ -580,7 +574,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"សម្អាត​ទំហំ​ផ្ទុក"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"សម្អាត​ឃ្លាំងបម្រុង"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"លុប​ទិន្នន័យ​កម្មវិធី?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"ទិន្នន័យ​របស់កម្មវិធីនេះ​នឹងត្រូវបានលុប​ជាអចិន្ត្រៃយ៍។ ទិន្នន័យនេះ​រួមមាន​ឯកសារ ការកំណត់ មូលដ្ឋាន​ទិន្នន័យ និង​ទិន្នន័យកម្មវិធី​ផ្សេងទៀត។"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ទិន្នន័យ​របស់​កម្មវិធី​នេះ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប​ជា​អចិន្ត្រៃយ៍។ ទិន្នន័យទាំងនេះរួមមាន ឯកសារ​ទាំងអស់ ការ​កំណត់ គណនី មូលដ្ឋាន​ទិន្នន័យ ។ល។"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"មិនអាច​សម្អាត​ទំហំផ្ទុក​សម្រាប់​កម្មវិធី​បានទេ។"</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"បានដក <xliff:g id="NAME">%1$s</xliff:g> ចេញដោយសុវត្ថិភាព"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"មិនអាចដក <xliff:g id="NAME">%1$s</xliff:g> ចេញដោយសុវត្ថិភាពបានទេ"</string>
@@ -775,7 +769,6 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{កម្មវិធីដែល​បានបើកដំណើរការ #}other{កម្មវិធីដែល​បានបើកដំណើរការ #}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"គ្មានកម្មវិធីដែល​បានបើកដំណើរការទេ"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"គោលការណ៍​យានជំនិះ <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g>"</string>
-    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"គោលការណ៍​យានជំនិះ"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"ការកំណត់ដែលស្ថិតក្រោមការគ្រប់គ្រងរបស់អ្នក​គ្រប់គ្រងស្ថាប័ន"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"ស្វែងយល់បន្ថែមអំពី <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"ព័ត៌មាន​អំពីយានជំនិះដែលត្រូវបានគ្រប់គ្រង"</string>
