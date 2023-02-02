@@ -18,8 +18,11 @@ package com.android.car.settings.datausage;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.text.BidiFormatter;
+import android.text.TextDirectionHeuristics;
 
 import androidx.annotation.CallSuper;
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
@@ -31,7 +34,8 @@ import com.android.car.settings.common.PreferenceController;
  */
 public class AppDataUsageTotalPreferenceController extends PreferenceController<Preference> {
 
-    private static final String STRING_FORMAT = "%s: %s";
+    @VisibleForTesting
+    static final String STRING_FORMAT = "%s: %s";
 
     private String mFieldName;
     private String mDataUsage;
@@ -54,7 +58,12 @@ public class AppDataUsageTotalPreferenceController extends PreferenceController<
     }
 
     private String getTitle() {
-        return String.format(STRING_FORMAT, mFieldName, mDataUsage);
+        if (mDataUsage == null) {
+            setDataUsage(0);
+        }
+        return BidiFormatter.getInstance().unicodeWrap(
+                String.format(STRING_FORMAT, mFieldName, mDataUsage),
+                TextDirectionHeuristics.LOCALE);
     }
 
     /** Set data usage in bytes */
