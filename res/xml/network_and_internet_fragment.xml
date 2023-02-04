@@ -26,6 +26,8 @@
         android:title="@string/hotspot_settings_title"
         android:icon="@drawable/ic_wifi_tethering"
         settings:controller="com.android.car.settings.wifi.WifiTetherPreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"
         settings:searchable="false"/>
     <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
         android:icon="@drawable/ic_settings_cellular"
