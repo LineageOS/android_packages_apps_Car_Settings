@@ -21,7 +21,6 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import androidx.annotation.CallSuper;
-import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
@@ -39,16 +38,8 @@ public class DataWarningAndLimitPreferenceController extends
 
     public DataWarningAndLimitPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
-        this(context, preferenceKey, fragmentController, uxRestrictions,
-                new DataUsageController(context));
-    }
-
-    @VisibleForTesting
-    DataWarningAndLimitPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
-            DataUsageController dataUsageController) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mDataUsageController = dataUsageController;
+        mDataUsageController = new DataUsageController(context);
     }
 
     @Override
