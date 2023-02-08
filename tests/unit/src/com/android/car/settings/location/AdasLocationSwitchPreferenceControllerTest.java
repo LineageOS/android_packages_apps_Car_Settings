@@ -19,7 +19,10 @@ package com.android.car.settings.location;
 import static android.os.UserManager.DISALLOW_CONFIG_LOCATION;
 import static android.os.UserManager.DISALLOW_SHARE_LOCATION;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+import static com.android.dx.mockito.inline.extended.ExtendedMockito.mockitoSession;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -33,6 +36,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
@@ -41,6 +45,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
+import android.os.UserHandle;
 import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -58,6 +63,7 @@ import com.android.car.settings.testutils.EnterpriseTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -65,6 +71,8 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
+import org.mockito.quality.Strictness;
 
 import java.util.List;
 
@@ -82,6 +90,8 @@ public class AdasLocationSwitchPreferenceControllerTest {
     @Mock
     private LocationManager mLocationManager;
 
+    private MockitoSession mSession;
+
     @Mock
     private UserManager mUserManager;
 
@@ -97,6 +107,11 @@ public class AdasLocationSwitchPreferenceControllerTest {
         when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
         when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
 
+        mSession = mockitoSession()
+                .strictness(Strictness.LENIENT)
+                .spyStatic(ActivityManager.class)
+                .startMocking();
+
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
@@ -104,6 +119,31 @@ public class AdasLocationSwitchPreferenceControllerTest {
         mPreferenceController = new AdasLocationSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
+    }
+
+    @After
+    public void tearDown() {
+        mSession.finishMocking();
+    }
+
+    @Test
+    public void driverAssistanceSwitchIsHiddenFromPassenger() {
+        int nonCurrentUser = UserHandle.myUserId() + 1;
+        when(ActivityManager.getCurrentUser()).thenReturn(nonCurrentUser);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void driverAssistanceSwitchIsShownToDriver() {
+        int currentUser = UserHandle.myUserId();
+        when(ActivityManager.getCurrentUser()).thenReturn(currentUser);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(mPreferenceController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
