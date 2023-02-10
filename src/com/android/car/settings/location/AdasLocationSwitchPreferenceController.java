@@ -23,12 +23,14 @@ import static android.os.UserManager.DISALLOW_SHARE_LOCATION;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
 
+import android.app.ActivityManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
+import android.os.UserHandle;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -47,6 +49,7 @@ public class AdasLocationSwitchPreferenceController extends
         PreferenceController<CarUiTwoActionSwitchPreference> {
     private final Context mContext;
     private final LocationManager mLocationManager;
+    private final ActivityManager mActivityManager;
 
     private final BroadcastReceiver mAdasReceiver = new BroadcastReceiver() {
         @Override
@@ -80,6 +83,7 @@ public class AdasLocationSwitchPreferenceController extends
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mContext = context;
         mLocationManager = context.getSystemService(LocationManager.class);
+        mActivityManager = context.getSystemService(ActivityManager.class);
         mPowerPolicyListener = new PowerPolicyListener(context, LOCATION,
                 isOn -> {
                     handlePowerPolicyChange(getPreference(), isOn);
@@ -93,6 +97,10 @@ public class AdasLocationSwitchPreferenceController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
+        if (mActivityManager.getCurrentUser() != UserHandle.myUserId()) {
+            return DISABLED_FOR_PROFILE;
+        }
+
         if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_LOCATION)
                 || hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION)) {
             return AVAILABLE_FOR_VIEWING;
