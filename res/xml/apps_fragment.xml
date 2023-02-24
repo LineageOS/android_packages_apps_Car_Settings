@@ -40,6 +40,14 @@
             settings:controller="com.android.car.settings.applications.RecentAppsViewAllPreferenceController"/>
         <com.android.car.settings.common.DividerPreference/>
     </com.android.car.settings.common.LogicalPreferenceGroup>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_personal_extra_settings"
+        settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
+        <intent>
+            <extra android:name="com.android.settings.category"
+                   android:value="com.android.settings.category.ia.apps"/>
+        </intent>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
     <Preference
         android:key="@string/pk_app_permissions_entry"
         android:title="@string/apps_permission_manager_title"
