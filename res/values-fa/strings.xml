@@ -672,7 +672,7 @@
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"پین نامعتبر است، پین باید حداقل ۴ رقم داشته باشد."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"پین‌ها با یکدیگر مطابقت ندارند"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"خطای ذخیره پین"</string>
-    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"پین اشتباه"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"پین اشتباه است"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"گذرواژه اشتباه است"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"برای حفظ امنیت، گذرواژه‌‌ای تنظیم کنید"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"گذرواژه‌ خود را دوباره وارد کنید"</string>
@@ -706,11 +706,11 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ترتیب صعودی، نزولی یا تکراری ارقام مجاز نیست"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"گزینه‌های قفل صفحه"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> روز پیش"</string>
-    <string name="credentials_reset" msgid="873900550885788639">"پاک کردن اطلاعات کاربری"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"پاک کردن اطلاعات اعتباری"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"حذف تمام گواهی‌ها"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"همه محتوا حذف شود؟"</string>
-    <string name="credentials_erased" msgid="2515915439705550379">"حافظه اطلاعات کاربری پاک شد."</string>
-    <string name="credentials_not_erased" msgid="6118567459076742720">"حافظه اطلاعات کاربری پاک نمی‌شود."</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"فضای ذخیره‌سازی اطلاعات اعتباری پاک شد."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"فضای ذخیره‌سازی اطلاعات اعتباری پاک نمی‌شود."</string>
     <string name="forget" msgid="3971143908183848527">"فراموش کردن"</string>
     <string name="connect" msgid="5861699594602380150">"اتصال"</string>
     <string name="disconnect" msgid="6140789953324820336">"قطع اتصال"</string>

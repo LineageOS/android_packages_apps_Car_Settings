@@ -356,7 +356,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Жоқ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Таңдалды"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant жүйеде пайдаланылып жатқан қолданбалар туралы ақпаратты, соның ішінде экранға шығатын немесе қолданбалардағы деректерді оқи алады."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Осы қолданбаға сенетініңізге көз жеткізіңіз&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Автотолтыру&gt;%1$s&lt;/xliff:g&gt; қызметі автоматты түрде толтыруға болатын деректерді анықтау үшін экран мазмұнын пайдаланады."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Осы қолданбаға сенетініңізге көз жеткізіңіз&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Автотолтыру&gt;%1$s&lt;/xliff:g&gt; қызметі автоматты түрде толтыруға болатын деректерді анықтау үшін экран контентін пайдаланады."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Қызметті енгізу"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Сілтемелерді ашу"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Орнатылған қолданбалар"</string>
@@ -416,7 +416,7 @@
     <string name="location_no_recent_access" msgid="2859914321242257931">"Жақында пайдаланған қолданбалар жоқ."</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Жүргізушіге көмек қолданбалары"</string>
     <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Осы көліктің локациясын пайдалану рұқсаты бар қолданбалар жүргізушіге көмектесетін функцияларды қолдана алады."</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Құпиялылық саясаты"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Құпиялық саясаты"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Қолданба деңгейіндегі рұқсаттар"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Локация қызметтері"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Локацияны пайдалану"</string>
@@ -615,7 +615,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Қазір синхрондау"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Синхрондауды өшіру"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Синхрондауда қате шығуда. Кішкене уақыттан кейін қалпына келеді."</string>
-    <string name="privacy_settings_title" msgid="3150145262029229572">"Құпиялылық"</string>
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Құпиялық"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Ақпараттық-сауықтық жүйе деректері"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Қолданбаның локацияны пайдалану рұқсатын басқару"</string>
     <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
@@ -708,7 +708,7 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн бұрын"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Тіркелу деректерін өшіру"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Барлық сертификаттарды өшіру"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Мазмұн толығымен өшірілсін бе?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Контент толығымен өшірілсін бе?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Маңызды деректер жады тазартылды."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Маңызды деректер жады тазартылмады."</string>
     <string name="forget" msgid="3971143908183848527">"Ұмыту"</string>
