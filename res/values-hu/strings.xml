@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktív / SIM-kártya"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktív / SIM-kártya"</string>
-    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktív / Letöltött SIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inaktív / Letöltött SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktív/eSIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktív/eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Továbbiak hozzáadása"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiladat"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Adathozzáférés a mobilhálózaton keresztül"</string>
@@ -177,6 +177,7 @@
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Összes mutatása"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Keresés"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth használata"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Név nélküli eszköz"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Párosított eszközök"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Új eszköz párosítása"</string>
@@ -300,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Alkalmazások és értesítések"</string>
     <string name="all_applications" msgid="7798210477486822168">"Összes alkalmazás mutatása"</string>
     <string name="default_applications" msgid="1558183275638697087">"Alapértelmezett alkalmazások"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Teljesítményt befolyásoló appok"</string>
     <string name="app_permissions" msgid="32799922508313948">"Alkalmazásengedélyek"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Az adataihoz hozzáférő alkalmazások kezelése"</string>
     <string name="applications_settings" msgid="794261395191035632">"Alkalmazásinfó"</string>
     <string name="force_stop" msgid="2153183697014720520">"Kényszerített leállítás"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Kényszeríti a leállítást?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ha leállásra kényszeríti az alkalmazást, lehetséges, hogy hibásan fog működni."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Bekapcsolja az appteljesítmény-rangsort?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Bekapcsolásával a rendszer instabilitását idézheti elő, vagy hosszú távon kihathat a hardver működésére. Biztosan folytatja?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Priorizálja az alkalmazásteljesítményt?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Ez a rendszer instabilitását idézheti elő, vagy hosszú távon kihathat a hardver működésére. Biztosan folytatja?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Igen"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nem, köszönöm"</string>
     <string name="disable_text" msgid="4358165448648990820">"Letiltás"</string>
@@ -378,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Engedélykezelő"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Az adataihoz hozzáférő alkalmazások kezelése"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Segéd és egyebek"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# alkalmazás befolyásolja a teljesítményt}other{# alkalmazás befolyásolja a teljesítményt}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"A rendszer- és egyéb beállításokhoz"</string>
     <string name="special_access" msgid="5730278220917123811">"Különleges alkalmazás-hozzáférés"</string>
     <string name="show_system" msgid="4401355756969485287">"Rendszer megjelenítése"</string>
@@ -391,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ha kikapcsolja az értesítésekhez való hozzáférést a(z) <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> számára, előfordulhat, hogy a „Ne zavarjanak” módhoz való hozzáférés is kikapcsolódik."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Kikapcsolás"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Mégse"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ezek az alkalmazások negatív hatással vannak a rendszer teljesítményére, ezért a rendszer megakadályozta, hogy a háttérben fussanak.\nAz alkalmazás priorizálásával engedélyezheti a háttérbeli használatot, és eltávolíthatja az appot erről a listáról."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"App priorizálása"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Emelt díjas SMS küldése"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"A Prémium SMS-ek használata pénzbe kerülhet Önnek, és a szolgáltatója által kiállított számlák végösszegét növeli. Ha engedélyt ad valamelyik alkalmazásnak, akkor azzal lehetősége lesz prémium SMS-eket küldeni."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Használati hozzáférés"</string>
@@ -401,22 +406,27 @@
     <string name="location_settings_title" msgid="901334356682423679">"Hely"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Hely használata"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Megadott alkalmazásai hozzáférhetnek a helyadatokhoz"</string>
-    <string name="location_toggle_off_warning" msgid="8396854289251143748">"A beállítás kikapcsolásával megszünteti a helyadatokhoz való hozzáférést is az összes alkalmazás esetében. A sofőrtámogató alkalmazások hozzáférése viszont megmarad."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="9201622805420459957">"Sofőrtámogatás helyadatokkal"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"A beállítás kikapcsolásával megszünteti a helyadatokhoz való hozzáférést is az összes alkalmazás esetében; kivéve azoknál, amelyek szükségesek a sofőrtámogatáshoz."</string>
+    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Sofőrtámogatás helyadatok használatával"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"A jármű helyadatai ki vannak kapcsolva"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="1516786816178866919">"A sofőrtámogatás nem látja a helyadatait"</string>
+    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"A sofőrtámogatás nem látja a helyadatait"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Módosítás"</string>
     <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"A vezetést segítő alkalmazások hozzáférhetnek a helyadatokhoz"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="8097738968253492982">"Ha kikapcsolja ezt a beállítást, letiltja a helyadatokra támaszkodó sofőrtámogató alkalmazásokat is."</string>
+    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ha kikapcsolja ezt a beállítást, letiltja a helyadatokra támaszkodó sofőrtámogató alkalmazásokat is."</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Kikapcsolás mindenképp"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Legutóbbi helylekérdezések"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nincsenek friss helylekérdezések"</string>
+    <string name="location_recently_accessed" msgid="522888989582110975">"A közelmúltban hozzáférő alkalmazások"</string>
+    <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"A közelmúltban hozzáférő alkalmazások"</string>
+    <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Összes megtekintése"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Nincs a közelmúltban hozzáférő alkalmazás"</string>
+    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Sofőrtámogatás"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Helymeghatározás jogosultsággal az appok hozzáférhetnek a jármű helyadataihoz a sofőrtámogatásban"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Adatvédelmi irányelvek"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Alkalmazásszintű engedélyek"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Helyszolgáltatások"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Helyadatok használata"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Eszköze helyének meghatározásához a Hely szolgáltatás a GPS, a Wi-Fi- és mobilhálózatok, továbbá az érzékelők adatait használhatja fel."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Sofőrtámogatás"</string>
-    <string name="adas_settings_footer" msgid="5128483877858058534">"A sofőrtámogatási alkalmazásoknak küldött helyadatok nem tartalmaznak olyan információt, amely alapján Ön azonosítható lenne. Legfeljebb két napig tároljuk ezeket az adatokat, mielőtt törölnénk őket."</string>
+    <string name="adas_settings_footer" msgid="6697021691244459156">"A sofőrtámogatási alkalmazásoknak küldött helyadatok nem tartalmaznak olyan információt, amely alapján Ön azonosítható lenne. Legfeljebb két napig tároljuk ezeket az adatokat, mielőtt törölnénk őket."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofon használata"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Mikrofonhoz való hozzáférés engedélyezése az összes alkalmazás számára"</string>
@@ -574,7 +584,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Tárhely ürítése"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Gyorsítótár törlése"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Törli az alkalmazásadatokat?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Az alkalmazás minden adatát véglegesen törölni fogja. Ez magában foglalja az összes fájlt, beállítást, fiókot, adatbázist stb."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Az alkalmazás adatai véglegesen törlődnek. Így törlődni fognak a fájlok, a beállítások, az adatbázisok és az egyéb alkalmazásadatok is."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Nem sikerült tárhelyet üríteni az alkalmazásnak."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"A(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságosan eltávolítva"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Nem sikerült a(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságos eltávolítása"</string>
@@ -769,6 +779,7 @@
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# aktivált alkalmazás}other{# aktivált alkalmazás}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Nincsenek aktivált alkalmazások"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"A(z) <xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> járművekre vonatkozó irányelvei"</string>
+    <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Járművekre vonatkozó irányelvek"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"A szervezetkezelő által kezelt beállítások"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"További információ erről: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Kezelt jármű adatai"</string>
