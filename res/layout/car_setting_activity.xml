@@ -47,7 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toRightOf="@id/top_level_divider"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        style="@style/CarSettingsFragmentContainerStyle">
 
         <com.android.car.settings.common.rotary.SettingsFocusParkingView
             android:id="@+id/settings_focus_parking_view"
