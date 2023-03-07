@@ -94,7 +94,7 @@ public class AddAccountActivity extends Activity {
                 intent.putExtras(addAccountOptions);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivityForResultAsUser(
-                        intent, ADD_ACCOUNT_REQUEST, mUserHandle);
+                        new Intent(intent), ADD_ACCOUNT_REQUEST, mUserHandle);
                 LOG.v("account added: " + result);
             } catch (OperationCanceledException | IOException | AuthenticatorException e) {
                 LOG.v("addAccount error: " + e);
