@@ -409,7 +409,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mPasswordHelper.validate(getEnteredPassword(), mExistingCredential);
         List<String> messages = mPasswordHelper.convertErrorCodeToMessages();
-        mHintMessage.setText(String.join("\n", messages));
+        mHintMessage.setText(mPasswordHelper.getCombinedErrorMessage(messages));
 
         setHintIfNeeded();
         setPrimaryButtonText(mUiStage.primaryButtonText);
