@@ -23,27 +23,21 @@ import static com.android.car.qc.QCItem.QC_ACTION_SLIDER_VALUE;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.withSettings;
 
-import android.car.Car;
 import android.car.media.CarAudioManager;
-import android.content.Context;
 import android.content.Intent;
 
 import com.android.car.qc.QCRow;
 import com.android.car.qc.QCSlider;
-import com.android.dx.mockito.inline.extended.ExtendedMockito;
+import com.android.car.settings.CarSettingsApplication;
 
-import org.junit.After;
 import org.junit.Before;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.MockitoSession;
 
 public abstract class VolumeSliderTestCase extends BaseSettingsQCItemTestCase {
     protected static final int GROUP_ID = 0;
@@ -51,11 +45,10 @@ public abstract class VolumeSliderTestCase extends BaseSettingsQCItemTestCase {
     protected static final int TEST_VOLUME = 40;
     protected static final int TEST_NEW_VOLUME = 80;
     protected static final int TEST_MAX_VOLUME = 100;
-
-    private MockitoSession mSession;
+    protected static final int TEST_ZONE_ID = 1;
 
     @Mock
-    private Car mCar;
+    private CarSettingsApplication mCarSettingsApplication;
     @Mock
     protected CarAudioManager mCarAudioManager;
 
@@ -63,26 +56,21 @@ public abstract class VolumeSliderTestCase extends BaseSettingsQCItemTestCase {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        mSession = ExtendedMockito.mockitoSession().mockStatic(Car.class,
-                withSettings().lenient()).startMocking();
+        when(mContext.getApplicationContext()).thenReturn(mCarSettingsApplication);
 
-        when(Car.createCar(any(Context.class))).thenReturn(mCar);
+        when(mCarSettingsApplication.getCarAudioManager()).thenReturn(mCarAudioManager);
 
-        when(mCar.getCarManager(Car.AUDIO_SERVICE)).thenReturn(mCarAudioManager);
+        when(mCarSettingsApplication.getMyAudioZoneId()).thenReturn(TEST_ZONE_ID);
         when(mCarAudioManager.getVolumeGroupIdForUsage(anyInt())).thenReturn(GROUP_ID);
-        when(mCarAudioManager.getGroupMinVolume(GROUP_ID)).thenReturn(TEST_MIN_VOLUME);
-        when(mCarAudioManager.getGroupVolume(GROUP_ID)).thenReturn(TEST_VOLUME);
-        when(mCarAudioManager.getGroupMaxVolume(GROUP_ID)).thenReturn(TEST_MAX_VOLUME);
+        when(mCarAudioManager.getGroupMinVolume(TEST_ZONE_ID, GROUP_ID))
+                .thenReturn(TEST_MIN_VOLUME);
+        when(mCarAudioManager.getGroupVolume(TEST_ZONE_ID, GROUP_ID))
+                .thenReturn(TEST_VOLUME);
+        when(mCarAudioManager.getGroupMaxVolume(TEST_ZONE_ID, GROUP_ID))
+                .thenReturn(TEST_MAX_VOLUME);
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_MUTING)).thenReturn(
                 true);
         when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(false);
-    }
-
-    @After
-    public void tearDown() {
-        if (mSession != null) {
-            mSession.finishMocking();
-        }
     }
 
     protected void verifyTitleSet(QCRow row, int titleResId) {
@@ -91,6 +79,10 @@ public abstract class VolumeSliderTestCase extends BaseSettingsQCItemTestCase {
 
     protected void verifyIconSet(QCRow row, int iconResId) {
         assertThat(row.getStartIcon().getResId()).isEqualTo(iconResId);
+    }
+
+    protected void verifyIconNotSet(QCRow row) {
+        assertThat(row.getStartIcon()).isNull();
     }
 
     protected void verifySliderCreated(QCRow row) {
@@ -106,7 +98,8 @@ public abstract class VolumeSliderTestCase extends BaseSettingsQCItemTestCase {
         intent.putExtra(QC_ACTION_SLIDER_VALUE, TEST_NEW_VOLUME);
         intent.putExtra(BaseVolumeSlider.EXTRA_GROUP_ID, groupId);
         slider.onNotifyChange(intent);
-        verify(mCarAudioManager).setGroupVolume(eq(groupId), eq(TEST_NEW_VOLUME), anyInt());
+        verify(mCarAudioManager).setGroupVolume(
+                eq(TEST_ZONE_ID), eq(groupId), eq(TEST_NEW_VOLUME), anyInt());
     }
 
     protected void verifyBaseUmRestriction(QCRow row) {
