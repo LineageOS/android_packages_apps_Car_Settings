@@ -32,7 +32,12 @@ import android.car.CarOccupantZoneManager;
 import android.car.CarOccupantZoneManager.OccupantZoneConfigChangeListener;
 import android.car.CarOccupantZoneManager.OccupantZoneInfo;
 import android.car.VehicleAreaSeat;
+import android.car.media.CarAudioManager;
 import android.content.Context;
+import android.hardware.display.DisplayManagerGlobal;
+import android.view.Display;
+import android.view.DisplayAdjustments;
+import android.view.DisplayInfo;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -54,14 +59,25 @@ public class CarSettingsApplicationTest {
     @Mock
     private Car mCar;
     @Mock
-    protected CarOccupantZoneManager mCarOccupantZoneManager;
+    private CarOccupantZoneManager mCarOccupantZoneManager;
+    @Mock
+    private CarAudioManager mCarAudioManager;
 
-    public final OccupantZoneInfo mZoneInfoDriver = new OccupantZoneInfo(0,
+    private final OccupantZoneInfo mZoneInfoDriver = new OccupantZoneInfo(0,
             CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER,
             VehicleAreaSeat.SEAT_ROW_1_LEFT);
-    public final OccupantZoneInfo mZoneInfoPassenger = new OccupantZoneInfo(1,
+    private final OccupantZoneInfo mZoneInfoPassenger = new OccupantZoneInfo(1,
             CarOccupantZoneManager.OCCUPANT_TYPE_FRONT_PASSENGER,
             VehicleAreaSeat.SEAT_ROW_1_RIGHT);
+    private final int mPrimaryAudioZoneId = 0;
+    private final int mSecondaryAudioZoneId = 1;
+    private final Display mDefaultDisplay = new Display(DisplayManagerGlobal.getInstance(),
+            Display.DEFAULT_DISPLAY, new DisplayInfo(),
+            DisplayAdjustments.DEFAULT_DISPLAY_ADJUSTMENTS);
+    private final Display mSecondaryDisplay = new Display(DisplayManagerGlobal.getInstance(),
+            Display.DEFAULT_DISPLAY + 1, new DisplayInfo(),
+            DisplayAdjustments.DEFAULT_DISPLAY_ADJUSTMENTS);
+
     private CarSettingsApplication mCarSettingsApplication;
     private CarServiceLifecycleListener mCarServiceLifecycleListener;
     private OccupantZoneConfigChangeListener mConfigChangeListener;
@@ -97,8 +113,23 @@ public class CarSettingsApplicationTest {
     public void onLifecycleChanged_carServiceNotReady() {
         mCarServiceLifecycleListener.onLifecycleChanged(null, false);
 
+        assertThat(mCarSettingsApplication.getCarAudioManager()).isEqualTo(
+                null);
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY);
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                CarAudioManager.INVALID_AUDIO_ZONE);
         assertThat(mCarSettingsApplication.getMyOccupantZoneType()).isEqualTo(
                 CarOccupantZoneManager.OCCUPANT_TYPE_INVALID);
+    }
+
+    @Test
+    public void onLifecycleChanged_carServiceReady_carAudioManager() {
+        when(mCar.getCarManager(Car.AUDIO_SERVICE)).thenReturn(mCarAudioManager);
+        mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
+
+        assertThat(mCarSettingsApplication.getCarAudioManager()).isEqualTo(
+                mCarAudioManager);
     }
 
     @Test
@@ -132,39 +163,116 @@ public class CarSettingsApplicationTest {
     }
 
     @Test
+    public void onLifecycleChanged_carServiceReady_primaryAudioZone() {
+        when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(mCarOccupantZoneManager);
+        when(mCarOccupantZoneManager.getMyOccupantZone()).thenReturn(mZoneInfoDriver);
+        when(mCarOccupantZoneManager.getAudioZoneIdForOccupant(
+                mZoneInfoDriver)).thenReturn(mPrimaryAudioZoneId);
+        mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
+
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                mPrimaryAudioZoneId);
+    }
+
+    @Test
+    public void onLifecycleChanged_carServiceReady_secondaryAudioZone() {
+        when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(mCarOccupantZoneManager);
+        when(mCarOccupantZoneManager.getMyOccupantZone()).thenReturn(mZoneInfoPassenger);
+        when(mCarOccupantZoneManager.getAudioZoneIdForOccupant(
+                mZoneInfoPassenger)).thenReturn(mSecondaryAudioZoneId);
+        mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
+
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                mSecondaryAudioZoneId);
+    }
+
+    @Test
+    public void onLifecycleChanged_carServiceReady_defaultDisplayId() {
+        when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(mCarOccupantZoneManager);
+        when(mCarOccupantZoneManager.getMyOccupantZone()).thenReturn(mZoneInfoDriver);
+        when(mCarOccupantZoneManager.getDisplayForOccupant(mZoneInfoDriver,
+                CarOccupantZoneManager.DISPLAY_TYPE_MAIN)).thenReturn(mDefaultDisplay);
+        mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
+
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY);
+    }
+
+    @Test
+    public void onLifecycleChanged_carServiceReady_secondaryDisplayId() {
+        when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(mCarOccupantZoneManager);
+        when(mCarOccupantZoneManager.getMyOccupantZone()).thenReturn(mZoneInfoPassenger);
+        when(mCarOccupantZoneManager.getDisplayForOccupant(mZoneInfoPassenger,
+                CarOccupantZoneManager.DISPLAY_TYPE_MAIN)).thenReturn(mSecondaryDisplay);
+        mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
+
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY + 1);
+    }
+
+    @Test
     public void onLifecycleChanged_carServiceReady_occupantZoneServiceIsNull() {
         when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(null);
         mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
 
         assertThat(mCarSettingsApplication.getMyOccupantZoneType()).isEqualTo(
                 CarOccupantZoneManager.OCCUPANT_TYPE_INVALID);
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                CarAudioManager.INVALID_AUDIO_ZONE);
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY);
     }
 
     @Test
-    public void onLifecycleChanged_carServiceCrashed_usePreviousZoneType() {
+    public void onLifecycleChanged_carServiceCrashed_usePreviousValues_exceptCarAudioManager() {
         when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(mCarOccupantZoneManager);
+        when(mCar.getCarManager(Car.AUDIO_SERVICE)).thenReturn(mCarAudioManager);
         when(mCarOccupantZoneManager.getMyOccupantZone()).thenReturn(mZoneInfoDriver);
+        when(mCarOccupantZoneManager.getAudioZoneIdForOccupant(
+                mZoneInfoDriver)).thenReturn(mPrimaryAudioZoneId);
+        when(mCarOccupantZoneManager.getDisplayForOccupant(mZoneInfoDriver,
+                CarOccupantZoneManager.DISPLAY_TYPE_MAIN)).thenReturn(mDefaultDisplay);
         mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
 
+        assertThat(mCarSettingsApplication.getCarAudioManager()).isEqualTo(
+                mCarAudioManager);
         assertThat(mCarSettingsApplication.getMyOccupantZoneType()).isEqualTo(
                 CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER);
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                mPrimaryAudioZoneId);
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY);
 
         mCarServiceLifecycleListener.onLifecycleChanged(null, false);
 
+        assertThat(mCarSettingsApplication.getCarAudioManager()).isEqualTo(
+                null);
         assertThat(mCarSettingsApplication.getMyOccupantZoneType()).isEqualTo(
                 CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER);
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                mPrimaryAudioZoneId);
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY);
     }
 
     @Test
-    public void onOccupantZoneConfigChanged_flagDisplay() {
+    public void onOccupantZoneConfigChanged_flagDisplay_displayChanged() {
         when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(mCarOccupantZoneManager);
         when(mCarOccupantZoneManager.getMyOccupantZone()).thenReturn(mZoneInfoDriver);
+        when(mCarOccupantZoneManager.getDisplayForOccupant(mZoneInfoDriver,
+                CarOccupantZoneManager.DISPLAY_TYPE_MAIN)).thenReturn(mDefaultDisplay);
         mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
+
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY);
+
+        when(mCarOccupantZoneManager.getDisplayForOccupant(mZoneInfoDriver,
+                CarOccupantZoneManager.DISPLAY_TYPE_MAIN)).thenReturn(mSecondaryDisplay);
         mConfigChangeListener.onOccupantZoneConfigChanged(
                 CarOccupantZoneManager.ZONE_CONFIG_CHANGE_FLAG_DISPLAY);
 
-        assertThat(mCarSettingsApplication.getMyOccupantZoneType()).isEqualTo(
-                CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER);
+        assertThat(mCarSettingsApplication.getMyOccupantZoneDisplayId()).isEqualTo(
+                Display.DEFAULT_DISPLAY + 1);
     }
 
     @Test
@@ -182,5 +290,25 @@ public class CarSettingsApplicationTest {
 
         assertThat(mCarSettingsApplication.getMyOccupantZoneType()).isEqualTo(
                 CarOccupantZoneManager.OCCUPANT_TYPE_FRONT_PASSENGER);
+    }
+
+    @Test
+    public void onOccupantZoneConfigChanged_flagAudio_audioChanged() {
+        when(mCar.getCarManager(Car.CAR_OCCUPANT_ZONE_SERVICE)).thenReturn(mCarOccupantZoneManager);
+        when(mCarOccupantZoneManager.getMyOccupantZone()).thenReturn(mZoneInfoDriver);
+        when(mCarOccupantZoneManager.getAudioZoneIdForOccupant(
+                mZoneInfoDriver)).thenReturn(mPrimaryAudioZoneId);
+        mCarServiceLifecycleListener.onLifecycleChanged(mCar, true);
+
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                mPrimaryAudioZoneId);
+
+        when(mCarOccupantZoneManager.getAudioZoneIdForOccupant(
+                mZoneInfoDriver)).thenReturn(mSecondaryAudioZoneId);
+        mConfigChangeListener.onOccupantZoneConfigChanged(
+                CarOccupantZoneManager.ZONE_CONFIG_CHANGE_FLAG_AUDIO);
+
+        assertThat(mCarSettingsApplication.getMyAudioZoneId()).isEqualTo(
+                mSecondaryAudioZoneId);
     }
 }
