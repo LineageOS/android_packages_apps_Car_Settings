@@ -16,12 +16,17 @@
 
 package com.android.car.settings;
 
+import static android.car.CarOccupantZoneManager.DISPLAY_TYPE_MAIN;
+
+import android.annotation.Nullable;
 import android.app.Application;
 import android.car.Car;
 import android.car.Car.CarServiceLifecycleListener;
 import android.car.CarOccupantZoneManager;
 import android.car.CarOccupantZoneManager.OccupantZoneConfigChangeListener;
 import android.car.CarOccupantZoneManager.OccupantZoneInfo;
+import android.car.media.CarAudioManager;
+import android.view.Display;
 
 import androidx.annotation.GuardedBy;
 
@@ -32,16 +37,24 @@ public class CarSettingsApplication extends Application {
 
     private CarOccupantZoneManager mCarOccupantZoneManager;
 
-    private final Object mLock = new Object();
-    @GuardedBy("mLock")
+    private final Object mInfoLock = new Object();
+    private final Object mCarAudioManagerLock = new Object();
+
+    @GuardedBy("mInfoLock")
+    private int mOccupantZoneDisplayId = Display.DEFAULT_DISPLAY;
+    @GuardedBy("mInfoLock")
+    private int mAudioZoneId = CarAudioManager.INVALID_AUDIO_ZONE;
+    @GuardedBy("mInfoLock")
     private int mOccupantZoneType = CarOccupantZoneManager.OCCUPANT_TYPE_INVALID;
+    @GuardedBy("mCarAudioManagerLock")
+    private CarAudioManager mCarAudioManager = null;
 
     /**
      * Listener to monitor any Occupant Zone configuration change.
      */
     private final OccupantZoneConfigChangeListener mConfigChangeListener = flags -> {
-        synchronized (mLock) {
-            updateZoneTypeLocked();
+        synchronized (mInfoLock) {
+            updateZoneInfoLocked();
         }
     };
 
@@ -50,6 +63,10 @@ public class CarSettingsApplication extends Application {
      */
     private final CarServiceLifecycleListener mCarServiceLifecycleListener = (car, ready) -> {
         if (!ready) {
+            mCarOccupantZoneManager = null;
+            synchronized (mCarAudioManagerLock) {
+                mCarAudioManager = null;
+            }
             return;
         }
         mCarOccupantZoneManager = (CarOccupantZoneManager) car.getCarManager(
@@ -58,8 +75,11 @@ public class CarSettingsApplication extends Application {
             mCarOccupantZoneManager.registerOccupantZoneConfigChangeListener(
                     mConfigChangeListener);
         }
-        synchronized (mLock) {
-            updateZoneTypeLocked();
+        synchronized (mCarAudioManagerLock) {
+            mCarAudioManager = (CarAudioManager) car.getCarManager(Car.AUDIO_SERVICE);
+        }
+        synchronized (mInfoLock) {
+            updateZoneInfoLocked();
         }
     };
 
@@ -77,19 +97,53 @@ public class CarSettingsApplication extends Application {
      * should be available or not.
      */
     public final int getMyOccupantZoneType() {
-        synchronized (mLock) {
+        synchronized (mInfoLock) {
             return mOccupantZoneType;
         }
     }
 
-    @GuardedBy("mLock")
-    private void updateZoneTypeLocked() {
+    /**
+     * Returns displayId assigned for the current user.
+     */
+    public final int getMyOccupantZoneDisplayId() {
+        synchronized (mInfoLock) {
+            return mOccupantZoneDisplayId;
+        }
+    }
+
+    /**
+     * Returns audio zone id assigned for the current user.
+     */
+    public final int getMyAudioZoneId() {
+        synchronized (mInfoLock) {
+            return mAudioZoneId;
+        }
+    }
+
+    /**
+     * Returns CarAudioManager instance.
+     */
+    @Nullable
+    public final CarAudioManager getCarAudioManager() {
+        synchronized (mCarAudioManagerLock) {
+            return mCarAudioManager;
+        }
+    }
+
+    @GuardedBy("mInfoLock")
+    private void updateZoneInfoLocked() {
         if (mCarOccupantZoneManager == null) {
             return;
         }
         OccupantZoneInfo info = mCarOccupantZoneManager.getMyOccupantZone();
         if (info != null) {
             mOccupantZoneType = info.occupantType;
+            mAudioZoneId = mCarOccupantZoneManager.getAudioZoneIdForOccupant(info);
+            Display display = mCarOccupantZoneManager
+                    .getDisplayForOccupant(info, DISPLAY_TYPE_MAIN);
+            if (display != null) {
+                mOccupantZoneDisplayId = display.getDisplayId();
+            }
         }
     }
 }
