@@ -24,7 +24,6 @@ import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
 import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 
 import android.app.PendingIntent;
-import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.Context;
@@ -41,6 +40,7 @@ import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.qc.QCSlider;
+import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.enterprise.EnterpriseUtils;
@@ -52,17 +52,17 @@ import com.android.car.settings.sound.VolumeItemParser;
  * should be shown as part of the quick control.
  */
 public abstract class BaseVolumeSlider extends SettingsQCItem {
-    static final int QC_VOLUME_SELF_CHANGE = 7919;
+    static final int QC_VOLUME_SELF_CHANGE = 7918;
     @VisibleForTesting
     static final String EXTRA_GROUP_ID = "QC_VOLUME_EXTRA_GROUP_ID";
     private static final Logger LOG = new Logger(BaseVolumeSlider.class);
 
+    private final Context mContext;
     private final SparseArray<VolumeItemParser.VolumeItem> mVolumeItems;
-    private Car mCar;
-    private CarAudioManager mCarAudioManager;
 
     public BaseVolumeSlider(Context context) {
         super(context);
+        mContext = context;
         setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
                 R.xml.sound_settings_fragment, R.string.pk_volume_settings));
         mVolumeItems = VolumeItemParser.loadAudioUsageItems(context, carVolumeItemsXml());
@@ -72,7 +72,12 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
 
     @Override
     QCItem getQCItem() {
-        if (!initializeCarAudioManager() || isHiddenForZone()) {
+        if (isHiddenForZone()) {
+            return null;
+        }
+        CarAudioManager carAudioManager = getCarAudioManager();
+        int zoneId = getMyAudioZoneId();
+        if (carAudioManager == null || zoneId == CarAudioManager.INVALID_AUDIO_ZONE) {
             return null;
         }
 
@@ -85,18 +90,19 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
         QCList.Builder listBuilder = new QCList.Builder();
         for (int usage : getUsages()) {
             VolumeItemParser.VolumeItem volumeItem = mVolumeItems.get(usage);
-            int groupId = mCarAudioManager.getVolumeGroupIdForUsage(usage);
-            int min = mCarAudioManager.getGroupMinVolume(groupId);
-            int max = mCarAudioManager.getGroupMaxVolume(groupId);
-            int value = mCarAudioManager.getGroupVolume(groupId);
+            int groupId = carAudioManager.getVolumeGroupIdForUsage(usage);
+            int min = carAudioManager.getGroupMinVolume(zoneId, groupId);
+            int max = carAudioManager.getGroupMaxVolume(zoneId, groupId);
+            int value = carAudioManager.getGroupVolume(zoneId, groupId);
             int iconResId = volumeItem.getIcon();
-            if (mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_MUTING)
-                    && mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, groupId)) {
+            if (carAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_MUTING)
+                    && carAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, groupId)) {
                 iconResId = volumeItem.getMuteIcon();
             }
             listBuilder.addRow(new QCRow.Builder()
                     .setTitle(getContext().getString(volumeItem.getTitle()))
-                    .setIcon(Icon.createWithResource(getContext(), iconResId))
+                    .setIcon(showSliderWithIcon()
+                            ? Icon.createWithResource(getContext(), iconResId) : null)
                     .addSlider(new QCSlider.Builder()
                             .setMin(min)
                             .setMax(max)
@@ -112,8 +118,6 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
                     .build()
             );
         }
-
-        cleanupCarAudioManager();
         return listBuilder.build();
     }
 
@@ -124,11 +128,7 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
         if (value == Integer.MIN_VALUE || groupId == Integer.MIN_VALUE) {
             return;
         }
-        if (!initializeCarAudioManager()) {
-            return;
-        }
         setGroupVolume(groupId, value);
-        cleanupCarAudioManager();
     }
 
     /**
@@ -139,28 +139,6 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
         return R.xml.car_volume_items;
     }
 
-    /**
-     * Initializes the CarAudioManager instance.
-     * @return true if the CarAudioManager was successfully initialized, false otherwise.
-     */
-    private boolean initializeCarAudioManager() {
-        mCar = Car.createCar(getContext());
-        mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
-        if (mCarAudioManager == null) {
-            cleanupCarAudioManager();
-            return false;
-        }
-        return true;
-    }
-
-    private void cleanupCarAudioManager() {
-        if (mCar != null) {
-            mCar.disconnect();
-        }
-        mCar = null;
-        mCarAudioManager = null;
-    }
-
     private PendingIntent createSliderAction(int groupId) {
         Bundle extras = new Bundle();
         extras.putInt(EXTRA_GROUP_ID, groupId);
@@ -168,10 +146,30 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
     }
 
     private void setGroupVolume(int volumeGroupId, int newVolume) {
+        CarAudioManager carAudioManager = getCarAudioManager();
+        int zoneId = getMyAudioZoneId();
+        if (carAudioManager == null || zoneId == CarAudioManager.INVALID_AUDIO_ZONE) {
+            return;
+        }
         try {
-            mCarAudioManager.setGroupVolume(volumeGroupId, newVolume, QC_VOLUME_SELF_CHANGE);
+            carAudioManager.setGroupVolume(zoneId, volumeGroupId, newVolume,
+                    QC_VOLUME_SELF_CHANGE);
         } catch (CarNotConnectedException e) {
             LOG.w("Ignoring volume change event because the car isn't connected", e);
         }
+    }
+
+    protected boolean showSliderWithIcon() {
+        return true; // by default
+    }
+
+    private int getMyAudioZoneId() {
+        return ((CarSettingsApplication) mContext.getApplicationContext())
+                .getMyAudioZoneId();
+    }
+
+    private CarAudioManager getCarAudioManager() {
+        return ((CarSettingsApplication) mContext.getApplicationContext())
+                .getCarAudioManager();
     }
 }
