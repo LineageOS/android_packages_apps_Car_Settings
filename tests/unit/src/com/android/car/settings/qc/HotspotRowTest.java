@@ -73,7 +73,7 @@ public class HotspotRowTest extends BaseSettingsQCItemTestCase {
                 SoftApConfiguration.SECURITY_TYPE_WPA2_PSK);
         when(mWifiManager.getSoftApConfiguration()).thenReturn(mSoftApConfiguration);
 
-        mHotspotRow = new HotspotRow(mContext);
+        mHotspotRow = getHotspotRowInstance();
     }
 
     @Test
@@ -167,12 +167,16 @@ public class HotspotRowTest extends BaseSettingsQCItemTestCase {
         assertThat(item).isNull();
     }
 
-    private QCRow getHotspotRow() {
+    protected QCRow getHotspotRow() {
         QCItem item = mHotspotRow.getQCItem();
         assertThat(item).isNotNull();
         assertThat(item instanceof QCList).isTrue();
         QCList list = (QCList) item;
         assertThat(list.getRows().size()).isEqualTo(1);
         return list.getRows().get(0);
+    }
+
+    protected HotspotRow getHotspotRowInstance() {
+        return new HotspotRow(mContext);
     }
 }
