@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ஆப்ஸ் &amp; அறிவிப்புகள்"</string>
     <string name="all_applications" msgid="7798210477486822168">"அனைத்து ஆப்ஸையும் காட்டு"</string>
     <string name="default_applications" msgid="1558183275638697087">"இயல்புநிலை ஆப்ஸ்"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"செயல்திறனைப் பாதிக்கும் ஆப்ஸ்"</string>
     <string name="app_permissions" msgid="32799922508313948">"ஆப்ஸ் அனுமதிகள்"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"தரவுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தும்"</string>
     <string name="applications_settings" msgid="794261395191035632">"ஆப்ஸ் தகவல்"</string>
     <string name="force_stop" msgid="2153183697014720520">"உடனே நிறுத்து"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"உடனே நிறுத்தவா?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ஆப்ஸை உடனே நிறுத்தினால் சரியாக இயங்காமல் போகக்கூடும்."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"ஆப்ஸ் செயல்திறன் முன்னுரிமையை இயக்கவா?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"இதை இயக்குவதால் சிஸ்டம் நிலைத்தன்மையில் பாதிப்பு ஏற்படலாம் அல்லது வன்பொருளின் மீது நீண்டகாலப் பாதிப்பை ஏற்படுத்தலாம். தொடர விரும்புகிறீர்களா?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ஆப்ஸ் செயல்திறனுக்கு முன்னுரிமையளிக்கவா?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"இதனால் சிஸ்டம் நிலைப்புத்தன்மை பாதிக்கப்படலாம் அல்லது வன்பொருளில் நீண்டகாலப் பாதிப்பு ஏற்படலாம். தொடர விரும்புகிறீர்களா?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ஆம்"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"வேண்டாம்"</string>
     <string name="disable_text" msgid="4358165448648990820">"முடக்கு"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"அனுமதி நிர்வாகம்"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"தரவுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தும்"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant மற்றும் பலவற்றுக்கு"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{செயல்திறனை # ஆப்ஸ் பாதிக்கிறது}other{செயல்திறனை # ஆப்ஸ் பாதிக்கின்றன}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"சிஸ்டம் மற்றும் பிற அமைப்புகளுக்கு"</string>
     <string name="special_access" msgid="5730278220917123811">"ஆப்ஸிற்கான சிறப்பு அணுகல்"</string>
     <string name="show_system" msgid="4401355756969485287">"சிஸ்டம் ஆப்ஸைக் காட்டு"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>என்பதற்கு அறிவிப்பு அணுகலை முடக்கினால், \'தொந்தரவு செய்யாதே\' அணுகல் ஆஃ செய்யப்படக்கூடும்."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ஆஃப் செய்"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"வேண்டாம்"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"சிஸ்டம் செயல்திறனை இந்த ஆப்ஸ் பாதிப்பதால் பின்னணியில் இயங்குவதிலிருந்து தடுக்கப்பட்டுள்ளன.\nபின்னணி உபயோகத்தை அனுமதிக்க ஆப்ஸுக்கு முன்னுரிமையளித்து அதைப் பட்டியலில் இருந்து அகற்றுங்கள்."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"முன்னுரிமையளி"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"பிரீமிய SMS அணுகல்"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"பிரீமிய SMSஸுக்குக் கட்டணம் விதிக்கப்படலாம், அது மொபைல் நிறுவன பில்களில் சேர்க்கப்படும். ஆப்ஸுக்கான அனுமதியை இயக்கினால் அதன் மூலம் பிரீமிய SMSஸை அனுப்ப இயலும்."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"உபயோக அணுகல்"</string>

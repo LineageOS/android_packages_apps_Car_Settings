@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Lietotnes un paziņojumi"</string>
     <string name="all_applications" msgid="7798210477486822168">"Rādīt visas lietotnes"</string>
     <string name="default_applications" msgid="1558183275638697087">"Noklusējuma lietotnes"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Lietotnes, kas ietekmē veiktspēju"</string>
     <string name="app_permissions" msgid="32799922508313948">"Lietotņu atļaujas"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Pārvaldiet lietotņu piekļuvi jūsu datiem"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informācija par lietotni"</string>
     <string name="force_stop" msgid="2153183697014720520">"Veikt piespiedu apturēšanu"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vai veikt piespiedu apturēšanu?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Piespiedu kārtā apturot lietotnes darbību, var rasties šīs lietotnes darbības traucējumi."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Piešķirt lietotnes veiktspējas prioritāti?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Šī iestatījuma ieslēgšana var izraisīt sistēmas nestabilitāti vai ietekmēt aparatūras veiktspēju ilgtermiņā. Vai vēlaties turpināt?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Vai piešķirt lietotnes veiktspējas prioritāti?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Šī iestatījuma ieslēgšana var izraisīt sistēmas nestabilitāti vai ietekmēt aparatūras veiktspēju ilgtermiņā. Vai vēlaties turpināt?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Jā"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nē, paldies"</string>
     <string name="disable_text" msgid="4358165448648990820">"Atspējot"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Atļauju pārvaldnieks"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Pārvaldiet lietotņu piekļuvi jūsu datiem"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Asistentam un citām lietotnēm"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# lietotne, kas ietekmē veiktspēju}zero{# lietotņu, kas ietekmē veiktspēju}one{# lietotne, kas ietekmē veiktspēju}other{# lietotnes, kas ietekmē veiktspēju}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Sistēmai un citiem iestatījumiem"</string>
     <string name="special_access" msgid="5730278220917123811">"Īpaša piekļuve lietotnēm"</string>
     <string name="show_system" msgid="4401355756969485287">"Rādīt sistēmas lietotnes"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Izslēdzot paziņojumu piekļuvi lietotnei <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, var tikt izslēgta arī piekļuve režīmam “Netraucēt”."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Izslēgt"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Atcelt"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Šīs lietotnes negatīvi ietekmē sistēmas veiktspēju, un tika pārtraukta to darbība fonā.\nPiešķiriet kādai lietotnei prioritāti, lai atļautu tās darbību fonā un noņemtu to no šī saraksta."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Piešķirt prioritāti"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Piekļuve maksas īsziņām"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Par maksas īsziņām no jums var tikt iekasēta samaksa, kas tiks pievienota jūsu mobilo sakaru operatora rēķinam. Ja kādai lietotnei iespējosiet piekļuves atļauju, varēsiet sūtīt maksas īsziņas, izmantojot šo lietotni."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Piekļuve lietojuma datiem"</string>

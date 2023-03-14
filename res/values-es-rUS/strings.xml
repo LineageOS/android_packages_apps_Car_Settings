@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps y notificaciones"</string>
     <string name="all_applications" msgid="7798210477486822168">"Mostrar todas las apps"</string>
     <string name="default_applications" msgid="1558183275638697087">"Apps predeterminadas"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Apps que afectan el rendimiento"</string>
     <string name="app_permissions" msgid="32799922508313948">"Permisos de apps"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Controla el acceso de las apps a tus datos"</string>
     <string name="applications_settings" msgid="794261395191035632">"Información de apps"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forzar detención"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"¿Deseas forzar la detención?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Si fuerzas la detención de una app, es posible que no funcione correctamente."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"¿Priorizar el rendimiento de la app?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"La activación podría generar inestabilidad en el sistema o un impacto en el hardware a largo plazo. ¿Deseas continuar?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"¿Priorizar rendimiento de la app?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Esta acción podría generar inestabilidad en el sistema o un impacto en el hardware a largo plazo. ¿Deseas continuar?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Sí"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"No, gracias"</string>
     <string name="disable_text" msgid="4358165448648990820">"Inhabilitar"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Administrador de permisos"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Controla el acceso de las apps a tus datos"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Para Asistente y más"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# app que afecta el rendimiento}other{# apps que afectan el rendimiento}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Para sistema y otras configuraciones"</string>
     <string name="special_access" msgid="5730278220917123811">"Acceso especial de apps"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si desactivas el acceso a las notificaciones de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, es posible que también se desactive el modo No interrumpir."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Estas apps afectan de forma negativa el rendimiento del sistema y se les impidió que se ejecuten en segundo plano.\nPrioriza las apps para que puedan ejecutarse en segundo plano y quítalas de esta lista."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Priorizar app"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso a SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS Premium podría implicar cargos en la factura de tu proveedor. Si otorgaste permiso a alguna app, podrás enviar SMS premium con ella."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acceso de uso"</string>

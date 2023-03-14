@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ଆପ୍ସ ଓ ବିଜ୍ଞପ୍ତି"</string>
     <string name="all_applications" msgid="7798210477486822168">"ସମସ୍ତ ଆପ୍ସ ଦେଖାନ୍ତୁ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ଡିଫଲ୍ଟ ଆପ୍ସ"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"ପରଫରମାନ୍ସକୁ-ପ୍ରଭାବିତ କରୁଥିବା ଆପ୍ସ"</string>
     <string name="app_permissions" msgid="32799922508313948">"ଆପ ଅନୁମତିଗୁଡ଼ିକ"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"ଆପଣଙ୍କ ଡାଟାକୁ ଆପର ଆକ୍ସେସ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ଆପ୍‌ ସୂଚନା"</string>
     <string name="force_stop" msgid="2153183697014720520">"ବାଧ୍ୟତାର ସହ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ବାଧ୍ୟତାର ସହ ବନ୍ଦ କରିବେ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ଯଦି ଆପଣ ଏକ ଆପ୍ ବାଧ୍ୟତାର ସହ ବନ୍ଦ କରନ୍ତି, ତେବେ ଏହା ଅସ୍ୱାଭାବିକ ବ୍ୟବହାର କରିପାରେ।"</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"\"ଆପ ପରଫରମାନ୍ସକୁ ପ୍ରାଥମିକତା\" ଚାଲୁ କରିବେ?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"ଏହାକୁ ଚାଲୁ କରିବା ଦ୍ୱାରା ସମ୍ଭାବ୍ୟ ସିଷ୍ଟମ ଅସ୍ଥିରତା ସୃଷ୍ଟି ହୋଇପାରେ କିମ୍ବା ହାର୍ଡୱେର ଉପରେ ଦୀର୍ଘ-କାଳୀନ ପ୍ରଭାବ ପଡ଼ିପାରେ। ଆପଣ ଜାରି ରଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ଆପ ପରଫରମାନ୍ସକୁ ପ୍ରାଥମିକତା ଦେବେ?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"ଏହା ସମ୍ଭାବ୍ୟ ସିଷ୍ଟମ ଅସ୍ଥିରତା ସୃଷ୍ଟି କରିପାରେ କିମ୍ବା ହାର୍ଡୱେର ଉପରେ ଦୀର୍ଘ-କାଳୀନ ପ୍ରଭାବ ପକାଇପାରେ। ଆପଣ ଜାରି ରଖିବାକୁ ଚାହାଁନ୍ତି?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ହଁ"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"ନା, ଧନ୍ୟବାଦ"</string>
     <string name="disable_text" msgid="4358165448648990820">"ଅକ୍ଷମ"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"ଅନୁମତି ପରିଚାଳକ"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"ଆପଣଙ୍କ ଡାଟାକୁ ଆପର ଆକ୍ସେସ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant ଏବଂ ଆହୁରି ଅଧିକ ପାଇଁ"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{#ଟି ଆପ ପରଫରମାନ୍ସକୁ ପ୍ରଭାବିତ କରୁଛି}other{#ଟି ଆପ୍ସ ପରଫରମାନ୍ସକୁ ପ୍ରଭାବିତ କରୁଛି}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"ସିଷ୍ଟମ୍ ଏବଂ ଅନ୍ୟ ସେଟିଂସ୍ ପାଇଁ"</string>
     <string name="special_access" msgid="5730278220917123811">"ସ୍ବତନ୍ତ୍ର ଆପ୍ ଆକ୍‍‍ସେସ୍ କରନ୍ତୁ"</string>
     <string name="show_system" msgid="4401355756969485287">"ସିଷ୍ଟମ୍ ଦେଖାନ୍ତୁ"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ଯଦି <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ପାଇଁ ଆପଣ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌କୁ ବନ୍ଦ କରିବେ, ତେବେ \"ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\" ବିକଳ୍ପ ଆକ୍ସେସ୍ ମଧ୍ୟ ହୁଏତ ବନ୍ଦ ହୋଇଯାଇପାରେ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ବାତିଲ କରନ୍ତୁ"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ଏହି ଆପ୍ସ ସିଷ୍ଟମ ପରଫରମାନ୍ସ ଉପରେ ନକାରାତ୍ମକ ପ୍ରଭାବ ପକାଏ ଏବଂ ପୃଷ୍ଠପଟରେ ଚାଲିବାରୁ ସେଗୁଡ଼ିକୁ ପ୍ରତିରୋଧ କରାଯାଇଛି।\nପୃଷ୍ଠପଟରେ ଚାଲିବା ପାଇଁ ଆପକୁ ପ୍ରାଥମିକତା ଦିଅନ୍ତୁ ଏବଂ ଏହି ତାଲିକାରୁ ଏହାକୁ କାଢ଼ି ଦିଅନ୍ତୁ।"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ଆପକୁ ପ୍ରାଥମିକତା ଦିଅ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ପ୍ରିମିୟମ୍ SMS ଆକ୍ସେସ୍"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ପ୍ରିମିୟମ୍ SMSରେ ଆପଣଙ୍କୁ ଖର୍ଚ୍ଚ କରିବାକୁ ପଡ଼ିପାରେ ଏବଂ ତାହା ଆପଣଙ୍କର ମୋବାଇଲ୍ କମ୍ପାନୀର ବିଲ୍‌ରେ ଯୋଗ ହୋଇଯିବ। ଯଦି ଆପଣ ଏକ ଆପ୍ ପାଇଁ ଅନୁମତି ଦେଇଛନ୍ତି, ତେବେ ସେହି ଆପ୍ ବ୍ୟବହାର କରି ଆପଣ ପ୍ରିମିୟମ୍ SMS ପଠାଇ ପାରିବେ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ବ୍ୟବହାର ଆକସେସ୍"</string>

@@ -1203,6 +1203,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="okay"/>
       <item type="string" name="one"/>
       <item type="string" name="outgoing_calls_permission_title"/>
+      <item type="string" name="performance_impacting_apps"/>
+      <item type="string" name="performance_impacting_apps_button_label"/>
+      <item type="string" name="performance_impacting_apps_description"/>
+      <item type="string" name="performance_impacting_apps_summary"/>
       <item type="string" name="permissions_label"/>
       <item type="string" name="power_component_disabled"/>
       <item type="string" name="premium_sms_access_description"/>
@@ -1622,6 +1626,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="network_and_internet_fragment"/>
       <item type="xml" name="notification_access_fragment"/>
       <item type="xml" name="notifications_fragment"/>
+      <item type="xml" name="performance_impact_apps_fragment"/>
       <item type="xml" name="preferred_engine_fragment"/>
       <item type="xml" name="premium_sms_access_fragment"/>
       <item type="xml" name="privacy_camera_settings_fragment"/>

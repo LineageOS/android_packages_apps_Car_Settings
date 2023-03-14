@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"యాప్‌లు &amp; నోటిఫికేషన్‌లు"</string>
     <string name="all_applications" msgid="7798210477486822168">"అన్ని యాప్‌లను చూపండి"</string>
     <string name="default_applications" msgid="1558183275638697087">"ఆటోమేటిక్ యాప్‌లు"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"పనితీరు-ప్రభావిత యాప్‌లు"</string>
     <string name="app_permissions" msgid="32799922508313948">"యాప్ అనుమతులు"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"మీ డేటాకు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
     <string name="applications_settings" msgid="794261395191035632">"యాప్ సమాచారం"</string>
     <string name="force_stop" msgid="2153183697014720520">"ఫోర్స్ స్టాప్"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ఫోర్స్ స్టాప్ చేయాలా?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"మీరు ఏదైనా యాప్‌ను ఫోర్స్ స్టాప్ చేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"యాప్ పనితీరు ప్రాధాన్యతను ఆన్ చేయాలా?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"దీన్ని ఆన్ చేయడం వలన సిస్టమ్ స్థిరంగా పని చేయకపోవచ్చు లేదా హార్డ్‌వేర్‌పై దీర్ఘకాలిక ప్రభావం ఉండవచ్చు. మీరు కొనసాగాలనుకుంటున్నారా?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"యాప్ పనితీరుకు ప్రాధాన్యత ఇవ్వాలా?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"దీని వలన సిస్టమ్ స్థిరంగా పని చేయకపోవచ్చు లేదా హార్డ్‌వేర్‌పై దీర్ఘకాలిక ప్రభావం ఉండవచ్చు. మీరు కొనసాగించాలనుకుంటున్నారా?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"అవును"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"వద్దు, ధన్యవాదాలు"</string>
     <string name="disable_text" msgid="4358165448648990820">"డిజేబుల్ చేయి"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"అనుమతి మేనేజర్"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"మీ డేటాకు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant, ఇంకా మరిన్నింటి కోసం"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# యాప్, పనితీరును ప్రభావితం చేస్తుంది}other{# యాప్, పనితీరును ప్రభావితం చేస్తున్నాయి}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"సిస్టమ్, ఇతర సెట్టింగ్‌లకు"</string>
     <string name="special_access" msgid="5730278220917123811">"ప్రత్యేక యాప్ యాక్సెస్"</string>
     <string name="show_system" msgid="4401355756969485287">"సిస్టమ్‌ను చూపు"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"మీరు <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను ఆఫ్ చేస్తే, అంతరాయం కలిగించవద్దు ఎంపిక యాక్సెస్ కూడా ఆఫ్ చేయబడవచ్చు."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ఆఫ్ చేయి"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"రద్దు చేయండి"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ఈ యాప్‌లు సిస్టమ్ పనితీరును ప్రతికూలంగా ప్రభావితం చేస్తాయి, అలాగే బ్యాక్‌గ్రౌండ్‌లో రన్ అవ్వకుండా నిరోధించబడ్డాయి.\nబ్యాక్‌గ్రౌండ్ వినియోగాన్ని అనుమతించడానికి యాప్‌నకు ప్రాధాన్యత ఇవ్వండి, అలాగే ఈ జాబితా నుండి దాన్ని తీసివేయండి."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"యాప్‌నకు ప్రాధాన్యత"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ప్రీమియం SMS యాక్సెస్"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ప్రీమియం SMSతో మీకు డబ్బు ఖర్చు కావచ్చు, ఈ ఛార్జీ మీ క్యారియర్ బిల్లులలో విధించబడుతుంది. మీరు ఒక యాప్‌కు అనుమతిని ఇస్తే, ఆ యాప్‌ను ఉపయోగించి మీరు ప్రీమియం SMSను పంపగలరు."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"వినియోగ యాక్సెస్"</string>

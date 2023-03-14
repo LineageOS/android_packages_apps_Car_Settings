@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Апп ба мэдэгдэл"</string>
     <string name="all_applications" msgid="7798210477486822168">"Бүх аппыг харуулах"</string>
     <string name="default_applications" msgid="1558183275638697087">"Өгөгдмөл апп"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Гүйцэтгэлд нөлөөлөх аппууд"</string>
     <string name="app_permissions" msgid="32799922508313948">"Аппын зөвшөөрөл"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Өгөгдлийнхөө аппын хандалтыг хянах"</string>
     <string name="applications_settings" msgid="794261395191035632">"Аппын мэдээлэл"</string>
     <string name="force_stop" msgid="2153183697014720520">"Хүчээр зогсоох"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Хүчээр зогсоох уу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Та аппыг хүчээр зогсоосон тохиолдолд энэ нь буруу ажиллаж болзошгүй."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Аппын гүйцэтгэлийг эрэмбэлэхийг асаах уу?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Үүнийг асаах нь системийн тогтворгүй байдал эсвэл техник хангамжийн урт хугацааны нөлөөллийг үүсгэх боломжтой. Та үргэлжлүүлэхийг хүсэж байна уу?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Аппын гүйцэтгэлийг эрэмбэлэх үү?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Энэ нь системийг тогтворгүй болгох эсвэл техник хангамжид урт хугацаанд нөлөөлж магадгүй. Та үргэлжлүүлэхийг хүсэж байна уу?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Тийм"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Үгүй, баярлалаа"</string>
     <string name="disable_text" msgid="4358165448648990820">"Идэвхгүй болгох"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Зөвшөөрлийн менежер"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Өгөгдлийнхөө аппын хандалтыг хянах"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Туслах болон бусдад"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{Гүйцэтгэлд нөлөөлж буй # апп}other{Гүйцэтгэлд нөлөөлж буй # апп}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Систем болон бусад тохиргоонд"</string>
     <string name="special_access" msgid="5730278220917123811">"Аппын тусгай хандалт"</string>
     <string name="show_system" msgid="4401355756969485287">"Систем харуулах"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Та <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-н мэдэгдлийн хандалтыг унтраасан тохиолдолд Бүү саад бол горимын хандалт мөн унтарна."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Унтраах"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Цуцлах"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Эдгээр аппууд нь системийн гүйцэтгэлд сөргөөр нөлөөлдөг ба ард ажиллуулахаас сэргийлсэн.\nАрын хэрэглээг зөвшөөрөхийн тулд аппыг эрэмбэлээд, энэ жагсаалтаас хасна уу."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Аппыг эрэмбэлэх"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium SMS хандалт"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMS-н төлбөрийг таны оператор компанийн төлбөр дээр нэмэхийг анхаарна уу. Та энэ аппын зөвшөөрлийг идэвхжүүлсэн тохиолдолд энэ аппыг ашиглан premium SMS илгээх боломжтой болно."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Ашиглалтын хандалт"</string>

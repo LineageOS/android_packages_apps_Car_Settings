@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ແອັບ ແລະ ການແຈ້ງເຕືອນ"</string>
     <string name="all_applications" msgid="7798210477486822168">"ສະແດງແອັບທັງໝົດ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ແອັບເລີ່ມຕົ້ນ"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"ແອັບທີ່ກະທົບປະສິດທິພາບ"</string>
     <string name="app_permissions" msgid="32799922508313948">"ການອະນຸຍາດແອັບ"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"ຄວບຄຸມສິດເຂົ້າເຖິງແອັບທີ່ມີຕໍ່ຂໍ້ມູນຂອງທ່ານ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ຂໍ້ມູນແອັບ"</string>
     <string name="force_stop" msgid="2153183697014720520">"ບັງຄັບຢຸດ"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ບັງຄັບປິດບໍ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ຖ້າທ່ານບັງຄັບປິດແອັບໃດໜຶ່ງ, ມັນອາດເຮັດວຽກຜິດປົກກະຕິໄດ້."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"ເປີດໃຫ້ຄວາມສຳຄັນແກ່ປະສິດທິພາບແອັບບໍ?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"ການເປີດມັນສາມາດອາດຈະເຮັດໃຫ້ລະບົບບໍ່ສະຖຽນກໍເປັນໄດ້ ຫຼື ຜົນກະທົບໄລຍະຍາວຕໍ່ກັບຮາດແວ. ທ່ານຕ້ອງການດຳເນີນການຕໍ່ບໍ່?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ໃຫ້ຄວາມສຳຄັນປະສິດທິພາບແອັບບໍ?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"ນີ້ອາດເປັນໄປໄດ້ທີ່ຈະກໍ່ໃຫ້ເກີດຄວາມບໍ່ສະຖຽນຂອງລະບົບ ຫຼື ກະທົບກັບຮາດແວໃນໄລຍະຍາວ. ທ່ານຕ້ອງການສືບຕໍ່ບໍ່?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ແມ່ນ"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"ບໍ່, ຂອບໃຈ"</string>
     <string name="disable_text" msgid="4358165448648990820">"ປິດນຳໃຊ້"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"ຕົວຈັດການສິດອະນຸຍາດ"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"ຄວບຄຸມສິດເຂົ້າເຖິງແອັບທີ່ມີຕໍ່ຂໍ້ມູນຂອງທ່ານ"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"ສຳລັບຜູ້ຊ່ວຍ ແລະ ອື່ນໆ"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# ແອັບທີ່ກະທົບປະສິດທິພາບ}other{# ແອັບທີ່ກະທົບປະສິດທິພາບ}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"ໄປຍັງລະບົບ ແລະ ການຕັ້ງຄ່າອື່ນ"</string>
     <string name="special_access" msgid="5730278220917123811">"ສິດການເຂົ້າເຖິງແອັບພິເສດ"</string>
     <string name="show_system" msgid="4401355756969485287">"ສະແດງລະບົບ"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ຖ້າທ່ານປິດການເຂົ້າເຖິງການແຈ້ງເຕືອນສຳລັບ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, ລະບົບອາດຈະປິດການເຂົ້າເຖິງຫ້າມລົບກວນເຊັ່ນກັນ."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ປິດ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ຍົກເລີກ"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ແອັບເຫຼົ່ານີ້ສົ່ງຜົນເສຍຕໍ່ປະສິດທິພາບຂອງລະບົບ ແລະ ຖືກປ້ອງກັນບໍ່ໃຫ້ເອີ້ນໃຊ້ໃນພື້ນຫຼັງ.\nກະລຸນາໃຫ້ຄວາມສຳຄັນແອັບເພື່ອເຮັດໃຫ້ໃຊ້ໃນພື້ນຫຼັງໄດ້ ແລະ ລຶບມັນອອກຈາກລາຍຊື່ນີ້."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ໃຫ້ຄວາມສຳຄັນແອັບ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"ການເຂົ້າເຖິງ SMS ແບບພຣີມຽມ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS ແບບພຣີມຽມອາດຈະເຮັດໃຫ້ທ່ານເສຍເງິນ ແລະ ຈະເພີ່ມໃສ່ໃບບິນຜູ້ໃຫ້ບໍລິການຂອງທ່ານ. ຖ້າທ່ານເປີດໃຊ້ການອະນຸຍາດສຳລັບແອັບໃດໜຶ່ງ, ທ່ານຈະສາມາດສົ່ງ SMS ແບບພຣີມຽມໂດຍໃຊ້ແອັບນັ້ນໄດ້."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ການເຂົ້າເຖິງການນຳໃຊ້"</string>

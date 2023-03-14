@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Programme en kennisgewings"</string>
     <string name="all_applications" msgid="7798210477486822168">"Wys alle programme"</string>
     <string name="default_applications" msgid="1558183275638697087">"Verstekprogramme"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Apps wat werkverrigting beïnvloed"</string>
     <string name="app_permissions" msgid="32799922508313948">"Programtoestemmings"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Beheer apptoegang tot jou data"</string>
     <string name="applications_settings" msgid="794261395191035632">"Programinligting"</string>
     <string name="force_stop" msgid="2153183697014720520">"Dwing stop"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Dwing stop?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"As jy \'n program dwing om te stop, kan dit wangedra."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Skakel Prioritiseer Programwerkverrigting aan?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"As jy dit aanskakel, kan dit potensiële stelselonstabiliteit of \'n langtermynimpak op hardware veroorsaak. Wil jy voortgaan?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Prioritiseer appwerkverrigting?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Dit kan potensiële stelselonstabiliteit veroorsaak of hardeware lang termyn beïnvloed. Wil jy voortgaan?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ja"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nee, dankie"</string>
     <string name="disable_text" msgid="4358165448648990820">"Deaktiveer"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Toestemmingbestuurder"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Beheer apptoegang tot jou data"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Vir Assistent en meer"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# app wat werkverrigting beïnvloed}other{# apps wat werkverrigting beïnvloed}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Na stelsel- en ander instellings"</string>
     <string name="special_access" msgid="5730278220917123811">"Spesiale apptoegang"</string>
     <string name="show_system" msgid="4401355756969485287">"Wys stelsel"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"As jy kennisgewingtoegang vir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> afskakel, kan Moenie Steur Nie-toegang dalk ook afgeskakel word."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Skakel af"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselleer"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Hierdie apps het stelselwerkverrigting negatief beïnvloed en is verhoed om op die agtergrond te loop.\nPrioritiseer app om agtergrondgebruik toe te laat en verwyder dit van hierdie lys."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritiseer app"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Toegang tot premium-SMS\'e"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS\'e kan jou geld kos en die koste sal by jou diensverskafferfakture gevoeg word. As jy toestemming vir \'n program aktiveer, sal jy premium-SMS\'e met daardie program kan stuur."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Gebruiktoegang"</string>

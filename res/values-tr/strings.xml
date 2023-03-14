@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Uygulamalar ve bildirimler"</string>
     <string name="all_applications" msgid="7798210477486822168">"Tüm uygulamaları göster"</string>
     <string name="default_applications" msgid="1558183275638697087">"Varsayılan uygulamalar"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Performansı etkileyen uygulamalar"</string>
     <string name="app_permissions" msgid="32799922508313948">"Uygulama izinleri"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Verilere uygulama erişimini denetleyin"</string>
     <string name="applications_settings" msgid="794261395191035632">"Uygulama bilgileri"</string>
     <string name="force_stop" msgid="2153183697014720520">"Zorla durdur"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Zorla durdurulsun mu?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Uygulama zorla durdurulursa hatalı davranabilir."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Uygulama performansı öncelikli olsun mu?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Bu ayarın açılması, sistem kararsızlıklarına veya donanım üzerinde uzun süreli etkiye sebep olabilir. Devam etmek istiyor musunuz?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Uygulama performansına öncelik verilsin mi?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Bu ayarın açılması, sistem kararsızlıklarına veya donanım üzerinde uzun süreli etkiye sebep olabilir. Devam etmek istiyor musunuz?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Evet"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Hayır, teşekkürler"</string>
     <string name="disable_text" msgid="4358165448648990820">"Devre dışı bırak"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"İzin yöneticisi"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Verilere uygulama erişimini denetleyin"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Asistan ve diğer uygulamalar için"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{Performansı etkileyen # uygulama var}other{Performansı etkileyen # uygulama var}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Sisteme ve diğer ayarlara"</string>
     <string name="special_access" msgid="5730278220917123811">"Özel uygulama erişimi"</string>
     <string name="show_system" msgid="4401355756969485287">"Sisteme ait olanlar"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> için bildirimlere erişimi devre dışı bırakırsanız Rahatsız Etmeyin erişimi de devre dışı bırakılabilir."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Devre dışı bırak"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"İptal et"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Sistem performansını olumsuz etkileyen bu uygulamaların arka planda çalışması engellenmiştir.\nArka planda kullanımına izin vermek için uygulamaya öncelik verin ve bu listeden kaldırın."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Uygulamaya öncelik ver"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium SMS erişimi"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMS kullanımı, para ödemenizi gerektirebilir ve bu ücret operatör faturanıza eklenir. Bir uygulamaya bu izni verdiğinizde söz konusu uygulamayı kullanarak premium SMS gönderebilirsiniz."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Kullanım erişimi"</string>

@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplikasi &amp; notifikasi"</string>
     <string name="all_applications" msgid="7798210477486822168">"Tampilkan semua aplikasi"</string>
     <string name="default_applications" msgid="1558183275638697087">"Aplikasi default"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Aplikasi yang memengaruhi performa"</string>
     <string name="app_permissions" msgid="32799922508313948">"Izin aplikasi"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Mengontrol akses aplikasi ke data Anda"</string>
     <string name="applications_settings" msgid="794261395191035632">"Info aplikasi"</string>
     <string name="force_stop" msgid="2153183697014720520">"Paksa berhenti"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Paksa berhenti?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Jika aplikasi dihentikan paksa, fungsinya mungkin akan terganggu."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Aktifkan prioritaskan performa aplikasi?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Mengaktifkannya dapat menyebabkan potensi ketidakstabilan sistem atau dampak jangka panjang pada hardware. Ingin melanjutkan?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Prioritaskan performa aplikasi?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Tindakan ini dapat berpotensi menyebabkan ketidakstabilan sistem atau dampak jangka panjang pada hardware. Ingin melanjutkan?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ya"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Tidak, terima kasih"</string>
     <string name="disable_text" msgid="4358165448648990820">"Nonaktifkan"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Pengelola izin"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Mengontrol akses aplikasi ke data Anda"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Untuk Asisten dan lainnya"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplikasi yang memengaruhi performa}other{# aplikasi yang memengaruhi performa}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Ke sistem dan setelan lainnya"</string>
     <string name="special_access" msgid="5730278220917123811">"Akses aplikasi khusus"</string>
     <string name="show_system" msgid="4401355756969485287">"Tampilkan sistem"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jika akses notifikasi untuk <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> dinonaktifkan, akses fitur Jangan Ganggu juga dapat dinonaktifkan."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Nonaktifkan"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Batal"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aplikasi ini berdampak negatif pada performa sistem dan telah dihentikan agar tidak berjalan di latar belakang.\nPrioritaskan aplikasi untuk mengizinkan penggunaan di latar belakang dan menghapusnya dari daftar ini."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritaskan apl"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Akses SMS Premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS Premium mungkin memerlukan biaya dan akan menambah tagihan operator. Jika izin aplikasi diaktifkan, Anda dapat mengirim SMS premium menggunakan aplikasi tersebut."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Akses penggunaan"</string>

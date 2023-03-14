@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apper og varsler"</string>
     <string name="all_applications" msgid="7798210477486822168">"Vis alle apper"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standardapper"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Apper som påvirker ytelsen"</string>
     <string name="app_permissions" msgid="32799922508313948">"Apptillatelser"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kontroller apptilgang til dataene dine"</string>
     <string name="applications_settings" msgid="794261395191035632">"App-info"</string>
     <string name="force_stop" msgid="2153183697014720520">"Tving avslutning"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vil du tvinge avslutning?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Hvis du tvinger avslutning av en app, kan det oppstå problemer."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Vil du slå på Prioriter appytelse?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Hvis du slår dette på, kan det gjøre systemet ustabilt eller ha langsiktig virkning på maskinvaren. Vil du fortsette?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Vil du prioritere appytelsen?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Dette kan gjøre systemet ustabilt eller ha langsiktig innvirkning på maskinvaren. Vil du fortsette?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ja"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nei, takk"</string>
     <string name="disable_text" msgid="4358165448648990820">"Deaktiver"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Behandle tillatelser"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontroller apptilgang til dataene dine"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"For assistenten med mer"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# app påvirker ytelsen}other{# apper påvirker ytelsen}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Til system og andre innstillinger"</string>
     <string name="special_access" msgid="5730278220917123811">"Spesiell apptilgang"</string>
     <string name="show_system" msgid="4401355756969485287">"Vis systemet"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Hvis du slår av varseltilgang for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan tilgang til «Ikke forstyrr» også bli slått av."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slå av"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Avbryt"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Disse appene påvirker systemytelsen negativt, og de er forhindret fra å kjøre i bakgrunnen.\nDu kan prioritere apper for å tillate at de kjører i bakgrunnen, og fjerne dem fra denne listen."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioriter appen"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Tilgang til premium-SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS kan koste penger og legges til telefonregningen din. Hvis du slår på tillatelse for en app, kan du sende premium-SMS via den appen."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Brukstilgang"</string>

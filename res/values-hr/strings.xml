@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplikacije i obavijesti"</string>
     <string name="all_applications" msgid="7798210477486822168">"Pokaži sve aplikacije"</string>
     <string name="default_applications" msgid="1558183275638697087">"Zadane aplikacije"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Aplikacije koje utječu na izvedbu"</string>
     <string name="app_permissions" msgid="32799922508313948">"Dopuštenja za aplikacije"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Upravljajte pristupom aplikacija svojim podacima"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informacije o aplikaciji"</string>
     <string name="force_stop" msgid="2153183697014720520">"Prisilno zaustavi"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Prisilno zaustaviti?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ako prisilno zaustavite aplikaciju, možda će se ponašati nepredviđeno."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Uključiti prioritet: izvedba aplikacije?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Uključivanje te opcije može uzrokovati nestabilnost sustava ili dugoročni učinak na hardver. Želite li nastaviti?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Dati prednost izvedbi aplikacije?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"To može uzrokovati nestabilnost sustava ili dugoročni učinak na hardver. Želite li nastaviti?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Da"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Ne, hvala"</string>
     <string name="disable_text" msgid="4358165448648990820">"Onemogući"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Upravitelj dopuštenja"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Upravljajte pristupom aplikacija svojim podacima"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Za Asistenta i druge aplikacije"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplikacija utječe na izvedbu}one{# aplikacija utječe na izvedbu}few{# aplikacije utječu na izvedbu}other{# aplikacija utječe na izvedbu}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Za sustav i druge postavke"</string>
     <string name="special_access" msgid="5730278220917123811">"Poseban pristup za aplikacije"</string>
     <string name="show_system" msgid="4401355756969485287">"Prikaži sustav"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obavijestima za <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda će se isključiti i pristup značajci Ne uznemiravaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Odustani"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ove aplikacije negativno utječu na izvedbu sustava i onemogućeno im je izvođenje u pozadini.\nDajte aplikaciji prednost da biste omogućili njezinu upotrebu u pozadini i uklonili je s ovog popisa."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prednost aplikaciji"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup SMS-ovima s dodatnom naplatom"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS-ovi s dodatnom naplatom mogu se dodatno naplaćivati i povećat će vaš račun. Ako nekoj aplikaciji date to dopuštenje, moći ćete slati SMS-ove s dodatnom naplatom pomoću te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup upotrebi"</string>
