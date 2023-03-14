@@ -228,6 +228,7 @@ public class ProfileGridRecyclerView extends RecyclerView {
         List<UserInfo> users = UserManager.get(mContext).getAliveUsers();
         return users.stream()
                 .filter(UserInfo::supportsSwitchToByUser)
+                .sorted((u1, u2) -> Long.signum(u1.creationTime - u2.creationTime))
                 .collect(Collectors.toList());
     }
 

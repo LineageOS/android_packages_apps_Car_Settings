@@ -122,7 +122,7 @@
     <item msgid="1838705897358163300">"Hyvä"</item>
     <item msgid="6067166649320533751">"Erinomainen"</item>
   </string-array>
-    <string name="link_speed" msgid="7868861844075624445">"%1$d Mbit/s"</string>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mb/s"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
     <string name="wifi_network_detail" msgid="9070182553555487360">"Verkon tiedot"</string>
@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Sovellukset ja ilmoitukset"</string>
     <string name="all_applications" msgid="7798210477486822168">"Näytä kaikki sovellukset"</string>
     <string name="default_applications" msgid="1558183275638697087">"Oletussovellukset"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Suorituskykyyn vaikuttavat sovellukset"</string>
     <string name="app_permissions" msgid="32799922508313948">"Sovellusluvat"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Päätä sovelluksen pääsystä dataasi"</string>
     <string name="applications_settings" msgid="794261395191035632">"Sovellustiedot"</string>
     <string name="force_stop" msgid="2153183697014720520">"Pakota sulkeutumaan"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Pakotetaanko sulkeutumaan?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Jos pakotat sovelluksen sulkeutumaan, se ei välttämättä enää toimi oikein."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Laitetaanko päälle sovelluksen suorituskyvyn priorisointi?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Päälle laittaminen saattaa aiheuttaa järjestelmän epävakautta tai pitkäaikaisia laitteistovaikutuksia. Haluatko jatkaa?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Priorisoi sovelluksen suorituskykyä?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Tämä saattaa aiheuttaa järjestelmän epävakautta tai pitkäaikaisia laitteistovaikutuksia. Haluatko jatkaa?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Kyllä"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Ei kiitos"</string>
     <string name="disable_text" msgid="4358165448648990820">"Poista käytöstä"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Käyttöoikeuksien ylläpitäjä"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Päätä sovelluksen pääsystä dataasi"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant ja muita"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# sovellus vaikuttaa suorituskykyyn}other{# sovellusta vaikuttaa suorituskykyyn}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Järjestelmäasetukset ja muut"</string>
     <string name="special_access" msgid="5730278220917123811">"Sovellusten erikoiskäyttö"</string>
     <string name="show_system" msgid="4401355756969485287">"Näytä järjestelmä"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jos <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ei enää pääse ilmoituksiin, myös Älä häiritse ‑tilaan pääsy voidaan estää."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Estä pääsy"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Peru"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Nämä sovellukset vaikuttavat järjestelmän suorituskykyyn negatiivisesti ja niiden toiminta taustalla on estetty.\nPriorisoi sovellusta salliaksesi sen toiminnan taustalla ja poista se listalta."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Priorisoi sovellusta"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium-tekstiviestien käyttö"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-tekstiviestien käyttö saattaa olla maksullista, ja kulut lisätään operaattorisi laskuun. Jos annat sovellukselle käyttöoikeuden, voit lähettää premium-tekstiviestejä kyseisellä sovelluksella."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Käyttöoikeus"</string>
@@ -458,7 +462,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Tekijät"</string>
     <string name="manual" msgid="4819839169843240804">"Manuaalinen"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Viranomaismerkinnät"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Turvallisuus- ja lakiopas"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Turvallisuus- ja säädöstenmukaisuusopas"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Tekijänoikeudet"</string>
     <string name="license_title" msgid="936705938435249965">"Käyttölupa"</string>
     <string name="terms_title" msgid="5201471373602628765">"Käyttöehdot"</string>

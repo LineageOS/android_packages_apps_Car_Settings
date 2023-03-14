@@ -241,7 +241,7 @@
     <string name="notification_volume_title" msgid="6749411263197157876">"નોટિફિકેશન"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"મીડિયા"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"સંગીત અને વીડિઓ માટે વૉલ્યૂમ સેટ કરો"</string>
-    <string name="alarm_volume_title" msgid="840384014895796587">"એલાર્મ"</string>
+    <string name="alarm_volume_title" msgid="840384014895796587">"અલાર્મ"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"ફોન રિંગટોન"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ડિફૉલ્ટ નોટિફિકેશન સાઉન્ડ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ડિફૉલ્ટ અલાર્મ સાઉન્ડ"</string>
@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ઍપ અને નોટિફિકેશન"</string>
     <string name="all_applications" msgid="7798210477486822168">"બધી ઍપ બતાવો"</string>
     <string name="default_applications" msgid="1558183275638697087">"ડિફૉલ્ટ ઍપ"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"કાર્યપ્રદર્શન પર નકારાત્મક અસર કરતી ઍપ"</string>
     <string name="app_permissions" msgid="32799922508313948">"ઍપની પરવાનગીઓ"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"ઍપને તમારા ડેટાનો ઍક્સેસ આપવા પર નિયંત્રણ કરો"</string>
     <string name="applications_settings" msgid="794261395191035632">"ઍપની માહિતી"</string>
     <string name="force_stop" msgid="2153183697014720520">"ફરજિયાત બંધ કરો"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ફરજિયાત બંધ કરીએ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"જો તમે કોઈ ઍપને ફરજિયાત બંધ કરો છો, તો તે બરાબર ચાલશે નહીં."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"ઍપના પર્ફોર્મન્સને પ્રાધાન્ય આપવાનું સેટિંગ ચાલુ કરૂએ?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"તેને ચાલુ કરવાથી સંભંવિત રીતે સિસ્ટમમાં અસ્થિરતા આવી શકે છે અથવા લાંબાગાળે હાર્ડવેરને અસર થઈ શકે છે. શું તમે ચાલુ રાખવા માગો છો?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ઍપ પર્ફોર્મન્સને પ્રાધાન્ય આપીએ?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"આને કારણે સંભવિત રીતે સિસ્ટમમાં અસ્થિરતા આવી શકે છે અથવા લાંબાગાળે હાર્ડવેરને અસર થઈ શકે છે. શું તમે ચાલુ રાખવા માગો છો?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"હા"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"ના, આભાર"</string>
     <string name="disable_text" msgid="4358165448648990820">"બંધ કરો"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"પરવાનગી મેનેજર"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"ઍપને તમારા ડેટાનો ઍક્સેસ આપવા પર નિયંત્રણ કરો"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant અને વધુ સુવિધાઓ માટે"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# ઍપ કાર્યપ્રદર્શન પર નકારાત્મક અસર કરી રહી છે}one{# ઍપ કાર્યપ્રદર્શન પર નકારાત્મક અસર કરી રહી છે}other{# ઍપ કાર્યપ્રદર્શન પર નકારાત્મક અસર કરી રહી છે}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"સિસ્ટમ અને અન્ય સેટિંગનો"</string>
     <string name="special_access" msgid="5730278220917123811">"ઍપ માટે વિશેષ ઍક્સેસ"</string>
     <string name="show_system" msgid="4401355756969485287">"સિસ્ટમ બતાવો"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"જો તમે <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> માટે નોટિફિકેશન ઍક્સેસને બંધ કરો છો, તો ખલેલ પાડશો નહીં ઍક્સેસ પણ બંધ કરવામાં આવી શકે છે."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"બંધ કરો"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"રદ કરો"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"આ ઍપ સિસ્ટમના કાર્યપ્રદર્શન પર નકારાત્મક અસર કરે છે અને તેથી તેને બૅકગ્રાઉન્ડમાં ચાલતા અટકાવવામાં આવી છે.\nઍપનો ઉપયોગ બૅકગ્રાઉન્ડમાં ચલાવવા માટે કરવામાં આવે તેની મંજૂરી આપવા, તેને પ્રાધાન્યતા આપો અને આ સૂચિમાંથી તેને કાઢી નાખો."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ઍપને પ્રાધાન્યતા આપો"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"પ્રીમિયમ SMSનો ઍક્સેસ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"તમને પ્રીમિયમ SMS માટે શુલ્ક લાગી શકે છે અને તે તમારા કૅરિઅર બિલમાં ઉમેરવામાં આવશે. જો તમે કોઇ ઍપ માટે પરવાનગી ચાલુ કરો છો, તો તમે તે ઍપનો ઉપયોગ કરીને પ્રીમિયમ SMS મોકલી શકશો."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"વપરાશનો ઍક્સેસ"</string>
