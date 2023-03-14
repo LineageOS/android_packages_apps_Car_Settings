@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"App e notifiche"</string>
     <string name="all_applications" msgid="7798210477486822168">"Mostra tutte le app"</string>
     <string name="default_applications" msgid="1558183275638697087">"App predefinite"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"App che influiscono sulle prestazioni"</string>
     <string name="app_permissions" msgid="32799922508313948">"Autorizzazioni app"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Controlla l\'accesso delle app ai tuoi dati"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informazioni app"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forza interruzione"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vuoi forzare l\'interruzione?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Se forzi l\'interruzione di un\'app, questa potrebbe funzionare in modo anomalo."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Attivare Priorità a prestazioni dell\'app?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"L\'attivazione dell\'impostazione può causare una potenziale instabilità del sistema o può avere un impatto a lungo termine sull\'hardware. Vuoi continuare?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Dare priorità alle prestazioni dell\'app?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Questa operazione può causare una potenziale instabilità del sistema o avere un impatto a lungo termine sull\'hardware. Vuoi continuare?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Sì"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"No, grazie"</string>
     <string name="disable_text" msgid="4358165448648990820">"Disattiva"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Gestione autorizzazioni"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Controlla l\'accesso delle app ai tuoi dati"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Per l\'assistente e altre app"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# app influisce sulle prestazioni}other{# app influiscono sulle prestazioni}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Al sistema e ad altre impostazioni"</string>
     <string name="special_access" msgid="5730278220917123811">"Accesso speciale per le app"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostra sistema"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se disattivi l\'accesso alle notifiche per <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, potrebbe essere disattivato anche l\'accesso alla funzione Non disturbare."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Disattiva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annulla"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Queste app influiscono negativamente sulle prestazioni del sistema ed è stato impedito il loro funzionamento in background.\nDai priorità all\'app per consentire l\'uso in background e rimuoverla da questo elenco."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Dai priorità all\'app"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Accesso a SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Gli SMS premium potrebbero comportare costi, che verranno aggiunti alle fatture del tuo operatore. Se attivi l\'autorizzazione per un\'app, potrai utilizzare tale app per inviare SMS premium."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Accesso ai dati di utilizzo"</string>
@@ -473,7 +477,7 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Errore di caricamento delle licenze."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Caricamento…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Ti manca # passaggio per diventare sviluppatore.}other{Ti mancano # passaggi per diventare sviluppatore.}}"</string>
-    <string name="show_dev_on" msgid="5339077400040834808">"Ora sei sviluppatore."</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"Ora sei uno sviluppatore."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Non è necessario, sei già sviluppatore."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opzioni sviluppatore"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opzioni di ripristino"</string>
@@ -537,7 +541,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Disinstallazione di app"</string>
     <string name="user_add_user_menu" msgid="4125869008006021799">"Aggiungi profilo"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Nuovo profilo"</string>
-    <string name="user_add_user_title" msgid="6296827596015729982">"Vuoi aggiungere nuovo profilo?"</string>
+    <string name="user_add_user_title" msgid="6296827596015729982">"Aggiungere un nuovo profilo?"</string>
     <string name="user_add_user_message_setup" msgid="812616230454605159">"I nuovi profili dovrebbero essere personalizzati dalle persone per cui sono stati creati."</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"Qualsiasi profilo può aggiornare le app che verranno usate da tutti gli altri profili."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Limite di profili raggiunto"</string>

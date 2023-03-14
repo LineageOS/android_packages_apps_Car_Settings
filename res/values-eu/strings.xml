@@ -176,7 +176,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Konektatu da"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Erakutsi guztiak"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Bilatzen"</string>
-    <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth-a"</string>
+    <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetootha"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Erabili Bluetooth bidezko konexioa"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Izenik gabeko gailua"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Parekatutako gailuak"</string>
@@ -193,16 +193,16 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Gailu erabilgarriak"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profilak"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
-    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetooth-a aktibatzen…"</string>
-    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetooth-a desaktibatzen…"</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a aktibatu nahi du"</string>
-    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a desaktibatu nahi du"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikazio batek Bluetooth-a aktibatu nahi du"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikazio batek Bluetooth-a desaktibatu nahi du"</string>
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Bluetootha aktibatzen…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Bluetootha desaktibatzen…"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetootha aktibatu nahi du"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetootha desaktibatu nahi du"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikazio batek Bluetootha aktibatu nahi du"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikazio batek Bluetootha desaktibatu nahi du"</string>
     <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du Bluetooth bidezko beste gailu batzuen aurrean."</string>
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Aplikazio batek gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du Bluetooth bidezko beste gailu batzuen aurrean."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetooth-a aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikazio batek Bluetooth-a aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak Bluetootha aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%2$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikazio batek Bluetootha aktibatu, eta gailu nagusia <xliff:g id="TIMEOUT">%1$d</xliff:g> segundoz ikusgai ezarri nahi du beste gailu batzuen aurrean."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"%1$s gisa dago ikusgai beste gailuetan"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Nire gailuak"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Aurretik konektatutakoak"</string>
@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplikazioak eta jakinarazpenak"</string>
     <string name="all_applications" msgid="7798210477486822168">"Erakutsi aplikazio guztiak"</string>
     <string name="default_applications" msgid="1558183275638697087">"Aplikazio lehenetsiak"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Errendimendua okertzen duten aplikazioak"</string>
     <string name="app_permissions" msgid="32799922508313948">"Aplikazio-baimenak"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrolatu aplikazioek datuak atzitzeko duten baimena"</string>
     <string name="applications_settings" msgid="794261395191035632">"Aplikazioaren informazioa"</string>
     <string name="force_stop" msgid="2153183697014720520">"Behartu gelditzera"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Gelditzera behartu nahi duzu?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Aplikazioak gelditzera behartzen badituzu, baliteke behar bezala ez funtzionatzea."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Aplikazioen errendimendua lehenesteko eginbidea aktibatu nahi duzu?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Aktibatzen baduzu, baliteke sistema ezegonkortzea edo eginbideak epe luzerako eragina edukitzea hardwarean. Aurrera egin nahi duzu?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Aplikazioen errendimendua lehenetsi nahi duzu?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Baliteke sistema ezegonkortzea edo eginbideak epe luzerako eragina edukitzea hardwarean. Aurrera egin nahi duzu?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Bai"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Ez, eskerrik asko"</string>
     <string name="disable_text" msgid="4358165448648990820">"Desgaitu"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Baimenen kudeatzailea"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrolatu aplikazioek datuak atzitzeko duten baimena"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Laguntzailea eta beste"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplikazio ari da errendimendua okertzen}other{# aplikazio ari dira errendimendua okertzen}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Sistema eta beste ezarpen batzuk"</string>
     <string name="special_access" msgid="5730278220917123811">"Aplikazio-baimen bereziak"</string>
     <string name="show_system" msgid="4401355756969485287">"Erakutsi sistemaren prozesuak"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioari jakinarazpenak atzitzeko aukera desaktibatzen badiozu, baliteke ez molestatzeko modurako sarbidea era desaktibatzea."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desaktibatu"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Utzi"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aplikazio hauek sistemaren errendimendua okertzen dute; horregatik, atzeko planoan exekutatzea galarazi zaie.\nAplikazio hauetakoren bat atzeko planoan erabili nahi baduzu, eman iezaiozu lehentasuna, eta zerrenda honetatik kenduko da."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Eman lehentasuna aplikazioari"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium SMSetarako sarbidea"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMSak ordaindu egin behar izan ditzakezu eta, hala bada, operadorearen fakturan gehituko da haien kostua. Aplikazioei baimen hau ematen badiezu, premium SMSak bidaltzeko gai izango dira."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Erabilera-datuetarako sarbidea"</string>
@@ -420,7 +424,7 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Erabili kokapena"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Gailuaren kokapena zehazteko, GPSa, wifi-sarea, sare mugikorrak, sentsoreak eta antzeko iturburuak erabiltzen ditu kokapenaren eginbideak."</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Gailuaren kokapena estimatzeko, GPSa, wifi-sarea, sare mugikorrak, sentsoreak eta antzeko iturburuak erabiltzen ditu kokapenaren eginbideak."</string>
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Gidatzeko laguntza"</string>
     <string name="adas_settings_footer" msgid="6697021691244459156">"Gidatzeko laguntzarekin erlazionatutako aplikazioei bidaltzen zaien kokapen-informazioak ez dauka identifikatzen zaituen informaziorik. Gehienez bi egunez gordetzen da. Gero, ezabatu egiten da."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofonoa"</string>
@@ -482,7 +486,7 @@
     <string name="reset_network_desc" msgid="602381374544634925">"Sareko ezarpen guztiak berrezarriko dira; besteak beste:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wifi‑konexioa"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datu-konexioa"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth-a"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetootha"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Ezabatu ibilgailuaren eSIM txarteletako eduki guztia"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Ez da utziko bertan behera daukazun zerbitzu-plana."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Ezin dira berrezarri eSIM txartelak"</string>
@@ -744,8 +748,8 @@
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ezabatu profila"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Gehitu profila"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Bistaratu distira"</string>
-    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktibatu Bluetooth-a gailuak ikusteko"</string>
-    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ireki Bluetooth-aren ezarpenak gailu batekin parekatzeko"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktibatu Bluetootha gailuak ikusteko"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ireki Bluetootharen ezarpenak gailu batekin parekatzeko"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informazio- eta aisia-sistemaren administratzailea"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktibatutako aplikazioak"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Desaktibatutako aplikazioak"</string>
@@ -786,7 +790,7 @@
     <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Ibilgailu kudeatuaren kontuarekin erlazionatutako datuak."</li>\n" "<li>"Ibilgailu kudeatuaren aplikazioen zerrenda."</li>\n" "<li>"Aplikazio bakoitzean emandako denbora eta erabilitako datuak."</li></string>
     <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Informazio- eta aisia-sistemarako duzun sarbidea"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Ibilgailuko aplikazioen zerrenda"</string>
-    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Gutxi gorabeherakoa da aplikazio kopurua. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Estimazio da aplikazio kopurua. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="other">Gutxienez <xliff:g id="COUNT_1">%d</xliff:g> aplikazio</item>
       <item quantity="one">Gutxienez <xliff:g id="COUNT_0">%d</xliff:g> aplikazio</item>

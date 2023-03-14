@@ -180,7 +180,7 @@
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Koristi Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Neimenovani uređaj"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Upareni uređaji"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Uparivanje novog uređaja"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Uparite novi uređaj"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth će se uključiti za uparivanje"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Prekinuti vezu s uređajem?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Vaše vozilo će prekinuti vezi s uređajem <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplikacije i obavještenja"</string>
     <string name="all_applications" msgid="7798210477486822168">"Prikaži sve aplikacije"</string>
     <string name="default_applications" msgid="1558183275638697087">"Zadane aplikacije"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Aplikacije koje utiču na performanse"</string>
     <string name="app_permissions" msgid="32799922508313948">"Odobrenja za aplikaciju"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrolirajte pristup aplikacija podacima"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informacije o aplikaciji"</string>
     <string name="force_stop" msgid="2153183697014720520">"Prisilno zaustavi"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Prisilno zaustaviti?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ako prisilno zaustavite aplikaciju, moguće je da će nepravilno funkcionirati."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Uključiti prioritet performansi aplikacije?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Ako uključite, to može prouzrokovati potencijalnu nestabilnost sistema ili dugotrajni uticaj na hardver. Želite li nastaviti?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Dati prioritet performansama aplikacije?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Ovo može uzrokovati potencijalnu nestabilnost sistema ili dugoročno uticati na hardver. Želite li nastaviti?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Da"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Ne, hvala"</string>
     <string name="disable_text" msgid="4358165448648990820">"Onemogući"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Upravitelj odobrenja"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrolirajte pristup aplikacija podacima"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Za Asistenta i druge usluge"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplikacija koja utiče na performanse}one{# aplikacija koja utiče na performanse}few{# aplikacije koje utiču na performanse}other{# aplikacija koje utiču na performanse}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Za sistem i druge postavke"</string>
     <string name="special_access" msgid="5730278220917123811">"Poseban pristup za aplikacije"</string>
     <string name="show_system" msgid="4401355756969485287">"Prikaži sistemske procese"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako aplikaciji <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> isključite pristup obavještenjima, može se isključiti i pristup načinu rada Ne ometaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Otkaži"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ove aplikacije negativno utiču na performanse sistema i njihov rad u pozadini je spriječen.\nDajte prioritet aplikaciji da dozvolite korištenje u pozadini i uklonite je s ovog spiska."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Daj prioritet aplik."</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup premium SMS-ovima"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Moguće je da se usluga slanja premium SMS-ova dodatno plaća, a trošak će se dodati na račun operatera. Ako aplikaciji date odobrenje, moći ćete slati premium SMS-ove putem te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup korištenju"</string>

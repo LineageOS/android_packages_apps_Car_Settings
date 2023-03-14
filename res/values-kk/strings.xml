@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Қолданбалар мен хабарландырулар"</string>
     <string name="all_applications" msgid="7798210477486822168">"Барлық қолданбаларды көрсету"</string>
     <string name="default_applications" msgid="1558183275638697087">"Әдепкі қолданбалар"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Өнімділікке әсер ететін қолданбалар"</string>
     <string name="app_permissions" msgid="32799922508313948">"Қолданба рұқсаттары"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Қолданбалардың деректерді пайдалану рұқсатын басқару"</string>
     <string name="applications_settings" msgid="794261395191035632">"Қолданба ақпараты"</string>
     <string name="force_stop" msgid="2153183697014720520">"Қолмен тоқтату"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Қолмен тоқтатылсын ба?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Қолданбаны қолмен тоқтату оның жұмысына кері әсерін тигізуі мүмкін."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Қолданба өнімділігін басымды ету қосылсын ба?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Функция қосылса, жүйенің жұмысы тұрақсыз болуы немесе жабдыққа әсер етуі мүмкін. Жалғастырғыңыз келе ме?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Қолданба өнімділігін басым ету керек пе?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Бұл әрекет жүйе жұмысын тұрақсыз қылуы не жабдыққа ұзақ мерзімді әсер етуі мүмкін. Жалғастырғыңыз келе ме?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Иә"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Жоқ, рақмет"</string>
     <string name="disable_text" msgid="4358165448648990820">"Өшіру"</string>
@@ -356,7 +357,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Жоқ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Таңдалды"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant жүйеде пайдаланылып жатқан қолданбалар туралы ақпаратты, соның ішінде экранға шығатын немесе қолданбалардағы деректерді оқи алады."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Осы қолданбаға сенетініңізге көз жеткізіңіз&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Автотолтыру&gt;%1$s&lt;/xliff:g&gt; қызметі автоматты түрде толтыруға болатын деректерді анықтау үшін экран мазмұнын пайдаланады."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Осы қолданбаға сенетініңізге көз жеткізіңіз&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Автотолтыру&gt;%1$s&lt;/xliff:g&gt; қызметі автоматты түрде толтыруға болатын деректерді анықтау үшін экран контентін пайдаланады."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Қызметті енгізу"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Сілтемелерді ашу"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Орнатылған қолданбалар"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Рұқсат менеджері"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Қолданбалардың деректерді пайдалану рұқсатын басқару"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant және басқа қолданбалар үшін"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# қолданба өнімділікке әсер етеді.}other{# қолданба өнімділікке әсер етеді.}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Жүйеге және басқа параметрлерге"</string>
     <string name="special_access" msgid="5730278220917123811">"Қолданба пайдалануға арналған арнайы рұқсат"</string>
     <string name="show_system" msgid="4401355756969485287">"Жүйені көрсету"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Егер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үшін хабарландыруларды пайдалану мүмкіндігін өшірсеңіз, Мазаламау режимін пайдалану мүмкін болмайды."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өшіру"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Бас тарту"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Бұл қолданбалар жүйенің өнімділігіне кері әсер етеді, сондықтан олардың фондық режимде жұмыс істеуіне тыйым салынды.\nҚолданбаның фондық режимде пайдаланылуына рұқсат беру үшін оны басым етіңіз және осы тізімнен жойыңыз."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Қолданбаны басым ету"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Ақылы SMS жіберу"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Ақылы SMS жіберу үшін оператор тарифтеріне сәйкес ақы алынады. Егер қолданбаға рұқсат берсеңіз, сол қолданба арқылы ақылы SMS жібере аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Пайдалану тарихын көру"</string>
@@ -416,7 +420,7 @@
     <string name="location_no_recent_access" msgid="2859914321242257931">"Жақында пайдаланған қолданбалар жоқ."</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Жүргізушіге көмек қолданбалары"</string>
     <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Осы көліктің локациясын пайдалану рұқсаты бар қолданбалар жүргізушіге көмектесетін функцияларды қолдана алады."</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Құпиялылық саясаты"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Құпиялық саясаты"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Қолданба деңгейіндегі рұқсаттар"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Локация қызметтері"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Локацияны пайдалану"</string>
@@ -615,7 +619,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Қазір синхрондау"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Синхрондауды өшіру"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Синхрондауда қате шығуда. Кішкене уақыттан кейін қалпына келеді."</string>
-    <string name="privacy_settings_title" msgid="3150145262029229572">"Құпиялылық"</string>
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Құпиялық"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Ақпараттық-сауықтық жүйе деректері"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Қолданбаның локацияны пайдалану рұқсатын басқару"</string>
     <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
@@ -708,7 +712,7 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн бұрын"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Тіркелу деректерін өшіру"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Барлық сертификаттарды өшіру"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Мазмұн толығымен өшірілсін бе?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Контент толығымен өшірілсін бе?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Маңызды деректер жады тазартылды."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Маңызды деректер жады тазартылмады."</string>
     <string name="forget" msgid="3971143908183848527">"Ұмыту"</string>

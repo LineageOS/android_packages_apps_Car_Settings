@@ -179,7 +179,7 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ব্লুটুথ ব্যৱহাৰ কৰক"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নাম নথকা ডিভাইচ"</string>
-    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"যোৰা লগোৱা ডিভাইচসমূহ"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"পেয়াৰ কৰা ডিভাইচসমূহ"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"নতুন ডিভাইচ পেয়াৰ কৰক"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"পেয়াৰ কৰিবলৈ ব্লুটুথ অন হ’ব"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ডিভাইচৰ সংযোগ বিচ্ছিন্ন কৰিবনে?"</string>
@@ -212,9 +212,9 @@
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"পেয়াৰ আৰু সংযোগ কৰক"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ব্লুটুথ যোৰ লগোৱা ক’ড"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"পিনত বৰ্ণ বা প্ৰতীকবোৰ থাকে"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"যোৰা লগোৱা ক’ডটো টাইপ কৰক আৰু তাৰ পিছত ৰিটাৰ্ণ বা এণ্টাৰ কী হেঁচক"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"যোৰা লগোৱা ক’ডটো টাইপ কৰক আৰু তাৰ পাছত ৰিটাৰ্ণ বা এণ্টাৰ কী হেঁচক"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ৰ সৈতে পেয়াৰ কৰিবনে?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ক আপোনাৰ সম্পৰ্কসূচী আৰু কলৰ ইতিহাস চাবলৈ দিয়ক"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ক আপোনাৰ সম্পৰ্কসূচী আৰু কলৰ ইতিহাস এক্সেছ কৰিবলৈ দিয়ক"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"আপুনি এই পিনটো আনটো ডিভাইচত টাইপ কৰিবলগীয়াও হ’ব পাৰে৷"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"আপুনি এই পাছকীটো আনটো ডিভাইচত টাইপ কৰিবলগীয়াও হ’ব পাৰে৷"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"১৬টা অংকযুক্ত হ\'ব লাগিব"</string>
@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"এপ্ আৰু জাননী"</string>
     <string name="all_applications" msgid="7798210477486822168">"সকলো এপ্‌ দেখুৱাওক"</string>
     <string name="default_applications" msgid="1558183275638697087">"ডিফ’ল্ট এপ্"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"কাৰ্যদক্ষতাত-প্ৰভাৱ পেলোৱা এপ্"</string>
     <string name="app_permissions" msgid="32799922508313948">"এপৰ অনুমতি"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"আপোনাৰ ডেটালৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
     <string name="applications_settings" msgid="794261395191035632">"এপ্‌ সম্পৰ্কীয় তথ্য"</string>
     <string name="force_stop" msgid="2153183697014720520">"বলেৰে ৰখাওক"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"বলেৰে বন্ধ কৰিবনে?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"আপুনি কোনো এপ্‌ বলেৰে বন্ধ কৰিবলৈ চেষ্টা কৰিলে ই অস্বাভাৱিক আচৰণ কৰিব পাৰে।"</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"এপৰ কাৰ্যদক্ষতাক অগ্ৰাধিকাৰ দিয়াটো অন কৰিবনে?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"এইটো অন কৰাটোৱে ছিষ্টেমত সমস্যাৰ সৃষ্টি কৰা অথবা দীঘলীয়া সময়ৰ বাবে হাৰ্ডৱেৰত প্ৰভাৱ পেলোৱাৰ সম্ভাৱনা থাকে। আপুনি অব্যাহত ৰাখিব বিচাৰেনে?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"এপৰ কাৰ্যদক্ষতাক অগ্ৰাধিকাৰ দিবনে?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"এইটোৱে ছিষ্টেমত সমস্যাৰ সৃষ্টি কৰা অথবা দীঘলীয়া সময়ৰ বাবে হাৰ্ডৱেৰত প্ৰভাৱ পেলোৱাৰ সম্ভাৱনা থাকে। আপুনি অব্যাহত ৰাখিব বিচাৰেনে?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"হয়"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"নালাগে, ধন্যবাদ"</string>
     <string name="disable_text" msgid="4358165448648990820">"অক্ষম কৰক"</string>
@@ -344,19 +345,19 @@
     <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"এপ্‌টো অগ্ৰভাগত থাকিলেহে ম’বাইল ডেটা ব্যৱহাৰ কৰক"</string>
     <string name="computing_size" msgid="5791407621793083965">"গণনা কৰি থকা হৈছে…"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# টা অতিৰিক্ত অনুমতি}one{# টা অতিৰিক্ত অনুমতি}other{# টা অতিৰিক্ত অনুমতি}}"</string>
-    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"টোকা: ৰিবুট কৰাৰ পিছত আপুনি নিজৰ বাহনখন আনলক নকৰালৈকে এই এপ্‌টো ষ্টাৰ্ট হ’ব নোৱাৰে।"</string>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"টোকা: ৰিবুট কৰাৰ পাছত আপুনি নিজৰ বাহনখন আনলক নকৰালৈকে এই এপ্‌টো ষ্টাৰ্ট হ’ব নোৱাৰে।"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"সহায় আৰু ধ্বনি ইনপুট"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"সহায়ক এপ্"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"স্ক্ৰীণৰ পৰা পাঠ ব্যৱহাৰ কৰক"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"স্ক্ৰীণৰ সমলসমূহ পাঠ ৰূপে চাবলৈ সহায়ক এপক অনুমতি দিয়ক"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"স্ক্ৰীনৰ পৰা পাঠ ব্যৱহাৰ কৰক"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"স্ক্ৰীনৰ সমলসমূহ পাঠ ৰূপে চাবলৈ সহায়ক এপক এক্সেছ দিয়ক"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"স্ক্ৰীণশ্বট ব্যৱহাৰ কৰক"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"সহায়ক এপ্‌টোক স্ক্ৰীণৰ কোনো ছবি এক্সেছ কৰিবলৈ অনুমতি দিয়ক"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"সহায়ক এপ্‌টোক স্ক্ৰীনৰ কোনো ছবি এক্সেছ কৰিবলৈ অনুমতি দিয়ক"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"ধ্বনি ইনপুট"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"স্বয়ংপূৰ্তি সেৱা"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"নাই"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"বাছনিকৃত"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"এই সহায়কটোৱে আপোনাৰ ছিষ্টেমত ব্যৱহৃত হৈ থকা এপসমূহৰ বিষয়ে তথ্য পঢ়িব পাৰিব। সেই তথ্যসমূহৰ ভিতৰত আপোনাৰ স্ক্ৰীণত দেখা পোৱা বা এপে চাব পৰা তথ্যসমূহ অন্তৰ্ভুক্ত।"</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;আপুনি এই এপটোক বিশ্বাস কৰাটো নিশ্চিত কৰক&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt;এ কি স্বয়ংপূৰ্তি কৰিব পাৰিব সেয়া আপোনাৰ স্ক্ৰীণত থকা সমল ব্যৱহাৰ কৰি নির্ধাৰণ কৰে।"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"এই সহায়কটোৱে আপোনাৰ ছিষ্টেমত ব্যৱহৃত হৈ থকা এপসমূহৰ বিষয়ে তথ্য পঢ়িব পাৰিব। সেই তথ্যসমূহৰ ভিতৰত আপোনাৰ স্ক্ৰীনত দেখা পোৱা বা এপে চাব পৰা তথ্যসমূহ অন্তৰ্ভুক্ত।"</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;আপুনি এই এপ্‌টোক বিশ্বাস কৰাটো নিশ্চিত কৰক&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt;এ কি স্বয়ংপূৰ্তি কৰিব পাৰিব সেয়া আপোনাৰ স্ক্ৰীনত থকা সমল ব্যৱহাৰ কৰি নির্ধাৰণ কৰে।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"সেৱা যোগ কৰক"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"লিংকসমূহ খুলি থকা হৈছে"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"ইনষ্টল কৰা এপ্‌সমূহ"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"অনুমতি পৰিচালক"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"আপোনাৰ ডেটালৈ এপৰ এক্সেছ নিয়ন্ত্ৰণ কৰক"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant আৰু বহুতো এপৰ বাবে"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# টা এপে কাৰ্যদক্ষতাত প্ৰভাৱ পেলাইছে}one{# টা এপে কাৰ্যদক্ষতাত প্ৰভাৱ পেলাইছে}other{# টা এপে কাৰ্যদক্ষতাত প্ৰভাৱ পেলাইছে}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"ছিষ্টেম আৰু অন্য ছেটিঙলৈ"</string>
     <string name="special_access" msgid="5730278220917123811">"বিশেষ এপ্ এক্সেছ"</string>
     <string name="show_system" msgid="4401355756969485287">"ছিষ্টেম দেখুৱাওক"</string>
@@ -392,8 +394,10 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপুনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি নিদিয়ে, তেন্তে অসুবিধা নিদিব-ৰ এক্সেছো অফ হ’ব পাৰে।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"অফ কৰক"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল কৰক"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"এই এপ্‌সমূহে ছিষ্টেমৰ কাৰ্যদক্ষতাত ঋণাত্মক প্ৰভাৱ পেলায় আৰু এইবোৰক নেপথ্যত চলাত বাধা দিয়া হৈছে।\nনেপথ্যত ব্যৱহাৰৰ অনুমতি দিবলৈ আৰু ইয়াক সূচীখনৰ পৰা আঁতৰাবলৈ এপক অগ্ৰাধিকাৰ দিয়ক।"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"এপক অগ্ৰাধিকাৰ দিয়ক"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"প্ৰিমিয়াম এছএমএছৰ এক্সেছ"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"প্ৰিমিয়াম এছএমএছৰ কাৰণে আপুনি খৰচ বহন কৰিবলগীয়া হ’ব পাৰে যাৰ বাবে বাহকে আপোনালৈ পঠিওৱা বিলত দেয়ৰ পৰিমাণ বাঢ়িব পাৰে। আপুনি যদি কোনো এপক অনুমতি দিয়ে, তেন্তে আপুনি সেই এপটো ব্যৱহাৰ কৰি প্ৰিমিয়াম এছএমএছ পঠাব পাৰিব।"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"প্ৰিমিয়াম এছএমএছৰ কাৰণে আপুনি খৰচ বহন কৰিবলগীয়া হ’ব পাৰে যাৰ বাবে বাহকে আপোনালৈ পঠিওৱা বিলত দেয়ৰ পৰিমাণ বাঢ়িব পাৰে। আপুনি যদি কোনো এপক অনুমতি দিয়ে, তেন্তে আপুনি সেই এপ্‌টো ব্যৱহাৰ কৰি প্ৰিমিয়াম এছএমএছ পঠাব পাৰিব।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ব্যৱহাৰৰ এক্সেছ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ব্যৱহাৰৰ এক্সেছ সুবিধাই এটা এপক আপুনি আন কি এপ্ ব্যৱহাৰ কৰে আৰু সেইবোৰ কিমান সঘনাই ব্যৱহাৰ কৰে, লগতে আপোনাৰ বাহক, ভাষাৰ ছেটিংসমূহ আৰু অন্যান্য সবিশেষ ট্ৰেক কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ৱাই-ফাই নিয়ন্ত্ৰণ"</string>
@@ -628,23 +632,23 @@
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ইনফ’টেইনমেণ্ট ছিষ্টেমটোৰ পৰা আপোনাৰ প্ৰ’ফাইল আৰু একাউণ্ট মচক"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"আপোনাৰ প্ৰ’ফাইলত এই কাৰ্যটো উপলব্ধ নহয়"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"সুৰক্ষা"</string>
-    <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীণ লক"</string>
+    <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীন লক"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"নাই"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"আৰ্হি"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"পিন"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"পাছৱৰ্ড"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"কোনো লকৰ প্ৰকাৰ বাছক"</string>
-    <string name="screen_lock_options" msgid="8531177937577168185">"স্ক্ৰীণ লকৰ বিকল্প"</string>
+    <string name="screen_lock_options" msgid="8531177937577168185">"স্ক্ৰীন লকৰ বিকল্প"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"আপোনাৰ আৰ্হি দিয়ক"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"নিশ্চিত কৰক"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"আকৌ আঁকক"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"অব্যাহত ৰাখক"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"পুনৰ চেষ্টা কৰক"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"এৰি যাওক"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"স্ক্ৰীণ ছেট কৰক"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"স্ক্ৰীন ছেট কৰক"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"আপোনাৰ পিন বাছনি কৰক"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"আপোনাৰ পাছৱৰ্ড বাছনি কৰক"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"বৰ্তমান ব্যৱহাৰ হৈ থকা স্ক্ৰীণ লক"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"বৰ্তমান ব্যৱহাৰ হৈ থকা স্ক্ৰীন লক"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"সুৰক্ষাৰ বাবে কোনো আৰ্হি ছেট কৰক"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"মচক"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"বাতিল কৰক"</string>
@@ -660,7 +664,7 @@
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"বহুসংখ্যক ভুল প্ৰয়াস। <xliff:g id="NUMBER">%d</xliff:g> ছেকেণ্ডত পুনৰ চেষ্টা কৰক।"</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"আহিটোৱে ৰ\'টেৰী সমর্থন কৰে, স্পর্শ কৰাটো ব্যৱহাৰ কৰক"</string>
     <string name="okay" msgid="4589873324439764349">"ঠিক আছে"</string>
-    <string name="remove_screen_lock_title" msgid="1234382338764193387">"স্ক্ৰীণ লক আঁতৰাবনে?"</string>
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"স্ক্ৰীন লক আঁতৰাবনে?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"এই কাৰ্যই সকলোকে আপোনাৰ একাউণ্টৰ এক্সেছ দিব"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"প্ৰ’ফাইল লক"</string>
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"স্বয়ংক্ৰিয়ভাৱে আনলক কৰাৰ সুবিধা ছেট আপ কৰক"</string>
@@ -704,7 +708,7 @@
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# টা বর্ণতকৈ কম হ\'বই লাগিব}one{# তকৈ কম সংখ্যক আখৰৰ হ\'ব লাগিব}other{# তকৈ কম সংখ্যক আখৰৰ হ\'ব লাগিব}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# টা সংখ্যাতকৈ কম হ\'বই লাগিব}one{# তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব}other{# তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"সংখ্যাবোৰৰ ঊৰ্ধ্বগামী, অধোগামী বা পুনৰাবৃত্তি ক্ৰমক অনুমতি দিয়া নহয়"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্ৰীণ লক সম্পৰ্কীয় বিকল্প"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্ৰীন লক সম্পৰ্কীয় বিকল্প"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> দিন আগত"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ক্ৰেডেনশ্বিয়েল মচক"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"সকলো প্ৰমাণপত্ৰ আঁতৰাওক"</string>

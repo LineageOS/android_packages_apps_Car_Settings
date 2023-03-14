@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Приложения и уведомления"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показать все приложения"</string>
     <string name="default_applications" msgid="1558183275638697087">"Приложения по умолчанию"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Приложения, снижающие производительность"</string>
     <string name="app_permissions" msgid="32799922508313948">"Разрешения для приложений"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Управление доступом приложений к вашим данным"</string>
     <string name="applications_settings" msgid="794261395191035632">"Сведения о приложениях"</string>
     <string name="force_stop" msgid="2153183697014720520">"Остановить"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Остановить принудительно?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Принудительное закрытие приложения может отразиться на его функциональности."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Приоритизировать производительность приложения?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Включение этой настройки может привести к нестабильной работе системы и долговременному воздействию на аппаратное обеспечение. Продолжить?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Приоритизиров. производ-сть приложения?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Это может привести к нестабильной работе системы и долговременному воздействию на аппаратное обеспечение. Продолжить?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Да"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Нет"</string>
     <string name="disable_text" msgid="4358165448648990820">"Отключить"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Управление разрешениями"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Управление доступом приложений к вашим данным"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Для Ассистента и не только"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# приложение, снижающее производительность}one{# приложение, снижающее производительность}few{# приложения, снижающих производительность}many{# приложений, снижающих производительность}other{# приложения, снижающих производительность}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Доступ к системным и другим настройкам"</string>
     <string name="special_access" msgid="5730278220917123811">"Специальный доступ для приложений"</string>
     <string name="show_system" msgid="4401355756969485287">"Показать системные"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Если вы отключите доступ к уведомлениям для приложения \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\", также может быть отключен доступ к настройкам режима \"Не беспокоить\"."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Отключить"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отмена"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Эти приложения снижают производительность системы. Им запрещено работать в фоновом режиме.\nПриоритизируйте приложение, чтобы разрешить ему работать в фоновом режиме и удалить из этого списка."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Приоритизировать"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Доступ к платным SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Обратите внимание, что такие SMS могут оплачиваться дополнительно. Предоставив разрешение приложению, вы сможете отправлять платные SMS с его помощью."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Доступ к истории использования"</string>

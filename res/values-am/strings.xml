@@ -178,7 +178,7 @@
     <string name="progress_scanning" msgid="7191583064717479795">"በመፈለግ ላይ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ብሉቱዝ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ብሉቱዝን ይጠቀሙ"</string>
-    <string name="bluetooth_device" msgid="3178478829314083240">"ያልተሰየመ መሳሪያ"</string>
+    <string name="bluetooth_device" msgid="3178478829314083240">"ያልተሰየመ መሣሪያ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"የተጣመሩ መሣሪያዎች"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"አዲስ መሣሪያ ያጣምሩ"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ብሉቱዝ ለማጣመር ይበራል"</string>
@@ -234,17 +234,17 @@
     <string name="tts_speech_rate" msgid="4512944877291943133">"የንግግር ፍጥነት"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"የድምጽ ውፍረት"</string>
     <string name="tts_reset" msgid="6289481549801844709">"ዳግም አስጀምር"</string>
-    <string name="sound_settings" msgid="3072423952331872246">"ድምጽ"</string>
+    <string name="sound_settings" msgid="3072423952331872246">"ድምፅ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"የጥሪ የድምጽ መጠን"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"የአሰሳ ድምጽ መጠን"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"የአሰሳ ድምፅ መጠን"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"የደውል ቅላጼ"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"ማሳወቂያ"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"ማህደረ መረጃ"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"ለሙዚቃ እና ቪዲዮዎች የድምፅ መጠን ያቀናብሩ"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"ማንቂያ"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"የስልክ ጥሪ ቅላጼ"</string>
-    <string name="notification_ringtone_title" msgid="8661716239594010288">"ነባሪ የማሳወቂያ ድምጽ"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"ነባሪ የማንቂያ ድምጽ"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"ነባሪ የማሳወቂያ ድምፅ"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"ነባሪ የማንቂያ ድምፅ"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"አስቀምጥ"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"የማንቂያ ድምፆች"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"የጥሪ ቅላጼ፣ ማሳወቂያዎች፣ ማንቂያ"</string>
@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"መተግበሪያዎች እና ማሳወቂያዎች"</string>
     <string name="all_applications" msgid="7798210477486822168">"ሁሉንም መተግበሪያዎች አሳይ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ነባሪ መተግበሪያዎች"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"በአፈጻጸም ላይ ተጽዕኖ ያላቸው መተግበሪያዎች"</string>
     <string name="app_permissions" msgid="32799922508313948">"የመተግበሪያ ፈቃዶች"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"መተግበሪያ ያለው የውሂብዎ መዳረሻን ይቆጣጠሩ"</string>
     <string name="applications_settings" msgid="794261395191035632">"የመተግበሪያ መረጃ"</string>
     <string name="force_stop" msgid="2153183697014720520">"በኃይል አቁም"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"በኃይል አቁም?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"መተግበሪያን በጉልበት እንዲቆም ካደረጉት ከአደብ ውጭ ሊሆን ይችላል።"</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"ለመተግበሪያ አፈጻጸም ቅድሚያ መስጠት ይብራ?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"እሱን ማብራት ሊከሰት የሚችል የስርዓት አለመረጋጋትን ወይም የረጅም ጊዜ የሃርድዌር ተፅእኖን ሊያስከትል ይችላል። መቀጠል ይፈልጋሉ?"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ለመተግበሪያ አፈጻጸም ቅድሚያ ይሰጥ?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"ይህ ሊሆን የሚችል የሥርዓት አለመረጋጋትን ወይም የረጅም ጊዜ የሃርድዌር ተጽዕኖን ሊያስከትል ይችላል። ለመቀጠል ይፈልጋሉ?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"አዎ"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"አይ፣ አመሰግናለሁ"</string>
     <string name="disable_text" msgid="4358165448648990820">"አሰናክል"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"የፈቃድ አስተዳዳሪ"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"መተግበሪያ ያለው የውሂብዎ መዳረሻን ይቆጣጠሩ"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"ለረዳት እና ለሌሎች"</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{በአፈጻጸም ላይ ተጽዕኖ የሚያደርግ # መተግበሪያ}one{በአፈጻጸም ላይ ተጽዕኖ የሚያደርግ # መተግበሪያ}other{በአፈጻጸም ላይ ተጽዕኖ የሚያደርጉ # መተግበሪያዎች}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"ለስርዓት እና ሌሎች ቅንብሮች"</string>
     <string name="special_access" msgid="5730278220917123811">"ልዩ የመተግበሪያ መዳረሻ"</string>
     <string name="show_system" msgid="4401355756969485287">"ሥርዓት አሳይ"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"የ<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ማሳወቂያ መዳረሻን ካጠፉ የአትረብሽ መዳረሻ እንዲሁም ሊጠፋ ይችላል።"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"አጥፋ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ተወው"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"እነዚህ መተግበሪያዎች በሥርዓት አፈጻጸም ላይ አሉታዊ ተጽዕኖ ያደርጋሉ እና በዳራ ከመሄድ የተከለከሉ ናቸው።\n የዳራ አጠቃቀምን ለመፍቀድ እና ከዚህ ዝርዝር እሱን ለማስወገድ ለመተግበሪያው ቅድሚያ ይስጡ።"</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ለመተግበሪያ ቅድሚያ ስጥ"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"የፕሪሚየም ኤስኤምኤስ መዳረሻ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ፕሪሚየም ኤስኤምኤስ ውድ ገንዘብ ሊያስወጣዎት ይችላል፣ እና በአገልግሎት አቅራቢ ክፍያዎ ላይ ሒሳብ ያስጨምርብዎታል። ለመተግበሪያ ፈቃድን ካነቁ ያንን መተግበሪያ በመጠቀም ፕሪሚየም ኤስኤምኤስ መላክ ይችላሉ።"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"የአጠቃቀም መዳረሻ"</string>

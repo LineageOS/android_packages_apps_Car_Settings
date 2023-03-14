@@ -301,14 +301,15 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Εφαρμογές και ειδοποιήσεις"</string>
     <string name="all_applications" msgid="7798210477486822168">"Εμφάνιση όλων των εφαρμογών"</string>
     <string name="default_applications" msgid="1558183275638697087">"Προεπιλεγμένες εφαρμογές"</string>
+    <string name="performance_impacting_apps" msgid="3439260699394720569">"Εφαρμογές που επηρεάζουν την απόδοση"</string>
     <string name="app_permissions" msgid="32799922508313948">"Άδειες εφαρμογών"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Ελέγξτε την πρόσβαση των εφαρμογών στα δεδομένα σας"</string>
     <string name="applications_settings" msgid="794261395191035632">"Πληροφορίες εφαρμογής"</string>
     <string name="force_stop" msgid="2153183697014720520">"Αναγκαστική διακοπή"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Αναγκαστική διακοπή;"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Εάν επιβάλετε τη διακοπή μιας εφαρμογής, ενδέχεται να μην λειτουργήσει σωστά."</string>
-    <string name="prioritize_app_performance_dialog_title" msgid="2561577032540073080">"Ενεργοποίηση προτεραιότητας απόδοσης εφαρμογών;"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="572525689800110355">"Η ενεργοποίηση της ρύθμισης μπορεί να προκαλέσει πιθανή αστάθεια συστήματος ή να έχει μακροπρόθεσμο αντίκτυπο στον εξοπλισμό. Θέλετε να συνεχίσετε;"</string>
+    <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Προτεραιότητα στην απόδοση εφαρμογών;"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Αυτό μπορεί να προκαλέσει πιθανή αστάθεια συστήματος ή να έχει μακροπρόθεσμο αντίκτυπο στον εξοπλισμό. Θέλετε να συνεχίσετε;"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ναι"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Όχι, ευχαριστώ"</string>
     <string name="disable_text" msgid="4358165448648990820">"Απενεργοποίηση"</string>
@@ -379,6 +380,7 @@
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Διαχείριση αδειών"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Ελέγξτε την πρόσβαση των εφαρμογών στα δεδομένα σας"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Για τον Βοηθό κ.ά."</string>
+    <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# εφαρμογή επηρεάζει την απόδοση}other{# εφαρμογές επηρεάζουν την απόδοση}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Για το σύστημα και άλλες ρυθμίσεις"</string>
     <string name="special_access" msgid="5730278220917123811">"Ειδική πρόσβαση στην εφαρμογή"</string>
     <string name="show_system" msgid="4401355756969485287">"Εμφάνιση συστήματος"</string>
@@ -392,6 +394,8 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Εάν απενεργοποιήσετε την πρόσβαση των ειδοποιήσεων για το <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, μπορεί να απενεργοποιηθεί επίσης η πρόσβαση της λειτουργίας Μην ενοχλείτε."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Απενεργοποίηση"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ακύρωση"</string>
+    <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Αυτές οι εφαρμογές επηρεάζουν αρνητικά την απόδοση του συστήματος και η εκτέλεσή τους στο παρασκήνιο έχει αποτραπεί.\nΔώστε προτεραιότητα στην εφαρμογή για να επιτρέψετε τη χρήση στο παρασκήνιο και καταργήστε την από τη λίστα."</string>
+    <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Προτερ. εφαρμογής"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Πρόσβαση σε SMS επιπλέον χρέωσης"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Τα SMS επιπλέον χρέωσης ενδέχεται να κοστίζουν χρήματα και θα αυξήσουν το συνολικό ποσό των λογαριασμών της εταιρείας κινητής τηλεφωνίας. Εάν ενεργοποιήσετε την πρόσβαση για μια εφαρμογή, θα μπορείτε να στέλνετε SMS επιπλέον χρέωσης χρησιμοποιώντας τη συγκεκριμένη εφαρμογή."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Πρόσβαση χρήσης"</string>
@@ -577,7 +581,7 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"Δεδομένα προφίλ"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Κρυφή μνήμη"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Σύνολο"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Διαγραφή αποθηκευτικού χώρου"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Εκκαθάριση αποθηκευτικού χώρου"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Διαγραφή κρυφής μνήμης"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Διαγραφή δεδομένων εφαρμογής;"</string>
     <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Τα δεδομένα αυτής της εφαρμογής θα διαγραφούν οριστικά. Σε αυτά περιλαμβάνονται αρχεία, ρυθμίσεις, βάσεις δεδομένων και άλλα δεδομένα εφαρμογών."</string>
