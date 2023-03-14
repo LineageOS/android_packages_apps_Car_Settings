@@ -25,7 +25,6 @@
         settings:occupant_rear_passenger="read"
         settings:controller="com.android.car.settings.wifi.WifiTetherStateSwitchPreferenceController"
         settings:searchable="false"/>
-    <com.android.car.settings.common.DividerPreference/>
     <com.android.car.settings.common.ValidatedEditTextPreference
         android:key="@string/pk_wifi_tether_name"
         android:title="@string/wifi_hotspot_name_title"
