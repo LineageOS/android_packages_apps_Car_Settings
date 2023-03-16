@@ -35,13 +35,13 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dados móveis"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Aceder aos dados através de rede móvel"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Rede móvel"</string>
-    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Utilizar dados móveis"</string>
+    <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Usar dados móveis"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Desativada"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Desativar os dados móveis?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"A seleção é necessária."</string>
-    <string name="sim_change_data_title" msgid="6677115745127365131">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g> para dados móveis?"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Usar <xliff:g id="CARRIER">%1$s</xliff:g> para dados móveis?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Está a utilizar o operador <xliff:g id="CARRIER2_0">%2$s</xliff:g> para dados móveis. Se mudar para o operador <xliff:g id="CARRIER1">%1$s</xliff:g>, o operador <xliff:g id="CARRIER2_1">%2$s</xliff:g> deixa de ser utilizado para dados móveis."</string>
-    <string name="sim_change_data_ok" msgid="2348804996223271081">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Usar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Ligar a serviços de dados em roaming"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Permitir roaming de dados?"</string>
@@ -215,7 +215,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Sincronizar com o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> aceda aos contactos e ao histórico de chamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Poderá também ter de introduzir este PIN no outro dispositivo."</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Poderá também ter de introduzir a token de acesso no outro dispositivo."</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Poderá também ter de introduzir o token de acesso no outro dispositivo."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Deve ter 16 dígitos."</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Geralmente 0000 ou 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Pedido de sincronização"</string>
@@ -428,7 +428,7 @@
     <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistência ao condutor"</string>
     <string name="adas_settings_footer" msgid="6697021691244459156">"As informações de localização enviadas para as apps de assistência ao condutor não incluem informações de identificação. São armazenadas durante um período máximo de 2 dias antes de serem eliminadas."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfone"</string>
-    <string name="microphone_toggle_title" msgid="911586035332827275">"Utilizar microfone"</string>
+    <string name="microphone_toggle_title" msgid="911586035332827275">"Usar microfone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as apps acedam ao microfone"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Gerir autorizações do microfone"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Acedido recentemente"</string>
@@ -519,7 +519,7 @@
     <string name="date_time_auto" msgid="6018635902717385962">"Definir a hora automaticamente"</string>
     <string name="zone_auto" msgid="4174874778459184605">"Definir fuso horário automat."</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Formato de 24 horas"</string>
-    <string name="date_time_24hour" msgid="1137618702556486913">"Utilizar formato de 24 horas"</string>
+    <string name="date_time_24hour" msgid="1137618702556486913">"Usar formato de 24 horas"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Hora"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"Definir hora"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Fuso horário"</string>
@@ -688,6 +688,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Cancelar"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Confirmar"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Tem de ter, pelo menos, 4 carateres"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"Este tipo de bloqueio está indisponível."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Tem de incluir apenas dígitos de 0 a 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"O administrador do dispositivo não permite a utilização de um PIN recente."</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Os PINs comuns estão bloqueados pelo seu Administrador de TI. Experimente outro PIN."</string>
@@ -869,11 +870,11 @@
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Leitor de ecrã"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Desativado"</string>
     <string name="screen_reader_settings_on" msgid="2168217218643349459">"Pronunciar itens no ecrã"</string>
-    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Utilizar <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
+    <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Usar <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Opções"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Definições"</string>
     <string name="camera_settings_title" msgid="2837785830355288903">"Câmara"</string>
-    <string name="camera_toggle_title" msgid="1990732328673068456">"Utilizar a câmara"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Usar a câmara"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Permita que todas as apps acedam à câmara"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"Gerir autorizações da câmara"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Acedido recentemente"</string>
