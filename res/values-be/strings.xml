@@ -667,7 +667,7 @@
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Занадта шмат няўдалых спроб. Паспрабуйце яшчэ раз праз <xliff:g id="NUMBER">%d</xliff:g> с."</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Паваротны рэгулятар не падтрымліваецца, выкарыстайце сэнсарны ўвод"</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
-    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Зняць блакіроўку экрана?"</string>
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Выключыць блакіроўку экрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Доступ да вашага ўліковага запісу зможа атрымаць любы чалавек"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"Блакіроўка профілю"</string>
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Наладзіць аўтаматычную разблакіроўку"</string>
@@ -688,6 +688,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Скасаваць"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Пацвердзіць"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мінімальная колькасць сімвалаў: 4"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"Гэты тып блакіроўкі недаступны."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN-код павінен змяшчаць толькі лічбы 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Адміністратар прылады не дазваляе выкарыстоўваць апошні PIN-код"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"IT-адміністратар блакіруе папулярныя PIN-коды. Паспрабуйце іншы PIN-код."</string>
