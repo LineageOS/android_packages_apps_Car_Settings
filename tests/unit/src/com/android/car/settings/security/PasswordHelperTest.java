@@ -281,8 +281,10 @@ public final class PasswordHelperTest {
         // PasswordMetrics considers a password "numeric" based on whether it is a pin or a
         // password. So even though "2222" is numeric, it will have the minimum length requirement
         // of a password.
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedFirstError,
-                expectedSecondError);
+        assertWithMessage(ERROR_MESSAGE).that(messages)
+                .containsExactly(StringUtil.getIcuPluralsString(mContext, /* count= */ 6,
+                        R.string.lockpassword_password_too_short),
+                        mContext.getString(R.string.lockpassword_pin_no_sequential_digits));
     }
 
     @Test
