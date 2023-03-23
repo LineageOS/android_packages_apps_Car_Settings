@@ -26,7 +26,6 @@
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.bluetooth.BluetoothStateSwitchPreferenceController"
         settings:searchable="false"/>
-    <com.android.car.settings.common.DividerPreference/>
     <PreferenceCategory
         android:key="@string/pk_bluetooth_paired_devices"
         android:title="@string/bluetooth_paired_devices"

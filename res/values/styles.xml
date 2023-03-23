@@ -79,11 +79,6 @@
     </style>
 
     <style name="ColoredSwitchPreferenceStyle">
-        <item name="disabledTitleColor">@color/car_grey_400_with_disable</item>
-        <item name="enabledTitleColor">@color/text_color_accent_with_disable</item>
-    </style>
-
-    <style name="ColoredSwitchPreferenceDefaultColorStyle">
         <item name="disabledTitleColor">@color/car_ui_text_color_primary</item>
         <item name="enabledTitleColor">@color/car_ui_text_color_primary</item>
     </style>
