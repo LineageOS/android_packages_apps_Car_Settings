@@ -686,6 +686,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="bluetooth_ask_enablement_and_discovery_no_name"/>
       <item type="string" name="bluetooth_ask_enablement_no_name"/>
       <item type="string" name="bluetooth_available_devices"/>
+      <item type="string" name="bluetooth_bonded_bluetooth_toggle_content_description"/>
+      <item type="string" name="bluetooth_bonded_media_toggle_content_description"/>
+      <item type="string" name="bluetooth_bonded_phone_toggle_content_description"/>
       <item type="string" name="bluetooth_device"/>
       <item type="string" name="bluetooth_device_connected_toast"/>
       <item type="string" name="bluetooth_device_context_pair_connect"/>
