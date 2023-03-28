@@ -468,6 +468,14 @@
     <!-- Title for page which supports selecting a Bluetooth device from other applications. [CHAR_LIMIT=40]-->
     <string name="bluetooth_device_picker">Choose Bluetooth device</string>
 
+    <!-- Bluetooth paired/bonded device action items - toggle switches --><skip/>
+    <!-- Content description for bluetooth toggle switch for a paired/bonded bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description">Bluetooth</string>
+    <!-- Content description for phone toggle switch for a paired/bonded bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_bonded_phone_toggle_content_description">Phone</string>
+    <!-- Content description for media toggle switch for a paired/bonded bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_bonded_media_toggle_content_description">Media</string>
+
     <!-- Language settings screen heading. [CHAR LIMIT=30] -->
     <string name="language_settings">Languages</string>
     <!-- Title of Languages & input settings screen. [CHAR LIMIT=30] -->
