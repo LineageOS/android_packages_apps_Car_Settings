@@ -101,6 +101,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="brightness_thumb_outer_ring_color"/>
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
+      <item type="color" name="ic_launcher_settings_background"/>
       <item type="color" name="icon_color_default"/>
       <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
@@ -319,6 +320,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_keyboard_arrow_down"/>
       <item type="drawable" name="ic_keyboard_arrow_up"/>
       <item type="drawable" name="ic_language"/>
+      <item type="drawable" name="ic_launcher_settings"/>
+      <item type="drawable" name="ic_launcher_settings_foreground"/>
       <item type="drawable" name="ic_lock"/>
       <item type="drawable" name="ic_media_stream"/>
       <item type="drawable" name="ic_ota_update_current"/>
