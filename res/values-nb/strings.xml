@@ -29,8 +29,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-kort}other{# SIM-kort}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktiv / SIM-kort"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktiv / SIM-kort"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktivt / e-SIM-kort"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktivt / e-SIM-kort"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktivt / eSIM-kort"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktivt / eSIM-kort"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Legg til mer"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobildata"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Bruk data via mobilnettverket"</string>
@@ -221,6 +221,12 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Tilkoblingsforespørsel"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Trykk for å koble til <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Velg en Bluetooth-enhet"</string>
+    <!-- no translation found for bluetooth_bonded_bluetooth_toggle_content_description (6800772154405846597) -->
+    <skip />
+    <!-- no translation found for bluetooth_bonded_phone_toggle_content_description (8152794643249938377) -->
+    <skip />
+    <!-- no translation found for bluetooth_bonded_media_toggle_content_description (7803420585378155404) -->
+    <skip />
     <string name="language_settings" msgid="2079258598337245546">"Språk"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Språk og inndata"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Foreslått"</string>
@@ -490,9 +496,9 @@
     <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"wifi-nettverk og -passord"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobildata"</li></string>
     <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"telefoner og andre Bluetooth-enheter"</li></string>
-    <string name="reset_esim_title" msgid="8132107637911831211">"Slett alle e-SIM-kortene på kjøretøyet"</string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Slett alle eSIM-kortene på kjøretøyet"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Dette kansellerer ikke serviceavtalen din."</string>
-    <string name="reset_esim_error_title" msgid="7245109418130525492">"Kan ikke tilbakestille e-SIM-kort"</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"Kan ikke tilbakestille eSIM-kort"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Velg nettverk"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Tilbakestill innstillingene"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vil du tilbakestille?"</string>
