@@ -99,7 +99,8 @@ public abstract class BaseVolumeSliderWorker<E extends BaseVolumeSlider>
         CarAudioManager carAudioManager = getCarAudioManager();
         if (carAudioManager != null) {
             for (int usage : getUsages()) {
-                if (carAudioManager.getVolumeGroupIdForUsage(usage) == groupId) {
+                if (carAudioManager
+                        .getVolumeGroupIdForUsage(getMyAudioZoneId(), usage) == groupId) {
                     notifyQCItemChange();
                     break;
                 }
