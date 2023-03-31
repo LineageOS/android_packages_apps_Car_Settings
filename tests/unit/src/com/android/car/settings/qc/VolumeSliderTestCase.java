@@ -17,7 +17,6 @@
 package com.android.car.settings.qc;
 
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_VOLUME_GROUP_MUTING;
-import static android.car.media.CarAudioManager.PRIMARY_AUDIO_ZONE;
 
 import static com.android.car.qc.QCItem.QC_ACTION_SLIDER_VALUE;
 
@@ -61,7 +60,8 @@ public abstract class VolumeSliderTestCase extends BaseSettingsQCItemTestCase {
         when(mCarSettingsApplication.getCarAudioManager()).thenReturn(mCarAudioManager);
 
         when(mCarSettingsApplication.getMyAudioZoneId()).thenReturn(TEST_ZONE_ID);
-        when(mCarAudioManager.getVolumeGroupIdForUsage(anyInt())).thenReturn(GROUP_ID);
+        when(mCarAudioManager.getVolumeGroupIdForUsage(eq(TEST_ZONE_ID), anyInt()))
+                .thenReturn(GROUP_ID);
         when(mCarAudioManager.getGroupMinVolume(TEST_ZONE_ID, GROUP_ID))
                 .thenReturn(TEST_MIN_VOLUME);
         when(mCarAudioManager.getGroupVolume(TEST_ZONE_ID, GROUP_ID))
@@ -70,7 +70,7 @@ public abstract class VolumeSliderTestCase extends BaseSettingsQCItemTestCase {
                 .thenReturn(TEST_MAX_VOLUME);
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_MUTING)).thenReturn(
                 true);
-        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(false);
+        when(mCarAudioManager.isVolumeGroupMuted(TEST_ZONE_ID, GROUP_ID)).thenReturn(false);
     }
 
     protected void verifyTitleSet(QCRow row, int titleResId) {
