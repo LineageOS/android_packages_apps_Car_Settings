@@ -18,6 +18,7 @@ package com.android.car.settings.qc;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -78,6 +79,6 @@ public class MediaVolumeSliderWorkerTest {
     @Test
     public void onGroupVolumeChanged_updateVolumeAndMute() {
         mWorker.getVolumeChangeCallback().onGroupVolumeChanged(TEST_ZONE_ID, GROUP_ID, FLAGS);
-        verify(mCarAudioManager).getVolumeGroupIdForUsage(anyInt());
+        verify(mCarAudioManager).getVolumeGroupIdForUsage(eq(TEST_ZONE_ID), anyInt());
     }
 }
