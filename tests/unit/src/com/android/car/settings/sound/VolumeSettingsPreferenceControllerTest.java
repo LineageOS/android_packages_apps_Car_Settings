@@ -36,7 +36,6 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.media.CarAudioManager;
@@ -53,6 +52,7 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
+import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
@@ -74,7 +74,7 @@ import org.mockito.quality.Strictness;
 public class VolumeSettingsPreferenceControllerTest {
 
     private static final int ZONE_ID = PRIMARY_AUDIO_ZONE;
-    private static final int INVALID_ZONE_ID = 1;
+    private static final int INVALID_ZONE_ID = -1;
     private static final int GROUP_ID = 0;
     private static final int TEST_MIN_VOLUME = 0;
     private static final int TEST_VOLUME = 40;
@@ -93,8 +93,6 @@ public class VolumeSettingsPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
     @Mock
-    private Car mCar;
-    @Mock
     private CarAudioManager mCarAudioManager;
     @Mock
     private VolumeSettingsRingtoneManager mRingtoneManager;
@@ -102,6 +100,8 @@ public class VolumeSettingsPreferenceControllerTest {
     private UserManager mMockUserManager;
     @Mock
     private Toast mMockToast;
+    @Mock
+    private CarSettingsApplication mCarSettingsApplication;
 
     @Before
     @UiThreadTest
@@ -116,15 +116,20 @@ public class VolumeSettingsPreferenceControllerTest {
                 .mockStatic(Toast.class)
                 .strictness(Strictness.LENIENT)
                 .startMocking();
-        when(mCar.getCarManager(Car.AUDIO_SERVICE)).thenReturn(mCarAudioManager);
-        when(mCarAudioManager.getVolumeGroupCount()).thenReturn(1);
-        when(mCarAudioManager.getUsagesForVolumeGroupId(GROUP_ID)).thenReturn(new int[]{1, 2});
-        when(mCarAudioManager.getGroupMinVolume(GROUP_ID)).thenReturn(TEST_MIN_VOLUME);
-        when(mCarAudioManager.getGroupVolume(GROUP_ID)).thenReturn(TEST_VOLUME);
-        when(mCarAudioManager.getGroupMaxVolume(GROUP_ID)).thenReturn(TEST_MAX_VOLUME);
-        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(false);
+
+        when(mCarAudioManager.getVolumeGroupCount(ZONE_ID)).thenReturn(1);
+        when(mCarAudioManager.getUsagesForVolumeGroupId(ZONE_ID, GROUP_ID))
+                .thenReturn(new int[]{1, 2});
+        when(mCarAudioManager.getGroupMinVolume(ZONE_ID, GROUP_ID)).thenReturn(TEST_MIN_VOLUME);
+        when(mCarAudioManager.getGroupVolume(ZONE_ID, GROUP_ID)).thenReturn(TEST_VOLUME);
+        when(mCarAudioManager.getGroupMaxVolume(ZONE_ID, GROUP_ID)).thenReturn(TEST_MAX_VOLUME);
+        when(mCarAudioManager.isVolumeGroupMuted(ZONE_ID, GROUP_ID)).thenReturn(false);
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_MUTING))
                 .thenReturn(true);
+
+        when(mContext.getApplicationContext()).thenReturn(mCarSettingsApplication);
+        when(mCarSettingsApplication.getCarAudioManager()).thenReturn(mCarAudioManager);
+        when(mCarSettingsApplication.getMyAudioZoneId()).thenReturn(ZONE_ID);
 
         when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
         when(Toast.makeText(any(), anyString(), anyInt())).thenReturn(mMockToast);
@@ -134,7 +139,7 @@ public class VolumeSettingsPreferenceControllerTest {
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         screen.addPreference(mPreferenceGroup);
         mPreferenceController = new TestVolumeSettingsPreferenceController(mContext,
-                "key", mFragmentController, mCarUxRestrictions, mCar, mRingtoneManager);
+                "key", mFragmentController, mCarUxRestrictions, mRingtoneManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
     }
 
@@ -203,7 +208,7 @@ public class VolumeSettingsPreferenceControllerTest {
         mPreferenceController.refreshUi();
         SeekBarPreference preference = (SeekBarPreference) mPreferenceGroup.getPreference(0);
         preference.getOnPreferenceChangeListener().onPreferenceChange(preference, TEST_NEW_VOLUME);
-        verify(mCarAudioManager).setGroupVolume(GROUP_ID, TEST_NEW_VOLUME, 0);
+        verify(mCarAudioManager).setGroupVolume(ZONE_ID, GROUP_ID, TEST_NEW_VOLUME, 0);
     }
 
     @Test
@@ -221,7 +226,7 @@ public class VolumeSettingsPreferenceControllerTest {
     public void onGroupVolumeChanged_differentValue_updatesVolumeSeekbar() {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.refreshUi();
-        when(mCarAudioManager.getGroupVolume(GROUP_ID)).thenReturn(TEST_NEW_VOLUME);
+        when(mCarAudioManager.getGroupVolume(ZONE_ID, GROUP_ID)).thenReturn(TEST_NEW_VOLUME);
         mPreferenceController.mVolumeChangeCallback.onGroupVolumeChanged(ZONE_ID,
                 GROUP_ID, /* flags= */ 0);
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
@@ -234,7 +239,7 @@ public class VolumeSettingsPreferenceControllerTest {
     public void onGroupVolumeChanged_invalidZoneId_doesNotUpdateVolumeSeekbar() {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.refreshUi();
-        when(mCarAudioManager.getGroupVolume(GROUP_ID)).thenReturn(TEST_NEW_VOLUME);
+        when(mCarAudioManager.getGroupVolume(ZONE_ID, GROUP_ID)).thenReturn(TEST_NEW_VOLUME);
         mPreferenceController.mVolumeChangeCallback.onGroupVolumeChanged(INVALID_ZONE_ID,
                 GROUP_ID, /* flags= */ 0);
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
@@ -260,7 +265,7 @@ public class VolumeSettingsPreferenceControllerTest {
     public void onGroupMuteChanged_differentValue_updatesMutedState() {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.refreshUi();
-        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(true);
+        when(mCarAudioManager.isVolumeGroupMuted(ZONE_ID, GROUP_ID)).thenReturn(true);
         mPreferenceController.mVolumeChangeCallback.onGroupMuteChanged(ZONE_ID,
                 GROUP_ID, /* flags= */ 0);
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
@@ -274,7 +279,7 @@ public class VolumeSettingsPreferenceControllerTest {
     public void onGroupMuteChanged_differentValue_muteFeatureDisabled_doesNotUpdatesMutedState() {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.refreshUi();
-        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(true);
+        when(mCarAudioManager.isVolumeGroupMuted(ZONE_ID, GROUP_ID)).thenReturn(true);
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_MUTING))
                 .thenReturn(false);
         mPreferenceController.mVolumeChangeCallback.onGroupMuteChanged(ZONE_ID,
@@ -290,7 +295,7 @@ public class VolumeSettingsPreferenceControllerTest {
     public void onGroupMuteChanged_invalidZoneId_doesNotUpdateMutedState() {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.refreshUi();
-        when(mCarAudioManager.isVolumeGroupMuted(PRIMARY_AUDIO_ZONE, GROUP_ID)).thenReturn(true);
+        when(mCarAudioManager.isVolumeGroupMuted(ZONE_ID, GROUP_ID)).thenReturn(true);
         mPreferenceController.mVolumeChangeCallback.onGroupMuteChanged(ZONE_ID,
                 GROUP_ID, /* flags= */ 0);
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
@@ -475,10 +480,9 @@ public class VolumeSettingsPreferenceControllerTest {
             VolumeSettingsPreferenceController {
 
         TestVolumeSettingsPreferenceController(Context context, String preferenceKey,
-                FragmentController fragmentController,
-                CarUxRestrictions uxRestrictions, Car car,
+                FragmentController fragmentController, CarUxRestrictions uxRestrictions,
                 VolumeSettingsRingtoneManager ringtoneManager) {
-            super(context, preferenceKey, fragmentController, uxRestrictions, car, ringtoneManager);
+            super(context, preferenceKey, fragmentController, uxRestrictions, ringtoneManager);
         }
 
         @Override
