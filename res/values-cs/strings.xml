@@ -221,12 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Požadavek na párování"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Klepnutím spárujete se zařízením <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Vybrat zařízení Bluetooth"</string>
-    <!-- no translation found for bluetooth_bonded_bluetooth_toggle_content_description (6800772154405846597) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_phone_toggle_content_description (8152794643249938377) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_media_toggle_content_description (7803420585378155404) -->
-    <skip />
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Média"</string>
     <string name="language_settings" msgid="2079258598337245546">"Jazyky"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Jazyky a zadávání"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Navrženo"</string>
@@ -300,7 +297,7 @@
     <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"Kilowatt na sto mil"</string>
     <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"Kilowatt na to kilometrů"</string>
     <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"Míle na galon (USA)"</string>
-    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Míle na galon (Velká Británie)"</string>
+    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Míle na galon (Spojené království)"</string>
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilometry na litr"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Litry na sto kilometrů"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplikace a oznámení"</string>
