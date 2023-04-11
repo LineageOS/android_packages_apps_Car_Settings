@@ -221,12 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"คำขอจับคู่อุปกรณ์"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"แตะเพื่อจับคู่กับ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"เลือกอุปกรณ์บลูทูธ"</string>
-    <!-- no translation found for bluetooth_bonded_bluetooth_toggle_content_description (6800772154405846597) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_phone_toggle_content_description (8152794643249938377) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_media_toggle_content_description (7803420585378155404) -->
-    <skip />
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"บลูทูธ"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"โทรศัพท์"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"สื่อ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ภาษา"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ภาษาและการป้อนข้อมูล"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"แนะนำ"</string>
@@ -854,12 +851,12 @@
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"ต้องจอดรถเพื่อเริ่มการรีเซ็ต"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"เปลี่ยนแปลงการตั้งค่านี้ไม่ได้ในตอนนี้"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"การช่วยเหลือพิเศษ"</string>
-    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"คำบรรยาย"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"คำบรรยายแทนเสียง"</string>
     <string name="captions_settings_title" msgid="5738067618097295831">"ค่ากำหนดคำบรรยาย"</string>
     <string name="captions_settings_off" msgid="7568096968016015626">"ปิด"</string>
     <string name="captions_settings_on" msgid="5374984113566914978">"เปิด"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"โปรแกรมอ่านหน้าจอ"</string>
-    <string name="show_captions_toggle_title" msgid="710582308974826311">"แสดงคำบรรยาย"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"แสดงคำบรรยายแทนเสียง"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"ขนาดข้อความ"</string>
     <string name="captions_settings_style_header" msgid="944591388386054372">"ขนาดและรูปแบบของคำบรรยาย"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"เล็กมาก"</string>

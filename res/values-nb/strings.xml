@@ -132,12 +132,12 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6-adresser"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Gateway"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi-innstillinger"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Slå på Wi‑Fi automatisk"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi slås på igjen i nærheten av lagrede nettverk av høy kvalitet, for eksempel hjemmenettverket"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Slå på wifi automatisk"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wifi slås på igjen i nærheten av lagrede nettverk av høy kvalitet, for eksempel hjemmenettverket ditt"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Utilgjengelig fordi Posisjon er slått av. Slå på "<annotation id="link">"Posisjon"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vil du slå på Wi‑Fi-skanning?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vil du slå på wifi-skanning?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Slå på"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-skanning er slått på"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-skanning er slått på"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Bytt til mobildata automatisk"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Bruk mobildata når Wifi ikke har internettilgang. Avgifter for databruk kan påløpe."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Finn og koble til Wifi-nettverk"</string>
@@ -221,12 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Tilkoblingsforespørsel"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Trykk for å koble til <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Velg en Bluetooth-enhet"</string>
-    <!-- no translation found for bluetooth_bonded_bluetooth_toggle_content_description (6800772154405846597) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_phone_toggle_content_description (8152794643249938377) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_media_toggle_content_description (7803420585378155404) -->
-    <skip />
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Media"</string>
     <string name="language_settings" msgid="2079258598337245546">"Språk"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Språk og inndata"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Foreslått"</string>
