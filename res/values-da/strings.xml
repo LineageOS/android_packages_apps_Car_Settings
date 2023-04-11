@@ -221,12 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Anmodning om parring"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tryk for at parre med <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Vælg Bluetooth-enhed"</string>
-    <!-- no translation found for bluetooth_bonded_bluetooth_toggle_content_description (6800772154405846597) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_phone_toggle_content_description (8152794643249938377) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_media_toggle_content_description (7803420585378155404) -->
-    <skip />
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Medier"</string>
     <string name="language_settings" msgid="2079258598337245546">"Sprog"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Sprog og indtastning"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Foreslået"</string>
@@ -404,7 +401,7 @@
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioriter app"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Adgang til overtakseret sms"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Overtakseret sms kan koste dig penge, som opkræves via din mobilregning. Hvis du aktiverer tilladelsen for en app, kan du sende overtakserede sms-beskeder ved hjælp af denne app."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Adgang til telefonbrug"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Adgang til brugsdata"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Med adgang til telefonbrug kan en app aflæse, hvilke andre apps du anvender og hvor ofte, samt dit mobilselskab, dine sprogindstillinger og andre oplysninger."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Styring af Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-styring giver en app tilladelse til at aktivere og deaktivere Wi-Fi, søge efter og oprette forbindelse til Wi-Fi-netværk, tilføje og fjerne netværk eller starte et lokalt hotspot."</string>
