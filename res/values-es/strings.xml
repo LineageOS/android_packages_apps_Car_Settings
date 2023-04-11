@@ -221,12 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitud de vinculación"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para emparejar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Elige un dispositivo Bluetooth"</string>
-    <!-- no translation found for bluetooth_bonded_bluetooth_toggle_content_description (6800772154405846597) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_phone_toggle_content_description (8152794643249938377) -->
-    <skip />
-    <!-- no translation found for bluetooth_bonded_media_toggle_content_description (7803420585378155404) -->
-    <skip />
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Teléfono"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Contenido multimedia"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e introducción de texto"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugerencias"</string>
@@ -388,7 +385,7 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Para el Asistente y más"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplicación que afecta al rendimiento}other{# aplicaciones que afectan al rendimiento}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Al sistema y otros ajustes"</string>
-    <string name="special_access" msgid="5730278220917123811">"Aplicaciones con accesos especiales"</string>
+    <string name="special_access" msgid="5730278220917123811">"Acceso especial de aplicaciones"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Ocultar aplicaciones del sistema"</string>
