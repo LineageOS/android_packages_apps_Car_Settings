@@ -1775,6 +1775,10 @@
 
     <!-- Warn user that the action they are trying to perform is blocked while the car is in motion [CHAR LIMIT=60] -->
     <string name="restricted_while_driving">Feature not available while driving</string>
+    <!-- Warn user that the action they are trying to perform is blocked and only available for the driver user [CHAR LIMIT=60] -->
+    <string name="restricted_for_passenger">Request driver to change setting</string>
+    <!-- Warn user that the action they are trying to perform is blocked and unavailable [CHAR LIMIT=60] -->
+    <string name="restricted_for_driver">You can\'t perform this action</string>
     <!-- Warn user that adding a profile is blocked while the car is in motion [CHAR LIMIT=60] -->
     <string name="add_user_restricted_while_driving">Can\'t add profile while driving</string>
 
