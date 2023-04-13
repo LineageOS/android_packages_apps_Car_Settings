@@ -24,6 +24,7 @@ import static com.android.settingslib.display.BrightnessUtils.GAMMA_SPACE_MAX;
 import static com.android.settingslib.display.BrightnessUtils.convertGammaToLinear;
 import static com.android.settingslib.display.BrightnessUtils.convertLinearToGamma;
 
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.display.DisplayManager;
@@ -118,6 +119,11 @@ public class BrightnessSlider extends SettingsQCItem {
         boolean hasUmRestrictions = EnterpriseUtils.hasUserRestrictionByUm(getContext(),
                 userRestriction);
 
+        boolean isReadOnlyForZone = isReadOnlyForZone();
+        PendingIntent disabledPendingIntent = isReadOnlyForZone
+                ? QCUtils.getDisabledToastBroadcastIntent(getContext())
+                : getActionDisabledDialogIntent(getContext(), userRestriction);
+
         return new QCRow.Builder()
                 .setTitle(getContext().getString(R.string.qc_display_brightness))
                 .addSlider(new QCSlider.Builder()
@@ -126,9 +132,8 @@ public class BrightnessSlider extends SettingsQCItem {
                         .setInputAction(getBroadcastIntent())
                         .setEnabled(!hasUmRestrictions && !hasDpmRestrictions
                                 && isWritableForZone())
-                        .setClickableWhileDisabled(hasDpmRestrictions)
-                        .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
-                                userRestriction))
+                        .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
+                        .setDisabledClickAction(disabledPendingIntent)
                         .build()
                 );
     }

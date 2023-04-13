@@ -145,6 +145,7 @@ public class HotspotTileTest extends BaseSettingsQCItemTestCase {
         when(mWifiManager.getWifiApState()).thenReturn(WifiManager.WIFI_AP_STATE_ENABLED);
         QCTile tile = getTile();
         assertThat(tile.isEnabled()).isFalse();
+        assertThat(tile.isClickableWhileDisabled()).isTrue();
     }
 
     @Test

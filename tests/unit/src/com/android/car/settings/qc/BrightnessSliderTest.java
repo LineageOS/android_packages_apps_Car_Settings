@@ -57,6 +57,7 @@ public class BrightnessSliderTest extends BrightnessSliderTestCase {
         QCSlider slider = row.getSlider();
         assertThat(slider).isNotNull();
         assertThat(slider.isEnabled()).isFalse();
+        assertThat(slider.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
