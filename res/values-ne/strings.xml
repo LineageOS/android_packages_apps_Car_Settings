@@ -213,7 +213,7 @@
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN मा अक्षर वा प्रतीकहरू समाविष्ट हुन्छन्"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"जोडा मिलाउने कोड टाइप गर्नुहोस् त्यसपछि फिर्ता गर्नुहोस् वा प्रविष्टि गर्नुहोस् नामक बटन थिच्नुहोस्"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सँग जोडा बनाउने हो?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>लाई तपाईंका सम्पर्क ठेगानाहरू र फोन सम्पर्कको इतिहासमाथि पहुँच गर्ने अनुमति दिनुहोस्"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>लाई तपाईंका कन्ट्याक्टहरू र फोन सम्पर्कको इतिहासमाथि पहुँच गर्ने अनुमति दिनुहोस्"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"तपाईंले अर्को यन्त्रमा पनि यो PIN टाइप गर्नु पर्ने हुन सक्छ।"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"तपाईंले अर्को यन्त्रमा यो पासकुञ्जी पनि टाइप गर्नु पर्ने हुन सक्छ।"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"पिन १६ अङ्कको हुनु पर्छ"</string>
@@ -738,6 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोडबाट बाहिरिनुहोस्"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"खारेज गर्नुहोस्"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"सवारी साधन चलाइरहेका बेला यो सुविधा उपलब्ध छैन"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"गाडी चलाइरहेका बेला प्रोफाइल थप्न सकिँदैन"</string>
     <string name="default_search_query" msgid="3137420627428857068">"खोज"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"सहायक तथा Voice"</string>

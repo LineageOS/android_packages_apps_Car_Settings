@@ -487,7 +487,7 @@
     <string name="show_dev_already" msgid="1678087328973865736">"কোনো প্ৰয়োজন নাই, আপুনি ইতিমধ্যে এজন বিকাশকৰ্তা।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"বিকাশকৰ্তাৰ বিকল্পসমূহ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"বিকল্পসমূহ ৰিছেট কৰক"</string>
-    <string name="reset_options_summary" msgid="5508201367420359293">"নেটৱৰ্ক, এপসমূহ বা ডিভাইচৰ ৰিছেট সম্পৰ্কীয় বিকল্প"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"নেটৱৰ্ক, এপ্‌সমূহ বা ডিভাইচৰ ৰিছেট সম্পৰ্কীয় বিকল্প"</string>
     <string name="reset_network_title" msgid="3077846909739832734">"ৱাই-ফাই আৰু ব্লুটুথ ৰিছেট কৰক"</string>
     <string name="reset_network_desc" msgid="3332203703135823033">"ই পূৰ্বতে সংযুক্ত হোৱা ইতিহাস আঁতৰাই, ৱাই-ফাই আৰু ব্লুটুথৰ ছেটিং ৰিছেট কৰিব:"</string>
     <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"ৱাই-ফাই নেটৱৰ্ক আৰু পাছৱৰ্ডসমূহ"</li></string>
@@ -504,7 +504,7 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"নেটৱৰ্কৰ ছেটিংসমূহ ৰিছেট কৰা হৈছে"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"এপৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰক"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ইয়ে:\n\n"<li>"অক্ষম কৰি থোৱা এপ্"</li>\n<li>"অক্ষম কৰি থোৱা এপ্ জাননী"</li>\n<li>"কাৰ্যৰ ডিফ’ল্ট এপ্লিকেশ্বন"</li>\n<li>"এপৰ নেপথ্য ডেটা সীমাবদ্ধকৰণ"</li>\n<li>"যিকোনো অনুমতিৰ সীমাবদ্ধকৰণ"</li>"ৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰিব\n\nআপুনি কোনো এপৰ ডেটা নেহেৰুৱায়।"</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"এপসমূহ ৰিছেট কৰক"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"এপ্‌সমূহ ৰিছেট কৰক"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"এপৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰা হৈছে"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"সকলো ডেটা মচক (ফেক্টৰী ৰিছেট)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ইনফ’টেইনমেণ্ট ছিষ্টেমটোৰ পৰা আটাইবোৰ ডেটা আৰু প্ৰ’ফাইল মচক"</string>
@@ -544,7 +544,7 @@
     <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ফ\'ন কল কৰক"</string>
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"গাড়ীৰ ম’বাইল ডেটাৰ জৰিয়তে বার্তালাপ"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"নতুন এপ্ ইনষ্টল কৰক"</string>
-    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"এপসমূহ আনইনষ্টল কৰক"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"এপ্‌সমূহ আনইনষ্টল কৰক"</string>
     <string name="user_add_user_menu" msgid="4125869008006021799">"প্ৰ’ফাইল যোগ দিয়ক"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"নতুন প্ৰ’ফাইল"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"নতুন প্ৰ’ফাইল যোগ দিবনে?"</string>
@@ -738,6 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ডেম\'ৰ পৰা বাহিৰ হওক"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"অগ্ৰাহ্য কৰক"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"গাড়ী চলাই থকা সময়ত এই সুবিধাটো উপলব্ধ নহয়"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"গাড়ী চলাই থকাৰ সময়ত প্ৰ’ফাইল যোগ দিব নোৱাৰি"</string>
     <string name="default_search_query" msgid="3137420627428857068">"সন্ধান কৰক"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant আৰু কণ্ঠধ্বনি"</string>
