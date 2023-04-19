@@ -183,8 +183,8 @@
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"El Bluetooth s\'activarà per vincular"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Vols desconnectar el dispositiu?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"El vehicle es desconnectarà del dispositiu (<xliff:g id="DEVICE_NAME">%1$s</xliff:g>)."</string>
-    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Adreça Bluetooth del vehicle: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Adreça Bluetooth del dispositiu: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Adreça de Bluetooth del vehicle: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Adreça de Bluetooth del dispositiu: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"Nom del vehicle"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Canvia el nom del vehicle"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"Canvia el nom del dispositiu"</string>
@@ -455,7 +455,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Versió de banda base"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Versió de kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Número de compilació"</string>
-    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adreça Bluetooth"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adreça de Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"No disponible"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Estat"</string>
     <string name="device_status" msgid="267298179806290920">"Estat"</string>
@@ -738,6 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Surt de la demostració"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Aquesta funció no està disponible mentre condueixes"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"No pots afegir perfils mentre condueixes"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Cerca"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent i veu"</string>
