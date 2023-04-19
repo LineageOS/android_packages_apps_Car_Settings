@@ -127,7 +127,7 @@ public class PairedBluetoothDevices extends SettingsQCItem {
         if (filteredDevices.isEmpty()) {
             listBuilder.addRow(new QCRow.Builder()
                     .setIcon(Icon.createWithResource(getContext(),
-                            R.drawable.ic_settings_bluetooth))
+                            R.drawable.ic_add))
                     .setTitle(getContext().getString(R.string.qc_bluetooth_on_no_devices_info))
                     .build());
             return listBuilder.build();
