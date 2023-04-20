@@ -95,12 +95,12 @@
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"నెట్‌వర్క్‌ను మర్చిపోవడంలో విఫలమైంది"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"నెట్‌వర్క్‌కు కనెక్ట్ చేయడం విఫలమైంది"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"నెట్‌వర్క్‌ను జోడించండి"</string>
-    <string name="wifi_setup_connect" msgid="3512399573397979101">"కనెక్ట్"</string>
+    <string name="wifi_setup_connect" msgid="3512399573397979101">"కనెక్ట్ చేయండి"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"కనెక్ట్ అవుతోంది…"</string>
     <string name="wifi_disconnected" msgid="4485699234859368137">"కనెక్ట్ చేయబడలేదు"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"నెట్‌వర్క్, పరిధిలో లేదు"</string>
     <string name="wifi_password" msgid="5565632142720292397">"పాస్‌‌వర్డ్"</string>
-    <string name="wifi_show_password" msgid="8423293211933521097">"పాస్‌వర్డ్‌ను చూపు"</string>
+    <string name="wifi_show_password" msgid="8423293211933521097">"పాస్‌వర్డ్‌ను చూపండి"</string>
     <string name="wifi_no_network_name" msgid="6819604337231313594">"దయచేసి నెట్‌వర్క్‌ పేరును నమోదు చేయండి"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"నెట్‌వర్క్ పేరు"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSIDని ఎంటర్ చేయండి"</string>
@@ -110,7 +110,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"లింక్ వేగం"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"తరచుదనం"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP అడ్రస్"</string>
-    <string name="show_password" msgid="2074628020371139240">"పాస్‌వర్డ్‌ను చూపు"</string>
+    <string name="show_password" msgid="2074628020371139240">"పాస్‌వర్డ్‌ను చూపండి"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"నెట్‌వర్క్ పేరును నమోదు చేయండి"</string>
     <string name="default_password_summary" msgid="8789594645836902982">"పాస్‌వర్డ్‌ని నమోదు చేయండి"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
@@ -722,7 +722,7 @@
     <string name="credentials_erased" msgid="2515915439705550379">"ఆధారాల స్టోరేజ్‌ తొలగించబడింది."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"ఆధారాల నిల్వను తొలగించడం సాధ్యపడలేదు."</string>
     <string name="forget" msgid="3971143908183848527">"విస్మరించు"</string>
-    <string name="connect" msgid="5861699594602380150">"కనెక్ట్ చేయి"</string>
+    <string name="connect" msgid="5861699594602380150">"కనెక్ట్ చేయండి"</string>
     <string name="disconnect" msgid="6140789953324820336">"డిస్‌కనెక్ట్ చేయి"</string>
     <string name="delete_button" msgid="5840500432614610850">"తొలగించండి"</string>
     <string name="remove_button" msgid="6664656962868194178">"తీసివేయండి"</string>
@@ -738,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"డెమో నుండి నిష్క్రమించండి"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"విస్మరించు"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"డ్రైవింగ్ చేస్తున్నప్పుడు ఈ ఫీచర్ అందుబాటులో ఉండదు"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"సెట్టింగ్‌ను మార్చమని డ్రైవర్‌ను రిక్వెస్ట్ చేయండి"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"మీరు ఈ చర్యను చేయడం సాధ్యం కాదు"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"డ్రైవింగ్ చేస్తున్నప్పుడు, ప్రొఫైల్‌ను జోడించడం సాధ్యం కాదు"</string>
     <string name="default_search_query" msgid="3137420627428857068">"సెర్చ్ చేయండి"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant &amp; వాయిస్"</string>
