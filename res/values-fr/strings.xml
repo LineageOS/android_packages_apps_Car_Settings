@@ -246,7 +246,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarme"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Sonnerie du téléphone"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notification par défaut"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Sonnerie par défaut du réveil"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Son de l\'alarme par défaut"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Enregistrer"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Alertes sonores"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Sonnerie, notifications, alarme"</string>
@@ -738,10 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Quitter la démo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Fonctionnalité non disponible lorsque vous conduisez"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Demandez au conducteur de modifier le paramètre"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Vous ne pouvez pas effectuer cette action"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Impossible d\'ajouter un profil en conduisant"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Rechercher"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant et voix"</string>

@@ -651,7 +651,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Nastavi"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Probaj ponovo"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Preskoči"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Podesite zaključavanje ekrana"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Podesite otključavanje ekrana"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Odaberite PIN"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Odaberite lozinku"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Trenutno zaključavanje ekrana"</string>
@@ -738,10 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Napusti režim demonstr."</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ODBACI"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funkcija nije dostupna tokom vožnje"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Zahteva vozača za promenu podešavanja"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Ne možete da obavite ovu radnju"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Ne možete da dodate profil tokom vožnje"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Pretražite"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Pomoćnik i glas"</string>
