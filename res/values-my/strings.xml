@@ -600,7 +600,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"အကောင့်များ ထည့်မထားပါ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> အတွက် အကောင့်များ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ဒေတာ အော်တိုစင့်ခ်လုပ်ရန်"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ဒေတာများကို အလိုအလျောက်ပြန်လည်စတင်ရန် အက်ပ်များကိုခွင့်ပြုပါ"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"အက်ပ်များအား ဒေတာကို အလိုအလျောက် ပြန်လည်စတင်ပါစေ"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"အလိုအလျောက်ဒေတာစင့်ခ်လုပ်ခွင့် ပေးမလား။"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ဝဘ်ပေါ်၌ သင်၏အကောင့်များတွင် ပြုလုပ်သော အပြောင်းအလဲမှန်သမျှကို သင့်ယာဉ်သို့ အလိုအလျောက်မိတ္တူကူးပါမည်။\n\nအချို့အကောင့်များသည် ယာဉ်ပေါ်၌ သင်ပြုလုပ်သော အပြောင်းအလဲမှန်သမျှကိုလည်း ဝဘ်ပေါ်သို့ အလိုအလျောက်မိတ္တူကူးနိုင်သည်။"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"အလိုအလျောက်ဒေတာစင့်ခ်လုပ်ခွင့် ပိတ်မလား။"</string>
@@ -739,10 +739,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"သရုပ်ပြမှ ထွက်ရန်"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ပယ်ရန်"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ကားမောင်းနေစဉ် ဝန်ဆောင်မှု မရနိုင်ပါ"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ဆက်တင်ပြောင်းပေးရန် ယာဉ်မောင်းအား တောင်းဆိုပါ"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"ဤလုပ်ဆောင်ချက်ကို ဆောင်ရွက်၍မရပါ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ကားမောင်းနေစဉ် ပရိုဖိုင်ကို ထည့်၍မရပါ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"ရှာရန်"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant နှင့် Voice"</string>
