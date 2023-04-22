@@ -1816,6 +1816,8 @@
     <string name="delete_this_profile_text">Delete this profile</string>
     <!-- Profile settings add profile menu [CHAR LIMIT=35] -->
     <string name="add_profile_text">Add profile</string>
+    <!-- Error message when a profile cannot be deleted because it is currently in use by the driver [CHAR LIMIT=105] -->
+    <string name="cannot_remove_driver_profile">This profile is currently signed in as driver. Try again when the profile is not in use as the driver.</string>
 
     <!-- Quick Controls --><skip/>
     <!-- Brightness quick control, control name to change display brightness [CHAR LIMIT=40] -->
