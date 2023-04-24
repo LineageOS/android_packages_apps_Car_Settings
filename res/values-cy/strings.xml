@@ -218,12 +218,16 @@
     <string name="language_picker_list_suggested_header">Awgrymwyd</string>
     <string name="language_picker_list_all_header">Pob iaith</string>
     <string name="keyboard_settings">Bysellfwrdd</string>
+    <string name="manage_keyboard">Rheoli bysellfyrddau</string>
+    <string name="text_to_speech_settings">Allbwn testun-i-lafar</string>
     <string name="text_to_speech_preferred_engine_settings">Peiriant i\'w ffafrio</string>
     <string name="text_to_speech_current_engine">Peiriant cyfredol</string>
+    <string name="tts_speech_rate">Cyflymder Llefaru</string>
     <string name="tts_pitch">Traw</string>
     <string name="tts_reset">Ailosod</string>
     <string name="sound_settings">Sain</string>
     <string name="ring_volume_title">Uchder sain caniad ffôn</string>
+    <string name="navi_volume_title">Uchder sain hysbysiadau</string>
     <string name="incoming_call_volume_title">Tôn caniad</string>
     <string name="notification_volume_title">Hysbysiad</string>
     <string name="media_volume_title">Cyfryngau</string>
@@ -241,6 +245,47 @@
     <string name="units_temperature_title">Tymheredd</string>
     <string name="units_volume_title">Uchder sain</string>
     <string name="units_pressure_title">Pwysedd</string>
+    <string name="units_list_entry"><xliff:g example="mph" id="unit_abbreviation">%1$s</xliff:g> - <xliff:g example="Miles per hour" id="unit_pronunciation">%2$s</xliff:g></string>
+    <string name="units_ratio"><xliff:g example="km" id="unit_numerator">%1$s</xliff:g>/<xliff:g example="h" id="unit_denominator">%2$s</xliff:g></string>
+    <string name="units_ratio_numerator"><xliff:g example="10" id="unit_numerator_quantity">%1$d</xliff:g><xliff:g example="kWh" id="unit_numerator_unit">%2$s</xliff:g></string>
+    <string name="units_ratio_denominator"><xliff:g example="100" id="unit_denominator_quantity">%1$d</xliff:g><xliff:g example="mi" id="unit_denominator_unit">%2$s</xliff:g></string>
+    <string name="units_unit_name_meter_per_sec">Metr yr Eiliad</string>
+    <string name="units_unit_name_rpm">Cylchdro y Munud</string>
+    <string name="units_unit_name_hertz">Herts</string>
+    <string name="units_unit_name_percentile">Canraddol</string>
+    <string name="units_unit_name_millimeter">Milimetr</string>
+    <string name="units_unit_name_meter">Metr</string>
+    <string name="units_unit_name_kilometer">Cilometr</string>
+    <string name="units_unit_name_mile">Milltir</string>
+    <string name="units_unit_name_celsius">Celsius</string>
+    <string name="units_unit_name_fahrenheit">Fahrenheit</string>
+    <string name="units_unit_name_kelvin">Celfin</string>
+    <string name="units_unit_name_milliliter">Mililitr</string>
+    <string name="units_unit_name_liter">Litr</string>
+    <string name="units_unit_name_us_gallon">Galwyn</string>
+    <string name="units_unit_name_imperial_gallon">Galwyn Imperial</string>
+    <string name="units_unit_name_nano_secs">Nanoeiliad</string>
+    <string name="units_unit_name_secs">Eiliad</string>
+    <string name="units_unit_name_year">Blwyddyn</string>
+    <string name="units_unit_name_kilopascal">Cilopascal</string>
+    <string name="units_unit_name_watt_hour">Awr Wat</string>
+    <string name="units_unit_name_milliampere">Miliamper</string>
+    <string name="units_unit_name_millivolt">Milifolt</string>
+    <string name="units_unit_name_milliwatts">Miliwat</string>
+    <string name="units_unit_name_ampere_hour">Awr Amper</string>
+    <string name="units_unit_name_kilowatt_hour">Awr Cilowat</string>
+    <string name="units_unit_name_psi">Pwys y fodfedd sgwâr</string>
+    <string name="units_unit_name_miles_per_hour">Milltir yr awr</string>
+    <string name="units_unit_name_kilometers_per_hour">Cilometr yr awr</string>
+    <string name="units_unit_name_bar">Bar</string>
+    <string name="units_unit_name_degrees">Gradd</string>
+    <string name="units_unit_name_kilowatt_per_hundred_miles">Cilowat pob can Milltir</string>
+    <string name="units_unit_name_kilowatt_per_hundred_kilometers">Cilowat pob can Cilomedr</string>
+    <string name="units_unit_name_miles_per_gallon_us">Milltir y Galwyn (UDA)</string>
+    <string name="units_unit_name_miles_per_gallon_uk">Milltir y Galwyn (DU)</string>
+    <string name="units_unit_name_kilometers_per_liter">Cilometr y Litr</string>
+    <string name="units_unit_name_liter_per_hundred_kilometers">Litr pob can Cilometr</string>
+    <string name="apps_and_notifications_settings">Apiau a hysbysiadau</string>
     <string name="all_applications">Dangos pob ap</string>
     <string name="default_applications">Apiau rhagosodedig</string>
     <string name="app_permissions">Caniatâd yr ap</string>
@@ -265,6 +310,15 @@
     <string name="data_usage_summary_title">Defnydd data</string>
     <string name="data_usage_app_summary_title">Defnydd data apiau</string>
     <string name="computing_size">Yn cyfrifo\u2026</string>
+    <plurals name="runtime_permissions_additional_count">
+        <item quantity="zero"><xliff:g example="10" id="count">%d</xliff:g> caniatâd ychwanegol</item>
+        <item quantity="one"><xliff:g example="10" id="count">%d</xliff:g> caniatâd ychwanegol</item>
+        <item quantity="two"><xliff:g example="10" id="count">%d</xliff:g> ganiatâd ychwanegol</item>
+        <item quantity="few"><xliff:g example="10" id="count">%d</xliff:g> chaniatâd ychwanegol</item>
+        <item quantity="many"><xliff:g example="10" id="count">%d</xliff:g> caniatâd ychwanegol</item>
+        <item quantity="other"><xliff:g example="10" id="count">%d</xliff:g> caniatâd ychwanegol</item>
+    </plurals>
+    <string name="direct_boot_unaware_dialog_message_car">Noder: Ar ôl ailddechrau, ni all yr ap hwn ddechrau nes bod dy gerbyd wedi ei ddatgloi.</string>
     <string name="assist_and_voice_input_settings">Cymorth a mewnbwn llais</string>
     <string name="assist_app_settings">Ap cynorthwyo</string>
     <string name="assist_access_context_title">Defnyddio testun o\'r sgrin</string>
@@ -284,7 +338,10 @@
         eu llenwi yn awtomatig.
         ]]></string>
     <string name="autofill_add_service">Ychwanegu gwasanaeth</string>
+    <string name="app_launch_domain_links_title">Agor dolenni</string>
     <string name="domain_url_section_title">Apiau wedi eu gosod</string>
+    <string name="domain_urls_summary_none">Peidio ag agor dolenni a gefnogir</string>
+    <string name="domain_urls_summary_one">Agor <xliff:g id="domain" example="mail.google.com">%s</xliff:g></string>
     <string name="domain_urls_summary_some">Agor <xliff:g id="domain" example="mail.google.com">%s</xliff:g> ac URLs eraill</string>
     <string name="app_launch_title">Agor fel yr ap rhagosodedig</string>
     <string name="app_launch_other_defaults_title">Rhagosodiadau eraill</string>
@@ -303,6 +360,8 @@
     <string name="modify_system_settings_description">Mae\'n caniatáu ap i addasu gosodiadau\'r system.</string>
     <string name="notification_access_title">Mynediad at hysbysiadau</string>
     <string name="notification_listener_security_warning_title">Caniatáu i <xliff:g id="service" example="NotificationReader">%1$s</xliff:g> gael mynediad at hysbysiadau?</string>
+    <string name="notification_listener_security_warning_summary">Mi fydd yn bosib i <xliff:g id="notification_listener_name">%1$s</xliff:g> ddarllen dy holl hysbysiadau, gan gynnwys gwybodaeth bersonol megis enwau cysylltiadau a thestun negeseuon rwyt yn eu derbyn.\nMi fydd hefyd yn bosib wfftio rhai hysbysiadau neu i weithredu unrhyw fotymau maen nhw\'n eu cynnwys.\n\nBydd hyn hefyd yn caniatáu i\'r ap droi Dim Tarfu ymlaen neu i ffwrdd ac i newid gosodiadau cysylltiedig.</string>
+    <string name="notification_listener_revoke_warning_summary">Os fyddi\'n gwrthod mynediad <xliff:g id="notification_listener_name">%1$s</xliff:g> at hysbysiadau, mae\'n bosib y bydd mynediad at Dim Tarfu hefyd yn cael ei wrthod.</string>
     <string name="notification_listener_revoke_warning_confirm">Troi i ffwrdd</string>
     <string name="notification_listener_revoke_warning_cancel">Diddymu</string>
     <string name="premium_sms_access_title">Mynediad SMS premiwm</string>
@@ -310,13 +369,19 @@
     <string name="usage_access_title">Mynediad at ddefnydd</string>
     <string name="usage_access_description">Mae mynediad defnydd yn caniatáu ap i ddilyn pa apiau eraill wyt yn eu defnyddio a pha mor aml, yn ogystal â dy ddarparwr gwasanaeth, iaith y system a manylion eraill.</string>
     <string name="wifi_control_title">Rheolaeth Wi-Fi</string>
+    <string name="wifi_control_description">Mae rheolaeth Wi-Fi yn caniatáu i ap droi Wi-Fi ymlaen ac i ffwrdd, sganio am a chysylltu â rhwydweithiau Wi-Fi, tynnu neu ychwanegu rhwydweithiau neu dechrau llecyn Wi-Fi.</string>
     <string name="more_special_access_title">Rhagor</string>
     <string name="location_settings_title">Lleoliad</string>
+    <string name="location_settings_recent_requests_title">Ceisiadau Diweddar am Leoliad</string>
+    <string name="location_settings_recent_requests_empty_message">Dim ceisiau diweddar am leoliad</string>
+    <string name="location_settings_app_permissions_title">Caniatâd lefel apiau</string>
+    <string name="location_settings_services_title">Gwasanaethau Lleoliad</string>
     <string name="system_setting_title">System</string>
     <string name="system_update_settings_title">Diweddariadau system</string>
     <string name="firmware_version">Fersiwn Android</string>
     <string name="security_patch">Lefel patsh diogelwch Android</string>
     <string name="hardware_info">Model a chaledwedd</string>
+    <string name="hardware_info_summary">Model: <xliff:g example="Hawk" id="model">%1$s</xliff:g></string>
     <string name="baseband_version">Fersiwn Baseband</string>
     <string name="kernel_version">Fersiwn cnewyllyn</string>
     <string name="build_number">Rhif adeiledd</string>
@@ -331,9 +396,13 @@
     <string name="about_settings_summary">Gweld gwybodaeth gyfreithiol, statws, fersiwn meddalwedd</string>
     <string name="legal_information">Gwybodaeth gyfreithiol</string>
     <string name="contributors_title">Cyfranwyr</string>
+    <string name="manual">Â llaw</string>
+    <string name="regulatory_labels">Labeli rheoleiddiol</string>
+    <string name="safety_and_regulatory_info">Llawlyfr diogelwch a rheoleiddiol</string>
     <string name="copyright_title">Hawlfraint</string>
     <string name="license_title">Trwydded</string>
     <string name="terms_title">Telerau ac amodau</string>
+    <string name="webview_license_title">Trwyddedau system WebView</string>
     <string name="wallpaper_attributions">Papurau wal</string>
     <string name="wallpaper_attributions_values">Darparwyr delweddau lleoren:\©2014 CNES / Astrium, DigitalGlobe, Bluesky</string>
     <string name="model_info">Model</string>
@@ -342,11 +411,55 @@
     <string name="settings_license_activity_title">Trwyddedau trydydd parti</string>
     <string name="settings_license_activity_unavailable">Mae yna broblem wrth lwytho\'r trwyddedau.</string>
     <string name="settings_license_activity_loading">Yn llwytho\u2026</string>
+    <plurals name="show_dev_countdown">
+        <item quantity="zero">Rwyt nawr <xliff:g id="step_count">%1$d</xliff:g> camau i ffwrdd o fod yn ddatblygwr.</item>
+        <item quantity="one">Rwyt nawr <xliff:g id="step_count">%1$d</xliff:g> cam i ffwrdd o fod yn ddatblygwr.</item>
+        <item quantity="two">Rwyt nawr <xliff:g id="step_count">%1$d</xliff:g> gam i ffwrdd o fod yn ddatblygwr.</item>
+        <item quantity="few">Rwyt nawr <xliff:g id="step_count">%1$d</xliff:g> cham i ffwrdd o fod yn ddatblygwr.</item>
+        <item quantity="many">Rwyt nawr <xliff:g id="step_count">%1$d</xliff:g> cam i ffwrdd o fod yn ddatblygwr.</item>
+        <item quantity="other">Rwyt nawr <xliff:g id="step_count">%1$d</xliff:g> cam i ffwrdd o fod yn ddatblygwr.</item>
+    </plurals>
+    <string name="show_dev_on">Rwyt bellach â mynediad fel datblygwr!</string>
     <string name="show_dev_already">Dim angen; rwyt eisoes yn ddatblygwr.</string>
     <string name="developer_options_settings">Dewisiadau datblygwr</string>
     <string name="reset_options_title">Ailosod dewisiadau</string>
+    <string name="reset_options_summary">Ailosod rhwydwaith, apiau neu\'r ddyfais</string>
+    <string name="reset_network_title">Ailosod rhwydweithiau</string>
+    <string name="reset_network_desc">Bydd hyn yn ailosod holl osodiadau rhwydwaith, gan gynnwys:</string>
     <string name="reset_network_item_wifi"><li>Wi\u2011Fi</li></string>
     <string name="reset_network_item_mobile"><li>Data symudol</li></string>
+    <string name="reset_network_item_bluetooth"><li>Bluetooth</li></string>
+    <string name="reset_esim_title">Dileu pob eSIM y cerbyd</string>
+    <string name="reset_esim_desc">Ni fydd hyn yn canslo dy gytundeb gwasanaeth.</string>
+    <string name="reset_esim_error_title">Methu ailosod eSIMau</string>
+    <string name="reset_network_select">Dewisa rwydwaith</string>
+    <string name="reset_network_button_text">Ailosod gosodiadau</string>
+    <string name="reset_network_confirm_title">Ailosod?</string>
+    <string name="reset_network_confirm_desc">Ailosod pob gosodiad rhwydwaith? Ni fydd posib dadwneud hyn!</string>
+    <string name="reset_network_confirm_button_text">Ailosod gosodiadau</string>
+    <string name="reset_network_complete_toast">Ailosodwyd gosodiadau rhwydweithiau</string>
+    <string name="reset_app_pref_title">Ailosod dewisiadau apiau</string>
+    <string name="reset_app_pref_desc">Bydd hyn yn ailosod yr holl ddewisiadau ar gyfer:\n\n<li>Apiau wedi\'u hanalluogi</li>\n<li>Hysbysiadau apiau wedi\'u hanalluogi</li>\n<li>Apiau rhagosodedig ar gyfer gweithredoedd</li>\n<li>Cyfyngiadau data cefndirol apiau</li>\n<li>Unrhyw gyfyngiadau caniatâd</li>\n\nNi fydd unrhyw ddata apiau yn cael ei golli.</string>
+    <string name="reset_app_pref_button_text">Ailosod apiau</string>
+    <string name="reset_app_pref_complete_toast">Ailosodwyd dewisiadau apiau</string>
+    <string name="master_clear_title">Dileu\'r holl ddata (ailosod i fel yr oedd yn gadael y ffatri)</string>
+    <string name="master_clear_desc">Bydd hyn yn dileu\'r holl ddata o <b>storfa fewnol</b> uned system y cerbyd, gan gynnwys:\n\n<li>Dy gyfrif Google</li>\n<li>Data a gosodiadau system ac apiau</li>\n<li>Apiau wedi\'u lawrlwytho</li></string>
+    <string name="master_clear_accounts">Rwyt ar hyn o bryd wedi mewngofnodi i\'r cyfrifon hyn:</string>
+    <string name="master_clear_other_users_present">Mae defnyddwyr eraill ar system y cerbyd hwn.</string>
+    <string name="master_clear_button_text">Ailosod y cerbyd</string>
+    <string name="master_clear_confirm_title">Ailosod?</string>
+    <string name="master_clear_confirm_desc">Dileu dy holl wybodaeth bersonol ac apiau wedi\u2019u lawrlwytho? Ni ellir dadwneud hyn!</string>
+    <string name="master_clear_confirm_button_text">Dileu popeth</string>
+    <string name="master_clear_progress_title">Yn dileu</string>
+    <string name="master_clear_progress_text">Arhosa...</string>
+    <string name="date_and_time_settings_title">Dyddiad ac amser</string>
+    <string name="date_and_time_settings_summary">Gosod dyddiad, amser, cylchfa amser a fformatau</string>
+    <string name="date_time_auto">Dyddiad ac amser awtomatig</string>
+    <string name="date_time_auto_summary">Defnyddio\'r amser gan y rhwydwaith</string>
+    <string name="zone_auto">Cylchfa amser awtomatig</string>
+    <string name="zone_auto_summary">Defnyddio\'r cylchfa amser gan y rhwydwaith</string>
+    <string name="date_time_24hour_title">Fformat 24\u2011awr</string>
+    <string name="date_time_24hour">Defnyddio fformat 24 awr</string>
     <string name="date_time_set_time_title">Amser</string>
     <string name="date_time_set_time">Gosod yr amser</string>
     <string name="date_time_set_timezone_title">Cylchfa amser</string>
@@ -357,8 +470,16 @@
     <string name="zone_list_menu_sort_by_timezone">Trefnu yn ôl cylchfa amser</string>
     <string name="date_picker_title">Dyddiad</string>
     <string name="time_picker_title">Amser</string>
+    <string name="user_admin">Gweinyddwr</string>
+    <string name="signed_in_admin_user">Wedi mewngofnodi fel gweinyddwr</string>
+    <string name="grant_admin_permissions_title">Pob caniatâd gweinyddwr</string>
+    <string name="grant_admin_permissions_button_text">Gwneud yn Weinyddwr</string>
+    <string name="grant_admin_permissions_message">Bydd gan y defnyddiwr y gallu i ddileu defnyddwyr, gan gynnwys Gweinyddwyr eraill, ac ailosod y system i fel yr oedd yn gadael y ffatri.</string>
+    <string name="action_not_reversible_message">Ni ellir dadwneud y weithred hon.</string>
+    <string name="confirm_grant_admin">Ie, ei wneud yn weinyddwr</string>
     <string name="create_user_permission_title">Creu defnyddwyr newydd</string>
     <string name="outgoing_calls_permission_title">Gwneud galwadau ffôn</string>
+    <string name="sms_messaging_permission_title">Negesu trwy ddata symudol y car</string>
     <string name="install_apps_permission_title">Gosod apiau newydd</string>
     <string name="uninstall_apps_permission_title">Dadosod apiau</string>
     <string name="user_add_user_menu">Ychwanegu defnyddiwr</string>
@@ -367,15 +488,39 @@
     <string name="user_add_user_message_setup">Pan fydd defnyddiwr newydd yn cael ei ychwanegu, bydd angen i\'r person hwnnw osod ei ofod ei hun.</string>
     <string name="user_add_user_message_update">Gall unrhyw ddefnyddiwr ddiweddaru apiau pob defnyddiwr arall.</string>
     <string name="user_limit_reached_title">Terfyn defnyddwyr wedi\'i gyrraedd</string>
+    <plurals name="user_limit_reached_message">
+        <item quantity="zero">Gellir ond creu <xliff:g example="3" id="count">%d</xliff:g> defnyddwyr.</item>
+        <item quantity="one">Gellir ond creu <xliff:g example="3" id="count">%d</xliff:g> defnyddiwr.</item>
+        <item quantity="two">Gellir ond creu <xliff:g example="3" id="count">%d</xliff:g> ddefnyddiwr.</item>
+        <item quantity="few">Gellir ond creu <xliff:g example="3" id="count">%d</xliff:g> defnyddiwr.</item>
+        <item quantity="many">Gellir ond creu <xliff:g example="3" id="count">%d</xliff:g> defnyddiwr.</item>
+        <item quantity="other">Gellir ond creu <xliff:g example="3" id="count">%d</xliff:g> defnyddiwr.</item>
+    </plurals>
+    <string name="add_user_error_title">Methwyd â chreu defnyddiwr newydd</string>
     <string name="delete_user_dialog_title">Dileu\'r defnyddiwr hwn?</string>
     <string name="delete_user_dialog_message">"Caiff yr holl apiau a data eu dileu."</string>
+    <string name="delete_user_error_title">Methwyd dileu defnyddiwr.</string>
     <string name="delete_user_error_dismiss">Diystyru</string>
     <string name="delete_user_error_retry">Ailgeisio</string>
+    <string name="delete_last_user_dialog_title">Dileu\'r defnyddiwr diwethaf?</string>
+    <string name="delete_last_user_admin_created_message">"Ar ôl dileu'r unig ddefnyddiwr sy'n weddill i'r car hwn, bydd defnyddiwr gweinyddwr newydd yn cael ei greu."</string>
+    <string name="delete_last_user_system_setup_required_message">"Caiff holl ddata, gosodiadau, ac apiau yn gysylltiedig â'r defnyddiwr hwn eu dileu. Bydd yn rhaid gosod y system eto."</string>
+    <string name="choose_new_admin_title">Dewisa weinyddwr newydd</string>
+    <string name="choose_new_admin_message">Rhaid bod o leiaf un gweinyddwr. I ddileu\'r un yma, rhaid yn gyntaf dewis un i gymryd ei le.</string>
+    <string name="choose_new_admin_label">Dewis gweinyddwr</string>
     <string name="user_guest">Gwestai</string>
     <string name="start_guest_session">Gwestai</string>
     <string name="user_switch">Newid</string>
+    <string name="current_user_name">Ti (%1$s)</string>
     <string name="user_name_label">Enw</string>
     <string name="user_summary_not_set_up">Heb ei osod</string>
+    <string name="edit_user_name_title">Golygu enw defnyddiwr</string>
+    <string name="name_input_blank_error">Ni all y maes fod yn wag.</string>
+    <string name="name_input_invalid_error">Dyw\'r enw defnyddiwr a roddwyd ddim yn nilys.</string>
+    <string name="users_list_title">Defnyddwyr</string>
+    <string name="user_details_admin_title">Wedi rhoi caniatâd i %1$s</string>
+    <string name="storage_settings_title">Storfa</string>
+    <string name="storage_music_audio">Cerddoriaeth a sain</string>
     <string name="storage_other_apps">Apiau eraill</string>
     <string name="storage_files">Ffeiliau</string>
     <string name="storage_system">System</string>
@@ -395,6 +540,16 @@
     <string name="storage_unmount_failure">Methwyd â dadfowntio <xliff:g id="name" example="SD card">%1$s</xliff:g> yn ddiogel</string>
     <string name="accounts_settings_title">Cyfrifon</string>
     <string name="user_add_account_menu">Ychwanegu cyfrif</string>
+    <string name="no_accounts_added">Dim cyfrifon wedi\'u hychwanegu</string>
+    <string name="account_list_title">Cyfrifon ar gyfer
+        <xliff:g id="current_user_name">%1$s</xliff:g>
+    </string>
+    <string name="account_auto_sync_title">Cysoni data yn awtomatig</string>
+    <string name="account_auto_sync_summary">Caniatáu i apiau ail-lwytho data yn awtomatig</string>
+    <string name="data_usage_auto_sync_on_dialog_title">Troi awto-cysoni data ymlaen?</string>
+    <string name="data_usage_auto_sync_on_dialog">Caiff unrhyw newidiadau rwyt yn eu gwneud i dy gyfrifon ar y we yn cael eu copïo yn awtomatig i dy ddyfais.\n\nGall rhai cyfrifon hefyd copïo unrhyw newidiadau rwyt yn eu gwneud y ffôn i\'r we. Mae Cyfrif Google yn gweithio yn y modd hwn.</string>
+    <string name="data_usage_auto_sync_off_dialog_title">Troi awto-cysoni data i ffwrdd?</string>
+    <string name="data_usage_auto_sync_off_dialog">Bydd hyn yn arbed defnydd data, ond bydd yn rhaid cysoni pob cyfrif dy hun i gael y wybodaeth ddiweddaraf. A ni fyddi\'n derbyn hysbysiadau pan fydd diweddariadau ar gael.</string>
     <string name="account_details_title">Gwybodaeth cyfrif</string>
     <string name="add_account_title">Ychwanegu cyfrif</string>
     <string name="add_an_account">Ychwanegu cyfrif</string>
@@ -402,6 +557,7 @@
     <string name="remove_account_title">Tynnu\'r cyfrif</string>
     <string name="really_remove_account_title">Tynnu\'r cyfrif?</string>
     <string name="really_remove_account_message">Bydd tynnu\'r cyfrif hwn yn dileu ei holl negeseuon, cysylltiadau, a data arall oddi ar y ddyfais!</string>
+    <string name="remove_account_error_title">Methwyd tynnu\'r cyfrif.</string>
     <string name="account_sync_title">Cysoni cyfrif</string>
     <string name="account_sync_summary_some_on">Mae cysoni ymlaen ar gyfer <xliff:g name="count" example="5">%1$d</xliff:g> o <xliff:g name="total" example="8">%2$d</xliff:g> eitem.</string>
     <string name="account_sync_summary_all_on">Cysoni ymlaen ar gyfer pob eitem</string>
@@ -448,10 +604,14 @@
     <string name="error_saving_lockpattern">Gwall wrth gadw\'r patrwm</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts">Bu gormod o ymdrechion aflwyddiannus. Rho gynnig arall arni ymhen <xliff:g id="number">%d</xliff:g> eiliad.</string>
     <string name="okay">Iawn</string>
+    <string name="remove_screen_lock_title">Tynnu clo\'r sgrin?</string>
+    <string name="remove_screen_lock_message">Bydd hyn yn caniatáu i unrhyw un gael mynediad at dy gyfrif</string>
     <string name="lock_settings_enter_pin">Rho dy PIN</string>
     <string name="lock_settings_enter_password">Rho dy gyfrinair</string>
     <string name="choose_lock_pin_message">Er diogelwch, gosoda PIN</string>
     <string name="confirm_your_pin_header">Rho dy PIN eto</string>
+    <string name="choose_lock_pin_hints">Rhaid bod y PIN yn o leiaf 4 digid.</string>
+    <string name="lockpin_invalid_pin">PIN annilys. Rhaid bod o leiaf 4 digid.</string>
     <string name="confirm_pins_dont_match">Dyw\'r ddau PIN ddim yr un fath</string>
     <string name="error_saving_lockpin">Gwall wrth gadw\'r PIN</string>
     <string name="lockscreen_wrong_pin">PIN anghywir</string>
@@ -462,7 +622,70 @@
     <string name="lockpassword_clear_label">Clirio</string>
     <string name="lockpassword_cancel_label">Diddymu</string>
     <string name="lockpassword_confirm_label">Cadarnhau</string>
+    <string name="choose_lock_password_hints">Rhaid bod o leiaf 4 nod.</string>
+    <string name="lockpassword_password_too_short">Rhaid bod o leiaf <xliff:g example="3" id="count">%d</xliff:g> nod</string>
+    <string name="lockpassword_pin_too_short">Rhaid bod y PIN yn o leiaf <xliff:g example="3" id="count">%d</xliff:g> digid</string>
+    <string name="lockpassword_password_too_long">Rhaid bod yn llai na <xliff:g example="17" id="number">%d</xliff:g> nod</string>
+    <string name="lockpassword_pin_too_long">Rhaid bod yn llai na <xliff:g example="17" id="number">%d</xliff:g> digid</string>
+    <string name="lockpassword_pin_contains_non_digits">Rhaid cynnwys digidau 0 i 9 yn unig.</string>
+    <string name="lockpassword_pin_recently_used">Dyw gweinyddwr y ddyfais ddim yn caniatáu defnyddio PIN diweddar</string>
+    <string name="lockpassword_pin_blacklisted_by_admin">Mae dy weinyddwr TGCh wedi rhwystro rhifau PIN cyffredin. Rho gynnig ar PIN gwahanol.</string>
+    <string name="lockpassword_illegal_character">Rhaid peidio â chynnwys nod annilys.</string>
+    <string name="lockpassword_invalid_password">Cyfrinair annilys. Mae\'n rhaid bod o leiaf 4 nod.</string>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="zero">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythrennau</item>
+        <item quantity="one">Rhaid cynnwys o leiaf un llythyren</item>
+        <item quantity="two">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> lythyren</item>
+        <item quantity="few">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythyren</item>
+        <item quantity="many">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythyren</item>
+        <item quantity="other">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythyren</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="zero">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> lythrennau bach</item>
+        <item quantity="one">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythyren fach</item>
+        <item quantity="two">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> lythyren fach</item>
+        <item quantity="few">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythyren fach</item>
+        <item quantity="many">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythyren fach</item>
+        <item quantity="other">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> llythyren fach</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="zero">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> prif lythrennau</item>
+        <item quantity="one">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> prif lythyren</item>
+        <item quantity="two">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> brif lythyren</item>
+        <item quantity="few">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> prif lythyren</item>
+        <item quantity="many">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> prif lythyren</item>
+        <item quantity="other">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> prif lythyren</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="zero">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> digidau rhifol.</item>
+        <item quantity="one">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> digid rhifol.</item>
+        <item quantity="two">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> ddigid rhifol.</item>
+        <item quantity="few">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> digid rhifol.</item>
+        <item quantity="many">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> digid rhifol.</item>
+        <item quantity="other">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> digid rhifol.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="zero">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> symbolau arbennig.</item>
+        <item quantity="one">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> symbol arbennig.</item>
+        <item quantity="two">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> symbol arbennig.</item>
+        <item quantity="few">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> symbol arbennig.</item>
+        <item quantity="many">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> symbol arbennig.</item>
+        <item quantity="other">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> symbol arbennig.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="zero">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> nodau na sy\'n llythrennau.</item>
+        <item quantity="one">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> nod na sy\'n llythrennau.</item>
+        <item quantity="two">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> nod na sy\'n llythrennau.</item>
+        <item quantity="few">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> nod na sy\'n llythrennau.</item>
+        <item quantity="many">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> nod na sy\'n llythrennau.</item>
+        <item quantity="other">Rhaid cynnwys o leiaf <xliff:g example="3" id="count">%d</xliff:g> nod na sy\'n llythrennau.</item>
+    </plurals>
+    <string name="lockpassword_password_recently_used">Dyw gweinyddwr y ddyfais ddim yn caniatáu defnyddio cyfrinair diweddar</string>
+    <string name="error_saving_password">Gwall wrth gadw\'r cyfrinair</string>
+    <string name="lockpassword_password_blacklisted_by_admin">Mae dy weinyddwr TG wedi rhwystro cyfrineiriau cyffredin. Rho gynnig ar gyfrinair gwahanol.</string>
+    <string name="lockpassword_pin_no_sequential_digits">Ni chaniateir rhes o rifau sy\'n dilyn neu\'n ailadrodd ei gilydd.</string>
     <string name="setup_lock_settings_options_button_label">Dewisiadau sgrin cloi</string>
+    <string name="build_info_fmt"><xliff:g example="google/gcar_emu_x86/..." id="fingerprint">%1$s</xliff:g>\n<xliff:g example="Thu Aug 30" id="date">%2$s</xliff:g> : <xliff:g example="4" id="num_days">%3$s</xliff:g> diwrnod yn ôl</string>
     <string name="credentials_reset">Clirio tystnodiadau</string>
     <string name="credentials_reset_summary">Tynnu pob tystysgrif</string>
     <string name="credentials_reset_hint">Tynnu\'r holl gynnwys?</string>
@@ -476,4 +699,14 @@
     <string name="cancel">Diddymu</string>
     <string name="allow">Caniatáu</string>
     <string name="deny">Gwrthod</string>
+    <string name="backspace_key">Bysell nôl</string>
+    <string name="enter_key">Bysell Enter</string>
+    <string name="exit_retail_button_text">Gadael modd arddangos</string>
+    <string name="exit_retail_mode_dialog_title">Gadael y modd arddangos</string>
+    <string name="exit_retail_mode_dialog_body">Bydd hyn yn dileu\'r cyfrif arddangos ac yn ailosod data\'r system i fel yr oedd yn gadael y ffatri. Caiff holl ddata defnyddwyr ei golli.</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text">Gadael modd arddangos</string>
+    <string name="suggestion_dismiss_button">DIYSTYRU</string>
+    <string name="restricted_while_driving">Nodwedd ddim ar gael tra\'n gyrru.</string>
+    <string name="add_user_restricted_while_driving">Methu ychwanegu defnyddiwr tra\'n gyrru</string>
+    <string name="default_search_query">Chwilio</string>
 </resources>
