@@ -328,7 +328,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"版本：%1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"未授予任何权限"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"未请求任何权限"</string>
-    <string name="unused_apps" msgid="648471933781010395">"未使用的应用"</string>
+    <string name="unused_apps" msgid="648471933781010395">"闲置应用"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# 个未使用的应用}other{# 个未使用的应用}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"撤消权限并释放空间"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"将使用%s的内部存储空间"</string>
@@ -454,7 +454,7 @@
     <string name="hardware_info_summary" msgid="8262576443254075921">"型号：<xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"基带版本"</string>
     <string name="kernel_version" msgid="7327212934187011508">"内核版本"</string>
-    <string name="build_number" msgid="3997326631001009102">"版本号"</string>
+    <string name="build_number" msgid="3997326631001009102">"Build 号"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"蓝牙地址"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"未提供"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"状态"</string>
@@ -738,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"退出演示模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"关闭"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"驾车时无法使用此功能"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"需要请驾驶员更改设置"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"您无法执行此操作"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"车辆行驶期间无法添加个人资料"</string>
     <string name="default_search_query" msgid="3137420627428857068">"搜索"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和语音"</string>
