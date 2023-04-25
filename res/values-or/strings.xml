@@ -328,7 +328,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"ଭର୍ସନ୍‌: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"କୌଣସି ଅନୁମତି ଦିଆଯାଇ ନାହିଁ"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"କୌଣସି ଅନୁମତିର ଅନୁରୋଧ କରାଯାଇ ନାହିଁ"</string>
-    <string name="unused_apps" msgid="648471933781010395">"ଅବ୍ୟବହୃତ ଆପଗୁଡ଼ିକ"</string>
+    <string name="unused_apps" msgid="648471933781010395">"ଅବ୍ୟବହୃତ ଆପ୍ସ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{#ଟି ଅବ୍ୟବହୃତ ଆପ}other{#ଟି ଅବ୍ୟବହୃତ ଆପ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ଅନୁମତିଗୁଡ଼ିକୁ କାଢ଼ି ସ୍ପେସ୍ ଖାଲି କରନ୍ତୁ"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"ଇଣ୍ଟର୍ନଲ୍ ଷ୍ଟୋରେଜ୍‌ରେ %s ଅଛି"</string>
@@ -575,7 +575,7 @@
     <string name="users_list_title" msgid="770764290290240909">"ୟୁଜର୍"</string>
     <string name="profiles_list_title" msgid="1443396686780460221">"ପ୍ରୋଫାଇଲଗୁଡ଼ିକ"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s ପାଇଁ ଅନୁମତି ଅନୁମୋଦିତ ହୋଇଛି"</string>
-    <string name="storage_settings_title" msgid="8957054192781341797">"ଷ୍ଟୋରେଜ୍"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"ଷ୍ଟୋରେଜ"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"ମ୍ୟୁଜିକ୍‌ ଓ ଅଡିଓ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"ଅନ୍ୟ ଆପ୍‍"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
@@ -628,7 +628,7 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ଗୋପନୀୟତା"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ଡାଟା"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ଆପଣଙ୍କ ଲୋକେସନକୁ ଆପର ଆକ୍ସେସ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
-    <string name="mute_camera_title" msgid="215494079895460172">"କ୍ୟାମେରା"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"କେମେରା"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"ଆପଣଙ୍କ କ୍ୟାମେରାଗୁଡ଼ିକୁ ଆପର ଆକ୍ସେସ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ମାଇକ୍ରୋଫୋନକୁ ଆପ୍ ଆକ୍ସେସ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
@@ -738,10 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ଖାରଜ କରନ୍ତୁ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ଗାଡ଼ି ଚଲାଇବା ସମୟରେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବ ନାହିଁ"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ସେଟିଂ ପରିବର୍ତ୍ତନ କରିବାକୁ ଡ୍ରାଇଭରଙ୍କୁ ଅନୁରୋଧ କରନ୍ତୁ"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"ଆପଣ ଏହି କାର୍ଯ୍ୟ କରିପାରିବେ ନାହିଁ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରିପାରିବେ ନାହିଁ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant ଓ ଭଏସ୍"</string>
@@ -880,7 +878,7 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ବିକଳ୍ପଗୁଡ଼ିକ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ସେଟିଂସ"</string>
-    <string name="camera_settings_title" msgid="2837785830355288903">"କ୍ୟାମେରା"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"କେମେରା"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"କ୍ୟାମେରା ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"ଆପଣଙ୍କ କ୍ୟାମେରାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ସମସ୍ତ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"କ୍ୟାମେରା ଅନୁମତିଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>

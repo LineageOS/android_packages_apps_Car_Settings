@@ -404,7 +404,7 @@
     <string name="usage_access_title" msgid="7153427122072303254">"Օգտագ. տվյալների հասանելիութ."</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Օգտագործման մասին տվյալների հասանելիությունը հնարավորություն է տալիս հավելվածներին հավաքել տարբեր տեղեկություններ, օրինակ, այն մասին, թե ուրիշ ինչ հավելվածներ եք օգտագործում և ինչ հաճախականությամբ, որ օպերատորից եք օգտվում, լեզվի ինչ կարգավորումներ եք սահմանել և այլն:"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-ի կառավար"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-ի կառավարը հնարավորություն է տալիս հավելվածներին միացնել և անջատել Wi-Fi-ը, գտնել Wi-Fi ցանցեր և միանալ դրանց, ավելացնել և հեռացնել ցանցեր, միացնել միայն տեղային թեժ կետ:"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-ի կառավարը հնարավորություն է տալիս հավելվածներին միացնել և անջատել Wi-Fi-ը, գտնել Wi-Fi ցանցեր և միանալ դրանց, ավելացնել և հեռացնել ցանցեր, միացնել միայն լոկալ թեժ կետ:"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Լրացուցիչ կարգավորումներ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Օգտագործել տեղորոշումը"</string>
@@ -738,10 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Անջատել դեմո ռեժիմը"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ՓԱԿԵԼ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Վարելու ընթացքում գործառույթը հասանելի չէ"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Խնդրեք վարորդին փոխել կարգավորումը"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Այս գործողությունը ձեզ հասանելի չէ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Վարելու ժամանակ հնարավոր չէ պրոֆիլ ավելացնել"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Որոնում"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Օգնական կամ Google Voice"</string>
