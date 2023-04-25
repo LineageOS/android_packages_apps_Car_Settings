@@ -25,6 +25,8 @@
         android:title="@string/hide_system_apps"
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.applications.HideSystemSwitchPreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"
         settings:searchable="false"/>
     <Preference
         android:key="@string/pk_wifi_control_description"
@@ -32,5 +34,7 @@
         android:summary="@string/wifi_control_description"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_wifi_control"
-        settings:controller="com.android.car.settings.applications.specialaccess.WifiControlPreferenceController"/>
+        settings:controller="com.android.car.settings.applications.specialaccess.WifiControlPreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
 </PreferenceScreen>
