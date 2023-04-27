@@ -86,6 +86,12 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
         boolean hasUmRestrictions = EnterpriseUtils.hasUserRestrictionByUm(getContext(),
                 userRestriction);
 
+
+        boolean isReadOnlyForZone = isReadOnlyForZone();
+        PendingIntent disabledPendingIntent = isReadOnlyForZone
+                ? QCUtils.getDisabledToastBroadcastIntent(getContext())
+                : getActionDisabledDialogIntent(getContext(), userRestriction);
+
         QCList.Builder listBuilder = new QCList.Builder();
         for (int usage : getUsages()) {
             VolumeItemParser.VolumeItem volumeItem = mVolumeItems.get(usage);
@@ -109,9 +115,8 @@ public abstract class BaseVolumeSlider extends SettingsQCItem {
                             .setInputAction(createSliderAction(groupId))
                             .setEnabled(!hasUmRestrictions && !hasDpmRestrictions
                                     && isWritableForZone())
-                            .setClickableWhileDisabled(hasDpmRestrictions)
-                            .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
-                                    userRestriction))
+                            .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
+                            .setDisabledClickAction(disabledPendingIntent)
                             .build()
                     )
                     .build()

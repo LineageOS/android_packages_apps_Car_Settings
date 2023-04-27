@@ -255,6 +255,7 @@ public class WifiRowTest extends BaseSettingsQCItemTestCase {
         assertThat(row.getStartIcon().getResId()).isEqualTo(R.drawable.ic_qc_wifi_level_4);
         QCActionItem actionItem = row.getEndItems().get(0);
         assertThat(actionItem.isEnabled()).isFalse();
+        assertThat(actionItem.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
