@@ -25,12 +25,14 @@ import android.annotation.StringRes;
 import android.annotation.XmlRes;
 import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
+import android.car.CarOccupantZoneManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
 import com.android.car.settings.CarSettingsApplication;
+import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceXmlParser;
 import com.android.car.settings.enterprise.ActionDisabledByAdminActivity;
 
@@ -103,5 +105,29 @@ public class QCUtils {
             }
         }
         return PREF_AVAILABILITY_STATUS_WRITE;
+    }
+
+    /** Standardized intent for onclick when qc is disabled for zone */
+    public static PendingIntent getDisabledToastBroadcastIntent(Context context) {
+        String message = isPassengerUser(context)
+                ? context.getString(R.string.restricted_for_passenger)
+                : context.getString(R.string.restricted_for_driver);
+
+        Intent intent = new Intent()
+                .setClass(context, DisabledQCToastBroadcastReceiver.class)
+                .addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
+        Bundle bundle = new Bundle();
+        bundle.putString(DisabledQCToastBroadcastReceiver.DISABLED_QC_TOAST_KEY, message);
+        intent.putExtras(bundle);
+
+        return PendingIntent.getBroadcast(context, /* requestCode= */ 0, intent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
+    }
+
+    /** Returns whether the current user is a passenger or not */
+    private static boolean isPassengerUser(Context context) {
+        int zoneType = ((CarSettingsApplication) context.getApplicationContext())
+                .getMyOccupantZoneType();
+        return zoneType != CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER;
     }
 }

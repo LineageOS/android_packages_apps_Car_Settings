@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 
@@ -287,6 +288,37 @@ public class PreferenceControllerTest {
 
         // onCreate, onStart
         assertThat(mPreferenceController.getUpdateStateCallCount()).isEqualTo(2);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unrestricted_available_zoneWrite() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatusForZone("write");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE);
+        verify(mPreference).setEnabled(true);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unrestricted_available_zoneRead() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatusForZone("read");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        verify(mPreference).setEnabled(false);
+    }
+    @Test
+    public void testGetAvailabilityStatus_unrestricted_available_zoneHidden() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatusForZone("hidden");
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     private static class FakePreferenceController extends
