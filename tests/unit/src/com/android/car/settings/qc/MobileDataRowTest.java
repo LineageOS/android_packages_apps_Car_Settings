@@ -165,6 +165,7 @@ public class MobileDataRowTest extends BaseSettingsQCItemTestCase {
         QCRow row = getRow();
         QCActionItem actionItem = row.getEndItems().get(0);
         assertThat(actionItem.isEnabled()).isFalse();
+        assertThat(actionItem.isClickableWhileDisabled()).isTrue();
     }
 
     @Test

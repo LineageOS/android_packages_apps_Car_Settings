@@ -21,6 +21,7 @@ import static com.android.car.qc.QCItem.QC_TYPE_ACTION_SWITCH;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
 import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 
+import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
@@ -56,13 +57,17 @@ public class BluetoothSwitch extends SettingsQCItem {
         boolean hasUmRestrictions = EnterpriseUtils.hasUserRestrictionByUm(getContext(),
                 userRestriction);
 
+        boolean isReadOnlyForZone = isReadOnlyForZone();
+        PendingIntent disabledPendingIntent = isReadOnlyForZone
+                ? QCUtils.getDisabledToastBroadcastIntent(getContext())
+                : getActionDisabledDialogIntent(getContext(), userRestriction);
+
         QCActionItem actionItem = new QCActionItem.Builder(QC_TYPE_ACTION_SWITCH)
                 .setChecked(isBluetoothOn())
                 .setAction(getBroadcastIntent())
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
-                .setClickableWhileDisabled(hasDpmRestrictions)
-                .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
-                        userRestriction))
+                .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
+                .setDisabledClickAction(disabledPendingIntent)
                 .build();
 
         QCList.Builder listBuilder = new QCList.Builder()

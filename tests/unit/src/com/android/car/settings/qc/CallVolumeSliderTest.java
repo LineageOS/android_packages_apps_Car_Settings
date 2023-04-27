@@ -74,6 +74,7 @@ public class CallVolumeSliderTest extends VolumeSliderTestCase {
         QCSlider slider = row.getSlider();
         assertThat(slider).isNotNull();
         assertThat(slider.isEnabled()).isFalse();
+        assertThat(slider.isClickableWhileDisabled()).isTrue();
     }
 
     @Test

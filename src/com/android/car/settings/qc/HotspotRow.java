@@ -73,15 +73,19 @@ public class HotspotRow extends SettingsQCItem {
         boolean hasUmRestrictions = EnterpriseUtils.hasUserRestrictionByUm(getContext(),
                 userRestriction);
 
+        boolean isReadOnlyForZone = isReadOnlyForZone();
+        PendingIntent disabledPendingIntent = isReadOnlyForZone
+                ? QCUtils.getDisabledToastBroadcastIntent(getContext())
+                : getActionDisabledDialogIntent(getContext(), userRestriction);
+
         QCActionItem hotpotToggle = new QCActionItem.Builder(QC_TYPE_ACTION_SWITCH)
                 .setChecked(HotspotQCUtils.isHotspotEnabled(mWifiManager))
-                .setEnabled(!HotspotQCUtils.isHotspotBusy(mWifiManager)
-                        && !hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
+                .setEnabled(!HotspotQCUtils.isHotspotBusy(mWifiManager) && !hasUmRestrictions
+                        && !hasDpmRestrictions && isWritableForZone())
                 .setAvailable(mIsSupported)
                 .setAction(getBroadcastIntent())
-                .setClickableWhileDisabled(hasDpmRestrictions)
-                .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
-                        userRestriction))
+                .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
+                .setDisabledClickAction(disabledPendingIntent)
                 .build();
 
         QCRow hotspotRow = new QCRow.Builder()
