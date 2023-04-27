@@ -99,6 +99,7 @@ public class NavigationVolumeSliderTest extends VolumeSliderTestCase {
         QCRow row = list.getRows().get(0);
         QCSlider slider = row.getSlider();
         assertThat(slider.isEnabled()).isFalse();
+        assertThat(slider.isClickableWhileDisabled()).isTrue();
     }
 
     @Test

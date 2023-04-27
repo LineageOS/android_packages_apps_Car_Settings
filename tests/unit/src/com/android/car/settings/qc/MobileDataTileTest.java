@@ -160,6 +160,7 @@ public class MobileDataTileTest extends BaseSettingsQCItemTestCase {
         mMobileDataTile.setAvailabilityStatusForZone("read");
         QCTile tile = getTile();
         assertThat(tile.isEnabled()).isFalse();
+        assertThat(tile.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
