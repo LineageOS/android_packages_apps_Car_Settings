@@ -100,6 +100,7 @@ public class BluetoothSwitchTest extends BaseSettingsQCItemTestCase {
         QCRow row = list.getRows().get(0);
         QCActionItem actionItem = row.getEndItems().get(0);
         assertThat(actionItem.isEnabled()).isFalse();
+        assertThat(actionItem.isClickableWhileDisabled()).isTrue();
     }
 
     @Test

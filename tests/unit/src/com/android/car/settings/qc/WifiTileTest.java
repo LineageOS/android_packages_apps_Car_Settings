@@ -230,6 +230,7 @@ public class WifiTileTest extends BaseSettingsQCItemTestCase {
         when(mWifiManager.calculateSignalLevel(anyInt())).thenReturn(4);
         QCTile tile = getWifiTile();
         assertThat(tile.isEnabled()).isFalse();
+        assertThat(tile.isClickableWhileDisabled()).isTrue();
     }
 
     @Test

@@ -87,6 +87,7 @@ public class AdaptiveBrightnessSwitchTest extends BaseSettingsQCItemTestCase {
         QCRow row = getQCRow();
         QCActionItem actionItem = row.getEndItems().get(0);
         assertThat(actionItem.isEnabled()).isFalse();
+        assertThat(actionItem.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
