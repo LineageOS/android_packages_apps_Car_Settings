@@ -22,6 +22,7 @@ import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
 import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFromXml;
 import static com.android.car.settings.qc.SettingsQCRegistry.MOBILE_DATA_ROW_URI;
 
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Icon;
@@ -68,13 +69,17 @@ public class MobileDataRow extends SettingsQCItem {
         boolean hasUmRestrictions = EnterpriseUtils.hasUserRestrictionByUm(getContext(),
                 userRestriction);
 
+        boolean isReadOnlyForZone = isReadOnlyForZone();
+        PendingIntent disabledPendingIntent = isReadOnlyForZone
+                ? QCUtils.getDisabledToastBroadcastIntent(getContext())
+                : getActionDisabledDialogIntent(getContext(), userRestriction);
+
         QCActionItem dataToggle = new QCActionItem.Builder(QC_TYPE_ACTION_SWITCH)
                 .setChecked(dataEnabled)
                 .setAction(getBroadcastIntent())
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
-                .setClickableWhileDisabled(hasDpmRestrictions)
-                .setDisabledClickAction(getActionDisabledDialogIntent(getContext(),
-                        userRestriction))
+                .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
+                .setDisabledClickAction(disabledPendingIntent)
                 .build();
 
         QCRow dataRow = new QCRow.Builder()

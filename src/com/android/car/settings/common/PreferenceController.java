@@ -19,6 +19,7 @@ package com.android.car.settings.common;
 import static com.android.car.settings.common.PreferenceXmlParser.PREF_AVAILABILITY_STATUS_HIDDEN;
 import static com.android.car.settings.common.PreferenceXmlParser.PREF_AVAILABILITY_STATUS_READ;
 
+import android.car.CarOccupantZoneManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
@@ -34,6 +35,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.ui.preference.ClickableWhileDisabledPreference;
 import com.android.car.ui.preference.UxRestrictablePreference;
@@ -176,6 +178,8 @@ public abstract class PreferenceController<V extends Preference> implements
     private final String mPreferenceKey;
     private final FragmentController mFragmentController;
     private final String mRestrictedWhileDrivingMessage;
+    private final String mRestrictedForDriversMessage;
+    private final String mRestrictedForPassengersMessage;
     private final int mDebounceIntervalMs;
 
     private CarUxRestrictions mUxRestrictions;
@@ -201,6 +205,10 @@ public abstract class PreferenceController<V extends Preference> implements
                 mContext.getResources().getBoolean(R.bool.config_always_ignore_ux_restrictions);
         mRestrictedWhileDrivingMessage =
                 mContext.getResources().getString(R.string.car_ui_restricted_while_driving);
+        mRestrictedForDriversMessage =
+                mContext.getResources().getString(R.string.restricted_for_driver);
+        mRestrictedForPassengersMessage =
+                mContext.getResources().getString(R.string.restricted_for_passenger);
         mDebounceIntervalMs =
                 mContext.getResources().getInteger(R.integer.config_preference_onclick_debounce_ms);
     }
@@ -341,6 +349,10 @@ public abstract class PreferenceController<V extends Preference> implements
             return;
         }
         onCreateInternal();
+        if (isPreferenceDisabledForZone()) {
+            setClickableWhileDisabledInternal(getPreference(), /* clickable= */ true,
+                    getZoneDisabledPreferenceOnClick());
+        }
         mIsCreated = true;
         refreshUi();
     }
@@ -607,24 +619,33 @@ public abstract class PreferenceController<V extends Preference> implements
     /**
      * Updates the clickable while disabled state and action for a preference. This will also
      * update all child preferences with the same state and action when {@param preference}
-     * is a PreferenceGroup.
+     * is a PreferenceGroup. If the preference is only available for viewing for the zone,
+     * this won't apply since an action will have already been assigned.
      *
      * @param preference the preference to update
      * @param clickable whether or not the preference should be clickable when disabled
-     * @param disabledClickAction the action that should be taken when clicked while disabled
+     * @param disabledClickAction the action that should be taken when clicked while disabled.
      */
     protected void setClickableWhileDisabled(Preference preference, boolean clickable,
             @Nullable Consumer<Preference> disabledClickAction) {
+        // Preferences disabled for zone message has highest priority
+        if (isPreferenceDisabledForZone()) {
+            return;
+        }
+        setClickableWhileDisabledInternal(preference, clickable, disabledClickAction);
+    }
+
+    private void setClickableWhileDisabledInternal(Preference preference, boolean clickable,
+            @Nullable Consumer<Preference> disabledClickAction) {
         if (preference instanceof ClickableWhileDisabledPreference) {
-            ClickableWhileDisabledPreference pref =
-                    (ClickableWhileDisabledPreference) preference;
+            ClickableWhileDisabledPreference pref = (ClickableWhileDisabledPreference) preference;
             pref.setClickableWhileDisabled(clickable);
             pref.setDisabledClickListener(disabledClickAction);
         }
         if (preference instanceof PreferenceGroup) {
             PreferenceGroup preferenceGroup = (PreferenceGroup) preference;
             for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
-                setClickableWhileDisabled(preferenceGroup.getPreference(i), clickable,
+                setClickableWhileDisabledInternal(preferenceGroup.getPreference(i), clickable,
                         disabledClickAction);
             }
         }
@@ -661,5 +682,19 @@ public abstract class PreferenceController<V extends Preference> implements
 
     protected final boolean isStarted() {
         return mIsStarted;
+    }
+
+    private Consumer<Preference> getZoneDisabledPreferenceOnClick() {
+        int zoneType = ((CarSettingsApplication) getContext().getApplicationContext())
+                .getMyOccupantZoneType();
+        String message = zoneType == CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER
+                ? mRestrictedForDriversMessage : mRestrictedForPassengersMessage;
+        return p -> Toast.makeText(mContext, message, Toast.LENGTH_LONG).show();
+    }
+
+    private boolean isPreferenceDisabledForZone() {
+        return mAvailabilityStatusForZone == AVAILABLE_FOR_VIEWING_FOR_ZONE
+                && (getDefaultAvailabilityStatus() == AVAILABLE_FOR_VIEWING
+                || getDefaultAvailabilityStatus() == AVAILABLE);
     }
 }
