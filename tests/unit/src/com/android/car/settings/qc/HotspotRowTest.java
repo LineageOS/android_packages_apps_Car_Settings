@@ -158,6 +158,7 @@ public class HotspotRowTest extends BaseSettingsQCItemTestCase {
         QCRow row = getHotspotRow();
         QCActionItem actionItem = row.getEndItems().get(0);
         assertThat(actionItem.isEnabled()).isFalse();
+        assertThat(actionItem.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
