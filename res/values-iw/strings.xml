@@ -497,7 +497,7 @@
     <string name="reset_esim_desc" msgid="1437276625485586740">"הפעולה לא תבטל את תוכנית השירות שלך."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"לא ניתן לאתחל את כרטיסי ה-eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"בחירת רשת"</string>
-    <string name="reset_network_button_text" msgid="8374174455632765033">"איפוס הגדרות"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"איפוס ההגדרות"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"לאפס?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"האם לאפס את כל הגדרות הרשת? לא ניתן לבטל את הפעולה!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"איפוס הגדרות"</string>
@@ -755,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"להוספת פרופיל"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"מחיקת הפרופיל"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"הוספת פרופיל"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"הפרופיל הזה משמש כרגע את החשבון של הנהג. יש לנסות שוב כשהפרופיל לא בשימוש הנהג."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"בהירות התצוגה"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"כדי להציג את המכשירים שלך, צריך להפעיל את Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"כדי להתאים מכשיר, צריך לפתוח את הגדרות Bluetooth"</string>
