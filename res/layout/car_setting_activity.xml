@@ -40,7 +40,7 @@
         android:layout_width="@dimen/top_level_divider_width"
         android:layout_height="match_parent"
         android:layout_toRightOf="@id/top_level_menu_container"
-        style="@style/Preference.CarUi.Divider"/>
+        style="@style/CarSettingsActivityDividerStyle"/>
 
     <FrameLayout
         android:id="@+id/fragment_container_wrapper"
