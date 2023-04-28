@@ -580,7 +580,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Aplikasi lainnya"</string>
     <string name="storage_files" msgid="6382081694781340364">"File"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem menyertakan file yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem mencakup file yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"File audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Menghitung…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Ukuran aplikasi"</string>
@@ -738,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Keluar dari Demo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"TOLAK"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Fitur tidak tersedia saat mengemudi"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Minta pengemudi untuk mengubah setelan"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Anda tidak dapat melakukan tindakan ini"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Tidak dapat menambahkan profil saat mengemudi"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Telusuri"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asisten &amp; suara"</string>

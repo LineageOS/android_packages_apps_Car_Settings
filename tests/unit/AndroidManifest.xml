@@ -69,7 +69,8 @@
 
     <application
         android:name="com.android.car.settings.CarSettingsApplication"
-        android:debuggable="true">
+        android:debuggable="true"
+        android:testOnly="true">
         <uses-library android:name="android.test.runner" />
 
         <activity

@@ -84,7 +84,7 @@
     <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Ако го исклучите интернетот на возилото, може да се попречат некои функции или апликации на возилото.\n\nКритичните податоци за користењето на возилото сепак ќе се споделуваат со производителот на возилото."</string>
     <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Сепак исклучи"</string>
     <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Интернетот на возилото е исклучен. Така може да се попречат некои функции или апликации на возилото. Критичните податоци за користењето на возилото сепак ќе се споделуваат со производителот на возилото."</string>
-    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Искористено: %1$s %2$s - %3$s"</string>
+    <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"Искористено: %1$s (%2$s – %3$s)"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Придружи се на друга мрежа"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Мрежни поставки"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
@@ -387,8 +387,8 @@
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"До системот и други поставки"</string>
     <string name="special_access" msgid="5730278220917123811">"Посебен пристап за апликации"</string>
     <string name="show_system" msgid="4401355756969485287">"Прикажи го системот"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Сокриј го системот"</string>
-    <string name="hide_system_apps" msgid="6583947381056154020">"Сокриј ги системските апликации"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Скриј го системот"</string>
+    <string name="hide_system_apps" msgid="6583947381056154020">"Скриј ги системските апликации"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Менување системски поставки"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Оваа дозвола ѝ овозможува на апликацијата да менува системски поставки."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Пристап до известувања"</string>
@@ -738,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Излези од демо-режим"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОТФРЛИ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функцијата не е достапна при возење"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Побарајте возачот да ја промени поставката"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Не можете да го извршите ова дејство."</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Не може да се профил корисник додека возите"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Пребарување"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"„Помошник“ и Voice"</string>
