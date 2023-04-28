@@ -33,6 +33,8 @@
         <item name="android:layout">@layout/settings_preference_fragment</item>
     </style>
 
+    <style name="CarSettingsActivityDividerStyle" parent="@style/Preference.CarUi.Divider" />
+
     <style name="LockPattern">
         <item name="*android:regularColor">@*android:color/car_body1</item>
         <item name="*android:successColor">@*android:color/car_blue_500</item>
