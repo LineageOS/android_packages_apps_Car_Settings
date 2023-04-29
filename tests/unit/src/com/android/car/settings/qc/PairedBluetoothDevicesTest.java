@@ -407,6 +407,9 @@ public class PairedBluetoothDevicesTest extends BaseSettingsQCItemTestCase {
         assertThat(btToggle.isEnabled()).isFalse();
         assertThat(phoneToggle.isEnabled()).isFalse();
         assertThat(mediaToggle.isEnabled()).isFalse();
+        assertThat(btToggle.isClickableWhileDisabled()).isTrue();
+        assertThat(phoneToggle.isClickableWhileDisabled()).isTrue();
+        assertThat(mediaToggle.isClickableWhileDisabled()).isTrue();
     }
 
     @Test
