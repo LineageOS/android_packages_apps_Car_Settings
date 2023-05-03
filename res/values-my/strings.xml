@@ -520,7 +520,7 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"ခဏစောင့်ပါ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ရက်စွဲနှင့် အချိန်"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ရက်စွဲ၊ အချိန်၊ စံတော်ချိန်နှင့် စနစ်များကို သတ်မှတ်ပါ"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"အချိန် အလိုအလျောက်ထည့်ရန်"</string>
+    <string name="date_time_auto" msgid="6018635902717385962">"အချိန် အလိုအလျောက် သတ်မှတ်ရန်"</string>
     <string name="zone_auto" msgid="4174874778459184605">"စံတော်ချိန် အလိုအလျောက်ထည့်ရန်"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"၂၄-နာရီ စနစ်"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"၂၄-နာရီ စနစ်ကို သုံးရန်"</string>
@@ -659,12 +659,12 @@
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"လုံခြုံရေးအတွက် ပုံစံတစ်ခု သတ်မှတ်ပါ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ရှင်းရန်"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"မလုပ်တော့"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"လော့ခ်ဖွင့်ရန် သင်၏ပုံစံအသစ်"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"သင်၏ လော့ခ်ဖွင့်ပုံစံအသစ်"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"လော့ခ်ဖွင့်ရန်ပုံစံကို ဆွဲပါ"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ပြီးသွားလျှင် လက်ချောင်းကို လွှတ်လိုက်ပါ"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"လော့ခ်ဖွင့်ရန်ပုံစံ မှတ်သားပြီးပါပြီ"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ပုံစံကိုထပ်ဆွဲပြီး အတည်ပြုရန်"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"အနည်းဆုံးအမှတ် ၄ မှတ်ချိတ်ပါ။ ထပ်လုပ်ပါ။"</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"အနည်းဆုံးအစက် ၄ စက်ကို ဆက်ပါ။ ထပ်လုပ်ပါ။"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ပုံစံ မှားနေသည်"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"လော့ခ်ဖွင့်ရန်ပုံစံ ဆွဲနည်း"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ပုံစံကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
@@ -756,6 +756,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ပရိုဖိုင် ထည့်ရန်"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ဤပရိုဖိုင်ကို ဖျက်ရန်"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ပရိုဖိုင် ထည့်ရန်"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ဤပရိုဖိုင်သည် မောင်းသူအဖြစ် လက်ရှိ လက်မှတ်ထိုးဝင်ထားသည်။ မောင်းသူအဖြစ် ပရိုဖိုင် မသုံးချိန်၌ ပြန်စမ်းပါ။"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"မျက်နှာပြင် တောက်ပမှု"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"သင့်စက်များကို တွေ့နိုင်ရန် ဘလူးတုသ်ဖွင့်ပါ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"စက်နှင့်တွဲချိတ်ရန် ဘလူးတုသ် ဆက်တင်များကို ဖွင့်ပါ"</string>

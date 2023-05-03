@@ -662,7 +662,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dibuixa un patró de desbloqueig"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Deixa anar el dit quan acabis"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patró enregistrat"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuixa el patró de nou per confirmar"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuixa el patró de nou per confirmar-lo"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connecta 4 punts com a mínim. Torna-ho a provar."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"El patró no és correcte"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Com es dibuixa un patró de desbloqueig"</string>
@@ -743,7 +743,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"No pots afegir perfils mentre condueixes"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Cerca"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent i veu"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplicació de l\'assistent digital"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplicació d\'assistent digital"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Ús del text de la pantalla"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Permet que l\'Assistent accedeixi al contingut de la pantalla"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Ús de captures de pantalla"</string>
@@ -755,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Afegeix un perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Suprimeix aquest perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Afegeix un perfil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Aquest perfil té la sessió iniciada com a conductor. Torna-hi quan el conductor no utilitzi el perfil."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillantor de la pantalla"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Per veure els teus dispositius, activa el Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Per vincular un dispositiu, obre la configuració del Bluetooth"</string>
