@@ -486,7 +486,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"¡Ya están activadas las opciones para desarrolladores!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Las opciones para desarrolladores ya están activadas."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opciones para desarrolladores"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Opciones de recuperación"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Opciones de restablecimiento"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Restablecer dispositivo, aplicaciones y red"</string>
     <string name="reset_network_title" msgid="3077846909739832734">"Restablecer Wi-Fi y Bluetooth"</string>
     <string name="reset_network_desc" msgid="3332203703135823033">"Se restablecerán los ajustes de Wi-Fi y Bluetooth, y se eliminarán los registros de conexiones anteriores:"</string>
@@ -755,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Añadir un perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Añadir perfil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Este perfil ha iniciado sesión como conductor. Vuelve a intentarlo cuando el perfil no esté en ese modo."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillo de la pantalla"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver tus dispositivos, activa el Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para emparejar un dispositivo, abre los ajustes de Bluetooth"</string>

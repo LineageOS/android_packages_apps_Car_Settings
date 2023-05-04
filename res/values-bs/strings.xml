@@ -509,11 +509,11 @@
     <string name="factory_reset_title" msgid="4019066569214122052">"Izbriši sve (vrati na fabričke postavke)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Brisanje svih podataka i profila s informativno-zabavnog sistema"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Ovim će se potpuno izbrisati svi podaci iz informativno-zabavnog sistema vašeg vozila, uključujući:\n\n"<li>"vaše račune i profile"</li>\n<li>"podatke i postavke sistema i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni na sljedećim računima:"</string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni na sljedeće račune:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Drugi profili su postavljeni za ovo vozilo."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Potpuno izbriši sve podatke"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Potpuno izbrisati sve podatke?"</string>
-    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ovim ćete potpuno izbrisati podatke svog ličnog profila, račune i preuzete aplikacije na ovom informativno-zabavnom sistemu.\n\nNe možete opozvati ovu radnju."</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ovim ćete potpuno izbrisati podatke svog ličnog profila, račune i preuzete aplikacije na ovom informativno-zabavnom sistemu.\n\nOvu radnju ne možete opozvati."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Izbriši sve podatke"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Potpuno brisanje podataka"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Pričekajte..."</string>
@@ -680,7 +680,7 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Ponovo unesite PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN mora sadržavati najmanje 4 cifre"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kôd nije ispravan, mora imati najmanje 4 cifre."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kôdovi se ne podudaraju"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-ovi se ne podudaraju"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Greška prilikom pohrane PIN-a"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Pogrešan PIN kôd"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Pogrešna lozinka"</string>
@@ -755,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Dodaj profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Izbriši ovaj profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Dodaj profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Profil je trenutno prijavljen kao vozač. Pokušajte ponovo kada profil ne bude korišten kao vozač."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Osvjetljenje ekrana"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Da vidite svoje uređaje, uključite Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Da uparite uređaj, otvorite postavke Bluetootha"</string>

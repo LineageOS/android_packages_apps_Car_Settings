@@ -163,7 +163,7 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot i tethering"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Wyłączono"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatycznie wyłącz hotspot"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatycznie wyłączaj hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspot Wi‑Fi wyłączy się, jeśli nie ma z nim połączonych żadnych urządzeń"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chce włączyć Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> chce wyłączyć Wi-Fi"</string>
@@ -472,7 +472,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Prawa autorskie"</string>
     <string name="license_title" msgid="936705938435249965">"Licencja"</string>
     <string name="terms_title" msgid="5201471373602628765">"Warunki i zasady korzystania"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Licencje systemowe WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Licencje na System WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Tapety"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Dostawcy zdjęć satelitarnych:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -662,8 +662,8 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Narysuj wzór odblokowania"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Gdy skończysz, podnieś palec"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Wzór zapisany"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Narysuj ponownie wzór, by potwierdzić"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Połącz min. 4 kropki. Spróbuj ponownie."</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Narysuj ponownie wzór, aby go potwierdzić"</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Połącz co najmniej 4 kropki. Spróbuj ponownie."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nieprawidłowy wzór"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Jak narysować wzór odblokowania"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Błąd podczas zapisywania wzoru"</string>
@@ -686,11 +686,11 @@
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Nieprawidłowe hasło"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Ze względów bezpieczeństwa ustaw hasło"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Podaj ponownie hasło"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Hasła nie są identyczne"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Hasła nie są takie same"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Wyczyść"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Anuluj"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potwierdź"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Musisz użyć co najmniej czterech znaków"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Musisz użyć co najmniej 4 znaków"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Ten rodzaj blokady jest niedostępny."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Może zawierać tylko cyfry od 0 do 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator urządzenia nie zezwala na ustawianie niedawno używanego kodu PIN"</string>
@@ -755,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Dodaj profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Usuń ten profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Dodaj profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Ten profil jest obecnie używany w trybie kierowcy. Spróbuj ponownie, gdy profil nie będzie w tym trybie."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Jasność wyświetlacza"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aby zobaczyć urządzenia, włącz Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Aby sparować urządzenie, otwórz ustawienia Bluetooth"</string>
