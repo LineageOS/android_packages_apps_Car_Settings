@@ -384,7 +384,7 @@
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Колдонмолорго маалыматыңыздын жеткиликтүүлүгүн көзөмөлдөйсүз"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Жардамчы жана башкалар үчүн"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# колдонмо майнаптуулукка таасирин тийгизип жатат}other{# колдонмо майнаптуулукка таасирин тийгизип жатат}}"</string>
-    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Тутум жана башка жөндөөлөргө"</string>
+    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Тутум жана башка параметрлерге"</string>
     <string name="special_access" msgid="5730278220917123811">"Колдонмонун атайын уруксаты"</string>
     <string name="show_system" msgid="4401355756969485287">"Тутум процесстерин көрсөтүү"</string>
     <string name="hide_system" msgid="8845453295584638040">"Системдик процесстерди жашыруу"</string>
@@ -445,8 +445,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системанын жаңыртуулары"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Өркүндөтүлгөн"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Маалымат, юридикалык маалымат, баштапкы абалга келтирүү жана башкалар"</string>
-    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Инфозоок тутумун өчүрүп күйгүзүү"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Унаадагы инфозоок тутумун өчүрүп күйгүзүү бир нече мүнөткө созулушу мүмкүн. Улантасызбы?"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Инфозоок системасын өчүрүп күйгүзүү"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Унаадагы инфозоок системасын өчүрүп күйгүзүү бир нече мүнөткө созулушу мүмкүн. Улантасызбы?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Улантуу"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android версиясы"</string>
     <string name="security_patch" msgid="4794276590178386903">"Коопсуздук системасын жаңыртуу:"</string>
@@ -512,7 +512,7 @@
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Бул унаа үчүн башка профилдер жөндөлгөн."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Бардык маалыматты өчүрүү"</string>
-    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Бардык дайындар тазалансынбы?"</string>
+    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Бардык нерселерди өчүрөсүзбү?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ушуну менен жеке профилиңиздеги бардык маалымат, аккаунттар жана жүктөлүп алынган колдонмолор инфозоок тутумунан өчүрүлөт.\n\nБул аракетти артка кайтарууга болбойт."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Баарын тазалоо"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Өчүрүлүүдө"</string>
@@ -537,7 +537,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Администратор катары кирдиңиз"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Админ уруксаттарын бересизби?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Админ кылуу"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Админ башка профилдерди (башка админдердин профилдерин да) өчүрүп, инфозоок тутумун баштапкы абалга кайтара алат."</string>
+    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Админ башка профилдерди (башка админдердин профилдерин да) өчүрүп, инфозоок системасын баштапкы абалга кайтара алат."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Бул аракетти кайтарууга болбойт."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Ооба, админ кылуу"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Жаңы профилдерди түзүү"</string>
@@ -645,7 +645,7 @@
     <string name="security_lock_password" msgid="4420203740048322494">"Сырсөз"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Кулпулоо түрүн тандоо"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Кулпулоо параметрлери"</string>
-    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Графикалык ачкычты киргизиңиз"</string>
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Графикалык ачкычты тартыңыз"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Ырастоо"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Кайра тартам"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Улантуу"</string>
@@ -755,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профиль кошуу"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бул профилди өчүрүү"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль кошуу"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Бул профилди учурда айдоочу колдонуп жатат. Ал чыккандан кийин кайталап көрүңүз."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Экрандын жарыктыгы"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Түзмөктөрдү көрүү үчүн Bluetooth\'ду күйгүзүңүз"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Түзмөктү жупташтыруу үчүн Bluetooth\'дун параметрлерин ачыңыз"</string>
@@ -792,11 +793,11 @@
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> жөнүндө кеңири маалымат"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Башкарылган унаа жөнүндө маалымат"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Параметрлер автопарктын администратору тарабынан башкарылат"</string>
-    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Бул башкарылган унаадагы маалыматка кирүү мүмкүнчүлүгүн берүү үчүн автопарктын администратору параметрлерди өзгөртүп, инфозоок тутумуна программа орното алат.\n\nТолук маалымат алуу үчүн автопарктын администраторуна кайрылыңыз."</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Бул башкарылган унаадагы маалыматка кирүү мүмкүнчүлүгүн берүү үчүн автопарктын администратору параметрлерди өзгөртүп, инфозоок системасына программа орното алат.\n\nТолук маалымат алуу үчүн автопарктын администраторуна кайрылыңыз."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Автопарктын администратору көргөн маалымат"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Автопарктын администратору киргизген өзгөртүүлөр"</string>
     <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Унаанын башкарылган аккаунту менен байланыштырылган маалымат"</li>\n" "<li>"Башкарылган унаадагы колдонмолордун тизмеси"</li>\n" "<li>"Ар бир колдонмодо өткөрүлгөн убакыт жана сарпталган трафик"</li></string>
-    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Инфозоок тутумуна кирүү мүмкүнчүлүгүңүз"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Инфозоок системасына кирүү мүмкүнчүлүгүңүз"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Унааңыздагы колдонмолордун тизмеси"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Колдонмолордун саны болжол менен көрсөтүлгөн. Play Дүкөндөн тышкары булактардан орнотулган колдонмолор бул жерге кошулбайт."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
@@ -820,7 +821,7 @@
     <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> деп коюлду"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Глобалдык HTTP прокси сервери коюлду"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Жеке профилиңиздеги ишенимдүү тастыктамалар"</string>
-    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Администратор инфозоок тутумун кулпулап, сырсөздү өзгөртө алат"</li>\n" "<li>"Администратор инфозоок тутумундагы маалыматты өчүрө алат"</li></string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Администратор инфозоок системасын кулпулап, сырсөздү өзгөртө алат"</li>\n" "<li>"Администратор инфозоок системасындагы маалыматты өчүрө алат"</li></string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Сырсөз канча жолу туура эмес киргизилгенден кийин, инфозоок тутумундагы бардык маалымат өчүп калат"</string>
     <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Сырсөз канча жолу туура эмес киргизилгенден кийин, профилдеги бардык нерселер өчүп калат"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
@@ -845,7 +846,7 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Бул мүчүлүштүк тууралуу кабар унаанын уюмунун башкаруучусу менен бөлүшүлүүдө. Толук маалымат алуу үчүн ага кайрылыңыз."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Бөлүшүү"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Четке кагуу"</string>
-    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Инфозоок тутумун баштапкы абалга келтирүү"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Инфозоок системасын баштапкы абалга келтирүү"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Тутум баштапкы абалга кайтаруу жана бардык маалыматты өчүрүү сурамын алды. Аны азыр аткарсаңыз болот же унаа кийинки жолу от алганда тутум башкапкы абалга кайтарылат. Андан кийин жаңы профилди жөндөп алсаңыз болот."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Азыр баштапкы абалга келтирүү"</string>
     <string name="factory_reset_later_button" msgid="2653125445148367016">"Кийинчерээк баштапкы абалга келтирүү"</string>
