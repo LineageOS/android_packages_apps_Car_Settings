@@ -663,7 +663,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Салып болғанда саусағыңызды жіберіңіз"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Өрнек сақталды"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Растау үшін өрнекті қайта сызыңыз"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кемі 4 нүктені қосу қажет. Қайталаңыз."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кемі 4 нүктені қосу қажет. Қайта салып көріңіз."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Қате өрнек"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Құлыпты ашу өрнегін сызу"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Өрнекті сақтау кезінде қате кетті"</string>
@@ -678,7 +678,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Құпия сөзіңізді енгізіңіз"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Қауіпсіздік үшін PIN кодын орнатыңыз"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN кодын қайта енгізіңіз"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN коды кемінде 4 таңбадан тұруы керек"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN коды кемінде 4 цифрдан тұруы керек."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN коды жарамсыз: кемінде 4 сан болуы керек."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN кодтары сәйкес емес"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN кодын сақтау кезінде қате кетті"</string>
@@ -690,7 +690,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Өшіру"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Бас тарту"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Растау"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Ең кемі 4 таңбадан тұруы керек"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Кемінде 4 таңбадан тұруы керек."</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Құлыптаудың бұл түрі қолжетімсіз."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Тек 0-9 арасындағы сандар болуы керек."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Құрылғы әкімшісі жақында пайдаланылған PIN кодын қолдануға рұқсат бермейді"</string>
