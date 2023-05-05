@@ -24,18 +24,14 @@ import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFra
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import android.app.AlertDialog;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
 import android.os.UserHandle;
@@ -45,11 +41,9 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.common.ColoredSwitchPreference;
-import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
@@ -119,78 +113,23 @@ public class LocationStateSwitchPreferenceControllerTest {
     }
 
     @Test
-    public void onPreferenceClicked_locationDisabled_shouldEnable_notShowDialog() {
+    public void onPreferenceClicked_locationDisabled_shouldEnable() {
         initializePreference(/* checked= */ false, /* enabled= */ true);
 
         mSwitchPreference.performClick();
 
         assertThat(mSwitchPreference.isChecked()).isTrue();
         verify(mLocationManager).setLocationEnabledForUser(/* enabled= */ true, mUserHandle);
-        verify(mFragmentController, never()).showDialog(any(ConfirmationDialogFragment.class),
-                any());
     }
 
     @Test
-    public void onPreferenceClicked_locationEnabled_shouldStayEnable_showDialog() {
+    public void onPreferenceClicked_locationEnabled_shouldDisable() {
         initializePreference(/* checked= */ true, /* enabled= */ true);
 
         mSwitchPreference.performClick();
 
-        assertThat(mSwitchPreference.isChecked()).isTrue();
-        verify(mLocationManager, never()).setLocationEnabledForUser(/* enabled= */ anyBoolean(),
-                any());
-        verify(mFragmentController).showDialog(any(ConfirmationDialogFragment.class),
-                eq(ConfirmationDialogFragment.TAG));
-    }
-
-    @Test
-    public void confirmDialog_turnOffLocation() throws Throwable {
-        initializePreference(/* checked= */ true, /* enabled= */ true);
-
-        mSwitchPreference.performClick();
-
-        // Capture the dialog that is shown on toggle.
-        ArgumentCaptor<ConfirmationDialogFragment> dialogCaptor = ArgumentCaptor.forClass(
-                ConfirmationDialogFragment.class);
-        verify(mFragmentController).showDialog(dialogCaptor.capture(),
-                eq(ConfirmationDialogFragment.TAG));
-
-        // Show the captured dialog on press the confirmation button.
-        ConfirmationDialogFragment dialog = dialogCaptor.getValue();
-        assertThat(dialogCaptor).isNotNull();
-        AlertDialog alertDialog = showDialog(dialog);
-        mActivityTestRule.runOnUiThread(() -> {
-            alertDialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-
-        verify(mLocationManager).setLocationEnabledForUser(/* enabled= */ false,
-                mUserHandle);
-    }
-
-    @Test
-    public void cancelDialog_LocationStaysOn() throws Throwable {
-        initializePreference(/* checked= */ true, /* enabled= */ true);
-
-        mSwitchPreference.performClick();
-
-        // Capture the dialog that is shown on toggle.
-        ArgumentCaptor<ConfirmationDialogFragment> dialogCaptor = ArgumentCaptor.forClass(
-                ConfirmationDialogFragment.class);
-        verify(mFragmentController).showDialog(dialogCaptor.capture(),
-                eq(ConfirmationDialogFragment.TAG));
-
-        // Show the captured dialog on press the confirmation button.
-        ConfirmationDialogFragment dialog = dialogCaptor.getValue();
-        assertThat(dialogCaptor).isNotNull();
-        AlertDialog alertDialog = showDialog(dialog);
-        mActivityTestRule.runOnUiThread(() -> {
-            alertDialog.getButton(DialogInterface.BUTTON_NEUTRAL).performClick();
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-
-        verify(mLocationManager, never()).setLocationEnabledForUser(/* enabled= */ false,
-                mUserHandle);
+        assertThat(mSwitchPreference.isChecked()).isFalse();
+        verify(mLocationManager).setLocationEnabledForUser(/* enabled= */ false, mUserHandle);
     }
 
     @Test
@@ -294,14 +233,5 @@ public class LocationStateSwitchPreferenceControllerTest {
         when(mLocationManager.isLocationEnabled()).thenReturn(checked);
         mSwitchPreference.setChecked(checked);
         mSwitchPreference.setEnabled(enabled);
-    }
-
-    private AlertDialog showDialog(ConfirmationDialogFragment dialog) throws Throwable {
-        mActivityTestRule.runOnUiThread(() -> {
-            dialog.show(mActivityTestRule.getActivity().getSupportFragmentManager(),
-                    /* tag= */ null);
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-        return (AlertDialog) dialog.getDialog();
     }
 }

@@ -164,4 +164,7 @@
 
     <!-- Whether to scan and start a custom pair device flow. -->
     <bool name="config_use_custom_pair_device_flow">true</bool>
+
+    <!-- Whether to allow the ADAS Location Switch to be clickable. -->
+    <bool name="config_allow_adas_location_switch_clickable">true</bool>
 </resources>
