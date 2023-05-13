@@ -16,6 +16,7 @@
 
 package com.android.car.settings.sound;
 
+import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_VOLUME_GROUP_MUTING;
 import static android.os.UserManager.DISALLOW_ADJUST_VOLUME;
 
@@ -169,9 +170,10 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
         preference.setMutedIcon(getContext().getDrawable(secondaryIconResId));
         preference.getMutedIcon().setTintList(
                 getContext().getColorStateList(R.color.icon_color_default));
+
+        int zoneId = getMyAudioZoneId();
+        CarAudioManager carAudioManager = getCarAudioManager();
         try {
-            int zoneId = getMyAudioZoneId();
-            CarAudioManager carAudioManager = getCarAudioManager();
             if (carAudioManager != null) {
                 preference.setValue(carAudioManager.getGroupVolume(zoneId, volumeGroupId));
                 preference.setMin(carAudioManager.getGroupMinVolume(zoneId, volumeGroupId));
@@ -191,7 +193,12 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
             int prefUsage = pref.getExtras().getInt(VOLUME_USAGE_KEY);
             int newVolume = (Integer) newValue;
             setGroupVolume(prefGroup, newVolume);
-            mRingtoneManager.playAudioFeedback(prefGroup, prefUsage);
+
+            if (carAudioManager != null
+                    && (!carAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING)
+                    || !carAudioManager.isPlaybackOnVolumeGroupActive(zoneId, volumeGroupId))) {
+                mRingtoneManager.playAudioFeedback(prefGroup, prefUsage);
+            }
             return true;
         });
         return preference;
