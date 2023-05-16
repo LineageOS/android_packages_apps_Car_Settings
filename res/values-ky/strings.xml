@@ -384,11 +384,11 @@
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Колдонмолорго маалыматыңыздын жеткиликтүүлүгүн көзөмөлдөйсүз"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Жардамчы жана башкалар үчүн"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# колдонмо майнаптуулукка таасирин тийгизип жатат}other{# колдонмо майнаптуулукка таасирин тийгизип жатат}}"</string>
-    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Тутум жана башка параметрлерге"</string>
+    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Система жана башка параметрлерге"</string>
     <string name="special_access" msgid="5730278220917123811">"Колдонмонун атайын уруксаты"</string>
-    <string name="show_system" msgid="4401355756969485287">"Тутум процесстерин көрсөтүү"</string>
+    <string name="show_system" msgid="4401355756969485287">"Система процесстерин көрсөтүү"</string>
     <string name="hide_system" msgid="8845453295584638040">"Системдик процесстерди жашыруу"</string>
-    <string name="hide_system_apps" msgid="6583947381056154020">"Тутум колдонмолорун жашыруу"</string>
+    <string name="hide_system_apps" msgid="6583947381056154020">"Система колдонмолорун жашыруу"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Системанын параметрлерин өзгөртүү"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын параметрлерин өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
@@ -441,7 +441,7 @@
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Жакында колдонулган"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"Баарын көрүү"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"Жүктөлүүдө…"</string>
-    <string name="system_setting_title" msgid="6864599341809463440">"Тутум"</string>
+    <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системанын жаңыртуулары"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Өркүндөтүлгөн"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Маалымат, юридикалык маалымат, баштапкы абалга келтирүү жана башкалар"</string>
@@ -579,7 +579,7 @@
     <string name="storage_music_audio" msgid="7827147379976134040">"Музыка жана аудио"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"Башка колдонмолор"</string>
     <string name="storage_files" msgid="6382081694781340364">"Файлдар"</string>
-    <string name="storage_system" msgid="1271345630248014010">"Тутум"</string>
+    <string name="storage_system" msgid="1271345630248014010">"Система"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Системада Android <xliff:g id="VERSION">%s</xliff:g> версиясында иштеген файлдар бар"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудио файлдар"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Эсептелүүдө…"</string>
@@ -847,7 +847,7 @@
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Бөлүшүү"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Четке кагуу"</string>
     <string name="factory_reset_parked_title" msgid="4004694559766549441">"Инфозоок системасын баштапкы абалга келтирүү"</string>
-    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Тутум баштапкы абалга кайтаруу жана бардык маалыматты өчүрүү сурамын алды. Аны азыр аткарсаңыз болот же унаа кийинки жолу от алганда тутум башкапкы абалга кайтарылат. Андан кийин жаңы профилди жөндөп алсаңыз болот."</string>
+    <string name="factory_reset_parked_text" msgid="1446768795193651311">"Система баштапкы абалга кайтаруу жана бардык маалыматты өчүрүү сурамын алды. Аны азыр аткарсаңыз болот же унаа кийинки жолу от алганда тутум башкапкы абалга кайтарылат. Андан кийин жаңы профилди жөндөп алсаңыз болот."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Азыр баштапкы абалга келтирүү"</string>
     <string name="factory_reset_later_button" msgid="2653125445148367016">"Кийинчерээк баштапкы абалга келтирүү"</string>
     <string name="factory_reset_later_text" msgid="6371031843489938419">"Инфозоок тутуму унаа кайра от алганда баштапкы абалга келтирилет."</string>
