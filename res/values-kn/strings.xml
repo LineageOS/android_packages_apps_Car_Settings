@@ -391,10 +391,10 @@
     <string name="hide_system_apps" msgid="6583947381056154020">"ಸಿಸ್ಟಂ ಆ್ಯಪ್‌ಗಳನ್ನು ನಕಲಿಸಿ"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‍ ಮಾರ್ಪಡಿಸಿ"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ಈ ಅನುಮತಿಯು ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
-    <string name="notification_access_title" msgid="1467340098885813473">"ಅಧಿಸೂಚನೆ ಆ್ಯಕ್ಸೆಸ್"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ಗಾಗಿ ಅಧಿಸೂಚನೆ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸುವುದೇ?"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"ನೋಟಿಫಿಕೇಶನ್ ಆ್ಯಕ್ಸೆಸ್"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ಗಾಗಿ ನೋಟಿಫಿಕೇಶನ್ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಅನುಮತಿಸುವುದೇ?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ಸಂಪರ್ಕ ಹೆಸರುಗಳು ಮತ್ತು ನೀವು ಸ್ವೀಕರಿಸುವ ಸಂದೇಶಗಳ ಪಠ್ಯದಂತಹ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಸೇರಿದಂತೆ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ಗೆ ಎಲ್ಲಾ ಅಧಿಸೂಚನೆಗಳನ್ನು ಓದಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಇದಕ್ಕೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ವಜಾ ಮಾಡಲು ಅಥವಾ ಅವುಗಳು ಹೊಂದಿರುವಂತಹ ಕ್ರಿಯೆ ಬಟನ್‌ಗಳನ್ನು ಟ್ರಿಗರ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.\n\nಇದು \"ಅಡಚಣೆ ಮಾಡಬೇಡಿ\" ಅನ್ನು ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡುವ ಹಾಗೂ ಸಂಬಂಧಿತ ಸೆಟ್ಟಿಂಗ್‍‍ಗಳನ್ನು ಬದಲಾಯಿಸುವ ಸಾಮರ್ಥ್ಯವನ್ನು ಸಹ ಈ ಆ್ಯಪ್‍ಗೆ ನೀಡುತ್ತದೆ."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ಗಾಗಿ ನೀವು ಅಧಿಸೂಚನೆ ಆ್ಯಕ್ಸೆಸಿಬಿಲಿಟಿಯನ್ನು ಆಫ್ ಮಾಡಿದರೆ, \"ಅಡಚಣೆ ಮಾಡಬೇಡಿ\" ಪ್ರವೇಶಿಸುವಿಕೆ ಸಹ ಆಫ್ ಆಗಬಹುದು."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ಗಾಗಿ ನೀವು ನೋಟಿಫಿಕೇಶನ್ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಆಫ್ ಮಾಡಿದರೆ, \"ಅಡಚಣೆ ಮಾಡಬೇಡಿ\" ಆ್ಯಕ್ಸೆಸ್ ಸಹ ಆಫ್ ಆಗಬಹುದು."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ಆಫ್ ಮಾಡಿ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ರದ್ದುಮಾಡಿ"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ಈ ಆ್ಯಪ್‌ಗಳು ಸಿಸ್ಟಂ ಕಾರ್ಯಕ್ಷಮತೆಯ ಮೇಲೆ ಋಣಾತ್ಮಕವಾಗಿ ಪರಿಣಾಮ ಬೀರುತ್ತವೆ ಹಾಗೂ ಇವುಗಳನ್ನು ಹಿನ್ನೆಲೆಯಲ್ಲಿ ರನ್ ಆಗದಂತೆ ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ.\nಹಿನ್ನೆಲೆ ಬಳಕೆಯನ್ನು ಅನುಮತಿಸಲು ಆ್ಯಪ್‌ಗೆ ಆದ್ಯತೆ ನೀಡಿ ಮತ್ತು ಈ ಪಟ್ಟಿಯಿಂದ ಅದನ್ನು ತೆಗೆದುಹಾಕಿ."</string>
