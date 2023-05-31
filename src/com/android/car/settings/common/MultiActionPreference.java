@@ -31,7 +31,6 @@ import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
 import com.android.car.ui.preference.CarUiPreference;
-import com.android.car.ui.uxr.DrawableStateImageView;
 
 /**
  * A class for preferences that have a main click action along with up to two group of actions that
@@ -58,8 +57,6 @@ public class MultiActionPreference extends CarUiPreference
 
     @Nullable
     private Integer mSummaryColor;
-
-    private boolean mShowChevron;
 
     protected BaseActionItem[] mActionItemArrayGroupOne = new BaseActionItem[1];
     protected BaseActionItem[] mActionItemArrayGroupTwo = new BaseActionItem[2];
@@ -182,9 +179,6 @@ public class MultiActionPreference extends CarUiPreference
             summary.setTextColor(mSummaryColor);
         }
 
-        DrawableStateImageView chevronIcon = requireViewByRefId(holder.itemView, R.id.icon_chevron);
-        chevronIcon.setVisibility(mShowChevron ? View.VISIBLE : View.INVISIBLE);
-
         View actionContainerGroupOne = requireViewByRefId(holder.itemView,
                 R.id.multi_action_preference_second_action_container1);
         FrameLayout container0 = requireViewByRefId(holder.itemView,
@@ -248,14 +242,6 @@ public class MultiActionPreference extends CarUiPreference
      */
     public void setSummaryColor(Integer summaryColorResId) {
         mSummaryColor = summaryColorResId;
-        notifyChanged();
-    }
-
-    /**
-     * Shows or hides chevron icon
-     */
-    public void showChevron(boolean show) {
-        mShowChevron = show;
         notifyChanged();
     }
 
