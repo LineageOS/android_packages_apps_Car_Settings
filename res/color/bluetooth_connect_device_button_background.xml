@@ -15,5 +15,5 @@
   ~ limitations under the License.
   -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/bluetooth_bonded_device_icon_color_checked"/>
+    <item android:color="@color/bluetooth_bonded_device_off_background_color"/>
 </selector>
