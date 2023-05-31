@@ -54,7 +54,7 @@
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.CarUi.PreferenceTitle"
             app:layout_constraintStart_toEndOf="@android:id/icon"
-            app:layout_constraintEnd_toStartOf="@id/icon_chevron"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@android:id/summary"
             app:layout_constraintVertical_chainStyle="packed"/>
@@ -69,19 +69,9 @@
             android:textAppearance="@style/TextAppearance.CarUi.PreferenceSummary"
             android:maxLines="2"
             app:layout_constraintStart_toEndOf="@android:id/icon"
-            app:layout_constraintEnd_toStartOf="@id/icon_chevron"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@android:id/title"
             app:layout_constraintBottom_toBottomOf="parent"/>
-
-        <com.android.car.ui.uxr.DrawableStateImageView
-            android:id="@+id/icon_chevron"
-            android:layout_width="@dimen/multi_action_preference_icon_chevron_size"
-            android:layout_height="50dp"
-            android:src="@drawable/car_ui_icon_chevron"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@android:id/title"
-            app:layout_constraintEnd_toEndOf="parent"/>
 
     </com.android.car.ui.uxr.DrawableStateConstraintLayout>
 
