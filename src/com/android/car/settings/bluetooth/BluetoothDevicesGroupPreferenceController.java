@@ -92,7 +92,23 @@ public abstract class BluetoothDevicesGroupPreferenceController extends
      */
     protected BluetoothDevicePreference createDevicePreference(CachedBluetoothDevice cachedDevice) {
         return new BluetoothDevicePreference(getContext(), cachedDevice,
-                shouldShowDisconnectedStateSubtitle());
+                shouldShowDisconnectedStateSubtitle(),
+                shouldShowChevronIcon(),
+                shouldShowIcon());
+    }
+
+    /**
+     * Returns whether icon should be displayed
+     */
+    protected boolean shouldShowIcon() {
+        return true;
+    }
+
+    /**
+     * Returns whether chevron icon should be displayed
+     */
+    protected boolean shouldShowChevronIcon() {
+        return false;
     }
 
     /**
