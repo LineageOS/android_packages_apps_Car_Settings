@@ -19,6 +19,7 @@ package com.android.car.settings.common;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
@@ -67,6 +68,7 @@ public final class ToggleButtonActionItem extends BaseActionItem {
         toggleButton.setOnCheckedChangeListener(null);
         toggleButton.setButtonDrawable(mDrawable);
         toggleButton.setChecked(mIsChecked);
+        toggleButton.setVisibility(isVisible() ? View.VISIBLE : View.GONE);
         toggleButton.setEnabled(isEnabled());
         toggleButton.setAllowClickWhenDisabled(true);
         toggleButton.setContentDescription(mContentDescription);

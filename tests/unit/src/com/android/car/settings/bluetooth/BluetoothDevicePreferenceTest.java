@@ -35,6 +35,7 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.MultiActionPreference;
+import com.android.settingslib.R;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 import org.junit.Before;
@@ -72,11 +73,14 @@ public class BluetoothDevicePreferenceTest {
 
     @Test
     public void actionIsHiddenByDefault() {
-        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
+        assertThat(mPreference.getGroupOneActionItem(
+                        MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1)
                 .isVisible()).isFalse();
-        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
+        assertThat(mPreference.getGroupTwoActionItem(
+                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)
                 .isVisible()).isFalse();
-        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
+        assertThat(mPreference.getGroupTwoActionItem(
+                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)
                 .isVisible()).isFalse();
     }
 
@@ -99,7 +103,7 @@ public class BluetoothDevicePreferenceTest {
 
     @Test
     public void onAttached_notConnected_setsCarConnectionSummaryAsSummary() {
-        String summary = "summary";
+        String summary = "Summary";
         when(mCachedDevice.isConnected()).thenReturn(false);
         when(mCachedDevice.getCarConnectionSummary(anyBoolean(), anyBoolean())).thenReturn(summary);
 
@@ -111,22 +115,26 @@ public class BluetoothDevicePreferenceTest {
     @Test
     public void onAttached_connected_setsCarConnectionSummaryAsSummary() {
         when(mCachedDevice.isConnected()).thenReturn(true);
-        String summary = "summary";
+
+        String summary = "Summary";
         when(mCachedDevice.getCarConnectionSummary(anyBoolean(), anyBoolean())).thenReturn(summary);
 
         mPreference.onAttached();
 
-        assertThat(mPreference.getSummary()).isEqualTo(summary);
+        // we append device type to the summary when device is connected
+        String deviceType = mContext.getString(R.string.bluetooth_talkback_bluetooth);
+        String summaryWithDeviceType = summary + " · " + deviceType;
+        assertThat(mPreference.getSummary()).isEqualTo(summaryWithDeviceType);
     }
 
     @Test
-    public void onAttached_setsIcon() {
+    public void onAttached_iconIsNotSet() {
         when(mCachedDevice.getBtClass()).thenReturn(
                 createBtClass(BluetoothClass.Device.Major.PHONE));
 
         mPreference.onAttached();
 
-        assertThat(mPreference.getIcon()).isNotNull();
+        assertThat(mPreference.getIcon()).isNull();
     }
 
     @Test
@@ -184,6 +192,7 @@ public class BluetoothDevicePreferenceTest {
     @Test
     public void onDeviceAttributesChanged_refreshesUi() {
         String name = "name";
+        when(mCachedDevice.isConnected()).thenReturn(false);
         when(mCachedDevice.getName()).thenReturn(name);
         String summary = "summary";
         when(mCachedDevice.getCarConnectionSummary(anyBoolean(), anyBoolean())).thenReturn(summary);
