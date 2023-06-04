@@ -126,7 +126,7 @@
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"२.४ GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"५ GHz"</string>
     <string name="wifi_network_detail" msgid="9070182553555487360">"नेटवर्कको विवरण"</string>
-    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC एड्रेस"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"म्याक एड्रेस"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP एड्रेस"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"सबनेट मास्क"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
@@ -172,7 +172,7 @@
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g> प्रयोग गरिने यन्त्र"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"कुनै पनि यन्त्र फेला परेन। यन्त्रहरू सक्रिय हुनुका साथै जडान गर्नका लागि उपलब्ध भएको कुरा सुनिश्चित गर्नुहोस्।"</string>
     <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"फेरि प्रयास गर्नुहोस्"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"केही चिज गडबड भयो। यो एपले कुनै यन्त्र छनौट गर्नेसम्बन्धी अनुरोध रद्द गरेको छ।"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"कुनै समस्या आयो। यो एपले कुनै यन्त्र छनौट गर्नेसम्बन्धी अनुरोध रद्द गरेको छ।"</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"सफलतापूर्वक जोडियो"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"सबै देखाउनुहोस्"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"खोजी गर्दै"</string>
@@ -214,7 +214,7 @@
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN मा अक्षर वा प्रतीकहरू समाविष्ट हुन्छन्"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"जोडा मिलाउने कोड टाइप गर्नुहोस् त्यसपछि फिर्ता गर्नुहोस् वा प्रविष्टि गर्नुहोस् नामक बटन थिच्नुहोस्"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सँग जोडा बनाउने हो?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>लाई तपाईंका सम्पर्क ठेगानाहरू र फोन सम्पर्कको इतिहासमाथि पहुँच गर्ने अनुमति दिनुहोस्"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>लाई तपाईंका कन्ट्याक्टहरू र फोन सम्पर्कको इतिहासमाथि पहुँच गर्ने अनुमति दिनुहोस्"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"तपाईंले अर्को यन्त्रमा पनि यो PIN टाइप गर्नु पर्ने हुन सक्छ।"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"तपाईंले अर्को यन्त्रमा यो पासकुञ्जी पनि टाइप गर्नु पर्ने हुन सक्छ।"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"पिन १६ अङ्कको हुनु पर्छ"</string>
@@ -358,7 +358,7 @@
     <string name="default_app_selected_app" msgid="5289396663745484773">"चयन गरिएको"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका एपबारे जानकारी पढ्न सक्ने छ।"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो एपमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस एपले अटोफिल गर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
-    <string name="autofill_add_service" msgid="6413893366443609951">"सेवा थप्नुहोस्"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"सेवा हाल्नुहोस्"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"लिंकहरू खोल्दा"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"इन्स्टल गरिएका एपहरू"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"समर्थित लिंकहरू नखोल्नुहोस्"</string>
@@ -668,7 +668,7 @@
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"यस कार्यले जुनसुकै व्यक्तिलाई तपाईंको खाता प्रयोग गर्न दिने छ"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"प्रोफाइल लक"</string>
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"स्वतः अनलक हुने सुविधा सेटअप गर्नुहोस्"</string>
-    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"आफ्नो PIN प्रविष्टि गर्नुहोस्"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"आफ्नो PIN हाल्नुहोस्"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"आफ्नो पासवर्ड प्रविष्टि गर्नुहोस्"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षाका ला‍गि एउटा PIN सेट गर्नुहोस्"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN फेरि हाल्नुहोस्"</string>

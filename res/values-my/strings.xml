@@ -161,7 +161,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"၂.၄ GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"၅.၀ GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi ဟော့စပေါ့ လိုင်း-"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ဟော့စပေါ့နှင့် မိုဘိုင်းဖုန်းကို မိုဒမ်အဖြစ်သုံးခြင်း"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"ဟော့စပေါ့နှင့် မိုဘိုင်းသုံးချိတ်ဆက်ခြင်း"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ဟော့စပေါ့"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ပိတ်"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ဟော့စပေါ့ကို အလိုအလျောက် ပိတ်ခြင်း"</string>
@@ -209,12 +209,12 @@
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s ကို ချိတ်ဆက်ထားသည်"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ကို ချိတ်ဆက်မထားပါ"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ဘလူးတုသ်တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
-    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"တွဲချိတ်ရန်နှင့် ချိတ်ဆက်ရန်"</string>
+    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"တွဲချိတ်ပြီးနောက် ချိတ်ဆက်ရန်"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ဘလူးတုသ် တွဲချိတ်ခြင်းကုဒ်"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ပင်နံပါတ်တွင် စာလုံး သို့မဟုတ် သင်္ကေတများပါဝင်သည်"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"တွဲချိတ်ရန်ကုဒ်ကို ထည့်ပြီး Return သို့မဟုတ် Enter ကို နှိပ်ပါ"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> နှင့် တွဲချိတ်လိုပါသလား။"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"သင်၏ အဆက်အသွယ်များနှင့် ခေါ်ဆိုမှုမှတ်တမ်းကို <xliff:g id="DEVICE_NAME">%1$s</xliff:g> အား အသုံးပြုခွင့်ပေးပါ"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"သင်၏ အဆက်အသွယ်များနှင့် ခေါ်ဆိုမှုမှတ်တမ်းကို <xliff:g id="DEVICE_NAME">%1$s</xliff:g> အား ကြည့်ခွင့်ပြုသည်"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ဤပင်နံပါတ်ကို အခြား စက်ပစ္စည်းတွင်လည်း ထည့်သွင်းရန် လိုအပ်နိုင်သည်။"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ဤလျှို့ဝှက်ကုဒ်ကို အခြား စက်ပစ္စည်းတွင်လည်း ထည့်သွင်းရန် လိုအပ်နိုင်သည်။"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"ဂဏန်း ၁၆ လုံး ရှိရမည်"</string>
@@ -514,7 +514,7 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"ခဏစောင့်ပါ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ရက်စွဲနှင့် အချိန်"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ရက်စွဲ၊ အချိန်၊ စံတော်ချိန်နှင့် စနစ်များကို သတ်မှတ်ပါ"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"အချိန် အလိုအလျောက်ထည့်ရန်"</string>
+    <string name="date_time_auto" msgid="6018635902717385962">"အချိန် အလိုအလျောက် သတ်မှတ်ရန်"</string>
     <string name="zone_auto" msgid="4174874778459184605">"စံတော်ချိန် အလိုအလျောက်ထည့်ရန်"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"၂၄-နာရီ စနစ်"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"၂၄-နာရီ စနစ်ကို သုံးရန်"</string>
@@ -594,7 +594,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"အကောင့်များ ထည့်မထားပါ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> အတွက် အကောင့်များ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ဒေတာ အော်တိုစင့်ခ်လုပ်ရန်"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ဒေတာများကို အလိုအလျောက်ပြန်လည်စတင်ရန် အက်ပ်များကိုခွင့်ပြုပါ"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"အက်ပ်များအား ဒေတာကို အလိုအလျောက် ပြန်လည်စတင်ပါစေ"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"အလိုအလျောက်ဒေတာစင့်ခ်လုပ်ခွင့် ပေးမလား။"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ဝဘ်ပေါ်၌ သင်၏အကောင့်များတွင် ပြုလုပ်သော အပြောင်းအလဲမှန်သမျှကို သင့်ယာဉ်သို့ အလိုအလျောက်မိတ္တူကူးပါမည်။\n\nအချို့အကောင့်များသည် ယာဉ်ပေါ်၌ သင်ပြုလုပ်သော အပြောင်းအလဲမှန်သမျှကိုလည်း ဝဘ်ပေါ်သို့ အလိုအလျောက်မိတ္တူကူးနိုင်သည်။"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"အလိုအလျောက်ဒေတာစင့်ခ်လုပ်ခွင့် ပိတ်မလား။"</string>
@@ -653,12 +653,12 @@
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"လုံခြုံရေးအတွက် ပုံစံတစ်ခု သတ်မှတ်ပါ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ရှင်းရန်"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"မလုပ်တော့"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"လော့ခ်ဖွင့်ရန် သင်၏ပုံစံအသစ်"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"သင်၏ လော့ခ်ဖွင့်ပုံစံအသစ်"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"လော့ခ်ဖွင့်ရန်ပုံစံကို ဆွဲပါ"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ပြီးသွားလျှင် လက်ချောင်းကို လွှတ်လိုက်ပါ"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"လော့ခ်ဖွင့်ရန်ပုံစံ မှတ်သားပြီးပါပြီ"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ပုံစံကိုထပ်ဆွဲပြီး အတည်ပြုရန်"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"အနည်းဆုံးအမှတ် ၄ မှတ်ချိတ်ပါ။ ထပ်လုပ်ပါ။"</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"အနည်းဆုံးအစက် ၄ စက်ကို ဆက်ပါ။ ထပ်လုပ်ပါ။"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ပုံစံ မှားနေသည်"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"လော့ခ်ဖွင့်ရန်ပုံစံ ဆွဲနည်း"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ပုံစံကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
@@ -845,7 +845,7 @@
     <string name="factory_reset_later_text" msgid="6371031843489938419">"နောက်တစ်ကြိမ် ကားစက်နှိုးသောအခါ သတင်းနှင့်ဖျော်ဖြေရေး စနစ်ကို ပြင်ဆင်သတ်မှတ်ပါမည်။"</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"ပြင်ဆင်သတ်မှတ်မှု စတင်ရန် ကားကို ရပ်နားထားရမည်။"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"ဤဆက်တင်ကို ယခု ပြောင်း၍မရပါ"</string>
-    <string name="accessibility_settings_title" msgid="2615042088419230347">"အများသုံးစွဲနိုင်မှု"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"အများသုံးနိုင်မှု"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"စာတန်းများ"</string>
     <string name="captions_settings_title" msgid="5738067618097295831">"စာတန်း သတ်မှတ်ချက်များ"</string>
     <string name="captions_settings_off" msgid="7568096968016015626">"ပိတ်"</string>

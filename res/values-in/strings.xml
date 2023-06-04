@@ -303,7 +303,7 @@
     <string name="default_applications" msgid="1558183275638697087">"Aplikasi default"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Aplikasi yang memengaruhi performa"</string>
     <string name="app_permissions" msgid="32799922508313948">"Izin aplikasi"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"Mengontrol akses aplikasi ke data Anda"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrol akses aplikasi ke data Anda"</string>
     <string name="applications_settings" msgid="794261395191035632">"Info aplikasi"</string>
     <string name="force_stop" msgid="2153183697014720520">"Paksa berhenti"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Paksa berhenti?"</string>
@@ -378,7 +378,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"Baru Dibuka"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Lihat %1$d aplikasi"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Pengelola izin"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Mengontrol akses aplikasi ke data Anda"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrol akses aplikasi ke data Anda"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Untuk Asisten dan lainnya"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplikasi yang memengaruhi performa}other{# aplikasi yang memengaruhi performa}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Ke sistem dan setelan lainnya"</string>
@@ -574,7 +574,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Aplikasi lainnya"</string>
     <string name="storage_files" msgid="6382081694781340364">"File"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem menyertakan file yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem mencakup file yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"File audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Menghitung…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Ukuran aplikasi"</string>
@@ -656,7 +656,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Gambar pola pembuka kunci"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Angkat jari ketika selesai"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Pola direkam"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Gambar pola lagi untuk mengonfirmasi"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Gambar lagi pola untuk mengonfirmasi"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Hubungkan minimal 4 titik. Coba lagi."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pola salah"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cara menggambar pola pembuka kunci"</string>
@@ -672,7 +672,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Masukkan sandi"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Untuk keamanan, setel PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Masukkan ulang PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN harus minimal 4 digit"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN minimal 4 digit"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN tidak valid, minimal 4 digit."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN tidak cocok"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Error saat menyimpan PIN"</string>

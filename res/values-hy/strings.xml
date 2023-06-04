@@ -181,7 +181,7 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"Անանուն սարք"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Զուգակցված սարքեր"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Զուգակցել նոր սարք"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth-ը կմիանա"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth-ը կմիանա զուգակցման համար"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Անջատե՞լ սարքը"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Ձեր մեքենան կանջատվի <xliff:g id="DEVICE_NAME">%1$s</xliff:g> սարքից:"</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Ավտոմեքենայի Bluetooth հասցեն՝ <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -326,7 +326,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Թույլտվություններ չեն տրվել"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Թույլտվությունների հարցում չի արվել"</string>
     <string name="unused_apps" msgid="648471933781010395">"Չօգտագործվող հավելվածներ"</string>
-    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# չօգտագործվող հավելված}one{# օգտագործվող հավելված}other{# օգտագործվող հավելված}}"</string>
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# չօգտագործվող հավելված}one{# չօգտագործվող հավելված}other{# չօգտագործվող հավելված}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Հեռացնել թույլտվությունները և տարածք ազատել"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s տարածք ներքին հիշողությունում"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Օգտագործում է համակարգի ռեսուրսները՝ հավելվածի արտադրողականությունը կարևորելու համար"</string>
@@ -401,7 +401,7 @@
     <string name="usage_access_title" msgid="7153427122072303254">"Օգտագ. տվյալների հասանելիութ."</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Օգտագործման մասին տվյալների հասանելիությունը հնարավորություն է տալիս հավելվածներին հավաքել տարբեր տեղեկություններ, օրինակ, այն մասին, թե ուրիշ ինչ հավելվածներ եք օգտագործում և ինչ հաճախականությամբ, որ օպերատորից եք օգտվում, լեզվի ինչ կարգավորումներ եք սահմանել և այլն:"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-ի կառավար"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-ի կառավարը հնարավորություն է տալիս հավելվածներին միացնել և անջատել Wi-Fi-ը, գտնել Wi-Fi ցանցեր և միանալ դրանց, ավելացնել և հեռացնել ցանցեր, միացնել միայն տեղային թեժ կետ:"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-ի կառավարը հնարավորություն է տալիս հավելվածներին միացնել և անջատել Wi-Fi-ը, գտնել Wi-Fi ցանցեր և միանալ դրանց, ավելացնել և հեռացնել ցանցեր, միացնել միայն լոկալ թեժ կետ:"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Լրացուցիչ կարգավորումներ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Օգտագործել տեղորոշումը"</string>

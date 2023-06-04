@@ -503,11 +503,11 @@
     <string name="factory_reset_title" msgid="4019066569214122052">"Izbriši sve (vrati na fabričke postavke)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Brisanje svih podataka i profila s informativno-zabavnog sistema"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Ovim će se potpuno izbrisati svi podaci iz informativno-zabavnog sistema vašeg vozila, uključujući:\n\n"<li>"vaše račune i profile"</li>\n<li>"podatke i postavke sistema i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni na sljedećim računima:"</string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni na sljedeće račune:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Drugi profili su postavljeni za ovo vozilo."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Potpuno izbriši sve podatke"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Potpuno izbrisati sve podatke?"</string>
-    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ovim ćete potpuno izbrisati podatke svog ličnog profila, račune i preuzete aplikacije na ovom informativno-zabavnom sistemu.\n\nNe možete opozvati ovu radnju."</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ovim ćete potpuno izbrisati podatke svog ličnog profila, račune i preuzete aplikacije na ovom informativno-zabavnom sistemu.\n\nOvu radnju ne možete opozvati."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Izbriši sve podatke"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Potpuno brisanje podataka"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Pričekajte..."</string>
@@ -668,13 +668,13 @@
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Svi će imati pristup vašem računu"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"Zaključavanje profila"</string>
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"Postavite automatsko otključavanje"</string>
-    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Unesite svoj PIN"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Unesite PIN"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Unesite lozinku"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Postavite PIN radi sigurnosti"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Ponovo unesite PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN mora sadržavati najmanje 4 cifre"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kôd nije ispravan, mora imati najmanje 4 cifre."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kôdovi se ne podudaraju"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-ovi se ne podudaraju"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Greška prilikom pohrane PIN-a"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Pogrešan PIN kôd"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Pogrešna lozinka"</string>

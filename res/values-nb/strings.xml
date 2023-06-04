@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-kort}other{# SIM-kort}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktiv / SIM-kort"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktiv / SIM-kort"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktivt / e-SIM-kort"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktivt / e-SIM-kort"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktivt / eSIM-kort"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktivt / eSIM-kort"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Legg til mer"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobildata"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Bruk data via mobilnettverket"</string>
@@ -133,12 +133,12 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6-adresser"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Gateway"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi-innstillinger"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Slå på Wi‑Fi automatisk"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi slås på igjen i nærheten av lagrede nettverk av høy kvalitet, for eksempel hjemmenettverket"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Slå på wifi automatisk"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wifi slås på igjen i nærheten av lagrede nettverk av høy kvalitet, for eksempel hjemmenettverket ditt"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Utilgjengelig fordi Posisjon er slått av. Slå på "<annotation id="link">"Posisjon"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vil du slå på Wi‑Fi-skanning?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vil du slå på wifi-skanning?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Slå på"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-skanning er slått på"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wifi-skanning er slått på"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Bytt til mobildata automatisk"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Bruk mobildata når Wifi ikke har internettilgang. Avgifter for databruk kan påløpe."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Finn og koble til Wifi-nettverk"</string>
@@ -401,7 +401,7 @@
     <string name="usage_access_title" msgid="7153427122072303254">"Brukstilgang"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Med brukstilgang kan apper spore hvilke andre apper du bruker, og hvor ofte du bruker dem. Operatør, språkinnstillinger og annen informasjon kan også spores med brukstilgang."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wifi-kontroll"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Med wifi-kontroll kan en app slå Wifi på eller av, søke etter og koble til wifi-nettverk, legge til eller fjerne nettverk eller starte en lokal wifi-sone"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Med wifi-kontroll kan en app slå wifi på eller av, søke etter og koble til wifi-nettverk, legge til eller fjerne nettverk eller starte en lokal wifi-sone"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Posisjon"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Bruk posisjon"</string>
@@ -487,9 +487,9 @@
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobildata"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
-    <string name="reset_esim_title" msgid="8132107637911831211">"Slett alle e-SIM-kortene på kjøretøyet"</string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Slett alle eSIM-kortene på kjøretøyet"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Dette kansellerer ikke serviceavtalen din."</string>
-    <string name="reset_esim_error_title" msgid="7245109418130525492">"Kan ikke tilbakestille e-SIM-kort"</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"Kan ikke tilbakestille eSIM-kort"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Velg nettverk"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Tilbakestill innstillingene"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vil du tilbakestille?"</string>
@@ -674,13 +674,13 @@
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Skriv inn PIN-koden på nytt"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-koden må bestå av minst fire sifre"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN-koden er ugyldig. Den må bestå av minst fire sifre."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-kodene samsvarer ikke"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-kodene er ikke like"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Feil ved lagring av PIN-kode"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Feil PIN-kode"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Feil passord"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Angi et passord for sikkerheten"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Skriv inn passordet på nytt"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Passordene samsvarer ikke"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Passordene er ikke like"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Fjern"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Avbryt"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bekreft"</string>

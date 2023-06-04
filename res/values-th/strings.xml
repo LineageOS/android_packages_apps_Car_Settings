@@ -75,7 +75,7 @@
     <string name="data_limit" msgid="227338836292511425">"ขีดจำกัดอินเทอร์เน็ต"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"จำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ระบบเครื่องเสียงของรถยนต์จะปิดอินเทอร์เน็ตมือถือเมื่อมีการใช้งานถึงขีดจำกัดที่คุณกำหนดไว้\n\nเนื่องจากนี่เป็นปริมาณการใช้อินเทอร์เน็ตที่วัดโดยระบบเครื่องเสียง ปริมาณการใช้งานที่ผู้ให้บริการวัดได้จึงอาจไม่เท่ากัน โปรดกำหนดขีดจำกัดอย่างระมัดระวัง"</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ตั้งค่าเตือนปริมาณการใช้อินเทอร์เน็ต"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ตั้งค่าคำเตือนปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ตั้งค่าขีดจำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"ปริมาณการใช้อินเทอร์เน็ตจะวัดโดยอุปกรณ์ ซึ่งอาจแตกต่างจากปริมาณอินเทอร์เน็ตของผู้ให้บริการเครือข่ายมือถือ"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ตั้งค่า"</string>
@@ -845,12 +845,12 @@
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"ต้องจอดรถเพื่อเริ่มการรีเซ็ต"</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"เปลี่ยนแปลงการตั้งค่านี้ไม่ได้ในตอนนี้"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"การช่วยเหลือพิเศษ"</string>
-    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"คำบรรยาย"</string>
+    <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"คำบรรยายแทนเสียง"</string>
     <string name="captions_settings_title" msgid="5738067618097295831">"ค่ากำหนดคำบรรยาย"</string>
     <string name="captions_settings_off" msgid="7568096968016015626">"ปิด"</string>
     <string name="captions_settings_on" msgid="5374984113566914978">"เปิด"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"โปรแกรมอ่านหน้าจอ"</string>
-    <string name="show_captions_toggle_title" msgid="710582308974826311">"แสดงคำบรรยาย"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"แสดงคำบรรยายแทนเสียง"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"ขนาดข้อความ"</string>
     <string name="captions_settings_style_header" msgid="944591388386054372">"ขนาดและรูปแบบของคำบรรยาย"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"เล็กมาก"</string>

@@ -184,8 +184,8 @@
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"El Bluetooth s\'activarà per vincular"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Vols desconnectar el dispositiu?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"El vehicle es desconnectarà del dispositiu (<xliff:g id="DEVICE_NAME">%1$s</xliff:g>)."</string>
-    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Adreça Bluetooth del vehicle: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Adreça Bluetooth del dispositiu: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Adreça de Bluetooth del vehicle: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Adreça de Bluetooth del dispositiu: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"Nom del vehicle"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Canvia el nom del vehicle"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"Canvia el nom del dispositiu"</string>
@@ -449,7 +449,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Versió de banda base"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Versió de kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Número de compilació"</string>
-    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adreça Bluetooth"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adreça de Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"No disponible"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Estat"</string>
     <string name="device_status" msgid="267298179806290920">"Estat"</string>
@@ -656,7 +656,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dibuixa un patró de desbloqueig"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Deixa anar el dit quan acabis"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patró enregistrat"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuixa el patró de nou per confirmar"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Dibuixa el patró de nou per confirmar-lo"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connecta 4 punts com a mínim. Torna-ho a provar."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"El patró no és correcte"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Com es dibuixa un patró de desbloqueig"</string>
@@ -735,7 +735,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"No pots afegir perfils mentre condueixes"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Cerca"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent i veu"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplicació de l\'assistent digital"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplicació d\'assistent digital"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Ús del text de la pantalla"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Permet que l\'Assistent accedeixi al contingut de la pantalla"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Ús de captures de pantalla"</string>
