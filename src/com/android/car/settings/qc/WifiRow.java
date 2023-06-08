@@ -77,6 +77,7 @@ public class WifiRow extends SettingsQCItem {
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
                 .setClickableWhileDisabled(hasDpmRestrictions | isReadOnlyForZone)
                 .setDisabledClickAction(disabledPendingIntent)
+                .setContentDescription(getContext(), R.string.wifi_settings)
                 .build();
 
         QCRow wifiRow = new QCRow.Builder()
