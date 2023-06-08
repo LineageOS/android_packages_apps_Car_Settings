@@ -71,6 +71,7 @@ public class AdaptiveBrightnessSwitch extends SettingsQCItem {
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
                 .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
                 .setDisabledClickAction(disabledPendingIntent)
+                .setContentDescription(getContext(), R.string.qc_display_brightness)
                 .build();
 
         QCList.Builder listBuilder = new QCList.Builder()
