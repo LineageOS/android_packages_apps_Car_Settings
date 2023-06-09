@@ -146,7 +146,9 @@ public class BluetoothDevicePreference extends MultiActionPreference {
                     .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
             String connectedDeviceType = pair.second;
 
-            summary += " · " + connectedDeviceType;
+            if (connectedDeviceType != null && !connectedDeviceType.isEmpty()) {
+                summary += " · " + connectedDeviceType;
+            }
         }
 
         return summary;
