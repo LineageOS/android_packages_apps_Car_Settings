@@ -16,11 +16,16 @@
 
 package com.android.car.settings.language;
 
+import static android.os.UserManager.DISALLOW_CONFIG_LOCALE;
+
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByUm;
+
 import android.app.ActivityManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.RemoteException;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
@@ -49,11 +54,21 @@ public class LanguageSettingsEntryPreferenceController extends PreferenceControl
         return Preference.class;
     }
 
+    @Override
+    public int getDefaultAvailabilityStatus() {
+        if (hasUserRestrictionByUm(getContext(), DISALLOW_CONFIG_LOCALE)) {
+            return DISABLED_FOR_PROFILE;
+        }
+
+        return AVAILABLE;
+    }
+
     /**
      * Returns the locale from current system configuration, or the default locale if no system
      * locale is available.
      */
-    private static Locale getConfiguredLocale() {
+    @VisibleForTesting
+    Locale getConfiguredLocale() {
         try {
             Locale configLocale =
                     ActivityManager.getService().getConfiguration().getLocales().get(0);
