@@ -68,6 +68,7 @@ public class BluetoothSwitch extends SettingsQCItem {
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
                 .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
                 .setDisabledClickAction(disabledPendingIntent)
+                .setContentDescription(getContext(), R.string.bluetooth_settings_title)
                 .build();
 
         QCList.Builder listBuilder = new QCList.Builder()
