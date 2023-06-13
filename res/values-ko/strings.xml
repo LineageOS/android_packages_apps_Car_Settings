@@ -323,7 +323,7 @@
     <string name="storage_application_label" msgid="5911779903670978586">"저장용량 및 캐시"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"앱 성능 우선순위 지정"</string>
     <string name="application_version_label" msgid="8556889839783311649">"버전: %1$s"</string>
-    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"부여된 권한이 없습니다."</string>
+    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"부여된 권한 없음"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"요청한 권한이 없습니다."</string>
     <string name="unused_apps" msgid="648471933781010395">"사용하지 않는 앱"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{사용하지 않는 앱 #개}other{사용하지 않는 앱 #개}}"</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"취소"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"확인"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"4자 이상이어야 합니다."</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"사용할 수 없는 잠금 유형입니다."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"숫자 0~9만 포함해야 합니다."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"기기 관리자가 최근 PIN 사용을 허용하지 않습니다."</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"IT 관리자가 일반적으로 사용되는 PIN을 차단했습니다. 다른 PIN을 시도해 보세요."</string>

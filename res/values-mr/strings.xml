@@ -212,7 +212,7 @@
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"पेअर करा आणि कनेक्ट करा"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लूटूथ पेअरिंग कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"पिन मध्ये अक्षरे किंवा चिन्हे आहेत"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"पेअरिंग कोड टाइप करा नंतर परत या किंवा Enter दाबा"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"पेअरिंग कोड टाइप करा नंतर परत या किंवा एंटर प्रेस करा"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सह पेअर करायचे?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ला तुमचे संपर्क आणि कॉल इतिहास अ‍ॅक्सेस करण्‍याची अनुमती द्या"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"तुम्हाला इतर डिव्हाइसवर देखील हा पिन टाइप करण्याची आवश्यकता असू शकते."</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"रद्द करा"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"खात्री करा"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"किमान 4 वर्ण असणे आवश्यक आहे"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"या लॉकचा प्रकार उपलब्ध नाही."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"केवळ ०-९ अंक असणे आवश्यक आहे."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"डिव्हाइस प्रशासक अलीकडील पिन वापरण्याची अनुमती देत नाही"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"तुमच्या IT ॲडमिनने सामान्यत: वापरले जाणारे पिन ब्लॉक केले आहेत. दुसरा पिन वापरून पहा."</string>

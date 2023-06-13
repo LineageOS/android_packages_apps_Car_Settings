@@ -67,7 +67,7 @@
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Hilabeteko eguna:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Ezarri"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datu-erabileraren abisua eta muga"</string>
-    <string name="app_usage_cycle" msgid="8445927080245880296">"Aplikazioetako datu-erabilera-zikloa"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Aplikazioen datu-erabileraren zikloa"</string>
     <string name="mobile_data_usage" msgid="8171519864391091861">"Datu-konexioaren erabilera"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Ezarri datu-erabileraren abisua"</string>
     <string name="data_warning" msgid="116776633806885370">"Datu-erabileraren abisua"</string>
@@ -214,7 +214,7 @@
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN kodeak hizkiak edo ikurrak ditu"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Idatzi parekatze-kodea eta sakatu Itzuli edo Sartu"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuarekin parekatu nahi duzu?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Eman zure kontaktuak eta deien historia atzitzeko baimena <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuari"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Eman zure kontaktuak eta deien historia erabiltzeko baimena <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuari"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Baliteke PIN hau beste gailuan ere idatzi behar izatea."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Baliteke pasahitz hau beste gailuan ere idatzi behar izatea."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"16 digitu izan behar ditu"</string>
@@ -349,9 +349,9 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Laguntza eta ahozko idazketa"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Laguntza-aplikazioa"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Erabili pantailako testua"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Eman pantailako edukia testu gisa atzitzeko baimena laguntza-aplikazioari"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Eman pantailako edukia testu gisa erabiltzeko baimena laguntza-aplikazioari"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Erabili pantaila-argazkia"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Eman pantailako irudia atzitzeko baimena laguntza-aplikazioari"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Eman pantailako irudi bat erabiltzeko baimena laguntza-aplikazioari"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Ahozko idazketa"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Betetze automatikoaren zerbitzua"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Bat ere ez"</string>
@@ -405,13 +405,13 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Gehiago"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Kokapena"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Erabili kokapena"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Eman kokapena atzitzeko baimena zehazten dituzun aplikazioei"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Aukera hau desaktibatuz gero, kokapena atzitzeko baimena kenduko zaie aplikazio guztiei, gidatzeko laguntza erabiltzeko behar direnei izan ezik"</string>
+    <string name="location_toggle_summary" msgid="7977868708102299495">"Eman kokapena erabiltzeko baimena zehazten dituzun aplikazioei"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Aukera hau desaktibatuz gero, kokapena erabiltzeko baimena kenduko zaie aplikazio guztiei, gidatzeko laguntza erabiltzeko behar direnei izan ezik"</string>
     <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Gidatzeko laguntza abian denean, erabili kokapena"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ibilgailuaren kokapena desaktibatuta dago"</string>
     <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Gidatzeko laguntzarekin erlazionatutako aplikazioek ezin dute atzitu kokapena"</string>
     <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Aldatu"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Eman kokapena atzitzeko baimena gidatzeko laguntza ematen duten aplikazioei"</string>
+    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Eman kokapena erabiltzeko baimena gidatzeko laguntza ematen duten aplikazioei"</string>
     <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Aukera hau desaktibatuz gero, kokapenari buruzko informazioa erabiltzen duten gidatzeko laguntzarekin erlazionatutako aplikazioak desgaituko dira"</string>
     <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desaktibatu, halere"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Azkenaldian kokapena atzitu dutenak"</string>
@@ -419,7 +419,7 @@
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ikusi guztiak"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ez dago azkenaldian kokapena atzitu duen aplikaziorik"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Gidatzeko laguntza"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Gidatzeko laguntzarekin erlazionatutako eginbideak erabiltzeko ibilgailuaren kokapena atzitzeko baimena duten aplikazioak"</string>
+    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Gidatzeko laguntzarekin erlazionatutako eginbideak erabiltzeko ibilgailuaren kokapena erabiltzeko baimena duten aplikazioak"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Pribatutasun-gidalerroak"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
@@ -429,7 +429,7 @@
     <string name="adas_settings_footer" msgid="6697021691244459156">"Gidatzeko laguntzarekin erlazionatutako aplikazioei bidaltzen zaien kokapen-informazioak ez dauka identifikatzen zaituen informaziorik. Gehienez bi egunez gordetzen da. Gero, ezabatu egiten da."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofonoa"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Erabili mikrofonoa"</string>
-    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Eman mikrofonoa atzitzeko baimena aplikazio guztiei"</string>
+    <string name="microphone_toggle_summary" msgid="2682653449849128626">"Eman mikrofonoa erabiltzeko baimena aplikazio guztiei"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Kudeatu mikrofonoaren baimenak"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Berriki mikrofonoa atzitu dutenak"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"Ez dago azkenaldian atzitutako aplikaziorik"</string>
@@ -657,7 +657,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Bukatutakoan, jaso hatza"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Erregistratu da eredua"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Berresteko, marraztu eredua berriro"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Lotu gutxienez 4 puntu. Saiatu berriro."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Lotu gutxienez lau puntu. Saiatu berriro."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Eredua ez da zuzena"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Desblokeatzeko eredu bat nola marraztu"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Errore bat gertatu da eredua gordetzean"</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Utzi"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Berretsi"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Lau karaktere izan behar ditu gutxienez"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"Ez dago erabilgarri ixteko modu hau."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0 eta 9 arteko zenbakiak soilik izan ditzake."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Gailuaren administratzaileak ez du eman beste PIN bat erabiltzeko baimenik"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"IKT administratzaileak blokeatu egiten ditu asmatzen errazak diren PIN kodeak. Erabili beste PIN bat."</string>
@@ -737,9 +738,9 @@
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Laguntzailea eta ahotsa"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Laguntzaile digitalaren aplikazioa"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Erabili pantailako testua"</string>
-    <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Eman pantailako edukiak atzitzeko baimena laguntzaileari"</string>
+    <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Eman pantailako edukiak erabiltzeko baimena laguntzaileari"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Erabili pantaila-argazkia"</string>
-    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Eman pantailako irudia atzitzeko baimena laguntzaileari"</string>
+    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Eman pantailako irudia erabiltzeko baimena laguntzaileari"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"Bidalitako azkenak"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"Aplikazio guztiak"</string>
     <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Profilak eta kontuak"</string>
@@ -872,8 +873,8 @@
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Ezarpenak"</string>
     <string name="camera_settings_title" msgid="2837785830355288903">"Kamera"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"Erabili kamera"</string>
-    <string name="camera_toggle_summary" msgid="5751159996822627567">"Eman kamera atzitzeko baimena aplikazio guztiei"</string>
-    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kudeatu kamera atzitzeko baimenak"</string>
+    <string name="camera_toggle_summary" msgid="5751159996822627567">"Eman kamera erabiltzeko baimena aplikazio guztiei"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Kudeatu kamera erabiltzeko baimenak"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Berriki atzitu dutenak"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Ez dago azkenaldian atzitu duen aplikaziorik"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Ez dago sarbidea duen aplikaziorik"</string>

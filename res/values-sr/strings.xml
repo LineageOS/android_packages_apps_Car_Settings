@@ -583,7 +583,7 @@
     <string name="storage_total_size_label" msgid="3892138268243791912">"Укупно"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Обриши меморијски простор"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Обриши кеш"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Бришете податке апликација?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Бришете податке апликације?"</string>
     <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Подаци ове апликације ће се трајно избрисати. То обухвата фајлове, подешавања, базе података и друге податке апликација."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Брисање меморије за апликацију није успело."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"Уређај <xliff:g id="NAME">%1$s</xliff:g> је безбедно искључен"</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Откажи"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Потврди"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мора да садржи најмање 4 знака"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"Овај тип браве је недоступан."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Мора да садржи само цифре 0–9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Администратор уређаја не дозвољава употребу недавно коришћеног PIN-а"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"ИТ администратор блокира честе PIN-ове. Изаберите други PIN."</string>

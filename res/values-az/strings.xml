@@ -43,7 +43,7 @@
     <string name="sim_change_data_title" msgid="6677115745127365131">"Mobil data üçün <xliff:g id="CARRIER">%1$s</xliff:g> istifadə edilsin?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Mobil data üçün <xliff:g id="CARRIER2_0">%2$s</xliff:g> istifadə edirsiniz. <xliff:g id="CARRIER1">%1$s</xliff:g> operatoruna keçsəniz, <xliff:g id="CARRIER2_1">%2$s</xliff:g> artıq mobil data üçün istifadə olunmayacaq."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> istifadə edin"</string>
-    <string name="roaming_title" msgid="6218635014519017734">"Rominq"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Rouminq"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Rouminq zamanı data xidmətinə qoşulun"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Data rominqə icazə verilsin?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Rominq xərcləri arta bilər."</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Ləğv edin"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Təsdiq edin"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Ən azı 4 simvol olmalıdır"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"Kilid növü əlçatan deyil."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Yalnız 0-9 aralığında olmalıdır."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Cihaz admini son vaxtlardakı PIN kodu istifadə etməyə icazə vermir"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Ümumi PIN kodlar IT admini tərəfindən blok edilib. Fərqli PIN kod sınayın."</string>
@@ -735,7 +736,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Avtomobil idarə edərkən profil əlavə etmək mümkün deyil"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Axtarış"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent və səs"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Rəqəmsal assistent tətbiqi"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Rəq. assistent tətbiqi"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Ekrandakı mətni istifadə edin"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Assistentin ekran məzmununa girişinə icazə verin"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Skrinşot istifadə edin"</string>
@@ -802,7 +803,7 @@
     <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Ən son şəbəkə trafiki qeydi"</string>
     <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Ən son baq hesabatı"</string>
     <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Ən son təhlükəsizlik jurnalı"</string>
-    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Heç bir"</string>
+    <string name="enterprise_privacy_none" msgid="2566653655908700748">"Heç biri"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Tətbiqlər quraşdırıldı"</string>
     <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Məkan icazələri"</string>
     <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Mikrofon icazələri"</string>

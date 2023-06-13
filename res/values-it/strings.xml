@@ -25,7 +25,7 @@
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Regola ambiente e luminosità dello schermo"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Luminosità notturna attiva"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Modalità notturna"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"Rete e Internet"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Rete e internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rete mobile"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Attivo/SIM"</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Annulla"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Conferma"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Deve contenere almeno 4 caratteri"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"Questo tipo di blocco non è disponibile."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Deve contenere solo cifre da 0 a 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"L\'amministratore del dispositivo non consente l\'utilizzo di un PIN recente"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"I PIN comuni sono stati bloccati dall\'amministratore IT. Prova a usare un altro PIN."</string>

@@ -328,7 +328,7 @@
     <string name="unused_apps" msgid="648471933781010395">"ఉపయోగించని యాప్‌లు"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ఉపయోగించని యాప్}other{# ఉపయోగించని యాప్‌లు}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"అనుమతులను తీసివేసి స్పేస్‌ను ఖాళీ చేయండి"</string>
-    <string name="storage_type_internal" msgid="8918688427078709570">"అంతర్గత నిల్వలో %s"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"అంతర్గత స్టోరేజ్‌లో %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"యాప్ పనితీరుకు ప్రాధాన్యత ఇవ్వడానికి సిస్టమ్ రిసోర్స్‌లను ఉపయోగిస్తుంది"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"డేటా వినియోగం"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"యాప్ డేటా వినియోగం"</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"రద్దు చేయండి"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"నిర్ధారించు"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"తప్పనిసరిగా కనీసం 4 అక్షరాలు ఉండాలి"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"ఈ లాక్ రకం అందుబాటులో లేదు."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"తప్పనిసరిగా 0-9 అంకెలను మాత్రమే కలిగి ఉండాలి."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ఇటీవలి పిన్‌ని ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"సాధారణ PINలను మీ IT అడ్మిన్ బ్లాక్ చేశారు. వేరే PINను ట్రై చేయండి."</string>
@@ -713,7 +714,7 @@
     <string name="credentials_reset" msgid="873900550885788639">"ఆధారాలను క్లియర్ చేయండి"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"అన్ని స‌ర్టిఫికెట్‌ల‌ను తీసివేయండి"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"అన్ని కంటెంట్‌లను తీసివేయాలా?"</string>
-    <string name="credentials_erased" msgid="2515915439705550379">"ఆధారాల నిల్వ తొలగించబడింది."</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ఆధారాల స్టోరేజ్‌ తొలగించబడింది."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"ఆధారాల నిల్వను తొలగించడం సాధ్యపడలేదు."</string>
     <string name="forget" msgid="3971143908183848527">"విస్మరించు"</string>
     <string name="connect" msgid="5861699594602380150">"కనెక్ట్ చేయి"</string>

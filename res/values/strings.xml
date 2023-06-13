@@ -1567,6 +1567,9 @@
     <!-- Hints for Choose Lock Password Screen [CHAR_LIMIT=73] -->
     <string name="choose_lock_password_hints">Must be at least 4 characters</string>
 
+    <!-- Error shown when the lock type if unavailable [CHAR LIMIT=50] -->
+    <string name="locktype_unavailable">This lock type is unavailable.</string>
+
     <!-- Error shown when in PIN mode and user enters a non-digit. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=40] -->
     <string name="lockpassword_pin_contains_non_digits">Must contain only digits 0-9.</string>
 

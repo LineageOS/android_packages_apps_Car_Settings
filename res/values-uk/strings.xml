@@ -462,7 +462,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Співавтори"</string>
     <string name="manual" msgid="4819839169843240804">"Посібник"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Сертифікації"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Посібник із безпеки та нормативних вимог"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Посібник із безпеки й нормативних вимог"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Авторські права"</string>
     <string name="license_title" msgid="936705938435249965">"Ліцензія"</string>
     <string name="terms_title" msgid="5201471373602628765">"Умови використання"</string>
@@ -685,6 +685,7 @@
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Скасувати"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Підтвердити"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Потрібно ввести принаймні 4 символи"</string>
+    <string name="locktype_unavailable" msgid="2678317466336249126">"Цей тип блокування недоступний."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Має містити лише цифри від 0 до 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Адміністратор пристрою не дозволяє використовувати останній PIN-код"</string>
     <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"Системний адміністратор заблокував загальні PIN-коди. Введіть інший PIN-код."</string>
@@ -856,7 +857,7 @@
     <string name="factory_reset_later_text" msgid="6371031843489938419">"Систему буде скинуто, коли ви наступного разу заведете авто."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"Налаштування не можна скинути, доки ви за кермом."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Наразі це налаштування змінити не можна"</string>
-    <string name="accessibility_settings_title" msgid="2615042088419230347">"Спеціальні можливості"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"Функції доступності"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Субтитри"</string>
     <string name="captions_settings_title" msgid="5738067618097295831">"Налаштування субтитрів"</string>
     <string name="captions_settings_off" msgid="7568096968016015626">"Вимкнено"</string>
