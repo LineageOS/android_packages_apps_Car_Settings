@@ -20,31 +20,33 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.location.LocationManager;
 
-import androidx.preference.PreferenceGroup;
+import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
 /**
- * Controller for displaying {@link AdasLocationSwitchSubMenuPreference} and a preference divider.
+ * Controller for displaying location access page.
  */
-public class AdasGroupPreferenceController extends PreferenceController<PreferenceGroup> {
+public class LocationAccessPreferenceController extends PreferenceController<Preference> {
 
     private final LocationManager mLocationManager;
 
-    public AdasGroupPreferenceController(Context context, String preferenceKey,
+    public LocationAccessPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mLocationManager = context.getSystemService(LocationManager.class);
     }
 
     @Override
-    protected Class<PreferenceGroup> getPreferenceType() {
-        return PreferenceGroup.class;
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        return mLocationManager.isAdasGnssLocationEnabled() ? UNSUPPORTED_ON_DEVICE : AVAILABLE;
+        return mLocationManager.getAdasAllowlist().isEmpty()
+                ? CONDITIONALLY_UNAVAILABLE
+                : AVAILABLE;
     }
 }

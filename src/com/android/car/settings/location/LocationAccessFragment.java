@@ -20,12 +20,12 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 
 /**
- * Driver assistance page.
+ * Location access page.
  */
-public class AdasLocationFragment extends SettingsFragment {
+public class LocationAccessFragment extends SettingsFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.adas_location_fragment;
+        return R.xml.location_access_fragment;
     }
 }

@@ -122,14 +122,19 @@ public class LocationRecentAccessesPreferenceController
     @Override
     public void updateState(PreferenceCategory preference) {
         super.updateState(preference);
-
-        if (!mLocationManager.isLocationEnabled()
-                && !mLocationManager.isAdasGnssLocationEnabled()) {
-            getPreference().setVisible(false);
-            return;
+        boolean isVisible = getVisibility();
+        preference.setVisible(isVisible);
+        if (isVisible) {
+            updateUi(loadData());
         }
-        getPreference().setVisible(true);
-        updateUi(loadData());
+    }
+
+    private boolean getVisibility() {
+        boolean isVisible = mLocationManager.isLocationEnabled();
+        if (LocationUtil.isDriverWithAdasApps(getContext())) {
+            isVisible = isVisible || mLocationManager.isAdasGnssLocationEnabled();
+        }
+        return isVisible;
     }
 
     private List<RecentAppOpsAccess.Access> loadData() {
