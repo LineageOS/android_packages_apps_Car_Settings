@@ -16,6 +16,8 @@
 
 package com.android.car.settings.location;
 
+import static com.android.dx.mockito.inline.extended.ExtendedMockito.mockitoSession;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -26,6 +28,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.ActivityManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -33,6 +36,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.location.LocationManager;
+import android.os.PackageTagsList;
 import android.os.UserHandle;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -49,14 +53,16 @@ import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.applications.RecentAppOpsAccess;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
+import org.mockito.quality.Strictness;
 
 import java.time.Clock;
 import java.util.ArrayList;
@@ -69,21 +75,29 @@ public class LocationRecentAccessesPreferenceControllerTest {
     private static final int RECENT_APPS_MAX_COUNT = 2;
 
     private final Context mContext = Mockito.spy(ApplicationProvider.getApplicationContext());
+    private final LocationManager mLocationManager =
+            Mockito.spy(mContext.getSystemService(LocationManager.class));
     private LifecycleOwner mLifecycleOwner;
     private PreferenceCategory mPreference;
     private LocationRecentAccessesPreferenceController mPreferenceController;
+    private MockitoSession mSession;
 
     @Mock private FragmentController mFragmentController;
     @Mock private RecentAppOpsAccess mRecentLocationAccesses;
-    @Mock private LocationManager mMockLocationManager;
-    @Captor private ArgumentCaptor<BroadcastReceiver> mAdasReceiver;
-    @Captor private ArgumentCaptor<BroadcastReceiver> mLocationReceiver;
 
     @Before
     @UiThreadTest
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
+
+        mSession = mockitoSession()
+                .strictness(Strictness.LENIENT)
+                .spyStatic(ActivityManager.class)
+                .startMocking();
+
+        when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
+
         CarUxRestrictions carUxRestrictions =
                 new CarUxRestrictions.Builder(
                                 /* reqOpt= */ true,
@@ -103,14 +117,21 @@ public class LocationRecentAccessesPreferenceControllerTest {
                         carUxRestrictions,
                         mRecentLocationAccesses,
                         RECENT_APPS_MAX_COUNT,
-                        mMockLocationManager);
+                        mLocationManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         doNothing().when(mContext).startActivity(any());
         mPreferenceController.onCreate(mLifecycleOwner);
     }
 
+    @After
+    @UiThreadTest
+    public void tearDown() {
+        mSession.finishMocking();
+    }
+
     @Test
-    public void locationAndAdasOff_preferenceIsHidden() {
+    public void driverWithAdas_locationAndAdasOff_preferenceIsHidden() {
+        setUserToDriverWithAdas();
         setIsLocationEnabled(false);
         setIsAdasGnssLocationEnabled(false);
 
@@ -120,7 +141,8 @@ public class LocationRecentAccessesPreferenceControllerTest {
     }
 
     @Test
-    public void locationAndAdasOn_preferenceIsShown() {
+    public void driverWithAdas_locationAndAdasOn_preferenceIsShown() {
+        setUserToDriverWithAdas();
         setIsLocationEnabled(true);
         setIsAdasGnssLocationEnabled(true);
 
@@ -130,13 +152,80 @@ public class LocationRecentAccessesPreferenceControllerTest {
     }
 
     @Test
-    public void adasOnOnly_preferenceIsShown() {
+    public void driverWithAdas_adasOnOnly_preferenceIsShown() {
+        setUserToDriverWithAdas();
         setIsLocationEnabled(false);
         setIsAdasGnssLocationEnabled(true);
 
         initializePreference();
 
         assertThat(mPreference.isVisible()).isTrue();
+    }
+
+    @Test
+    public void driverWithNoAdas_locationAndAdasOff_preferenceIsHidden() {
+        setUserToDriverWithNoAdas();
+        setIsLocationEnabled(false);
+        setIsAdasGnssLocationEnabled(false);
+
+        initializePreference();
+
+        assertThat(mPreference.isVisible()).isFalse();
+    }
+
+    @Test
+    public void driverWithNoAdas_locationAndAdasOn_preferenceIsShown() {
+        setUserToDriverWithNoAdas();
+        setIsLocationEnabled(true);
+        setIsAdasGnssLocationEnabled(true);
+
+        initializePreference();
+
+        assertThat(mPreference.isVisible()).isTrue();
+    }
+
+    @Test
+    public void driverWithNoAdas_adasOnOnly_preferenceIsHidden() {
+        setUserToDriverWithNoAdas();
+        setIsLocationEnabled(false);
+        setIsAdasGnssLocationEnabled(true);
+
+        initializePreference();
+
+        assertThat(mPreference.isVisible()).isFalse();
+    }
+
+    @Test
+    public void passenger_locationAndAdasOff_preferenceIsHidden() {
+        setUserToPassenger();
+        setIsLocationEnabled(false);
+        setIsAdasGnssLocationEnabled(false);
+
+        initializePreference();
+
+        assertThat(mPreference.isVisible()).isFalse();
+    }
+
+    @Test
+    public void passenger_locationAndAdasOn_preferenceIsShown() {
+        setUserToPassenger();
+        setIsLocationEnabled(true);
+        setIsAdasGnssLocationEnabled(true);
+
+        initializePreference();
+
+        assertThat(mPreference.isVisible()).isTrue();
+    }
+
+    @Test
+    public void passenger_adasOnOnly_preferenceIsHidden() {
+        setUserToPassenger();
+        setIsLocationEnabled(false);
+        setIsAdasGnssLocationEnabled(true);
+
+        initializePreference();
+
+        assertThat(mPreference.isVisible()).isFalse();
     }
 
     @Test
@@ -294,11 +383,30 @@ public class LocationRecentAccessesPreferenceControllerTest {
                         intentFilterCaptor.capture(), eq(Context.RECEIVER_EXPORTED));
     }
 
+    private void setUserToDriverWithAdas() {
+        int currentUser = UserHandle.myUserId();
+        when(ActivityManager.getCurrentUser()).thenReturn(currentUser);
+        PackageTagsList list = new PackageTagsList.Builder().add("testApp1").build();
+        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
+    }
+
+    private void setUserToDriverWithNoAdas() {
+        int currentUser = UserHandle.myUserId();
+        when(ActivityManager.getCurrentUser()).thenReturn(currentUser);
+        PackageTagsList list = new PackageTagsList.Builder().build();
+        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
+    }
+
+    private void setUserToPassenger() {
+        int nonCurrentUser = UserHandle.myUserId() + 1;
+        when(ActivityManager.getCurrentUser()).thenReturn(nonCurrentUser);
+    }
+
     private void setIsLocationEnabled(boolean isEnabled) {
-        when(mMockLocationManager.isLocationEnabled()).thenReturn(isEnabled);
+        when(mLocationManager.isLocationEnabled()).thenReturn(isEnabled);
     }
 
     private void setIsAdasGnssLocationEnabled(boolean isEnabled) {
-        when(mMockLocationManager.isAdasGnssLocationEnabled()).thenReturn(isEnabled);
+        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(isEnabled);
     }
 }

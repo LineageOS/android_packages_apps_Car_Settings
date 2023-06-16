@@ -76,6 +76,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="titleText"/>
       <item type="attr" name="usage"/>
       <item type="attr" name="wifiSignalColor"/>
+      <item type="bool" name="config_allow_adas_location_switch_clickable"/>
       <item type="bool" name="config_always_ignore_ux_restrictions"/>
       <item type="bool" name="config_automatic_brightness_available"/>
       <item type="bool" name="config_enable_home_settings_icon"/>
@@ -614,7 +615,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="accounts_settings_title"/>
       <item type="string" name="action_not_reversible_message"/>
       <item type="string" name="action_unavailable"/>
-      <item type="string" name="adas_settings_footer"/>
+      <item type="string" name="adas_location_toggle_confirm_label"/>
+      <item type="string" name="adas_location_toggle_off_warning"/>
+      <item type="string" name="adas_location_toggle_popup_summary"/>
+      <item type="string" name="adas_location_toggle_summary"/>
+      <item type="string" name="adas_location_toggle_title"/>
       <item type="string" name="add_a_profile_button_text"/>
       <item type="string" name="add_account_title"/>
       <item type="string" name="add_an_account"/>
@@ -906,8 +911,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_one"/>
       <item type="string" name="domain_urls_summary_some"/>
       <item type="string" name="driver_assistance_label"/>
-      <item type="string" name="driver_assistance_settings_title"/>
-      <item type="string" name="driver_assistance_warning_confirm_label"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
@@ -1050,16 +1053,16 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="license_title"/>
       <item type="string" name="link_speed"/>
       <item type="string" name="loading_wifi_list"/>
-      <item type="string" name="location_driver_assistance_action_text"/>
+      <item type="string" name="location_access_disclaimer_summary"/>
+      <item type="string" name="location_access_settings_summary"/>
+      <item type="string" name="location_access_settings_title"/>
+      <item type="string" name="location_adas_app_info_summary"/>
+      <item type="string" name="location_adas_apps_list_summary"/>
+      <item type="string" name="location_adas_apps_list_title"/>
       <item type="string" name="location_driver_assistance_privacy_policy_button_text"/>
-      <item type="string" name="location_driver_assistance_privacy_policy_header_content"/>
-      <item type="string" name="location_driver_assistance_toggle_off_summary"/>
-      <item type="string" name="location_driver_assistance_toggle_off_title"/>
-      <item type="string" name="location_driver_assistance_toggle_off_warning"/>
-      <item type="string" name="location_driver_assistance_toggle_summary"/>
-      <item type="string" name="location_driver_assistance_toggle_title"/>
       <item type="string" name="location_no_recent_access"/>
       <item type="string" name="location_recently_accessed"/>
+      <item type="string" name="location_settings_app_permissions_summary"/>
       <item type="string" name="location_settings_app_permissions_title"/>
       <item type="string" name="location_settings_footer"/>
       <item type="string" name="location_settings_recently_accessed_title"/>
@@ -1577,7 +1580,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="accessibility_settings_fragment"/>
       <item type="xml" name="account_details_fragment"/>
       <item type="xml" name="account_sync_details_fragment"/>
-      <item type="xml" name="adas_location_fragment"/>
       <item type="xml" name="add_wifi_fragment"/>
       <item type="xml" name="app_data_usage_fragment"/>
       <item type="xml" name="app_specific_data_usage_fragment"/>
@@ -1623,6 +1625,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="language_picker_fragment"/>
       <item type="xml" name="languages_and_input_fragment"/>
       <item type="xml" name="legal_information_fragment"/>
+      <item type="xml" name="location_access_fragment"/>
       <item type="xml" name="location_recent_accessed_view_all_fragment"/>
       <item type="xml" name="location_settings_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>
