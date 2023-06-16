@@ -106,6 +106,7 @@ public class NotificationAccessPreferenceControllerTest {
         mListenerServiceInfo.nonLocalizedLabel = "label";
         mApplicationInfo = new ApplicationInfo();
         mApplicationInfo.uid = 123;
+        mApplicationInfo.name = "SomeApplicationInfo";
         mListenerServiceInfo.applicationInfo = mApplicationInfo;
 
         mListenerComponent = new ComponentName(mListenerServiceInfo.packageName,

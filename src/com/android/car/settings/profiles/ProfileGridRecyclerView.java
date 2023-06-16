@@ -441,11 +441,10 @@ public class ProfileGridRecyclerView extends RecyclerView {
         }
 
         private Drawable getCircularProfileRecordIcon(ProfileRecord profileRecord) {
-            Resources resources = mContext.getResources();
             Drawable circleIcon;
             switch (profileRecord.mType) {
                 case ProfileRecord.START_GUEST:
-                    circleIcon = mProfileIconProvider.getRoundedGuestDefaultIcon(resources);
+                    circleIcon = mProfileIconProvider.getRoundedGuestDefaultIcon(mContext);
                     break;
                 case ProfileRecord.ADD_PROFILE:
                     circleIcon = getCircularAddProfileIcon();
