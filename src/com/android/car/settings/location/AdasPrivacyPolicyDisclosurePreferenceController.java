@@ -16,7 +16,6 @@
 
 package com.android.car.settings.location;
 
-import android.Manifest;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -84,17 +83,11 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
 
         Collection<String> adasApps = mLocationManager.getAdasAllowlist().getPackages();
         for (String adasApp : adasApps) {
-            if (mPackageManager.checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION, adasApp)
-                            == PackageManager.PERMISSION_GRANTED
-                    || mPackageManager.checkPermission(
-                                    Manifest.permission.ACCESS_FINE_LOCATION, adasApp)
-                            == PackageManager.PERMISSION_GRANTED) {
-                CarUiTwoActionTextPreference perf =
-                        AdasPrivacyPolicyUtil.createPrivacyPolicyPreference(
-                                getContext(), mPackageManager, adasApp, Process.myUserHandle());
-                if (perf != null) {
-                    getPreference().addPreference(perf);
-                }
+            CarUiTwoActionTextPreference perf =
+                    AdasPrivacyPolicyUtil.createPrivacyPolicyPreference(
+                            getContext(), mPackageManager, adasApp, Process.myUserHandle());
+            if (perf != null) {
+                getPreference().addPreference(perf);
             }
         }
     }
