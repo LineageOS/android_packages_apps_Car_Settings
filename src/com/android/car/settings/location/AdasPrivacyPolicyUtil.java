@@ -16,6 +16,8 @@
 
 package com.android.car.settings.location;
 
+import static com.android.car.ui.preference.CarUiTwoActionTextPreference.SECONDARY_ACTION_STYLE_BORDERLESS;
+
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -44,7 +46,8 @@ public final class AdasPrivacyPolicyUtil {
      */
     public static CarUiTwoActionTextPreference createPrivacyPolicyPreference(
             Context context, PackageManager packageManager, String pkgName, UserHandle userHandle) {
-        CarUiTwoActionTextPreference pref = new CarUiTwoActionTextPreference(context);
+        CarUiTwoActionTextPreference pref =
+                new CarUiTwoActionTextPreference(context, SECONDARY_ACTION_STYLE_BORDERLESS);
 
         IconDrawableFactory drawableFactory = IconDrawableFactory.newInstance(context);
         int userId = userHandle.getIdentifier();

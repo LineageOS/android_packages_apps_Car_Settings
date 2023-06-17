@@ -16,15 +16,11 @@
 
 package com.android.car.settings.location;
 
-import static android.os.UserManager.DISALLOW_CONFIG_LOCATION;
-import static android.os.UserManager.DISALLOW_SHARE_LOCATION;
-
-import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
-
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.never;
@@ -32,6 +28,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.withSettings;
 
 import android.app.AlertDialog;
 import android.car.drivingstate.CarUxRestrictions;
@@ -41,7 +38,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
-import android.os.UserManager;
+import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.test.core.app.ApplicationProvider;
@@ -49,15 +46,16 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
-import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
-import com.android.car.settings.testutils.EnterpriseTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
-import com.android.car.ui.preference.CarUiTwoActionSwitchPreference;
+import com.android.car.ui.preference.CarUiSwitchPreference;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -65,6 +63,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
 
 import java.util.List;
 
@@ -72,9 +71,10 @@ import java.util.List;
 public class AdasLocationSwitchPreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
-    private CarUiTwoActionSwitchPreference mSwitchPreference;
+    private CarUiSwitchPreference mSwitchPreference;
     private AdasLocationSwitchPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
+    private MockitoSession mSession;
 
     @Mock
     private FragmentController mFragmentController;
@@ -83,7 +83,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
     private LocationManager mLocationManager;
 
     @Mock
-    private UserManager mUserManager;
+    private Toast mToast;
 
     @Rule
     public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
@@ -95,23 +95,92 @@ public class AdasLocationSwitchPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
-        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
+
+        mSession = ExtendedMockito.mockitoSession().mockStatic(Toast.class,
+                withSettings().lenient()).startMocking();
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mSwitchPreference = new CarUiTwoActionSwitchPreference(mContext);
-        mPreferenceController = new AdasLocationSwitchPreferenceController(mContext,
-                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
-        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
+        mSwitchPreference = new CarUiSwitchPreference(mContext);
+    }
+
+    @After
+    public void tearDown() {
+        mSession.finishMocking();
+    }
+
+    @Test
+    public void unclickable_switchDisabled() throws Throwable {
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
+                /* isClickable= */false);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
+    }
+
+    @Test
+    public void unclickable_onPreferenceClicked_noChange_showCorrectToast() throws Throwable {
+        int correctToastId = R.string.adas_location_toggle_popup_summary;
+        mActivityTestRule.runOnUiThread(() -> {
+            ExtendedMockito.when(Toast.makeText(any(), eq(correctToastId), anyInt()))
+                    .thenReturn(mToast);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
+                /* isClickable= */false);
+
+        mSwitchPreference.performClick();
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
+        verify(mLocationManager, never()).setAdasGnssLocationEnabled(anyBoolean());
+        verify(mFragmentController, never())
+                .showDialog(any(ConfirmationDialogFragment.class), any());
+        verify(mToast).show();
+    }
+
+    @Test
+    public void unclickable_powerPolicyOff_onPreferenceClicked_showCorrectToast() throws Throwable {
+        int correctToastId = R.string.adas_location_toggle_popup_summary;
+        mActivityTestRule.runOnUiThread(() -> {
+            ExtendedMockito.when(Toast.makeText(any(), eq(correctToastId), anyInt()))
+                    .thenReturn(mToast);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
+                /* isClickable= */false);
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ false);
+
+        mSwitchPreference.performClick();
+
+        verify(mToast).show();
+    }
+
+    @Test
+    public void powerPolicyOff_onPreferenceClicked_showCorrectToast() throws Throwable {
+        int correctToastId = R.string.power_component_disabled;
+        mActivityTestRule.runOnUiThread(() -> {
+            ExtendedMockito.when(Toast.makeText(any(), eq(correctToastId), anyInt()))
+                    .thenReturn(mToast);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
+                /* isClickable= */true);
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ false);
+
+        mSwitchPreference.performClick();
+
+        verify(mToast).show();
     }
 
     @Test
     public void onAdasIntentReceived_updateUi() {
-        initializePreference(/* checked= */false, /* enabled= */true);
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false,
+                /* isClickable= */true);
 
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
         ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
                 BroadcastReceiver.class);
         ArgumentCaptor<IntentFilter> intentFilterCaptor = ArgumentCaptor.forClass(
@@ -126,15 +195,13 @@ public class AdasLocationSwitchPreferenceControllerTest {
         broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
                 new Intent(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED));
 
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
     }
 
     @Test
     public void onLocationIntentReceived_updateUi() {
-        initializePreference(/* checked= */false, /* enabled= */true);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false,
+                /* isClickable= */true);
 
         ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
                 BroadcastReceiver.class);
@@ -151,18 +218,18 @@ public class AdasLocationSwitchPreferenceControllerTest {
         broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
                 new Intent(LocationManager.MODE_CHANGED_ACTION));
 
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
     }
 
     @Test
     public void onPreferenceClicked_adasDisabled_shouldEnable_notShowDialog() {
-        initializePreference(/* checked= */false, /* enabled= */true);
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false,
+                /* isClickable= */true);
 
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mSwitchPreference.performSecondaryActionClick();
+        mSwitchPreference.performClick();
 
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
-        assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
         verify(mLocationManager).setAdasGnssLocationEnabled(true);
         verify(mFragmentController, never())
                 .showDialog(any(ConfirmationDialogFragment.class), any());
@@ -170,13 +237,13 @@ public class AdasLocationSwitchPreferenceControllerTest {
 
     @Test
     public void onPreferenceClicked_adasEnabled_shouldStayEnable_showDialog() {
-        initializePreference(/* checked= */true, /* enabled= */true);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
+                /* isClickable= */true);
 
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mSwitchPreference.performSecondaryActionClick();
+        mSwitchPreference.performClick();
 
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
-        assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
         verify(mLocationManager, never()).setLocationEnabledForUser(anyBoolean(), any());
         verify(mFragmentController)
                 .showDialog(any(ConfirmationDialogFragment.class),
@@ -185,10 +252,10 @@ public class AdasLocationSwitchPreferenceControllerTest {
 
     @Test
     public void confirmDialog_turnOffDriverAssistance() throws Throwable {
-        initializePreference(/* checked= */true, /* enabled= */true);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
+                /* isClickable= */true);
 
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mSwitchPreference.performSecondaryActionClick();
+        mSwitchPreference.performClick();
 
         // Capture the dialog that is shown on toggle.
         ArgumentCaptor<ConfirmationDialogFragment> dialogCaptor = ArgumentCaptor.forClass(
@@ -211,100 +278,40 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    public void onPolicyChanged_enabled_setsSwitchEnabled() {
-        initializePreference(/* checked= */ true, /* enabled= */ false);
-        when(mLocationManager.isLocationEnabled()).thenReturn(false);
-
-        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
-                .handlePolicyChange(/* isOn= */ true);
-
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isTrue();
-    }
-
-    @Test
-    public void onPolicyChanged_disabled_setsSwitchDisabled() {
-        initializePreference(/* checked= */ true, /* enabled= */ true);
-        when(mLocationManager.isLocationEnabled()).thenReturn(false);
+    public void onPowerPolicyChange_isEnabledChanges() {
+        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ false,
+                /* isClickable= */true);
 
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ false);
 
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
-    }
-
-    @Test
-    public void onPolicyChange_enabled_locationEnabled_switchStaysDisabled() {
-        initializePreference(/* checked= */ true, /* enabled= */ false);
-        when(mLocationManager.isLocationEnabled()).thenReturn(true);
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
 
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ true);
 
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
     }
 
     @Test
-    public void adasLocationOnAndEnabled_disallowConfigLocation_switchStaysChecked() {
-        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_CONFIG_LOCATION,
-                /* restricted= */true);
-        when(mLocationManager.isLocationEnabled()).thenReturn(false);
+    public void onPowerPolicyChange_enabled_locationEnabled_switchStaysDisabled() {
+        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ true,
+                /* isClickable= */true);
 
-        initializePreference(/* checked= */ true, /* enabled= */ false);
-        mPreferenceController.onCreate(mLifecycleOwner);
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
 
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
-        assertThat(mSwitchPreference.isSecondaryActionChecked()).isTrue();
-    }
-    @Test
-    public void adasLocationOnAndEnabled_disallowShareLocation_setsSwitchUnchecked() {
-        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_SHARE_LOCATION,
-                /* restricted= */true);
-        when(mLocationManager.isLocationEnabled()).thenReturn(false);
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
 
-        initializePreference(/* checked= */ true, /* enabled= */ false);
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        assertThat(mSwitchPreference.isSecondaryActionEnabled()).isFalse();
-        assertThat(mSwitchPreference.isSecondaryActionChecked()).isFalse();
-    }
-
-    @Test
-    public void disallowConfigLocation_switchTapped_showsDialog() {
-        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_CONFIG_LOCATION,
-                /* restricted= */true);
-        when(mLocationManager.isLocationEnabled()).thenReturn(false);
-        initializePreference(/* checked= */ true, /* enabled= */ false);
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        mSwitchPreference.performClick();
-
-        assertShowingDisabledByAdminDialog();
-    }
-
-    @Test
-    public void disallowShareLocation_switchTapped_showsDialog() {
-        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager,  DISALLOW_SHARE_LOCATION,
-                /* restricted= */true);
-        when(mLocationManager.isLocationEnabled()).thenReturn(false);
-        initializePreference(/* checked= */ true, /* enabled= */ false);
-        mPreferenceController.onCreate(mLifecycleOwner);
-
-        mSwitchPreference.performClick();
-
-        assertShowingDisabledByAdminDialog();
-    }
-
-    private void assertShowingDisabledByAdminDialog() {
-        verify(mFragmentController).showDialog(any(ActionDisabledByAdminDialogFragment.class),
-                eq(DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG));
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
     }
 
     @Test
     public void cancelDialog_DriverAssistanceStaysOn() throws Throwable {
-        initializePreference(/* checked= */true, /* enabled= */true);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
+                /* isClickable= */true);
 
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mSwitchPreference.performSecondaryActionClick();
+        mSwitchPreference.performClick();
 
         // Capture the dialog that is shown on toggle.
         ArgumentCaptor<ConfirmationDialogFragment> dialogCaptor = ArgumentCaptor.forClass(
@@ -326,10 +333,16 @@ public class AdasLocationSwitchPreferenceControllerTest {
         verify(mLocationManager, never()).setAdasGnssLocationEnabled(false);
     }
 
-    private void initializePreference(boolean checked, boolean enabled) {
-        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(checked);
-        mSwitchPreference.setSecondaryActionChecked(checked);
-        mSwitchPreference.setSecondaryActionEnabled(enabled);
+    private void initializePreference(boolean isAdasLocationEnabled, boolean isMainLocationEnabled,
+            boolean isClickable) {
+        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(isAdasLocationEnabled);
+        when(mLocationManager.isLocationEnabled()).thenReturn(isMainLocationEnabled);
+        mPreferenceController = new AdasLocationSwitchPreferenceController(mContext,
+                /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.mIsClickable = isClickable;
+        mPreferenceController.onStart(mLifecycleOwner);
     }
 
     private AlertDialog showDialog(ConfirmationDialogFragment dialog) throws Throwable {
