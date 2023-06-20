@@ -34,7 +34,6 @@
         <item name="android:fragmentOpenExitAnimation">@animator/trans_left_out</item>
         <item name="android:fragmentCloseEnterAnimation">@animator/trans_left_in</item>
         <item name="android:fragmentCloseExitAnimation">@animator/trans_right_out</item>
-        <item name="colorPrimaryVariant">?android:attr/colorPrimary</item>
     </style>
 
     <style name="FallbackHome" parent="@android:style/Theme.DeviceDefault.NoActionBar">
