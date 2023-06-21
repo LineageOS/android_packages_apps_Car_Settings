@@ -253,7 +253,10 @@ public final class EnterpriseUtils {
      * @return {@code RestrictedLockUtils.EnforcedAdmin}
      */
     public static EnforcedAdmin getEnforcedAdmin(Context context, @UserIdInt int adminUser,
-            String restriction, String restrictedPackage) {
+            @Nullable String restriction, String restrictedPackage) {
+        if (restriction == null) {
+            return null;
+        }
         EnforcedAdmin admin = null;
         if (hasUserRestrictionByDpm(context, restriction)) {
             admin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
